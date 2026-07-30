@@ -1,6 +1,7 @@
 # Local client materials and meeting recordings
 materials/private/
 *.mp3
+!materials/meeting/2026-07-30-zoom-audio.mp3
 *.mp4
 *.wav
 
