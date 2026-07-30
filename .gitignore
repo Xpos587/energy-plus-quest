@@ -1,0 +1,13 @@
+# Local client materials and meeting recordings
+materials/private/
+*.mp3
+*.mp4
+*.wav
+
+# Local environment and generated output
+.env
+.env.*
+!.env.example
+dist/
+build/
+.DS_Store
