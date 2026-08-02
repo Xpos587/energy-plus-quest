@@ -15,7 +15,7 @@
 
 - [Актуальные требования](docs/requirements.md)
 - [Первая сцена](docs/scenarios/01-express.md)
-- [Бренд-правила](docs/brand-constraints.md)
+- [Дизайн-система](DESIGN.md)
 - [Техническое решение](docs/architecture.md)
 - [Оценка](docs/estimate.md)
 
