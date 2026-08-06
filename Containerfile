@@ -6,21 +6,18 @@ FROM docker.io/oven/bun:1 AS builder
 
 WORKDIR /app
 
-# Copy lockfile and package manifest for layer caching
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 
-# Copy source and build
 COPY . .
 RUN bun run build
 
 # ── runtime stage ────────────────────────────────────────────
 FROM docker.io/library/nginx:1.27-alpine
 
-# Copy built static assets
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# SPA fallback config
+# SPA fallback config on port 3000
 RUN printf 'server {\n\
   listen 3000;\n\
   root /usr/share/nginx/html;\n\
@@ -29,13 +26,6 @@ RUN printf 'server {\n\
     try_files $uri $uri/ /index.html;\n\
   }\n\
 }\n' > /etc/nginx/conf.d/default.conf
-
-# Run as non-root
-RUN chown -R nginx:nginx /usr/share/nginx/html && \
-    chown -R nginx:nginx /var/cache/nginx && \
-    chown -R nginx:nginx /var/log/nginx && \
-    touch /var/run/nginx.pid && chown nginx:nginx /var/run/nginx.pid
-USER nginx
 
 EXPOSE 3000
 
