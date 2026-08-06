@@ -9,6 +9,14 @@ materials/private/
 .env
 .env.*
 !.env.example
+node_modules/
 dist/
 build/
+test-results/
+playwright-report/
 .DS_Store
+
+# Local agent/skill configuration (not part of the project)
+.agents/
+.claude/
+skills-lock.json

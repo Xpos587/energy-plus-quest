@@ -1,0 +1,20 @@
+version: "3"
+
+tasks:
+  dev:
+    cmds:
+      - bun run dev
+  build:
+    cmds:
+      - bun run build
+  test:
+    cmds:
+      - bun run test
+  check:
+    cmds:
+      - bun run check
+  verify:
+    cmds:
+      - task: check
+      - task: test
+      - task: build

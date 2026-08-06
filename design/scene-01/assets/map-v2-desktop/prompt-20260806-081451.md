@@ -1,0 +1,9 @@
+Edit SOURCE IMAGE 1 into the second-pass desktop city map for the Energy+ browser quest. SOURCE IMAGE 1 is the structural source of truth: preserve its exact 16:9 direct-overhead composition, the cobalt logistics hub slightly right of center, the road crossings, the four delivery vehicles and their approximate positions, and the calm left third reserved for a large accessible HTML panel.
+
+Use SOURCE IMAGES 2 and 3 only as editorial treatment references. Borrow their confident Energy+ rhythm: layered archival-paper feeling, purposeful small technical details around large clean color fields, warm human irregularity, fine line accents and restrained printed grain. Do not copy their people, objects, stories, photographic content or collage subjects into the map.
+
+Make the city feel like a living logistics system instead of a sterile diagram. Add subtle route traces, loading-bay markings, tiny parcel silhouettes, depot modules, simplified energy-flow connectors and varied block interiors. Keep all additions readable from a distance and secondary to the hub and four vehicles. Preserve generous negative space beneath future HTML overlays.
+
+Exact visual language: strictly flat editorial illustration, direct top-down orthographic view, large rounded modular shapes, consistent fine dark-brown construction line, subtle paper grain, primarily #FF5500, #003CA6, #041327, #FFFFFF and very pale blue-gray. Crisp but not clinical. Friendly scientific-popular magazine, not a dashboard.
+
+No readable text, letters, numbers, logo, official switch mark, UI panels, buttons, labels, people, photo collage, trees, realistic buildings, 3D, isometry, perspective, drop shadows suggesting height, glossy gradients, neon, purple, teal or green. Do not move or remove the four vehicles. Do not fill the calm left overlay zone with important objects.

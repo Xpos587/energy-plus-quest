@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "EPQ Normalidad Proxy";
+  src: url("/fonts/normalidad-proxy-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EPQ Normalidad Proxy";
+  src: url("/fonts/normalidad-proxy-medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EPQ Normalidad Proxy";
+  src: url("/fonts/normalidad-proxy-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* Canonical brand colors plus explicitly derived prototype surfaces. */
+  --orange: #ff5500;
+  --blue: #003ca6;
+  --navy: #041327;
+  --white: #ffffff;
+  --line: #6b3f26;
+  --mist: #edf3f8;
+  --pale-blue: #dfeafb;
+  --paper: #f8fbfd;
+  --font-brand: "Normalidad Compact", "EPQ Normalidad Proxy", sans-serif;
+  --header-height: 72px;
+  --panel-border: rgba(0, 60, 166, 0.16);
+  --panel-shadow: 0 22px 70px rgba(0, 60, 166, 0.12);
+  font-family: var(--font-brand);
+  font-size: 16px;
+  line-height: 1.5;
+  color: #041327;
+  background: #041327;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #041327;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #ff5500;
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #ffffff;
+  background: #003ca6;
+}
