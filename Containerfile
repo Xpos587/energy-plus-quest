@@ -15,9 +15,12 @@ RUN bun run build
 # ── runtime stage ────────────────────────────────────────────
 FROM docker.io/library/nginx:1.27-alpine
 
+# Remove default nginx static page and config
+RUN rm -f /usr/share/nginx/html/* /etc/nginx/conf.d/default.conf
+
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# SPA fallback config on port 3000
+# SPA fallback config on port 80
 RUN printf 'server {\n\
   listen 80;\n\
   root /usr/share/nginx/html;\n\
