@@ -19,7 +19,7 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 
 # SPA fallback config on port 3000
 RUN printf 'server {\n\
-  listen 3000;\n\
+  listen 80;\n\
   root /usr/share/nginx/html;\n\
   index index.html;\n\
   location / {\n\
@@ -27,9 +27,9 @@ RUN printf 'server {\n\
   }\n\
 }\n' > /etc/nginx/conf.d/default.conf
 
-EXPOSE 3000
+EXPOSE 80
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:3000/ || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost:80/ || exit 1
 
 CMD ["nginx", "-g", "daemon off;"]
