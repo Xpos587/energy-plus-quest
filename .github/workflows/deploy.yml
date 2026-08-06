@@ -1,4 +1,4 @@
-name: Build and Push to GHCR
+name: Build, Push and Deploy
 
 on:
   push:
@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-and-push:
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -48,3 +48,11 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Trigger Dokploy deploy
+        run: |
+          curl -fsS -X POST \
+            -H "x-api-key: ${{ secrets.DOKPLOY_API_KEY }}" \
+            -H 'Content-Type: application/json' \
+            -d '{"applicationId":"pfnvsqxv0r5pqE-Pbr8qi"}' \
+            https://dokploy.hypcat.net/api/application.deploy
