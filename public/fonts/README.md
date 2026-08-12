@@ -1,9 +1,8 @@
 # Prototype typography
 
 The interface requests the official `Normalidad Compact` family first. The
-repository does not contain licensed Normalidad files, so the bundled
-`EPQ Normalidad Proxy` faces use Roboto Condensed as a temporary visual proxy.
+repository does not contain licensed Normalidad files, so the prototype uses
+the brand guide's permitted system fallback: `Verdana Regular`.
 
-Roboto Condensed is distributed under the SIL Open Font License 1.1; the
-copied license text is stored in `OFL-Roboto.txt` for this prototype bundle.
-Replace the proxy with properly licensed Normalidad web fonts when supplied.
+No substitute webfont is bundled or presented as a brand font. Add properly
+licensed Normalidad webfont files only after the customer supplies them.
