@@ -33,6 +33,31 @@ async function expectScoreIcons(page: Page) {
   }
 }
 
+async function expectResultScoresDoNotOverlap(page: Page) {
+  const resultScores = page.locator('[data-layout="result"] [data-score-key]');
+
+  for (let index = 0; index < (await resultScores.count()); index += 1) {
+    const score = resultScores.nth(index);
+    const labelBox = await score.locator("span").boundingBox();
+    const valueBox = await score.locator("strong").boundingBox();
+
+    expect(labelBox).not.toBeNull();
+    expect(valueBox).not.toBeNull();
+    const overlapWidth =
+      Math.min(
+        (labelBox?.x ?? 0) + (labelBox?.width ?? 0),
+        (valueBox?.x ?? 0) + (valueBox?.width ?? 0),
+      ) - Math.max(labelBox?.x ?? 0, valueBox?.x ?? 0);
+    const overlapHeight =
+      Math.min(
+        (labelBox?.y ?? 0) + (labelBox?.height ?? 0),
+        (valueBox?.y ?? 0) + (valueBox?.height ?? 0),
+      ) - Math.max(labelBox?.y ?? 0, valueBox?.y ?? 0);
+
+    expect(overlapWidth > 0.5 && overlapHeight > 0.5).toBe(false);
+  }
+}
+
 test("keeps the complete route inside one viewport", async ({ page }) => {
   await page.goto("/");
   await expect(
@@ -68,6 +93,7 @@ test("keeps the complete route inside one viewport", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: "Перевозчик найден за два часа" }),
   ).toBeVisible();
+  await expectResultScoresDoNotOverlap(page);
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
   await page.getByRole("button", { name: /Разобрать подбор Express/ }).click();

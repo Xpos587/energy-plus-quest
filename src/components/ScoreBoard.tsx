@@ -72,7 +72,7 @@ export function ScoreDelta({ scores }: { scores: Scores }) {
               className={styles.deltaIcon}
               src={item.iconUrl}
             />
-            {item.label}
+            <em className={styles.deltaLabel}>{item.label}</em>
           </span>
           <strong data-positive={scores[item.key] > 0}>
             {formatScore(scores[item.key])}
