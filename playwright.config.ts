@@ -24,6 +24,14 @@ export default defineConfig({
       },
     },
     {
+      name: "mobile-toolbar-chromium",
+      testMatch: /layout\.spec\.ts/,
+      use: {
+        ...devices["Pixel 5"],
+        viewport: { width: 390, height: 700 },
+      },
+    },
+    {
       name: "windows-125-chromium",
       testMatch: /layout\.spec\.ts/,
       use: {

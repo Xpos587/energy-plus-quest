@@ -1388,18 +1388,19 @@
 
 @media (max-width: 760px) {
   :root {
-    --header-height: 68px;
+    --header-height: 64px;
   }
 
   .app {
-    overflow: visible;
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow: hidden;
   }
 
   .header {
-    position: sticky;
-    top: 0;
+    position: relative;
     height: var(--header-height);
-    padding: 8px 12px 15px;
+    padding: 6px 10px 13px;
   }
 
   .projectMark span {
@@ -1418,9 +1419,9 @@
 
   .scoreItem {
     min-width: 44px;
-    min-height: 44px;
+    min-height: 40px;
     gap: 4px;
-    padding: 5px 6px 6px;
+    padding: 4px 6px 5px;
   }
 
   .scoreItem span {
@@ -1437,40 +1438,46 @@
     display: none;
   }
 
+  .main,
+  .screen,
   .sceneStage,
   .carrierScene {
-    min-height: calc(100dvh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
+    min-height: 0;
+    overflow: hidden;
   }
 
   .sceneStage[data-layout="intro"] {
-    display: flex;
+    display: block;
+    height: 100dvh;
     min-height: 100dvh;
-    flex-direction: column;
+    overflow: hidden;
   }
 
   .sceneStage[data-layout="intro"] .cityMap {
-    position: relative;
-    order: 2;
-    min-height: 410px;
+    position: absolute;
+    min-height: 100%;
   }
 
   .sceneStage[data-layout="intro"] .mapImage {
-    transform: scale(1.18) translateY(-7%);
+    transform: scale(1.12);
   }
 
   .mapVeil {
-    display: none;
+    display: block;
+    background: rgba(237, 243, 248, 0.42);
   }
 
   .openingPanel {
-    position: relative;
+    position: absolute;
     z-index: 10;
-    top: auto;
-    left: auto;
-    order: 1;
+    inset: 12px;
+    display: flex;
     width: auto;
-    margin: 12px;
-    padding: 34px 22px 28px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: clamp(24px, 7dvh, 54px) 22px;
     transform: none;
     border-radius: 34px 34px 34px 8px;
   }
@@ -1480,8 +1487,8 @@
   }
 
   .openingPanel > p {
-    margin: 22px 0;
-    font-size: 16px;
+    margin: 18px 0;
+    font-size: 14px;
   }
 
   .primaryButton {
@@ -1493,18 +1500,17 @@
   .sceneStage[data-layout="result"],
   .sceneStage[data-layout="express"],
   .sceneStage[data-layout="complete"] {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
 
   .mapBackdrop {
-    position: relative;
-    order: 1;
-    height: 250px;
+    position: absolute;
+    inset: 0;
+    height: auto;
   }
 
   .mapBackdrop .cityMap {
-    min-height: 250px;
+    min-height: 100%;
   }
 
   .dialogPanel,
@@ -1512,19 +1518,23 @@
   .resultPanel,
   .expressPanel,
   .completePanel {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    order: 2;
+    position: absolute;
+    inset: 8px 8px max(8px, env(safe-area-inset-bottom));
     width: auto;
     max-height: none;
-    margin: -34px 10px 18px;
-    padding: 28px 18px;
-    overflow: visible;
+    margin: 0;
+    padding: 18px;
+    overflow: hidden;
     transform: none;
-    border-radius: 32px 32px 32px 8px;
+    border-radius: 30px 30px 30px 8px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(9px);
+  }
+
+  .dialogPanel {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 12px;
   }
 
   .screenHeading h2,
@@ -1532,40 +1542,97 @@
   .resultPanel h2,
   .expressPanel h2,
   .completePanel h2 {
-    font-size: clamp(30px, 8.5vw, 40px);
+    font-size: clamp(28px, 8vw, 36px);
   }
 
   .screenHeading {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 7px;
+    margin-bottom: 0;
+  }
+
+  .screenHeading .eyebrow {
+    margin-bottom: 2px;
+  }
+
+  .screenHeading > p:last-child,
+  .panelLead {
+    font-size: 13px;
+    line-height: 1.38;
   }
 
   .choiceGrid,
   .choiceGrid[data-count="2"] {
     grid-template-columns: 1fr;
+    min-height: 0;
+    gap: 8px;
+  }
+
+  .choiceGrid {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+  .choiceGrid[data-count="2"] {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .choiceCard {
-    min-height: 144px;
-    grid-template-columns: 112px 1fr;
-    padding: 10px;
-    border-radius: 22px;
+    min-height: 0;
+    grid-template-columns: clamp(76px, 24vw, 98px) minmax(0, 1fr);
+    gap: 10px;
+    padding: 8px;
+    border-radius: 20px;
   }
 
   .choiceText {
-    padding-right: 14px;
+    padding: 4px 30px 4px 0;
   }
 
   .choiceText strong {
-    font-size: 18px;
+    font-size: clamp(16px, 4.7vw, 19px);
   }
 
   .choiceText p {
-    font-size: 12px;
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .choiceText small {
+    margin-bottom: 2px;
+    font-size: 8px;
+  }
+
+  .choiceSymbol {
+    border-radius: 15px;
+  }
+
+  .choiceSymbol b {
+    top: 6px;
+    left: 6px;
+    min-width: 27px;
+    height: 21px;
+    font-size: 8px;
+  }
+
+  .choiceArrow {
+    right: 9px;
+    bottom: 9px;
+    width: 27px;
+    height: 27px;
   }
 
   .manifest {
     grid-template-columns: 1fr 1fr;
+    margin: 16px 0;
+  }
+
+  .manifest div {
+    padding: 9px 8px 9px 0;
+  }
+
+  .manifest dd {
+    font-size: 14px;
   }
 
   .routeTicket {
@@ -1573,15 +1640,12 @@
   }
 
   .carrierScene {
-    display: flex;
-    min-height: calc(100dvh - var(--header-height));
-    flex-direction: column;
+    display: block;
   }
 
   .carrierScene .cityMap {
-    position: relative;
-    order: 1;
-    min-height: 650px;
+    position: absolute;
+    min-height: 100%;
   }
 
   .carrierScene .mapImage {
@@ -1595,7 +1659,7 @@
     left: 12px;
     width: auto;
     margin: 0;
-    padding: 15px 16px;
+    padding: 12px 14px;
     border-radius: 26px 26px 8px 26px;
   }
 
@@ -1605,7 +1669,7 @@
   }
 
   .missionBar h2 {
-    font-size: clamp(25px, 7.2vw, 30px);
+    font-size: clamp(22px, 6.4vw, 27px);
   }
 
   .missionBadge {
@@ -1618,36 +1682,44 @@
   }
 
   .carrierDock {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    order: 2;
+    position: absolute;
+    right: 8px;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    left: 8px;
     grid-template-columns: 1fr 1fr;
-    gap: 7px;
-    padding: 0 10px 14px;
+    gap: 6px;
+    padding: 0;
   }
 
   .carrierRow {
-    min-height: 170px;
-    grid-template-columns: 1fr 30px;
-    grid-template-rows: 90px 1fr;
-    gap: 8px;
-    padding: 12px;
-    border-radius: 20px;
+    min-height: 128px;
+    grid-template-columns: 1fr 24px;
+    grid-template-rows: 66px minmax(0, 1fr);
+    gap: 5px;
+    padding: 8px;
+    border-radius: 17px;
   }
 
   .carrierVehicle {
-    min-height: 88px;
+    min-height: 62px;
     grid-column: 1 / -1;
   }
 
   .carrierRow strong {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .carrierRow p {
     display: none;
+  }
+
+  .carrierRow small {
+    font-size: 8px;
+  }
+
+  .carrierArrow {
+    width: 24px;
+    height: 24px;
   }
 
   .mapHotspot {
@@ -1670,7 +1742,7 @@
   }
 
   .mapHotspot[data-carrier="near"] {
-    top: 72.7%;
+    top: 57%;
     left: 51.2%;
   }
 
@@ -1687,9 +1759,8 @@
   .sceneStage[data-layout="result"] .cityMap,
   .sceneStage[data-layout="express"] .cityMap,
   .sceneStage[data-layout="complete"] .cityMap {
-    position: relative;
-    order: 1;
-    min-height: 430px;
+    position: absolute;
+    min-height: 100%;
   }
 
   .cityMap[data-mode="result"] .mapShade,
@@ -1709,11 +1780,12 @@
 
   .carrierFacts span,
   .expressMetrics span {
-    min-height: 62px;
+    min-height: 52px;
+    padding: 7px;
   }
 
   .scoreDelta {
-    gap: 8px;
+    gap: 5px;
   }
 
   .comparisonRow {
@@ -1725,7 +1797,153 @@
   }
 
   .completeStats {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin: 14px 0;
+  }
+
+  .briefingPanel,
+  .resultPanel,
+  .expressPanel,
+  .completePanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .briefingPanel .panelLead,
+  .resultPanel .panelLead,
+  .expressPanel .panelLead,
+  .completePanel .panelLead {
+    margin-top: 12px;
+  }
+
+  .briefingPanel .primaryButton,
+  .resultPanel .primaryButton,
+  .expressPanel .primaryButton {
+    min-height: 50px;
+    margin-top: auto;
+  }
+
+  .carrierFacts,
+  .expressMetrics {
+    margin: 14px 0;
+  }
+
+  .scoreDelta {
+    margin-bottom: 14px;
+  }
+
+  .scoreDelta > div {
+    padding: 8px 5px 8px 0;
+  }
+
+  .resultTopline {
+    margin-bottom: 10px;
+  }
+
+  .resultTopline strong {
+    min-width: 82px;
+    min-height: 42px;
+    font-size: 14px;
+  }
+
+  .expressIntro {
+    gap: 7px;
+  }
+
+  .expressIntro h2 {
+    font-size: clamp(27px, 7.7vw, 34px);
+  }
+
+  .scanResults {
+    gap: 5px;
+    margin: 12px 0 8px;
+  }
+
+  .comparisonRow {
+    min-height: 58px;
+    gap: 6px 10px;
+    padding: 8px 10px;
+  }
+
+  .comparisonRow strong {
+    font-size: 12px;
+  }
+
+  .learningNote {
+    margin-bottom: 10px;
+    padding: 9px 11px;
+  }
+
+  .learningNote p {
+    margin-top: 3px;
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .completionMark {
+    margin-bottom: 12px;
+  }
+
+  .completionMark span,
+  .completionMark i {
+    width: 42px;
+    height: 42px;
+  }
+
+  .completeStats div {
+    padding: 9px 0;
+  }
+
+  .completeActions {
+    gap: 12px;
+  }
+
+  .completeActions .primaryButton {
+    min-height: 48px;
+  }
+
+  @media (max-height: 720px) {
+    .dialogPanel,
+    .briefingPanel,
+    .resultPanel,
+    .expressPanel,
+    .completePanel {
+      inset: 5px 5px max(5px, env(safe-area-inset-bottom));
+      padding: 13px;
+    }
+
+    .screenHeading h2,
+    .briefingPanel h2,
+    .resultPanel h2,
+    .expressPanel h2,
+    .completePanel h2 {
+      font-size: 26px;
+    }
+
+    .screenHeading > p:last-child,
+    .panelLead,
+    .choiceText p {
+      display: none;
+    }
+
+    .choiceGrid,
+    .choiceGrid[data-count="2"] {
+      gap: 5px;
+    }
+
+    .carrierRow {
+      min-height: 112px;
+      grid-template-rows: 54px minmax(0, 1fr);
+    }
+
+    .carrierVehicle {
+      min-height: 50px;
+    }
+
+    .learningNote {
+      display: none;
+    }
   }
 }
 
