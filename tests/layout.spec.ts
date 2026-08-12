@@ -25,6 +25,14 @@ async function expectControlsInsideViewport(page: Page) {
   }
 }
 
+async function expectScoreIcons(page: Page) {
+  for (const key of ["energy", "empathy", "efficiency"]) {
+    const score = page.locator(`[data-score-key="${key}"]`).first();
+    await expect(score).toBeVisible();
+    await expect(score.locator("img")).toBeVisible();
+  }
+}
+
 test("keeps the complete route inside one viewport", async ({ page }) => {
   await page.goto("/");
   await expect(
@@ -33,6 +41,7 @@ test("keeps the complete route inside one viewport", async ({ page }) => {
   await expectNoPageScroll(page);
 
   await page.getByRole("button", { name: /Начать маршрут/ }).click();
+  await expectScoreIcons(page);
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
   await page.getByRole("button", { name: /Студент/ }).click();

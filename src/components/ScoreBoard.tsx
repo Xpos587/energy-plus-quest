@@ -1,15 +1,22 @@
 import type { CSSProperties } from "react";
 import styles from "../App.module.css";
+import efficiencyIconUrl from "../assets/icons/metrics/efficiency.svg";
+import empathyIconUrl from "../assets/icons/metrics/empathy.svg";
+import energyIconUrl from "../assets/icons/metrics/energy.svg";
 import type { Scores } from "../game/types";
 
 const scoreItems: Array<{
   key: keyof Scores;
-  short: string;
+  iconUrl: string;
   label: string;
 }> = [
-  { key: "energy", short: "ЭН", label: "Энергия" },
-  { key: "empathy", short: "ЭМ", label: "Эмпатия" },
-  { key: "efficiency", short: "ЭФ", label: "Эффективность" },
+  { key: "energy", iconUrl: energyIconUrl, label: "Энергия" },
+  { key: "empathy", iconUrl: empathyIconUrl, label: "Эмпатия" },
+  {
+    key: "efficiency",
+    iconUrl: efficiencyIconUrl,
+    label: "Эффективность",
+  },
 ];
 
 export function ScoreBoard({ scores }: { scores: Scores }) {
@@ -18,12 +25,18 @@ export function ScoreBoard({ scores }: { scores: Scores }) {
       {scoreItems.map((item) => (
         <div
           className={styles.scoreItem}
+          data-score-key={item.key}
           data-tone={scoreTone(scores[item.key])}
           key={item.key}
           title={item.label}
         >
           <span>
-            <b className={styles.scoreShort}>{item.short}</b>
+            <img
+              alt=""
+              aria-hidden="true"
+              className={styles.scoreIcon}
+              src={item.iconUrl}
+            />
             <em className={styles.scoreLong}>{item.label}</em>
           </span>
           <strong>{formatScore(scores[item.key])}</strong>
@@ -47,8 +60,20 @@ export function ScoreDelta({ scores }: { scores: Scores }) {
   return (
     <fieldset className={styles.scoreDelta} aria-label="Изменение показателей">
       {scoreItems.map((item) => (
-        <div data-direction={deltaDirection(scores[item.key])} key={item.key}>
-          <span>{item.label}</span>
+        <div
+          data-score-key={item.key}
+          data-direction={deltaDirection(scores[item.key])}
+          key={item.key}
+        >
+          <span>
+            <img
+              alt=""
+              aria-hidden="true"
+              className={styles.deltaIcon}
+              src={item.iconUrl}
+            />
+            {item.label}
+          </span>
           <strong data-positive={scores[item.key] > 0}>
             {formatScore(scores[item.key])}
           </strong>
