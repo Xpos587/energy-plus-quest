@@ -11,9 +11,14 @@ materials/private/
 !.env.example
 node_modules/
 build/
+release/
 test-results/
 playwright-report/
 .DS_Store
+
+# The current runtime image copies the pre-built static bundle.
+!dist/
+!dist/**
 
 # Local agent/skill configuration (not part of the project)
 .agents/

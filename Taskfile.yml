@@ -18,3 +18,11 @@ tasks:
       - task: check
       - task: test
       - task: build
+  e2e:
+    cmds:
+      - bun run test:e2e
+  release:
+    cmds:
+      - task: verify
+      - task: e2e
+      - sh scripts/package-static.sh

@@ -23,6 +23,30 @@ export default defineConfig({
         viewport: { width: 390, height: 844 },
       },
     },
+    {
+      name: "windows-125-chromium",
+      testMatch: /layout\.spec\.ts/,
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1152, height: 720 },
+      },
+    },
+    {
+      name: "windows-140-chromium",
+      testMatch: /layout\.spec\.ts/,
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1024, height: 643 },
+      },
+    },
+    {
+      name: "tablet-chromium",
+      testMatch: /layout\.spec\.ts/,
+      use: {
+        ...devices["Galaxy Tab S4"],
+        viewport: { width: 820, height: 1180 },
+      },
+    },
   ],
   webServer: {
     command: "bun run dev -- --host 127.0.0.1 --port 4173",

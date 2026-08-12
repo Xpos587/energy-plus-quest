@@ -30,6 +30,7 @@ import { GameProvider, useGame } from "./game/GameContext";
 import type { CarrierId, ChoiceItem } from "./game/types";
 
 const progressSteps = ["Профиль", "Получатель", "Груз", "Перевозчик"];
+const brandIconUrl = `${import.meta.env.BASE_URL}brand/icon-192.png`;
 
 const progressByStep = {
   intro: -1,
@@ -87,7 +88,9 @@ function Game() {
             <img
               alt="Энергия+"
               className={styles.brandIcon}
-              src="/brand/icon-192.png"
+              height="192"
+              src={brandIconUrl}
+              width="192"
             />
             <div>
               <span>Доставляем радость</span>
