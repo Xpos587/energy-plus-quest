@@ -90,7 +90,7 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
   ).toHaveCount(4);
 
   const viewport = page.viewportSize();
-  if (viewport && viewport.width > 760 && viewport.width <= 1120) {
+  if (viewport && viewport.width > 760 && viewport.width <= 1380) {
     const scoreBottom = await page
       .locator("[data-score-key]")
       .evaluateAll((elements) =>

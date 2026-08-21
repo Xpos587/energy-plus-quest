@@ -50,16 +50,18 @@ function Game() {
     <div className={styles.app} data-step={state.step}>
       {showChrome && (
         <header className={styles.header}>
-          <div className={styles.projectMark}>
-            <img
-              alt="Газпром нефть — Газпромнефть-Снабжение"
-              className={styles.companyLogo}
-              src={companyLogoUrl}
-            />
-          </div>
-          <div className={styles.energyMark} aria-label="Энергия+">
-            <img src={energyLogoUrl} alt="" />
-            <span>Энергия+</span>
+          <div className={styles.brandCluster}>
+            <div className={styles.projectMark}>
+              <img
+                alt="Газпром нефть — Газпромнефть-Снабжение"
+                className={styles.companyLogo}
+                src={companyLogoUrl}
+              />
+            </div>
+            <div aria-label="Энергия+" className={styles.energyMark} role="img">
+              <img src={energyLogoUrl} alt="" />
+              <span>Энергия+</span>
+            </div>
           </div>
           <div className={styles.gameIdentity}>
             <span>Доставляем радость</span>

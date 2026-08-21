@@ -22,13 +22,20 @@
   z-index: 40;
   display: grid;
   height: var(--header-height);
-  grid-template-columns: minmax(128px, 148px) 86px auto minmax(300px, 1fr) auto auto;
+  grid-template-columns: minmax(228px, 254px) auto minmax(300px, 1fr) auto auto;
   align-items: center;
   gap: 26px;
   padding: 10px clamp(18px, 3.4vw, 54px);
   border-bottom: 1px solid rgba(0, 60, 166, 0.12);
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
+}
+
+.brandCluster {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 14px;
 }
 
 .projectMark {
@@ -4079,13 +4086,85 @@
 
 @media (min-width: 1121px) and (max-width: 1500px) {
   .header {
-    grid-template-columns: minmax(124px, 140px) 80px auto minmax(300px, 1fr) auto auto;
+    grid-template-columns: minmax(218px, 234px) auto minmax(300px, 1fr) auto auto;
     gap: 14px;
     padding-inline: 30px;
   }
 
   .companyLogo {
     max-width: 140px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1380px) {
+  .app {
+    --header-height: 82px;
+  }
+
+  .header {
+    height: var(--header-height);
+    grid-template-areas:
+      "brand selection scores"
+      "progress progress progress";
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-rows: 56px 3px;
+    column-gap: 16px;
+    row-gap: 4px;
+    padding: 6px clamp(18px, 3vw, 38px) 9px;
+  }
+
+  .brandCluster {
+    grid-area: brand;
+  }
+
+  .gameIdentity {
+    display: none;
+  }
+
+  .routeProgress {
+    position: static;
+    display: grid;
+    grid-area: progress;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    width: 100%;
+  }
+
+  .progressItem {
+    display: block;
+    min-width: 0;
+    height: 3px;
+    padding: 0;
+    border-radius: 999px;
+    background: rgba(0, 60, 166, 0.14);
+  }
+
+  .progressItem:not(:last-child) {
+    padding-right: 0;
+  }
+
+  .progressItem:not(:last-child)::after,
+  .progressItem i,
+  .progressItem span {
+    display: none;
+  }
+
+  .progressItem[data-active="true"] {
+    background: var(--blue);
+  }
+
+  .progressItem[data-current="true"] {
+    background: var(--orange);
+  }
+
+  .selectionSummary {
+    grid-area: selection;
+    justify-self: end;
+  }
+
+  .scoreBoard {
+    grid-area: scores;
+    justify-self: end;
   }
 }
 
@@ -4100,6 +4179,10 @@
     grid-template-rows: 52px;
     gap: 5px;
     padding: 6px 8px 10px;
+  }
+
+  .brandCluster {
+    display: contents;
   }
 
   .projectMark {
