@@ -22,7 +22,7 @@
 
 Команда `go-task release` проверяет проект, проходит E2E-матрицу, собирает архив
 `release/energy-plus-quest-static.zip` и тестирует его из вложенного URL вида
-`/specialprojects/energy-plus-quest/`. В архиве `index.html` лежит на верхнем
+`/specprojects/joydelivery/`. В архиве `index.html` лежит на верхнем
 уровне — дополнительную папку `dist/` загружать на площадку не нужно.
 
 Для кеширования рекомендуется:

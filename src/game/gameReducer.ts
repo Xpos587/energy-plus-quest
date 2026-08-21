@@ -1,10 +1,39 @@
 import { findCarrier } from "./content";
 import type { GameAction, GameState } from "./types";
 
+const emptyScores = { energy: 0, empathy: 0, efficiency: 0 };
+
 export const initialGameState: GameState = {
   step: "intro",
-  scores: { energy: 0, empathy: 0, efficiency: 0 },
+  scores: emptyScores,
 };
+
+function goBack(state: GameState): GameState {
+  switch (state.step) {
+    case "profile":
+      return { ...state, step: "intro" };
+    case "recipient":
+      return { ...state, step: "profile", recipient: undefined };
+    case "parcel":
+      return { ...state, step: "recipient", parcel: undefined };
+    case "carrier":
+      return {
+        ...state,
+        step: "parcel",
+        carrier: undefined,
+        scores: emptyScores,
+      };
+    case "outcome":
+      return {
+        ...state,
+        step: "carrier",
+        carrier: undefined,
+        scores: emptyScores,
+      };
+    case "intro":
+      return state;
+  }
+}
 
 export function gameReducer(state: GameState, action: GameAction): GameState {
   switch (action.type) {
@@ -15,9 +44,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
     case "CHOOSE_RECIPIENT":
       return { ...state, recipient: action.value, step: "parcel" };
     case "CHOOSE_PARCEL":
-      return { ...state, parcel: action.value, step: "briefing" };
-    case "OPEN_CARRIER_MAP":
-      return { ...state, step: "carrier" };
+      return { ...state, parcel: action.value, step: "carrier" };
     case "CHOOSE_CARRIER": {
       const carrier = findCarrier(action.value);
 
@@ -32,10 +59,8 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         step: "outcome",
       };
     }
-    case "SHOW_EXPRESS":
-      return { ...state, step: "express" };
-    case "COMPLETE_SCENE":
-      return { ...state, step: "complete" };
+    case "BACK":
+      return goBack(state);
     case "RESET":
       return initialGameState;
   }

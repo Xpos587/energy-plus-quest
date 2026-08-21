@@ -58,14 +58,14 @@ async function expectResultScoresDoNotOverlap(page: Page) {
   }
 }
 
-test("keeps the complete route inside one viewport", async ({ page }) => {
+test("keeps the playable route inside one viewport", async ({ page }) => {
   await page.goto("/");
   await expect(
-    page.getByRole("heading", { name: "ДОСТАВЛЯЕМ РАДОСТЬ" }),
+    page.getByRole("heading", { name: /Доставляем радость/ }),
   ).toBeVisible();
   await expectNoPageScroll(page);
 
-  await page.getByRole("button", { name: /Начать маршрут/ }).click();
+  await page.getByRole("button", { name: /Начать игру/ }).click();
   await expectScoreIcons(page);
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
@@ -78,35 +78,93 @@ test("keeps the complete route inside one viewport", async ({ page }) => {
   await page.getByRole("button", { name: /Фотоаппарат/ }).click();
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
-  await page.getByRole("button", { name: /Открыть карту/ }).click();
 
   await expect(
-    page.getByRole("heading", { name: "Кому доверите первый участок?" }),
+    page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
   ).toBeVisible();
   await expect(
-    page.getByRole("button", { name: /Запустить Express/ }),
+    page.getByRole("button", { name: "Express: Автоподбор Express" }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: /(?:Машин(?:а|ы)|Express)/ }),
+  ).toHaveCount(4);
+
+  const viewport = page.viewportSize();
+  if (viewport && viewport.width > 760 && viewport.width <= 1120) {
+    const scoreBottom = await page
+      .locator("[data-score-key]")
+      .evaluateAll((elements) =>
+        Math.max(
+          ...elements.map((element) => element.getBoundingClientRect().bottom),
+        ),
+      );
+    const progressTop = await page
+      .getByRole("navigation", { name: "Прогресс сцены" })
+      .evaluate((element) => element.getBoundingClientRect().top);
+
+    expect(scoreBottom).toBeLessThanOrEqual(progressTop);
+  }
+
+  if (
+    viewport &&
+    viewport.width > 760 &&
+    viewport.width <= 1120 &&
+    viewport.height <= 700
+  ) {
+    const missionBottom = await page
+      .locator('[class*="missionBar"]')
+      .evaluate((element) => element.getBoundingClientRect().bottom);
+    const carrierTops = await page
+      .locator('section[aria-label="Карта доступных перевозчиков"] button')
+      .evaluateAll((elements) =>
+        elements.map((element) => element.getBoundingClientRect().top),
+      );
+
+    expect(Math.min(...carrierTops)).toBeGreaterThanOrEqual(missionBottom);
+  }
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
 
-  await page.getByRole("button", { name: /Запустить Express/ }).click();
+  await page
+    .getByRole("button", { name: "Express: Автоподбор Express" })
+    .click();
   await expect(
     page.getByRole("heading", { name: "Перевозчик найден за два часа" }),
   ).toBeVisible();
   await expectResultScoresDoNotOverlap(page);
+  if (viewport && viewport.width > 760) {
+    const resultPanel = await page
+      .locator('[data-layout="result"] [data-carrier="express"]')
+      .boundingBox();
+    expect(resultPanel).not.toBeNull();
+    expect(resultPanel?.x ?? 0).toBeGreaterThanOrEqual(viewport.width * 0.6);
+  }
+
+  if (viewport && viewport.width <= 760 && viewport.height <= 720) {
+    const panelTop = await page
+      .locator('[data-layout="result"] [class*="resultPanel"]')
+      .evaluate((element) => element.getBoundingClientRect().top);
+    const artworkBottom = await page
+      .locator('[data-layout="result"] [class*="outcomeBackdrop"]')
+      .evaluate((element) => element.getBoundingClientRect().bottom);
+    expect(panelTop).toBeGreaterThanOrEqual(artworkBottom - 2);
+  }
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
-  await page.getByRole("button", { name: /Разобрать подбор Express/ }).click();
   await expect(
-    page.getByRole("heading", {
-      name: "Не искать фуру. Найти лучшее решение.",
-    }),
+    page.getByRole("button", { name: /Назад к машинам/ }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: /Назад к машинам/ }).click();
+  await expect(
+    page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
   ).toBeVisible();
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
-  await page.getByRole("button", { name: /Зафиксировать результат/ }).click();
+
+  await page.getByRole("button", { name: /Назад/ }).first().click();
   await expect(
-    page.getByRole("heading", { name: "Первый участок пройден" }),
+    page.getByRole("heading", { name: "Что будет в посылке?" }),
   ).toBeVisible();
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);

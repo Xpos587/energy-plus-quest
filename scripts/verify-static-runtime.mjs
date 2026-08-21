@@ -49,22 +49,25 @@ try {
     page.on("pageerror", (error) => pageErrors.push(error.message));
 
     await page.goto(target, { waitUntil: "networkidle" });
-    await page.getByRole("button", { name: /Начать маршрут/ }).click();
+    await page.getByRole("button", { name: /Начать игру/ }).click();
     await page.getByRole("button", { name: /Студент/ }).click();
     await page.getByRole("button", { name: /Альва/ }).click();
     await page.getByRole("button", { name: /Фотоаппарат/ }).click();
-    await page.getByRole("button", { name: /Открыть карту/ }).click();
-    await page.getByRole("button", { name: /Запустить Express/ }).click();
     await page
-      .getByRole("button", { name: /Разобрать подбор Express/ })
+      .getByRole("button", { name: "Express: Автоподбор Express" })
       .click();
     await page
-      .getByRole("button", { name: /Зафиксировать результат/ })
-      .click();
-    await page
-      .getByRole("heading", { name: "Первый участок пройден" })
+      .getByRole("heading", { name: "Перевозчик найден за два часа" })
       .waitFor();
     await page.evaluate(() => document.fonts.ready);
+    await page.waitForFunction(
+      () =>
+        [...document.images].every(
+          (image) => image.complete && image.naturalWidth > 0,
+        ),
+      undefined,
+      { timeout: 10_000 },
+    );
 
     const state = await page.evaluate(() => ({
       clientHeight: document.documentElement.clientHeight,
@@ -72,6 +75,9 @@ try {
       imagesLoaded: [...document.images].every(
         (image) => image.complete && image.naturalWidth > 0,
       ),
+      incompleteImages: [...document.images]
+        .filter((image) => !image.complete || image.naturalWidth === 0)
+        .map((image) => image.currentSrc || image.src),
       scrollHeight: document.documentElement.scrollHeight,
       scrollWidth: document.documentElement.scrollWidth,
     }));
@@ -96,7 +102,7 @@ try {
     }
 
     console.log(
-      `${profile.name}: complete route passed; all resources local; no page scroll`,
+      `${profile.name}: outcome route passed; all resources local; no page scroll`,
     );
     await page.close();
   }

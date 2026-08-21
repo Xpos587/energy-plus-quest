@@ -3,11 +3,8 @@ export type GameStep =
   | "profile"
   | "recipient"
   | "parcel"
-  | "briefing"
   | "carrier"
-  | "outcome"
-  | "express"
-  | "complete";
+  | "outcome";
 
 export type ProfileId = "student" | "professional";
 export type RecipientId = "alva" | "khor" | "arseniy";
@@ -34,18 +31,20 @@ export type GameAction =
   | { type: "CHOOSE_PROFILE"; value: ProfileId }
   | { type: "CHOOSE_RECIPIENT"; value: RecipientId }
   | { type: "CHOOSE_PARCEL"; value: ParcelId }
-  | { type: "OPEN_CARRIER_MAP" }
   | { type: "CHOOSE_CARRIER"; value: CarrierId }
-  | { type: "SHOW_EXPRESS" }
-  | { type: "COMPLETE_SCENE" }
+  | { type: "BACK" }
   | { type: "RESET" };
 
 export type ChoiceItem<T extends string> = {
   id: T;
   title: string;
   eyebrow: string;
-  description: string;
+  description?: string;
   symbol: string;
+};
+
+export type ParcelChoice = ChoiceItem<ParcelId> & {
+  accusativeTitle: string;
 };
 
 export type CarrierChoice = ChoiceItem<CarrierId> & {

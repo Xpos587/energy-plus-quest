@@ -7,6 +7,9 @@
 2. Файл index.html должен находиться непосредственно в корне этой папки.
 3. Открывайте спецпроект отдельной ссылкой в новой вкладке.
 
+Целевой production-URL:
+https://e-plus.media/specprojects/joydelivery/
+
 ЛОКАЛЬНАЯ ПРОВЕРКА
 
 - Не открывайте index.html двойным кликом через адрес `file://`: современные
@@ -33,10 +36,10 @@ fonts/
 
 ПУБЛИКАЦИЯ В PRODUCTION
 
-- В репозитории исходный код собирается GitHub Actions в статический образ.
-- Workflow отправляет образ в registry и вызывает Dokploy для развёртывания.
-- Dokploy публикует приложение по HTTPS; PHP, WordPress, Node.js и API для
-  работы игры не нужны.
+- Распакуйте архив в webroot/specprojects/joydelivery/.
+- Пример location-блоков Nginx находится в deploy/nginx-joydelivery.conf в
+  репозитории проекта.
+- index.html отдаётся без кеша; ассеты с хешами можно кешировать на год.
 
 РЕКОМЕНДУЕМОЕ КЕШИРОВАНИЕ
 

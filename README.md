@@ -40,6 +40,8 @@ go-task release
 Результат: `release/energy-plus-quest-static.zip`. `index.html` находится в
 корне архива, а относительные пути проверяются из вложенной папки спецпроекта.
 
+Целевой URL площадки: `https://e-plus.media/specprojects/joydelivery/`.
+
 ## Рабочие документы
 
 - [Актуальные требования](docs/requirements.md)

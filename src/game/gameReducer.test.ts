@@ -2,27 +2,64 @@ import { describe, expect, it } from "vitest";
 import { gameReducer, initialGameState } from "./gameReducer";
 
 describe("gameReducer", () => {
-  it("walks through onboarding and keeps the selected cargo context", () => {
-    const started = gameReducer(initialGameState, { type: "START" });
-    const withProfile = gameReducer(started, {
-      type: "CHOOSE_PROFILE",
-      value: "student",
-    });
-    const withRecipient = gameReducer(withProfile, {
-      type: "CHOOSE_RECIPIENT",
-      value: "alva",
-    });
-    const withParcel = gameReducer(withRecipient, {
-      type: "CHOOSE_PARCEL",
-      value: "camera",
-    });
+  it("moves directly from parcel selection to the carrier map", () => {
+    const state = gameReducer(
+      {
+        ...initialGameState,
+        step: "parcel",
+        profile: "student",
+        recipient: "alva",
+      },
+      { type: "CHOOSE_PARCEL", value: "camera" },
+    );
 
-    expect(withParcel).toMatchObject({
-      step: "briefing",
+    expect(state).toMatchObject({
+      step: "carrier",
       profile: "student",
       recipient: "alva",
       parcel: "camera",
     });
+  });
+
+  it("returns from an outcome to the carrier map and clears its score", () => {
+    const outcome = gameReducer(
+      {
+        ...initialGameState,
+        step: "carrier",
+        profile: "professional",
+        recipient: "arseniy",
+        parcel: "boat",
+      },
+      { type: "CHOOSE_CARRIER", value: "crew" },
+    );
+
+    expect(gameReducer(outcome, { type: "BACK" })).toEqual({
+      step: "carrier",
+      profile: "professional",
+      recipient: "arseniy",
+      parcel: "boat",
+      scores: { energy: 0, empathy: 0, efficiency: 0 },
+    });
+  });
+
+  it("walks backward through the personalization choices", () => {
+    expect(
+      gameReducer(
+        { ...initialGameState, step: "recipient", profile: "student" },
+        { type: "BACK" },
+      ).step,
+    ).toBe("profile");
+    expect(
+      gameReducer(
+        {
+          ...initialGameState,
+          step: "parcel",
+          profile: "student",
+          recipient: "alva",
+        },
+        { type: "BACK" },
+      ).step,
+    ).toBe("recipient");
   });
 
   it("applies the chosen carrier score and opens the consequence", () => {

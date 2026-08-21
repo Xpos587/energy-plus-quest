@@ -26,7 +26,7 @@ if rg -n -i 'fetch\(|XMLHttpRequest|WebSocket|EventSource|https?://|//[a-z0-9.-]
   exit 1
 fi
 
-if rg -n -P '(?<!\.)/(assets|brand|fonts)/' dist/index.html dist/assets; then
+if rg -n -P '["'\''(]/(assets|brand|fonts)/' dist/index.html dist/assets; then
   echo "Root-relative project resource found in production output" >&2
   exit 1
 fi
@@ -38,7 +38,7 @@ rm -f "$archive_path"
   zip -q -r "$archive_path" .
 )
 
-nested_root="$verification_root/specialprojects/energy-plus-quest"
+nested_root="$verification_root/specprojects/joydelivery"
 mkdir -p "$nested_root"
 unzip -q "$archive_path" -d "$nested_root"
 
@@ -46,7 +46,7 @@ busybox httpd -f -p 127.0.0.1:4174 -h "$verification_root" &
 server_pid=$!
 
 attempt=0
-until curl -fsS "http://127.0.0.1:4174/specialprojects/energy-plus-quest/" -o "$verification_root/index.html"; do
+until curl -fsS "http://127.0.0.1:4174/specprojects/joydelivery/" -o "$verification_root/index.html"; do
   attempt=$((attempt + 1))
   if [ "$attempt" -ge 20 ]; then
     echo "Static archive did not start from a nested path" >&2
@@ -61,8 +61,8 @@ test -n "$asset_path"
 test -n "$font_path"
 test -f "$nested_root/README-DEPLOY.txt"
 test -f "$nested_root/fonts/README.md"
-curl -fsS "http://127.0.0.1:4174/specialprojects/energy-plus-quest/$asset_path" -o /dev/null
-curl -fsS "http://127.0.0.1:4174/specialprojects/energy-plus-quest/fonts/$(basename "$font_path")" -o /dev/null
+curl -fsS "http://127.0.0.1:4174/specprojects/joydelivery/$asset_path" -o /dev/null
+curl -fsS "http://127.0.0.1:4174/specprojects/joydelivery/fonts/$(basename "$font_path")" -o /dev/null
 
 if rg -n -i "(src|href)=[\"'][[:space:]]*https?://|url\\([\"']?[[:space:]]*https?://|localhost|127\\.0\\.0\\.1|hypcat\\.net|dokploy" \
   "$nested_root" -g '*.html' -g '*.css' -g '*.js'; then
@@ -71,6 +71,6 @@ if rg -n -i "(src|href)=[\"'][[:space:]]*https?://|url\\([\"']?[[:space:]]*https
 fi
 
 bun scripts/verify-static-runtime.mjs \
-  "http://127.0.0.1:4174/specialprojects/energy-plus-quest/"
+  "http://127.0.0.1:4174/specprojects/joydelivery/"
 
 echo "Static archive verified: release/energy-plus-quest-static.zip"

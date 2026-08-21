@@ -1,8 +1,8 @@
 import type { CSSProperties } from "react";
+import efficiencyIconUrl from "../../design/scene-01/assets/feedback-v5/production/metrics/efficiency.webp";
+import empathyIconUrl from "../../design/scene-01/assets/feedback-v5/production/metrics/empathy-no-border.webp";
+import energyIconUrl from "../../design/scene-01/assets/feedback-v5/production/metrics/energy.webp";
 import styles from "../App.module.css";
-import efficiencyIconUrl from "../assets/icons/metrics/efficiency.svg";
-import empathyIconUrl from "../assets/icons/metrics/empathy.svg";
-import energyIconUrl from "../assets/icons/metrics/energy.svg";
 import type { Scores } from "../game/types";
 
 const scoreItems: Array<{
@@ -35,6 +35,7 @@ export function ScoreBoard({ scores }: { scores: Scores }) {
               alt=""
               aria-hidden="true"
               className={styles.scoreIcon}
+              data-score-art="feedback-v5"
               src={item.iconUrl}
             />
             <em className={styles.scoreLong}>{item.label}</em>
@@ -70,6 +71,7 @@ export function ScoreDelta({ scores }: { scores: Scores }) {
               alt=""
               aria-hidden="true"
               className={styles.deltaIcon}
+              data-score-art="feedback-v5"
               src={item.iconUrl}
             />
             <em className={styles.deltaLabel}>{item.label}</em>
