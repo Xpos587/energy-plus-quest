@@ -18,6 +18,7 @@ import type { CarrierId, ChoiceItem, GameAction } from "./game/types";
 
 const progressSteps = ["Профиль", "Получатель", "Подарок", "Перевозчик"];
 const companyLogoUrl = `${import.meta.env.BASE_URL}brand/gpn-snabzhenie.svg`;
+const energyLogoUrl = `${import.meta.env.BASE_URL}brand/icon-192.png`;
 
 const progressByStep = {
   intro: -1,
@@ -56,9 +57,13 @@ function Game() {
               src={companyLogoUrl}
             />
           </div>
+          <div className={styles.energyMark} aria-label="Энергия+">
+            <img src={energyLogoUrl} alt="" />
+            <span>Энергия+</span>
+          </div>
           <div className={styles.gameIdentity}>
             <span>Доставляем радость</span>
-            <small>Энергия+ · сцена 01</small>
+            <small>Сцена 01</small>
           </div>
           <nav className={styles.routeProgress} aria-label="Прогресс сцены">
             {progressSteps.map((label, index) => (
@@ -142,6 +147,17 @@ function Intro({ onStart }: { onStart: () => void }) {
       <CityMap mode="soft" />
       <div className={styles.mapVeil} aria-hidden="true" />
       <div className={styles.openingPanel}>
+        <div className={styles.introBrandLockup}>
+          <img
+            alt="Газпром нефть — Газпромнефть-Снабжение"
+            className={styles.introCompanyLogo}
+            src={companyLogoUrl}
+          />
+          <span className={styles.introEnergyMark}>
+            <img src={energyLogoUrl} alt="" />
+            <span>Энергия+</span>
+          </span>
+        </div>
         <p className={styles.gameStart}>Начало игры</p>
         <h1>
           Доставляем <span>радость</span>
