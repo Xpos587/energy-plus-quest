@@ -122,16 +122,18 @@
 }
 
 .routeProgress {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  overflow: hidden;
   min-width: 0;
 }
 
 .progressItem {
   position: relative;
   display: grid;
-  min-width: 102px;
-  grid-template-columns: 24px auto;
+  min-width: 0;
+  grid-template-columns: 24px minmax(0, 1fr);
   align-items: center;
   gap: 8px;
   color: rgba(0, 60, 166, 0.28);
@@ -171,6 +173,13 @@
   color: var(--white);
   border-color: var(--orange);
   background: var(--orange);
+}
+
+.progressItem span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .scoreBoard,

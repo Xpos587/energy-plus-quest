@@ -69,6 +69,27 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
   await expectScoreIcons(page);
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
+
+  const initialViewport = page.viewportSize();
+  if (initialViewport && initialViewport.width > 1380) {
+    const identityBox = await page
+      .locator('[class*="gameIdentity"]')
+      .boundingBox();
+    const progressBox = await page
+      .getByRole("navigation", { name: "Прогресс сцены" })
+      .boundingBox();
+    const progressOverflow = await page
+      .getByRole("navigation", { name: "Прогресс сцены" })
+      .evaluate((element) => element.scrollWidth - element.clientWidth);
+
+    expect(identityBox).not.toBeNull();
+    expect(progressBox).not.toBeNull();
+    expect(
+      (identityBox?.x ?? 0) + (identityBox?.width ?? 0),
+    ).toBeLessThanOrEqual(progressBox?.x ?? 0);
+    expect(progressOverflow).toBeLessThanOrEqual(1);
+  }
+
   await page.getByRole("button", { name: /Студент/ }).click();
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
