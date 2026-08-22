@@ -4405,10 +4405,6 @@
     font-size: 10px;
   }
 
-  .outcomeScene[data-layout="result"] .resultActions .primaryButton {
-    display: none;
-  }
-
   .outcomeScene[data-layout="result"] .resultActions {
     grid-template-columns: 1fr 1fr;
   }
@@ -4529,6 +4525,46 @@
   }
 
   .outcomeScene[data-layout="result"] .resultActions {
-    margin-top: 4px;
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    left: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 34px 34px;
+    gap: 5px;
+    margin: 0;
+  }
+
+  .outcomeScene[data-layout="result"] .resultPanel {
+    padding-bottom: 88px;
+  }
+
+  .outcomeScene[data-layout="result"] .resultActions .textButton,
+  .outcomeScene[data-layout="result"] .resultActions .primaryButton {
+    min-height: 34px;
+    height: 34px;
+    padding: 0 8px;
+    font-size: 9px;
+  }
+
+  .outcomeScene[data-layout="result"] .resultActions .primaryButton {
+    display: inline-flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="old"] span {
+    bottom: 128%;
+    left: 36%;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="express"] span {
+    bottom: 128%;
+    left: 64%;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="near"] span {
+    bottom: 126%;
+    left: 42%;
   }
 }
