@@ -4184,14 +4184,16 @@
 
   .header {
     height: var(--header-height);
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 104px minmax(0, 1fr);
     grid-template-rows: 52px;
-    gap: 0;
+    gap: 8px;
     padding: 6px 8px 10px;
   }
 
   .brandCluster {
-    display: none;
+    display: flex;
+    grid-column: 1;
+    align-items: center;
   }
 
   .projectMark {
@@ -4200,13 +4202,12 @@
   }
 
   .companyLogo {
-    width: 66px;
-    max-height: 30px;
+    width: 98px;
+    max-height: 32px;
   }
 
   .energyMark {
-    grid-row: 1;
-    grid-column: 2;
+    display: none;
   }
 
   .energyMark img {
@@ -4224,7 +4225,7 @@
 
   .scoreBoard {
     grid-row: 1;
-    grid-column: 1;
+    grid-column: 2;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 7px;
     width: 100%;
