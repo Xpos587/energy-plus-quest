@@ -4184,14 +4184,14 @@
 
   .header {
     height: var(--header-height);
-    grid-template-columns: 66px 32px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: 52px;
-    gap: 5px;
+    gap: 0;
     padding: 6px 8px 10px;
   }
 
   .brandCluster {
-    display: contents;
+    display: none;
   }
 
   .projectMark {
@@ -4224,9 +4224,9 @@
 
   .scoreBoard {
     grid-row: 1;
-    grid-column: 3;
+    grid-column: 1;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 4px;
+    gap: 7px;
     width: 100%;
   }
 
@@ -4271,8 +4271,7 @@
 
   .scoreLong,
   .app[data-step="carrier"] .scoreLong {
-    display: block;
-    font-size: 7.5px;
+    display: none;
   }
 
   .scoreItem strong {
@@ -4340,8 +4339,35 @@
   }
 
   .carrierScene .mapVehicle[data-carrier="crew"] span {
-    bottom: -1%;
-    left: 54%;
+    bottom: -20%;
+    left: 50%;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="old"] span {
+    bottom: 104%;
+    left: 38%;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="express"] span {
+    bottom: 104%;
+    left: 62%;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="near"] span {
+    bottom: 104%;
+    left: 44%;
+  }
+
+  .carrierScene .mapImage {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .carrierScene .mapPicture {
+    background: transparent;
   }
 
   /* Keep the task title out of the map's active area on phone screens. */
@@ -4351,8 +4377,8 @@
     bottom: max(10px, env(safe-area-inset-bottom));
     left: 10px;
     width: auto;
-    min-height: 68px;
-    padding: 34px 12px 10px;
+    min-height: 80px;
+    padding: 40px 12px 10px;
     border-radius: 24px 24px 8px 24px;
   }
 
@@ -4376,6 +4402,14 @@
     min-height: 38px;
     padding: 0 10px;
     font-size: 10px;
+  }
+
+  .outcomeScene[data-layout="result"] .resultActions .primaryButton {
+    display: none;
+  }
+
+  .outcomeScene[data-layout="result"] .resultActions {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

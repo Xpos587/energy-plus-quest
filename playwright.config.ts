@@ -32,6 +32,14 @@ export default defineConfig({
       },
     },
     {
+      name: "iphone-se-chromium",
+      testMatch: /layout\.spec\.ts/,
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 375, height: 667 },
+      },
+    },
+    {
       name: "windows-125-chromium",
       testMatch: /layout\.spec\.ts/,
       use: {
