@@ -10,13 +10,11 @@ import type {
 export const profiles: ChoiceItem<ProfileId>[] = [
   {
     id: "student",
-    eyebrow: "Вы —",
     title: "Студент",
     symbol: "01",
   },
   {
     id: "professional",
-    eyebrow: "Вы —",
     title: "Профессионал",
     symbol: "02",
   },

@@ -41,10 +41,17 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   }
   for (const role of ["student", "professional"]) {
     const card = page.locator(`[data-choice="${role}"]`);
-    await expect(card.locator('[data-role-part="label"]')).toHaveText("Вы —");
+    await expect(card.locator('[data-role-part="label"]')).toHaveCount(0);
     await expect(card.locator('[data-role-part="title"]')).toBeVisible();
     await expect(card.locator('[data-role-part="action"]')).toBeVisible();
   }
+  await expect(
+    page.getByText("Начало игры · роль", { exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByText("Выберите, кто отправится в путь.", { exact: true }),
+  ).toHaveCount(0);
+  await expect(page.getByText("Сцена 01", { exact: true })).toHaveCount(0);
   await settle(page);
   await page.screenshot({
     fullPage: false,

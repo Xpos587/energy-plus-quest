@@ -18,7 +18,7 @@ import type { CarrierId, ChoiceItem, GameAction } from "./game/types";
 
 const progressSteps = ["Профиль", "Получатель", "Подарок", "Перевозчик"];
 const companyLogoUrl = `${import.meta.env.BASE_URL}brand/gpn-snabzhenie.svg`;
-const energyLogoUrl = `${import.meta.env.BASE_URL}brand/icon-192.png`;
+const energyLogoUrl = `${import.meta.env.BASE_URL}brand/energy-plus-logo.svg`;
 
 const progressByStep = {
   intro: -1,
@@ -58,14 +58,9 @@ function Game() {
                 src={companyLogoUrl}
               />
             </div>
-            <div aria-label="Энергия+" className={styles.energyMark} role="img">
-              <img src={energyLogoUrl} alt="" />
-              <span>Энергия+</span>
+            <div className={styles.energyMark}>
+              <img alt="Энергия+" src={energyLogoUrl} />
             </div>
-          </div>
-          <div className={styles.gameIdentity}>
-            <span>Доставляем радость</span>
-            <small>Сцена 01</small>
           </div>
           <nav className={styles.routeProgress} aria-label="Прогресс сцены">
             {progressSteps.map((label, index) => (
@@ -83,7 +78,6 @@ function Game() {
               </div>
             ))}
           </nav>
-          <SelectionSummary />
           <ScoreBoard scores={state.scores} />
         </header>
       )}
@@ -95,8 +89,6 @@ function Game() {
           )}
           {state.step === "profile" && (
             <ChoiceScreen
-              description="Выберите, кто отправится в путь."
-              eyebrow="Начало игры · роль"
               items={profiles}
               onBack={() => navigate({ type: "BACK" })}
               onSelect={(value) => navigate({ type: "CHOOSE_PROFILE", value })}
@@ -156,8 +148,7 @@ function Intro({ onStart }: { onStart: () => void }) {
             src={companyLogoUrl}
           />
           <span className={styles.introEnergyMark}>
-            <img src={energyLogoUrl} alt="" />
-            <span>Энергия+</span>
+            <img alt="Энергия+" src={energyLogoUrl} />
           </span>
         </div>
         <p className={styles.gameStart}>Начало игры</p>
@@ -187,9 +178,9 @@ function Intro({ onStart }: { onStart: () => void }) {
 }
 
 type ChoiceScreenProps<T extends string> = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
-  description: string;
+  description?: string;
   items: ChoiceItem<T>[];
   onBack: () => void;
   onSelect: (value: T) => void;
@@ -237,7 +228,9 @@ function ChoiceScreen<T extends string>({
                 <b>{item.symbol}</b>
               </span>
               <span className={styles.choiceText}>
-                <small data-role-part="label">{item.eyebrow}</small>
+                {item.eyebrow && (
+                  <small data-role-part="label">{item.eyebrow}</small>
+                )}
                 <strong data-role-part="title">{item.title}</strong>
                 {item.description && <p>{item.description}</p>}
               </span>
@@ -383,39 +376,23 @@ function BackButton({ onClick }: { onClick: () => void }) {
   );
 }
 
-function SelectionSummary() {
-  const { state } = useGame();
-  const selected = [state.profile, state.recipient, state.parcel].filter(
-    Boolean,
-  );
-
-  if (selected.length === 0) {
-    return null;
-  }
-
-  return (
-    <fieldset aria-label="Ваш выбор" className={styles.selectionSummary}>
-      {selected.map((id) => (
-        <img alt="" aria-hidden="true" key={id} src={choiceArtwork[id ?? ""]} />
-      ))}
-    </fieldset>
-  );
-}
-
 function ScreenHeading({
   eyebrow,
   title,
   description,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
-  description: string;
+  description?: string;
 }) {
   return (
-    <div className={styles.screenHeading}>
-      <p className={styles.eyebrow}>{eyebrow}</p>
+    <div
+      className={styles.screenHeading}
+      data-compact={!eyebrow && !description ? "true" : undefined}
+    >
+      {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
       <h2>{title}</h2>
-      <p>{description}</p>
+      {description && <p>{description}</p>}
     </div>
   );
 }

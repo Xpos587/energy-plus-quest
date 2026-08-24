@@ -72,8 +72,8 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
 
   const initialViewport = page.viewportSize();
   if (initialViewport && initialViewport.width > 1380) {
-    const identityBox = await page
-      .locator('[class*="gameIdentity"]')
+    const brandBox = await page
+      .locator('[class*="brandCluster"]')
       .boundingBox();
     const progressBox = await page
       .getByRole("navigation", { name: "Прогресс сцены" })
@@ -82,11 +82,11 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
       .getByRole("navigation", { name: "Прогресс сцены" })
       .evaluate((element) => element.scrollWidth - element.clientWidth);
 
-    expect(identityBox).not.toBeNull();
+    expect(brandBox).not.toBeNull();
     expect(progressBox).not.toBeNull();
-    expect(
-      (identityBox?.x ?? 0) + (identityBox?.width ?? 0),
-    ).toBeLessThanOrEqual(progressBox?.x ?? 0);
+    expect((brandBox?.x ?? 0) + (brandBox?.width ?? 0)).toBeLessThanOrEqual(
+      progressBox?.x ?? 0,
+    );
     expect(progressOverflow).toBeLessThanOrEqual(1);
   }
 

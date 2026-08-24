@@ -38,7 +38,7 @@ export type GameAction =
 export type ChoiceItem<T extends string> = {
   id: T;
   title: string;
-  eyebrow: string;
+  eyebrow?: string;
   description?: string;
   symbol: string;
 };

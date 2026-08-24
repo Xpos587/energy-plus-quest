@@ -1,8 +1,8 @@
 # Brand assets used by the prototype
 
-The raster `Э+` mark comes from the supplied expanded Energy+ reference pack.
-It is used only as a browser favicon/app icon. It is not a substitute for the
-missing full logo lockup or its background-specific production variants.
+`energy-plus-logo.svg` is the official RGB Energy+ logo extracted as vector
+artwork from `energy_plus_logo_rgb.pdf` supplied on 24 August 2026 in
+`/home/michael/Downloads/Логотип.zip`.
 
-Source files are preserved in
-`design/references/energy-plus-expanded-2026-08-02/logos/`.
+The favicon and touch icons are official raster exports from the same archive.
+`gpn-snabzhenie.svg` remains the client-provided GPN-S logo.

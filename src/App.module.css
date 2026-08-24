@@ -22,7 +22,7 @@
   z-index: 40;
   display: grid;
   height: var(--header-height);
-  grid-template-columns: minmax(228px, 254px) auto minmax(300px, 1fr) auto auto;
+  grid-template-columns: minmax(272px, 304px) minmax(360px, 1fr) auto;
   align-items: center;
   gap: 26px;
   padding: 10px clamp(18px, 3.4vw, 54px);
@@ -53,72 +53,16 @@
 }
 
 .energyMark {
-  display: inline-flex;
+  display: flex;
   min-width: 0;
   align-items: center;
-  gap: 6px;
-  color: var(--navy);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  white-space: nowrap;
 }
 
-.energyMark img,
-.introEnergyMark img {
-  width: 26px;
-  height: 26px;
+.energyMark img {
+  display: block;
+  width: 112px;
+  height: auto;
   flex: 0 0 auto;
-  border-radius: 50%;
-}
-
-.gameIdentity {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.gameIdentity span {
-  overflow: hidden;
-  color: var(--navy);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.gameIdentity small {
-  overflow: hidden;
-  max-width: 100%;
-  color: rgba(4, 19, 39, 0.68);
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.selectionSummary {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.selectionSummary img {
-  width: 36px;
-  height: 36px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(4, 19, 39, 0.14);
 }
 
 .routeProgress {
@@ -1260,15 +1204,15 @@
 }
 
 .introEnergyMark {
-  display: inline-flex;
+  display: block;
   align-items: center;
-  gap: 7px;
-  color: var(--navy);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  width: min(164px, 34%);
+}
+
+.introEnergyMark img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .gameStart {
@@ -1439,6 +1383,10 @@
   column-gap: 42px;
   align-items: end;
   margin-bottom: 26px;
+}
+
+.screenHeading[data-compact="true"] {
+  grid-template-columns: 1fr;
 }
 
 .eyebrow {
@@ -2421,14 +2369,6 @@
     grid-template-columns: minmax(120px, 148px) 86px minmax(0, 1fr) auto;
     gap: 12px;
     padding-bottom: 16px;
-  }
-
-  .gameIdentity {
-    display: none;
-  }
-
-  .selectionSummary {
-    justify-self: end;
   }
 
   .routeProgress {
@@ -4095,7 +4035,7 @@
 
 @media (min-width: 1121px) and (max-width: 1500px) {
   .header {
-    grid-template-columns: minmax(218px, 234px) auto minmax(300px, 1fr) auto auto;
+    grid-template-columns: minmax(258px, 280px) minmax(300px, 1fr) auto;
     gap: 14px;
     padding-inline: 30px;
   }
@@ -4113,9 +4053,9 @@
   .header {
     height: var(--header-height);
     grid-template-areas:
-      "brand selection scores"
-      "progress progress progress";
-    grid-template-columns: auto minmax(0, 1fr) auto;
+      "brand scores"
+      "progress progress";
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-rows: 56px 3px;
     column-gap: 16px;
     row-gap: 4px;
@@ -4124,10 +4064,6 @@
 
   .brandCluster {
     grid-area: brand;
-  }
-
-  .gameIdentity {
-    display: none;
   }
 
   .routeProgress {
@@ -4164,11 +4100,6 @@
 
   .progressItem[data-current="true"] {
     background: var(--orange);
-  }
-
-  .selectionSummary {
-    grid-area: selection;
-    justify-self: end;
   }
 
   .scoreBoard {
@@ -4210,19 +4141,6 @@
     display: none;
   }
 
-  .energyMark img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .energyMark span {
-    display: none;
-  }
-
-  .selectionSummary {
-    display: none;
-  }
-
   .scoreBoard {
     grid-row: 1;
     grid-column: 2;
@@ -4242,13 +4160,12 @@
   }
 
   .introEnergyMark {
-    gap: 5px;
-    font-size: 10px;
+    width: min(116px, 30%);
   }
 
   .introEnergyMark img {
-    width: 24px;
-    height: 24px;
+    width: 100%;
+    height: auto;
   }
 
   .scoreItem {
