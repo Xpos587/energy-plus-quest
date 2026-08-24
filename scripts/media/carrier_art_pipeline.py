@@ -14,11 +14,12 @@ import argparse
 import json
 import os
 import tempfile
+from collections import deque
 from pathlib import Path
 from urllib.request import urlretrieve
 
 import fal_client
-from PIL import Image, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 
 def configure_credentials() -> None:
@@ -43,6 +44,31 @@ def save_result(result: dict, output: Path, metadata: Path | None) -> None:
 
     print(f"saved={output}")
     print(f"seed={result.get('seed', 'not-returned')}")
+
+
+def save_single_image_result(
+    result: dict, output: Path, metadata: Path | None
+) -> None:
+    image_url = result["image"]["url"]
+    output.parent.mkdir(parents=True, exist_ok=True)
+    urlretrieve(image_url, output)
+
+    if metadata:
+        metadata.parent.mkdir(parents=True, exist_ok=True)
+        metadata.write_text(json.dumps(result, ensure_ascii=False, indent=2))
+
+    print(f"saved={output}")
+
+
+def save_image_url(
+    image_url: str, result: dict, output: Path, metadata: Path | None
+) -> None:
+    output.parent.mkdir(parents=True, exist_ok=True)
+    urlretrieve(image_url, output)
+    if metadata:
+        metadata.parent.mkdir(parents=True, exist_ok=True)
+        metadata.write_text(json.dumps(result, ensure_ascii=False, indent=2))
+    print(f"saved={output}")
 
 
 def compose(args: argparse.Namespace) -> None:
@@ -96,6 +122,171 @@ def outpaint(args: argparse.Namespace) -> None:
         },
     )
     save_result(result, Path(args.output), Path(args.metadata) if args.metadata else None)
+
+
+def segment(args: argparse.Namespace) -> None:
+    result = fal_client.subscribe(
+        "fal-ai/evf-sam",
+        arguments={
+            "image_url": upload(args.image),
+            "prompt": args.prompt,
+            "negative_prompt": args.negative_prompt,
+            "mask_only": True,
+            "use_grounding_dino": True,
+            "semantic_type": False,
+            "fill_holes": True,
+            "expand_mask": args.expand,
+            "blur_mask": args.blur,
+        },
+    )
+    save_single_image_result(
+        result, Path(args.output), Path(args.metadata) if args.metadata else None
+    )
+
+
+def segment_box(args: argparse.Namespace) -> None:
+    point_prompts = [
+        {"x": point[0], "y": point[1], "label": 1, "object_id": 1}
+        for point in args.positive_point
+    ]
+    point_prompts.extend(
+        {"x": point[0], "y": point[1], "label": 0, "object_id": 1}
+        for point in args.negative_point
+    )
+    result = fal_client.subscribe(
+        "fal-ai/sam-3-1/image",
+        arguments={
+            "image_url": upload(args.image),
+            "prompt": args.prompt,
+            "point_prompts": point_prompts,
+            "box_prompts": [
+                {
+                    "x_min": args.x_min,
+                    "y_min": args.y_min,
+                    "x_max": args.x_max,
+                    "y_max": args.y_max,
+                    "object_id": 1,
+                }
+            ],
+            "apply_mask": args.apply_mask,
+            "output_format": "png",
+            "return_multiple_masks": True,
+            "max_masks": 1,
+            "include_scores": True,
+            "include_boxes": True,
+        },
+    )
+    images = result.get("masks") or [result["image"]]
+    image = images[0]
+    save_image_url(
+        image["url"], result, Path(args.output), Path(args.metadata) if args.metadata else None
+    )
+
+
+def remove_object(args: argparse.Namespace) -> None:
+    result = fal_client.subscribe(
+        "fal-ai/object-removal/mask",
+        arguments={
+            "image_url": upload(args.image),
+            "mask_url": upload(args.mask),
+            "model": "best_quality",
+            "mask_expansion": args.mask_expansion,
+        },
+    )
+    save_result(
+        result, Path(args.output), Path(args.metadata) if args.metadata else None
+    )
+
+
+def extract_layer(args: argparse.Namespace) -> None:
+    source = Image.open(args.image).convert("RGBA")
+    mask = Image.open(args.mask).convert("L").resize(source.size, Image.Resampling.NEAREST)
+    if args.source_box:
+        restricted = Image.new("L", source.size, 0)
+        restricted.paste(mask.crop(tuple(args.source_box)), tuple(args.source_box[:2]))
+        mask = restricted
+    if args.threshold is not None:
+        threshold = args.threshold
+        mask = mask.point(lambda value: 255 if value >= threshold else 0)
+    if args.largest_component:
+        mask = keep_largest_component(mask)
+    if args.invert:
+        mask = ImageChops.invert(mask)
+    if args.feather > 0:
+        mask = mask.filter(ImageFilter.GaussianBlur(radius=args.feather))
+    source.putalpha(mask)
+
+    if args.crop:
+        bounds = mask.getbbox()
+        if bounds is None:
+            raise SystemExit("Mask is empty")
+        left = max(0, bounds[0] - args.padding)
+        top = max(0, bounds[1] - args.padding)
+        right = min(source.width, bounds[2] + args.padding)
+        bottom = min(source.height, bounds[3] + args.padding)
+        source = source.crop((left, top, right, bottom))
+
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    source.save(output)
+    print(f"saved={output}")
+
+
+def keep_largest_component(mask: Image.Image) -> Image.Image:
+    bounds = mask.getbbox()
+    if bounds is None:
+        return mask
+
+    crop = mask.crop(bounds).convert("L")
+    width, height = crop.size
+    pixels = bytearray(crop.tobytes())
+    visited = bytearray(width * height)
+    largest: list[int] = []
+
+    for start, value in enumerate(pixels):
+        if value == 0 or visited[start]:
+            continue
+        component: list[int] = []
+        queue = deque([start])
+        visited[start] = 1
+        while queue:
+            index = queue.popleft()
+            component.append(index)
+            x = index % width
+            y = index // width
+            for neighbor in (
+                index - 1 if x > 0 else -1,
+                index + 1 if x + 1 < width else -1,
+                index - width if y > 0 else -1,
+                index + width if y + 1 < height else -1,
+            ):
+                if neighbor >= 0 and pixels[neighbor] and not visited[neighbor]:
+                    visited[neighbor] = 1
+                    queue.append(neighbor)
+        if len(component) > len(largest):
+            largest = component
+
+    cleaned = bytearray(width * height)
+    for index in largest:
+        cleaned[index] = 255
+    cleaned_crop = Image.frombytes("L", (width, height), bytes(cleaned))
+    result = Image.new("L", mask.size, 0)
+    result.paste(cleaned_crop, bounds[:2])
+    return result
+
+
+def rectangle_mask(args: argparse.Namespace) -> None:
+    source = Image.open(args.image)
+    mask = Image.new("L", source.size, 0)
+    draw = ImageDraw.Draw(mask)
+    for box in args.box:
+        draw.rounded_rectangle(tuple(box), radius=args.radius, fill=255)
+    if args.blur > 0:
+        mask = mask.filter(ImageFilter.GaussianBlur(radius=args.blur))
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    mask.save(output)
+    print(f"saved={output}")
 
 
 def chunk_inpaint(args: argparse.Namespace) -> None:
@@ -210,6 +401,65 @@ def build_parser() -> argparse.ArgumentParser:
     outpaint_parser.add_argument("--output", required=True)
     outpaint_parser.add_argument("--metadata")
     outpaint_parser.set_defaults(func=outpaint)
+
+    segment_parser = subparsers.add_parser("segment")
+    segment_parser.add_argument("--image", required=True)
+    segment_parser.add_argument("--prompt", required=True)
+    segment_parser.add_argument("--negative-prompt", default="")
+    segment_parser.add_argument("--expand", type=int, default=2)
+    segment_parser.add_argument("--blur", type=int, default=1)
+    segment_parser.add_argument("--output", required=True)
+    segment_parser.add_argument("--metadata")
+    segment_parser.set_defaults(func=segment)
+
+    segment_box_parser = subparsers.add_parser("segment-box")
+    segment_box_parser.add_argument("--image", required=True)
+    segment_box_parser.add_argument("--prompt", default="truck")
+    segment_box_parser.add_argument("--x-min", type=int, required=True)
+    segment_box_parser.add_argument("--y-min", type=int, required=True)
+    segment_box_parser.add_argument("--x-max", type=int, required=True)
+    segment_box_parser.add_argument("--y-max", type=int, required=True)
+    segment_box_parser.add_argument(
+        "--positive-point", type=int, nargs=2, action="append", default=[]
+    )
+    segment_box_parser.add_argument(
+        "--negative-point", type=int, nargs=2, action="append", default=[]
+    )
+    segment_box_parser.add_argument("--apply-mask", action="store_true")
+    segment_box_parser.add_argument("--output", required=True)
+    segment_box_parser.add_argument("--metadata")
+    segment_box_parser.set_defaults(func=segment_box)
+
+    remove_parser = subparsers.add_parser("remove-object")
+    remove_parser.add_argument("--image", required=True)
+    remove_parser.add_argument("--mask", required=True)
+    remove_parser.add_argument("--mask-expansion", type=int, default=8)
+    remove_parser.add_argument("--output", required=True)
+    remove_parser.add_argument("--metadata")
+    remove_parser.set_defaults(func=remove_object)
+
+    extract_parser = subparsers.add_parser("extract-layer")
+    extract_parser.add_argument("--image", required=True)
+    extract_parser.add_argument("--mask", required=True)
+    extract_parser.add_argument("--crop", action="store_true")
+    extract_parser.add_argument("--source-box", type=int, nargs=4)
+    extract_parser.add_argument("--padding", type=int, default=12)
+    extract_parser.add_argument("--feather", type=float, default=0.8)
+    extract_parser.add_argument("--threshold", type=int, default=127)
+    extract_parser.add_argument("--largest-component", action="store_true")
+    extract_parser.add_argument("--invert", action="store_true")
+    extract_parser.add_argument("--output", required=True)
+    extract_parser.set_defaults(func=extract_layer)
+
+    mask_parser = subparsers.add_parser("rectangle-mask")
+    mask_parser.add_argument("--image", required=True)
+    mask_parser.add_argument(
+        "--box", type=int, nargs=4, action="append", required=True
+    )
+    mask_parser.add_argument("--radius", type=int, default=24)
+    mask_parser.add_argument("--blur", type=float, default=3)
+    mask_parser.add_argument("--output", required=True)
+    mask_parser.set_defaults(func=rectangle_mask)
 
     chunk_parser = subparsers.add_parser("chunk-inpaint")
     chunk_parser.add_argument("--image", required=True)

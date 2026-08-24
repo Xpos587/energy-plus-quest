@@ -1,0 +1,29 @@
+{
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa7aa3f/9tdJQ9ZUJfNaMZgdd7QdJ.png",
+        "width": 640,
+        "height": 592,
+        "content_type": "image/png"
+      }
+    ],
+    "timings": {
+      "inference": 5.91039049399842
+    },
+    "seed": 26082452,
+    "has_nsfw_concepts": [
+      false
+    ],
+    "prompt": "Remove the tiny dark truck from the distant road behind the warehouse. Restore\nthe snowbank, distant road and town buildings continuously in the same vertical\nstorybook diorama perspective and painterly texture. Preserve every building,\nlamppost and mountain outside the mask. Add no vehicle, person, text or sign.\n"
+  },
+  "chunk": {
+    "x": 375,
+    "y": 175,
+    "width": 125,
+    "height": 100,
+    "padding": 100,
+    "scale": 2,
+    "feather": 12.0
+  }
+}

@@ -126,15 +126,17 @@ test("plays the first scene from intro to an illustrated outcome", async ({
       .getByRole("button"),
   ).toHaveCount(4);
   await expect(
-    page.getByRole("button", { name: /дальний маршрут от склада/i }),
+    page.getByRole("button", { name: /старая машина далеко от склада/i }),
   ).toBeVisible();
   await expect(
-    page.getByRole("button", { name: /короткий маршрут рядом со складом/i }),
+    page.getByRole("button", { name: /машина у ворот едет медленно/i }),
   ).toBeVisible();
-  await expect(page.locator('[data-art-version="feedback-v7"]')).toBeVisible();
+  await expect(page.locator('[data-art-version="feedback-v8"]')).toBeVisible();
   for (const carrier of ["old", "near", "crew", "express"]) {
     await expect(page.locator(`[data-map-label="${carrier}"]`)).toBeVisible();
   }
+  await expect(page.locator('[class*="vehicleSprite"]')).toHaveCount(4);
+  await expect(page.locator('[class*="routeNetwork"]')).toHaveCount(2);
   await expect(page.getByText("Старая машина", { exact: true })).toBeVisible();
   await expect(page.getByText("Два водителя", { exact: true })).toBeVisible();
   await expect(page.getByText("Машины 1 и 4", { exact: true })).toHaveCount(0);
@@ -147,7 +149,9 @@ test("plays the first scene from intro to an illustrated outcome", async ({
     path: reviewScreenshot(testInfo.project.name, "carrier"),
   });
 
-  await page.getByRole("button", { name: /^Машина у ворот:/ }).click();
+  await page
+    .getByRole("button", { name: /^Машина у ворот едет медленно:/ })
+    .click();
   await expect(
     page.getByRole("heading", { name: "Близко — не значит быстро" }),
   ).toBeVisible();
@@ -185,7 +189,7 @@ test("frames the slower outcomes constructively instead of as breakdown imagery"
   await page.getByRole("button", { name: /Альва/ }).click();
   await page.getByRole("button", { name: /Фотоаппарат/ }).click();
   await page
-    .getByRole("button", { name: /дальний маршрут от склада/i })
+    .getByRole("button", { name: /старая машина далеко от склада/i })
     .click();
 
   await expect(
@@ -212,7 +216,7 @@ test("returns from an outcome to the map and then shows the Express result", asy
   await page.getByRole("button", { name: /Фотоаппарат/ }).click();
 
   await page
-    .getByRole("button", { name: /^Экипаж из двух водителей:/ })
+    .getByRole("button", { name: /^Два водителя едут без остановок:/ })
     .click();
   await expect(
     page.getByRole("heading", { name: "Два водителя лучше одного" }),
@@ -224,7 +228,9 @@ test("returns from an outcome to the map and then shows the Express result", asy
   ).toBeVisible();
 
   await page
-    .getByRole("button", { name: "Express: Автоподбор Express" })
+    .getByRole("button", {
+      name: "Автоподбор Express уже в пути: Автоподбор Express",
+    })
     .click();
   await expect(
     page.getByRole("heading", { name: "Перевозчик найден за два часа" }),

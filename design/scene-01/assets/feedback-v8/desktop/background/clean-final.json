@@ -1,0 +1,29 @@
+{
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa7a9af/OzP6hBDEG4OcEvJwx8C7-.png",
+        "width": 1216,
+        "height": 992,
+        "content_type": "image/png"
+      }
+    ],
+    "timings": {
+      "inference": 9.798545947000093
+    },
+    "seed": 26082434,
+    "has_nsfw_concepts": [
+      false
+    ],
+    "prompt": "Remove the orange truck from the right-hand road. Reconstruct the empty asphalt,\nlane markings, curb and snowbank continuously in the same three-quarter camera,\npainterly texture, scale and warm winter light. Preserve the nearby people,\nlampposts, person with the parcel, warehouse and buildings. Add no vehicle,\nperson, text, sign or new structure.\n"
+  },
+  "chunk": {
+    "x": 940,
+    "y": 390,
+    "width": 470,
+    "height": 360,
+    "padding": 70,
+    "scale": 2,
+    "feather": 18.0
+  }
+}

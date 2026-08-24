@@ -1,0 +1,29 @@
+{
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa7a9c1/QOEP3IRvFTLC22FzdKvVQ.png",
+        "width": 1408,
+        "height": 1104,
+        "content_type": "image/png"
+      }
+    ],
+    "timings": {
+      "inference": 11.671347149000212
+    },
+    "seed": 26082433,
+    "has_nsfw_concepts": [
+      false
+    ],
+    "prompt": "Remove the large blue truck from the foreground road. Reconstruct the curving\ngray asphalt, road edge, snowbanks and soft cast shadows as a continuous empty\nwinter street in the exact same perspective and painted texture. Preserve the\nwarehouse, lampposts, orange truck, person with the parcel and every object\noutside the masked area. Add no vehicle, person, text or sign.\n"
+  },
+  "chunk": {
+    "x": 245,
+    "y": 380,
+    "width": 570,
+    "height": 470,
+    "padding": 70,
+    "scale": 2,
+    "feather": 18.0
+  }
+}

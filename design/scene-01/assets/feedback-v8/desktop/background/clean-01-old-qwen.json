@@ -1,0 +1,29 @@
+{
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa7a9b2/1o1dXY5pfHntgtJHGde4B.png",
+        "width": 816,
+        "height": 736,
+        "content_type": "image/png"
+      }
+    ],
+    "timings": {
+      "inference": 7.061269870995602
+    },
+    "seed": 26082431,
+    "has_nsfw_concepts": [
+      false
+    ],
+    "prompt": "Remove the small dark truck from this local region. Reconstruct the winter road\ncontinuously behind it with the same perspective, painted texture, lane edge,\nsnowbanks and soft ambient light as the surrounding illustration. Preserve the\nnearby blue-and-yellow road sign, lampposts, warehouse, houses and every object\noutside the masked area exactly. Add no vehicle, person, text or new sign.\n"
+  },
+  "chunk": {
+    "x": 125,
+    "y": 220,
+    "width": 190,
+    "height": 150,
+    "padding": 110,
+    "scale": 2,
+    "feather": 14.0
+  }
+}

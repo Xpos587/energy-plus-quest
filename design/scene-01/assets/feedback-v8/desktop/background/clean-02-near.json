@@ -1,0 +1,29 @@
+{
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa7a9aa/9yFqOlSYQp_xCn9A_Dg1m.png",
+        "width": 1008,
+        "height": 832,
+        "content_type": "image/png"
+      }
+    ],
+    "timings": {
+      "inference": 7.9880942730014795
+    },
+    "seed": 26082432,
+    "has_nsfw_concepts": [
+      false
+    ],
+    "prompt": "Remove the small gray truck at the warehouse gate. Reconstruct the warehouse\nloading apron and the gray road continuously behind it in the same three-quarter\nperspective, painterly winter style and soft light. Preserve the blue warehouse,\nopen loading door, road markings, snowbanks and all surrounding objects. Add no\nvehicle, person, text, sign or new architecture.\n"
+  },
+  "chunk": {
+    "x": 620,
+    "y": 320,
+    "width": 310,
+    "height": 220,
+    "padding": 100,
+    "scale": 2,
+    "feather": 14.0
+  }
+}

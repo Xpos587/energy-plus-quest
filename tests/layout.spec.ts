@@ -181,7 +181,9 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
     page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
   ).toBeVisible();
   await expect(
-    page.getByRole("button", { name: "Express: Автоподбор Express" }),
+    page.getByRole("button", {
+      name: "Автоподбор Express уже в пути: Автоподбор Express",
+    }),
   ).toBeVisible();
   await expect(
     page
@@ -226,7 +228,9 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
   await expectNoPageScroll(page);
 
   await page
-    .getByRole("button", { name: "Express: Автоподбор Express" })
+    .getByRole("button", {
+      name: "Автоподбор Express уже в пути: Автоподбор Express",
+    })
     .click();
   await expect(
     page.getByRole("heading", { name: "Перевозчик найден за два часа" }),

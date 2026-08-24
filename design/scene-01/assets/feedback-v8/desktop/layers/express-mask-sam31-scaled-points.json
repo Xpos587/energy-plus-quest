@@ -1,0 +1,39 @@
+{
+  "image": {
+    "url": "https://v3b.fal.media/files/b/0aa7a92e/wKeV8N8DshG8QGavHFcsB.png",
+    "width": 1536,
+    "height": 864,
+    "content_type": "image/png"
+  },
+  "masks": [
+    {
+      "url": "https://v3b.fal.media/files/b/0aa7a92e/wKeV8N8DshG8QGavHFcsB.png",
+      "width": 1536,
+      "height": 864,
+      "content_type": "image/png"
+    }
+  ],
+  "metadata": [
+    {
+      "index": 0,
+      "score": 0.953125,
+      "box": [
+        0.7314460674921671,
+        0.6742374985306351,
+        0.30388840039571124,
+        0.33997669926396124
+      ]
+    }
+  ],
+  "scores": [
+    0.953125
+  ],
+  "boxes": [
+    [
+      0.7314460674921671,
+      0.6742374985306351,
+      0.30388840039571124,
+      0.33997669926396124
+    ]
+  ]
+}
