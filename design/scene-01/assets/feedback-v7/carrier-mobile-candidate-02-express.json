@@ -1,0 +1,29 @@
+{
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa7a7f7/jxkl8MB3k6CWqAfids2Qi.png",
+        "width": 880,
+        "height": 848,
+        "content_type": "image/png"
+      }
+    ],
+    "timings": {
+      "inference": 8.548453733001224
+    },
+    "seed": 26082421,
+    "has_nsfw_concepts": [
+      false
+    ],
+    "prompt": "Edit only the masked road and snow area. Add one fully visible vivid Energy+ orange modern box truck travelling from left to right on the upper road behind the warehouse. Match the existing three-quarter camera, vehicle scale, painted volumetric 3D storybook geometry, winter daylight, dark-cobalt edges, gouache texture, cast shadow and road perspective exactly. Keep the truck separated from the old dark-blue truck. The orange truck has an empty dark windscreen with no visible people. Preserve all buildings, lamps, snow banks and roads outside the mask. No other vehicle, no text, no logo, no badge, no duplicated wheels, no malformed cab.\n"
+  },
+  "chunk": {
+    "x": 420,
+    "y": 105,
+    "width": 255,
+    "height": 235,
+    "padding": 96,
+    "scale": 2,
+    "feather": 12.0
+  }
+}

@@ -184,7 +184,9 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
     page.getByRole("button", { name: "Express: Автоподбор Express" }),
   ).toBeVisible();
   await expect(
-    page.getByRole("button", { name: /(?:Машин(?:а|ы)|Express)/ }),
+    page
+      .locator('section[aria-label="Карта доступных перевозчиков"]')
+      .getByRole("button"),
   ).toHaveCount(4);
 
   const viewport = page.viewportSize();

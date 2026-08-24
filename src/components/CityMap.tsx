@@ -1,6 +1,5 @@
-import mapDesktop from "../../design/scene-01/assets/feedback-v4/production/carrier-desktop.webp";
-import crewBadge from "../../design/scene-01/assets/feedback-v4/production/choices/crew-badge.webp";
-import mapMobile from "../../design/scene-01/assets/feedback-v5/production/carrier-mobile.webp";
+import mapDesktop from "../../design/scene-01/assets/feedback-v7/production/carrier-desktop.webp";
+import mapMobile from "../../design/scene-01/assets/feedback-v7/production/carrier-mobile.webp";
 import styles from "../App.module.css";
 import { carriers } from "../game/content";
 import type { CarrierId } from "../game/types";
@@ -19,20 +18,20 @@ const mapMarkers: Array<{
 }> = [
   {
     carrier: "old",
-    ariaLabel: "Машина 1: дальний маршрут от склада",
-    kicker: "Машина 1",
-    label: "Дальше от склада",
+    ariaLabel: "Старая машина: дальний маршрут от склада",
+    kicker: "Дальний маршрут",
+    label: "Старая машина",
   },
   {
     carrier: "near",
-    ariaLabel: "Машина 2: короткий маршрут рядом со складом",
-    kicker: "Машина 2",
-    label: "У ворот склада",
+    ariaLabel: "Машина у ворот: короткий маршрут рядом со складом",
+    kicker: "Рядом со складом",
+    label: "У ворот",
   },
   {
     carrier: "crew",
-    ariaLabel: "Машина 3: экипаж из двух водителей",
-    kicker: "Машина 3",
+    ariaLabel: "Экипаж из двух водителей",
+    kicker: "Экипаж",
     label: "Два водителя",
   },
   {
@@ -57,10 +56,10 @@ export function CityMap({ onSelect, selected, mode = "soft" }: CityMapProps) {
           alt=""
           aria-hidden="true"
           className={styles.mapImage}
-          data-art-version="feedback-v4"
-          height="800"
+          data-art-version="feedback-v7"
+          height="864"
           src={mapDesktop}
-          width="1328"
+          width="1536"
         />
       </picture>
       <div aria-hidden="true" className={styles.mapShade} />
@@ -78,14 +77,6 @@ export function CityMap({ onSelect, selected, mode = "soft" }: CityMapProps) {
               onClick={() => onSelect(marker.carrier)}
               type="button"
             >
-              {marker.carrier === "crew" && (
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  className={styles.crewMarkerBadge}
-                  src={crewBadge}
-                />
-              )}
               <span data-map-label={marker.carrier}>
                 <small>{marker.kicker}</small>
                 <strong>{marker.label}</strong>

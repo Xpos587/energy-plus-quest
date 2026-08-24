@@ -121,9 +121,6 @@ test("plays the first scene from intro to an illustrated outcome", async ({
     page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
   ).toBeVisible();
   await expect(
-    page.getByRole("button", { name: /(?:Машин(?:а|ы)|Express)/ }),
-  ).toHaveCount(4);
-  await expect(
     page
       .locator('section[aria-label="Карта доступных перевозчиков"]')
       .getByRole("button"),
@@ -134,11 +131,11 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   await expect(
     page.getByRole("button", { name: /короткий маршрут рядом со складом/i }),
   ).toBeVisible();
-  await expect(page.locator('[data-art-version="feedback-v4"]')).toBeVisible();
+  await expect(page.locator('[data-art-version="feedback-v7"]')).toBeVisible();
   for (const carrier of ["old", "near", "crew", "express"]) {
     await expect(page.locator(`[data-map-label="${carrier}"]`)).toBeVisible();
   }
-  await expect(page.getByText("Машина 1", { exact: true })).toBeVisible();
+  await expect(page.getByText("Старая машина", { exact: true })).toBeVisible();
   await expect(page.getByText("Два водителя", { exact: true })).toBeVisible();
   await expect(page.getByText("Машины 1 и 4", { exact: true })).toHaveCount(0);
   await expect(page.getByText("Широкий маршрут", { exact: true })).toHaveCount(
@@ -150,7 +147,7 @@ test("plays the first scene from intro to an illustrated outcome", async ({
     path: reviewScreenshot(testInfo.project.name, "carrier"),
   });
 
-  await page.getByRole("button", { name: /^Машина 2:/ }).click();
+  await page.getByRole("button", { name: /^Машина у ворот:/ }).click();
   await expect(
     page.getByRole("heading", { name: "Близко — не значит быстро" }),
   ).toBeVisible();
@@ -214,7 +211,9 @@ test("returns from an outcome to the map and then shows the Express result", asy
   await page.getByRole("button", { name: /Альва/ }).click();
   await page.getByRole("button", { name: /Фотоаппарат/ }).click();
 
-  await page.getByRole("button", { name: /^Машина 3:/ }).click();
+  await page
+    .getByRole("button", { name: /^Экипаж из двух водителей:/ })
+    .click();
   await expect(
     page.getByRole("heading", { name: "Два водителя лучше одного" }),
   ).toBeVisible();

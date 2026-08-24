@@ -63,7 +63,7 @@ export const parcels: ParcelChoice[] = [
 export const carriers: CarrierChoice[] = [
   {
     id: "old",
-    eyebrow: "Машина 1",
+    eyebrow: "Дальний маршрут",
     title: "Знакомая «Ласточка»",
     description:
       "Проверенная фура с большим пробегом находится дальше от склада.",
@@ -80,7 +80,7 @@ export const carriers: CarrierChoice[] = [
   },
   {
     id: "near",
-    eyebrow: "Машина 2",
+    eyebrow: "У ворот склада",
     title: "Ближайшая к центру",
     description: "Исправная фура, которая очень медленно ездит рядом с офисом.",
     symbol: "2",
@@ -96,7 +96,7 @@ export const carriers: CarrierChoice[] = [
   },
   {
     id: "crew",
-    eyebrow: "Машина 3",
+    eyebrow: "Два водителя",
     title: "Экипаж из двух водителей",
     description: "Новая фура с двумя водителями — они работают посменно.",
     symbol: "3",
