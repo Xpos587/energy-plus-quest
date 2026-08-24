@@ -71,6 +71,39 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
   await expectNoPageScroll(page);
 
   const initialViewport = page.viewportSize();
+  if (initialViewport && initialViewport.width <= 760) {
+    await expect(page.getByAltText("Энергия+", { exact: true })).toBeVisible();
+
+    const headerHeight = await page
+      .locator("header")
+      .evaluate((element) => element.getBoundingClientRect().height);
+    const scoreMetrics = await page
+      .locator("[data-score-key]")
+      .evaluateAll((elements) =>
+        elements.map((element) => {
+          const box = element.getBoundingClientRect();
+          const icon = element.querySelector("img")?.getBoundingClientRect();
+          const value = element
+            .querySelector("strong")
+            ?.getBoundingClientRect();
+
+          return {
+            height: box.height,
+            iconValueGap:
+              icon && value
+                ? value.left - icon.right
+                : Number.POSITIVE_INFINITY,
+          };
+        }),
+      );
+
+    expect(headerHeight).toBeLessThanOrEqual(62);
+    for (const metric of scoreMetrics) {
+      expect(metric.height).toBeLessThanOrEqual(44);
+      expect(metric.iconValueGap).toBeLessThanOrEqual(6);
+    }
+  }
+
   if (initialViewport && initialViewport.width > 1380) {
     const brandBox = await page
       .locator('[class*="brandCluster"]')
