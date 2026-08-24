@@ -23,21 +23,18 @@ export const profiles: ChoiceItem<ProfileId>[] = [
 export const recipients: ChoiceItem<RecipientId>[] = [
   {
     id: "alva",
-    eyebrow: "Получатель",
     title: "Девочка Альва",
     symbol: "А",
   },
   {
     id: "khor",
-    eyebrow: "Получатель",
     title: "Северный олень Хор",
     description: "«Хор» с языка хантов — самец оленя.",
     symbol: "Х",
   },
   {
     id: "arseniy",
-    eyebrow: "Вахтовый работник",
-    title: "Арсений",
+    title: "Вахтовик Арсений",
     symbol: "АР",
   },
 ];

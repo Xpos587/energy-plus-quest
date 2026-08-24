@@ -62,6 +62,27 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   await expect(
     page.getByRole("heading", { name: "Выберите получателя" }),
   ).toBeVisible();
+  await expect(
+    page.locator('[class*="screenHeading"] [class*="eyebrow"]'),
+  ).toHaveCount(0);
+  await expect(
+    page.locator('[data-choice="alva"] [data-role-part="label"]'),
+  ).toHaveCount(0);
+  await expect(
+    page.locator('[data-choice="khor"] [data-role-part="label"]'),
+  ).toHaveCount(0);
+  await expect(
+    page.locator('[data-choice="arseniy"] [data-role-part="label"]'),
+  ).toHaveCount(0);
+  await expect(
+    page.getByText("Выберите того, кому мы повезём подарок.", { exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByText("Вахтовый работник", { exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByText("Вахтовик Арсений", { exact: true }),
+  ).toBeVisible();
   const khorImage = page.locator(
     '[data-choice="khor"] [class*="choiceSymbol"] img',
   );
