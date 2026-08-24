@@ -43,21 +43,18 @@ export const parcels: ParcelChoice[] = [
   {
     id: "camera",
     accusativeTitle: "фотоаппарат",
-    eyebrow: "Подарок",
     title: "Фотоаппарат",
     symbol: "ФОТО",
   },
   {
     id: "socks",
     accusativeTitle: "вязаные носки",
-    eyebrow: "Подарок",
     title: "Вязаные носки",
     symbol: "ТЕПЛО",
   },
   {
     id: "boat",
     accusativeTitle: "лодку",
-    eyebrow: "Подарок",
     title: "Лодка",
     symbol: "ЛОДКА",
   },

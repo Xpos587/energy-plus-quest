@@ -96,6 +96,17 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   await expect(
     page.getByRole("heading", { name: "Что будет в посылке?" }),
   ).toBeVisible();
+  await expect(
+    page.locator('[class*="screenHeading"] [class*="eyebrow"]'),
+  ).toHaveCount(0);
+  for (const parcel of ["camera", "socks", "boat"]) {
+    await expect(
+      page.locator(`[data-choice="${parcel}"] [data-role-part="label"]`),
+    ).toHaveCount(0);
+  }
+  await expect(
+    page.getByText("Решите, что окажется внутри посылки.", { exact: true }),
+  ).toHaveCount(0);
   await settle(page);
   await page.screenshot({
     fullPage: false,

@@ -107,8 +107,6 @@ function Game() {
           )}
           {state.step === "parcel" && (
             <ChoiceScreen
-              description="Решите, что окажется внутри посылки."
-              eyebrow="Подарок"
               items={parcels}
               onBack={() => navigate({ type: "BACK" })}
               onSelect={(value) => navigate({ type: "CHOOSE_PARCEL", value })}
