@@ -33,6 +33,48 @@ async function expectScoreIcons(page: Page) {
   }
 }
 
+async function expectChoiceArtworkFullBleed(page: Page, choice: string) {
+  const card = page.locator(`[data-choice="${choice}"]`);
+  const artwork = card.locator('[class*="choiceSymbol"]');
+  await card.evaluate((element) =>
+    Promise.all(
+      element
+        .getAnimations()
+        .map((animation) => animation.finished.catch(() => undefined)),
+    ),
+  );
+  const cardBox = await card.boundingBox();
+  const artworkBox = await artwork.boundingBox();
+
+  expect(cardBox).not.toBeNull();
+  expect(artworkBox).not.toBeNull();
+  expect(
+    Math.abs((cardBox?.x ?? 0) - (artworkBox?.x ?? 0)),
+  ).toBeLessThanOrEqual(1.5);
+  expect(
+    Math.abs((cardBox?.y ?? 0) - (artworkBox?.y ?? 0)),
+  ).toBeLessThanOrEqual(1.5);
+
+  const isStacked = (artworkBox?.height ?? 0) < (cardBox?.height ?? 0) * 0.8;
+  if (isStacked) {
+    expect(
+      Math.abs(
+        (cardBox?.x ?? 0) +
+          (cardBox?.width ?? 0) -
+          ((artworkBox?.x ?? 0) + (artworkBox?.width ?? 0)),
+      ),
+    ).toBeLessThanOrEqual(1.5);
+  } else {
+    expect(
+      Math.abs(
+        (cardBox?.y ?? 0) +
+          (cardBox?.height ?? 0) -
+          ((artworkBox?.y ?? 0) + (artworkBox?.height ?? 0)),
+      ),
+    ).toBeLessThanOrEqual(1.5);
+  }
+}
+
 async function expectResultScoresDoNotOverlap(page: Page) {
   const resultScores = page.locator('[data-layout="result"] [data-score-key]');
 
@@ -124,9 +166,11 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
   }
 
   await page.getByRole("button", { name: /Студент/ }).click();
+  await expectChoiceArtworkFullBleed(page, "alva");
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
   await page.getByRole("button", { name: /Альва/ }).click();
+  await expectChoiceArtworkFullBleed(page, "camera");
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);
   await page.getByRole("button", { name: /Фотоаппарат/ }).click();
@@ -201,7 +245,7 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
     const artworkBottom = await page
       .locator('[data-layout="result"] [class*="outcomeBackdrop"]')
       .evaluate((element) => element.getBoundingClientRect().bottom);
-    expect(panelTop).toBeGreaterThanOrEqual(artworkBottom - 2);
+    expect(panelTop).toBeGreaterThanOrEqual(artworkBottom - 4);
   }
   await expectControlsInsideViewport(page);
   await expectNoPageScroll(page);

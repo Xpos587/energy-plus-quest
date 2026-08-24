@@ -89,7 +89,7 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   const khorImage = page.locator(
     '[data-choice="khor"] [class*="choiceSymbol"] img',
   );
-  await expect(khorImage).toHaveCSS("object-fit", "contain");
+  await expect(khorImage).toHaveCSS("object-fit", "cover");
   await settle(page);
   await page.screenshot({
     fullPage: false,

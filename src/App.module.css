@@ -4528,3 +4528,208 @@
     left: 42%;
   }
 }
+
+/* Final typography and card rhythm: one contract across every game state. */
+.openingPanel h1 {
+  line-height: 0.96;
+}
+
+.openingPanel > p {
+  line-height: 1.48;
+}
+
+.screenHeading h2,
+.missionHeading h2,
+.outcomeScene[data-layout="result"] .outcomeCopy h2 {
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.screenHeading > p:last-child,
+.choiceText p,
+.missionBar > p,
+.outcomeScene[data-layout="result"] .panelLead,
+.outcomeScene[data-layout="result"] .nextBeat {
+  line-height: 1.42;
+}
+
+.choiceText strong {
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.choiceText small,
+.eyebrow,
+.gameStart,
+.outcomeTiming,
+.primaryButton,
+.textButton,
+.backButton {
+  line-height: 1.18;
+}
+
+.scoreBoard {
+  grid-template-columns: repeat(3, 126px);
+  gap: 6px;
+}
+
+.scoreItem {
+  min-width: 0;
+  min-height: 52px;
+  grid-template-columns: max-content auto;
+  justify-content: center;
+  column-gap: 6px;
+  padding-inline: 7px;
+}
+
+.scoreItem span {
+  min-width: auto;
+}
+
+.scoreIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.scoreLong {
+  line-height: 1.12;
+}
+
+.choiceGrid[data-count="3"] .choiceCard {
+  grid-template-columns: minmax(112px, 40%) minmax(0, 1fr) 40px;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.choiceGrid[data-count="3"] .choiceSymbol {
+  height: auto;
+  min-height: 0;
+  align-self: stretch;
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: auto;
+  border-radius: 20px 0 0 20px;
+  background: transparent;
+}
+
+.choiceGrid[data-count="3"] .choiceSymbol img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+}
+
+.choiceGrid[data-count="3"] .choiceText {
+  justify-content: center;
+  padding: 12px 8px 12px 16px;
+}
+
+.choiceGrid[data-count="3"] .choiceArrow {
+  align-self: end;
+  margin: 0 9px 9px 0;
+}
+
+.choiceGrid[data-count="3"] .choiceCard[data-choice="alva"] .choiceSymbol img,
+.choiceGrid[data-count="3"]
+  .choiceCard[data-choice="arseniy"]
+  .choiceSymbol
+  img {
+  object-position: center 28%;
+  transform: scale(1.06);
+}
+
+.choiceGrid[data-count="3"] .choiceCard[data-choice="khor"] .choiceSymbol img {
+  object-position: center 43%;
+  transform: scale(1.03);
+}
+
+.choiceGrid[data-count="3"]
+  .choiceCard:is(:hover, :focus-visible)
+  .choiceSymbol
+  img {
+  transform: scale(1.08);
+}
+
+@media (max-width: 760px) {
+  .energyMark {
+    width: 82%;
+  }
+
+  .energyMark img {
+    max-width: 86px;
+  }
+
+  .scoreBoard {
+    grid-template-columns: repeat(3, clamp(70px, 22vw, 94px));
+    justify-content: end;
+    gap: 4px;
+  }
+
+  .scoreItem {
+    min-height: 44px;
+    grid-template-columns: max-content auto;
+    grid-template-rows: 28px 3px;
+    column-gap: 5px;
+    padding: 3px 5px 4px;
+  }
+
+  .scoreIcon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .screenHeading h2 {
+    line-height: 1.05;
+  }
+
+  .choiceGrid[data-count="3"] .choiceCard {
+    grid-template-columns: clamp(108px, 32vw, 124px) minmax(0, 1fr) 42px;
+    min-height: 0;
+    border-radius: 20px;
+  }
+
+  .choiceGrid[data-count="3"] .choiceSymbol {
+    border-radius: 19px 0 0 19px;
+  }
+
+  .choiceGrid[data-count="3"] .choiceText {
+    padding: 10px 6px 10px 14px;
+  }
+
+  .choiceGrid[data-count="3"] .choiceText strong {
+    font-size: clamp(17px, 4.8vw, 20px);
+    line-height: 1.08;
+  }
+
+  .choiceGrid[data-count="3"] .choiceText p {
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 1.32;
+  }
+
+  .choiceGrid[data-count="3"] .choiceArrow {
+    margin: 0 8px 8px 0;
+  }
+
+  .outcomeScene[data-layout="result"] .outcomeCopy h2 {
+    line-height: 1.08;
+  }
+}
+
+@media (max-width: 760px) and (max-height: 720px) {
+  .outcomeScene[data-layout="result"] .outcomeBackdrop {
+    height: 52%;
+  }
+
+  .outcomeScene[data-layout="result"] .resultPanel {
+    top: 52%;
+    max-height: 47%;
+  }
+
+  .outcomeScene[data-layout="result"] .outcomeCopy h2 {
+    max-width: calc(100% - 122px);
+    font-size: 22px;
+    line-height: 1.05;
+  }
+}
