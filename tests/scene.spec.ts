@@ -69,6 +69,9 @@ test("plays the first scene from intro to an illustrated outcome", async ({
     page.locator('[data-choice="alva"] [data-role-part="label"]'),
   ).toHaveCount(0);
   await expect(
+    page.locator('[data-choice="alva"] [data-art-version="feedback-v6"]'),
+  ).toBeVisible();
+  await expect(
     page.locator('[data-choice="khor"] [data-role-part="label"]'),
   ).toHaveCount(0);
   await expect(

@@ -217,7 +217,11 @@ function ChoiceScreen<T extends string>({
                   alt=""
                   aria-hidden="true"
                   data-art-version={
-                    item.id === "professional" ? "feedback-v5" : "feedback-v4"
+                    item.id === "professional"
+                      ? "feedback-v5"
+                      : item.id === "alva"
+                        ? "feedback-v6"
+                        : "feedback-v4"
                   }
                   src={choiceArtwork[item.id]}
                 />

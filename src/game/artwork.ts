@@ -1,4 +1,3 @@
-import alvaArtwork from "../../design/scene-01/assets/feedback-v4/production/choices/alva.webp";
 import arseniyArtwork from "../../design/scene-01/assets/feedback-v4/production/choices/arseniy.webp";
 import boatArtwork from "../../design/scene-01/assets/feedback-v4/production/choices/boat.webp";
 import cameraArtwork from "../../design/scene-01/assets/feedback-v4/production/choices/camera.webp";
@@ -14,6 +13,7 @@ import outcomeNearDesktop from "../../design/scene-01/assets/feedback-v5/product
 import outcomeNearMobile from "../../design/scene-01/assets/feedback-v5/production/outcomes/near-mobile.webp";
 import outcomeOldDesktop from "../../design/scene-01/assets/feedback-v5/production/outcomes/old-desktop.webp";
 import outcomeOldMobile from "../../design/scene-01/assets/feedback-v5/production/outcomes/old-mobile.webp";
+import alvaArtwork from "../../design/scene-01/assets/feedback-v6/production/choices/alva.webp";
 import type { CarrierId } from "./types";
 
 export const choiceArtwork: Record<string, string> = {
