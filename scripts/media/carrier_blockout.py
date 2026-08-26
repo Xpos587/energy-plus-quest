@@ -17,7 +17,7 @@ COLORS = {
     "snow": (0.84, 0.91, 0.96, 1.0),
     "road": (0.16, 0.20, 0.25, 1.0),
     "warehouse": (0.02, 0.22, 0.55, 1.0),
-    "old": (0.25, 0.20, 0.16, 1.0),
+    "old": (0.24, 0.34, 0.40, 1.0),
     "near": (0.42, 0.56, 0.62, 1.0),
     "crew": (0.02, 0.24, 0.55, 1.0),
     "express": (1.0, 0.20, 0.02, 1.0),
@@ -37,7 +37,7 @@ class TownDistrict:
 
 
 CARRIER_LAYOUT = {
-    "old": TownDistrict((-19.0, 11.5), math.pi / 2, "north-service"),
+    "old": TownDistrict((-16.5, 11.5), math.pi / 2, "north-service"),
     "near": TownDistrict((11.5, 7.0), math.pi / 2, "warehouse-spur"),
     "crew": TownDistrict((-10.5, -3.0), math.radians(-36), "west-diagonal"),
     "express": TownDistrict((8.0, -12.0), -math.pi / 2, "south-arterial"),
@@ -210,6 +210,8 @@ def add_van(
     angle: float,
     color: str,
     target: bpy.types.Collection,
+    *,
+    scale_factor: float = 1.0,
 ) -> None:
     x, y = position
     forward = Vector((0, 1, 0))
@@ -221,16 +223,17 @@ def add_van(
         point = Vector((x, y, 0)) + forward * longitudinal + side * lateral
         return point.x, point.y, z
 
-    cube(f"{name}-body", at(-0.2, 0, 0.85), (0.92, 1.65, 0.82), color, target, angle, bevel=0.32)
-    cube(f"{name}-nose", at(1.48, 0, 0.62), (0.9, 0.38, 0.55), color, target, angle, bevel=0.24)
-    cube(f"{name}-windshield", at(1.87, 0, 0.9), (0.76, 0.04, 0.32), "glass", target, angle, bevel=0.03)
-    for lateral in (-0.66, 0.66):
-        for longitudinal in (-0.85, 1.05):
+    s = scale_factor
+    cube(f"{name}-body", at(-0.2 * s, 0, 0.85 * s), (0.92 * s, 1.65 * s, 0.82 * s), color, target, angle, bevel=0.32 * s)
+    cube(f"{name}-nose", at(1.48 * s, 0, 0.62 * s), (0.9 * s, 0.38 * s, 0.55 * s), color, target, angle, bevel=0.24 * s)
+    cube(f"{name}-windshield", at(1.87 * s, 0, 0.9 * s), (0.76 * s, 0.04 * s, 0.32 * s), "glass", target, angle, bevel=0.03 * s)
+    for lateral in (-0.66 * s, 0.66 * s):
+        for longitudinal in (-0.85 * s, 1.05 * s):
             cylinder(
                 f"{name}-wheel",
-                at(longitudinal, lateral, 0.3),
-                0.3,
-                0.2,
+                at(longitudinal, lateral, 0.3 * s),
+                0.3 * s,
+                0.2 * s,
                 "road",
                 target,
                 rotation=(math.pi / 2, 0, angle),
@@ -241,6 +244,8 @@ def add_express_truck(
     position: tuple[float, float],
     angle: float,
     target: bpy.types.Collection,
+    *,
+    scale_factor: float = 1.0,
 ) -> None:
     x, y = position
     forward = Vector((0, 1, 0))
@@ -252,17 +257,18 @@ def add_express_truck(
         point = Vector((x, y, 0)) + forward * longitudinal + side * lateral
         return point.x, point.y, z
 
-    cube("ExpressTruck-body", at(-0.55, 0, 1.05), (1.08, 1.85, 0.95), "express", target, angle, bevel=0.34)
-    cube("ExpressTruck-cab", at(1.58, 0, 0.78), (1.0, 0.72, 0.72), "express", target, angle, bevel=0.38)
-    cube("ExpressTruck-windshield", at(2.33, 0, 0.98), (0.82, 0.05, 0.37), "glass", target, angle, bevel=0.04)
-    cube("ExpressTruck-roof-band", at(-0.4, 0, 1.98), (1.0, 1.72, 0.08), "warm", target, angle, bevel=0.06)
-    for lateral in (-0.78, 0.78):
-        for longitudinal in (-1.25, 1.35):
+    s = scale_factor
+    cube("ExpressTruck-body", at(-0.55 * s, 0, 1.05 * s), (1.08 * s, 1.85 * s, 0.95 * s), "express", target, angle, bevel=0.34 * s)
+    cube("ExpressTruck-cab", at(1.58 * s, 0, 0.78 * s), (1.0 * s, 0.72 * s, 0.72 * s), "express", target, angle, bevel=0.38 * s)
+    cube("ExpressTruck-windshield", at(2.33 * s, 0, 0.98 * s), (0.82 * s, 0.05 * s, 0.37 * s), "glass", target, angle, bevel=0.04 * s)
+    cube("ExpressTruck-roof-band", at(-0.4 * s, 0, 1.98 * s), (1.0 * s, 1.72 * s, 0.08 * s), "warm", target, angle, bevel=0.06 * s)
+    for lateral in (-0.78 * s, 0.78 * s):
+        for longitudinal in (-1.25 * s, 1.35 * s):
             cylinder(
                 "ExpressTruck-wheel",
-                at(longitudinal, lateral, 0.34),
-                0.35,
-                0.22,
+                at(longitudinal, lateral, 0.34 * s),
+                0.35 * s,
+                0.22 * s,
                 "road",
                 target,
                 rotation=(math.pi / 2, 0, angle),
@@ -329,13 +335,13 @@ def add_environment() -> None:
     near = CARRIER_LAYOUT["near"]
     crew = CARRIER_LAYOUT["crew"]
     express = CARRIER_LAYOUT["express"]
-    add_truck("OldTruck", old.position, old.angle, "old", old_collection, old=True, scale_factor=0.72)
-    add_van("NearVan", near.position, near.angle, "near", near_collection)
-    add_truck("CrewTruck", crew.position, crew.angle, "crew", crew_collection, drivers=2, scale_factor=1.12)
-    add_express_truck(express.position, express.angle, express_collection)
+    add_truck("OldTruck", old.position, old.angle, "old", old_collection, old=True, scale_factor=0.95)
+    add_van("NearVan", near.position, near.angle, "near", near_collection, scale_factor=1.25)
+    add_truck("CrewTruck", crew.position, crew.angle, "crew", crew_collection, drivers=2, scale_factor=1.55)
+    add_express_truck(express.position, express.angle, express_collection, scale_factor=1.45)
 
-    cube("InspectionBooth", (-23.0, 11.5, 0.9), (0.9, 0.9, 0.9), "building", cues, bevel=0.12)
-    cylinder("InspectionSign", (-21.7, 11.5, 1.45), 0.42, 0.08, "orange", cues, rotation=(0, math.pi / 2, 0))
+    cube("InspectionBooth", (-24.0, 11.5, 0.9), (0.9, 0.9, 0.9), "building", cues, bevel=0.12)
+    cylinder("InspectionSign", (-22.7, 11.5, 1.45), 0.42, 0.08, "orange", cues, rotation=(0, math.pi / 2, 0))
     cube("GateBarrier", (9.2, 7.0, 0.78), (0.08, 1.45, 0.08), "orange", cues, bevel=0.02)
     cube("GateSnowBank", (9.7, 9.1, 0.4), (1.0, 1.35, 0.4), "snow", cues, bevel=0.3)
     for index in range(5):

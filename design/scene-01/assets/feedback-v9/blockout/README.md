@@ -20,12 +20,14 @@ rendering.
 
 ## Narrative placement
 
-- `OldCarrier`: `(-19.0, 11.5)` on `north-service`, beside an inspection booth.
-- `NearCarrier`: `(11.5, 7.0)` on `warehouse-spur`, facing out from the loading
-  gate and stopped by a barrier and snow bank.
-- `CrewCarrier`: `(-10.5, -3.0)` on `west-diagonal`, with two visible occupants.
-- `ExpressCarrier`: `(8.0, -12.0)` on `south-arterial`, with an unobstructed lane
-  and restrained snow plume.
+- `OldCarrier`: `(-16.5, 11.5)` on `north-service`, beside but spatially separated
+  from the inspection booth; scale `0.95`, faded blue-grey body.
+- `NearCarrier`: `(11.5, 7.0)` on `warehouse-spur`, scale `1.25`, facing out from
+  the loading gate and stopped by a barrier and snow bank.
+- `CrewCarrier`: `(-10.5, -3.0)` on `west-diagonal`, scale `1.55`, with two visible
+  occupants and an enlarged windshield.
+- `ExpressCarrier`: `(8.0, -12.0)` on `south-arterial`, scale `1.45`, with an
+  unobstructed lane and restrained snow plume.
 
 The blockout covers a `70m x 56m` ground plane with ten town buildings, a
 warehouse district and six named road segments. `validate_layout()` prevents

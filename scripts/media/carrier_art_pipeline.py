@@ -220,7 +220,11 @@ def assemble_regions(
         region = Image.open(region_paths[name]).convert("RGBA")
         expected_size = (bounds[2] - bounds[0], bounds[3] - bounds[1])
         if region.size != expected_size:
-            raise ValueError(f"region {name} must have size {expected_size}")
+            differences = [abs(actual - expected) for actual, expected in zip(region.size, expected_size)]
+            if any(difference > 16 for difference in differences):
+                raise ValueError(f"region {name} must have size {expected_size}")
+            # fal.ai rounds requested dimensions to model-compatible multiples.
+            region = region.resize(expected_size, Image.Resampling.LANCZOS)
         layer = Image.new("RGBA", manifest.size, (0, 0, 0, 0))
         layer.paste(region, bounds[:2])
         assembled = Image.composite(
