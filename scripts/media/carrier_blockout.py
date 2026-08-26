@@ -6,6 +6,7 @@ import argparse
 import math
 import subprocess
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 import bpy
@@ -17,7 +18,7 @@ COLORS = {
     "road": (0.16, 0.20, 0.25, 1.0),
     "warehouse": (0.02, 0.22, 0.55, 1.0),
     "old": (0.25, 0.20, 0.16, 1.0),
-    "near": (0.68, 0.72, 0.73, 1.0),
+    "near": (0.42, 0.56, 0.62, 1.0),
     "crew": (0.02, 0.24, 0.55, 1.0),
     "express": (1.0, 0.20, 0.02, 1.0),
     "orange": (1.0, 0.32, 0.02, 1.0),
@@ -25,6 +26,21 @@ COLORS = {
     "glass": (0.12, 0.28, 0.38, 1.0),
     "building": (0.48, 0.38, 0.29, 1.0),
     "warm": (1.0, 0.55, 0.16, 1.0),
+}
+
+
+@dataclass(frozen=True)
+class TownDistrict:
+    position: tuple[float, float]
+    angle: float
+    road_id: str
+
+
+CARRIER_LAYOUT = {
+    "old": TownDistrict((-19.0, 11.5), math.pi / 2, "north-service"),
+    "near": TownDistrict((11.5, 7.0), math.pi / 2, "warehouse-spur"),
+    "crew": TownDistrict((-10.5, -3.0), math.radians(-36), "west-diagonal"),
+    "express": TownDistrict((8.0, -12.0), -math.pi / 2, "south-arterial"),
 }
 
 
@@ -188,6 +204,84 @@ def add_truck(
         cube(f"{name}-old-bumper", at(2.22 * s, 0, 0.38 * s), (1.18 * s, 0.12 * s, 0.1 * s), "near", target, angle, bevel=0.02)
 
 
+def add_van(
+    name: str,
+    position: tuple[float, float],
+    angle: float,
+    color: str,
+    target: bpy.types.Collection,
+) -> None:
+    x, y = position
+    forward = Vector((0, 1, 0))
+    forward.rotate(Matrix.Rotation(angle, 4, "Z"))
+    side = Vector((1, 0, 0))
+    side.rotate(Matrix.Rotation(angle, 4, "Z"))
+
+    def at(longitudinal: float, lateral: float, z: float) -> tuple[float, float, float]:
+        point = Vector((x, y, 0)) + forward * longitudinal + side * lateral
+        return point.x, point.y, z
+
+    cube(f"{name}-body", at(-0.2, 0, 0.85), (0.92, 1.65, 0.82), color, target, angle, bevel=0.32)
+    cube(f"{name}-nose", at(1.48, 0, 0.62), (0.9, 0.38, 0.55), color, target, angle, bevel=0.24)
+    cube(f"{name}-windshield", at(1.87, 0, 0.9), (0.76, 0.04, 0.32), "glass", target, angle, bevel=0.03)
+    for lateral in (-0.66, 0.66):
+        for longitudinal in (-0.85, 1.05):
+            cylinder(
+                f"{name}-wheel",
+                at(longitudinal, lateral, 0.3),
+                0.3,
+                0.2,
+                "road",
+                target,
+                rotation=(math.pi / 2, 0, angle),
+            )
+
+
+def add_express_truck(
+    position: tuple[float, float],
+    angle: float,
+    target: bpy.types.Collection,
+) -> None:
+    x, y = position
+    forward = Vector((0, 1, 0))
+    forward.rotate(Matrix.Rotation(angle, 4, "Z"))
+    side = Vector((1, 0, 0))
+    side.rotate(Matrix.Rotation(angle, 4, "Z"))
+
+    def at(longitudinal: float, lateral: float, z: float) -> tuple[float, float, float]:
+        point = Vector((x, y, 0)) + forward * longitudinal + side * lateral
+        return point.x, point.y, z
+
+    cube("ExpressTruck-body", at(-0.55, 0, 1.05), (1.08, 1.85, 0.95), "express", target, angle, bevel=0.34)
+    cube("ExpressTruck-cab", at(1.58, 0, 0.78), (1.0, 0.72, 0.72), "express", target, angle, bevel=0.38)
+    cube("ExpressTruck-windshield", at(2.33, 0, 0.98), (0.82, 0.05, 0.37), "glass", target, angle, bevel=0.04)
+    cube("ExpressTruck-roof-band", at(-0.4, 0, 1.98), (1.0, 1.72, 0.08), "warm", target, angle, bevel=0.06)
+    for lateral in (-0.78, 0.78):
+        for longitudinal in (-1.25, 1.35):
+            cylinder(
+                "ExpressTruck-wheel",
+                at(longitudinal, lateral, 0.34),
+                0.35,
+                0.22,
+                "road",
+                target,
+                rotation=(math.pi / 2, 0, angle),
+            )
+
+
+def validate_layout() -> None:
+    districts = list(CARRIER_LAYOUT.values())
+    road_ids = {district.road_id for district in districts}
+    if len(road_ids) != len(districts):
+        raise ValueError("each carrier must occupy a distinct road")
+
+    for index, first in enumerate(districts):
+        for second in districts[index + 1 :]:
+            distance = (Vector(first.position) - Vector(second.position)).length
+            if distance < 7.0:
+                raise ValueError(f"carrier centres are only {distance:.2f}m apart")
+
+
 def add_environment() -> None:
     environment = collection("Environment")
     warehouse = collection("Warehouse")
@@ -197,35 +291,58 @@ def add_environment() -> None:
     crew_collection = collection("CrewCarrier")
     express_collection = collection("ExpressCarrier")
 
-    cube("SnowGround", (0, 2, -0.45), (17, 15, 0.45), "snow", environment, bevel=0.0)
-    add_road("FarRoad", (-4.5, 9.2, 0.05), (2.2, 12.0, 0.12), math.radians(-69), environment)
-    add_road("WarehouseRoad", (1.5, 2.0, 0.08), (2.4, 11.5, 0.12), math.radians(-18), environment)
-    add_road("FrontRoad", (0.8, -5.4, 0.1), (2.8, 15.0, 0.13), math.radians(-82), environment)
+    validate_layout()
+    cube("SnowGround", (0, 0, -0.45), (35, 28, 0.45), "snow", environment, bevel=0.0)
 
-    cube("WarehouseBody", (0.0, 5.1, 2.2), (4.3, 3.0, 2.2), "warehouse", warehouse, bevel=0.22)
-    cube("WarehouseRoof", (0.0, 5.1, 4.65), (4.7, 3.35, 0.26), "snow", warehouse, bevel=0.18)
-    cube("LoadingGate", (1.8, 1.98, 1.15), (1.35, 0.16, 1.2), "road", warehouse, bevel=0.05)
-    for x in (-2.5, 0.0, 2.5):
-        cube(f"WarehouseWindow-{x}", (x, 2.06, 3.25), (0.58, 0.08, 0.4), "warm", warehouse, bevel=0.03)
+    add_road("NorthService", (-13.0, 11.5, 0.08), (2.5, 16.0, 0.13), math.pi / 2, environment)
+    add_road("WestConnector", (-17.0, -0.5, 0.08), (2.5, 12.0, 0.13), 0.0, environment)
+    add_road("WestDiagonal", (-9.0, -4.0, 0.09), (2.8, 12.5, 0.13), math.radians(-36), environment)
+    add_road("SouthArterial", (4.0, -12.0, 0.1), (3.3, 29.0, 0.14), math.pi / 2, environment)
+    add_road("EastAvenue", (14.0, -1.0, 0.08), (2.8, 11.0, 0.13), 0.0, environment)
+    add_road("WarehouseSpur", (15.0, 7.0, 0.1), (2.3, 7.0, 0.13), math.pi / 2, environment)
 
-    for index, (x, y) in enumerate(((-13.0, 13.0), (9.5, 11.5), (13.0, 13.0))):
-        cube(f"TownBuilding-{index}", (x, y, 1.8), (2.0, 2.3, 1.8), "building", environment, bevel=0.15)
-        cube(f"TownRoof-{index}", (x, y, 3.9), (2.25, 2.55, 0.24), "snow", environment, bevel=0.12)
+    cube("WarehouseBody", (22.0, 7.0, 2.8), (5.0, 4.2, 2.8), "warehouse", warehouse, bevel=0.28)
+    cube("WarehouseRoof", (22.0, 7.0, 5.9), (5.35, 4.55, 0.3), "snow", warehouse, bevel=0.2)
+    cube("LoadingGate", (16.95, 7.0, 1.45), (0.16, 1.65, 1.5), "road", warehouse, bevel=0.05)
+    for y in (4.5, 7.0, 9.5):
+        cube(f"WarehouseWindow-{y}", (16.88, y, 3.9), (0.08, 0.68, 0.48), "warm", warehouse, bevel=0.03)
 
-    add_truck("OldTruck", (-10.5, 7.0), math.radians(-72), "old", old_collection, old=True, scale_factor=0.72)
-    add_truck("NearTruck", (3.2, 0.2), math.radians(162), "near", near_collection, scale_factor=0.93)
-    add_truck("CrewTruck", (-3.2, -5.2), math.radians(-82), "crew", crew_collection, drivers=2, scale_factor=1.08)
-    add_truck("ExpressTruck", (4.6, -3.4), math.radians(96), "express", express_collection, scale_factor=0.96)
+    buildings = (
+        (-27.0, 20.0, 2.8, 3.0),
+        (-14.0, 20.5, 3.2, 2.7),
+        (0.0, 20.0, 3.0, 3.1),
+        (13.0, 19.0, 3.4, 2.8),
+        (-27.0, 1.5, 3.1, 3.4),
+        (2.0, 5.0, 3.4, 3.0),
+        (26.0, -3.5, 3.2, 3.2),
+        (-23.0, -21.0, 3.6, 2.8),
+        (-7.0, -21.0, 3.2, 3.0),
+        (23.0, -21.0, 3.5, 3.1),
+    )
+    for index, (x, y, sx, sy) in enumerate(buildings):
+        height = 2.0 + (index % 3) * 0.35
+        cube(f"TownBuilding-{index}", (x, y, height), (sx, sy, height), "building", environment, bevel=0.18)
+        cube(f"TownRoof-{index}", (x, y, height * 2 + 0.25), (sx + 0.3, sy + 0.3, 0.25), "snow", environment, bevel=0.14)
+        cube(f"TownWindow-{index}", (x, y - sy - 0.04, height + 0.5), (0.55, 0.07, 0.42), "warm", environment, bevel=0.03)
 
-    cube("InspectionBooth", (-7.0, 10.0, 0.75), (0.75, 0.75, 0.75), "building", cues, bevel=0.12)
-    cylinder("InspectionSign", (-7.1, 9.0, 1.25), 0.38, 0.08, "orange", cues, rotation=(0, math.pi / 2, 0))
-    cube("GateBarrier", (4.0, 1.7, 0.75), (1.35, 0.08, 0.08), "orange", cues, math.radians(-18), bevel=0.02)
-    cube("GateSnowBank", (5.0, 2.8, 0.34), (0.8, 1.25, 0.34), "snow", cues, math.radians(-18), bevel=0.28)
+    old = CARRIER_LAYOUT["old"]
+    near = CARRIER_LAYOUT["near"]
+    crew = CARRIER_LAYOUT["crew"]
+    express = CARRIER_LAYOUT["express"]
+    add_truck("OldTruck", old.position, old.angle, "old", old_collection, old=True, scale_factor=0.72)
+    add_van("NearVan", near.position, near.angle, "near", near_collection)
+    add_truck("CrewTruck", crew.position, crew.angle, "crew", crew_collection, drivers=2, scale_factor=1.12)
+    add_express_truck(express.position, express.angle, express_collection)
+
+    cube("InspectionBooth", (-23.0, 11.5, 0.9), (0.9, 0.9, 0.9), "building", cues, bevel=0.12)
+    cylinder("InspectionSign", (-21.7, 11.5, 1.45), 0.42, 0.08, "orange", cues, rotation=(0, math.pi / 2, 0))
+    cube("GateBarrier", (9.2, 7.0, 0.78), (0.08, 1.45, 0.08), "orange", cues, bevel=0.02)
+    cube("GateSnowBank", (9.7, 9.1, 0.4), (1.0, 1.35, 0.4), "snow", cues, bevel=0.3)
     for index in range(5):
         bpy.ops.mesh.primitive_ico_sphere_add(
             subdivisions=2,
             radius=0.33 + index * 0.08,
-            location=(4.2 + index * 0.55, -3.8 + index * 0.15, 0.25 + index * 0.05),
+            location=(5.8 - index * 0.6, -12.0, 0.25 + index * 0.05),
         )
         plume = bpy.context.object
         plume.name = f"ExpressSnowPlume-{index}"
@@ -266,8 +383,8 @@ def configure_scene() -> tuple[bpy.types.Object, bpy.types.Object]:
     scene.render.film_transparent = False
     scene.render.resolution_percentage = 100
     scene.unit_settings.system = "METRIC"
-    desktop = create_camera("CameraDesktop", (22.5, -29.0, 27.0), (0.2, 2.1, 0.7), 55)
-    mobile = create_camera("CameraMobile", (17.0, -34.0, 34.0), (-0.8, 2.5, 0.5), 60)
+    desktop = create_camera("CameraDesktop", (58.0, -72.0, 67.0), (0.0, 0.0, 1.0), 58)
+    mobile = create_camera("CameraMobile", (70.0, -105.0, 100.0), (2.0, 0.0, 0.8), 50)
     return desktop, mobile
 
 
