@@ -175,7 +175,7 @@ def add_truck(
     s = scale_factor
     cube(f"{name}-box", at(-0.65 * s, 0, 1.25 * s), (1.25 * s, 1.75 * s, 1.15 * s), color, target, angle)
     cube(f"{name}-cab", at(1.52 * s, 0, 0.9 * s), (1.22 * s, 0.62 * s, 0.88 * s), color, target, angle, bevel=0.24 * s)
-    cube(f"{name}-windshield", at(2.16 * s, 0, 1.1 * s), (1.02 * s, 0.05 * s, 0.44 * s), "glass", target, angle, bevel=0.03)
+    cube(f"{name}-windshield", at(2.18 * s, 0, 1.12 * s), (1.08 * s, 0.07 * s, 0.5 * s), "glass", target, angle, bevel=0.03)
     for lateral in (-0.82 * s, 0.82 * s):
         for longitudinal in (-1.25 * s, 1.45 * s):
             cylinder(
@@ -193,7 +193,7 @@ def add_truck(
             segments=20,
             ring_count=12,
             radius=0.23 * s,
-            location=at(2.24 * s, lateral * s, 1.18 * s),
+            location=at(2.12 * s, lateral * s, 1.2 * s),
         )
         head = bpy.context.object
         head.name = f"{name}-driver-{index}"
