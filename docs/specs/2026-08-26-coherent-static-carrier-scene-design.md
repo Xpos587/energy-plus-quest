@@ -1,6 +1,6 @@
 # Coherent Static Carrier Scene Design
 
-**Status:** Approved by Michael on 2026-08-26.
+**Status:** Revised composition approved by Michael on 2026-08-26.
 
 ## Intent
 
@@ -22,6 +22,8 @@ crew composition and the Express advantage before reading any supporting label.
 - Desktop and mobile use separately art-directed cameras of the same location.
 - The scene remains volumetric and consistent with the other three-dimensional
   illustrated screens; it never becomes a flat city map.
+- The four vehicles occupy independent roads and districts. They never read as
+  a queue, convoy or four choices staged around one warehouse exit.
 
 **Betrayal condition:** A technically interactive screen that needs animation,
 labels or independently composited sprites to explain the vehicles does not meet
@@ -29,26 +31,32 @@ the requirement.
 
 ## Approved Production Direction
 
-Use a controlled three-dimensional blocking scene to establish geometry, then
-generate each final viewport as one complete raster illustration. The blocking
-render, depth map and edge map act as structural controls. Reference images may
-teach the model vehicle design and the approved painterly language, but they are
-never overlaid as final transparent layers.
+Use a controlled three-dimensional blocking scene to establish a substantial
+northern town, then generate the final viewports through overlapping regional
+passes followed by whole-frame harmonization. The blocking render, depth map and
+edge map act as structural controls. Reference images may teach the model
+vehicle design and the approved painterly language, but they are never overlaid
+as final transparent layers.
 
-Local corrections use masked editing on the complete canvas. A correction mask
-must include the vehicle and enough adjacent road, snow, reflected light and
-shadow for the model to repaint the physical integration. Final vehicle sprites,
-CSS route animation and decorative speed animation are removed from the carrier
-screen.
+Each regional pass includes one vehicle story plus its road, nearby buildings,
+snow, reflected light, contact shadows and an overlap into adjacent districts.
+The regions are composited through broad feathered masks, then a low-strength
+whole-frame pass unifies atmosphere, lighting and texture without changing road
+geometry or vehicle count. Final vehicle sprites, CSS route animation and
+decorative speed animation are removed from the carrier screen.
 
 ## Static Scene Narrative
 
 ### Shared Environment
 
-- A blue logistics warehouse is the spatial anchor.
-- Roads form an understandable continuous network rather than decorative bands.
-- Snow banks, street lighting, buildings and people establish a warm northern
-  town without competing with the vehicles.
+- A blue logistics warehouse anchors one district but is not the centre of all
+  four stories.
+- The town contains several blocks, 8-12 substantial buildings, intersections
+  and at least four visibly independent road branches.
+- Roads form an understandable continuous network with lanes and unambiguous
+  travel directions rather than decorative bands.
+- Snow banks, street lighting, buildings, service points and people establish a
+  warm inhabited northern town without competing with the vehicles.
 - The camera is a high three-quarter view: low enough for cab interiors and
   vehicle volume to read, high enough for all four route situations to coexist.
 - Warm warehouse and window light contrasts with blue winter ambient light.
@@ -67,8 +75,8 @@ screen.
 
 - The vehicle is directly connected to the warehouse loading gate and is the
   nearest option.
-- Its route is visibly constrained by a gate procedure, a short loading queue or
-  a snow-clearing vehicle on the exit lane.
+- Its own warehouse spur is visibly constrained by a gate procedure, a short
+  loading queue or a snow-clearing vehicle on the exit lane.
 - It is intact and ready, but its immediate environment communicates a slow start.
 - The cue cannot depend on a written word such as `медленно`.
 
@@ -79,8 +87,8 @@ screen.
   thermos or route sheet.
 - Both figures belong inside the illustrated cab and share its reflections and
   lighting. A detached portrait badge is not used as the primary evidence.
-- The truck sits on a viable long road, away from the warehouse but not as deep
-  as the old vehicle.
+- The truck sits on a viable urban or inter-district road, away from the
+  warehouse and on a different branch from every other vehicle.
 
 ### Express Vehicle
 
@@ -96,8 +104,10 @@ screen.
 
 The illustration uses relative size, interposition, linear perspective,
 atmospheric perspective, light and shadow as redundant depth cues. The four
-vehicle stories occupy distinct spatial zones with enough negative space to be
-selected without covering one another.
+vehicle stories occupy separate districts and road branches with enough
+negative space to be selected without covering one another. No two vehicles
+face each other on the same lane, and no three vehicles occupy the same local
+intersection or warehouse apron.
 
 Orange is reserved for Express and small warm environmental accents. Blue
 vehicles remain separable through value, scale and context rather than competing
@@ -110,6 +120,7 @@ foreground.
 
 - Target master: `1536x864`, landscape `16:9`.
 - All four vehicles and the warehouse are simultaneously visible.
+- The frame shows a broad town panorama rather than a warehouse yard.
 - The mission panel occupies an inactive edge region and never covers a vehicle.
 - Vehicle hit areas follow semantic regions of the single raster rather than
   displaying separate vehicle images.
@@ -119,6 +130,8 @@ foreground.
 - Target master: `944x1792`, portrait, composed independently from desktop.
 - The camera is higher and tighter, but vehicles remain distributed through the
   full available height rather than compressed into the upper third.
+- Roads and districts are re-composed for portrait orientation; mobile is not a
+  crop or simple camera rotation of desktop.
 - The two-driver cab remains readable at iPhone SE presentation size.
 - The mission panel uses a safe lower or upper area that contains no vehicle.
 - All four hit areas remain reachable without page scrolling at `375x667` and
@@ -139,26 +152,35 @@ foreground.
 
 ## Production Workflow
 
-1. Build a low-detail 3D blockout with warehouse, roads, vehicles, people and cue
-   props using simple primitives and fixed real-world proportions.
+1. Build a low-detail 3D blockout of a substantial town with multiple districts,
+   warehouse, independent roads, vehicles, people and cue props using simple
+   primitives and fixed real-world proportions.
 2. Lock desktop and mobile cameras and render color blocking, depth and edge
    guides for each.
-3. Generate several whole-frame painterly candidates from the structural guides
-   and the approved V7 style reference.
-4. Inspect every candidate at original resolution with `view_image`; reject any
+3. Define four overlapping regional crops per viewport. Each crop centres one
+   vehicle story while retaining 20-30% context overlap with adjacent regions.
+4. Generate each region separately through structurally controlled img2img so
+   the model can resolve the vehicle, local road logic and environmental cues.
+5. Inspect every regional candidate at original resolution with `view_image`;
+   reject any
    frame with duplicated vehicles, unreadable occupants, inconsistent geometry
    or weak visual semantics.
-5. Correct only failed regions through full-canvas masked editing with masks that
-   include their environmental integration.
-6. Export final lossless masters, then encode production WebP assets.
-7. Replace V8 layered rendering with semantic hotspots over the two coherent
+6. Composite accepted regions with broad feathered overlap masks. Never paste a
+   tightly cut vehicle or replace a region without its surrounding road and snow.
+7. Run a low-strength whole-frame harmonization pass for shared light, weather,
+   texture and seam removal while preserving the structural guide.
+8. Export final lossless masters, then encode production WebP assets.
+9. Replace V8 layered rendering with semantic hotspots over the two coherent
    rasters.
-8. Capture and inspect desktop, `390x844` and iPhone SE `375x667` screenshots
+10. Capture and inspect desktop, `390x844` and iPhone SE `375x667` screenshots
    before deployment.
 
 ## Acceptance Criteria
 
-- Each master contains exactly one warehouse and exactly four trucks.
+- Each master contains exactly one primary warehouse and exactly four delivery
+  vehicles distributed across independent road branches.
+- The environment contains multiple recognisable districts and enough buildings
+  to read as a town rather than a small warehouse yard.
 - No final carrier vehicle is a transparent layer or separately rendered DOM
   image.
 - With all HTML labels and animations disabled, a reviewer can identify which
@@ -183,3 +205,7 @@ foreground.
 - Mechanical desktop-to-mobile cropping or horizontal outpainting that preserves
   only one viewport's composition.
 - Tight object masks that repaint a truck without adjacent road, shadow and snow.
+- Four vehicles compressed onto one road, one intersection or one warehouse
+  apron.
+- Whole-frame generation as the only detail pass when it repeatedly neglects
+  small or distant vehicle stories.
