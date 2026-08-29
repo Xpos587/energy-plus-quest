@@ -1,0 +1,152 @@
+{
+  "blend": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/blockout/carrier-scene.blend",
+  "viewports": {
+    "desktop": {
+      "size": [
+        1536,
+        864
+      ],
+      "camera": "CameraDesktop",
+      "carriers": {
+        "old": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/desktop/old-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/desktop/old-id.png",
+          "size": [
+            1536,
+            864
+          ],
+          "nonzero_alpha": 86808,
+          "road_prefix": "north-service"
+        },
+        "near": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/desktop/near-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/desktop/near-id.png",
+          "size": [
+            1536,
+            864
+          ],
+          "nonzero_alpha": 55136,
+          "road_prefix": "east-street"
+        },
+        "crew": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/desktop/crew-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/desktop/crew-id.png",
+          "size": [
+            1536,
+            864
+          ],
+          "nonzero_alpha": 108744,
+          "road_prefix": "main-avenue"
+        },
+        "express": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/desktop/express-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/desktop/express-id.png",
+          "size": [
+            1536,
+            864
+          ],
+          "nonzero_alpha": 111093,
+          "road_prefix": "south-arterial"
+        }
+      }
+    },
+    "tablet": {
+      "size": [
+        1200,
+        1200
+      ],
+      "camera": "CameraTablet",
+      "carriers": {
+        "old": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/tablet/old-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/tablet/old-id.png",
+          "size": [
+            1200,
+            1200
+          ],
+          "nonzero_alpha": 66665,
+          "road_prefix": "north-service"
+        },
+        "near": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/tablet/near-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/tablet/near-id.png",
+          "size": [
+            1200,
+            1200
+          ],
+          "nonzero_alpha": 42548,
+          "road_prefix": "east-street"
+        },
+        "crew": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/tablet/crew-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/tablet/crew-id.png",
+          "size": [
+            1200,
+            1200
+          ],
+          "nonzero_alpha": 82871,
+          "road_prefix": "main-avenue"
+        },
+        "express": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/tablet/express-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/tablet/express-id.png",
+          "size": [
+            1200,
+            1200
+          ],
+          "nonzero_alpha": 85543,
+          "road_prefix": "south-arterial"
+        }
+      }
+    },
+    "mobile": {
+      "size": [
+        944,
+        1792
+      ],
+      "camera": "CameraMobile",
+      "carriers": {
+        "old": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/mobile/old-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/mobile/old-id.png",
+          "size": [
+            944,
+            1792
+          ],
+          "nonzero_alpha": 86885,
+          "road_prefix": "north-service"
+        },
+        "near": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/mobile/near-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/mobile/near-id.png",
+          "size": [
+            944,
+            1792
+          ],
+          "nonzero_alpha": 96017,
+          "road_prefix": "east-street"
+        },
+        "crew": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/mobile/crew-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/mobile/crew-id.png",
+          "size": [
+            944,
+            1792
+          ],
+          "nonzero_alpha": 125347,
+          "road_prefix": "main-avenue"
+        },
+        "express": {
+          "color": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/mobile/express-color.png",
+          "id_mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/cutouts-26082740/mobile/express-id.png",
+          "size": [
+            944,
+            1792
+          ],
+          "nonzero_alpha": 155568,
+          "road_prefix": "south-arterial"
+        }
+      }
+    }
+  }
+}

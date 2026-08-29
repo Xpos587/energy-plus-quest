@@ -1,0 +1,15 @@
+{
+  "name": "crew",
+  "bounds": [
+    0,
+    800,
+    560,
+    1400
+  ],
+  "size": [
+    560,
+    600
+  ],
+  "image": "mobile-color.png",
+  "control": "mobile-canny.png"
+}

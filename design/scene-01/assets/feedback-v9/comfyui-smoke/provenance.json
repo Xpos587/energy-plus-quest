@@ -1,0 +1,41 @@
+{
+  "prompt_id": "ef683cc0-aab9-4959-b490-1bea3541809c",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "ef683cc0-aab9-4959-b490-1bea3541809c",
+          "timestamp": 1787995076055
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "ef683cc0-aab9-4959-b490-1bea3541809c",
+          "timestamp": 1787995076056
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "ef683cc0-aab9-4959-b490-1bea3541809c",
+          "timestamp": 1787995081844
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v9_fal_smoke_00001_.png",
+      "path": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/comfyui-smoke/carrier_v9_fal_smoke_00001_.png",
+      "bytes": 259513
+    }
+  ],
+  "workflow": "FluxSchnell_fal 512x512 4 steps",
+  "seed": 26082801,
+  "key_source": "FAL_API_KEY -> FAL_KEY process alias"
+}

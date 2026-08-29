@@ -1,0 +1,18 @@
+{
+  "images": [
+    {
+      "url": "https://v3b.fal.media/files/b/0aa8054d/7jwsBZ78_2Fkc9Tt3a6Yf.png",
+      "width": 944,
+      "height": 1536,
+      "content_type": "image/png"
+    }
+  ],
+  "timings": {
+    "inference": 10.748451108000154
+  },
+  "seed": 26082721,
+  "has_nsfw_concepts": [
+    false
+  ],
+  "prompt": "Repaint the masked area as a seamless part of the existing hand-painted winter town. Use the temporary low-detail 3D shapes inside the mask only as geometry guidance. Preserve the road position, neighbouring houses, snow banks, mountain atmosphere, camera perspective, crop-edge continuity, light direction and gouache/colored-pencil texture of the surrounding image.\n\nInside the masked area create exactly one readable older operational delivery vehicle: a muted blue-grey vintage tarp-covered flatbed truck with a compact old cab, low wooden bed, rounded canvas cover, restrained wear, four wheels and a small windshield. It travels slowly along the upper service road beside a tiny inspection booth. Add shallow tyre ruts and a small powder-snow puff behind it. Keep the full vehicle visible and clearly separate from every building.\n\nRemove any orange truck, Express branding or duplicate vehicle from this masked area. No text, letters, numbers, logos, extra vehicle, collision, smoke, breakdown, detached parts, cutout edge, photorealism or flat map.\n"
+}

@@ -1,0 +1,486 @@
+{
+  "roads": [
+    {
+      "id": "north-service",
+      "position": [
+        0.0,
+        16.0
+      ],
+      "half_width": 2.4,
+      "half_length": 25.0,
+      "angle": 1.5707963267948966
+    },
+    {
+      "id": "main-avenue",
+      "position": [
+        0.0,
+        2.0
+      ],
+      "half_width": 3.0,
+      "half_length": 25.0,
+      "angle": 1.5707963267948966
+    },
+    {
+      "id": "south-arterial",
+      "position": [
+        0.0,
+        -14.0
+      ],
+      "half_width": 3.2,
+      "half_length": 25.0,
+      "angle": 1.5707963267948966
+    },
+    {
+      "id": "west-street",
+      "position": [
+        -18.0,
+        1.0
+      ],
+      "half_width": 2.4,
+      "half_length": 15.0,
+      "angle": 0.0
+    },
+    {
+      "id": "central-street",
+      "position": [
+        0.0,
+        1.0
+      ],
+      "half_width": 2.5,
+      "half_length": 15.0,
+      "angle": 0.0
+    },
+    {
+      "id": "east-street",
+      "position": [
+        14.0,
+        1.0
+      ],
+      "half_width": 2.5,
+      "half_length": 15.0,
+      "angle": 0.0
+    },
+    {
+      "id": "warehouse-spur",
+      "position": [
+        13.5,
+        8.0
+      ],
+      "half_width": 2.3,
+      "half_length": 3.5,
+      "angle": 1.5707963267948966
+    }
+  ],
+  "buildings": [
+    {
+      "position": [
+        -28,
+        21
+      ],
+      "size": [
+        3.0,
+        3.2
+      ],
+      "height": 4.8,
+      "color": "wood"
+    },
+    {
+      "position": [
+        -15,
+        23
+      ],
+      "size": [
+        3.7,
+        3.0
+      ],
+      "height": 6.2,
+      "color": "building"
+    },
+    {
+      "position": [
+        -3,
+        21
+      ],
+      "size": [
+        3.0,
+        3.1
+      ],
+      "height": 4.5,
+      "color": "building"
+    },
+    {
+      "position": [
+        10,
+        21
+      ],
+      "size": [
+        3.5,
+        3.0
+      ],
+      "height": 5.8,
+      "color": "building_red"
+    },
+    {
+      "position": [
+        22,
+        23
+      ],
+      "size": [
+        3.2,
+        3.1
+      ],
+      "height": 4.6,
+      "color": "wood"
+    },
+    {
+      "position": [
+        -27,
+        8
+      ],
+      "size": [
+        3.1,
+        3.0
+      ],
+      "height": 4.4,
+      "color": "wood"
+    },
+    {
+      "position": [
+        -16,
+        7
+      ],
+      "size": [
+        3.8,
+        3.1
+      ],
+      "height": 5.5,
+      "color": "building"
+    },
+    {
+      "position": [
+        5,
+        9
+      ],
+      "size": [
+        3.2,
+        3.0
+      ],
+      "height": 4.6,
+      "color": "wood"
+    },
+    {
+      "position": [
+        -29,
+        -7
+      ],
+      "size": [
+        3.6,
+        3.0
+      ],
+      "height": 5.8,
+      "color": "building_red"
+    },
+    {
+      "position": [
+        -12,
+        -7
+      ],
+      "size": [
+        3.1,
+        3.0
+      ],
+      "height": 4.5,
+      "color": "wood"
+    },
+    {
+      "position": [
+        3,
+        -7
+      ],
+      "size": [
+        3.7,
+        3.1
+      ],
+      "height": 5.6,
+      "color": "building"
+    },
+    {
+      "position": [
+        28,
+        -7
+      ],
+      "size": [
+        3.1,
+        3.0
+      ],
+      "height": 4.4,
+      "color": "building"
+    },
+    {
+      "position": [
+        -28,
+        -21
+      ],
+      "size": [
+        3.3,
+        3.2
+      ],
+      "height": 4.7,
+      "color": "building"
+    },
+    {
+      "position": [
+        -14,
+        -21
+      ],
+      "size": [
+        3.8,
+        3.0
+      ],
+      "height": 5.9,
+      "color": "building_red"
+    },
+    {
+      "position": [
+        2,
+        -22
+      ],
+      "size": [
+        3.1,
+        3.0
+      ],
+      "height": 4.5,
+      "color": "wood"
+    },
+    {
+      "position": [
+        20,
+        -22
+      ],
+      "size": [
+        4.0,
+        3.2
+      ],
+      "height": 5.7,
+      "color": "wood"
+    }
+  ],
+  "carriers": {
+    "old": {
+      "position": [
+        -4.0,
+        16.0
+      ],
+      "angle": 1.5707963267948966,
+      "road_id": "north-service",
+      "body_type": "old-tarp-flatbed"
+    },
+    "near": {
+      "position": [
+        16.0,
+        0.0
+      ],
+      "angle": 0.0,
+      "road_id": "east-street",
+      "body_type": "panel-van"
+    },
+    "crew": {
+      "position": [
+        -8.0,
+        2.0
+      ],
+      "angle": -1.5707963267948966,
+      "road_id": "main-avenue",
+      "body_type": "high-box-crew"
+    },
+    "express": {
+      "position": [
+        7.0,
+        -14.0
+      ],
+      "angle": 1.5707963267948966,
+      "road_id": "south-arterial",
+      "body_type": "streamlined-express"
+    }
+  },
+  "props": {
+    "lamps": 10,
+    "trees": 20,
+    "snowbanks": 22,
+    "mountains": 5,
+    "motion_tracks": 8,
+    "snow_plumes": 13,
+    "express_wordmarks": 1
+  },
+  "network_connected": true,
+  "viewports": {
+    "desktop": {
+      "size": [
+        1536,
+        864
+      ],
+      "landmarks": {
+        "warehouse": {
+          "visible_fraction": 0.8333
+        },
+        "loading_gate": {
+          "visible_fraction": 1.0
+        }
+      },
+      "vehicles": {
+        "old": {
+          "bounds": [
+            0.4939,
+            0.7018,
+            0.6069,
+            0.8552
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "near": {
+          "bounds": [
+            0.6323,
+            0.2676,
+            0.7212,
+            0.4413
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "crew": {
+          "bounds": [
+            0.3369,
+            0.5198,
+            0.4518,
+            0.7085
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "express": {
+          "bounds": [
+            0.4127,
+            0.1488,
+            0.5184,
+            0.2949
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        }
+      }
+    },
+    "tablet": {
+      "size": [
+        1200,
+        1200
+      ],
+      "landmarks": {
+        "warehouse": {
+          "visible_fraction": 0.8333
+        },
+        "loading_gate": {
+          "visible_fraction": 1.0
+        }
+      },
+      "vehicles": {
+        "old": {
+          "bounds": [
+            0.4761,
+            0.6333,
+            0.5994,
+            0.7239
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "near": {
+          "bounds": [
+            0.6791,
+            0.3653,
+            0.7674,
+            0.4738
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "crew": {
+          "bounds": [
+            0.326,
+            0.5014,
+            0.4518,
+            0.6125
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "express": {
+          "bounds": [
+            0.4509,
+            0.2708,
+            0.5673,
+            0.3572
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        }
+      }
+    },
+    "mobile": {
+      "size": [
+        944,
+        1792
+      ],
+      "landmarks": {
+        "warehouse": {
+          "visible_fraction": 0.8333
+        },
+        "loading_gate": {
+          "visible_fraction": 1.0
+        }
+      },
+      "vehicles": {
+        "old": {
+          "bounds": [
+            0.2232,
+            0.5849,
+            0.4126,
+            0.6472
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "near": {
+          "bounds": [
+            0.8197,
+            0.3934,
+            0.9396,
+            0.4935
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "crew": {
+          "bounds": [
+            0.0659,
+            0.4339,
+            0.2904,
+            0.5146
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "express": {
+          "bounds": [
+            0.5173,
+            0.2301,
+            0.7438,
+            0.3028
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        }
+      }
+    }
+  }
+}

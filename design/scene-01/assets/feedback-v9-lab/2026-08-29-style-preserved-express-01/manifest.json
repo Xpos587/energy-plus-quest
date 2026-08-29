@@ -1,0 +1,22 @@
+{
+  "source": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-style-preserved-express-01/source-styled-desktop.png",
+  "mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-style-preserved-express-01/express-mask.png",
+  "canvas": [
+    1536,
+    864
+  ],
+  "masked_object": "express",
+  "bbox": [
+    652,
+    559,
+    814,
+    707
+  ],
+  "status": "blocked",
+  "style_reference": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9/candidates/mobile-26082653-clean-style.png",
+  "prompt_id": "5eae25d0-738d-4fe7-98c1-b8454ca5e358",
+  "provider_output": null,
+  "credits_spent": false,
+  "error": "[file-upload] Credential has been revoked",
+  "resume": "Set a valid FAL_KEY in process environment and resubmit payload.json; run only express visual gate."
+}

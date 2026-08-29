@@ -1,0 +1,58 @@
+{
+  "blender": {
+    "script": "scripts/media/carrier_blockout.py",
+    "proof_dir": "/tmp/carrier-v9-proof",
+    "validation": "uv run --with pytest pytest scripts/media/test_carrier_blockout.py -q",
+    "result": "1 passed"
+  },
+  "comfyui": {
+    "version": "0.34.0",
+    "nodes": [
+      "CannyEdgePreprocessor",
+      "ControlNetLoader",
+      "ControlNetApplyAdvanced",
+      "CheckpointLoaderSimple",
+      "KSampler",
+      "SaveImage"
+    ],
+    "api_workflow": "carrier-v9-controlnet-canny-api.json",
+    "result": "success",
+    "prompt_id": "6da4066b-ff8f-446f-9974-d550bd4d297d",
+    "additional_tests": [
+      {
+        "operation": "QwenImageEdit_fal",
+        "prompt_id": "692752ec-06a5-40c5-8f3a-887a03485a81",
+        "request_id": "01a04d0d-5157-7943-b9a4-26148f0bb7c6",
+        "result": "success",
+        "output": "carrier_v9_qwen_edit_proof_00001_.png",
+        "composite": "carrier_v9_qwen_desktop_regional_composite.png",
+        "outside_mask_diff": "none"
+      },
+      {
+        "operation": "FluxPro1Fill_fal",
+        "prompt_id": "32ac3abd-56f1-4875-b739-096f6377517b",
+        "result": "success",
+        "output": "carrier_v9_fal_regional_fill_00001_.png",
+        "composite": "carrier_v9_desktop_regional_composite.png",
+        "outside_mask_diff": "none"
+      },
+      {
+        "operation": "FluxPro1Fill_fal_outpaint",
+        "prompt_id": "53090da1-84b9-44a6-a277-5061e66b0fa9",
+        "result": "success",
+        "output": "carrier_v9_fal_outpaint_00001_.png"
+      }
+    ]
+  },
+  "artifacts": [
+    "carrier_v9_controlnet_canny_proof_00001_.png",
+    "carrier_v9_depth_test_00001_.png",
+    "carrier_v9_sd15_local_test_00001_.png"
+  ],
+  "qa": {
+    "technical": "pass",
+    "production_art": "reject",
+    "reason": "SD1.5 Canny ControlNet dropped required vehicles and produced generic snow-town; do not promote."
+  },
+  "next_route": "Blender passes -> local preprocessors -> fal regional inpaint/edit with masks -> compositing -> object-count QA"
+}

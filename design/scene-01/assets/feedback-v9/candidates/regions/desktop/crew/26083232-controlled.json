@@ -1,0 +1,16 @@
+{
+  "endpoint": "fal-ai/flux-control-lora-canny",
+  "input": "crew-image.png",
+  "control": "crew-control.png",
+  "control_type": "canny",
+  "size": [
+    850,
+    534
+  ],
+  "seed": 26083232,
+  "steps": 32,
+  "guidance": 3.5,
+  "strength": null,
+  "control_strength": 0.86,
+  "output": "26083232-controlled.png"
+}

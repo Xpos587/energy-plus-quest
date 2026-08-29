@@ -1,0 +1,79 @@
+{
+  "source": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/blender/desktop-color.png",
+  "canvas": [
+    1536,
+    864
+  ],
+  "regions": {
+    "old": {
+      "box": [
+        680,
+        90,
+        300,
+        170
+      ],
+      "size": [
+        300,
+        170
+      ],
+      "source": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/old/source.png",
+      "mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/old/mask.png",
+      "output": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/old/output.png",
+      "qa": "reject"
+    },
+    "crew": {
+      "box": [
+        480,
+        220,
+        280,
+        235
+      ],
+      "size": [
+        280,
+        235
+      ],
+      "source": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/crew/source.png",
+      "mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/crew/mask.png",
+      "output": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/crew/output.png",
+      "qa": "reject"
+    },
+    "near": {
+      "box": [
+        900,
+        410,
+        290,
+        270
+      ],
+      "size": [
+        290,
+        270
+      ],
+      "source": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/near/source.png",
+      "mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/near/mask.png",
+      "output": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/near/output.png",
+      "qa": "reject"
+    },
+    "express": {
+      "box": [
+        560,
+        560,
+        320,
+        240
+      ],
+      "size": [
+        320,
+        240
+      ],
+      "source": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/express/source.png",
+      "mask": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/express/mask.png",
+      "output": "/home/michael/Github/.worktrees/energy-plus-quest/carrier-v9/design/scene-01/assets/feedback-v9-lab/2026-08-29-four-vehicles-desktop/regions/express/output.png",
+      "qa": "reject"
+    }
+  },
+  "note": "Fresh crops/masks from same Blender render; polygons require silhouette QA before paid edit.",
+  "qa": {
+    "status": "reject",
+    "reason": "tight low-resolution crops caused provider context drift and distorted surrounding geometry; do not composite into production",
+    "next": "512 square padded crops or full-frame mask-aware fill with object registration"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "endpoint": "fal-ai/flux-control-lora-canny",
+  "input": "mobile-color.png",
+  "control": "mobile-canny.png",
+  "control_type": "canny",
+  "size": [
+    944,
+    1792
+  ],
+  "seed": 26082641,
+  "steps": 36,
+  "guidance": 4.0,
+  "strength": null,
+  "control_strength": 1.0,
+  "output": "mobile-layout-v4-canny-seed-26082641.png"
+}

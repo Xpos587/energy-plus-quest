@@ -15,6 +15,7 @@ import json
 import os
 import tempfile
 from collections import deque
+from dataclasses import dataclass
 from pathlib import Path
 from urllib.request import urlretrieve
 
@@ -30,7 +31,12 @@ def configure_credentials() -> None:
 
 
 def upload(path: str) -> str:
-    return fal_client.upload_file(str(Path(path).resolve()))
+    resolved = Path(path).resolve()
+    try:
+        return fal_client.upload_file(str(resolved))
+    except Exception as error:
+        print(f"upload fallback={type(error).__name__}")
+        return fal_client.encode_file(resolved)
 
 
 def save_result(result: dict, output: Path, metadata: Path | None) -> None:
@@ -85,6 +91,207 @@ def compose(args: argparse.Namespace) -> None:
         },
     )
     save_result(result, Path(args.output), Path(args.metadata) if args.metadata else None)
+
+
+@dataclass(frozen=True)
+class RegionManifest:
+    size: tuple[int, int]
+    regions: dict[str, tuple[int, int, int, int]]
+
+
+def load_region_manifest(path: str | Path) -> RegionManifest:
+    payload = json.loads(Path(path).read_text())
+    size = tuple(payload.get("size", ()))
+    if len(size) != 2 or any(not isinstance(value, int) or value <= 0 for value in size):
+        raise ValueError("manifest size must contain two positive integers")
+
+    raw_regions = payload.get("regions", {})
+    expected_names = {"old", "near", "crew", "express"}
+    if set(raw_regions) != expected_names:
+        raise ValueError(f"manifest regions must be exactly {sorted(expected_names)}")
+
+    width, height = size
+    regions: dict[str, tuple[int, int, int, int]] = {}
+    for name, raw_bounds in raw_regions.items():
+        bounds = tuple(raw_bounds)
+        if len(bounds) != 4 or any(not isinstance(value, int) for value in bounds):
+            raise ValueError(f"region {name} must contain four integer bounds")
+        left, top, right, bottom = bounds
+        if not (0 <= left < right <= width and 0 <= top < bottom <= height):
+            raise ValueError(f"region {name} is outside the manifest canvas")
+        regions[name] = bounds
+
+    overlap_counts = {name: 0 for name in regions}
+    names = list(regions)
+    for index, first_name in enumerate(names):
+        first = regions[first_name]
+        for second_name in names[index + 1 :]:
+            second = regions[second_name]
+            overlap_width = max(0, min(first[2], second[2]) - max(first[0], second[0]))
+            overlap_height = max(0, min(first[3], second[3]) - max(first[1], second[1]))
+            if overlap_width == 0 or overlap_height == 0:
+                continue
+            smaller_width = min(first[2] - first[0], second[2] - second[0])
+            smaller_height = min(first[3] - first[1], second[3] - second[1])
+            if max(overlap_width / smaller_width, overlap_height / smaller_height) < 0.2:
+                raise ValueError(
+                    f"regions {first_name} and {second_name} overlap by less than 20%"
+                )
+            overlap_counts[first_name] += 1
+            overlap_counts[second_name] += 1
+
+    if any(count < 2 for count in overlap_counts.values()):
+        raise ValueError("each region must overlap at least two neighbouring regions")
+    return RegionManifest(size=(width, height), regions=regions)
+
+
+def extract_regions(
+    image_path: str | Path,
+    control_path: str | Path,
+    manifest_path: str | Path,
+    output_dir: str | Path,
+) -> None:
+    manifest = load_region_manifest(manifest_path)
+    image = Image.open(image_path)
+    control = Image.open(control_path)
+    if image.size != manifest.size or control.size != manifest.size:
+        raise ValueError("image, control and manifest dimensions must match")
+
+    destination = Path(output_dir)
+    destination.mkdir(parents=True, exist_ok=True)
+    for name, bounds in manifest.regions.items():
+        image.crop(bounds).save(destination / f"{name}-image.png")
+        control.crop(bounds).save(destination / f"{name}-control.png")
+        metadata = {
+            "name": name,
+            "bounds": list(bounds),
+            "size": [bounds[2] - bounds[0], bounds[3] - bounds[1]],
+            "image": Path(image_path).name,
+            "control": Path(control_path).name,
+        }
+        (destination / f"{name}.json").write_text(
+            json.dumps(metadata, ensure_ascii=False, indent=2) + "\n"
+        )
+
+
+def _region_mask(
+    canvas_size: tuple[int, int], bounds: tuple[int, int, int, int], feather: int
+) -> Image.Image:
+    left, top, right, bottom = bounds
+    region_width, region_height = right - left, bottom - top
+    local = Image.new("L", (region_width, region_height), 255)
+    pixels = local.load()
+    canvas_width, canvas_height = canvas_size
+    for y in range(region_height):
+        for x in range(region_width):
+            distances = [feather]
+            if left > 0:
+                distances.append(x)
+            if top > 0:
+                distances.append(y)
+            if right < canvas_width:
+                distances.append(region_width - 1 - x)
+            if bottom < canvas_height:
+                distances.append(region_height - 1 - y)
+            pixels[x, y] = round(255 * min(1.0, max(0, min(distances)) / feather))
+    mask = Image.new("L", canvas_size, 0)
+    mask.paste(local, (left, top))
+    return mask
+
+
+def assemble_regions(
+    base_path: str | Path,
+    manifest_path: str | Path,
+    region_paths: dict[str, str | Path],
+    feather: int,
+    output_path: str | Path,
+) -> None:
+    if feather <= 0:
+        raise ValueError("feather must be positive")
+    manifest = load_region_manifest(manifest_path)
+    assembled = Image.open(base_path).convert("RGBA")
+    if assembled.size != manifest.size:
+        raise ValueError("base and manifest dimensions must match")
+
+    for name in manifest.regions:
+        if name not in region_paths:
+            continue
+        bounds = manifest.regions[name]
+        region = Image.open(region_paths[name]).convert("RGBA")
+        expected_size = (bounds[2] - bounds[0], bounds[3] - bounds[1])
+        if region.size != expected_size:
+            differences = [abs(actual - expected) for actual, expected in zip(region.size, expected_size)]
+            if any(difference > 16 for difference in differences):
+                raise ValueError(f"region {name} must have size {expected_size}")
+            # fal.ai rounds requested dimensions to model-compatible multiples.
+            region = region.resize(expected_size, Image.Resampling.LANCZOS)
+        layer = Image.new("RGBA", manifest.size, (0, 0, 0, 0))
+        layer.paste(region, bounds[:2])
+        assembled = Image.composite(
+            layer, assembled, _region_mask(manifest.size, bounds, feather)
+        )
+
+    output = Path(output_path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    assembled.convert("RGB").save(output)
+    print(f"saved={output}")
+
+
+def extract_regions_command(args: argparse.Namespace) -> None:
+    extract_regions(args.image, args.control, args.manifest, args.output_dir)
+
+
+def assemble_regions_command(args: argparse.Namespace) -> None:
+    regions = {}
+    for value in args.region:
+        name, separator, path = value.partition("=")
+        if not separator or not name or not path:
+            raise SystemExit("--region must use name=path")
+        regions[name] = path
+    assemble_regions(args.base, args.manifest, regions, args.feather, args.output)
+
+
+def structured_generate(args: argparse.Namespace) -> None:
+    endpoint = (
+        "fal-ai/flux-control-lora-depth/image-to-image"
+        if args.control_type == "depth"
+        else "fal-ai/flux-control-lora-canny"
+    )
+    arguments = {
+        "prompt": Path(args.prompt_file).read_text(),
+        "image_url": upload(args.image),
+        "control_lora_image_url": upload(args.control),
+        "image_size": {"width": args.width, "height": args.height},
+        "num_inference_steps": args.steps,
+        "guidance_scale": args.guidance,
+        "seed": args.seed,
+        "num_images": 1,
+        "control_lora_strength": args.control_strength,
+        "output_format": "png",
+        "enable_safety_checker": True,
+    }
+    if args.control_type == "depth":
+        arguments["strength"] = args.strength
+    result = fal_client.subscribe(endpoint, arguments=arguments)
+    output = Path(args.output)
+    save_result(result, output, None)
+    if args.metadata:
+        metadata = {
+            "endpoint": endpoint,
+            "input": Path(args.image).name,
+            "control": Path(args.control).name,
+            "control_type": args.control_type,
+            "size": [args.width, args.height],
+            "seed": result.get("seed", args.seed),
+            "steps": args.steps,
+            "guidance": args.guidance,
+            "strength": args.strength if args.control_type == "depth" else None,
+            "control_strength": args.control_strength,
+            "output": output.name,
+        }
+        metadata_path = Path(args.metadata)
+        metadata_path.parent.mkdir(parents=True, exist_ok=True)
+        metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n")
 
 
 def inpaint(args: argparse.Namespace) -> None:
@@ -378,6 +585,39 @@ def build_parser() -> argparse.ArgumentParser:
     compose_parser.add_argument("--metadata")
     compose_parser.set_defaults(func=compose)
 
+    structured_parser = subparsers.add_parser("structured-generate")
+    structured_parser.add_argument("--image", required=True)
+    structured_parser.add_argument("--control", required=True)
+    structured_parser.add_argument(
+        "--control-type", choices=("depth", "canny"), required=True
+    )
+    structured_parser.add_argument("--prompt-file", required=True)
+    structured_parser.add_argument("--width", type=int, required=True)
+    structured_parser.add_argument("--height", type=int, required=True)
+    structured_parser.add_argument("--steps", type=int, default=32)
+    structured_parser.add_argument("--guidance", type=float, default=3.5)
+    structured_parser.add_argument("--strength", type=float, default=0.78)
+    structured_parser.add_argument("--control-strength", type=float, default=0.92)
+    structured_parser.add_argument("--seed", type=int, required=True)
+    structured_parser.add_argument("--output", required=True)
+    structured_parser.add_argument("--metadata")
+    structured_parser.set_defaults(func=structured_generate)
+
+    extract_regions_parser = subparsers.add_parser("extract-regions")
+    extract_regions_parser.add_argument("--image", required=True)
+    extract_regions_parser.add_argument("--control", required=True)
+    extract_regions_parser.add_argument("--manifest", required=True)
+    extract_regions_parser.add_argument("--output-dir", required=True)
+    extract_regions_parser.set_defaults(func=extract_regions_command, local=True)
+
+    assemble_regions_parser = subparsers.add_parser("assemble-regions")
+    assemble_regions_parser.add_argument("--base", required=True)
+    assemble_regions_parser.add_argument("--manifest", required=True)
+    assemble_regions_parser.add_argument("--region", action="append", required=True)
+    assemble_regions_parser.add_argument("--feather", type=int, default=96)
+    assemble_regions_parser.add_argument("--output", required=True)
+    assemble_regions_parser.set_defaults(func=assemble_regions_command, local=True)
+
     inpaint_parser = subparsers.add_parser("inpaint")
     inpaint_parser.add_argument("--image", required=True)
     inpaint_parser.add_argument("--mask", required=True)
@@ -483,8 +723,9 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main() -> None:
-    configure_credentials()
     args = build_parser().parse_args()
+    if not getattr(args, "local", False):
+        configure_credentials()
     args.func(args)
 
 

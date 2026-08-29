@@ -1,0 +1,15 @@
+{
+  "name": "old",
+  "bounds": [
+    0,
+    400,
+    520,
+    950
+  ],
+  "size": [
+    520,
+    550
+  ],
+  "image": "mobile-color.png",
+  "control": "mobile-canny.png"
+}
