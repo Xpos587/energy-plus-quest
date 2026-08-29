@@ -1,0 +1,18 @@
+{
+  "images": [
+    {
+      "url": "https://v3b.fal.media/files/b/0aa7e71f/WE_C-omMxiO5iPucRe0HA.png",
+      "width": 800,
+      "height": 1536,
+      "content_type": "image/png"
+    }
+  ],
+  "timings": {
+    "inference": 4.790392540000539
+  },
+  "seed": 26082671,
+  "has_nsfw_concepts": [
+    false
+  ],
+  "prompt": "Create one coherent tall winter storybook illustration from this exact portrait 3D layout. Preserve the camera, road geometry, warehouse position, four truck positions, relative scales and the quiet empty sky/snow zone at the top for interface text. This is a separately art-directed mobile scene, not a crop. Use a warm northern Russian logistics-town atmosphere, volumetric hand-painted editorial gouache, subtly rounded realistic forms, blue ambient snow light, warm windows, one consistent late-afternoon light source, continuous contact shadows and reflected colors.\n\nPaint exactly one blue logistics warehouse and exactly four visibly different delivery vehicles, all physically integrated into the same illustration and distributed vertically. Upper distant road: one small older muted blue-brown box truck, intact and safe, with restrained wear, beside a tiny inspection booth and service worker; it is visibly farthest away. At the central warehouse loading gate: one compact light-grey panel van facing outward, closest to the gate, visibly delayed by a barrier procedure and piled snow at the exit. Mid-left lane: one tall blue box truck with a large readable windshield containing exactly two distinct adult drivers, one driving and one prepared with a route sheet or thermos; both faces remain visible when the tall image is displayed on an iPhone SE. Lower clear lane: one lower, streamlined modern bright-orange Express delivery truck with a distinct rounded cab and long roofline, fully inside the frame, confidently oriented forward, with compressed wheel detail and a restrained snow plume that statically communicates the fastest option.\n\nUse relative size, road convergence, overlap, atmospheric perspective and lower contrast to communicate distance. The road network is continuous. All trucks share one perspective, painterly texture, edge treatment, lighting and contact-shadow system. Keep every truck fully visible and leave no ambiguity without labels.\n\nNo text, no letters, no numbers, no logos, no UI, no map pins, no route overlays, no comic speed lines, no collision, no smoke, no breakdown, no duplicated truck, no fifth vehicle, no cutout edges, no sticker-like objects, no transparent layers, no isolated product render, no photorealism, no flat 2D city map.\n"
+}

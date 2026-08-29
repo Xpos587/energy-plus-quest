@@ -1,0 +1,16 @@
+{
+  "endpoint": "fal-ai/flux-control-lora-canny",
+  "input": "desktop-color.png",
+  "control": "desktop-canny.png",
+  "control_type": "canny",
+  "size": [
+    1536,
+    864
+  ],
+  "seed": 26083603,
+  "steps": 32,
+  "guidance": 3.5,
+  "strength": null,
+  "control_strength": 0.96,
+  "output": "desktop-26083603-canny.png"
+}

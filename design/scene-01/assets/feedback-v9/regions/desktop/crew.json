@@ -1,0 +1,15 @@
+{
+  "name": "crew",
+  "bounds": [
+    0,
+    330,
+    850,
+    864
+  ],
+  "size": [
+    850,
+    534
+  ],
+  "image": "desktop-color.png",
+  "control": "desktop-canny.png"
+}

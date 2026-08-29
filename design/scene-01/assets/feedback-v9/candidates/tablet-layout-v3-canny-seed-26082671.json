@@ -1,0 +1,16 @@
+{
+  "endpoint": "fal-ai/flux-control-lora-canny",
+  "input": "tablet-color.png",
+  "control": "tablet-canny.png",
+  "control_type": "canny",
+  "size": [
+    1200,
+    1200
+  ],
+  "seed": 26082671,
+  "steps": 36,
+  "guidance": 4.0,
+  "strength": null,
+  "control_strength": 1.0,
+  "output": "tablet-layout-v3-canny-seed-26082671.png"
+}

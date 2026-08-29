@@ -5285,3 +5285,133 @@
     line-height: 1.05;
   }
 }
+
+/* V9 uses one painted raster; buttons are semantic hotspots only. */
+.carrierScene .mapVehicle,
+.carrierScene .mapVehicle[data-carrier] {
+  width: 12%;
+  height: 16%;
+  min-width: 96px;
+  min-height: 72px;
+  padding: 0;
+  border: 0;
+  border-radius: 22px;
+  background: transparent;
+  box-shadow: none;
+  transform: translate(-50%, -50%);
+}
+
+.carrierScene .mapVehicle::before {
+  position: absolute;
+  inset: 8%;
+  content: "";
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.carrierScene .mapVehicle:is(:hover, :focus-visible)::before {
+  border-color: rgba(255, 85, 0, 0.9);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.carrierScene .mapVehicle:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.carrierScene .mapVehicle span.mapVehicleLabel {
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 50%;
+  width: max-content;
+  min-width: 132px;
+  max-width: 180px;
+  padding: 7px 11px 8px;
+  transform: translateX(-50%);
+  color: var(--navy);
+  border: 1px solid rgba(0, 60, 166, 0.13);
+  border-radius: 14px 14px 14px 4px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 18px rgba(4, 19, 39, 0.13);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.carrierScene .mapVehicle span.mapVehicleLabel small,
+.carrierScene .mapVehicle span.mapVehicleLabel strong {
+  display: block;
+}
+
+.carrierScene .mapVehicle[data-carrier="old"] {
+  top: 36%;
+  left: 15.5%;
+}
+
+.carrierScene .mapVehicle[data-carrier="crew"] {
+  top: 42%;
+  left: 35.5%;
+}
+
+.carrierScene .mapVehicle[data-carrier="near"] {
+  top: 54%;
+  left: 68.5%;
+}
+
+.carrierScene .mapVehicle[data-carrier="express"] {
+  top: 73.5%;
+  left: 48%;
+}
+
+@media (max-width: 760px) {
+  .carrierScene .mapVehicle,
+  .carrierScene .mapVehicle[data-carrier] {
+    width: 25%;
+    height: 7%;
+    min-width: 76px;
+    min-height: 54px;
+  }
+
+  .carrierScene .mapVehicle span.mapVehicleLabel {
+    top: calc(100% - 10px);
+    left: 50%;
+    width: max-content;
+    min-width: 0;
+    max-width: 126px;
+    padding: 5px 8px 6px;
+    transform: translateX(-50%);
+    border: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 12px rgba(4, 19, 39, 0.1);
+  }
+
+  .carrierScene .mapVehicle span.mapVehicleLabel small {
+    font-size: 8px;
+  }
+
+  .carrierScene .mapVehicle span.mapVehicleLabel strong {
+    font-size: 10px;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="old"] {
+    top: 22%;
+    left: 30%;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="crew"] {
+    top: 34.5%;
+    left: 19.5%;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="near"] {
+    top: 42%;
+    left: 82%;
+  }
+
+  .carrierScene .mapVehicle[data-carrier="express"] {
+    top: 52%;
+    left: 50.5%;
+  }
+}

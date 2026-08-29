@@ -1,0 +1,15 @@
+{
+  "name": "old",
+  "bounds": [
+    0,
+    0,
+    720,
+    430
+  ],
+  "size": [
+    720,
+    430
+  ],
+  "image": "desktop-color.png",
+  "control": "desktop-canny.png"
+}

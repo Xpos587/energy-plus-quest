@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-08-29",
+  "comfyui_root": "/home/michael/.local/share/comfyui/ComfyUI",
+  "preprocessors": [
+    {
+      "name": "Depth Anything V2 Small",
+      "repo": "depth-anything/Depth-Anything-V2-Small",
+      "path": "custom_nodes/comfyui_controlnet_aux/ckpts/depth-anything/Depth-Anything-V2-Small/depth_anything_v2_vits.pth",
+      "sha256": "715fade13be8f229f8a70cc02066f656f2423a59effd0579197bbf57860e1378"
+    }
+  ],
+  "local_baseline": {
+    "base": {
+      "name": "Stable Diffusion 1.5 EMA-only fp16",
+      "repo": "Comfy-Org/stable-diffusion-v1-5-archive",
+      "path": "models/checkpoints/v1-5-pruned-emaonly-fp16.safetensors",
+      "sha256": "e9476a13728cd75d8279f6ec8bad753a66a1957ca375a1464dc63b37db6e3916"
+    },
+    "controlnets": [
+      {"name": "SD1.5 Canny fp16", "repo": "lllyasviel/control_v11p_sd15_canny", "sha256": "9ed3a7f834aca0d2b26f9c7f186b3ee29465de1d13e152459e8c9cbb25a0c0bc"},
+      {"name": "SD1.5 Depth fp16", "repo": "lllyasviel/control_v11f1p_sd15_depth", "sha256": "838f3e848cb93231d41084d858d117416ab32907a5c8c80c421a131d101ba1ef"},
+      {"name": "SD1.5 Lineart fp16", "repo": "lllyasviel/control_v11p_sd15_lineart", "sha256": "de4f699573813c5ad07091fe1ad4097ddc957c22e313187caa885c82e3b6a85b"},
+      {"name": "SD1.5 OpenPose fp16", "repo": "lllyasviel/control_v11p_sd15_openpose", "sha256": "b25b1125e870275550b2a7de289056cb3c236c01c293bd5ba883657b1c006e3e"}
+    ]
+  },
+  "deferred_heavy_profiles": [
+    "Flux.1 Canny/Depth full checkpoints or LoRAs",
+    "SDXL Union ProMax",
+    "Qwen Image ControlNet patches"
+  ],
+  "reason": "Keep 4 GB laptop GPU runnable; use fal for cloud generation and local models for guides/fallback."
+}

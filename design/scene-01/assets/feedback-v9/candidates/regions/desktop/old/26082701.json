@@ -1,0 +1,16 @@
+{
+  "endpoint": "fal-ai/flux-control-lora-canny",
+  "input": "old-image.png",
+  "control": "old-control.png",
+  "control_type": "canny",
+  "size": [
+    720,
+    430
+  ],
+  "seed": 26082701,
+  "steps": 32,
+  "guidance": 3.5,
+  "strength": null,
+  "control_strength": 0.96,
+  "output": "26082701.png"
+}

@@ -131,12 +131,12 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   await expect(
     page.getByRole("button", { name: /машина у ворот едет медленно/i }),
   ).toBeVisible();
-  await expect(page.locator('[data-art-version="feedback-v8"]')).toBeVisible();
+  await expect(page.locator('[data-art-version="feedback-v9"]')).toBeVisible();
   for (const carrier of ["old", "near", "crew", "express"]) {
     await expect(page.locator(`[data-map-label="${carrier}"]`)).toBeVisible();
   }
-  await expect(page.locator('[class*="vehicleSprite"]')).toHaveCount(4);
-  await expect(page.locator('[class*="routeNetwork"]')).toHaveCount(2);
+  await expect(page.locator('[class*="vehicleSprite"]')).toHaveCount(0);
+  await expect(page.locator('[class*="routeNetwork"]')).toHaveCount(0);
   await expect(page.getByText("Старая машина", { exact: true })).toBeVisible();
   await expect(page.getByText("Два водителя", { exact: true })).toBeVisible();
   await expect(page.getByText("Машины 1 и 4", { exact: true })).toHaveCount(0);

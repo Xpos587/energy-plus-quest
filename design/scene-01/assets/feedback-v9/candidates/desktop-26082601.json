@@ -1,0 +1,18 @@
+{
+  "images": [
+    {
+      "url": "https://v3b.fal.media/files/b/0aa7e50f/zYnct1VviwJVUgzbrxf0Q.png",
+      "width": 1536,
+      "height": 864,
+      "content_type": "image/png"
+    }
+  ],
+  "timings": {
+    "inference": 10.387668960989686
+  },
+  "seed": 26082601,
+  "has_nsfw_concepts": [
+    false
+  ],
+  "prompt": "Create one coherent wide winter storybook illustration from this exact 3D layout. Preserve the camera, road geometry, warehouse position, four truck positions, relative scales and clear negative space at the top edge. The scene is a warm northern Russian logistics town in a volumetric hand-painted editorial style: soft gouache texture, subtly rounded realistic forms, crisp readable silhouettes, blue ambient snow light, warm windows, one consistent late-afternoon light source, continuous contact shadows and reflected colors.\n\nPaint exactly one blue logistics warehouse and exactly four delivery trucks, all physically integrated into the same image. Upper-left far road: one small older muted blue-brown box truck, intact and safe, with restrained wear, beside a tiny technical inspection booth and a service worker; it is visibly farthest from the warehouse. At the warehouse gate: one light grey truck, closest to the loading entrance, waiting behind a raised-late barrier and a piled snow bank so its slow start is visually obvious. Lower-left foreground: one blue truck with a large readable windshield; exactly two adult drivers are clearly visible inside the same cab, one driving and one holding a route sheet or thermos. Lower-right foreground: one modern bright orange Express truck on the widest clear straight road, oriented confidently forward, with compressed wheel detail and a restrained snow plume showing that it is the quickest option.\n\nThe road network must be continuous and believable. Use relative size, road convergence, overlap, atmospheric perspective and lower contrast to communicate distance. Trucks share identical perspective, paint texture, edge softness, lighting and shadow logic. Keep every truck fully visible. No labels are needed for understanding.\n\nNo text, no letters, no numbers, no logos, no UI, no map pins, no route overlays, no comic speed lines, no collision, no smoke, no breakdown, no duplicated truck, no fifth vehicle, no cutout edges, no sticker-like objects, no transparent layers, no isolated product render, no photorealism, no flat 2D city map.\n"
+}

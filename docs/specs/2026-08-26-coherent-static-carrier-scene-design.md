@@ -19,7 +19,7 @@ crew composition and the Express advantage before reading any supporting label.
   logic, edge treatment and painterly texture.
 - The meaning of every option remains legible when labels, routes, hover effects
   and animation are hidden.
-- Desktop and mobile use separately art-directed cameras of the same location.
+- Desktop, tablet and mobile use separately art-directed cameras of the same location.
 - The scene remains volumetric and consistent with the other three-dimensional
   illustrated screens; it never becomes a flat city map.
 - The four vehicles occupy independent roads and districts. They never read as
@@ -50,7 +50,9 @@ decorative speed animation are removed from the carrier screen.
 ### Shared Environment
 
 - A blue logistics warehouse anchors one district but is not the centre of all
-  four stories.
+  four stories. Its facade, loading gate, canopy, dock hardware, approach lane
+  and gate procedure remain readable in every viewport; a plain blue box does
+  not count as a recognizable warehouse.
 - The town contains several blocks, 8-12 substantial buildings, intersections
   and at least four visibly independent road branches.
 - Roads form an understandable continuous network with lanes and unambiguous
@@ -98,7 +100,8 @@ decorative speed animation are removed from the carrier screen.
 - Roadside elements and snow texture reinforce the direction of travel without
   comic-book speed lines or UI animation.
 - Express is visually the quickest and most capable option even when its label is
-  removed.
+  removed. Final art also carries exactly one `Express` wordmark on the orange
+  body, with no other generated signage or vehicle text.
 
 ## Composition And Hierarchy
 
@@ -124,6 +127,14 @@ foreground.
 - The mission panel occupies an inactive edge region and never covers a vehicle.
 - Vehicle hit areas follow semantic regions of the single raster rather than
   displaying separate vehicle images.
+
+### Tablet
+
+- Target master: `1200x1200`, square and crop-safe for portrait and landscape tablets.
+- All four vehicles, warehouse facade and loading gate remain simultaneously visible.
+- Vehicle and landmark visibility is validated through both projected bounds and
+  camera raycasts so an object behind a roof does not pass merely because its
+  geometry lies inside the frame.
 
 ### Mobile
 
@@ -191,8 +202,8 @@ foreground.
 - Express reads as fastest through the static environment and vehicle pose.
 - Contact shadows, reflected color, snow interaction, perspective and texture are
   continuous across each whole frame.
-- Desktop and mobile are separate compositions of the same art direction, not
-  mechanical crops.
+- Desktop, tablet and mobile are separate compositions of the same art direction,
+  not mechanical crops.
 - The carrier screen remains fully usable at `1440x900`, `390x844` and `375x667`.
 - `bun run check`, unit tests, build and Playwright tests pass after integration.
 

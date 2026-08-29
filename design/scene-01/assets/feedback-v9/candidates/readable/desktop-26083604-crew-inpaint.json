@@ -1,0 +1,18 @@
+{
+  "images": [
+    {
+      "url": "https://v3b.fal.media/files/b/0aa7ef84/7h0uCQEp1RWdk9ofUkemB.png",
+      "width": 1536,
+      "height": 864,
+      "content_type": "image/png"
+    }
+  ],
+  "timings": {
+    "inference": 10.53483674600102
+  },
+  "seed": 26083604,
+  "has_nsfw_concepts": [
+    false
+  ],
+  "prompt": "Repaint only the blue delivery truck inside the masked road area while preserving its exact position, direction, scale, wheels, road geometry, snow edges, lighting and contact shadow. Keep it as one tall blue box truck. Replace the unreadable block-like cab with a clear three-quarter delivery-truck cab and one broad windshield. Show exactly two clearly separated adult drivers seated together behind that windshield: one driving and one holding a folded route sheet or thermos. Match the surrounding hand-painted gouache and colored-pencil winter illustration exactly, including edge softness, pale-blue ambient snow and late-afternoon light.\n\nDo not alter anything outside the mask. No additional vehicle, no duplicated truck, no person outside the cab, no child, no text, letters, numbers, logo, badge, watermark, UI, route overlay, collision, smoke, cutout edge or photorealism.\n"
+}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import math
 import subprocess
 import sys
@@ -10,6 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import bpy
+from bpy_extras.object_utils import world_to_camera_view
 from mathutils import Matrix, Vector
 
 
@@ -25,6 +27,9 @@ COLORS = {
     "skin": (0.63, 0.33, 0.18, 1.0),
     "glass": (0.12, 0.28, 0.38, 1.0),
     "building": (0.48, 0.38, 0.29, 1.0),
+    "building_blue": (0.15, 0.38, 0.55, 1.0),
+    "building_red": (0.55, 0.20, 0.12, 1.0),
+    "wood": (0.42, 0.29, 0.19, 1.0),
     "warm": (1.0, 0.55, 0.16, 1.0),
 }
 
@@ -36,17 +41,67 @@ class TownDistrict:
     road_id: str
 
 
+@dataclass(frozen=True)
+class Road:
+    id: str
+    position: tuple[float, float]
+    half_width: float
+    half_length: float
+    angle: float
+
+
+@dataclass(frozen=True)
+class Building:
+    position: tuple[float, float]
+    half_width: float
+    half_depth: float
+    wall_height: float
+    color: str
+    ridge_y: bool = True
+
+
+ROAD_LAYOUT = (
+    Road("north-service", (0.0, 16.0), 2.4, 25.0, math.pi / 2),
+    Road("main-avenue", (0.0, 2.0), 3.0, 25.0, math.pi / 2),
+    Road("south-arterial", (0.0, -14.0), 3.2, 25.0, math.pi / 2),
+    Road("west-street", (-18.0, 1.0), 2.4, 15.0, 0.0),
+    Road("central-street", (0.0, 1.0), 2.5, 15.0, 0.0),
+    Road("east-street", (14.0, 1.0), 2.5, 15.0, 0.0),
+    Road("warehouse-spur", (13.5, 8.0), 2.3, 3.5, math.pi / 2),
+)
+
 CARRIER_LAYOUT = {
-    "old": TownDistrict((-16.5, 11.5), math.pi / 2, "north-service"),
-    "near": TownDistrict((11.5, 7.0), math.pi / 2, "warehouse-spur"),
-    "crew": TownDistrict((-10.5, -3.0), math.radians(-36), "west-diagonal"),
-    "express": TownDistrict((8.0, -12.0), -math.pi / 2, "south-arterial"),
+    "old": TownDistrict((-4.0, 16.0), math.pi / 2, "north-service"),
+    "near": TownDistrict((16.0, 0.0), 0.0, "east-street"),
+    "crew": TownDistrict((-8.0, 2.0), -math.pi / 2, "main-avenue"),
+    "express": TownDistrict((7.0, -14.0), math.pi / 2, "south-arterial"),
 }
+
+BUILDING_LAYOUT = (
+    Building((-28, 21), 3.0, 3.2, 4.8, "wood"),
+    Building((-15, 23), 3.7, 3.0, 6.2, "building", False),
+    Building((-3, 21), 3.0, 3.1, 4.5, "building"),
+    Building((10, 21), 3.5, 3.0, 5.8, "building_red", False),
+    Building((22, 23), 3.2, 3.1, 4.6, "wood"),
+    Building((-27, 8), 3.1, 3.0, 4.4, "wood", False),
+    Building((-16, 7), 3.8, 3.1, 5.5, "building"),
+    Building((5, 9), 3.2, 3.0, 4.6, "wood", False),
+    Building((-29, -7), 3.6, 3.0, 5.8, "building_red"),
+    Building((-12, -7), 3.1, 3.0, 4.5, "wood", False),
+    Building((3, -7), 3.7, 3.1, 5.6, "building"),
+    Building((28, -7), 3.1, 3.0, 4.4, "building"),
+    Building((-28, -21), 3.3, 3.2, 4.7, "building"),
+    Building((-14, -21), 3.8, 3.0, 5.9, "building_red", False),
+    Building((2, -22), 3.1, 3.0, 4.5, "wood"),
+    Building((20, -22), 4.0, 3.2, 5.7, "wood", False),
+)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", required=True)
+    parser.add_argument("--manifest")
+    parser.add_argument("--skip-render", action="store_true")
     args = sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else []
     return parser.parse_args(args)
 
@@ -173,7 +228,11 @@ def add_truck(
         return point.x, point.y, z
 
     s = scale_factor
-    cube(f"{name}-box", at(-0.65 * s, 0, 1.25 * s), (1.25 * s, 1.75 * s, 1.15 * s), color, target, angle)
+    if old:
+        cube(f"{name}-flatbed", at(-0.7 * s, 0, 0.72 * s), (1.35 * s, 1.8 * s, 0.32 * s), "wood", target, angle, bevel=0.06 * s)
+        cube(f"{name}-tarp", at(-0.72 * s, 0, 1.38 * s), (1.2 * s, 1.55 * s, 0.58 * s), color, target, angle, bevel=0.38 * s)
+    else:
+        cube(f"{name}-box", at(-0.65 * s, 0, 1.25 * s), (1.25 * s, 1.75 * s, 1.15 * s), color, target, angle)
     cube(f"{name}-cab", at(1.52 * s, 0, 0.9 * s), (1.22 * s, 0.62 * s, 0.88 * s), color, target, angle, bevel=0.24 * s)
     cube(f"{name}-windshield", at(2.18 * s, 0, 1.12 * s), (1.08 * s, 0.07 * s, 0.5 * s), "glass", target, angle, bevel=0.03)
     for lateral in (-0.82 * s, 0.82 * s):
@@ -262,6 +321,19 @@ def add_express_truck(
     cube("ExpressTruck-cab", at(1.58 * s, 0, 0.78 * s), (1.0 * s, 0.72 * s, 0.72 * s), "express", target, angle, bevel=0.38 * s)
     cube("ExpressTruck-windshield", at(2.33 * s, 0, 0.98 * s), (0.82 * s, 0.05 * s, 0.37 * s), "glass", target, angle, bevel=0.04 * s)
     cube("ExpressTruck-roof-band", at(-0.4 * s, 0, 1.98 * s), (1.0 * s, 1.72 * s, 0.08 * s), "warm", target, angle, bevel=0.06 * s)
+
+    bpy.ops.object.text_add(location=at(-0.55 * s, -1.1 * s, 1.18 * s))
+    wordmark = bpy.context.object
+    wordmark.name = "ExpressTruck-wordmark"
+    wordmark.data.body = "Express"
+    wordmark.data.align_x = "CENTER"
+    wordmark.data.align_y = "CENTER"
+    wordmark.data.size = 0.72 * s
+    wordmark.data.extrude = 0.025
+    wordmark.data.materials.append(material("Mat-snow", COLORS["snow"]))
+    wordmark.rotation_euler = (math.pi / 2, 0, 0)
+    move_to_collection(wordmark, target)
+
     for lateral in (-0.78 * s, 0.78 * s):
         for longitudinal in (-1.25 * s, 1.35 * s):
             cylinder(
@@ -273,6 +345,133 @@ def add_express_truck(
                 target,
                 rotation=(math.pi / 2, 0, angle),
             )
+
+
+def add_gable_roof(name, building, target):
+    # Pitched geometry gives img2img real roof planes instead of asking it to invent them.
+    x, y = building.position
+    width = building.half_width + 0.35
+    depth = building.half_depth + 0.35
+    eave = building.wall_height + 0.1
+    ridge = eave + min(width, depth) * 0.68
+    if building.ridge_y:
+        vertices = [
+            (x - width, y - depth, eave), (x + width, y - depth, eave), (x, y - depth, ridge),
+            (x - width, y + depth, eave), (x + width, y + depth, eave), (x, y + depth, ridge),
+        ]
+    else:
+        vertices = [
+            (x - width, y - depth, eave), (x - width, y + depth, eave), (x - width, y, ridge),
+            (x + width, y - depth, eave), (x + width, y + depth, eave), (x + width, y, ridge),
+        ]
+    faces = [(0, 1, 2), (3, 5, 4), (0, 3, 4, 1), (1, 4, 5, 2), (2, 5, 3, 0)]
+    mesh = bpy.data.meshes.new(f"{name}-mesh")
+    mesh.from_pydata(vertices, [], faces)
+    mesh.materials.append(material("Mat-snow", COLORS["snow"]))
+    roof = bpy.data.objects.new(name, mesh)
+    target.objects.link(roof)
+
+
+def add_house(index: int, building: Building, target: bpy.types.Collection) -> None:
+    x, y = building.position
+    cube(
+        f"TownBuilding-{index}",
+        (x, y, building.wall_height / 2),
+        (building.half_width, building.half_depth, building.wall_height / 2),
+        building.color,
+        target,
+        bevel=0.12,
+    )
+    add_gable_roof(f"TownRoof-{index}", building, target)
+    window_rows = 2 if building.wall_height >= 5.4 else 1
+    for row in range(window_rows):
+        z = 1.45 + row * 2.15
+        for offset in (-building.half_width * 0.52, building.half_width * 0.52):
+            cube(
+                f"TownWindow-{index}-{row}-{offset}",
+                (x + offset, y - building.half_depth - 0.05, z),
+                (0.48, 0.07, 0.42),
+                "warm",
+                target,
+                bevel=0.03,
+            )
+    cube(
+        f"TownDoor-{index}",
+        (x, y - building.half_depth - 0.07, 0.9),
+        (0.48, 0.08, 0.9),
+        "road",
+        target,
+        bevel=0.03,
+    )
+
+
+def add_lamp(name: str, position: tuple[float, float], target: bpy.types.Collection) -> None:
+    x, y = position
+    cylinder(name, (x, y, 1.8), 0.09, 3.6, "road", target, rotation=(0, 0, 0))
+    cube(f"{name}-light", (x, y, 3.7), (0.28, 0.28, 0.22), "warm", target, bevel=0.08)
+
+
+def add_conifer(name: str, position: tuple[float, float], target: bpy.types.Collection) -> None:
+    x, y = position
+    cylinder(f"{name}-trunk", (x, y, 0.8), 0.13, 1.6, "wood", target, rotation=(0, 0, 0))
+    for index, (z, radius) in enumerate(((1.4, 1.2), (2.2, 0.95), (2.9, 0.65))):
+        bpy.ops.mesh.primitive_cone_add(vertices=16, radius1=radius, radius2=0.0, depth=1.7, location=(x, y, z))
+        cone = bpy.context.object
+        cone.name = f"{name}-snow-tier-{index}"
+        cone.data.materials.append(material("Mat-snow", COLORS["snow"]))
+        move_to_collection(cone, target)
+
+
+def add_snowbank(name: str, position: tuple[float, float], scale: tuple[float, float], target: bpy.types.Collection) -> None:
+    bpy.ops.mesh.primitive_uv_sphere_add(segments=20, ring_count=12, location=(position[0], position[1], 0.28))
+    bank = bpy.context.object
+    bank.name = name
+    bank.scale = (scale[0], scale[1], 0.42)
+    bank.data.materials.append(material("Mat-snow", COLORS["snow"]))
+    move_to_collection(bank, target)
+
+
+def add_mountain(
+    name: str,
+    position: tuple[float, float],
+    width: float,
+    height: float,
+    target: bpy.types.Collection,
+) -> None:
+    bpy.ops.mesh.primitive_cone_add(
+        vertices=7,
+        radius1=width,
+        radius2=0,
+        depth=height,
+        location=(position[0], position[1], height / 2),
+    )
+    mountain = bpy.context.object
+    mountain.name = name
+    mountain.scale.y = 0.42
+    mountain.data.materials.append(material("Mat-near", COLORS["near"]))
+    move_to_collection(mountain, target)
+
+
+def roads_connected() -> bool:
+    def intersects(first: Road, second: Road) -> bool:
+        first_horizontal = abs(math.sin(first.angle)) > 0.5
+        second_horizontal = abs(math.sin(second.angle)) > 0.5
+        if first_horizontal == second_horizontal:
+            if first_horizontal:
+                return abs(first.position[1] - second.position[1]) <= first.half_width + second.half_width and abs(first.position[0] - second.position[0]) <= first.half_length + second.half_length
+            return abs(first.position[0] - second.position[0]) <= first.half_width + second.half_width and abs(first.position[1] - second.position[1]) <= first.half_length + second.half_length
+        horizontal, vertical = (first, second) if first_horizontal else (second, first)
+        return abs(vertical.position[0] - horizontal.position[0]) <= horizontal.half_length + vertical.half_width and abs(horizontal.position[1] - vertical.position[1]) <= vertical.half_length + horizontal.half_width
+
+    seen = {0}
+    frontier = [0]
+    while frontier:
+        current = frontier.pop()
+        for index, road in enumerate(ROAD_LAYOUT):
+            if index not in seen and intersects(ROAD_LAYOUT[current], road):
+                seen.add(index)
+                frontier.append(index)
+    return len(seen) == len(ROAD_LAYOUT)
 
 
 def validate_layout() -> None:
@@ -287,8 +486,60 @@ def validate_layout() -> None:
             if distance < 7.0:
                 raise ValueError(f"carrier centres are only {distance:.2f}m apart")
 
+    road_angles = {road.id: road.angle for road in ROAD_LAYOUT}
+    for name, district in CARRIER_LAYOUT.items():
+        difference = abs((district.angle - road_angles[district.road_id] + math.pi) % (2 * math.pi) - math.pi)
+        if min(difference, abs(math.pi - difference)) > math.radians(1):
+            raise ValueError(f"{name} is not parallel to {district.road_id}")
+    if not roads_connected():
+        raise ValueError("road network must be connected")
 
-def add_environment() -> None:
+
+def add_motion_cues(
+    name: str,
+    district: TownDistrict,
+    target: bpy.types.Collection,
+    plume_count: int,
+) -> tuple[int, int]:
+    forward = Vector((0, 1, 0))
+    forward.rotate(Matrix.Rotation(district.angle, 4, "Z"))
+    side = Vector((1, 0, 0))
+    side.rotate(Matrix.Rotation(district.angle, 4, "Z"))
+    origin = Vector((*district.position, 0))
+
+    track_center = origin - forward * 4.0
+    for index, lateral in enumerate((-0.72, 0.72)):
+        point = track_center + side * lateral
+        cube(
+            f"{name}-motion-track-{index}",
+            (point.x, point.y, 0.24),
+            (0.07, 2.5, 0.025),
+            "near",
+            target,
+            district.angle,
+            bevel=0.01,
+        )
+
+    for index in range(plume_count):
+        distance = 2.8 + index * 0.5
+        lateral = ((index % 3) - 1) * 0.34
+        point = origin - forward * distance + side * lateral
+        bpy.ops.mesh.primitive_ico_sphere_add(
+            subdivisions=2,
+            radius=0.2 + index * 0.035,
+            location=(point.x, point.y, 0.24 + index * 0.035),
+        )
+        plume = bpy.context.object
+        plume.name = f"{name}-snow-plume-{index}"
+        plume.scale = (1.15 + index * 0.04, 0.62, 0.48)
+        plume.data.materials.append(material("Mat-snow", COLORS["snow"]))
+        plume.color = COLORS["snow"]
+        move_to_collection(plume, target)
+
+    return 2, plume_count
+
+
+def add_environment() -> dict[str, int]:
     environment = collection("Environment")
     warehouse = collection("Warehouse")
     cues = collection("CueProps")
@@ -298,82 +549,114 @@ def add_environment() -> None:
     express_collection = collection("ExpressCarrier")
 
     validate_layout()
-    cube("SnowGround", (0, 0, -0.45), (35, 28, 0.45), "snow", environment, bevel=0.0)
+    cube("SnowGround", (0, -10, -0.45), (45, 55, 0.45), "snow", environment, bevel=0.0)
+    for road in ROAD_LAYOUT:
+        add_road(
+            road.id,
+            (road.position[0], road.position[1], 0.08),
+            (road.half_width, road.half_length, 0.13),
+            road.angle,
+            environment,
+        )
 
-    add_road("NorthService", (-13.0, 11.5, 0.08), (2.5, 16.0, 0.13), math.pi / 2, environment)
-    add_road("WestConnector", (-17.0, -0.5, 0.08), (2.5, 12.0, 0.13), 0.0, environment)
-    add_road("WestDiagonal", (-9.0, -4.0, 0.09), (2.8, 12.5, 0.13), math.radians(-36), environment)
-    add_road("SouthArterial", (4.0, -12.0, 0.1), (3.3, 29.0, 0.14), math.pi / 2, environment)
-    add_road("EastAvenue", (14.0, -1.0, 0.08), (2.8, 11.0, 0.13), 0.0, environment)
-    add_road("WarehouseSpur", (15.0, 7.0, 0.1), (2.3, 7.0, 0.13), math.pi / 2, environment)
+    add_road("foreground-footpath", (0.0, -31.0, 0.02), (0.65, 31.0, 0.05), math.pi / 2, environment)
 
-    cube("WarehouseBody", (22.0, 7.0, 2.8), (5.0, 4.2, 2.8), "warehouse", warehouse, bevel=0.28)
-    cube("WarehouseRoof", (22.0, 7.0, 5.9), (5.35, 4.55, 0.3), "snow", warehouse, bevel=0.2)
-    cube("LoadingGate", (16.95, 7.0, 1.45), (0.16, 1.65, 1.5), "road", warehouse, bevel=0.05)
-    for y in (4.5, 7.0, 9.5):
-        cube(f"WarehouseWindow-{y}", (16.88, y, 3.9), (0.08, 0.68, 0.48), "warm", warehouse, bevel=0.03)
+    # Warehouse has readable loading architecture before any generative pass.
+    cube("WarehouseBody", (16.0, 8.0, 3.2), (4.7, 4.3, 3.2), "warehouse", warehouse, bevel=0.22)
+    warehouse_roof = Building((16.0, 8.0), 4.7, 4.3, 6.4, "warehouse", False)
+    add_gable_roof("WarehouseRoof", warehouse_roof, warehouse)
+    # South-facing loading architecture stays legible from all three cameras.
+    cube("LoadingGate", (14.0, 3.62, 1.6), (1.7, 0.16, 1.6), "road", warehouse, bevel=0.04)
+    cube("LoadingCanopy", (14.0, 3.08, 3.4), (2.05, 0.85, 0.18), "snow", warehouse, bevel=0.08)
+    for x in (12.0, 16.0, 19.0):
+        cube(f"WarehouseWindow-{x}", (x, 3.66, 4.5), (0.68, 0.08, 0.48), "warm", warehouse, bevel=0.03)
+    for x in (12.55, 15.45):
+        cube(f"DockBumper-{x}", (x, 3.38, 0.65), (0.12, 0.18, 0.65), "orange", warehouse, bevel=0.03)
+    cylinder("WarehouseVent", (19.0, 8.0, 7.2), 0.3, 1.2, "near", warehouse, rotation=(0, 0, 0))
 
-    buildings = (
-        (-27.0, 20.0, 2.8, 3.0),
-        (-14.0, 20.5, 3.2, 2.7),
-        (0.0, 20.0, 3.0, 3.1),
-        (13.0, 19.0, 3.4, 2.8),
-        (-27.0, 1.5, 3.1, 3.4),
-        (2.0, 5.0, 3.4, 3.0),
-        (26.0, -3.5, 3.2, 3.2),
-        (-23.0, -21.0, 3.6, 2.8),
-        (-7.0, -21.0, 3.2, 3.0),
-        (23.0, -21.0, 3.5, 3.1),
-    )
-    for index, (x, y, sx, sy) in enumerate(buildings):
-        height = 2.0 + (index % 3) * 0.35
-        cube(f"TownBuilding-{index}", (x, y, height), (sx, sy, height), "building", environment, bevel=0.18)
-        cube(f"TownRoof-{index}", (x, y, height * 2 + 0.25), (sx + 0.3, sy + 0.3, 0.25), "snow", environment, bevel=0.14)
-        cube(f"TownWindow-{index}", (x, y - sy - 0.04, height + 0.5), (0.55, 0.07, 0.42), "warm", environment, bevel=0.03)
+    for index, building in enumerate(BUILDING_LAYOUT):
+        add_house(index, building, environment)
 
     old = CARRIER_LAYOUT["old"]
     near = CARRIER_LAYOUT["near"]
     crew = CARRIER_LAYOUT["crew"]
     express = CARRIER_LAYOUT["express"]
-    add_truck("OldTruck", old.position, old.angle, "old", old_collection, old=True, scale_factor=0.95)
-    add_van("NearVan", near.position, near.angle, "near", near_collection, scale_factor=1.25)
+    add_truck("OldTruck", old.position, old.angle, "old", old_collection, old=True, scale_factor=1.45)
+    add_van("NearVan", near.position, near.angle, "near", near_collection, scale_factor=1.8)
     add_truck("CrewTruck", crew.position, crew.angle, "crew", crew_collection, drivers=2, scale_factor=1.55)
     add_express_truck(express.position, express.angle, express_collection, scale_factor=1.45)
 
-    cube("InspectionBooth", (-24.0, 11.5, 0.9), (0.9, 0.9, 0.9), "building", cues, bevel=0.12)
-    cylinder("InspectionSign", (-22.7, 11.5, 1.45), 0.42, 0.08, "orange", cues, rotation=(0, math.pi / 2, 0))
-    cube("GateBarrier", (9.2, 7.0, 0.78), (0.08, 1.45, 0.08), "orange", cues, bevel=0.02)
-    cube("GateSnowBank", (9.7, 9.1, 0.4), (1.0, 1.35, 0.4), "snow", cues, bevel=0.3)
-    for index in range(5):
-        bpy.ops.mesh.primitive_ico_sphere_add(
-            subdivisions=2,
-            radius=0.33 + index * 0.08,
-            location=(5.8 - index * 0.6, -12.0, 0.25 + index * 0.05),
-        )
-        plume = bpy.context.object
-        plume.name = f"ExpressSnowPlume-{index}"
-        plume.scale = (1.2, 0.65, 0.5)
-        plume.data.materials.append(material("Mat-snow", COLORS["snow"]))
-        plume.color = COLORS["snow"]
-        move_to_collection(plume, cues)
+    motion_tracks = 0
+    snow_plumes = 0
+    for name, district, plume_count in (
+        ("old", old, 2),
+        ("near", near, 1),
+        ("crew", crew, 3),
+        ("express", express, 7),
+    ):
+        tracks, plumes = add_motion_cues(name, district, cues, plume_count)
+        motion_tracks += tracks
+        snow_plumes += plumes
+
+    cube("InspectionBooth", (-13.0, 16.0, 1.1), (1.0, 1.0, 1.1), "building_blue", cues, bevel=0.12)
+    cylinder("InspectionSign", (-11.5, 16.0, 1.55), 0.42, 0.08, "orange", cues, rotation=(0, math.pi / 2, 0))
+    cube("GateBarrier", (14.0, 4.2, 0.78), (1.45, 0.08, 0.08), "orange", cues, bevel=0.02)
+    cube("GateSnowBank", (16.5, 4.2, 0.4), (1.0, 1.35, 0.4), "snow", cues, bevel=0.3)
+
+    lamp_positions = ((-25, 17.5), (-8, 17.5), (8, 17.5), (23, 17.5), (-25, 3.5), (3.5, 3.5), (16.5, -3.5), (-18, -17.5), (3, -17.5), (24, -17.5))
+    for index, position in enumerate(lamp_positions):
+        add_lamp(f"StreetLamp-{index}", position, cues)
+
+    tree_positions = ((-35, 24), (-32, 14), (-34, 0), (-34, -15), (-31, -27), (-21, 27), (-8, 27), (6, 27), (19, 27), (33, 23), (35, 13), (35, -1), (34, -14), (31, -26), (12, -27), (-4, -27), (-24, -38), (-10, -42), (8, -39), (25, -43))
+    for index, position in enumerate(tree_positions):
+        add_conifer(f"Conifer-{index}", position, environment)
+
+    snowbank_positions = ((-24, 11), (-10, 11), (5, 11), (17, 11), (-24, 3), (-10, 3), (8, 3), (23, 3), (-24, -10), (-9, -10), (5, -10), (22, -10), (-25, -17), (-8, -17), (12, -17), (27, -17), (-4, 17), (14, 17), (-20, -34), (-2, -36), (17, -35), (30, -38))
+    for index, position in enumerate(snowbank_positions):
+        add_snowbank(f"Snowbank-{index}", position, (1.5 + index % 3 * 0.35, 0.55 + index % 2 * 0.2), cues)
+
+    mountain_positions = ((-28, 31, 10, 6), (-14, 33, 11, 8), (1, 32, 12, 7), (16, 33, 11, 9), (30, 31, 10, 6))
+    for index, (x, y, width, height) in enumerate(mountain_positions):
+        add_mountain(f"BackgroundMountain-{index}", (x, y), width, height, environment)
+
+    return {
+        "lamps": len(lamp_positions),
+        "trees": len(tree_positions),
+        "snowbanks": len(snowbank_positions),
+        "mountains": len(mountain_positions),
+        "motion_tracks": motion_tracks,
+        "snow_plumes": snow_plumes,
+        "express_wordmarks": 1,
+    }
 
 
 def point_camera(camera: bpy.types.Object, target: tuple[float, float, float]) -> None:
     camera.rotation_euler = (Vector(target) - camera.location).to_track_quat("-Z", "Y").to_euler()
 
 
-def create_camera(name: str, location: tuple[float, float, float], target: tuple[float, float, float], lens: float) -> bpy.types.Object:
+def create_camera(
+    name: str,
+    location: tuple[float, float, float],
+    target: tuple[float, float, float],
+    lens: float,
+    ortho_scale: float | None = None,
+) -> bpy.types.Object:
     data = bpy.data.cameras.new(name)
     data.lens = lens
     data.sensor_width = 36
     camera = bpy.data.objects.new(name, data)
     bpy.context.scene.collection.objects.link(camera)
     camera.location = location
+    if ortho_scale is not None:
+        data.type = "ORTHO"
+        data.ortho_scale = ortho_scale
+    else:
+        data.type = "PERSP"
     point_camera(camera, target)
     return camera
 
 
-def configure_scene() -> tuple[bpy.types.Object, bpy.types.Object]:
+def configure_scene() -> tuple[bpy.types.Object, bpy.types.Object, bpy.types.Object]:
     scene = bpy.context.scene
     scene.render.engine = "BLENDER_WORKBENCH"
     scene.display.shading.light = "STUDIO"
@@ -389,9 +672,153 @@ def configure_scene() -> tuple[bpy.types.Object, bpy.types.Object]:
     scene.render.film_transparent = False
     scene.render.resolution_percentage = 100
     scene.unit_settings.system = "METRIC"
-    desktop = create_camera("CameraDesktop", (58.0, -72.0, 67.0), (0.0, 0.0, 1.0), 58)
-    mobile = create_camera("CameraMobile", (70.0, -105.0, 100.0), (2.0, 0.0, 0.8), 50)
-    return desktop, mobile
+    desktop = create_camera("CameraDesktop", (42.0, -68.0, 78.0), (1.0, 1.0, 1.0), 58, 70.0)
+    tablet = create_camera("CameraTablet", (28.0, -64.0, 76.0), (0.0, 1.0, 1.0), 58, 64.0)
+    mobile = create_camera("CameraMobile", (3.0, -68.0, 82.0), (3.0, 6.0, 0.0), 58)
+    bpy.context.view_layer.update()
+    return desktop, tablet, mobile
+
+
+def visibility_fraction(
+    camera: bpy.types.Object,
+    objects: list[bpy.types.Object],
+) -> float:
+    scene = bpy.context.scene
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+    target_objects = set(objects)
+    mesh_objects = [obj for obj in objects if obj.type == "MESH"]
+    visible_samples = 0
+    for obj in mesh_objects:
+        target = obj.matrix_world.translation
+        if camera.data.type == "ORTHO":
+            direction = camera.matrix_world.to_quaternion() @ Vector((0, 0, -1))
+            origin = target - direction * 200.0
+            distance = 400.0
+        else:
+            origin = camera.matrix_world.translation
+            direction = target - origin
+            distance = direction.length + 0.5
+            direction.normalize()
+        hit, _, _, _, hit_object, _ = scene.ray_cast(
+            depsgraph, origin, direction, distance=distance
+        )
+        if hit and hit_object in target_objects:
+            visible_samples += 1
+    return visible_samples / max(1, len(mesh_objects))
+
+
+def landmark_visibility(camera: bpy.types.Object) -> dict[str, dict[str, float]]:
+    warehouse_objects = [
+        bpy.data.objects[name]
+        for name in (
+            "WarehouseBody",
+            "WarehouseRoof",
+            "LoadingGate",
+            "LoadingCanopy",
+            "WarehouseWindow-12.0",
+            "WarehouseWindow-16.0",
+        )
+    ]
+    return {
+        "warehouse": {
+            "visible_fraction": round(visibility_fraction(camera, warehouse_objects), 4)
+        },
+        "loading_gate": {
+            "visible_fraction": round(
+                visibility_fraction(camera, [bpy.data.objects["LoadingGate"]]), 4
+            )
+        },
+    }
+
+
+def carrier_bounds(
+    camera: bpy.types.Object,
+    size: tuple[int, int],
+) -> dict[str, dict[str, object]]:
+    scene = bpy.context.scene
+    scene.render.resolution_x, scene.render.resolution_y = size
+    scene.render.resolution_percentage = 100
+    bpy.context.view_layer.update()
+    collection_names = {
+        "old": "OldCarrier",
+        "near": "NearCarrier",
+        "crew": "CrewCarrier",
+        "express": "ExpressCarrier",
+    }
+    result: dict[str, dict[str, object]] = {}
+    margin = 0.01
+    for carrier, collection_name in collection_names.items():
+        points = []
+        for obj in bpy.data.collections[collection_name].objects:
+            if obj.type != "MESH":
+                continue
+            for corner in obj.bound_box:
+                world = obj.matrix_world @ Vector(corner)
+                points.append(world_to_camera_view(scene, camera, world))
+        left = min(point.x for point in points)
+        bottom = min(point.y for point in points)
+        right = max(point.x for point in points)
+        top = max(point.y for point in points)
+        in_frame = (
+            all(point.z > 0 for point in points)
+            and left >= margin
+            and bottom >= margin
+            and right <= 1 - margin
+            and top <= 1 - margin
+        )
+
+        target_objects = list(bpy.data.collections[collection_name].objects)
+        visible_fraction = visibility_fraction(camera, target_objects)
+
+        result[carrier] = {
+            "bounds": [round(value, 4) for value in (left, bottom, right, top)],
+            "visible": in_frame and visible_fraction >= 0.75,
+            "visible_fraction": round(visible_fraction, 4),
+        }
+    return result
+
+
+def write_manifest(
+    path: Path,
+    props: dict[str, int],
+    cameras: dict[str, tuple[bpy.types.Object, tuple[int, int]]],
+) -> None:
+    payload = {
+        "roads": [
+            {"id": road.id, "position": road.position, "half_width": road.half_width, "half_length": road.half_length, "angle": road.angle}
+            for road in ROAD_LAYOUT
+        ],
+        "buildings": [
+            {"position": building.position, "size": [building.half_width, building.half_depth], "height": building.wall_height, "color": building.color}
+            for building in BUILDING_LAYOUT
+        ],
+        "carriers": {
+            name: {
+                "position": district.position,
+                "angle": district.angle,
+                "road_id": district.road_id,
+                "body_type": {
+                    "old": "old-tarp-flatbed",
+                    "near": "panel-van",
+                    "crew": "high-box-crew",
+                    "express": "streamlined-express",
+                }[name],
+            }
+            for name, district in CARRIER_LAYOUT.items()
+        },
+        "props": props,
+        "network_connected": roads_connected(),
+        "viewports": {
+            name: {
+                "size": list(size),
+                "landmarks": landmark_visibility(camera),
+                "vehicles": carrier_bounds(camera, size),
+            }
+            for name, (camera, size) in cameras.items()
+        },
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2) + "\n")
 
 
 def render_pass(output: Path, camera: bpy.types.Object, size: tuple[int, int], pass_name: str) -> None:
@@ -428,13 +855,20 @@ def main() -> None:
     output = Path(args.output_dir).resolve()
     output.mkdir(parents=True, exist_ok=True)
     reset_scene()
-    add_environment()
-    desktop, mobile = configure_scene()
+    props = add_environment()
+    desktop, tablet, mobile = configure_scene()
+    cameras = {
+        "desktop": (desktop, (1536, 864)),
+        "tablet": (tablet, (1200, 1200)),
+        "mobile": (mobile, (944, 1792)),
+    }
+    if args.manifest:
+        write_manifest(Path(args.manifest).resolve(), props, cameras)
     bpy.ops.wm.save_as_mainfile(filepath=str(output / "carrier-scene.blend"))
-    for prefix, camera, size in (
-        ("desktop", desktop, (1536, 864)),
-        ("mobile", mobile, (944, 1792)),
-    ):
+    if args.skip_render:
+        print(f"validated={output}")
+        return
+    for prefix, (camera, size) in cameras.items():
         for pass_name in ("color", "depth"):
             render_pass(output / f"{prefix}-{pass_name}.png", camera, size, pass_name)
         subprocess.run(

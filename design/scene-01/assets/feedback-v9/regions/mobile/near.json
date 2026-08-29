@@ -1,0 +1,15 @@
+{
+  "name": "near",
+  "bounds": [
+    420,
+    400,
+    944,
+    1050
+  ],
+  "size": [
+    524,
+    650
+  ],
+  "image": "mobile-color.png",
+  "control": "mobile-canny.png"
+}

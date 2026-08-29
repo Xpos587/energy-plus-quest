@@ -1,0 +1,15 @@
+{
+  "name": "near",
+  "bounds": [
+    650,
+    0,
+    1536,
+    500
+  ],
+  "size": [
+    886,
+    500
+  ],
+  "image": "desktop-color.png",
+  "control": "desktop-canny.png"
+}
