@@ -131,9 +131,39 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   await expect(
     page.getByRole("button", { name: /машина у ворот едет медленно/i }),
   ).toBeVisible();
-  await expect(page.locator('[data-art-version="feedback-v9"]')).toBeVisible();
+  const generatedMap = page.locator(
+    '[data-map-media="generated"][data-art-version="feedback-v11"]',
+  );
+  await expect(generatedMap).toBeVisible();
+  await expect(generatedMap).toHaveAttribute(
+    "data-map-contract",
+    "warehouse-roads-four-carriers",
+  );
+  await expect(page.locator('[data-carrier-map="vector-v1"]')).toHaveCount(0);
+  await expect(page.locator('[data-art-version="feedback-v9"]')).toHaveCount(0);
   for (const carrier of ["old", "near", "crew", "express"]) {
     await expect(page.locator(`[data-map-label="${carrier}"]`)).toBeVisible();
+  }
+  await expect(page.locator("[data-carrier-hotspot]")).toHaveCount(4);
+  await expect(page.locator('[data-motion-state]')).toHaveCount(4);
+  const motionDurations = await page.locator('[data-motion-state]').evaluateAll((elements) =>
+    Object.fromEntries(elements.map((element) => [
+      element.getAttribute('data-motion-state'),
+      getComputedStyle(element).animationDuration,
+    ])),
+  );
+  expect(motionDurations).toMatchObject({ old: '8s', near: '7.4s', crew: '3.8s', express: '1.9s' });
+  const hotspotSizes = await page
+    .locator("[data-carrier-hotspot]")
+    .evaluateAll((elements) =>
+      elements.map((element) => {
+        const box = element.getBoundingClientRect();
+        return { width: box.width, height: box.height };
+      }),
+    );
+  for (const size of hotspotSizes) {
+    expect(size.width).toBeGreaterThanOrEqual(44);
+    expect(size.height).toBeGreaterThanOrEqual(44);
   }
   await expect(page.locator('[class*="vehicleSprite"]')).toHaveCount(0);
   await expect(page.locator('[class*="routeNetwork"]')).toHaveCount(0);
@@ -143,6 +173,10 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   await expect(page.getByText("Широкий маршрут", { exact: true })).toHaveCount(
     0,
   );
+  const carrierViewport = page.viewportSize();
+  if (carrierViewport && carrierViewport.width <= 760) {
+    await expect(page.locator('[data-carrier="express"] [data-map-label="express"]')).toBeInViewport();
+  }
   await settle(page);
   await page.screenshot({
     fullPage: false,
@@ -178,6 +212,19 @@ test("plays the first scene from intro to an illustrated outcome", async ({
   await expect(
     page.getByText(/Теперь нам нужно погрузить подарок/),
   ).toBeVisible();
+});
+
+test("stops carrier state motion when reduced motion is requested", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  await page.getByRole("button", { name: /Начать игру/ }).click();
+  await page.getByRole("button", { name: /Студент/ }).click();
+  await page.getByRole("button", { name: /Альва/ }).click();
+  await page.getByRole("button", { name: /Фотоаппарат/ }).click();
+  const animations = await page.locator('[data-motion-state]').evaluateAll((elements) =>
+    elements.map((element) => getComputedStyle(element).animationName),
+  );
+  expect(animations).toEqual(["none", "none", "none", "none"]);
 });
 
 test("frames the slower outcomes constructively instead of as breakdown imagery", async ({

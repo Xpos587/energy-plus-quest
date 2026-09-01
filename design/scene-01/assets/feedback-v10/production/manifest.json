@@ -1,0 +1,33 @@
+{
+  "version": "feedback-v10",
+  "source": "Blender structural master + regional Flux Kontext edits",
+  "variants": {
+    "desktop": {
+      "file": "carrier-desktop.webp",
+      "size": [
+        1536,
+        864
+      ],
+      "source": "desktop-final-with-crew-old.png",
+      "sha256": "b6709be2872bdea3785cdd491389ee15fc478c19d7ca4afa18f93a874050de08"
+    },
+    "tablet": {
+      "file": "carrier-tablet.webp",
+      "size": [
+        1024,
+        768
+      ],
+      "source": "desktop-final-with-crew-old.png",
+      "sha256": "34505d6c8ea69a3be9d1e183d68d24c369762e31dc475d64f77495ac1ca960a0"
+    },
+    "mobile": {
+      "file": "carrier-mobile.webp",
+      "size": [
+        944,
+        1792
+      ],
+      "source": "mobile-final.png",
+      "sha256": "46b6975b73cf87f23f1d7ce153dc2619d3631243b4d39b973b53fa380db0314c"
+    }
+  }
+}

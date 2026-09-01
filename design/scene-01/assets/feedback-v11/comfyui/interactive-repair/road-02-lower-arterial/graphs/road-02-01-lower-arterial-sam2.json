@@ -1,0 +1,99 @@
+{
+  "manifest": {
+    "schema": "carrier-mask-workbench/v1",
+    "session_id": "road-02-lower-arterial",
+    "source": {
+      "file": "carrier-mobile.png",
+      "width": 768,
+      "height": 1424,
+      "sha256": "39530396f4600095f405a5572fdf44f8c3fc6a79e407db0a998a1d06b46ed44e"
+    },
+    "mask_convention": "white=edit,black=preserve",
+    "mode": "sequential",
+    "overlap_policy": "allow",
+    "masks": [
+      {
+        "id": "lower-arterial-two-lanes",
+        "name": "Entire lower arterial — two lanes; contour-protected trucks",
+        "comment": "Regenerate the entire lower horizontal arterial as one connected ordinary two-lane road: exactly two lanes total, one lane in each direction, one restrained dashed center line, coherent asphalt and snowy edges. Remove the current four-to-five parallel lane-like strips and duplicate road bands. Keep Crew and Express exactly where they are using only their contour-following vehicle silhouettes; preserve the trucks but do not preserve rectangular road areas, shadows, wakes, snow, or surrounding pixels. Do not add vehicles, text, logos, road labels, route overlays, or extra lane markings. Preserve the northern winter illustration style, camera, lighting, connected intersections, railway, warehouse context, and every pixel outside the white edit region.",
+        "color": "#ef4444",
+        "visible": true,
+        "file": "masks/lower-arterial-two-lanes-sam2-v2.png",
+        "bounds": [
+          0,
+          890,
+          768,
+          1170
+        ],
+        "sha256": "9f1b2ca438de312874221d78ac011efa9823108cf1073a87cd2b57437970aa6b",
+        "pixel_count": 175443
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "job_id": "road-02-lower-arterial-01-lower-arterial-two-lanes",
+      "mask_id": "lower-arterial-two-lanes",
+      "source_file": "carrier-mobile.png",
+      "mask_file": "masks/lower-arterial-two-lanes-sam2-v2.png",
+      "prompt": "Repair only the white masked region for mask lower-arterial-two-lanes. Human note:\nRegenerate the entire lower horizontal arterial as one connected ordinary two-lane road: exactly two lanes total, one lane in each direction, one restrained dashed center line, coherent asphalt and snowy edges. Remove the current four-to-five parallel lane-like strips and duplicate road bands. Keep Crew and Express exactly where they are using only their contour-following vehicle silhouettes; preserve the trucks but do not preserve rectangular road areas, shadows, wakes, snow, or surrounding pixels. Do not add vehicles, text, logos, road labels, route overlays, or extra lane markings. Preserve the northern winter illustration style, camera, lighting, connected intersections, railway, warehouse context, and every pixel outside the white edit region.\n\nWhite means regenerate; black means preserve. Preserve every pixel, object, road, building, vehicle, text, lighting, camera, and composition outside the mask. Match the surrounding image with no extra objects, labels, logos, or text.",
+      "requires_union_mask": false,
+      "requires_checkpoint": false,
+      "graph": {
+        "1": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "carrier-mobile.png"
+          }
+        },
+        "2": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "uploads/lower-arterial-two-lanes-comfy-alpha.png"
+          }
+        },
+        "3": {
+          "class_type": "MaskToImage",
+          "inputs": {
+            "mask": [
+              "2",
+              1
+            ]
+          }
+        },
+        "4": {
+          "class_type": "GPTImage15Edit_fal",
+          "inputs": {
+            "prompt": "Repair only the white masked region for mask lower-arterial-two-lanes. Human note:\nRegenerate the entire lower horizontal arterial as one connected ordinary two-lane road: exactly two lanes total, one lane in each direction, one restrained dashed center line, coherent asphalt and snowy edges. Remove the current four-to-five parallel lane-like strips and duplicate road bands. Keep Crew and Express exactly where they are using only their contour-following vehicle silhouettes; preserve the trucks but do not preserve rectangular road areas, shadows, wakes, snow, or surrounding pixels. Do not add vehicles, text, logos, road labels, route overlays, or extra lane markings. Preserve the northern winter illustration style, camera, lighting, connected intersections, railway, warehouse context, and every pixel outside the white edit region.\n\nWhite means regenerate; black means preserve. Preserve every pixel, object, road, building, vehicle, text, lighting, camera, and composition outside the mask. Match the surrounding image with no extra objects, labels, logos, or text.",
+            "images": [
+              "1",
+              0
+            ],
+            "mask_image": [
+              "3",
+              0
+            ],
+            "image_size": "auto",
+            "background": "opaque",
+            "quality": "low",
+            "input_fidelity": "high",
+            "num_images": 1,
+            "output_format": "png",
+            "sync_mode": false
+          }
+        },
+        "5": {
+          "class_type": "SaveImage",
+          "inputs": {
+            "images": [
+              "4",
+              0
+            ],
+            "filename_prefix": "mask_workbench/road-02-lower-arterial/lower-arterial-two-lanes"
+          }
+        }
+      },
+      "transport_mask_file": "uploads/lower-arterial-two-lanes-comfy-alpha.png"
+    }
+  ]
+}

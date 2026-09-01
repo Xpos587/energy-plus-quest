@@ -5415,3 +5415,187 @@
     left: 50.5%;
   }
 }
+
+/* Feedback V11: generated city master with hotspots in the same media space. */
+.liveMapSurface {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, calc((100dvh - var(--header-height)) * 1.7753));
+  aspect-ratio: 2528 / 1424;
+  overflow: visible;
+  transform: translate(-50%, -50%);
+}
+
+.liveMapSurface .mapImage {
+  object-fit: fill;
+  filter: none;
+  transform: none;
+}
+
+.cityMap[data-mode="live"] .liveMapSurface .mapShade {
+  background: transparent;
+}
+
+.carrierScene .liveMapSurface .mapVehicle[data-carrier="old"] {
+  top: 19%;
+  left: 42.6%;
+}
+
+.carrierScene .liveMapSurface .mapVehicle[data-carrier="near"] {
+  top: 49.7%;
+  left: 60.7%;
+}
+
+.carrierScene .liveMapSurface .mapVehicle[data-carrier="crew"] {
+  top: 69%;
+  left: 43%;
+}
+
+.carrierScene .liveMapSurface .mapVehicle[data-carrier="express"] {
+  top: 76.8%;
+  left: 58.3%;
+}
+
+@media (min-width: 761px) and (max-width: 1120px) {
+  .carrierScene .liveMapSurface .mapVehicle[data-carrier="old"] {
+    top: 20.2%;
+  }
+}
+
+@media (max-width: 760px) {
+  .liveMapSurface {
+    width: max(100%, calc((100dvh - var(--header-height)) * 0.5393));
+    aspect-ratio: 768 / 1424;
+  }
+
+  .carrierScene .liveMapSurface .mapVehicle[data-carrier="old"] {
+    top: 19%;
+    left: 26%;
+  }
+
+  .carrierScene .liveMapSurface .mapVehicle[data-carrier="near"] {
+    top: 49.7%;
+    left: 85%;
+  }
+
+  .carrierScene .liveMapSurface .mapVehicle[data-carrier="crew"] {
+    top: 69%;
+    left: 27%;
+  }
+
+  .carrierScene .liveMapSurface .mapVehicle[data-carrier="express"] {
+    top: 76.8%;
+    left: 77.5%;
+  }
+
+  .carrierScene
+    .liveMapSurface
+    .mapVehicle[data-carrier="near"]
+    span.mapVehicleLabel,
+  .carrierScene
+    .liveMapSurface
+    .mapVehicle[data-carrier="express"]
+    span.mapVehicleLabel {
+    left: 30%;
+  }
+
+  .carrierScene .liveMapSurface .mapVehicle[data-carrier="express"] span.mapVehicleLabel {
+    top: auto;
+    bottom: 76%;
+  }
+}
+
+/* The raster owns the vehicles; these restrained wakes communicate state without moving it. */
+.carrierScene .liveMapSurface .mapVehicle {
+  isolation: isolate;
+}
+
+.carrierScene .liveMapSurface .mapVehicle span.vehicleTrail {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 8%;
+  display: block;
+  width: 34%;
+  height: 18%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(196, 222, 238, 0.16) 38%,
+    rgba(255, 255, 255, 0.54)
+  );
+  filter: blur(3px);
+  opacity: 0.36;
+  pointer-events: none;
+  transform: translate(-72%, -50%) scaleX(0.72);
+  transform-origin: right center;
+}
+
+.carrierScene .liveMapSurface .mapVehicle span.mapVehicleLabel {
+  z-index: 2;
+}
+
+.carrierScene .liveMapSurface .mapVehicle[data-carrier="old"] span.vehicleTrail {
+  width: 24%;
+  opacity: 0.22;
+  animation: old-wake-pulse 8s ease-in-out infinite;
+}
+
+.carrierScene .liveMapSurface .mapVehicle[data-carrier="near"] span.vehicleTrail {
+  width: 15%;
+  height: 22%;
+  opacity: 0.2;
+  animation: near-wake-stutter 7.4s steps(1, end) infinite;
+}
+
+.carrierScene .liveMapSurface .mapVehicle[data-carrier="crew"] span.vehicleTrail {
+  width: 42%;
+  opacity: 0.4;
+  animation: crew-wake-roll 3.8s ease-in-out infinite;
+}
+
+.carrierScene .liveMapSurface .mapVehicle[data-carrier="express"] span.vehicleTrail {
+  width: 68%;
+  height: 24%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 147, 82, 0.12) 22%,
+    rgba(255, 101, 36, 0.62) 78%,
+    rgba(255, 231, 193, 0.76)
+  );
+  filter: blur(4px);
+  opacity: 0.82;
+  animation: express-wake-sweep 1.9s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes old-wake-pulse {
+  0%, 72%, 100% { opacity: 0.16; transform: translate(-72%, -50%) scaleX(0.68); }
+  84% { opacity: 0.3; transform: translate(-72%, -50%) scaleX(0.82); }
+}
+
+@keyframes near-wake-stutter {
+  0%, 48%, 100% { opacity: 0.14; transform: translate(-72%, -50%) scaleX(0.52); }
+  49%, 57% { opacity: 0.28; transform: translate(-72%, -50%) scaleX(0.7); }
+}
+
+@keyframes crew-wake-roll {
+  0%, 100% { opacity: 0.3; transform: translate(-72%, -50%) scaleX(0.82); }
+  50% { opacity: 0.48; transform: translate(-72%, -50%) scaleX(1); }
+}
+
+@keyframes express-wake-sweep {
+  0%, 100% { opacity: 0.62; transform: translate(-72%, -50%) scaleX(0.72); }
+  50% { opacity: 0.94; transform: translate(-72%, -50%) scaleX(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrierScene .liveMapSurface .mapVehicle span.vehicleTrail {
+    animation: none !important;
+  }
+}

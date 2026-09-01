@@ -1,0 +1,36 @@
+{
+  "schema": "carrier-mask-draft-receipt/v1",
+  "status": "dry-run-reviewed-by-agent-paid-not-authorized",
+  "created_at_unix": 1788181075.0096474,
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/assets/feedback-v11/production/carrier-mobile.png",
+  "source_sha256": "4589cd044064cacbd0d4e45bf8776ebb78f2f88d7cbb879be588c1cafd5db606",
+  "seed_mask": "/home/michael/.local/share/comfyui/ComfyUI/input/clipspace-mask-1788170150011.png",
+  "seed_mask_sha256": "d5dafd0280770e7c42812209c3ddec0bffd1e03dfb9fc9b8dc39a299f300de72",
+  "template": "/home/michael/.local/share/comfyui/ComfyUI/user/default/workflows/fal-inpaint-repair.json",
+  "mask_id": "road-warehouse-seam",
+  "mask_bounds": [
+    137,
+    330,
+    264,
+    900
+  ],
+  "mask_pixel_count": 70706,
+  "mask_growth_px": 12,
+  "mask_feather_px": 10,
+  "protected_regions": {
+    "railway_and_west_block_x_lte": 136,
+    "crew_and_lower_road_y_gte": 900
+  },
+  "compiled_node": "GPTImage15Edit_fal",
+  "mask_transport": "comfy-alpha",
+  "paid_submission": false,
+  "compiled_mask_file": "uploads/road-warehouse-seam-comfy-alpha.png",
+  "dry_run_graph_sha256": "210ce1795297b7b7e0f8d0d4fbb68ffc06eebd91ff7c33f58cc178e1737c7640",
+  "template_mask_transport": "comfy-alpha",
+  "compiled_graph": "graphs/road-01-01-road-warehouse-seam.json",
+  "compiled_graph_sha256": "210ce1795297b7b7e0f8d0d4fbb68ffc06eebd91ff7c33f58cc178e1737c7640",
+  "transport_mask": "uploads/road-warehouse-seam-comfy-alpha.png",
+  "transport_mask_sha256": "781a9648dc224a3669a246fef534c7e2c40cf5347fb3627fcab90f4ea73e8edf",
+  "dry_run_verified_at_unix": 1788184719.748978,
+  "paid_submission_authorized": false
+}

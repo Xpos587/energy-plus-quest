@@ -1,0 +1,13 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v10-integrated-final.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"reference-near-final.png","upload":"image"}},
+    "3": {"class_type":"LoadImage","inputs":{"image":"v9-production-map-final.png","upload":"image"}},
+    "4": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 is the approved integrated desktop city map and is the composition authority. Image 2 is the production reference for the white-and-gray compact service van only. Image 3 supplies the approved painterly winter storybook treatment. Return one coherent finished image, not a collage. Preserve Image 1 exactly in its elevated 3/4 camera, compact northern city, connected roads, blue logistics warehouse, snow roof, orange trim, loading yard, all buildings and the three existing carrier vehicles: the small distant old truck, the blue crew truck on the middle road and the orange Express truck on the foreground road. Add exactly one fourth carrier: the white-and-gray compact service van from Image 2, directly on the warehouse loading-gate road at right-center, closest to the warehouse, moving slowly. It must be clearly separate from the three existing vehicles and grounded with the same scale, perspective and soft winter shadow. Keep exactly four carrier vehicles total. Keep the Express wordmark readable. Match the hand-drawn northern winter storybook illustration with crisp contours, controlled gouache and paper grain. No vehicle deletion, no duplicate, no extra traffic, no changed roads, no missing warehouse, no collage, no pasted edges, no UI, no labels except Express, no photorealism, no low-poly or toy render.",
+      "image_1":["1",0],"image_2":["2",0],"image_3":["3",0],"aspect_ratio":"16:9","max_quality":true,"guidance_scale":4.2,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26083061
+    }},
+    "5": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_desktop_add_near_final","images":["4",0]}}
+  },
+  "client_id":"carrier-v10-desktop-add-near-final"
+}

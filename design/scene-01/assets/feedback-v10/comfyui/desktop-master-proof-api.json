@@ -1,0 +1,42 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {"image": "v10-desktop-canny.png", "upload": "image"}
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {"image": "v10-style-reference.png", "upload": "image"}
+    },
+    "3": {
+      "class_type": "FluxGeneral_fal",
+      "inputs": {
+        "prompt": "Transform the Blender structural guide into a polished winter logistics-town game scene while preserving the exact camera, road network, building positions, warehouse position, and exactly four vehicle positions. The large cobalt-blue logistics warehouse at right-center is the main landmark: keep its broad industrial footprint, flat snow roof, orange trim, loading yard, and exactly three dark loading bays clearly readable. Turn the surrounding blocks into a believable compact northern city with varied two- and three-storey houses, warm windows, street lamps, snowbanks, sidewalks, road junctions, and distant mountain layers. Keep all roads connected and wide enough for trucks. Preserve clear foreground, middle ground, and background depth. Premium editorial storybook illustration matching the existing Energy+ winter outcome art: crisp drawn contours, controlled gouache and paper texture, blue-white snow, restrained orange accents, warm human light, coherent shadows, detailed but uncluttered. Not an empty plain, not a toy model, not low-poly, not strict isometric, not photorealistic. Exactly four vehicles total, one on each existing structural position; their detailed identities will be refined later. No labels, no UI, no decorative text, no logo, no extra vehicles, no duplicated buildings, no changed roads, no cropped warehouse.",
+        "image_size": "custom",
+        "width": 1024,
+        "height": 576,
+        "num_inference_steps": 20,
+        "guidance_scale": 3.2,
+        "real_cfg_scale": 3.3,
+        "num_images": 1,
+        "enable_safety_checker": true,
+        "use_real_cfg": false,
+        "sync_mode": false,
+        "seed": 26082901,
+        "ip_adapter_scale": 0.42,
+        "controlnet_conditioning_scale": 0.82,
+        "ip_adapters": "XLabs-AI/flux-ip-adapter",
+        "controlnets": "XLabs-AI/flux-controlnet-canny-v3",
+        "controlnet_unions": "None",
+        "controlnet_union_control_mode": "canny",
+        "control_image": ["1", 0],
+        "ip_adapter_image": ["2", 0]
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {"filename_prefix": "carrier_v10_desktop_master_proof", "images": ["3", 0]}
+    }
+  },
+  "client_id": "carrier-v10-desktop-master-proof"
+}

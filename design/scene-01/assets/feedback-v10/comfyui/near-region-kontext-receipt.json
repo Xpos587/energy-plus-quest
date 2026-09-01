@@ -1,0 +1,40 @@
+{
+  "prompt_id": "0fd2c170-403e-4fed-b701-14bb57478ad7",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "0fd2c170-403e-4fed-b701-14bb57478ad7",
+          "timestamp": 1788044489380
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "0fd2c170-403e-4fed-b701-14bb57478ad7",
+          "timestamp": 1788044489414
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "0fd2c170-403e-4fed-b701-14bb57478ad7",
+          "timestamp": 1788044507100
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_near_region_kontext_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "near-region-kontext-api.json",
+  "seed": 26082971
+}

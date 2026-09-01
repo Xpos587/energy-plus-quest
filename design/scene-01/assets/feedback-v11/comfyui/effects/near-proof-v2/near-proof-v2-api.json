@@ -1,0 +1,56 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-express-approved-near-v2-base.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-near-v2-guide.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "FluxPro1Fill_fal",
+      "inputs": {
+        "prompt": "Replace the temporary teal guide shape inside the mask with exactly one clearly readable compact utility panel van at the right-hand warehouse loading exit. This is the mandatory NEAR vehicle, not another ordinary box truck. Make it a distinctive short-wheelbase, short-nose dark teal delivery van with a low rounded cargo body, pale grey hood, one restrained orange safety stripe, two visible wheels, and a broad dark windshield. It must fill roughly the guide silhouette, be visibly larger than the distant old truck (about 1.25 times its width) but remain below 18 percent of the full frame width, and be clearly separate from the warehouse and every existing vehicle. Face it outward from the loading yard into the tight turn, with front wheels turned toward the road, a barrier and snow bank immediately beside it, and only short compressed ruts. Keep the same northern winter painterly illustration, three-quarter perspective, paper texture, blue snow shadows, warm light, and contact-shadow language as the surrounding image. Do not make it white, do not make it a tall box truck, do not duplicate the old truck or crew truck, do not add a trailer, and do not add text, logos, labels, signs, UI, or any other vehicle. Preserve the warehouse, loading gate, people, roads, Old, Crew, Express, the single Express wordmark, and the approved Express snow wake outside the mask.",
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "image": [
+          "1",
+          0
+        ],
+        "mask_image": [
+          "4",
+          0
+        ],
+        "seed": 26083151,
+        "sync_mode": false,
+        "enhance_prompt": false
+      }
+    },
+    "4": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-near-v2-mask.png",
+        "upload": "image"
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_near_v2_context_proof",
+        "images": [
+          "3",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-near-v2-context-proof"
+}

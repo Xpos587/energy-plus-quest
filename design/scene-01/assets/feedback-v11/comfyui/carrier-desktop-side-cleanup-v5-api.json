@@ -1,0 +1,51 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-desktop-outpaint-v4.jpg",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-gpt2-clean-v2-base.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-desktop-side-cleanup-v5-mask.png",
+        "upload": "image"
+      }
+    },
+    "4": {
+      "class_type": "GPTImage2Edit_fal",
+      "inputs": {
+        "prompt": "Edit only the white side regions of Image 1. Preserve every black-mask pixel exactly: the complete central portrait scene, warehouse, four selected delivery vehicles, roads, railway, buildings, snow, lighting and texture in the center are immutable. Image 2 is the original central mobile artwork and confirms the protected content and visual language.\n\nRepaint the left and right side extensions as a seamless continuation of the same compact northern winter city. Continue the exact street grid, sidewalks, snowy city blocks, small brick houses, office buildings, fences, trees and lamps already present at the mask boundary. Match the same elevated map camera, scale, daylight, blue-white snow shadows, dark-brown contours and tactile paper-gouache grain. Keep road lanes and intersections physically connected across the seams.\n\nThe two side extensions must contain ZERO vehicles and ZERO vehicle-like objects. Remove every car, truck, van, bus, trailer, parked vehicle, moving traffic, vehicle fragment, wheel shape, or object that could be mistaken for a fifth vehicle. Streets and parking spaces in both side extensions are intentionally empty. Do not add people, readable text, signs, logos, UI, labels, advertisements, map pins, arrows, route overlays or circles.\n\nThe final wide scene must contain exactly four vehicles total, all already preserved inside the black center: OLD, NEAR, CREW and orange Express. Do not redraw or duplicate them in the side regions. Preserve a coherent one-artist city illustration with no seams, collage edges, perspective shift, repeated objects or abrupt texture changes.",
+        "image_1": ["1", 0],
+        "image_2": ["2", 0],
+        "mask_image": ["3", 0],
+        "image_size": "custom",
+        "width": 2528,
+        "height": 1424,
+        "background": "opaque",
+        "quality": "high",
+        "input_fidelity": "high",
+        "num_images": 1,
+        "output_format": "png",
+        "sync_mode": false
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_desktop_side_cleanup_v5",
+        "images": ["4", 0]
+      }
+    }
+  },
+  "client_id": "carrier-v11-desktop-side-cleanup-v5"
+}

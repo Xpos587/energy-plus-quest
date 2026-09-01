@@ -1,0 +1,42 @@
+{
+  "prompt_id": "395b19e7-5c4e-4b03-b54e-c91fa7993c4d",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "395b19e7-5c4e-4b03-b54e-c91fa7993c4d",
+          "timestamp": 1788044014704
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "2"
+          ],
+          "prompt_id": "395b19e7-5c4e-4b03-b54e-c91fa7993c4d",
+          "timestamp": 1788044014705
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "395b19e7-5c4e-4b03-b54e-c91fa7993c4d",
+          "timestamp": 1788044161757
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_crew_tight_kontext_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "crew-tight-kontext-api.json",
+  "seed": 26082951
+}

@@ -1,0 +1,12 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v9-production-mobile.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"v10-mobile-color.png","upload":"image"}},
+    "3": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 supplies the approved hand-drawn northern winter storybook art direction, snow texture, warmth and the recognizable production carrier identities. Image 2 supplies the new portrait composition and camera. Preserve Image 2's vertical elevated 3/4 city layout: a complete compact city, connected streets, foreground road, large blue logistics warehouse with orange trim and visible loading gates, snow-covered roofs, street lamps and distant mountain depth. Transfer Image 1's painterly style and vehicle identities into that exact composition. Exactly four vehicles total, one per route: an aged white/gray old truck far in the upper city, a white compact van directly at the warehouse loading gate and visibly slow, a blue high-box crew truck on a separate middle road with exactly two drivers visible, and a bright orange modern Express truck already moving on the foreground road with one clean Express wordmark. Keep every vehicle on a road, separated vertically for touch targets. The warehouse and all four vehicles must remain visible in the portrait frame. This is a readable city logistics scene, not a field or diagram. No UI, no labels except the single Express wordmark on its truck, no duplicate or missing vehicles, no extra people, no lost roads, no cropped warehouse, no toy render, no low-poly geometry, no photorealism, no strict isometric view.",
+      "image_1":["1",0],"image_2":["2",0],"aspect_ratio":"9:16","max_quality":false,"guidance_scale":4.0,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26082961
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_mobile_master","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-mobile-master"
+}

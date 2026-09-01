@@ -1,0 +1,522 @@
+{
+  "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+  "success": true,
+  "events": [
+    {
+      "type": "status",
+      "data": {
+        "status": {
+          "exec_info": {
+            "queue_remaining": 0
+          }
+        },
+        "sid": "mask-workbench-e42df3ca3f864108"
+      }
+    },
+    {
+      "type": "status",
+      "data": {
+        "status": {
+          "exec_info": {
+            "queue_remaining": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "status",
+      "data": {
+        "status": {
+          "exec_info": {
+            "queue_remaining": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "execution_start",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "timestamp": 1788209698440
+      }
+    },
+    {
+      "type": "execution_cached",
+      "data": {
+        "nodes": [
+          "1"
+        ],
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "timestamp": 1788209698446
+      }
+    },
+    {
+      "type": "progress_state",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "nodes": {
+          "2": {
+            "value": 0.0,
+            "max": 1.0,
+            "state": "running",
+            "node_id": "2",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "2",
+            "parent_node_id": null,
+            "real_node_id": "2"
+          }
+        }
+      }
+    },
+    {
+      "type": "executing",
+      "data": {
+        "node": "2",
+        "display_node": "2",
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b"
+      }
+    },
+    {
+      "type": "progress_state",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "nodes": {
+          "2": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "2",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "2",
+            "parent_node_id": null,
+            "real_node_id": "2"
+          }
+        }
+      }
+    },
+    {
+      "type": "progress_state",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "nodes": {
+          "2": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "2",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "2",
+            "parent_node_id": null,
+            "real_node_id": "2"
+          },
+          "3": {
+            "value": 0.0,
+            "max": 1.0,
+            "state": "running",
+            "node_id": "3",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "3",
+            "parent_node_id": null,
+            "real_node_id": "3"
+          }
+        }
+      }
+    },
+    {
+      "type": "executing",
+      "data": {
+        "node": "3",
+        "display_node": "3",
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b"
+      }
+    },
+    {
+      "type": "progress_state",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "nodes": {
+          "2": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "2",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "2",
+            "parent_node_id": null,
+            "real_node_id": "2"
+          },
+          "3": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "3",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "3",
+            "parent_node_id": null,
+            "real_node_id": "3"
+          }
+        }
+      }
+    },
+    {
+      "type": "progress_state",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "nodes": {
+          "2": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "2",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "2",
+            "parent_node_id": null,
+            "real_node_id": "2"
+          },
+          "3": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "3",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "3",
+            "parent_node_id": null,
+            "real_node_id": "3"
+          },
+          "4": {
+            "value": 0.0,
+            "max": 1.0,
+            "state": "running",
+            "node_id": "4",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "4",
+            "parent_node_id": null,
+            "real_node_id": "4"
+          }
+        }
+      }
+    },
+    {
+      "type": "executing",
+      "data": {
+        "node": "4",
+        "display_node": "4",
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b"
+      }
+    },
+    {
+      "type": "progress_state",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "nodes": {
+          "2": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "2",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "2",
+            "parent_node_id": null,
+            "real_node_id": "2"
+          },
+          "3": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "3",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "3",
+            "parent_node_id": null,
+            "real_node_id": "3"
+          },
+          "4": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "4",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "4",
+            "parent_node_id": null,
+            "real_node_id": "4"
+          }
+        }
+      }
+    },
+    {
+      "type": "progress_state",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "nodes": {
+          "2": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "2",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "2",
+            "parent_node_id": null,
+            "real_node_id": "2"
+          },
+          "3": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "3",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "3",
+            "parent_node_id": null,
+            "real_node_id": "3"
+          },
+          "4": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "4",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "4",
+            "parent_node_id": null,
+            "real_node_id": "4"
+          },
+          "5": {
+            "value": 0.0,
+            "max": 1.0,
+            "state": "running",
+            "node_id": "5",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "5",
+            "parent_node_id": null,
+            "real_node_id": "5"
+          }
+        }
+      }
+    },
+    {
+      "type": "executing",
+      "data": {
+        "node": "5",
+        "display_node": "5",
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b"
+      }
+    },
+    {
+      "type": "executed",
+      "data": {
+        "node": "5",
+        "display_node": "5",
+        "output": {
+          "images": [
+            {
+              "filename": "lower-arterial-two-lanes_00002_.png",
+              "subfolder": "mask_workbench/road-02-lower-arterial",
+              "type": "output"
+            }
+          ]
+        },
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b"
+      }
+    },
+    {
+      "type": "progress_state",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "nodes": {
+          "2": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "2",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "2",
+            "parent_node_id": null,
+            "real_node_id": "2"
+          },
+          "3": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "3",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "3",
+            "parent_node_id": null,
+            "real_node_id": "3"
+          },
+          "4": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "4",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "4",
+            "parent_node_id": null,
+            "real_node_id": "4"
+          },
+          "5": {
+            "value": 1.0,
+            "max": 1.0,
+            "state": "finished",
+            "node_id": "5",
+            "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+            "display_node_id": "5",
+            "parent_node_id": null,
+            "real_node_id": "5"
+          }
+        }
+      }
+    },
+    {
+      "type": "execution_success",
+      "data": {
+        "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        "timestamp": 1788209792891
+      }
+    }
+  ],
+  "history": {
+    "5ee81ec0-766d-45e0-b1f7-1ea7491b153b": {
+      "prompt": [
+        27,
+        "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+        {
+          "1": {
+            "class_type": "LoadImage",
+            "inputs": {
+              "image": "carrier-mobile.png"
+            }
+          },
+          "2": {
+            "class_type": "LoadImageMask",
+            "inputs": {
+              "image": "lower-arterial-two-lanes-sam2-v2.png",
+              "channel": "red"
+            }
+          },
+          "3": {
+            "class_type": "MaskToImage",
+            "inputs": {
+              "mask": [
+                "2",
+                0
+              ]
+            }
+          },
+          "4": {
+            "class_type": "GPTImage2Edit_fal",
+            "inputs": {
+              "prompt": "Repair only the white masked region for mask lower-arterial-two-lanes. Human note:\nRegenerate the entire lower horizontal arterial as one connected ordinary two-lane road: exactly two lanes total, one lane in each direction, one restrained dashed center line, coherent asphalt and snowy edges. Remove the current four-to-five parallel lane-like strips and duplicate road bands. Keep Crew and Express exactly where they are using only their contour-following vehicle silhouettes; preserve the trucks but do not preserve rectangular road areas, shadows, wakes, snow, or surrounding pixels. Do not add vehicles, text, logos, road labels, route overlays, or extra lane markings. Preserve the northern winter illustration style, camera, lighting, connected intersections, railway, warehouse context, and every pixel outside the white edit region.\n\nWhite means regenerate; black means preserve. Preserve every pixel, object, road, building, vehicle, text, lighting, camera, and composition outside the mask. Match the surrounding image with no extra objects, labels, logos, or text.",
+              "image_1": [
+                "1",
+                0
+              ],
+              "image_size": "custom",
+              "width": 768,
+              "height": 1424,
+              "mask_image": [
+                "3",
+                0
+              ],
+              "background": "opaque",
+              "quality": "high",
+              "input_fidelity": "high",
+              "num_images": 1,
+              "output_format": "png",
+              "sync_mode": false
+            }
+          },
+          "5": {
+            "class_type": "SaveImage",
+            "inputs": {
+              "images": [
+                "4",
+                0
+              ],
+              "filename_prefix": "mask_workbench/road-02-lower-arterial/lower-arterial-two-lanes"
+            }
+          }
+        },
+        {
+          "client_id": "mask-workbench-e42df3ca3f864108",
+          "create_time": 1788209698439
+        },
+        [
+          "5"
+        ]
+      ],
+      "outputs": {
+        "5": {
+          "images": [
+            {
+              "filename": "lower-arterial-two-lanes_00002_.png",
+              "subfolder": "mask_workbench/road-02-lower-arterial",
+              "type": "output"
+            }
+          ]
+        }
+      },
+      "status": {
+        "status_str": "success",
+        "completed": true,
+        "messages": [
+          [
+            "execution_start",
+            {
+              "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+              "timestamp": 1788209698440
+            }
+          ],
+          [
+            "execution_cached",
+            {
+              "nodes": [
+                "1"
+              ],
+              "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+              "timestamp": 1788209698446
+            }
+          ],
+          [
+            "execution_success",
+            {
+              "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+              "timestamp": 1788209792891
+            }
+          ]
+        ]
+      },
+      "meta": {
+        "5": {
+          "node_id": "5",
+          "display_node": "5",
+          "parent_node": null,
+          "real_node_id": "5"
+        }
+      }
+    }
+  },
+  "websocket_error": null,
+  "status": "success",
+  "candidate": {
+    "file": "candidates/01-lower-arterial-two-lanes-5ee81ec0-766d-45e0-b1f7-1ea7491b153b.png",
+    "url": "/api/candidate/5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+    "dimensions": {
+      "raw_size": [
+        768,
+        1424
+      ],
+      "size": [
+        768,
+        1424
+      ]
+    },
+    "reference": {
+      "filename": "lower-arterial-two-lanes_00002_.png",
+      "subfolder": "mask_workbench/road-02-lower-arterial",
+      "type": "output"
+    },
+    "protection": {
+      "provider_outside_changed_pixels": 902182,
+      "provider_outside_max_delta": 230,
+      "outside_changed_pixels": 0,
+      "outside_max_delta": 0
+    }
+  }
+}

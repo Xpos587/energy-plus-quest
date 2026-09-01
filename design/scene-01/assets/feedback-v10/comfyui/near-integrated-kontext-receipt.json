@@ -1,0 +1,40 @@
+{
+  "prompt_id": "d3c890eb-5214-4ee3-8fb5-bf73812b09e8",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "d3c890eb-5214-4ee3-8fb5-bf73812b09e8",
+          "timestamp": 1788047105531
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "d3c890eb-5214-4ee3-8fb5-bf73812b09e8",
+          "timestamp": 1788047105534
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "d3c890eb-5214-4ee3-8fb5-bf73812b09e8",
+          "timestamp": 1788047127996
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_near_integrated_kontext_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "near-integrated-kontext-api.json",
+  "seed": 26083071
+}

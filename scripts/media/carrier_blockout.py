@@ -20,7 +20,7 @@ COLORS = {
     "road": (0.16, 0.20, 0.25, 1.0),
     "warehouse": (0.02, 0.22, 0.55, 1.0),
     "old": (0.24, 0.34, 0.40, 1.0),
-    "near": (0.42, 0.56, 0.62, 1.0),
+    "near": (0.24, 0.50, 0.66, 1.0),
     "crew": (0.02, 0.24, 0.55, 1.0),
     "express": (1.0, 0.20, 0.02, 1.0),
     "orange": (1.0, 0.32, 0.02, 1.0),
@@ -62,19 +62,20 @@ class Building:
 
 ROAD_LAYOUT = (
     Road("north-service", (0.0, 16.0), 2.4, 25.0, math.pi / 2),
-    Road("main-avenue", (0.0, 2.0), 3.0, 25.0, math.pi / 2),
-    Road("south-arterial", (0.0, -14.0), 3.2, 25.0, math.pi / 2),
+    Road("main-avenue", (0.0, -4.0), 3.0, 25.0, math.pi / 2),
+    Road("south-arterial", (0.0, -16.0), 3.2, 25.0, math.pi / 2),
     Road("west-street", (-18.0, 1.0), 2.4, 15.0, 0.0),
     Road("central-street", (0.0, 1.0), 2.5, 15.0, 0.0),
     Road("east-street", (14.0, 1.0), 2.5, 15.0, 0.0),
     Road("warehouse-spur", (13.5, 8.0), 2.3, 3.5, math.pi / 2),
+    Road("crew-street", (-8.0, -7.0), 2.8, 9.0, 0.0),
 )
 
 CARRIER_LAYOUT = {
-    "old": TownDistrict((-4.0, 16.0), math.pi / 2, "north-service"),
-    "near": TownDistrict((16.0, 0.0), 0.0, "east-street"),
-    "crew": TownDistrict((-8.0, 2.0), -math.pi / 2, "main-avenue"),
-    "express": TownDistrict((7.0, -14.0), math.pi / 2, "south-arterial"),
+    "old": TownDistrict((-6.0, 16.0), math.pi / 2, "north-service"),
+    "near": TownDistrict((14.0, 0.0), math.pi, "east-street"),
+    "crew": TownDistrict((-8.0, -5.0), math.pi, "crew-street"),
+    "express": TownDistrict((13.0, -16.0), math.pi / 2, "south-arterial"),
 }
 
 BUILDING_LAYOUT = (
@@ -85,10 +86,10 @@ BUILDING_LAYOUT = (
     Building((22, 23), 3.2, 3.1, 4.6, "wood"),
     Building((-27, 8), 3.1, 3.0, 4.4, "wood", False),
     Building((-16, 7), 3.8, 3.1, 5.5, "building"),
-    Building((5, 9), 3.2, 3.0, 4.6, "wood", False),
+    Building((28, 9), 3.2, 3.0, 4.6, "wood", False),
     Building((-29, -7), 3.6, 3.0, 5.8, "building_red"),
     Building((-12, -7), 3.1, 3.0, 4.5, "wood", False),
-    Building((3, -7), 3.7, 3.1, 5.6, "building"),
+    Building((23, -7), 3.7, 3.1, 5.6, "building"),
     Building((28, -7), 3.1, 3.0, 4.4, "building"),
     Building((-28, -21), 3.3, 3.2, 4.7, "building"),
     Building((-14, -21), 3.8, 3.0, 5.9, "building_red", False),
@@ -561,18 +562,26 @@ def add_environment() -> dict[str, int]:
 
     add_road("foreground-footpath", (0.0, -31.0, 0.02), (0.65, 31.0, 0.05), math.pi / 2, environment)
 
-    # Warehouse has readable loading architecture before any generative pass.
-    cube("WarehouseBody", (16.0, 8.0, 3.2), (4.7, 4.3, 3.2), "warehouse", warehouse, bevel=0.22)
-    warehouse_roof = Building((16.0, 8.0), 4.7, 4.3, 6.4, "warehouse", False)
-    add_gable_roof("WarehouseRoof", warehouse_roof, warehouse)
-    # South-facing loading architecture stays legible from all three cameras.
-    cube("LoadingGate", (14.0, 3.62, 1.6), (1.7, 0.16, 1.6), "road", warehouse, bevel=0.04)
-    cube("LoadingCanopy", (14.0, 3.08, 3.4), (2.05, 0.85, 0.18), "snow", warehouse, bevel=0.08)
-    for x in (12.0, 16.0, 19.0):
-        cube(f"WarehouseWindow-{x}", (x, 3.66, 4.5), (0.68, 0.08, 0.48), "warm", warehouse, bevel=0.03)
-    for x in (12.55, 15.45):
-        cube(f"DockBumper-{x}", (x, 3.38, 0.65), (0.12, 0.18, 0.65), "orange", warehouse, bevel=0.03)
-    cylinder("WarehouseVent", (19.0, 8.0, 7.2), 0.3, 1.2, "near", warehouse, rotation=(0, 0, 0))
+    # The warehouse dominates the mobile storyboard; no vehicle may rival its scale.
+    warehouse_center = (8.0, 7.0)
+    cube("WarehouseBody", (8.0, 7.0, 3.4), (7.2, 4.5, 3.4), "warehouse", warehouse, bevel=0.2)
+    cube("WarehouseRoof", (8.0, 7.0, 7.05), (7.45, 4.75, 0.28), "snow", warehouse, bevel=0.18)
+    cube("WarehouseRoofTrim", (8.0, 2.3, 6.35), (7.0, 0.16, 0.16), "orange", warehouse, bevel=0.04)
+    cube("WarehouseYard", (8.0, 1.05, 0.12), (7.7, 2.2, 0.12), "road", warehouse, bevel=0.08)
+    # Three south-facing loading bays establish a logistics destination, not a house.
+    for index, x in enumerate((3.5, 8.0, 12.5), 1):
+        gate_name = "LoadingGate" if index == 2 else f"LoadingGate-{index}"
+        cube(gate_name, (x, 2.24, 1.55), (1.35, 0.16, 1.55), "road", warehouse, bevel=0.04)
+        cube(f"LoadingGateFrame-{index}", (x, 2.0, 3.15), (1.55, 0.13, 0.12), "orange", warehouse, bevel=0.03)
+        cube(f"LoadingBayLight-{index}", (x, 1.96, 3.58), (0.22, 0.12, 0.18), "warm", warehouse, bevel=0.04)
+    cube("LoadingCanopy", (8.0, 1.72, 3.45), (7.05, 0.3, 0.16), "snow", warehouse, bevel=0.08)
+    cube("WarehouseSign", (8.0, 1.98, 5.45), (2.6, 0.12, 0.78), "road", warehouse, bevel=0.08)
+    cube("WarehouseSignAccent", (8.0, 1.82, 5.45), (0.9, 0.08, 0.42), "orange", warehouse, bevel=0.08)
+    for x in (3.5, 8.0, 12.5):
+        cube(f"WarehouseWindow-{x}", (x, 2.24, 4.75), (0.75, 0.08, 0.48), "warm", warehouse, bevel=0.03)
+    for x in (2.5, 5.5, 10.5, 13.5):
+        cube(f"DockBumper-{x}", (x, 1.98, 0.65), (0.12, 0.18, 0.65), "orange", warehouse, bevel=0.03)
+    cylinder("WarehouseVent", (12.8, 7.0, 8.05), 0.3, 1.2, "near", warehouse, rotation=(0, 0, 0))
 
     for index, building in enumerate(BUILDING_LAYOUT):
         add_house(index, building, environment)
@@ -581,10 +590,10 @@ def add_environment() -> dict[str, int]:
     near = CARRIER_LAYOUT["near"]
     crew = CARRIER_LAYOUT["crew"]
     express = CARRIER_LAYOUT["express"]
-    add_truck("OldTruck", old.position, old.angle, "old", old_collection, old=True, scale_factor=1.45)
-    add_van("NearVan", near.position, near.angle, "near", near_collection, scale_factor=1.8)
-    add_truck("CrewTruck", crew.position, crew.angle, "crew", crew_collection, drivers=2, scale_factor=1.55)
-    add_express_truck(express.position, express.angle, express_collection, scale_factor=1.45)
+    add_truck("OldTruck", old.position, old.angle, "old", old_collection, old=True, scale_factor=1.0)
+    add_van("NearVan", near.position, near.angle, "near", near_collection, scale_factor=1.5)
+    add_truck("CrewTruck", crew.position, crew.angle, "crew", crew_collection, drivers=2, scale_factor=1.25)
+    add_express_truck(express.position, express.angle, express_collection, scale_factor=1.0)
 
     motion_tracks = 0
     snow_plumes = 0
@@ -600,8 +609,8 @@ def add_environment() -> dict[str, int]:
 
     cube("InspectionBooth", (-13.0, 16.0, 1.1), (1.0, 1.0, 1.1), "building_blue", cues, bevel=0.12)
     cylinder("InspectionSign", (-11.5, 16.0, 1.55), 0.42, 0.08, "orange", cues, rotation=(0, math.pi / 2, 0))
-    cube("GateBarrier", (14.0, 4.2, 0.78), (1.45, 0.08, 0.08), "orange", cues, bevel=0.02)
-    cube("GateSnowBank", (16.5, 4.2, 0.4), (1.0, 1.35, 0.4), "snow", cues, bevel=0.3)
+    cube("GateBarrier", (13.8, 1.4, 0.78), (1.45, 0.08, 0.08), "orange", cues, bevel=0.02)
+    cube("GateSnowBank", (14.0, 2.6, 0.4), (1.0, 1.35, 0.4), "snow", cues, bevel=0.3)
 
     lamp_positions = ((-25, 17.5), (-8, 17.5), (8, 17.5), (23, 17.5), (-25, 3.5), (3.5, 3.5), (16.5, -3.5), (-18, -17.5), (3, -17.5), (24, -17.5))
     for index, position in enumerate(lamp_positions):
@@ -672,9 +681,10 @@ def configure_scene() -> tuple[bpy.types.Object, bpy.types.Object, bpy.types.Obj
     scene.render.film_transparent = False
     scene.render.resolution_percentage = 100
     scene.unit_settings.system = "METRIC"
-    desktop = create_camera("CameraDesktop", (42.0, -68.0, 78.0), (1.0, 1.0, 1.0), 58, 70.0)
-    tablet = create_camera("CameraTablet", (28.0, -64.0, 76.0), (0.0, 1.0, 1.0), 58, 64.0)
-    mobile = create_camera("CameraMobile", (3.0, -68.0, 82.0), (3.0, 6.0, 0.0), 58)
+    # Perspective gives the master a real foreground/midground/background hierarchy.
+    desktop = create_camera("CameraDesktop", (30.0, -90.0, 130.0), (2.0, 2.0, 2.0), 76)
+    tablet = create_camera("CameraTablet", (34.0, -72.0, 92.0), (3.0, 4.0, 2.0), 52)
+    mobile = create_camera("CameraMobile", (5.0, -74.0, 86.0), (5.0, 3.0, 1.5), 54)
     bpy.context.view_layer.update()
     return desktop, tablet, mobile
 
@@ -715,8 +725,8 @@ def landmark_visibility(camera: bpy.types.Object) -> dict[str, dict[str, float]]
             "WarehouseRoof",
             "LoadingGate",
             "LoadingCanopy",
-            "WarehouseWindow-12.0",
-            "WarehouseWindow-16.0",
+            "WarehouseWindow-3.5",
+            "WarehouseWindow-8.0",
         )
     ]
     return {

@@ -1,0 +1,67 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-gpt2-clean-v2-base.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "docx-map-clean-layout-guide-v2.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-crew-v4-mobile.webp",
+        "upload": "image"
+      }
+    },
+    "4": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-express-v5-desktop.webp",
+        "upload": "image"
+      }
+    },
+    "5": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-gpt2-clean-v2-mask-three.png",
+        "upload": "image"
+      }
+    },
+    "6": {
+      "class_type": "GPTImage2Edit_fal",
+      "inputs": {
+        "prompt": "Edit only the white mask regions of Image 1. Preserve every black-mask pixel exactly. In particular preserve the entire warehouse, its apron, the attached gate and barrier, the dark-teal NEAR vehicle, every building, railway, tree, lamp, road junction, light direction, winter paper-gouache style, and camera outside the masks. Image 2 is the strict position and relative-scale guide. Image 3 is only a reference for two readable drivers in one cab. Image 4 is only a reference for the orange Express identity and snow wake. Do not copy the compositions of Images 2, 3, or 4.\n\nInside the three mask regions, repaint the road continuously and recreate exactly these three vehicles at smaller city-map scale. Together with the preserved NEAR vehicle, the final image must contain exactly four and only four vehicles.\n\nUpper-left mask: one small muted blue-grey OLD delivery truck, centered on the same upper-left road and aligned with it. About 80 pixels wide on this 768-pixel-wide master. It is aged but operational and moving safely, with faded paint, modest scuffs, a thin exhaust wisp and a short tire trace. No crash or broken parts.\n\nLower-left mask: one medium blue high-box CREW truck, centered on the same lower-left horizontal road and aligned left-to-right with the lane, never touching or crossing the railway. About 125 pixels wide. Through its broad windshield show exactly two separate adult drivers seated side by side, both readable at mobile size. Add clean continuous tire tracks. No third person.\n\nLower-right mask: one modern signal-orange EXPRESS box truck, centered on the same lower-right horizontal arterial and aligned left-to-right. About 120 pixels wide. It is already moving on the open road with visible wheel motion, small tire spray and a long low tapered snow wake following the lane. Put exactly one readable word \"Express\" directly on the cargo body; no other text.\n\nNo vehicle may exceed 18 percent of the image width. Keep natural contact shadows and make the newly exposed asphalt, lane paint, snow edges and paper texture seamless. Do not add traffic, parked vehicles, trailers, fragments, labels, signs, UI, numbers, arrows, pins, circles, logos, or any fifth vehicle. The only readable text is Express.",
+        "image_1": ["1", 0],
+        "image_2": ["2", 0],
+        "image_3": ["3", 0],
+        "image_4": ["4", 0],
+        "mask_image": ["5", 0],
+        "image_size": "custom",
+        "width": 768,
+        "height": 1424,
+        "background": "opaque",
+        "quality": "high",
+        "input_fidelity": "high",
+        "num_images": 1,
+        "output_format": "png",
+        "sync_mode": false
+      }
+    },
+    "7": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_gpt2_three_vehicle_scale_v4",
+        "images": ["6", 0]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-gpt2-three-vehicle-scale-v4"
+}

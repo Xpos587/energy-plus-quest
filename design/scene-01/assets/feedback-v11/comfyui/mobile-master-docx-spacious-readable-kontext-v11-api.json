@@ -1,0 +1,62 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-mobile-spacious-readable-guide-v3.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-kontext-style.webp",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-accepted-tone-reference.png",
+        "upload": "image"
+      }
+    },
+    "4": {
+      "class_type": "FluxProKontextMulti_fal",
+      "inputs": {
+        "prompt": "Image 1 is the authoritative vertical 9:16 overhead city-map guide. It has a spacious three-column, five-band city grid, broad connected streets, intersections, railway, public spaces, one central logistics center and exactly four colored vehicle anchors. Image 2 is production art for surface language only: tactile paper grain, hand-painted contours, winter snow, asphalt, varied roofs, trees, practical vehicles and the accepted blue-white-orange palette. Image 3 is the accepted friendly northern winter tone. Rebuild Image 1 as one finished production illustration while preserving its exact map structure and vehicle anchors. Do not copy the composition of Images 2 or 3.\n\nThe map must feel inhabited and finished: varied snow-covered apartment and office roofs, courtyards, fences, utility details, trees, plowed sidewalks, uneven snow banks, weathered asphalt and clear marked intersections. Keep a mostly overhead bird's-eye camera. Keep one broad unmistakable central blue logistics center, fully visible and dominant, with three loading doors, a practical loading court, fence, snow piles and a clear right-side exit. The roads must remain visibly connected to all four vehicles.\n\nPaint exactly four and only four complete delivery vehicles. The colored vehicle anchors in Image 1 are mandatory and are already sized for a readable mobile choice screen. Preserve their relative scale; do not shrink them into dots and do not enlarge them into two-lane objects. At a 375px preview, aim for body widths of Old 28-34px, Near 50-58px, Crew 56-64px and Express 56-64px. Their narrow dimension stays within one lane; the long axis follows the road. Do not add any traffic, cars, vans, trailers, fragments, or vehicle-like rooftop objects in any city block.\n\n1. OLD: the single muted aged-but-operational truck on the upper-left distant road, separated from the railway and water, with faded paint, thin exhaust and narrow tracks.\n2. NEAR: the single distinctive compact short cab-over teal-and-pale utility truck immediately outside the warehouse's right loading exit, fully on the curved apron, front wheels turned, barrier, snow bank and short compressed ruts.\n3. CREW: the single blue truck on the lower-left perimeter road, aligned with one lane, with exactly two separate adult drivers clearly visible through the cab.\n4. EXPRESS: the single modern bright-orange truck on the lower-right open arterial, aligned with one lane and clear of the junction, with only one Express wordmark directly on its body, subtle wheel motion and a local tapered snow wake.\n\nUse restrained indexical motion cues: tracks originate at wheels, snow spray comes from tires, Near's turned wheels show constraint, Old's exhaust is thin and Express has the strongest directional energy. No UI, pins, circles, route overlays, arrows, logos, numbers, advertisements, extra text, photorealism, glossy 3D, low-poly toy style, flat board-game icons, collage edges, or a fifth vehicle. The only readable word in the art is Express.",
+        "image_1": [
+          "1",
+          0
+        ],
+        "image_2": [
+          "2",
+          0
+        ],
+        "image_3": [
+          "3",
+          0
+        ],
+        "aspect_ratio": "9:16",
+        "max_quality": true,
+        "guidance_scale": 4.0,
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "sync_mode": false,
+        "seed": 26083222
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_docx_spacious_readable_kontext_v11",
+        "images": [
+          "4",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-docx-spacious-readable-kontext-v11"
+}

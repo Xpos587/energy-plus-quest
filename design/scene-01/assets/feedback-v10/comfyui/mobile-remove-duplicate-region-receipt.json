@@ -1,0 +1,40 @@
+{
+  "prompt_id": "05fa1840-9b2e-45cf-8016-0e2a1111f45a",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "05fa1840-9b2e-45cf-8016-0e2a1111f45a",
+          "timestamp": 1788048206424
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "05fa1840-9b2e-45cf-8016-0e2a1111f45a",
+          "timestamp": 1788048206432
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "05fa1840-9b2e-45cf-8016-0e2a1111f45a",
+          "timestamp": 1788048242743
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_mobile_remove_duplicate_region_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "mobile-remove-duplicate-region-api.json",
+  "seed": 26083101
+}

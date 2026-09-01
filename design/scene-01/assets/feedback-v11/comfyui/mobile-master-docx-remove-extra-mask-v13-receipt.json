@@ -1,0 +1,22 @@
+{
+  "prompt_id": "fbb2ad7b-0fa6-47aa-9017-7aa7158a937d",
+  "node": "FluxPro1Fill_fal",
+  "endpoint": "fal-ai/flux-pro/v1/fill",
+  "base_image": "mobile-master-docx-remove-extra-v12.png",
+  "mask": "effects-remove-extra-mask-v13.png",
+  "raw_output": "mobile-master-docx-remove-extra-mask-v13-raw.png",
+  "composite": "mobile-master-docx-remove-extra-mask-v13-composite.png",
+  "preview": "mobile-master-docx-remove-extra-mask-v13-composite-375px.png",
+  "grid_review": "mobile-master-docx-remove-extra-mask-v13-grid-3x6.png",
+  "source_size": [
+    768,
+    1424
+  ],
+  "raw_size": [
+    768,
+    1408
+  ],
+  "outside_zero_pixel_diff": true,
+  "status": "intermediate",
+  "note": "Removed accidental fifth vehicle-like object only; not wired into app or approved for outpaint."
+}

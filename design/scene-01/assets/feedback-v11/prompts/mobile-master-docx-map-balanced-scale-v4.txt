@@ -1,0 +1,11 @@
+Image 1 is the accepted polished city-map composition before the last scale attempt. Make one final balanced scale pass. Preserve the exact city grid, railway, central warehouse, winter rendering, lighting, road layout, and four route positions. Do not redesign the map or add detail that changes its composition.
+
+The previous version made every truck too large and the last correction made the trucks too tiny. Use the middle scale that reads at mobile size without spanning the street: in the 375 px preview, OLD should be about 22-28 px wide, NEAR 38-46 px, CREW 50-58 px, and EXPRESS 48-56 px. These are vehicle body widths on screen, not the length of their snow tracks. Each truck must occupy one lane or its own small loading apron, never straddle two lanes or sit across a junction. Keep the four vehicles high-contrast and fully countable without labels.
+
+Preserve exactly four complete delivery vehicles and no other cars, vans, trailers, fragments, or vehicle-like objects:
+- OLD: upper-left distant road, small muted aged but operating truck, fully visible on asphalt, separated from the railway and water, thin exhaust and narrow tracks.
+- NEAR: distinctive short cab-over teal-and-pale utility truck immediately outside the warehouse right exit, medium-small, fully on the curved exit apron, front wheels turned, barrier and compact ruts visible. Do not let it touch or cover the perpendicular street.
+- CREW: blue truck on the lower-left broad perimeter road, medium size, centered on the road rather than parked across the intersection, with exactly two separate adult drivers readable through the cab.
+- EXPRESS: bright-orange modern truck on the lower-right open arterial, medium size, centered in one lane and clear of the crossing, single word Express on its body, short strong snow wake and subtle wheel movement.
+
+The warehouse remains the dominant landmark but should not become a blank void. Keep its loading apron, three doors, snow banks, fencing, and clear exit. Keep varied urban blocks, rooftops, trees, courtyards, and plowed street texture. Motion traces must stay subordinate to the map and originate at the smaller vehicles. No UI, pins, circles, route overlays, arrows, logos, numbers, advertisements, comic speed lines, neon glow, photorealism, glossy 3D, low-poly styling, or readable text except the single Express wordmark.

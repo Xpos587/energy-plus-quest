@@ -1,0 +1,12 @@
+{
+  "prompt_id": "85e8c8a8-d5a0-4b5e-8787-027c4a345b99",
+  "node": "GPTImage2Edit_fal",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "base_image": "mobile-master-docx-map-lived-repaint.png",
+  "style_reference": "carrier-docx-map-production-style.webp",
+  "prompt": "../prompts/mobile-master-docx-map-polish-v2.txt",
+  "output": "mobile-master-docx-map-polish-v2.png",
+  "preview": "mobile-master-docx-map-polish-v2-375px.png",
+  "status": "success",
+  "note": "polished intermediate visual proof; not wired into app or approved for outpaint"
+}

@@ -1,0 +1,24 @@
+{
+  "prompt": {
+    "1": {"class_type": "LoadImage", "inputs": {"image": "v10-desktop-color.png", "upload": "image"}},
+    "2": {"class_type": "LoadImage", "inputs": {"image": "v10-outcome-style.png", "upload": "image"}},
+    "3": {
+      "class_type": "FluxProKontextMulti_fal",
+      "inputs": {
+        "prompt": "Image 1 is the immutable scene layout and camera. Preserve every road, junction, building position, mountain position, the large blue logistics warehouse at right-center with its three loading bays, and exactly four vehicle positions from image 1. Image 2 is STYLE ONLY: transfer its hand-drawn northern winter illustration language, crisp dark contours, blue-white painted snow, layered paper/gouache texture, warm windows, restrained orange/cobalt palette and natural coherent shadows. Do not copy the large truck, people, road signs, gift, or composition from image 2. The result must remain the same compact city map as image 1, not a single-truck scene. Exactly four vehicles total. Keep the warehouse fully visible and obviously industrial. No UI, labels, logos, new text, duplicated vehicles, missing roads, toy render, low-poly geometry, tilt-shift, photorealism, or strict isometric diagram.",
+        "image_1": ["1", 0],
+        "image_2": ["2", 0],
+        "aspect_ratio": "16:9",
+        "max_quality": false,
+        "guidance_scale": 4.0,
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "sync_mode": false,
+        "seed": 26082903
+      }
+    },
+    "4": {"class_type": "SaveImage", "inputs": {"filename_prefix": "carrier_v10_desktop_master_kontext", "images": ["3", 0]}}
+  },
+  "client_id": "carrier-v10-desktop-master-kontext"
+}

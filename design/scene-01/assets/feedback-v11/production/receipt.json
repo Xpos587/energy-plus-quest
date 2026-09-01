@@ -1,0 +1,57 @@
+{
+  "status": "integrated-verified",
+  "mobile_source": "design/scene-01/assets/feedback-v11/comfyui/gpt2-three-vehicle-scale-v4-output/carrier_v11_mobile_gpt2_three_vehicle_scale_v4_00001_.png",
+  "mobile_prompt_id": "b03bf97a-4a91-4dc8-94f3-3773ba7a3f93",
+  "desktop_outpaint_source": "design/scene-01/assets/feedback-v11/comfyui/carrier-desktop-outpaint-v4.png",
+  "desktop_cleanup_source": "design/scene-01/assets/feedback-v11/comfyui/desktop-side-cleanup-v5-output/carrier_v11_desktop_side_cleanup_v5_00001_.png",
+  "desktop_cleanup_prompt_id": "eb57f67e-afa1-4b5a-a309-a85174ea75a3",
+  "mobile_size": [
+    768,
+    1424
+  ],
+  "desktop_size": [
+    2528,
+    1424
+  ],
+  "desktop_center_x": 880,
+  "desktop_center_interior_zero_pixel_diff": false,
+  "vehicle_contract": {
+    "count": 4,
+    "ids": [
+      "old",
+      "near",
+      "crew",
+      "express"
+    ],
+    "side_extension_vehicle_count": 0
+  },
+  "exports": [
+    "carrier-mobile.webp",
+    "carrier-desktop.webp"
+  ],
+  "desktop_source": "design/scene-01/assets/feedback-v11/comfyui/desktop-side-cleanup-v5-output/carrier_v11_desktop_side_cleanup_v5_00001_.png",
+  "desktop_center_note": "Side cleanup regenerated a coherent wide frame; the canonical mobile master remains a separate immutable export.",
+  "visual_qa": {
+    "exactly_four_vehicles": true,
+    "warehouse_complete_and_central": true,
+    "roads_connected": true,
+    "near_at_attached_gate_and_barrier": true,
+    "crew_two_drivers_visible": true,
+    "express_single_wordmark_and_snow_wake": true,
+    "side_extensions_have_no_vehicles": true,
+    "reviewed_viewports": [
+      "375x667",
+      "390x844",
+      "820x1180",
+      "1024x643",
+      "1152x720",
+      "1440x900"
+    ]
+  },
+  "validation": [
+    "npm run test",
+    "npm run build",
+    "npm run check",
+    "npm run test:e2e"
+  ]
+}

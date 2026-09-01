@@ -1,0 +1,21 @@
+{
+  "prompt_id": "be43e669-6c32-4ead-b622-31bf1a3c951a",
+  "node": "FluxPro1Fill_fal",
+  "endpoint": "fal-ai/flux-pro/v1/fill",
+  "seed": 26083150,
+  "base": "../express-proof/composite.png",
+  "mask": "mask.png",
+  "raw": "raw.png",
+  "composite": "composite.png",
+  "source_size": [
+    752,
+    1392
+  ],
+  "raw_size": [
+    736,
+    1376
+  ],
+  "outside_zero_pixel_diff": true,
+  "outside_changed_pixels": 0,
+  "mask_policy": "warehouse loading-yard context only; gate, people, facade, and existing vehicles preserved"
+}

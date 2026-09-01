@@ -1,0 +1,49 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-near-v3-guide.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-near-v3-mask.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "FluxPro1Fill_fal",
+      "inputs": {
+        "prompt": "Replace the temporary teal scaffold inside the mask with exactly one large-enough, fully in-frame NEAR utility van at the right-hand warehouse loading exit. It must be a distinctive short-wheelbase, short-nose dark teal panel delivery van, visibly different from the distant pale box truck and the blue high-box crew truck. Use a low rounded cargo body, pale grey hood, one simple orange safety stripe, broad dark windshield, and two visible wheels. The van should fill most of the scaffold footprint and be about 1.25 times wider than the distant old truck, but stay below 18 percent of the full frame width. Keep its whole body inside the frame; do not crop it. Place it directly beside the orange loading barrier and snow bank, facing out of the yard into the tight turn, with front wheels turned and only short compressed ruts. Match the surrounding northern winter painterly illustration, three-quarter perspective, paper texture, soft blue snow shadows, warm light, and contact shadows. Preserve the warehouse, loading gate, two people, roads, Old, Crew, Express, the single Express wordmark, and the approved Express snow wake. Do not add any text or symbols on this van, do not add a trailer, do not add another vehicle, and do not make a tall white box truck. No labels, logos, signs, UI, glow, smoke, or comic speed lines.",
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "image": [
+          "1",
+          0
+        ],
+        "mask_image": [
+          "2",
+          0
+        ],
+        "seed": 26083152,
+        "sync_mode": false,
+        "enhance_prompt": false
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_near_v3_context_proof",
+        "images": [
+          "3",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-near-v3-context-proof"
+}

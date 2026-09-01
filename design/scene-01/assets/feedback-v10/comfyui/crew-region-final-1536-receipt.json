@@ -1,0 +1,42 @@
+{
+  "prompt_id": "150a6212-3f39-4fac-aa5f-4c13ed31ae3b",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "150a6212-3f39-4fac-aa5f-4c13ed31ae3b",
+          "timestamp": 1788043284261
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "2"
+          ],
+          "prompt_id": "150a6212-3f39-4fac-aa5f-4c13ed31ae3b",
+          "timestamp": 1788043284263
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "150a6212-3f39-4fac-aa5f-4c13ed31ae3b",
+          "timestamp": 1788043326056
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_crew_region_final_1536_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "crew-region-final-1536-api.json",
+  "seed": 26082931
+}

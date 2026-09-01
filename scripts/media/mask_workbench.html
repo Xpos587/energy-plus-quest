@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mask repair workbench</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #e8eef2;
+      --muted: #91a3ad;
+      --panel: #152229;
+      --panel-2: #1c2c34;
+      --line: #30454e;
+      --accent: #f08a4b;
+      --accent-2: #74c6c2;
+      --danger: #ef767a;
+      --stage: #0c151a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0b1418;
+      color: var(--ink);
+      font: 14px/1.4 ui-sans-serif, system-ui, sans-serif;
+    }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    .topbar {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--line);
+      background: #111e24;
+    }
+    .topbar h1 { margin: 0; font-size: 18px; letter-spacing: .02em; }
+    .topbar p { margin: 0; color: var(--muted); font-size: 12px; }
+    .status { color: var(--accent-2); white-space: nowrap; }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 18px;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .18);
+    }
+    .stage-panel { min-width: 0; padding: 14px; }
+    .stage-head, .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .stage-head strong, .section-head strong { font-size: 13px; }
+    .meta { color: var(--muted); font-size: 12px; }
+    .canvas-shell {
+      position: relative;
+      width: 100%;
+      max-height: calc(100vh - 170px);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      border: 1px solid #263940;
+      border-radius: 8px;
+      background: var(--stage);
+      isolation: isolate;
+    }
+    .canvas-shell img, .canvas-shell canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: calc(100vh - 170px);
+      object-fit: contain;
+    }
+    .canvas-shell img { position: relative; z-index: 0; }
+    #overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      touch-action: none;
+      cursor: crosshair;
+    }
+    .empty-hint {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 280px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(12, 21, 26, .9);
+      color: var(--muted);
+      text-align: center;
+      pointer-events: none;
+    }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 12px;
+    }
+    .tool-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel-2);
+    }
+    .tool-group label { color: var(--muted); font-size: 12px; }
+    .tool-group input[type=range] { width: 105px; accent-color: var(--accent); }
+    button, select, input, textarea {
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel-2);
+    }
+    button { padding: 7px 10px; }
+    button:hover:not(:disabled), button:focus-visible { border-color: var(--accent); }
+    button:disabled { cursor: not-allowed; opacity: .45; }
+    button.primary { border-color: #b96131; background: #8f4928; }
+    button.warn { border-color: #9b555b; background: #63363d; }
+    button.active { border-color: var(--accent-2); background: #24434a; }
+    .side { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+    .side > section { padding: 14px; }
+    .mask-list { display: grid; gap: 7px; }
+    .mask-row {
+      display: grid;
+      grid-template-columns: 24px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #182a32;
+    }
+    .mask-row.selected { border-color: var(--accent-2); }
+    .mask-row button.name {
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .swatch { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.45); }
+    .eye { padding: 2px 5px; border: 0; background: transparent; color: var(--muted); }
+    .field { display: grid; gap: 5px; margin-top: 10px; }
+    .field label { color: var(--muted); font-size: 12px; }
+    .field input, .field textarea, .field select { width: 100%; padding: 8px; }
+    .field textarea { min-height: 92px; resize: vertical; }
+    .inline { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .inline > * { flex: 1 1 auto; }
+    .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+    .actions button:last-child { grid-column: 1 / -1; }
+    .notice {
+      margin: 0;
+      padding: 9px 10px;
+      border-left: 3px solid var(--accent);
+      background: #1a2b31;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    pre {
+      max-height: 240px;
+      overflow: auto;
+      margin: 10px 0 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #0b151a;
+      color: #c9d8dc;
+      font: 11px/1.45 ui-monospace, monospace;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .gate { display: none; }
+    .gate.visible { display: block; }
+    .small { color: var(--muted); font-size: 11px; }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      .side { display: grid; grid-template-columns: 1fr 1fr; }
+      .side > section:last-child { grid-column: 1 / -1; }
+      .canvas-shell, .canvas-shell img, .canvas-shell canvas { max-height: none; }
+    }
+    @media (max-width: 600px) {
+      .topbar { padding: 14px; }
+      main { padding: 10px; gap: 10px; }
+      .side { display: flex; }
+      .toolbar { gap: 6px; }
+      .tool-group input[type=range] { width: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Mask repair workbench</h1>
+      <p>Draw local regions, attach the human note, then compile a dry-run graph.</p>
+    </div>
+    <div id="status" class="status" role="status" aria-live="polite">Loading...</div>
+  </header>
+  <main>
+    <section class="panel stage-panel" aria-label="Mask canvas">
+      <div class="stage-head">
+        <strong id="sourceTitle">Source image</strong>
+        <span id="sourceMeta" class="meta"></span>
+      </div>
+      <div class="canvas-shell" id="canvasShell">
+        <img id="sourceImage" alt="Source image for local mask editing">
+        <canvas id="overlay" aria-label="Draw the selected mask"></canvas>
+        <div id="emptyHint" class="empty-hint">Add a mask, select it, and paint the pixels the model may regenerate.</div>
+      </div>
+      <div class="toolbar" aria-label="Drawing controls">
+        <div class="tool-group" role="group" aria-label="Brush tool">
+          <button id="paintTool" class="active" type="button">Paint</button>
+          <button id="eraseTool" type="button">Erase</button>
+        </div>
+        <div class="tool-group">
+          <label for="brushSize">Size</label>
+          <input id="brushSize" type="range" min="2" max="160" value="28">
+          <output id="brushSizeValue">28 px</output>
+        </div>
+        <div class="tool-group">
+          <label for="brushOpacity">Opacity</label>
+          <input id="brushOpacity" type="range" min="1" max="100" value="100">
+          <output id="brushOpacityValue">100%</output>
+        </div>
+        <button id="undo" type="button" disabled>Undo</button>
+        <button id="redo" type="button" disabled>Redo</button>
+      </div>
+    </section>
+
+    <aside class="side" aria-label="Mask and workflow controls">
+      <section class="panel">
+        <div class="section-head">
+          <strong>Masks</strong>
+          <button id="addMask" class="primary" type="button">+ Add mask</button>
+        </div>
+        <div id="maskList" class="mask-list"></div>
+        <p id="maskStats" class="small">No masks yet.</p>
+      </section>
+
+      <section class="panel" id="editorPanel">
+        <div class="section-head"><strong>Selected mask</strong><span id="selectedId" class="small">none</span></div>
+        <div id="editorEmpty" class="notice">Select a mask to edit its name, color, and comment.</div>
+        <div id="editor" hidden>
+          <div class="field">
+            <label for="maskName">Name</label>
+            <input id="maskName" maxlength="160" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="maskComment">Comment sent to the edit prompt</label>
+            <textarea id="maskComment" maxlength="4000" placeholder="Describe only the local repair you want."></textarea>
+          </div>
+          <div class="field">
+            <label for="maskColor">Overlay color</label>
+            <input id="maskColor" type="color" value="#f97316">
+          </div>
+          <div class="inline" style="margin-top:10px">
+            <label><input id="maskVisible" type="checkbox" checked> visible in overlay</label>
+            <button id="deleteMask" class="warn" type="button">Delete mask</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head"><strong>Workflow</strong><span class="small">white = edit</span></div>
+        <div class="field">
+          <label for="mode">Execution mode</label>
+          <select id="mode">
+            <option value="sequential">Sequential checkpoints (default)</option>
+            <option value="union">Union mask (one shared comment only)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="overlapPolicy">Overlapping masks</label>
+          <select id="overlapPolicy">
+            <option value="allow">Allow (review each region)</option>
+            <option value="reject">Reject (disjoint bounds only)</option>
+          </select>
+        </div>
+        <p class="notice" style="margin-top:10px">Sequential mode pauses between masks so a human can approve each checkpoint. Union mode is allowed only when every mask has the same instruction.</p>
+        <div class="actions">
+          <button id="save" type="button">Save session</button>
+          <button id="export" type="button">Export PNGs + manifest</button>
+          <button id="compile" type="button" class="primary">Compile dry run</button>
+          <button id="health" type="button">Check ComfyUI</button>
+        </div>
+        <pre id="output" hidden></pre>
+      </section>
+
+      <section class="panel gate" id="paidPanel">
+        <div class="section-head"><strong>Paid submission</strong><span class="small">explicit gate</span></div>
+        <p class="notice">The browser never receives a provider key. Submission is disabled unless the server was started with <code>--allow-paid</code> and the exact phrase below is entered.</p>
+        <div class="field">
+          <label for="confirmation">Type SUBMIT_PAID</label>
+          <input id="confirmation" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="actions">
+          <button id="submit" class="warn" type="button" disabled>Submit selected mask</button>
+          <button id="watch" type="button" disabled>Reconcile prompt</button>
+        </div>
+        <p id="promptMeta" class="small"></p>
+        <div id="candidateReview" hidden>
+          <p class="small">Review this checkpoint at native size before accepting it as the next source.</p>
+          <img id="candidateImage" alt="Generated checkpoint candidate" style="display:block;width:100%;max-height:360px;object-fit:contain;border:1px solid var(--line);border-radius:7px;background:#0b151a">
+          <div class="inline" style="margin-top:8px">
+            <button id="acceptCandidate" class="primary" type="button">Accept checkpoint</button>
+            <button id="rejectCandidate" class="warn" type="button">Reject checkpoint</button>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <script>
+    (() => {
+      'use strict';
+      const $ = (id) => document.getElementById(id);
+      const MAX_HISTORY = 12;
+      const state = {
+        config: null,
+        masks: [],
+        activeId: null,
+        tool: 'paint',
+        brushSize: 28,
+        opacity: 1,
+        pointer: null,
+        lastPromptId: null,
+        execution: null,
+      };
+
+      const sourceImage = $('sourceImage');
+      const overlay = $('overlay');
+      const overlayContext = overlay.getContext('2d');
+
+      function say(message, kind = 'ok') {
+        $('status').textContent = message;
+        $('status').style.color = kind === 'error' ? '#ef767a' : '#74c6c2';
+      }
+
+      function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
+      function activeMask() { return state.masks.find((mask) => mask.id === state.activeId) || null; }
+      function expectedMaskId() {
+        if (!state.execution || state.execution.pending) return null;
+        if ($('mode').value === 'union') return state.execution.next_index === 0 ? 'union' : null;
+        return state.masks[state.execution.next_index]?.id || null;
+      }
+      function updateSubmitButton() {
+        const expected = expectedMaskId();
+        const selectionReady = $('mode').value === 'union' || state.activeId === expected;
+        $('submit').disabled = $('confirmation').value !== 'SUBMIT_PAID' || !expected || !selectionReady;
+      }
+      function makeId() {
+        let index = state.masks.length + 1;
+        let id = `mask-${String(index).padStart(2, '0')}`;
+        while (state.masks.some((mask) => mask.id === id)) id = `mask-${String(++index).padStart(2, '0')}`;
+        return id;
+      }
+      function makeCanvas() {
+        const canvas = document.createElement('canvas');
+        canvas.width = state.config.source.width;
+        canvas.height = state.config.source.height;
+        return canvas;
+      }
+      function newMask(meta = {}) {
+        const mask = {
+          id: meta.id || makeId(),
+          name: meta.name || `Mask ${state.masks.length + 1}`,
+          comment: meta.comment || 'Describe the requested local repair.',
+          color: meta.color || '#f97316',
+          visible: meta.visible !== false,
+          canvas: makeCanvas(),
+          undo: [],
+          redo: [],
+        };
+        return mask;
+      }
+      function setCanvasSize() {
+        overlay.width = state.config.source.width;
+        overlay.height = state.config.source.height;
+        $('sourceMeta').textContent = `${overlay.width} x ${overlay.height}`;
+        $('canvasShell').style.aspectRatio = `${overlay.width} / ${overlay.height}`;
+      }
+      function tintCanvas(mask) {
+        if (!mask.tint) {
+          mask.tint = document.createElement('canvas');
+          mask.tint.width = overlay.width;
+          mask.tint.height = overlay.height;
+          mask.tintContext = mask.tint.getContext('2d');
+        }
+        const context = mask.tintContext;
+        context.clearRect(0, 0, overlay.width, overlay.height);
+        context.globalCompositeOperation = 'source-over';
+        context.fillStyle = mask.color;
+        context.fillRect(0, 0, overlay.width, overlay.height);
+        context.globalCompositeOperation = 'destination-in';
+        context.drawImage(mask.canvas, 0, 0);
+        context.globalCompositeOperation = 'source-over';
+        return mask.tint;
+      }
+      function render() {
+        overlayContext.clearRect(0, 0, overlay.width, overlay.height);
+        for (const mask of state.masks) {
+          if (!mask.visible) continue;
+          overlayContext.globalAlpha = mask.id === state.activeId ? 0.52 : 0.28;
+          overlayContext.drawImage(tintCanvas(mask), 0, 0);
+        }
+        overlayContext.globalAlpha = 1;
+        $('emptyHint').hidden = state.masks.length > 0;
+        renderMaskList();
+        renderEditor();
+        updateHistoryButtons();
+        lockPendingAnnotations();
+        updateSubmitButton();
+      }
+      function syncActiveToExecution() {
+        if (!state.execution || state.execution.pending || $('mode').value === 'union') return;
+        const next = state.masks[state.execution.next_index];
+        if (next) state.activeId = next.id;
+      }
+      function renderMaskList() {
+        const list = $('maskList');
+        list.replaceChildren();
+        for (const mask of state.masks) {
+          const row = document.createElement('div');
+          row.className = `mask-row${mask.id === state.activeId ? ' selected' : ''}`;
+          const swatch = document.createElement('span');
+          swatch.className = 'swatch';
+          swatch.style.background = mask.color;
+          swatch.title = mask.color;
+          const select = document.createElement('button');
+          select.className = 'name';
+          select.type = 'button';
+          select.textContent = mask.name || mask.id;
+          select.title = mask.comment || '';
+          select.addEventListener('click', () => { state.activeId = mask.id; render(); });
+          const eye = document.createElement('button');
+          eye.className = 'eye';
+          eye.type = 'button';
+          eye.textContent = mask.visible ? 'Hide' : 'Show';
+          eye.setAttribute('aria-label', `${mask.visible ? 'Hide' : 'Show'} ${mask.name}`);
+          eye.disabled = !!state.execution?.pending;
+          eye.addEventListener('click', () => { mask.visible = !mask.visible; render(); });
+          row.append(swatch, select, eye);
+          list.append(row);
+        }
+        $('maskStats').textContent = state.masks.length ? `${state.masks.length} mask${state.masks.length === 1 ? '' : 's'}; active regions stay separate.` : 'No masks yet.';
+      }
+      function renderEditor() {
+        const mask = activeMask();
+        $('editorEmpty').hidden = !!mask;
+        $('editor').hidden = !mask;
+        $('selectedId').textContent = mask ? mask.id : 'none';
+        if (!mask) return;
+        $('maskName').value = mask.name;
+        $('maskComment').value = mask.comment;
+        $('maskColor').value = mask.color;
+        $('maskVisible').checked = mask.visible;
+      }
+      function updateHistoryButtons() {
+        const mask = activeMask();
+        $('undo').disabled = !mask || mask.undo.length === 0;
+        $('redo').disabled = !mask || mask.redo.length === 0;
+      }
+      function pointFromEvent(event) {
+        const rect = overlay.getBoundingClientRect();
+        return {
+          x: clamp((event.clientX - rect.left) * overlay.width / rect.width, 0, overlay.width - 1),
+          y: clamp((event.clientY - rect.top) * overlay.height / rect.height, 0, overlay.height - 1),
+        };
+      }
+      function snapshot(mask) {
+        const context = mask.canvas.getContext('2d', { willReadFrequently: true });
+        return context.getImageData(0, 0, overlay.width, overlay.height);
+      }
+      function drawSegment(mask, from, to) {
+        const context = mask.canvas.getContext('2d');
+        context.save();
+        context.globalCompositeOperation = state.tool === 'erase' ? 'destination-out' : 'source-over';
+        context.globalAlpha = state.tool === 'erase' ? 1 : state.opacity;
+        context.strokeStyle = '#ffffff';
+        context.fillStyle = '#ffffff';
+        context.lineWidth = state.brushSize * 2;
+        context.lineCap = 'round';
+        context.lineJoin = 'round';
+        context.beginPath();
+        context.moveTo(from.x, from.y);
+        context.lineTo(to.x, to.y);
+        context.stroke();
+        context.beginPath();
+        context.arc(to.x, to.y, state.brushSize, 0, Math.PI * 2);
+        context.fill();
+        context.restore();
+      }
+      function startDrawing(event) {
+        if (event.button !== 0 || !activeMask()) return;
+        const mask = activeMask();
+        mask.undo.push(snapshot(mask));
+        if (mask.undo.length > MAX_HISTORY) mask.undo.shift();
+        mask.redo = [];
+        state.pointer = { id: event.pointerId, point: pointFromEvent(event) };
+        overlay.setPointerCapture(event.pointerId);
+        drawSegment(mask, state.pointer.point, state.pointer.point);
+        render();
+        event.preventDefault();
+      }
+      function continueDrawing(event) {
+        if (!state.pointer || event.pointerId !== state.pointer.id) return;
+        const next = pointFromEvent(event);
+        drawSegment(activeMask(), state.pointer.point, next);
+        state.pointer.point = next;
+        render();
+        event.preventDefault();
+      }
+      function stopDrawing(event) {
+        if (!state.pointer || event.pointerId !== state.pointer.id) return;
+        try { overlay.releasePointerCapture(event.pointerId); } catch (_) {}
+        state.pointer = null;
+        render();
+      }
+      function restoreImageData(mask, imageData) {
+        mask.canvas.getContext('2d').putImageData(imageData, 0, 0);
+      }
+      function undo() {
+        const mask = activeMask();
+        if (!mask || !mask.undo.length) return;
+        mask.redo.push(snapshot(mask));
+        restoreImageData(mask, mask.undo.pop());
+        render();
+      }
+      function redo() {
+        const mask = activeMask();
+        if (!mask || !mask.redo.length) return;
+        mask.undo.push(snapshot(mask));
+        restoreImageData(mask, mask.redo.pop());
+        render();
+      }
+      function maskAlpha(mask) {
+        const data = mask.canvas.getContext('2d', { willReadFrequently: true }).getImageData(0, 0, overlay.width, overlay.height).data;
+        const alpha = new Uint8Array(overlay.width * overlay.height);
+        for (let i = 0, pixel = 0; i < data.length; i += 4, pixel += 1) alpha[pixel] = data[i + 3];
+        return alpha;
+      }
+      function boundsFor(alpha) {
+        let left = overlay.width, top = overlay.height, right = -1, bottom = -1;
+        for (let y = 0, index = 0; y < overlay.height; y += 1) {
+          for (let x = 0; x < overlay.width; x += 1, index += 1) {
+            if (!alpha[index]) continue;
+            left = Math.min(left, x); top = Math.min(top, y);
+            right = Math.max(right, x + 1); bottom = Math.max(bottom, y + 1);
+          }
+        }
+        return right < 0 ? null : [left, top, right, bottom];
+      }
+      function maskDataUrl(mask) {
+        const alpha = maskAlpha(mask);
+        const canvas = document.createElement('canvas');
+        canvas.width = overlay.width; canvas.height = overlay.height;
+        const context = canvas.getContext('2d');
+        const data = context.createImageData(canvas.width, canvas.height);
+        for (let i = 0, pixel = 0; i < data.data.length; i += 4, pixel += 1) {
+          data.data[i] = alpha[pixel];
+          data.data[i + 1] = alpha[pixel];
+          data.data[i + 2] = alpha[pixel];
+          data.data[i + 3] = 255;
+        }
+        context.putImageData(data, 0, 0);
+        return canvas.toDataURL('image/png');
+      }
+      function overlayDataUrl() {
+        const canvas = document.createElement('canvas');
+        canvas.width = overlay.width; canvas.height = overlay.height;
+        const context = canvas.getContext('2d');
+        context.drawImage(sourceImage, 0, 0, canvas.width, canvas.height);
+        for (const mask of state.masks) {
+          if (!mask.visible) continue;
+          context.globalAlpha = 0.42;
+          context.drawImage(tintCanvas(mask), 0, 0);
+        }
+        context.globalAlpha = 1;
+        return canvas.toDataURL('image/png');
+      }
+      function downloadDataUrl(dataUrl, filename) {
+        const link = document.createElement('a');
+        link.href = dataUrl;
+        link.download = filename;
+        link.click();
+      }
+      function exportPngs() {
+        try {
+          for (const mask of state.masks) downloadDataUrl(maskDataUrl(mask), `mask-${mask.id}.png`);
+          downloadDataUrl(overlayDataUrl(), 'mask-overlay.png');
+          downloadDataUrl(`data:application/json;charset=utf-8,${encodeURIComponent(JSON.stringify(buildManifest(), null, 2))}`, 'mask-manifest.json');
+          say('PNGs and manifest exported');
+        } catch (error) { say(error.message, 'error'); }
+      }
+      function buildManifest() {
+        if (!state.masks.length) throw new Error('Add at least one mask.');
+        const masks = state.masks.map((mask) => {
+          const alpha = maskAlpha(mask);
+          const bounds = boundsFor(alpha);
+          if (!bounds) throw new Error(`Mask ${mask.id} is empty.`);
+          if (!mask.comment.trim()) throw new Error(`Add a comment for ${mask.id}.`);
+          return {
+            id: mask.id,
+            name: mask.name.trim() || mask.id,
+            comment: mask.comment,
+            color: mask.color,
+            visible: mask.visible,
+            file: `masks/${mask.id}.png`,
+            bounds,
+            pixel_count: alpha.reduce((sum, value) => sum + (value > 0 ? 1 : 0), 0),
+          };
+        });
+        return {
+          schema: 'carrier-mask-workbench/v1',
+          session_id: state.config.session_id,
+          source: {
+            file: state.config.source.file,
+            width: state.config.source.width,
+            height: state.config.source.height,
+          },
+          mask_convention: 'white=edit,black=preserve',
+          mode: $('mode').value,
+          overlap_policy: $('overlapPolicy').value,
+          masks,
+        };
+      }
+      async function request(path, options = {}) {
+        const response = await fetch(path, options);
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+        return payload;
+      }
+      async function saveSession(showMessage = true) {
+        const manifest = buildManifest();
+        const masks = Object.fromEntries(state.masks.map((mask) => [mask.id, maskDataUrl(mask)]));
+        const result = await request('/api/session', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({manifest, masks, overlay: overlayDataUrl()}),
+        });
+        state.execution = result.execution || state.execution;
+        syncActiveToExecution();
+        if (showMessage) say('Session saved');
+        return result;
+      }
+      async function compile() {
+        try {
+          await saveSession(false);
+          const result = await request('/api/compile', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: '{}'});
+          $('output').hidden = false;
+          $('output').textContent = JSON.stringify(result.report, null, 2);
+          say('Dry run valid');
+        } catch (error) { say(error.message, 'error'); }
+      }
+      async function checkHealth() {
+        try {
+          const result = await request('/api/comfy/health');
+          $('output').hidden = false;
+          $('output').textContent = JSON.stringify(result, null, 2);
+          say('ComfyUI reachable');
+        } catch (error) { say(`ComfyUI check failed: ${error.message}`, 'error'); }
+      }
+      async function acceptCandidate() {
+        if (!state.lastPromptId) return;
+        try {
+          const result = await request('/api/comfy/accept', {
+            method: 'POST', headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({prompt_id: state.lastPromptId}),
+          });
+          state.execution = result.execution;
+          syncActiveToExecution();
+          $('candidateReview').hidden = true;
+          $('watch').disabled = true;
+          state.lastPromptId = null;
+          $('promptMeta').textContent = `Checkpoint accepted; compile the next checkpoint.`;
+          $('output').hidden = false;
+          $('output').textContent = JSON.stringify(result.execution, null, 2);
+          say('Checkpoint accepted');
+          render();
+          lockPendingAnnotations();
+        } catch (error) { say(error.message, 'error'); }
+      }
+      async function rejectCandidate() {
+        if (!state.lastPromptId) return;
+        try {
+          const result = await request('/api/comfy/reject', {
+            method: 'POST', headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({prompt_id: state.lastPromptId}),
+          });
+          state.execution = result.execution;
+          syncActiveToExecution();
+          $('candidateReview').hidden = true;
+          $('watch').disabled = true;
+          state.lastPromptId = null;
+          $('promptMeta').textContent = `Checkpoint rejected; edit the mask or comment before retrying.`;
+          say('Checkpoint rejected');
+          render();
+          lockPendingAnnotations();
+        } catch (error) { say(error.message, 'error'); }
+      }
+      async function submitSelected() {
+        try {
+          await saveSession(false);
+          const maskId = $('mode').value === 'union' ? 'union' : state.activeId;
+          const result = await request('/api/comfy/submit', {
+            method: 'POST', headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({mask_id: maskId, confirmation: $('confirmation').value}),
+          });
+          state.lastPromptId = result.response.prompt_id;
+          state.execution = result.execution;
+          $('watch').disabled = false;
+          $('promptMeta').textContent = `Prompt ${state.lastPromptId}`;
+          lockPendingAnnotations();
+          say('Submitted one guarded job');
+        } catch (error) { say(error.message, 'error'); }
+      }
+      async function watchPrompt() {
+        if (!state.lastPromptId) return;
+        try {
+          const result = await request('/api/comfy/watch', {
+            method: 'POST', headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({prompt_id: state.lastPromptId}),
+          });
+          $('output').hidden = false;
+          $('output').textContent = JSON.stringify(result, null, 2);
+          if (result.candidate && result.candidate.url) {
+            $('candidateImage').src = result.candidate.url;
+            $('candidateReview').hidden = false;
+            $('promptMeta').textContent = `Candidate ready for ${state.lastPromptId}`;
+          } else if (result.status === 'failed') {
+            const rejected = await request('/api/comfy/reject', {
+              method: 'POST', headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({prompt_id: state.lastPromptId}),
+            });
+            state.execution = rejected.execution;
+            $('watch').disabled = true;
+            state.lastPromptId = null;
+            lockPendingAnnotations();
+          }
+          say(result.success ? 'Prompt completed; review candidate' : `Prompt ${result.status}`, result.success ? 'ok' : 'error');
+        } catch (error) { say(error.message, 'error'); }
+      }
+      async function loadExisting() {
+        const existing = await request('/api/session');
+        if (!existing) return;
+        $('mode').value = existing.mode || 'sequential';
+        $('overlapPolicy').value = existing.overlap_policy || 'allow';
+        state.execution = existing.execution_state || null;
+        for (const meta of existing.masks || []) {
+          const mask = newMask(meta);
+          try {
+            const image = new Image();
+            image.src = `/api/mask/${encodeURIComponent(mask.id)}`;
+            await new Promise((resolve, reject) => { image.onload = resolve; image.onerror = reject; });
+            const sourceCanvas = document.createElement('canvas');
+            sourceCanvas.width = overlay.width; sourceCanvas.height = overlay.height;
+            const sourceContext = sourceCanvas.getContext('2d', { willReadFrequently: true });
+            sourceContext.drawImage(image, 0, 0, overlay.width, overlay.height);
+            const sourceData = sourceContext.getImageData(0, 0, overlay.width, overlay.height);
+            const targetContext = mask.canvas.getContext('2d');
+            const targetData = targetContext.createImageData(overlay.width, overlay.height);
+            for (let i = 0; i < sourceData.data.length; i += 4) {
+              const value = sourceData.data[i];
+              targetData.data[i] = 255; targetData.data[i + 1] = 255; targetData.data[i + 2] = 255; targetData.data[i + 3] = value;
+            }
+            targetContext.putImageData(targetData, 0, 0);
+          } catch (_) { say(`Could not restore ${mask.id}`, 'error'); }
+          state.masks.push(mask);
+        }
+        state.activeId = state.masks[0]?.id || null;
+        syncActiveToExecution();
+        const pending = state.execution?.pending;
+        if (pending?.prompt_id) {
+          state.lastPromptId = pending.prompt_id;
+          $('watch').disabled = false;
+          $('promptMeta').textContent = `Pending prompt ${pending.prompt_id}`;
+          try {
+            const response = await fetch(`/api/candidate/${encodeURIComponent(pending.prompt_id)}`);
+            if (response.ok) {
+              $('candidateImage').src = `/api/candidate/${encodeURIComponent(pending.prompt_id)}`;
+              $('candidateReview').hidden = false;
+            }
+          } catch (_) {}
+        }
+      }
+      function lockPendingAnnotations() {
+        const locked = !!state.execution?.pending;
+        for (const id of ['addMask', 'deleteMask', 'maskName', 'maskComment', 'maskColor', 'maskVisible', 'mode', 'overlapPolicy', 'paintTool', 'eraseTool', 'brushSize', 'brushOpacity', 'undo', 'redo']) {
+          $(id).disabled = locked;
+        }
+        overlay.style.pointerEvents = locked ? 'none' : 'auto';
+      }
+      function wire() {
+        $('addMask').addEventListener('click', () => {
+          const mask = newMask();
+          state.masks.push(mask);
+          state.activeId = mask.id;
+          render();
+        });
+        $('paintTool').addEventListener('click', () => { state.tool = 'paint'; $('paintTool').classList.add('active'); $('eraseTool').classList.remove('active'); });
+        $('eraseTool').addEventListener('click', () => { state.tool = 'erase'; $('eraseTool').classList.add('active'); $('paintTool').classList.remove('active'); });
+        $('brushSize').addEventListener('input', (event) => { state.brushSize = Number(event.target.value); $('brushSizeValue').textContent = `${state.brushSize} px`; });
+        $('brushOpacity').addEventListener('input', (event) => { state.opacity = Number(event.target.value) / 100; $('brushOpacityValue').textContent = `${event.target.value}%`; });
+        $('undo').addEventListener('click', undo); $('redo').addEventListener('click', redo);
+        overlay.addEventListener('pointerdown', startDrawing); overlay.addEventListener('pointermove', continueDrawing);
+        overlay.addEventListener('pointerup', stopDrawing); overlay.addEventListener('pointercancel', stopDrawing);
+        $('maskName').addEventListener('input', (event) => { const mask = activeMask(); if (mask) { mask.name = event.target.value; renderMaskList(); } });
+        $('maskComment').addEventListener('input', (event) => { const mask = activeMask(); if (mask) mask.comment = event.target.value; });
+        $('maskColor').addEventListener('input', (event) => { const mask = activeMask(); if (mask) { mask.color = event.target.value; render(); } });
+        $('maskVisible').addEventListener('change', (event) => { const mask = activeMask(); if (mask) { mask.visible = event.target.checked; render(); } });
+        $('mode').addEventListener('change', render);
+        $('overlapPolicy').addEventListener('change', render);
+        $('deleteMask').addEventListener('click', () => {
+          if (!activeMask()) return;
+          state.masks = state.masks.filter((mask) => mask.id !== state.activeId);
+          state.activeId = state.masks[0]?.id || null;
+          render();
+        });
+        $('save').addEventListener('click', async () => { try { await saveSession(); } catch (error) { say(error.message, 'error'); } });
+        $('export').addEventListener('click', exportPngs);
+        $('compile').addEventListener('click', compile); $('health').addEventListener('click', checkHealth);
+        $('confirmation').addEventListener('input', updateSubmitButton);
+        $('submit').addEventListener('click', submitSelected); $('watch').addEventListener('click', watchPrompt);
+        $('acceptCandidate').addEventListener('click', acceptCandidate); $('rejectCandidate').addEventListener('click', rejectCandidate);
+        document.addEventListener('keydown', (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'z') { event.preventDefault(); event.shiftKey ? redo() : undo(); }
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'y') { event.preventDefault(); redo(); }
+        });
+      }
+      async function init() {
+        try {
+          state.config = await request('/api/config');
+          sourceImage.src = '/api/source';
+          await new Promise((resolve, reject) => { sourceImage.onload = resolve; sourceImage.onerror = reject; });
+          setCanvasSize();
+          if (state.config.paid_submission_enabled) $('paidPanel').classList.add('visible');
+          await loadExisting();
+          wire();
+          render();
+          lockPendingAnnotations();
+          say(state.masks.length ? 'Session restored' : 'Ready');
+        } catch (error) { say(`Workbench failed: ${error.message}`, 'error'); }
+      }
+      init();
+    })();
+  </script>
+</body>
+</html>

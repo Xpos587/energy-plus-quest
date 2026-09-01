@@ -1,0 +1,40 @@
+{
+  "prompt_id": "a8352528-2b98-448d-a300-1633a56f95c0",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "a8352528-2b98-448d-a300-1633a56f95c0",
+          "timestamp": 1788078869529
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "a8352528-2b98-448d-a300-1633a56f95c0",
+          "timestamp": 1788078869531
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "a8352528-2b98-448d-a300-1633a56f95c0",
+          "timestamp": 1788078909867
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_mobile_duplicate_local_kontext_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "mobile-duplicate-local-kontext-api.json",
+  "seed": 26083121
+}

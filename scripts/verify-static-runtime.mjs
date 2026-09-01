@@ -54,7 +54,7 @@ try {
     await page.getByRole("button", { name: /Альва/ }).click();
     await page.getByRole("button", { name: /Фотоаппарат/ }).click();
     await page
-      .getByRole("button", { name: "Express: Автоподбор Express" })
+      .getByRole("button", { name: /^Автоподбор Express уже в пути:/ })
       .click();
     await page
       .getByRole("heading", { name: "Перевозчик найден за два часа" })

@@ -1,0 +1,49 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-near-v4-guide.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-near-v4-mask.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "FluxPro1Fill_fal",
+      "inputs": {
+        "prompt": "Replace the temporary guide inside the mask with exactly one fully visible NEAR vehicle at the right-hand warehouse loading exit. The guide marks the intended size and position; fill most of it. Paint a distinctive short-wheelbase dark teal utility panel van with a low rounded cargo body, pale grey hood, one simple orange safety stripe, broad dark windshield, two visible wheels, and a plain unmarked cargo side. It must be clearly different from the distant pale old box truck and the blue crew truck: do not make a tall white box truck and do not duplicate either silhouette. Keep the entire van inside the frame, larger than the distant old truck and about 12-16 percent of full frame width. Put it immediately beside the orange barrier and snow bank at the warehouse exit, facing outward into the tight turn with turned front wheels and short compressed ruts. Match the same northern winter painterly three-quarter illustration, paper texture, blue snow shadows, warm light, and contact shadows. Preserve the warehouse, gate, people, roads, Old, Crew, Express, the single Express wordmark, and the approved Express snow wake. No writing, letters, logos, numbers, labels, signs, UI, trailers, other vehicles, smoke, glow, or speed lines.",
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "image": [
+          "1",
+          0
+        ],
+        "mask_image": [
+          "2",
+          0
+        ],
+        "seed": 26083153,
+        "sync_mode": false,
+        "enhance_prompt": false
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_near_v4_context_proof",
+        "images": [
+          "3",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-near-v4-context-proof"
+}

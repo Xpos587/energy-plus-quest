@@ -1,0 +1,32 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {"image": "v10-desktop-color.png", "upload": "image"}
+    },
+    "2": {
+      "class_type": "QwenImageEdit_fal",
+      "inputs": {
+        "prompt": "Keep the exact image composition, elevated camera, connected roads, every building position, the large blue logistics warehouse at right-center, its snow roof and three visible loading bays, and exactly four vehicle positions unchanged. Restyle only the visual surfaces from low-poly Blender into a polished hand-drawn northern winter game illustration matching premium editorial storybook art: crisp ink-like contours, controlled gouache and paper grain, blue-white snow, cobalt warehouse, warm windows, restrained orange accents, coherent soft shadows, detailed city streets, snowbanks, lamps and mountain depth. Make the warehouse obviously industrial and the surrounding blocks obviously a compact city. Keep the same foreground, middle ground and background. Exactly four vehicles total; do not add, delete, duplicate or merge any vehicle. Do not change roads or camera. No UI, no labels, no logo, no new text, not photorealistic, not tilt-shift, not toy-like, not low-poly, not strict isometric.",
+        "image": ["1", 0],
+        "image_size": "custom",
+        "width": 1536,
+        "height": 864,
+        "num_inference_steps": 18,
+        "guidance_scale": 3.8,
+        "num_images": 1,
+        "enable_safety_checker": true,
+        "output_format": "png",
+        "acceleration": "regular",
+        "sync_mode": false,
+        "seed": 26082902,
+        "negative_prompt": "extra vehicle, missing vehicle, duplicate vehicle, two vehicles merged, changed road layout, missing loading bays, cropped warehouse, floating vehicle, label, logo, watermark, photorealistic, 3d render, tilt shift, toy model"
+      }
+    },
+    "3": {
+      "class_type": "SaveImage",
+      "inputs": {"filename_prefix": "carrier_v10_desktop_master_qwen", "images": ["2", 0]}
+    }
+  },
+  "client_id": "carrier-v10-desktop-master-qwen"
+}

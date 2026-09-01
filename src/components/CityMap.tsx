@@ -1,5 +1,7 @@
 import mapDesktop from "../../design/scene-01/assets/feedback-v9/production/carrier-desktop.webp";
 import mapMobile from "../../design/scene-01/assets/feedback-v9/production/carrier-mobile.webp";
+import carrierDesktop from "../../design/scene-01/assets/feedback-v11/production/carrier-desktop.webp";
+import carrierMobile from "../../design/scene-01/assets/feedback-v11/production/carrier-mobile.webp";
 import styles from "../App.module.css";
 import { carriers } from "../game/content";
 import type { CarrierId } from "../game/types";
@@ -50,43 +52,69 @@ export function CityMap({ onSelect, selected, mode = "soft" }: CityMapProps) {
       data-mode={mode}
       data-selected={selected}
     >
-      <picture className={styles.mapPicture}>
-        <source media="(max-width: 760px)" srcSet={mapMobile} />
-        <img
-          alt=""
-          aria-hidden="true"
-          className={styles.mapImage}
-          data-art-version="feedback-v9"
-          height="864"
-          src={mapDesktop}
-          width="1536"
-        />
-      </picture>
-      <div aria-hidden="true" className={styles.mapShade} />
+      {onSelect ? (
+        <div className={styles.liveMapSurface}>
+          <picture className={styles.mapPicture}>
+            <source media="(max-width: 760px)" srcSet={carrierMobile} />
+            <img
+              alt=""
+              aria-hidden="true"
+              className={styles.mapImage}
+              data-art-version="feedback-v11"
+              data-map-contract="warehouse-roads-four-carriers"
+              data-map-media="generated"
+              height="1424"
+              src={carrierDesktop}
+              width="2528"
+            />
+          </picture>
+          <div aria-hidden="true" className={styles.mapShade} />
+          {mapMarkers.map((marker) => {
+            const carrier = carriers.find((item) => item.id === marker.carrier);
 
-      {onSelect &&
-        mapMarkers.map((marker) => {
-          const carrier = carriers.find((item) => item.id === marker.carrier);
-
-          return (
-            <button
-              aria-label={`${marker.ariaLabel}: ${carrier?.title ?? "перевозчик"}`}
-              className={styles.mapVehicle}
-              data-carrier={marker.carrier}
-              key={marker.carrier}
-              onClick={() => onSelect(marker.carrier)}
-              type="button"
-            >
-              <span
-                className={styles.mapVehicleLabel}
-                data-map-label={marker.carrier}
+            return (
+              <button
+                aria-label={`${marker.ariaLabel}: ${carrier?.title ?? "перевозчик"}`}
+                className={styles.mapVehicle}
+                data-carrier={marker.carrier}
+                data-carrier-hotspot={marker.carrier}
+                key={marker.carrier}
+                onClick={() => onSelect(marker.carrier)}
+                type="button"
               >
-                <small>{marker.kicker}</small>
-                <strong>{marker.label}</strong>
-              </span>
-            </button>
-          );
-        })}
+                <span
+                  aria-hidden="true"
+                  className={styles.vehicleTrail}
+                  data-motion-state={marker.carrier}
+                />
+                <span
+                  className={styles.mapVehicleLabel}
+                  data-map-label={marker.carrier}
+                >
+                  <small>{marker.kicker}</small>
+                  <strong>{marker.label}</strong>
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      ) : (
+        <>
+          <picture className={styles.mapPicture}>
+            <source media="(max-width: 760px)" srcSet={mapMobile} />
+            <img
+              alt=""
+              aria-hidden="true"
+              className={styles.mapImage}
+              data-art-version="feedback-v9"
+              height="864"
+              src={mapDesktop}
+              width="1536"
+            />
+          </picture>
+          <div aria-hidden="true" className={styles.mapShade} />
+        </>
+      )}
     </section>
   );
 }

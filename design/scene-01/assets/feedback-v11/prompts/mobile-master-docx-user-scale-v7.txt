@@ -1,0 +1,11 @@
+Image 1 is a finished winter overhead city-map master. Preserve its map, warehouse, roads, railway, urban blocks, lighting and paper-painted finish. This is a user-readability correction, not a new composition.
+
+The immediately previous correction made the vehicles too small to find comfortably on a phone. Use a middle scale: reduce the four truck bodies from Image 1 by only about 10-12%, not 35-50%. In a 375 px preview their visible body lengths should be approximately Old 25-30 px, Near 46-52 px, Crew 56-62 px, Express 55-61 px. They should be obvious colored choices at a glance while still fitting the map; no body should exceed 17% of the 375 px frame width or visually read as a two-lane object. Keep the long axis aligned with its road; do not lay a truck across a junction.
+
+Preserve exactly four complete delivery vehicles and no extra vehicles, trailers or fragments:
+- Old: muted aged but operational, upper-left distant road, separated from the railway and water, thin exhaust and narrow tracks.
+- Near: distinctive compact short cab-over teal-and-pale utility truck directly at the central warehouse's right exit, fully on the curved loading apron, turned front wheels, barrier and short ruts.
+- Crew: blue truck on the lower-left perimeter road, aligned with the lane, with exactly two separate adult drivers visible through the cab.
+- Express: modern bright orange truck on the lower-right open arterial, aligned with the lane, one Express wordmark directly on the body, subtle wheel motion and a compact directional snow wake.
+
+Increase local contrast around each truck and keep a clear contact shadow so all four can be found without zooming. Keep the warehouse dominant but not empty and retain the varied city blocks. No UI, route lines, pins, circles, arrows, logos, numbers or labels except the single Express wordmark. No giant foreground trucks, tiny dots, cartoon icons, glossy 3D or low-poly styling.

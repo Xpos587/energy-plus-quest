@@ -1,0 +1,8 @@
+{
+  "base": "mobile-master.png",
+  "removed_duplicate_region": {
+    "source": "mobile-duplicate-local-kontext.png",
+    "bounds": [350, 960, 710, 1220],
+    "feather_px": 2.5
+  }
+}

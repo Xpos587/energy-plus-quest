@@ -1,0 +1,52 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-balanced-scale-base.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-production-style.webp",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "GPTImage2Edit_fal",
+      "inputs": {
+        "prompt": "Image 1 is the accepted polished city-map composition before the last scale attempt. Make one final balanced scale pass. Preserve the exact city grid, railway, central warehouse, winter rendering, lighting, road layout, and four route positions. Do not redesign the map or add detail that changes its composition.\n\nThe previous version made every truck too large and the last correction made the trucks too tiny. Use the middle scale that reads at mobile size without spanning the street: in the 375 px preview, OLD should be about 22-28 px wide, NEAR 38-46 px, CREW 50-58 px, and EXPRESS 48-56 px. These are vehicle body widths on screen, not the length of their snow tracks. Each truck must occupy one lane or its own small loading apron, never straddle two lanes or sit across a junction. Keep the four vehicles high-contrast and fully countable without labels.\n\nPreserve exactly four complete delivery vehicles and no other cars, vans, trailers, fragments, or vehicle-like objects:\n- OLD: upper-left distant road, small muted aged but operating truck, fully visible on asphalt, separated from the railway and water, thin exhaust and narrow tracks.\n- NEAR: distinctive short cab-over teal-and-pale utility truck immediately outside the warehouse right exit, medium-small, fully on the curved exit apron, front wheels turned, barrier and compact ruts visible. Do not let it touch or cover the perpendicular street.\n- CREW: blue truck on the lower-left broad perimeter road, medium size, centered on the road rather than parked across the intersection, with exactly two separate adult drivers readable through the cab.\n- EXPRESS: bright-orange modern truck on the lower-right open arterial, medium size, centered in one lane and clear of the crossing, single word Express on its body, short strong snow wake and subtle wheel movement.\n\nThe warehouse remains the dominant landmark but should not become a blank void. Keep its loading apron, three doors, snow banks, fencing, and clear exit. Keep varied urban blocks, rooftops, trees, courtyards, and plowed street texture. Motion traces must stay subordinate to the map and originate at the smaller vehicles. No UI, pins, circles, route overlays, arrows, logos, numbers, advertisements, comic speed lines, neon glow, photorealism, glossy 3D, low-poly styling, or readable text except the single Express wordmark.",
+        "image_1": [
+          "1",
+          0
+        ],
+        "image_2": [
+          "2",
+          0
+        ],
+        "image_size": "custom",
+        "width": 768,
+        "height": 1424,
+        "background": "opaque",
+        "quality": "high",
+        "input_fidelity": "high",
+        "num_images": 1,
+        "output_format": "png",
+        "sync_mode": false
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_docx_map_balanced_scale_v4",
+        "images": [
+          "3",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-docx-map-balanced-scale-v4"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "carrier-mask-execution/v1",
+  "mode": "sequential",
+  "next_index": 0,
+  "current_source": "carrier-mobile.png",
+  "accepted": [],
+  "pending": null,
+  "manifest_digest": "706c92c63d773837df967b7190855c11748cdc411a1e0876f3300cad938a7707",
+  "rejected": [
+    {
+      "mask_id": "lower-arterial-two-lanes",
+      "prompt_id": "d9f66e3a-d828-4e3e-a9c3-ce79c9ff197f",
+      "file": "candidates/01-lower-arterial-two-lanes-d9f66e3a-d828-4e3e-a9c3-ce79c9ff197f.png"
+    },
+    {
+      "mask_id": "lower-arterial-two-lanes",
+      "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+      "file": "candidates/01-lower-arterial-two-lanes-5ee81ec0-766d-45e0-b1f7-1ea7491b153b.png"
+    }
+  ]
+}

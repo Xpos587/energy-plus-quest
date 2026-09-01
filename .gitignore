@@ -24,3 +24,6 @@ playwright-report/
 .agents/
 .claude/
 skills-lock.json
+# CocoIndex Code (ccc)
+/.cocoindex_code/
+.tmp-work/

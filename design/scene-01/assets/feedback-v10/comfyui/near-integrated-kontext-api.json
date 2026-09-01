@@ -1,0 +1,12 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v10-integrated-near-scene.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"reference-near.png","upload":"image"}},
+    "3": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 is an exact crop from the finished city map. Keep the warehouse facade, loading doors, steps, snow, road geometry, lane markings, perspective and all surrounding pixels. Add exactly one compact white-and-gray service van from Image 2 directly on the road outside the loading gate, closest to the warehouse, facing along the road and visibly slow. Keep the van small enough to belong to this perspective, grounded with a soft contact shadow. Image 2 is vehicle identity only; ignore its background. Keep the hand-painted northern winter storybook treatment. Do not change any existing carrier, building or road. No extra vehicle, no text, no logo, no collage, no photorealism, no toy or low-poly render.",
+      "image_1":["1",0],"image_2":["2",0],"aspect_ratio":"3:2","max_quality":true,"guidance_scale":4.0,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26083071
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_near_integrated_kontext","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-near-integrated-kontext"
+}

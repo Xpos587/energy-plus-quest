@@ -1,0 +1,30 @@
+{
+  "schema": "carrier-mask-workbench/v1",
+  "session_id": "road-02-lower-arterial",
+  "source": {
+    "file": "carrier-mobile.png",
+    "width": 768,
+    "height": 1424
+  },
+  "mask_convention": "white=edit,black=preserve",
+  "mode": "sequential",
+  "overlap_policy": "allow",
+  "masks": [
+    {
+      "id": "lower-arterial-two-lanes",
+      "name": "Entire lower arterial \u2014 two lanes",
+      "comment": "Regenerate the entire lower horizontal arterial as one connected ordinary two-lane road: exactly two lanes total, one lane in each direction, one restrained dashed center line, coherent asphalt and snowy edges. Remove the current four-to-five parallel lane-like strips and duplicate road bands. Keep the two visible trucks exactly where they are and unchanged: Crew (green protected box at x=105..344, y=890..1047) and Express (green protected box at x=460..739, y=995..1169). Do not add vehicles, text, logos, road labels, route overlays, or extra lane markings. Preserve the northern winter illustration style, camera, lighting, connected intersections, railway, warehouse context, and all pixels outside the white edit region.",
+      "color": "#ef4444",
+      "visible": true,
+      "file": "masks/lower-arterial-two-lanes.png",
+      "bounds": [
+        0,
+        890,
+        768,
+        1170
+      ],
+      "sha256": "1e58dcddf7a125b9c0ea510a5fa29042957bfa5874bf2b5ff8e35a4659df8e7e",
+      "pixel_count": 128120
+    }
+  ]
+}

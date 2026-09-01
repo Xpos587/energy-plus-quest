@@ -1,0 +1,40 @@
+{
+  "prompt_id": "0e5b35e4-8683-4f94-ba51-032018050e24",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "0e5b35e4-8683-4f94-ba51-032018050e24",
+          "timestamp": 1788042538219
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "0e5b35e4-8683-4f94-ba51-032018050e24",
+          "timestamp": 1788042538231
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "0e5b35e4-8683-4f94-ba51-032018050e24",
+          "timestamp": 1788042553933
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_desktop_master_prod_geometry_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "desktop-master-production-geometry-api.json",
+  "seed": 26082904
+}

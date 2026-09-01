@@ -1,0 +1,40 @@
+{
+  "prompt_id": "43354b47-3f67-43b4-9550-54ffcc027dd5",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "43354b47-3f67-43b4-9550-54ffcc027dd5",
+          "timestamp": 1788046632817
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "43354b47-3f67-43b4-9550-54ffcc027dd5",
+          "timestamp": 1788046632826
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "43354b47-3f67-43b4-9550-54ffcc027dd5",
+          "timestamp": 1788046657692
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_desktop_integrated_final_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "desktop-integrated-final-api.json",
+  "seed": 26083041
+}

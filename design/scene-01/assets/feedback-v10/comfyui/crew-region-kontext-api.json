@@ -1,0 +1,12 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v10-crew-scene.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"reference-crew.png","upload":"image"}},
+    "3": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 is the exact local scene crop and camera. Image 2 is the existing production reference for the blue crew vehicle only. Preserve the road, snow, house edges, shadows and composition from Image 1. Replace only the single central blue vehicle with the same vehicle identity from Image 2: compact blue high-box delivery truck, front three-quarter view, dark blue cab and blue cargo box, two clearly visible people in the cab, grounded on the existing road. Use Image 2 only for vehicle shape, proportions, paint and the two-driver cue; ignore its background. Keep one vehicle total. Do not add or remove buildings, roads or snow. Hand-drawn northern winter storybook illustration, crisp dark contour, restrained gouache and paper grain, coherent light. No text, no logo, no extra vehicle, no photorealism, no 3D render, no toy model, no tilt-shift.",
+      "image_1":["1",0],"image_2":["2",0],"aspect_ratio":"1:1","max_quality":false,"guidance_scale":4.0,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26082912
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_crew_region_kontext","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-crew-region-kontext"
+}

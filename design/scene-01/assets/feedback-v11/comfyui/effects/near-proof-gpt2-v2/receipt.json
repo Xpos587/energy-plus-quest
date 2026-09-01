@@ -1,0 +1,19 @@
+{
+  "prompt_id": "fd762621-b7f1-47a6-b396-93335ce5da6a",
+  "node": "GPTImage2Edit_fal",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "base": "../../express-proof/composite.png",
+  "mask": "../near-proof-gpt2/mask.png",
+  "raw": "raw.png",
+  "composite": "composite.png",
+  "source_size": [
+    752,
+    1392
+  ],
+  "raw_size": [
+    768,
+    1424
+  ],
+  "outside_zero_pixel_diff": true,
+  "outside_changed_pixels": 0
+}

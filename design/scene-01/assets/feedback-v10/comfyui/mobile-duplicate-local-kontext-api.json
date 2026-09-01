@@ -1,0 +1,12 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"mobile-duplicate-target.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"mobile-empty-road-reference.png","upload":"image"}},
+    "3": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 is a local crop of the approved portrait winter logistics map containing one unwanted duplicate orange truck. Image 2 is a clean empty-road reference from the same artwork. Edit Image 1: remove the orange truck completely and reconstruct only the empty diagonal asphalt road, snowbank, tire texture, and natural shadows behind it. Match Image 1's exact road boundaries and perspective; use Image 2 only for the hand-painted road and snow texture. Do not add any vehicle, person, object, text, logo, building, or lamp. Preserve the coherent gouache-and-paper northern winter storybook style. No truck fragment, no orange paint, no collage edge, no photorealism, no low-poly or toy render.",
+      "image_1":["1",0],"image_2":["2",0],"aspect_ratio":"3:2","max_quality":true,"guidance_scale":4.4,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26083121
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_mobile_duplicate_local_kontext","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-mobile-duplicate-local-kontext"
+}

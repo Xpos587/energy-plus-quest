@@ -1,0 +1,23 @@
+{
+  "prompt_id": "eddaa4f3-34fc-489a-8f99-43ba13a5814b",
+  "node": "FluxPro1Fill_fal",
+  "endpoint": "fal-ai/flux-pro/v1/fill",
+  "seed": 26083241,
+  "source": "mobile-master.png",
+  "mask": "mask.png",
+  "raw_output": "raw.png",
+  "composite": "composite.png",
+  "source_size": [
+    752,
+    1392
+  ],
+  "raw_size": [
+    736,
+    1376
+  ],
+  "mask_policy": "rear wheel, contact shadow, trailing road only; cargo body and wordmark protected",
+  "outside_zero_pixel_diff": true,
+  "outside_changed_pixels": 0,
+  "inside_changed_pixels": 22511,
+  "status": "success"
+}

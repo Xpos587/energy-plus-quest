@@ -1,0 +1,62 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-city-map-layout.jpg",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-production-style-reference.webp",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-accepted-tone-reference.png",
+        "upload": "image"
+      }
+    },
+    "4": {
+      "class_type": "FluxProKontextMulti_fal",
+      "inputs": {
+        "prompt": "Image 1 is the canonical composition reference from the original scene brief: a city map seen from above with a regular street grid, several intersecting roads and blocks, a central logistics/office center, a parking/loading area, and recognizable city facilities. Rebuild that map structure as a vertical 9:16 scene. Image 2 is the production artwork reference for surface language only: borrow its tactile paper grain, hand-painted contours, snow texture, asphalt, blue-white-orange palette, and practical carrier silhouettes. Image 3 is the accepted project illustration reference for friendly northern winter tone, human scale, and light. Do not copy the composition of Images 2 or 3.\n\nThis is a functional city map, not a snowy landscape or a single warehouse diorama. Use a mostly overhead bird's-eye map view with slight painterly 3D height: broad perpendicular streets, marked crossings, sidewalks, urban blocks, small houses and offices, a park/water or civic block, lamps, signs, and a central logistics center. The central logistics center must be a complete broad building/office hub with a visible loading/parking court and roads connecting to all four vehicle routes. Keep the map readable at 375 px: roads and blocks create a clear city grid; the logistics center is the spatial destination, not a house. No UI or interface elements inside the art.\n\nPaint exactly four and only four visible delivery vehicles, all in the same coherent map illustration and all on distinct connected roads. No hidden fifth auto-selection, no background traffic, no duplicates, no detached trailers, no vehicle fragments.\n\n1. OLD / the old truck: one small, visibly aged but operational muted blue-grey truck on a remote outer road near a small inspection post. It is far from the logistics center, moving safely, with faded paint, modest wear, a thin exhaust wisp and short tracks. It must not look crashed or abandoned.\n\n2. NEAR / the slow truck: one compact, distinctive practical delivery truck directly beside the central logistics center's loading/office exit. It is physically the closest vehicle to the hub, visibly leaving the parking/loading court into a tight turn beside a barrier and snow bank. Show turned front wheels and short compressed tracks so it reads close but slow. Give it a different silhouette from OLD and CREW: short cab-over utility body, not a generic duplicate box truck.\n\n3. CREW / the two-driver truck: one blue high-box truck on a broad perimeter road around a city block, away from the center. Its windshield clearly shows exactly two separate adult drivers side by side. Add a subtle clean highlight to the truck and continuous tracks on the open road, but no glow or comic effects.\n\n4. EXPRESS / the fast auto-found option: one modern bright-orange box truck already traveling on a wide unobstructed arterial/highway at the edge of the city. It has the strongest directional movement, subtle wheel motion, rear tire spray, and a long low tapered snow trail. Put exactly one readable word Express directly on its cargo body and no other readable text anywhere.\n\nThe map itself explains the choices before labels: distance to the central hub, constrained versus open road, technical age, two people in the cab, and directional motion. Use painterly cause-and-effect cues only: road position, turned wheels, tire traces, powder, thin exhaust, snow banks, inspection post, and clear intersections. No speed lines, glow, arrows, route overlays, circles, pins, labels, advertisements, numbers, logos, photorealism, glossy 3D, low-poly toy style, collage edges, isolated product renders, or changed camera away from the overhead city-map view. The only readable word in the image is Express.",
+        "image_1": [
+          "1",
+          0
+        ],
+        "image_2": [
+          "2",
+          0
+        ],
+        "image_3": [
+          "3",
+          0
+        ],
+        "aspect_ratio": "9:16",
+        "max_quality": true,
+        "guidance_scale": 3.8,
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "sync_mode": false,
+        "seed": 26083160
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_docx_map_style_rebuild",
+        "images": [
+          "4",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-docx-map-style-rebuild"
+}

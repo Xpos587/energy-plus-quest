@@ -1,0 +1,43 @@
+{
+  "base": "desktop-integrated-final.png",
+  "added_region": {
+    "source": "near-integrated-kontext.png",
+    "bounds": [
+      800,
+      200,
+      1180,
+      440
+    ],
+    "mask_polygon": [
+      [
+        230,
+        120
+      ],
+      [
+        330,
+        112
+      ],
+      [
+        338,
+        165
+      ],
+      [
+        327,
+        190
+      ],
+      [
+        300,
+        202
+      ],
+      [
+        240,
+        190
+      ],
+      [
+        226,
+        160
+      ]
+    ],
+    "feather_px": 2.5
+  }
+}

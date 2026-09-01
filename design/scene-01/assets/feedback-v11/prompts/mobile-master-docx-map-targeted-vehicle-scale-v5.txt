@@ -1,0 +1,11 @@
+Image 1 is a polished winter overhead city-map master. Use it as the fixed composition. This is a targeted vehicle-scale and lane-placement correction after a 4x8 grid review; do not redesign the city, warehouse, road grid, railway, lighting, or texture.
+
+The map itself is working. Keep the current Crew and Express visual readability and overall size close to Image 1, but make the vehicles belong to the street scale. At 375 px, target body widths are: Old 26-32 px, Near 42-48 px, Crew 52-58 px, Express 50-56 px. Do not make Crew or Express smaller than these ranges. Do not make any body wider than 60 px. Each truck must read as a complete vehicle on one lane or a small apron, never as a giant object spanning two lanes or crossing a junction.
+
+Keep exactly four and only four complete delivery vehicles:
+- OLD stays on the upper-left distant road, but move it a little inward from the top/rail edge so it is countable. It is a small muted aged-but-operational truck with thin exhaust and narrow tracks.
+- NEAR is the only vehicle to shrink substantially: reduce it to the 42-48px target, keep the distinctive short cab-over teal-and-pale utility silhouette, and place it fully on the curved right-side warehouse exit apron. Front wheels are turned toward the road; barrier, snow bank, and tight ruts remain visible. It must not cover the perpendicular street.
+- CREW remains a medium blue truck around the current Image 1 size, centered in a single lower-left lane rather than laid across the intersection. Exactly two separate adult drivers remain visible through its cab.
+- EXPRESS remains a medium bright-orange truck around the current Image 1 size, centered in the lower-right open arterial and clear of the junction. Keep the single word Express directly on its body and a compact directional snow wake.
+
+Make each vehicle grounded with a clear contact shadow. Tracks and snow spray must originate at the wheels and stay local. Do not add any other vehicle, trailer, fragment, traffic, UI, pin, route overlay, arrow, logo, number, advertisement, or readable text except the one Express wordmark. Do not turn the vehicles into icons, toys, or foreground hero objects.

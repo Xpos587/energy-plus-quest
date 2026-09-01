@@ -1,0 +1,12 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v9-production-map.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"v10-desktop-color.png","upload":"image"}},
+    "3": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 supplies the approved hand-drawn winter illustration language, blue-white snow texture, city warmth and the exact visual identities of all four carrier vehicles. Image 2 supplies the immutable new composition and camera: preserve its road network, building block positions, large blue logistics warehouse at right-center, flat snow roof, orange trim, loading apron and three loading bays, and the four vehicle locations. Transfer Image 1 style and vehicle identities onto Image 2 geometry. This is a readable city logistics map, not an empty snowy field: keep a compact northern town of many varied homes, street lamps, snowbanks, connected roads, junctions and distant mountains. Exactly four vehicles total, one per vehicle location. Keep old far away, near at the warehouse approach, crew on the middle road, and Express on the foreground arterial. No UI, no labels except the existing Express wordmark on the Express vehicle, no fake logo, no extra or missing vehicles, no duplicated building, no lost roads, no cropped warehouse, no toy render, no low-poly geometry, no strict isometric diagram, no photorealism.",
+      "image_1":["1",0],"image_2":["2",0],"aspect_ratio":"16:9","max_quality":false,"guidance_scale":4.1,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26082904
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_desktop_master_prod_geometry","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-desktop-master-prod-geometry"
+}

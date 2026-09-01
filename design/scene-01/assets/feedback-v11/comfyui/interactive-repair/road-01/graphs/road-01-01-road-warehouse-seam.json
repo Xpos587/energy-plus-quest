@@ -1,0 +1,57 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-mobile.png"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "uploads/road-warehouse-seam-comfy-alpha.png"
+      }
+    },
+    "3": {
+      "class_type": "MaskToImage",
+      "inputs": {
+        "mask": [
+          "2",
+          1
+        ]
+      }
+    },
+    "4": {
+      "class_type": "GPTImage15Edit_fal",
+      "inputs": {
+        "prompt": "Repair only the white masked region for mask road-warehouse-seam. Human note:\nRepair the vertical service-road edge along the left side of the central warehouse so the road runs cleanly beside, not beneath, the building. Preserve the complete warehouse, railway, loading yard, all four vehicles, snow, intersections, lighting, camera, and every unmasked pixel.\n\nWhite means regenerate; black means preserve. Preserve every pixel, object, road, building, vehicle, text, lighting, camera, and composition outside the mask. Match the surrounding image with no extra objects, labels, logos, or text.",
+        "images": [
+          "1",
+          0
+        ],
+        "mask_image": [
+          "3",
+          0
+        ],
+        "image_size": "auto",
+        "background": "opaque",
+        "quality": "low",
+        "input_fidelity": "high",
+        "num_images": 1,
+        "output_format": "png",
+        "sync_mode": false
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": [
+          "4",
+          0
+        ],
+        "filename_prefix": "mask_workbench/road-01/road-warehouse-seam"
+      }
+    }
+  },
+  "client_id": "mask-workbench-cabac03b6a81e73c"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "failed-confirmed",
+  "reason": "provider output aspect ratio differs from source; rejected without resize/crop",
+  "prompt_id": "d9f66e3a-d828-4e3e-a9c3-ce79c9ff197f",
+  "source_dimensions": [
+    768,
+    1424
+  ],
+  "provider_dimensions": [
+    1024,
+    1536
+  ],
+  "provider_mode": "RGB",
+  "raw_file": "design/scene-01/assets/feedback-v11/comfyui/interactive-repair/road-02-lower-arterial/candidates/01-lower-arterial-two-lanes-d9f66e3a-d828-4e3e-a9c3-ce79c9ff197f-raw.png",
+  "raw_sha256": "6e3fab6eccc3a0a2ca8aab2f062c420a9fbfb7c86ea759acdb96d1e05d62a78e",
+  "source_ratio": "768/1424",
+  "provider_ratio": "1024/1536",
+  "next_action": "rejected; corrected submission must use GPTImage2Edit_fal custom 768x1424",
+  "paid_submission_retried": false,
+  "recorded_at_unix": 1788209584.73731
+}

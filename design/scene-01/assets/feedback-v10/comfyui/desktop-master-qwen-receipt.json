@@ -1,0 +1,40 @@
+{
+  "prompt_id": "31ee72a5-cd8b-4a72-bd25-b6f87b862d47",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "31ee72a5-cd8b-4a72-bd25-b6f87b862d47",
+          "timestamp": 1788040375214
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "31ee72a5-cd8b-4a72-bd25-b6f87b862d47",
+          "timestamp": 1788040375282
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "31ee72a5-cd8b-4a72-bd25-b6f87b862d47",
+          "timestamp": 1788040396315
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_desktop_master_qwen_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "desktop-master-qwen-api.json",
+  "seed": 26082902
+}

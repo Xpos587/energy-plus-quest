@@ -1,0 +1,52 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-mobile-spacious-readable-guide-v3.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-polish-style.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "GPTImage2Edit_fal",
+      "inputs": {
+        "prompt": "Image 1 is the authoritative final layout guide for a vertical 9:16 winter city map. Image 2 is the style reference for painterly snow, asphalt, paper grain, varied rooftops, trees and practical vehicles only. Repaint Image 1 into a finished production illustration. Preserve the guide's spacious three-column urban grid, broad connected roads, obvious intersections, railway, public spaces, central logistics center and all four vehicle anchors. Do not copy the denser composition or oversized trucks from Image 2.\n\nThe four vehicle footprints in Image 1 are already at the intended mobile readability scale. Preserve their relative size and positions during repaint; do not shrink them into tiny dots. At a 375 px preview, Old should remain about 28-34 px wide, Near about 50-58 px, Crew about 56-64 px and Express about 56-64 px. These dimensions refer to the visible vehicle body, not its snow trail. Each vehicle's narrow dimension stays inside one lane and its long dimension follows the lane; never spread a truck sideways across two lanes or across an intersection. Keep the full map visible and do not zoom into a vehicle.\n\nRepaint exactly four complete delivery vehicles and absolutely no other cars, vans, trucks, trailers or fragments:\n- Old: small muted aged-but-operational truck on the upper-left distant road, clearly separated from the water and railway; thin exhaust and narrow tracks.\n- Near: distinct compact short cab-over teal-and-pale utility truck immediately beside the central warehouse's right loading exit, fully on the curved apron, turned front wheels, barrier, snow bank and tight ruts.\n- Crew: blue truck on the lower-left perimeter road, aligned with one lane and not parked across the crossing, with exactly two separate adult drivers clearly visible through the cab.\n- Express: bright-orange modern truck on the lower-right open arterial, aligned with one lane and clear of the junction, with only one Express wordmark directly on the body, subtle wheel movement and a directional local snow wake.\n\nMake the city finished and inhabited without clutter: varied snow-covered roofs, small apartment and office blocks, courtyards, fences, utility details, snow-laden trees, plowed edges and weathered road texture. Keep one broad unmistakable warehouse with three doors, loading apron and clear exit. Make all four trucks countable at 375 px through contrast and contact shadows, not UI labels or oversized scale. No UI, pins, circles, route overlays, arrows, logos, numbers, ads or readable text except the single Express wordmark. No flat board-game style, glossy 3D, low-poly toy style, photorealism or collage edges.",
+        "image_1": [
+          "1",
+          0
+        ],
+        "image_2": [
+          "2",
+          0
+        ],
+        "image_size": "custom",
+        "width": 768,
+        "height": 1424,
+        "background": "opaque",
+        "quality": "high",
+        "input_fidelity": "high",
+        "num_images": 1,
+        "output_format": "png",
+        "sync_mode": false
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_docx_spacious_readable_v10",
+        "images": [
+          "3",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-docx-spacious-readable-v10"
+}

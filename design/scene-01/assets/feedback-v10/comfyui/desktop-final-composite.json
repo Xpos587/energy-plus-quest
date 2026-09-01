@@ -1,0 +1,57 @@
+{
+  "base": "desktop-master-base.png",
+  "canvas": [
+    1536,
+    864
+  ],
+  "regions": [
+    {
+      "name": "old",
+      "bounds": [
+        480,
+        285,
+        680,
+        450
+      ],
+      "source": "old-region-kontext-v2.png",
+      "mask": "polygon",
+      "feather_px": 8
+    },
+    {
+      "name": "crew",
+      "bounds": [
+        520,
+        450,
+        735,
+        625
+      ],
+      "source": "crew-tight-two-driver-kontext.png",
+      "mask": "polygon",
+      "feather_px": 8
+    },
+    {
+      "name": "near",
+      "bounds": [
+        900,
+        320,
+        1280,
+        620
+      ],
+      "source": "near-region-kontext.png",
+      "mask": "polygon",
+      "feather_px": 8
+    },
+    {
+      "name": "express",
+      "bounds": [
+        700,
+        540,
+        1000,
+        790
+      ],
+      "source": "express-region-kontext.png",
+      "mask": "polygon",
+      "feather_px": 8
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-remove-extra-v13.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-effects-remove-extra-mask-v14.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "FluxPro1Fill_fal",
+      "inputs": {
+        "prompt": "Inside the masked upper-middle residential block only, remove every trace of the accidental blue vehicle-like object. Repaint the masked block as ordinary quiet winter city fabric: a low neutral snow-covered house roof, a small bare tree, fence and snow-covered side path, with no blue roof, no blue vehicle, no wheels, no cab, no truck-like horizontal shape and no parked object. Keep the surrounding roads, railway, water and all four intended delivery vehicles unchanged. The four intended vehicles are Old on the upper-left road, Near at the warehouse right exit, Crew with two drivers on the lower-left road, and Express on the lower-right road. Do not add any vehicle, trailer or vehicle fragment. The masked area is the only area to change. Match the surrounding hand-painted northern winter map style.",
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "image": [
+          "1",
+          0
+        ],
+        "mask_image": [
+          "2",
+          0
+        ],
+        "seed": 26083264,
+        "sync_mode": false,
+        "enhance_prompt": false
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_docx_remove_extra_mask_v14",
+        "images": [
+          "3",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-docx-remove-extra-mask-v14"
+}

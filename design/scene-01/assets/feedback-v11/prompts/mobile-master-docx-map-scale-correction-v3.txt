@@ -1,0 +1,11 @@
+Image 1 is the current polished winter city-map master. Perform a careful scale-and-placement correction, keeping the city, warehouse, roads, railway, lighting, painterly texture, and overall composition unchanged. Do not redesign the map and do not zoom into any vehicle.
+
+The current four trucks are too large for the map. Shrink each complete truck to roughly 55-65% of its current visible size. Each vehicle must occupy about 0.55-0.75 of one road lane width, never two lanes, and must sit fully inside one lane or the small loading apron. Keep enough contrast and clean silhouette that all four are clearly countable at 375 px; do not make them tiny dots.
+
+Preserve exactly four and only four delivery vehicles, with these corrected positions and identities:
+1. OLD: small muted aged-but-operational truck on the upper-left distant road, centered in one lane, fully visible and separated from the railway and water; thin exhaust and narrow tracks only.
+2. NEAR: small-to-medium compact short cab-over teal-and-pale utility truck immediately outside the warehouse's right loading exit, fully on the short curved exit lane, no part crossing the perpendicular street, front wheels turned, barrier and tight ruts preserved.
+3. CREW: medium blue crew truck on the lower-left perimeter road, centered in one lane and not perpendicular across the intersection; exactly two separate adult drivers remain visible through the cab.
+4. EXPRESS: medium bright-orange modern truck on the lower-right arterial, centered in one lane and fully clear of the crossing, with the single word Express directly on its body and a compact but directional snow wake.
+
+Keep the warehouse and all city blocks the same size; the warehouse remains the dominant landmark. Keep the motion storytelling but make it subordinate to the map: tire tracks must originate under the smaller vehicles, the Express wake should not fill an entire junction, and no vehicle may read as a foreground hero object. Do not add any vehicle, trailer, fragment, pin, route line, arrow, logo, label, advertisement, number, or readable text except the one Express wordmark. Do not use cartoon icon scale, glossy 3D, low-poly style, or collage edges.

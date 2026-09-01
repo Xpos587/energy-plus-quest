@@ -1,0 +1,9 @@
+{
+  "schema": "carrier-mask-execution/v1",
+  "mode": "sequential",
+  "next_index": 0,
+  "current_source": "carrier-mobile.png",
+  "accepted": [],
+  "pending": null,
+  "manifest_digest": "61948ee409f060729f4f742284d5ba10cb09dbb48a28e1e477531938c7bf50d4"
+}

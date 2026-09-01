@@ -1,0 +1,74 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "docx-map-clean-layout-guide-v2.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-style-v5-mobile.webp",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-crew-v4-mobile.webp",
+        "upload": "image"
+      }
+    },
+    "4": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-express-v5-desktop.webp",
+        "upload": "image"
+      }
+    },
+    "5": {
+      "class_type": "GPTImage2Edit_fal",
+      "inputs": {
+        "prompt": "Treat Image 1 as a hard layout blueprint. In this version, the blue CREW truck is on the lower-left horizontal street, clear of the railway; keep it there and do not put it on the tracks., not as a loose inspiration. Repaint the same portrait city quarter: regular intersecting street grid, railway on the left, connected roads and crossings, urban building blocks, and one complete broad central logistics warehouse with a loading apron. Preserve the four vehicle locations and their relative sizes from the blueprint. Do not add, remove, merge, duplicate, or relocate any vehicle.\n\nUse Image 2 only for the accepted Energy+ winter illustration language: bright friendly northern daylight, paper and gouache texture, simplified rounded shapes, confident dark-brown contour lines, blue-white snow, cobalt and signal orange accents, warm windows, and grounded contact shadows. Use Image 3 only for the visual treatment of two people in a truck cab. Use Image 4 only for the orange Express truck identity and restrained snow wake. Do not copy their compositions, scenery, signage, labels, or scale.\n\nOutput one coherent 9:16 mobile game illustration. It is a lively compact city map with a gentle elevated three-quarter illustration, not a snowy field, not an isolated warehouse, not a flat corporate infographic, not glossy 3D, not photorealism, and not a collage. Keep every road, intersection, block, and the full warehouse readable at 375 px. The warehouse facade is at least 2.5 times wider than the largest vehicle.\n\nThere are exactly FOUR and only FOUR delivery vehicles in the entire image. All four are fully inside the frame, each on its own road and aligned with that road. All other streets, parking areas, and backgrounds are empty: no cars, buses, vans, trucks, trailers, bicycles, vehicle silhouettes, or vehicle-like objects. Buildings, lamps, trees, railway, fences, and signs are allowed but must not look like vehicles.\n\nVehicle 1, upper-left by the railway: one small muted blue-grey OLD delivery truck, far from the warehouse, aged but safe and operational. Show faded paint, modest wear, a thin exhaust wisp and short tire trace. Do not show damage, crash, or abandonment.\n\nVehicle 2, immediately at the warehouse's right loading exit: one distinctive compact dark-teal cab-over utility delivery van, the closest vehicle to the warehouse. Keep it beside the attached gate and snow bank in the tight loading turn. The red-white barrier must be physically connected to the warehouse gate post, never floating in an empty field. Show turned front wheels and short compressed tracks so the van reads close but slow. Its silhouette must not resemble the other trucks.\n\nVehicle 3, lower-left perimeter road: one medium blue high-box CREW truck. Through its broad windshield show exactly two separate adult drivers seated side by side, clearly visible at mobile size. There is no third person. Give it clean continuous tire tracks on the open road.\n\nVehicle 4, lower-right arterial: one modern bright signal-orange EXPRESS box truck, fully visible and already moving on an unobstructed road with open space ahead. Give it the strongest directional energy with visible wheel motion, small tire spray, and a long low tapered snow wake following the lane. Put exactly one readable word \"Express\" directly on the orange cargo body; no other readable words anywhere.\n\nNo UI, labels, captions, logos, numbers, advertisements, route arrows, route lines, pins, circles, or decorative overlay graphics in the painting. The only readable text in the whole artwork is the single word Express on the orange truck. Preserve the visual cause-and-effect: distance and wear for OLD; gate, barrier, snow bank and turned wheels for NEAR; two faces and uninterrupted road for CREW; open road, wheel movement and long wake for EXPRESS. Keep the scene warm, human and storybook-like while retaining the city-map structure from Image 1.",
+        "image_1": [
+          "1",
+          0
+        ],
+        "image_2": [
+          "2",
+          0
+        ],
+        "image_3": [
+          "3",
+          0
+        ],
+        "image_4": [
+          "4",
+          0
+        ],
+        "image_size": "custom",
+        "width": 768,
+        "height": 1424,
+        "background": "opaque",
+        "quality": "high",
+        "input_fidelity": "high",
+        "num_images": 1,
+        "output_format": "png",
+        "sync_mode": false
+      }
+    },
+    "6": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_gpt2_docx_clean_guide_v2",
+        "images": [
+          "5",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-gpt2-docx-clean-guide-v2"
+}

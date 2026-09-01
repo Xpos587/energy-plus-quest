@@ -1,0 +1,11 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v10-mobile-master.png","upload":"image"}},
+    "2": {"class_type":"LoadImageMask","inputs":{"image":"v10-mobile-duplicate-mask.png","channel":"red"}},
+    "3": {"class_type":"RecraftImageInpaintingNode","inputs":{
+      "image":["1",0],"mask":["2",0],"prompt":"restore the empty snow-covered road and snowbank in this masked area; preserve the original road direction, snow texture, tire wear, shadows, houses and all unmasked content; no vehicle, no truck, no orange object, natural hand-painted northern winter storybook illustration","n":1,"seed":26083111,"negative_prompt":"vehicle, truck, van, car, duplicate, orange object, text, logo, watermark, changed road, changed building"
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_mobile_recraft_remove_duplicate","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-mobile-recraft-remove-duplicate"
+}

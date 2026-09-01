@@ -1,0 +1,11 @@
+Edit only the white mask regions of Image 1. Preserve every black-mask pixel exactly. In particular preserve the entire warehouse, its apron, the attached gate and barrier, the dark-teal NEAR vehicle, every building, railway, tree, lamp, road junction, light direction, winter paper-gouache style, and camera outside the masks.
+
+Inside the three mask regions, repaint the road continuously and recreate exactly these three vehicles at smaller city-map scale. Together with the preserved NEAR vehicle, the final image must contain exactly four and only four vehicles.
+
+Upper-left mask: one small muted blue-grey OLD delivery truck, centered on the same upper-left road and aligned with it. About 80 pixels wide on this 768-pixel-wide master. It is aged but operational and moving safely, with faded paint, modest scuffs, a thin exhaust wisp and a short tire trace. No crash or broken parts.
+
+Lower-left mask: one medium blue high-box CREW truck, centered on the same lower-left horizontal road and aligned left-to-right with the lane, never touching or crossing the railway. About 125 pixels wide. Through its broad windshield show exactly two separate adult drivers seated side by side, both readable at mobile size. Add clean continuous tire tracks. No third person.
+
+Lower-right mask: one modern signal-orange EXPRESS box truck, centered on the same lower-right horizontal arterial and aligned left-to-right. About 120 pixels wide. It is already moving on the open road with visible wheel motion, small tire spray and a long low tapered snow wake following the lane. Put exactly one readable word "Express" directly on the cargo body; no other text.
+
+No vehicle may exceed 18 percent of the image width. Keep natural contact shadows and make the newly exposed asphalt, lane paint, snow edges and paper texture seamless. Do not add traffic, parked vehicles, trailers, fragments, labels, signs, UI, numbers, arrows, pins, circles, logos, or any fifth vehicle. The only readable text is Express.

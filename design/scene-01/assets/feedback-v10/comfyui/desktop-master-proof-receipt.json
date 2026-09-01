@@ -1,0 +1,40 @@
+{
+  "prompt_id": "d9e343af-25ee-46aa-809b-083ea26d22e8",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "d9e343af-25ee-46aa-809b-083ea26d22e8",
+          "timestamp": 1788039970447
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "d9e343af-25ee-46aa-809b-083ea26d22e8",
+          "timestamp": 1788039970492
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "d9e343af-25ee-46aa-809b-083ea26d22e8",
+          "timestamp": 1788040134814
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_desktop_master_proof_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "desktop-master-proof-api.json",
+  "seed": 26082901
+}

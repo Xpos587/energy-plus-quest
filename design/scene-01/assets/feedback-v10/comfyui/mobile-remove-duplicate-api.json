@@ -1,0 +1,12 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v10-mobile-master.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"v9-mobile-production-final.png","upload":"image"}},
+    "3": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 is the approved portrait city/warehouse master. Image 2 is the accepted production winter illustration reference. Return one coherent portrait illustration. Preserve Image 1's vertical elevated 3/4 camera, connected city roads, snow, complete blue logistics warehouse with loading gates, houses, mountain depth and the four intended carrier positions: far old truck, blue crew truck with two drivers, white slow van by the warehouse, and the upper orange Express truck on the middle foreground road. Remove only the second duplicate orange truck at the very bottom edge and restore that area as a natural empty snowy road with matching tire texture and shadow direction. Do not move, redraw or duplicate the remaining four carriers. Exactly four carriers total. Keep the accepted hand-painted northern winter storybook language from Image 2, with crisp contours, gouache and paper grain. Keep one clean readable Express wordmark on the remaining orange truck. No extra vehicle, no missing vehicle, no changed warehouse, no changed road layout, no collage, no cutout edges, no UI, no labels except Express, no photorealism, no low-poly or toy render.",
+      "image_1":["1",0],"image_2":["2",0],"aspect_ratio":"9:16","max_quality":true,"guidance_scale":4.2,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26083091
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_mobile_remove_duplicate","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-mobile-remove-duplicate"
+}

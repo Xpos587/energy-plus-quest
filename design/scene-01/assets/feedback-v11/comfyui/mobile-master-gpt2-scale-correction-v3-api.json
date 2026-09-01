@@ -1,0 +1,43 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-gpt2-clean-v2-base.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "docx-map-clean-layout-guide-v2.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "GPTImage2Edit_fal",
+      "inputs": {
+        "prompt": "Image 1 is the approved city illustration base. Preserve its exact camera, portrait crop, railway, roads, intersections, buildings, snow, lighting, paper-gouache texture, central warehouse, loading apron, attached gate and barrier. Do not redesign the city and do not change the warehouse. Image 2 is the strict location and relative-scale guide for the four vehicles.\n\nMake one precise correction only: reduce the physical painted size of all four vehicles while keeping each vehicle centered at its current road location and aligned with its current lane. Do not move them to different streets. The image must still contain exactly four and only four vehicles.\n\nTarget mobile scale on the 768-pixel-wide master:\n- OLD upper-left: about 82 pixels wide, smallest and farthest.\n- NEAR at the right warehouse gate: about 105 pixels wide.\n- CREW lower-left: about 125 pixels wide.\n- EXPRESS lower-right: about 115 pixels wide.\nNo vehicle may exceed 18 percent of the image width. The complete warehouse facade must remain at least 2.5 times wider than the largest vehicle.\n\nRetain every vehicle's accepted identity and story cue: OLD is muted blue-grey, aged but operational, with a thin exhaust trace; NEAR is compact dark teal, beside the barrier and snow bank with turned wheels; CREW is blue and still shows exactly two separate adult drivers side by side through the windshield; EXPRESS is signal orange, moving on the open road with wheel motion, tire spray, and a long low tapered snow wake. Keep exactly one readable word \"Express\" on the orange cargo body and no other readable text.\n\nFill the newly exposed road and snow naturally after reducing each vehicle, with matching lane markings, tire traces, contact shadows and uninterrupted paper texture. The vehicles must not look pasted, cut out, floating, or separately rendered. Do not add traffic, trailers, parked cars, fragments, signs shaped like vehicles, UI, labels, numbers, logos, arrows, route overlays, or map pins. All other parts of Image 1 remain unchanged.",
+        "image_1": ["1", 0],
+        "image_2": ["2", 0],
+        "image_size": "custom",
+        "width": 768,
+        "height": 1424,
+        "background": "opaque",
+        "quality": "high",
+        "input_fidelity": "high",
+        "num_images": 1,
+        "output_format": "png",
+        "sync_mode": false
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_gpt2_scale_correction_v3",
+        "images": ["3", 0]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-gpt2-scale-correction-v3"
+}

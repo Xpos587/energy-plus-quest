@@ -1,0 +1,13 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v10-crew-scene.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"v10-crew-canny.png","upload":"image"}},
+    "3": {"class_type":"LoadImage","inputs":{"image":"reference-crew.png","upload":"image"}},
+    "4": {"class_type":"FluxGeneral_fal","inputs":{
+      "prompt":"Image 1 is the immutable local scene crop. Preserve its camera, road geometry, house edges, snow and every object outside the blue vehicle. Refine only the central blue crew delivery truck into a polished hand-drawn northern winter game illustration matching the vehicle identity in Image 3: a compact blue high-box cargo truck, front three-quarter view, clean blue box body, dark blue cab, readable windshield, wheels grounded on the same road, exactly two visible drivers in the cab. Keep exactly one truck and no other vehicle. Use Image 3 only for the truck's shape, blue color, cab proportions and two-driver cue, not its background. Crisp dark contours, restrained gouache and paper grain, coherent winter light. No road changes, no new buildings, no duplicated vehicle, no text, no logo, no photorealism, no 3D render, no toy look.",
+      "image_size":"custom","width":512,"height":512,"num_inference_steps":22,"guidance_scale":3.4,"real_cfg_scale":3.3,"num_images":1,"enable_safety_checker":true,"use_real_cfg":false,"sync_mode":false,"seed":26082911,"ip_adapter_scale":0.72,"controlnet_conditioning_scale":0.68,"ip_adapters":"XLabs-AI/flux-ip-adapter","controlnets":"XLabs-AI/flux-controlnet-canny-v3","controlnet_unions":"None","controlnet_union_control_mode":"canny","control_image":["2",0],"ip_adapter_image":["3",0]
+    }},
+    "5": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_crew_flux_controlnet_proof","images":["4",0]}}
+  },
+  "client_id":"carrier-v10-crew-flux-controlnet-proof"
+}

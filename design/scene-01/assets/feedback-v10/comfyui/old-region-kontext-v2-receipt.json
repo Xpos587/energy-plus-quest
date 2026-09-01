@@ -1,0 +1,40 @@
+{
+  "prompt_id": "3c993f07-84c3-434b-86ce-9031650974f9",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "3c993f07-84c3-434b-86ce-9031650974f9",
+          "timestamp": 1788045109383
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "3c993f07-84c3-434b-86ce-9031650974f9",
+          "timestamp": 1788045109385
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "3c993f07-84c3-434b-86ce-9031650974f9",
+          "timestamp": 1788045125912
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_old_region_kontext_00002_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "old-region-kontext-api.json",
+  "seed": 26083001
+}

@@ -1,0 +1,14 @@
+{
+  "prompt_id": "ea35cd70-121a-40f2-a535-61d90a5394c9",
+  "node": "GPTImage2Edit_fal",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "seed": null,
+  "layout_reference": "../../references/docx-city-map-layout.jpg",
+  "structural_guide": "../../references/docx-map-mobile-lived-guide.png",
+  "style_reference": "../../../../feedback-v5/production/carrier-mobile.webp",
+  "prompt": "../prompts/mobile-master-docx-map-lived-repaint.txt",
+  "output": "mobile-master-docx-map-lived-repaint.png",
+  "preview": "mobile-master-docx-map-lived-repaint-375px.png",
+  "status": "success",
+  "note": "intermediate visual proof only; not wired into app or approved for outpaint"
+}

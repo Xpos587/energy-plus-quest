@@ -1,0 +1,84 @@
+{
+  "status": "prepared-for-human-review",
+  "previous_mask": "masks/lower-arterial-two-lanes.png",
+  "previous_mask_archived": "archive/rectangular-v1/lower-arterial-two-lanes.png",
+  "new_mask": "masks/lower-arterial-two-lanes-sam2-v2.png",
+  "new_mask_sha256": "9f1b2ca438de312874221d78ac011efa9823108cf1073a87cd2b57437970aa6b",
+  "source_sha256": "39530396f4600095f405a5572fdf44f8c3fc6a79e407db0a998a1d06b46ed44e",
+  "logical_convention": "white=edit,black=preserve",
+  "edit_bounds": [
+    0,
+    890,
+    768,
+    1170
+  ],
+  "edit_pixels": 175443,
+  "mask": "masks/lower-arterial-two-lanes-sam2-v2.png",
+  "mask_sha256": "9f1b2ca438de312874221d78ac011efa9823108cf1073a87cd2b57437970aa6b",
+  "mask_pixel_count": 175443,
+  "mask_bounds": [
+    0,
+    890,
+    768,
+    1170
+  ],
+  "protected_trucks": {
+    "crew": {
+      "id": "crew-sam2-silhouette",
+      "dimensions": [
+        768,
+        1424
+      ],
+      "bounds": [
+        121,
+        912,
+        325,
+        1039
+      ],
+      "pixel_count": 20196,
+      "sha256": "518e315d8ccfb56c3fc35c5a92a8814fe351ca37faf5e8dda28b94de5d329b31",
+      "name": "Crew vehicle silhouette",
+      "comment": "Preserve only the visible Crew truck contour, including its body, cab, wheels, and two-driver pixels; do not preserve its road shadow, wake, or surrounding asphalt.",
+      "raw_mask": {
+        "file": "protection/raw/crew-sam2-raw.png",
+        "sha256": "48d87d9b7486e672bb3a21b90160477ba5eca3c6b295c4fd1fe08a98575925a8"
+      }
+    },
+    "express": {
+      "id": "express-sam2-silhouette",
+      "dimensions": [
+        768,
+        1424
+      ],
+      "bounds": [
+        489,
+        1035,
+        706,
+        1156
+      ],
+      "pixel_count": 19401,
+      "sha256": "f40f84c7f5e0254d9c14210e95b22f7e64c9d2f7ebfa740b1737febba98bf8c7",
+      "name": "Express vehicle silhouette",
+      "comment": "Preserve only the visible Express truck contour, including its body, cab, wheels, and wordmark pixels; do not preserve its snow wake, shadow, or surrounding asphalt.",
+      "raw_mask": {
+        "file": "protection/raw/express-sam2-raw.png",
+        "sha256": "b0994ec0e303f93e982caa0c358b0467419fd9d2ed326ec6e23df73cb876b738"
+      }
+    }
+  },
+  "segmentation_model": {
+    "repo": "facebook/sam2.1-hiera-tiny",
+    "revision": "de431c4043854a71d8101e17995dfe596bf101a5",
+    "task": "prompted image segmentation",
+    "device": "cpu",
+    "token_source": "HF_TOKEN",
+    "token_recorded": false
+  },
+  "rectangle_protection_removed": true,
+  "local_image_generation": false,
+  "local_generative_models_used": false,
+  "paid_submission_authorized": false,
+  "segmentation_receipt": "segmentation-receipt.json",
+  "local_segmentation_model_used": true,
+  "next_step": "human visual review, then dry-run compile; no paid request submitted"
+}

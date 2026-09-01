@@ -1,0 +1,60 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-mobile.png"
+      }
+    },
+    "2": {
+      "class_type": "LoadImageMask",
+      "inputs": {
+        "image": "masks/lower-arterial-two-lanes-sam2-v2.png",
+        "channel": "red"
+      }
+    },
+    "3": {
+      "class_type": "MaskToImage",
+      "inputs": {
+        "mask": [
+          "2",
+          0
+        ]
+      }
+    },
+    "4": {
+      "class_type": "GPTImage2Edit_fal",
+      "inputs": {
+        "prompt": "Repair only the white masked region for mask lower-arterial-two-lanes. Human note:\nRegenerate the entire lower horizontal arterial as one connected ordinary two-lane road: exactly two lanes total, one lane in each direction, one restrained dashed center line, coherent asphalt and snowy edges. Remove the current four-to-five parallel lane-like strips and duplicate road bands. Keep Crew and Express exactly where they are using only their contour-following vehicle silhouettes; preserve the trucks but do not preserve rectangular road areas, shadows, wakes, snow, or surrounding pixels. Do not add vehicles, text, logos, road labels, route overlays, or extra lane markings. Preserve the northern winter illustration style, camera, lighting, connected intersections, railway, warehouse context, and every pixel outside the white edit region.\n\nWhite means regenerate; black means preserve. Preserve every pixel, object, road, building, vehicle, text, lighting, camera, and composition outside the mask. Match the surrounding image with no extra objects, labels, logos, or text.",
+        "image_1": [
+          "1",
+          0
+        ],
+        "image_size": "custom",
+        "width": 768,
+        "height": 1424,
+        "mask_image": [
+          "3",
+          0
+        ],
+        "background": "opaque",
+        "quality": "high",
+        "input_fidelity": "high",
+        "num_images": 1,
+        "output_format": "png",
+        "sync_mode": false
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": [
+          "4",
+          0
+        ],
+        "filename_prefix": "mask_workbench/road-02-lower-arterial/lower-arterial-two-lanes"
+      }
+    }
+  },
+  "client_id": "mask-workbench-e42df3ca3f864108"
+}

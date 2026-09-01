@@ -1,0 +1,104 @@
+{
+  "status": "candidate-verified",
+  "method": "deterministic-pixel-clone",
+  "local_models_used": false,
+  "road_contract": "one connected road band with exactly two lanes",
+  "assets": {
+    "mobile": {
+      "source": "design/scene-01/assets/feedback-v11/comfyui/gpt2-three-vehicle-scale-v4-output/carrier_v11_mobile_gpt2_three_vehicle_scale_v4_00001_.png",
+      "source_sha256": "39530396f4600095f405a5572fdf44f8c3fc6a79e407db0a998a1d06b46ed44e",
+      "output_sha256": "bca0a5ea2bde9cb1d84ea4f79944e4c4a3a34ae1aab150dd7c29590860850ff4",
+      "dimensions": [
+        768,
+        1424
+      ],
+      "internal_marking_bands": [
+        [
+          1006,
+          1013
+        ]
+      ],
+      "protected_pixels_changed": 0,
+      "repair_rectangles": [
+        [
+          350,
+          946,
+          540,
+          970
+        ],
+        [
+          690,
+          946,
+          768,
+          970
+        ],
+        [
+          350,
+          993,
+          480,
+          1025
+        ],
+        [
+          710,
+          993,
+          768,
+          1025
+        ],
+        [
+          720,
+          1054,
+          768,
+          1082
+        ]
+      ]
+    },
+    "desktop": {
+      "source": "design/scene-01/assets/feedback-v11/comfyui/desktop-side-cleanup-v5-output/carrier_v11_desktop_side_cleanup_v5_00001_.png",
+      "source_sha256": "45aa056433d7541edeb3874578f754b27acc30e391f1d33802c6a9cd3345b25f",
+      "output_sha256": "d5718867e2d296ca6c975df963e6d86165a4ed1ed94927f7ecc5c2afb3ebc6a9",
+      "dimensions": [
+        2528,
+        1424
+      ],
+      "internal_marking_bands": [
+        [
+          1010,
+          1014
+        ]
+      ],
+      "protected_pixels_changed": 0,
+      "repair_rectangles": [
+        [
+          1240,
+          946,
+          1390,
+          970
+        ],
+        [
+          1550,
+          946,
+          2528,
+          970
+        ],
+        [
+          1240,
+          993,
+          1350,
+          1025
+        ],
+        [
+          1660,
+          993,
+          2528,
+          1025
+        ],
+        [
+          1680,
+          1054,
+          2528,
+          1082
+        ]
+      ]
+    }
+  }
+}

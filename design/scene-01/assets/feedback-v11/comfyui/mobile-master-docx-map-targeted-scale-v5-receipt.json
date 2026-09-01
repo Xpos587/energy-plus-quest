@@ -1,0 +1,13 @@
+{
+  "prompt_id": "43a49145-98ac-456d-bf5a-2958900d8478",
+  "node": "GPTImage2Edit_fal",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "base_image": "mobile-master-docx-map-polish-v2.png",
+  "style_reference": "carrier-docx-map-production-style.webp",
+  "prompt": "../prompts/mobile-master-docx-map-targeted-vehicle-scale-v5.txt",
+  "grid_review": "mobile-master-docx-map-polish-v2-grid-review.md",
+  "output": "mobile-master-docx-map-targeted-scale-v5.png",
+  "preview": "mobile-master-docx-map-targeted-scale-v5-375px.png",
+  "status": "success",
+  "note": "intermediate scale-corrected visual proof; not wired into app or approved for outpaint"
+}

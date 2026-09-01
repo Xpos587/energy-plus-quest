@@ -1,0 +1,11 @@
+Image 1 is a spacious, polished vertical winter city map. Preserve the exact three-column city grid, railway, central logistics warehouse, public spaces, lighting, snow texture, and all four route positions. This is only a controlled readability adjustment.
+
+At 375 px, the four vehicle bodies are still a little too subtle. Increase their visible silhouettes modestly so a user can identify and tap the choices without zooming: target approximately OLD 28-32 px wide, NEAR 50-54 px, CREW 56-60 px, EXPRESS 56-60 px in the final 375 px preview. Do not turn them into giant foreground trucks. Keep the short dimension of each body inside one road lane; the long dimension follows the road and may be up to roughly 1.5 lane modules. No truck may cross a junction or visually occupy two lanes sideways.
+
+Keep exactly four complete, distinct delivery vehicles and no others:
+- Old: upper-left distant road, clearly visible against the dark asphalt and separated from the railway/water; aged but operational, thin exhaust, narrow tracks.
+- Near: distinctive compact short cab-over teal-and-pale utility truck immediately at the warehouse right loading exit, fully on the curved apron, turned front wheels, barrier and tight ruts.
+- Crew: blue truck on the lower-left perimeter road, aligned with the lane, with exactly two separate adult drivers readable through the cab.
+- Express: modern bright-orange truck on the lower-right open arterial, aligned with the lane, one Express wordmark directly on its body, subtle wheel movement and compact snow wake.
+
+Do not change the warehouse size or city density. Keep clear contrast and contact shadows around the four trucks. Do not add any other vehicle, trailer, fragment, route overlay, pin, circle, arrow, UI, logo, number, advertisement, or readable text except the single Express wordmark. No toy-icon scale, glossy 3D, low-poly style, photorealism, or collage edges.

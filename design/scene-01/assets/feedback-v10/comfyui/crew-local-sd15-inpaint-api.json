@@ -1,0 +1,17 @@
+{
+  "prompt": {
+    "1": {"class_type":"CheckpointLoaderSimple","inputs":{"ckpt_name":"v1-5-pruned-emaonly-fp16.safetensors"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"v10-crew-local-scene.png","upload":"image"}},
+    "3": {"class_type":"LoadImage","inputs":{"image":"v10-crew-local-canny.png","upload":"image"}},
+    "4": {"class_type":"LoadImageMask","inputs":{"image":"v10-crew-local-mask.png","channel":"red"}},
+    "5": {"class_type":"CLIPTextEncode","inputs":{"text":"hand-drawn northern winter storybook game illustration, one compact blue high-box delivery truck, dark blue cab, blue cargo body, front three-quarter view, exactly two clearly visible adult drivers side by side behind the windshield, grounded on the same road, crisp ink contours, restrained gouache, paper grain, coherent snow light","clip":["1",1]}},
+    "6": {"class_type":"CLIPTextEncode","inputs":{"text":"extra vehicle, duplicate vehicle, extra person, missing driver, malformed face, changed road, changed building, text, logo, watermark, photorealistic, 3d render, toy model","clip":["1",1]}},
+    "7": {"class_type":"VAEEncodeForInpaint","inputs":{"pixels":["2",0],"vae":["1",2],"mask":["4",0],"grow_mask_by":12}},
+    "8": {"class_type":"ControlNetLoader","inputs":{"control_net_name":"control_v11p_sd15_canny_fp16.safetensors"}},
+    "9": {"class_type":"ControlNetApplyAdvanced","inputs":{"positive":["5",0],"negative":["6",0],"control_net":["8",0],"image":["3",0],"strength":0.35,"start_percent":0.0,"end_percent":0.65,"vae":["1",2]}},
+    "10": {"class_type":"KSampler","inputs":{"model":["1",0],"seed":26083021,"steps":28,"cfg":7.0,"sampler_name":"dpmpp_2m","scheduler":"karras","positive":["9",0],"negative":["9",1],"latent_image":["7",0],"denoise":0.82}},
+    "11": {"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["1",2]}},
+    "12": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_crew_local_sd15_inpaint","images":["11",0]}}
+  },
+  "client_id":"carrier-v10-crew-local-sd15-inpaint"
+}

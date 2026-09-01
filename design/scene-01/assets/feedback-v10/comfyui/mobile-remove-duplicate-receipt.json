@@ -1,0 +1,40 @@
+{
+  "prompt_id": "5a6bf34d-67c3-4871-94e1-c8e8fe57595e",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "5a6bf34d-67c3-4871-94e1-c8e8fe57595e",
+          "timestamp": 1788048014033
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "5a6bf34d-67c3-4871-94e1-c8e8fe57595e",
+          "timestamp": 1788048014065
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "5a6bf34d-67c3-4871-94e1-c8e8fe57595e",
+          "timestamp": 1788048049353
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v10_mobile_remove_duplicate_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "mobile-remove-duplicate-api.json",
+  "seed": 26083091
+}

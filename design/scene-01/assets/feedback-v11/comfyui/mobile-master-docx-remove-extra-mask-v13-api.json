@@ -1,0 +1,49 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-remove-extra-v12.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-docx-map-effects-remove-extra-mask-v13.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "FluxPro1Fill_fal",
+      "inputs": {
+        "prompt": "Image 1 is a nearly approved spacious winter city-map master. Perform one surgical whole-frame cleanup while preserving everything else pixel-for-pixel in spirit: same three-column map, roads, railway, warehouse, city blocks, lighting, vehicle positions, vehicle sizes, and painterly texture.\n\nThere are currently five vehicle-like objects. Remove only the accidental small blue vehicle in the upper city block beneath the upper apartment building (the object in the upper-middle area, above and left of the warehouse). Replace that exact spot with an ordinary snow-covered courtyard/sidewalk/roof detail, not a vehicle. Do not remove or alter the four intended vehicles:\n- the muted Old truck on the upper-left distant road;\n- the compact teal Near truck at the warehouse's right loading exit;\n- the blue Crew truck on the lower-left road with two drivers;\n- the orange Express truck on the lower-right arterial with its single Express wordmark.\n\nKeep the four intended truck bodies at their current readable middle size. Do not shrink them, enlarge them, move them, duplicate them, turn them into icons, or add any new cars, vans, trucks, trailers, fragments, or vehicle-like rooftop objects elsewhere. Keep the warehouse and map composition unchanged. No UI, pins, circles, route overlays, arrows, logos, numbers, ads, extra text, glossy 3D, low-poly style, or landscape camera.\n\nIn the masked area only, remove the accidental small blue delivery vehicle and its tire marks from the upper-middle residential block. Repaint that area as a natural snow-covered residential side street/courtyard with consistent road and snow texture. Do not introduce a new vehicle-like object. The masked region is the only region to change. Do not touch any of the four intended vehicles, the warehouse, the railway, or their tracks.",
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "image": [
+          "1",
+          0
+        ],
+        "mask_image": [
+          "2",
+          0
+        ],
+        "seed": 26083263,
+        "sync_mode": false,
+        "enhance_prompt": false
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_docx_remove_extra_mask_v13",
+        "images": [
+          "3",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-docx-remove-extra-mask-v13"
+}

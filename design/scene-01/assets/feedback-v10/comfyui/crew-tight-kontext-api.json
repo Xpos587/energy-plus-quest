@@ -1,0 +1,12 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v10-crew-tight-scene.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"reference-crew.png","upload":"image"}},
+    "3": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 is a tight local crop around the one existing blue crew truck. Preserve the crop framing, road, snow, lane markings, shadows and surrounding pixels. Replace only that one vehicle in place with the production vehicle identity from Image 2: a compact blue high-box delivery truck in the same front three-quarter orientation, dark blue cab, blue cargo box, wheels grounded on the same asphalt, exactly two clearly visible drivers behind the windshield. Keep its current modest scale and position inside the crop. Image 2 is vehicle reference only; ignore its background. Hand-drawn northern winter storybook illustration, crisp contours, restrained gouache and paper grain. No extra vehicle, no extra people outside the cab, no road changes, no new buildings, no text, no invented lettering, no logo, no photorealism, no 3D render, no toy model.",
+      "image_1":["1",0],"image_2":["2",0],"aspect_ratio":"4:3","max_quality":false,"guidance_scale":3.4,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26082951
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_crew_tight_kontext","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-crew-tight-kontext"
+}

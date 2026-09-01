@@ -1,0 +1,21 @@
+{
+  "prompt_id": "ea84e05f-9fc1-4449-84f7-06c1fd839d1c",
+  "node": "FluxPro1Fill_fal",
+  "endpoint": "fal-ai/flux-pro/v1/fill",
+  "seed": 26083151,
+  "base": "../express-proof/composite.png",
+  "mask": "mask.png",
+  "guide": "guide.png",
+  "raw": "raw.png",
+  "composite": "composite.png",
+  "source_size": [
+    752,
+    1392
+  ],
+  "raw_size": [
+    736,
+    1376
+  ],
+  "outside_zero_pixel_diff": true,
+  "outside_changed_pixels": 0
+}

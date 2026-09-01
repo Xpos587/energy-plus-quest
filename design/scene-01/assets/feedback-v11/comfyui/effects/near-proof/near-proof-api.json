@@ -1,0 +1,49 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-approved-express-composite-near.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-near-context-mask.png",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "FluxPro1Fill_fal",
+      "inputs": {
+        "prompt": "Within the masked contextual area, add exactly one compact practical light-grey panel delivery van directly outside the right-hand warehouse loading exit. The van must be fully visible, clearly separate from the warehouse and every existing vehicle, and positioned on the dark loading-yard asphalt beside the orange barrier and snow bank. Face it out of the yard toward the tight turn, with front wheels visibly turned and only short compressed tire ruts. Use the same friendly northern winter illustration, three-quarter perspective, hand-painted contours, soft paper texture, blue snow shadows, warm low sun, and contact-shadow language as the surrounding scene. Make it larger than the distant old truck but smaller than the crew and Express trucks. Preserve the warehouse facade, loading gate, people, roads, all existing vehicles, the Express wordmark, and the approved Express snow wake. Do not add any other vehicle, detached trailer, traffic, text, logo, label, sign, UI, glow, or comic speed lines. The masked area is the only area that needs a change.",
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "image": [
+          "1",
+          0
+        ],
+        "mask_image": [
+          "2",
+          0
+        ],
+        "seed": 26083150,
+        "sync_mode": false,
+        "enhance_prompt": false
+      }
+    },
+    "4": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_near_context_proof",
+        "images": [
+          "3",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-near-context-proof"
+}

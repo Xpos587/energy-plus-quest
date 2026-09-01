@@ -1,0 +1,14 @@
+{
+  "status": "rejected",
+  "prompt_id": "5ee81ec0-766d-45e0-b1f7-1ea7491b153b",
+  "candidate": "candidates/01-lower-arterial-two-lanes-5ee81ec0-766d-45e0-b1f7-1ea7491b153b.png",
+  "candidate_sha256": "3ee1a30df924476b8ead2c99a45bfaadd517293aafe9f957ff445a2332b356a5",
+  "dimensions": [
+    768,
+    1424
+  ],
+  "reason": "visual QA rejected: duplicated vehicle-like forms/wheels appeared immediately outside the contour-protected Crew and Express masks; road cleanup itself was not sufficient for acceptance",
+  "protected_pixel_diff": "zero",
+  "next_action": "reject checkpoint; refine contour context/prompt before any further paid submission",
+  "recorded_at_unix": 1788209978.5342274
+}

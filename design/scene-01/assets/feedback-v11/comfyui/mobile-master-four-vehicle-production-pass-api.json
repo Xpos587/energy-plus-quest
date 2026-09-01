@@ -1,0 +1,62 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v11-approved-express-composite.png",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v5-production-mobile-style.webp",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "carrier-v10-near-vehicle-identity-reference.png",
+        "upload": "image"
+      }
+    },
+    "4": {
+      "class_type": "FluxProKontextMulti_fal",
+      "inputs": {
+        "prompt": "Image 1 is the current approved 9:16 winter city composition. Treat it as the hard content and camera reference: preserve the central blue warehouse, complete facade, roads, intersections, urban blocks, lighting direction, the existing Old, Crew, Express positions, and the approved Express snow wake. Image 2 is a production artwork style reference only: borrow its paper grain, hand-painted snow, asphalt texture, compact practical carrier silhouettes, and restrained blue-grey/orange palette. Image 3 is a vehicle identity reference for NEAR only: borrow its compact utility-van proportions and practical details, but do not copy its background or composition.\n\nCreate one coherent full-frame production texture revision, not a collage and not a new map. The final image must contain exactly four visible delivery vehicles and no traffic: the existing small distant muted blue-grey OLD truck upper-left; one new compact NEAR utility panel van directly outside the right-hand warehouse loading exit; the existing blue CREW truck lower-left with exactly two separate adult drivers readable side by side; and the existing modern orange EXPRESS truck lower-right on the open road with exactly one Express wordmark on its cargo body. Keep all four simultaneously countable at 375 px. NEAR must be clearly larger than OLD, clearly different from OLD and CREW, and fully inside the frame.\n\nMake NEAR a distinctive short-wheelbase, dark teal practical utility panel van with a low rounded body, pale hood, two visible wheels, turned front wheels, and no writing or logo. Place it immediately beside the warehouse barrier and snow bank, facing out from the loading yard into the tight turn; short compressed ruts make it close but slow. Never leave the loading exit empty, never turn NEAR into a white box truck, detached trailer, sign, shadow, or duplicate.\n\nUse the production reference's tactile texture over the whole scene while preserving the spatial drawing: layered paper grain, painterly snow edges, subtle asphalt variation, confident contours, and natural contact shadows. Reinforce the story with restrained indexical cues: OLD has faded paint, thin exhaust and thin tracks; NEAR has turned wheels and short ruts; CREW has two people and continuous tracks; EXPRESS has subtle wheel rotation blur, rear-tire spray, and a long low tapered wake on clear road. No comic speed lines, glow, arrows, smoke clouds, decorative noise, UI, labels, pins, routes, advertisements, extra text, logos, numbers, photorealism, glossy 3D, low-poly toy style, pasted cutouts, changed camera, extra vehicles, or cropped vehicles. Only the single Express wordmark may be readable.",
+        "image_1": [
+          "1",
+          0
+        ],
+        "image_2": [
+          "2",
+          0
+        ],
+        "image_3": [
+          "3",
+          0
+        ],
+        "aspect_ratio": "9:16",
+        "max_quality": true,
+        "guidance_scale": 3.8,
+        "num_images": 1,
+        "safety_tolerance": "2",
+        "output_format": "png",
+        "sync_mode": false,
+        "seed": 26083154
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "carrier_v11_mobile_four_vehicle_production_pass",
+        "images": [
+          "4",
+          0
+        ]
+      }
+    }
+  },
+  "client_id": "carrier-v11-mobile-four-vehicle-production-pass"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "carrier-mask-workbench/v1",
+  "session_id": "road-01",
+  "source": {
+    "file": "carrier-mobile.png",
+    "width": 768,
+    "height": 1424,
+    "sha256": "4589cd044064cacbd0d4e45bf8776ebb78f2f88d7cbb879be588c1cafd5db606"
+  },
+  "mask_convention": "white=edit,black=preserve",
+  "mode": "sequential",
+  "overlap_policy": "allow",
+  "masks": [
+    {
+      "id": "road-warehouse-seam",
+      "name": "Road / warehouse seam",
+      "comment": "Repair the vertical service-road edge along the left side of the central warehouse so the road runs cleanly beside, not beneath, the building. Preserve the complete warehouse, railway, loading yard, all four vehicles, snow, intersections, lighting, camera, and every unmasked pixel.",
+      "color": "#ef4444",
+      "visible": true,
+      "file": "masks/road-warehouse-seam.png",
+      "bounds": [
+        137,
+        330,
+        264,
+        900
+      ],
+      "sha256": "3810dee8471c9ad1a57112f898e7e8db3eadf8bac606b1dc4b015c858af2311a",
+      "pixel_count": 70706
+    }
+  ]
+}

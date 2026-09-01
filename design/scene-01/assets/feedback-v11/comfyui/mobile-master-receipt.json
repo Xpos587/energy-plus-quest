@@ -1,0 +1,40 @@
+{
+  "prompt_id": "fd5844e3-ab82-416e-b17d-d0f14ee793a7",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "fd5844e3-ab82-416e-b17d-d0f14ee793a7",
+          "timestamp": 1788080982540
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "fd5844e3-ab82-416e-b17d-d0f14ee793a7",
+          "timestamp": 1788080982544
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "fd5844e3-ab82-416e-b17d-d0f14ee793a7",
+          "timestamp": 1788081140964
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "filename": "carrier_v11_mobile_master_00001_.png",
+      "subfolder": "",
+      "type": "output"
+    }
+  ],
+  "workflow": "mobile-master-api.json",
+  "seed": 26083131
+}

@@ -1,0 +1,12 @@
+{
+  "prompt": {
+    "1": {"class_type":"LoadImage","inputs":{"image":"v10-crew-region-scene.png","upload":"image"}},
+    "2": {"class_type":"LoadImage","inputs":{"image":"reference-crew.png","upload":"image"}},
+    "3": {"class_type":"FluxProKontextMulti_fal","inputs":{
+      "prompt":"Image 1 is the exact local crop of the new city map. Preserve its camera, street layout, houses, snow, shadows, road markings and every object outside the one central blue vehicle. Image 2 is the current production reference for that vehicle only. Replace and refine only the central blue vehicle with the same production identity: a compact high-box blue delivery truck, dark blue cab, blue cargo body, front three-quarter view, grounded on the same road, exactly two clearly visible drivers through the windshield. Use Image 2 only for body shape, proportions, paint and crew cue; ignore its background. Keep exactly one vehicle in the crop. Match the hand-drawn northern winter storybook illustration language with crisp contours, gouache and paper grain. No new buildings, no road changes, no duplicate vehicle, no extra people outside the cab, no text, no logo, no photorealism, no 3D render, no toy model, no tilt-shift.",
+      "image_1":["1",0],"image_2":["2",0],"aspect_ratio":"1:1","max_quality":false,"guidance_scale":4.0,"num_images":1,"safety_tolerance":"2","output_format":"png","sync_mode":false,"seed":26082921
+    }},
+    "4": {"class_type":"SaveImage","inputs":{"filename_prefix":"carrier_v10_crew_region_final","images":["3",0]}}
+  },
+  "client_id":"carrier-v10-crew-region-final"
+}
