@@ -53,6 +53,6 @@ go-task release
 
 Оригинальные материалы Эдика находятся в [`materials/`](materials/). Актуальные
 решения последней встречи собраны в
-[`materials/meeting/2026-08-24/summary.md`](materials/meeting/2026-08-24/summary.md);
+[`materials/meeting/2026-09-02/summary.md`](materials/meeting/2026-09-02/summary.md);
 более ранние источники продолжают действовать в части, которую новая встреча не
 изменила.
