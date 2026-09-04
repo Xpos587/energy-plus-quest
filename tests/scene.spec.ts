@@ -1,7 +1,6 @@
-import { expect, type Page, test } from "@playwright/test";
+import { expect, type Locator, type Page, test } from "@playwright/test";
 
-const reviewScreenshot = (projectName: string, state: string) =>
-  `design/scene-01/review/${state}-${projectName === "mobile-chromium" ? "mobile" : "desktop"}.png`;
+const progressLabels = ["Профиль", "Получатель", "Подарок", "Перевозчик"];
 
 async function settle(page: Page) {
   await page.evaluate(() => document.fonts.ready);
@@ -13,286 +12,196 @@ async function settle(page: Page) {
   await page.waitForTimeout(700);
 }
 
-test("plays the first scene from intro to an illustrated outcome", async ({
-  page,
-}, testInfo) => {
-  await page.goto("/");
-  await expect(
-    page.getByRole("heading", { name: /Доставляем радость/ }),
-  ).toBeVisible();
-  await settle(page);
-  await page.screenshot({
-    fullPage: false,
-    path: reviewScreenshot(testInfo.project.name, "intro"),
-  });
-
-  await page.getByRole("button", { name: /Начать игру/ }).click();
-  await expect(
-    page.getByRole("heading", { name: "Кто отправится в путь?" }),
-  ).toBeVisible();
-  await expect(
-    page.locator('[data-art-version="feedback-v4"]').first(),
-  ).toBeVisible();
-  await expect(page.locator('[data-score-art="feedback-v5"]')).toHaveCount(3);
-  for (const label of ["Энергия", "Эмпатия", "Эффективность"]) {
-    await expect(
-      page.locator("[data-score-key]").filter({ hasText: label }),
-    ).toBeVisible();
-  }
-  for (const role of ["student", "professional"]) {
-    const card = page.locator(`[data-choice="${role}"]`);
-    await expect(card.locator('[data-role-part="label"]')).toHaveCount(0);
-    await expect(card.locator('[data-role-part="title"]')).toBeVisible();
-    await expect(card.locator('[data-role-part="action"]')).toBeVisible();
-  }
-  await expect(
-    page.getByText("Начало игры · роль", { exact: true }),
-  ).toHaveCount(0);
-  await expect(
-    page.getByText("Выберите, кто отправится в путь.", { exact: true }),
-  ).toHaveCount(0);
-  await expect(page.getByText("Сцена 01", { exact: true })).toHaveCount(0);
-  await settle(page);
-  await page.screenshot({
-    fullPage: false,
-    path: reviewScreenshot(testInfo.project.name, "profile"),
-  });
-
-  await page.getByRole("button", { name: /Студент/ }).click();
-  await expect(
-    page.getByRole("heading", { name: "Выберите получателя" }),
-  ).toBeVisible();
-  await expect(
-    page.locator('[class*="screenHeading"] [class*="eyebrow"]'),
-  ).toHaveCount(0);
-  await expect(
-    page.locator('[data-choice="alva"] [data-role-part="label"]'),
-  ).toHaveCount(0);
-  await expect(
-    page.locator('[data-choice="alva"] [data-art-version="feedback-v6"]'),
-  ).toBeVisible();
-  await expect(
-    page.locator('[data-choice="khor"] [data-role-part="label"]'),
-  ).toHaveCount(0);
-  await expect(
-    page.locator('[data-choice="arseniy"] [data-role-part="label"]'),
-  ).toHaveCount(0);
-  await expect(
-    page.getByText("Выберите того, кому мы повезём подарок.", { exact: true }),
-  ).toHaveCount(0);
-  await expect(
-    page.getByText("Вахтовый работник", { exact: true }),
-  ).toHaveCount(0);
-  await expect(
-    page.getByText("Вахтовик Арсений", { exact: true }),
-  ).toBeVisible();
-  const khorImage = page.locator(
-    '[data-choice="khor"] [class*="choiceSymbol"] img',
+async function expectContext(locator: Locator, keys: string[]) {
+  await expect(locator.locator("[data-selection-context]")).toHaveCount(
+    keys.length,
   );
-  await expect(khorImage).toHaveCSS("object-fit", "cover");
-  await settle(page);
-  await page.screenshot({
-    fullPage: false,
-    path: reviewScreenshot(testInfo.project.name, "recipient"),
-  });
-  await page.getByRole("button", { name: /Альва/ }).click();
-  await expect(
-    page.getByRole("heading", { name: "Что будет в посылке?" }),
-  ).toBeVisible();
-  await expect(
-    page.locator('[class*="screenHeading"] [class*="eyebrow"]'),
-  ).toHaveCount(0);
-  for (const parcel of ["camera", "socks", "boat"]) {
-    await expect(
-      page.locator(`[data-choice="${parcel}"] [data-role-part="label"]`),
-    ).toHaveCount(0);
-  }
-  await expect(
-    page.getByText("Решите, что окажется внутри посылки.", { exact: true }),
-  ).toHaveCount(0);
-  await settle(page);
-  await page.screenshot({
-    fullPage: false,
-    path: reviewScreenshot(testInfo.project.name, "parcel"),
-  });
-  await page.getByRole("button", { name: /Фотоаппарат/ }).click();
+  expect(
+    await locator
+      .locator("[data-selection-context]")
+      .evaluateAll((elements) =>
+        elements.map((element) =>
+          element.getAttribute("data-selection-context"),
+        ),
+      ),
+  ).toEqual(keys);
+}
 
+async function expectCompactHeader(page: Page) {
+  const progress = page.getByRole("navigation", { name: "Прогресс сцены" });
+  await expect(progress.locator("[data-progress-step]")).toHaveCount(4);
+  await expect(progress.locator('[aria-current="step"]')).toHaveCount(1);
+  for (const label of progressLabels) {
+    await expect(progress.getByText(label, { exact: true })).toHaveCSS(
+      "clip-path",
+      "inset(50%)",
+    );
+  }
+  await expect(page.locator("header [data-score-key]")).toHaveCount(0);
+}
+
+async function playReviewPath(page: Page) {
+  await page.goto("/");
+  await page.getByRole("button", { name: /Начать игру/ }).click();
+  await page.getByRole("button", { name: /Профессионал/ }).click();
+  await page.getByRole("button", { name: /Альва/ }).click();
+  await page.getByRole("button", { name: /Фотоаппарат/ }).click();
   await expect(
     page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
   ).toBeVisible();
-  await expect(
-    page
-      .locator('section[aria-label="Карта доступных перевозчиков"]')
-      .getByRole("button"),
-  ).toHaveCount(4);
-  await expect(
-    page.getByRole("button", { name: /старая машина далеко от склада/i }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: /машина у ворот едет медленно/i }),
-  ).toBeVisible();
-  const generatedMap = page.locator(
-    '[data-map-media="generated"][data-art-version="feedback-v11"]',
-  );
-  await expect(generatedMap).toBeVisible();
-  await expect(generatedMap).toHaveAttribute(
-    "data-map-contract",
-    "warehouse-roads-four-carriers",
-  );
-  await expect(page.locator('[data-carrier-map="vector-v1"]')).toHaveCount(0);
-  await expect(page.locator('[data-art-version="feedback-v9"]')).toHaveCount(0);
-  for (const carrier of ["old", "near", "crew", "express"]) {
-    await expect(page.locator(`[data-map-label="${carrier}"]`)).toBeVisible();
-  }
-  await expect(page.locator("[data-carrier-hotspot]")).toHaveCount(4);
-  await expect(page.locator('[data-motion-state]')).toHaveCount(4);
-  const motionDurations = await page.locator('[data-motion-state]').evaluateAll((elements) =>
-    Object.fromEntries(elements.map((element) => [
-      element.getAttribute('data-motion-state'),
-      getComputedStyle(element).animationDuration,
-    ])),
-  );
-  expect(motionDurations).toMatchObject({ old: '8s', near: '7.4s', crew: '3.8s', express: '1.9s' });
-  const hotspotSizes = await page
-    .locator("[data-carrier-hotspot]")
-    .evaluateAll((elements) =>
-      elements.map((element) => {
-        const box = element.getBoundingClientRect();
-        return { width: box.width, height: box.height };
-      }),
-    );
-  for (const size of hotspotSizes) {
-    expect(size.width).toBeGreaterThanOrEqual(44);
-    expect(size.height).toBeGreaterThanOrEqual(44);
-  }
-  await expect(page.locator('[class*="vehicleSprite"]')).toHaveCount(0);
-  await expect(page.locator('[class*="routeNetwork"]')).toHaveCount(0);
-  await expect(page.getByText("Старая машина", { exact: true })).toBeVisible();
-  await expect(page.getByText("Два водителя", { exact: true })).toBeVisible();
-  await expect(page.getByText("Машины 1 и 4", { exact: true })).toHaveCount(0);
-  await expect(page.getByText("Широкий маршрут", { exact: true })).toHaveCount(
-    0,
-  );
-  const carrierViewport = page.viewportSize();
-  if (carrierViewport && carrierViewport.width <= 760) {
-    await expect(page.locator('[data-carrier="express"] [data-map-label="express"]')).toBeInViewport();
-  }
-  await settle(page);
-  await page.screenshot({
-    fullPage: false,
-    path: reviewScreenshot(testInfo.project.name, "carrier"),
-  });
+}
 
-  await page
-    .getByRole("button", { name: /^Машина у ворот едет медленно:/ })
-    .click();
-  await expect(
-    page.getByRole("heading", { name: "Близко — не значит быстро" }),
-  ).toBeVisible();
-  await expect(page.locator('[data-outcome-art="near"]')).toBeVisible();
-  await expect(page.locator('[class*="outcomeTokenThumb"]')).toHaveCount(2);
-  await expect(
-    page.locator('[data-outcome-art="near"][data-art-version="feedback-v5"]'),
-  ).toBeVisible();
-  for (const rejectedLabel of ["График", "Техника", "Экипаж", "Цена"]) {
-    await expect(page.getByText(rejectedLabel, { exact: true })).toHaveCount(0);
-  }
-  await expect(
-    page.getByRole("button", { name: /Назад к машинам/ }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: /Назад к машинам/ }),
-  ).toHaveAttribute("data-control-style", "secondary");
-  await expect(
-    page.getByRole("button", { name: /Начать заново/ }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: /Начать заново/ }),
-  ).toHaveAttribute("data-control-style", "secondary");
-  await expect(
-    page.getByText(/Теперь нам нужно погрузить подарок/),
-  ).toBeVisible();
-});
-
-test("stops carrier state motion when reduced motion is requested", async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/");
-  await page.getByRole("button", { name: /Начать игру/ }).click();
-  await page.getByRole("button", { name: /Студент/ }).click();
-  await page.getByRole("button", { name: /Альва/ }).click();
-  await page.getByRole("button", { name: /Фотоаппарат/ }).click();
-  const animations = await page.locator('[data-motion-state]').evaluateAll((elements) =>
-    elements.map((element) => getComputedStyle(element).animationName),
-  );
-  expect(animations).toEqual(["none", "none", "none", "none"]);
-});
-
-test("frames the slower outcomes constructively instead of as breakdown imagery", async ({
+test("first scene uses compact progress and incremental selection context", async ({
   page,
-}, testInfo) => {
+}) => {
   await page.goto("/");
   await page.getByRole("button", { name: /Начать игру/ }).click();
-  await page.getByRole("button", { name: /Студент/ }).click();
-  await page.getByRole("button", { name: /Альва/ }).click();
-  await page.getByRole("button", { name: /Фотоаппарат/ }).click();
-  await page
-    .getByRole("button", { name: /старая машина далеко от склада/i })
-    .click();
 
+  await expectCompactHeader(page);
+  await expectContext(page.locator("header"), []);
+  await expect(
+    page.locator(
+      '[data-choice="professional"] [data-art-version="feedback-v12"]',
+    ),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: /Профессионал/ }).click();
+  await expectCompactHeader(page);
+  await expectContext(page.locator("header"), ["profile"]);
+
+  await page.getByRole("button", { name: /Альва/ }).click();
+  await expectCompactHeader(page);
+  await expectContext(page.locator("header"), ["profile", "recipient"]);
+
+  await page.getByRole("button", { name: /Фотоаппарат/ }).click();
+  await expectCompactHeader(page);
+  await expectContext(page.locator("header"), [
+    "profile",
+    "parcel",
+    "recipient",
+  ]);
+});
+
+test("carrier map exposes four numbered trucks and a separate Express control", async ({
+  page,
+}) => {
+  await playReviewPath(page);
+
+  const hotspots = page.locator("[data-carrier-hotspot]");
+  await expect(hotspots).toHaveCount(4);
+  expect(
+    await hotspots.evaluateAll((elements) =>
+      elements.map((element) => element.getAttribute("data-truck")),
+    ),
+  ).toEqual(["truck-1", "truck-2", "truck-3", "truck-4"]);
+  for (const number of [1, 2, 3, 4]) {
+    await expect(
+      page.locator(`[data-truck="truck-${number}"]`).getByText(String(number), {
+        exact: true,
+      }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: `Машина №${number}`, exact: true }),
+    ).toBeVisible();
+  }
+
+  await expect(page.locator("[data-express-control]")).toHaveCount(1);
+  await expect(
+    page.getByRole("button", { name: "Автоподбор Express", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.locator(
+      '[data-map-media="generated"][data-art-version="feedback-v12"]',
+    ),
+  ).toBeVisible();
+
+  for (const choice of ["№1 или №4", "№2", "№3"]) {
+    await expect(
+      page.getByRole("button", { name: choice, exact: true }),
+    ).toBeVisible();
+  }
+});
+
+test("truck 1 and duplicated truck 4 choice share the old result", async ({
+  page,
+}) => {
+  await playReviewPath(page);
+  await page.getByRole("button", { name: "Машина №1", exact: true }).click();
   await expect(
     page.getByRole("heading", { name: "Маршрут потребовал больше времени" }),
   ).toBeVisible();
+
+  await page.getByRole("button", { name: "Назад к машинам" }).click();
+  await page.getByRole("button", { name: "№1 или №4", exact: true }).click();
   await expect(
-    page.locator('[data-outcome-art="old"][data-art-version="feedback-v5"]'),
+    page.getByRole("heading", { name: "Маршрут потребовал больше времени" }),
   ).toBeVisible();
-  await expect(page.getByText("Возраст берёт своё")).toHaveCount(0);
-  await settle(page);
-  await page.screenshot({
-    fullPage: false,
-    path: reviewScreenshot(testInfo.project.name, "outcome-old"),
-  });
 });
 
-test("returns from an outcome to the map and then shows the Express result", async ({
+test("truck 2, truck 3, and Express keep their existing outcomes", async ({
   page,
-}, testInfo) => {
-  await page.goto("/");
-  await page.getByRole("button", { name: /Начать игру/ }).click();
-  await page.getByRole("button", { name: /Студент/ }).click();
-  await page.getByRole("button", { name: /Альва/ }).click();
-  await page.getByRole("button", { name: /Фотоаппарат/ }).click();
+}) => {
+  const cases = [
+    ["Машина №2", "Близко — не значит быстро"],
+    ["Машина №3", "Два водителя лучше одного"],
+    ["Автоподбор Express", "Перевозчик найден за два часа"],
+  ] as const;
 
-  await page
-    .getByRole("button", { name: /^Два водителя едут без остановок:/ })
-    .click();
+  for (const [control, title] of cases) {
+    await playReviewPath(page);
+    await page.getByRole("button", { name: control, exact: true }).click();
+    await expect(page.getByRole("heading", { name: title })).toBeVisible();
+  }
+});
+
+test("outcome keeps one score delta and active review continuation", async ({
+  page,
+}) => {
+  await playReviewPath(page);
+  await page.getByRole("button", { name: "Машина №2", exact: true }).click();
+
+  await expectContext(page.locator('[data-layout="result"]'), [
+    "profile",
+    "parcel",
+    "recipient",
+  ]);
+  await expect(page.locator("header [data-score-key]")).toHaveCount(0);
   await expect(
-    page.getByRole("heading", { name: "Два водителя лучше одного" }),
+    page.locator('[data-layout="result"] [data-score-key]'),
+  ).toHaveCount(3);
+  await expect(
+    page.locator('[data-outcome-art="near"][data-art-version="feedback-v12"]'),
   ).toBeVisible();
 
-  await page.getByRole("button", { name: /Назад к машинам/ }).click();
-  await expect(
-    page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
-  ).toBeVisible();
+  for (const removed of [
+    "Изменение срока",
+    "Дальше · скоро",
+    "Начать заново",
+    "Теперь нам нужно погрузить подарок...",
+  ]) {
+    await expect(page.getByText(removed, { exact: true })).toHaveCount(0);
+  }
 
-  await page
-    .getByRole("button", {
-      name: "Автоподбор Express уже в пути: Автоподбор Express",
-    })
-    .click();
   await expect(
-    page.getByRole("heading", { name: "Перевозчик найден за два часа" }),
+    page.getByRole("button", { name: "Назад к машинам" }),
   ).toBeVisible();
-  await expect(
-    page.getByText(/За два часа Express нашёл новую фуру с двумя водителями/),
-  ).toBeVisible();
-  await expect(page.locator('[data-outcome-art="express"]')).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: /Начать заново/ }),
-  ).toBeVisible();
-  await expect(page.getByText(/Рекомендация Express/)).toHaveCount(0);
+  const continueButton = page.getByRole("button", { name: "Едем дальше" });
+  await expect(continueButton).toBeEnabled();
+  await continueButton.click();
+  await expect(page.getByRole("status")).toHaveText(
+    "Продолжение маршрута появится в следующей версии",
+  );
   await settle(page);
-  await page.screenshot({
-    fullPage: false,
-    path: reviewScreenshot(testInfo.project.name, "outcome"),
-  });
+});
+
+test("carrier choices remain static with reduced motion", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await playReviewPath(page);
+
+  const animations = await page
+    .locator("[data-carrier-hotspot]")
+    .evaluateAll((elements) =>
+      elements.map((element) => getComputedStyle(element).animationName),
+    );
+  expect(animations).toEqual(["none", "none", "none", "none"]);
 });

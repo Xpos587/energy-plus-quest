@@ -62,32 +62,18 @@ describe("gameReducer", () => {
     ).toBe("recipient");
   });
 
-  it("applies the chosen carrier score and opens the consequence", () => {
+  it.each([
+    ["old", { energy: 0, empathy: -3, efficiency: -3 }],
+    ["near", { energy: 1, empathy: 0, efficiency: -2 }],
+    ["crew", { energy: -3, empathy: 3, efficiency: 4 }],
+    ["express", { energy: -1, empathy: 5, efficiency: 5 }],
+  ] as const)("applies the %s carrier score", (carrier, scores) => {
     const outcome = gameReducer(initialGameState, {
       type: "CHOOSE_CARRIER",
-      value: "crew",
+      value: carrier,
     });
 
-    expect(outcome.step).toBe("outcome");
-    expect(outcome.carrier).toBe("crew");
-    expect(outcome.scores).toEqual({
-      energy: -3,
-      empathy: 3,
-      efficiency: 4,
-    });
-  });
-
-  it("gives Express the values from the first-scene draft", () => {
-    const outcome = gameReducer(initialGameState, {
-      type: "CHOOSE_CARRIER",
-      value: "express",
-    });
-
-    expect(outcome.scores).toEqual({
-      energy: -1,
-      empathy: 5,
-      efficiency: 5,
-    });
+    expect(outcome).toMatchObject({ carrier, scores, step: "outcome" });
   });
 
   it("resets the entire route", () => {

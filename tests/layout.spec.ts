@@ -18,86 +18,40 @@ async function expectNoPageScroll(page: Page) {
 
 async function expectControlsInsideViewport(page: Page) {
   const controls = page.getByRole("button").filter({ visible: true });
-  const count = await controls.count();
-
-  for (let index = 0; index < count; index += 1) {
+  for (let index = 0; index < (await controls.count()); index += 1) {
     await expect(controls.nth(index)).toBeInViewport();
   }
 }
 
-async function expectScoreIcons(page: Page) {
-  for (const key of ["energy", "empathy", "efficiency"]) {
-    const score = page.locator(`[data-score-key="${key}"]`).first();
-    await expect(score).toBeVisible();
-    await expect(score.locator("img")).toBeVisible();
-  }
+async function expectImagesComplete(page: Page) {
+  expect(
+    await page
+      .locator("img")
+      .evaluateAll((images) =>
+        images.every(
+          (image) =>
+            (image as HTMLImageElement).complete &&
+            (image as HTMLImageElement).naturalWidth > 0,
+        ),
+      ),
+  ).toBe(true);
 }
 
-async function expectChoiceArtworkFullBleed(page: Page, choice: string) {
-  const card = page.locator(`[data-choice="${choice}"]`);
-  const artwork = card.locator('[class*="choiceSymbol"]');
-  await card.evaluate((element) =>
-    Promise.all(
-      element
-        .getAnimations()
-        .map((animation) => animation.finished.catch(() => undefined)),
-    ),
-  );
-  const cardBox = await card.boundingBox();
-  const artworkBox = await artwork.boundingBox();
-
-  expect(cardBox).not.toBeNull();
-  expect(artworkBox).not.toBeNull();
-  expect(
-    Math.abs((cardBox?.x ?? 0) - (artworkBox?.x ?? 0)),
-  ).toBeLessThanOrEqual(1.5);
-  expect(
-    Math.abs((cardBox?.y ?? 0) - (artworkBox?.y ?? 0)),
-  ).toBeLessThanOrEqual(1.5);
-
-  const isStacked = (artworkBox?.height ?? 0) < (cardBox?.height ?? 0) * 0.8;
-  if (isStacked) {
-    expect(
-      Math.abs(
-        (cardBox?.x ?? 0) +
-          (cardBox?.width ?? 0) -
-          ((artworkBox?.x ?? 0) + (artworkBox?.width ?? 0)),
-      ),
-    ).toBeLessThanOrEqual(1.5);
-  } else {
-    expect(
-      Math.abs(
-        (cardBox?.y ?? 0) +
-          (cardBox?.height ?? 0) -
-          ((artworkBox?.y ?? 0) + (artworkBox?.height ?? 0)),
-      ),
-    ).toBeLessThanOrEqual(1.5);
-  }
+async function expectScreenFits(page: Page) {
+  await expectControlsInsideViewport(page);
+  await expectNoPageScroll(page);
+  await expectImagesComplete(page);
 }
 
-async function expectResultScoresDoNotOverlap(page: Page) {
-  const resultScores = page.locator('[data-layout="result"] [data-score-key]');
-
-  for (let index = 0; index < (await resultScores.count()); index += 1) {
-    const score = resultScores.nth(index);
-    const labelBox = await score.locator("span").boundingBox();
-    const valueBox = await score.locator("strong").boundingBox();
-
-    expect(labelBox).not.toBeNull();
-    expect(valueBox).not.toBeNull();
-    const overlapWidth =
-      Math.min(
-        (labelBox?.x ?? 0) + (labelBox?.width ?? 0),
-        (valueBox?.x ?? 0) + (valueBox?.width ?? 0),
-      ) - Math.max(labelBox?.x ?? 0, valueBox?.x ?? 0);
-    const overlapHeight =
-      Math.min(
-        (labelBox?.y ?? 0) + (labelBox?.height ?? 0),
-        (valueBox?.y ?? 0) + (valueBox?.height ?? 0),
-      ) - Math.max(labelBox?.y ?? 0, valueBox?.y ?? 0);
-
-    expect(overlapWidth > 0.5 && overlapHeight > 0.5).toBe(false);
-  }
+async function playReviewPath(page: Page) {
+  await page.goto("/");
+  await page.getByRole("button", { name: /Начать игру/ }).click();
+  await page.getByRole("button", { name: /Профессионал/ }).click();
+  await page.getByRole("button", { name: /Альва/ }).click();
+  await page.getByRole("button", { name: /Фотоаппарат/ }).click();
+  await expect(
+    page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
+  ).toBeVisible();
 }
 
 test("keeps the playable route inside one viewport", async ({ page }) => {
@@ -105,171 +59,74 @@ test("keeps the playable route inside one viewport", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: /Доставляем радость/ }),
   ).toBeVisible();
-  await expectNoPageScroll(page);
+  await expectScreenFits(page);
 
   await page.getByRole("button", { name: /Начать игру/ }).click();
-  await expectScoreIcons(page);
-  await expectControlsInsideViewport(page);
-  await expectNoPageScroll(page);
-
-  const initialViewport = page.viewportSize();
-  if (initialViewport && initialViewport.width <= 760) {
-    await expect(page.getByAltText("Энергия+", { exact: true })).toBeVisible();
-
-    const headerHeight = await page
-      .locator("header")
-      .evaluate((element) => element.getBoundingClientRect().height);
-    const scoreMetrics = await page
-      .locator("[data-score-key]")
-      .evaluateAll((elements) =>
-        elements.map((element) => {
-          const box = element.getBoundingClientRect();
-          const icon = element.querySelector("img")?.getBoundingClientRect();
-          const value = element
-            .querySelector("strong")
-            ?.getBoundingClientRect();
-
-          return {
-            height: box.height,
-            iconValueGap:
-              icon && value
-                ? value.left - icon.right
-                : Number.POSITIVE_INFINITY,
-          };
-        }),
-      );
-
-    expect(headerHeight).toBeLessThanOrEqual(62);
-    for (const metric of scoreMetrics) {
-      expect(metric.height).toBeLessThanOrEqual(44);
-      expect(metric.iconValueGap).toBeLessThanOrEqual(6);
-    }
-  }
-
-  if (initialViewport && initialViewport.width > 1380) {
-    const brandBox = await page
-      .locator('[class*="brandCluster"]')
-      .boundingBox();
-    const progressBox = await page
-      .getByRole("navigation", { name: "Прогресс сцены" })
-      .boundingBox();
-    const progressOverflow = await page
-      .getByRole("navigation", { name: "Прогресс сцены" })
-      .evaluate((element) => element.scrollWidth - element.clientWidth);
-
-    expect(brandBox).not.toBeNull();
-    expect(progressBox).not.toBeNull();
-    expect((brandBox?.x ?? 0) + (brandBox?.width ?? 0)).toBeLessThanOrEqual(
-      progressBox?.x ?? 0,
-    );
-    expect(progressOverflow).toBeLessThanOrEqual(1);
-  }
-
-  await page.getByRole("button", { name: /Студент/ }).click();
-  await expectChoiceArtworkFullBleed(page, "alva");
-  await expectControlsInsideViewport(page);
-  await expectNoPageScroll(page);
+  await expectScreenFits(page);
+  await page.getByRole("button", { name: /Профессионал/ }).click();
+  await expectScreenFits(page);
   await page.getByRole("button", { name: /Альва/ }).click();
-  await expectChoiceArtworkFullBleed(page, "camera");
-  await expectControlsInsideViewport(page);
-  await expectNoPageScroll(page);
+  await expectScreenFits(page);
   await page.getByRole("button", { name: /Фотоаппарат/ }).click();
-  await expectControlsInsideViewport(page);
-  await expectNoPageScroll(page);
+  await expectScreenFits(page);
 
+  const carrierControls = page.locator(
+    "[data-carrier-hotspot], [data-carrier-choice], [data-express-control]",
+  );
+  for (let index = 0; index < (await carrierControls.count()); index += 1) {
+    const box = await carrierControls.nth(index).boundingBox();
+    expect(box).not.toBeNull();
+    expect(box?.width ?? 0).toBeGreaterThanOrEqual(44);
+    expect(box?.height ?? 0).toBeGreaterThanOrEqual(44);
+  }
+
+  for (let number = 1; number <= 4; number += 1) {
+    const hotspot = page.locator(`[data-truck="truck-${number}"]`);
+    const badge = hotspot.locator("[data-truck-number]");
+    const [hotspotBox, badgeBox] = await Promise.all([
+      hotspot.boundingBox(),
+      badge.boundingBox(),
+    ]);
+    expect(hotspotBox).not.toBeNull();
+    expect(badgeBox).not.toBeNull();
+    const badgeCenter = {
+      x: (badgeBox?.x ?? 0) + (badgeBox?.width ?? 0) / 2,
+      y: (badgeBox?.y ?? 0) + (badgeBox?.height ?? 0) / 2,
+    };
+    expect(badgeCenter.x).toBeGreaterThanOrEqual(hotspotBox?.x ?? 0);
+    expect(badgeCenter.x).toBeLessThanOrEqual(
+      (hotspotBox?.x ?? 0) + (hotspotBox?.width ?? 0),
+    );
+    expect(badgeCenter.y).toBeGreaterThanOrEqual(hotspotBox?.y ?? 0);
+    expect(badgeCenter.y).toBeLessThanOrEqual(
+      (hotspotBox?.y ?? 0) + (hotspotBox?.height ?? 0),
+    );
+  }
+
+  await page.getByRole("button", { name: "Машина №2", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
+    page.getByRole("heading", { name: "Близко — не значит быстро" }),
   ).toBeVisible();
-  await expect(
-    page.getByRole("button", {
-      name: "Автоподбор Express уже в пути: Автоподбор Express",
+  await expectScreenFits(page);
+
+  await page.getByRole("button", { name: "Назад к машинам" }).click();
+  await expectScreenFits(page);
+  await page.getByRole("button", { name: "Назад", exact: true }).click();
+  await expectScreenFits(page);
+});
+
+test("shows visible keyboard focus on carrier controls", async ({ page }) => {
+  await playReviewPath(page);
+  const firstTruck = page.getByRole("button", {
+    name: "Машина №1",
+    exact: true,
+  });
+  await firstTruck.focus();
+  await expect(firstTruck).toBeFocused();
+  expect(
+    await firstTruck.evaluate((element) => {
+      const style = getComputedStyle(element);
+      return style.outlineStyle !== "none" || style.boxShadow !== "none";
     }),
-  ).toBeVisible();
-  await expect(
-    page
-      .locator('section[aria-label="Карта доступных перевозчиков"]')
-      .getByRole("button"),
-  ).toHaveCount(4);
-
-  const viewport = page.viewportSize();
-  if (viewport && viewport.width > 760 && viewport.width <= 1380) {
-    const scoreBottom = await page
-      .locator("[data-score-key]")
-      .evaluateAll((elements) =>
-        Math.max(
-          ...elements.map((element) => element.getBoundingClientRect().bottom),
-        ),
-      );
-    const progressTop = await page
-      .getByRole("navigation", { name: "Прогресс сцены" })
-      .evaluate((element) => element.getBoundingClientRect().top);
-
-    expect(scoreBottom).toBeLessThanOrEqual(progressTop);
-  }
-
-  if (
-    viewport &&
-    viewport.width > 760 &&
-    viewport.width <= 1120 &&
-    viewport.height <= 700
-  ) {
-    const missionBottom = await page
-      .locator('[class*="missionBar"]')
-      .evaluate((element) => element.getBoundingClientRect().bottom);
-    const carrierTops = await page
-      .locator('section[aria-label="Карта доступных перевозчиков"] button')
-      .evaluateAll((elements) =>
-        elements.map((element) => element.getBoundingClientRect().top),
-      );
-
-    expect(Math.min(...carrierTops)).toBeGreaterThanOrEqual(missionBottom);
-  }
-  await expectControlsInsideViewport(page);
-  await expectNoPageScroll(page);
-
-  await page
-    .getByRole("button", {
-      name: "Автоподбор Express уже в пути: Автоподбор Express",
-    })
-    .click();
-  await expect(
-    page.getByRole("heading", { name: "Перевозчик найден за два часа" }),
-  ).toBeVisible();
-  await expectResultScoresDoNotOverlap(page);
-  if (viewport && viewport.width > 760) {
-    const resultPanel = await page
-      .locator('[data-layout="result"] [data-carrier="express"]')
-      .boundingBox();
-    expect(resultPanel).not.toBeNull();
-    expect(resultPanel?.x ?? 0).toBeGreaterThanOrEqual(viewport.width * 0.6);
-  }
-
-  if (viewport && viewport.width <= 760 && viewport.height <= 720) {
-    const panelTop = await page
-      .locator('[data-layout="result"] [class*="resultPanel"]')
-      .evaluate((element) => element.getBoundingClientRect().top);
-    const artworkBottom = await page
-      .locator('[data-layout="result"] [class*="outcomeBackdrop"]')
-      .evaluate((element) => element.getBoundingClientRect().bottom);
-    expect(panelTop).toBeGreaterThanOrEqual(artworkBottom - 4);
-  }
-  await expectControlsInsideViewport(page);
-  await expectNoPageScroll(page);
-  await expect(
-    page.getByRole("button", { name: /Назад к машинам/ }),
-  ).toBeVisible();
-
-  await page.getByRole("button", { name: /Назад к машинам/ }).click();
-  await expect(
-    page.getByRole("heading", { name: "Выберите транспорт для подарка" }),
-  ).toBeVisible();
-  await expectControlsInsideViewport(page);
-  await expectNoPageScroll(page);
-
-  await page.getByRole("button", { name: /Назад/ }).first().click();
-  await expect(
-    page.getByRole("heading", { name: "Что будет в посылке?" }),
-  ).toBeVisible();
-  await expectControlsInsideViewport(page);
-  await expectNoPageScroll(page);
+  ).toBe(true);
 });

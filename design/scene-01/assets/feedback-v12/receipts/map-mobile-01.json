@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "prompt": "design/scene-01/assets/feedback-v12/prompts/map-mobile.txt",
+  "prompt_sha256": "4eb30b1925a1d714dfe1b215633cf725fffaf340f56442d381f783e0bed9a2cc",
+  "references": [
+    {
+      "path": "design/scene-01/assets/feedback-v12/guides/mobile-safe-zone.png",
+      "sha256": "8a1cdb684e41406b914a0a511f94a4b2cb6ecd1a0b3ce7395f38fad5fde98166"
+    },
+    {
+      "path": "design/scene-01/assets/feedback-v4/production/choices/student.webp",
+      "sha256": "2508b846d8253fe8c9a985e40ef61f8ecff5c5a690650835a537aeb8f3cd25a1"
+    }
+  ],
+  "parameters": {
+    "width": 780,
+    "height": 1688,
+    "background": "opaque",
+    "quality": "high",
+    "input_fidelity": "high",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa8fba7/dnpM9bIVspKjRwnOU-gzm_MtInaFKl.png",
+        "content_type": "image/png",
+        "file_name": "dnpM9bIVspKjRwnOU-gzm_MtInaFKl.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "output": "design/scene-01/assets/feedback-v12/candidates/map-mobile-01.png",
+  "output_sha256": "bdcfa0fdf2cc3a87d7b412821b6df42f6c854105678df97d67e08d614a9a2813"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "prompt": "design/scene-01/assets/feedback-v12/prompts/professional.txt",
+  "prompt_sha256": "26fa40db1cbe1c8c42a953fe47a477e03d704b1c3c4ef740d3e23ccf9bc5c2ee",
+  "references": [
+    {
+      "path": "design/scene-01/assets/feedback-v4/production/choices/student.webp",
+      "sha256": "2508b846d8253fe8c9a985e40ef61f8ecff5c5a690650835a537aeb8f3cd25a1"
+    },
+    {
+      "path": "design/scene-01/assets/feedback-v5/production/choices/professional.webp",
+      "sha256": "19eb9ef17be69b851f9cd2dbb041a43c98443bdaf0442b32d905a449821a5f4c"
+    }
+  ],
+  "parameters": {
+    "width": 1536,
+    "height": 1920,
+    "background": "opaque",
+    "quality": "high",
+    "input_fidelity": "high",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa8fb93/1De1JIWSDn1JtnUGiPQ5A_7IdKIQUk.png",
+        "content_type": "image/png",
+        "file_name": "1De1JIWSDn1JtnUGiPQ5A_7IdKIQUk.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "output": "design/scene-01/assets/feedback-v12/candidates/professional-01.png",
+  "output_sha256": "1d8cb527abc708a583ae924d72cd46d7aa6ab487d042cb367cbcb8af4163e3ad"
+}

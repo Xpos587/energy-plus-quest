@@ -1,12 +1,13 @@
-import type { CSSProperties } from "react";
+import { type CSSProperties, useState } from "react";
 import arrowDiscArtwork from "../design/scene-01/assets/ui/arrow-disc-blue.png";
 import styles from "./App.module.css";
 import { CityMap } from "./components/CityMap";
-import { ScoreBoard, ScoreDelta } from "./components/ScoreBoard";
+import { ScoreDelta } from "./components/ScoreBoard";
 import { choiceArtwork, outcomeArtwork } from "./game/artwork";
 import {
   findCarrier,
   findParcel,
+  findProfile,
   findRecipient,
   parcels,
   profiles,
@@ -14,9 +15,19 @@ import {
 } from "./game/content";
 import { GameProvider, useGame } from "./game/GameContext";
 import { interpolateOutcome } from "./game/outcomeText";
-import type { CarrierId, ChoiceItem, GameAction } from "./game/types";
+import type {
+  CarrierId,
+  ChoiceItem,
+  GameAction,
+  GameState,
+} from "./game/types";
 
-const progressSteps = ["Профиль", "Получатель", "Подарок", "Перевозчик"];
+const progressSteps = [
+  { id: "profile", label: "Профиль" },
+  { id: "recipient", label: "Получатель" },
+  { id: "parcel", label: "Подарок" },
+  { id: "carrier", label: "Перевозчик" },
+] as const;
 const companyLogoUrl = `${import.meta.env.BASE_URL}brand/gpn-snabzhenie.svg`;
 const energyLogoUrl = `${import.meta.env.BASE_URL}brand/energy-plus-logo.svg`;
 
@@ -63,7 +74,7 @@ function Game() {
             </div>
           </div>
           <nav className={styles.routeProgress} aria-label="Прогресс сцены">
-            {progressSteps.map((label, index) => (
+            {progressSteps.map((step, index) => (
               <div
                 aria-current={
                   index === progressByStep[state.step] ? "step" : undefined
@@ -71,14 +82,15 @@ function Game() {
                 className={styles.progressItem}
                 data-active={index <= progressByStep[state.step]}
                 data-current={index === progressByStep[state.step]}
-                key={label}
+                data-progress-step={step.id}
+                key={step.id}
               >
-                <i>{index + 1}</i>
-                <span>{label}</span>
+                <i aria-hidden="true" />
+                <span className={styles.visuallyHidden}>{step.label}</span>
               </div>
             ))}
           </nav>
-          <ScoreBoard scores={state.scores} />
+          <SelectionSummary state={state} />
         </header>
       )}
 
@@ -120,14 +132,39 @@ function Game() {
             />
           )}
           {state.step === "outcome" && (
-            <Outcome
-              onBack={() => navigate({ type: "BACK" })}
-              onReset={() => navigate({ type: "RESET" })}
-            />
+            <Outcome onBack={() => navigate({ type: "BACK" })} />
           )}
         </div>
       </main>
     </div>
+  );
+}
+
+function SelectionSummary({ state }: { state: GameState }) {
+  const selections = [
+    { key: "profile", item: findProfile(state.profile) },
+    { key: "parcel", item: findParcel(state.parcel) },
+    { key: "recipient", item: findRecipient(state.recipient) },
+  ] as const;
+
+  if (!selections.some(({ item }) => item)) {
+    return null;
+  }
+
+  return (
+    <fieldset
+      className={styles.selectionSummary}
+      aria-label="Выбрано для доставки"
+    >
+      {selections.map(({ key, item }, index) =>
+        item ? (
+          <span data-selection-context={key} key={key}>
+            {index > 0 && <i aria-hidden="true" />}
+            <img alt={`Выбрано: ${item.title}`} src={choiceArtwork[item.id]} />
+          </span>
+        ) : null,
+      )}
+    </fieldset>
   );
 }
 
@@ -218,7 +255,7 @@ function ChoiceScreen<T extends string>({
                   aria-hidden="true"
                   data-art-version={
                     item.id === "professional"
-                      ? "feedback-v5"
+                      ? "feedback-v12"
                       : item.id === "alva"
                         ? "feedback-v6"
                         : "feedback-v4"
@@ -258,26 +295,52 @@ function CarrierScreen({
       <div className={styles.missionBar}>
         <BackButton onClick={onBack} />
         <div className={styles.missionHeading}>
-          <div>
-            <p className={styles.eyebrow}>Первый участок пути</p>
-            <h2>Выберите транспорт для подарка</h2>
-          </div>
+          <h2>Выберите транспорт для подарка</h2>
+          <p>
+            Выберите номер грузовика, который лучше всего справится с задачей.
+          </p>
         </div>
-        <p>Сравните расстояние, темп и экипаж — затем выберите машину.</p>
+        <div className={styles.carrierChoices}>
+          <button
+            data-carrier-choice="old"
+            onClick={() => onSelect("old")}
+            type="button"
+          >
+            №1 или №4
+          </button>
+          <button
+            data-carrier-choice="near"
+            onClick={() => onSelect("near")}
+            type="button"
+          >
+            №2
+          </button>
+          <button
+            data-carrier-choice="crew"
+            onClick={() => onSelect("crew")}
+            type="button"
+          >
+            №3
+          </button>
+        </div>
+        <button
+          className={styles.expressButton}
+          data-express-control="true"
+          onClick={() => onSelect("express")}
+          type="button"
+        >
+          Автоподбор Express
+        </button>
       </div>
     </section>
   );
 }
 
-function Outcome({
-  onBack,
-  onReset,
-}: {
-  onBack: () => void;
-  onReset: () => void;
-}) {
+function Outcome({ onBack }: { onBack: () => void }) {
   const { state } = useGame();
+  const [continued, setContinued] = useState(false);
   const carrier = findCarrier(state.carrier);
+  const profile = findProfile(state.profile);
   const recipient = findRecipient(state.recipient);
   const parcel = findParcel(state.parcel);
 
@@ -293,35 +356,56 @@ function Outcome({
     >
       <picture>
         <source
+          height="1688"
           media="(max-width: 760px)"
           srcSet={outcomeArtwork[carrier.id].mobile}
+          type="image/webp"
+          width="780"
         />
         <img
           alt=""
           aria-hidden="true"
           className={styles.outcomeBackdrop}
           data-art-version={
-            carrier.id === "crew" ? "feedback-v4" : "feedback-v5"
+            carrier.id === "near"
+              ? "feedback-v12"
+              : carrier.id === "crew"
+                ? "feedback-v4"
+                : "feedback-v5"
           }
           data-outcome-art={carrier.id}
+          fetchPriority="high"
+          height="1800"
+          loading="eager"
           src={outcomeArtwork[carrier.id].desktop}
+          width="2880"
         />
       </picture>
       <div aria-hidden="true" className={styles.outcomeVeil} />
       <div className={styles.resultPanel} data-carrier={carrier.id}>
-        <div className={styles.outcomeTokens}>
-          {recipient && (
-            <span className={styles.outcomeTokenThumb}>
-              <img alt={recipient.title} src={choiceArtwork[recipient.id]} />
-            </span>
+        <fieldset
+          className={styles.outcomeTokens}
+          aria-label="Выбрано для доставки"
+        >
+          {[
+            ["profile", profile],
+            ["parcel", parcel],
+            ["recipient", recipient],
+          ].map(([key, item]) =>
+            typeof item === "object" && item ? (
+              <span
+                className={styles.outcomeTokenThumb}
+                data-selection-context={key as string}
+                key={key as string}
+              >
+                <img
+                  alt={`Выбрано: ${item.title}`}
+                  src={choiceArtwork[item.id]}
+                />
+              </span>
+            ) : null,
           )}
-          <span aria-hidden="true">+</span>
-          {parcel && (
-            <span className={styles.outcomeTokenThumb}>
-              <img alt={parcel.title} src={choiceArtwork[parcel.id]} />
-            </span>
-          )}
-        </div>
+        </fieldset>
         <div className={styles.outcomeCopy}>
           <p className={styles.eyebrow}>Вот что произошло</p>
           <h2>{carrier.resultTitle}</h2>
@@ -332,14 +416,7 @@ function Outcome({
               parcel?.accusativeTitle,
             )}
           </p>
-          <p className={styles.outcomeTiming}>
-            <span>Изменение срока</span>
-            <strong>{carrier.delivery}</strong>
-          </p>
           <ScoreDelta scores={carrier.score} />
-          <p className={styles.nextBeat}>
-            Теперь нам нужно погрузить подарок...
-          </p>
           <div className={styles.resultActions}>
             <button
               className={styles.textButton}
@@ -349,18 +426,23 @@ function Outcome({
             >
               Назад к машинам
             </button>
-            <button className={styles.primaryButton} disabled type="button">
-              <span>Дальше · скоро</span>
-            </button>
             <button
-              className={styles.textButton}
-              data-control-style="secondary"
-              onClick={onReset}
+              className={styles.primaryButton}
+              onClick={() => setContinued(true)}
               type="button"
             >
-              Начать заново
+              <span>Едем дальше</span>
             </button>
           </div>
+          {continued && (
+            <p
+              aria-live="polite"
+              className={styles.continuationStatus}
+              role="status"
+            >
+              Продолжение маршрута появится в следующей версии
+            </p>
+          )}
         </div>
       </div>
     </section>

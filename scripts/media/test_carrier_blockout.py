@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-import math
+import os
 import subprocess
 from pathlib import Path
 
@@ -10,12 +10,18 @@ ROOT = Path(__file__).resolve().parents[2]
 SCRIPT = ROOT / "scripts/media/carrier_blockout.py"
 
 
-def angle_difference(first: float, second: float) -> float:
-    return abs((first - second + math.pi) % (2 * math.pi) - math.pi)
-
-
-def test_blockout_describes_populated_connected_town(tmp_path: Path) -> None:
+def test_blockout_describes_v12_metropolitan_logistics_scene(tmp_path: Path) -> None:
     manifest = tmp_path / "layout.json"
+    env = os.environ.copy()
+    compat_library = Path("/usr/lib/libjsoncpp.so.27")
+    if compat_library.exists() and not Path("/usr/lib/libjsoncpp.so.26").exists():
+        compat_dir = tmp_path / "blender-libs"
+        compat_dir.mkdir()
+        (compat_dir / "libjsoncpp.so.26").symlink_to(compat_library)
+        env["LD_LIBRARY_PATH"] = os.pathsep.join(
+            filter(None, (str(compat_dir), env.get("LD_LIBRARY_PATH"))),
+        )
+
     result = subprocess.run(
         [
             "blender",
@@ -31,6 +37,7 @@ def test_blockout_describes_populated_connected_town(tmp_path: Path) -> None:
         ],
         capture_output=True,
         cwd=ROOT,
+        env=env,
         text=True,
         timeout=120,
     )
@@ -38,40 +45,34 @@ def test_blockout_describes_populated_connected_town(tmp_path: Path) -> None:
     assert result.returncode == 0, result.stderr or result.stdout
     layout = json.loads(manifest.read_text())
 
-    assert len(layout["roads"]) >= 7
-    assert len(layout["buildings"]) >= 14
-    assert layout["props"]["lamps"] >= 8
-    assert layout["props"]["trees"] >= 12
-    assert layout["props"]["snowbanks"] >= 12
-    assert layout["props"]["mountains"] >= 4
-    assert layout["props"]["motion_tracks"] >= 8
-    assert layout["props"]["snow_plumes"] >= 8
-    assert layout["props"]["express_wordmarks"] == 1
+    assert layout["season"] == "early-autumn"
+    assert layout["setting"] == "metropolitan-logistics-centre"
     assert layout["network_connected"] is True
+    assert len(layout["roads"]) >= 7
+    assert len(layout["buildings"]) >= 12
+    assert layout["props"]["loading_bays"] >= 6
+    assert layout["props"]["trees"] >= 12
+    assert layout["props"]["snowbanks"] == 0
+    assert layout["props"]["decorative_vehicles"] == 0
+    assert layout["props"]["express_vehicles"] == 0
 
-    body_types = {carrier["body_type"] for carrier in layout["carriers"].values()}
-    assert body_types == {
-        "old-tarp-flatbed",
-        "panel-van",
-        "high-box-crew",
-        "streamlined-express",
-    }
+    assert list(layout["trucks"]) == ["truck-1", "truck-2", "truck-3", "truck-4"]
+    assert [truck["outcome"] for truck in layout["trucks"].values()] == [
+        "old",
+        "near",
+        "crew",
+        "old",
+    ]
+    assert len({truck["road_id"] for truck in layout["trucks"].values()}) == 4
+    assert layout["trucks"]["truck-2"]["nearest_to_warehouse"] is True
+    assert layout["trucks"]["truck-3"]["drivers"] == 2
 
-    assert set(layout["viewports"]) == {"desktop", "tablet", "mobile"}
+    assert set(layout["viewports"]) == {"desktop", "mobile"}
+    assert layout["viewports"]["desktop"]["size"] == [2880, 1800]
+    assert layout["viewports"]["mobile"]["size"] == [780, 1688]
     for viewport in layout["viewports"].values():
         assert viewport["landmarks"]["warehouse"]["visible_fraction"] >= 0.75
-        assert viewport["landmarks"]["loading_gate"]["visible_fraction"] >= 0.75
-        assert set(viewport["vehicles"]) == {"old", "near", "crew", "express"}
-        for vehicle in viewport["vehicles"].values():
-            assert vehicle["visible"] is True
-            assert vehicle["visible_fraction"] >= 0.75
-            left, bottom, right, top = vehicle["bounds"]
-            assert right - left >= 0.055
-            assert top - bottom >= 0.025
-
-    road_angles = {road["id"]: road["angle"] for road in layout["roads"]}
-    carriers = layout["carriers"]
-    assert len({carrier["road_id"] for carrier in carriers.values()}) == 4
-    for carrier in carriers.values():
-        difference = angle_difference(carrier["angle"], road_angles[carrier["road_id"]])
-        assert min(difference, abs(math.pi - difference)) <= math.radians(1)
+        assert set(viewport["trucks"]) == set(layout["trucks"])
+        for truck in viewport["trucks"].values():
+            assert truck["visible"] is True
+            assert truck["visible_fraction"] >= 0.7

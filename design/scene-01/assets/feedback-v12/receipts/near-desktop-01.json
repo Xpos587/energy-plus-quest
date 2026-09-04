@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "prompt": "design/scene-01/assets/feedback-v12/prompts/near-desktop.txt",
+  "prompt_sha256": "ee6d2c5d42b64ebb92609432b782877bdac1142972a6f0c6eb2d7ffa7c7e427d",
+  "references": [
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/near-mobile-01.png",
+      "sha256": "fc4ccfc8b7648edd8e6baeaa07ffdf014057293634bc2d4b4ea9daecb2b3109e"
+    },
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/map-desktop-01.png",
+      "sha256": "1da001b8950478da85feda53c288f50028a261db244ef6f3598b341bd057c361"
+    }
+  ],
+  "parameters": {
+    "width": 2880,
+    "height": 1800,
+    "background": "opaque",
+    "quality": "high",
+    "input_fidelity": "high",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa8fbca/U_zBDAGoE9pR5p7r-9ZP2_z1LhNTTr.png",
+        "content_type": "image/png",
+        "file_name": "U_zBDAGoE9pR5p7r-9ZP2_z1LhNTTr.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "output": "design/scene-01/assets/feedback-v12/candidates/near-desktop-01.png",
+  "output_sha256": "778f2ab52e5b10f89ea5f6371a5d5267fd7cd44bc0171675ec8af987175b9103"
+}
