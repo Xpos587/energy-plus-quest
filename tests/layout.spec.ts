@@ -24,17 +24,11 @@ async function expectControlsInsideViewport(page: Page) {
 }
 
 async function expectImagesComplete(page: Page) {
-  expect(
-    await page
-      .locator("img")
-      .evaluateAll((images) =>
-        images.every(
-          (image) =>
-            (image as HTMLImageElement).complete &&
-            (image as HTMLImageElement).naturalWidth > 0,
-        ),
-      ),
-  ).toBe(true);
+  await page.waitForFunction(() =>
+    [...document.images].every(
+      (image) => image.complete && image.naturalWidth > 0,
+    ),
+  );
 }
 
 async function expectScreenFits(page: Page) {
