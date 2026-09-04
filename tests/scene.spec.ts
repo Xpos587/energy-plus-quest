@@ -154,6 +154,39 @@ test("truck 2, truck 3, and Express keep their existing outcomes", async ({
   }
 });
 
+test("all carrier outcomes use the feedback-v12 artwork set", async ({
+  page,
+}) => {
+  const cases = [
+    ["Машина №1", "old"],
+    ["Машина №2", "near"],
+    ["Машина №3", "crew"],
+    ["Автоподбор Express", "express"],
+  ] as const;
+
+  for (const [control, outcome] of cases) {
+    await playReviewPath(page);
+    await page.getByRole("button", { name: control, exact: true }).click();
+
+    const artwork = page.locator(
+      `[data-outcome-art="${outcome}"][data-art-version="feedback-v12"]`,
+    );
+    await expect(artwork).toBeVisible();
+    await expect(artwork).toHaveAttribute(
+      "src",
+      new RegExp(
+        `/feedback-v12/production/outcomes/${outcome}-desktop\\.webp$`,
+      ),
+    );
+    await expect(
+      artwork.locator("xpath=preceding-sibling::source"),
+    ).toHaveAttribute(
+      "srcset",
+      new RegExp(`/feedback-v12/production/outcomes/${outcome}-mobile\\.webp$`),
+    );
+  }
+});
+
 test("outcome keeps one score delta and active review continuation", async ({
   page,
 }) => {

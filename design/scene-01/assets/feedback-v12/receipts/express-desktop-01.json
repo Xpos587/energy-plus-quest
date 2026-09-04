@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "prompt": "design/scene-01/assets/feedback-v12/prompts/express-desktop.txt",
+  "prompt_sha256": "573a41fc39c0ebce311173c7537e3e34df35c1193778ff2b482262d07f76f9a6",
+  "references": [
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/express-mobile-01.png",
+      "sha256": "e05d531792c28710e80f35924d038f04ee74e37e75220dc075deb4c432d5b5f8"
+    },
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/map-desktop-01.png",
+      "sha256": "1da001b8950478da85feda53c288f50028a261db244ef6f3598b341bd057c361"
+    }
+  ],
+  "parameters": {
+    "width": 2880,
+    "height": 1800,
+    "background": "opaque",
+    "quality": "high",
+    "input_fidelity": "high",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa90cb6/XQ1wMFI0WNMMNoBgeVp3n_V7tneQK0.png",
+        "content_type": "image/png",
+        "file_name": "XQ1wMFI0WNMMNoBgeVp3n_V7tneQK0.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "output": "design/scene-01/assets/feedback-v12/candidates/express-desktop-01.png",
+  "output_sha256": "f1805d7a44227fd05aa8a408f5639d4c5305caf4a72f55aef07f7839af926612"
+}

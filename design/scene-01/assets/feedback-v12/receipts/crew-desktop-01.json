@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "prompt": "design/scene-01/assets/feedback-v12/prompts/crew-desktop.txt",
+  "prompt_sha256": "8515ae03eda93ac7b1c2cf8d50f906082e98fcb8f4b6a475eedde1f623cb33ce",
+  "references": [
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/crew-mobile-01.png",
+      "sha256": "e4c15da4f97d563bb04261d47d53314bb5b877a0a8f5b5a0b4948eb779807586"
+    },
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/map-desktop-01.png",
+      "sha256": "1da001b8950478da85feda53c288f50028a261db244ef6f3598b341bd057c361"
+    }
+  ],
+  "parameters": {
+    "width": 2880,
+    "height": 1800,
+    "background": "opaque",
+    "quality": "high",
+    "input_fidelity": "high",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa90cb7/I1HNZpjRAXgCiEVHuU2fZ_RhYXj6V4.png",
+        "content_type": "image/png",
+        "file_name": "I1HNZpjRAXgCiEVHuU2fZ_RhYXj6V4.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "output": "design/scene-01/assets/feedback-v12/candidates/crew-desktop-01.png",
+  "output_sha256": "cbc78a3101f1289a926d34dc1d1bdc6de134f7790de797a21ad8d44b1e25a493"
+}
