@@ -1,0 +1,346 @@
+{
+  "season": "early-autumn",
+  "setting": "metropolitan-logistics-centre",
+  "roads": [
+    {
+      "id": "north-branch",
+      "position": [
+        0.0,
+        16.0
+      ],
+      "half_width": 2.7,
+      "half_length": 28.0,
+      "angle": 1.5707963267948966
+    },
+    {
+      "id": "dock-apron",
+      "position": [
+        0.0,
+        2.0
+      ],
+      "half_width": 3.2,
+      "half_length": 29.0,
+      "angle": 1.5707963267948966
+    },
+    {
+      "id": "main-arterial",
+      "position": [
+        0.0,
+        -12.0
+      ],
+      "half_width": 3.8,
+      "half_length": 31.0,
+      "angle": 1.5707963267948966
+    },
+    {
+      "id": "south-branch",
+      "position": [
+        0.0,
+        -28.0
+      ],
+      "half_width": 2.9,
+      "half_length": 28.0,
+      "angle": 1.5707963267948966
+    },
+    {
+      "id": "west-link",
+      "position": [
+        -20.0,
+        -6.0
+      ],
+      "half_width": 2.6,
+      "half_length": 22.0,
+      "angle": 0.0
+    },
+    {
+      "id": "central-link",
+      "position": [
+        0.0,
+        -6.0
+      ],
+      "half_width": 2.6,
+      "half_length": 22.0,
+      "angle": 0.0
+    },
+    {
+      "id": "east-link",
+      "position": [
+        20.0,
+        -6.0
+      ],
+      "half_width": 2.7,
+      "half_length": 22.0,
+      "angle": 0.0
+    },
+    {
+      "id": "gate-loop",
+      "position": [
+        12.0,
+        8.0
+      ],
+      "half_width": 2.3,
+      "half_length": 8.0,
+      "angle": 0.0
+    }
+  ],
+  "buildings": [
+    [
+      -27.0,
+      25.0,
+      5.5,
+      5.5,
+      8.0,
+      "building_grey"
+    ],
+    [
+      -13.0,
+      27.0,
+      5.0,
+      4.5,
+      11.0,
+      "building_ochre"
+    ],
+    [
+      4.0,
+      27.0,
+      6.0,
+      4.8,
+      14.0,
+      "building_blue"
+    ],
+    [
+      24.0,
+      27.0,
+      6.0,
+      5.0,
+      10.0,
+      "building_grey"
+    ],
+    [
+      -29.0,
+      7.0,
+      5.5,
+      4.5,
+      13.0,
+      "building_blue"
+    ],
+    [
+      29.0,
+      8.0,
+      5.0,
+      5.0,
+      12.0,
+      "building_ochre"
+    ],
+    [
+      -30.0,
+      -10.0,
+      5.0,
+      5.0,
+      9.0,
+      "building_ochre"
+    ],
+    [
+      30.0,
+      -10.0,
+      5.5,
+      5.0,
+      14.0,
+      "building_blue"
+    ],
+    [
+      -29.0,
+      -27.0,
+      5.0,
+      5.0,
+      12.0,
+      "building_grey"
+    ],
+    [
+      -12.0,
+      -28.0,
+      4.5,
+      5.0,
+      9.0,
+      "building_blue"
+    ],
+    [
+      7.0,
+      -29.0,
+      5.0,
+      4.5,
+      11.0,
+      "building_ochre"
+    ],
+    [
+      29.0,
+      -29.0,
+      5.5,
+      5.0,
+      13.0,
+      "building_grey"
+    ]
+  ],
+  "trucks": {
+    "truck-1": {
+      "position": [
+        -20.0,
+        -2.0
+      ],
+      "angle": 0.0,
+      "road_id": "west-link",
+      "outcome": "old",
+      "drivers": 1,
+      "nearest_to_warehouse": false
+    },
+    "truck-2": {
+      "position": [
+        8.0,
+        2.0
+      ],
+      "angle": 1.5707963267948966,
+      "road_id": "dock-apron",
+      "outcome": "near",
+      "drivers": 1,
+      "nearest_to_warehouse": true
+    },
+    "truck-3": {
+      "position": [
+        -7.0,
+        -12.0
+      ],
+      "angle": 1.5707963267948966,
+      "road_id": "main-arterial",
+      "outcome": "crew",
+      "drivers": 2,
+      "nearest_to_warehouse": false
+    },
+    "truck-4": {
+      "position": [
+        16.0,
+        -28.0
+      ],
+      "angle": 1.5707963267948966,
+      "road_id": "south-branch",
+      "outcome": "old",
+      "drivers": 1,
+      "nearest_to_warehouse": false
+    }
+  },
+  "props": {
+    "loading_bays": 7,
+    "trees": 16,
+    "snowbanks": 0,
+    "decorative_vehicles": 0,
+    "express_vehicles": 0
+  },
+  "network_connected": true,
+  "viewports": {
+    "desktop": {
+      "size": [
+        2880,
+        1800
+      ],
+      "landmarks": {
+        "warehouse": {
+          "visible_fraction": 1.0
+        }
+      },
+      "trucks": {
+        "truck-1": {
+          "bounds": [
+            0.2973,
+            0.6914,
+            0.3542,
+            0.7964
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "truck-2": {
+          "bounds": [
+            0.6008,
+            0.4971,
+            0.6674,
+            0.5936
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "truck-3": {
+          "bounds": [
+            0.36,
+            0.44,
+            0.4267,
+            0.5366
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "truck-4": {
+          "bounds": [
+            0.4845,
+            0.0171,
+            0.5501,
+            0.1099
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        }
+      }
+    },
+    "mobile": {
+      "size": [
+        780,
+        1688
+      ],
+      "landmarks": {
+        "warehouse": {
+          "visible_fraction": 1.0
+        }
+      },
+      "trucks": {
+        "truck-1": {
+          "bounds": [
+            0.0948,
+            0.5675,
+            0.1816,
+            0.6219
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "truck-2": {
+          "bounds": [
+            0.6552,
+            0.5106,
+            0.7726,
+            0.5546
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "truck-3": {
+          "bounds": [
+            0.2549,
+            0.4485,
+            0.3723,
+            0.4925
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        },
+        "truck-4": {
+          "bounds": [
+            0.5681,
+            0.2443,
+            0.6836,
+            0.2867
+          ],
+          "visible": true,
+          "visible_fraction": 1.0
+        }
+      }
+    }
+  }
+}

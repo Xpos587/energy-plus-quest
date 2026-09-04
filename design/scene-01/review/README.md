@@ -1,21 +1,19 @@
-# Scene 01 review screenshots
+# Scene 01 feedback V12 review
 
-Persistent review artifacts for the first scene. These files are stored in the
-repository workspace and remain available after a reboot.
+Press-office review package captured on 2026-09-03 from the built artifact at
+`/specialprojects/energy-plus-quest/`, with external requests blocked.
 
+- Asset version: `feedback-v12`
 - Desktop viewport: `1440x900`
 - Mobile viewport: `390x844`
-- Naming: `<state>-desktop.png` and `<state>-mobile.png`
-- Regenerate: `bun run test:e2e`
-- Build first: `bun run build` when the shared preview runs via `vite preview`.
-- Current client-review set: four representative states, desktop and mobile.
-- Other screenshots in this directory are historical artifacts from the earlier
-  nine-state flow; they are intentionally preserved but are not part of the
-  2026-08-17 review set.
+- Capture mode: viewport only (`fullPage: false`), after fonts and images loaded
+- Approval status: pending press-office approval
 
 | State | Desktop | Mobile |
 | --- | --- | --- |
-| Intro | [intro-desktop.png](intro-desktop.png) | [intro-mobile.png](intro-mobile.png) |
-| Profile | [profile-desktop.png](profile-desktop.png) | [profile-mobile.png](profile-mobile.png) |
-| Carrier selection | [carrier-desktop.png](carrier-desktop.png) | [carrier-mobile.png](carrier-mobile.png) |
-| Express outcome | [outcome-desktop.png](outcome-desktop.png) | [outcome-mobile.png](outcome-mobile.png) |
+| Professional profile | [profile-desktop.png](profile-desktop.png) | [profile-mobile.png](profile-mobile.png) |
+| Carrier map | [carrier-desktop.png](carrier-desktop.png) | [carrier-mobile.png](carrier-mobile.png) |
+| Representative `near` result | [outcome-desktop.png](outcome-desktop.png) | [outcome-mobile.png](outcome-mobile.png) |
+
+Only these six files are current V12 approval references. Other images in this
+directory are historical and are not part of this review package.

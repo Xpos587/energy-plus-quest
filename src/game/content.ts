@@ -68,15 +68,10 @@ export const carriers: CarrierChoice[] = [
     description:
       "Проверенная фура с большим пробегом находится дальше от склада.",
     symbol: "1",
-    mapLabel: "1",
     score: { energy: 0, empathy: -3, efficiency: -3 },
     resultTitle: "Маршрут потребовал больше времени",
     resultBody:
       "Дальняя машина прошла дополнительную техническую проверку по пути. Подарок в безопасности, но {recipient} получит {parcel} на неделю позже.",
-    delivery: "+7 дней",
-    condition: "Большой пробег",
-    crew: "Один водитель",
-    cost: "Низкая",
   },
   {
     id: "near",
@@ -84,15 +79,10 @@ export const carriers: CarrierChoice[] = [
     title: "Ближайшая к центру",
     description: "Исправная фура, которая очень медленно ездит рядом с офисом.",
     symbol: "2",
-    mapLabel: "2",
     score: { energy: 1, empathy: 0, efficiency: -2 },
     resultTitle: "Близко — не значит быстро",
     resultBody:
       "Машина была рядом, но водитель ехал очень неторопливо. {recipient} получит {parcel} на три дня позже.",
-    delivery: "+3 дня",
-    condition: "Исправная техника",
-    crew: "Один водитель",
-    cost: "Средняя",
   },
   {
     id: "crew",
@@ -100,15 +90,10 @@ export const carriers: CarrierChoice[] = [
     title: "Экипаж из двух водителей",
     description: "Новая фура с двумя водителями — они работают посменно.",
     symbol: "3",
-    mapLabel: "3",
     score: { energy: -3, empathy: 3, efficiency: 4 },
     resultTitle: "Два водителя лучше одного",
     resultBody:
       "Водители сменяли друг друга и добрались до Лабытнанги без остановок на сон. {recipient} получит {parcel} на три дня раньше, но на следующем участке придётся сэкономить.",
-    delivery: "−3 дня",
-    condition: "Новая техника",
-    crew: "Два водителя",
-    cost: "Высокая",
   },
   {
     id: "express",
@@ -117,15 +102,10 @@ export const carriers: CarrierChoice[] = [
     description:
       "Подберёт перевозчика по состоянию техники, экипажу и стоимости.",
     symbol: "EX",
-    mapLabel: "EX",
     score: { energy: -1, empathy: 5, efficiency: 5 },
     resultTitle: "Перевозчик найден за два часа",
     resultBody:
       "За два часа Express нашёл новую фуру с двумя водителями. {recipient} получит {parcel} в целости и сохранности — на неделю раньше плана!",
-    delivery: "−7 дней",
-    condition: "Новая техника",
-    crew: "Два водителя",
-    cost: "Выгодная",
   },
 ];
 

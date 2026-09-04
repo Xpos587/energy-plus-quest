@@ -19,44 +19,6 @@ const scoreItems: Array<{
   },
 ];
 
-export function ScoreBoard({ scores }: { scores: Scores }) {
-  return (
-    <fieldset className={styles.scoreBoard} aria-label="Показатели игрока">
-      {scoreItems.map((item) => (
-        <div
-          className={styles.scoreItem}
-          data-score-key={item.key}
-          data-tone={scoreTone(scores[item.key])}
-          key={item.key}
-          title={item.label}
-        >
-          <span>
-            <img
-              alt=""
-              aria-hidden="true"
-              className={styles.scoreIcon}
-              data-score-art="feedback-v5"
-              src={item.iconUrl}
-            />
-            <em className={styles.scoreLong}>{item.label}</em>
-          </span>
-          <strong>{formatScore(scores[item.key])}</strong>
-          <i aria-hidden="true" className={styles.scoreGauge}>
-            <b
-              className={styles.scoreGaugeFill}
-              style={
-                {
-                  "--score-fill": `${String(scoreFill(scores[item.key]))}%`,
-                } as CSSProperties
-              }
-            />
-          </i>
-        </div>
-      ))}
-    </fieldset>
-  );
-}
-
 export function ScoreDelta({ scores }: { scores: Scores }) {
   return (
     <fieldset className={styles.scoreDelta} aria-label="Изменение показателей">
@@ -99,18 +61,8 @@ function formatScore(value: number) {
   return value > 0 ? `+${value}` : String(value);
 }
 
-function scoreFill(value: number) {
-  return Math.max(8, Math.min(100, ((value + 5) / 10) * 100));
-}
-
 function deltaFill(value: number) {
   return Math.min(50, (Math.abs(value) / 5) * 50);
-}
-
-function scoreTone(value: number) {
-  if (value > 0) return "positive";
-  if (value < 0) return "negative";
-  return "neutral";
 }
 
 function deltaDirection(value: number) {

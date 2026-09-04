@@ -48,12 +48,7 @@ export type ParcelChoice = ChoiceItem<ParcelId> & {
 };
 
 export type CarrierChoice = ChoiceItem<CarrierId> & {
-  mapLabel: string;
   score: Scores;
   resultTitle: string;
   resultBody: string;
-  delivery: string;
-  condition: string;
-  crew: string;
-  cost: string;
 };

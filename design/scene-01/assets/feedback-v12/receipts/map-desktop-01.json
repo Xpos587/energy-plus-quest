@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "prompt": "design/scene-01/assets/feedback-v12/prompts/map-desktop.txt",
+  "prompt_sha256": "b8ec58a7f9c1319b109313b988dbe779fa39bc1af8d5e41cce9488533ddee14c",
+  "references": [
+    {
+      "path": "design/scene-01/assets/feedback-v12/guides/desktop-safe-zone.png",
+      "sha256": "c1d987ef631e27ad43d1ce8724444d8fb1eaca06dbd905a3befe0dd1e5d50237"
+    },
+    {
+      "path": "design/scene-01/assets/feedback-v4/production/choices/student.webp",
+      "sha256": "2508b846d8253fe8c9a985e40ef61f8ecff5c5a690650835a537aeb8f3cd25a1"
+    }
+  ],
+  "parameters": {
+    "width": 2880,
+    "height": 1800,
+    "background": "opaque",
+    "quality": "high",
+    "input_fidelity": "high",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa8fba8/lqXSTbWtBh1MqdEVqoa5I_9z3mxSpD.png",
+        "content_type": "image/png",
+        "file_name": "lqXSTbWtBh1MqdEVqoa5I_9z3mxSpD.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "output": "design/scene-01/assets/feedback-v12/candidates/map-desktop-01.png",
+  "output_sha256": "1da001b8950478da85feda53c288f50028a261db244ef6f3598b341bd057c361"
+}
