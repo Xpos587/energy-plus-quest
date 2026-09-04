@@ -9,8 +9,14 @@ EXPECTED = {
     "choices/professional.webp": (1536, 1920),
     "map/carrier-desktop.webp": (2880, 1800),
     "map/carrier-mobile.webp": (780, 1688),
+    "outcomes/old-desktop.webp": (2880, 1800),
+    "outcomes/old-mobile.webp": (780, 1688),
     "outcomes/near-desktop.webp": (2880, 1800),
     "outcomes/near-mobile.webp": (780, 1688),
+    "outcomes/crew-desktop.webp": (2880, 1800),
+    "outcomes/crew-mobile.webp": (780, 1688),
+    "outcomes/express-desktop.webp": (2880, 1800),
+    "outcomes/express-mobile.webp": (780, 1688),
 }
 
 

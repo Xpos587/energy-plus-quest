@@ -1,0 +1,42 @@
+{
+  "status": "success",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "prompt": "design/scene-01/assets/feedback-v12/prompts/express-desktop-cleanup.txt",
+  "references": [
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/express-desktop-01.png",
+      "sha256": "f1805d7a44227fd05aa8a408f5639d4c5305caf4a72f55aef07f7839af926612"
+    }
+  ],
+  "mask": {
+    "path": "design/scene-01/assets/feedback-v12/guides/express-desktop-duplicate-mask.png",
+    "sha256": "f1f2502bf8c3d16c58858e1dba5fd6b8132f89993f5b8a0931d7d39c984dcd59"
+  },
+  "parameters": {
+    "prompt": "Preserve the entire illustration exactly except inside the white mask. Remove the duplicate logistics worker and the gift parcel sitting on the pavement. Reconstruct this masked area as the same empty paved dispatch apron, curb, fence, and scanner-gate surroundings with seamless contours, perspective, warm daylight, and paper-gouache texture. Keep exactly one logistics worker: the existing woman at the scanner post on the right. Keep exactly two adult drivers in the truck cab. Do not alter the truck, warehouse, city, road, trees, or quiet right-side HTML copy zone. No new person, parcel on the ground, object, text, sign, logo, seam, or blur.",
+    "image_size": {
+      "width": 2880,
+      "height": 1800
+    },
+    "background": "opaque",
+    "quality": "high",
+    "input_fidelity": "high",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa90ce5/Hm3DLTKBBE77g0kroaTsI_I6yafJYa.png",
+        "content_type": "image/png",
+        "file_name": "Hm3DLTKBBE77g0kroaTsI_I6yafJYa.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "output": "design/scene-01/assets/feedback-v12/candidates/express-desktop-02.png",
+  "output_sha256": "51aa8486b56b3456bc3f47b1c45ff889960a43523005cd6db90114dff47f9a37",
+  "prompt_sha256": "52117b597085dcfc409c4620379a9806b946435e6e7a48d3f6deb673d14d96b4"
+}

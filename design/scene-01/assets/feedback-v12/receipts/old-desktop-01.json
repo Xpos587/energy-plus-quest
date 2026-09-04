@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "endpoint": "fal-ai/gpt-image-2/edit",
+  "prompt": "design/scene-01/assets/feedback-v12/prompts/old-desktop.txt",
+  "prompt_sha256": "a91718418790f373a344a87906792a6357967c3371377783231dcd0f4648e1de",
+  "references": [
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/old-mobile-01.png",
+      "sha256": "567f61f743811a7a0f00e8a80cd63ac6a06cecd1a63b85b9ee9cfa0684894c57"
+    },
+    {
+      "path": "design/scene-01/assets/feedback-v12/candidates/map-desktop-01.png",
+      "sha256": "1da001b8950478da85feda53c288f50028a261db244ef6f3598b341bd057c361"
+    }
+  ],
+  "parameters": {
+    "width": 2880,
+    "height": 1800,
+    "background": "opaque",
+    "quality": "high",
+    "input_fidelity": "high",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0aa90cb7/YInIijgAfR-FEa5v28C4s_9bgOfXAe.png",
+        "content_type": "image/png",
+        "file_name": "YInIijgAfR-FEa5v28C4s_9bgOfXAe.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "output": "design/scene-01/assets/feedback-v12/candidates/old-desktop-01.png",
+  "output_sha256": "9d6ed6612f431d67cc406c2c62089c2d1348795f4f043e80069bf6db6ba3d604"
+}

@@ -366,13 +366,7 @@ function Outcome({ onBack }: { onBack: () => void }) {
           alt=""
           aria-hidden="true"
           className={styles.outcomeBackdrop}
-          data-art-version={
-            carrier.id === "near"
-              ? "feedback-v12"
-              : carrier.id === "crew"
-                ? "feedback-v4"
-                : "feedback-v5"
-          }
+          data-art-version="feedback-v12"
           data-outcome-art={carrier.id}
           fetchPriority="high"
           height="1800"

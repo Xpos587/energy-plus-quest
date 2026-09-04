@@ -4,16 +4,16 @@ import cameraArtwork from "../../design/scene-01/assets/feedback-v4/production/c
 import khorArtwork from "../../design/scene-01/assets/feedback-v4/production/choices/khor.webp";
 import socksArtwork from "../../design/scene-01/assets/feedback-v4/production/choices/socks.webp";
 import studentArtwork from "../../design/scene-01/assets/feedback-v4/production/choices/student.webp";
-import outcomeCrewDesktop from "../../design/scene-01/assets/feedback-v4/production/outcomes/crew-desktop.webp";
-import outcomeCrewMobile from "../../design/scene-01/assets/feedback-v4/production/outcomes/crew-mobile.webp";
-import outcomeExpressMobile from "../../design/scene-01/assets/feedback-v4/production/outcomes/express-mobile.webp";
-import outcomeExpressDesktop from "../../design/scene-01/assets/feedback-v5/production/outcomes/express-desktop.webp";
-import outcomeOldDesktop from "../../design/scene-01/assets/feedback-v5/production/outcomes/old-desktop.webp";
-import outcomeOldMobile from "../../design/scene-01/assets/feedback-v5/production/outcomes/old-mobile.webp";
 import alvaArtwork from "../../design/scene-01/assets/feedback-v6/production/choices/alva.webp";
 import professionalArtwork from "../../design/scene-01/assets/feedback-v12/production/choices/professional.webp";
+import outcomeCrewDesktop from "../../design/scene-01/assets/feedback-v12/production/outcomes/crew-desktop.webp";
+import outcomeCrewMobile from "../../design/scene-01/assets/feedback-v12/production/outcomes/crew-mobile.webp";
+import outcomeExpressDesktop from "../../design/scene-01/assets/feedback-v12/production/outcomes/express-desktop.webp";
+import outcomeExpressMobile from "../../design/scene-01/assets/feedback-v12/production/outcomes/express-mobile.webp";
 import outcomeNearDesktop from "../../design/scene-01/assets/feedback-v12/production/outcomes/near-desktop.webp";
 import outcomeNearMobile from "../../design/scene-01/assets/feedback-v12/production/outcomes/near-mobile.webp";
+import outcomeOldDesktop from "../../design/scene-01/assets/feedback-v12/production/outcomes/old-desktop.webp";
+import outcomeOldMobile from "../../design/scene-01/assets/feedback-v12/production/outcomes/old-mobile.webp";
 import type { CarrierId } from "./types";
 
 export const choiceArtwork: Record<string, string> = {
