@@ -3,9 +3,9 @@ import { expect, type Page, test } from "@playwright/test";
 async function expectResponsive(page: Page) {
   await page.evaluate(() => document.fonts.ready);
   await page.waitForFunction(() =>
-    [...document.images].every(
-      (image) => image.complete && image.naturalWidth > 0,
-    ),
+    [...document.images]
+      .filter((image) => image.getClientRects().length > 0)
+      .every((image) => image.complete && image.naturalWidth > 0),
   );
   const failures = await page.evaluate(() => {
     const issues: string[] = [];
@@ -93,8 +93,8 @@ test("responsive route keeps artwork complete and controls reachable", async ({
   for (const control of ["№1", "№2", "№3", "№4", "Подобрать автоматически"]) {
     await page.getByRole("button", { name: control, exact: true }).click();
     await expectResponsive(page);
-    const image = page.locator("[data-outcome-art]");
-    await expect(image).toHaveCSS("object-fit", "contain");
+    const image = page.locator("[data-outcome-art]:visible");
+    await expect(image).toHaveCSS("object-fit", "cover");
     await expect(image).toHaveCSS("transform", "none");
     const box = await image.boundingBox();
     expect(box?.width).toBeGreaterThanOrEqual(
@@ -174,7 +174,9 @@ test("meeting cleanup and readable type survive responsive layouts", async ({
     await page.getByRole("button", { name: action, exact: true }).click();
     const nav = page.getByRole("navigation", { name: "Этапы доставки" });
     await expect(nav.locator("[data-progress-step]")).toHaveCount(5);
-    await expect(nav.locator('[aria-current="step"] span')).toHaveText(current);
+    await expect(nav.locator('[aria-current="step"] > span')).toHaveText(
+      current,
+    );
     expect(
       await nav
         .locator("span")
@@ -258,7 +260,7 @@ test("media meets card edges and desktop map fills its scene", async ({
   }
   await page.getByRole("button", { name: "Хор", exact: true }).click();
   await page.getByRole("button", { name: "Лодка", exact: true }).click();
-  const map = await page.locator('[data-map-media="generated"]').boundingBox();
+  const map = await page.locator('[data-mode="live"]').boundingBox();
   expect(map!.width).toBeGreaterThan(150);
   expect(map!.height).toBeLessThanOrEqual(page.viewportSize()!.height);
 });
@@ -293,7 +295,9 @@ test("desktop composition stays compact rather than becoming a poster gallery", 
   await page.getByRole("button", { name: "Лодка", exact: true }).click();
   for (const name of ["№2", "№1", "№3", "Подобрать автоматически"]) {
     await page.getByRole("button", { name, exact: true }).click();
-    const picture = await page.locator("[data-outcome-art]").boundingBox();
+    const picture = await page
+      .locator("[data-outcome-art]:visible")
+      .boundingBox();
     const panel = await page
       .locator('[data-layout="result"] > [data-carrier]')
       .boundingBox();
@@ -312,7 +316,7 @@ test("header restores numbered progress and rounded media", async ({
   await page.goto("/");
   const nav = page.getByRole("navigation", { name: "Этапы доставки" });
   await expect(nav.locator("i")).toHaveText(["1", "2", "3", "4", "5"]);
-  await expect(nav.locator("span")).toHaveText([
+  await expect(nav.locator("[data-progress-step] > span")).toHaveText([
     "Перевозчик",
     "Загрузка",
     "Склад",
@@ -339,7 +343,9 @@ test("header restores numbered progress and rounded media", async ({
     ["Назад", "Перевозчик"],
   ]) {
     await page.getByRole("button", { name: action, exact: true }).click();
-    await expect(nav.locator('[aria-current="step"] span')).toHaveText(current);
+    await expect(nav.locator('[aria-current="step"] > span')).toHaveText(
+      current,
+    );
     expect((await page.locator("header").boundingBox())!.height).toBeCloseTo(
       initialHeight,
       0,
@@ -401,7 +407,7 @@ test("profile-first entry and mobile delivery hierarchy follow the review", asyn
     page.viewportSize()!.width <= 900 &&
     page.viewportSize()!.height > page.viewportSize()!.width
   ) {
-    const map = await page.locator("[data-map-media]").boundingBox();
+    const map = await page.locator('[data-mode="live"]').boundingBox();
     const back = await page
       .getByRole("button", { name: "Назад", exact: true })
       .boundingBox();

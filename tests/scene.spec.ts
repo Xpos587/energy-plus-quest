@@ -46,7 +46,7 @@ test("preserves brand UI and incremental context with four scene steps", async (
   await page.getByRole("button", { name: /Фотоаппарат/ }).click();
   const progress = page.getByRole("navigation", { name: "Этапы доставки" });
   await expect(progress.locator("[data-progress-step]")).toHaveCount(5);
-  await expect(progress.locator('[aria-current="step"] span')).toHaveText(
+  await expect(progress.locator('[aria-current="step"] > span')).toHaveText(
     "Перевозчик",
   );
   for (const label of [
@@ -101,7 +101,9 @@ for (const [control, outcome, title] of cases) {
     await playReviewPath(page);
     await page.getByRole("button", { name: control, exact: true }).click();
     await expect(page.getByRole("heading", { name: title })).toBeVisible();
-    await expect(page.locator(`[data-outcome-art="${outcome}"]`)).toBeVisible();
+    await expect(
+      page.locator(`[data-outcome-art="${outcome}"]:visible`),
+    ).toBeVisible();
     await expect(
       page.locator('[data-layout="result"] [data-selection-context]'),
     ).toHaveCount(0);

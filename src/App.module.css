@@ -70,8 +70,18 @@
   border: 1px solid currentColor;
   border-radius: 50%;
   font-style: normal;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.progressItem i span {
+  display: block;
+  transform: translateY(0.5px);
+}
+/* This font's '1' has a wider right sidebearing than the other digits. */
+.progressItem:first-child i span {
+  transform: translate(0.9px, 0.5px);
 }
 .progressItem[data-current="true"] {
   color: var(--blue);
@@ -267,16 +277,18 @@ button:focus-visible {
   min-height: 0;
   min-width: 0;
   container-type: size;
-  display: grid;
-  place-items: center;
-}
-/* The labels belong to the fitted image rectangle, not its surrounding space. */
-.liveMapSurface {
   position: relative;
-  width: min(100cqw, calc(100cqh * 1.791667));
-  aspect-ratio: 3225 / 1800;
   overflow: hidden;
   border-radius: 24px;
+}
+/* One coordinate plane keeps markers attached to the art during cover cropping. */
+.liveMapSurface {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: max(100cqw, calc(100cqh * 2));
+  height: max(100cqh, calc(100cqw / 2));
+  transform: translateY(-50%);
 }
 .liveMapSurface .mapPicture,
 .liveMapSurface .mapImage {
@@ -304,25 +316,30 @@ button:focus-visible {
   line-height: 1.1;
   pointer-events: none;
 }
+.truckNumber {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
 .truckNumber[data-truck="truck-1"] {
-  left: 15.7%;
-  top: 56.7%;
+  left: 12%;
+  top: 63%;
 }
 .truckNumber[data-truck="truck-2"] {
-  left: 55.4%;
-  top: 41.5%;
+  left: 37.5%;
+  top: 43%;
 }
 .truckNumber[data-truck="truck-3"] {
-  left: 37.3%;
-  top: 71.6%;
+  left: 32%;
+  top: 78%;
 }
 .truckNumber[data-truck="truck-4"] {
-  left: 63.3%;
-  top: 60.4%;
+  left: 45%;
+  top: 71%;
 }
 .pickupLabel {
-  left: 40.6%;
-  top: 26.3%;
+  left: 25%;
+  top: 31%;
   color: var(--blue);
   border-color: var(--orange);
   background: white;
@@ -365,7 +382,7 @@ button:focus-visible {
   grid-template: minmax(0, 1fr) / minmax(0, 1fr);
   align-items: center;
   border-radius: 24px;
-  background: #041e43 var(--scene-art) center / cover;
+  background: #041e43;
 }
 .outcomePicture {
   position: relative;
@@ -376,14 +393,56 @@ button:focus-visible {
   min-width: 0;
   overflow: hidden;
   border-radius: 24px;
+  container-type: size;
 }
 .outcomeBackdrop {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  transform: none;
+  object-fit: cover;
+  object-position: left center;
+}
+.mapPicture .mapImage[data-format="mobile"],
+.outcomeBackdrop[data-format="mobile"] {
+  display: none;
+}
+@container (max-aspect-ratio: 1.4) {
+  .mapPicture .mapImage[data-format="desktop"],
+  .outcomeBackdrop[data-format="desktop"] {
+    display: none;
+  }
+  .mapPicture .mapImage[data-format="mobile"],
+  .outcomeBackdrop[data-format="mobile"] {
+    display: block;
+    object-position: center;
+  }
+  .liveMapSurface {
+    width: max(100cqw, calc(100cqh * 1.067039));
+    height: max(100cqh, calc(100cqw / 1.067039));
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .truckNumber[data-truck="truck-1"] {
+    left: 22.1%;
+    top: 63%;
+  }
+  .truckNumber[data-truck="truck-2"] {
+    left: 68.1%;
+    top: 45.3%;
+  }
+  .truckNumber[data-truck="truck-3"] {
+    left: 58.2%;
+    top: 80.9%;
+  }
+  .truckNumber[data-truck="truck-4"] {
+    left: 78.5%;
+    top: 65%;
+  }
+  .pickupLabel {
+    left: 34%;
+    top: 28%;
+  }
 }
 .resultPanel {
   position: relative;
@@ -517,10 +576,6 @@ button:focus-visible {
     gap: 8px;
     padding-bottom: 8px;
   }
-  .liveMapSurface {
-    width: min(100cqw, calc(100cqh * 1.067039));
-    aspect-ratio: 955 / 895;
-  }
   .missionBar {
     grid-area: 2 / 1;
     display: grid;
@@ -550,13 +605,6 @@ button:focus-visible {
     width: 100%;
     border-radius: 24px 24px 0 0;
   }
-  .outcomePicture::before {
-    content: "";
-    position: absolute;
-    inset: -24px;
-    background: var(--scene-mobile-art) center / cover;
-    filter: blur(18px);
-  }
   .resultPanel {
     flex: none;
     width: 100%;
@@ -572,26 +620,6 @@ button:focus-visible {
   }
   .panelLead {
     font-size: clamp(16px, 2.5cqh, 20px);
-  }
-  .truckNumber[data-truck="truck-1"] {
-    left: 22.1%;
-    top: 63%;
-  }
-  .truckNumber[data-truck="truck-2"] {
-    left: 68.1%;
-    top: 45.3%;
-  }
-  .truckNumber[data-truck="truck-3"] {
-    left: 58.2%;
-    top: 80.9%;
-  }
-  .truckNumber[data-truck="truck-4"] {
-    left: 82.3%;
-    top: 71.7%;
-  }
-  .pickupLabel {
-    left: 34%;
-    top: 28%;
   }
 }
 @media (max-width: 600px) {
@@ -623,17 +651,12 @@ button:focus-visible {
     text-align: center;
     font-size: 13px;
   }
-  .progressItem span {
+  .progressItem > span {
     min-height: 30px;
-  }
-  .progressItem i {
-    width: 26px;
-    height: 26px;
-    flex-basis: 26px;
   }
   .progressItem:not(:last-child)::after {
     position: absolute;
-    top: 13px;
+    top: 14px;
     left: calc(50% + 16px);
     right: calc(-50% + 16px);
     min-width: 0;

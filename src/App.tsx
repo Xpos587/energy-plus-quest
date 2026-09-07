@@ -71,7 +71,9 @@ function Game() {
               data-progress-step={step.id}
               key={step.id}
             >
-              <i aria-hidden="true">{index + 1}</i>
+              <i aria-hidden="true">
+                <span>{index + 1}</span>
+              </i>
               <span>{step.label}</span>
             </div>
           ))}
@@ -284,30 +286,23 @@ function Outcome({ onBack }: { onBack: () => void }) {
       className={styles.outcomeScene}
       data-carrier={carrier.id}
       data-layout="result"
-      style={
-        {
-          "--scene-art": `url("${outcomeArtwork[carrier.id].desktop}")`,
-          "--scene-mobile-art": `url("${outcomeArtwork[carrier.id].mobile}")`,
-        } as CSSProperties
-      }
     >
-      <picture className={styles.outcomePicture}>
-        <source
-          media="(max-width: 900px) and (orientation: portrait)"
-          srcSet={outcomeArtwork[carrier.id].mobile}
-          type="image/webp"
-        />
-        <img
-          alt=""
-          aria-hidden="true"
-          className={styles.outcomeBackdrop}
-          data-art-version="current"
-          data-outcome-art={carrier.id}
-          fetchPriority="high"
-          loading="eager"
-          src={outcomeArtwork[carrier.id].desktop}
-        />
-      </picture>
+      <div className={styles.outcomePicture}>
+        {(["mobile", "desktop"] as const).map((format) => (
+          <img
+            alt=""
+            aria-hidden="true"
+            className={styles.outcomeBackdrop}
+            data-art-version="current"
+            data-outcome-art={carrier.id}
+            data-format={format}
+            fetchPriority="high"
+            loading="eager"
+            key={format}
+            src={outcomeArtwork[carrier.id][format]}
+          />
+        ))}
+      </div>
       <div aria-hidden="true" className={styles.outcomeVeil} />
       <div className={styles.resultPanel} data-carrier={carrier.id}>
         <div className={styles.outcomeCopy}>

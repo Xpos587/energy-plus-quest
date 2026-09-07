@@ -11,24 +11,23 @@ export function CityMap({ mode = "soft" }: { mode?: "soft" | "live" }) {
       data-mode={mode}
     >
       <div className={live ? styles.liveMapSurface : undefined}>
-        <picture className={styles.mapPicture}>
-          <source
-            media="(max-width: 900px) and (orientation: portrait)"
-            srcSet={mapMobile}
-            type="image/webp"
-          />
-          <img
-            alt=""
-            aria-hidden="true"
-            className={styles.mapImage}
-            data-art-version="current"
-            data-map-contract="warehouse-roads-four-trucks"
-            data-map-media="generated"
-            fetchPriority={live ? "high" : undefined}
-            loading={live ? "eager" : "lazy"}
-            src={mapDesktop}
-          />
-        </picture>
+        <div className={styles.mapPicture}>
+          {([mapMobile, mapDesktop] as const).map((source, index) => (
+            <img
+              alt=""
+              aria-hidden="true"
+              className={styles.mapImage}
+              data-art-version="current"
+              data-map-contract="warehouse-roads-four-trucks"
+              data-map-media="generated"
+              data-format={index === 0 ? "mobile" : "desktop"}
+              fetchPriority={live ? "high" : undefined}
+              loading={live ? "eager" : "lazy"}
+              key={source}
+              src={source}
+            />
+          ))}
+        </div>
         <div aria-hidden="true" className={styles.mapShade} />
         {live && (
           <>

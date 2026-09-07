@@ -8,7 +8,11 @@ const scoreItems = [
     label: "Эмпатия",
     path: "M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z",
   },
-  { key: "efficiency", label: "Эффективность", path: "M4 20 20 4M7 4h13v13" },
+  {
+    key: "efficiency",
+    label: "Эффективность",
+    path: "M3 3v18h18M6 16l5-5 4 3 6-9M16 5h5v5",
+  },
 ] as const;
 
 export function ScoreDelta({ scores }: { scores: Scores }) {

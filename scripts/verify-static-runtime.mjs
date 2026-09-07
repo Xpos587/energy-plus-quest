@@ -9,6 +9,7 @@ if (!target) {
 
 const profiles = [
   { name: "small-phone", viewport: { width: 320, height: 568 } },
+  { name: "iphone-max", viewport: { width: 430, height: 932 } },
   { name: "phone-landscape", viewport: { width: 844, height: 390 } },
   { name: "tablet-landscape", viewport: { width: 1180, height: 820 } },
   { name: "wide-monitor", viewport: { width: 2560, height: 1440 } },
@@ -105,7 +106,8 @@ try {
       pageErrors.length > 0 ||
       !state.imagesLoaded ||
       !state.labelsFit ||
-      state.scrollWidth > state.clientWidth + 1
+      state.scrollWidth > state.clientWidth + 1 ||
+      state.scrollHeight > state.clientHeight + 1
     ) {
       throw new Error(
         JSON.stringify({
