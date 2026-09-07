@@ -60,7 +60,7 @@ test("scene panels retain their rounded corners", async ({ page }) => {
     "Назад к машинам",
   ]) {
     const panels = page.locator(
-      '[data-layout="dialog"] > div:last-child, [data-layout="result"], div:has(> div > [data-carrier-choice])',
+      '[data-layout="dialog"] > div:last-child, [data-layout="result"] > [data-carrier], div:has(> div > [data-carrier-choice])',
     );
     await expect(panels).toHaveCount(1);
     for (const panel of await panels.all()) {
@@ -73,7 +73,12 @@ test("scene panels retain their rounded corners", async ({ page }) => {
           s.borderBottomRightRadius,
         ].map(parseFloat);
       });
-      expect(Math.min(...radii)).toBeGreaterThanOrEqual(24);
+      const portraitResult =
+        action === "Назад к машинам" &&
+        page.viewportSize()!.width <= 900 &&
+        page.viewportSize()!.height > page.viewportSize()!.width;
+      if (portraitResult) expect(radii).toEqual([0, 0, 0, 0]);
+      else expect(Math.min(...radii)).toBeGreaterThanOrEqual(24);
     }
     await page.getByRole("button", { name: action, exact: true }).click();
   }
@@ -129,4 +134,46 @@ test("media fills its surface once and progress numerals stay light", async ({
     (el) => getComputedStyle(el.parentElement!, "::before").content,
   );
   expect(background).toBe("none");
+});
+
+test("edge-to-edge outcomes stay filled when switching phone and desktop", async ({
+  page,
+}, info) => {
+  test.skip(
+    info.project.name !== "desktop-chromium",
+    "one resize sequence covers the breakpoint transition",
+  );
+  await page.setViewportSize({ width: 440, height: 956 });
+  await page.goto("/");
+  for (const name of ["Профессионал", "Хор", "Вязаные носки", "№3"]) {
+    await page.getByRole("button", { name, exact: true }).click();
+  }
+  for (const [width, height] of [
+    [440, 956],
+    [1725, 998],
+    [440, 956],
+    [1265, 730],
+    [1440, 900],
+  ]) {
+    await page.setViewportSize({ width, height });
+    const scene = page.locator('[data-layout="result"]');
+    await expect(scene).toHaveCSS("border-radius", "0px");
+    const image = page.locator("[data-outcome-art]:visible");
+    await image.evaluate((el: HTMLImageElement) => el.decode());
+    await expect(image.locator("..")).toHaveCSS("border-radius", "0px");
+    const art = (await image.boundingBox())!;
+    const bounds = (await scene.boundingBox())!;
+    expect(art.x).toBe(0);
+    expect(art.width).toBe(width);
+    expect(art.y).toBe(bounds.y);
+    expect(bounds.y + bounds.height).toBe(height);
+    if (width > 900) expect(art.y + art.height).toBe(height);
+    else {
+      const panel = scene.locator(":scope > [data-carrier]");
+      await expect(panel).toHaveCSS("border-radius", "0px");
+      const box = (await panel.boundingBox())!;
+      expect(Math.abs(art.y + art.height - box.y)).toBeLessThan(1);
+      expect(box.y + box.height).toBe(height);
+    }
+  }
 });
