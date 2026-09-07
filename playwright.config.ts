@@ -9,6 +9,17 @@ export default defineConfig({
     trace: "retain-on-failure",
   },
   projects: [
+    ...[
+      { name: "small-phone", width: 320, height: 568 },
+      { name: "iphone-14-pro-max", width: 430, height: 932 },
+      { name: "phone-landscape", width: 844, height: 390 },
+      { name: "tablet-landscape", width: 1180, height: 820 },
+      { name: "wide-monitor", width: 2560, height: 1440 },
+    ].map(({ name, width, height }) => ({
+      name: `${name}-chromium`,
+      testMatch: /(?:layout|viewport)\.spec\.ts/,
+      use: { ...devices["Desktop Chrome"], viewport: { width, height } },
+    })),
     {
       name: "desktop-chromium",
       use: {
@@ -25,7 +36,7 @@ export default defineConfig({
     },
     {
       name: "mobile-toolbar-chromium",
-      testMatch: /layout\.spec\.ts/,
+      testMatch: /(?:layout|viewport)\.spec\.ts/,
       use: {
         ...devices["Pixel 5"],
         viewport: { width: 390, height: 700 },
@@ -33,7 +44,7 @@ export default defineConfig({
     },
     {
       name: "iphone-se-chromium",
-      testMatch: /layout\.spec\.ts/,
+      testMatch: /(?:layout|viewport)\.spec\.ts/,
       use: {
         ...devices["Desktop Chrome"],
         viewport: { width: 375, height: 667 },
@@ -41,7 +52,7 @@ export default defineConfig({
     },
     {
       name: "windows-125-chromium",
-      testMatch: /layout\.spec\.ts/,
+      testMatch: /(?:layout|viewport)\.spec\.ts/,
       use: {
         ...devices["Desktop Chrome"],
         viewport: { width: 1152, height: 720 },
@@ -49,7 +60,7 @@ export default defineConfig({
     },
     {
       name: "windows-140-chromium",
-      testMatch: /layout\.spec\.ts/,
+      testMatch: /(?:layout|viewport)\.spec\.ts/,
       use: {
         ...devices["Desktop Chrome"],
         viewport: { width: 1024, height: 643 },
@@ -57,7 +68,7 @@ export default defineConfig({
     },
     {
       name: "tablet-chromium",
-      testMatch: /layout\.spec\.ts/,
+      testMatch: /(?:layout|viewport)\.spec\.ts/,
       use: {
         ...devices["Galaxy Tab S4"],
         viewport: { width: 820, height: 1180 },

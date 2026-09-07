@@ -1,72 +1,46 @@
-import type { CSSProperties } from "react";
-import efficiencyIconUrl from "../../design/scene-01/assets/feedback-v5/production/metrics/efficiency.webp";
-import empathyIconUrl from "../../design/scene-01/assets/feedback-v5/production/metrics/empathy-no-border.webp";
-import energyIconUrl from "../../design/scene-01/assets/feedback-v5/production/metrics/energy.webp";
 import styles from "../App.module.css";
 import type { Scores } from "../game/types";
 
-const scoreItems: Array<{
-  key: keyof Scores;
-  iconUrl: string;
-  label: string;
-}> = [
-  { key: "energy", iconUrl: energyIconUrl, label: "Энергия" },
-  { key: "empathy", iconUrl: empathyIconUrl, label: "Эмпатия" },
+const scoreItems = [
+  { key: "energy", label: "Энергия", path: "M13 2 4 14h7l-1 8 10-13h-8z" },
   {
-    key: "efficiency",
-    iconUrl: efficiencyIconUrl,
-    label: "Эффективность",
+    key: "empathy",
+    label: "Эмпатия",
+    path: "M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z",
   },
-];
+  { key: "efficiency", label: "Эффективность", path: "M4 20 20 4M7 4h13v13" },
+] as const;
 
 export function ScoreDelta({ scores }: { scores: Scores }) {
   return (
     <fieldset className={styles.scoreDelta} aria-label="Изменение показателей">
       {scoreItems.map((item) => (
-        <div
-          data-score-key={item.key}
-          data-direction={deltaDirection(scores[item.key])}
-          key={item.key}
-        >
+        <div data-score-key={item.key} key={item.key}>
           <span>
-            <img
-              alt=""
+            <svg
               aria-hidden="true"
               className={styles.deltaIcon}
-              data-score-art="feedback-v5"
-              src={item.iconUrl}
-            />
-            <em className={styles.deltaLabel}>{item.label}</em>
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d={item.path} />
+            </svg>
+            <strong
+              data-positive={scores[item.key] > 0}
+              data-neutral={scores[item.key] === 0}
+            >
+              {scores[item.key] > 0
+                ? `+${scores[item.key]}`
+                : String(scores[item.key])}
+            </strong>
           </span>
-          <strong data-positive={scores[item.key] > 0}>
-            {formatScore(scores[item.key])}
-          </strong>
-          <i aria-hidden="true" className={styles.deltaTrack}>
-            <b
-              className={styles.deltaFill}
-              style={
-                {
-                  "--delta-fill": `${String(deltaFill(scores[item.key]))}%`,
-                } as CSSProperties
-              }
-            />
-          </i>
+          <em className={styles.deltaLabel}>{item.label}</em>
         </div>
       ))}
     </fieldset>
   );
-}
-
-function formatScore(value: number) {
-  return value > 0 ? `+${value}` : String(value);
-}
-
-function deltaFill(value: number) {
-  return Math.min(50, (Math.abs(value) / 5) * 50);
-}
-
-function deltaDirection(value: number) {
-  if (value > 0) return "positive";
-  if (value < 0) return "negative";
-  return "neutral";
 }

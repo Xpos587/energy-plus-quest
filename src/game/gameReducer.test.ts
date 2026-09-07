@@ -76,6 +76,40 @@ describe("gameReducer", () => {
     expect(outcome).toMatchObject({ carrier, scores, step: "outcome" });
   });
 
+  it("requires explicit Back before changing personalization", () => {
+    const state = {
+      ...initialGameState,
+      step: "carrier" as const,
+      profile: "professional" as const,
+      recipient: "alva" as const,
+      parcel: "camera" as const,
+    };
+    for (const action of [
+      { type: "START" },
+      { type: "CHOOSE_PROFILE", value: "student" },
+      { type: "CHOOSE_RECIPIENT", value: "arseniy" },
+      { type: "CHOOSE_PARCEL", value: "boat" },
+    ] as const) {
+      expect(gameReducer(state, action)).toEqual(state);
+      const outcome = gameReducer(state, {
+        type: "CHOOSE_CARRIER",
+        value: "near",
+      });
+      expect(gameReducer(outcome, action)).toEqual(outcome);
+    }
+    const back = gameReducer(state, { type: "BACK" });
+    expect(back).toMatchObject({
+      step: "parcel",
+      profile: "professional",
+      recipient: "alva",
+      parcel: "camera",
+    });
+    expect(
+      gameReducer(back, { type: "CHOOSE_PARCEL", value: "boat" }),
+    ).toMatchObject({ step: "carrier", parcel: "boat" });
+    expect(gameReducer(state, { type: "RESET" })).toEqual(initialGameState);
+  });
+
   it("resets the entire route", () => {
     const changed = gameReducer(initialGameState, {
       type: "CHOOSE_CARRIER",

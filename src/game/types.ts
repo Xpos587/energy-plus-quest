@@ -40,7 +40,6 @@ export type ChoiceItem<T extends string> = {
   title: string;
   eyebrow?: string;
   description?: string;
-  symbol: string;
 };
 
 export type ParcelChoice = ChoiceItem<ParcelId> & {

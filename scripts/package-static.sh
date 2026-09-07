@@ -73,4 +73,5 @@ fi
 bun scripts/verify-static-runtime.mjs \
   "http://127.0.0.1:4174/specprojects/joydelivery/"
 
+(cd "$release_dir" && sha256sum energy-plus-quest-static.zip > energy-plus-quest-static.zip.sha256)
 echo "Static archive verified: release/energy-plus-quest-static.zip"

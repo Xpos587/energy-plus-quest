@@ -36,6 +36,15 @@ function goBack(state: GameState): GameState {
 }
 
 export function gameReducer(state: GameState, action: GameAction): GameState {
+  if (
+    (state.step === "carrier" || state.step === "outcome") &&
+    (action.type === "START" ||
+      action.type === "CHOOSE_PROFILE" ||
+      action.type === "CHOOSE_RECIPIENT" ||
+      action.type === "CHOOSE_PARCEL")
+  )
+    return state;
+
   switch (action.type) {
     case "START":
       return { ...state, step: "profile" };
