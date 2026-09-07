@@ -56,7 +56,7 @@ try {
 
     await page.goto(target, { waitUntil: "networkidle" });
     assert.equal(await page.getByText("Начало игры", { exact: true }).count(), 0);
-    for (const name of ["Начать игру", "Студент", "Хор", "Фотоаппарат"]) {
+    for (const name of ["Студент", "Хор", "Фотоаппарат"]) {
       await page.getByRole("button", { name, exact: true }).click();
       assert.equal(await page.locator('[data-choice] b, [data-choice] [data-role-part="action"]').count(), 0);
       assert.equal(await page.getByRole("navigation", { name: "Этапы доставки" }).locator('[data-progress-step]').count(), 5);

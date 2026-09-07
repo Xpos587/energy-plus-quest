@@ -2,7 +2,6 @@ import { expect, type Page, test } from "@playwright/test";
 
 async function playReviewPath(page: Page) {
   await page.goto("/");
-  await page.getByRole("button", { name: /Начать игру/ }).click();
   await page.getByRole("button", { name: /Профессионал/ }).click();
   await page.getByRole("button", { name: /Альва/ }).click();
   await page.getByRole("button", { name: /Фотоаппарат/ }).click();
@@ -20,7 +19,6 @@ test("preserves brand UI and incremental context with four scene steps", async (
   page,
 }) => {
   await page.goto("/");
-  await page.getByRole("button", { name: /Начать игру/ }).click();
   await expect(page.locator("header [data-selection-context]")).toHaveCount(0);
   const logos = page.locator("header img");
   const logoWidths = await logos.evaluateAll((images) =>

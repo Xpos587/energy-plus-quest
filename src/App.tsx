@@ -1,5 +1,4 @@
 import type { CSSProperties } from "react";
-import arrowDiscArtwork from "../design/scene-01/assets/current/ui/arrow-disc-blue.png";
 import styles from "./App.module.css";
 import { CityMap } from "./components/CityMap";
 import { ScoreDelta } from "./components/ScoreBoard";
@@ -42,8 +41,6 @@ export function App() {
 
 function Game() {
   const { state, dispatch } = useGame();
-  const showChrome = state.step !== "intro";
-
   const navigate = (action: GameAction) => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     dispatch(action);
@@ -51,48 +48,42 @@ function Game() {
 
   return (
     <div className={styles.app} data-step={state.step}>
-      {showChrome && (
-        <header className={styles.header}>
-          <div className={styles.brandCluster}>
-            <div className={styles.projectMark}>
-              <img
-                alt="Газпром нефть — Газпромнефть-Снабжение"
-                className={styles.companyLogo}
-                src={companyLogoUrl}
-              />
-            </div>
-            <div className={styles.energyMark}>
-              <img alt="Энергия+" src={energyLogoUrl} />
-            </div>
+      <header className={styles.header}>
+        <div className={styles.brandCluster}>
+          <div className={styles.projectMark}>
+            <img
+              alt="Газпром нефть — Газпромнефть-Снабжение"
+              className={styles.companyLogo}
+              src={companyLogoUrl}
+            />
           </div>
-          <nav className={styles.routeProgress} aria-label="Этапы доставки">
-            {progressSteps.map((step, index) => (
-              <div
-                aria-current={index === 0 ? "step" : undefined}
-                className={styles.progressItem}
-                data-active={index === 0}
-                data-current={index === 0}
-                data-progress-step={step.id}
-                key={step.id}
-              >
-                <i aria-hidden="true">{index + 1}</i>
-                <span>{step.label}</span>
-              </div>
-            ))}
-          </nav>
-          <SelectionSummary state={state} />
-        </header>
-      )}
+          <div className={styles.energyMark}>
+            <img alt="Энергия+" src={energyLogoUrl} />
+          </div>
+        </div>
+        <nav className={styles.routeProgress} aria-label="Этапы доставки">
+          {progressSteps.map((step, index) => (
+            <div
+              aria-current={index === 0 ? "step" : undefined}
+              className={styles.progressItem}
+              data-active={index === 0}
+              data-current={index === 0}
+              data-progress-step={step.id}
+              key={step.id}
+            >
+              <i aria-hidden="true">{index + 1}</i>
+              <span>{step.label}</span>
+            </div>
+          ))}
+        </nav>
+        <SelectionSummary state={state} />
+      </header>
 
       <main className={styles.main} id="quest-main">
         <div className={styles.screen} key={state.step}>
-          {state.step === "intro" && (
-            <Intro onStart={() => navigate({ type: "START" })} />
-          )}
           {state.step === "profile" && (
             <ChoiceScreen
               items={profiles}
-              onBack={() => navigate({ type: "BACK" })}
               onSelect={(value) => navigate({ type: "CHOOSE_PROFILE", value })}
               title="Кто отправится в путь?"
             />
@@ -158,53 +149,12 @@ function SelectionSummary({ state }: { state: GameState }) {
   );
 }
 
-function Intro({ onStart }: { onStart: () => void }) {
-  return (
-    <section className={styles.sceneStage} data-layout="intro">
-      <CityMap mode="soft" />
-      <div className={styles.mapVeil} aria-hidden="true" />
-      <div className={styles.openingPanel}>
-        <div className={styles.introBrandLockup}>
-          <img
-            alt="Газпром нефть — Газпромнефть-Снабжение"
-            className={styles.introCompanyLogo}
-            src={companyLogoUrl}
-          />
-          <span className={styles.introEnergyMark}>
-            <img alt="Энергия+" src={energyLogoUrl} />
-          </span>
-        </div>
-        <h1>
-          Доставляем <span>радость</span>
-        </h1>
-        <p>
-          У логистов есть профессиональное правило: не бывает неважных грузов.
-          Для кого-то это многотонная турбина, а для кого-то — одна маленькая
-          коробка, одна большая радость.
-        </p>
-        <p>
-          Сегодня вам предстоит провести такой груз на Крайний Север — быстро,
-          легко и с любовью к людям.
-        </p>
-        <button
-          className={styles.primaryButton}
-          onClick={onStart}
-          type="button"
-        >
-          <span>Начать игру</span>
-          <ActionArrow />
-        </button>
-      </div>
-    </section>
-  );
-}
-
 type ChoiceScreenProps<T extends string> = {
   eyebrow?: string;
   title: string;
   description?: string;
   items: ChoiceItem<T>[];
-  onBack: () => void;
+  onBack?: () => void;
   onSelect: (value: T) => void;
 };
 
@@ -222,7 +172,7 @@ function ChoiceScreen<T extends string>({
         <CityMap mode="soft" />
       </div>
       <div className={styles.dialogPanel}>
-        <BackButton onClick={onBack} />
+        {onBack && <BackButton onClick={onBack} />}
         <ScreenHeading
           description={description}
           eyebrow={eyebrow}
@@ -416,13 +366,5 @@ function ScreenHeading({
       <h2>{title}</h2>
       {description && <p>{description}</p>}
     </div>
-  );
-}
-
-function ActionArrow() {
-  return (
-    <span className={styles.actionArrow}>
-      <img alt="" aria-hidden="true" src={arrowDiscArtwork} />
-    </span>
   );
 }

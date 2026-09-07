@@ -1,5 +1,4 @@
 export type GameStep =
-  | "intro"
   | "profile"
   | "recipient"
   | "parcel"
@@ -27,7 +26,6 @@ export type GameState = {
 };
 
 export type GameAction =
-  | { type: "START" }
   | { type: "CHOOSE_PROFILE"; value: ProfileId }
   | { type: "CHOOSE_RECIPIENT"; value: RecipientId }
   | { type: "CHOOSE_PARCEL"; value: ParcelId }

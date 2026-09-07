@@ -5,7 +5,6 @@ test("every scene fits the viewport without hiding content", async ({
 }) => {
   await page.goto("/");
   for (const action of [
-    "Начать игру",
     "Профессионал",
     "Хор",
     "Лодка",

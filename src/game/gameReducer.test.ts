@@ -2,6 +2,13 @@ import { describe, expect, it } from "vitest";
 import { gameReducer, initialGameState } from "./gameReducer";
 
 describe("gameReducer", () => {
+  it("starts directly on profile selection", () => {
+    expect(initialGameState.step).toBe("profile");
+    expect(gameReducer(initialGameState, { type: "BACK" })).toBe(
+      initialGameState,
+    );
+  });
+
   it("moves directly from parcel selection to the carrier map", () => {
     const state = gameReducer(
       {
@@ -85,7 +92,6 @@ describe("gameReducer", () => {
       parcel: "camera" as const,
     };
     for (const action of [
-      { type: "START" },
       { type: "CHOOSE_PROFILE", value: "student" },
       { type: "CHOOSE_RECIPIENT", value: "arseniy" },
       { type: "CHOOSE_PARCEL", value: "boat" },

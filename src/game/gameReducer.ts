@@ -4,14 +4,14 @@ import type { GameAction, GameState } from "./types";
 const emptyScores = { energy: 0, empathy: 0, efficiency: 0 };
 
 export const initialGameState: GameState = {
-  step: "intro",
+  step: "profile",
   scores: emptyScores,
 };
 
 function goBack(state: GameState): GameState {
   switch (state.step) {
     case "profile":
-      return { ...state, step: "intro" };
+      return state;
     case "recipient":
       return { ...state, step: "profile", recipient: undefined };
     case "parcel":
@@ -30,24 +30,19 @@ function goBack(state: GameState): GameState {
         carrier: undefined,
         scores: emptyScores,
       };
-    case "intro":
-      return state;
   }
 }
 
 export function gameReducer(state: GameState, action: GameAction): GameState {
   if (
     (state.step === "carrier" || state.step === "outcome") &&
-    (action.type === "START" ||
-      action.type === "CHOOSE_PROFILE" ||
+    (action.type === "CHOOSE_PROFILE" ||
       action.type === "CHOOSE_RECIPIENT" ||
       action.type === "CHOOSE_PARCEL")
   )
     return state;
 
   switch (action.type) {
-    case "START":
-      return { ...state, step: "profile" };
     case "CHOOSE_PROFILE":
       return { ...state, profile: action.value, step: "recipient" };
     case "CHOOSE_RECIPIENT":

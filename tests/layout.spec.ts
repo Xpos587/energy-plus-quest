@@ -62,7 +62,6 @@ async function expectResponsive(page: Page) {
 
 async function startRoute(page: Page, recipient = "alva", parcel = "camera") {
   await page.goto("/");
-  await page.getByRole("button", { name: "Начать игру", exact: true }).click();
   await page.locator('[data-choice="professional"]').click();
   await page.locator(`[data-choice="${recipient}"]`).click();
   await page.locator(`[data-choice="${parcel}"]`).click();
@@ -73,7 +72,6 @@ test("responsive route keeps artwork complete and controls reachable", async ({
 }) => {
   await page.goto("/");
   await expectResponsive(page);
-  await page.getByRole("button", { name: "Начать игру", exact: true }).click();
   for (const choice of ["professional", "khor", "camera"]) {
     await expectResponsive(page);
     for (const image of await page.locator("[data-choice] img").all()) {
@@ -150,43 +148,13 @@ test("meeting cleanup and readable type survive responsive layouts", async ({
   page,
 }) => {
   await page.goto("/");
-  await page
-    .getByRole("button", { name: "Начать игру", exact: true })
-    .waitFor();
-  await expect(page.getByText("Начало игры", { exact: true })).toHaveCount(0);
-  const widths = await page
-    .locator('[data-layout="intro"] img[alt]:not([alt=""])')
-    .evaluateAll((images) =>
-      images.map((image) => image.getBoundingClientRect().width),
-    );
-  expect(Math.abs(widths[0] - widths[1])).toBeLessThan(1);
-  const contrast = await page
-    .getByRole("button", { name: "Начать игру", exact: true })
-    .evaluate((element) => {
-      const style = getComputedStyle(element);
-      const luminance = (color: string) =>
-        color
-          .match(/[\d.]+/g)!
-          .slice(0, 3)
-          .map(Number)
-          .map((value) => value / 255)
-          .map((value) =>
-            value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4,
-          )
-          .reduce(
-            (sum, value, index) =>
-              sum + value * [0.2126, 0.7152, 0.0722][index],
-            0,
-          );
-      const values = [
-        luminance(style.color),
-        luminance(style.backgroundColor),
-      ].sort((a, b) => b - a);
-      return (values[0] + 0.05) / (values[1] + 0.05);
-    });
-  expect(contrast).toBeGreaterThanOrEqual(3);
+  await expect(
+    page.getByRole("heading", { name: "Кто отправится в путь?" }),
+  ).toBeVisible();
+  await expect(page.getByRole("button", { name: "Начать игру" })).toHaveCount(
+    0,
+  );
   for (const [action, current] of [
-    ["Начать игру", "Перевозчик"],
     ["Профессионал", "Перевозчик"],
     ["Хор", "Перевозчик"],
     ["Фотоаппарат", "Перевозчик"],
@@ -259,7 +227,6 @@ test("media meets card edges and desktop map fills its scene", async ({
   page,
 }) => {
   await page.goto("/");
-  await page.getByRole("button", { name: "Начать игру", exact: true }).click();
   const scene = await page.locator('[data-layout="dialog"]').boundingBox();
   expect(scene!.y + scene!.height).toBeGreaterThanOrEqual(
     page.viewportSize()!.height - 1,
@@ -301,7 +268,6 @@ test("desktop composition stays compact rather than becoming a poster gallery", 
 }) => {
   test.skip((page.viewportSize()?.width ?? 0) < 901, "Desktop composition");
   await page.goto("/");
-  await page.getByRole("button", { name: "Начать игру", exact: true }).click();
   const cards = await page.locator("[data-choice]").evaluateAll((elements) =>
     elements.map((element) => {
       const card = element.getBoundingClientRect();
@@ -344,7 +310,6 @@ test("header restores numbered progress and rounded media", async ({
   page,
 }) => {
   await page.goto("/");
-  await page.getByRole("button", { name: "Начать игру", exact: true }).click();
   const nav = page.getByRole("navigation", { name: "Этапы доставки" });
   await expect(nav.locator("i")).toHaveText(["1", "2", "3", "4", "5"]);
   await expect(nav.locator("span")).toHaveText([
@@ -414,18 +379,21 @@ test("header restores numbered progress and rounded media", async ({
   );
 });
 
-test("intro and mobile delivery hierarchy follow the review", async ({
+test("profile-first entry and mobile delivery hierarchy follow the review", async ({
   page,
 }) => {
   await page.goto("/");
-  const start = page.getByRole("button", { name: "Начать игру", exact: true });
-  await expect(start).toHaveCSS("color", "rgb(255, 255, 255)");
-  const brand = await page
-    .getByAltText("Газпром нефть — Газпромнефть-Снабжение", { exact: true })
-    .boundingBox();
-  expect(brand!.width).toBeGreaterThan(110);
+  await expect(
+    page.getByRole("heading", { name: "Кто отправится в путь?" }),
+  ).toBeVisible();
+  await expect(page.getByRole("button", { name: "Начать игру" })).toHaveCount(
+    0,
+  );
+  await expect(
+    page.getByRole("button", { name: "Назад", exact: true }),
+  ).toHaveCount(0);
+  await expect(page.locator('[data-layout="intro"]')).toHaveCount(0);
   await expectResponsive(page);
-  await start.click();
   await page.getByRole("button", { name: "Профессионал", exact: true }).click();
   await page.getByRole("button", { name: "Хор", exact: true }).click();
   await page.getByRole("button", { name: "Лодка", exact: true }).click();
