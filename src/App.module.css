@@ -178,6 +178,14 @@ button:focus-visible {
   outline: 3px solid var(--orange);
   outline-offset: 3px;
 }
+.dialogPanel,
+.missionBar,
+.resultPanel {
+  border: 1px solid var(--panel-border);
+  border-radius: 28px;
+  box-shadow: 0 16px 40px #04132718;
+}
+
 .dialogPanel {
   width: min(100%, 1120px);
   margin-inline: auto;

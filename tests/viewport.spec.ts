@@ -49,3 +49,32 @@ test("every scene fits the viewport without hiding content", async ({
     "rgb(255, 255, 255)",
   );
 });
+
+test("scene panels retain their rounded corners", async ({ page }) => {
+  await page.goto("/");
+  for (const action of [
+    "Профессионал",
+    "Хор",
+    "Лодка",
+    "№1",
+    "Назад к машинам",
+  ]) {
+    const panels = page.locator(
+      '[data-layout="dialog"] > div:last-child, [data-layout="result"], div:has(> div > [data-carrier-choice])',
+    );
+    await expect(panels).toHaveCount(1);
+    for (const panel of await panels.all()) {
+      const radii = await panel.evaluate((el) => {
+        const s = getComputedStyle(el);
+        return [
+          s.borderTopLeftRadius,
+          s.borderTopRightRadius,
+          s.borderBottomLeftRadius,
+          s.borderBottomRightRadius,
+        ].map(parseFloat);
+      });
+      expect(Math.min(...radii)).toBeGreaterThanOrEqual(24);
+    }
+    await page.getByRole("button", { name: action, exact: true }).click();
+  }
+});
