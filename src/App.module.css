@@ -402,6 +402,27 @@ button:focus-visible {
   object-fit: cover;
   object-position: left center;
 }
+/* Keep the mobile-derived story clear of the desktop result panel. */
+.outcomeBackdrop[data-format="desktop"][data-outcome-art="old"],
+.outcomeBackdrop[data-format="desktop"][data-outcome-art="near"] {
+  object-position: 55% center;
+}
+.outcomeBackdrop[data-format="desktop"][data-outcome-art="old4"] {
+  object-position: 25% center;
+}
+.outcomeBackdrop[data-format="desktop"][data-outcome-art="crew"] {
+  object-position: right center;
+}
+.outcomeBackdrop[data-format="mobile"][data-outcome-art="old"],
+.outcomeBackdrop[data-format="mobile"][data-outcome-art="near"] {
+  object-position: left center;
+}
+.outcomeBackdrop[data-format="mobile"][data-outcome-art="old4"] {
+  object-position: 15% center;
+}
+.outcomeBackdrop[data-format="mobile"][data-outcome-art="crew"] {
+  object-position: 60% center;
+}
 .mapPicture .mapImage[data-format="mobile"],
 .outcomeBackdrop[data-format="mobile"] {
   display: none;

@@ -8,7 +8,7 @@ export type GameStep =
 export type ProfileId = "student" | "professional";
 export type RecipientId = "alva" | "khor" | "arseniy";
 export type ParcelId = "camera" | "socks" | "boat";
-export type CarrierId = "old" | "near" | "crew" | "express";
+export type CarrierId = "old" | "old4" | "near" | "crew" | "express";
 
 export type Scores = {
   energy: number;

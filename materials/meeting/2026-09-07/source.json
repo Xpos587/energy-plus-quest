@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-07",
+  "source_file": "/home/michael/Videos/Video_2026-09-07_17-04-34.mp4",
+  "source_bytes": 1671928210,
+  "source_sha256": "93249ef007d82c3e8517b537df0e7eccb22d7a2c286c047016daec02fff1ba48",
+  "duration_seconds": 884.7465,
+  "analysis_scope": "Audio transcription only; video frames were not analyzed",
+  "stt_model": "groq/whisper-large-v3",
+  "language": "ru",
+  "segments": 192,
+  "speaker_diarization": false,
+  "raw_artifacts": "/home/michael/.local/state/energy-plus-quest/production/2026-09-05-scene-01/meeting-2026-09-07",
+  "transcript_sha256": "96f5dab9e02e012d822a902ec5aebf81059633376d4c2c527603937d8b8e35da",
+  "caveats": [
+    "Automatic transcription; unclear fragments retained verbatim.",
+    "Speaker names are not attributed.",
+    "Final subtitle-like phrase is not treated as a meeting decision."
+  ]
+}

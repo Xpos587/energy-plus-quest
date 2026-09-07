@@ -51,18 +51,21 @@ export const parcels: ParcelChoice[] = [
   },
 ];
 
+const oldCarrier: CarrierChoice = {
+  id: "old",
+  eyebrow: "Дальний маршрут",
+  title: "Знакомая «Ласточка»",
+  description:
+    "Проверенная фура с большим пробегом находится дальше от склада.",
+  score: { energy: 0, empathy: -3, efficiency: -3 },
+  resultTitle: "Маршрут потребовал больше времени",
+  resultBody:
+    "Дальняя машина прошла дополнительную техническую проверку по пути. Подарок в безопасности, но {recipient} получит {parcel} на неделю позже.",
+};
+
 export const carriers: CarrierChoice[] = [
-  {
-    id: "old",
-    eyebrow: "Дальний маршрут",
-    title: "Знакомая «Ласточка»",
-    description:
-      "Проверенная фура с большим пробегом находится дальше от склада.",
-    score: { energy: 0, empathy: -3, efficiency: -3 },
-    resultTitle: "Маршрут потребовал больше времени",
-    resultBody:
-      "Дальняя машина прошла дополнительную техническую проверку по пути. Подарок в безопасности, но {recipient} получит {parcel} на неделю позже.",
-  },
+  oldCarrier,
+  { ...oldCarrier, id: "old4" },
   {
     id: "near",
     eyebrow: "У ворот склада",

@@ -11,7 +11,7 @@ const cases = [
   ["№1", "old", "Маршрут потребовал больше времени"],
   ["№2", "near", "Близко — не значит быстро"],
   ["№3", "crew", "Два водителя лучше одного"],
-  ["№4", "old", "Маршрут потребовал больше времени"],
+  ["№4", "old4", "Маршрут потребовал больше времени"],
   ["Подобрать автоматически", "express", "Перевозчик найден за два часа"],
 ] as const;
 
@@ -153,4 +153,33 @@ test("near uses the forecast and signed deltas without fictional continuation", 
   await expect(
     page.getByText("Продолжение пока недоступно", { exact: true }),
   ).toHaveCount(0);
+});
+
+test("old trucks 1 and 4 have different media but the same consequence", async ({
+  page,
+}) => {
+  await playReviewPath(page);
+  await page.getByRole("button", { name: "№1", exact: true }).click();
+  const firstImage = await page
+    .locator('[data-outcome-art="old"]:visible')
+    .getAttribute("src");
+  const firstScores = await page
+    .locator("[data-score-key] strong")
+    .allTextContents();
+  const firstCopy = await page
+    .locator('[data-layout="result"] p')
+    .textContent();
+  await page
+    .getByRole("button", { name: "Назад к машинам", exact: true })
+    .click();
+  await page.getByRole("button", { name: "№4", exact: true }).click();
+  const fourthImage = page.locator('[data-outcome-art="old4"]:visible');
+  await expect(fourthImage).toBeVisible();
+  expect(await fourthImage.getAttribute("src")).not.toBe(firstImage);
+  expect(
+    await page.locator("[data-score-key] strong").allTextContents(),
+  ).toEqual(firstScores);
+  expect(await page.locator('[data-layout="result"] p').textContent()).toBe(
+    firstCopy,
+  );
 });

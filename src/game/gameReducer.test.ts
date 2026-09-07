@@ -71,6 +71,7 @@ describe("gameReducer", () => {
 
   it.each([
     ["old", { energy: 0, empathy: -3, efficiency: -3 }],
+    ["old4", { energy: 0, empathy: -3, efficiency: -3 }],
     ["near", { energy: 1, empathy: 0, efficiency: -2 }],
     ["crew", { energy: -3, empathy: 3, efficiency: 4 }],
     ["express", { energy: -1, empathy: 5, efficiency: 5 }],

@@ -14,6 +14,8 @@ import outcomeNearDesktop from "../../design/scene-01/assets/current/outcomes/ne
 import outcomeNearMobile from "../../design/scene-01/assets/current/outcomes/near-mobile.webp";
 import outcomeOldDesktop from "../../design/scene-01/assets/current/outcomes/old-desktop.webp";
 import outcomeOldMobile from "../../design/scene-01/assets/current/outcomes/old-mobile.webp";
+import outcomeOld4Desktop from "../../design/scene-01/assets/current/outcomes/old4-desktop.webp";
+import outcomeOld4Mobile from "../../design/scene-01/assets/current/outcomes/old4-mobile.webp";
 import type { CarrierId } from "./types";
 
 export const choiceArtwork: Record<string, string> = {
@@ -32,6 +34,7 @@ export const outcomeArtwork: Record<
   { desktop: string; mobile: string }
 > = {
   old: { desktop: outcomeOldDesktop, mobile: outcomeOldMobile },
+  old4: { desktop: outcomeOld4Desktop, mobile: outcomeOld4Mobile },
   near: { desktop: outcomeNearDesktop, mobile: outcomeNearMobile },
   crew: { desktop: outcomeCrewDesktop, mobile: outcomeCrewMobile },
   express: { desktop: outcomeExpressDesktop, mobile: outcomeExpressMobile },

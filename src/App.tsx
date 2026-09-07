@@ -251,8 +251,8 @@ function CarrierScreen({
             №3
           </button>
           <button
-            data-carrier-choice="old"
-            onClick={() => onSelect("old")}
+            data-carrier-choice="old4"
+            onClick={() => onSelect("old4")}
             type="button"
           >
             №4
