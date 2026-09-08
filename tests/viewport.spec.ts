@@ -121,7 +121,7 @@ test("media fills its surface once and progress numerals stay light", async ({
     .locator("[data-map-media]:visible")
     .getAttribute("data-format");
   expect(media!.width / media!.height).toBeCloseTo(
-    format === "mobile" ? 720 / 1024 : 1280 / 724,
+    format === "mobile" ? 720 / 1088 : 1280 / 788,
     3,
   );
   await page.getByRole("button", { name: "№1", exact: true }).click();
@@ -234,8 +234,8 @@ test("authored carrier media and all moving trucks fit without UI occlusion", as
     };
   });
   expect([
-    [720, 1024],
-    [1280, 724],
+    [720, 1088],
+    [1280, 788],
   ]).toContainEqual(geometry.size);
   expect(geometry.duration).toBeCloseTo(64, 1);
   expect(geometry.ratioError).toBeLessThan(0.001);

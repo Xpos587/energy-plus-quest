@@ -80,7 +80,7 @@ try {
       };
     });
     assert.equal(motion.duration, 64);
-    assert.ok((motion.width === 720 && motion.height === 1024) || (motion.width === 1280 && motion.height === 724));
+    assert.ok((motion.width === 720 && motion.height === 1088) || (motion.width === 1280 && motion.height === 788));
     assert.ok(motion.fitted && motion.visible && motion.noOverflow, `${profile.name}: whole authored map must fit`);
     await page.getByRole("button", { name: "Назад", exact: true }).click();
     await page.getByRole("button", { name: "Лодка", exact: true }).click();

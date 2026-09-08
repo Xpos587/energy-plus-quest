@@ -282,13 +282,13 @@ button:focus-visible {
   position: relative;
   overflow: visible;
 }
-/* Match the authored 1280x724 video so labels share its pixel plane. */
+/* Match the authored 1280x788 video so labels share its pixel plane. */
 .liveMapSurface {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: min(100cqw, calc(100cqh * 1.767956));
-  height: min(100cqh, calc(100cqw / 1.767956));
+  width: min(100cqw, calc(100cqh * 1.624365));
+  height: min(100cqh, calc(100cqw / 1.624365));
   transform: translate(-50%, -50%);
   overflow: visible;
   border-radius: 0;
@@ -296,7 +296,7 @@ button:focus-visible {
 .cityExtension {
   position: absolute;
   width: 220%;
-  height: 200%;
+  height: auto;
   max-width: none;
   left: -60%;
   top: 0;
@@ -494,10 +494,10 @@ button:focus-visible {
 }
 
 @container (max-aspect-ratio: 1.607143) {
-  /* Match the authored 720x1024 mobile video. */
+  /* Match the authored 720x1088 mobile video. */
   .liveMapSurface {
-    width: min(100cqw, calc(100cqh * 0.703125));
-    height: min(100cqh, calc(100cqw / 0.703125));
+    width: min(100cqw, calc(100cqh * 0.661765));
+    height: min(100cqh, calc(100cqw / 0.661765));
     left: 50%;
     transform: translate(-50%, -50%);
   }

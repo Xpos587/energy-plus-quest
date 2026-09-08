@@ -34,7 +34,10 @@ export function MapInspection({
     const paths = tracks[format];
     let frame = 0;
     let active = true;
-    const update = () => {
+    let previousTime = 0;
+    let displayed: number[][] | null = null;
+    let previousBounds = "";
+    const update = (timestamp?: number) => {
       if (!active) return;
       // Track the decoded video's clock, including seeks, pauses and loop wrap.
       const position = ((element?.currentTime ?? 0) * 18) % paths[0].length;
@@ -52,7 +55,22 @@ export function MapInspection({
         bounds.width,
         bounds.height,
       );
-      positions.forEach(([x, y], i) => {
+      const now = timestamp ?? performance.now();
+      const boundsKey = `${bounds.width}:${bounds.height}`;
+      if (!displayed || boundsKey !== previousBounds) displayed = positions.map(p => [...p]);
+      const elapsed = Math.min(now - previousTime, 50);
+      const blend = 1 - Math.exp(-elapsed / 180);
+      displayed.forEach((p, i) => {
+        const dx = (positions[i][0] - p[0]) * blend;
+        const dy = (positions[i][1] - p[1]) * blend;
+        const limit = 140 * elapsed / 1000;
+        const factor = Math.min(1, limit / (Math.hypot(dx, dy) || 1));
+        p[0] += dx * factor;
+        p[1] += dy * factor;
+      });
+      previousTime = now;
+      previousBounds = boundsKey;
+      displayed.forEach(([x, y], i) => {
         const marker = markers.current[i];
         if (marker) {
           marker.style.left = `${x}px`;
@@ -67,24 +85,23 @@ export function MapInspection({
         }
       });
     };
-    const decodedFrames = element && "requestVideoFrameCallback" in element;
-    const tick = () => {
-      update();
-      if (decodedFrames) frame = element.requestVideoFrameCallback(tick);
-      else frame = requestAnimationFrame(tick);
+    // UI runs at display refresh rate, independently of the 18fps video.
+    const tick = (timestamp: number) => {
+      update(timestamp);
+      frame = requestAnimationFrame(tick);
     };
     update();
-    tick();
-    element?.addEventListener("seeked", update);
-    const observer = new ResizeObserver(update);
+    frame = requestAnimationFrame(tick);
+    const refresh = () => update();
+    element?.addEventListener("seeked", refresh);
+    const observer = new ResizeObserver(refresh);
     if (markers.current[0]?.parentElement)
       observer.observe(markers.current[0].parentElement);
     return () => {
       active = false;
       observer.disconnect();
-      if (decodedFrames) element.cancelVideoFrameCallback(frame);
-      else cancelAnimationFrame(frame);
-      element?.removeEventListener("seeked", update);
+      cancelAnimationFrame(frame);
+      element?.removeEventListener("seeked", refresh);
     };
   }, [format, playing, video]);
   return (
