@@ -11,6 +11,8 @@ import mapDesktopVideo from "../../design/scene-01/assets/current/map/carrier-de
 import mapDesktop from "../../design/scene-01/assets/current/map/carrier-desktop.webp";
 import mapMobileVideo from "../../design/scene-01/assets/current/map/carrier-mobile.mp4";
 import mapMobile from "../../design/scene-01/assets/current/map/carrier-mobile.webp";
+import extensionMobile from "../../design/scene-01/assets/current/map/extension-mobile.webp";
+import extensionDesktop from "../../design/scene-01/assets/current/map/extension-desktop.webp";
 import styles from "../App.module.css";
 import { MapInspection } from "./MapInspection";
 
@@ -35,11 +37,8 @@ export function CityMap({
   const descriptionId = useId();
   const mapRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const pausedRef = useRef(false);
   const [format, setFormat] = useState<MapFormat | null>(null);
   const [motionReady, setMotionReady] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState<boolean | null>(null);
-  const [paused, setPaused] = useState(false);
   const [motionBlocked, setMotionBlocked] = useState(false);
   const [motionFailed, setMotionFailed] = useState(false);
   const [posterFailed, setPosterFailed] = useState(false);
@@ -61,19 +60,10 @@ export function CityMap({
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setReducedMotion(query.matches);
-    update();
-    query.addEventListener("change", update);
-    return () => query.removeEventListener("change", update);
-  }, []);
-
   const shouldShowVideo =
     live &&
     motionReady &&
     format !== null &&
-    reducedMotion === false &&
     !motionFailed;
 
   const attemptPlay = useCallback(
@@ -85,8 +75,6 @@ export function CityMap({
             videoRef.current === video &&
             video.getAttribute("src") === source
           ) {
-            pausedRef.current = false;
-            setPaused(false);
             setMotionBlocked(false);
           }
         },
@@ -111,7 +99,7 @@ export function CityMap({
       const video = videoRef.current;
       if (!video) return;
       if (document.hidden) video.pause();
-      else if (!pausedRef.current && !motionBlocked) attemptPlay(video, true);
+      else if (!motionBlocked) attemptPlay(video, true);
     };
     document.addEventListener("visibilitychange", onVisibilityChange);
     return () =>
@@ -122,28 +110,18 @@ export function CityMap({
     const previous = videoRef.current;
     if (previous && previous !== element) previous.pause();
     videoRef.current = element;
-  }, []);
-
-  const toggleMotion = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (paused || motionBlocked) {
-      pausedRef.current = false;
-      attemptPlay(video, false);
-      return;
+    if (element) {
+      // WebKit needs a muted inline autoplay element before media readiness.
+      element.defaultMuted = true;
+      element.muted = true;
     }
-    video.pause();
-    pausedRef.current = true;
-    setPaused(true);
-  };
+  }, []);
 
   const activeFormat = format ?? "desktop";
   const media = mapFormats[activeFormat];
   const status = motionFailed
     ? `Анимация карты недоступна. ${mapDescription}`
-    : reducedMotion
-      ? `Движение остановлено по настройке устройства. ${mapDescription}`
-      : motionBlocked
+    : motionBlocked
         ? `Движение ожидает запуска. ${mapDescription}`
         : mapDescription;
 
@@ -156,6 +134,8 @@ export function CityMap({
       ref={mapRef}
     >
       <div className={live ? styles.liveMapSurface : undefined}>
+        {live && <img alt="" aria-hidden="true" className={styles.cityExtension}
+          src={activeFormat === "mobile" ? extensionMobile : extensionDesktop} />}
         <div className={styles.mapPicture}>
           {shouldShowVideo ? (
             <>
@@ -167,16 +147,17 @@ export function CityMap({
                 data-map-contract="warehouse-roads-four-trucks"
                 data-map-media="authored-video"
                 disablePictureInPicture
+                autoPlay={!motionBlocked}
                 loop
                 muted
                 onCanPlay={(event) => {
-                  if (!pausedRef.current && !document.hidden && !motionBlocked)
+                  if (!document.hidden && !motionBlocked)
                     attemptPlay(event.currentTarget, true);
                 }}
                 onError={() => setMotionFailed(true)}
                 playsInline
                 poster={media.poster}
-                preload="metadata"
+                preload="auto"
                 ref={setVideo}
                 src={media.video}
               />
@@ -236,51 +217,14 @@ export function CityMap({
         controlsHost &&
         createPortal(
           <>
-            {shouldShowVideo && (
-              <button
-                aria-pressed={paused}
-                className={styles.motionToggle}
-                onClick={toggleMotion}
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  className={styles.motionIcon}
-                >
-                  <path
-                    d={
-                      paused || motionBlocked
-                        ? "M7 4v16l14-8z"
-                        : "M6 4h4v16H6zM14 4h4v16h-4z"
-                    }
-                    fill="currentColor"
-                  />
-                </svg>
-                <span>
-                  {paused
-                    ? "Продолжить движение"
-                    : motionBlocked
-                      ? "Запустить движение"
-                      : "Приостановить движение"}
-                </span>
+            {motionBlocked && shouldShowVideo && (
+              <button className={styles.motionToggle} type="button"
+                onClick={() => videoRef.current && attemptPlay(videoRef.current, false)}>
+                Запустить движение
               </button>
             )}
-            <p
-              aria-live="polite"
-              className={
-                paused || reducedMotion || motionFailed || motionBlocked
-                  ? styles.motionDescription
-                  : styles.motionDescriptionHidden
-              }
-              id={descriptionId}
-              data-visually-hidden={
-                !(paused || reducedMotion || motionFailed || motionBlocked)
-              }
-              data-motion-description
-            >
-              {status}
-            </p>
+            <p className={styles.motionDescriptionHidden} id={descriptionId}
+              data-visually-hidden="true" data-motion-description>{status}</p>
           </>,
           controlsHost,
         )}

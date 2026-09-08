@@ -14,6 +14,11 @@ test("all decoded frame targets fit and remain separate at small-phone size", ()
         height,
       );
       positions.forEach(([x, y], i) => {
+        for (const path of tracks[format]) {
+          const [ax, ay] = path[frame];
+          expect(Math.hypot(x - ax * width / 100, y - ay * height / 100))
+            .toBeGreaterThanOrEqual(width * 0.065 + 15 - 0.01);
+        }
         expect(x).toBeGreaterThanOrEqual(22);
         expect(x).toBeLessThanOrEqual(width - 22);
         expect(y).toBeGreaterThanOrEqual(22);

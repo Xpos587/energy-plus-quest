@@ -69,7 +69,7 @@ for (const viewport of [
     await page.getByRole("button", { name: /Профессионал/ }).click();
     await page.getByRole("button", { name: /Альва/ }).click();
     await page.getByRole("button", { name: /Фотоаппарат/ }).click();
-    await expect(page.locator("video")).toHaveCount(0);
+    await expect(page.locator("video")).toHaveCount(1);
     const markers = page.locator("[data-truck-inspect]");
     await markers.nth(2).click();
     const dialog = page.getByRole("dialog");

@@ -223,7 +223,6 @@ test("keyboard order puts delivery choices before playback controls", async ({
     "№3",
     "№4",
     "Подобрать автоматически",
-    "Приостановить движение",
   ]) {
     await page.keyboard.press("Tab");
     await expect(page.getByRole("button", { name, exact: true })).toBeFocused();

@@ -71,27 +71,18 @@ test("carrier has four choice actions, authored motion and an accessible static 
   page,
 }) => {
   await playReviewPath(page);
+  const motion = page.locator('video[data-map-media="authored-video"]');
+  await expect(motion).toHaveAttribute("autoplay", "");
+  await expect(motion).toHaveAttribute("preload", "auto");
+  await expect.poll(() => motion.evaluate((video: HTMLVideoElement) => video.currentTime)).toBeGreaterThan(0);
   await expect(page.locator("[data-carrier-hotspot]")).toHaveCount(0);
   await expect(page.locator("[data-pickup-label]")).toBeVisible();
   await expect(
     page.locator('[data-map-media="authored-video"]:visible'),
   ).toHaveCount(1);
-  await expect(
-    page.getByRole("button", { name: "Приостановить движение", exact: true }),
-  ).toBeVisible();
-  await expect(page.locator("[data-motion-description]")).toContainText(
-    /№2: у склада, очень медленно/,
-  );
-  for (const [label] of cases)
-    await expect(
-      page.getByRole("button", { name: label, exact: true }),
-    ).toBeVisible();
-  await page
-    .getByRole("button", { name: "Приостановить движение", exact: true })
-    .click();
-  await expect(
-    page.getByRole("button", { name: "Продолжить движение", exact: true }),
-  ).toBeVisible();
+  await expect(page.getByRole("button", { name: /Приостановить|Продолжить/ })).toHaveCount(0);
+  await expect(page.locator("[data-motion-description]")).toHaveAttribute("data-visually-hidden", "true");
+  for (const [label] of cases) await expect(page.getByRole("button", { name: label, exact: true })).toBeVisible();
 });
 
 test("carrier loads only the active map video", async ({ page }) => {
@@ -110,36 +101,11 @@ test("carrier loads only the active map video", async ({ page }) => {
   await expect.poll(() => new Set(videoRequests).size).toBe(1);
 });
 
-test("paused motion stays paused when the active format changes", async ({
-  page,
-}) => {
+test("motion starts again after changing format without a pause control", async ({ page }) => {
   await playReviewPath(page);
-  await page
-    .getByRole("button", { name: "Приостановить движение", exact: true })
-    .click();
-  await expect(
-    page.getByRole("button", { name: "Продолжить движение", exact: true }),
-  ).toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
-  await expect(
-    page.locator('[data-map-media="authored-video"][data-format="mobile"]'),
-  ).toHaveCount(1);
-  await expect(
-    page.getByRole("button", { name: "Продолжить движение", exact: true }),
-  ).toBeVisible();
-});
-
-test("pause and resume change the active media state", async ({ page }) => {
-  await playReviewPath(page);
-  const video = page.locator('[data-map-media="authored-video"]');
-  await page.getByRole("button", { name: "Приостановить движение" }).click();
-  await expect
-    .poll(() => video.evaluate((node) => (node as HTMLVideoElement).paused))
-    .toBe(true);
-  await page.getByRole("button", { name: "Продолжить движение" }).click();
-  await expect
-    .poll(() => video.evaluate((node) => !(node as HTMLVideoElement).paused))
-    .toBe(true);
+  await expect.poll(() => page.locator("video").evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThan(0);
+  await expect(page.getByRole("button", { name: /Приостановить|Продолжить/ })).toHaveCount(0);
 });
 
 test("page visibility pauses and resumes map media", async ({ page }) => {
@@ -174,34 +140,10 @@ test("page visibility pauses and resumes map media", async ({ page }) => {
     .toBe(true);
 });
 
-test("reduced motion never creates a video request and explains the static map", async ({
-  page,
-}) => {
-  await page.addInitScript(() => {
-    window.matchMedia = (query) =>
-      ({
-        matches: query === "(prefers-reduced-motion: reduce)",
-        addEventListener: () => {},
-        removeEventListener: () => {},
-      }) as MediaQueryList;
-  });
-  const videoRequests: string[] = [];
-  page.on("request", (request) => {
-    if (
-      request.resourceType() === "media" &&
-      new URL(request.url()).pathname.endsWith(".mp4")
-    )
-      videoRequests.push(request.url());
-  });
+test("scenario motion starts even when the OS requests reduced decorative motion", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
   await playReviewPath(page);
-  await expect(page.locator('[data-map-media="authored-video"]')).toHaveCount(
-    0,
-  );
-  await expect(page.locator('[data-map-media="poster"]')).toHaveCount(1);
-  await expect(
-    page.getByText(/Движение остановлено по настройке устройства/),
-  ).toBeVisible();
-  expect(videoRequests).toEqual([]);
+  await expect.poll(() => page.locator("video").evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThan(0);
 });
 
 test("a rejected autoplay keeps a poster and a user retry control", async ({
@@ -216,15 +158,12 @@ test("a rejected autoplay keeps a poster and a user retry control", async ({
   });
   await playReviewPath(page);
   await expect(page.locator('[data-map-media="poster"]')).toHaveCount(1);
-  await expect(page.getByText(/Движение ожидает запуска/)).toBeVisible();
+  await expect(page.getByRole("button", { name: "Запустить движение" })).toBeVisible();
   await page.evaluate(() => {
     (window as Window & { allowMapPlay?: boolean }).allowMapPlay = true;
   });
   await page.getByRole("button", { name: "Запустить движение" }).click();
-  await expect(
-    page.getByRole("button", { name: "Приостановить движение" }),
-  ).toBeVisible();
-  await expect(page.getByText(/№3: новая фура, 2 водителя/)).toBeVisible();
+  await expect(page.getByRole("button", { name: "Запустить движение" })).toHaveCount(0);
 });
 
 test("a media error falls back to the poster", async ({ page }) => {
@@ -340,7 +279,7 @@ for (const [control, outcome, title] of cases) {
     await expect(page.locator("header [data-selection-context]")).toHaveCount(
       3,
     );
-    await expect(page.getByRole("button")).toHaveCount(11);
+    await expect(page.getByRole("button")).toHaveCount(10);
   });
 }
 
