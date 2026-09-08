@@ -278,17 +278,18 @@ button:focus-visible {
   min-width: 0;
   container-type: size;
   position: relative;
-  overflow: hidden;
-  border-radius: 24px;
+  overflow: visible;
 }
-/* One coordinate plane keeps markers attached to the art during cover cropping. */
+/* Match the authored 1280x724 video so labels share its pixel plane. */
 .liveMapSurface {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 50%;
-  width: max(100cqw, calc(100cqh * 2));
-  height: max(100cqh, calc(100cqw / 2));
-  transform: translateY(-50%);
+  width: min(100cqw, calc(100cqh * 1.767956));
+  height: min(100cqh, calc(100cqw / 1.767956));
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 24px;
 }
 .liveMapSurface .mapPicture,
 .liveMapSurface .mapImage {
@@ -296,8 +297,18 @@ button:focus-visible {
   width: 100%;
   height: 100%;
 }
+.liveMapSurface .mapPicture {
+  position: relative;
+}
+.liveMapSurface .mapPicture > .mapImage {
+  position: absolute;
+  inset: 0;
+}
 .liveMapSurface .mapImage {
   object-fit: contain;
+}
+.mapFallback {
+  background: #d8e3e7;
 }
 .truckNumber,
 .pickupLabel {
@@ -338,19 +349,53 @@ button:focus-visible {
   top: 71%;
 }
 .pickupLabel {
-  left: 25%;
-  top: 31%;
+  left: 48.9%;
+  top: 25.55%;
   color: var(--blue);
   border-color: var(--orange);
   background: white;
   font-size: 14px;
+}
+.motionControls {
+  grid-column: 1 / -1;
+}
+.motionToggle {
+  min-height: 44px;
+  padding: 7px 11px;
+  width: 100%;
+  color: var(--blue);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  background: white;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.motionIcon {
+  display: none;
+}
+.motionDescription {
+  margin: 6px 0 0;
+  color: var(--blue);
+  font-size: 12px;
+  line-height: 1.25;
+}
+.motionDescriptionHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 .missionBar {
   z-index: 1;
   grid-area: 1 / 1;
   align-self: start;
   justify-self: end;
-  width: min(430px, 34%);
+  width: min(430px, 30%);
   margin: 16px 2%;
   padding: 20px;
   background: #fffaf1;
@@ -362,7 +407,7 @@ button:focus-visible {
 }
 .carrierChoices {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
 }
 .carrierChoices button {
@@ -423,23 +468,24 @@ button:focus-visible {
 .outcomeBackdrop[data-format="mobile"][data-outcome-art="crew"] {
   object-position: 60% center;
 }
-.mapPicture .mapImage[data-format="mobile"],
 .outcomeBackdrop[data-format="mobile"] {
   display: none;
 }
 @container (max-aspect-ratio: 1.4) {
-  .mapPicture .mapImage[data-format="desktop"],
   .outcomeBackdrop[data-format="desktop"] {
     display: none;
   }
-  .mapPicture .mapImage[data-format="mobile"],
   .outcomeBackdrop[data-format="mobile"] {
     display: block;
     object-position: center;
   }
+}
+
+@container (max-aspect-ratio: 1.607143) {
+  /* Match the authored 720x1024 mobile video. */
   .liveMapSurface {
-    width: max(100cqw, calc(100cqh * 1.067039));
-    height: max(100cqh, calc(100cqw / 1.067039));
+    width: min(100cqw, calc(100cqh * 0.703125));
+    height: min(100cqh, calc(100cqw / 0.703125));
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -460,10 +506,11 @@ button:focus-visible {
     top: 65%;
   }
   .pickupLabel {
-    left: 34%;
-    top: 28%;
+    left: 48.6%;
+    top: 30.66%;
   }
 }
+
 .resultPanel {
   position: relative;
   grid-area: 1 / 1;
@@ -599,17 +646,44 @@ button:focus-visible {
   .missionBar {
     grid-area: 2 / 1;
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 10px;
+    grid-template-columns: auto minmax(0, 1fr) 44px;
+    gap: 6px;
     width: calc(100% - 16px);
     max-width: 580px;
     margin: 0 auto;
     padding: 12px;
     align-items: center;
   }
+  .motionControls {
+    display: contents;
+  }
+  .missionHeading {
+    grid-column: 2;
+  }
+  .motionToggle {
+    grid-column: 3;
+    grid-row: 1;
+    width: 44px;
+    padding: 10px;
+  }
+  .motionIcon {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+  .motionToggle span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .motionDescription {
+    grid-column: 1 / -1;
+  }
   .missionHeading h2 {
     margin: 0;
-    font-size: 22px;
+    font-size: 20px;
   }
   .carrierChoices {
     grid-column: 1 / -1;
@@ -791,4 +865,85 @@ button:focus-visible {
     transition: none;
     scroll-behavior: auto;
   }
+}
+
+.mapInspectMarker {
+  position: absolute;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  background: #ff5500;
+  background-clip: padding-box;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.mapInspectMarker:focus-visible {
+  outline: 3px solid #0055ff;
+}
+.mapInspectDialog {
+  width: min(680px, calc(100vw - 24px));
+  max-height: calc(100svh - 24px);
+  padding: 16px;
+  border: 1px solid #c7d6e7;
+  border-radius: 24px;
+  color: #102638;
+  background: radial-gradient(ellipse at center, #fff 35%, #e4eef0);
+}
+.mapInspectDialog::backdrop {
+  background: #102638a8;
+}
+.mapInspectHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.mapInspectDialog h2 {
+  margin: 0;
+}
+.mapInspectDialog button {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid #aabed5;
+  border-radius: 12px;
+  background: white;
+  color: #0055ff;
+  cursor: pointer;
+}
+.mapInspectDialog img {
+  display: block;
+  width: 100%;
+  height: min(52svh, 410px);
+  object-fit: contain;
+}
+.mapInspectDialog nav {
+  display: flex;
+  gap: 8px;
+}
+.mapInspectDialog nav button {
+  flex: 1;
+  padding-inline: 8px;
+}
+.mapInspectDialog button[aria-pressed="true"] {
+  color: white;
+  background: #0055ff;
+}
+.mapInspectLeaders {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+.mapInspectLeaders line {
+  stroke: #ff5500;
+  stroke-width: 2;
 }

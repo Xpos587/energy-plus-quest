@@ -16,7 +16,11 @@ async function expectResponsive(page: Page) {
     for (const element of document.querySelectorAll<HTMLElement>(
       'button, h1, h2, p, nav span, [data-role-part="title"]',
     )) {
-      if (!element.getClientRects().length) continue;
+      if (
+        !element.getClientRects().length ||
+        element.dataset.visuallyHidden === "true"
+      )
+        continue;
       const box = element.getBoundingClientRect();
       if (box.left < -1 || box.right > innerWidth + 1)
         issues.push(`horizontal clipping: ${element.textContent}`);
@@ -81,10 +85,9 @@ test("responsive route keeps artwork complete and controls reachable", async ({
     await page.locator(`[data-choice="${choice}"]`).click();
   }
   await expectResponsive(page);
-  for (const badge of await page.locator("[data-truck-number]").all()) {
-    await badge.scrollIntoViewIfNeeded();
-    await expect(badge).toBeInViewport({ ratio: 0.99 });
-  }
+  await expect(
+    page.locator('[data-map-media="authored-video"]:visible'),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Назад", exact: true }).click();
   await expect(
     page.getByRole("heading", { name: "Что будет в посылке?" }),
@@ -209,20 +212,22 @@ test("meeting cleanup and readable type survive responsive layouts", async ({
     ).toBeGreaterThanOrEqual(14);
 });
 
-test("keyboard focus reaches carrier controls including Back", async ({
+test("keyboard order puts delivery choices before playback controls", async ({
   page,
 }) => {
   await startRoute(page);
-  await page.keyboard.press("Tab");
-  await expect(
-    page.getByRole("button", { name: "Назад", exact: true }),
-  ).toBeFocused();
-  await page.keyboard.press("Tab");
-  const first = page.getByRole("button", { name: "№1", exact: true });
-  await expect(first).toBeFocused();
-  expect(
-    await first.evaluate((element) => getComputedStyle(element).outlineStyle),
-  ).not.toBe("none");
+  for (const name of [
+    "Назад",
+    "№1",
+    "№2",
+    "№3",
+    "№4",
+    "Подобрать автоматически",
+    "Приостановить движение",
+  ]) {
+    await page.keyboard.press("Tab");
+    await expect(page.getByRole("button", { name, exact: true })).toBeFocused();
+  }
 });
 
 test("media meets card edges and desktop map fills its scene", async ({

@@ -49,7 +49,11 @@ try {
     page.on("requestfailed", (request) => {
       const requestUrl = new URL(request.url());
 
-      if (requestUrl.hostname === "127.0.0.1") {
+      // Navigation legitimately aborts an in-flight video range request.
+      if (
+        requestUrl.hostname === "127.0.0.1" &&
+        request.failure()?.errorText !== "net::ERR_ABORTED"
+      ) {
         localFailures.push(request.url());
       }
     });
@@ -62,6 +66,22 @@ try {
       assert.equal(await page.locator('[data-choice] b, [data-choice] [data-role-part="action"]').count(), 0);
       assert.equal(await page.getByRole("navigation", { name: "Этапы доставки" }).locator('[data-progress-step]').count(), 5);
     }
+    await page.waitForFunction(() => {
+      const video = document.querySelector("video[data-map-media]");
+      return video && video.videoWidth > 0 && !video.paused && video.currentTime > 0.15;
+    });
+    const motion = await page.locator("video[data-map-media]").evaluate(video => {
+      const box = video.getBoundingClientRect();
+      return {
+        width: video.videoWidth, height: video.videoHeight, duration: video.duration,
+        fitted: Math.abs(box.width / box.height - video.videoWidth / video.videoHeight) < 0.001,
+        visible: box.left >= -1 && box.top >= -1 && box.right <= innerWidth + 1 && box.bottom <= innerHeight + 1,
+        noOverflow: document.documentElement.scrollHeight <= innerHeight + 1,
+      };
+    });
+    assert.equal(motion.duration, 64);
+    assert.ok((motion.width === 720 && motion.height === 1024) || (motion.width === 1280 && motion.height === 724));
+    assert.ok(motion.fitted && motion.visible && motion.noOverflow, `${profile.name}: whole authored map must fit`);
     await page.getByRole("button", { name: "Назад", exact: true }).click();
     await page.getByRole("button", { name: "Лодка", exact: true }).click();
     await page

@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import { type CSSProperties, useState } from "react";
 import styles from "./App.module.css";
 import { CityMap } from "./components/CityMap";
 import { ScoreDelta } from "./components/ScoreBoard";
@@ -220,9 +220,11 @@ function CarrierScreen({
   onSelect: (value: CarrierId) => void;
   onBack: () => void;
 }) {
+  const [motionControls, setMotionControls] = useState<HTMLDivElement | null>(
+    null,
+  );
   return (
     <section className={styles.carrierScene}>
-      <CityMap mode="live" />
       <div className={styles.missionBar}>
         <BackButton onClick={onBack} />
         <div className={styles.missionHeading}>
@@ -266,7 +268,9 @@ function CarrierScreen({
             Подобрать автоматически
           </button>
         </div>
+        <div className={styles.motionControls} ref={setMotionControls} />
       </div>
+      <CityMap mode="live" controlsHost={motionControls} />
     </section>
   );
 }

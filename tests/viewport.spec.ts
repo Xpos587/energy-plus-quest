@@ -110,17 +110,19 @@ test("media fills its surface once and progress numerals stay light", async ({
     await page.getByRole("button", { name: action, exact: true }).click();
   }
   const map = await page.locator('[data-mode="live"]').boundingBox();
-  for (const marker of await page.locator("[data-truck-number]").all()) {
-    const box = (await marker.boundingBox())!;
-    expect(box.x).toBeGreaterThanOrEqual(map!.x);
-    expect(box.y).toBeGreaterThanOrEqual(map!.y);
-    expect(box.x + box.width).toBeLessThanOrEqual(map!.x + map!.width);
-    expect(box.y + box.height).toBeLessThanOrEqual(map!.y + map!.height);
-  }
   const media = await page.locator("[data-map-media]:visible").boundingBox();
-  expect(media!.x).toBeLessThanOrEqual(map!.x + 1);
-  expect(media!.x + media!.width).toBeGreaterThanOrEqual(
-    map!.x + map!.width - 1,
+  expect(media!.x).toBeGreaterThanOrEqual(map!.x - 1);
+  expect(media!.y).toBeGreaterThanOrEqual(map!.y - 1);
+  expect(media!.x + media!.width).toBeLessThanOrEqual(map!.x + map!.width + 1);
+  expect(media!.y + media!.height).toBeLessThanOrEqual(
+    map!.y + map!.height + 1,
+  );
+  const format = await page
+    .locator("[data-map-media]:visible")
+    .getAttribute("data-format");
+  expect(media!.width / media!.height).toBeCloseTo(
+    format === "mobile" ? 720 / 1024 : 1280 / 724,
+    3,
   );
   await page.getByRole("button", { name: "№1", exact: true }).click();
   await expect(page.locator('[data-layout="result"]')).toHaveCSS(
@@ -176,4 +178,68 @@ test("edge-to-edge outcomes stay filled when switching phone and desktop", async
       expect(box.y + box.height).toBe(height);
     }
   }
+});
+
+test("authored carrier media and all moving trucks fit without UI occlusion", async ({
+  page,
+}) => {
+  await page.goto("/");
+  for (const name of ["Профессионал", "Хор", "Фотоаппарат"]) {
+    await page.getByRole("button", { name, exact: true }).click();
+  }
+  const video = page.locator("video[data-map-media]");
+  await expect
+    .poll(() => video.evaluate((node: HTMLVideoElement) => node.videoWidth))
+    .toBeGreaterThan(0);
+  const geometry = await video.evaluate((node: HTMLVideoElement) => {
+    const box = node.getBoundingClientRect();
+    const mobile = node.dataset.format === "mobile";
+    // Conservative full-cycle swept envelope from the verified r22 render, including mirrors.
+    const bounds = mobile ? [76, 37, 630, 1024] : [370, 31, 839, 724];
+    const moving = {
+      x: box.x + (bounds[0] / node.videoWidth) * box.width,
+      y: box.y + (bounds[1] / node.videoHeight) * box.height,
+      right: box.x + (bounds[2] / node.videoWidth) * box.width,
+      bottom: box.y + (bounds[3] / node.videoHeight) * box.height,
+    };
+    // Moving inspection targets intentionally follow the trucks; mission controls must not cover them.
+    const buttons = [
+      ...document.querySelectorAll("button:not([data-truck-inspect])"),
+    ].map((button) => button.getBoundingClientRect());
+    const pickup = document
+      .querySelector("[data-pickup-label]")!
+      .getBoundingClientRect();
+    return {
+      size: [node.videoWidth, node.videoHeight],
+      duration: node.duration,
+      ratioError: Math.abs(
+        box.width / box.height - node.videoWidth / node.videoHeight,
+      ),
+      clipped:
+        moving.x < 0 ||
+        moving.y < 0 ||
+        moving.right > innerWidth + 1 ||
+        moving.bottom > innerHeight + 1,
+      obscured: buttons.some(
+        (button) =>
+          moving.x < button.right &&
+          moving.right > button.x &&
+          moving.y < button.bottom &&
+          moving.bottom > button.y,
+      ),
+      pickup: [
+        Math.abs((pickup.x - box.x) / box.width - (mobile ? 0.486 : 0.489)),
+        Math.abs((pickup.y - box.y) / box.height - (mobile ? 0.3066 : 0.2555)),
+      ],
+    };
+  });
+  expect([
+    [720, 1024],
+    [1280, 724],
+  ]).toContainEqual(geometry.size);
+  expect(geometry.duration).toBeCloseTo(64, 1);
+  expect(geometry.ratioError).toBeLessThan(0.001);
+  expect(geometry.clipped).toBe(false);
+  expect(geometry.obscured).toBe(false);
+  expect(Math.max(...geometry.pickup)).toBeLessThan(0.001);
 });
