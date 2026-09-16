@@ -1,5 +1,6 @@
 .app {
-  --logo-width: 130px;
+  --company-logo-width: 160px;
+  --energy-logo-width: 156px;
   height: 100svh;
   display: flex;
   flex-direction: column;
@@ -25,10 +26,16 @@
 .companyLogo,
 .energyMark img {
   display: block;
-  width: var(--logo-width);
   height: auto;
 }
-.energyMark {
+.companyLogo {
+  width: var(--company-logo-width);
+}
+.energyMark img {
+  width: var(--energy-logo-width);
+  transform: translateY(3px);
+}
+.projectMark {
   padding-left: 14px;
   border-left: 1px solid var(--panel-border);
 }
@@ -281,6 +288,7 @@ button:focus-visible {
   container-type: size;
   position: relative;
   overflow: visible;
+
 }
 /* Match the authored 1280x788 video so labels share its pixel plane. */
 .liveMapSurface {
@@ -292,16 +300,6 @@ button:focus-visible {
   transform: translate(-50%, -50%);
   overflow: visible;
   border-radius: 0;
-}
-.cityExtension {
-  position: absolute;
-  width: 220%;
-  height: auto;
-  max-width: none;
-  left: -60%;
-  top: 0;
-  pointer-events: none;
-  z-index: -1;
 }
 .liveMapSurface .mapPicture,
 .liveMapSurface .mapImage {
@@ -315,6 +313,21 @@ button:focus-visible {
 .liveMapSurface .mapPicture > .mapImage {
   position: absolute;
   inset: 0;
+}
+.cityExtension {
+  position: absolute;
+  width: 146.875%;
+  height: auto;
+  max-width: none;
+  left: -23.4375%;
+  top: -12.690355%;
+  pointer-events: none;
+  z-index: -1;
+}
+.cityExtension[data-format="mobile"] {
+  width: 213.888889%;
+  left: -58.333333%;
+  top: 0;
 }
 .liveMapSurface .mapImage {
   object-fit: contain;
@@ -494,7 +507,6 @@ button:focus-visible {
 }
 
 @container (max-aspect-ratio: 1.607143) {
-  /* Match the authored 720x1088 mobile video. */
   .liveMapSurface {
     width: min(100cqw, calc(100cqh * 0.661765));
     height: min(100cqh, calc(100cqw / 0.661765));
@@ -729,7 +741,8 @@ button:focus-visible {
 }
 @media (max-width: 600px) {
   .app {
-    --logo-width: 90px;
+    --company-logo-width: 112px;
+    --energy-logo-width: 109px;
   }
   .header {
     padding: 8px 10px;
@@ -738,7 +751,7 @@ button:focus-visible {
     gap: 7px;
     min-height: 30px;
   }
-  .energyMark {
+  .projectMark {
     padding-left: 7px;
   }
   .selectionSummary {
@@ -793,13 +806,21 @@ button:focus-visible {
 }
 @media (max-width: 360px) {
   .app {
-    --logo-width: 78px;
+    --company-logo-width: 94px;
+    --energy-logo-width: 92px;
   }
   .progressItem {
     font-size: 12px;
   }
   .resultPanel {
     padding: 10px;
+  }
+  .panelLead {
+    margin-block: 8px;
+  }
+  .scoreDelta {
+    margin-block: 8px;
+    padding-block: 6px;
   }
 }
 @media (max-height: 500px) and (orientation: landscape) {
@@ -879,83 +900,22 @@ button:focus-visible {
   }
 }
 
-.mapInspectMarker {
+.mapNumber {
   position: absolute;
   z-index: 3;
-  width: 44px;
-  height: 44px;
+  width: 20px;
+  height: 20px;
   padding: 0;
-  border: 8px solid transparent;
+  border: 1px solid white;
   border-radius: 50%;
   background: #ff5500;
   background-clip: padding-box;
   color: white;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1;
   transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-.mapInspectMarker:focus-visible {
-  outline: 3px solid #0055ff;
-}
-.mapInspectDialog {
-  width: min(680px, calc(100vw - 24px));
-  max-height: calc(100svh - 24px);
-  padding: 16px;
-  border: 1px solid #c7d6e7;
-  border-radius: 24px;
-  color: #102638;
-  background: radial-gradient(ellipse at center, #fff 35%, #e4eef0);
-}
-.mapInspectDialog::backdrop {
-  background: #102638a8;
-}
-.mapInspectHeading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-.mapInspectDialog h2 {
-  margin: 0;
-}
-.mapInspectDialog button {
-  min-height: 44px;
-  padding: 8px 16px;
-  border: 1px solid #aabed5;
-  border-radius: 12px;
-  background: white;
-  color: #0055ff;
-  cursor: pointer;
-}
-.mapInspectDialog img {
-  display: block;
-  width: 100%;
-  height: min(52svh, 410px);
-  object-fit: contain;
-}
-.mapInspectDialog nav {
-  display: flex;
-  gap: 8px;
-}
-.mapInspectDialog nav button {
-  flex: 1;
-  padding-inline: 8px;
-}
-.mapInspectDialog button[aria-pressed="true"] {
-  color: white;
-  background: #0055ff;
-}
-.mapInspectLeaders {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
-  z-index: 2;
-}
-.mapInspectLeaders line {
-  stroke: #ff5500;
-  stroke-width: 2;
+  display: grid;
+  place-items: center;
 }

@@ -11,10 +11,10 @@ import mapDesktopVideo from "../../design/scene-01/assets/current/map/carrier-de
 import mapDesktop from "../../design/scene-01/assets/current/map/carrier-desktop.webp";
 import mapMobileVideo from "../../design/scene-01/assets/current/map/carrier-mobile.mp4";
 import mapMobile from "../../design/scene-01/assets/current/map/carrier-mobile.webp";
-import extensionMobile from "../../design/scene-01/assets/current/map/extension-mobile.webp";
-import extensionDesktop from "../../design/scene-01/assets/current/map/extension-desktop.webp";
+import extensionDesktop from "../../design/scene-01/assets/current/map/extension-desktop-clean.webp";
+import extensionMobile from "../../design/scene-01/assets/current/map/extension-mobile-clean.webp";
 import styles from "../App.module.css";
-import { MapInspection } from "./MapInspection";
+import { MapNumbers } from "./MapNumbers";
 
 type MapFormat = "desktop" | "mobile";
 
@@ -61,10 +61,7 @@ export function CityMap({
   }, []);
 
   const shouldShowVideo =
-    live &&
-    motionReady &&
-    format !== null &&
-    !motionFailed;
+    live && motionReady && format !== null && !motionFailed;
 
   const attemptPlay = useCallback(
     (video: HTMLVideoElement, autoplay: boolean) => {
@@ -122,8 +119,8 @@ export function CityMap({
   const status = motionFailed
     ? `Анимация карты недоступна. ${mapDescription}`
     : motionBlocked
-        ? `Движение ожидает запуска. ${mapDescription}`
-        : mapDescription;
+      ? `Движение ожидает запуска. ${mapDescription}`
+      : mapDescription;
 
   return (
     <section
@@ -134,8 +131,15 @@ export function CityMap({
       ref={mapRef}
     >
       <div className={live ? styles.liveMapSurface : undefined}>
-        {live && <img alt="" aria-hidden="true" className={styles.cityExtension}
-          src={activeFormat === "mobile" ? extensionMobile : extensionDesktop} />}
+        {live && (
+          <img
+            alt=""
+            aria-hidden="true"
+            className={styles.cityExtension}
+            data-format={activeFormat}
+            src={activeFormat === "mobile" ? extensionMobile : extensionDesktop}
+          />
+        )}
         <div className={styles.mapPicture}>
           {shouldShowVideo ? (
             <>
@@ -201,7 +205,7 @@ export function CityMap({
         </div>
         <div aria-hidden="true" className={styles.mapShade} />
         {live && (
-          <MapInspection
+          <MapNumbers
             format={activeFormat}
             video={videoRef}
             playing={shouldShowVideo && !motionBlocked}
@@ -218,13 +222,24 @@ export function CityMap({
         createPortal(
           <>
             {motionBlocked && shouldShowVideo && (
-              <button className={styles.motionToggle} type="button"
-                onClick={() => videoRef.current && attemptPlay(videoRef.current, false)}>
+              <button
+                className={styles.motionToggle}
+                type="button"
+                onClick={() =>
+                  videoRef.current && attemptPlay(videoRef.current, false)
+                }
+              >
                 Запустить движение
               </button>
             )}
-            <p className={styles.motionDescriptionHidden} id={descriptionId}
-              data-visually-hidden="true" data-motion-description>{status}</p>
+            <p
+              className={styles.motionDescriptionHidden}
+              id={descriptionId}
+              data-visually-hidden="true"
+              data-motion-description
+            >
+              {status}
+            </p>
           </>,
           controlsHost,
         )}

@@ -50,15 +50,15 @@ function Game() {
     <div className={styles.app} data-step={state.step}>
       <header className={styles.header}>
         <div className={styles.brandCluster}>
+          <div className={styles.energyMark}>
+            <img alt="Энергия+" src={energyLogoUrl} />
+          </div>
           <div className={styles.projectMark}>
             <img
               alt="Газпром нефть — Газпромнефть-Снабжение"
               className={styles.companyLogo}
               src={companyLogoUrl}
             />
-          </div>
-          <div className={styles.energyMark}>
-            <img alt="Энергия+" src={energyLogoUrl} />
           </div>
         </div>
         <nav className={styles.routeProgress} aria-label="Этапы доставки">

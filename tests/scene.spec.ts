@@ -1,4 +1,5 @@
 import { expect, type Page, test } from "@playwright/test";
+import tracks from "../src/game/mapTracks.json" with { type: "json" };
 
 async function playReviewPath(page: Page) {
   await page.goto("/");
@@ -20,11 +21,20 @@ test("preserves brand UI and incremental context with four scene steps", async (
 }) => {
   await page.goto("/");
   await expect(page.locator("header [data-selection-context]")).toHaveCount(0);
-  const logos = page.locator("header img");
-  const logoWidths = await logos.evaluateAll((images) =>
-    images.map((image) => image.getBoundingClientRect().width),
-  );
-  expect(Math.abs(logoWidths[0] - logoWidths[1])).toBeLessThan(1);
+  const logos = page.locator("header > div:first-child img");
+  await expect(logos.nth(0)).toHaveAttribute("alt", "Энергия+");
+  await expect(logos.nth(1)).toHaveAttribute("alt", /Газпром/);
+  const boxes = await logos.evaluateAll(images => images.map(image => {
+    const r = image.getBoundingClientRect();
+    return { width: r.width, height: r.height, center: r.top + r.height / 2 };
+  }));
+  // Optical balance is reviewed visually; guard usable sizes and header fit instead.
+  for (const box of boxes) {
+    expect(box.width).toBeGreaterThan(70);
+    expect(box.height).toBeGreaterThan(10);
+  }
+  await expect(logos.nth(0)).toBeVisible();
+  await expect(logos.nth(1)).toBeVisible();
   expect(
     await page
       .locator('[data-step="profile"]')
@@ -65,6 +75,47 @@ test("preserves brand UI and incremental context with four scene steps", async (
         es.map((e) => e.getAttribute("data-selection-context")),
       ),
   ).toEqual(["profile", "recipient", "parcel"]);
+});
+
+test("live map preserves the authored aspect ratio without extension seams", async ({
+  page,
+}) => {
+  await playReviewPath(page);
+  const map = page.locator('[data-mode="live"]');
+  const surface = page.locator('[data-mode="live"] > div').first();
+  const video = page.locator('video[data-map-media="authored-video"]:visible');
+  await video.evaluate((node) =>
+    node.readyState >= 1
+      ? undefined
+      : new Promise<void>((resolve) =>
+          node.addEventListener("loadedmetadata", () => resolve(), { once: true }),
+        ),
+  );
+  const [mapBox, surfaceBox, mediaSize] = await Promise.all([
+    map.boundingBox(),
+    surface.boundingBox(),
+    video.evaluate((node) => ({ width: node.videoWidth, height: node.videoHeight })),
+  ]);
+  expect(mapBox).not.toBeNull();
+  expect(surfaceBox).not.toBeNull();
+  expect(mediaSize.width).toBeGreaterThan(0);
+  expect(mediaSize.height).toBeGreaterThan(0);
+  expect(
+    Math.abs(surfaceBox.width / surfaceBox.height - mediaSize.width / mediaSize.height),
+  ).toBeLessThan(0.02);
+  expect(surfaceBox.width).toBeLessThanOrEqual(mapBox.width + 1);
+  expect(surfaceBox.height).toBeLessThanOrEqual(mapBox.height + 1);
+  await expect(page.locator('img[src*="extension-"]')).toHaveCount(1);
+  const videoBox = await video.boundingBox();
+  expect(videoBox).not.toBeNull();
+  for (const label of await page.locator("[data-truck-number]").all()) {
+    const box = await label.boundingBox();
+    expect(box).not.toBeNull();
+    expect(box.x).toBeGreaterThanOrEqual(videoBox.x);
+    expect(box.y).toBeGreaterThanOrEqual(videoBox.y);
+    expect(box.x + box.width).toBeLessThanOrEqual(videoBox.x + videoBox.width);
+    expect(box.y + box.height).toBeLessThanOrEqual(videoBox.y + videoBox.height);
+  }
 });
 
 test("carrier has four choice actions, authored motion and an accessible static description", async ({
@@ -279,11 +330,11 @@ for (const [control, outcome, title] of cases) {
     await expect(page.locator("header [data-selection-context]")).toHaveCount(
       3,
     );
-    await expect(page.getByRole("button")).toHaveCount(10);
+    await expect(page.getByRole("button")).toHaveCount(6);
   });
 }
 
-test("near uses the forecast and signed deltas without fictional continuation", async ({
+test("near follows the scenario consequence and signed deltas", async ({
   page,
 }) => {
   await playReviewPath(page);
@@ -293,7 +344,7 @@ test("near uses the forecast and signed deltas without fictional continuation", 
   ).toHaveCount(0);
   await expect(
     page.getByText(
-      "Перевозчик выбран; груз ещё ждёт загрузки. Машина рядом, но водитель едет неторопливо. Если темп сохранится, Девочка Альва получит фотоаппарат на три дня позже.",
+      "Вы отлично сокращаете дистанцию! Ваш перевозчик был рядом со складом и сразу же завернул в ваш логистический центр. Но водитель оказался очень неторопливым: Девочка Альва получит фотоаппарат на три дня позже.",
       { exact: true },
     ),
   ).toBeVisible();
@@ -350,7 +401,7 @@ test("authored video continues through two complete loop boundaries", async ({
   await playReviewPath(page);
   const result = await page
     .locator("video[data-map-media]")
-    .evaluate(async (video: HTMLVideoElement) => {
+    .evaluate(async (video: HTMLVideoElement, tracks) => {
       video.pause();
       video.currentTime = 0;
       video.playbackRate = 8;
@@ -359,17 +410,28 @@ test("authored video continues through two complete loop boundaries", async ({
         loops: number;
         frames: number;
         maximumRestartTime: number;
+        maximumAnchorError: number;
       }>((resolve, reject) => {
         let previous = 0;
         let loops = 0;
         let frames = 0;
         let maximumRestartTime = 0;
+        let maximumAnchorError = 0;
         const timeout = setTimeout(
           () => reject(new Error("video did not finish two loops")),
           25000,
         );
         const observe = (_now: number, frame: VideoFrameCallbackMetadata) => {
           frames += 1;
+          const paths = tracks[video.dataset.format as "mobile" | "desktop"];
+          const index = Math.floor(frame.mediaTime * tracks.fps + 1e-6) % paths[0].length;
+          const plane = video.getBoundingClientRect();
+          document.querySelectorAll<HTMLElement>("[data-truck-number]").forEach((badge, i) => {
+            maximumAnchorError = Math.max(maximumAnchorError, Math.hypot(
+              parseFloat(badge.style.left) - paths[i][index][0] * plane.width / 100,
+              parseFloat(badge.style.top) - paths[i][index][1] * plane.height / 100,
+            ));
+          });
           if (previous > 60 && frame.mediaTime < previous) {
             loops += 1;
             maximumRestartTime = Math.max(maximumRestartTime, frame.mediaTime);
@@ -378,13 +440,14 @@ test("authored video continues through two complete loop boundaries", async ({
           if (loops === 2) {
             clearTimeout(timeout);
             video.pause();
-            resolve({ loops, frames, maximumRestartTime });
+            resolve({ loops, frames, maximumRestartTime, maximumAnchorError });
           } else video.requestVideoFrameCallback(observe);
         };
         video.requestVideoFrameCallback(observe);
       });
-    });
+    }, tracks);
   expect(result.loops).toBe(2);
   expect(result.frames).toBeGreaterThan(100);
   expect(result.maximumRestartTime).toBeLessThan(2);
+  expect(result.maximumAnchorError).toBeLessThan(0.1);
 });

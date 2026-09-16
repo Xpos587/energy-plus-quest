@@ -204,7 +204,7 @@ test("authored carrier media and all moving trucks fit without UI occlusion", as
     };
     // Moving inspection targets intentionally follow the trucks; mission controls must not cover them.
     const buttons = [
-      ...document.querySelectorAll("button:not([data-truck-inspect])"),
+      ...document.querySelectorAll("button"),
     ].map((button) => button.getBoundingClientRect());
     const pickup = document
       .querySelector("[data-pickup-label]")!

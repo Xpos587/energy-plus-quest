@@ -2,32 +2,26 @@ import { expect, test } from "vitest";
 import { mapMarkerPositions } from "./mapMarkerPositions";
 import tracks from "./mapTracks.json";
 
-test("all decoded frame targets fit and remain separate at small-phone size", () => {
-  for (const [format, width, height] of [
-    ["mobile", 171, 243],
-    ["desktop", 440, 249],
-  ] as const) {
-    for (let frame = 0; frame < 1152; frame++) {
-      const positions = mapMarkerPositions(
-        tracks[format].map((path) => path[frame]),
-        width,
-        height,
-      );
-      positions.forEach(([x, y], i) => {
-        for (const path of tracks[format]) {
-          const [ax, ay] = path[frame];
-          expect(Math.hypot(x - ax * width / 100, y - ay * height / 100))
-            .toBeGreaterThanOrEqual(width * 0.065 + 15 - 0.01);
-        }
-        expect(x).toBeGreaterThanOrEqual(22);
-        expect(x).toBeLessThanOrEqual(width - 22);
-        expect(y).toBeGreaterThanOrEqual(22);
-        expect(y).toBeLessThanOrEqual(height - 22);
-        for (let j = 0; j < i; j++)
-          expect(
-            Math.hypot(x - positions[j][0], y - positions[j][1]),
-          ).toBeGreaterThan(43.9);
-      });
+test("every badge stays on its own trailer roof through two loops and resize", () => {
+  for (const format of ["mobile", "desktop"] as const) {
+    for (const width of [171, 390, 1440, 1920]) {
+      const height = width * (format === "mobile" ? 1088 / 720 : 788 / 1280);
+      for (let frame = 0; frame < tracks[format][0].length * 2; frame++) {
+        const anchors = tracks[format].map(path => path[frame % path.length]);
+        const positions = mapMarkerPositions(anchors, width, height);
+        positions.forEach(([x, y], i) => {
+          expect(x).toBe(anchors[i][0] * width / 100);
+          expect(y).toBe(anchors[i][1] * height / 100);
+        });
+      }
     }
   }
+});
+
+test("track sampling metadata agrees with both complete authored loops", () => {
+  expect(tracks.fps).toBe(60);
+  expect(tracks.durationSeconds).toBe(64);
+  for (const format of ["mobile", "desktop"] as const)
+    for (const path of tracks[format])
+      expect(path).toHaveLength(tracks.fps * tracks.durationSeconds);
 });
