@@ -1,0 +1,15 @@
+{
+  "preservedAssets": {
+    "truck-1.png": "90cf924fc2efd81a0ff3d0e5fb50da54b0ea4c0c5438d798aa68af5b72986bca",
+    "truck-2.png": "82d496997f6db4f5d0771cf4a6a6d927ba72087eb0c6021eb1d904566723cf6b",
+    "truck-3.png": "d9f8317c30122a49324c23db0bc5d62f087018399c13d74c598a56e6fff6257c",
+    "near-desktop.png": "7c4a22ae8852497149d8d692fcaa1f99306f5eac62fde96e1c15eee52f4f1d5d",
+    "near-mobile.png": "e19f039877eda7c797f46b21386094715438798b852681e65ac5c31b32233d5d",
+    "crew-desktop.png": "8bc717488adcb110cf247f3dc6eb417211c4547cf1ded331f63ba1363c2f5b27",
+    "crew-mobile.png": "4d3f84a3362367132d667f830fc9f304042c3d035ad3b3123632edd40ad4315d"
+  },
+  "preservedAssetCount": 7,
+  "map4": "pixel-identical to approved pass17",
+  "old4Results": "pixel-identical to neutral old candidates in both formats",
+  "note": "Old outcome cab edges intentionally refined subsequently; see cab-edge-validation.json."
+}

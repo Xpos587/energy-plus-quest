@@ -1,0 +1,227 @@
+{
+  "revision": 6,
+  "authoringModel": "9router/gpt-6-astra",
+  "reasoningLevel": "xhigh",
+  "renderEngine": "BLENDER_EEVEE",
+  "surfaceTextures": "local procedural material textures",
+  "source": "Surface-only study of user-approved pass-05 metropolitan geometry; truck colors follow approved outcome illustrations",
+  "fps": 24,
+  "frames": 768,
+  "duration": 32,
+  "truckCount": 4,
+  "warehouseLoadingBays": 6,
+  "clearance": {
+    "samples": 3072,
+    "failures": 0,
+    "failureCounts": {},
+    "examples": [],
+    "minimumObstacleClearance": 0.4920318603515632,
+    "roadMargin": 0.12,
+    "vehicleMargin": 0.2
+  },
+  "articulation": {
+    "bodyPairsChecked": 12288,
+    "minimumCabCargoClearance": 0.30204780469528314,
+    "failures": 0,
+    "examples": []
+  },
+  "visibility": {
+    "loopMatrixError": 2.4437904357910156e-06,
+    "views": [
+      {
+        "camera": "desktop",
+        "sampledFrames": 192,
+        "roofSampleVisibleFractions": {
+          "truck-1-tractor": 1.0,
+          "truck-1-trailer": 1.0,
+          "truck-2-tractor": 1.0,
+          "truck-2-trailer": 1.0,
+          "truck-3-tractor": 0.9895833333333334,
+          "truck-3-trailer": 0.9878472222222222,
+          "truck-4-tractor": 0.9994212962962963,
+          "truck-4-trailer": 1.0
+        },
+        "clippedSamples": 0,
+        "dockFirstHits": [
+          "warehouse loading door",
+          "warehouse loading door.001",
+          "warehouse loading door.002",
+          "warehouse loading door.003",
+          "warehouse loading door.004",
+          "warehouse loading door.005"
+        ]
+      },
+      {
+        "camera": "mobile",
+        "sampledFrames": 192,
+        "roofSampleVisibleFractions": {
+          "truck-1-tractor": 1.0,
+          "truck-1-trailer": 1.0,
+          "truck-2-tractor": 1.0,
+          "truck-2-trailer": 1.0,
+          "truck-3-tractor": 0.9803240740740741,
+          "truck-3-trailer": 0.9756944444444444,
+          "truck-4-tractor": 0.9988425925925926,
+          "truck-4-trailer": 1.0
+        },
+        "clippedSamples": 0,
+        "dockFirstHits": [
+          "warehouse loading door",
+          "warehouse loading door.001",
+          "warehouse loading door.002",
+          "warehouse loading door.003",
+          "warehouse loading door.004",
+          "warehouse loading door.005"
+        ]
+      }
+    ]
+  },
+  "finalCheck": {
+    "trucks": 4,
+    "loadingDoors": 6,
+    "pitchedRoofs": 0,
+    "warehouseHeight": 8.399999618530273,
+    "volumetricEmitters": [
+      1,
+      4
+    ],
+    "volumetricParticles": 24,
+    "opaqueSmokeSurfaces": 0,
+    "exhaustLoopMatrixError": 0.0
+  },
+  "staticFootprints": {
+    "source": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-06/clearance.json",
+    "checkedFootprints": 76,
+    "failures": 0,
+    "examples": []
+  },
+  "surfaces": {
+    "geometryUnchangedAcrossAllStages": true,
+    "geometryHash": "bf618e75a4418623db1d1be370dd10348e568d58e1ad3fd32517d08ca1fe74de",
+    "cleanGlassAndModernTrucks": true,
+    "localTextureMaterials": {
+      "surface / asphalt": "asphalt",
+      "surface / bark": "wood",
+      "surface / bench timber": "wood",
+      "surface / concrete": "concrete",
+      "surface / facade 0": "concrete",
+      "surface / facade 1": "concrete",
+      "surface / facade 2": "concrete",
+      "surface / facade 3": "concrete",
+      "surface / paving": "paving",
+      "surface / planting soil": "soil",
+      "surface / truck 1 cargo": "old paint",
+      "surface / truck 1 paint": "old paint",
+      "surface / truck 4 cargo": "old paint",
+      "surface / truck 4 paint": "old paint",
+      "surface / warehouse insulated panels": "concrete"
+    },
+    "globalTextureOverlay": false
+  },
+  "textureLayers": {
+    "desktop": {
+      "maximumRecompositionError8bit": 0,
+      "meanAlpha": 0.002745822440087146,
+      "pixelsAboveTenPercentAlpha": 0.0
+    },
+    "mobile": {
+      "maximumRecompositionError8bit": 0,
+      "meanAlpha": 0.0037017941942401955,
+      "pixelsAboveTenPercentAlpha": 0.0
+    }
+  },
+  "maximumHitchGap": 0.00016381004755847083,
+  "limits": [
+    "3D material reference, not the final branded 2D illustration; live game assets are unchanged.",
+    "Geometry and district dimensions are stylized and compressed for map readability.",
+    "Visibility is nine real roof-surface samples per rig every fourth frame, not a pixel-area percentage; limited partial occlusion remains.",
+    "Volumetric envelopes are excluded from opaque geometry raycasts.",
+    "Texture is intentionally subtle and local; no global aging or paper overlay."
+  ],
+  "commands": [
+    "bash run-final.sh",
+    "python publish.py",
+    "node verify-browser.mjs"
+  ],
+  "sourceHashes": {
+    "base-gray.blend": "4636fdfbf76eb04060ee5c65a923d387530c88351768db801651c71382e4fc42",
+    "layout.py": "400607e65bc22240c4d0a0bad60fb57051ea0ad9ceae8f26240d1313da7d4152",
+    "layout.json": "d77ec7cc02e8c8a7e459b6109d615f11e7fe11e7720b27b16a8cf4d03f737308",
+    "district.py": "590ffe5f018c790d1c933672b0b66ac3234f88a3d7b4e7e03c35a28205b32afb",
+    "facades.py": "eba0c24a5f13147e4b0b0272133a1b59375980f1a58d07b2504442d597ab011d",
+    "environment.py": "3897bcbdcff620444b5836c697ccec6dd49ffd939c2d0c6596de0ed272990383",
+    "vehicles.py": "f5b6c8430a9cf6b4f33b878523e124db54a7f9cb89064ec0366945c40d42eace",
+    "scene.py": "dabe45f618b5b2afaeb34939d0171cde0d94e27af863f1acd00bdf02de74107e",
+    "finish_scene.py": "de5bee12fea55cb075bfd5d15f2d96e4885047c6eb4cc16d0941fc37e9f0eade",
+    "materials_pass.py": "59df6d10e0354a797f1589ddd24291638867fcf5cc4e29057b00915ebb4f2618",
+    "check_static.py": "501b1dd11a20a27e3d26b0f45af48da13397466534f4f40ea2722fc7750a1138",
+    "check_surfaces.py": "c8d811abf464e2c2772c75f275813c6bd074ce330cd7f82a6439bcd36109c32f",
+    "texture_layers.py": "04b69fc5c52017be1005e36cc0ae7aa3dec22970c104eb7c77afffbc6de98cec",
+    "check_clearance.py": "98c2aa8def24a7d510954469a4e9b658724f2ecdae53a53ca8ecec14c2c1e379",
+    "check_visibility.py": "694795d77c36e7a1bcc025686ab8f77ae2bfd790e71737361d9be3995c92303c",
+    "check_articulation.py": "fb8671c54561364af1f773b9bed3f5b0d025d177efb3a7300841a2fce1b1899e",
+    "verify_articulation.py": "11f620a05cc38d76a13638b9aa568e3970d3e9989252ab1b33469be61681301b",
+    "check_final.py": "c62fd545ec1efa1d3d6170c71a3fa0652baf274ce1fbb37fd86deb2239fa24d2",
+    "render_motion.py": "3f41a1ac4f29e3ab3702d2ea7785fb5fbda931c52a9803a1ef0e911e3e39b033",
+    "render_trucks.py": "080614a865a18d42ec50ec6b50249897d439020a5aff4dbc41d08e59e39c1ea4",
+    "render_validation.py": "5210bb3bd6c95701193fc3dfd82e207190375e06145a2f947829aa83fefec93b",
+    "run-final.sh": "5d38febf8ce4e1e17139e7b329ab76dfd116b45ab625519b5bedc55a0ad2c1e4",
+    "DESIGN.md": "af98fa46884e5c637a6d12d8e216903b2834df57ddf84918277a59922f9273b8",
+    "design-contract.md": "5940d52f5b6767b35fee471dfaa0705870dcac0a9f92aa9d44e5fe7be43abd48",
+    "implementation-handoff.md": "3f422032e1da2867dfe9d14c52a6f20448fabe06632039e85db1367a9dcd8846",
+    "verify-browser.mjs": "df39494312dbe5601880bd8d89b9c8cf08f68ae25747519fe9b419e08b5b1502"
+  },
+  "artifactHashes": {
+    "desktop.png": "bd8b983c3e437dc7b377cd90c997878749605c4a8a9e81049381fd55b792729b",
+    "mobile.png": "0b834c4a825e19f566e01169a83c4a5d48ea70864e38d7ec75ce943c78000bfb",
+    "top.png": "8b7f29a11d6c4a8f1b905409b27958b7a4c7fcf0037121be4f96ee93f126de10",
+    "warehouse.png": "b2b1aa76d0b8e84667f13633638514a92362f91494604893f3381af873078192",
+    "neighborhood.png": "a37b387a93fa2aa1dcce9a8b6399b98b1d50aa0ac7f508d5e2978163112306fa",
+    "street-detail.png": "ab9fd9626114b835facd9c68925636acb4d7de21f3f2e81ca1e78d6d12851386",
+    "truck-1.png": "161d53a882b9d8b4dd49989a69d8863ccfaa5e2d35faf4cf886e8af7a586a077",
+    "truck-2.png": "ed1ade66e734075d6f2be94828e666b801584b2228334eb0b914595d2458b41b",
+    "truck-3.png": "725e7123fab155ac7b0e37fbabdce67c3fab711dac7e93e2e45450e9c197643d",
+    "truck-4.png": "1cee59d5dae1d5deae88432780e81547d93b221627dd262e72b7070d76d790fc",
+    "truck-2-side.png": "7db4e8dc6ad13788aec7ba8161129eb2aa60f891af65e166153d635fdb219dd3",
+    "truck-2-rear.png": "f0a3539def0df426470cd93c96a1a0a849013f759f7819f76c1f0a6b09736428",
+    "desktop-id.png": "83de2088f6862b1242cbabd0488cd93a05791f86c4435ac8b4f718316b28ce51",
+    "desktop-normal.png": "ad47fe049f4f871d1123a3a2ceff58d8ae8caac480f0a9fa8b370997cef73da7",
+    "desktop-edges.png": "1a621b06e66beca644e7a63579ea83da71cc0a1cf96b945896e4c2a09eb3984f",
+    "mobile-id.png": "969aa265f714f2d297b3dbd8b925a3ada255eb34b74ef1f1023611a048de410f",
+    "mobile-normal.png": "0506379e1ad1691b1db121a7cfe7ab9abf4407649c3fbc8f5a08157469f000c3",
+    "mobile-edges.png": "fde4f6ced5087365d9f466bd3ef12260199a54c2f922b4bee0c9bf88c8a09459",
+    "flat-desktop.png": "bba5ef0d7d4fd854eb24ab25c0dcab9ec1e5712c043543cef919e61a705dae4d",
+    "flat-mobile.png": "cc7c35e59287b53b25e3d322748daa1ed927199761d1da1417696812fd506608",
+    "material-desktop.png": "797b13cbc3b0bc0e69eef8194d529b25b1202e4649da05268fdd6fac99619f18",
+    "material-mobile.png": "694b1d6c740572264476c4fce8ede19aff852b928ce401bdaf9f5d5b1725c898",
+    "desktop-texture-only.png": "5f2b57133237604f622dbcc47ff48fc6cb40f930bd56c588ba24b30db1983bc1",
+    "mobile-texture-only.png": "a513b5f68ea7939f9b63057404e5a5b0d47ba8f4f1910a4dc5fee2f85ea4b79f",
+    "surface-comparison.png": "fa027ce789f9019e2fce4925ff0739cebe537f520454f2d383f4487188f21754",
+    "material-details.png": "0109bfe2d4013cb405914fd514f08ccf50a0ea6d7fbb31423b301d0d53892dfb",
+    "gray-desktop.png": "e0caeb205d296eb178c721bc4a1137ac5a139dcdbd913b16884f38734c147238",
+    "gray-neighborhood.png": "8f7e8436e61dedc69ec2b3ad857da975dd549765d0071f8c0070998648c99eca",
+    "desktop-motion.mp4": "086c19c55ce598a4a626fd5e02cfef0c3a25137d287883bad7bc56e6d5d9ac02",
+    "mobile-motion.mp4": "1cf48af96763f85865e9b43055ba87430115da24c65e77cf73b04e3ba4227e20",
+    "city.blend": "15de029833dcaf5beb806e2df2733763d97199c40f8955f240d93118dc6217bd",
+    "clearance-result.json": "ec515986a910e8059003d9ca7906844e608fbc51e30a1779f559feebfb45462c",
+    "visibility.json": "156d4b48e8da4616356e00bdc7a19fe41b09de7d594adbf56ead32cbd153ad1c",
+    "articulation-result.json": "923853cd32e5e54b8293f876741c7a8cb8b06f39cd9fdd7e72de18ebf5b8910e",
+    "final-check.json": "5503c50cdc261173959a5d527a2ab0e56fa809b9fcb8fe1dc0d7bb9f7af81029",
+    "static-result.json": "5a6abd67d3f7757818de70eac8d9a83d48a1262f4793548d63e3bba4b09bccc8",
+    "surface-check.json": "c1346eabbf50f9b338927ccda7d86127294fc03c27056e8e5d05971062624c7d",
+    "texture-layer-check.json": "b80dcfb8090f71c3860d0867024f882e2c33d1d499bef5ea5536f40f5ba4ee4e"
+  },
+  "browserVerification": {
+    "passed": true,
+    "engine": "Playwright Chromium",
+    "widths": [
+      375,
+      1440
+    ],
+    "record": "browser-check.json",
+    "sha256": "b6dd11bd7c3c08fc33938bfaf987b5d0e999cba989d658d55d8c9bd13d94cf61",
+    "playPauseSeekLoop": true,
+    "servedArtifactsVerified": 38
+  },
+  "reviewPageSha256": "7eae4109b6f0d75179f85be85bb15cb190cd5960989ade979e040a5c7c5bfa2c"
+}

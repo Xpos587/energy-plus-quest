@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "width": 375,
+      "height": 667,
+      "status": "passed",
+      "overviewWidth": 351,
+      "playingChangesPixels": true,
+      "pausedIsStable": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "passed",
+      "overviewWidth": 928.796875,
+      "playingChangesPixels": true,
+      "pausedIsStable": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "status": "passed",
+      "overviewWidth": 296,
+      "playingChangesPixels": true,
+      "pausedIsStable": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": "passed",
+      "overviewWidth": 366,
+      "playingChangesPixels": true,
+      "pausedIsStable": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "status": "passed",
+      "overviewWidth": 756,
+      "playingChangesPixels": true,
+      "pausedIsStable": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "status": "passed",
+      "overviewWidth": 544,
+      "playingChangesPixels": true,
+      "pausedIsStable": true
+    }
+  ],
+  "unchangedMainIndex": true,
+  "unchangedPass09Files": true,
+  "unchangedPass10Files": true,
+  "unchangedCharacterReferences": true,
+  "scope": "Static map and stationary cab-side smoke only; no speed or route claim."
+}

@@ -1,0 +1,76 @@
+{
+  "url": "http://localhost:4173/review/map-geometry/index.html",
+  "verifiedBytes": {
+    "index.html": {
+      "status": 200,
+      "sha256": "3e6fe2e37d58bd0682d3c2fe2962f56d011cbbbb650a7b9fecfc9a1606149893",
+      "contentType": "text/html;charset=utf-8"
+    },
+    "archive-pass-06.html": {
+      "status": 200,
+      "sha256": "7eae4109b6f0d75179f85be85bb15cb190cd5960989ade979e040a5c7c5bfa2c",
+      "contentType": "text/html;charset=utf-8"
+    },
+    "pass-07/index.html": {
+      "status": 200,
+      "sha256": "3e6fe2e37d58bd0682d3c2fe2962f56d011cbbbb650a7b9fecfc9a1606149893",
+      "contentType": "text/html;charset=utf-8"
+    },
+    "pass-07/review.css": {
+      "status": 200,
+      "sha256": "12d256202beb1176ecd2580f3829b61759c86f03364156bd6df57b6a6576c9a6",
+      "contentType": "text/css"
+    },
+    "pass-07/review.mjs": {
+      "status": 200,
+      "sha256": "e872008a5e9277a92d2f815fd92ddf0199c7963b6bda841450ca58e0836d217e",
+      "contentType": "text/javascript"
+    },
+    "pass-07/fit-map.mjs": {
+      "status": 200,
+      "sha256": "05b88a2265e2bfa6967fd1420212264f6387e207c13337b24cbc7b6ccc4687a5",
+      "contentType": "text/javascript"
+    },
+    "pass-07/tracks.json": {
+      "status": 200,
+      "sha256": "e515b53acdfb2d40df509cd691846a8bf3cafc958f69d2dfd59a2986f1b274ea",
+      "contentType": "application/json"
+    },
+    "pass-07/mobile-poster.jpg": {
+      "status": 200,
+      "sha256": "687ae3c02f72e9c71f8842d6c913fba15e36de32674a6425422de9dfb4a247b7",
+      "contentType": "image/jpeg"
+    },
+    "pass-07/desktop-poster.jpg": {
+      "status": 200,
+      "sha256": "e5a58ca61841f170d4013cfe40e5ef8e7909d813da6468f3c5065d2c44eaa1c3",
+      "contentType": "image/jpeg"
+    },
+    "pass-07/mobile-motion.mp4": {
+      "status": 200,
+      "sha256": "058efeca01066964d3ca8059424c6997b060eda866d7f6290fe495b47e99bdd1",
+      "contentType": "video/mp4"
+    },
+    "pass-07/desktop-motion.mp4": {
+      "status": 200,
+      "sha256": "7915e05b5e501ccfded4622dedd333ad3b7c4c38412ed75387ddb40f00afafd3",
+      "contentType": "video/mp4"
+    },
+    "pass-07/report.html": {
+      "status": 200,
+      "sha256": "ac09f24063ccc17d2bf6a7dbd9343e0f6eb42db224d1468ced3b54f470382590",
+      "contentType": "text/html;charset=utf-8"
+    },
+    "pass-07/browser-check.json": {
+      "status": 200,
+      "sha256": "3abfa2aaf4d7ec88baf29f4890b4041c0bd7f2d7a25308894f6ad47fbf6723f2",
+      "contentType": "application/json"
+    },
+    "pass-07/manifest.json": {
+      "status": 200,
+      "sha256": "2140479e1a8786018cc34d59c0a804857a496024ea93b55cfcc409385efc574e",
+      "contentType": "application/json"
+    }
+  },
+  "gameIntegration": false
+}

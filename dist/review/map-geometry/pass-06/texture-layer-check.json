@@ -1,0 +1,12 @@
+{
+  "desktop": {
+    "maximumRecompositionError8bit": 0,
+    "meanAlpha": 0.002745822440087146,
+    "pixelsAboveTenPercentAlpha": 0.0
+  },
+  "mobile": {
+    "maximumRecompositionError8bit": 0,
+    "meanAlpha": 0.0037017941942401955,
+    "pixelsAboveTenPercentAlpha": 0.0
+  }
+}

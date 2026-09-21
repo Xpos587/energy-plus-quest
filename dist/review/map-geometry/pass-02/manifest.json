@@ -1,0 +1,127 @@
+{
+  "revision": 2,
+  "authoringModel": "9router/gpt-6-astra",
+  "reasoningLevel": "xhigh",
+  "textures": false,
+  "source": "New Blender geometry based on four approved cutscene illustrations; stylized reconstruction, not manufacturer CAD",
+  "referenceNames": [
+    "old-preview.jpg",
+    "near-preview.jpg",
+    "crew-preview.jpg",
+    "old4-preview.jpg"
+  ],
+  "fps": 24,
+  "frames": 768,
+  "duration": 32,
+  "truckCount": 4,
+  "warehouseLoadingBays": 6,
+  "clearance": {
+    "samples": 3072,
+    "failures": 0,
+    "examples": [],
+    "minimumObstacleClearance": 1.4009641031351843,
+    "roadMargin": 0.12,
+    "vehicleMargin": 0.2
+  },
+  "visibility": {
+    "loopMatrixError": 1.9669532775878906e-06,
+    "views": [
+      {
+        "camera": "desktop",
+        "sampledFrames": 192,
+        "roofSampleVisibleFractions": {
+          "truck-1-tractor": 1.0,
+          "truck-1-trailer": 1.0,
+          "truck-2-tractor": 1.0,
+          "truck-2-trailer": 1.0,
+          "truck-3-tractor": 1.0,
+          "truck-3-trailer": 1.0,
+          "truck-4-tractor": 1.0,
+          "truck-4-trailer": 1.0
+        },
+        "clippedSamples": 0,
+        "dockFirstHits": [
+          "warehouse loading door",
+          "warehouse loading door.001",
+          "warehouse loading door.002",
+          "warehouse loading door.003",
+          "warehouse loading door.004",
+          "warehouse loading door.005"
+        ]
+      },
+      {
+        "camera": "mobile",
+        "sampledFrames": 192,
+        "roofSampleVisibleFractions": {
+          "truck-1-tractor": 1.0,
+          "truck-1-trailer": 1.0,
+          "truck-2-tractor": 1.0,
+          "truck-2-trailer": 1.0,
+          "truck-3-tractor": 1.0,
+          "truck-3-trailer": 1.0,
+          "truck-4-tractor": 1.0,
+          "truck-4-trailer": 1.0
+        },
+        "clippedSamples": 0,
+        "dockFirstHits": [
+          "warehouse loading door",
+          "warehouse loading door.001",
+          "warehouse loading door.002",
+          "warehouse loading door.003",
+          "warehouse loading door.004",
+          "warehouse loading door.005"
+        ]
+      }
+    ]
+  },
+  "maximumHitchGap": 0.00016719518280648138,
+  "limits": [
+    "Collision checks use conservative 2D body envelopes and 0.12-unit road/static margin at quarter-frame samples.",
+    "Visibility uses nine actual roof-surface samples per body every fourth frame; this is not a pixel-area percentage.",
+    "This remains an untextured reference; live game assets are not replaced."
+  ],
+  "commands": [
+    "blender -b --python scene.py -- --render",
+    "python check_clearance.py clearance.json",
+    "blender -b --python check_visibility.py",
+    "blender -b --python render_trucks.py",
+    "blender -b --python render_validation.py",
+    "blender -b --python render_motion.py",
+    "blender -b --python-exit-code 1 --python check_articulation.py",
+    "python verify_articulation.py"
+  ],
+  "sourceHashes": {
+    "scene.py": "be17f61c46f788640411d20f5a36234e3bbdfb5a72618386db3f8f4642b10f13",
+    "vehicles.py": "afea4906f63e3ec910cff171b843bcd489ef0d85c2f265a04b5a74509b2558b1",
+    "city.blend": "097dfc7ee106116e02a8ed11949d22c35c0e287ee38f30e2770d3ac249f8d899",
+    "check_clearance.py": "7126b37fb907530ee76813940cabc6578ee838d0caa4ca2801b8e49aa63be2eb",
+    "check_visibility.py": "2cc49b995e4d2fc29d1287bc9b1a40b970f3d84c657f60f64e7d49bbe02d4bd6",
+    "check_articulation.py": "fb8671c54561364af1f773b9bed3f5b0d025d177efb3a7300841a2fce1b1899e",
+    "verify_articulation.py": "11f620a05cc38d76a13638b9aa568e3970d3e9989252ab1b33469be61681301b"
+  },
+  "articulation": {
+    "bodyPairsChecked": 12288,
+    "minimumCabCargoClearance": 0.24631938908990914,
+    "failures": 0,
+    "examples": []
+  },
+  "artifactHashes": {
+    "desktop.png": "ec6f28e17f787f3ca07e826e30401ae8e6672139fc586efefa417cffe818fc52",
+    "mobile.png": "a8df4cc7baa039405b959be139db23c1c129e743fd2b0e98bd349ae7a72538df",
+    "top.png": "a910c20a2e05e265cac92039fd7befced30c2a68c608caf03bab1d8a6146cae0",
+    "truck-1.png": "c06d09b7743b6e14571476ab01d267d628373111c3bd00d60e4a6d62ef6fcd71",
+    "truck-2.png": "8d265c14084bc339efcde6fa1c4554bde16727ffbad693a27401c2627b9e5f68",
+    "truck-3.png": "a5c471c7b0424a3affdddfc329929914f79fea332912fbdb9db1a8740b9e560b",
+    "truck-4.png": "a0ab4f8f29fd88f9f14b3360a38958787494f9259fe41917bb55ba42c3e89fbc",
+    "desktop-id.png": "5f19b2fb53da89efe2856d4107b26fa48c0e3c611283dbb19b67318cd4fc0ad6",
+    "mobile-id.png": "a722e0fd1ad27a345255a4dbcc554823283a0081126d56c278e1c7c39e06ad02",
+    "desktop-normal.png": "e032ac44498b80ae484c47ca85a1d572a71999b8d0e537f842e123647727b398",
+    "mobile-normal.png": "4b085c4dc312864cd77e3e89db5b1d2c509a28f7d1e5eafb56be859c34fd9a60",
+    "desktop-edges.png": "d69cbabba3a3e222e50e9584ee34d0c2b089e9187f4182e6b751424884912d17",
+    "mobile-edges.png": "360bf4bdaf5e4d8f062409e3cca7133da8355a5bdaa899fd292e13b71a94508b",
+    "truck-2-side.png": "fe446b77e5fa3381256b509cbf191c0319d6a78c1245c12f784f0c64c763fd3c",
+    "truck-2-rear.png": "3bb96a3391218499693c9d46420d0ee32c4106222e5e64e7cdf16fff61702904",
+    "desktop-motion.mp4": "22d645ed86e6f5f9a45e92ac8c65d1d3e66a619ba87fb313606822066a1f5d2e",
+    "mobile-motion.mp4": "86c7c5400d23eb83c322f0a4414c916dd75487f6583c87023662c6b22bb3166e"
+  }
+}

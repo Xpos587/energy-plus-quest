@@ -1,0 +1,40 @@
+[
+  {
+    "created_at": "2026-09-18T16:08:25.146002Z",
+    "display_name": "GPT Image 2",
+    "id": "3c7e049e-db8a-4a2c-932f-fd427cb1c866",
+    "job_type": "gpt_image_2",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_160825_3c7e049e-db8a-4a2c-932f-fd427cb1c866_min.webp",
+    "params": {
+      "aspect_ratio": "auto",
+      "height": 2304,
+      "medias": [
+        {
+          "data": {
+            "id": "17005d1b-fe10-4da7-a113-c0c1c3c34453",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/17005d1b-fe10-4da7-a113-c0c1c3c34453.png"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "ce207ba2-ba1b-4a8a-a308-71f1eac31015",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/ce207ba2-ba1b-4a8a-a308-71f1eac31015.webp"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "videotape-alpha",
+      "prompt": "Redraw IMAGE 1 as a finished hand-INKED COMIC ENVIRONMENT drawn by the illustrator of IMAGE 2. IMAGE 1 is ONLY the composition / count reference. IMAGE 2 is ONLY the exact drawing-language reference. Do NOT draw the woman. Output only the same environment crop, no border or typography.\nThis is a fundamental redrawing of form language, NOT a filter, texture overlay or subtle architectural rendering. The current architectural maquette look must disappear. Study image2: near-black tapered expressive silhouette lines, thin broken interior strokes, solid saturated local colors, opaque angular blue shadow shapes with restrained painted variation. Transfer precisely that ink-and-opaque-paint vocabulary to EVERY surface: warehouse, truck, foliage, sidewalk and road. Clearly articulated asymmetrical clusters of drawn leaves instead of fuzzy spherical 3D trees; drawn tire and wheel arch shapes; bold cab silhouette; opaque grouped blue-grey architectural shadow planes; lively confident contour rhythm with selective thinner edges on sunlit sides. Make this drawing change immediately evident at thumbnail scale. Not photoreal, not softly modeled architectural visualization, not a watercolor wash, not pencil hatching, not uniform thick outlines around every window, not toy/pictogram art. Keep sophisticated functional industrial detail.\nSame view/crop and placement; same building shapes and footprints. Six roof skylights in two rows of three, two HVAC at far roof edge clear of skylights. SIX distinct loading doors and SEVEN white boundary lines. Keep fence continuous and existing open entrance. Same truck2, blue cab, white box and number2; no extra vehicles. Maintained mature working city. Calm clear daylight, solid colors, short SOFT ground shadows, no dramatic directional shadows. Do not preserve any old rendering language just because it contains a protected detail: redraw the details correctly.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_160825_3c7e049e-db8a-4a2c-932f-fd427cb1c866.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,260 @@
+{
+  "passed": true,
+  "changedPixels": 142162,
+  "offMaskChanges": 0,
+  "priorFilesHashChecked": 63,
+  "girlOriginalByteIdentical": true,
+  "losslessExport": true,
+  "protectedRegions": [
+    "warehouse-bays",
+    "yard",
+    "east-fence",
+    "south-fence",
+    "crew-glass",
+    "truck4-glass",
+    "truck4-rear-wheel",
+    "truck4-front-wheel",
+    "west-zebra",
+    "west-stop-line",
+    "east-upper-zebra",
+    "east-middle-zebra",
+    "east-lower-zebra",
+    "east-bottom-zebra"
+  ],
+  "number4InkPixelsUnchanged": 1173,
+  "rasterMeasurements": [
+    {
+      "segment": "north-west",
+      "rasterCount": 1,
+      "rasterLengths": [
+        31.82
+      ],
+      "rasterWidths": [
+        3.37
+      ],
+      "rasterGaps": [],
+      "maxAngleErrorDegrees": 0.017
+    },
+    {
+      "segment": "west",
+      "rasterCount": 9,
+      "rasterLengths": [
+        31.49,
+        31.44,
+        31.49,
+        31.44,
+        31.44,
+        31.91,
+        31.86,
+        31.49,
+        31.49
+      ],
+      "rasterWidths": [
+        3.05,
+        3.47,
+        3.05,
+        3.4,
+        3.4,
+        3.02,
+        3.44,
+        3.05,
+        3.05
+      ],
+      "rasterGaps": [
+        24.58,
+        24.58,
+        24.58,
+        24.64,
+        24.16,
+        24.16,
+        24.16,
+        24.58
+      ],
+      "maxAngleErrorDegrees": 0.31
+    },
+    {
+      "segment": "central",
+      "rasterCount": 7,
+      "rasterLengths": [
+        31.49,
+        31.49,
+        31.91,
+        31.49,
+        31.49,
+        31.49,
+        31.49
+      ],
+      "rasterWidths": [
+        3.35,
+        3.03,
+        3.08,
+        3.35,
+        3.35,
+        3.35,
+        3.35
+      ],
+      "rasterGaps": [
+        24.58,
+        24.16,
+        24.16,
+        24.58,
+        24.64,
+        24.58
+      ],
+      "maxAngleErrorDegrees": 0.241
+    },
+    {
+      "segment": "east-north",
+      "rasterCount": 3,
+      "rasterLengths": [
+        31.86,
+        31.86,
+        31.82
+      ],
+      "rasterWidths": [
+        3.08,
+        3.4,
+        3.51
+      ],
+      "rasterGaps": [
+        24.11,
+        24.16
+      ],
+      "maxAngleErrorDegrees": 0.213
+    },
+    {
+      "segment": "east-lower",
+      "rasterCount": 2,
+      "rasterLengths": [
+        31.49,
+        31.49
+      ],
+      "rasterWidths": [
+        3.03,
+        3.35
+      ],
+      "rasterGaps": [
+        24.58
+      ],
+      "maxAngleErrorDegrees": 0.213
+    },
+    {
+      "segment": "central-south",
+      "rasterCount": 2,
+      "rasterLengths": [
+        31.44,
+        31.44
+      ],
+      "rasterWidths": [
+        3.14,
+        3.4
+      ],
+      "rasterGaps": [
+        24.58
+      ],
+      "maxAngleErrorDegrees": 0.342
+    },
+    {
+      "segment": "middle-link",
+      "rasterCount": 2,
+      "rasterLengths": [
+        27.48,
+        27.62
+      ],
+      "rasterWidths": [
+        3.38,
+        3.34
+      ],
+      "rasterGaps": [
+        28.37
+      ],
+      "maxAngleErrorDegrees": 0.113
+    },
+    {
+      "segment": "south-west-link",
+      "rasterCount": 2,
+      "rasterLengths": [
+        27.62,
+        27.59
+      ],
+      "rasterWidths": [
+        3.34,
+        3.38
+      ],
+      "rasterGaps": [
+        28.55
+      ],
+      "maxAngleErrorDegrees": 0.113
+    },
+    {
+      "segment": "south-east-link",
+      "rasterCount": 2,
+      "rasterLengths": [
+        27.59,
+        27.48
+      ],
+      "rasterWidths": [
+        3.38,
+        3.38
+      ],
+      "rasterGaps": [
+        28.37
+      ],
+      "maxAngleErrorDegrees": 0.107
+    },
+    {
+      "segment": "north-west-link",
+      "rasterCount": 2,
+      "rasterLengths": [
+        27.24,
+        27.48
+      ],
+      "rasterWidths": [
+        3.32,
+        3.11
+      ],
+      "rasterGaps": [
+        28.64
+      ],
+      "maxAngleErrorDegrees": 0.312
+    },
+    {
+      "segment": "west-bottom",
+      "rasterCount": 1,
+      "rasterLengths": [
+        31.49
+      ],
+      "rasterWidths": [
+        3.35
+      ],
+      "rasterGaps": [],
+      "maxAngleErrorDegrees": 0.213
+    },
+    {
+      "segment": "east-bottom",
+      "rasterCount": 1,
+      "rasterLengths": [
+        31.49
+      ],
+      "rasterWidths": [
+        3.35
+      ],
+      "rasterGaps": [],
+      "maxAngleErrorDegrees": 0.213
+    },
+    {
+      "segment": "central-bottom",
+      "rasterCount": 1,
+      "rasterLengths": [
+        31.91
+      ],
+      "rasterWidths": [
+        3.35
+      ],
+      "rasterGaps": [],
+      "maxAngleErrorDegrees": 0.098
+    }
+  ],
+  "northwest": "one visible complete dash, other regularly spaced positions occluded by original truck1",
+  "method": "actual raster pale-pixel connected components measured against manifest, not mask metadata alone"
+}

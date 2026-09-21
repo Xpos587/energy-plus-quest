@@ -1,0 +1,48 @@
+[
+  {
+    "created_at": "2026-09-18T16:18:22.852804Z",
+    "display_name": "GPT Image 2",
+    "id": "fffadbb8-b5d7-4205-8770-c11df9ec787d",
+    "job_type": "gpt_image_2",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_161822_fffadbb8-b5d7-4205-8770-c11df9ec787d_min.webp",
+    "params": {
+      "aspect_ratio": "auto",
+      "height": 2304,
+      "medias": [
+        {
+          "data": {
+            "id": "d46c01a0-b0b7-4d5d-abcc-dd9a55993e22",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/d46c01a0-b0b7-4d5d-abcc-dd9a55993e22.png"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "6540a679-d177-4280-b1fe-6469bed95feb",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/6540a679-d177-4280-b1fe-6469bed95feb.png"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "8cdcd080-55e9-40f5-a2e0-d22e77e8193a",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/8cdcd080-55e9-40f5-a2e0-d22e77e8193a.webp"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "videotape-alpha",
+      "prompt": "Refine IMAGE1 as a detailed hand-inked comic truck cab closeup. Keep EXACTLY its composition, shapes, camera, truck silhouette and windshield corners. IMAGE2 is a reference for naturally seated two people BEHIND actual glass with subtle cool reflections. IMAGE3 is the illustrator's ink and opaque painted shading vocabulary, do not include the woman from it. The cab from image1 must stay in that solid BLUE ink-and-paint comic style, NOT photoreal or a soft 3D render. In the front windshield show TWO naturally seated adults with unobtrusive work clothing, anatomically plausible faces at this high angle, hands naturally below dashboard, skin tones and distinct head shapes, the driver actually seated behind steering wheel. Subtle cool diagonal glass reflections visibly pass in front of their clothes, heads and seat but do not hide their faces. No pasted black busts, no passengers outside glass, no frontal portrait laid over the cab, no window shape change. Keep every panel, mirror, tire, light and proportion as image1. Output only the same truck crop. Daytime, no smoke.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 1792
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_161822_fffadbb8-b5d7-4205-8770-c11df9ec787d.png",
+    "status": "completed"
+  }
+]

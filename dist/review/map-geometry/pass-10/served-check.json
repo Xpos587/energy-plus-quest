@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "alva.webp",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "arseniy.webp",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "browser-check.cjs",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "comparison.jpg",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "exhaust-proof.mp4",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "exhaust-timeline.jpg",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "fence-closeups.jpg",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "fence-projection.json",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "fence.json",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "geometry-check.json",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "in-scene.jpg",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "khor.webp",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "map.jpg",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "professional-cutout.png",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "professional.webp",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "smoke.mjs",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "smoke.test.mjs",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "student.webp",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "style.css",
+      "status": 200,
+      "sha256Matched": true
+    },
+    {
+      "file": "validation.json",
+      "status": 200,
+      "sha256Matched": true
+    }
+  ]
+}

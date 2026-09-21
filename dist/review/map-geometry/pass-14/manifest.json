@@ -1,0 +1,58 @@
+{
+  "pass": 14,
+  "rawSource": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-13/map-raw.png",
+  "rawDimensions": [
+    3504,
+    2336
+  ],
+  "outputDimensions": [
+    3504,
+    2336
+  ],
+  "mapTransform": "identity; zero global or local geometry registration",
+  "crewRepair": "Existing pass13 crew, uniform thumbnail 215x276 and translation (2653,954); clipped front-glass polygon only.",
+  "crewMaskBBox": [
+    2686,
+    1065,
+    2787,
+    1125
+  ],
+  "characterSource": "design/scene-01/assets/current/choices/professional.webp",
+  "characterRGB": "unchanged crop of existing pass12 alpha cutout; uniform display resize only",
+  "characterCrop": [
+    450,
+    55,
+    1110,
+    1855
+  ],
+  "characterPlacements1500x1000": {
+    "foreground": [
+      1280,
+      480,
+      180,
+      491
+    ],
+    "natural": [
+      953,
+      830,
+      11,
+      30
+    ]
+  },
+  "previewFrame": [
+    1500,
+    1000
+  ],
+  "beforeFraming": "pass13 and pass12 uniformly contained, 30px horizontal letterbox; never stretched",
+  "generationJobs": 0,
+  "smoke": "omitted; all art explicitly static",
+  "geometryReference": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-12/city-repaired.blend",
+  "geometryEvidence": "Actual final map crops in details.jpg and geometry-evidence.jpg; unchanged Blender source is not final-image proof.",
+  "limitations": [
+    "Generated layout differs modestly from pass12; intentionally not rubber-registered.",
+    "9.3m gate is a source-scene dimension, not a calibrated raster measurement.",
+    "Foreground girl is a deliberately enlarged comparison figure; smaller copy is the natural-scale diagnostic.",
+    "Style compatibility remains subject to user review; no user approval claimed."
+  ],
+  "mapSHA256": "7d8bd41f39c0b5dd68da94092bbdac7a965ada984b7fadb9ee11ca5daade762e"
+}

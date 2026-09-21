@@ -1,0 +1,18 @@
+{
+  "headings": 72,
+  "cell": 256,
+  "columns": 12,
+  "cabOrthoScale": 7.5,
+  "trailerOrthoScale": 8.4,
+  "trailerAnchorHeight": 1.7,
+  "camera": [
+    8,
+    -100,
+    120
+  ],
+  "source": "pass-21-live: reference-shaped tractor meshes with four registered GPT Image 2 painted projections; approved18 trailer panel texture",
+  "articulation": "separate cab, original-UV chassis and trailer headings; chassis always beneath cargo; continuous premultiplied adjacent-heading sampling",
+  "crew": "Two painted seated humans behind reflective glazing in the registered front-camera textures",
+  "oldFamily": "Maintained slate blue-gray low cab with painted glass, panels and hubs; white/cream worn trailer",
+  "nearFamily": "Lower blue modern cab beside warehouse; same coherent modern vehicle paint family"
+}

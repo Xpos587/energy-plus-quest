@@ -1,0 +1,183 @@
+{
+  "scope": "Standalone painted map + stationary animated exhaust; no production or moving-route integration.",
+  "source": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-11",
+  "generationJobs": [
+    {
+      "receipt": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-11/style-job.json",
+      "id": "dd7f2a3b-b875-4e1d-ad9e-16faef3a286a",
+      "model": "Nano Banana Pro",
+      "status": "completed",
+      "prompt": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-11/style-prompt.txt"
+    },
+    {
+      "receipt": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-11/correction-job.json",
+      "id": "874f51ad-b12c-4462-8df6-14a5794a0237",
+      "model": "Nano Banana Pro",
+      "status": "completed",
+      "prompt": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-11/correction-prompt.txt"
+    },
+    {
+      "receipt": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-11/finish-job.json",
+      "id": "dc67fabb-fb6e-4b2b-aa6f-16a8c0ec882a",
+      "model": "GPT Image 2",
+      "status": "completed",
+      "prompt": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-11/finish-prompt.txt"
+    }
+  ],
+  "mainReference": "design/scene-01/assets/current/choices/professional.webp",
+  "characterRGBUnchanged": true,
+  "sourceFix": "Six gates, seven shared bay boundaries. Broad overhead AREA light size45 at(-8,-10,75); pass10 connected fence retained.",
+  "localImageEdit": "Only missing neutral roof numeral 1 restored; no mixed-style roof patches, no global image blur or color grade.",
+  "checks": {
+    "docks": {
+      "passed": true,
+      "sourceDoors": 6,
+      "sourceBoundaries": 7,
+      "paintedBoundaries": 7,
+      "doorCentersAreBetweenLines": true,
+      "image": "map.jpg",
+      "rows": [
+        {
+          "y": 405,
+          "lineCenters": [
+            380.0,
+            414.0,
+            449.0,
+            483.0,
+            517.5,
+            552.5,
+            586.5
+          ]
+        },
+        {
+          "y": 412,
+          "lineCenters": [
+            379.0,
+            414.0,
+            448.0,
+            482.5,
+            517.0,
+            552.0,
+            586.0
+          ]
+        },
+        {
+          "y": 420,
+          "lineCenters": [
+            378.0,
+            413.0,
+            447.5,
+            482.0,
+            516.5,
+            551.0,
+            585.0
+          ]
+        }
+      ],
+      "manualBasis": "Door centers inspected in dock-inspect.jpg; small perspective slant allowed."
+    },
+    "fence": {
+      "passed": true,
+      "frames": 3072,
+      "minimumTruckFenceClearanceMeters": 0.31941986083984375,
+      "openGateMeters": 9.3,
+      "warehouseConnectedChains": 2,
+      "roadCrossings": 0
+    },
+    "browser": {
+      "passed": true,
+      "results": [
+        {
+          "width": 375,
+          "height": 667,
+          "status": "passed",
+          "overviewWidth": 351,
+          "playingChangesPixels": true,
+          "pausedIsStable": true
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "status": "passed",
+          "overviewWidth": 928.796875,
+          "playingChangesPixels": true,
+          "pausedIsStable": true
+        },
+        {
+          "width": 320,
+          "height": 568,
+          "status": "passed",
+          "overviewWidth": 296,
+          "playingChangesPixels": true,
+          "pausedIsStable": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "status": "passed",
+          "overviewWidth": 366,
+          "playingChangesPixels": true,
+          "pausedIsStable": true
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "status": "passed",
+          "overviewWidth": 756,
+          "playingChangesPixels": true,
+          "pausedIsStable": true
+        },
+        {
+          "width": 568,
+          "height": 320,
+          "status": "passed",
+          "overviewWidth": 544,
+          "playingChangesPixels": true,
+          "pausedIsStable": true
+        }
+      ],
+      "unchangedMainIndex": true,
+      "unchangedPass09Files": true,
+      "unchangedPass10Files": true,
+      "unchangedCharacterReferences": true,
+      "scope": "Static map and stationary cab-side smoke only; no speed or route claim."
+    },
+    "smoke": "769 deterministic frames; pixel-changing play/pause verified; 48 recorded browser frames"
+  },
+  "limits": [
+    "Vehicles are stationary; speed and route integration not demonstrated.",
+    "Minor generative facade/vegetation/service-detail drift; image is not a metric projection.",
+    "Some straight architectural edges remain. No claim of client-approved style.",
+    "Driver silhouettes and vehicle condition have not been validated in moving mobile gameplay."
+  ],
+  "unchangedMainIndexSHA256": "3e6fe2e37d58bd0682d3c2fe2962f56d011cbbbb650a7b9fecfc9a1606149893",
+  "files": {
+    "alva.webp": "d1f2e98ed451c8c8dae8cd8eaab4c489e2431aafcab9b816dfd51095b8325114",
+    "arseniy.webp": "c6aebaf5caf3cdf3500fcb61595d995ee92892a6018d86a6861496ccc523daad",
+    "browser-check.cjs": "53a27e2ff02b06584e1308c5f8b9f592e5e0fef57194b816a7609bc7be32198b",
+    "check_docks.py": "5553ab5f92d17a08ae8280bd19e74c46862bbae4fd5433f1ec302f840d122a8b",
+    "comparison.jpg": "00d248b56219903931c3878a21ad07c59144a86f6eee842615d767f36e4ab868",
+    "decisions.md": "c4339937e2bed38a8d2157a72dbad3c99f9e185095579dd694145d709993337f",
+    "dock-check.json": "dfeb4ba2869f143dac3fa070ca5e9c862c89a50e507616014a6200496dadfd90",
+    "dock-closeup.jpg": "bca429f0e3ca9f55c8feec2f53ee97c1b146c140f37b1d58e45bd082556acc5f",
+    "dock-projection.json": "a6f73d66ef95c55df765b0434df3f0d358bd8e6d68ef86e98824a13a29c21440",
+    "dock_layout.py": "c365715d9d3d8c0de30cd427f0b9beb6c51a08dbaabe826b530042111989ae9e",
+    "exhaust-proof.mp4": "f97bcd77d036c0b937587c214cd767b8bb6734dfdde66a767f8e6fbf9c9e2bbb",
+    "exhaust-timeline.jpg": "73688fbcbef811297372e70e60426b9289e92aee7b0eba90c0f79701b3fdc45b",
+    "fence-closeups.jpg": "6a21bdca6e1e99a4020f8db6091aaf5d30a8153e2c491fa103a216483db7da4f",
+    "fence.json": "eab53d5c4384f533bf8a186b9c84b37777bdf0e20073b85c551edfce07f7477c",
+    "geometry-check.json": "efa896e5a5db96383690be2107900875ead7434386909fb4ea772e3d234f599e",
+    "in-scene.jpg": "caca9754bd384993a955ae166b4a8cf1cf0e870d9d173203def4317710420968",
+    "index.html": "4121efeab620dceadd6564f659aec7e93633823a50c4ce3a0c615c9f27072d61",
+    "khor.webp": "fcee80743a072841f3b4087d67dd8e7be694a5e8699227e3bc00d6d165116703",
+    "map.jpg": "387040c206e47c80e49d60b121b1627c6aed4044f10a48e534eefdc5bd8fc6a4",
+    "professional-cutout.png": "914d83e6799efad528f872f4e1691c4d02633fed4dd42bdf3d5477129b81579a",
+    "professional.webp": "86955f737339f1e07ce7db771794b1f14eae348cf96bba3599f5f1ae226793d8",
+    "shadow-comparison.jpg": "74b2ca0f2ec3953aee8ac66e5f0ed9e223f06cf793489db24eeb01217d6ff398",
+    "smoke.mjs": "605521931b6bda62eaeb0cdb15a58ac85da8b915bb1ef9584c28b49782485674",
+    "smoke.test.mjs": "13538c9347864d2963cc85871da687f98da4e5fd5b0e45fc162fec2837c2d575",
+    "student.webp": "1d872c3560d46b0d7458ecd8eb65af07f24d7ae4f19a96ac0af46a10bf894737",
+    "style.css": "dfce06e8f2ec1a456b9825eb8aee036a96bb4a8ab2565a74684906907bab0257",
+    "validation.json": "cfb01439f99c1524cf7c6dbe77f1f2dae7206451bd8fa08b374644ef1e7ffa0f"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "loopMatrixError": 3.3676624298095703e-06,
+  "views": [
+    {
+      "camera": "desktop",
+      "sampledFrames": 192,
+      "roofSampleVisibleFractions": {
+        "truck-1-tractor": 1.0,
+        "truck-1-trailer": 1.0,
+        "truck-2-tractor": 1.0,
+        "truck-2-trailer": 1.0,
+        "truck-3-tractor": 1.0,
+        "truck-3-trailer": 0.9971064814814815,
+        "truck-4-tractor": 1.0,
+        "truck-4-trailer": 1.0
+      },
+      "clippedSamples": 0,
+      "dockFirstHits": [
+        "warehouse loading door",
+        "warehouse loading door.001",
+        "warehouse loading door.002",
+        "warehouse loading door.003",
+        "warehouse loading door.004",
+        "warehouse loading door.005"
+      ]
+    },
+    {
+      "camera": "mobile",
+      "sampledFrames": 192,
+      "roofSampleVisibleFractions": {
+        "truck-1-tractor": 1.0,
+        "truck-1-trailer": 1.0,
+        "truck-2-tractor": 1.0,
+        "truck-2-trailer": 1.0,
+        "truck-3-tractor": 0.9965277777777778,
+        "truck-3-trailer": 0.9901620370370371,
+        "truck-4-tractor": 1.0,
+        "truck-4-trailer": 1.0
+      },
+      "clippedSamples": 0,
+      "dockFirstHits": [
+        "warehouse loading door",
+        "warehouse loading door.001",
+        "warehouse loading door.002",
+        "warehouse loading door.003",
+        "warehouse loading door.004",
+        "warehouse loading door.005"
+      ]
+    }
+  ]
+}

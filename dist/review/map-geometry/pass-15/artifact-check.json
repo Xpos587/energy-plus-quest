@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "priorAndSourceHashesVerified": 345,
+  "dimensions": [
+    3504,
+    2336
+  ],
+  "roofPlanes": 12,
+  "changedPixels": 939505,
+  "roofMaskPixels": 710701,
+  "foliageMaskPixels": 243573,
+  "changedPixelsOutsideIntendedMasks": 0,
+  "fixturePixelsUnchanged": 21505,
+  "protectedRegionsUnchanged": [
+    "truck-1",
+    "truck-2",
+    "truck-3-and-crew",
+    "truck-4-cab",
+    "west-facade",
+    "tower-facade",
+    "east-facade",
+    "business-facade",
+    "warehouse-roof-and-skylights",
+    "road-and-shadow",
+    "retained-green-tree"
+  ],
+  "roofLuminanceMaxError255": 0.45340000000000025,
+  "foliageHSVValuePreserved": true,
+  "greenLeafFraction": 0.5191904485670197,
+  "losslessBrowserArtMatchesMaster": true,
+  "originalGirlRGBUnchanged": true,
+  "girlVisibleAlphaBBoxes1500x1000": {
+    "foreground": [
+      1284,
+      483,
+      1459,
+      967
+    ],
+    "natural": [
+      953,
+      830,
+      964,
+      860
+    ]
+  },
+  "losslessExportMatchesIndependentTwoGirlComposite": true,
+  "noStagedFiles": true
+}

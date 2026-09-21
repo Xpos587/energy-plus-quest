@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Карта — современный городской район</title>
+<style>
+:root{color-scheme:light;font-family:Georgia,serif;color:#242424;background:#f1f0ec}body{margin:0 auto;padding:24px;max-width:1280px}h1{font-size:clamp(28px,4vw,48px);font-weight:normal;margin:24px 0 16px}h2{font-size:28px;font-weight:normal;margin-top:48px}p,li{max-width:900px;line-height:1.6}a{color:#164869}figure{margin:28px 0}img,video{display:block;width:100%;height:auto;background:#aaa}figcaption{line-height:1.5;padding:12px 0}section{display:grid;grid-template-columns:1fr 1fr;gap:24px}section figure{min-width:0;margin-top:0}video{max-height:820px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:20px}a:focus-visible,summary:focus-visible{outline:3px solid #d65520;outline-offset:4px}summary{cursor:pointer;padding:16px 0}details{border-top:1px solid #ccc;margin-top:20px}.note{border-left:3px solid #d65520;padding-left:16px}@media(max-width:650px){body{padding:16px}section{grid-template-columns:1fr}}
+</style>
+<nav><a href="/">В игру</a><a href="archive-pass-02.html">Предыдущий вариант</a><a href="pass-04/city.blend" download>Скачать Blender-сцену</a></nav>
+<h1>Современный городской район</h1>
+<p>Складской комплекс, многоэтажные кварталы с двором и новая планировка улиц. Переработанная геометрия для сцены современного российского мегаполиса — без сараев и маленьких промышленных домиков.</p>
+<p class="note">Это отдельный 3D-референс с нейтральными материалами, не финальная цветная иллюстрация. Карта в самой игре не заменена.</p>
+<h2>Склад — логистический комплекс</h2>
+<figure><a href="pass-04/warehouse.png"><img src="pass-04/warehouse.png" width="1200" height="900" alt="Современный склад: плоская кровля с парапетом, шесть погрузочных доков и остеклённая административная часть"></a><figcaption>Убрана двускатная крыша. Добавлены панельный фасад, доковые укрытия, кровельные фонари, инженерное оборудование и административная часть. Перед воротами — проезжий погрузочный двор с отдельным въездом, а не городская улица.</figcaption></figure>
+<h2>Район и движение</h2>
+<section>
+<figure><video controls playsinline loop preload="metadata" poster="pass-04/mobile.png" aria-label="Мобильная камера: полный цикл движения четырёх грузовиков"><source src="pass-04/mobile-motion.mp4" type="video/mp4"></video><figcaption>Мобильная камера · 32 секунды, 24 fps. Сохранены четыре грузовика и движение сочленённых прицепов. У старых №1 и №4 — мягкий объёмный выхлоп; №2 и №3 не дымят.</figcaption></figure>
+<figure><a href="pass-04/mobile.png"><img src="pass-04/mobile.png" width="720" height="1024" alt="Многоэтажный городской квартал с внутренним двором, складским комплексом и четырьмя грузовиками"></a><figcaption>Связанные жилые корпуса, внутренний двор и коммерческий первый этаж вместо отдельных маленьких кубов. Главная улица, Т-образные примыкания и непрерывные тротуары со скруглёнными углами.</figcaption></figure>
+</section>
+<figure><video controls playsinline loop preload="metadata" poster="pass-04/desktop.png" aria-label="Широкоформатная камера: полный цикл движения по городским улицам"><source src="pass-04/desktop-motion.mp4" type="video/mp4"></video><figcaption>Широкоформатная камера той же сцены. Грузовики не обрезаются краями кадра, застройка продолжается за его границами. <a href="pass-04/desktop.png">Открыть неподвижный кадр</a>.</figcaption></figure>
+<h2>Архитектурные ориентиры</h2>
+<p>Устройство современного склада — по фотографиям <a href="https://rrpa.ru/projects/ISTRA/">логистического парка «Истра»</a>; квартальная застройка — по <a href="https://prorus.ru/projects/kvartal-na-nekrasova-v-ekaterinburge/">«На Некрасова» в Екатеринбурге</a>. <a href="https://kenney.nl/assets/city-kit-roads">Kenney City Kit Roads</a> использован как ориентир для связности улиц и бордюров, не для архитектуры зданий. Это стилизованная сцена, не копия конкретного района.</p>
+<details><summary>Грузовики крупно</summary>
+<p>Сохранены формы четырёх бескапотных грузовиков из предыдущего прохода. Это стилизованные модели по иллюстрациям сцен, не заводские CAD-модели.</p>
+<section>
+<figure><a href="pass-04/truck-1.png"><img loading="lazy" src="pass-04/truck-1.png" width="1280" height="800" alt="Грузовик номер один с высокой бескапотной кабиной и длинным полуприцепом"></a><figcaption>№1 · Высокая кабина с обтекателем и выхлопной трубой.</figcaption></figure>
+<figure><a href="pass-04/truck-2.png"><img loading="lazy" src="pass-04/truck-2.png" width="1280" height="800" alt="Современный грузовик номер два с полуприцепом"></a><figcaption>№2 · Современная кабина; короткий маршрут по складскому двору.</figcaption></figure>
+<figure><a href="pass-04/truck-3.png"><img loading="lazy" src="pass-04/truck-3.png" width="1280" height="800" alt="Грузовик номер три с высокой спальной кабиной"></a><figcaption>№3 · Высокая спальная кабина; длинный внешний маршрут.</figcaption></figure>
+<figure><a href="pass-04/truck-4.png"><img loading="lazy" src="pass-04/truck-4.png" width="1280" height="800" alt="Грузовик номер четыре с низкой кабиной, разделённым лобовым стеклом и круглыми фарами"></a><figcaption>№4 · Низкая кабина, разделённое лобовое стекло и круглые фары.</figcaption></figure>
+<figure><a href="pass-04/truck-2-side.png"><img loading="lazy" src="pass-04/truck-2-side.png" width="1280" height="800" alt="Боковой вид грузовика номер два"></a><figcaption>Посадка колёс, длина полуприцепа и положение осей.</figcaption></figure>
+<figure><a href="pass-04/truck-2-rear.png"><img loading="lazy" src="pass-04/truck-2-rear.png" width="1280" height="800" alt="Задние двери полуприцепа и противоподкатный брус"></a><figcaption>Двери, запорные штанги и задний брус.</figcaption></figure>
+</section></details>
+<details><summary>План сверху и проверки</summary>
+<figure><a href="pass-04/top.png"><img loading="lazy" src="pass-04/top.png" width="1100" height="1100" alt="План улиц, отдельного складского двора и городских кварталов сверху"></a></figure>
+<ul>
+<li>3072 положения за цикл: нет пересечений с учтёнными препятствиями и другими грузовиками, нет выходов габаритов за проезжую часть.</li>
+<li>12 288 проверок пар «кабина — собственный прицеп»: пересечений нет.</li>
+<li>В каждой камере проверены 192 кадра: грузовики не обрезаются краями; все шесть ворот видны в исходном положении.</li>
+<li>У каждого тягача и прицепа видимы более 95% проверенных точек поверхности за цикл. У №3 есть небольшие частичные перекрытия застройкой; это проверка выборки точек, не процент видимой площади изображения.</li>
+<li>Выхлоп создан объёмным материалом без непрозрачных шариков. Источники есть только у №1 и №4; цикл замкнут.</li>
+<li>Геометрия, свет и анимация собраны в Blender на GPT-6 Astra. Финальные цвет, фактуры и интеграция в игру в этот проход не входят.</li>
+</ul>
+<nav><a href="pass-04/manifest.json">Манифест</a><a href="pass-04/clearance-result.json">Габариты</a><a href="pass-04/articulation-result.json">Сочленение</a><a href="pass-04/visibility.json">Камеры</a><a href="pass-04/final-check.json">Склад и выхлоп</a><a href="pass-04/desktop-id.png">ID-маска</a><a href="pass-04/desktop-normal.png">Нормали</a><a href="pass-04/desktop-edges.png">Контуры</a></nav>
+</details>
+</html>

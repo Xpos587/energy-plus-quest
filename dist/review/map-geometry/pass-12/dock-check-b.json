@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "sourceDoors": 6,
+  "sourceBoundaries": 7,
+  "paintedBoundaries": 7,
+  "doorCentersAreBetweenLines": true,
+  "image": "map-b.jpg",
+  "rows": [
+    {
+      "y": 405,
+      "lineCenters": [
+        380.0,
+        414.0,
+        449.0,
+        483.5,
+        517.5,
+        552.5,
+        586.5
+      ]
+    },
+    {
+      "y": 412,
+      "lineCenters": [
+        379.0,
+        414.0,
+        448.0,
+        482.5,
+        517.0,
+        552.0,
+        586.0
+      ]
+    },
+    {
+      "y": 420,
+      "lineCenters": [
+        378.0,
+        413.0,
+        447.5,
+        482.0,
+        516.5,
+        551.0,
+        585.0
+      ]
+    }
+  ],
+  "manualBasis": "Door centers inspected in dock-inspect.jpg; small perspective slant allowed."
+}

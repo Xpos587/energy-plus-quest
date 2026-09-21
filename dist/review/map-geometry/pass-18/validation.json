@@ -1,0 +1,57 @@
+{
+  "candidateOnly": true,
+  "browser": "Chromium",
+  "results": [
+    {
+      "width": 375,
+      "height": 667,
+      "choices": 5,
+      "responsiveSources": "passed",
+      "downloads": 6,
+      "overflow": false,
+      "consoleErrors": [],
+      "girl": "same pass17 sprite baked into full uncropped map; pixel-checked separately"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "choices": 5,
+      "responsiveSources": "passed",
+      "downloads": 6,
+      "overflow": false,
+      "consoleErrors": [],
+      "girl": "same pass17 sprite baked into full uncropped map; pixel-checked separately"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "choices": 5,
+      "responsiveSources": "passed",
+      "downloads": 6,
+      "overflow": false,
+      "consoleErrors": [],
+      "girl": "same pass17 sprite baked into full uncropped map; pixel-checked separately"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "choices": 5,
+      "responsiveSources": "passed",
+      "downloads": 6,
+      "overflow": false,
+      "consoleErrors": [],
+      "girl": "same pass17 sprite baked into full uncropped map; pixel-checked separately"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "choices": 5,
+      "responsiveSources": "passed",
+      "downloads": 6,
+      "overflow": false,
+      "consoleErrors": [],
+      "girl": "same pass17 sprite baked into full uncropped map; pixel-checked separately"
+    }
+  ],
+  "limits": "Static review, not animation/speed or live integration; no Safari/Firefox claim."
+}

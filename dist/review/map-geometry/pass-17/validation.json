@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "passed": true,
+      "defaultGirlInsideFrame": true,
+      "switches": 2,
+      "zoomStable": true,
+      "noOverflow": true,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "defaultGirlInsideFrame": true,
+      "switches": 2,
+      "zoomStable": true,
+      "noOverflow": true,
+      "pageErrors": []
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "defaultGirlInsideFrame": true,
+      "switches": 2,
+      "zoomStable": true,
+      "noOverflow": true,
+      "pageErrors": []
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "defaultGirlInsideFrame": true,
+      "switches": 2,
+      "zoomStable": true,
+      "noOverflow": true,
+      "pageErrors": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "passed": true,
+      "defaultGirlInsideFrame": true,
+      "switches": 2,
+      "zoomStable": true,
+      "noOverflow": true,
+      "pageErrors": []
+    }
+  ],
+  "pixelChecks": [
+    {
+      "screenshot": "1440x1000-map.png",
+      "actualVisibleGirlPixelBBoxes": {
+        "foreground": [
+          955,
+          360,
+          1085,
+          721
+        ],
+        "natural": [
+          708,
+          618,
+          717,
+          641
+        ]
+      }
+    },
+    {
+      "screenshot": "390x844-map.png",
+      "actualVisibleGirlPixelBBoxes": {
+        "foreground": [
+          311,
+          118,
+          354,
+          236
+        ],
+        "natural": [
+          231,
+          203,
+          234,
+          210
+        ]
+      }
+    },
+    {
+      "screenshot": "320x568-map.png",
+      "actualVisibleGirlPixelBBoxes": {
+        "foreground": [
+          251,
+          95,
+          287,
+          190
+        ],
+        "natural": [
+          186,
+          163,
+          189,
+          169
+        ]
+      }
+    },
+    {
+      "screenshot": "820x1180-map.png",
+      "actualVisibleGirlPixelBBoxes": {
+        "foreground": [
+          659,
+          249,
+          749,
+          498
+        ],
+        "natural": [
+          489,
+          427,
+          495,
+          443
+        ]
+      }
+    },
+    {
+      "screenshot": "568x320-map.png",
+      "actualVisibleGirlPixelBBoxes": {
+        "foreground": [
+          461,
+          172,
+          529,
+          354
+        ],
+        "natural": [
+          343,
+          298,
+          350,
+          313
+        ]
+      }
+    }
+  ],
+  "downloadWithGirlsByteVerified": true,
+  "staticArtwork": true,
+  "localAssetsMatchHTTP": true
+}

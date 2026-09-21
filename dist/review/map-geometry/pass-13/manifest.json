@@ -1,0 +1,69 @@
+{
+  "pass": 13,
+  "page": "http://localhost:4173/review/map-geometry/pass-13/index.html",
+  "scope": "Static city drawing-language review only. No production game, old review or route-animation changes.",
+  "before": "../pass-12/map-a.jpg",
+  "after": "map.jpg",
+  "displayCoordinateSpace": [
+    1440,
+    1000
+  ],
+  "imagePixels": [
+    2880,
+    2000
+  ],
+  "geometrySource": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-12/city-repaired.blend",
+  "geometrySourceSha256": "0745cc8a6e1a461310c795a54ccff8bfbef2af26ca41fc0ae2d45b84916e852d",
+  "jobs": [
+    {
+      "purpose": "sample",
+      "model": "gpt_image_2",
+      "id": "3c7e049e-db8a-4a2c-932f-fd427cb1c866",
+      "receipt": "sample-job.json",
+      "prompt": "sample-prompt.txt"
+    },
+    {
+      "purpose": "map",
+      "model": "gpt_image_2",
+      "id": "f5eb6522-ae20-4142-a3c3-588b197cc76d",
+      "receipt": "map-job.json",
+      "prompt": "map-prompt.txt"
+    },
+    {
+      "purpose": "crew",
+      "model": "gpt_image_2",
+      "id": "fffadbb8-b5d7-4205-8770-c11df9ec787d",
+      "receipt": "crew-job.json",
+      "prompt": "crew-prompt.txt"
+    }
+  ],
+  "sourceDirectory": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-13",
+  "pipeline": [
+    "Representative warehouse/truck/foliage redraw using original character as separate style reference",
+    "Full-map redraw referencing repaired layout, immutable girl and accepted drawing-language sample",
+    "Separate natural seated crew under glass; admit only projectively fitted front windshield",
+    "Whole generated image registration with projective architectural and vehicle regions; continuous road/fence transitions; narrow generated-texture edge bleed",
+    "Original girl composited only from unchanged pre-existing RGB-identical cutout"
+  ],
+  "oldEnvironmentPixelsInserted": 0,
+  "character": {
+    "file": "../pass-12/professional.webp",
+    "sha256": "86955f737339f1e07ce7db771794b1f14eae348cf96bba3599f5f1ae226793d8",
+    "cutout": "../pass-12/professional-cutout.png",
+    "editing": "None. Original RGB plus pre-existing alpha. Display resampling only."
+  },
+  "motion": {
+    "vehicles": "static",
+    "exhaust": "reused unchanged pass12 smoke.mjs; trucks1/4 only",
+    "fullAnimation": "../pass-07/index.html"
+  },
+  "comparison": "comparison.jpg",
+  "details": "details.jpg",
+  "limitations": [
+    "The result is a drawing-language candidate, not a user-approved style match.",
+    "Drawn ground shadows have more contrast and definition than pass12, although they remain short and the scene remains daylight.",
+    "Source geometry remains exact; the generated painting is registered to its placement and checked semantically, not a dimensionally exact CAD rendering.",
+    "Continuous registration can introduce small local distortions in surrounding pavement and peripheral cropped art. No old-looking architectural patches are inserted.",
+    "Natural crew is visible in a static test pose only."
+  ]
+}

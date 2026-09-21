@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Карта — исходная геометрия</title>
+<style>
+:root{color-scheme:light;font-family:Georgia,serif;color:#242424;background:#f1f0ec}body{margin:0 auto;padding:24px;max-width:1280px}h1{font-size:clamp(28px,4vw,48px);font-weight:normal;margin:24px 0 16px}p{max-width:850px;line-height:1.6}a{color:#164869}figure{margin:32px 0}img,video{display:block;width:100%;height:auto;background:#ccc}figcaption{line-height:1.5;padding:12px 0}section{display:grid;grid-template-columns:1fr 1fr;gap:24px}section figure{min-width:0;margin-top:0}video{max-height:780px;object-fit:contain}a:focus-visible{outline:3px solid #d65520;outline-offset:4px}@media(max-width:650px){body{padding:16px}section{grid-template-columns:1fr}}
+</style>
+<a href="/">Вернуться в игру</a>
+<h1>Карта: только геометрия</h1>
+<p>Архивный 3D-исходник r18, без текстур и художественных наложений. Геометрия не перестраивалась. Это не новая утверждённая карта и не точное воспроизведение нынешнего видео в игре: поздняя версия собрана из отдельного фона и рендеров машин.</p>
+<figure><a href="overview.png"><img src="overview.png" width="1280" height="960" alt="Общий объёмный вид кварталов и склада в едином сером материале"></a><figcaption>01 / Общий объём. Новый обзорный ракурс той же сцены. Сразу видна проблема: высокие здания перекрывают часть машин и подъезд к складу.</figcaption></figure>
+<section>
+<figure><a href="top.png"><img src="top.png" width="1100" height="1100" alt="Вид сверху: сетка улиц, склад и четыре грузовика"></a><figcaption>02 / План сверху. Связанные улицы, шесть центральных кварталов, четыре грузовика.</figcaption></figure>
+<figure><a href="archived-mobile.png"><img src="archived-mobile.png" width="720" height="1024" alt="Архивная мобильная камера, почти вертикальный вид на город"></a><figcaption>03 / Исходная мобильная камера. Машины различимы, но фасады почти не видны; склад теряется среди одинаковых крупных крыш.</figcaption></figure>
+</section>
+<figure><a href="warehouse.png"><img src="warehouse.png" width="1280" height="900" alt="Крупный вид склада с воротами, частично перекрытыми соседним зданием"></a><figcaption>04 / Склад крупнее. Шесть ворот уже смоделированы, но соседнее здание перекрывает часть фасада. Это ограничение исходной планировки, не готовая игровая композиция.</figcaption></figure>
+<figure><a href="archived-desktop.png"><img src="archived-desktop.png" width="1280" height="800" alt="Исходная широкоформатная камера карты"></a><figcaption>05 / Исходная desktop-камера, без изменения положения и масштаба.</figcaption></figure>
+<figure><video controls playsinline loop preload="metadata" poster="archived-mobile.png" aria-label="Архивная анимация четырёх грузовиков без текстур"><source src="motion.mp4" type="video/mp4"></video><figcaption>06 / Существующая анимация: 16 секунд, 288 кадров, 18 fps. Движение тягачей, прицепов и условных клубов выхлопа сохранено. Это проверка исходника, а не перенос более поздней 60 fps-анимации из игры. Звука нет.</figcaption></figure>
+<p>Следующий геометрический проход: сделать склад главным ориентиром, открыть подъезд и обзор машин, разнообразить высоту и форму зданий; затем согласовать отдельные камеры для телефона и компьютера. Текстуры и финальные эффекты — после этого.</p>
+</html>

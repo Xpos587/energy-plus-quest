@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="836" viewBox="0 0 1440 836" preserveAspectRatio="none">
+  <defs><linearGradient id="wall" x2="0" y2="1"><stop stop-color="#faf3e5"/><stop offset="1" stop-color="#eee7d7"/></linearGradient><linearGradient id="floor" x2="0" y2="1"><stop stop-color="#d9e2e2"/><stop offset="1" stop-color="#f2ebdc"/></linearGradient></defs>
+  <path fill="url(#wall)" d="M0 0h1440v560H0z"/>
+  <path fill="#d3e0e4" d="M0 423h1440v137H0z"/>
+  <path stroke="#b1c7d0" stroke-width="3" d="M0 424h1440M0 553h1440"/>
+  <g fill="#c4dfe9" stroke="#9fbecb" stroke-width="5"><path d="M68 52h610v76H68zM927 52h456v76H927z"/></g>
+  <path stroke="#f5faf4" stroke-width="7" d="M73 58h600m259 0h445"/>
+  <path stroke="#adc9d3" stroke-width="7" d="M221 53v75m152-75v75m152-75v75m554-75v75m152-75v75"/>
+  <path fill="#b8cbd3" d="M0 8h1440v15H0zM14 23h25v533H14zM867 23h25v533h-25zM1405 23h25v533h-25z"/>
+  <path stroke="#edf1e8" stroke-width="5" d="M17 24v526M870 24v526M1408 24v526"/>
+  <path fill="#98b3c1" d="M6 519h39v42H6zM859 519h41v42h-41zM1397 519h41v42h-41z"/>
+  <path fill="url(#floor)" d="M0 560h1440v276H0z"/>
+  <g fill="none" stroke="#c6d2d1" stroke-width="1.3"><path d="M0 665h1440M0 806h1440M288 560 80 836m998-276-148 276"/></g>
+</svg>

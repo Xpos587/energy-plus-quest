@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "bounds": [
+    24.668800354003906,
+    2.8945999145507812,
+    27.731201171875,
+    17.21000099182129
+  ],
+  "roadEdgeClearance": 0.6188003540039054,
+  "southCrossingClearance": 0.9945999145507813,
+  "northCrossingClearance": 0.8899990081787124
+}

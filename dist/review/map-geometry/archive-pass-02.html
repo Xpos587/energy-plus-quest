@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Карта — второй проход геометрии</title>
+<style>
+:root{color-scheme:light;font-family:Georgia,serif;color:#242424;background:#f1f0ec}body{margin:0 auto;padding:24px;max-width:1280px}h1{font-size:clamp(28px,4vw,48px);font-weight:normal;margin:24px 0 16px}h2{font-size:28px;font-weight:normal;margin-top:48px}p,li{max-width:900px;line-height:1.6}a{color:#164869}figure{margin:28px 0}img,video{display:block;width:100%;height:auto;background:#aaa}figcaption{line-height:1.5;padding:12px 0}section{display:grid;grid-template-columns:1fr 1fr;gap:24px}section figure{min-width:0;margin-top:0}video{max-height:820px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:20px}a:focus-visible,summary:focus-visible{outline:3px solid #d65520;outline-offset:4px}summary{cursor:pointer;padding:16px 0}details{border-top:1px solid #ccc;margin-top:20px}.note{border-left:3px solid #d65520;padding-left:16px}@media(max-width:650px){body{padding:16px}section{grid-template-columns:1fr}}
+</style>
+<nav><a href="/">В игру</a><a href="archive.html">Предыдущая геометрия</a><a href="pass-02/city.blend" download>Скачать Blender-сцену</a></nav>
+<h1>Карта: второй проход</h1>
+<p>Новые формы грузовиков, свободный подъезд к складу и проверенное движение. Только геометрия и нейтральные серые материалы — без текстур и художественной обработки. Реконструкция выполнена в Blender на GPT-6 Astra, thinking xhigh.</p>
+<p class="note"><strong>3072 положения за полный цикл:</strong> проверены габариты тягачей и прицепов с зеркалами. Пересечений с зданиями, бордюрами, другими машинами и выходов за проезжую часть не обнаружено. Это новый 3D-референс; карта в самой игре пока не заменена.</p>
+<h2>Движение и склад</h2>
+<section>
+<figure><video controls playsinline loop preload="metadata" poster="pass-02/mobile.png" aria-label="Новая мобильная камера: полный цикл движения четырёх грузовиков"><source src="pass-02/mobile-motion.mp4" type="video/mp4"></video><figcaption>Мобильная камера · 32 секунды, 24 fps. Разворот №2 вынесен на свободную площадку перед складом; прицеп связан с седлом тягача, а не просто отстаёт по той же траектории.</figcaption></figure>
+<figure><a href="pass-02/mobile.png"><img src="pass-02/mobile.png" width="720" height="1024" alt="Новая мобильная композиция: склад с открытым подъездом и четыре грузовика"></a><figcaption>Склад выше соседних центральных зданий. Перед ним нет дома, перекрывающего ворота. Камера наклонена сильнее, чтобы видеть фасады и кабины, а не только крыши.</figcaption></figure>
+</section>
+<figure><video controls playsinline loop preload="metadata" poster="pass-02/desktop.png" aria-label="Новая широкоформатная камера: полный цикл движения"><source src="pass-02/desktop-motion.mp4" type="video/mp4"></video><figcaption>Desktop-камера той же сцены. По всей анимации машины остаются внутри кадра; фоновые кварталы продолжаются за его границами.</figcaption></figure>
+<h2>Грузовики крупно</h2>
+<p>Формы восстановлены по иллюстрациям из сцен после выбора. Это стилизованные модели, не точные заводские CAD-модели. Кабины закрыты; колёса посажены под кузов, передние арки вырезаны в геометрии. Убраны большие таблички на стойках, добавлены длинные полуприцепы, топливные баки и детали шасси.</p>
+<section>
+<figure><a href="pass-02/truck-1.png"><img src="pass-02/truck-1.png" width="1280" height="800" alt="Грузовик номер один: высокая бескапотная кабина, полуприцеп и выхлопная труба"></a><figcaption>№1 · Высокая кабина с обтекателем и выхлопной трубой. Износ будет отличием поверхности, сейчас текстур нет.</figcaption></figure>
+<figure><a href="pass-02/truck-2.png"><img src="pass-02/truck-2.png" width="1280" height="800" alt="Грузовик номер два: современная кабина с обтекателем и длинным полуприцепом"></a><figcaption>№2 · Современная кабина и длинный полуприцеп. Радиус разворота увеличен; движение прицепа рассчитано через точку сцепки.</figcaption></figure>
+<figure><a href="pass-02/truck-3.png"><img src="pass-02/truck-3.png" width="1280" height="800" alt="Грузовик номер три с высокой спальной кабиной"></a><figcaption>№3 · Более высокая спальная кабина. Закрытая крыша вместо прежней игрушечной открытой кабины.</figcaption></figure>
+<figure><a href="pass-02/truck-4.png"><img src="pass-02/truck-4.png" width="1280" height="800" alt="Грузовик номер четыре: низкая бескапотная кабина, разделённое лобовое стекло и круглые фары"></a><figcaption>№4 · Отдельный силуэт: низкая бескапотная кабина, разделённое лобовое стекло и круглые фары. Без длинного капота.</figcaption></figure>
+</section>
+<details><summary>Проверить форму сбоку и сзади</summary><section>
+<figure><a href="pass-02/truck-2-side.png"><img src="pass-02/truck-2-side.png" width="1280" height="800" alt="Боковой вид грузовика номер два"></a><figcaption>Посадка колёс, длина полуприцепа и положение осей.</figcaption></figure>
+<figure><a href="pass-02/truck-2-rear.png"><img src="pass-02/truck-2-rear.png" width="1280" height="800" alt="Грузовик номер два сзади: двери и запорные штанги"></a><figcaption>Задние двери, запорные штанги и противоподкатный брус.</figcaption></figure>
+</section></details>
+<details><summary>План сверху и результаты проверки</summary>
+<figure><a href="pass-02/top.png"><img src="pass-02/top.png" width="1100" height="1100" alt="План новых улиц, двора склада и кварталов сверху"></a></figure>
+<ul><li>Полный цикл: 768 кадров; геометрическая проверка — четыре положения на кадр.</li><li>Защитный запас к границам проезжей части и препятствиям — 0,12 единицы сцены; между разными машинами — 0,2.</li><li>В обеих камерах дополнительно проверены 192 кадра: машины не обрезаются границей кадра, все шесть ворот склада видимы в исходном положении.</li><li>Проверка видимости использует точки на реальной поверхности моделей, не только рамки. Все контрольные точки видимы в проверенных положениях обеих камер.</li><li>Отдельно проверены 12 288 пар «кабина — собственный прицеп»: пересечений нет. Положение седла скорректировано с учётом поворотов.</li><li>Сцена и тесты сохранены. Условные клубы выхлопа в этот проход не добавлялись: сейчас проверяем форму и движение.</li></ul>
+<nav><a href="pass-02/manifest.json">Манифест</a><a href="pass-02/clearance-result.json">Габариты</a><a href="pass-02/visibility.json">Камеры</a><a href="pass-02/desktop-id.png">ID-маска</a><a href="pass-02/desktop-normal.png">Нормали</a><a href="pass-02/desktop-edges.png">Контуры</a></nav>
+</details>
+</html>

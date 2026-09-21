@@ -1,0 +1,23 @@
+{
+  "geometryUnchangedAcrossAllStages": true,
+  "geometryHash": "bf618e75a4418623db1d1be370dd10348e568d58e1ad3fd32517d08ca1fe74de",
+  "cleanGlassAndModernTrucks": true,
+  "localTextureMaterials": {
+    "surface / asphalt": "asphalt",
+    "surface / bark": "wood",
+    "surface / bench timber": "wood",
+    "surface / concrete": "concrete",
+    "surface / facade 0": "concrete",
+    "surface / facade 1": "concrete",
+    "surface / facade 2": "concrete",
+    "surface / facade 3": "concrete",
+    "surface / paving": "paving",
+    "surface / planting soil": "soil",
+    "surface / truck 1 cargo": "old paint",
+    "surface / truck 1 paint": "old paint",
+    "surface / truck 4 cargo": "old paint",
+    "surface / truck 4 paint": "old paint",
+    "surface / warehouse insulated panels": "concrete"
+  },
+  "globalTextureOverlay": false
+}

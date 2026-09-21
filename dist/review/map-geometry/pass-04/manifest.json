@@ -1,0 +1,169 @@
+{
+  "revision": 4,
+  "authoringModel": "9router/gpt-6-astra",
+  "reasoningLevel": "xhigh",
+  "renderEngine": "BLENDER_EEVEE",
+  "surfaceTextures": false,
+  "proceduralVolumeNoise": true,
+  "source": "Modern Russian metropolitan geometry reference; stylized reconstruction, not engineering CAD",
+  "references": [
+    "https://rrpa.ru/projects/ISTRA/",
+    "https://prorus.ru/projects/kvartal-na-nekrasova-v-ekaterinburge/",
+    "https://kenney.nl/assets/city-kit-roads"
+  ],
+  "fps": 24,
+  "frames": 768,
+  "duration": 32,
+  "truckCount": 4,
+  "warehouseLoadingBays": 6,
+  "clearance": {
+    "samples": 3072,
+    "failures": 0,
+    "failureCounts": {},
+    "examples": [],
+    "minimumObstacleClearance": 0.5439908981323245,
+    "roadMargin": 0.12,
+    "vehicleMargin": 0.2
+  },
+  "articulation": {
+    "bodyPairsChecked": 12288,
+    "minimumCabCargoClearance": 0.30204780469528314,
+    "failures": 0,
+    "examples": []
+  },
+  "visibility": {
+    "loopMatrixError": 2.4437904357910156e-06,
+    "views": [
+      {
+        "camera": "desktop",
+        "sampledFrames": 192,
+        "roofSampleVisibleFractions": {
+          "truck-1-tractor": 1.0,
+          "truck-1-trailer": 1.0,
+          "truck-2-tractor": 1.0,
+          "truck-2-trailer": 1.0,
+          "truck-3-tractor": 0.9895833333333334,
+          "truck-3-trailer": 0.9878472222222222,
+          "truck-4-tractor": 1.0,
+          "truck-4-trailer": 1.0
+        },
+        "clippedSamples": 0,
+        "dockFirstHits": [
+          "warehouse loading door",
+          "warehouse loading door.001",
+          "warehouse loading door.002",
+          "warehouse loading door.003",
+          "warehouse loading door.004",
+          "warehouse loading door.005"
+        ]
+      },
+      {
+        "camera": "mobile",
+        "sampledFrames": 192,
+        "roofSampleVisibleFractions": {
+          "truck-1-tractor": 1.0,
+          "truck-1-trailer": 1.0,
+          "truck-2-tractor": 1.0,
+          "truck-2-trailer": 1.0,
+          "truck-3-tractor": 0.9803240740740741,
+          "truck-3-trailer": 0.9756944444444444,
+          "truck-4-tractor": 1.0,
+          "truck-4-trailer": 1.0
+        },
+        "clippedSamples": 0,
+        "dockFirstHits": [
+          "warehouse loading door",
+          "warehouse loading door.001",
+          "warehouse loading door.002",
+          "warehouse loading door.003",
+          "warehouse loading door.004",
+          "warehouse loading door.005"
+        ]
+      }
+    ]
+  },
+  "finalCheck": {
+    "trucks": 4,
+    "loadingDoors": 6,
+    "pitchedRoofs": 0,
+    "warehouseHeight": 8.399999618530273,
+    "volumetricEmitters": [
+      1,
+      4
+    ],
+    "volumetricParticles": 24,
+    "opaqueSmokeSurfaces": 0,
+    "exhaustLoopMatrixError": 0.0
+  },
+  "maximumHitchGap": 0.00016381004755847083,
+  "limits": [
+    "Neutral geometry review only; live game assets remain unchanged.",
+    "Building heights and district dimensions are compressed for readable map composition, not engineering-scale accuracy.",
+    "Collision checks use conservative 2D body envelopes at quarter-frame samples.",
+    "Visibility is nine real roof-surface samples per rig every fourth frame, not a pixel-area percentage. Truck 3 is partly occluded in a small subset; every rig exceeds 95% aggregate sampled visibility.",
+    "Volumetric exhaust envelopes are excluded from opaque geometry raycasts."
+  ],
+  "commands": [
+    "bash run-final.sh",
+    "python publish.py"
+  ],
+  "sourceHashes": {
+    "layout.py": "067cebdc10c0135c78574c93f9673d781fc25b46669eb70907473430faef7841",
+    "layout.json": "c101556a025eb8294eeba23e85a31f7455da2a05c94fb7f87589886e35c2fd9a",
+    "district.py": "56e8149be73be50af49a77762a5402479fa2aa83417f480c3d7f6367da420e52",
+    "vehicles.py": "f5b6c8430a9cf6b4f33b878523e124db54a7f9cb89064ec0366945c40d42eace",
+    "scene.py": "6178ee10a85397d0b20c5e402c88541b8c5131fe289d3303b309a5f9595ec428",
+    "finish_scene.py": "d026dba0d002e3dad7aa3b670a02adc373c32bd19f60bf3290808994491951ee",
+    "check_clearance.py": "98c2aa8def24a7d510954469a4e9b658724f2ecdae53a53ca8ecec14c2c1e379",
+    "check_visibility.py": "694795d77c36e7a1bcc025686ab8f77ae2bfd790e71737361d9be3995c92303c",
+    "check_articulation.py": "fb8671c54561364af1f773b9bed3f5b0d025d177efb3a7300841a2fce1b1899e",
+    "verify_articulation.py": "11f620a05cc38d76a13638b9aa568e3970d3e9989252ab1b33469be61681301b",
+    "check_final.py": "c62fd545ec1efa1d3d6170c71a3fa0652baf274ce1fbb37fd86deb2239fa24d2",
+    "render_motion.py": "3f41a1ac4f29e3ab3702d2ea7785fb5fbda931c52a9803a1ef0e911e3e39b033",
+    "render_trucks.py": "8257269293373937e4dff91bb35a705cb8482fba293de4cd988d9836ef68e5f2",
+    "render_validation.py": "5210bb3bd6c95701193fc3dfd82e207190375e06145a2f947829aa83fefec93b",
+    "run-final.sh": "a507b6576d9deb37add98ca624effec9f0b3ea7ccb3ef47a98216be3434eb4ec",
+    "DESIGN.md": "273feb2f56c59c5327e2e0381c64d5ee1ff2ab02da8f48a14233dc38996eb815",
+    "design-contract.md": "e6cfaa3c6a39918e52b9c9bf68404a5b7d7f2b092deabcbb53fdf46ca0261ecf",
+    "implementation-handoff.md": "30aab6574eb022fa7fc7f2932843d21d4ef5dd95547e47bcac038f0d72d80aba",
+    "verify-browser.mjs": "8824d371d83cd4399e25daeea9ca228de291d54cd81874ffd5be79efa03a3e75"
+  },
+  "artifactHashes": {
+    "desktop.png": "b8e605200abf5e13e7d758dd15dfa05054277d278919b13b216c2ac21fe891fa",
+    "mobile.png": "a1a758d799d20f27cb4052f85fac3199a5838cb484910f6b024f20ddf3175ef4",
+    "top.png": "dae72778726a33b893ff8ea562e2ca954d7e79334a2c141a0186bc53805cfcd6",
+    "warehouse.png": "27c4db80b685fbbee497a5b296c9a3dc7bac052e2c0993e3f8bfb2c2ffa4f62f",
+    "truck-1.png": "758101814cdb633dcac1e44eda3a4a490f2b1f5f01db75dfaa2048d70aeb151d",
+    "truck-2.png": "a0487e87e07c9b5fd0ad04164090019e585a7318443c80acd9455b33f1d66011",
+    "truck-3.png": "6c1bfda3fee63ce0b40a5db9a9b6a912f6a6efe5f91a0015eb358358f3ea2d19",
+    "truck-4.png": "76e3e0869a130396b6a999d317bf2a1f68afd24cfd1c12e5877e5b711c8a0efd",
+    "truck-2-side.png": "7091e6283e54a81938ce880eee4468f42bcb8aba4d1c05caa26688619f0636f1",
+    "truck-2-rear.png": "ac94dd905d10452a2e4b5ef3a925a47c82aa96598258020c3a7cf6709cb93ef4",
+    "desktop-id.png": "62d4f6dabc76faa43204bcb1e7e1ee2fd0a3b2fe8e8df68021557d6a21302b72",
+    "desktop-normal.png": "3b109fc44b98b5bd8af47ac3b4f215625aa59c085bd88be56b0983016130d501",
+    "desktop-edges.png": "5bc7518b385825d3790ce27b55c3626e8ff192f4f9f764964317a4828cd7c5fa",
+    "mobile-id.png": "b0338dc5f5916f4670a9fb3b42074902fc704f4e51edb4a9e1222cf044da0d77",
+    "mobile-normal.png": "5eac3a877cce9304e1262cb5de2d1b7146d6e359f2e8e58705da7ed02f60e232",
+    "mobile-edges.png": "08124d9e81d0a1c063ff5edddc5d88b57c645b3c36b546a58aca96065eb9cf03",
+    "desktop-motion.mp4": "05999d152cd81ce7075599d7a3e78038021f64fda123c48a50ede7d293b3804f",
+    "mobile-motion.mp4": "a88e41b89f9f22bedbfa2cae831355ea043da637d7f9c87e03402a21ef3478fd",
+    "city.blend": "e49d44965dfca178f64ef0a0a7496d22e1b0a0a5596cacb982d618b9debf5379",
+    "clearance-result.json": "c3749124ac210840f1c55bd591e4c2c4b7869bd363087a78882cb389ad942d5d",
+    "visibility.json": "7e90c3218801ab2048fbfcd175514b992282e894e8b90e5ff7708718ee6eec97",
+    "articulation-result.json": "923853cd32e5e54b8293f876741c7a8cb8b06f39cd9fdd7e72de18ebf5b8910e",
+    "final-check.json": "5503c50cdc261173959a5d527a2ab0e56fa809b9fcb8fe1dc0d7bb9f7af81029"
+  },
+  "browserVerification": {
+    "passed": true,
+    "engine": "Playwright Chromium",
+    "widths": [
+      375,
+      1440
+    ],
+    "record": "browser-check.json",
+    "sha256": "86ccb5b314bc143057fa6628ce3558761d385ba8d3b8c012dadb85e77aee44ad",
+    "playPauseSeekLoop": true,
+    "servedArtifactsVerified": 23
+  },
+  "reviewPageSha256": "5e9ed5829ae8c59b6412cc5477593fd851adc4f8306d1829f400385c4f9abfe5"
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "Static style candidate only, supervisor-approved. No game or pass07 modifications.",
+  "generator": "nano_banana_pro",
+  "jobs": [
+    "d1b1d06a-ab99-46cf-8ea8-917b87a19642",
+    "8765c722-884c-4355-a958-9cad3f3d26e3"
+  ],
+  "manualCleanup": "finish_art.py restores three warehouse skylights and gently lifts two right-side road shadow interiors. No global filter.",
+  "deferred": [
+    "Motion and exhaust animation restyle",
+    "Mobile-specific camera art",
+    "Human style approval"
+  ],
+  "sourceRoot": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-09",
+  "unchangedMainIndexSHA256": "3e6fe2e37d58bd0682d3c2fe2962f56d011cbbbb650a7b9fecfc9a1606149893",
+  "files": {
+    "map.jpg": "b7b9e89fc7e2dd498dfaa8bab760c44e4b5a9af7008c9b94a1d444f925c4afc6",
+    "before.jpg": "e5a58ca61841f170d4013cfe40e5ef8e7909d813da6468f3c5065d2c44eaa1c3",
+    "characters.jpg": "59bacf47cee5127f0a141dc3bb7c1ae9aea09038baf17884f662cd6009768f3e",
+    "professional.webp": "86955f737339f1e07ce7db771794b1f14eae348cf96bba3599f5f1ae226793d8",
+    "student.webp": "1d872c3560d46b0d7458ecd8eb65af07f24d7ae4f19a96ac0af46a10bf894737",
+    "arseniy.webp": "c6aebaf5caf3cdf3500fcb61595d995ee92892a6018d86a6861496ccc523daad",
+    "alva.webp": "d1f2e98ed451c8c8dae8cd8eaab4c489e2431aafcab9b816dfd51095b8325114",
+    "khor.webp": "fcee80743a072841f3b4087d67dd8e7be694a5e8699227e3bc00d6d165116703",
+    "truck-1.jpg": "942a0afbf4280b617a554b15965c206d34cf998f7f76ebec54080914a095a8b6",
+    "truck-2.jpg": "b06b937db0ca49b061d62784050d4c6923c820ed46c72dda8bc806e06968e3e2",
+    "truck-3.jpg": "829619f6d6fc1a0646597a918feee8f7b44e8e5d5db6a270f99f0b13a151a62a",
+    "truck-4.jpg": "2280486014168fdf7b54583f368c9aa9fabec57b4557f28cd3f186beed65da99",
+    "comparison.jpg": "fcd26daadf6aa0c72b5d302a4fb7016dae1946a1fe37b1f0af8c53e4c9b77201",
+    "index.html": "a146148a76f0bfa57a13e0edac481d045ecb41a06309aa283c5df83da0c08168",
+    "style.css": "f59a28ce65aec03d3f288acfcca17bad547f92bcdf0fd3db9305d0b6350a123b",
+    "browser-check.json": "3f18344fed07219787c670f222ee8f55404fc2dd2c89bcbf76624f71764f5a54"
+  }
+}

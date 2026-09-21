@@ -1,0 +1,2546 @@
+{
+  "scenes": {
+    "compact": {
+      "desktop": {
+        "image": "scene-world/compact-desktop.webp",
+        "width": 1200,
+        "height": 800,
+        "hotspots": [
+          {
+            "id": "place-1",
+            "x": 0.189811,
+            "y": 0.489321
+          },
+          {
+            "id": "place-2",
+            "x": 0.339722,
+            "y": 0.627508
+          },
+          {
+            "id": "place-3",
+            "x": 0.480471,
+            "y": 0.473497
+          },
+          {
+            "id": "place-4",
+            "x": 0.632881,
+            "y": 0.616251
+          }
+        ],
+        "camera": "compact-desktop",
+        "visibility": [
+          {
+            "id": "place-1",
+            "point": [
+              -20.33,
+              -4.45,
+              5.287741935483871
+            ],
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "visible_fraction": 1.0,
+            "visible": true
+          },
+          {
+            "id": "place-2",
+            "point": [
+              -16.73,
+              -4.45,
+              2.8780645161290326
+            ],
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "visible_fraction": 1.0,
+            "visible": true
+          },
+          {
+            "id": "place-3",
+            "point": [
+              -13.35,
+              -4.45,
+              5.690967741935484
+            ],
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "visible_fraction": 1.0,
+            "visible": true
+          },
+          {
+            "id": "place-4",
+            "point": [
+              -9.69,
+              -4.45,
+              3.200645161290323
+            ],
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "visible_fraction": 1.0,
+            "visible": true
+          },
+          {
+            "point": [
+              -14.0,
+              7.099999904632568,
+              6.0
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "warehouse identity"
+          }
+        ],
+        "meshVisibility": [
+          {
+            "name": "warehouse loading door",
+            "pixels": 4079,
+            "visible": true
+          },
+          {
+            "name": "warehouse sign",
+            "pixels": 333,
+            "visible": true
+          },
+          {
+            "name": "rear kettlebell weight",
+            "pixels": 612,
+            "visible": true
+          },
+          {
+            "name": "stacked dishes",
+            "pixels": 37,
+            "visible": true
+          },
+          {
+            "name": "staff parcels 0",
+            "pixels": 4257,
+            "visible": true
+          },
+          {
+            "name": "soft pillow",
+            "pixels": 4315,
+            "visible": true
+          },
+          {
+            "name": "compact reused 4 side window",
+            "pixels": 5403,
+            "visible": true
+          },
+          {
+            "name": "compact reused 4 formed enclosed cab",
+            "pixels": 18335,
+            "visible": true
+          },
+          {
+            "name": "group: compact reused 4 seated tire",
+            "pixels": 4843,
+            "visible": true
+          },
+          {
+            "name": "group: compact wheel lug",
+            "pixels": 94,
+            "visible": true
+          },
+          {
+            "name": "group: compact rubber tread",
+            "pixels": 270,
+            "visible": true
+          }
+        ]
+      },
+      "mobile": {
+        "image": "scene-world/compact-mobile.webp",
+        "width": 900,
+        "height": 1000,
+        "hotspots": [
+          {
+            "id": "place-1",
+            "x": 0.145894,
+            "y": 0.460467
+          },
+          {
+            "id": "place-2",
+            "x": 0.319807,
+            "y": 0.553566
+          },
+          {
+            "id": "place-3",
+            "x": 0.483092,
+            "y": 0.444888
+          },
+          {
+            "id": "place-4",
+            "x": 0.659903,
+            "y": 0.541103
+          }
+        ],
+        "camera": "compact-mobile",
+        "visibility": [
+          {
+            "id": "place-1",
+            "point": [
+              -20.33,
+              -4.45,
+              5.287741935483871
+            ],
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "visible_fraction": 1.0,
+            "visible": true
+          },
+          {
+            "id": "place-2",
+            "point": [
+              -16.73,
+              -4.45,
+              2.8780645161290326
+            ],
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "visible_fraction": 1.0,
+            "visible": true
+          },
+          {
+            "id": "place-3",
+            "point": [
+              -13.35,
+              -4.45,
+              5.690967741935484
+            ],
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "visible_fraction": 1.0,
+            "visible": true
+          },
+          {
+            "id": "place-4",
+            "point": [
+              -9.69,
+              -4.45,
+              3.200645161290323
+            ],
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "visible_fraction": 1.0,
+            "visible": true
+          },
+          {
+            "point": [
+              -14.0,
+              7.099999904632568,
+              6.0
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "warehouse identity"
+          }
+        ],
+        "meshVisibility": [
+          {
+            "name": "warehouse loading door",
+            "pixels": 3352,
+            "visible": true
+          },
+          {
+            "name": "warehouse sign",
+            "pixels": 193,
+            "visible": true
+          },
+          {
+            "name": "rear kettlebell weight",
+            "pixels": 469,
+            "visible": true
+          },
+          {
+            "name": "stacked dishes",
+            "pixels": 25,
+            "visible": true
+          },
+          {
+            "name": "staff parcels 0",
+            "pixels": 3286,
+            "visible": true
+          },
+          {
+            "name": "soft pillow",
+            "pixels": 3235,
+            "visible": true
+          },
+          {
+            "name": "compact reused 4 side window",
+            "pixels": 4064,
+            "visible": true
+          },
+          {
+            "name": "compact reused 4 formed enclosed cab",
+            "pixels": 13923,
+            "visible": true
+          },
+          {
+            "name": "group: compact reused 4 seated tire",
+            "pixels": 3252,
+            "visible": true
+          },
+          {
+            "name": "group: compact wheel lug",
+            "pixels": 50,
+            "visible": true
+          },
+          {
+            "name": "group: compact rubber tread",
+            "pixels": 159,
+            "visible": true
+          }
+        ]
+      }
+    },
+    "inventory": {
+      "desktop": {
+        "image": "scene-world/inventory-desktop.webp",
+        "width": 1200,
+        "height": 900,
+        "hotspots": [
+          {
+            "id": "entrance",
+            "x": 0.237875,
+            "y": 0.741866
+          },
+          {
+            "id": "alphabet",
+            "x": 0.27239,
+            "y": 0.463861
+          },
+          {
+            "id": "keeper",
+            "x": 0.495336,
+            "y": 0.656562
+          },
+          {
+            "id": "wms",
+            "x": 0.752797,
+            "y": 0.390331
+          }
+        ],
+        "camera": "inventory-desktop",
+        "visibility": [
+          {
+            "point": [
+              -19.25,
+              6.900000095367432,
+              1.7000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "entrance"
+          },
+          {
+            "point": [
+              -19.600000381469727,
+              12.0,
+              3.9000000953674316
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "alphabet"
+          },
+          {
+            "point": [
+              -13.149999618530273,
+              10.100000381469727,
+              2.25
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "keeper"
+          },
+          {
+            "point": [
+              -8.100000381469727,
+              17.5,
+              2.5999999046325684
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "wms"
+          },
+          {
+            "point": [
+              -8.100000381469727,
+              20.5,
+              3.799999952316284
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "dispatch"
+          },
+          {
+            "point": [
+              -17.399999618530273,
+              19.0,
+              3.0
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "forklift"
+          }
+        ],
+        "meshVisibility": [
+          {
+            "name": "warehouse loading door",
+            "pixels": 1794,
+            "visible": true
+          },
+          {
+            "name": "rack upright",
+            "pixels": 83,
+            "visible": true
+          },
+          {
+            "name": "rack stock",
+            "pixels": 258,
+            "visible": true
+          },
+          {
+            "name": "warehouse keeper helmet",
+            "pixels": 144,
+            "visible": true
+          },
+          {
+            "name": "WMS screen",
+            "pixels": 294,
+            "visible": true
+          },
+          {
+            "name": "barcode scanner",
+            "pixels": 503,
+            "visible": true
+          },
+          {
+            "name": "robot forklift chassis",
+            "pixels": 1464,
+            "visible": true
+          },
+          {
+            "name": "dispatch counter",
+            "pixels": 857,
+            "visible": true
+          },
+          {
+            "name": "inventory drone body",
+            "pixels": 410,
+            "visible": true
+          },
+          {
+            "name": "inventory drone rotor",
+            "pixels": 142,
+            "visible": true
+          },
+          {
+            "name": "inventory drone rotor.001",
+            "pixels": 122,
+            "visible": true
+          },
+          {
+            "name": "inventory drone rotor.002",
+            "pixels": 137,
+            "visible": true
+          },
+          {
+            "name": "inventory drone rotor.003",
+            "pixels": 113,
+            "visible": true
+          },
+          {
+            "name": "CC0 PalletTruck Base",
+            "pixels": 603,
+            "visible": true
+          },
+          {
+            "name": "CC0 PalletTruck Handle",
+            "pixels": 44,
+            "visible": true
+          },
+          {
+            "name": "CC0 CableDrum Cylinder_7",
+            "pixels": 1338,
+            "visible": true
+          },
+          {
+            "name": "CC0 ElectricalBox Polygon_Reduction",
+            "pixels": 604,
+            "visible": true
+          },
+          {
+            "name": "group: warehouse eave beam",
+            "pixels": 5110,
+            "visible": true
+          },
+          {
+            "name": "group: rack diagonal brace",
+            "pixels": 203,
+            "visible": true
+          },
+          {
+            "name": "group: stock pallet deck slat",
+            "pixels": 2040,
+            "visible": true
+          },
+          {
+            "name": "group: dock safety bollard",
+            "pixels": 68,
+            "visible": true
+          },
+          {
+            "name": "group: ventilation louvre",
+            "pixels": 338,
+            "visible": true
+          },
+          {
+            "name": "group: drone propeller safety guard",
+            "pixels": 130,
+            "visible": true
+          },
+          {
+            "name": "group: picking bin parts",
+            "pixels": 550,
+            "visible": true
+          },
+          {
+            "name": "group: CC0 PalletTruck ",
+            "pixels": 659,
+            "visible": true
+          },
+          {
+            "name": "group: CC0 CableDrum ",
+            "pixels": 1338,
+            "visible": true
+          },
+          {
+            "name": "group: CC0 ElectricalBox ",
+            "pixels": 604,
+            "visible": true
+          }
+        ]
+      },
+      "mobile": {
+        "image": "scene-world/inventory-mobile.webp",
+        "width": 900,
+        "height": 1100,
+        "hotspots": [
+          {
+            "id": "entrance",
+            "x": 0.15785,
+            "y": 0.667485
+          },
+          {
+            "id": "alphabet",
+            "x": 0.209895,
+            "y": 0.455618
+          },
+          {
+            "id": "keeper",
+            "x": 0.487577,
+            "y": 0.609749
+          },
+          {
+            "id": "wms",
+            "x": 0.824354,
+            "y": 0.420368
+          }
+        ],
+        "camera": "inventory-mobile",
+        "visibility": [
+          {
+            "point": [
+              -19.25,
+              6.900000095367432,
+              1.7000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "entrance"
+          },
+          {
+            "point": [
+              -19.600000381469727,
+              12.0,
+              3.9000000953674316
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "alphabet"
+          },
+          {
+            "point": [
+              -13.149999618530273,
+              10.100000381469727,
+              2.25
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "keeper"
+          },
+          {
+            "point": [
+              -8.100000381469727,
+              17.5,
+              2.5999999046325684
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "wms"
+          },
+          {
+            "point": [
+              -8.100000381469727,
+              20.5,
+              3.799999952316284
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "dispatch"
+          },
+          {
+            "point": [
+              -17.399999618530273,
+              19.0,
+              3.0
+            ],
+            "visible_fraction": 0.8,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": false,
+                "occluder": "drone propeller safety guard.001"
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "forklift"
+          }
+        ],
+        "meshVisibility": [
+          {
+            "name": "warehouse loading door",
+            "pixels": 2144,
+            "visible": true
+          },
+          {
+            "name": "rack upright",
+            "pixels": 124,
+            "visible": true
+          },
+          {
+            "name": "rack stock",
+            "pixels": 314,
+            "visible": true
+          },
+          {
+            "name": "warehouse keeper helmet",
+            "pixels": 130,
+            "visible": true
+          },
+          {
+            "name": "WMS screen",
+            "pixels": 286,
+            "visible": true
+          },
+          {
+            "name": "barcode scanner",
+            "pixels": 473,
+            "visible": true
+          },
+          {
+            "name": "robot forklift chassis",
+            "pixels": 1038,
+            "visible": true
+          },
+          {
+            "name": "dispatch counter",
+            "pixels": 647,
+            "visible": true
+          },
+          {
+            "name": "inventory drone body",
+            "pixels": 360,
+            "visible": true
+          },
+          {
+            "name": "inventory drone rotor",
+            "pixels": 119,
+            "visible": true
+          },
+          {
+            "name": "inventory drone rotor.001",
+            "pixels": 101,
+            "visible": true
+          },
+          {
+            "name": "inventory drone rotor.002",
+            "pixels": 110,
+            "visible": true
+          },
+          {
+            "name": "inventory drone rotor.003",
+            "pixels": 91,
+            "visible": true
+          },
+          {
+            "name": "CC0 PalletTruck Base",
+            "pixels": 462,
+            "visible": true
+          },
+          {
+            "name": "CC0 PalletTruck Handle",
+            "pixels": 17,
+            "visible": true
+          },
+          {
+            "name": "CC0 CableDrum Cylinder_7",
+            "pixels": 1329,
+            "visible": true
+          },
+          {
+            "name": "CC0 ElectricalBox Polygon_Reduction",
+            "pixels": 470,
+            "visible": true
+          },
+          {
+            "name": "group: warehouse eave beam",
+            "pixels": 4546,
+            "visible": true
+          },
+          {
+            "name": "group: rack diagonal brace",
+            "pixels": 185,
+            "visible": true
+          },
+          {
+            "name": "group: stock pallet deck slat",
+            "pixels": 1665,
+            "visible": true
+          },
+          {
+            "name": "group: dock safety bollard",
+            "pixels": 68,
+            "visible": true
+          },
+          {
+            "name": "group: ventilation louvre",
+            "pixels": 316,
+            "visible": true
+          },
+          {
+            "name": "group: drone propeller safety guard",
+            "pixels": 74,
+            "visible": true
+          },
+          {
+            "name": "group: picking bin parts",
+            "pixels": 494,
+            "visible": true
+          },
+          {
+            "name": "group: CC0 PalletTruck ",
+            "pixels": 483,
+            "visible": true
+          },
+          {
+            "name": "group: CC0 CableDrum ",
+            "pixels": 1329,
+            "visible": true
+          },
+          {
+            "name": "group: CC0 ElectricalBox ",
+            "pixels": 470,
+            "visible": true
+          }
+        ]
+      }
+    },
+    "crane": {
+      "desktop": {
+        "image": "scene-world/crane-desktop.webp",
+        "width": 1200,
+        "height": 900,
+        "hotspots": [
+          {
+            "id": "rush",
+            "x": 0.367805,
+            "y": 0.477159
+          },
+          {
+            "id": "wait",
+            "x": 0.272557,
+            "y": 0.670234
+          },
+          {
+            "id": "petr",
+            "x": 0.227441,
+            "y": 0.505677
+          },
+          {
+            "id": "remote",
+            "x": 0.278557,
+            "y": 0.494304
+          }
+        ],
+        "camera": "crane-desktop",
+        "visibility": [
+          {
+            "point": [
+              119.0,
+              -1.0,
+              8.600000381469727
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "rush"
+          },
+          {
+            "point": [
+              116.0,
+              -5.0,
+              1.2000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "wait"
+          },
+          {
+            "point": [
+              109.5,
+              1.2000000476837158,
+              2.5
+            ],
+            "visible_fraction": 0.6,
+            "visible": true,
+            "rays": [
+              {
+                "visible": false,
+                "occluder": "Petr operator helmet"
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": false,
+                "occluder": "Petr operator helmet"
+              }
+            ],
+            "id": "petr"
+          },
+          {
+            "point": [
+              110.69999694824219,
+              4.0,
+              1.7999999523162842
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "remote"
+          },
+          {
+            "point": [
+              111.0,
+              18.0,
+              5.5
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "Ob warehouse"
+          },
+          {
+            "point": [
+              108.0,
+              2.700000047683716,
+              3.5999999046325684
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "PRU"
+          },
+          {
+            "point": [
+              132.0,
+              8.0,
+              3.799999952316284
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "barge pipes"
+          },
+          {
+            "point": [
+              119.0,
+              12.0,
+              8.600000381469727
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "second crane"
+          }
+        ],
+        "meshVisibility": [
+          {
+            "name": "Ob warehouse",
+            "pixels": 37827,
+            "visible": true
+          },
+          {
+            "name": "PRU control cabin",
+            "pixels": 6726,
+            "visible": true
+          },
+          {
+            "name": "crane one cab",
+            "pixels": 1394,
+            "visible": true
+          },
+          {
+            "name": "crane two cab",
+            "pixels": 901,
+            "visible": true
+          },
+          {
+            "name": "loaded pipe barge",
+            "pixels": 12507,
+            "visible": true
+          },
+          {
+            "name": "barge pipe",
+            "pixels": 312,
+            "visible": true
+          },
+          {
+            "name": "Petr operator torso",
+            "pixels": 74,
+            "visible": true
+          },
+          {
+            "name": "remote console",
+            "pixels": 333,
+            "visible": true
+          }
+        ]
+      },
+      "mobile": {
+        "image": "scene-world/crane-mobile.webp",
+        "width": 900,
+        "height": 1100,
+        "hotspots": [
+          {
+            "id": "rush",
+            "x": 0.338371,
+            "y": 0.497298
+          },
+          {
+            "id": "wait",
+            "x": 0.225319,
+            "y": 0.660314
+          },
+          {
+            "id": "petr",
+            "x": 0.124809,
+            "y": 0.5316
+          },
+          {
+            "id": "remote",
+            "x": 0.181688,
+            "y": 0.515567
+          }
+        ],
+        "camera": "crane-mobile",
+        "visibility": [
+          {
+            "point": [
+              119.0,
+              -1.0,
+              8.600000381469727
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "rush"
+          },
+          {
+            "point": [
+              116.0,
+              -5.0,
+              1.2000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "wait"
+          },
+          {
+            "point": [
+              109.5,
+              1.2000000476837158,
+              2.5
+            ],
+            "visible_fraction": 0.6,
+            "visible": true,
+            "rays": [
+              {
+                "visible": false,
+                "occluder": "Petr operator helmet"
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": false,
+                "occluder": "Petr operator helmet"
+              }
+            ],
+            "id": "petr"
+          },
+          {
+            "point": [
+              110.69999694824219,
+              4.0,
+              1.7999999523162842
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "remote"
+          },
+          {
+            "point": [
+              111.0,
+              18.0,
+              5.5
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "Ob warehouse"
+          },
+          {
+            "point": [
+              108.0,
+              2.700000047683716,
+              3.5999999046325684
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "PRU"
+          },
+          {
+            "point": [
+              132.0,
+              8.0,
+              3.799999952316284
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "barge pipes"
+          },
+          {
+            "point": [
+              119.0,
+              12.0,
+              8.600000381469727
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "second crane"
+          }
+        ],
+        "meshVisibility": [
+          {
+            "name": "Ob warehouse",
+            "pixels": 36132,
+            "visible": true
+          },
+          {
+            "name": "PRU control cabin",
+            "pixels": 6198,
+            "visible": true
+          },
+          {
+            "name": "crane one cab",
+            "pixels": 1269,
+            "visible": true
+          },
+          {
+            "name": "crane two cab",
+            "pixels": 817,
+            "visible": true
+          },
+          {
+            "name": "loaded pipe barge",
+            "pixels": 11280,
+            "visible": true
+          },
+          {
+            "name": "barge pipe",
+            "pixels": 475,
+            "visible": true
+          },
+          {
+            "name": "Petr operator torso",
+            "pixels": 68,
+            "visible": true
+          },
+          {
+            "name": "remote console",
+            "pixels": 308,
+            "visible": true
+          }
+        ]
+      }
+    },
+    "lastmile": {
+      "desktop": {
+        "image": "scene-world/lastmile-desktop.webp",
+        "width": 1200,
+        "height": 1000,
+        "hotspots": [
+          {
+            "id": "helicopter",
+            "x": 0.220763,
+            "y": 0.560831
+          },
+          {
+            "id": "rover",
+            "x": 0.360487,
+            "y": 0.668354
+          },
+          {
+            "id": "robot",
+            "x": 0.303539,
+            "y": 0.464549
+          },
+          {
+            "id": "pipe-carrier",
+            "x": 0.519477,
+            "y": 0.585931
+          }
+        ],
+        "camera": "lastmile-desktop",
+        "visibility": [
+          {
+            "point": [
+              182.0,
+              -16.0,
+              6.300000190734863
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "helicopter"
+          },
+          {
+            "point": [
+              193.0,
+              -16.0,
+              4.099999904632568
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "rover"
+          },
+          {
+            "point": [
+              181.0,
+              -5.0,
+              4.5
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "robot"
+          },
+          {
+            "point": [
+              198.0,
+              -5.0,
+              4.400000095367432
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "pipe-carrier"
+          },
+          {
+            "point": [
+              177.0,
+              -22.0,
+              1.7000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "quay"
+          },
+          {
+            "point": [
+              191.0,
+              10.0,
+              1.7000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "swamp"
+          },
+          {
+            "point": [
+              184.0,
+              25.200000762939453,
+              1.2000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "first ice"
+          },
+          {
+            "point": [
+              201.0,
+              28.079999923706055,
+              5.5
+            ],
+            "visible_fraction": 0.8,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": false,
+                "occluder": "destination raised cabin"
+              }
+            ],
+            "id": "destination"
+          }
+        ],
+        "meshVisibility": [
+          {
+            "name": "last mile quay",
+            "pixels": 41970,
+            "visible": true
+          },
+          {
+            "name": "marsh hummock",
+            "pixels": 246,
+            "visible": true
+          },
+          {
+            "name": "first ice floe",
+            "pixels": 495,
+            "visible": true
+          },
+          {
+            "name": "destination raised cabin",
+            "pixels": 6201,
+            "visible": true
+          },
+          {
+            "name": "destination chum",
+            "pixels": 2667,
+            "visible": true
+          },
+          {
+            "name": "helicopter fuselage",
+            "pixels": 2024,
+            "visible": true
+          },
+          {
+            "name": "amphibious rover chassis",
+            "pixels": 598,
+            "visible": true
+          },
+          {
+            "name": "delivery robot chassis",
+            "pixels": 186,
+            "visible": true
+          },
+          {
+            "name": "pipe carrier chassis",
+            "pixels": 1455,
+            "visible": true
+          }
+        ]
+      },
+      "mobile": {
+        "image": "scene-world/lastmile-mobile.webp",
+        "width": 900,
+        "height": 1200,
+        "hotspots": [
+          {
+            "id": "helicopter",
+            "x": 0.213466,
+            "y": 0.602378
+          },
+          {
+            "id": "rover",
+            "x": 0.417782,
+            "y": 0.661924
+          },
+          {
+            "id": "robot",
+            "x": 0.263999,
+            "y": 0.509213
+          },
+          {
+            "id": "pipe-carrier",
+            "x": 0.579759,
+            "y": 0.566976
+          }
+        ],
+        "camera": "lastmile-mobile",
+        "visibility": [
+          {
+            "point": [
+              182.0,
+              -16.0,
+              6.300000190734863
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "helicopter"
+          },
+          {
+            "point": [
+              193.0,
+              -16.0,
+              4.099999904632568
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "rover"
+          },
+          {
+            "point": [
+              181.0,
+              -5.0,
+              4.5
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "robot"
+          },
+          {
+            "point": [
+              198.0,
+              -5.0,
+              4.400000095367432
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "pipe-carrier"
+          },
+          {
+            "point": [
+              177.0,
+              -22.0,
+              1.7000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "quay"
+          },
+          {
+            "point": [
+              191.0,
+              10.0,
+              1.7000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "swamp"
+          },
+          {
+            "point": [
+              184.0,
+              25.200000762939453,
+              1.2000000476837158
+            ],
+            "visible_fraction": 1.0,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              }
+            ],
+            "id": "first ice"
+          },
+          {
+            "point": [
+              201.0,
+              28.079999923706055,
+              5.5
+            ],
+            "visible_fraction": 0.8,
+            "visible": true,
+            "rays": [
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": true,
+                "occluder": null
+              },
+              {
+                "visible": false,
+                "occluder": "destination raised cabin"
+              }
+            ],
+            "id": "destination"
+          }
+        ],
+        "meshVisibility": [
+          {
+            "name": "last mile quay",
+            "pixels": 40203,
+            "visible": true
+          },
+          {
+            "name": "marsh hummock",
+            "pixels": 242,
+            "visible": true
+          },
+          {
+            "name": "first ice floe",
+            "pixels": 437,
+            "visible": true
+          },
+          {
+            "name": "destination raised cabin",
+            "pixels": 5277,
+            "visible": true
+          },
+          {
+            "name": "destination chum",
+            "pixels": 2439,
+            "visible": true
+          },
+          {
+            "name": "helicopter fuselage",
+            "pixels": 1981,
+            "visible": true
+          },
+          {
+            "name": "amphibious rover chassis",
+            "pixels": 506,
+            "visible": true
+          },
+          {
+            "name": "delivery robot chassis",
+            "pixels": 135,
+            "visible": true
+          },
+          {
+            "name": "pipe carrier chassis",
+            "pixels": 1283,
+            "visible": true
+          }
+        ]
+      }
+    }
+  }
+}

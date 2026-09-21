@@ -1,0 +1,77 @@
+{
+  "url": "http://localhost:4173/review/map-geometry/index.html",
+  "viewports": [
+    {
+      "width": 375,
+      "images": 9,
+      "horizontalOverflow": false,
+      "errors": [],
+      "videos": [
+        {
+          "duration": 32,
+          "width": 540,
+          "height": 768,
+          "paused": true,
+          "loop": true
+        },
+        {
+          "duration": 32,
+          "width": 960,
+          "height": 666,
+          "paused": true,
+          "loop": true
+        }
+      ],
+      "playPauseSeekLoop": true
+    },
+    {
+      "width": 1440,
+      "images": 9,
+      "horizontalOverflow": false,
+      "errors": [],
+      "videos": [
+        {
+          "duration": 32,
+          "width": 540,
+          "height": 768,
+          "paused": true,
+          "loop": true
+        },
+        {
+          "duration": 32,
+          "width": 960,
+          "height": 666,
+          "paused": true,
+          "loop": true
+        }
+      ],
+      "playPauseSeekLoop": true
+    }
+  ],
+  "verifiedArtifacts": [
+    "desktop.png",
+    "mobile.png",
+    "top.png",
+    "warehouse.png",
+    "truck-1.png",
+    "truck-2.png",
+    "truck-3.png",
+    "truck-4.png",
+    "truck-2-side.png",
+    "truck-2-rear.png",
+    "desktop-id.png",
+    "desktop-normal.png",
+    "desktop-edges.png",
+    "mobile-id.png",
+    "mobile-normal.png",
+    "mobile-edges.png",
+    "desktop-motion.mp4",
+    "mobile-motion.mp4",
+    "city.blend",
+    "clearance-result.json",
+    "visibility.json",
+    "articulation-result.json",
+    "final-check.json"
+  ],
+  "passed": true
+}

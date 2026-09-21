@@ -1,0 +1,40 @@
+[
+  {
+    "created_at": "2026-09-18T14:50:21.645402Z",
+    "display_name": "GPT Image 2",
+    "id": "06a47fe4-bc01-420c-84e5-39af1636ab39",
+    "job_type": "gpt_image_2",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_145021_06a47fe4-bc01-420c-84e5-39af1636ab39_min.webp",
+    "params": {
+      "aspect_ratio": "auto",
+      "height": 1360,
+      "medias": [
+        {
+          "data": {
+            "id": "de9e2305-bc0f-4f09-8a5e-805fec7fc714",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/de9e2305-bc0f-4f09-8a5e-805fec7fc714.png"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "b39c26b5-480a-47cf-8eaa-01388d149c73",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/b39c26b5-480a-47cf-8eaa-01388d149c73.webp"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "videotape-alpha",
+      "prompt": "IMAGE1 IS THE EXACT COMMON BASE. Paint the SAME city, pixel-registered framing, same silhouettes, streets, building footprints, parapets, four truck positions and all numbers. IMAGE2 is the immutable professional woman, provided ONLY as a rendering vocabulary reference; do NOT include, redraw, recolor or insert her into the output. Output ONLY the city map of image1, no page, text labels or montage. Do not zoom, crop, shift buildings, move trucks, change perspective or add anything. All styles must retain friendly sunny daytime with soft short contact shadows. This is hand-drawn solid illustrative painting, NOT a 3D render, flat vector graphic, blueprint or architectural drafting sketch. Match the character's selective drawn edges and modeled painted volume. The trucks stay maintained with restrained wear, never wrecked. No smoke painted into the image; preserve slim cab-side exhaust stacks.\nFROZEN STRUCTURE: warehouse has exactly SIX loading doors and SEVEN white bay boundary lines extending BETWEEN the doors. Continuous warehouse-rooted fence chains surround its yard, with the existing one vehicle entrance unchanged. Roof has SIX skylights and TWO HVAC units along the BACK edge, NOT over the skylights. West tower has SIX coherent ordinary window floors, NO balcony slabs or loggias. Both lower shop facades have ground-floor glazing ONLY, three panes left and three right of a separate central entrance; blue-roof building retains its small upper windows ABOVE the shopfronts. Road to right of bottom warehouse fence has NO zebra paint; the east road next to the business center has only ONE zebra. Truck3 stays on the upper east road, south-facing CAB AT BOTTOM, trailer stretching north, two NATURAL SEATED PEOPLE behind the true FRONT windshield with soft skin, quiet clothing, glass reflections; NEVER black bust icons. Keep their anatomy and actual front grille, not a rear window.\n\nDIRECTION A / LIVING INK: visibly hand-drawn, selective variable-pressure warm charcoal contours laid over solid softly brushed paint. Emphasize major building SILHOUETTES, roof overlaps, lower edges of canopies, tree clump silhouettes, vehicle overlaps; vary line weight and allow occasional broken strokes. Interior windows must stay much quieter and finer than silhouettes. A lively authored comic-environment drawing, not a mechanical ruler outline around every feature. Preserve the nuanced sunny tonal transitions of image1, adding the character-like rhythmic ink hierarchy rather than increasing saturation. Clear dark-to-light drawing rhythm at overlaps. This must visibly be a DRAWING, not architectural visualization.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_145021_06a47fe4-bc01-420c-84e5-39af1636ab39.png",
+    "status": "completed"
+  }
+]

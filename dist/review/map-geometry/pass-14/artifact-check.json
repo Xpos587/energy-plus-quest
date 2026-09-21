@@ -1,0 +1,186 @@
+{
+  "passed": true,
+  "protectedFileHashes": 661,
+  "nativeDimensions": [
+    3504,
+    2336
+  ],
+  "unchangedOutsideGlass": true,
+  "editedMaskPixels": 4618,
+  "environmentRegistration": "none",
+  "characterSourceAndCutoutRGBUnchanged": true,
+  "girlVisibleAlphaBBoxes1500x1000": {
+    "foreground": [
+      1284,
+      483,
+      1459,
+      967
+    ],
+    "natural": [
+      953,
+      830,
+      964,
+      860
+    ]
+  },
+  "exportGirlsVerifiedAgainstIndependentComposite": true,
+  "dockSevenBoundariesAtFiveScanlines": {
+    "970": [
+      [
+        893,
+        901
+      ],
+      [
+        977,
+        985
+      ],
+      [
+        1061,
+        1070
+      ],
+      [
+        1146,
+        1155
+      ],
+      [
+        1229,
+        1237
+      ],
+      [
+        1313,
+        1321
+      ],
+      [
+        1394,
+        1403
+      ]
+    ],
+    "990": [
+      [
+        890,
+        899
+      ],
+      [
+        974,
+        983
+      ],
+      [
+        1059,
+        1068
+      ],
+      [
+        1144,
+        1153
+      ],
+      [
+        1226,
+        1235
+      ],
+      [
+        1311,
+        1319
+      ],
+      [
+        1392,
+        1402
+      ]
+    ],
+    "1010": [
+      [
+        888,
+        897
+      ],
+      [
+        972,
+        981
+      ],
+      [
+        1057,
+        1066
+      ],
+      [
+        1142,
+        1151
+      ],
+      [
+        1224,
+        1233
+      ],
+      [
+        1308,
+        1317
+      ],
+      [
+        1390,
+        1400
+      ]
+    ],
+    "1030": [
+      [
+        885,
+        894
+      ],
+      [
+        969,
+        978
+      ],
+      [
+        1055,
+        1064
+      ],
+      [
+        1139,
+        1148
+      ],
+      [
+        1222,
+        1231
+      ],
+      [
+        1306,
+        1315
+      ],
+      [
+        1388,
+        1397
+      ]
+    ],
+    "1050": [
+      [
+        883,
+        892
+      ],
+      [
+        967,
+        976
+      ],
+      [
+        1052,
+        1061
+      ],
+      [
+        1137,
+        1146
+      ],
+      [
+        1219,
+        1229
+      ],
+      [
+        1303,
+        1313
+      ],
+      [
+        1386,
+        1395
+      ]
+    ]
+  },
+  "frameEdgesPixelIdenticalToRaw": true,
+  "noStagedFiles": true,
+  "visualEvidence": [
+    "comparison-after.jpg",
+    "details.jpg",
+    "geometry-evidence.jpg"
+  ]
+}

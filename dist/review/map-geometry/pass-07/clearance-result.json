@@ -1,0 +1,9 @@
+{
+  "samples": 3072,
+  "failures": 0,
+  "failureCounts": {},
+  "examples": [],
+  "minimumObstacleClearance": 0.31941986083984375,
+  "roadMargin": 0.12,
+  "vehicleMargin": 0.2
+}

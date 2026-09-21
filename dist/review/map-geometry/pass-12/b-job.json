@@ -1,0 +1,40 @@
+[
+  {
+    "created_at": "2026-09-18T14:50:21.776424Z",
+    "display_name": "GPT Image 2",
+    "id": "96804fa9-4864-4c07-bbee-3a12bf9c8d29",
+    "job_type": "gpt_image_2",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_145021_96804fa9-4864-4c07-bbee-3a12bf9c8d29_min.webp",
+    "params": {
+      "aspect_ratio": "auto",
+      "height": 1360,
+      "medias": [
+        {
+          "data": {
+            "id": "3c2ed098-c324-454b-907f-f415beeee470",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/3c2ed098-c324-454b-907f-f415beeee470.png"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "15a0768a-b0b1-4952-95e4-e73873151949",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/15a0768a-b0b1-4952-95e4-e73873151949.webp"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "videotape-alpha",
+      "prompt": "IMAGE1 IS THE EXACT COMMON BASE. Paint the SAME city, pixel-registered framing, same silhouettes, streets, building footprints, parapets, four truck positions and all numbers. IMAGE2 is the immutable professional woman, provided ONLY as a rendering vocabulary reference; do NOT include, redraw, recolor or insert her into the output. Output ONLY the city map of image1, no page, text labels or montage. Do not zoom, crop, shift buildings, move trucks, change perspective or add anything. All styles must retain friendly sunny daytime with soft short contact shadows. This is hand-drawn solid illustrative painting, NOT a 3D render, flat vector graphic, blueprint or architectural drafting sketch. Match the character's selective drawn edges and modeled painted volume. The trucks stay maintained with restrained wear, never wrecked. No smoke painted into the image; preserve slim cab-side exhaust stacks.\nFROZEN STRUCTURE: warehouse has exactly SIX loading doors and SEVEN white bay boundary lines extending BETWEEN the doors. Continuous warehouse-rooted fence chains surround its yard, with the existing one vehicle entrance unchanged. Roof has SIX skylights and TWO HVAC units along the BACK edge, NOT over the skylights. West tower has SIX coherent ordinary window floors, NO balcony slabs or loggias. Both lower shop facades have ground-floor glazing ONLY, three panes left and three right of a separate central entrance; blue-roof building retains its small upper windows ABOVE the shopfronts. Road to right of bottom warehouse fence has NO zebra paint; the east road next to the business center has only ONE zebra. Truck3 stays on the upper east road, south-facing CAB AT BOTTOM, trailer stretching north, two NATURAL SEATED PEOPLE behind the true FRONT windshield with soft skin, quiet clothing, glass reflections; NEVER black bust icons. Keep their anatomy and actual front grille, not a rear window.\n\nDIRECTION B / GRAPHIC PAINT: describe buildings, trees and trucks with a few CHARACTER-LIKE OPAQUE GOUACHE LIGHT AND SHADE PLANES, as in the dark fold shapes of the reference woman's clothes. Consolidate form into broad deliberate brush shapes; make local plane changes decisive while retaining subtle brush transitions WITHIN each plane. Quiet selective dark drawn accents at contact/overlap only, less contour than an ink treatment. Rounded blocky foliage clumps, painted facades with coherent warm-lit and cooler-shaded surfaces. Still dimensional and brushed, never flat vector, never cel-shaded uniform outlines. Cast shadows stay SHORT and SOFT; do not introduce long dramatic directional shadows. Graphic solidity, not paler watercolor. Preserve all geometric detail but hierarchy is defined by painted LIGHT/SHADOW SHAPES.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2048
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_145021_96804fa9-4864-4c07-bbee-3a12bf9c8d29.png",
+    "status": "completed"
+  }
+]

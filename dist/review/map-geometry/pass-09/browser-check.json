@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "height": 568,
+      "status": "passed",
+      "mapWidth": 296,
+      "mapHeight": 205.546875
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "status": "passed",
+      "mapWidth": 351,
+      "mapHeight": 243.75
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": "passed",
+      "mapWidth": 366,
+      "mapHeight": 254.15625
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "status": "passed",
+      "mapWidth": 544,
+      "mapHeight": 377.765625
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "status": "passed",
+      "mapWidth": 594,
+      "mapHeight": 412.5
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "passed",
+      "mapWidth": 1099.1875,
+      "mapHeight": 763.3125
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "status": "passed",
+      "mapWidth": 1307.1875,
+      "mapHeight": 907.765625
+    }
+  ],
+  "unchangedMainReview": true,
+  "scope": "Static art review, not gameplay or moving-marker validation",
+  "residual": [
+    "Physical iPhone/Safari not tested",
+    "Dedicated portrait camera and animation not integrated"
+  ]
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "created_at": "2026-09-18T16:12:37.343113Z",
+    "display_name": "GPT Image 2",
+    "id": "f5eb6522-ae20-4142-a3c3-588b197cc76d",
+    "job_type": "gpt_image_2",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_161237_f5eb6522-ae20-4142-a3c3-588b197cc76d_min.webp",
+    "params": {
+      "aspect_ratio": "auto",
+      "height": 2336,
+      "medias": [
+        {
+          "data": {
+            "id": "574c3a61-ece6-4d24-b624-1d567a660245",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/574c3a61-ece6-4d24-b624-1d567a660245.png"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "a62cb682-4800-4607-83f7-6e2bab3bd386",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/a62cb682-4800-4607-83f7-6e2bab3bd386.webp"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "ba828464-34ae-4858-a1b2-1cdc6ac2a935",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/ba828464-34ae-4858-a1b2-1cdc6ac2a935_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "videotape-alpha",
+      "prompt": "Create the full city map of IMAGE1, redrawn entirely by the comic illustrator of the woman in IMAGE2, using the approved ink-and-paint environment fragment in IMAGE3 as the drawing-language target. Output ONLY the full map. Do not include the woman, sheet, panels or borders. IMAGE1 controls exact framing, object placement, topology and counts. IMAGE2 controls ink hierarchy, opacity and modeled comic shapes. IMAGE3 demonstrates how differently the entire environment must be DRAWN, but must NOT change IMAGE1's framing or composition.\nTransform the WHOLE city, not just roofs: hand-inked expressive silhouettes with fine broken interior drawing, solid local colors, opaque modeled cool shadow SHAPES, selective painterly transitions. Foliage should have lively jagged inked clusters and grouped dark leaf masses, not fuzzy 3D spheres. Truck cabs, tires and wheel arches should be drawn with clear comic silhouettes and blue opaque planes. Buildings have drawn edges and solid grouped planes, not airbrushed architectural rendering. Road/sidewalk use confident graphic curbs and restrained drawn irregularity. NO generic pencil filter, no uniformly thick window grid, no maquette softness, no washed-out pastel toy city. Do not exaggerate shadows: calm daylight, SHORT SOFT contact shadows, not dramatic long hard diagonal shadows. No dirt/damage exaggeration. No black or grey smoke in still art.\nCRITICAL STRUCTURE, exact same placement and framing as IMAGE1:\n- Exactly FOUR trucks, same pose and position, numbered 1 at upper left, 2 in warehouse yard, 3 along eastern vertical street, 4 orange turning by entrance. Old trucks1/4 maintained, readable, not wrecked. Truck3 windshield has TWO naturally seated humans with skin tones and subtle clothes behind reflected FRONT glass, not dark stick figures.\n- Warehouse: exactly SIX separate loading doors under the blue canopy, with SEVEN parallel white bay boundary lines, six equal spaces, each centered on a door. Preserve small sign СКЛАД. Roof: exactly SIX blue rectangular skylights arranged TWO rows of THREE, exactly TWO larger HVAC boxes toward back edge with visible clearance to skylights; small center vent retained.\n- Fence chains attach to warehouse corners and follow existing yard edge. ONE open vehicle gate at lower-right of yard, current 9.3m opening, not a new barrier. No crossing into fence. No missing fence or disconnected floating fence sections.\n- Central west tower exactly six ordinary window floors in a coherent grid, no balconies/loggias. Preserve both existing tower masses and courtyard trees.\n- The tan-roof single-storey retail and blue-roof two-storey business center each have separate central entrance and three nonoverlapping glass panels on either side. Business center upper windows MUST stay above ground floor panes, not overlap them.\n- Same roads, pavements, crossings and buildings. Retain one zebra across the east road just right of southern blue-roof business center. Do not add a zebra into warehouse fence. Do not duplicate zebras.\nPreserve composition semantically and geometrically, but DO NOT preserve old soft 3D rendering anywhere. This is a completely coherent comic drawing, with the very visible transformation of IMAGE3 across all buildings, trucks, roads and vegetation. Same image borders as IMAGE1.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3504
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260918_161237_f5eb6522-ae20-4142-a3c3-588b197cc76d.png",
+    "status": "completed"
+  }
+]

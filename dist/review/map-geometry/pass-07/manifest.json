@@ -1,0 +1,162 @@
+{
+  "revision": 7,
+  "source": "Responsive scale candidate; no main game integration",
+  "truckScale": 1.32,
+  "roadHalfWidth": 3.95,
+  "fps": 24,
+  "frames": 768,
+  "checks": {
+    "clearance-result.json": {
+      "samples": 3072,
+      "failures": 0,
+      "failureCounts": {},
+      "examples": [],
+      "minimumObstacleClearance": 0.31941986083984375,
+      "roadMargin": 0.12,
+      "vehicleMargin": 0.2
+    },
+    "articulation-result.json": {
+      "bodyPairsChecked": 12288,
+      "minimumCabCargoClearance": 0.3985579524480679,
+      "failures": 0,
+      "examples": []
+    },
+    "static-result.json": {
+      "source": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-07/clearance.json",
+      "checkedFootprints": 76,
+      "failures": 0,
+      "examples": []
+    },
+    "visibility.json": {
+      "loopMatrixError": 3.3676624298095703e-06,
+      "views": [
+        {
+          "camera": "desktop",
+          "sampledFrames": 192,
+          "roofSampleVisibleFractions": {
+            "truck-1-tractor": 1.0,
+            "truck-1-trailer": 1.0,
+            "truck-2-tractor": 1.0,
+            "truck-2-trailer": 1.0,
+            "truck-3-tractor": 1.0,
+            "truck-3-trailer": 0.9971064814814815,
+            "truck-4-tractor": 1.0,
+            "truck-4-trailer": 1.0
+          },
+          "clippedSamples": 0,
+          "dockFirstHits": [
+            "warehouse loading door",
+            "warehouse loading door.001",
+            "warehouse loading door.002",
+            "warehouse loading door.003",
+            "warehouse loading door.004",
+            "warehouse loading door.005"
+          ]
+        },
+        {
+          "camera": "mobile",
+          "sampledFrames": 192,
+          "roofSampleVisibleFractions": {
+            "truck-1-tractor": 1.0,
+            "truck-1-trailer": 1.0,
+            "truck-2-tractor": 1.0,
+            "truck-2-trailer": 1.0,
+            "truck-3-tractor": 0.9965277777777778,
+            "truck-3-trailer": 0.9901620370370371,
+            "truck-4-tractor": 1.0,
+            "truck-4-trailer": 1.0
+          },
+          "clippedSamples": 0,
+          "dockFirstHits": [
+            "warehouse loading door",
+            "warehouse loading door.001",
+            "warehouse loading door.002",
+            "warehouse loading door.003",
+            "warehouse loading door.004",
+            "warehouse loading door.005"
+          ]
+        }
+      ]
+    },
+    "final-check.json": {
+      "trucks": 4,
+      "loadingDoors": 6,
+      "pitchedRoofs": 0,
+      "warehouseHeight": 8.399999618530273,
+      "volumetricEmitters": [
+        1,
+        4
+      ],
+      "volumetricParticles": 24,
+      "opaqueSmokeSurfaces": 0,
+      "exhaustLoopMatrixError": 0.0
+    }
+  },
+  "media": {
+    "mobile": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 1024,
+          "r_frame_rate": "24/1",
+          "duration": "32.000000",
+          "nb_frames": "768"
+        }
+      ]
+    },
+    "desktop": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1440,
+          "height": 1000,
+          "r_frame_rate": "24/1",
+          "duration": "32.000000",
+          "nb_frames": "768"
+        }
+      ]
+    }
+  },
+  "browserReport": "browser-check.json",
+  "reviewPageSha256": "3e6fe2e37d58bd0682d3c2fe2962f56d011cbbbb650a7b9fecfc9a1606149893",
+  "archivedPass06Sha256": "7eae4109b6f0d75179f85be85bb15cb190cd5960989ade979e040a5c7c5bfa2c",
+  "files": {
+    "index.html": "3e6fe2e37d58bd0682d3c2fe2962f56d011cbbbb650a7b9fecfc9a1606149893",
+    "review.css": "12d256202beb1176ecd2580f3829b61759c86f03364156bd6df57b6a6576c9a6",
+    "review.mjs": "e872008a5e9277a92d2f815fd92ddf0199c7963b6bda841450ca58e0836d217e",
+    "fit-map.mjs": "05b88a2265e2bfa6967fd1420212264f6387e207c13337b24cbc7b6ccc4687a5",
+    "tracks.json": "e515b53acdfb2d40df509cd691846a8bf3cafc958f69d2dfd59a2986f1b274ea",
+    "mobile-poster.jpg": "687ae3c02f72e9c71f8842d6c913fba15e36de32674a6425422de9dfb4a247b7",
+    "desktop-poster.jpg": "e5a58ca61841f170d4013cfe40e5ef8e7909d813da6468f3c5065d2c44eaa1c3",
+    "report.html": "ac09f24063ccc17d2bf6a7dbd9343e0f6eb42db224d1468ced3b54f470382590",
+    "mobile-motion.mp4": "058efeca01066964d3ca8059424c6997b060eda866d7f6290fe495b47e99bdd1",
+    "desktop-motion.mp4": "7915e05b5e501ccfded4622dedd333ad3b7c4c38412ed75387ddb40f00afafd3",
+    "mobile.png": "cba4141f4bd9e58d25bc25938ef4e5b3b0261ac07c914637d76f0f88f37168ca",
+    "desktop.png": "bb7a3e5a1403cda5fd3306d60a6210c3e884175e13cc36761c731dbc123e39ee",
+    "clearance-result.json": "921f2c26bf042811955b54187770c1a469d9e8242e044e16e1cf1c7cd5e6bc32",
+    "articulation-result.json": "a8dba9faf74318fca418fdd90de157f6c5afe16d7b2c39c1a9acedea676c0be6",
+    "static-result.json": "c9af38920e9dd04395b252dc4093513620cd9608f083fdc24fdbd11071f3b995",
+    "visibility.json": "772032b09defb250145126a005d3ed975e88b18e2fd8d8ecc01303d27e2cc989",
+    "final-check.json": "5503c50cdc261173959a5d527a2ab0e56fa809b9fcb8fe1dc0d7bb9f7af81029",
+    "browser-check.json": "3abfa2aaf4d7ec88baf29f4890b4041c0bd7f2d7a25308894f6ad47fbf6723f2",
+    "PLAN.md": "d61518cd0e08576b78c0d3975ce70bda492ed72a910c19e58997bb65ce4cef46",
+    "fit-map.test.mjs": "74ed5b06c5833c649040e07fd040a9a050b68064fc3ac21ba92ed0ed4de947a7",
+    "browser-check.cjs": "16fd54f9fec312f529f7c7a343d40cbfcf104222ee910ce10542ff7c0b7ec965",
+    "projection.json": "170b3f73798aea624f0e034a1e3dace758c840377fc6cb565d4cf0c1bac6e7c5",
+    "baseline-projection.json": "195198f61026f96052b47b122c3004e377a02944bd14ddf6ac4c48bc991c436e",
+    "check_scale.py": "912e8b03775705884c05d28016beff9db72b29c509a0d1099c425eb52c4a8152",
+    "export_projection.py": "49ec601fd8ebd29ae75621d8e665ba905ae1ffa8b257124e616a76fa32ecc4e5"
+  },
+  "limits": [
+    "No physical iPhone Safari or Telegram WebView check",
+    "Equivalent CSS zoom viewports, not actual browser zoom",
+    "No driver figures in current geometry; storytelling not approved",
+    "Short screens scroll rather than shrink below readable scale"
+  ],
+  "publishedBrowserMatrix": true
+}

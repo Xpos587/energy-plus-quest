@@ -1,0 +1,89 @@
+{
+  "scope": "Static art and animated stationary exhaust review; not production integration or a moving-truck render.",
+  "source": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-10",
+  "generationReceipts": [
+    "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-10/style-job.json",
+    "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-10/correction-job.json",
+    "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-10/finish-job.json"
+  ],
+  "mainStyleReference": "design/scene-01/assets/current/choices/professional.webp",
+  "referencesUnchanged": true,
+  "fenceGeometry": {
+    "passed": true,
+    "frames": 3072,
+    "minimumTruckFenceClearanceMeters": 0.31941986083984375,
+    "openGateMeters": 9.3,
+    "warehouseConnectedChains": 2,
+    "roadCrossings": 0
+  },
+  "validation": {
+    "passed": true,
+    "results": [
+      {
+        "width": 375,
+        "height": 667,
+        "status": "passed",
+        "overviewWidth": 351,
+        "playingChangesPixels": true,
+        "pausedIsStable": true
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "status": "passed",
+        "overviewWidth": 928.796875,
+        "playingChangesPixels": true,
+        "pausedIsStable": true
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "status": "passed",
+        "overviewWidth": 296,
+        "playingChangesPixels": true,
+        "pausedIsStable": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "status": "passed",
+        "overviewWidth": 366,
+        "playingChangesPixels": true,
+        "pausedIsStable": true
+      }
+    ],
+    "unchangedMainIndex": true,
+    "unchangedPass09Files": true,
+    "unchangedCharacterReferences": true,
+    "scope": "Static map and stationary cab-side smoke only; no speed or route claim."
+  },
+  "limits": [
+    "Vehicles stationary; speed and route behavior remain in pass07.",
+    "Image-generation architecture is not exact source geometry.",
+    "Original character is composited only for visual comparison, not inserted into game.",
+    "Some facade outlines remain crisp; visual style is not claimed client-approved."
+  ],
+  "files": {
+    "alva.webp": "d1f2e98ed451c8c8dae8cd8eaab4c489e2431aafcab9b816dfd51095b8325114",
+    "arseniy.webp": "c6aebaf5caf3cdf3500fcb61595d995ee92892a6018d86a6861496ccc523daad",
+    "browser-check.cjs": "7c5176f85bf3b5a1b5ee7be595fa996da6699b6e4013e1b12628498543098275",
+    "comparison.jpg": "5e47979e861eb3c954f399daaab32b30e6b2cae3e66919ac4fecbe88b8acc017",
+    "exhaust-proof.mp4": "acc1d7d7eea9f05999ffee5ece9e414dde4df58486071416275331b4e547b318",
+    "exhaust-timeline.jpg": "0d015353358bc7751a7d199a589a5d98ba2579ea4a787200d13d80161c024b3b",
+    "fence-closeups.jpg": "dcac091db4a1d85a9c001fc9425d307a3b06d7ac6fd410f02872a8c7785cf2ab",
+    "fence-projection.json": "065fe3f20d37c4ec8375898eeb5953f33150d2cfef2ee35a2c2673ec6c260c3e",
+    "fence.json": "eab53d5c4384f533bf8a186b9c84b37777bdf0e20073b85c551edfce07f7477c",
+    "geometry-check.json": "efa896e5a5db96383690be2107900875ead7434386909fb4ea772e3d234f599e",
+    "in-scene.jpg": "406ba2a50ca25921968011bc4a73cecef4f9932f3321d666830fbf0afd17e5e6",
+    "index.html": "84606a48af1d5b9f1a56e210b10adad12a8d41199c6ddefcdab5a52bc129753b",
+    "khor.webp": "fcee80743a072841f3b4087d67dd8e7be694a5e8699227e3bc00d6d165116703",
+    "map.jpg": "2061564da5463227ad793d51be9f2ab76cd1152df1e42bc92f62b4e62e547969",
+    "professional-cutout.png": "914d83e6799efad528f872f4e1691c4d02633fed4dd42bdf3d5477129b81579a",
+    "professional.webp": "86955f737339f1e07ce7db771794b1f14eae348cf96bba3599f5f1ae226793d8",
+    "smoke.mjs": "ecd30c9062d705f3b4e156c4b7db5de6d706a6c69bcc5b0cba08eca69333342f",
+    "smoke.test.mjs": "37f20b377f1d285b317faa868d526978657f5d9692a5efbff63feaf9f5efe370",
+    "student.webp": "1d872c3560d46b0d7458ecd8eb65af07f24d7ae4f19a96ac0af46a10bf894737",
+    "style.css": "dfce06e8f2ec1a456b9825eb8aee036a96bb4a8ab2565a74684906907bab0257",
+    "validation.json": "ab4aee9581026945a72d4b410efc47d2b09302604e9f2d90eb13c1003c982665"
+  }
+}

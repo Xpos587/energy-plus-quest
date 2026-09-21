@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "dimensions": [
+    3504,
+    2336
+  ],
+  "preservedHashes": 449,
+  "changedPixels": 373634,
+  "changedPixelsOutsideAllowedMasks": 0,
+  "truckChangedPixels": {
+    "1": 101171,
+    "2": 119259,
+    "3": 21239,
+    "4": 117434
+  },
+  "roofNumbersOCR": {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4"
+  },
+  "newRoadPaintComponents": 7,
+  "protectedPixelRegions": [
+    "warehouse-six-doors-and-bay-starts",
+    "warehouse-roof-skylights-and-units",
+    "south-fence",
+    "truck3-glass-and-two-faces",
+    "truck3-ground-contact",
+    "west-crosswalk-landings",
+    "east-crosswalk-north",
+    "east-crosswalk-middle",
+    "east-crosswalk-south",
+    "business-facade-and-girl-site"
+  ],
+  "roofFoliageFixturePixelsUnchanged": true,
+  "dockBoundaries": 7,
+  "dockDoors": 6,
+  "dockRows": [
+    {
+      "y": 415,
+      "lineCenters": [
+        384.0,
+        419.0,
+        456.0,
+        492.0,
+        527.0,
+        563.0,
+        598.0
+      ]
+    },
+    {
+      "y": 425,
+      "lineCenters": [
+        382.0,
+        418.0,
+        455.0,
+        491.0,
+        526.0,
+        562.0,
+        597.0
+      ]
+    },
+    {
+      "y": 435,
+      "lineCenters": [
+        381.0,
+        417.0,
+        453.5,
+        490.0,
+        525.0,
+        561.0,
+        596.0
+      ]
+    }
+  ],
+  "originalGirlRGBAndBytesUnchanged": true,
+  "twoGirlCompositeVerified": true,
+  "losslessWebPMatchesPNG": true,
+  "noStagedFiles": true,
+  "limitations": [
+    "OCR verifies numbers, not truck identity or narrative traits; those require visual review.",
+    "Static art cannot prove relative speeds or route animation.",
+    "Source geometry unchanged; prior fence/dock checks plus delivered pixel preservation, not a new full Blender render.",
+    "JPEG review files are lossy, invariance applies to lossless PNG/WebP."
+  ]
+}

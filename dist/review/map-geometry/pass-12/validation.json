@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "passed": true,
+      "switches": 4,
+      "zoomStable": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "switches": 4,
+      "zoomStable": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "switches": 4,
+      "zoomStable": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "switches": 4,
+      "zoomStable": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "passed": true,
+      "switches": 4,
+      "zoomStable": true,
+      "reducedMotion": true
+    }
+  ],
+  "localAssetsMatchHTTP": true,
+  "priorReviewsAndCharacterUnchanged": true
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Карта — материалы и фактуры</title>
+<style>
+:root{color-scheme:light;font-family:Georgia,serif;color:#242424;background:#f1f0ec}body{margin:0 auto;padding:24px;max-width:1280px}h1{font-size:clamp(28px,4vw,48px);font-weight:normal;margin:24px 0 16px}h2{font-size:28px;font-weight:normal;margin-top:48px}p,li{max-width:900px;line-height:1.6}a{color:#164869}figure{margin:28px 0}img,video{display:block;width:100%;height:auto;background:#aaa}figcaption{line-height:1.5;padding:12px 0}section{display:grid;grid-template-columns:1fr 1fr;gap:24px}section figure{min-width:0;margin-top:0}video{max-height:820px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:20px}a:focus-visible,summary:focus-visible{outline:3px solid #d65520;outline-offset:4px}summary{cursor:pointer;padding:16px 0}details{border-top:1px solid #ccc;margin-top:20px}.note{border-left:3px solid #d65520;padding-left:16px}@media(max-width:650px){body{padding:16px}section{grid-template-columns:1fr}}
+</style>
+<nav><a href="/">В игру</a><a href="archive-pass-04.html">Предыдущий опубликованный вариант</a><a href="pass-06/city.blend" download>Скачать Blender-сцену</a></nav>
+<h1>Материалы и фактуры</h1>
+<p>Светлые фасады, стекло с чистыми отражениями, асфальт, мощение, металл и раннеосенняя листва. Цвета четырёх грузовиков взяты из утверждённых иллюстраций: выцветший голубой №1, синие №2 и №3, оранжевый №4.</p>
+<p class="note">Последняя согласованная геометрия сохранена: материалы не меняют здания, камеры и маршруты. Это отдельный 3D-референс; карта в игре пока не заменена.</p>
+<figure><a href="pass-06/desktop.png"><img src="pass-06/desktop.png" width="1440" height="1000" alt="Город с цветными материалами: светлые кварталы, современный склад, синие и оранжевый грузовики, зелёные и охристые деревья"></a><figcaption>Общий кадр. Мелкая фактура остаётся внутри конкретных материалов — без общего шумового фильтра и состаривания города.</figcaption></figure>
+<h2>Фасады, окна и улица</h2>
+<section>
+<figure><a href="pass-06/neighborhood.png"><img loading="lazy" src="pass-06/neighborhood.png" width="1200" height="900" alt="Фасады жилого квартала: оконные рамы, чистое голубое стекло, светлая штукатурка и деревья во дворе"></a><figcaption>Окна с рамами, откосами и подоконниками. У стекла — чистый отражающий градиент, без зерна и грязных пятен.</figcaption></figure>
+<figure><a href="pass-06/street-detail.png"><img loading="lazy" src="pass-06/street-detail.png" width="1200" height="900" alt="Нижний квартал крупно: здания не выходят на дорогу, тротуар с мощением и металлическое ограждение"></a><figcaption>Нижний квартал и границы улицы. Проверены 76 контуров зданий и оборудования: на проезжую часть они не заходят.</figcaption></figure>
+</section>
+<figure><a href="pass-06/warehouse.png"><img loading="lazy" src="pass-06/warehouse.png" width="1200" height="900" alt="Склад со светлыми фасадными панелями, синей полосой, шестью доками и остеклённой административной частью"></a><figcaption>Современный склад: светлые панели, синяя полоса с вывеской, металлические доки, кровля и отдельная административная часть.</figcaption></figure>
+<h2>Материалы крупно</h2>
+<figure><a href="pass-06/material-details.png"><img loading="lazy" src="pass-06/material-details.png" width="1200" height="610" alt="Шесть фрагментов сцены: асфальт, мощение, стекло, фасадные панели, металл и раннеосенняя листва"></a><figcaption>Асфальт и бетон — с очень слабой локальной неоднородностью. На тротуаре читаются стыки плитки; стекло и современные машины остаются чистыми.</figcaption></figure>
+<h2>Движение</h2>
+<section>
+<figure><video controls playsinline loop preload="metadata" poster="pass-06/mobile.png" aria-label="Мобильная камера с материалами: движение четырёх грузовиков"><source src="pass-06/mobile-motion.mp4" type="video/mp4"></video><figcaption>Мобильная камера · 32 секунды, 24 fps. Мягкий объёмный выхлоп — только у старых №1 и №4.</figcaption></figure>
+<figure><a href="pass-06/mobile.png"><img loading="lazy" src="pass-06/mobile.png" width="720" height="1024" alt="Мобильная композиция цветного города с четырьмя грузовиками"></a><figcaption>Те же материалы в вертикальной композиции. <a href="pass-06/mobile.png">Открыть кадр в полном размере</a>.</figcaption></figure>
+</section>
+<figure><video controls playsinline loop preload="metadata" poster="pass-06/desktop.png" aria-label="Широкоформатная камера с материалами: полный цикл движения"><source src="pass-06/desktop-motion.mp4" type="video/mp4"></video><figcaption>Широкоформатная камера · полный цикл с обновлёнными материалами.</figcaption></figure>
+<details><summary>До материалов и после</summary><section>
+<figure><a href="pass-06/gray-neighborhood.png"><img loading="lazy" src="pass-06/gray-neighborhood.png" width="1200" height="900" alt="Согласованная геометрия квартала до добавления цвета и материалов"></a><figcaption>Согласованная геометрия.</figcaption></figure>
+<figure><a href="pass-06/neighborhood.png"><img loading="lazy" src="pass-06/neighborhood.png" width="1200" height="900" alt="Та же геометрия квартала после работы с материалами"></a><figcaption>Те же модели и камера, с материалами.</figcaption></figure>
+</section>
+<figure><a href="pass-06/surface-comparison.png"><img loading="lazy" src="pass-06/surface-comparison.png" width="1440" height="373" alt="Три этапа: базовый цвет, чистые материалы, локальная фактура"></a><figcaption>Базовый цвет → материалы → локальная фактура. Последний этап намеренно деликатный, чтобы не загрязнять изображение.</figcaption></figure>
+<nav><a href="pass-06/flat-desktop.png">Базовый цвет</a><a href="pass-06/material-desktop.png">Материалы без фактуры</a><a href="pass-06/desktop-texture-only.png">Отдельный слой фактуры</a><a href="pass-06/surface-check.json">Неизменность геометрии</a><a href="pass-06/texture-layer-check.json">Проверка слоёв</a></nav>
+</details>
+<details><summary>Грузовики с материалами</summary><section>
+<figure><a href="pass-06/truck-1.png"><img loading="lazy" src="pass-06/truck-1.png" width="1280" height="800" alt="Грузовик номер 1 с материалами"></a><figcaption>№1 · Выцветший голубой и светлый старый полуприцеп.</figcaption></figure>
+<figure><a href="pass-06/truck-2.png"><img loading="lazy" src="pass-06/truck-2.png" width="1280" height="800" alt="Грузовик номер 2 с материалами"></a><figcaption>№2 · Чистая синяя кабина и светлый холодный кузов.</figcaption></figure>
+<figure><a href="pass-06/truck-3.png"><img loading="lazy" src="pass-06/truck-3.png" width="1280" height="800" alt="Грузовик номер 3 с материалами"></a><figcaption>№3 · Синяя спальная кабина и светлый полуприцеп.</figcaption></figure>
+<figure><a href="pass-06/truck-4.png"><img loading="lazy" src="pass-06/truck-4.png" width="1280" height="800" alt="Грузовик номер 4 с материалами"></a><figcaption>№4 · Оранжевая классическая кабина и старый кремовый кузов.</figcaption></figure>
+</section></details>
+<details><summary>План сверху и проверки</summary>
+<figure><a href="pass-06/top.png"><img loading="lazy" src="pass-06/top.png" width="1100" height="1100" alt="План города и складского двора с материалами сверху"></a></figure>
+<ul><li>Геометрия совпадает на всех трёх этапах работы с материалами.</li><li>3072 положения за цикл: нет пересечений грузовиков с учтёнными препятствиями, другими машинами и границей проезжей части.</li><li>12 288 пар «кабина — собственный прицеп»: пересечений нет.</li><li>В каждой камере проверены 192 кадра: машины не обрезаются краями, шесть ворот склада видны в исходном положении.</li><li>У каждого тягача и прицепа видимы более 95% проверенных точек поверхности за цикл. Небольшие частичные перекрытия сохраняются; это не процент видимой площади изображения.</li><li>Стекло и современные машины не покрыты шумом. Фактура локальна; отдельный прозрачный слой точно восстанавливает итоговый кадр из версии без фактуры.</li></ul>
+<nav><a href="pass-06/manifest.json">Манифест</a><a href="pass-06/static-result.json">Здания и улицы</a><a href="pass-06/clearance-result.json">Габариты</a><a href="pass-06/articulation-result.json">Сочленение</a><a href="pass-06/visibility.json">Камеры</a><a href="pass-06/desktop-id.png">ID-маска</a><a href="pass-06/desktop-normal.png">Нормали</a></nav>
+</details>
+</html>

@@ -1,0 +1,253 @@
+{
+  "browser": "Playwright Chromium",
+  "results": [
+    {
+      "width": 320,
+      "height": 568,
+      "format": "mobile",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 320,
+        "height": 308
+      },
+      "smallestTruckPx": 48.23301598716762,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "format": "mobile",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 375,
+        "height": 407
+      },
+      "smallestTruckPx": 57.84466772374088,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 520,
+      "format": "desktop",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 375,
+        "height": 300
+      },
+      "smallestTruckPx": 54.32243479012956,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "format": "mobile",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 390,
+        "height": 584
+      },
+      "smallestTruckPx": 60.466027288260875,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 700,
+      "format": "mobile",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 390,
+        "height": 440
+      },
+      "smallestTruckPx": 60.466027288260875,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "format": "mobile",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 344,
+        "height": 300
+      },
+      "smallestTruckPx": 52.427191290399605,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "format": "desktop",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 620,
+        "height": 333
+      },
+      "smallestTruckPx": 60.961843486700985,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "format": "mobile",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 820,
+        "height": 920
+      },
+      "smallestTruckPx": 132.54863794652226,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "format": "mobile",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 800,
+        "height": 711
+      },
+      "smallestTruckPx": 129.25140814685756,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "format": "desktop",
+      "map": {
+        "x": 0,
+        "y": 72,
+        "width": 1120,
+        "height": 828
+      },
+      "smallestTruckPx": 158.75274819037605,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "format": "desktop",
+      "map": {
+        "x": 0,
+        "y": 72,
+        "width": 2240,
+        "height": 1368
+      },
+      "smallestTruckPx": 264.3272359031878,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 1152,
+      "height": 720,
+      "format": "desktop",
+      "map": {
+        "x": 0,
+        "y": 72,
+        "width": 832,
+        "height": 648
+      },
+      "smallestTruckPx": 123.56125228610546,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 1029,
+      "height": 643,
+      "format": "desktop",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 805,
+        "height": 586
+      },
+      "smallestTruckPx": 111.43973703019009,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    },
+    {
+      "width": 960,
+      "height": 600,
+      "format": "desktop",
+      "map": {
+        "x": 0,
+        "y": 57,
+        "width": 736,
+        "height": 543
+      },
+      "smallestTruckPx": 103.03287967528098,
+      "allLoopFrames": 768,
+      "seekSamples": 4,
+      "keyboard": true,
+      "tap": true,
+      "overflow": false
+    }
+  ],
+  "resizePhase": true,
+  "movingPointerCapture": true,
+  "dragCancelled": true,
+  "loop": true,
+  "mediaFallback": true,
+  "mediaRetry": true,
+  "reducedMotion": true,
+  "webkit": "Unavailable: missing host dependencies (libicu74, libxml2, libflite1). Not Safari verification.",
+  "zoom": "Last 3 sizes are 125%, 140%, 150% equivalent CSS viewports for 1440x900, not a physical browser-zoom test.",
+  "physicalDevices": "No physical iPhone or Telegram WebView access."
+}

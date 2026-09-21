@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "characterOriginalAndCutoutRGBUnchanged": true,
+  "priorReviewsAndSourceUnchanged": true,
+  "bayRows": [
+    {
+      "y": 403,
+      "paintedBayBoundaries": [
+        375.0,
+        408.5,
+        443.0,
+        478.0,
+        513.0,
+        548.0,
+        583.0
+      ]
+    },
+    {
+      "y": 405,
+      "paintedBayBoundaries": [
+        375.0,
+        408.0,
+        443.0,
+        478.0,
+        513.0,
+        548.0,
+        583.0
+      ]
+    },
+    {
+      "y": 412,
+      "paintedBayBoundaries": [
+        374.0,
+        407.5,
+        442.0,
+        477.5,
+        512.0,
+        547.0,
+        582.0
+      ]
+    },
+    {
+      "y": 420,
+      "paintedBayBoundaries": [
+        373.5,
+        407.0,
+        442.0,
+        477.0,
+        511.0,
+        546.5,
+        581.5
+      ]
+    }
+  ],
+  "wholeEnvironmentChange": {
+    "warehouse": {
+      "meanRGBDifference": 40.98411057960459,
+      "fractionDifferentByOver8": 0.8920155908580878
+    },
+    "foliage": {
+      "meanRGBDifference": 47.92690644654088,
+      "fractionDifferentByOver8": 0.982940251572327
+    },
+    "trucks": {
+      "meanRGBDifference": 35.3351724137931,
+      "fractionDifferentByOver8": 0.9206736166800321
+    },
+    "road": {
+      "meanRGBDifference": 33.10941945405613,
+      "fractionDifferentByOver8": 0.9979700115340254
+    },
+    "shops": {
+      "meanRGBDifference": 36.8453544973545,
+      "fractionDifferentByOver8": 0.8998095238095238
+    }
+  },
+  "blackBorderHoles": false,
+  "note": "Pixel differences establish broad edit coverage, NOT subjective stylistic approval. Counts beyond bay lines were visually inspected and source-checked separately."
+}

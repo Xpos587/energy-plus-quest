@@ -1,0 +1,13 @@
+{
+  "trucks": 4,
+  "loadingDoors": 6,
+  "pitchedRoofs": 0,
+  "warehouseHeight": 8.399999618530273,
+  "volumetricEmitters": [
+    1,
+    4
+  ],
+  "volumetricParticles": 24,
+  "opaqueSmokeSurfaces": 0,
+  "exhaustLoopMatrixError": 0.0
+}

@@ -1,0 +1,131 @@
+{
+  "pass": 12,
+  "page": "http://localhost:4173/review/map-geometry/pass-12/index.html",
+  "sourceScene": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-12/city-repaired.blend",
+  "sourceParent": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-11/city-daylight-fixed.blend",
+  "geometryTests": [
+    "check_scene.py",
+    "check_geometry.py",
+    "check_crew.py",
+    "repair_layout.py",
+    "check_preservation.py"
+  ],
+  "render": {
+    "camera": "desktop",
+    "size": [
+      1440,
+      1000
+    ],
+    "engine": "CYCLES",
+    "samples": 16,
+    "passes": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-12/geometry-passes.exr"
+  },
+  "commonBase": {
+    "file": "common-base.png",
+    "method": "Regional geometry-guided composite against immutable pass11. Rejected base-job whole frame for layout drift. Roof, tower, storefronts, crossings and crew repaired with recorded masks.",
+    "receipt": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-12/base-job.json",
+    "script": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-12/compose_base.py"
+  },
+  "variants": {
+    "a": {
+      "label": "Живой контур",
+      "model": "gpt_image_2",
+      "jobId": "06a47fe4-bc01-420c-84e5-39af1636ab39",
+      "receipt": "a-job.json",
+      "prompt": "a-prompt.txt",
+      "image": "map-a.jpg",
+      "diagnostic": "comparison-a.jpg",
+      "crops": "crops-a.jpg",
+      "sha256": "d4a529427b533f66e476fa5f20dc319f3ad78a89db343e9879b977e931fc12b0",
+      "postprocess": "Rigid projective registration of central architectural regions to common base; restore count-critical warehouse art and source-projected single east zebra. No palette-only filter.",
+      "smokeEmitters": [
+        {
+          "truck": 1,
+          "x": 311,
+          "y": 88
+        },
+        {
+          "truck": 4,
+          "x": 654,
+          "y": 640
+        }
+      ]
+    },
+    "b": {
+      "label": "Графичная живопись",
+      "model": "gpt_image_2",
+      "jobId": "96804fa9-4864-4c07-bbee-3a12bf9c8d29",
+      "receipt": "b-job.json",
+      "prompt": "b-prompt.txt",
+      "image": "map-b.jpg",
+      "diagnostic": "comparison-b.jpg",
+      "crops": "crops-b.jpg",
+      "sha256": "d5859284bd9ee5b65c638602892fa431e4d9e286e8584b8b2fafa197258e0c7a",
+      "postprocess": "Rigid projective registration of central architectural regions to common base; restore count-critical warehouse art and source-projected single east zebra. No palette-only filter.",
+      "smokeEmitters": [
+        {
+          "truck": 1,
+          "x": 311,
+          "y": 88
+        },
+        {
+          "truck": 4,
+          "x": 654,
+          "y": 640
+        }
+      ]
+    },
+    "c": {
+      "label": "Кистевой скетч",
+      "model": "gpt_image_2",
+      "jobId": "7d35c7a4-9539-420c-a3ff-5ee0680c46b1",
+      "receipt": "c-job.json",
+      "prompt": "c-prompt.txt",
+      "image": "map-c.jpg",
+      "diagnostic": "comparison-c.jpg",
+      "crops": "crops-c.jpg",
+      "sha256": "6b53eda35dc611af506c4279851b9edc8591129f75c9d0775f8d18b53d13ed59",
+      "postprocess": "Rigid projective registration of central architectural regions to common base; restore count-critical warehouse art and source-projected single east zebra. No palette-only filter.",
+      "smokeEmitters": [
+        {
+          "truck": 1,
+          "x": 311,
+          "y": 88
+        },
+        {
+          "truck": 4,
+          "x": 654,
+          "y": 640
+        }
+      ]
+    }
+  },
+  "character": {
+    "source": "design/scene-01/assets/current/choices/professional.webp",
+    "sha256": "86955f737339f1e07ce7db771794b1f14eae348cf96bba3599f5f1ae226793d8",
+    "originalByteIdentical": true,
+    "cutoutRGBIdentical": true,
+    "changes": "alpha masking only; display scaled identically in all variants"
+  },
+  "scope": "Static style-review only. No game, scenario, UI, Outro, Telegram or calendar changes. No full-motion claim.",
+  "protectedCommonArt": [
+    "roads and curb context",
+    "trees",
+    "four trucks and natural crew",
+    "warehouse front and loading canopy",
+    "six loading doors and seven boundary lines",
+    "fence chains and single vehicle entrance",
+    "cab-side exhaust outlets"
+  ],
+  "styleRegion": "warehouse roof and central residential/commercial architecture; unchanged surroundings provide a controlled comparison",
+  "limitations": [
+    "Independent full-frame generations changed geometry and omitted the east zebra; only rigidly registered architectural regions were admitted. Common base retains layout and count-critical art.",
+    "Architecture differs in actual line weight, opaque painted planes and dry-brush edges; roads, trees, vehicles and warehouse front deliberately remain common rather than receiving an unsafe full-frame restyle.",
+    "The painted geometry is visually checked, not a pixel-exact rendering of every 3D dimension.",
+    "Style selection and character compatibility require user review; no style is claimed approved.",
+    "Truck3 uses a new stationary southbound test pose; original pass07 routes remain untouched."
+  ],
+  "geometryAdditionalFinding": "Saved-mesh landing checks also exposed the west-of-yard zebra with a 0.05m landing; removed it rather than break the fence. Moved the east-road lamp 1.2m away from the retained landing. 48 local dropped-curb ramps remain.",
+  "preservedSavedObjects": 74,
+  "crewVisibility": "Two rays pass through true front windshield directly to heads, not cab shell. Recalculated cutter normals before carving cabin opening."
+}
