@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480">
   <title>Погрузка на фуру: четыре места в грузовом отсеке</title>
-  <desc>Слева над задней осью стоят тяжёлые ящики с гирями. Первое место над ними без креплений. Второе — над защищённой посудой, с красными стропами. Третье — узкая ниша за тремя коробками. Четвёртое — высокое место у передней стенки, с креплениями и подушками.</desc>
+  <desc>Слева над задней осью стоят тяжёлые ящики с гирями. Первое место над ними без креплений. Второе — над защищённой посудой, с красными стропами. Третье — узкая ниша за тремя коробками. Четвёртое — высокое место у передней стенки, с креплениями и коробками с подушками.</desc>
   <defs>
     <pattern id="floor" width="76" height="12" patternUnits="userSpaceOnUse" patternTransform="skewX(-32)"><path d="M0 0V12" stroke="#aa9e86" stroke-width="1"/></pattern>
     <g id="weight" fill="#35474a" stroke="none"><rect x="-18" y="-3" width="36" height="6" rx="2"/><rect x="-23" y="-12" width="7" height="24" rx="2"/><rect x="-30" y="-8" width="6" height="16" rx="2"/><rect x="16" y="-12" width="7" height="24" rx="2"/><rect x="24" y="-8" width="6" height="16" rx="2"/></g>
@@ -178,16 +178,20 @@
         <path d="M541 441h12m-12 5h8m-10 18h12m77-31h10m-10 5h7m42 9h12m-12 5h8" stroke="#827762" stroke-width="1.5"/>
       </g>
     </g>
-    <!-- Front-wall space stays full-height; soft goods separate it from the cartons. -->
-    <g id="pillow-padding" data-cargo="pillow-padding" stroke-width="1.8">
-      <path d="M746 407q20-11 44-2l23 2 5 30q-5 12-17 15l-47-1q-12-16-8-44Z" fill="#c2dce7"/>
-      <path d="M743 360q15-12 40-4l20 3v36l-15 10q-22-5-35 1-12-14-10-46Z" fill="#fff0cf"/>
-      <path d="M749 315q15-13 37-5l17 4v36l-17 8q-17-6-33 0-12-24-4-43Z" fill="#abcddb"/>
-      <path d="M751 455q20-9 41-2l32 5 31 1q9 6 2 13l-31 9q-29 8-47 3l-25 2q-13-14-3-31Z" fill="#f8e9c9"/>
-      <g fill="none" stroke="#9bb7bf" stroke-width="1.2">
-        <path d="M755 319q17-8 30-3l12 3m-43 2q-6 15 3 29l27 3 13-7m-46 18q17-7 30-2l15 2m-46 3q-2 21 7 32l27-1 13-6m-44 20q15-7 32-3l20 2m-52 6q-2 17 5 27l38 2 13-8m-52 22q23-6 35-1l29 3 26 1m-90 3q-3 6 3 12l20-1q25 5 45-2"/>
-        <path d="m795 323 7 4m-8 13 8-3m-8 32 8 5m-8 12 8-3m0 36 12 4m-11 12 12-4m8 34 13 3"/>
+    <!-- Pillows are shipped in cartons, not used as loose packing material. -->
+    <g id="pillow-padding" data-cargo="boxed-pillows" stroke-width="1.8">
+      <g fill="#d7bc91">
+        <rect x="746" y="310" width="49" height="70" rx="2"/>
+        <rect x="742" y="382" width="53" height="77" rx="2"/>
       </g>
+      <path d="M746 321h49m-53 74h53" stroke="#f3e5c5" stroke-width="8"/>
+      <path d="M769 310v20m0 52v22" stroke="#ead8b3" stroke-width="9"/>
+      <!-- Printed pillow illustrations make the contents clear without unpacking them. -->
+      <g fill="#e6f0ef" stroke="#6d929e" stroke-width="1.4">
+        <path d="M752 338q16 5 36 0l-3 27q-15-5-31 0Z"/>
+        <path d="M749 414q18 5 39 0l-3 29q-17-5-34 0Z"/>
+      </g>
+      <path d="m754 342 29 0m-31 77h31" stroke="#b2cbd0" stroke-width="1"/>
     </g>
     <g id="front-wall-restraints" data-cargo="front-wall-restraints">
       <path d="M798 137v298m106-298v298" stroke="#b6cdd6" stroke-width="11"/>

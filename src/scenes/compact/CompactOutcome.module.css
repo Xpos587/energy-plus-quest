@@ -1,0 +1,27 @@
+.consequence {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid currentColor;
+}
+.consequence svg {
+  flex: 0 0 96px;
+  width: 96px;
+  height: 58px;
+}
+.consequence figcaption {
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.consequence {
+  border-bottom-color: #dce5ec;
+}
+.consequence figcaption {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  text-wrap: pretty;
+}

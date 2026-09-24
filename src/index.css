@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "EPQ Normalidad Proxy";
+  font-family: "Roboto Condensed";
   src: url("/fonts/normalidad-proxy-regular.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "EPQ Normalidad Proxy";
+  font-family: "Roboto Condensed";
   src: url("/fonts/normalidad-proxy-medium.woff2") format("woff2");
   font-style: normal;
   font-weight: 500;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "EPQ Normalidad Proxy";
+  font-family: "Roboto Condensed";
   src: url("/fonts/normalidad-proxy-bold.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
@@ -23,6 +23,10 @@
 }
 
 :root {
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
   /* Canonical brand colors plus explicitly derived prototype surfaces. */
   --orange: #ff5500;
   --blue: #003ca6;
@@ -32,7 +36,7 @@
   --mist: #edf3f8;
   --pale-blue: #dfeafb;
   --paper: #f8fbfd;
-  --font-brand: "Normalidad Compact", "EPQ Normalidad Proxy", sans-serif;
+  --font-brand: "Normalidad Compact", "Roboto Condensed", Verdana, sans-serif;
   --header-height: 72px;
   --panel-border: rgba(0, 60, 166, 0.16);
   --panel-shadow: 0 22px 70px rgba(0, 60, 166, 0.12);
@@ -58,6 +62,7 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
 }
 

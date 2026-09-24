@@ -42,6 +42,7 @@ export type ChoiceItem<T extends string> = {
 
 export type ParcelChoice = ChoiceItem<ParcelId> & {
   accusativeTitle: string;
+  genitiveTitle: string;
 };
 
 export type CarrierChoice = ChoiceItem<CarrierId> & {

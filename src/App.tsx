@@ -1,12 +1,16 @@
-import { type CSSProperties, useState } from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
 import styles from "./App.module.css";
 import { CityMap } from "./components/CityMap";
+import { DescriptionSheet } from "./components/DescriptionSheet";
+import mapStyles from "./components/IllustratedCityMap.module.css";
+import { BackButton, QuestHeader } from "./components/QuestShell";
 import { ScoreDelta } from "./components/ScoreBoard";
 import { choiceArtwork, outcomeArtwork } from "./game/artwork";
 import {
+  carrierBriefing,
+  carrierQuestion,
   findCarrier,
   findParcel,
-  findProfile,
   findRecipient,
   parcels,
   profiles,
@@ -14,22 +18,8 @@ import {
 } from "./game/content";
 import { GameProvider, useGame } from "./game/GameContext";
 import { interpolateOutcome } from "./game/outcomeText";
-import type {
-  CarrierId,
-  ChoiceItem,
-  GameAction,
-  GameState,
-} from "./game/types";
-
-const progressSteps = [
-  { id: "carrier", label: "Перевозчик" },
-  { id: "loading", label: "Загрузка" },
-  { id: "warehouse", label: "Склад" },
-  { id: "barge", label: "Баржа" },
-  { id: "last-mile", label: "Последняя миля" },
-] as const;
-const companyLogoUrl = `${import.meta.env.BASE_URL}brand/gpn-snabzhenie.svg`;
-const energyLogoUrl = `${import.meta.env.BASE_URL}brand/energy-plus-logo.svg`;
+import type { CarrierId, ChoiceItem, GameAction } from "./game/types";
+import { ScenesGame } from "./scenes/ScenesGame";
 
 export function App() {
   return (
@@ -41,45 +31,38 @@ export function App() {
 
 function Game() {
   const { state, dispatch } = useGame();
+  const [remaining, setRemaining] = useState(false);
+  const [carrierToFocus, setCarrierToFocus] = useState<CarrierId>();
   const navigate = (action: GameAction) => {
+    setCarrierToFocus(
+      action.type === "BACK" && state.step === "outcome"
+        ? state.carrier
+        : undefined,
+    );
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     dispatch(action);
   };
 
+  if (remaining && state.profile && state.recipient && state.parcel) {
+    return (
+      <ScenesGame
+        context={{
+          profile: state.profile,
+          recipient: state.recipient,
+          parcel: state.parcel,
+        }}
+        initialScores={state.scores}
+        onBackToCarrier={() => {
+          setRemaining(false);
+          navigate({ type: "BACK" });
+        }}
+      />
+    );
+  }
+
   return (
     <div className={styles.app} data-step={state.step}>
-      <header className={styles.header}>
-        <div className={styles.brandCluster}>
-          <div className={styles.energyMark}>
-            <img alt="Энергия+" src={energyLogoUrl} />
-          </div>
-          <div className={styles.projectMark}>
-            <img
-              alt="Газпром нефть — Газпромнефть-Снабжение"
-              className={styles.companyLogo}
-              src={companyLogoUrl}
-            />
-          </div>
-        </div>
-        <nav className={styles.routeProgress} aria-label="Этапы доставки">
-          {progressSteps.map((step, index) => (
-            <div
-              aria-current={index === 0 ? "step" : undefined}
-              className={styles.progressItem}
-              data-active={index === 0}
-              data-current={index === 0}
-              data-progress-step={step.id}
-              key={step.id}
-            >
-              <i aria-hidden="true">
-                <span>{index + 1}</span>
-              </i>
-              <span>{step.label}</span>
-            </div>
-          ))}
-        </nav>
-        <SelectionSummary state={state} />
-      </header>
+      <QuestHeader state={state} />
 
       <main className={styles.main} id="quest-main">
         <div className={styles.screen} key={state.step}>
@@ -110,44 +93,20 @@ function Game() {
           )}
           {state.step === "carrier" && (
             <CarrierScreen
+              focusCarrier={carrierToFocus}
               onBack={() => navigate({ type: "BACK" })}
               onSelect={(value) => navigate({ type: "CHOOSE_CARRIER", value })}
             />
           )}
           {state.step === "outcome" && (
-            <Outcome onBack={() => navigate({ type: "BACK" })} />
+            <Outcome
+              onBack={() => navigate({ type: "BACK" })}
+              onNext={() => setRemaining(true)}
+            />
           )}
         </div>
       </main>
     </div>
-  );
-}
-
-function SelectionSummary({ state }: { state: GameState }) {
-  const selections = [
-    { key: "profile", item: findProfile(state.profile) },
-    { key: "recipient", item: findRecipient(state.recipient) },
-    { key: "parcel", item: findParcel(state.parcel) },
-  ] as const;
-
-  if (!selections.some(({ item }) => item)) {
-    return null;
-  }
-
-  return (
-    <fieldset
-      className={styles.selectionSummary}
-      aria-label="Выбрано для доставки"
-    >
-      {selections.map(({ key, item }, index) =>
-        item ? (
-          <span data-selection-context={key} key={key}>
-            {index > 0 && <i aria-hidden="true" />}
-            <img alt={`Выбрано: ${item.title}`} src={choiceArtwork[item.id]} />
-          </span>
-        ) : null,
-      )}
-    </fieldset>
   );
 }
 
@@ -216,49 +175,89 @@ function ChoiceScreen<T extends string>({
 function CarrierScreen({
   onSelect,
   onBack,
+  focusCarrier,
 }: {
   onSelect: (value: CarrierId) => void;
   onBack: () => void;
+  focusCarrier?: CarrierId;
 }) {
-  const [motionControls, setMotionControls] = useState<HTMLDivElement | null>(
-    null,
-  );
+  const { state } = useGame();
+  const [expanded, setExpanded] = useState(false);
+  const [mapOnly, setMapOnly] = useState(false);
+  const panel = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!focusCarrier) return;
+    const selected = panel.current?.querySelector<HTMLButtonElement>(
+      `[data-carrier-choice="${focusCarrier}"]`,
+    );
+    selected?.focus({ preventScroll: true });
+    selected?.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }, [focusCarrier]);
   return (
-    <section className={styles.carrierScene}>
-      <div className={styles.missionBar}>
-        <BackButton onClick={onBack} />
-        <div className={styles.missionHeading}>
-          <h2>Выберите транспорт для подарка</h2>
+    <section className={mapStyles.scene} data-map-only={mapOnly}>
+      <CityMap mode="live" />
+      <button
+        type="button"
+        className={mapStyles.mapToggle}
+        aria-controls="carrier-selection"
+        aria-expanded={!mapOnly}
+        onClick={() => {
+          setExpanded(false);
+          setMapOnly(!mapOnly);
+        }}
+      >
+        {mapOnly ? "Вернуться к выбору" : "Рассмотреть карту"}
+      </button>
+      <div
+        id="carrier-selection"
+        ref={panel}
+        className={mapStyles.panel}
+        data-carrier-panel
+        data-sheet-panel
+        data-expanded={expanded}
+        hidden={mapOnly}
+      >
+        <div className={mapStyles.briefing}>
+          <div className={mapStyles.navigation}>
+            <BackButton onClick={onBack} />
+            <DescriptionSheet
+              expanded={expanded}
+              onExpandedChange={setExpanded}
+              collapsedLabel="Описание доставки"
+            >
+              <p data-carrier-briefing>
+                {interpolateOutcome(
+                  carrierBriefing,
+                  undefined,
+                  findParcel(state.parcel)?.accusativeTitle,
+                )}
+              </p>
+            </DescriptionSheet>
+          </div>
+          <h2 id="carrier-question">
+            {carrierQuestion.split(/(?<=\.) /).map((sentence, index) => (
+              <span key={sentence}>
+                {index > 0 && " "}
+                {sentence}
+              </span>
+            ))}
+          </h2>
         </div>
-        <div className={styles.carrierChoices}>
-          <button
-            data-carrier-choice="old"
-            onClick={() => onSelect("old")}
-            type="button"
-          >
-            №1
-          </button>
-          <button
-            data-carrier-choice="near"
-            onClick={() => onSelect("near")}
-            type="button"
-          >
-            №2
-          </button>
-          <button
-            data-carrier-choice="crew"
-            onClick={() => onSelect("crew")}
-            type="button"
-          >
-            №3
-          </button>
-          <button
-            data-carrier-choice="old4"
-            onClick={() => onSelect("old4")}
-            type="button"
-          >
-            №4
-          </button>
+        <fieldset
+          className={mapStyles.choices}
+          aria-labelledby="carrier-question"
+        >
+          {(["old", "near", "crew", "old4"] as const).map((id, index) => (
+            <button
+              data-carrier-choice={id}
+              aria-label={`№${index + 1}`}
+              key={id}
+              onClick={() => onSelect(id)}
+              type="button"
+            >
+              <span>№{index + 1}</span>
+            </button>
+          ))}
           <button
             data-carrier-choice="express"
             data-express-control="true"
@@ -267,16 +266,21 @@ function CarrierScreen({
           >
             Подобрать автоматически
           </button>
-        </div>
-        <div className={styles.motionControls} ref={setMotionControls} />
+        </fieldset>
       </div>
-      <CityMap mode="live" controlsHost={motionControls} />
     </section>
   );
 }
 
-function Outcome({ onBack }: { onBack: () => void }) {
+function Outcome({
+  onBack,
+  onNext,
+}: {
+  onBack: () => void;
+  onNext: () => void;
+}) {
   const { state } = useGame();
+  const [expanded, setExpanded] = useState(true);
   const carrier = findCarrier(state.carrier);
   const recipient = findRecipient(state.recipient);
   const parcel = findParcel(state.parcel);
@@ -308,16 +312,27 @@ function Outcome({ onBack }: { onBack: () => void }) {
         ))}
       </div>
       <div aria-hidden="true" className={styles.outcomeVeil} />
-      <div className={styles.resultPanel} data-carrier={carrier.id}>
+      <div
+        className={styles.resultPanel}
+        data-sheet-panel
+        data-expanded={expanded}
+        data-carrier={carrier.id}
+      >
         <div className={styles.outcomeCopy}>
           <h2>{carrier.resultTitle}</h2>
-          <p className={styles.panelLead}>
-            {interpolateOutcome(
-              carrier.resultBody,
-              recipient?.title,
-              parcel?.accusativeTitle,
-            )}
-          </p>
+          <DescriptionSheet
+            expanded={expanded}
+            onExpandedChange={setExpanded}
+            result
+          >
+            <p className={styles.panelLead}>
+              {interpolateOutcome(
+                carrier.resultBody,
+                recipient?.title,
+                parcel?.accusativeTitle,
+              )}
+            </p>
+          </DescriptionSheet>
           <ScoreDelta scores={carrier.score} />
           <div className={styles.resultActions}>
             <button
@@ -328,22 +343,17 @@ function Outcome({ onBack }: { onBack: () => void }) {
             >
               Назад к машинам
             </button>
-            <button className={styles.nextButton} disabled type="button">
+            <button
+              className={styles.nextButton}
+              onClick={onNext}
+              type="button"
+            >
               К следующей сцене
             </button>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function BackButton({ onClick }: { onClick: () => void }) {
-  return (
-    <button className={styles.backButton} onClick={onClick} type="button">
-      <span aria-hidden="true">←</span>
-      Назад
-    </button>
   );
 }
 

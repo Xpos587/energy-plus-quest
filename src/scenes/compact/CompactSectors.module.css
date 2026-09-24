@@ -1,0 +1,71 @@
+.art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sector {
+  --ink: #0067ae;
+  --floor: #36a6e5;
+  cursor: pointer;
+  outline: none;
+}
+.sector[aria-disabled="true"] { cursor: default; }
+.volume { stroke: none; }
+.surface {
+  fill: var(--floor);
+  fill-opacity: 0.34;
+  stroke: var(--ink);
+  stroke-opacity: 0.95;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+}
+.edge {
+  fill: none;
+  stroke: var(--ink);
+  stroke-opacity: 0.78;
+  stroke-width: 1.25;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.near {
+  fill: none;
+  stroke: #fff;
+  stroke-opacity: 0.9;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+}
+.number rect {
+  fill: var(--ink);
+  stroke: #fff;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+.number text {
+  font: 700 28px var(--font-brand);
+  text-anchor: middle;
+  fill: #fff;
+}
+.number rect, .number text { scale: 1.35; }
+@media (max-width: 600px) {
+  .number rect, .number text { scale: 2.25; }
+}
+.sector[aria-pressed="true"],
+.sector:not([aria-disabled="true"]):hover,
+.sector:focus-visible {
+  --ink: #c34b00;
+  --floor: #ff8c32;
+}
+.sector[aria-pressed="true"] .surface,
+.sector:not([aria-disabled="true"]):hover .surface,
+.sector:focus-visible .surface { fill-opacity: 0.48; }
+.sector[aria-pressed="true"] .volume {
+  fill: #ff9c45;
+  fill-opacity: 0.18;
+}
+.sector:focus-visible .edge {
+  stroke-width: 2.5;
+  stroke-opacity: 1;
+}
