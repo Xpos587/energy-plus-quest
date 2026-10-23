@@ -66,12 +66,43 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Trigger Dokploy deploy
-        timeout-minutes: 2
+        timeout-minutes: 3
         env:
           DOKPLOY_API_KEY: ${{ secrets.DOKPLOY_API_KEY }}
+          IMAGE_METADATA: ${{ steps.meta.outputs.json }}
+          REVISION: ${{ github.sha }}
         run: |
-          curl -fsS --connect-timeout 15 --max-time 90 -X POST \
-            -H "x-api-key: $DOKPLOY_API_KEY" \
-            -H 'Content-Type: application/json' \
-            -d '{"applicationId":"pfnvsqxv0r5pqE-Pbr8qi"}' \
-            https://dokploy.hypcat.net/api/application.deploy
+          bun run - <<'JS'
+          const applicationId = "pfnvsqxv0r5pqE-Pbr8qi";
+          const metadata = JSON.parse(process.env.IMAGE_METADATA);
+          const candidates = metadata.tags?.filter(tag =>
+            /^ghcr\.io\/xpos587\/energy-plus-quest:sha-[0-9a-f]{7,40}$/.test(tag));
+          if (candidates?.length !== 1) throw new Error("Expected exactly one immutable revision image tag");
+          const image = candidates[0];
+          const revision = process.env.REVISION;
+          if (!/^[0-9a-f]{40}$/.test(revision) ||
+              !revision.startsWith(image.split(":sha-")[1]))
+            throw new Error("Image tag does not match this revision");
+          if (!process.env.DOKPLOY_API_KEY) throw new Error("Missing Dokploy API key");
+          async function api(route, body) {
+            const response = await fetch(`https://dokploy.hypcat.net/api/${route}`, {
+              method: body === undefined ? "GET" : "POST",
+              headers: { "x-api-key": process.env.DOKPLOY_API_KEY,
+                "Content-Type": "application/json" },
+              ...(body === undefined ? {} : { body: JSON.stringify(body) }),
+              signal: AbortSignal.timeout(30000),
+            });
+            if (!response.ok) throw new Error(`Dokploy ${route.split("?")[0]} returned HTTP ${response.status}`);
+            return response.json();
+          }
+          const deployments = await api(`deployment.all?applicationId=${applicationId}`);
+          if (!Array.isArray(deployments)) throw new Error("Unexpected deployment history response");
+          if (deployments.some(item => ["running", "queued", "pending"].includes(item.status)))
+            throw new Error("An application deployment is already active; no changes made");
+          await api("application.update", { applicationId, sourceType: "docker", dockerImage: image });
+          const application = await api(`application.one?applicationId=${applicationId}`);
+          if (application.sourceType !== "docker" || application.dockerImage !== image)
+            throw new Error("Dokploy image configuration did not match the requested revision");
+          await api("application.deploy", { applicationId, title: `Git revision ${revision}` });
+          console.log(`Deployment requested for ${image}`);
+          JS
