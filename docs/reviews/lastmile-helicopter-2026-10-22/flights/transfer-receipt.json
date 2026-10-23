@@ -1,0 +1,93 @@
+{
+  "method": "One builtin edit; source-coordinate target alignment, generated aircraft silhouette only. Deterministic local sky cleanup under obsolete silhouette, exact original variant cabin restored. Other sky retained; y>=390 including slung cargo/rigging and destination unchanged.",
+  "assets": [
+    {
+      "asset": "F0098",
+      "output": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0098-flight-corrected.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "nativeDimensions": [
+        2106,
+        747
+      ],
+      "roiBox": [
+        40,
+        0,
+        1140,
+        390
+      ],
+      "changedPixels": 119196,
+      "changedOutsideAircraftROI": 0,
+      "belowROIIncludingAllSlungRiggingPipesAndDestinationPixelIdentical": true,
+      "originalCabinAndGiftPixelIdentical": true
+    },
+    {
+      "asset": "F0099",
+      "output": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0099-flight-corrected.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "nativeDimensions": [
+        2106,
+        747
+      ],
+      "roiBox": [
+        40,
+        0,
+        1140,
+        390
+      ],
+      "changedPixels": 118824,
+      "changedOutsideAircraftROI": 0,
+      "belowROIIncludingAllSlungRiggingPipesAndDestinationPixelIdentical": true,
+      "originalCabinAndGiftPixelIdentical": true
+    },
+    {
+      "asset": "F0100",
+      "output": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0100-flight-corrected.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "nativeDimensions": [
+        2106,
+        747
+      ],
+      "roiBox": [
+        40,
+        0,
+        1140,
+        390
+      ],
+      "changedPixels": 118941,
+      "changedOutsideAircraftROI": 0,
+      "belowROIIncludingAllSlungRiggingPipesAndDestinationPixelIdentical": true,
+      "originalCabinAndGiftPixelIdentical": true
+    },
+    {
+      "asset": "F0101",
+      "output": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0101-flight-corrected.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "nativeDimensions": [
+        2106,
+        747
+      ],
+      "roiBox": [
+        40,
+        0,
+        1140,
+        390
+      ],
+      "changedPixels": 119176,
+      "changedOutsideAircraftROI": 0,
+      "belowROIIncludingAllSlungRiggingPipesAndDestinationPixelIdentical": true,
+      "originalCabinAndGiftPixelIdentical": true
+    }
+  ]
+}

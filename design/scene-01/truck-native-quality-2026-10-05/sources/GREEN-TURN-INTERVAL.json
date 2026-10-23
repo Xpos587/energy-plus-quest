@@ -1,0 +1,154 @@
+{
+  "source_blend": "/home/michael/Github/energy-plus-quest/design/scene-01/controlled-motion-2026-10-04/v2b/controlled-straight-start.blend",
+  "fps": 24,
+  "tractor_corner_frames_inclusive": [
+    2,
+    57
+  ],
+  "straight_confirmation_frames": [
+    1,
+    58
+  ],
+  "samples": {
+    "entry": {
+      "frame": 2,
+      "truck-3-tractor": {
+        "xyz": [
+          29.799999237060547,
+          20.411518096923828,
+          0.0
+        ],
+        "rotation_z_radians_unwrapped": 1.5707963705062866,
+        "rotation_z_degrees_mod360": 90.00000250447816
+      },
+      "truck-3-trailer": {
+        "xyz": [
+          29.799999237060547,
+          17.83091926574707,
+          0.0
+        ],
+        "rotation_z_radians_unwrapped": 39.268638610839844,
+        "rotation_z_degrees_mod360": 89.92725962559098
+      }
+    },
+    "apex": {
+      "frame": 30,
+      "truck-3-tractor": {
+        "xyz": [
+          26.800458908081055,
+          27.64097785949707,
+          0.0
+        ],
+        "rotation_z_radians_unwrapped": 2.366130828857422,
+        "rotation_z_degrees_mod360": 135.56931026932156
+      },
+      "truck-3-trailer": {
+        "xyz": [
+          28.643260955810547,
+          25.834440231323242,
+          0.0
+        ],
+        "rotation_z_radians_unwrapped": 39.44157791137695,
+        "rotation_z_degrees_mod360": 99.83595165831184
+      }
+    },
+    "exit": {
+      "frame": 57,
+      "truck-3-tractor": {
+        "xyz": [
+          19.799999237060547,
+          30.5,
+          0.0
+        ],
+        "rotation_z_radians_unwrapped": 3.1415927410125732,
+        "rotation_z_degrees_mod360": 180.00000500895632
+      },
+      "truck-3-trailer": {
+        "xyz": [
+          22.380599975585938,
+          30.5,
+          0.0
+        ],
+        "rotation_z_radians_unwrapped": 40.048709869384766,
+        "rotation_z_degrees_mod360": 134.62205045967357
+      }
+    }
+  },
+  "bounds_world_xyz": {
+    "min": [
+      18.010408401489258,
+      10.03184986114502,
+      0.011219971813261509
+    ],
+    "max": [
+      31.223939895629883,
+      31.87364387512207,
+      3.6829652786254883
+    ]
+  },
+  "world_xy_target_rectangle": {
+    "xmin": 18.010408401489258,
+    "xmax": 31.223939895629883,
+    "ymin": 10.03184986114502,
+    "ymax": 31.87364387512207
+  },
+  "world_xy_rectangle_with_1_unit_margin": {
+    "xmin": 17.010408401489258,
+    "xmax": 32.22393989562988,
+    "ymin": 9.03184986114502,
+    "ymax": 32.87364387512207
+  },
+  "existing_camera": "desktop",
+  "existing_camera_normalized_crop": {
+    "left": 0.7262009978294373,
+    "right": 0.8383339643478394,
+    "bottom": 0.5805639624595642,
+    "top": 0.8445805311203003
+  },
+  "render_resolution": [
+    1008,
+    700
+  ],
+  "notes": [
+    "Tractor is straight at frames 1-2, turns during 3-57, straight again at 57-99. Corner interval measured as last entry-heading frame to first exit-heading frame.",
+    "Trailer is independently baked and lags: it is not aligned with exit straight at frame 57. There is no fully articulated rig straight-to-straight 90-degree interval before next tractor corner starts at frame 100.",
+    "Bounds include every visible-render mesh directly parented to tractor or trailer, including cab accessories, wheels and crew; evaluated every integer frame 2-57. Camera crop is normalized projection of all 3D bounding corners under existing camera; bottom-origin coordinates.",
+    "No render, file save, or runtime modification performed."
+  ],
+  "suggested_presentation_interval_with_trailer_exit_settling": {
+    "frames_inclusive": [
+      2,
+      99
+    ],
+    "exit_sample": {
+      "truck-3-tractor": {
+        "xyz": [
+          7.737260818481445,
+          30.5,
+          0.0
+        ],
+        "rotation_z_degrees_mod360": 180.00000500895632
+      },
+      "truck-3-trailer": {
+        "xyz": [
+          10.31786060333252,
+          30.5,
+          0.0
+        ],
+        "rotation_z_degrees_mod360": 173.62013567688518
+      }
+    },
+    "world_xy_rectangle_with_1_unit_margin": {
+      "xmin": 4.9476704597473145,
+      "xmax": 32.22393989562988,
+      "ymin": 9.03184986114502,
+      "ymax": 32.87364387512207
+    },
+    "existing_camera_normalized_crop": {
+      "left": 0.6186489462852478,
+      "right": 0.8383339643478394,
+      "bottom": 0.5805639624595642,
+      "top": 0.854456901550293
+    }
+  }
+}

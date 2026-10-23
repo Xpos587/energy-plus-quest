@@ -1,0 +1,41 @@
+[
+  {
+    "frame": "0017",
+    "foreground_interior_pixels": 8249,
+    "criterion": "RGB all>230 and channel range<30; alpha minfilter5>=250; diagnostic, not artistic quality",
+    "transfer-three": {
+      "white_pixels": 3741,
+      "white_fraction": 0.4535095163050067
+    },
+    "transfer-coordinates": {
+      "white_pixels": 3740,
+      "white_fraction": 0.4533882894896351
+    }
+  },
+  {
+    "frame": "0036",
+    "foreground_interior_pixels": 7432,
+    "criterion": "RGB all>230 and channel range<30; alpha minfilter5>=250; diagnostic, not artistic quality",
+    "transfer-three": {
+      "white_pixels": 3538,
+      "white_fraction": 0.4760495156081808
+    },
+    "transfer-coordinates": {
+      "white_pixels": 3533,
+      "white_fraction": 0.4753767491926803
+    }
+  },
+  {
+    "frame": "0054",
+    "foreground_interior_pixels": 5829,
+    "criterion": "RGB all>230 and channel range<30; alpha minfilter5>=250; diagnostic, not artistic quality",
+    "transfer-three": {
+      "white_pixels": 2650,
+      "white_fraction": 0.45462343455138104
+    },
+    "transfer-coordinates": {
+      "white_pixels": 2933,
+      "white_fraction": 0.5031737862412078
+    }
+  }
+]

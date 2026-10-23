@@ -1,0 +1,75 @@
+# Local client materials and meeting recordings
+materials/private/
+*.mp3
+!materials/meeting/2026-07-30-zoom-audio.mp3
+*.mp4
+*.wav
+
+# Local environment and generated output
+.env
+.env.*
+!.env.example
+node_modules/
+build/
+release/
+test-results/
+playwright-report/
+.DS_Store
+
+# Production is built from source; generated bundles never enter Git.
+/dist/
+
+# Exact current media is restored from checksummed GitHub Release artifacts.
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.avif
+*.webm
+*.gif
+*.ico
+*.pdf
+*.woff
+*.woff2
+*.ttf
+*.otf
+*.blend
+*.glb
+*.gltf
+*.zip
+
+# Local agent/skill configuration (not part of the project)
+.agents/
+.claude/
+skills-lock.json
+# CocoIndex Code (ccc)
+/.cocoindex_code/
+.tmp-work/
+
+# Local review capture cache. Keep canonical text/receipts and explicitly
+# selected report dependencies in Git; raw screenshots/native crops stay local.
+/docs/reviews/**/*.png
+/docs/reviews/**/*.jpg
+/docs/reviews/**/*.jpeg
+/docs/reviews/**/*.webp
+/docs/reviews/**/*.avif
+/docs/reviews/**/*.pdf
+/docs/reviews/**/*.txt
+/docs/reviews/**/prepared/
+/docs/reviews/**/frozen/
+/docs/reviews/**/__pycache__/
+/design/**/__pycache__/
+/design/**/*.blend1
+**/__pycache__/
+*.pyc
+
+# Storage policy: generated frame sequences and local-only input archives.
+/design/**/frames/
+/design/**/*-frames/
+/docs/reviews/**/prepared/
+/docs/reviews/**/frozen/
+/materials/meeting/*.zip
+/output/
+
+# Local checkout of the third-party Ebsynth tool.
+/design/scene-01/ebsynth-turn-pilot-2026-10-05/tools/ebsynth/

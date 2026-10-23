@@ -1,0 +1,287 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "id": "rush",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 161.34375,
+      "y": -249.359375,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "id": "wait",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 205.34375,
+      "y": -249.359375,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "id": "petr",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 262.625,
+      "y": -310.671875,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "id": "remote",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 77.25,
+      "y": -208.859375,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 320,
+    "confirmed": "remote",
+    "outcomeShown": true
+  },
+  {
+    "width": 393,
+    "height": 650,
+    "id": "rush",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 208.1875,
+      "y": 105.203125,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 393,
+    "height": 650,
+    "id": "wait",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 252.1875,
+      "y": 28.203125,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 393,
+    "height": 650,
+    "id": "petr",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 327.5625,
+      "y": -47.109375,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 393,
+    "height": 650,
+    "id": "remote",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 99.890625,
+      "y": 154.9375,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 393,
+    "confirmed": "remote",
+    "outcomeShown": true
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "id": "rush",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 208.1875,
+      "y": 109.265625,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "id": "wait",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 252.1875,
+      "y": 109.265625,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "id": "petr",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 327.5625,
+      "y": 33.953125,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "id": "remote",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 99.890625,
+      "y": 159,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 393,
+    "confirmed": "remote",
+    "outcomeShown": true
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "id": "rush",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 482.203125,
+      "y": 290.140625,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "id": "wait",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 526.203125,
+      "y": 290.140625,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "id": "petr",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 707.375,
+      "y": 133.015625,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "id": "remote",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 232.328125,
+      "y": 393.921875,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 820,
+    "confirmed": "remote",
+    "outcomeShown": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "id": "rush",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 789.640625,
+      "y": 282.1875,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "id": "wait",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 833.640625,
+      "y": 282.1875,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "id": "petr",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 1161.65625,
+      "y": 166,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "id": "remote",
+    "cardVisible": true,
+    "markerHit": {
+      "x": 228.515625,
+      "y": 198.671875,
+      "width": 44,
+      "height": 44
+    },
+    "canonicalText": true
+  },
+  {
+    "width": 1440,
+    "confirmed": "remote",
+    "outcomeShown": true
+  }
+]

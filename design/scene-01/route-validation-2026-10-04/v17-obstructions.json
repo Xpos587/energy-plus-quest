@@ -1,0 +1,125 @@
+[
+  {
+    "obstacle": "A: upper block north",
+    "recorded_nonroad_box": [
+      830,
+      0,
+      1048,
+      112
+    ],
+    "corridor_overlap_bounds": [
+      843.4192531771786,
+      90.98811967850469,
+      1048.0,
+      112.0
+    ],
+    "corridor_overlap_area_px2": 1128.69
+  },
+  {
+    "obstacle": "B1: left tower roof",
+    "recorded_nonroad_box": [
+      815,
+      157,
+      873,
+      279
+    ],
+    "corridor_overlap_bounds": [
+      815.0,
+      157.0,
+      873.0,
+      235.24704743997384
+    ],
+    "corridor_overlap_area_px2": 1986.26
+  },
+  {
+    "obstacle": "B2: right tower roof",
+    "recorded_nonroad_box": [
+      952,
+      157,
+      1032,
+      309
+    ],
+    "corridor_overlap_bounds": [
+      952.0,
+      157.0,
+      1032.0,
+      190.89388927846372
+    ],
+    "corridor_overlap_area_px2": 1911.13
+  },
+  {
+    "obstacle": "B3: connector roof",
+    "recorded_nonroad_box": [
+      879,
+      175,
+      944,
+      224
+    ],
+    "corridor_overlap_bounds": null,
+    "corridor_overlap_area_px2": 0.0
+  },
+  {
+    "obstacle": "C: upper west sidewalk",
+    "recorded_nonroad_box": [
+      792,
+      285,
+      805,
+      457
+    ],
+    "corridor_overlap_bounds": [
+      792.0,
+      285.0,
+      802.8749906749167,
+      457.0
+    ],
+    "corridor_overlap_area_px2": 544.14
+  },
+  {
+    "obstacle": "D: lower inner corner",
+    "recorded_nonroad_box": [
+      805,
+      583,
+      1029,
+      674
+    ],
+    "corridor_overlap_bounds": [
+      805.0,
+      647.9392610749569,
+      842.0748631807028,
+      674.0
+    ],
+    "corridor_overlap_area_px2": 399.41
+  },
+  {
+    "obstacle": "E: narrow passage east curb",
+    "recorded_nonroad_box": [
+      783,
+      612,
+      800,
+      656
+    ],
+    "corridor_overlap_bounds": [
+      783.0,
+      612.0,
+      800.0,
+      656.0
+    ],
+    "corridor_overlap_area_px2": 608.19
+  },
+  {
+    "obstacle": "F: lower south building",
+    "recorded_nonroad_box": [
+      814,
+      778,
+      1013,
+      990
+    ],
+    "corridor_overlap_bounds": [
+      829.3723655899892,
+      778.0,
+      860.8472120918482,
+      779.0118803214963
+    ],
+    "corridor_overlap_area_px2": 20.61
+  }
+]

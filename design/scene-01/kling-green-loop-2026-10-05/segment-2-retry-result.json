@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T12:25:34.473133Z",
+    "display_name": "Kling v3.0",
+    "id": "e1f10e7e-5431-4f20-9e34-33b7e0254185",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "ead9a81a-334c-4d83-90ba-0c37dd2077e6",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/ead9a81a-334c-4d83-90ba-0c37dd2077e6.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "e9800be2-df0e-4b27-a4dc-0b31941210a1",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/e9800be2-df0e-4b27-a4dc-0b31941210a1.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera and immutable bright illustrated city. Animate exactly one green tractor coupled to one rigid white semitrailer. Follow this specific route, using percentages of the INNER CITY IMAGE (excluding white sidebars): cab starts around x57%, y18%, heading LEFT. Travel a short distance LEFT only until x53%, y18%. At THAT intersection, immediately turn ninety degrees DOWN into the narrow vertical road at x53%. This road lies BETWEEN the tall beige apartment tower in the center (on truck's RIGHT while heading down) and the orange-and-blue buildings further right (on truck's LEFT while heading down). Remain EAST/RIGHT of the central tall beige apartment building at all times. Never travel to the western road beside the glass warehouse; that road at x28% is forbidden. During seconds0-2 approach and complete this single corner, then seconds2-5 drive straight DOWN at x53% to y45% exactly matching final image. The cab steers first, trailer rear axles follow an inner curve, fifth-wheel coupling stays connected. Exactly ONE cab ONE trailer throughout, no copy, disappearance, dissolving, morphing, reversing, second corner, roof overlap or teleport. Two drivers preserved; fixed truck size. End at final image pose. Background, camera, borders and lighting perfectly stationary. Soft colored edges and soft shadows, same clean detailed illustration. Five-second continuous shot.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_122534_e1f10e7e-5431-4f20-9e34-33b7e0254185.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_122534_e1f10e7e-5431-4f20-9e34-33b7e0254185_thumbnail.webp"
+  }
+]

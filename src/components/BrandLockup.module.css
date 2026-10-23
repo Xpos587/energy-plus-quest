@@ -1,0 +1,26 @@
+.lockup {
+  display: block;
+  flex: 0 1 340px;
+  width: 340px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.large {
+  flex-basis: 484px;
+  width: 484px;
+}
+
+@media (max-width: 700px) {
+  .lockup { flex-basis: 290px; width: 290px; }
+  .large { flex-basis: 340px; width: 340px; }
+}
+
+@media (max-width: 360px) {
+  .lockup { flex-basis: 260px; width: 260px; }
+  .large { flex-basis: 290px; width: 290px; }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .lockup { flex-basis: 280px; width: 280px; }
+}

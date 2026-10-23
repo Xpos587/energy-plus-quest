@@ -1,0 +1,34 @@
+[
+  {
+    "created_at": "2026-09-23T12:18:58.498088Z",
+    "display_name": "Nano Banana Pro",
+    "id": "65fef671-b85a-4d2c-9862-678d96abab02",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_121858_65fef671-b85a-4d2c-9862-678d96abab02_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "da35fb84-ee17-4245-86b9-27e736b6cf82",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/da35fb84-ee17-4245-86b9-27e736b6cf82_resize.jpg"
+        },
+        {
+          "id": "0df4c8ae-2617-4c0b-81e9-df76caf62411",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/0df4c8ae-2617-4c0b-81e9-df76caf62411_resize.jpg"
+        }
+      ],
+      "prompt": "Repaint IMAGE 1 (the logistics scene) into the exact visual family of IMAGE 2 (the city/characters art reference). IMAGE 1 supplies the scene composition, object count, placement and scenario; IMAGE 2 supplies the STYLE ONLY. Do not insert city buildings, roof truck numbers or large foreground portrait characters from the style reference into this scene.\n\nMake a substantial art-style correction, not a slight color filter. Match the reference's warm welcoming contemporary 2D illustrated game art: creamy whites and gentle apricot architecture, soft natural green/ochre vegetation, light airy neutral surfaces, believable friendly people, carefully observed vehicle/building detail and soft restrained volume shading. Absolutely no 3D render, no photo, no isometric toy/clay look, no watercolor paper grain, no sepia wash. Avoid the cold monochromatic slate-blue comic-book style of IMAGE 1.\n\nThree mandatory designer corrections apply throughout:\nA. All asphalt, paved yards, concrete quay surfaces and indoor concrete floors are LIGHT NEUTRAL GRAY (#d9dad8), not blue, lavender or dark gray. Soft neutral-gray shadows, pale cream sidewalks. Water remains water-colored; do not recolor the river gray.\nB. REMOVE heavy black and navy ink outlines. Most forms meet through local-color edges; use only thin soft medium-gray low-contrast contours where necessary. No black/dark-blue tracing around every object. Retain facial features, readable machinery joints and purposeful detail, do not blur or wash out the picture.\nC. All architectural windowpanes and vehicle windshield/side-window glass must be PALE LIGHT SKY BLUE (#c9e5ef) with subtle white reflections, not dark or saturated blue. Blue painted metal, uniforms and awnings can remain blue, but glass must clearly be a different, much lighter material.\n\nUse bright but controlled warm colors like IMAGE 2. Keep the orange gift legible and the scene professionally detailed. A crisp finished 2D illustration, not a simplified pictogram diagram. Preserve composition and frame of IMAGE 1 exactly. Landscape16:9. No added UI, captions, logos or watermark.\n\nSCENE-SPECIFIC NON-NEGOTIABLES:\nPreserve exactly two dock cranes, the warehouse at left, PRU office, large near crane and smaller distant crane, river barge with pipes ALREADY resting on its deck. Exactly two people: Ivan in office, Petr at distant crane; near crane cabin empty. Near hook hangs idle in air, not connected to pipes. Exactly ONE orange camera gift on the cart on quay. Keep autonomous towing tractor without steering wheel or driver seat. Office and warehouse facades become warm cream/light apricot with cobalt accents, not blue-gray all over. Crane painted metal may be clean moderate blue with gray structural joints and much softer edges. Barge hull may be medium blue/gray. River pale natural blue, autumn shore warm sage/ochre. Do not move the gift aboard or add trucks/portraits.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_121858_65fef671-b85a-4d2c-9862-678d96abab02.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "status": "local comparison only; no production promotion",
+  "crop_source_full_dimensions": [
+    1440,
+    1000
+  ],
+  "source_crop_xyxy": [
+    875,
+    605,
+    1125,
+    805
+  ],
+  "output_crop_dimensions": [
+    250,
+    200
+  ],
+  "protected_context_policy": "Retain exact decoded v3 source context outside union of old evaluated keeper silhouette and new card bounds, with 2px margin. This is proof-only compositing, not editing the native sprite.",
+  "local_comparison_mask_xyxy": [
+    120,
+    33,
+    177,
+    158
+  ],
+  "outside_mask_pixels_checked": 42692,
+  "outside_mask_changed_pixels": 0,
+  "outside_mask_max_channel_difference": 0,
+  "raw_rerender_outside_changed_pixels": 37104,
+  "raw_rerender_note": "Cycles crop denoising/sample changes alter unrelated pixels. Raw regional render retained and disclosed; context-protected proof copies exact v3 pixels outside the keeper region.",
+  "native_sprite_edited": false,
+  "native_sprite_alpha_cutoff_shader": 0.7529411764705882,
+  "card_fits_original_horizontal_envelope": true,
+  "card_matches_original_projected_top_and_bottom": true
+}

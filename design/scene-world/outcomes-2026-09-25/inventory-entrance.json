@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:06:14.84901Z",
+    "display_name": "Nano Banana Pro",
+    "id": "40a24abf-8bc7-458a-9ae5-c45c3534bbe6",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090614_40a24abf-8bc7-458a-9ae5-c45c3534bbe6_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "f6663c75-80cf-41eb-886e-c79060391719",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/f6663c75-80cf-41eb-886e-c79060391719_resize.jpg"
+        }
+      ],
+      "prompt": "Create ONE polished narrative result illustration for a Russian logistics game, wide 3:2, full bleed, no panel border. Attached picture defines the EXACT existing game visual style, materials and environment. Refined hand painted 2D editorial illustration, detailed but uncluttered, warm cream architecture, neutral light gray ground, pale light blue glass, thin soft gray outlines NO black outlines, soft dimensional shading, navy blue and vivid orange work uniforms and blue machinery. NOT 3D render, NOT flat vector infographic. Show the specified consequence as the dominant readable subject, with medium close framing readable on a small phone. Human and machine proportions realistic, no giant packages or people relative to machinery. No text, no captions, no speech bubbles, no numbers, no arrows, no UI, no watermarks. Gift is a modest closed cardboard shipping parcel; it must not display a particular sock or camera. Composition depicts a single coherent physical scene, not collage. Warehouse picking delay: in foreground a weary worker in orange/navy PPE carrying a modest parcel on a small cart from the receiving entrance. Tall shelving creates a long aisle and a visible detour. Far in background at the opposite end is dispatch loading dock with assembled shipment, clearly far away. The gift was stored by the wrong entrance. Keep clear aisle and readable worker expression.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090614_40a24abf-8bc7-458a-9ae5-c45c3534bbe6.png",
+    "status": "completed"
+  }
+]

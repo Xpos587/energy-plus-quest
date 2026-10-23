@@ -1,0 +1,234 @@
+{
+  "scenes": {
+    "compact": {
+      "desktop": {
+        "image": "compact-art/compact-environment-v54-wide.png",
+        "width": 1774,
+        "height": 887,
+        "hotspots": [
+          {
+            "id": "place-1",
+            "x": 0.13557692307692307,
+            "y": 0.23076923076923078
+          },
+          {
+            "id": "place-2",
+            "x": 0.3173076923076923,
+            "y": 0.31826923076923075
+          },
+          {
+            "id": "place-3",
+            "x": 0.48028846153846155,
+            "y": 0.2144230769230769
+          },
+          {
+            "id": "place-4",
+            "x": 0.7125,
+            "y": 0.39326923076923076
+          }
+        ]
+      },
+      "mobile": {
+        "image": "compact-art/compact-environment-v53-portrait.png",
+        "width": 1774,
+        "height": 887,
+        "hotspots": [
+          {
+            "id": "place-1",
+            "x": 0.13557692307692307,
+            "y": 0.23076923076923078
+          },
+          {
+            "id": "place-2",
+            "x": 0.3173076923076923,
+            "y": 0.31826923076923075
+          },
+          {
+            "id": "place-3",
+            "x": 0.48028846153846155,
+            "y": 0.2144230769230769
+          },
+          {
+            "id": "place-4",
+            "x": 0.7125,
+            "y": 0.39326923076923076
+          }
+        ]
+      }
+    },
+    "inventory": {
+      "desktop": {
+        "image": "scene-art/warehouse-corrections-2026-10-20/overview-receiving-parallel-labels-v1.png",
+        "width": 1546,
+        "height": 1017,
+        "hotspots": [
+          {
+            "id": "entrance",
+            "x": 0.17,
+            "y": 0.65
+          },
+          {
+            "id": "alphabet",
+            "x": 0.54,
+            "y": 0.43
+          },
+          {
+            "id": "keeper",
+            "x": 0.82,
+            "y": 0.62
+          },
+          {
+            "id": "wms",
+            "x": 0.72,
+            "y": 0.82
+          }
+        ],
+        "rendering": "raster"
+      },
+      "mobile": {
+        "image": "scene-art/warehouse-corrections-2026-10-20/mobile/overview-mobile-native-v3.png",
+        "width": 1024,
+        "height": 1536,
+        "hotspots": [
+          {
+            "id": "entrance",
+            "x": 0.17,
+            "y": 0.65
+          },
+          {
+            "id": "alphabet",
+            "x": 0.54,
+            "y": 0.43
+          },
+          {
+            "id": "keeper",
+            "x": 0.82,
+            "y": 0.62
+          },
+          {
+            "id": "wms",
+            "x": 0.72,
+            "y": 0.82
+          }
+        ],
+        "rendering": "raster"
+      }
+    },
+    "crane": {
+      "desktop": {
+        "image": "scene-art/crane-v2.png",
+        "width": 1679,
+        "height": 937,
+        "hotspots": [
+          {
+            "id": "rush",
+            "x": 0.375,
+            "y": 0.58
+          },
+          {
+            "id": "wait",
+            "x": 0.595,
+            "y": 0.515
+          },
+          {
+            "id": "petr",
+            "x": 0.815,
+            "y": 0.25
+          },
+          {
+            "id": "remote",
+            "x": 0.13,
+            "y": 0.585
+          }
+        ],
+        "rendering": "raster"
+      },
+      "mobile": {
+        "image": "scene-art/crane-v2.png",
+        "width": 1679,
+        "height": 937,
+        "hotspots": [
+          {
+            "id": "rush",
+            "x": 0.375,
+            "y": 0.58
+          },
+          {
+            "id": "wait",
+            "x": 0.595,
+            "y": 0.515
+          },
+          {
+            "id": "petr",
+            "x": 0.815,
+            "y": 0.25
+          },
+          {
+            "id": "remote",
+            "x": 0.13,
+            "y": 0.585
+          }
+        ],
+        "rendering": "raster"
+      }
+    },
+    "lastmile": {
+      "desktop": {
+        "image": "scene-art/lastmile-fifth-scene-v9.png",
+        "width": 1672,
+        "height": 941,
+        "hotspots": [
+          {
+            "id": "helicopter",
+            "x": 0.33,
+            "y": 0.12
+          },
+          {
+            "id": "rover",
+            "x": 0.46,
+            "y": 0.7
+          },
+          {
+            "id": "robot",
+            "x": 0.55,
+            "y": 0.8
+          },
+          {
+            "id": "pipe-carrier",
+            "x": 0.24,
+            "y": 0.72
+          }
+        ],
+        "rendering": "raster"
+      },
+      "mobile": {
+        "image": "scene-art/lastmile-fifth-scene-v9.png",
+        "width": 1672,
+        "height": 941,
+        "hotspots": [
+          {
+            "id": "helicopter",
+            "x": 0.33,
+            "y": 0.21
+          },
+          {
+            "id": "rover",
+            "x": 0.46,
+            "y": 0.7
+          },
+          {
+            "id": "robot",
+            "x": 0.55,
+            "y": 0.8
+          },
+          {
+            "id": "pipe-carrier",
+            "x": 0.24,
+            "y": 0.72
+          }
+        ],
+        "rendering": "raster"
+      }
+    }
+  }
+}

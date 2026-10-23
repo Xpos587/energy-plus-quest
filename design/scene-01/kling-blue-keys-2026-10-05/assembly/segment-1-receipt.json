@@ -1,0 +1,14 @@
+{
+  "segment": 1,
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-blue-keys-2026-10-05/assembly/segment-1.mp4",
+  "fps": 24.0,
+  "frames": 121,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "duration_seconds": 5.041666666666667,
+  "gate": "motion_pass",
+  "driver": "Uncertain at native scale; no all-frame head-count proof or empty-seat certification.",
+  "motion_evidence": "21 quarter-second source samples reviewed, plus native3.5s corner; single cab/trailer follows intended road. No sampled hard failure."
+}

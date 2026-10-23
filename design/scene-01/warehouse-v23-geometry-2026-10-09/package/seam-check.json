@@ -1,0 +1,13 @@
+{
+  "turn-vehicles": {
+    "boundary_mae_255": 3.738365192403798e-05,
+    "pixels_any_channel_over8": 7,
+    "max_channel_difference": 17
+  },
+  "turn-shadow": {
+    "boundary_mae_255": 5.3781702898550724e-05,
+    "pixels_any_channel_over8": 21,
+    "max_channel_difference": 22
+  },
+  "tracking_boundary_error": 5.960464477539063e-08
+}

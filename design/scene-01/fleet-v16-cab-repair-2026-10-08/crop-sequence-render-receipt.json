@@ -1,0 +1,30 @@
+[
+  {
+    "script": "crop_render_map.py",
+    "start": 73,
+    "end": 120,
+    "exit": 0,
+    "seconds": 186.59433832099603
+  },
+  {
+    "script": "crop_render_shadow.py",
+    "start": 73,
+    "end": 120,
+    "exit": 0,
+    "seconds": 18.157404962999863
+  },
+  {
+    "script": "crop_render_map.py",
+    "start": 121,
+    "end": 168,
+    "exit": 0,
+    "seconds": 175.46318527100084
+  },
+  {
+    "script": "crop_render_shadow.py",
+    "start": 121,
+    "end": 168,
+    "exit": 0,
+    "seconds": 17.588491757000156
+  }
+]

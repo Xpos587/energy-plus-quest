@@ -1,0 +1,430 @@
+{
+  "status": "assembled shape candidate, visual gate pending; approximate print-kit placement",
+  "source": "Paolo Scania R730 Printables 1396992 CC BY 4.0",
+  "materials": {
+    "Moderate sage green paint": [
+      0.27000001072883606,
+      0.47999998927116394,
+      0.30000001192092896,
+      1.0
+    ],
+    "Medium slate grille": [
+      0.20999999344348907,
+      0.28999999165534973,
+      0.30000001192092896,
+      1.0
+    ],
+    "Warm soft tire": [
+      0.18000000715255737,
+      0.20999999344348907,
+      0.20999999344348907,
+      1.0
+    ],
+    "Warm white trim": [
+      0.8399999737739563,
+      0.8500000238418579,
+      0.7699999809265137,
+      1.0
+    ],
+    "Seat textile muted blue": [
+      0.3199999928474426,
+      0.4000000059604645,
+      0.4300000071525574,
+      1.0
+    ]
+  },
+  "engine": "Cycles",
+  "samples": 24,
+  "camera_records": [
+    {
+      "camera": "shape-gate-front-three-quarter",
+      "location_mm": [
+        -260,
+        -340,
+        235
+      ],
+      "target_mm": [
+        0,
+        37,
+        87
+      ],
+      "ortho_scale_mm": 350,
+      "resolution": [
+        1400,
+        1050
+      ]
+    },
+    {
+      "camera": "orthographic-front",
+      "location_mm": [
+        0,
+        -400,
+        94
+      ],
+      "target_mm": [
+        0,
+        0,
+        94
+      ],
+      "ortho_scale_mm": 205,
+      "resolution": [
+        900,
+        900
+      ]
+    },
+    {
+      "camera": "orthographic-side",
+      "location_mm": [
+        -500,
+        72,
+        94
+      ],
+      "target_mm": [
+        0,
+        72,
+        94
+      ],
+      "ortho_scale_mm": 310,
+      "resolution": [
+        1200,
+        800
+      ]
+    },
+    {
+      "camera": "map-heading-0",
+      "location_mm": [
+        -280,
+        -330,
+        370
+      ],
+      "target_mm": [
+        0,
+        65,
+        65
+      ],
+      "ortho_scale_mm": 390,
+      "resolution": [
+        640,
+        640
+      ]
+    },
+    {
+      "camera": "map-heading-120",
+      "location_mm": [
+        370,
+        220,
+        370
+      ],
+      "target_mm": [
+        0,
+        65,
+        65
+      ],
+      "ortho_scale_mm": 390,
+      "resolution": [
+        640,
+        640
+      ]
+    },
+    {
+      "camera": "map-heading-240",
+      "location_mm": [
+        -230,
+        390,
+        370
+      ],
+      "target_mm": [
+        0,
+        65,
+        65
+      ],
+      "ortho_scale_mm": 390,
+      "resolution": [
+        640,
+        640
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "part": "r730-18-x2.stl",
+      "name": "SCANIA curved cab with embossed door panels",
+      "source_map": "(x-55, 50-z, y)",
+      "offset_mm": [
+        0,
+        0,
+        53
+      ]
+    },
+    {
+      "part": "r730-8.stl",
+      "name": "SCANIA lower cab curved wheel arches and steps",
+      "source_map": "(x-55, 50-z, y)",
+      "offset_mm": [
+        1.8,
+        -23,
+        0
+      ]
+    },
+    {
+      "part": "r730-46.stl",
+      "name": "SCANIA integrated curved high roof",
+      "source_map": "(x-55, 50-z, y)",
+      "offset_mm": [
+        0.7,
+        0,
+        53
+      ]
+    },
+    {
+      "part": "r730-31.stl",
+      "name": "SCANIA open windshield and sidewindow frame",
+      "source_map": "(x-55, 50-z, y)",
+      "offset_mm": [
+        1.65,
+        -55,
+        101
+      ]
+    },
+    {
+      "part": "r730-10.stl",
+      "name": "SCANIA sculpted upper front grille",
+      "source_map": "(x-55, 50-z, y)",
+      "offset_mm": [
+        10.3,
+        -100,
+        53
+      ]
+    },
+    {
+      "part": "r730-11.stl",
+      "name": "SCANIA lower fascia grille",
+      "source_map": "(x-55, 50-z, y)",
+      "offset_mm": [
+        21,
+        -109,
+        12
+      ]
+    },
+    {
+      "part": "r730-39.stl",
+      "name": "Interior detailed seat -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-39.stl",
+      "name": "Interior detailed seat 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-33.stl",
+      "name": "Detailed mirror -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-47.stl",
+      "name": "Detailed mirror 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-2-x2.stl",
+      "name": "Detailed tread tire 8 -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-18-x2.stl",
+      "name": "Embossed wheel rim 8 -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-2-x2.stl",
+      "name": "Detailed tread tire 8 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-18-x2.stl",
+      "name": "Embossed wheel rim 8 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-38.stl",
+      "name": "Detailed tread tire 130 -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-20-x4.stl",
+      "name": "Embossed wheel rim 130 -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-38.stl",
+      "name": "Detailed tread tire 130 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-20-x4.stl",
+      "name": "Embossed wheel rim 130 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-38.stl",
+      "name": "Detailed tread tire 182 -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-20-x4.stl",
+      "name": "Embossed wheel rim 182 -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-38.stl",
+      "name": "Detailed tread tire 182 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-20-x4.stl",
+      "name": "Embossed wheel rim 182 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-12.stl",
+      "name": "Detailed tandem rear mudguard -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-40.stl",
+      "name": "Detailed tandem rear mudguard 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-64.stl",
+      "name": "Native kit chassis frame rail -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-64.stl",
+      "name": "Native kit chassis frame rail 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-14.stl",
+      "name": "Curved fuel tank -1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "part": "r730-14.stl",
+      "name": "Curved fuel tank 1",
+      "source_map": "original",
+      "offset_mm": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  color: #315f80;
+  font-size: clamp(12px, 1.15vw, 18px);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.indicator svg { flex: none; width: 1.25em; height: 1.25em; }

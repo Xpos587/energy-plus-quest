@@ -1,0 +1,208 @@
+[
+  {
+    "asset": "PalletTruck",
+    "root": "CC0 PalletTruck",
+    "source": "https://3dmodelscc0.itch.io/free-cc0-industrial-3d-models",
+    "author": "3dmodelscc0",
+    "license": "CC0",
+    "files": [
+      {
+        "path": "design/scene-world/assets/industrial-pack/PalletTruck/PalletTruck.fbx",
+        "sha256": "8bae7607335be03e253a639265dfb619630f81e4db2b1ebc09aa82cbe8fea272"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/PalletTruck/PalletTruck_Base_Color.png",
+        "sha256": "3ed98661696a210a540f8b2b27dac7f2efea908412962917ebc24fac75221e78"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/PalletTruck/PalletTruck_Metallic.png",
+        "sha256": "bec67cee8f2137e287331d39672d7682d1c7c01f03a68978e985002bbc9e99a4"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/PalletTruck/PalletTruck_Roughness.png",
+        "sha256": "87a1d3399a1cd06c76ef7207315fd56cda95a71d7bf07cce7ada5dc1e1a39ea0"
+      }
+    ],
+    "meshes": [
+      {
+        "sourceObject": "Base",
+        "object": "CC0 PalletTruck Base",
+        "vertices": 1273,
+        "polygons": 1092,
+        "uvLayers": 1,
+        "passIndex": 4266
+      },
+      {
+        "sourceObject": "Handle",
+        "object": "CC0 PalletTruck Handle",
+        "vertices": 364,
+        "polygons": 348,
+        "uvLayers": 1,
+        "passIndex": 4267
+      },
+      {
+        "sourceObject": "Lever",
+        "object": "CC0 PalletTruck Lever",
+        "vertices": 24,
+        "polygons": 21,
+        "uvLayers": 1,
+        "passIndex": 4268
+      },
+      {
+        "sourceObject": "Wheel_Left_1",
+        "object": "CC0 PalletTruck Wheel_Left_1",
+        "vertices": 22,
+        "polygons": 30,
+        "uvLayers": 1,
+        "passIndex": 4269
+      },
+      {
+        "sourceObject": "Wheel_Left_2",
+        "object": "CC0 PalletTruck Wheel_Left_2",
+        "vertices": 22,
+        "polygons": 30,
+        "uvLayers": 1,
+        "passIndex": 4270
+      },
+      {
+        "sourceObject": "Wheel_Right_1",
+        "object": "CC0 PalletTruck Wheel_Right_1",
+        "vertices": 22,
+        "polygons": 30,
+        "uvLayers": 1,
+        "passIndex": 4271
+      },
+      {
+        "sourceObject": "Wheel_Right_1_2",
+        "object": "CC0 PalletTruck Wheel_Right_1_2",
+        "vertices": 22,
+        "polygons": 30,
+        "uvLayers": 1,
+        "passIndex": 4272
+      },
+      {
+        "sourceObject": "Wheels_2",
+        "object": "CC0 PalletTruck Wheels_2",
+        "vertices": 664,
+        "polygons": 682,
+        "uvLayers": 1,
+        "passIndex": 4274
+      }
+    ],
+    "scale": 1.1,
+    "rotationZ": 1.5707963267948966,
+    "bounds": [
+      [
+        -20.089977264404297,
+        19.927541732788086,
+        0.4049999713897705
+      ],
+      [
+        -17.910022735595703,
+        20.772459030151367,
+        1.920060157775879
+      ]
+    ],
+    "normalMap": "omitted; no DirectX normal interpretation required"
+  },
+  {
+    "asset": "CableDrum",
+    "root": "CC0 CableDrum",
+    "source": "https://3dmodelscc0.itch.io/free-cc0-industrial-3d-models",
+    "author": "3dmodelscc0",
+    "license": "CC0",
+    "files": [
+      {
+        "path": "design/scene-world/assets/industrial-pack/CableDrum/CableDrum.fbx",
+        "sha256": "28966de54bf77db4ba3e42dfc8b8891d12f1b157547a913f7f443f1ea98c6f25"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/CableDrum/CableDrum_Base_Color.png",
+        "sha256": "65c464766ba0bad6dc4a5b47ef44fb0137211c6ba060eea87cd81b4438765fa6"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/CableDrum/CableDrum_Metallic.png",
+        "sha256": "4f3e62a797bd5bdb9d72bd73b1d679bbe5ea94f77259d2bdac5b147ab555331c"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/CableDrum/CableDrum_Roughness.png",
+        "sha256": "ac8c94cf9256134296a4a3d9faef0fcf8c10e41288487829ad5983fe568c8dbd"
+      }
+    ],
+    "meshes": [
+      {
+        "sourceObject": "Cylinder_7",
+        "object": "CC0 CableDrum Cylinder_7",
+        "vertices": 1107,
+        "polygons": 1984,
+        "uvLayers": 1,
+        "passIndex": 4275
+      }
+    ],
+    "scale": 1.0,
+    "rotationZ": 0,
+    "bounds": [
+      [
+        -10.85420036315918,
+        20.120038986206055,
+        0.4049999415874481
+      ],
+      [
+        -9.845800399780273,
+        20.879959106445312,
+        1.413400650024414
+      ]
+    ],
+    "normalMap": "omitted; no DirectX normal interpretation required"
+  },
+  {
+    "asset": "ElectricalBox",
+    "root": "CC0 ElectricalBox",
+    "source": "https://3dmodelscc0.itch.io/free-cc0-industrial-3d-models",
+    "author": "3dmodelscc0",
+    "license": "CC0",
+    "files": [
+      {
+        "path": "design/scene-world/assets/industrial-pack/ElectricalBox/ElectricalBox.fbx",
+        "sha256": "23992044238a4f441c046bf398da2c64501e5f88b472c7907139c9a74b6d81d9"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/ElectricalBox/ElectricalBox_Base_Color.png",
+        "sha256": "76388615f3671e17b36eeecffee3e8a28a810b70d97b9ccfe0e23ebef5b403a6"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/ElectricalBox/ElectricalBox_Metallic.png",
+        "sha256": "adc73e9e91b4b63d734c4c024d8bd2da4b9f75cb7eb111fd119b47022e1e7c11"
+      },
+      {
+        "path": "design/scene-world/assets/industrial-pack/ElectricalBox/ElectricalBox_Roughness.png",
+        "sha256": "dcafaf01d6a8d490581711e68000a73b4e0e2b75015ddebe459145762c46a587"
+      }
+    ],
+    "meshes": [
+      {
+        "sourceObject": "Polygon_Reduction",
+        "object": "CC0 ElectricalBox Polygon_Reduction",
+        "vertices": 1094,
+        "polygons": 2140,
+        "uvLayers": 1,
+        "passIndex": 4276
+      }
+    ],
+    "scale": 1.3,
+    "rotationZ": 3.141592653589793,
+    "bounds": [
+      [
+        -8.291792869567871,
+        20.900970458984375,
+        1.1499998569488525
+      ],
+      [
+        -7.708207607269287,
+        21.299028396606445,
+        2.201432466506958
+      ]
+    ],
+    "normalMap": "omitted; no DirectX normal interpretation required"
+  }
+]

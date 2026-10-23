@@ -1,0 +1,6 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-corners-2026-10-05/yellow-2-3.mp4",
+  "model": "gemini-3-flash-preview",
+  "cleanup": true,
+  "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+}

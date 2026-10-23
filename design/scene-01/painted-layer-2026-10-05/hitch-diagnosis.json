@@ -1,0 +1,23 @@
+{
+  "reviewed_actual_composite_seconds": [5.5, 7.0],
+  "reviewed_source_frames": [133, 169],
+  "confirmed": {
+    "animation_root_pose_drift": false,
+    "archived_cab_upper_body_rear_x_old": -0.444023,
+    "frozen_native_cab_upper_body_rear_x_old": -0.85,
+    "rear_body_boundary_shift_forward_m": 0.405977,
+    "fifth_wheel_center_x": -2.3,
+    "exposed_upper_cab_to_fifth_wheel_span_old_m": 1.855977,
+    "native_ladder_frame_z_bounds": [0.53, 0.77],
+    "trailer_body_lower_z": 1.01,
+    "fuel_tanks_hidden_during_replacement": true,
+    "yellow_old_cab_top_z_before": 2.52,
+    "yellow_old_cab_top_z_after": 1.863419,
+    "trailer_top_z": 3.27,
+    "native_trailer_root_pivot_x_in_tractor": -2.5806,
+    "native_fifth_wheel_root_alignment_offset_m": 0.2806
+  },
+  "interpretation": "The route is unchanged; the replacement upper cab moved forward and became substantially smaller/lower. Its detailed archived rear chassis was omitted, original fuel tanks hidden, and only a low thin native ladder frame now bridges the broad empty rear deck. This makes the hitch read disconnected during broad trailer articulation. The 0.2806 pivot-to-fifth-wheel mismatch already exists in the frozen native rig and was not introduced by the cab replacement.",
+  "repair_direction": "Rebuild a coherent tractor unit around the existing native hitch/root reference: align reconstructed upper cab rear to the original -0.85 boundary, restore appropriately fitted detailed rear frame/tanks/fifth-wheel platform, and make the connection visually continuous at frames133/169 before another motion render. Do not fix this by changing the frozen route.",
+  "render_status": "stopped; no further rendering performed after parent rejection"
+}

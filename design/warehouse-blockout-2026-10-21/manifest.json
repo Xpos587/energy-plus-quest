@@ -1,0 +1,310 @@
+{
+  "units": "m",
+  "seed": 0,
+  "engine": "BLENDER_WORKBENCH",
+  "room": {
+    "bounds": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        12,
+        7.5,
+        3.6
+      ]
+    ],
+    "receiving_plane": "X=0",
+    "dispatch_plane": "X=12",
+    "parallel_normals": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "cutaway": "roof and south wall omitted; dispatch surface cut at z .2 with full-height wire edges, true wall plane X12 unchanged"
+  },
+  "rack_runs": [
+    {
+      "id": 1,
+      "center": [
+        2.4,
+        4.1,
+        1.35
+      ],
+      "bounds": [
+        [
+          1.5,
+          3.5,
+          0
+        ],
+        [
+          3.3,
+          4.7,
+          2.7
+        ]
+      ],
+      "bay_width": 0.9,
+      "labels": [
+        "А-Б",
+        "В-К"
+      ],
+      "storage": "cartons/totes; no rack pallets"
+    },
+    {
+      "id": 2,
+      "center": [
+        5.4,
+        4.1,
+        1.35
+      ],
+      "bounds": [
+        [
+          4.5,
+          3.5,
+          0
+        ],
+        [
+          6.300000000000001,
+          4.7,
+          2.7
+        ]
+      ],
+      "bay_width": 0.9,
+      "labels": [
+        "Л-М",
+        "Н-У"
+      ],
+      "storage": "cartons/totes; no rack pallets"
+    },
+    {
+      "id": 3,
+      "center": [
+        8.4,
+        4.1,
+        1.35
+      ],
+      "bounds": [
+        [
+          7.5,
+          3.5,
+          0
+        ],
+        [
+          9.3,
+          4.7,
+          2.7
+        ]
+      ],
+      "bay_width": 0.9,
+      "labels": [
+        "Ф-Э",
+        "Ю-Я"
+      ],
+      "storage": "cartons/totes; no rack pallets"
+    }
+  ],
+  "pedestrian_service_gaps_m": [
+    1.2,
+    1.2
+  ],
+  "front_cross_aisle_m": 3.5,
+  "operational_limit": "3.5m is modeled clear cross-aisle, not certified turning clearance; forklift excluded from 1.2m gaps",
+  "human_height_m": 1.76,
+  "floor_pallet": [
+    1.2,
+    0.8,
+    0.15
+  ],
+  "forklift_body": [
+    1.65,
+    1.1,
+    0.85
+  ],
+  "forklift_total_length_m": 2.8,
+  "gate_opening_m": [
+    3,
+    3
+  ],
+  "dock": {
+    "indoor_and_cargo_bed_z": 0,
+    "exterior_yard_z": -1.1,
+    "truck_long_axis": "X; perpendicular to X0; no forklift route into yard"
+  },
+  "targets": {
+    "receiving": [
+      0.25,
+      2.2,
+      1.4
+    ],
+    "keeper": [
+      1.0,
+      5.1,
+      1.5
+    ],
+    "wms": [
+      10.6,
+      0.9,
+      1.1
+    ],
+    "alphabet": [
+      5.4,
+      3.43,
+      2.32
+    ]
+  },
+  "cameras": {
+    "Desktop": {
+      "type": "ORTHO",
+      "location": [
+        20.799999237060547,
+        -19.600000381469727,
+        22.799999237060547
+      ],
+      "rotation_euler": [
+        0.9151125550270081,
+        -5.250659995681417e-08,
+        0.6365082859992981
+      ],
+      "look_at": [
+        3.8,
+        3.4,
+        0.8
+      ],
+      "ortho_scale": 19.5,
+      "resolution": [
+        1440,
+        900
+      ],
+      "safe_margin": 0.05,
+      "target_projection_uvz": {
+        "receiving": [
+          0.31702089309692383,
+          0.5963062047958374,
+          36.625038146972656
+        ],
+        "keeper": [
+          0.4363473355770111,
+          0.6971762180328369,
+          38.05922317504883
+        ],
+        "wms": [
+          0.7042267322540283,
+          0.21673372387886047,
+          31.103084564208984
+        ],
+        "alphabet": [
+          0.5668982267379761,
+          0.5524853467941284,
+          34.42179870605469
+        ]
+      },
+      "same_scene": true,
+      "portrait_policy": null
+    },
+    "Portrait": {
+      "type": "ORTHO",
+      "location": [
+        20.299999237060547,
+        -20.200000762939453,
+        23.0
+      ],
+      "rotation_euler": [
+        0.9151125550270081,
+        -5.250659995681417e-08,
+        0.6365082859992981
+      ],
+      "look_at": [
+        3.3,
+        2.8,
+        1
+      ],
+      "ortho_scale": 13.199999809265137,
+      "resolution": [
+        780,
+        1180
+      ],
+      "safe_margin": 0.05,
+      "target_projection_uvz": {
+        "receiving": [
+          0.17802485823631287,
+          0.5854688882827759,
+          36.89385986328125
+        ],
+        "keeper": [
+          0.4447014033794403,
+          0.6786017417907715,
+          38.32804489135742
+        ],
+        "wms": [
+          1.043371319770813,
+          0.23501132428646088,
+          31.371906280517578
+        ],
+        "alphabet": [
+          0.7364627718925476,
+          0.5450092554092407,
+          34.69062042236328
+        ]
+      },
+      "same_scene": true,
+      "portrait_policy": "viewport/pan; all four targets need not be in one view"
+    },
+    "Topdown": {
+      "type": "ORTHO",
+      "location": [
+        4.0,
+        3.299999952316284,
+        30.0
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "look_at": [
+        4,
+        3.3,
+        0
+      ],
+      "ortho_scale": 20.0,
+      "resolution": [
+        1600,
+        1000
+      ],
+      "safe_margin": 0.05,
+      "target_projection_uvz": {
+        "receiving": [
+          0.3125,
+          0.41200000047683716,
+          28.600000381469727
+        ],
+        "keeper": [
+          0.3499999940395355,
+          0.6439999938011169,
+          28.5
+        ],
+        "wms": [
+          0.8300000429153442,
+          0.30799999833106995,
+          28.899999618530273
+        ],
+        "alphabet": [
+          0.5699999928474426,
+          0.5103999972343445,
+          27.68000030517578
+        ]
+      },
+      "same_scene": true,
+      "portrait_policy": null
+    }
+  },
+  "art_status": "geometry blockout only; no AI or production edits"
+}

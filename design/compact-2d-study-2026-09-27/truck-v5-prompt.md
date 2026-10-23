@@ -1,0 +1,20 @@
+# V5: проверка читаемости ячеек
+
+Встроенный ImageGen, исходник truck-v4.png. Основание: процитированное пользователем сообщение Teo от 24.09.2026, 12:16–12:17: явное зонирование, понятные границы ячеек, плоская подача как тетрис.
+
+Это концепт игрового отображения, не финальный иллюстративный актив. Номера и выделения при реализации должны стать интерфейсными слоями. Выноска про три коробки — предложенное объяснение ограничения доступа в плоской схеме, не согласованное изменение сценария. Проверка: четыре замкнутые области и номера внутри; остаются лишний верхний пустой участок и отсутствие крепления в ячейке 3 в сгенерированном варианте. Применение к живой сцене не выполнено.
+
+## Prompt
+
+Edit this truck illustration into a REVIEWABLE GAMEPLAY CONCEPT, not just prettier truck art. Preserve exterior blue tractor identity, side-on orientation, sensible cab/trailer relative size, wheels, folded rear doors and thin illustrated rendering. Rebuild cargo area into a genuinely FLAT 2D TETRIS-LIKE packing diagram integrated in the illustrated truck. Main goal: viewer immediately knows exact extent of EACH of FOUR selectable empty cells and the cell belonging to each numeral. NOT isometry, NOT a row of 3D crates with numbered dots over them.
+
+Interior: front faces of boxes ONLY, rectangles aligned on a common modular 2D grid, no visible top surfaces or receding side faces, no objects hidden behind others, no depth-dependent target area. Keep subtle drawn material grain/contact shadows but not volumetric perspective. Occupied space consists of several simple interlocking rectangular cargo groups, wooden heavy crates at left with kettlebell pictogram, wide cloth-topped dish carton next, cardboard boxes center, boxed pillows near right. Simplify excess individual box seams; do not crowd many indistinguishable cartons into a row.
+
+EXACTLY FOUR selectable rectangular voids with clearly visible thin flat BLUE closed outlines and very pale blue translucent fill. These are a GAME INTERFACE overlay, not physical walls or structural beams: no bevels, thickness, metal edges or shadows on outline. All four outlines lie in same front plane. Each region contains one centered ORANGE small disc with white numeral 1,2,3,4, entirely inside free region, not on any crate, not straddling an edge. No generic grid covering everything; only these four cell boundaries. Zone edges align to rectangular cargo edges and modular alignment. Reduce excessive empty upper space by making cargo groups taller or flattening bay composition, with no arbitrary fifth unmarked cavity.
+
+Zone 1: broad low free rectangle above heavy wooden cargo at LEFT/rear. NO restraints in this region.
+Zone 2: medium free rectangle above fragile dish carton with pale-blue cloth, clearly distinct from zone1; short simple RED restraint visible inside cell away from centered number.
+Zone3: small clearly fully visible free rectangle framed by central rectangular cardboard group. It MUST NOT appear behind boxes or be occluded by them. For this flattened conceptual representation, preserve the scenario access complication through a separate small compact explanatory inset BELOW cargo bay, clear neutral white note linked by a fine leader to zone3: exactly THREE small flat carton icons followed by Russian text 'Сначала убрать 3 коробки'. Do not place these three blocking boxes OVER the target cell. This inset is an explicit diagram convention, not changed scenario. Keep it discreet, legible and not obscuring wheels, truck or other cells.
+Zone4: tall narrow empty rectangle against RIGHT/front end of trailer, floor to near roof, next to the stack of two BOXED pillows. No internal dividing wall, no fake chamber. Simple red strap along edge of zone away from centered 4.
+
+Keep old prototype's intelligible flat packing but polished illustration same project family as input. No random clutter. No long red cross-bay strap. No extra numeric labels. No screen panels, scoring UI, headers, decorative copy or watermarks. One wide coherent gameplay concept image. Intentionally prioritize the visible FOUR CELLS over transport realism inside the cutaway.

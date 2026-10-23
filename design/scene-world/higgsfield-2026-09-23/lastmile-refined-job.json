@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-23T12:01:53.594301Z",
+    "display_name": "Nano Banana Pro",
+    "id": "936955b6-c082-4db2-ae91-7ff90f3cf78d",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_120153_936955b6-c082-4db2-ae91-7ff90f3cf78d_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "88f8a0d2-04a9-41fa-8c89-715bde3d2d0f",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/88f8a0d2-04a9-41fa-8c89-715bde3d2d0f_resize.jpg"
+        }
+      ],
+      "prompt": "Edit the supplied 2D illustrated Siberian logistics map. Keep the same exact hand-drawn artwork, camera, river position, port, tent, person, four vehicle silhouettes and color harmony. Correct four specific scenario errors:\n1. There must be exactly ONE orange camera gift box, at the quay in upper left. Completely REMOVE the little orange gift box from the robot luggage cart in the vehicle lineup. Its cargo platform is empty. No other gifts anywhere.\n2. The bog must be an unavoidable barrier across the LEFT-bank land corridor between starting quay and river. Extend the wet bog and its pools/reeds UPWARD all the way to the top edge of the image between the quay and river. Remove the empty dry landing clearing and curved dry path above the current bog. From the quay toward the inland river there is no dry shortcut around the bog. Retain visually legible patches of muddy soil and water; not a lake or second river. Bog occupies center-left ground including the upper land corridor. Lower vehicle lineup is a separate display apron, not a driveable bypass road.\n3. The area behind the four vehicle illustrations in bottom left is a flat WARM LIGHT GRAY / OFF-WHITE display strip (#f1f1e9), not blue. It must look like neutral illustration space, NOT water, ice, a winter road or a bridge. Remove its lower-left road-like projecting spur: simple calm rounded irregular rectangle separated from landscape, no connector.\n4. First ice on the river should be much thinner and patchier: open blue water dominates, only a few isolated fine white slivers at the banks, no continuous thick white frozen bank or snow. Never create an ice crossing or bridge.\nDo not remove or duplicate any of the four vehicles: helicopter, huge-tire amphibious rover, small empty robot luggage cart, tracked pipe carrier. Keep the pipes aboard barge and pipe carrier. Retain the Nenets woman and chum on right bank. No text, UI, labels, numbers or new structures. All other details unchanged, absolutely no3D rendering.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_120153_936955b6-c082-4db2-ae91-7ff90f3cf78d.png",
+    "status": "completed"
+  }
+]

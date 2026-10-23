@@ -1,0 +1,119 @@
+[
+  {
+    "name": "small",
+    "rush": {
+      "x": 124.25,
+      "y": 95.921875,
+      "right": 182.25,
+      "bottom": 139.921875,
+      "icon": "lucide lucide-footprints _actionIcon_7mkow_142"
+    },
+    "wait": {
+      "x": 188.25,
+      "y": 95.921875,
+      "right": 246.25,
+      "bottom": 139.921875,
+      "icon": "lucide lucide-clock-3 _actionIcon_7mkow_142"
+    },
+    "cards": [
+      {
+        "id": "remote",
+        "text": "Иван управляет краном из офиса",
+        "icons": 1
+      },
+      {
+        "id": "rush",
+        "text": "Быстрее начать погрузку, отправив Ивана на ближайший к барже кран.",
+        "icons": 1
+      },
+      {
+        "id": "wait",
+        "text": "Дождаться плановой работы крана через 3 часа.",
+        "icons": 1
+      },
+      {
+        "id": "petr",
+        "text": "Попросить Петра помочь",
+        "icons": 1
+      }
+    ]
+  },
+  {
+    "name": "phone",
+    "rush": {
+      "x": 152.015625,
+      "y": 126.53125,
+      "right": 210.015625,
+      "bottom": 170.53125,
+      "icon": "lucide lucide-footprints _actionIcon_7mkow_142"
+    },
+    "wait": {
+      "x": 216.015625,
+      "y": 126.53125,
+      "right": 274.015625,
+      "bottom": 170.53125,
+      "icon": "lucide lucide-clock-3 _actionIcon_7mkow_142"
+    },
+    "cards": [
+      {
+        "id": "remote",
+        "text": "Иван управляет краном из офиса",
+        "icons": 1
+      },
+      {
+        "id": "rush",
+        "text": "Быстрее начать погрузку, отправив Ивана на ближайший к барже кран.",
+        "icons": 1
+      },
+      {
+        "id": "wait",
+        "text": "Дождаться плановой работы крана через 3 часа.",
+        "icons": 1
+      },
+      {
+        "id": "petr",
+        "text": "Попросить Петра помочь",
+        "icons": 1
+      }
+    ]
+  },
+  {
+    "name": "desktop",
+    "rush": {
+      "x": 490.859375,
+      "y": 375.078125,
+      "right": 548.859375,
+      "bottom": 419.078125,
+      "icon": "lucide lucide-footprints _actionIcon_7mkow_142"
+    },
+    "wait": {
+      "x": 554.859375,
+      "y": 375.078125,
+      "right": 612.859375,
+      "bottom": 419.078125,
+      "icon": "lucide lucide-clock-3 _actionIcon_7mkow_142"
+    },
+    "cards": [
+      {
+        "id": "remote",
+        "text": "Иван управляет краном из офиса",
+        "icons": 1
+      },
+      {
+        "id": "rush",
+        "text": "Быстрее начать погрузку, отправив Ивана на ближайший к барже кран.",
+        "icons": 1
+      },
+      {
+        "id": "wait",
+        "text": "Дождаться плановой работы крана через 3 часа.",
+        "icons": 1
+      },
+      {
+        "id": "petr",
+        "text": "Попросить Петра помочь",
+        "icons": 1
+      }
+    ]
+  }
+]

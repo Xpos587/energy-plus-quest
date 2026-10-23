@@ -1,0 +1,43 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-v20-game-loop-2026-10-08/v20-game-loop.blend",
+  "output": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-v21-coupling-geometry-2026-10-09/v21-compact-trailer.blend",
+  "rendered": false,
+  "frames": 1536,
+  "vehicles": [
+    {
+      "truck": 1,
+      "wheel_hardware_half_width_before": 1.0,
+      "wheel_hardware_half_width_after": 0.8550003170967102,
+      "wheel_center_half_track": 0.66,
+      "coupling_local_x_before": -2.3,
+      "coupling_local_x_after": -1.7499999999999998
+    },
+    {
+      "truck": 2,
+      "wheel_hardware_half_width_before": 1.0,
+      "wheel_hardware_half_width_after": 0.8550045490264893,
+      "wheel_center_half_track": 0.66,
+      "coupling_local_x_before": -2.3,
+      "coupling_local_x_after": -1.7499999999999998
+    },
+    {
+      "truck": 3,
+      "wheel_hardware_half_width_before": 1.0,
+      "wheel_hardware_half_width_after": 0.8550027012825012,
+      "wheel_center_half_track": 0.66,
+      "coupling_local_x_before": -2.3,
+      "coupling_local_x_after": -1.7499999999999998
+    },
+    {
+      "truck": 4,
+      "wheel_hardware_half_width_before": 1.0,
+      "wheel_hardware_half_width_after": 0.8550031781196594,
+      "wheel_center_half_track": 0.66,
+      "coupling_local_x_before": -2.3,
+      "coupling_local_x_after": -1.7499999999999998
+    }
+  ],
+  "max_hitch_position_error": 0.000145787368508852,
+  "loop_boundary_matrix_error": 2.592802047729492e-06,
+  "minimum_trailer_front_distance_behind_tractor_origin": 0.5470930933952332
+}

@@ -1,0 +1,34 @@
+{
+  "status": "comparison only, not promotion",
+  "render_dimensions": [
+    960,
+    667
+  ],
+  "canonical_plane": [
+    1440,
+    1000
+  ],
+  "source_coordinate_mapping": {
+    "scale_xy": 0.6666666666666666,
+    "offset_y_px": 0.16666666666668561
+  },
+  "desktop_canonical_crop": [
+    0,
+    50,
+    1440,
+    950
+  ],
+  "portrait_canonical_crop": [
+    341.8014714937448,
+    9.252056359842499,
+    986.1407553525422,
+    984.0218729561262
+  ],
+  "right_pan_canonical_crop": [
+    795.6607161412026,
+    9.252056359842499,
+    1440,
+    984.0218729561262
+  ],
+  "frame_policy": "All crops from one small full-source render. No new scene or geometry. Output surface iteration stops pending combined verdict."
+}

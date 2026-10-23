@@ -1,0 +1,128 @@
+.root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  container-type: size;
+  background: #dce6e9;
+}
+.map {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: clip;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  cursor: grab;
+  touch-action: none;
+}
+.map:active {
+  cursor: grabbing;
+}
+.zoomHint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  z-index: 5;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: 0;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #fffdf7e8;
+  color: #164b70;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  box-shadow: none;
+  pointer-events: none;
+}
+.zoomHint > svg { flex: none; color: #0b659a; }
+@media (max-width: 600px) and (orientation: portrait) {
+  .zoomHint { display: none; }
+}
+.reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  right: 12px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #cbdce9;
+  border-radius: 12px;
+  background: #fff;
+  color: #164b70;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #173a5b14;
+}
+.reset > svg { flex: none; }
+.reset:focus-visible {
+  outline: 2px solid #ff7a33;
+  outline-offset: 2px;
+}
+.surface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+  container-type: inline-size;
+  aspect-ratio: 1.44;
+}
+.video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+.target {
+  position: absolute;
+  width: max(calc(44px / var(--map-zoom, 1)), 12cqw);
+  height: max(calc(44px / var(--map-zoom, 1)), 4.8cqw);
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  touch-action: none;
+}
+.root .target:focus-visible {
+  outline: 2px solid #ff7a33;
+  outline-offset: 2px;
+}
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.map::-webkit-scrollbar {
+  display: none;
+}
+
+/* Keep the map affordance legible on a wide scene without enlarging mobile UI. */
+@container (min-width: 900px) {
+  .zoomHint {
+    bottom: 20px;
+    gap: 10px;
+    padding: 12px 18px;
+    font-size: clamp(18px, 1.2cqw, 22px);
+  }
+  .zoomHint > svg { width: 24px; height: 24px; }
+}

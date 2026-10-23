@@ -1,0 +1,164 @@
+{
+  "meshGate": "exact categorical ID pixels >= 8 per named mesh",
+  "rayGate": "5 orthographic samples per anchor; >= 3 unobstructed",
+  "views": [
+    {
+      "view": "crane-desktop",
+      "meshPixels": {
+        "Ob warehouse": 37827,
+        "PRU control cabin": 6726,
+        "crane one cab": 1394,
+        "crane two cab": 901,
+        "loaded pipe barge": 12507,
+        "barge pipe": 312,
+        "Petr operator torso": 74,
+        "remote console": 333
+      },
+      "webpSHA256": "b540d4423050f546991227d06ea023985c7de2eb68a294e6a530ad7e0125959c"
+    },
+    {
+      "view": "crane-mobile",
+      "meshPixels": {
+        "Ob warehouse": 36132,
+        "PRU control cabin": 6198,
+        "crane one cab": 1269,
+        "crane two cab": 817,
+        "loaded pipe barge": 11280,
+        "barge pipe": 475,
+        "Petr operator torso": 68,
+        "remote console": 308
+      },
+      "webpSHA256": "86cf1dbb601b600bc1defa3c97567520ea96b1936e8d95cda218eac1d19c1e65"
+    },
+    {
+      "view": "lastmile-desktop",
+      "meshPixels": {
+        "last mile quay": 41970,
+        "marsh hummock": 246,
+        "first ice floe": 495,
+        "destination raised cabin": 6201,
+        "destination chum": 2667,
+        "helicopter fuselage": 2024,
+        "amphibious rover chassis": 598,
+        "delivery robot chassis": 186,
+        "pipe carrier chassis": 1455
+      },
+      "webpSHA256": "ac1add0891482d08fda3c7f01e53dbcba409287be0ae0951774bbc37b3af47a3"
+    },
+    {
+      "view": "lastmile-mobile",
+      "meshPixels": {
+        "last mile quay": 40203,
+        "marsh hummock": 242,
+        "first ice floe": 437,
+        "destination raised cabin": 5277,
+        "destination chum": 2439,
+        "helicopter fuselage": 1981,
+        "amphibious rover chassis": 506,
+        "delivery robot chassis": 135,
+        "pipe carrier chassis": 1283
+      },
+      "webpSHA256": "51989444d101d68a56dbb487fb3d1c3c346ddeba5714d7db34c17dbabc3a53d6"
+    },
+    {
+      "view": "compact-desktop",
+      "meshPixels": {
+        "warehouse loading door": 4079,
+        "warehouse sign": 333,
+        "rear kettlebell weight": 612,
+        "stacked dishes": 37,
+        "staff parcels 0": 4257,
+        "soft pillow": 4315,
+        "compact reused 4 side window": 5403,
+        "compact reused 4 formed enclosed cab": 18335,
+        "group: compact reused 4 seated tire": 4843,
+        "group: compact wheel lug": 94,
+        "group: compact rubber tread": 270
+      },
+      "webpSHA256": "e1ac7b5846cba95464ec89921b282097f869769ed0d9a57fbac3b9e5e86f8eff"
+    },
+    {
+      "view": "compact-mobile",
+      "meshPixels": {
+        "warehouse loading door": 3352,
+        "warehouse sign": 193,
+        "rear kettlebell weight": 469,
+        "stacked dishes": 25,
+        "staff parcels 0": 3286,
+        "soft pillow": 3235,
+        "compact reused 4 side window": 4064,
+        "compact reused 4 formed enclosed cab": 13923,
+        "group: compact reused 4 seated tire": 3252,
+        "group: compact wheel lug": 50,
+        "group: compact rubber tread": 159
+      },
+      "webpSHA256": "7904067ff3716fbe161f2dce83db286c61129f99806e67569d4438b98f42ea5d"
+    },
+    {
+      "view": "inventory-desktop",
+      "meshPixels": {
+        "warehouse loading door": 1794,
+        "rack upright": 83,
+        "rack stock": 258,
+        "warehouse keeper helmet": 144,
+        "WMS screen": 294,
+        "barcode scanner": 503,
+        "robot forklift chassis": 1464,
+        "dispatch counter": 857,
+        "inventory drone body": 410,
+        "inventory drone rotor": 142,
+        "inventory drone rotor.001": 122,
+        "inventory drone rotor.002": 137,
+        "inventory drone rotor.003": 113,
+        "CC0 PalletTruck Base": 603,
+        "CC0 PalletTruck Handle": 44,
+        "CC0 CableDrum Cylinder_7": 1338,
+        "CC0 ElectricalBox Polygon_Reduction": 604,
+        "group: warehouse eave beam": 5110,
+        "group: rack diagonal brace": 203,
+        "group: stock pallet deck slat": 2040,
+        "group: dock safety bollard": 68,
+        "group: ventilation louvre": 338,
+        "group: drone propeller safety guard": 130,
+        "group: picking bin parts": 550,
+        "group: CC0 PalletTruck ": 659,
+        "group: CC0 CableDrum ": 1338,
+        "group: CC0 ElectricalBox ": 604
+      },
+      "webpSHA256": "38f2cb2812acf7df9ef82149718690957fe7783d59ea47683823f0e9647ea830"
+    },
+    {
+      "view": "inventory-mobile",
+      "meshPixels": {
+        "warehouse loading door": 2144,
+        "rack upright": 124,
+        "rack stock": 314,
+        "warehouse keeper helmet": 130,
+        "WMS screen": 286,
+        "barcode scanner": 473,
+        "robot forklift chassis": 1038,
+        "dispatch counter": 647,
+        "inventory drone body": 360,
+        "inventory drone rotor": 119,
+        "inventory drone rotor.001": 101,
+        "inventory drone rotor.002": 110,
+        "inventory drone rotor.003": 91,
+        "CC0 PalletTruck Base": 462,
+        "CC0 PalletTruck Handle": 17,
+        "CC0 CableDrum Cylinder_7": 1329,
+        "CC0 ElectricalBox Polygon_Reduction": 470,
+        "group: warehouse eave beam": 4546,
+        "group: rack diagonal brace": 185,
+        "group: stock pallet deck slat": 1665,
+        "group: dock safety bollard": 68,
+        "group: ventilation louvre": 316,
+        "group: drone propeller safety guard": 74,
+        "group: picking bin parts": 494,
+        "group: CC0 PalletTruck ": 483,
+        "group: CC0 CableDrum ": 1329,
+        "group: CC0 ElectricalBox ": 470
+      },
+      "webpSHA256": "8e6530ecec83b5962edd95f44846012410b1683e453afa398f6f6e925421b337"
+    }
+  ]
+}

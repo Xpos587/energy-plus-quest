@@ -1,0 +1,202 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-crew-v3-DagJjUW9.avif",
+      "decoded": [
+        5120,
+        3413
+      ],
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 436.28125,
+        "top": 48,
+        "right": 390,
+        "bottom": 484.28125,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-crew-v3-DagJjUW9.avif",
+      "decoded": [
+        5120,
+        3413
+      ],
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 436.28125,
+        "top": 48,
+        "right": 390,
+        "bottom": 484.28125,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 800,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-crew-v3-DagJjUW9.avif",
+      "decoded": [
+        5120,
+        3413
+      ],
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 800,
+        "height": 503.3125,
+        "top": 48,
+        "right": 800,
+        "bottom": 551.3125,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 800,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-crew-v3-DagJjUW9.avif",
+      "decoded": [
+        5120,
+        3413
+      ],
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 800,
+        "height": 503.3125,
+        "top": 48,
+        "right": 800,
+        "bottom": 551.3125,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-crew-v3-1280-JIyRr-hI.avif",
+      "decoded": [
+        1280,
+        853
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 472.640625,
+        "height": 334,
+        "top": 56,
+        "right": 472.640625,
+        "bottom": 390,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-crew-v3-DagJjUW9.avif",
+      "decoded": [
+        5120,
+        3413
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 472.640625,
+        "height": 334,
+        "top": 56,
+        "right": 472.640625,
+        "bottom": 390,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-crew-wide-v6-IknR2rDl.avif",
+      "decoded": [
+        1983,
+        793
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 554.703125,
+        "top": 56,
+        "right": 1440,
+        "bottom": 610.703125,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-crew-wide-v6-IknR2rDl.avif",
+      "decoded": [
+        1983,
+        793
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 554.703125,
+        "top": 56,
+        "right": 1440,
+        "bottom": 610.703125,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  }
+]

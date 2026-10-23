@@ -1,0 +1,52 @@
+{
+  "canonicalId": "F0093",
+  "source": "public/scene-art/lastmile-family-v1/choice-final-wide-v10.webp",
+  "sourceDimensions": [
+    1983,
+    793
+  ],
+  "technicalReference": "docs/reviews/feedback-2026-10-22/references/03-helicopter-reference.png",
+  "correctedIllustration": "docs/reviews/lastmile-helicopter-2026-10-22/choice-wide-refined.png",
+  "generationCalls": 0,
+  "method": "Deterministic transfer of existing corrected common aircraft, tight union of old and new aircraft including rotor/tail plus immediate shadow; feather exterior only",
+  "sourceBox": [
+    850,
+    15,
+    1300,
+    260
+  ],
+  "correctedCropNativeDimensions": [
+    1700,
+    925
+  ],
+  "correctedCropToKVMatrix": [
+    [
+      0.2647058823529412,
+      0,
+      850
+    ],
+    [
+      0,
+      0.2648648648648649,
+      15
+    ]
+  ],
+  "mask": "aircraft-shadow-mask.png",
+  "changedPixelCount": 20382,
+  "changedBoundingBox": [
+    924,
+    34,
+    1176,
+    191
+  ],
+  "changedPixelsOutsideMask": 0,
+  "output": "F0093-helicopter-corrected.png",
+  "fullReview": "F0093-helicopter-corrected.png",
+  "detailReview": "detail-review-100pct.png",
+  "visualReview": {
+    "status": "pending_final_peer_check",
+    "aircraft": "Orange fuselage; black engine housing and tail boom; white-orange bands; white body graphic; circular cabin windows; no lettering, registration, flag or logo observed. Five main rotor blades visible.",
+    "preserved": "All vehicles, people, buildings, water, trees, cones and windsock outside aircraft/shadow union remain original.",
+    "limitation": "Local background exposed by removal of original rotor is taken from corrected crop inside union mask; no full-scene regeneration. Runtime and stakeholder acceptance not claimed."
+  }
+}

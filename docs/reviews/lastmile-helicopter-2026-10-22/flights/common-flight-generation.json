@@ -1,0 +1,15 @@
+{
+  "tool": "builtin image_gen",
+  "sourceOutput": "/home/michael/.config/codex/generated_images/01a16012-8dd5-7922-ad35-b577466c3b82/exec-74a7a094-6e2f-40d2-bade-da776f1ade39.png",
+  "nativeDimensions": [
+    2106,
+    747
+  ],
+  "roiBox": [
+    40,
+    0,
+    1140,
+    390
+  ],
+  "prompt": "common-flight-prompt.txt"
+}

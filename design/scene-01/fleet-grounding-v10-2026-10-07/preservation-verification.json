@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "camera": true,
+    "roots": true,
+    "frame_start": true,
+    "frame_end": true,
+    "frames": true,
+    "meshes": true
+  },
+  "fleet_objects": 838,
+  "frames": [
+    1,
+    385,
+    769
+  ],
+  "action_duration": 1152,
+  "assertion": "Source and candidate truck matrices at all three rendered frames, mesh vertices/topology/material assignment and orthographic camera are exactly equal; only added receiver and pass visibility/light settings differ."
+}

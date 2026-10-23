@@ -1,0 +1,52 @@
+[
+  {
+    "name": "ViewLayer.Combined",
+    "channels": [
+      "ViewLayer.Combined.A",
+      "ViewLayer.Combined.B",
+      "ViewLayer.Combined.G",
+      "ViewLayer.Combined.R"
+    ]
+  },
+  {
+    "name": "ViewLayer.Depth",
+    "channels": [
+      "ViewLayer.Depth.Z"
+    ]
+  },
+  {
+    "name": "ViewLayer.Normal",
+    "channels": [
+      "ViewLayer.Normal.X",
+      "ViewLayer.Normal.Y",
+      "ViewLayer.Normal.Z"
+    ]
+  },
+  {
+    "name": "ViewLayer.CryptoObject00",
+    "channels": [
+      "ViewLayer.CryptoObject00.a",
+      "ViewLayer.CryptoObject00.b",
+      "ViewLayer.CryptoObject00.g",
+      "ViewLayer.CryptoObject00.r"
+    ]
+  },
+  {
+    "name": "ViewLayer.CryptoObject01",
+    "channels": [
+      "ViewLayer.CryptoObject01.a",
+      "ViewLayer.CryptoObject01.b",
+      "ViewLayer.CryptoObject01.g",
+      "ViewLayer.CryptoObject01.r"
+    ]
+  },
+  {
+    "name": "ViewLayer.CryptoObject02",
+    "channels": [
+      "ViewLayer.CryptoObject02.a",
+      "ViewLayer.CryptoObject02.b",
+      "ViewLayer.CryptoObject02.g",
+      "ViewLayer.CryptoObject02.r"
+    ]
+  }
+]

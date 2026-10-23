@@ -1,0 +1,28 @@
+{
+  "method": "actual visible animated mesh ground projection along approved SUN direction; no generic proxy shapes; translucent smoke excluded",
+  "source": "fleet-v13-clean.blend",
+  "light_position": [
+    -40,
+    35,
+    70
+  ],
+  "projection_z": -0.002,
+  "render_resolution": [
+    960,
+    667
+  ],
+  "frames_requested": [
+    385,
+    1
+  ],
+  "timings": [
+    {
+      "frame": 385,
+      "seconds": 0.682409369999732
+    },
+    {
+      "frame": 1,
+      "seconds": 0.3067804199999955
+    }
+  ]
+}

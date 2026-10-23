@@ -1,0 +1,10 @@
+{
+  "engine": "CYCLES",
+  "device": "OPTIX",
+  "samples": 8,
+  "resolution": [
+    960,
+    667
+  ],
+  "first_frame_seconds": 9.8628491390009
+}

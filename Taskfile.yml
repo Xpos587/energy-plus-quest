@@ -1,0 +1,31 @@
+version: "3"
+
+tasks:
+  deploy:
+    desc: Собрать текущую локальную версию и обновить сайт в Dokploy
+    cmds:
+      - bun run deploy
+  dev:
+    cmds:
+      - bun run dev
+  build:
+    cmds:
+      - bun run build
+  test:
+    cmds:
+      - bun run test
+  check:
+    cmds:
+      - bun run check
+  verify:
+    cmds:
+      - task: check
+      - task: test
+      - task: build
+  e2e:
+    cmds:
+      - bun run test:e2e
+  release:
+    cmds:
+      - task: verify
+      - task: e2e

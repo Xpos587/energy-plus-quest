@@ -1,0 +1,16 @@
+{
+  "id": "F0029",
+  "decision": "accepted_for_runtime",
+  "processingMode": "selective_flowers",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "fullNativeReconstruction": false,
+  "master": ".tmp-work/flowers-all-2026-10-20/F0029/pass2-master.png",
+  "reviewedAssemblyReceipt": "docs/reviews/flowers-all-2026-10-20/general-assemblies/F0029-P2-run-001.json",
+  "acceptedP1": 6,
+  "retainedP1": 3,
+  "acceptedP2": 2,
+  "inspection": ["fresh whole scene", "boat rigging and trolley focal", "left and right worker face/collar at100percent", "cargo count, one plate stack and four cups", "source protected feathered background and side edges"],
+  "evidence": [".tmp-work/flowers-all-2026-10-20/F0029/release-overview.png", ".tmp-work/flowers-all-2026-10-20/F0029/release-focal.png", ".tmp-work/flowers-all-2026-10-20/F0029/release-left-worker-100.png", ".tmp-work/flowers-all-2026-10-20/F0029/release-right-worker-100.png"],
+  "limitations": "Selective partial reconstruction; original protected faces and sleeve flags remain source-detail limited. Retained source cores and feathered source background preserve geometry. Export8192 is assembled, not native full-scene resolution. The original outside-boat failure story is unchanged."
+}

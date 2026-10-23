@@ -1,0 +1,20 @@
+{
+  "source": "source-v2-clean.png",
+  "source_dimensions": [
+    1440,
+    1000
+  ],
+  "desktop_source_xyxy": [
+    0,
+    50,
+    1440,
+    950
+  ],
+  "portrait_source_xyxy": [
+    341.8014714937448,
+    9.252056359842499,
+    986.1407553525422,
+    984.0218729561262
+  ],
+  "policy": "Both camera views are deterministic exact source-plane EXTENT samples. No independent generation. Pan uses full 1440x1000 source."
+}

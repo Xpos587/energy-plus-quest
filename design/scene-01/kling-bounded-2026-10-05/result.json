@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T10:30:24.33299Z",
+    "display_name": "Kling v3.0",
+    "id": "fc813a0c-1694-40bd-8828-df44a8d663be",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 6,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "cfb315b0-3efb-4d46-8887-bd0fd85a6ccd",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/cfb315b0-3efb-4d46-8887-bd0fd85a6ccd.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "cefc7293-a02b-43d2-8f7c-d0b1411b86f9",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/cefc7293-a02b-43d2-8f7c-d0b1411b86f9.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera, fixed bright illustrated city, all buildings and roads perfectly motionless. Animate exactly FOUR articulated semi-trucks to the supplied END frame over six seconds, preserving their colors, total lengths and identities. BLUE at left near glass warehouse drives slowly DOWN on the same vertical lane; no turn. YELLOW in middle drives DOWN, then ONE smooth left vehicle-steering turn toward screen RIGHT on bottom horizontal road. GREEN upper-right drives UP on right vertical street, turns LEFT onto upper horizontal road, then toward DOWN at the next junction, ending in the exact supplied angled green pose. RED lower-right follows UP that same right lane at a safe distance behind green, then begins LEFT turn onto upper horizontal road, finishing in exact end red pose. Green leads red; never overtake, collide, merge or leave asphalt. Tractor steers and rigid long semitrailer follows through a real fifth-wheel hitch, rear axles trace an inner curve. Never rotate a whole rigid truck around its center; never bend the trailer rectangle. One cab and one trailer per truck at every frame. No duplicate trucks, no disappearing, no extra parked vehicles, no morphing colors. Each path stays on its road, never crosses building or sidewalk. Smooth slow readable motion, physically coupled wheels/tractor/trailer, intact illustrated details. Only green has TWO normal male drivers; others exactly ONE, empty passenger seat. Match supplied images' clean soft illustrated style, light colored linework, soft blue shadows, no black contour, no plastic3D, no gray veil, no sepia. No camera motion, zoom, cuts, transitions or extra effects. This is a single continuous short road segment, NOT a whole loop. Reach end frame smoothly, no teleporting. White side borders are fixed framing only; keep both borders completely static.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_103024_fc813a0c-1694-40bd-8828-df44a8d663be.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_103024_fc813a0c-1694-40bd-8828-df44a8d663be_thumbnail.webp"
+  }
+]

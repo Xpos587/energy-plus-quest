@@ -1,0 +1,3320 @@
+{
+  "version": 1,
+  "repository": "Xpos587/energy-plus-quest",
+  "release": "media-baseline-2026-10-23",
+  "archives": [
+    {
+      "name": "media-01-32eb00d20ba4.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-01-32eb00d20ba4.tar.gz",
+      "sha256": "32eb00d20ba450e4af781bec973a6a6a647a99e0e3f00a449e62cbdf13e0113a",
+      "bytes": 64974708,
+      "files": [
+        {
+          "path": "design/preparation-outpaint-2026-10-11/alva.webp",
+          "sha256": "a2534291f5a0844b0b427df13decca03c931337c67260a6edae1dff05ded9666",
+          "bytes": 403820
+        },
+        {
+          "path": "design/preparation-outpaint-2026-10-11/arseniy.webp",
+          "sha256": "cb53dca36f3fb7daa3caa2ac5ac4d8fc3e25180418a4055e8adba3286e54a6f1",
+          "bytes": 180574
+        },
+        {
+          "path": "design/preparation-outpaint-2026-10-11/boat.webp",
+          "sha256": "7efe9f602308666e81f77733371e0e24f2613566352a6bea7c34c225c5959cf0",
+          "bytes": 528446
+        },
+        {
+          "path": "design/preparation-outpaint-2026-10-11/camera.webp",
+          "sha256": "ec477f49876a4e042b8756469cf23b3a96f8fba72cb137208d5edf62787eab09",
+          "bytes": 453086
+        },
+        {
+          "path": "design/preparation-outpaint-2026-10-11/khor.webp",
+          "sha256": "d7879e27d50aecfcd2bc156d13f266cc40ba01ad357f47b69a9e0f3bdad7395d",
+          "bytes": 488716
+        },
+        {
+          "path": "design/preparation-outpaint-2026-10-11/professional.webp",
+          "sha256": "c85bd52b2f9ba966036e36e9133465490f2e3c258f528cc76082772716a3605c",
+          "bytes": 82354
+        },
+        {
+          "path": "design/preparation-outpaint-2026-10-11/socks.webp",
+          "sha256": "daee57fffd63f45415ea0b917333a028906b5fd6a370c7f1418f38a9c4ec70de",
+          "bytes": 519012
+        },
+        {
+          "path": "design/preparation-outpaint-2026-10-11/student.webp",
+          "sha256": "d159a3af06fb92297b971864a2d60ae70eea2477a1c1dce585d971150641ddc6",
+          "bytes": 83172
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/alva.webp",
+          "sha256": "d1f2e98ed451c8c8dae8cd8eaab4c489e2431aafcab9b816dfd51095b8325114",
+          "bytes": 123370
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/arseniy.webp",
+          "sha256": "c6aebaf5caf3cdf3500fcb61595d995ee92892a6018d86a6861496ccc523daad",
+          "bytes": 1003676
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/boat-tall.webp",
+          "sha256": "b4fb7d733acffe700680c7c564398f2e57db1fa76e9d66bf9b0a8d464eefa278",
+          "bytes": 232218
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/boat.webp",
+          "sha256": "d56b44a3f8f934106b2f11e8a328fb2c77bc55dc7665b329de8b09c48fa08457",
+          "bytes": 167778
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/camera-tall.webp",
+          "sha256": "dca34cd55a4df929228fc7c9540f1da4f2f4c6533ae7f5bdf09cafe09d2d98d1",
+          "bytes": 167918
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/camera.webp",
+          "sha256": "830f9ec84f344e4a76a6b1894ba0080cf73e4503be6217b4f82ff13cd5b04204",
+          "bytes": 125074
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/khor.webp",
+          "sha256": "fcee80743a072841f3b4087d67dd8e7be694a5e8699227e3bc00d6d165116703",
+          "bytes": 162102
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/professional.webp",
+          "sha256": "86955f737339f1e07ce7db771794b1f14eae348cf96bba3599f5f1ae226793d8",
+          "bytes": 1542214
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/socks-tall.webp",
+          "sha256": "b775e36f933ae8cce5a5767a4baf2848e061e37d00564f61dbb734977af39ec4",
+          "bytes": 248380
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/socks.webp",
+          "sha256": "615eff3b49221bf0c8951adf3ca6c65ada5bcc0f442c88c94d250c6ce4ee9e99",
+          "bytes": 183360
+        },
+        {
+          "path": "design/scene-01/assets/current/choices/student.webp",
+          "sha256": "1d872c3560d46b0d7458ecd8eb65af07f24d7ae4f19a96ac0af46a10bf894737",
+          "bytes": 408562
+        },
+        {
+          "path": "design/warehouse-blockout-2026-10-21/warehouse-blockout-v4.blend",
+          "sha256": "560fbe7df25c37fc7aae961167abe0e57f09fad9dfe21ee8a0116d77d0e969b3",
+          "bytes": 221055
+        },
+        {
+          "path": "design/warehouse-finish-2026-10-22/rack-worldplane-v1-full.blend",
+          "sha256": "a443b9ac5474553aa8f1142594466eda6322a20acfca9fa6cd9a46cf549ead18",
+          "bytes": 665277
+        },
+        {
+          "path": "docs/reviews/barge-2026-10-22/frames/mobile-a-boat-choice.png",
+          "sha256": "1e1a71d4b4c73c4fc4354eedd7bc4bf21b2c24fff7bed3dee17d6a3986e0a930",
+          "bytes": 241008
+        },
+        {
+          "path": "docs/reviews/barge-2026-10-22/frames/mobile-b-boat-choice.png",
+          "sha256": "174d807b8787f2829fa13f5ea75a82aa7f9a7c49419b876f9d15046757cd7965",
+          "bytes": 240676
+        },
+        {
+          "path": "docs/reviews/barge-2026-10-22/frames/mobile-c-boat-choice.png",
+          "sha256": "f8a0ab6233592c661245938240709cc6f960556cc2db7d35101c54f8d9d65ad6",
+          "bytes": 264680
+        },
+        {
+          "path": "docs/reviews/barge-2026-10-22/frames/mobile-runtime-boat-choice.png",
+          "sha256": "5519b1c9a05d4cf4a7bdd3b1cf8bce682002539bc49860a7e6eb40be63904559",
+          "bytes": 355925
+        },
+        {
+          "path": "docs/reviews/consolidated-2026-10-22/current-review.pdf",
+          "sha256": "85036dd9a6d67440b40e4698685c1355d7d5899cafaa8efd9794c08721e68315",
+          "bytes": 2354844
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/barge-choice-tall-v1/after/390-dpr2.png",
+          "sha256": "8e7a7d94367fd5a496138a7d3a6917a0ce48b060955754b569c879b2df8c2d2e",
+          "bytes": 1144438
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/barge-choice-tall-v1/before/390-dpr2.png",
+          "sha256": "d3477c4f1d9e8e4d0bf6d222d5a97c2da43e042a6b10f1b55ceeabc4969303bf",
+          "bytes": 1165076
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/barge-petr-boat-v1/after/390-dpr2.png",
+          "sha256": "f24cd4dffad822c8321b1744ce97db09af2af277ac0772a2730f15acb7d5fb31",
+          "bytes": 389147
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/barge-petr-boat-v1/before/390-dpr2.png",
+          "sha256": "9324921eafc3958e7bd2bac5ca43a98be8d035709b7490de19b850a0894b6832",
+          "bytes": 399965
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/carrier-old-wide-v8-v1/after/1440-dpr2.png",
+          "sha256": "2f80bf25d012459ef49b6098eba271f65378289b6e1a7b158526c2463a8bb97e",
+          "bytes": 3464566
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/carrier-old-wide-v8-v1/after/390-dpr2.png",
+          "sha256": "ed07644a561b1632f574a7cf8cb61740e975eb72664074128d09fefbb098e1ec",
+          "bytes": 950891
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/carrier-old-wide-v8-v1/before/1440-dpr2.png",
+          "sha256": "ab04673e571530e3d9b1ce951914a067b20821a37f12100e874f91f05462b719",
+          "bytes": 3122896
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/carrier-old-wide-v8-v1/before/390-dpr2.png",
+          "sha256": "ed07644a561b1632f574a7cf8cb61740e975eb72664074128d09fefbb098e1ec",
+          "bytes": 950891
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/rover-boat-khor-v1/after/1440-dpr2.png",
+          "sha256": "7053c11e12cccabc57bafe208954ac71152c133d6febf44a53f1fdccd74958eb",
+          "bytes": 4480207
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/rover-boat-khor-v1/after/390-dpr2.png",
+          "sha256": "1ad98e66f6d3725ff58157bee4d530dfb4a80929587e5d289a828d6093d9359e",
+          "bytes": 709190
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/rover-boat-khor-v1/before/1440-dpr2.png",
+          "sha256": "0f2c9d3841bbe30f3b62d853f1d9b62f92ea2557dc245a3edb1ba196ce71e1a9",
+          "bytes": 4162547
+        },
+        {
+          "path": "docs/reviews/conventional-media-2026-10-22/rover-boat-khor-v1/before/390-dpr2.png",
+          "sha256": "a734f8ed09f1357fd8d0f215f3278688ff2a7f6b69eba41ece3f9a8ebe8c9107",
+          "bytes": 693841
+        },
+        {
+          "path": "docs/reviews/ending-2026-10-21-share-feedback/before-1440x900-result.png",
+          "sha256": "b0097b0865e835dc4a0844b1f2514cc0d801dc655015702044d08e6d04da7122",
+          "bytes": 308518
+        },
+        {
+          "path": "docs/reviews/ending-2026-10-21-share-feedback/before-390x844-result.png",
+          "sha256": "0c9e4300ecc76115e074f2c0337d3c9fd7c5c2e84c9b16bf3bfd8e5af36f8a8e",
+          "bytes": 67037
+        },
+        {
+          "path": "docs/reviews/ending-2026-10-21-share-feedback/runtime-1440x900-popup.png",
+          "sha256": "41cd6b6a1cd012735bd3e4d3ccc91c00df0e544ba68231244e8362c6df8ca911",
+          "bytes": 203777
+        },
+        {
+          "path": "docs/reviews/ending-2026-10-21-share-feedback/runtime-1440x900-result.png",
+          "sha256": "b923eee97cd7ecaef32de84cf8890bf893a1ac346a03bc680b60b352cd5683e2",
+          "bytes": 263373
+        },
+        {
+          "path": "docs/reviews/ending-2026-10-21-share-feedback/runtime-390x844-popup.png",
+          "sha256": "9eaed05f1baa02aef2c300a5ced5460b1aa75f00eee3dab461f663a4c666d2a4",
+          "bytes": 52460
+        },
+        {
+          "path": "docs/reviews/ending-2026-10-21-share-feedback/runtime-390x844-result.png",
+          "sha256": "e7966086b5b30060b8560bc986eafdb09f0dfe0b3d196dba8fd6a76b488b2700",
+          "bytes": 81081
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/carrier/after/1440-inspection.png",
+          "sha256": "a62e3851d27237c63681cef3e6a4ca9bacd130d9b8e901caa61e3e6c57c1dd13",
+          "bytes": 943243
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/carrier/after/390-inspection.png",
+          "sha256": "b704bd6970d463df70fdecb74d5672139076044bad86f3a93e0595ff8853a9ca",
+          "bytes": 209856
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/carrier/before/1440-inspection.png",
+          "sha256": "a62e3851d27237c63681cef3e6a4ca9bacd130d9b8e901caa61e3e6c57c1dd13",
+          "bytes": 943243
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/carrier/before/390-inspection.png",
+          "sha256": "b704bd6970d463df70fdecb74d5672139076044bad86f3a93e0595ff8853a9ca",
+          "bytes": 209856
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/references/01-truck-outline.png",
+          "sha256": "e9a8eafb6e6b20a0df4ad4cbdfe63599215825e10bcaa64a459c9f8ff5efb0b3",
+          "bytes": 5107933
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/references/02-helicopter-current.png",
+          "sha256": "76cd539c042a31afad2ef09cd388350557f4f578a4048ac7a8e14fbf274e8147",
+          "bytes": 240110
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/references/03-helicopter-reference.png",
+          "sha256": "e5b37657ec668a9d6e68d6a478c7aabde84b0741a43bbf0a14a7f3ead1e086a0",
+          "bytes": 54455
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/references/04-score-current.png",
+          "sha256": "c247677a21b0e43ab94e77da4b7c0d4ad176eda68e4defe526bc3cb421028f44",
+          "bytes": 85755
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/references/05-score-feedback.png",
+          "sha256": "98fe971313b77d4540d5de031653bc96678ae3907e9177d8ba4c79bb5ee17944",
+          "bytes": 101600
+        },
+        {
+          "path": "docs/reviews/feedback-2026-10-22/references/06-intro-nav.png",
+          "sha256": "05949e5b15ec5d178e7bf023ff7f40869e0e5dce573b855585ea0da56a08c241",
+          "bytes": 595570
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0001/after/1440-dpr2.png",
+          "sha256": "fc5df3aa2d8a8b2b1869d0887fc871e035cd9e3d5b48c9065446374f10f1a2fb",
+          "bytes": 3582692
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0001/after/390-dpr2.png",
+          "sha256": "4d29dcad1270558c4aa67fc9f856b02b472c804681afe3c1bb902530d429b212",
+          "bytes": 894249
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0001/before/1440-dpr2.png",
+          "sha256": "bccc77bf2830b5cdfab061f0d174f95978292755a2b82887bd31f642512fcde8",
+          "bytes": 3664837
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0001/before/390-dpr2.png",
+          "sha256": "b06e23f00024fd875ff365acfcb8590a67c7efd7ae613895cc9487055e45b411",
+          "bytes": 897444
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0029/after/F0029-1440-dpr2.png",
+          "sha256": "b3849e2737f35cb9d9ad074269dfa4dc958bfb3c763bd54ae35751abc2d485b8",
+          "bytes": 3031812
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0029/before/F0029-1440-dpr2.png",
+          "sha256": "5a78f8fa8e86f20d2c9a522b8b131a7fd540bfa7d0d090907873e4c219806580",
+          "bytes": 2623404
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0075/after/390-dpr2.png",
+          "sha256": "dd2f73d3126b64b02815a86e3fae96314b4562eeb0b393830d0f8b5a2a14fdd5",
+          "bytes": 659477
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0075/after/800-dpr2.png",
+          "sha256": "9edef700cece658c7a0351ec8e889274affa397a0187ebbe15ee744205316693",
+          "bytes": 1501863
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0075/before/390-dpr2.png",
+          "sha256": "04eaa662dbf35927f19e09c38762ead94e95d41148f5dde23d27471d847b83c0",
+          "bytes": 588315
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0075/before/800-dpr2.png",
+          "sha256": "e3b53fa29cea54403fc116c7e8e0b58b02c22cef22c185d36a6bd62ff54e729f",
+          "bytes": 1363335
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0095/after/1440-dpr2.png",
+          "sha256": "a7e2218b543929935cc76f4dc7b3be90fbd72b6008201afee689f5497e9b30b1",
+          "bytes": 4340135
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0095/after/390-dpr2.png",
+          "sha256": "f383cce80a3b696b7a46dad80d0f92d0c2ea365724a75bdd0e3589c65edadcb9",
+          "bytes": 710532
+        }
+      ]
+    },
+    {
+      "name": "media-02-937551b449e5.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-02-937551b449e5.tar.gz",
+      "sha256": "937551b449e56452a02661c6c4472ca6850ecc71833ac1f08f34214c9a2e6e17",
+      "bytes": 66555407,
+      "files": [
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0095/before/1440-dpr2.png",
+          "sha256": "ffa639cd68476957cbd5e023fe7fc76f1f2a2c78c30fc6f8de42c535ec8e4cca",
+          "bytes": 3808647
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0095/before/390-dpr2.png",
+          "sha256": "a0dbf84c800ad259b353aaf8c3174ff4782588b17bb4cf1ee94cb18375eaf0de",
+          "bytes": 679132
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0136/after/F0136-1440-dpr2.png",
+          "sha256": "f963406b1eb93865ab8ec488a4c260639f178b8614ca4dfb0c4d6003dfae8a98",
+          "bytes": 2884228
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0136/before/F0136-1440-dpr2.png",
+          "sha256": "c482f91b8c69c45ad2b1a23fbc510fa59fb9e2af812d10ed2b543f044f156b91",
+          "bytes": 2301805
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0137/after/F0137-1440-dpr2.png",
+          "sha256": "754a18e474d48eb46f6f43c6253f0afe7e7ae9b0786415ac0bfe766c5ae47eae",
+          "bytes": 2508688
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0137/before/F0137-1440-dpr2.png",
+          "sha256": "9e2f142ed250d4e673d9bb574493f53d9c2abdd5c0fb4868a583b0ec649e1d1c",
+          "bytes": 2012344
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0144/after/1440-dpr2.png",
+          "sha256": "26c9be9a4130e26d783722d44d7f1d2953f77199b8e0e3163967a3a50375ef68",
+          "bytes": 2650454
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/F0144/before/1440-dpr2.png",
+          "sha256": "d9e8547cd256ba749257b07f204da2398010c7f6167c8afda52e2bf3be8e3629",
+          "bytes": 2097731
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/after/F0025-390-dpr2.png",
+          "sha256": "e9e70dc0469e28803307c41e4eadc721d2eacf75d7a67052b549ddd239c1cdd4",
+          "bytes": 656821
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/after/F0026-1440-dpr2.png",
+          "sha256": "367009f1b1bc3b9d2b2e3b8271dfc41ce4736df34bd2985d207cfade25519149",
+          "bytes": 3097871
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/after/F0027-1440-dpr2.png",
+          "sha256": "b1ecec0300feecbee554afaa67d808fe7ed6a03dbc2e629c2fd229b3f8ebf4b8",
+          "bytes": 3075968
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/after/F0028-1440-dpr2.png",
+          "sha256": "6de70b64f8bf2fe3617cc915d9c885a109a10560e0d19f24706240386191c892",
+          "bytes": 3059780
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/after/F0145-1440-dpr2.png",
+          "sha256": "805d9d89b5e14d95660dac3d6c3fc4978b1c9f12771de95a03660147b1e89cd4",
+          "bytes": 2388319
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/after/F0145-390-dpr2.png",
+          "sha256": "bf5f3d4b4d1122f078dd5d2e893b533084e1c4af196cbe38ff676b2f9d828fa6",
+          "bytes": 725839
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/after/F0146-1440-dpr2.png",
+          "sha256": "431c9964d23a2e1e3e47aac4cbbfdaaddceb66c524506f192ad08e11580461c8",
+          "bytes": 2406101
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/after/F0146-390-dpr2.png",
+          "sha256": "f15796c812de8db7c6657fb319f8242d2d248bb497182be8c283b6414d19fbf1",
+          "bytes": 719473
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/before/F0025-390-dpr2.png",
+          "sha256": "e0b9de0e6a2e33d823a37e6cd4d3859d3d3fdcd15c6fde07a98a459442b4ce88",
+          "bytes": 643706
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/before/F0026-1440-dpr2.png",
+          "sha256": "2dac9702c7a4a191cb8e0f6a7ce56ec552f43f1361d8111118177c05d94060c5",
+          "bytes": 2449906
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/before/F0027-1440-dpr2.png",
+          "sha256": "ef203cc25680e4268e2861da39888913a9c28ca39685bb8a492662d38a111269",
+          "bytes": 2465722
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/before/F0028-1440-dpr2.png",
+          "sha256": "f2ede7379cc56e61eb62f1a3c70c5a528e5c79ae7328544c5d99fa158b6fe8b4",
+          "bytes": 2455659
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/before/F0145-1440-dpr2.png",
+          "sha256": "d0ee8f85ac415fabebeafca280ffdc63384f27c23e49445ecb454bf9fcfd585e",
+          "bytes": 1813378
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/before/F0145-390-dpr2.png",
+          "sha256": "f1d4acf87094961e8d9db27461db71993b4f1ef412bf226481fb00ef98441db9",
+          "bytes": 568065
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/before/F0146-1440-dpr2.png",
+          "sha256": "10a83807bf0502f0e6f5d486f58c4b14b19c62328d372f4f46bfd0a1ba972799",
+          "bytes": 1836106
+        },
+        {
+          "path": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/before/F0146-390-dpr2.png",
+          "sha256": "0213a95c3703f018f6cc9d759e8301523653010d2efd17b79900d5667b42737a",
+          "bytes": 551675
+        },
+        {
+          "path": "docs/reviews/general-ux-2026-10-21/after/carrier-1440x900.png",
+          "sha256": "52f21c66ab61ca598a7d10fb71c16baf464f8e8f8a7378da9c51efa122981233",
+          "bytes": 1100618
+        },
+        {
+          "path": "docs/reviews/general-ux-2026-10-21/after/carrier-390x844.png",
+          "sha256": "bbb45f81bc8e9073a4236d5d4a2e80b30f51381a9c08177f4c8ca1c53e409250",
+          "bytes": 888251
+        },
+        {
+          "path": "docs/reviews/general-ux-2026-10-21/after/intro-1440x900.png",
+          "sha256": "b649a1a79715f1c5fc488031d9a83660630dc662a905a6c890eb222e49a9a708",
+          "bytes": 1165580
+        },
+        {
+          "path": "docs/reviews/general-ux-2026-10-21/after/intro-390x844.png",
+          "sha256": "5fb453d5b1d013035c4e9b1761ef8ce95fac4727e72086d0dc6a56695eef7672",
+          "bytes": 933073
+        },
+        {
+          "path": "docs/reviews/general-ux-2026-10-21/before/carrier-1440x900.png",
+          "sha256": "9ec5c72716ca41fcbfdd7cdcf2b7a47145ac6ae47867ea2313ef085f77c9f6ea",
+          "bytes": 957697
+        },
+        {
+          "path": "docs/reviews/general-ux-2026-10-21/before/carrier-390x844.png",
+          "sha256": "bbb45f81bc8e9073a4236d5d4a2e80b30f51381a9c08177f4c8ca1c53e409250",
+          "bytes": 888251
+        },
+        {
+          "path": "docs/reviews/general-ux-2026-10-21/before/intro-1440x900.png",
+          "sha256": "1c2928dba1ffcd5d9a45a7f7ab9f7065757e120615394de1ae6ea07a7c1851e6",
+          "bytes": 1041154
+        },
+        {
+          "path": "docs/reviews/general-ux-2026-10-21/before/intro-390x844.png",
+          "sha256": "5fb453d5b1d013035c4e9b1761ef8ce95fac4727e72086d0dc6a56695eef7672",
+          "bytes": 933073
+        },
+        {
+          "path": "docs/reviews/intro-2026-10-22-feedback/after/1440-scores.png",
+          "sha256": "ca082fc211c693436d22dfb91fa3ed2bfdc87976b6299992bcb1f1ff7132c8f3",
+          "bytes": 360456
+        },
+        {
+          "path": "docs/reviews/intro-2026-10-22-feedback/after/1440-story.png",
+          "sha256": "2816399d4af8c89b6063bece21d4739fead590c32a8bdc0a0816b9a73bdcbcb4",
+          "bytes": 716459
+        },
+        {
+          "path": "docs/reviews/intro-2026-10-22-feedback/after/390-scores.png",
+          "sha256": "bf8e38d3dba96c849a24904e138167b66ea95ecacf987e3291e5cb34460e4e70",
+          "bytes": 114243
+        },
+        {
+          "path": "docs/reviews/intro-2026-10-22-feedback/after/390-story.png",
+          "sha256": "79ed0d1700ad88db301a9cd10a11dd16f7f82088c86a508a877431974edb88db",
+          "bytes": 144824
+        },
+        {
+          "path": "docs/reviews/intro-2026-10-22-feedback/before/1440-scores.png",
+          "sha256": "bcdf0d776e905c36012b5314eae28ed43bedd1a5fe1de5fd1552cd9792db4edf",
+          "bytes": 107118
+        },
+        {
+          "path": "docs/reviews/intro-2026-10-22-feedback/before/1440-story.png",
+          "sha256": "a4e55ca48cd898098840918fbb07f79ce22aebaec928e545b7bf024ef12f88a8",
+          "bytes": 171383
+        },
+        {
+          "path": "docs/reviews/intro-2026-10-22-feedback/before/390-scores.png",
+          "sha256": "9a0c1eef0a320ebe1d54b98fc7334da40cbe2b62f293eb756d835e880255a3af",
+          "bytes": 78253
+        },
+        {
+          "path": "docs/reviews/intro-2026-10-22-feedback/before/390-story.png",
+          "sha256": "af119fb1554ac540dd1c79bc6dc74b36b00b98ca7e73df6ca6674b4a3574324e",
+          "bytes": 65812
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/forklift-sprite-v1-native.png",
+          "sha256": "4782fe02eabbcad201f6282f93fc9de427c4daf58e0283fb9c8cd8e7fbbef9b4",
+          "bytes": 1028015
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/keeper-sprite-v1-native.png",
+          "sha256": "b2dcc4a2d8e6f27c65b9350f874d49c76ac5abbba9d25187502baa9edc099747",
+          "bytes": 1503752
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-sprite-v1-native.png",
+          "sha256": "0a9656aabdb1952c6c70f92a91c83c0bc8226442b93cb0cc213e65db98397b72",
+          "bytes": 1478421
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-before-desktop.png",
+          "sha256": "903e0dc3b59699f180b2f49c4586700226e2ca60d6974125d860c597b5c82421",
+          "bytes": 667350
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-before-pan-right.png",
+          "sha256": "9f2edeed6740830822f116590fa88080e4b74d4c00cad36f6b1152ebd5c755b3",
+          "bytes": 299182
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-before-portrait.png",
+          "sha256": "dc2e318ac4e6df5d3f798305f73411708b640c608062fddf2196083a9c17281f",
+          "bytes": 295083
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-desktop-guides.png",
+          "sha256": "6ae3466469f0de24d8bb11b9785acc058cd4050461418bd618ad649af943fdea",
+          "bytes": 900895
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-desktop.png",
+          "sha256": "30bd8b603802b9e7710cdf1828379855b7848b976d61c9929abfba7a0b8b731f",
+          "bytes": 677113
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-marked-comparison.png",
+          "sha256": "7bdab95271d7289e0b28c4633ba4f346f6c14b11e5a6bb0d824243f681aa69e4",
+          "bytes": 960906
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-original-board-protection-mask.png",
+          "sha256": "0d50a2d2bb4afe072ea9d24b23ab92d4891c4532a89fc1c0b77339e507e1e8dd",
+          "bytes": 1567
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-pan-right-comparison.png",
+          "sha256": "fbc694a6e2058688734cf65d7cb5e0746efcc38fdb53c4c0a08a6ee3df09e3e5",
+          "bytes": 449627
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-pan-right.png",
+          "sha256": "175ea749ed368d354539ddc7035b31b0f47f0717007ce92e4887de79cfe4296f",
+          "bytes": 305051
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-portrait-comparison.png",
+          "sha256": "ad87824192caee14dd9eed9905d0aa723bb4ec55f439c288b64c00042ac52844",
+          "bytes": 460415
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-portrait-guides.png",
+          "sha256": "abd069e094d56ff28c4e207db11c2de82db7ff228e185bdd43587e9986262e35",
+          "bytes": 396782
+        }
+      ]
+    },
+    {
+      "name": "media-03-7e00bb763c9f.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-03-7e00bb763c9f.tar.gz",
+      "sha256": "7e00bb763c9ff0a87e25128957bee242698e6613a647375ac728e090a540f740",
+      "bytes": 63575724,
+      "files": [
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-portrait.png",
+          "sha256": "ed6d2527fab3241bcd85719a8e11f0c81dc5c489ba1c5520ba9476ab233feae5",
+          "bytes": 300859
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-raw-source.png",
+          "sha256": "79a8484cfee529dc8d65ed36a25af359cba7b5b5b31aad3416034a041bac388e",
+          "bytes": 1316956
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-source-guides.png",
+          "sha256": "f6c450031c18d42c496aeee7c13bc5973f05821fcbea4dc82f64ac9039f4554d",
+          "bytes": 846353
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/rack-worldplane-v1-full-source.png",
+          "sha256": "e272b71b739581a503b9edaa0b35047019fb4bc2f9600fdaacbd3e8114f64bb0",
+          "bytes": 683120
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/warehouse-human-review-desktop-2026-10-23.png",
+          "sha256": "94df2b7d197a2d7d44252b8176f958344b237c166891337786cdd48441b146b7",
+          "bytes": 827386
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/warehouse-human-review-mobile-2026-10-23.png",
+          "sha256": "44bc0abf48c04dcb522e67d979bc7a28abe274f79988aeea7ba352d86df842cc",
+          "bytes": 1042423
+        },
+        {
+          "path": "docs/reviews/inventory-2026-10-22-finish/window-view-texture-v1-native.png",
+          "sha256": "c2c4d591aadbccb7bcc21d8f06587b8c6d096864ce6f4d34b6835e776b456b92",
+          "bytes": 1668817
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-khor-final-detail.png",
+          "sha256": "c9d8b77f74fe37ffe062c9406e7c5771ab9287c3175aaafb8f4ddc38e4e67b61",
+          "bytes": 817226
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-khor-final-full.png",
+          "sha256": "1e278140ffd1d5566b57db6453fac6ce5efe268b37f8208f7a4a1c7ff89ebdd5",
+          "bytes": 2519058
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-khor-final-source-detail.png",
+          "sha256": "5f0e415ac176e651e926fbbb66977f4f28a4f5e57654e81892fa517071cec699",
+          "bytes": 180226
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/choices/tall-representative-v3.png",
+          "sha256": "e80d76197f7bc829bd115cda8b5d3523bfe2a3718e5b7f7e96d0a3ffffc5a22e",
+          "bytes": 1775383
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0098-aircraft-100.png",
+          "sha256": "3d77320c28d37c1223fcbc77fd8651d6ff693e29e9d79d05c9dcf6723b8f11d7",
+          "bytes": 275760
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0098-flight-corrected.png",
+          "sha256": "ad07f99a3b5403a79d024cd06f985665bead3e055200d06b43887fb31fba7639",
+          "bytes": 1615423
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0098-gift-contact-100.png",
+          "sha256": "e7ffda4af096c2dc98589d4818153a3f82c7d0d07717aed07f3f1ee4246f5c84",
+          "bytes": 43461
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0098-original.png",
+          "sha256": "55c59e1959d729682bf9bf73933bb518de5bbb75c10a0634954bdb96f575963a",
+          "bytes": 1597396
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0098-rigging-100.png",
+          "sha256": "1043dc5bf0015ca070be095727904028a4b07fc0563a9caff5355ffdad475cdc",
+          "bytes": 82361
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0099-aircraft-100.png",
+          "sha256": "325ccf172753ab3ba002fb9d71c7376c7027f42c90e4e0222fb5ba6e6d4541c5",
+          "bytes": 271204
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0099-flight-corrected.png",
+          "sha256": "1e11a6223e2a5106688409bb7ba0d7046ecbaa5eadb8b4fbf287967cf8af70bf",
+          "bytes": 1594759
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0099-gift-contact-100.png",
+          "sha256": "8c5e99ef0bb4341834d0b0c1eaccc15d38e84e0211ed3430cd4cb778a004a00a",
+          "bytes": 42764
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0099-original.png",
+          "sha256": "a0866288f662570823c1691f53218f107a0f5c89de240a74b0537016b29befe4",
+          "bytes": 1576640
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0099-rigging-100.png",
+          "sha256": "9df8a1433c2236bba7eb5772f7223a2308df5382fabe276a8aab5ded9e3c5eaa",
+          "bytes": 80343
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0100-aircraft-100.png",
+          "sha256": "be97fa828766abf24bfefa9fdd684b8bc1dd7898e908d249b675524cbc9abc3e",
+          "bytes": 273813
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0100-flight-corrected.png",
+          "sha256": "1e06100443b12c39defddc7590123902cbc1dae8864a42e597188938c02ca6f8",
+          "bytes": 1603486
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0100-gift-contact-100.png",
+          "sha256": "3d172b73254577a5854ae7fc5b1810d1b770c9ffdcd4841c5164fa6d9d8ff717",
+          "bytes": 43134
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0100-original.png",
+          "sha256": "7c169e2f85dead8846d48aa34b0f3d4e921b434e47755db718d1733446efc5ba",
+          "bytes": 1584064
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0100-rigging-100.png",
+          "sha256": "5d1c1dac1fe78db111f2e004e5619a8aa4850f93be1dac9efd71ab15196aa7e9",
+          "bytes": 81115
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0101-aircraft-100.png",
+          "sha256": "0fbc99cc3feb66923b0d8ce849932836c414c6b4fd5ec2ff736cba4c9dab299f",
+          "bytes": 270125
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0101-flight-corrected.png",
+          "sha256": "09019a5c8d0ed3f5c45030a50414f517f5a29b1cc117d4c5b1b0a44cdd1814e6",
+          "bytes": 1590980
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0101-gift-contact-100.png",
+          "sha256": "128a2c5e7b5a0d40131e8967af3d32a0cd180bc0405026a0601a30670b6ddd24",
+          "bytes": 42905
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0101-original.png",
+          "sha256": "e400eafcfd235a02b728618236822fde17fc256f9d9ff2b528638a7067b4bf98",
+          "bytes": 1568691
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0101-rigging-100.png",
+          "sha256": "7e05e79678a7b1f0407cb1dd20375beaa1cf60d7db4967635c3d0afcf78e86ed",
+          "bytes": 79723
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/flights/common-flight-native.png",
+          "sha256": "b72cfa4d4fa5978837f4fdb5bb4c6390f38641c10364846ea8ee03714c9fbb15",
+          "bytes": 1557460
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/intro/F0093-helicopter-corrected-v4.png",
+          "sha256": "1448d6d0d6f47e550acfb2f3d524229a2f50ab5e11e2154bac8d0b9884757464",
+          "bytes": 2420975
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/intro/common-tall-aircraft-alpha.png",
+          "sha256": "99f4a968b78bd9ba83ad659809a365d40047346c35093be74b0b976557e7c519",
+          "bytes": 13603
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/intro/common-tall-aircraft-only.png",
+          "sha256": "72b4e32d7f9a6633f5370f42ca55b332d4b58fce8cccf6cebbb5fd7e519a2b9a",
+          "bytes": 2097169
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/intro/common-tall-display-review.png",
+          "sha256": "336e95621f4f5f54812bf784e4fe3847956d55596a4cf5af7633cf75a7fbbef9",
+          "bytes": 160407
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/intro/common-tall-final-attempt.png",
+          "sha256": "c321dc5480b44ec4aa10575f061bf9e768f1db6d06baf30c35abc86de7cf9f8f",
+          "bytes": 1683354
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/intro/common-tall-representative-v2.png",
+          "sha256": "1c47911338b37c1631105e90c5f48205c75319b1c446bdd09c72cf02f4b2f6c8",
+          "bytes": 1661048
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/intro/common-wide-aircraft-native.png",
+          "sha256": "e6cfa35bff4e35f02ea8813232b2ed1143aad49769cce53592b92bde35e1db74",
+          "bytes": 2086855
+        },
+        {
+          "path": "docs/reviews/lastmile-helicopter-2026-10-22/intro/common-wide-tail-final-detail.png",
+          "sha256": "276c2d8b961a96ed6d4574116ba0a0263602583f8c1fe3e4fdd3e19019a08567",
+          "bytes": 167260
+        },
+        {
+          "path": "docs/scenario-assets/image1.jpg",
+          "sha256": "ae4f859f532c1e99ddc0daca446da0d3f430c52e167e66a10c1bbfe7851598c2",
+          "bytes": 105701
+        },
+        {
+          "path": "docs/scenario-assets/image10.jpeg",
+          "sha256": "e795badb0d845ab7508d1f0bff80858189b83a96d01848ead0ddd18d3b12aa29",
+          "bytes": 135420
+        },
+        {
+          "path": "docs/scenario-assets/image11.png",
+          "sha256": "887dd453a3771db4a195c228444c92134b70eee851de5b5e3c605042fc6977e1",
+          "bytes": 459339
+        },
+        {
+          "path": "docs/scenario-assets/image12.png",
+          "sha256": "15696c52d34333979316fbb80bda9c441198c020301eae6d3109a493fd16df7a",
+          "bytes": 919303
+        },
+        {
+          "path": "docs/scenario-assets/image13.png",
+          "sha256": "6dad79b30ebf9633f013bfa336821fa9c290f474514cc3b5991cddf7f00323df",
+          "bytes": 342605
+        },
+        {
+          "path": "docs/scenario-assets/image14.jpg",
+          "sha256": "e084da59afd1587220ee2e37f8956ffa41167a2588d7fbe062c51d30acafcdd5",
+          "bytes": 157256
+        },
+        {
+          "path": "docs/scenario-assets/image15.jpeg",
+          "sha256": "7e01658ad95528ddc12ecba41d77d5cacdd408ccbada92b387f373e70d1e00e2",
+          "bytes": 69453
+        },
+        {
+          "path": "docs/scenario-assets/image16.jpeg",
+          "sha256": "858924acb07592b1fe98fe415b16dc7cd4e905e9bb8ca3aefd1fb981ffb99fd0",
+          "bytes": 86866
+        },
+        {
+          "path": "docs/scenario-assets/image17.jpg",
+          "sha256": "f1f4338521ce87658b1c6dab13bda91fe4086c7726d47143ca253b5c6d3b63ab",
+          "bytes": 49075
+        },
+        {
+          "path": "docs/scenario-assets/image18.jpeg",
+          "sha256": "e5a3df95fdaef97539698b5d276b8835f17ab3af798cc95adf7a963c03e13bef",
+          "bytes": 35303
+        },
+        {
+          "path": "docs/scenario-assets/image19.jpg",
+          "sha256": "da76b58b07892736a777577dbfab64103d6c683f40bd1859c0542d852f15310b",
+          "bytes": 77374
+        },
+        {
+          "path": "docs/scenario-assets/image2.jpg",
+          "sha256": "88c43b2d1c7c59956a05ddd45da66191ae3743d1e384494093fdf644a29d56bb",
+          "bytes": 97801
+        },
+        {
+          "path": "docs/scenario-assets/image20.png",
+          "sha256": "2c870b0588d908cd3062d42d2361d9279b8aca9bc77783293ee836f2219b6372",
+          "bytes": 993095
+        },
+        {
+          "path": "docs/scenario-assets/image3.png",
+          "sha256": "8067b9004999dc7802f5175fb110466de2e2d074fdd0610e23d6ca38f9fbe5a6",
+          "bytes": 728419
+        },
+        {
+          "path": "docs/scenario-assets/image4.png",
+          "sha256": "de9bd0f2881fdf655376abaffc9b6fcd7e1354563e3bd40514a930c58875b88d",
+          "bytes": 23823
+        },
+        {
+          "path": "docs/scenario-assets/image5.png",
+          "sha256": "67c1b9cd3ac7ddcdba09dd1558af9d4200baed02580dd90017a9ab9f9e53894c",
+          "bytes": 20366
+        },
+        {
+          "path": "docs/scenario-assets/image6.png",
+          "sha256": "903583c6a85dc3336d958f40ac5ff93b0afe26a29e3e20ab69cf5c55ffcee478",
+          "bytes": 42170
+        },
+        {
+          "path": "docs/scenario-assets/image7.jpg",
+          "sha256": "f1fcb3af08c08aa1dabda7e4998cef6e1423729932ab2cf022b305aff8df76a8",
+          "bytes": 157580
+        },
+        {
+          "path": "docs/scenario-assets/image8.png",
+          "sha256": "3015ff80a703f96214626057ac183b1afbbbb3b040bc453c974cc35e08239875",
+          "bytes": 168182
+        },
+        {
+          "path": "docs/scenario-assets/image9.png",
+          "sha256": "2347d9ab946dd13b9551ee53e806bc7d54bbc84ee027bd755e11a597f1317f17",
+          "bytes": 408056
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-01.png",
+          "sha256": "25a484f24c5c2339051273caa3d445b15c03fd7167f1ea663f57f824f4bd6d42",
+          "bytes": 283238
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-02.png",
+          "sha256": "933e7cef529d077581fae91bd73d83cbca7f282c69ed574f98698297cf3baac0",
+          "bytes": 224530
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-03.png",
+          "sha256": "334d0590174b01063fa7d380b3d745b6d2cb75e8c0acc74f4189501aec3bd8d3",
+          "bytes": 2959663
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-04.png",
+          "sha256": "9178bdc7f7eb6046da166021c2d09b304f2d1f8c47e5e403b3a1930f1ddca76e",
+          "bytes": 2583921
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-05.png",
+          "sha256": "d5c748e40fc23364a120c216e6ef9919b497e8cd4376a29b210bae9568594a84",
+          "bytes": 2412176
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-06.png",
+          "sha256": "4b4b44d072e79bf21b5939d87649b6aa19a46de940b59bdedeff5abf7bc28437",
+          "bytes": 652444
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-07.png",
+          "sha256": "51fdef48f2713cbec8d7faf4505716a741097406b8d4a27a59c87ef4838a86e6",
+          "bytes": 96469
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-08.png",
+          "sha256": "05e4f1eac3ec6d9cf06dc5cc8a540f83f5c928bd0dcbd92791bbc6d3df970519",
+          "bytes": 187186
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-09.png",
+          "sha256": "e2f94a125520f65a9ece399168897eb7165023b94a243c3baa3c2a74324145a8",
+          "bytes": 2303643
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-10.png",
+          "sha256": "33bc46f5b15f4a4fe2658ff2227791a9e47d06ff9dace2e267fc8568c9622099",
+          "bytes": 1051841
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-11.png",
+          "sha256": "dd18c0cd89049b688291ac18084eb8c016c859e62b023b2b8fc1bc677a5fc2ff",
+          "bytes": 593054
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-12.png",
+          "sha256": "dd18c0cd89049b688291ac18084eb8c016c859e62b023b2b8fc1bc677a5fc2ff",
+          "bytes": 593054
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-13.png",
+          "sha256": "4bd560f11189db265e7f560c56d3f8e1e07f2afe4a19fea58dc374fbb8656b13",
+          "bytes": 3056599
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-14.png",
+          "sha256": "d3d8a672068de59715f0756a112eae813e8a418d64f5045f37d7dabf446b84a5",
+          "bytes": 1475968
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-15.png",
+          "sha256": "df902c4fa796e8415800f847ad58e7c69db8b5e0822fb64d691b80cdca274bbd",
+          "bytes": 2544131
+        }
+      ]
+    },
+    {
+      "name": "media-04-76e4ced8f867.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-04-76e4ced8f867.tar.gz",
+      "sha256": "76e4ced8f867983ae65427106d6aa621cbdf9107d05fea8866f643b53a8495aa",
+      "bytes": 65893410,
+      "files": [
+        {
+          "path": "docs/teo-feedback-assets/image-16.png",
+          "sha256": "36da9f5f69f65e480681026bc4438ac71f6b69fd52d6605b2dfd491363f9e26f",
+          "bytes": 2977767
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-17.png",
+          "sha256": "3f8f4bca30542aef5db8abeebc47148ac7bb9a41b584b44a4c423bc433b1e9c5",
+          "bytes": 2320155
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-18.png",
+          "sha256": "bba2cc026cef3eb67aa3d09994c0c6f24e90bb839f6ebcf912d51d0c4b900f1a",
+          "bytes": 3013414
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-19.png",
+          "sha256": "44e4cca2af6e94be604413249b60f14bb694d743454a0c6a574e156b0641cdfd",
+          "bytes": 2578959
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-20.png",
+          "sha256": "a1a47f8da6514ca1e8e02b606f6330e1242c3f71a753cddfea87f618a7b29b40",
+          "bytes": 3011649
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-21.png",
+          "sha256": "f6564e56ffc4b0bd0583b771df8750f22fa03c849ea24c7694773834070952d0",
+          "bytes": 844618
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-22.png",
+          "sha256": "d9ee893712b5f8bda3bce31842d2d2694b374da611a20b5f5e731ac6f2c503c7",
+          "bytes": 847344
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-23.png",
+          "sha256": "a5ae4b10da214aecd0562214e7c06d5b0fe2326c1cbfb1ea30d5b3176434024e",
+          "bytes": 2800134
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-24.png",
+          "sha256": "4b84ef6417d66117bf1e6e5c374c42332e5f0604b691926b793d49356e9dc69c",
+          "bytes": 3061001
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-25.png",
+          "sha256": "36476b21ef25a2893f92449c3df81825125624676e4c96a8be1ea588dabc76a0",
+          "bytes": 2719045
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-26.png",
+          "sha256": "cf326dbb293e83bfeccdeb717f45aa498b9e5440ff53de1816ee3aa2c9adc80e",
+          "bytes": 1043015
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-27.png",
+          "sha256": "dbdde9bbfa03f3c58ce4ed5e59a3fad5cffd778f8f3f811a7a6c2252766fc340",
+          "bytes": 3617414
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-28.png",
+          "sha256": "b0c8e645cc09a123d5b3b2e956f92acaf1514e7528ba7abcce6ae243d9f7e34d",
+          "bytes": 259784
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-29.png",
+          "sha256": "9ac2a2d015a2cafc639c9c8fcb75b9bc6b934d5c1f7a0e57bb42df00de3e816b",
+          "bytes": 1326820
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-30.png",
+          "sha256": "6cc91cbe0377d6af438824577a7bb516f4231c623b6de049077545dabe1d00fb",
+          "bytes": 630209
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-31.png",
+          "sha256": "a805c56b86aa8ce309d554442865ef6366aa991b7a25383b043c4e571780f4cc",
+          "bytes": 405117
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-32.png",
+          "sha256": "3c576cdc241c6b090d8800e46486e6772d235c146d0f38733dcfed852629a86e",
+          "bytes": 973091
+        },
+        {
+          "path": "docs/teo-feedback-assets/image-33.png",
+          "sha256": "cdd2123f6ab8ab01f1f07b17a895c20ede48ed90791b6b836d6bfa7524eeee52",
+          "bytes": 1553040
+        },
+        {
+          "path": "public/brand/apple-touch-icon.png",
+          "sha256": "9fee034dfa4db3a5bce720fc6870a85fa78bd9d5a13fd12d2f7fdb7c91d1c418",
+          "bytes": 3931
+        },
+        {
+          "path": "public/brand/favicon-32.png",
+          "sha256": "b9d3acfa8564e87109ada0617ff878c18713b334ef6bec8456ccfee2d32b4779",
+          "bytes": 675
+        },
+        {
+          "path": "public/brand/icon-192.png",
+          "sha256": "05aa06dc064f333398de7c1e39dee74522bc010594aded3ac914e459349992c6",
+          "bytes": 8088
+        },
+        {
+          "path": "public/compact-art/boat-zone1-axle-v47.png",
+          "sha256": "3051d98ef7357973ef75bf9e810018abc2b7d3737fbc2e92f3f7ed5004c3585a",
+          "bytes": 1571083
+        },
+        {
+          "path": "public/compact-art/boat-zone1-axle-v49.png",
+          "sha256": "ae21497ada4d4e9567f939792ab01d13606fb005b3199dec7a9923d5ff8c9371",
+          "bytes": 1734175
+        },
+        {
+          "path": "public/compact-art/boat-zone1-axle-v53.png",
+          "sha256": "0d87d512c789183148d3e3f2d579fcb0575e9f55e141359406b9c90099c72a6a",
+          "bytes": 2335020
+        },
+        {
+          "path": "public/compact-art/boat-zone2-dishes-v46.png",
+          "sha256": "c1784109c4df1dad5d3cc372a88aaa4503639f57f2c12ae8f4fe42b487188175",
+          "bytes": 1570473
+        },
+        {
+          "path": "public/compact-art/boat-zone2-v53.png",
+          "sha256": "d9ff90841198794aa466b8a2d23d185901434ff3ee603fbffef8d970ba11c5a0",
+          "bytes": 1535035
+        },
+        {
+          "path": "public/compact-art/boat-zone3-no-fit-crew-v50.webp",
+          "sha256": "c1f10e8b8c2263efe1a36a29f80aab8cc5ea731de71234609118a3ca8be62d0e",
+          "bytes": 223126
+        },
+        {
+          "path": "public/compact-art/boat-zone3-no-fit-old-v50.webp",
+          "sha256": "55b197a729aa8641e5cbaa1c37b4d9c7ee6c8ab4f347150a1e3ea471e56a44e6",
+          "bytes": 225392
+        },
+        {
+          "path": "public/compact-art/boat-zone3-no-fit-old4-v50.webp",
+          "sha256": "acc5e23f67a71265098e001c33f12afd2f7bfc2a87a76dbde82300461ea93362",
+          "bytes": 227102
+        },
+        {
+          "path": "public/compact-art/boat-zone3-no-fit-v48.webp",
+          "sha256": "2816f894d9262ce50663256791f06caf44fc7270b21e5e5f8e7937a600886da8",
+          "bytes": 360984
+        },
+        {
+          "path": "public/compact-art/boat-zone3-no-fit-wide-crew-v50.webp",
+          "sha256": "8b549951c29a3b4d9967de0bfe62f51d97def91b1760d06f5f4d3f5765cf9a0e",
+          "bytes": 185512
+        },
+        {
+          "path": "public/compact-art/boat-zone3-no-fit-wide-old-v50.webp",
+          "sha256": "91b7bb0e4befdce11a8a83ff37ff303726f67f9d6ab6afab7df54887f152a466",
+          "bytes": 187402
+        },
+        {
+          "path": "public/compact-art/boat-zone3-no-fit-wide-old4-v50.webp",
+          "sha256": "4ffea6024e0bd5eaae5b35ec0175b2acf66c811a4d25fada905cab97042b3d78",
+          "bytes": 185946
+        },
+        {
+          "path": "public/compact-art/boat-zone3-no-fit-wide-v48.webp",
+          "sha256": "7acf9025333a3c9357884082c35ebba6723f83183ad20b6951a30c0b5868dbfe",
+          "bytes": 310618
+        },
+        {
+          "path": "public/compact-art/boat-zone3-v32.png",
+          "sha256": "2d47bd16bcca6b6038a7e856483d100bb9f1ca0fefbe2940fa0c22e7e169787f",
+          "bytes": 1641480
+        },
+        {
+          "path": "public/compact-art/boat-zone4-supported-v52.png",
+          "sha256": "039d895cfd6e1e876a60ad3a7f6aadb117369ab0954d088e66c54eb1768f731a",
+          "bytes": 2356062
+        },
+        {
+          "path": "public/compact-art/boat-zone4-supported-v53.png",
+          "sha256": "1d17cbf624fdc87c5701514b86c8611830e3d659a7e4d93827bb8cbf0f01d88c",
+          "bytes": 2314534
+        },
+        {
+          "path": "public/compact-art/boat-zone4-v29.png",
+          "sha256": "6d15ccef56bdea0aa4994a05ba57c9ad326228cd10d5a8d2f7a5c3cd562f4f76",
+          "bytes": 1549635
+        },
+        {
+          "path": "public/compact-art/camera-zone1-fallen-v44.png",
+          "sha256": "671c153ff45d11db02441e881624c96634d4300c97de235f6cc9161415d973c1",
+          "bytes": 1523698
+        },
+        {
+          "path": "public/compact-art/camera-zone1-fallen-v53.png",
+          "sha256": "2e8b8d6ba4ca7b6fb5bb6411c8f353b967219dd2753ffe6e5cb21d3c9da9a4fa",
+          "bytes": 2204253
+        },
+        {
+          "path": "public/compact-art/camera-zone2-v36.png",
+          "sha256": "8d9eebfe70007c9469e70d3646c8c60f71b66089a1017c457ed0882c9e5a8548",
+          "bytes": 1515738
+        },
+        {
+          "path": "public/compact-art/camera-zone2-v53.png",
+          "sha256": "4a380c6427c4c29e85e70023efe73908f32bb890e3bafd1f5bd2c5dda80aca75",
+          "bytes": 1708570
+        },
+        {
+          "path": "public/compact-art/camera-zone3-packed-v40.png",
+          "sha256": "29c2a55c17852d1db1341f68e57df4a61333c495ac890b57b3609f0d2987d2c3",
+          "bytes": 1522032
+        },
+        {
+          "path": "public/compact-art/camera-zone3-packed-v53.png",
+          "sha256": "8e9f0aa2316eb1feac93749c2242b02f0d4f308834106a4b7f3a70b8699b80ad",
+          "bytes": 2253088
+        },
+        {
+          "path": "public/compact-art/camera-zone3-unload-v41.png",
+          "sha256": "5639b2a021fe5e6d4a9db8b503178c57396b9ae8af33eb5a2dd5adf084733e6a",
+          "bytes": 1573825
+        },
+        {
+          "path": "public/compact-art/camera-zone4-v38.png",
+          "sha256": "dccef28f41d104d1ca0a8e00bbe33a1f341f839a563aed199758be648b55c6c2",
+          "bytes": 1528997
+        }
+      ]
+    },
+    {
+      "name": "media-05-63965a8eeb6d.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-05-63965a8eeb6d.tar.gz",
+      "sha256": "63965a8eeb6d5a4d3d466eb83999abfcec306f4235b86457cc6938d14cb71a7e",
+      "bytes": 62414646,
+      "files": [
+        {
+          "path": "public/compact-art/camera-zone4-v53.png",
+          "sha256": "32a5f780e219339b11300f090453337351e6d148b01832d38e19b5bea2a67f10",
+          "bytes": 2225802
+        },
+        {
+          "path": "public/compact-art/compact-environment-v26-portrait-v2.png",
+          "sha256": "ee67b3788dc7319877b61f2ddc5f1dc73f420cfadbed11e11b2aca405ff1131b",
+          "bytes": 1561219
+        },
+        {
+          "path": "public/compact-art/compact-environment-v51-wide.png",
+          "sha256": "be3ba5b8e0d925a1a072f9ad25ee30688e05f058b8c4b82a4bd8e5913a7b8421",
+          "bytes": 1525499
+        },
+        {
+          "path": "public/compact-art/compact-environment-v53-portrait.png",
+          "sha256": "f31892e885c92a2530e88393473d365d2f109ede222677c132775d9331c4d9a6",
+          "bytes": 2238180
+        },
+        {
+          "path": "public/compact-art/compact-environment-v54-wide.png",
+          "sha256": "d74ba754a585e389f800258a1f353b9cfee5798b405051a55eb19815900d390e",
+          "bytes": 1588114
+        },
+        {
+          "path": "public/compact-art/loading-background-tall-v1.webp",
+          "sha256": "5b2f92c3b2501d7a8c6a6f1ccad7a2fae03de486613fd67559031f8a251752b4",
+          "bytes": 116960
+        },
+        {
+          "path": "public/compact-art/loading-clean-belts-v26.png",
+          "sha256": "eddbd5fbe0dffcd50258919d3a350744d4bc004cb37ee83e58a6635ac55e8ff0",
+          "bytes": 1616418
+        },
+        {
+          "path": "public/compact-art/loading-clean-v17.png",
+          "sha256": "fb50e2950726d5c399143769bb09fe40876a7a12f7d2ef6da988547b9c6294d1",
+          "bytes": 1492937
+        },
+        {
+          "path": "public/compact-art/loading-illustration.png",
+          "sha256": "72fcfe773ed5f9b081525353a51b219b715a8960c26c332cb86a86688fad12e9",
+          "bytes": 5857857
+        },
+        {
+          "path": "public/compact-art/loading-neutral-v2.png",
+          "sha256": "14702ffbde29dabae535aa4d279b5e7d5df80422852ec5150426b1c0ad148587",
+          "bytes": 6345506
+        },
+        {
+          "path": "public/compact-art/loading-niche-v6.png",
+          "sha256": "4a57b7110f873fb67da656581d676a41ee300a9d98454dc09223c7eae8de5d47",
+          "bytes": 6567458
+        },
+        {
+          "path": "public/compact-art/loading-organized-v3.png",
+          "sha256": "f01fc48b018d808aebffb0c38fc6f8c43a4c58d7fbf7b151a252c3164db8b908",
+          "bytes": 4622501
+        },
+        {
+          "path": "public/compact-art/loading-organized-v4.png",
+          "sha256": "e5964be5a54f39333c16ec3d606d140e04ed09035c26052a1ce47475d31af4cf",
+          "bytes": 4721931
+        },
+        {
+          "path": "public/compact-art/loading-organized-v5.png",
+          "sha256": "a8c9709267aba32d4647d75443417bed0c9c39e1bdefd6ca95e2e68e9649e762",
+          "bytes": 6395497
+        },
+        {
+          "path": "public/compact-art/loading-side-packed-v11.png",
+          "sha256": "24f50223fcd2da0c73f9eddcbe9176efadf3b1c4fb8c1bca50931548f37fbc59",
+          "bytes": 1562942
+        },
+        {
+          "path": "public/compact-art/loading-side-painted-v7.png",
+          "sha256": "25c93eb68292d5dc33ef87c0193de8717e5e73a3651ed0c10ddd47c41eef4bcd",
+          "bytes": 1454820
+        },
+        {
+          "path": "public/compact-art/outcomes/boat-axle.png",
+          "sha256": "eb4b6fdd1b7becb2e5dfd6f47997925e75bc8caf11bc08def6f657291e8ca17d",
+          "bytes": 1408418
+        },
+        {
+          "path": "public/compact-art/outcomes/boat-dishes.png",
+          "sha256": "b78f56a441081c9252a9349513d4e6c9fc2737b2934d93e369ffe3827a8c78e2",
+          "bytes": 1204591
+        },
+        {
+          "path": "public/compact-art/outcomes/boat-no-fit.png",
+          "sha256": "1e7da11aa4ba3b6d0d41676f4bdf5fdd7722d55e3e0e24882d43fc5a824a9c87",
+          "bytes": 1103777
+        },
+        {
+          "path": "public/compact-art/outcomes/boat-reload.png",
+          "sha256": "217f281515cfd0b32c8435f788115c992262ac5f4c618f9dcbb84ebc17fb306b",
+          "bytes": 1149786
+        },
+        {
+          "path": "public/compact-art/outcomes/boat-upright.png",
+          "sha256": "325edb6f4215c084e55fc57a9c7292581cca405e019e9da236b08c90330a5f4d",
+          "bytes": 1195761
+        },
+        {
+          "path": "public/compact-art/outcomes/camera-dishes-broken.png",
+          "sha256": "e02964d258fc1d3a91f4c07c40e2ac0d89ac09d77ac4adf8c3e259293832a130",
+          "bytes": 1119011
+        },
+        {
+          "path": "public/compact-art/outcomes/camera-dishes.png",
+          "sha256": "d04ea751d6a36de927893e0a3efd1ab27ac14b7dd425beeaf6c48cca5928b931",
+          "bytes": 1280788
+        },
+        {
+          "path": "public/compact-art/outcomes/camera-niche.png",
+          "sha256": "09f8bb4e08734ad4935148ef183c565da0bbd88cca49fc5a006d229da3e45e38",
+          "bytes": 1086006
+        },
+        {
+          "path": "public/compact-art/outcomes/camera-space.png",
+          "sha256": "be8b4d0414fd31d6df8dda1dd6935b937e5d113965a943c5a5be5424059aa14d",
+          "bytes": 1060965
+        },
+        {
+          "path": "public/compact-art/outcomes/camera-unload-three.png",
+          "sha256": "f006c9ed42ce78059200252a77c02e9f6fa9f1fa493c7b9ba15bb5b1e840eeff",
+          "bytes": 1136995
+        },
+        {
+          "path": "public/compact-art/outcomes/socks-dishes.png",
+          "sha256": "cfc492dc9ac3efa534ac653cae4ecf4885f7daf5f3d889d3f8f8db25e27f4c25",
+          "bytes": 1150180
+        },
+        {
+          "path": "public/compact-art/outcomes/socks-niche.png",
+          "sha256": "2c14215d1307442a256de52671131f2467727b3c8207418ac6e4227f5a44641f",
+          "bytes": 1147130
+        },
+        {
+          "path": "public/compact-art/outcomes/socks-scatter.png",
+          "sha256": "730f0cd208b0e4dd5db1f2b488aeb7d72d48af7915589280993976aff2b44bf1",
+          "bytes": 1158519
+        },
+        {
+          "path": "public/compact-art/outcomes/socks-space.png",
+          "sha256": "20db99081f7e183c9135fe8b5b374392c0bfa189168cd42ca39efdcc9cdd6c41",
+          "bytes": 1026368
+        }
+      ]
+    },
+    {
+      "name": "media-06-32da59a84eb5.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-06-32da59a84eb5.tar.gz",
+      "sha256": "32da59a84eb5afd58bcd75429c7c40aa044ac7b5ad8603984decbb316b2c7422",
+      "bytes": 42847737,
+      "files": [
+        {
+          "path": "public/compact-art/socks-zone1-unsecured-v45.png",
+          "sha256": "9fbe214c8f4aaef9cc784ea712c1e475f0cfa75362c638d6717dd8e5899d9528",
+          "bytes": 1544694
+        },
+        {
+          "path": "public/compact-art/socks-zone1-unsecured-v53.png",
+          "sha256": "4956e2b8c76ebb8a65422cdda6d8d72eee08b58c94fd97b4679fc41a581ae65c",
+          "bytes": 2247952
+        },
+        {
+          "path": "public/compact-art/socks-zone2-v37.png",
+          "sha256": "1be61b874bfbceee350ab992e7768056d7ca41b7639c3cd552c3d2a74bd80179",
+          "bytes": 1542620
+        },
+        {
+          "path": "public/compact-art/socks-zone2-v53.png",
+          "sha256": "a4ab1c2e7b8c7f945e60ec3ec0a49c69d341156a803fa9c0ab2933ea883f2d01",
+          "bytes": 1738697
+        },
+        {
+          "path": "public/compact-art/socks-zone3-secured-v43.png",
+          "sha256": "1606cac1357476d099faccad329fffd8c9ce7be51023b1decde432b692bbefd1",
+          "bytes": 1505830
+        },
+        {
+          "path": "public/compact-art/socks-zone3-secured-v53.png",
+          "sha256": "00b750e85054400259daab948cc6038aaf483fb7641a3bb7da8dfeee9a239b4e",
+          "bytes": 2249756
+        },
+        {
+          "path": "public/compact-art/socks-zone4-v39.png",
+          "sha256": "5ad5c9337b3ec629d04187bb4e76e1d07a80b3ed6c5340316b08bfc4b488ad8e",
+          "bytes": 1518800
+        },
+        {
+          "path": "public/compact-art/socks-zone4-v53.png",
+          "sha256": "5a032153b055839d149ce93565d39f28100c465695b343dc404053d9bf663db2",
+          "bytes": 2231769
+        },
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0001-v1.png",
+          "sha256": "a72ca82a5ce69a99917697b6d716ee369e6d993cc68032c4520c78dc73a3f73d",
+          "bytes": 29626657
+        }
+      ]
+    },
+    {
+      "name": "media-07-dc5f07539414.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-07-dc5f07539414.tar.gz",
+      "sha256": "dc5f0753941450665019f8807168dc9095bad6709a724fa40654f1c43e299c17",
+      "bytes": 61986086,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0025-v1.png",
+          "sha256": "1c670e601fbe1b468ea5e88a922e68200609407631d0dda8d2a1b281dda7662f",
+          "bytes": 40579186
+        },
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0026-v1.png",
+          "sha256": "a1b00981d32f8e52a1fc18da888f817f69d3f69b9649e35b03210325f438f20d",
+          "bytes": 24064590
+        }
+      ]
+    },
+    {
+      "name": "media-08-ff9e12639fe9.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-08-ff9e12639fe9.tar.gz",
+      "sha256": "ff9e12639fe9c80a3c74e8bc34c30832f7663d05549396db30b147b212773e5f",
+      "bytes": 48842255,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0027-v1.png",
+          "sha256": "ad833d30736561e762239e64734d94a1ba484e59fe1f989a3448879837aa2fdd",
+          "bytes": 25545627
+        },
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0028-v1.png",
+          "sha256": "c2f370152e063f1e48c6ae717249e30ff3278a15c7e401937f256e11fa7c6ebb",
+          "bytes": 25210041
+        }
+      ]
+    },
+    {
+      "name": "media-09-f1ef8d22336b.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-09-f1ef8d22336b.tar.gz",
+      "sha256": "f1ef8d22336bed9163bd26a466ac08c585f8003b94e0622ebf11623e0e5ad370",
+      "bytes": 52958169,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0029-v1.png",
+          "sha256": "f06843e04d9dcd7f29aca370a338087e12e4ed629a88b110ce75059e386f6d87",
+          "bytes": 22699485
+        },
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0075-v1.png",
+          "sha256": "76e9a0190497429fea09876d56edb6d41b31cdc1c69f1c2d24022aacb3c0700f",
+          "bytes": 32776657
+        }
+      ]
+    },
+    {
+      "name": "media-10-1a42fcfbc140.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-10-1a42fcfbc140.tar.gz",
+      "sha256": "1a42fcfbc140e89925d25705e71ecd5b569e917d8e4826e9c52afc5add072aa8",
+      "bytes": 53691321,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0086-v1.webp",
+          "sha256": "62a707f74945d6029afd54108b86b4c0acfe553b84d08b6ffe4863e798940826",
+          "bytes": 24372984
+        },
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0087-v1.webp",
+          "sha256": "0ae263335bf7d796c630f38a33428919a342f38aa34d45f6df3a03d92e285437",
+          "bytes": 29309342
+        }
+      ]
+    },
+    {
+      "name": "media-11-6f843d7341f6.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-11-6f843d7341f6.tar.gz",
+      "sha256": "6f843d7341f62ac5a94907c56b80c920cf22703f79bbe5b73be6801a91caa047",
+      "bytes": 57864332,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0088-v1.webp",
+          "sha256": "117ec42d138cfa713b63334ff3775e9884dc9c7dcebdd634584eca225678fc8a",
+          "bytes": 27014646
+        },
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0089-v1.webp",
+          "sha256": "92005255c32ae8ce0edf890fa569d180e5329523b7558ff1e7fd82abce8ef93a",
+          "bytes": 30839984
+        }
+      ]
+    },
+    {
+      "name": "media-12-22cf1eacfb16.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-12-22cf1eacfb16.tar.gz",
+      "sha256": "22cf1eacfb165dd13cd14b9bb19f79cbb29e35fe31189a184b89ca8788bc5b3f",
+      "bytes": 40745724,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0095-v1.png",
+          "sha256": "daeec852eb6a640c3bbd0647c206f64ffca45459d6e3cd181e8382fccfd05ff1",
+          "bytes": 41928671
+        }
+      ]
+    },
+    {
+      "name": "media-13-3fa253665390.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-13-3fa253665390.tar.gz",
+      "sha256": "3fa253665390cb5b91942d9001ca0737976a189c600c5af1b3ccc036eb59dc54",
+      "bytes": 49587149,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0111-v1.png",
+          "sha256": "f808458dca555fbfe3ba219b95e85a9ad2df77fb69590773ea0996763b9f409c",
+          "bytes": 50342423
+        }
+      ]
+    },
+    {
+      "name": "media-14-367f2c1a8a4b.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-14-367f2c1a8a4b.tar.gz",
+      "sha256": "367f2c1a8a4b9705794fe0e941bd902d9a2afdb85ec53ee6f2c3d5448137f02f",
+      "bytes": 61183850,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0114-v1.webp",
+          "sha256": "ef07facbb0a6080cfb45a4d9ce55fedeafb054c53e4e801b42612ec22cba3025",
+          "bytes": 22151810
+        },
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0136-v1.png",
+          "sha256": "4b89f1d51a7c38a9628feaa5a6b81e5c94269b3e88b9a99546e6a6041b0d4a2a",
+          "bytes": 41693676
+        }
+      ]
+    },
+    {
+      "name": "media-15-5a402063b4a1.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-15-5a402063b4a1.tar.gz",
+      "sha256": "5a402063b4a1ccc50e6f3733882aa3b59094591a94d44bd1382766f5d7f92308",
+      "bytes": 32469227,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0137-v1.png",
+          "sha256": "a5bd94c847eeb2638627a4c5eeb149790255e5eb1e9a92f0fea2dcc4caa022c2",
+          "bytes": 34557173
+        }
+      ]
+    },
+    {
+      "name": "media-16-f2d05e41db50.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-16-f2d05e41db50.tar.gz",
+      "sha256": "f2d05e41db50a878a6c4e527a419a244df0d323bcc065e4b34697b3a0b2fe973",
+      "bytes": 32495816,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0144-v1.png",
+          "sha256": "b25b5d5c2bdbb682c4f3621d0ad964d5c388a59598f67e2b9a7de20f14d8cabb",
+          "bytes": 34513083
+        }
+      ]
+    },
+    {
+      "name": "media-17-fe44a3910ea9.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-17-fe44a3910ea9.tar.gz",
+      "sha256": "fe44a3910ea94ecd586f2eb7ece042de8a747920654e567688a4ac2d4b5cf819",
+      "bytes": 38403734,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0145-v1.png",
+          "sha256": "777973a47c531a2474884c6b235f799a1be797eddd0bca1b71e015c706f127f9",
+          "bytes": 41472664
+        }
+      ]
+    },
+    {
+      "name": "media-18-0f0a04ef7052.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-18-0f0a04ef7052.tar.gz",
+      "sha256": "0f0a04ef7052747e460ba94619ea7019fa547e86e756ab39d7235d3d6840648c",
+      "bytes": 62536740,
+      "files": [
+        {
+          "path": "public/flowers-2pass-2026-10-20/F0146-v1.png",
+          "sha256": "c76f0c4704b75b6d2f762c5d50c0d7f7198a81885cd78e87877914be60d04052",
+          "bytes": 42531087
+        },
+        {
+          "path": "public/fonts/normalidad-proxy-bold.woff2",
+          "sha256": "2877d6c573d6ad32dac33b3ef76da9f2207d57551004f64f162b3266acef9865",
+          "bytes": 190240
+        },
+        {
+          "path": "public/fonts/normalidad-proxy-medium.woff2",
+          "sha256": "a964d99b0611445d8fbd64040156451f64285e6342ff2eaae74a44beb9436e24",
+          "bytes": 187908
+        },
+        {
+          "path": "public/fonts/normalidad-proxy-regular.woff2",
+          "sha256": "361caf727c5293bf88c512faab53954ae2dbdff7bf6d38bcfe9a1f93c796b1ac",
+          "bytes": 177588
+        },
+        {
+          "path": "public/fonts/roboto-condensed-semibold.woff2",
+          "sha256": "845b177985c9537f8f693b7d439fd59f7c610ffb4b898f3b0f285522f6766e2d",
+          "bytes": 65880
+        },
+        {
+          "path": "public/opening/parcel-heart-v2.png",
+          "sha256": "878c260a5635a772caeada4ca42135d8154ef09d884ab39436a036e602bfb978",
+          "bytes": 2743657
+        },
+        {
+          "path": "public/opening/parcel-heart-v2.webp",
+          "sha256": "02b10f001e4b8adfb647ee995cf92b6dce20f6c0de8c6388d7b658cc2a02da3a",
+          "bytes": 129914
+        },
+        {
+          "path": "public/review/carrier-art-2026-09-27/closer-crew.png",
+          "sha256": "736653e29d7d2b04d48cbada378fb26ec195faef8b7ded66f4126e99c491fc8d",
+          "bytes": 1912423
+        },
+        {
+          "path": "public/review/carrier-art-2026-09-27/closer-near.png",
+          "sha256": "54ebf708ec85d8bc5fb1da4f08a8cc241b0f036933dbff0ed7d52bf84d2d9a90",
+          "bytes": 1920623
+        },
+        {
+          "path": "public/review/carrier-art-2026-09-27/closer-old.png",
+          "sha256": "e0088c9d63654567244de56068b481939d4cac57455f07d4908b6e5acef53152",
+          "bytes": 2007730
+        },
+        {
+          "path": "public/review/carrier-art-2026-09-27/closer-old4.png",
+          "sha256": "ba35ccc2958e33efec1103004369a0d20c1e83e711cb48dc0b774c1bc2b16eef",
+          "bytes": 2054761
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-boat-v1.png",
+          "sha256": "25d1628240fe0fa4a99949510fce0a2ca375ef01c189fe4deb45f0296e3d0934",
+          "bytes": 2225759
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-camera-v1.png",
+          "sha256": "a5b87b71eb46a0140b6a5ea68c884f5fbb352614da596b17084623b4d22e68a7",
+          "bytes": 2221660
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-tall-v2.webp",
+          "sha256": "9c7351f40e19539a51f0496eced8bc966e71729b33d38341bb7e5235aded41cf",
+          "bytes": 605606
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+          "sha256": "5324205f5c76a9adc41e5f744e4a4839bfe3e66478b5f18fcd01152819eb7195",
+          "bytes": 413682
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-tall-v4.webp",
+          "sha256": "c26698c892b7594ae01df71cbff690622c0f7fd938019e43441fb8488fbb2608",
+          "bytes": 454506
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-tall-v5.webp",
+          "sha256": "642499f7cae5d05b2b057297b9ec8ae953750b9153dba45abe5c895e639fddd2",
+          "bytes": 427472
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+          "sha256": "1ef64baff557dc4c2e1e185e259c494ac91b2ee4142bcae20b6802557f6af9f3",
+          "bytes": 504346
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-tall-v7.webp",
+          "sha256": "b1a9ee6ec14c0507143f6dfe34d1979dd48b81ad9b233fd612640b799863aeb7",
+          "bytes": 390260
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-wide-v2.webp",
+          "sha256": "b98a18dffc87cd2aa3a6449cd11cb2f312cadeb543b6619d57fd908fa327095b",
+          "bytes": 581586
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+          "sha256": "ea49a41991214e7128d8b6e49e9935b30d53f5e52df53511dfb5f42f3597a99b",
+          "bytes": 434688
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-wide-v4.webp",
+          "sha256": "52fbaf68c451d62c081968dada2210e81735a2f87cb069704586c9248892a989",
+          "bytes": 428768
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-wide-v5.webp",
+          "sha256": "4e0362e78e44d246952a364bddb7beac192c6ab758fb3a2643bf32568a9f2c38",
+          "bytes": 432866
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-wide-v6.webp",
+          "sha256": "2196f62de7e98c373b21d6548e084dbb18ecb3d8d6b4e9a3707eaddcfc27c0d3",
+          "bytes": 548844
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-neutral-wide-v7.webp",
+          "sha256": "eb9a651b8b781c55ffa7246bf6cb255b6d7d0c83405c17a0ab2f4d7f9576f835",
+          "bytes": 412100
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+          "sha256": "db540d1bf115494c25cf17d5571504c8fdfc85bebd88b34624fddcf274ee1cbb",
+          "bytes": 1846604
+        }
+      ]
+    },
+    {
+      "name": "media-19-f89c6887be48.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-19-f89c6887be48.tar.gz",
+      "sha256": "f89c6887be48ddfa811def664e70d0a0faa70811eef633a3e0f8c26eaac13724",
+      "bytes": 64860514,
+      "files": [
+        {
+          "path": "public/scene-art/barge-family-v1/choice-socks-v1.png",
+          "sha256": "6dda1c4242ebc04ca9b3423043154965b7dbce812b2cd4a23d9c423ccb10abce",
+          "bytes": 2214054
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/choice-surround-v1.png",
+          "sha256": "d183e149975207b3ba06d90d2d35eb3b6bd7dc0f206601990ccc0fdbaea1f932",
+          "bytes": 2346672
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/outcome-petr-neutral-v1.webp",
+          "sha256": "cd32f8df567471329c03b09a234b74fede6c629dc5985525c9921a56a242caa5",
+          "bytes": 449856
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/outcome-remote-neutral-v1.webp",
+          "sha256": "b63f6722ef1c579ad27f202a979b37af495ce6ce3ec5ae7d7ce89ec80bea3759",
+          "bytes": 456634
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/outcome-rush-neutral-v1.webp",
+          "sha256": "256ef360ed4cab796cff5f04a794145dfcd15c724e377d4c4e09b973cd16c144",
+          "bytes": 438670
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/outcome-rush-neutral-v2.webp",
+          "sha256": "96982f7b468892139c86f4b6324ee0252f0cd72451a076ca97ea4e91fd687df6",
+          "bytes": 441894
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/outcome-rush-neutral-v3.webp",
+          "sha256": "fcd78971507c6bb096e22a0ae1ee1c7734c3296c2aedad4b8e2a381d170717f1",
+          "bytes": 451038
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/outcome-rush-neutral-v4.webp",
+          "sha256": "bc9019f82149b971c67eaa494209cdc8d1425c19f1706cd6954c33852f9868b2",
+          "bytes": 414248
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/outcome-wait-neutral-v1.webp",
+          "sha256": "d58a186a795fd1befe2fd8255a1d6d0043449a6cf82a1582b83ee27d7cfea2e0",
+          "bytes": 458986
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-boat-v12.png",
+          "sha256": "cf1065607f1066d66bbd55f95ae875af1ba86868416ece10d077c988cbaab25a",
+          "bytes": 2197352
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-boat-v13.png",
+          "sha256": "a824083d556eb00f41dbe541855b76b06c567a0ca3711676db9d7d7bbddc68b1",
+          "bytes": 2626690
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-boat-v2.png",
+          "sha256": "a6136bfded3337c47c4a189c9d4e889b6c911605ba0b289d7031445efbea6efd",
+          "bytes": 2027156
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-boat-v3.png",
+          "sha256": "f771ed78564b071a4cfbb5f3e7066351b949a658f49ca0cbe7f23d57257ab259",
+          "bytes": 2267144
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-boat-v8.png",
+          "sha256": "d5a7075ab380170fa712364ea6f4eec1f8ce7dd0aa47527e1d7e053da71917db",
+          "bytes": 2196268
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-boat-v9.png",
+          "sha256": "27ec6ad0f48ce980a9c76b585203bdbfcc3728a0f74801977d13efd5ad8dc776",
+          "bytes": 2204334
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-boat-wide-v1.webp",
+          "sha256": "c81436e6137f4959b1bfc8800f6e7f398eea6119b38ed8cdb9f473e3a4f41dfe",
+          "bytes": 640398
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-camera-v13.png",
+          "sha256": "c7b2891823907ff15cffcae1791b59a91d90ff26327dd5d0270ebb06c5f1a61d",
+          "bytes": 2508721
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-camera-v2.png",
+          "sha256": "5514dfddf1bc20731ebb4845dcd10b93ec9a2f92557e12fbcd1611a334ee2d0f",
+          "bytes": 2022766
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-camera-v3.png",
+          "sha256": "c6cff72471ab4fdd2021877bdbf0a36cfd79b0dc69cf07e1fe08ba484dbdc44c",
+          "bytes": 2329000
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-camera-v8.png",
+          "sha256": "44377ddd0da0861e1765ee089c87eac6560b1b3ae12e8aea81c16b7c2fccfc87",
+          "bytes": 2179781
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-camera-wide-v1.webp",
+          "sha256": "e05d415d30916cfb5ac147fe193ea5f4d6d1b4e0b390b77a5d2f446202ecc93f",
+          "bytes": 652030
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-socks-v13.png",
+          "sha256": "d6cc60e4dc8a17cf9b5ec4b952c14e427de24e8eac7b0176e5c9ec21ea13ef23",
+          "bytes": 2530813
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-socks-v2.png",
+          "sha256": "d1e0cc258fc4ef1102df35c0fae895848570046495e63d22972aba9ef0abb86d",
+          "bytes": 1978476
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-socks-v3.png",
+          "sha256": "8e7674907a5fd11721785bf970cfcd9cc1ab72c5f04a55848db2990ccd9d079e",
+          "bytes": 2256121
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-socks-v8.png",
+          "sha256": "5ab075e08443c18c2eff7698af56afc5e7179cfabdb0a031e73abe1774add523",
+          "bytes": 2232094
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/petr-socks-wide-v1.webp",
+          "sha256": "258e63feb6361b5236fadb0bce70611d3a05739ca2e8d50695218a7d0662f91b",
+          "bytes": 646986
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/remote-boat-v2.png",
+          "sha256": "80e769d50323d3194281dd06c4cab16152e4a3e444b554e4b6b67d6a3dad915b",
+          "bytes": 2219794
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/remote-boat-v4.png",
+          "sha256": "1a376128f8b2b4c8e53d8b904c6c79a0b2bea43cb1cbdf5f593fa18f5c6e5ff0",
+          "bytes": 2255855
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/remote-camera-v2.png",
+          "sha256": "b8dabcc7d5755bbd145e415e245321503cdd587dea91e53e28eaac9bd25d2c17",
+          "bytes": 2234666
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/remote-camera-v3.png",
+          "sha256": "b41a0ae672425ec5e478d1c3666efe9cdd554aa2b3f168e89ab979c07fc625e4",
+          "bytes": 2215685
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/remote-camera-v4.png",
+          "sha256": "8adb6c7bb38cb1dc23b849a8f5eabe83945e1a464314951a78938a6066437aa9",
+          "bytes": 2259712
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/remote-socks-v2.png",
+          "sha256": "0c604cb97360d64085cd0c398bff8b6ab3f6beb61aba70bff35ab618d55b56f7",
+          "bytes": 2224903
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/remote-socks-v3.png",
+          "sha256": "7aa767f0f9d11a2f117f97b47df47dbe074233fcf29723c9f0e2a96fe2cbf017",
+          "bytes": 2230494
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/remote-socks-v4.png",
+          "sha256": "334e541a1621c4aa843475c603731c0d8205aaf05d7b53c413726566e379a530",
+          "bytes": 2252254
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/rush-boat-v1.png",
+          "sha256": "c344abf723cdc7dbc9196c502693a87ce60720f0265bc6ffd983222dbba456d1",
+          "bytes": 2318816
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/rush-boat-v3.png",
+          "sha256": "729c4c85a3acf3743c103eb1645ea402121f7fc9347fd20fb6a916fa5245d0ed",
+          "bytes": 2370125
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/rush-boat-wide-v1.webp",
+          "sha256": "1686675d24a4c15274b4368c6b8497a2560f0526c3a89141171fdc1a0cdb456d",
+          "bytes": 1849134
+        }
+      ]
+    },
+    {
+      "name": "media-20-459f1820326c.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-20-459f1820326c.tar.gz",
+      "sha256": "459f1820326c71c3d1a7671420f7d4a3b8b4e3862519d494446186e90cc0d06f",
+      "bytes": 66540249,
+      "files": [
+        {
+          "path": "public/scene-art/barge-family-v1/rush-camera-v1.png",
+          "sha256": "54655419a9a662544bdf9c94e22b768998d65fcdf64f0b6701d84900e1d88eea",
+          "bytes": 2297899
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/rush-camera-v2.png",
+          "sha256": "78414af0deb9522ce7e66e83521310bc340ac429d1625327bc88735b9371e9a0",
+          "bytes": 2299433
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/rush-camera-v3.png",
+          "sha256": "b4d8f40456ecd3c31e75690cf6fa486ea8923a7346052b37f65421f55a6155b8",
+          "bytes": 2375583
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/rush-socks-v1.png",
+          "sha256": "3970920b375c4a61827dcabb35c5f68f2205a0aea7bf7289b3fb492b43dd2acc",
+          "bytes": 2297594
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/rush-socks-v2.png",
+          "sha256": "255688da35160a25ee6c8bdddb5544cf61527f999d44878c0d1d27d8e9e14687",
+          "bytes": 2305375
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/rush-socks-v3.png",
+          "sha256": "902a607add2f42b4db32f16cf7dfdf5f268da2a028a2ef2bfa0f865dc7dc0fc1",
+          "bytes": 2394612
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/wait-boat-v1.png",
+          "sha256": "895e4c954a15724231c7a6f277a0c74ec7fbe2a33c82564e530bf65d186aa877",
+          "bytes": 2176181
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/wait-boat-v3.png",
+          "sha256": "2e1f1365d47fb32efb536fd34bb45fc27ee3f3d00a105be3b7bf14d0743ab8b2",
+          "bytes": 2262650
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/wait-camera-v1.png",
+          "sha256": "d99dd34a35a1fa41e6a8d0c521a874007aa7d21599782ae61821020fd89a6fb3",
+          "bytes": 2142070
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/wait-socks-v1.png",
+          "sha256": "3a71c7c0a350e7006089b645b031d828e6cd746ecaba270121cfb486d5b7f7e9",
+          "bytes": 2156966
+        },
+        {
+          "path": "public/scene-art/barge-family-v1/wait-socks-v2.png",
+          "sha256": "978b7a3e8130c543eb26150830d76ff96633bbea62a4c2042ca697c5d056d6ea",
+          "bytes": 2121468
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/crew-v2.webp",
+          "sha256": "011a22136761f548267e13c68edcb48af000a3b08e08af62978454e2fb35602d",
+          "bytes": 276870
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/crew-v3.webp",
+          "sha256": "339ca7087e3175f4e64b23360513ee45cf07dc2c6aeef0ccd580ee467b890a8c",
+          "bytes": 265512
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/crew-wide-v6.webp",
+          "sha256": "baae874db9467afc822e3aa2fbe6480f871dcf14d0f4a26b11f8bb645f5d6e90",
+          "bytes": 359484
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/near-portrait-v1.webp",
+          "sha256": "87a3b4f079f61ed1048282e7d21adedd98c63368ef81808c3ef59bcaaa737750",
+          "bytes": 297334
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/near-v3.webp",
+          "sha256": "3b00071657b966a8a268ba3e526b5dc5cbb3a17ccd7943a1ecf8b815eb856b8c",
+          "bytes": 363434
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/near-v4.webp",
+          "sha256": "a46f65074c36fac71f6a086909a95ac916280d84cf3c3e7c92d2bbd74e561665",
+          "bytes": 350320
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/near-v5.webp",
+          "sha256": "53e800018946e97cb5e3f53933459afc1e5020b62239818d509e1004058f3cfc",
+          "bytes": 362230
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/near-v6.webp",
+          "sha256": "79b765486009f527c5073f828a56d7d42e4938fa85bbde8039c7d348e926782e",
+          "bytes": 273522
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/near-wide-v6.webp",
+          "sha256": "509042210d4b192e04ad7f72fa8afa51a1739f0a69b86d9642a2d89242a2a29f",
+          "bytes": 578406
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/near-wide-v7.webp",
+          "sha256": "32802771109711bae3f825dbd9cea9bb4bd407ba21c3f0edf610b0e58d02f270",
+          "bytes": 337258
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-portrait-v1.webp",
+          "sha256": "755b32ad7ec1a92ad7914e27dc340097743ca786db82e8e01d6d7b8ec7713de7",
+          "bytes": 277958
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-portrait-v2.webp",
+          "sha256": "57ce80c1f7670bad51391e091498ac5e9fd6508d9c0868f23cef902f462b0541",
+          "bytes": 364898
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-v2.webp",
+          "sha256": "782dc232b34811ea535c27a7f50f326c86171d320527343f2e1cce0aa775deea",
+          "bytes": 227712
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-v3.webp",
+          "sha256": "4857c48cadaba4126ce4d9cdf152553291220da2cf626309acdb0b318ee8a181",
+          "bytes": 350608
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-v4.webp",
+          "sha256": "3ee01e364c342db4bc882422186ba89cc9e07156cddc3c38c8056989b5c30fc4",
+          "bytes": 227188
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-v5.webp",
+          "sha256": "b64891c86e87b9aad4bed2f2d470de1d84dadd9f0342b40c0a8f728d6daca0f8",
+          "bytes": 404278
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-wide-v6.webp",
+          "sha256": "25aeb2af4a0b8bf241ea05134d3e8a30973e3aeef26c73b813a84cc737688d19",
+          "bytes": 461340
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-wide-v7.webp",
+          "sha256": "5518af9026ae41c2572af9fa328164df296423c2782eb017688e453b0dae8f8c",
+          "bytes": 290206
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
+          "sha256": "ae82a322f0a337af5e845c5b99fe841f7f1e64e01e3ba035ec4de7eca6911888",
+          "bytes": 418154
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old4-portrait-v1.webp",
+          "sha256": "debac4a4cd6723bda48e3d0514059fdf17cd8d827ab286841576c04397a03fc5",
+          "bytes": 430870
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old4-v2.webp",
+          "sha256": "8ab2aaad338edcb4250497f533748c6008bb5c3d9093745ea9936f3fad1452fd",
+          "bytes": 230692
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old4-v3.webp",
+          "sha256": "e91d720c6c0cd65f9f727e81b64aa6a7a24caa1be1b0c4ae91b401ecfaef34c7",
+          "bytes": 340664
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old4-v4.webp",
+          "sha256": "9f55517bd5f8837a6707424602893c0d5335a207d700753f0ce58b2c5c58caaf",
+          "bytes": 341582
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old4-v5.webp",
+          "sha256": "ab040372af49a8af8e8c2db1c613d5de247551e8211173cf0199a2d6c71bf8d4",
+          "bytes": 397648
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old4-wide-v6.webp",
+          "sha256": "8862b9c82bba6e04ddb7f95d1be653f47c9fdb9883e89dede31a75aef258fbf6",
+          "bytes": 423112
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old4-wide-v7.webp",
+          "sha256": "27aa0081bcdfd66b02ce3e037588b4b7e29518c941522aaaa2ddfcaaf269d64a",
+          "bytes": 377054
+        },
+        {
+          "path": "public/scene-art/carrier-results-2026-10-02/old4-wide-v8.webp",
+          "sha256": "5c0cc36783755a2e9e616ce3ffe074e8308b39cf5e15d8dcb7199ba4dd114075",
+          "bytes": 410386
+        },
+        {
+          "path": "public/scene-art/certificates-v1/professional-efficiency.webp",
+          "sha256": "a0254c0cf78307cf602f75889a1485be3ffadce1e42040708ac301f8984bf3a4",
+          "bytes": 198522
+        },
+        {
+          "path": "public/scene-art/certificates-v1/professional-empathy.webp",
+          "sha256": "481692a40aac0f88bb262aa97d1366114620bd4b0383bad1fe1a2fcf545208d2",
+          "bytes": 224454
+        },
+        {
+          "path": "public/scene-art/certificates-v1/professional-energy.webp",
+          "sha256": "44a8c22216ce32655b4e6451bb6c0706339572b409eb1ec2df6cd2f6c2493966",
+          "bytes": 188646
+        },
+        {
+          "path": "public/scene-art/certificates-v1/student-efficiency.webp",
+          "sha256": "fd7c36cc3db3027365ccb8404d82434d59b27b74a726ac3608a45c283edb03f0",
+          "bytes": 233712
+        },
+        {
+          "path": "public/scene-art/certificates-v1/student-empathy.webp",
+          "sha256": "255533c11c0b2f42753d29623552706d3cd1c38bed41a0c7464db17025e83eb7",
+          "bytes": 272120
+        },
+        {
+          "path": "public/scene-art/certificates-v1/student-energy.webp",
+          "sha256": "7c8accf61e82133ad4cfed9732c155d52da36ca6b681cc5a5a5263785cdb1796",
+          "bytes": 262208
+        },
+        {
+          "path": "public/scene-art/certificates-v1/student-future.webp",
+          "sha256": "76587e07f0319ef504cc3e4a8c8c9e61ec680a43e4faf4499f8f3a9793debdd5",
+          "bytes": 335982
+        },
+        {
+          "path": "public/scene-art/crane-v2.png",
+          "sha256": "96efc651a08e11f35a9b4fcc99494b0dfb4bdd7aa7ecadb80f61a393e0fcd150",
+          "bytes": 2250129
+        },
+        {
+          "path": "public/scene-art/crane.png",
+          "sha256": "c1d120947c5599bbc0ed9731e45fb3442ecfbec0edb23f6d45cc21cdbd4a40ad",
+          "bytes": 6339788
+        },
+        {
+          "path": "public/scene-art/inventory-alphabet-v3.webp",
+          "sha256": "c138443ee90387b577f1f0f5cfa32d6b649eeedf182bc9af569ba7357a86a979",
+          "bytes": 415916
+        },
+        {
+          "path": "public/scene-art/inventory-barge-style-v5.webp",
+          "sha256": "74865c4ee0485c3c1590cf1e3de7078a999a98a4360a773a1fea9688037aaa39",
+          "bytes": 491620
+        },
+        {
+          "path": "public/scene-art/inventory-barge-style-v6.webp",
+          "sha256": "49f1eb1e0364b035eafd1ca8055630ee2d0634e32745a8c6153157efc8dfa0ba",
+          "bytes": 569900
+        },
+        {
+          "path": "public/scene-art/inventory-choice-tall-v1.webp",
+          "sha256": "4dce81baeb2ac9d52a586b99d83a9aa1eca23b0576d38a4501c89a9b359f2726",
+          "bytes": 1511118
+        },
+        {
+          "path": "public/scene-art/inventory-clean-family-v1.webp",
+          "sha256": "3e6429eca5e3602094237e79bdd5412bfbe2c7d8013b8dd62a6f47f6bb4342dd",
+          "bytes": 1564512
+        },
+        {
+          "path": "public/scene-art/inventory-horizontal-v1.png",
+          "sha256": "60037923487b5b43c3feec429e1405acd7c67ecef227d524e2e6fea481527b1d",
+          "bytes": 2136131
+        },
+        {
+          "path": "public/scene-art/inventory-master-labels-v5.webp",
+          "sha256": "27931e1d64b01b5984b78b08268ddfdff3f794c9a11e3ad4b9b0b25365128019",
+          "bytes": 1653468
+        },
+        {
+          "path": "public/scene-art/inventory-master-labels-v6.webp",
+          "sha256": "30d35d56a82b3dfb444e6a51dea42eda88fdb9de988ef155df13cd4c1ecd8112",
+          "bytes": 288368
+        },
+        {
+          "path": "public/scene-art/inventory-master-v4.webp",
+          "sha256": "c21bcfe7105f78fecf44cacb0f70c57e06cdde9eb164b2a36228fe0e216bd732",
+          "bytes": 371926
+        },
+        {
+          "path": "public/scene-art/inventory-zones-v4.webp",
+          "sha256": "51a513d8748ff907be017a350c4f4260f8a4207c7ff218fff12fe28e743a0a49",
+          "bytes": 227884
+        },
+        {
+          "path": "public/scene-art/inventory.png",
+          "sha256": "d400a854c47d6b25e1a221c3555a4a24026486d8c4fe1c5cb1f4bf887343c2e7",
+          "bytes": 5489266
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-tall-v10.webp",
+          "sha256": "3ccb9eabe036da44ff9b6e60aa2f7e52c67818f66a6c1aa61be60f08ec23282c",
+          "bytes": 488266
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-tall-v3.webp",
+          "sha256": "77bf7c2719ef53af3a0c30f93f62a9cebeb084cd50b9a60d778e148f8c69960a",
+          "bytes": 623254
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-tall-v4.webp",
+          "sha256": "5c0205eff59fe54e2564f5b201d52af4b88e30fd6e9bd0dd60bb7e7f61a79716",
+          "bytes": 604028
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-tall-v5.webp",
+          "sha256": "96a3f3d4491441d4f930e4198a90df998467e85c6bbf2901f71333d3bffcb444",
+          "bytes": 644648
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+          "sha256": "03cd57b53b68f295095d59a8c53225e217855ff6fbedf8006c4d2f44033648bf",
+          "bytes": 469408
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-tall-v7.webp",
+          "sha256": "0be5572d640242738e3a04d2099fa863b5b5a416d60412e388afa651a23d05ac",
+          "bytes": 632424
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-tall-v8.webp",
+          "sha256": "e65a8cd4d4a0ac754d3f251eb2e97acdad40ad97567cc840b11573ba17dd594f",
+          "bytes": 604684
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-tall-v9.webp",
+          "sha256": "b98ec91f304d9dcb1d5753a4804b6ed5592ac34a0f04c4eb7d35f614f29cb8d2",
+          "bytes": 563748
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-wide-v10.webp",
+          "sha256": "35e241bfdc3d3e8929065bbf6a65f182b4cc12f150fdf2cf6e2e4a0cf259809c",
+          "bytes": 440384
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-wide-v3.webp",
+          "sha256": "15da41b74b0cbc9d8ad5f17e15dbf37820817f351e4949575c62278c0cc43646",
+          "bytes": 556140
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-wide-v4.webp",
+          "sha256": "2c427b856e8c2b1745f60981b5ed5c154e1d270c8f4bb78183ccc57d67f35ad9",
+          "bytes": 518708
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-wide-v5.webp",
+          "sha256": "284b1921676d7d443700bc0d074191acdecd72fc8512b135b077d6e1979b9510",
+          "bytes": 545816
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-wide-v6.webp",
+          "sha256": "5e0d8fb928a86d625a9669d6d956e7213e0bb63967476c04b28ad126caffd039",
+          "bytes": 378884
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-wide-v7.webp",
+          "sha256": "60e96dd846d0c2f1fffd089286ca552b1c781410427c33c0b0b1f0ed504c561b",
+          "bytes": 538350
+        }
+      ]
+    },
+    {
+      "name": "media-21-61d45a9fcc3f.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-21-61d45a9fcc3f.tar.gz",
+      "sha256": "61d45a9fcc3f4f636f51d80706966b9832c246a2d1e7d7ecd9e9ffe5eaafa92e",
+      "bytes": 65900617,
+      "files": [
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-wide-v8.webp",
+          "sha256": "059c0d99aee8073ad1dc07c13734ece8a4f6f89efd45d037da40d245773767a5",
+          "bytes": 510156
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-final-wide-v9.webp",
+          "sha256": "c7b63a259950417565f1390ba2f63955c72c82dabbc72322a99cb9af657b9ed6",
+          "bytes": 513122
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-neutral-tall-v1.webp",
+          "sha256": "786f81de078377270736bdbdc796e2a56ee348d5a78e48ee5bd3f4297e0826c3",
+          "bytes": 2439938
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-neutral-tall-v2.webp",
+          "sha256": "a1d079985f323d0588d990c17c2ce3aa28b58c577e24e29afb61407caed298bd",
+          "bytes": 719466
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/choice-neutral-wide-v1.webp",
+          "sha256": "af275caf5b0440c2aba3112dd4fd0035ad0bd86be9dbd9824c461f2372b0bc86",
+          "bytes": 601660
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-flight-boat-v5.webp",
+          "sha256": "0d85abc95e12ee236fe52653c0d607dfa61ddca87f159c2eb2182a6435e2fe42",
+          "bytes": 284240
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+          "sha256": "68a1ae209e90e436e68dbe47408610adcfe1a126d76bef4e0ab218b963bf996c",
+          "bytes": 1602686
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-flight-result-v4.webp",
+          "sha256": "9c03acf43690d8d87d42a0b11b76a4db620059104240b2e33cc6b97248613f92",
+          "bytes": 295834
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-alva-parcel-v6.webp",
+          "sha256": "aa2ca4f0d12d0a0ca96dab5dc58d35f6228907258928e18fb0e095ec6f353247",
+          "bytes": 336374
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-boat-final-v4.webp",
+          "sha256": "e7b8ba86831a85fa0eb2303ab8b4a6edf20465f711a5cedd1737f4ad23155992",
+          "bytes": 499494
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-boat-final-v5.webp",
+          "sha256": "3df6bbf9e4d40d8aff1a2fda77c70c8f32633e06f63d89fdc7fcf4b545f30bce",
+          "bytes": 470602
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-boat-result-v3.webp",
+          "sha256": "6f7d046136bd1b6a5aba60423405ce0cd76d8dc612e6dde8b0bc0db12e11c56e",
+          "bytes": 2093554
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-khor-boat-v6.webp",
+          "sha256": "36d0625824777294b2813f2991cab86e91ffcda31237af178512df4d1185ad77",
+          "bytes": 424762
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-khor-parcel-v6.webp",
+          "sha256": "b5a508b1a617947bcd6166b0a3bb8a47629a3e06c6fdda25189aea99054be4ef",
+          "bytes": 411762
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-parcel-final-v4.webp",
+          "sha256": "35580fadfab9f02b0bddde1b9afe85b27dda1fcd65a318fa06d948d2a7d0e2c3",
+          "bytes": 484092
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-parcel-final-v5.webp",
+          "sha256": "6a411b9236e53d96d22d67160494866c24ef0c4d71829fea896a3e2e1decd2ea",
+          "bytes": 470316
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/helicopter-ground-parcel-result-v1.webp",
+          "sha256": "3241a0b3b10a4762e063045be2ffc65cbdb90b88d80b3825cae6d12e970ba90a",
+          "bytes": 1978062
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/lastmile-boat-v22-pilot.webp",
+          "sha256": "93ff0a9fc3145bd3e1c76fb16e4bb264ba50571774306ecf832e8c3fa94dec6a",
+          "bytes": 1938200
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/lastmile-choice-tall-v1.webp",
+          "sha256": "b377ad797341d0d58be938cabf8be28416c25eba314487f6127d609b5bc869ed",
+          "bytes": 2575478
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+          "sha256": "663632d17ad9ff3bc33f35e3e9740439dc7a8fca07f65e26164e63d9c86887f9",
+          "bytes": 744834
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/lastmile-choice-wide-v1.webp",
+          "sha256": "25cf08c3db930b5cfd9eec8fb86d191fa53a7e72ddc9dad88c04287b045b6d2d",
+          "bytes": 2211848
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/lastmile-choice-wide-v2.webp",
+          "sha256": "1e8dbf6d339b763a225810176278deb597fd31ee26dc805d78b2e6bac346e3cb",
+          "bytes": 607410
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/pipecarrier-boat-result-v2.webp",
+          "sha256": "3379b6ac91b43a72bc299b15bae7c5198ab7cfd64d049b465ee703593e92ab90",
+          "bytes": 2233476
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/pipecarrier-drone-result-v1.webp",
+          "sha256": "d12deff909720c08f167b45aa53bf2418651cdd0a0f27cbebc9f29d0230e123a",
+          "bytes": 2177192
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/pipecarrier-rescue-final-v3.webp",
+          "sha256": "6c790fc3c7e1f560d574285b2ef0c014814c074c729b52958a065c7d78000bce",
+          "bytes": 579474
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp",
+          "sha256": "ce1e0713b583e070e6b9f8ce58bbd1b3b334b873c9389954753f9e3a1d59a013",
+          "bytes": 569556
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+          "sha256": "56fd3a1fbb591e8773b945d9649d1f9f6d436ec75ee9a6cf2797c32889f96bee",
+          "bytes": 514606
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/choice-tall-alva.webp",
+          "sha256": "f888245dfaa822908b6bb30af72215532e5128c1a13a1f833053632065794680",
+          "bytes": 546944
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/choice-tall-arseniy.webp",
+          "sha256": "16ab1471bacd30ca1aed36021ce094f57510fd82a0087c4ee66a62ce95de2c54",
+          "bytes": 523448
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/choice-tall-khor.webp",
+          "sha256": "05c36aa778c4ab566bb6074797250b32cffd21a31f42c4cec9dc6f2bb44a540a",
+          "bytes": 531204
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/choice-wide-alva.webp",
+          "sha256": "c49eab348e476571f91f4fdcb478b74fc9956f5f8a7cb2f041ffec9607703d56",
+          "bytes": 494890
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/choice-wide-arseniy.webp",
+          "sha256": "ca305d0fd6963638c51747f6594ad98c3e00de3397e657d57ed276d62c1b245a",
+          "bytes": 513136
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/choice-wide-khor.webp",
+          "sha256": "fe3bf01147e6de8c8f55837ab6754e92a85d4c2213602feccdcdc43bc635ce4f",
+          "bytes": 504574
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/flight-boat-arseniy.webp",
+          "sha256": "db3a6dd2083b21bfffe7a863416f675b6e038d0543252d4017eecb88d824e729",
+          "bytes": 339172
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/flight-boat.webp",
+          "sha256": "56cd9ee6b3deae1f21db346b86b81205b0733fd82b3c89125684d2fafeb4e724",
+          "bytes": 325410
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/flight-parcel-arseniy.webp",
+          "sha256": "72d69187d02fe4ea2e29debbb946756c486d5817be11279754a85707bf8585f4",
+          "bytes": 338230
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/flight-parcel.webp",
+          "sha256": "24a84b555f3e0384a8530c3d32f62de6bdd740453ff9d771b5aca4dbf46844b0",
+          "bytes": 331086
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/pipe-carrier-alva.webp",
+          "sha256": "e9d1beeb82b85e19a709ef56647dbc96f42f7321b348f5e23592ac2c748a819e",
+          "bytes": 503676
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/pipe-carrier-arseniy.webp",
+          "sha256": "3209e65e9b0484792c419fd9ae2c55699c8edcb3a8e6d96f8727afe4bca4257a",
+          "bytes": 493270
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/pipe-carrier-khor.webp",
+          "sha256": "925c0ab6e046c32bbd7ee6f844fa36015afdc15c7a4605b8ca376e6170013b62",
+          "bytes": 489190
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/rover-boat-alva.webp",
+          "sha256": "316444eabdb511726a8468c2cff29d525d5426b4d7f7ff6907153b1349ba2cf3",
+          "bytes": 457990
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/rover-boat-arseniy.webp",
+          "sha256": "737cae114d33d354adca74e7c19262cc41d05ac9378f073c549dc69cae26950f",
+          "bytes": 464664
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/rover-boat-khor.webp",
+          "sha256": "d3d35b8540782cde25ec17bc0baaccfb47475bbd8df73aa4389ea0d18edd9e92",
+          "bytes": 460442
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/rover-parcel-alva.webp",
+          "sha256": "6c702b3bb8713166d26f6f2ad98b796d9826137756b3248f55f35350e583b693",
+          "bytes": 478356
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/rover-parcel-arseniy.webp",
+          "sha256": "1f5ab281335278ee1f17d90b0effc6f6d3598ba93af18cba67ec7a7bda5b8159",
+          "bytes": 477656
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-2/rover-parcel-khor.webp",
+          "sha256": "adf27ea2c4cf657a9ddbdd0264ef83a59371b14356ee2dd3ef29f5a26751cab7",
+          "bytes": 498970
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-alva.webp",
+          "sha256": "7d7fc35d895ecff76eb7731a187731245b5d7544f0c35d4e6a73ec2f3e84aea1",
+          "bytes": 761832
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-arseniy.webp",
+          "sha256": "834a9b44f8c02fa5f2bb59b2bc5428cc6510fd1e94adc395ccfa79efcb4f0150",
+          "bytes": 800476
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-khor.webp",
+          "sha256": "d62d9a8fa1ec31b28c95454f0afbeac46c2d7f7779a18101dcfa630501a825bb",
+          "bytes": 804386
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-alva.webp",
+          "sha256": "d7cc0f67b85e9a31b13009616405a7749eecc7f5a429c647f5fe1ca97f59993c",
+          "bytes": 649720
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-arseniy.webp",
+          "sha256": "93203e2b55ec9e5772223fed82ecc6d47ff668c8b131e7a0f674257a39d4254a",
+          "bytes": 647010
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-khor.webp",
+          "sha256": "de774d0b9d150994831d65fbd1efa8830de64729edbb0e5dc351912a238b4bdd",
+          "bytes": 679606
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-4/pilot-tall-khor-v2.webp",
+          "sha256": "6abfea4522350e9cad91be0aaa44f118ba2aa635f5500ca7778262ced7b8820c",
+          "bytes": 794648
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/robot-boat-result-v3.webp",
+          "sha256": "5a552d95627c3f806606991662451b27d2fb25a75a99b6a61ca6fdd90f307a6d",
+          "bytes": 2111304
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/robot-parcel-result-v1.webp",
+          "sha256": "daf051ce28239e7c5ca3d1f89753c7dac5b5b23e6986aed238862fee8fba38d2",
+          "bytes": 2019092
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/rusak-boat-final-v4.webp",
+          "sha256": "c4985be159815b123b907032224348bab9ea4f38a1bbdea1190fb053d2e1f1dd",
+          "bytes": 531760
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/rusak-boat-final-v5.webp",
+          "sha256": "b8a144665dc71720f157b1a9eb7ecbc9924b767b759e95604ed0c2da8fb6516a",
+          "bytes": 520428
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/rusak-boat-neutral-v1.webp",
+          "sha256": "fb1d214952cf8feb307bff28085d8fe4fc9574a73f7f8cc611eeb0fb68582ced",
+          "bytes": 459504
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/rusak-boat-result-v3.webp",
+          "sha256": "0aa2c7df74eb7e9895a1c3194181b2e1dac0a1a097cad0fe8b86f56f37b3da6e",
+          "bytes": 2115912
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/rusak-parcel-final-v4.webp",
+          "sha256": "057be171a5f4840be97e7852279e3d15b0eca201d67f90341004e12ec8d9b54f",
+          "bytes": 531522
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/rusak-parcel-final-v5.webp",
+          "sha256": "28f3bd0a8fe5c8629712be35b0d25762ae20394495d24c7d3a9cd665de548437",
+          "bytes": 514510
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/rusak-parcel-result-v1.webp",
+          "sha256": "274aa64a3ebce5fcc1f1be2f97ebf3099c09ae92c2795309d01b70a7ede6d4f6",
+          "bytes": 2029764
+        },
+        {
+          "path": "public/scene-art/lastmile-fifth-scene-v2.png",
+          "sha256": "f29644c12efab88ce3b156b7552c8a597d1c8c695fc18328389a35405b5fb1fb",
+          "bytes": 2532829
+        },
+        {
+          "path": "public/scene-art/lastmile-fifth-scene-v3.png",
+          "sha256": "3ac1a5abcb572151fa5a279cf78d200602bedf762eb0dcc8f84753d133daf9c4",
+          "bytes": 2848543
+        },
+        {
+          "path": "public/scene-art/lastmile-fifth-scene-v4.png",
+          "sha256": "f136ec85f1b999a2baaf1b9d9ee1d47ff381123e33efee896a65affbaed0601e",
+          "bytes": 2288680
+        },
+        {
+          "path": "public/scene-art/lastmile-fifth-scene-v5.png",
+          "sha256": "c27a55c84e92591e06da2d143794bdc62c9c7908607c073a60292f9445b7b0f3",
+          "bytes": 2772484
+        },
+        {
+          "path": "public/scene-art/lastmile-fifth-scene-v6.png",
+          "sha256": "983a19cfa5a72b29dccc9f45fd6da308307cd0214d53be335e8369553a7dae5a",
+          "bytes": 2459552
+        }
+      ]
+    },
+    {
+      "name": "media-22-e79988d6deef.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-22-e79988d6deef.tar.gz",
+      "sha256": "e79988d6deef6f9168cd28ce24449ab3909e8ba82882777dd82fb33fa9340d52",
+      "bytes": 66373139,
+      "files": [
+        {
+          "path": "public/scene-art/lastmile-fifth-scene-v7.png",
+          "sha256": "b4952237a978e31aafa21ffd09a9a91156566531df2803a8f018693259ad439f",
+          "bytes": 2231121
+        },
+        {
+          "path": "public/scene-art/lastmile-fifth-scene-v8.png",
+          "sha256": "ea3b04766c3ac0aefa59028313515e5303081600a76978dc587f3bf4b577ee78",
+          "bytes": 2277708
+        },
+        {
+          "path": "public/scene-art/lastmile-fifth-scene-v9.png",
+          "sha256": "9b67bfd771a0418aa9d94d3571fe8e18a9c8bc0c29545093526f7e3e61d5fc19",
+          "bytes": 2250886
+        },
+        {
+          "path": "public/scene-art/lastmile.png",
+          "sha256": "62debad796c05d65966d79f1a3b07f808cd5302d7f43ea635986d77d474c561b",
+          "bytes": 7502302
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-petr-v2.png",
+          "sha256": "3aeefb3e93e38edfb9a6c2bd58b4ee35fa745ce9bc3830de883bc17f158caa71",
+          "bytes": 2279071
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-petr-v3-desktop.png",
+          "sha256": "5ce61f93a11d004fd6e636e4ea5f64095219618f600ae7569b46bd8822072ccc",
+          "bytes": 2416375
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-petr-v3-mobile.png",
+          "sha256": "79ffd740fa94fe97bbccb4ccbc1b6c493b95a13c17724416877bb8abc1ddc82e",
+          "bytes": 2449215
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-petr-v4-desktop.png",
+          "sha256": "7c7135f411bf280b38823daf7c60447dca7e1f8e5da307af44bbfdc311cff189",
+          "bytes": 2421939
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-petr-v5-desktop.png",
+          "sha256": "e9f14b99e49e50617c96841df6ad67ff4517395b8ce9505f286afd3974ccefd9",
+          "bytes": 2037052
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-petr-v6-desktop.png",
+          "sha256": "12d6bbc1665e57ad96220da2b224638a3f6b99b803fee93bff18f30ec85caf39",
+          "bytes": 2028269
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-petr-v7-desktop.png",
+          "sha256": "cef7c75c6af65a63bc140c404a24f08031c382b6593696944c50d140c60e34b5",
+          "bytes": 1971692
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-petr.webp",
+          "sha256": "ea8f64e793b8aa4079b0330b540ae21798696f965dc4fda93a486bfbf88882ef",
+          "bytes": 155676
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-remote-v2.png",
+          "sha256": "e3a8faa33551373d3ff2aa598d4a90a2995223fd83919fa493ee7612c2c2ed9c",
+          "bytes": 2297481
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-remote-v3-desktop.png",
+          "sha256": "c09255617c0de35516fabf8c66017d3f7b3a2b361809917f58d134e8fa368882",
+          "bytes": 2268729
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-remote-v3-mobile.png",
+          "sha256": "078c8e1929063cd57abfb756d08d0d775a50d37203827f6a45f7b098a966f5ce",
+          "bytes": 2088961
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-remote-v4-desktop.png",
+          "sha256": "b83998a9486fa0b39de899ca5bfdb97f919a51367a946c53c3954f4cf9309c66",
+          "bytes": 2277000
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-remote.webp",
+          "sha256": "02e5eb4a32d3441d252ad266fbf8998fd83fbb7b37c3c14b90cd1b5f6a462273",
+          "bytes": 152946
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-rush-v2.png",
+          "sha256": "3c02367f639d7a927c8efef27819db96ac8794437f21cb2d4fa311141099abe3",
+          "bytes": 2247422
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-rush-v3-desktop.png",
+          "sha256": "2b65a7f53617084549c0afbfba2c83e0e6469b9b0e81e5116d7e0eb0641b3dda",
+          "bytes": 2392927
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-rush-v3-mobile.png",
+          "sha256": "395f099424295a00e01d262148138bf0c57a90aafa9ca5fe7f7e16120e9339e5",
+          "bytes": 2338575
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-rush-v4-desktop.png",
+          "sha256": "f329e17f3c0fe4592c0e94ee6fa7ab2e587e5aab46812ded2832c395e17f12ca",
+          "bytes": 2346729
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-rush.webp",
+          "sha256": "6207e334e0128b1477b81b5c87d030c4e093c1452b0eb802eb4cc0aa6e0a7a09",
+          "bytes": 161840
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-wait-v2.png",
+          "sha256": "cb3003e3aa7920a9b2b7c39ba95f9247f91225f00aa2375af5097a37c8472c1b",
+          "bytes": 2286656
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-wait-v3-desktop.png",
+          "sha256": "8ae8ffcd99dec8710490a1dbfc4c337c5ff16737ccb625632c501799f8da0783",
+          "bytes": 2159284
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-wait-v3-mobile.png",
+          "sha256": "3b8e855a99eb35cee97b50c2047cc95549566d7a9dde2af978b8cb5b86c090fa",
+          "bytes": 2100678
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-wait-v4-desktop.png",
+          "sha256": "6f65f2d96d9926aa209b0e666405c8eb44422e05b5bc7a7ec628deef315b9d19",
+          "bytes": 2119764
+        },
+        {
+          "path": "public/scene-art/outcomes/crane-wait.webp",
+          "sha256": "ec0f43e42c50afe6f1656cd57d591c6659b31a77cfa1518b02b1e17465528303",
+          "bytes": 158072
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-boat-family-v1.webp",
+          "sha256": "38de41dda1bafac48589c08eecdb221de6c125aaec5022f18d6e3edc9a32424f",
+          "bytes": 1499846
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-boat-panorama-v1.webp",
+          "sha256": "f8b46744e11ffcf9e98cc19f79d0b1a1a270e6840d938475d29fe8b432adb5f3",
+          "bytes": 1572172
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-boat-v4.webp",
+          "sha256": "e40de31bfa5fc8e8a26e1ff251358da558b4abac97ac614079338ee0ccb16016",
+          "bytes": 403030
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "sha256": "03e7e9ba12227ee07ad307fd835a74eedb9847a51ab3ff731e980adc5f158957",
+          "bytes": 164248
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-boat.webp",
+          "sha256": "d01d41ab3396378dec4c3570ea111b2fc1d2a2fbe4c3273373cf3bacd97fb7b1",
+          "bytes": 139130
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-camera-v10.webp",
+          "sha256": "07d2d517a566ceae64a7783e4b9e72797a91618f48a179993ee896a2659accc9",
+          "bytes": 1043326
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-camera-v4.webp",
+          "sha256": "d49d2e3ce83ae55dd64670a3f255e0735a6b21f001c15aba800ab073e85e5fcc",
+          "bytes": 478410
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-camera-v8.webp",
+          "sha256": "e07ca7f16d9a877244f089a478224ddfcaefb5f7f6347932c6dd7de1d6baa743",
+          "bytes": 177880
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-camera.webp",
+          "sha256": "c4fdcb1ea16a68db930de47b1359dd37586b02f95d53e60c55ea7e0fdaeb6997",
+          "bytes": 132370
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-socks-v10.webp",
+          "sha256": "e6f4e1b106244b8739e53f56a5636f4e956c0e91ee3e3ff28b11063a93adb191",
+          "bytes": 1328594
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-socks-v4.webp",
+          "sha256": "5c1723cf64dfbc38f0b6e9434c608957027be93288eeaf5b2066de8f29195470",
+          "bytes": 564672
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-socks-v8.webp",
+          "sha256": "5c720f0a5a9d9a3636ea76d76faa1e8f3819a4cddf4096d020cc57b88068aef5",
+          "bytes": 173900
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-socks-v9.webp",
+          "sha256": "5efd663bdd83c6d7f5ec9341ad8bc2742fb8c52544e9bad20921bc1260040d10",
+          "bytes": 1314530
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet-socks.webp",
+          "sha256": "30d1bb6f6fbd0d6261c22d33bdfea32082e6d196c03b8eee48b988b6cb862c1a",
+          "bytes": 138872
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-alphabet.webp",
+          "sha256": "04e54204496c06d4e140ef1a35d94096e729f9d172519a3595b196b5adb9af45",
+          "bytes": 142140
+        }
+      ]
+    },
+    {
+      "name": "media-23-2f32daa5eb58.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-23-2f32daa5eb58.tar.gz",
+      "sha256": "2f32daa5eb58f6e0ef7e420edde1af7d1346e5b79418673cd288b5ddd986584c",
+      "bytes": 65499511,
+      "files": [
+        {
+          "path": "public/scene-art/outcomes/inventory-entrance-boat-family-v1.webp",
+          "sha256": "b276a9e00e3a3dd02fcdabcbf389ad8a98c4703015cb40fbe342617fd495481b",
+          "bytes": 1558614
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-entrance-boat-panorama-v1.webp",
+          "sha256": "7d918d9fc179a1954b6f473035f81c7a23c068abda81f1239c7e373c00fa8bb6",
+          "bytes": 1555676
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-entrance-v10.webp",
+          "sha256": "a0c0a55747636b37cf9ddc7cf79d8bad0f68508aa165ad87bc75de7257918f5b",
+          "bytes": 1047944
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-entrance-v11.webp",
+          "sha256": "1aa5d5d6beeb8091e2eebe9983d6d785f5cc106ec2493852cd09ea3aa7754a62",
+          "bytes": 1047880
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-entrance-v4.webp",
+          "sha256": "930b18b0fef3d15ad3a9f943ef54cdc2d421346cc351d6e9e641f402a331cb0f",
+          "bytes": 599142
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-entrance-v8.webp",
+          "sha256": "da7f19d330248d6403ad837a680e2fd8f91ea28485e5b42a4e9a0684e9d2481d",
+          "bytes": 191850
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-entrance.webp",
+          "sha256": "d73d034404a30b84512f1394234a43fe941280ed64e990cf8de9d619b0ca9603",
+          "bytes": 95484
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-keeper-boat-family-v1.webp",
+          "sha256": "8a0d7d107d1d02c1d990c65514670ee31999212c63c51c6d4c9722825300795d",
+          "bytes": 1567230
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-keeper-boat-panorama-v1.webp",
+          "sha256": "cc3c56b62b5b59eb263043cd5e909a9a95417cbb6fff4bf5b6412d8e7a619abf",
+          "bytes": 1670662
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-keeper-v10.webp",
+          "sha256": "2e1b8665eeed50dca7115b8057d2d34204378b9985890d194380d849087b70c1",
+          "bytes": 946010
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-keeper-v11.webp",
+          "sha256": "25d3943967d78e6edfb2cc03a5291283ff845768dbdba86144c7dd7992ac1a0b",
+          "bytes": 946084
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-keeper-v4.webp",
+          "sha256": "3fda3a3466cfb432b0934b9768be46784115ff8602d352426c85987038f2e1cf",
+          "bytes": 355720
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-keeper-v8.webp",
+          "sha256": "da0225ffe942f3d9acbcb0c2879980a96597799fe2d85c7ba49f5913c91426fd",
+          "bytes": 168322
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-keeper.webp",
+          "sha256": "79a67c72cfd7c09ac717969a42d1675fa6a598930942fc37a5df5125effdb9c5",
+          "bytes": 117056
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-wms-boat-family-v1.webp",
+          "sha256": "822ff1b7c878e078c966d94e33cbf28fe5c47057b648152d2272b0a063a97db4",
+          "bytes": 1502646
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-wms-boat-panorama-v1.webp",
+          "sha256": "2cc2fe7e48978f5cc45f21d1f5e620c540eac2f79734b433493aeb7a6998a02a",
+          "bytes": 1535742
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-wms-v10.webp",
+          "sha256": "35de7efc976466c923faf6b25f43455814512b147f2e7e046b46c07bfdb9ca71",
+          "bytes": 911038
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-wms-v2.webp",
+          "sha256": "31c6c0c04d670fe0cd0128d8ed18410970bcb852fa51d437b3d98b5660e44342",
+          "bytes": 107546
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-wms-v4.webp",
+          "sha256": "234325825cb158da141797307c82a7bdaa08ec6c58389cf919246df8b49e84aa",
+          "bytes": 532330
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-wms-v8.webp",
+          "sha256": "a4067e01b572f7fa94d7a4db9525bbc3fb5456a79d80b008cd289f3f8d1a92be",
+          "bytes": 160966
+        },
+        {
+          "path": "public/scene-art/outcomes/inventory-wms.webp",
+          "sha256": "31c6c0c04d670fe0cd0128d8ed18410970bcb852fa51d437b3d98b5660e44342",
+          "bytes": 107546
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-helicopter-remote-v3.png",
+          "sha256": "7a598a5342ca14b6c1677b6e36e9a12edf76743ad6f112885a13996e4591bd38",
+          "bytes": 2538559
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-helicopter-remote.webp",
+          "sha256": "09a6d9097b7773ef9b924184fcc066469e40fb288eb58fdf4a30db534f3a1552",
+          "bytes": 167094
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-helicopter-v2.png",
+          "sha256": "20444018b357d9b5408f9ee31dd525323bf89954072694356476f1801e575453",
+          "bytes": 2625001
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-helicopter-v3.png",
+          "sha256": "d36b5c67f1f3969df90cabe9f3b0a0195a10488d47cc67630768a2ae244361eb",
+          "bytes": 2613305
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-helicopter.webp",
+          "sha256": "c97d0c58bdfeccef814b5b592570ce2e6e9e7604d6d3317aee635516ce43e38b",
+          "bytes": 114584
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-pipe-carrier-boat-v2.png",
+          "sha256": "65c1f9d091f66806d2837b46519bca0f69b7d1f1d32b3b84c43d80c6408e6378",
+          "bytes": 2009413
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-pipe-carrier-boat-v3.png",
+          "sha256": "76a9740c72490ee258586933ae2d5a74eb700fe5bd68c0ede693524cf6c04483",
+          "bytes": 2643707
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-pipe-carrier-boat.webp",
+          "sha256": "90ba2633384ab6f669c6883adb44b34e142c49fd865e840d65870ca7fd5c66bd",
+          "bytes": 109944
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-pipe-carrier-v2.png",
+          "sha256": "23f4e411d4b8a50ed0876c6225a6a909949cd42004b1a4c03531d127112b7074",
+          "bytes": 2389081
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-pipe-carrier-v3.png",
+          "sha256": "c260f00b06745b07456d6727e3ca9d78b8b52c0d48744bf0867c8dd83336cefe",
+          "bytes": 2683459
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-pipe-carrier.webp",
+          "sha256": "74b62502fe22f2bd205adc6ec3840e2757508e2a3081530030a883e3b6c84f61",
+          "bytes": 81704
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-robot-v2.png",
+          "sha256": "3f6caf7f55fda6458a9a883ec4f6df663dfa6f6748b6b53a351d5f08e3a0d180",
+          "bytes": 1882897
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-robot-v3.png",
+          "sha256": "ee922bea340b576ff5e6bb3c3aaafe7318fdd05b48dc2ccd9f048d98a33e2450",
+          "bytes": 2753435
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-robot.webp",
+          "sha256": "2aa3c53bd916d5ae87fddcc49b246d232af92d97c0f171727a36297c92ad40d3",
+          "bytes": 111268
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-rover-v3.png",
+          "sha256": "fb49107d9a385da0800486c76942ab4f095318175e91e7af6db37f20c25bb976",
+          "bytes": 2687068
+        },
+        {
+          "path": "public/scene-art/outcomes/lastmile-rover.webp",
+          "sha256": "29c67545a93af47fc53445f77ad1a1e0a77798227dacf8422ed2279e0decf623",
+          "bytes": 108418
+        },
+        {
+          "path": "public/scene-art/resolution-v2/alva-boat.webp",
+          "sha256": "20badca8fc939cc57cc695f15e2558ee40f12e32e4708b38985264593bb380a3",
+          "bytes": 371186
+        },
+        {
+          "path": "public/scene-art/resolution-v2/alva-camera.webp",
+          "sha256": "02623f039c6b435e506ad709a7758e7fa43050e44bb067d92e49aba77bdad4e8",
+          "bytes": 413458
+        },
+        {
+          "path": "public/scene-art/resolution-v2/alva-socks.webp",
+          "sha256": "e07dad8710f3b9c87db372729ed63958845d277b68dccffe34ba2681dcc4fcc9",
+          "bytes": 332672
+        },
+        {
+          "path": "public/scene-art/resolution-v2/arseniy-boat.webp",
+          "sha256": "37c8f4fdc492984b541d514744d9d0b2212878f2bc79883e0211b8f59a4b331d",
+          "bytes": 364368
+        },
+        {
+          "path": "public/scene-art/resolution-v2/arseniy-camera.webp",
+          "sha256": "0b13b2eb9c2ad72e9c2eb09313f374466b370987e23420267b8233a6f96e0e15",
+          "bytes": 328916
+        },
+        {
+          "path": "public/scene-art/resolution-v2/arseniy-socks.webp",
+          "sha256": "20b750ab9e7b79c3cc551905d6cb133a633ec8922817dad997483ae1af34da6f",
+          "bytes": 293128
+        },
+        {
+          "path": "public/scene-art/resolution-v2/khor-boat.webp",
+          "sha256": "ef20aea8ef395684cf163f65a9619c923a8ad639e6bd262a1393ec48dc70bb54",
+          "bytes": 368100
+        },
+        {
+          "path": "public/scene-art/resolution-v2/khor-camera.webp",
+          "sha256": "58a1425f55fc5de7c0afa7a314fc48acdb2255581d0930dfa8c962c27d4c0662",
+          "bytes": 403996
+        },
+        {
+          "path": "public/scene-art/resolution-v2/khor-socks.webp",
+          "sha256": "1b2332abcb452b3accb146575d1aa8faf01ef39b17b45c78fbe03f27bdd85dc5",
+          "bytes": 347714
+        },
+        {
+          "path": "public/scene-art/warehouse-corrections-2026-10-20/mobile/overview-mobile-native-v1-original.png",
+          "sha256": "3d31fd76d5961aa244b11458c03468e61a0549f78cb9c39fe54d27cde3e1caec",
+          "bytes": 2310746
+        },
+        {
+          "path": "public/scene-art/warehouse-corrections-2026-10-20/mobile/overview-mobile-native-v2.png",
+          "sha256": "d9bfbd6a5ce90c0008fe940ed00e50124ee9fb0f09abbf56297e9051c5605a2d",
+          "bytes": 2243373
+        },
+        {
+          "path": "public/scene-art/warehouse-corrections-2026-10-20/mobile/overview-mobile-native-v3.png",
+          "sha256": "1b3d165ad17b1d624376504c132b5beed002185fd6e59335432842bbb721e0bb",
+          "bytes": 2087633
+        },
+        {
+          "path": "public/scene-art/warehouse-corrections-2026-10-20/outcomes/entrance-labels-v1.png",
+          "sha256": "836be85a12d906a3032933f8dbebdd845e63054db886ddafabfd8fbf66ca299f",
+          "bytes": 1328839
+        },
+        {
+          "path": "public/scene-art/warehouse-corrections-2026-10-20/outcomes/keeper-v2-labels-v1.png",
+          "sha256": "342198449a211b61f5f93f081cbb9c60966378106bea91ad7181ee3055d4fb16",
+          "bytes": 1524698
+        },
+        {
+          "path": "public/scene-art/warehouse-corrections-2026-10-20/overview-receiving-parallel-labels-v1.png",
+          "sha256": "56f9a24e5b2f898401cd56ac9820764c3ee90e307cb6cb9ad83f4dfc64a427c2",
+          "bytes": 3064790
+        },
+        {
+          "path": "public/scene-art/warehouse-polish-2026-10-17/alphabet.webp",
+          "sha256": "aa7ae23ce04e74d7f2fbf704a7dc3dbc1a8151588d7be67123b4a1df9d085bd9",
+          "bytes": 282352
+        },
+        {
+          "path": "public/scene-art/warehouse-polish-2026-10-17/entrance.webp",
+          "sha256": "1f106ffab5bb0cf49239cbeb56c41100c5f7a42b70af729e91214da93362fe1e",
+          "bytes": 258510
+        },
+        {
+          "path": "public/scene-art/warehouse-polish-2026-10-17/wms-head-v2.webp",
+          "sha256": "e5b79121c3c2b62175720a645b7d79d5d647cd8e70665c2a08d41ab48d064a3e",
+          "bytes": 266654
+        },
+        {
+          "path": "public/scene-art/warehouse-polish-2026-10-17/wms.webp",
+          "sha256": "83e6ef91d1a6f6fbc9fdd6e7458650cd33935018a5f5e710de8810324f41cb97",
+          "bytes": 265636
+        },
+        {
+          "path": "public/scene-art/warehouse-restored-2026-10-11/alphabet.webp",
+          "sha256": "a9106bb1b0452f1de396d6bafd2f9ece679c2db92436631c6060df14322d199f",
+          "bytes": 398418
+        },
+        {
+          "path": "public/scene-art/warehouse-restored-2026-10-11/entrance.webp",
+          "sha256": "fffa5b4fc7fa5a63b3d19f135fadcddb1ad507bc794b671cea6f475051c33dd9",
+          "bytes": 325824
+        },
+        {
+          "path": "public/scene-art/warehouse-restored-2026-10-11/keeper-v2.webp",
+          "sha256": "7b0a5ef843b363cb178ddc30b6cd5f44a0114ea3c3ee717c6868766377254686",
+          "bytes": 236344
+        },
+        {
+          "path": "public/scene-art/warehouse-restored-2026-10-11/keeper.webp",
+          "sha256": "e3e67c0095677c6b70068a892e4b4a9bf5cf02ecfe55132195a59889904ef564",
+          "bytes": 351974
+        },
+        {
+          "path": "public/scene-art/warehouse-restored-2026-10-11/wms.webp",
+          "sha256": "d0ef4c0e525db7cb97d53f419435e21df38a143f9c78268f4e5b037889cae09a",
+          "bytes": 319840
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-3-2026-10-18/overview-perspective-v4.png",
+          "sha256": "5ae4e412bdcf32aabbe9d1da64a5ae93da1d3afd1b46a69d777c6f3ec4523e13",
+          "bytes": 2165051
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-3-2026-10-18/overview-perspective-v5-local.png",
+          "sha256": "5e11f4c83c1443ebded1bca27fc959b25d7367b2c416f1e2b34c7eae67ae7cdc",
+          "bytes": 3056740
+        }
+      ]
+    },
+    {
+      "name": "media-24-6687d1e1b105.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-24-6687d1e1b105.tar.gz",
+      "sha256": "6687d1e1b105f3e500a24e4e29b42900aae2eefa027d23566f46e2e909c59d0e",
+      "bytes": 38441228,
+      "files": [
+        {
+          "path": "public/scene-art/warehouse-revision-3-2026-10-18/overview-perspective-v6-local.png",
+          "sha256": "a0f0522092864457c0b079bc57c5353b1397fea5ab9be8a412b1c32b085a3cc4",
+          "bytes": 3055899
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png",
+          "sha256": "85ba91147b1b2adbd24e9fd7b392ab0cf0be76fb0ef171eb101bca2205fefbe6",
+          "bytes": 1814497
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v1-local.png",
+          "sha256": "f4a01cd86b17a6f30deea33e05a8c8a826292a23de49d487b12357950eae633b",
+          "bytes": 3065361
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v10-local.png",
+          "sha256": "2254ca07f4ebef56d26b952ee038f9c784233a1c83bade8f06e7ad8ee1a8b2c5",
+          "bytes": 3063844
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v11-local.png",
+          "sha256": "ec0644fc51397db1a1e6a33960892e530dc9013e120254bad298d81bfbb105c8",
+          "bytes": 3063842
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v2-local.png",
+          "sha256": "63c483e0e3763ef4c89a50ef719a904ab49ef59c30b666ddafed49c04235d3ad",
+          "bytes": 3067930
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v3-local.png",
+          "sha256": "beff458d4dea46d0e94024cf6aea29544ccb9980b5dcdebea703c32a5d76865c",
+          "bytes": 3063054
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v4-local.png",
+          "sha256": "a8bf257f3b7441efe768303f182349b7866d2fc3054b52593470cd74f3fddc90",
+          "bytes": 3061265
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v5-local.png",
+          "sha256": "3cc503cd6978d7ea1934ffb656ecaa5472d346a73e7a2c8365f388314053c847",
+          "bytes": 3061172
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v6-local.png",
+          "sha256": "080796ddc08c9d1a0473283e4be112f58b64352d14b6c9a6aa3ffe8be4d15d38",
+          "bytes": 3064003
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v7-local.png",
+          "sha256": "fbac3235c4243e3641a0905ae77736eae4fdf13674a4e645adf545e2e150a2ec",
+          "bytes": 3063867
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v8-local.png",
+          "sha256": "9e7de147a930bd1ecf5902d431948c2f04f007fed2c2e8eee51e1cad430c71a0",
+          "bytes": 3063834
+        },
+        {
+          "path": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v9-local.png",
+          "sha256": "ff25ce48116136cd592e1f9ae43b3576cbc21b61422677d3dcbb03c61f1acd38",
+          "bytes": 3064001
+        }
+      ]
+    },
+    {
+      "name": "media-25-0ec37bc536ed.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-25-0ec37bc536ed.tar.gz",
+      "sha256": "0ec37bc536ed491c3e1b4bf48e9cd922dfab8cbf685c8e505a9467951cc63895",
+      "bytes": 54332849,
+      "files": [
+        {
+          "path": "public/scene1-live/separated-routes/city-motion-desktop.mp4",
+          "sha256": "23e4d47e67599562de4c23a97ffa8d7052ddc62db889601396fae57e57f27ce5",
+          "bytes": 39039927
+        },
+        {
+          "path": "public/scene1-live/separated-routes/city-motion-mobile.mp4",
+          "sha256": "2c0ae1514081a1e5894b48b2fd783f9e2e4b7a8accf1e09ee5c1e4265e1320f0",
+          "bytes": 15341293
+        }
+      ]
+    },
+    {
+      "name": "media-26-b62041d42edb.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-26-b62041d42edb.tar.gz",
+      "sha256": "b62041d42edb552ab0ed013fdcc03dabfad9eac86bb3938056328faf41152c6a",
+      "bytes": 24424370,
+      "files": [
+        {
+          "path": "public/scene1-live/separated-routes/city-motion-tablet.mp4",
+          "sha256": "5e28b90851f9f7f18598c3b3c105edc173cc70aa93fe3b6b181a0b62ec7f9c74",
+          "bytes": 23361553
+        },
+        {
+          "path": "public/scene1-live/separated-routes/city-poster.webp",
+          "sha256": "8e23e31ddcf87b40242ef25e87034225be9f79f25e8a2c91618367b0a6a1fb15",
+          "bytes": 1096008
+        }
+      ]
+    }
+  ]
+}

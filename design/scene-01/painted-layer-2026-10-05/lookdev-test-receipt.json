@@ -1,0 +1,47 @@
+{
+  "candidate_only": true,
+  "style_accepted": false,
+  "source": "painted-vehicles-driver-fixed-optimized.blend",
+  "dimensions": [
+    3840,
+    2667
+  ],
+  "samples": 8,
+  "changed_materials": [
+    "PILOT 1 projected paint 0",
+    "PILOT 1 projected paint 1",
+    "PILOT 1 projected paint 2",
+    "PILOT 1 projected paint 3",
+    "PILOT 1 projected paint 4",
+    "PILOT 2 projected paint 0",
+    "PILOT 2 projected paint 1",
+    "PILOT 2 projected paint 2",
+    "PILOT 2 projected paint 3",
+    "PILOT 2 projected paint 4",
+    "PILOT 3 projected paint 0",
+    "PILOT 3 projected paint 1",
+    "PILOT 3 projected paint 2",
+    "PILOT 3 projected paint 3",
+    "PILOT 3 projected paint 4",
+    "PILOT 4 projected paint 0",
+    "PILOT 4 projected paint 1",
+    "PILOT 4 projected paint 2",
+    "PILOT 4 projected paint 3",
+    "PILOT 4 projected paint 4"
+  ],
+  "value_gain": 0.6,
+  "value_bias": 0.4,
+  "palette_srgb": {
+    "1": "e9563c",
+    "2": "218ee4",
+    "3": "85c753",
+    "4": "eabe43"
+  },
+  "frames": {
+    "1": 6.259,
+    "133": 5.365,
+    "769": 5.197
+  },
+  "geometry_camera_routes_drivers_glazing": "unchanged",
+  "neutral_floor_skin_mask": "unchanged"
+}

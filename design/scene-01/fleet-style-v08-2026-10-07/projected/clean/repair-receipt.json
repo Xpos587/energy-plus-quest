@@ -1,0 +1,166 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/projected/fleet-painted-projected-v09.blend",
+  "records": [
+    {
+      "truck": 1,
+      "removed_sill_body_faces": 785,
+      "removed_mirror_body_faces": 851,
+      "driver_polygons_before": 118,
+      "driver_polygons_after": 118,
+      "driver_vertices_unchanged": true,
+      "driver_images": [
+        "single-illustrated-shared-driver.png"
+      ],
+      "all_existing_vertex_coordinates_unchanged": true,
+      "added_geometry": [
+        "Thin closed continuous sill ribbon in cabmesh local space",
+        "Two compact rounded mirror housings/stems",
+        "Two thin continuous windshield side strips"
+      ],
+      "repair_bounds_model": {
+        "sill_z": [
+          -0.079,
+          0.055
+        ],
+        "sill_y": [
+          -0.442,
+          0.442
+        ],
+        "mirror_z": [
+          0.124,
+          0.32
+        ]
+      }
+    },
+    {
+      "truck": 2,
+      "removed_sill_body_faces": 785,
+      "removed_mirror_body_faces": 851,
+      "driver_polygons_before": 118,
+      "driver_polygons_after": 118,
+      "driver_vertices_unchanged": true,
+      "driver_images": [
+        "single-illustrated-shared-driver.png"
+      ],
+      "all_existing_vertex_coordinates_unchanged": true,
+      "added_geometry": [
+        "Thin closed continuous sill ribbon in cabmesh local space",
+        "Two compact rounded mirror housings/stems",
+        "Two thin continuous windshield side strips"
+      ],
+      "repair_bounds_model": {
+        "sill_z": [
+          -0.079,
+          0.055
+        ],
+        "sill_y": [
+          -0.442,
+          0.442
+        ],
+        "mirror_z": [
+          0.124,
+          0.32
+        ]
+      }
+    },
+    {
+      "truck": 3,
+      "removed_sill_body_faces": 785,
+      "removed_mirror_body_faces": 851,
+      "driver_polygons_before": 118,
+      "driver_polygons_after": 118,
+      "driver_vertices_unchanged": true,
+      "driver_images": [
+        "crew-illustrated.png"
+      ],
+      "all_existing_vertex_coordinates_unchanged": true,
+      "added_geometry": [
+        "Thin closed continuous sill ribbon in cabmesh local space",
+        "Two compact rounded mirror housings/stems",
+        "Two thin continuous windshield side strips"
+      ],
+      "repair_bounds_model": {
+        "sill_z": [
+          -0.079,
+          0.055
+        ],
+        "sill_y": [
+          -0.442,
+          0.442
+        ],
+        "mirror_z": [
+          0.124,
+          0.32
+        ]
+      }
+    },
+    {
+      "truck": 4,
+      "removed_sill_body_faces": 785,
+      "removed_mirror_body_faces": 667,
+      "driver_polygons_before": 118,
+      "driver_polygons_after": 118,
+      "driver_vertices_unchanged": true,
+      "driver_images": [
+        "single-illustrated-shared-driver.png"
+      ],
+      "all_existing_vertex_coordinates_unchanged": true,
+      "added_geometry": [
+        "Thin closed continuous sill ribbon in cabmesh local space",
+        "Two compact rounded mirror housings/stems",
+        "Two thin continuous windshield side strips"
+      ],
+      "repair_bounds_model": {
+        "sill_z": [
+          -0.079,
+          0.055
+        ],
+        "sill_y": [
+          -0.442,
+          0.442
+        ],
+        "mirror_z": [
+          0.124,
+          0.32
+        ]
+      }
+    }
+  ],
+  "frames_verified": 1152,
+  "root_count": 8,
+  "root_matrix_max_delta": 0.0,
+  "camera_unchanged": true,
+  "actions": {
+    "truck-1-tractor": "truck-1-tractorAction",
+    "truck-1-trailer": "truck-1-trailerAction",
+    "truck-2-tractor": "truck-2-tractorAction",
+    "truck-2-trailer": "truck-2-trailerAction",
+    "truck-3-tractor": "truck-3-tractorAction",
+    "truck-3-trailer": "truck-3-trailerAction",
+    "truck-4-tractor": "truck-4-tractorAction",
+    "truck-4-trailer": "truck-4-trailerAction"
+  },
+  "protected_regions": "All pre-existing vertex coordinates unchanged. Face deletion restricted to frontal windshield sill/mirror regions; no wheel/contact/rear/hitch region touched.",
+  "geometry_method": "Real closed sill ribbon and compact mirror hardware parented to existing detailed tractor mesh; no billboard or overlay.",
+  "visual_status": "Continuous lower windshield cowl removes large triangle teeth in front and opposite side views. Compact mirrors read smoothly. Bounded pilot accepted for packaging by parent; remaining corners/sidebody are not fully repaired.",
+  "limitations": [
+    "Upper windshield corners and adjacent side-panel source mesh still contain photogrammetry roughness.",
+    "Opposite side/front bumper outside this repair still retain irregular source geometry.",
+    "New sill ribbon is a small physical overlay on the cab front; original suspect body faces beneath were removed, original driver faces remain.",
+    "No full-loop render or exact historical cab rebuild."
+  ],
+  "export_frames": [
+    1,
+    385,
+    769
+  ],
+  "resolution": [
+    1920,
+    1334
+  ],
+  "fronts_resolution": [
+    1200,
+    1200
+  ],
+  "verification": "saved-verification.json"
+}

@@ -1,0 +1,963 @@
+[
+  {
+    "scene": "compact",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Погрузка на фуру",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Итак, вы нашли перевозчика, который довезет подарок до склада в Лабытнанги. В фуру уже заг",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К этапу «Перевозчик»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "compact",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Погрузка на фуру",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Куда поставить лодку, чтобы она доехала в целости и сохранности, а погрузка прошла быстро ",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1Место",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2Место",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3Место",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4Место",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Поручить размещение Compact",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К этапу «Перевозчик»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1",
+        "font": "15px",
+        "line": "15px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2",
+        "font": "15px",
+        "line": "15px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3",
+        "font": "15px",
+        "line": "15px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "font": "15px",
+        "line": "15px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "compact",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Погрузка на фуру",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1",
+        "font": "15px",
+        "line": "15px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2",
+        "font": "15px",
+        "line": "15px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3",
+        "font": "15px",
+        "line": "15px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "font": "15px",
+        "line": "15px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Место 4",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "compact",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Погрузка на фуру",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Отличное решение! Чтобы поставить лодку вертикально, пришлось вынуть часть уже загруженных",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Изменить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Продолжить",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Хранение на складе",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваш подарок наконец приехал на склад в Лабытнанги.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К этапу «Загрузка»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Далее",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Хранение на складе",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Давайте решим, где его разместить.",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "У приёмки",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Стеллаж «Л»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Кладовщик",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Система WMS",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К этапу «Загрузка»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Хранение на складе",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Система WMS",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Воспользоваться умной системой управления складом Inventory",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Хранение на складе",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Inventory - это цифровой мозг современного промышленного склада, или WMS-система, на профе",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Изменить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Читать дальше",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Погрузка на баржу",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваша лодка уже на причале — её вместе с другими грузами привезли со склада на беспилотном ",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К этапу «Склад»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Далее",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Погрузка на баржу",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Как погрузить подарок на баржу?",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Одно судно уже загружено и готово к отправке, но ближайший кран освободится только через т",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Крановщик Иван ждет ваших распоряжений.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Пётр — у него вот-вот начнется своя погрузка, поэтому он уже на причале.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1Иван управляет краном из офиса",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2Отправить Ивана на кран",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3Дождаться плановой работы крана через 3 часа.",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4Попросить Петра помочь",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К этапу «Склад»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Погрузка на баржу",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Иван управляет краном из офиса",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Попросить Ивана управлять краном прямо из офиса.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Погрузка на баржу",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Оказывается, так тоже можно — Ивану не пришлось подниматься на кран.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Изменить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Читать дальше",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Последние препятствия",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Баржа причалила к берегу в Новом Порту. Капитан довольно потирает усы.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К этапу «Баржа»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Далее",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Последние препятствия",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Какой транспорт лучше всего подойдет для доставки лодки Арсению",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вертолёт",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Снегоболотоход",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Роботизированная тележка",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Трубовоз",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К этапу «Баржа»",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Последние препятствия",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "font": "12px",
+        "line": "12px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Снегоболотоход",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Снегоболотоход — он будто создан для таких мест.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Последние препятствия",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "На шинах со сверхнизким давлением современный вездеход преодолел болотные топи — там, где ",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Изменить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Читать дальше",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  }
+]

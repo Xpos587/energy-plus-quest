@@ -1,0 +1,16 @@
+{
+  "source_objects_checked_except_intentionally_moved_arch_lips": 3617,
+  "unchanged_source_local_matrices_parents_visibility_material_slots": true,
+  "upper_detailed_cab_vertices_and_polygons_exactly_unchanged": true,
+  "all_source_animation_curves_keyframes_handles_interpolation_exactly_equal": true,
+  "new_panel_and_lip_tire_clearance_all_192_frames": {
+    "1": 0.02626508945663819,
+    "4": 0.028136751893609258
+  },
+  "worst_clearance_frames": {
+    "1": 75,
+    "4": 62
+  },
+  "clearance_method": "evaluated new cladding/wheel-well/lip vertices including modifiers against fixed front tire radius .358 at x .8,z .355, both sides",
+  "remaining_gate": "front/side/threequarter visual review"
+}

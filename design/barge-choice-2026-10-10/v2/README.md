@@ -1,0 +1,9 @@
+# Barge choice V2 · 2026-10-10
+
+Applied to local runtime: hide segment borders/fills while idle; retain clickable SAM regions and square markers; on interaction use continuous0.8px blue border and3.5% translucent fill, with2px light under-stroke on direct region hover/selection. Walking-route under-stroke reduced3px, dashed route1.2px. No idle animation. Four sizes captured as thin-*.png. Runtime interaction verification repeated (20checks).
+
+Composition proposal is not applied: PRU moved left, longer visible paved-quay separation from nearest crane, Petr's own staged cargo beside farther crane. Building reference is docs/scenario-assets/image9.png. Office identity confirmed by visual blocks037FC11D and7D20F2BB. Current text6F7BE91B says Ivan waits for player's orders, whereas meeting feedback says player is Ivan: do not silently rewrite canonical text.
+
+Built-in imagegen used. First source/reference are existing choice-neutral-wide-v3.webp and scenario PRU image9.png. Prompt: retain scene style and physical engineering, enlarge office/crane separation, keep Ivan visible inPRU and Petr in farcrane, add separate cargo staging besidePetr, no UI marks or animation. Second targeted edit: only clarify visible remote control desk/monitors through front office upper-floor glazing; retain face and all exterior composition. Generated originals retained under configuredgenerated_images directory. PDF numbers are review overlays, not baked into source art.
+
+Independent critiques treated as hypotheses: office/crane spacing now readable; remote-control console needed clarification. Reviewer disagreement about drawing an idlewalking route was resolved by retaining route only when considering rush. Mobile composition and final mask/hotspot coordinates require user composition feedback first; old masks must not be reused on newgeometry. No outcome assets or other scene assets replaced in this pass.

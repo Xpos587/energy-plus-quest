@@ -1,0 +1,4 @@
+# Two-truck Kling trial
+User accepted previous single-truck Kling turn as usable experimental direction. Not final-map approval. This test adds red moving truck, retains green turning, uses same5second Kling3.0std soundoff; actual debit6.25credits. Source ../turn-pilot-2026-10-04/start.png; generated end.png; exact prompt and result.json retained. Production unchanged.
+
+Sampled local review at0.5second intervals: both rigs retained, red moves right and stays visible, no observed sampled collision or split. Green swings toward screen left before turning right on screen, excessive maneuver compared to intended path. Cab details and perspective drift remain. This is NOT a clean final route and is not approved for all-four loop. Static end-frame/background slight differences also need correction before final use. Previous accepted single-truck candidate remains untouched. Gemini actual-video review requested; do not treat output as proof without visual corroboration.

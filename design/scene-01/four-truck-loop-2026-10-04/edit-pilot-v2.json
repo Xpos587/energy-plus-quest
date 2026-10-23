@@ -1,0 +1,34 @@
+[
+  {
+    "created_at": "2026-10-04T19:45:44.801926Z",
+    "display_name": "Kling O1 Video Edit",
+    "id": "e64b0706-529d-47f0-89b8-9535aa7b8b18",
+    "job_type": "kling_video_edit",
+    "min_result_url": null,
+    "params": {
+      "height": 700,
+      "input_images": [
+        {
+          "id": "9f9938c8-4a73-4de8-830b-05692e101b14",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/9f9938c8-4a73-4de8-830b-05692e101b14.png"
+        }
+      ],
+      "input_videos": [
+        {
+          "id": "46176bf0-a84f-404f-8dbf-c6fe748f7ffa",
+          "type": "video_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/46176bf0-a84f-404f-8dbf-c6fe748f7ffa.mp4"
+        }
+      ],
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "mode": "std",
+      "model": "kling-video-edit-o3",
+      "prompt": "Convert source video rendering into bright illustrated 2D game art using the image reference for surface style ONLY. Exactly FOUR trucks total throughout the frame: ONE BLUE, ONE GREEN, ONE RED, ONE YELLOW. No parked extra vehicles or duplicate tractors. Keep ALL source paths, locations, sizes, articulation and exact timing. Do not create a new composition. Same fixed camera and exact building footprints. Style: clean hand-painted 2D illustration, soft colored grey contours, pastel blue roads, cream and muted apricot facades, crisp blue windows, green-yellow leafy trees. Soft diffuse illumination, no sharp black contour, no dark shading, no plastic glossy 3D, no clay miniature. Each truck keeps its source moving location and rigid body, only surface details become illustrated. Background must stay perfectly stationary. All motion MUST match source frame by frame, including roof centers. Only restyle, no choreography changes.",
+      "width": 1008
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_194544_e64b0706-529d-47f0-89b8-9535aa7b8b18.mp4",
+    "status": "completed"
+  }
+]

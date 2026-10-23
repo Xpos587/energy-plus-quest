@@ -1,0 +1,15 @@
+{
+  "label": "preliminary actual models; green/blue semantic cleanup pending",
+  "scale": 0.92,
+  "margin_px": 2,
+  "period_frames": 546,
+  "fps": 24,
+  "blue_mapping": "endpoint-inclusive",
+  "output_subdirectory": "actual-preliminary-0.92",
+  "colors": {
+    "green": {"directory": "design/scene-01/kling-green-loop-2026-10-05/assembly/candidate-22.75s", "tracking": "green-tracking.json", "first_file_index": 1},
+    "red": {"directory": "design/scene-01/kling-fleet-corners-2026-10-05/assembly/red-semantic-candidate", "tracking": "roof-tracking-22.75s.json", "first_file_index": 0},
+    "yellow": {"directory": "design/scene-01/kling-fleet-corners-2026-10-05/assembly/yellow-semantic-candidate", "tracking": "roof-tracking-22.75s.json", "first_file_index": 0},
+    "blue": {"directory": "design/scene-01/kling-blue-keys-2026-10-05/assembly/candidate-corrected", "tracking": "blue-tracking-20s.json", "first_file_index": 1}
+  }
+}

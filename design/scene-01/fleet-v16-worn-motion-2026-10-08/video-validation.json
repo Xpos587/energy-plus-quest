@@ -1,0 +1,34 @@
+{
+  "worn-cab-map-proof-4s.mp4": {
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 960,
+          "height": 668,
+          "r_frame_rate": "24/1",
+          "duration": "4.000000",
+          "nb_read_frames": "96"
+        }
+      ]
+    },
+    "full_decode_exit": 0
+  },
+  "worn-cab-before-after-tracking-4s.mp4": {
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 768,
+          "height": 960,
+          "r_frame_rate": "24/1",
+          "duration": "4.000000",
+          "nb_read_frames": "96"
+        }
+      ]
+    },
+    "full_decode_exit": 0
+  }
+}

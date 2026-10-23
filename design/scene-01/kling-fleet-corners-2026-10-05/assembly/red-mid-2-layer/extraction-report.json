@@ -1,0 +1,739 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-corners-2026-10-05/red-mid-2.mp4",
+  "fps": 24,
+  "frames": 121,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "gate": "REJECTED experiment; partial RGBA reruns may coexist with stale contacts. Do not use for fleet. Await independently reviewed semantic masks.",
+  "cab_alpha_failures": [],
+  "metrics": [
+    {
+      "frame": 0,
+      "cab_alpha": 255,
+      "opaque_pixels": 3636,
+      "white_pixels": 336
+    },
+    {
+      "frame": 1,
+      "cab_alpha": 255,
+      "opaque_pixels": 3642,
+      "white_pixels": 376
+    },
+    {
+      "frame": 2,
+      "cab_alpha": 255,
+      "opaque_pixels": 3622,
+      "white_pixels": 437
+    },
+    {
+      "frame": 3,
+      "cab_alpha": 255,
+      "opaque_pixels": 3628,
+      "white_pixels": 507
+    },
+    {
+      "frame": 4,
+      "cab_alpha": 255,
+      "opaque_pixels": 3608,
+      "white_pixels": 591
+    },
+    {
+      "frame": 5,
+      "cab_alpha": 255,
+      "opaque_pixels": 3589,
+      "white_pixels": 662
+    },
+    {
+      "frame": 6,
+      "cab_alpha": 255,
+      "opaque_pixels": 3573,
+      "white_pixels": 684
+    },
+    {
+      "frame": 7,
+      "cab_alpha": 255,
+      "opaque_pixels": 3597,
+      "white_pixels": 753
+    },
+    {
+      "frame": 8,
+      "cab_alpha": 255,
+      "opaque_pixels": 3603,
+      "white_pixels": 805
+    },
+    {
+      "frame": 9,
+      "cab_alpha": 255,
+      "opaque_pixels": 3602,
+      "white_pixels": 842
+    },
+    {
+      "frame": 10,
+      "cab_alpha": 255,
+      "opaque_pixels": 3564,
+      "white_pixels": 843
+    },
+    {
+      "frame": 11,
+      "cab_alpha": 255,
+      "opaque_pixels": 3542,
+      "white_pixels": 848
+    },
+    {
+      "frame": 12,
+      "cab_alpha": 255,
+      "opaque_pixels": 3537,
+      "white_pixels": 876
+    },
+    {
+      "frame": 13,
+      "cab_alpha": 255,
+      "opaque_pixels": 3454,
+      "white_pixels": 854
+    },
+    {
+      "frame": 14,
+      "cab_alpha": 255,
+      "opaque_pixels": 3418,
+      "white_pixels": 860
+    },
+    {
+      "frame": 15,
+      "cab_alpha": 255,
+      "opaque_pixels": 3401,
+      "white_pixels": 871
+    },
+    {
+      "frame": 16,
+      "cab_alpha": 255,
+      "opaque_pixels": 3358,
+      "white_pixels": 875
+    },
+    {
+      "frame": 17,
+      "cab_alpha": 255,
+      "opaque_pixels": 3370,
+      "white_pixels": 888
+    },
+    {
+      "frame": 18,
+      "cab_alpha": 255,
+      "opaque_pixels": 3342,
+      "white_pixels": 893
+    },
+    {
+      "frame": 19,
+      "cab_alpha": 255,
+      "opaque_pixels": 3327,
+      "white_pixels": 911
+    },
+    {
+      "frame": 20,
+      "cab_alpha": 255,
+      "opaque_pixels": 3286,
+      "white_pixels": 913
+    },
+    {
+      "frame": 21,
+      "cab_alpha": 255,
+      "opaque_pixels": 3284,
+      "white_pixels": 921
+    },
+    {
+      "frame": 22,
+      "cab_alpha": 255,
+      "opaque_pixels": 3290,
+      "white_pixels": 926
+    },
+    {
+      "frame": 23,
+      "cab_alpha": 255,
+      "opaque_pixels": 3277,
+      "white_pixels": 935
+    },
+    {
+      "frame": 24,
+      "cab_alpha": 255,
+      "opaque_pixels": 3300,
+      "white_pixels": 968
+    },
+    {
+      "frame": 25,
+      "cab_alpha": 255,
+      "opaque_pixels": 3302,
+      "white_pixels": 978
+    },
+    {
+      "frame": 26,
+      "cab_alpha": 255,
+      "opaque_pixels": 3301,
+      "white_pixels": 991
+    },
+    {
+      "frame": 27,
+      "cab_alpha": 255,
+      "opaque_pixels": 3319,
+      "white_pixels": 984
+    },
+    {
+      "frame": 28,
+      "cab_alpha": 255,
+      "opaque_pixels": 3286,
+      "white_pixels": 978
+    },
+    {
+      "frame": 29,
+      "cab_alpha": 255,
+      "opaque_pixels": 3266,
+      "white_pixels": 1003
+    },
+    {
+      "frame": 30,
+      "cab_alpha": 255,
+      "opaque_pixels": 3268,
+      "white_pixels": 1010
+    },
+    {
+      "frame": 31,
+      "cab_alpha": 255,
+      "opaque_pixels": 3261,
+      "white_pixels": 1021
+    },
+    {
+      "frame": 32,
+      "cab_alpha": 255,
+      "opaque_pixels": 3267,
+      "white_pixels": 1016
+    },
+    {
+      "frame": 33,
+      "cab_alpha": 255,
+      "opaque_pixels": 3269,
+      "white_pixels": 1023
+    },
+    {
+      "frame": 34,
+      "cab_alpha": 255,
+      "opaque_pixels": 3285,
+      "white_pixels": 1025
+    },
+    {
+      "frame": 35,
+      "cab_alpha": 255,
+      "opaque_pixels": 3278,
+      "white_pixels": 1024
+    },
+    {
+      "frame": 36,
+      "cab_alpha": 255,
+      "opaque_pixels": 3276,
+      "white_pixels": 1031
+    },
+    {
+      "frame": 37,
+      "cab_alpha": 255,
+      "opaque_pixels": 3264,
+      "white_pixels": 1043
+    },
+    {
+      "frame": 38,
+      "cab_alpha": 255,
+      "opaque_pixels": 3286,
+      "white_pixels": 1045
+    },
+    {
+      "frame": 39,
+      "cab_alpha": 255,
+      "opaque_pixels": 3254,
+      "white_pixels": 1036
+    },
+    {
+      "frame": 40,
+      "cab_alpha": 255,
+      "opaque_pixels": 3254,
+      "white_pixels": 1064
+    },
+    {
+      "frame": 41,
+      "cab_alpha": 255,
+      "opaque_pixels": 3252,
+      "white_pixels": 1073
+    },
+    {
+      "frame": 42,
+      "cab_alpha": 255,
+      "opaque_pixels": 3178,
+      "white_pixels": 1074
+    },
+    {
+      "frame": 43,
+      "cab_alpha": 255,
+      "opaque_pixels": 3147,
+      "white_pixels": 1097
+    },
+    {
+      "frame": 44,
+      "cab_alpha": 255,
+      "opaque_pixels": 3152,
+      "white_pixels": 1090
+    },
+    {
+      "frame": 45,
+      "cab_alpha": 255,
+      "opaque_pixels": 3091,
+      "white_pixels": 1069
+    },
+    {
+      "frame": 46,
+      "cab_alpha": 255,
+      "opaque_pixels": 3062,
+      "white_pixels": 1091
+    },
+    {
+      "frame": 47,
+      "cab_alpha": 255,
+      "opaque_pixels": 3041,
+      "white_pixels": 1088
+    },
+    {
+      "frame": 48,
+      "cab_alpha": 255,
+      "opaque_pixels": 3015,
+      "white_pixels": 1088
+    },
+    {
+      "frame": 49,
+      "cab_alpha": 255,
+      "opaque_pixels": 2992,
+      "white_pixels": 1104
+    },
+    {
+      "frame": 50,
+      "cab_alpha": 255,
+      "opaque_pixels": 2947,
+      "white_pixels": 1123
+    },
+    {
+      "frame": 51,
+      "cab_alpha": 255,
+      "opaque_pixels": 2895,
+      "white_pixels": 1134
+    },
+    {
+      "frame": 52,
+      "cab_alpha": 255,
+      "opaque_pixels": 2815,
+      "white_pixels": 1144
+    },
+    {
+      "frame": 53,
+      "cab_alpha": 255,
+      "opaque_pixels": 2724,
+      "white_pixels": 1162
+    },
+    {
+      "frame": 54,
+      "cab_alpha": 255,
+      "opaque_pixels": 2646,
+      "white_pixels": 1143
+    },
+    {
+      "frame": 55,
+      "cab_alpha": 255,
+      "opaque_pixels": 2568,
+      "white_pixels": 1154
+    },
+    {
+      "frame": 56,
+      "cab_alpha": 255,
+      "opaque_pixels": 2525,
+      "white_pixels": 1167
+    },
+    {
+      "frame": 57,
+      "cab_alpha": 255,
+      "opaque_pixels": 2504,
+      "white_pixels": 1174
+    },
+    {
+      "frame": 58,
+      "cab_alpha": 255,
+      "opaque_pixels": 2453,
+      "white_pixels": 1180
+    },
+    {
+      "frame": 59,
+      "cab_alpha": 255,
+      "opaque_pixels": 2450,
+      "white_pixels": 1177
+    },
+    {
+      "frame": 60,
+      "cab_alpha": 255,
+      "opaque_pixels": 2439,
+      "white_pixels": 1182
+    },
+    {
+      "frame": 61,
+      "cab_alpha": 255,
+      "opaque_pixels": 2444,
+      "white_pixels": 1203
+    },
+    {
+      "frame": 62,
+      "cab_alpha": 255,
+      "opaque_pixels": 2472,
+      "white_pixels": 1225
+    },
+    {
+      "frame": 63,
+      "cab_alpha": 255,
+      "opaque_pixels": 2471,
+      "white_pixels": 1231
+    },
+    {
+      "frame": 64,
+      "cab_alpha": 255,
+      "opaque_pixels": 2500,
+      "white_pixels": 1240
+    },
+    {
+      "frame": 65,
+      "cab_alpha": 255,
+      "opaque_pixels": 2525,
+      "white_pixels": 1246
+    },
+    {
+      "frame": 66,
+      "cab_alpha": 255,
+      "opaque_pixels": 2618,
+      "white_pixels": 1267
+    },
+    {
+      "frame": 67,
+      "cab_alpha": 255,
+      "opaque_pixels": 2688,
+      "white_pixels": 1260
+    },
+    {
+      "frame": 68,
+      "cab_alpha": 255,
+      "opaque_pixels": 2712,
+      "white_pixels": 1253
+    },
+    {
+      "frame": 69,
+      "cab_alpha": 255,
+      "opaque_pixels": 2713,
+      "white_pixels": 1255
+    },
+    {
+      "frame": 70,
+      "cab_alpha": 255,
+      "opaque_pixels": 2746,
+      "white_pixels": 1266
+    },
+    {
+      "frame": 71,
+      "cab_alpha": 255,
+      "opaque_pixels": 2776,
+      "white_pixels": 1286
+    },
+    {
+      "frame": 72,
+      "cab_alpha": 255,
+      "opaque_pixels": 2749,
+      "white_pixels": 1277
+    },
+    {
+      "frame": 73,
+      "cab_alpha": 255,
+      "opaque_pixels": 2766,
+      "white_pixels": 1276
+    },
+    {
+      "frame": 74,
+      "cab_alpha": 255,
+      "opaque_pixels": 2770,
+      "white_pixels": 1231
+    },
+    {
+      "frame": 75,
+      "cab_alpha": 255,
+      "opaque_pixels": 2806,
+      "white_pixels": 1262
+    },
+    {
+      "frame": 76,
+      "cab_alpha": 255,
+      "opaque_pixels": 2816,
+      "white_pixels": 1267
+    },
+    {
+      "frame": 77,
+      "cab_alpha": 255,
+      "opaque_pixels": 2820,
+      "white_pixels": 1271
+    },
+    {
+      "frame": 78,
+      "cab_alpha": 255,
+      "opaque_pixels": 2791,
+      "white_pixels": 1245
+    },
+    {
+      "frame": 79,
+      "cab_alpha": 255,
+      "opaque_pixels": 2802,
+      "white_pixels": 1254
+    },
+    {
+      "frame": 80,
+      "cab_alpha": 255,
+      "opaque_pixels": 2799,
+      "white_pixels": 1274
+    },
+    {
+      "frame": 81,
+      "cab_alpha": 255,
+      "opaque_pixels": 2797,
+      "white_pixels": 1276
+    },
+    {
+      "frame": 82,
+      "cab_alpha": 255,
+      "opaque_pixels": 2806,
+      "white_pixels": 1260
+    },
+    {
+      "frame": 83,
+      "cab_alpha": 255,
+      "opaque_pixels": 2814,
+      "white_pixels": 1268
+    },
+    {
+      "frame": 84,
+      "cab_alpha": 255,
+      "opaque_pixels": 2797,
+      "white_pixels": 1266
+    },
+    {
+      "frame": 85,
+      "cab_alpha": 255,
+      "opaque_pixels": 2766,
+      "white_pixels": 1261
+    },
+    {
+      "frame": 86,
+      "cab_alpha": 255,
+      "opaque_pixels": 2767,
+      "white_pixels": 1259
+    },
+    {
+      "frame": 87,
+      "cab_alpha": 255,
+      "opaque_pixels": 2793,
+      "white_pixels": 1252
+    },
+    {
+      "frame": 88,
+      "cab_alpha": 255,
+      "opaque_pixels": 2789,
+      "white_pixels": 1266
+    },
+    {
+      "frame": 89,
+      "cab_alpha": 255,
+      "opaque_pixels": 2792,
+      "white_pixels": 1275
+    },
+    {
+      "frame": 90,
+      "cab_alpha": 255,
+      "opaque_pixels": 2783,
+      "white_pixels": 1241
+    },
+    {
+      "frame": 91,
+      "cab_alpha": 255,
+      "opaque_pixels": 2798,
+      "white_pixels": 1242
+    },
+    {
+      "frame": 92,
+      "cab_alpha": 255,
+      "opaque_pixels": 2783,
+      "white_pixels": 1240
+    },
+    {
+      "frame": 93,
+      "cab_alpha": 255,
+      "opaque_pixels": 2780,
+      "white_pixels": 1231
+    },
+    {
+      "frame": 94,
+      "cab_alpha": 255,
+      "opaque_pixels": 2786,
+      "white_pixels": 1211
+    },
+    {
+      "frame": 95,
+      "cab_alpha": 255,
+      "opaque_pixels": 2819,
+      "white_pixels": 1222
+    },
+    {
+      "frame": 96,
+      "cab_alpha": 255,
+      "opaque_pixels": 2806,
+      "white_pixels": 1200
+    },
+    {
+      "frame": 97,
+      "cab_alpha": 255,
+      "opaque_pixels": 2812,
+      "white_pixels": 1233
+    },
+    {
+      "frame": 98,
+      "cab_alpha": 255,
+      "opaque_pixels": 2807,
+      "white_pixels": 1173
+    },
+    {
+      "frame": 99,
+      "cab_alpha": 255,
+      "opaque_pixels": 2819,
+      "white_pixels": 1161
+    },
+    {
+      "frame": 100,
+      "cab_alpha": 255,
+      "opaque_pixels": 2792,
+      "white_pixels": 1090
+    },
+    {
+      "frame": 101,
+      "cab_alpha": 255,
+      "opaque_pixels": 2781,
+      "white_pixels": 1038
+    },
+    {
+      "frame": 102,
+      "cab_alpha": 255,
+      "opaque_pixels": 2784,
+      "white_pixels": 1037
+    },
+    {
+      "frame": 103,
+      "cab_alpha": 255,
+      "opaque_pixels": 2804,
+      "white_pixels": 1052
+    },
+    {
+      "frame": 104,
+      "cab_alpha": 255,
+      "opaque_pixels": 2763,
+      "white_pixels": 1000
+    },
+    {
+      "frame": 105,
+      "cab_alpha": 255,
+      "opaque_pixels": 2748,
+      "white_pixels": 1005
+    },
+    {
+      "frame": 106,
+      "cab_alpha": 255,
+      "opaque_pixels": 2750,
+      "white_pixels": 998
+    },
+    {
+      "frame": 107,
+      "cab_alpha": 255,
+      "opaque_pixels": 2759,
+      "white_pixels": 938
+    },
+    {
+      "frame": 108,
+      "cab_alpha": 255,
+      "opaque_pixels": 2747,
+      "white_pixels": 775
+    },
+    {
+      "frame": 109,
+      "cab_alpha": 255,
+      "opaque_pixels": 2741,
+      "white_pixels": 681
+    },
+    {
+      "frame": 110,
+      "cab_alpha": 255,
+      "opaque_pixels": 2754,
+      "white_pixels": 590
+    },
+    {
+      "frame": 111,
+      "cab_alpha": 255,
+      "opaque_pixels": 2743,
+      "white_pixels": 549
+    },
+    {
+      "frame": 112,
+      "cab_alpha": 255,
+      "opaque_pixels": 2719,
+      "white_pixels": 426
+    },
+    {
+      "frame": 113,
+      "cab_alpha": 255,
+      "opaque_pixels": 2713,
+      "white_pixels": 388
+    },
+    {
+      "frame": 114,
+      "cab_alpha": 255,
+      "opaque_pixels": 2723,
+      "white_pixels": 337
+    },
+    {
+      "frame": 115,
+      "cab_alpha": 255,
+      "opaque_pixels": 2707,
+      "white_pixels": 364
+    },
+    {
+      "frame": 116,
+      "cab_alpha": 255,
+      "opaque_pixels": 2679,
+      "white_pixels": 337
+    },
+    {
+      "frame": 117,
+      "cab_alpha": 255,
+      "opaque_pixels": 2666,
+      "white_pixels": 294
+    },
+    {
+      "frame": 118,
+      "cab_alpha": 255,
+      "opaque_pixels": 2678,
+      "white_pixels": 202
+    },
+    {
+      "frame": 119,
+      "cab_alpha": 255,
+      "opaque_pixels": 2678,
+      "white_pixels": 274
+    },
+    {
+      "frame": 120,
+      "cab_alpha": 255,
+      "opaque_pixels": 2664,
+      "white_pixels": 214
+    }
+  ]
+}

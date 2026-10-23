@@ -1,0 +1,188 @@
+[
+  {
+    "name": "tablet",
+    "input": "mouse",
+    "before": {
+      "x": -435.39581298828125,
+      "y": 526.796875,
+      "width": 84,
+      "height": 32
+    },
+    "steps": [
+      {
+        "x": 56.60417175292969,
+        "y": 526.796875,
+        "width": 84,
+        "height": 32
+      }
+    ],
+    "exposed": {
+      "x": 56.60417175292969,
+      "y": 526.796875,
+      "width": 84,
+      "height": 32
+    },
+    "success": true,
+    "failure": null,
+    "errors": []
+  },
+  {
+    "name": "tablet",
+    "input": "touch",
+    "before": {
+      "x": -435.39581298828125,
+      "y": 526.796875,
+      "width": 84,
+      "height": 32
+    },
+    "steps": [
+      {
+        "x": 56.60417175292969,
+        "y": 526.796875,
+        "width": 84,
+        "height": 32
+      }
+    ],
+    "exposed": {
+      "x": 56.60417175292969,
+      "y": 526.796875,
+      "width": 84,
+      "height": 32
+    },
+    "success": true,
+    "failure": null,
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "input": "mouse",
+    "before": {
+      "x": -421.63018798828125,
+      "y": 372.234375,
+      "width": 84,
+      "height": 32
+    },
+    "steps": [
+      {
+        "x": -187.63021850585938,
+        "y": 372.234375,
+        "width": 84,
+        "height": 32
+      },
+      {
+        "x": 46.369789123535156,
+        "y": 372.234375,
+        "width": 83.99999237060547,
+        "height": 32
+      }
+    ],
+    "exposed": {
+      "x": 46.369789123535156,
+      "y": 372.234375,
+      "width": 83.99999237060547,
+      "height": 32
+    },
+    "success": true,
+    "failure": null,
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "input": "touch",
+    "before": {
+      "x": -421.63018798828125,
+      "y": 372.234375,
+      "width": 84,
+      "height": 32
+    },
+    "steps": [
+      {
+        "x": -187.63021850585938,
+        "y": 372.234375,
+        "width": 84,
+        "height": 32
+      },
+      {
+        "x": 46.369789123535156,
+        "y": 372.234375,
+        "width": 83.99999237060547,
+        "height": 32
+      }
+    ],
+    "exposed": {
+      "x": 46.369789123535156,
+      "y": 372.234375,
+      "width": 83.99999237060547,
+      "height": 32
+    },
+    "success": true,
+    "failure": null,
+    "errors": []
+  },
+  {
+    "name": "small",
+    "input": "mouse",
+    "before": {
+      "x": -268.7239685058594,
+      "y": 245.265625,
+      "width": 84,
+      "height": 32
+    },
+    "steps": [
+      {
+        "x": -76.72395324707031,
+        "y": 245.265625,
+        "width": 84,
+        "height": 32
+      },
+      {
+        "x": 80.109375,
+        "y": 245.265625,
+        "width": 84,
+        "height": 32
+      }
+    ],
+    "exposed": {
+      "x": 80.109375,
+      "y": 245.265625,
+      "width": 84,
+      "height": 32
+    },
+    "success": true,
+    "failure": null,
+    "errors": []
+  },
+  {
+    "name": "small",
+    "input": "touch",
+    "before": {
+      "x": -268.7239685058594,
+      "y": 245.265625,
+      "width": 84,
+      "height": 32
+    },
+    "steps": [
+      {
+        "x": -76.72395324707031,
+        "y": 245.265625,
+        "width": 84,
+        "height": 32
+      },
+      {
+        "x": 80.109375,
+        "y": 245.265625,
+        "width": 84,
+        "height": 32
+      }
+    ],
+    "exposed": {
+      "x": 80.109375,
+      "y": 245.265625,
+      "width": 84,
+      "height": 32
+    },
+    "success": true,
+    "failure": null,
+    "errors": []
+  }
+]

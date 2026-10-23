@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T12:12:30.451021Z",
+    "display_name": "Kling v3.0",
+    "id": "a6a1b26c-a237-419a-8631-f89f8b876ea5",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "37efc34b-80c6-4002-a9e6-7baeb0863a39",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/37efc34b-80c6-4002-a9e6-7baeb0863a39.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "fbf84b32-4728-41e0-b350-4aca60c692b4",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/fbf84b32-4728-41e0-b350-4aca60c692b4.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera, unchanged bright clean illustrated city and white side borders. Exactly ONE green articulated semi-truck and NO other vehicles. Preserve the rigid white semitrailer and green tractor identity, scale, wheels, two drivers and one steering wheel. Tractor steers first, trailer follows through fifth wheel coupling; wheels stay on asphalt. Smooth forward driving, no reversing, no spinning around body center, no duplication, no cuts, no teleportation, no roof overlap. Camera and background perfectly still. End exactly at supplied final pose. Soft colored outlines, soft shadows, same illustration. Five second continuous shot. Start facing DOWN on central vertical street. Drive DOWN on this street past the small building, turn ninety degrees RIGHT at the lower horizontal road, straighten facing RIGHT at supplied endpoint. Only one corner.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_121230_a6a1b26c-a237-419a-8631-f89f8b876ea5.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_121230_a6a1b26c-a237-419a-8631-f89f8b876ea5_thumbnail.webp"
+  }
+]

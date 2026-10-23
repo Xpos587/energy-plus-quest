@@ -1,0 +1,232 @@
+.stage {
+  container-type: size;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  color: #365774;
+  background: linear-gradient(#cbd2dc, #e1e2e5);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  cursor: grab;
+  touch-action: pan-x;
+}
+.stage::-webkit-scrollbar {
+  display: none;
+}
+.stage:active {
+  cursor: grabbing;
+}
+.plane {
+  position: relative;
+  width: max(100cqw, calc(72cqh * 1040 / 550));
+  top: 8cqh;
+  aspect-ratio: var(--canvas-aspect, 2);
+}
+.art {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 10%,
+    #000 85%,
+    transparent
+  );
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.space {
+  fill: #1684bb;
+  fill-opacity: 0.12;
+  stroke: #075d9b;
+  stroke-opacity: 1;
+  stroke-width: 2.5;
+  stroke-dasharray: 6 4;
+  vector-effect: non-scaling-stroke;
+  transition:
+    fill 160ms ease,
+    fill-opacity 160ms ease,
+    stroke 160ms ease;
+}
+.space[data-focused="true"] {
+  fill: var(--orange);
+  fill-opacity: 0.18;
+  stroke: var(--orange);
+  stroke-opacity: 1;
+  stroke-width: 2;
+}
+/* Continuous, seamless motion marks available placements only while choosing. */
+@keyframes placementOutline {
+  from { stroke-dashoffset: 20; }
+  to { stroke-dashoffset: 0; }
+}
+:global([data-interaction="inspect-confirm"]):has(:global([data-scene-briefing][data-reading="false"])) .stage:not([data-selected]) .space {
+  animation: placementOutline 2.4s linear infinite;
+}
+.space[data-active="true"] {
+  fill: var(--orange);
+  fill-opacity: 0.18;
+  stroke: var(--orange);
+  stroke-opacity: 1;
+  stroke-width: 2;
+  stroke-dasharray: 6 4;
+}
+.marker {
+  position: absolute;
+  left: calc(var(--marker-x) / 1040 * 100%);
+  top: calc(var(--marker-y) / var(--canvas-height, 520) * 100%);
+  display: grid;
+  place-items: center;
+  width: calc(var(--marker-width) / 1040 * 100%);
+  height: calc(var(--marker-height) / var(--canvas-height, 520) * 100%);
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  transform: none;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  font: 700 15px / 1 var(--font-brand);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #075d9b;
+  box-shadow: 0 1px 3px #08294633;
+  transition: background 160ms ease;
+}
+.marker:hover:not(:disabled) .number,
+.marker[data-focused="true"]:not(:disabled) .number,
+.marker:focus-visible:not(:disabled) .number,
+.marker[aria-pressed="true"] .number {
+  background: var(--orange);
+  color: #fff;
+}
+.marker:focus-visible {
+  outline: 3px solid #164f93;
+  outline-offset: 3px;
+}
+.marker[aria-pressed="true"] .number {
+  opacity: 1;
+}
+.marker:disabled {
+  cursor: default;
+  opacity: 1;
+}
+.artLabels {
+  font: 600 14px var(--font-brand);
+  fill: #57778a;
+  letter-spacing: 1px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .space,
+  .number {
+    transition: none;
+  }
+  .stage .art .space { animation: none !important; }
+}
+
+.stage[data-fixed-result] {
+  overflow: clip;
+  cursor: default;
+  touch-action: auto;
+}
+.stage[data-fixed-result] .plane {
+  transform: translateX(
+    clamp(calc(100cqw - 100%), calc(50cqw - var(--result-focus)), 0px)
+  );
+}
+
+.stage[data-map-viewport] { overflow: clip; touch-action: none; }
+.stage[data-map-viewport] .plane { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+.stage[data-map-viewport] .number { scale: calc(1 / var(--map-zoom, 1)); transform-origin: top left; }
+@media (max-width: 900px) and (orientation: portrait) {
+  .stage[data-fixed-result] .art { mask-image: none; }
+  .stage[data-fixed-result] .plane {
+    position: absolute;
+    inset: 50% 0 auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: var(--canvas-aspect, 2);
+    transform: translateY(-50%);
+  }
+}
+
+/* Keep the illustration and hit regions in the same responsive coordinate plane. */
+.art { mask-image: none; }
+.stage[data-fixed-result] .plane {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(100%, calc(100cqh * 1040 / var(--canvas-height, 520)));
+  height: auto;
+  aspect-ratio: var(--canvas-aspect, 2);
+  transform: translate(-50%, -50%);
+}
+
+/* Outcome framing follows both the gift and its consequence. */
+.stage[data-camera-detail] .plane {
+  --detail-width: var(--detail-mobile-width);
+  width: calc(100cqw * 1040 / var(--detail-width));
+  height: auto;
+  left: clamp(calc(100cqw - 100cqw * 1040 / var(--detail-width)), calc(50% - 100cqw * var(--detail-x) / var(--detail-width)), 0px);
+  top: clamp(calc(100cqh - 100cqw * var(--canvas-height) / var(--detail-width)), calc(50% - 100cqw * var(--detail-y) / var(--detail-width)), 0px);
+  aspect-ratio: var(--canvas-aspect);
+  transform: none;
+}
+.stage[data-fixed-result] .marker,
+.stage[data-fixed-result] .space { display: none; }
+@media (min-width: 901px), (orientation: landscape) {
+  .stage[data-camera-detail] .plane {
+    --detail-width: var(--detail-desktop-width);
+    left: clamp(calc(100cqw - 100cqw * 1040 / var(--detail-width)), calc(50% - 100cqw * var(--detail-desktop-x) / var(--detail-width)), 0px);
+  }
+}
+.failurePicture, .failureImage { display: block; width: 100%; height: 100%; }
+.failureImage { object-fit: cover; }
+@media (max-width: 900px) and (orientation: portrait) {
+  :global([data-scene="compact"] [data-layout="result"]:has([data-failure-art="boat-place-3"])) {
+    grid-template-rows: calc(100vw * 1024 / 1536) minmax(0, 1fr) !important;
+  }
+  .stage[data-failure-art="boat-place-3"] {
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
+.stage[data-fixed-choice], .stage[data-fixed-result] { overflow: hidden; cursor: default; touch-action: auto; }
+.stage[data-fixed-choice]:not([data-camera-detail]) .plane {
+  position: absolute; inset: 0 auto auto 50%;
+  width: min(100cqw, calc(100cqh * 1040 / var(--canvas-height, 520)));
+  height: auto;
+  transform: translate(-50%, 0) scale(var(--inspection-scale, 1)) translateX(var(--inspection-shift, 0%));
+  transform-origin: center top;
+  transition: transform 360ms cubic-bezier(.22, 1, .36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage[data-fixed-choice] .plane { transition: none; }
+}
+.stage[data-fixed-result][data-camera-detail] .plane {
+  transition: width 360ms cubic-bezier(.22,1,.36,1), left 360ms cubic-bezier(.22,1,.36,1), top 360ms cubic-bezier(.22,1,.36,1), transform 360ms cubic-bezier(.22,1,.36,1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .stage[data-fixed-result][data-camera-detail] .plane { transition: none; }
+}

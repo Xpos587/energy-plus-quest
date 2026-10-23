@@ -1,0 +1,13 @@
+{
+  "status": "Integrated locally; not deployed or approved by Fedya",
+  "encoding": "lossless WebP; original PNGs retained",
+  "choice": {"source": "clean-colors/warehouse-v4.png", "target": "public/scene-art/inventory-clean-family-v1.webp"},
+  "boatOutcomes": {
+    "entrance": {"source": "clean-colors/entrance-v3.png", "target": "public/scene-art/outcomes/inventory-entrance-boat-family-v1.webp"},
+    "alphabet": {"source": "clean-colors/alphabet-v12.png", "target": "public/scene-art/outcomes/inventory-alphabet-boat-family-v1.webp"},
+    "keeper": {"source": "clean-colors/keeper-v7.png", "target": "public/scene-art/outcomes/inventory-keeper-boat-family-v1.webp"},
+    "wms": {"source": "clean-colors/wms-v11.png", "target": "public/scene-art/outcomes/inventory-wms-boat-family-v1.webp"}
+  },
+  "otherParcels": "Existing cargo-specific images retained",
+  "uxOwner": "codex://threads/01a0e848-0314-7590-ac6d-6ed20f22e9fc"
+}

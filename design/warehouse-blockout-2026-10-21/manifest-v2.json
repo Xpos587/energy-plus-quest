@@ -1,0 +1,732 @@
+{
+  "units": "m",
+  "seed": 0,
+  "engine": "BLENDER_WORKBENCH",
+  "room": {
+    "bounds": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        12,
+        7.5,
+        3.6
+      ]
+    ],
+    "receiving_plane": "X=0",
+    "dispatch_plane": "X=12",
+    "parallel_normals": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "cutaway": "roof and south wall omitted; dispatch opaque wall cut at z .2, full-height wire retained; truck cargo roof/side surfaces omitted with exact volume wire and open rear"
+  },
+  "rack_runs": [
+    {
+      "id": 1,
+      "center": [
+        2.4,
+        4.1,
+        1.35
+      ],
+      "bounds": [
+        [
+          1.5,
+          3.5,
+          0
+        ],
+        [
+          3.3,
+          4.7,
+          2.7
+        ]
+      ],
+      "bay_width": 0.9,
+      "labels": [
+        "А-Б",
+        "В-К"
+      ],
+      "storage": "cartons/totes; no rack pallets"
+    },
+    {
+      "id": 2,
+      "center": [
+        5.4,
+        4.1,
+        1.35
+      ],
+      "bounds": [
+        [
+          4.5,
+          3.5,
+          0
+        ],
+        [
+          6.300000000000001,
+          4.7,
+          2.7
+        ]
+      ],
+      "bay_width": 0.9,
+      "labels": [
+        "Л-М",
+        "Н-У"
+      ],
+      "storage": "cartons/totes; no rack pallets"
+    },
+    {
+      "id": 3,
+      "center": [
+        8.4,
+        4.1,
+        1.35
+      ],
+      "bounds": [
+        [
+          7.5,
+          3.5,
+          0
+        ],
+        [
+          9.3,
+          4.7,
+          2.7
+        ]
+      ],
+      "bay_width": 0.9,
+      "labels": [
+        "Ф-Э",
+        "Ю-Я"
+      ],
+      "storage": "cartons/totes; no rack pallets"
+    }
+  ],
+  "pedestrian_service_gaps_m": [
+    1.2,
+    1.2
+  ],
+  "front_cross_aisle_m": 3.5,
+  "operational_limit": "3.5m modeled front cross-aisle is not a certified turning envelope; forklift excluded from 1.2m gaps",
+  "human_height_m": 1.76,
+  "floor_pallet": [
+    1.2,
+    0.8,
+    0.15
+  ],
+  "forklift_body": [
+    1.65,
+    1.1,
+    0.85
+  ],
+  "forklift_total_length_m": 2.8,
+  "gate_opening_m": [
+    3,
+    3
+  ],
+  "dock": {
+    "indoor_and_cargo_bed_z": 0,
+    "exterior_yard_z": -1.1,
+    "truck_long_axis": "X perpendicular to X0; no drive to yard"
+  },
+  "targets": {
+    "receiving": [
+      0.25,
+      2.2,
+      1.4
+    ],
+    "keeper": [
+      10.8,
+      2.3,
+      1.5
+    ],
+    "wms": [
+      9.5,
+      0.9,
+      1.1
+    ],
+    "alphabet": [
+      5.4,
+      3.43,
+      2.32
+    ]
+  },
+  "cameras": {
+    "Desktop": {
+      "type": "ORTHO",
+      "location": [
+        20.799999237060547,
+        -19.600000381469727,
+        22.799999237060547
+      ],
+      "rotation_euler": [
+        0.9151125550270081,
+        -5.250659995681417e-08,
+        0.6365082859992981
+      ],
+      "look_at": [
+        3.8,
+        3.4,
+        0.8
+      ],
+      "ortho_scale": 19.5,
+      "resolution": [
+        1440,
+        900
+      ],
+      "safe_margin": 0.05,
+      "target_projection_uvz": {
+        "receiving": [
+          0.31702089309692383,
+          0.5963062047958374,
+          36.625038146972656
+        ],
+        "keeper": [
+          0.7551488876342773,
+          0.29312366247177124,
+          31.657358169555664
+        ],
+        "wms": [
+          0.6588629484176636,
+          0.24944275617599487,
+          31.6213321685791
+        ],
+        "alphabet": [
+          0.5668982267379761,
+          0.5524853467941284,
+          34.42179870605469
+        ]
+      },
+      "proof_points_uvz": {
+        "origin": [
+          0.2396514117717743,
+          0.42418238520622253,
+          36.194091796875
+        ],
+        "X12": [
+          0.7345290184020996,
+          0.06735671311616898,
+          30.540496826171875
+        ],
+        "Y7.5": [
+          0.4682633876800537,
+          0.7259098887443542,
+          40.97470474243164
+        ],
+        "Z3.6": [
+          0.2396514117717743,
+          0.6583134531974792,
+          33.999168395996094
+        ],
+        "dispatch0": [
+          0.7345290184020996,
+          0.3014877736568451,
+          28.345571517944336
+        ],
+        "dispatchY": [
+          0.9631409645080566,
+          0.6032152771949768,
+          33.12618637084961
+        ],
+        "receiving0": [
+          0.2396514117717743,
+          0.6583134531974792,
+          33.999168395996094
+        ],
+        "receivingY": [
+          0.4682633876800537,
+          0.9600409269332886,
+          38.779781341552734
+        ],
+        "rackA": [
+          0.40819668769836426,
+          0.5203853249549866,
+          37.718345642089844
+        ],
+        "rackB": [
+          0.48242834210395813,
+          0.4668614864349365,
+          36.87030792236328
+        ],
+        "rackC": [
+          0.5190062522888184,
+          0.5151379108428955,
+          37.63520431518555
+        ],
+        "rackD": [
+          0.4447745978832245,
+          0.5686617493629456,
+          38.48324203491211
+        ],
+        "rackTop": [
+          0.40819671750068665,
+          0.6959836483001709,
+          36.07215118408203
+        ],
+        "gapA": [
+          0.500717282295227,
+          0.49230045080184937,
+          37.240562438964844
+        ],
+        "gapB": [
+          0.5502050518989563,
+          0.45661789178848267,
+          36.675201416015625
+        ],
+        "aisleA": [
+          0.46234631538391113,
+          0.26491156220436096,
+          33.637779235839844
+        ],
+        "aisleB": [
+          0.5690318942070007,
+          0.40571773052215576,
+          35.86873245239258
+        ]
+      },
+      "same_scene": true,
+      "visibility": {
+        "receiving": {
+          "front_surface_samples": 72,
+          "inside_viewport_samples": 72,
+          "ray_visible_samples": 32,
+          "visible_fraction": 0.4444444444444444,
+          "viewport_visible_fraction": 0.4444444444444444,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "keeper": {
+          "front_surface_samples": 520,
+          "inside_viewport_samples": 520,
+          "ray_visible_samples": 268,
+          "visible_fraction": 0.5153846153846153,
+          "viewport_visible_fraction": 0.5153846153846153,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "wms": {
+          "front_surface_samples": 96,
+          "inside_viewport_samples": 96,
+          "ray_visible_samples": 72,
+          "visible_fraction": 0.75,
+          "viewport_visible_fraction": 0.75,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "alphabet": {
+          "front_surface_samples": 144,
+          "inside_viewport_samples": 144,
+          "ray_visible_samples": 138,
+          "visible_fraction": 0.9583333333333334,
+          "viewport_visible_fraction": 0.9583333333333334,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        }
+      }
+    },
+    "Portrait": {
+      "type": "ORTHO",
+      "location": [
+        20.299999237060547,
+        -20.200000762939453,
+        23.0
+      ],
+      "rotation_euler": [
+        0.9151125550270081,
+        -5.250659995681417e-08,
+        0.6365082859992981
+      ],
+      "look_at": [
+        3.3,
+        2.8,
+        1
+      ],
+      "ortho_scale": 13.199999809265137,
+      "resolution": [
+        780,
+        1180
+      ],
+      "safe_margin": 0.05,
+      "target_projection_uvz": {
+        "receiving": [
+          0.17802485823631287,
+          0.5854688882827759,
+          36.89385986328125
+        ],
+        "keeper": [
+          1.1571745872497559,
+          0.3055418133735657,
+          31.926179885864258
+        ],
+        "wms": [
+          0.9419900178909302,
+          0.26521143317222595,
+          31.890153884887695
+        ],
+        "alphabet": [
+          0.7364627718925476,
+          0.5450092554092407,
+          34.69062042236328
+        ]
+      },
+      "proof_points_uvz": {
+        "origin": [
+          0.00511581776663661,
+          0.42654773592948914,
+          36.462913513183594
+        ],
+        "X12": [
+          1.111092209815979,
+          0.09709221124649048,
+          30.80931854248047
+        ],
+        "Y7.5": [
+          0.5160289406776428,
+          0.7051313519477844,
+          41.243526458740234
+        ],
+        "Z3.6": [
+          0.00511581776663661,
+          0.6427198648452759,
+          34.26799011230469
+        ],
+        "dispatch0": [
+          1.111092209815979,
+          0.3132643401622772,
+          28.61439323425293
+        ],
+        "dispatchY": [
+          1.6220053434371948,
+          0.5918480157852173,
+          33.3950080871582
+        ],
+        "receiving0": [
+          0.00511581776663661,
+          0.6427198648452759,
+          34.26799011230469
+        ],
+        "receivingY": [
+          0.5160289406776428,
+          0.9213035106658936,
+          39.04860305786133
+        ],
+        "rackA": [
+          0.3817889988422394,
+          0.5153715014457703,
+          37.98716735839844
+        ],
+        "rackB": [
+          0.547685444355011,
+          0.46595317125320435,
+          37.139129638671875
+        ],
+        "rackC": [
+          0.6294315457344055,
+          0.5105265378952026,
+          37.90402603149414
+        ],
+        "rackD": [
+          0.46353504061698914,
+          0.5599448680877686,
+          38.7520637512207
+        ],
+        "rackTop": [
+          0.3817889988422394,
+          0.6775006055831909,
+          36.340972900390625
+        ],
+        "gapA": [
+          0.5885584950447083,
+          0.48944082856178284,
+          37.50938415527344
+        ],
+        "gapB": [
+          0.6991561055183411,
+          0.4564952850341797,
+          36.94402313232422
+        ],
+        "aisleA": [
+          0.5028051733970642,
+          0.2794937193393707,
+          33.90660095214844
+        ],
+        "aisleB": [
+          0.7412313222885132,
+          0.4094994068145752,
+          36.13755416870117
+        ]
+      },
+      "same_scene": true,
+      "visibility": {
+        "receiving": {
+          "front_surface_samples": 72,
+          "inside_viewport_samples": 72,
+          "ray_visible_samples": 32,
+          "visible_fraction": 0.4444444444444444,
+          "viewport_visible_fraction": 0.4444444444444444,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "keeper": {
+          "front_surface_samples": 520,
+          "inside_viewport_samples": 0,
+          "ray_visible_samples": 0,
+          "visible_fraction": 0.0,
+          "viewport_visible_fraction": 0,
+          "visible": false,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "wms": {
+          "front_surface_samples": 96,
+          "inside_viewport_samples": 90,
+          "ray_visible_samples": 66,
+          "visible_fraction": 0.6875,
+          "viewport_visible_fraction": 0.7333333333333333,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "alphabet": {
+          "front_surface_samples": 144,
+          "inside_viewport_samples": 112,
+          "ray_visible_samples": 106,
+          "visible_fraction": 0.7361111111111112,
+          "viewport_visible_fraction": 0.9464285714285714,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        }
+      }
+    },
+    "Topdown": {
+      "type": "ORTHO",
+      "location": [
+        4.0,
+        3.299999952316284,
+        30.0
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "look_at": [
+        4,
+        3.3,
+        0
+      ],
+      "ortho_scale": 20.0,
+      "resolution": [
+        1600,
+        1000
+      ],
+      "safe_margin": 0.05,
+      "target_projection_uvz": {
+        "receiving": [
+          0.3125,
+          0.41200000047683716,
+          28.600000381469727
+        ],
+        "keeper": [
+          0.8400000333786011,
+          0.41999998688697815,
+          28.5
+        ],
+        "wms": [
+          0.7749999761581421,
+          0.30799999833106995,
+          28.899999618530273
+        ],
+        "alphabet": [
+          0.5699999928474426,
+          0.5103999972343445,
+          27.68000030517578
+        ]
+      },
+      "proof_points_uvz": {
+        "origin": [
+          0.30000001192092896,
+          0.23600000143051147,
+          30.0
+        ],
+        "X12": [
+          0.8999999761581421,
+          0.23600000143051147,
+          30.0
+        ],
+        "Y7.5": [
+          0.30000001192092896,
+          0.8359999656677246,
+          30.0
+        ],
+        "Z3.6": [
+          0.30000001192092896,
+          0.23600000143051147,
+          26.399999618530273
+        ],
+        "dispatch0": [
+          0.8999999761581421,
+          0.23600000143051147,
+          26.399999618530273
+        ],
+        "dispatchY": [
+          0.8999999761581421,
+          0.8359999656677246,
+          26.399999618530273
+        ],
+        "receiving0": [
+          0.30000001192092896,
+          0.23600000143051147,
+          26.399999618530273
+        ],
+        "receivingY": [
+          0.30000001192092896,
+          0.8359999656677246,
+          26.399999618530273
+        ],
+        "rackA": [
+          0.375,
+          0.5160000324249268,
+          30.0
+        ],
+        "rackB": [
+          0.4650000035762787,
+          0.5160000324249268,
+          30.0
+        ],
+        "rackC": [
+          0.4650000035762787,
+          0.6119999885559082,
+          30.0
+        ],
+        "rackD": [
+          0.375,
+          0.6119999885559082,
+          30.0
+        ],
+        "rackTop": [
+          0.375,
+          0.5160000324249268,
+          27.299999237060547
+        ],
+        "gapA": [
+          0.4650000035762787,
+          0.5640000104904175,
+          29.979999542236328
+        ],
+        "gapB": [
+          0.5249999761581421,
+          0.5640000104904175,
+          29.979999542236328
+        ],
+        "aisleA": [
+          0.5699999928474426,
+          0.23600000143051147,
+          29.979999542236328
+        ],
+        "aisleB": [
+          0.5699999928474426,
+          0.5160000324249268,
+          29.979999542236328
+        ]
+      },
+      "same_scene": true,
+      "visibility": {
+        "receiving": {
+          "front_surface_samples": 24,
+          "inside_viewport_samples": 24,
+          "ray_visible_samples": 0,
+          "visible_fraction": 0.0,
+          "viewport_visible_fraction": 0.0,
+          "visible": false,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "keeper": {
+          "front_surface_samples": 472,
+          "inside_viewport_samples": 472,
+          "ray_visible_samples": 452,
+          "visible_fraction": 0.9576271186440678,
+          "viewport_visible_fraction": 0.9576271186440678,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "wms": {
+          "front_surface_samples": 32,
+          "inside_viewport_samples": 32,
+          "ray_visible_samples": 15,
+          "visible_fraction": 0.46875,
+          "viewport_visible_fraction": 0.46875,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        },
+        "alphabet": {
+          "front_surface_samples": 48,
+          "inside_viewport_samples": 48,
+          "ray_visible_samples": 48,
+          "visible_fraction": 1.0,
+          "viewport_visible_fraction": 1.0,
+          "visible": true,
+          "method": "orthographic camera rays to front-facing triangle samples; evaluated mesh"
+        }
+      }
+    }
+  },
+  "art_status": "plain geometry sourceproof; no AI/production edits",
+  "runtime_source_contract": {
+    "full_source": "desktop-v2-clean.png",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "origin": "top-left",
+    "all_four_anchor_px": {
+      "receiving": [
+        456.5100860595703,
+        363.32441568374634
+      ],
+      "keeper": [
+        1087.4143981933594,
+        636.1887037754059
+      ],
+      "wms": [
+        948.7626457214355,
+        675.5015194416046
+      ],
+      "alphabet": [
+        816.3334465026855,
+        402.7631878852844
+      ]
+    },
+    "portrait_initial_viewport_source_xyxy": [
+      341.8014714937448,
+      -40.747898704872874,
+      986.1407553525422,
+      934.0216487735262
+    ],
+    "portrait_initial_frame": "portrait-v2-clean.png",
+    "portrait_policy": "same full source plane; viewport plus pan, clipped items remain reachable; allow transparent overflow if source rect exceeds full source",
+    "projection_mapping_uv": {
+      "matrix": [
+        [
+          0.4474575438573918,
+          -2.9215566199614074e-07
+        ],
+        [
+          -1.0152281171293964e-07,
+          1.0830771734531872
+        ]
+      ],
+      "translation": [
+        0.23736242513742922,
+        -0.03780173044777285
+      ]
+    }
+  }
+}

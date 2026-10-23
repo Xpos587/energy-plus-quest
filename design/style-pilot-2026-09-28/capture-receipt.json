@@ -1,0 +1,104 @@
+[
+  {
+    "device": "desktop",
+    "intercepted": [
+      "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+      "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp"
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "intercepted": [
+      "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+      "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp"
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "device": "small",
+    "intercepted": [
+      "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+      "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp"
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  }
+]

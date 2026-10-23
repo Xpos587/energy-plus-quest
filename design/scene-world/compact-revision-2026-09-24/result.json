@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-24T09:33:38.848466Z",
+    "display_name": "Nano Banana Pro",
+    "id": "13c7b711-1099-4371-94e7-57a7411252b4",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_093338_13c7b711-1099-4371-94e7-57a7411252b4_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "fac492e8-e3a7-4d7f-bbb6-0eff6140c31b",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/fac492e8-e3a7-4d7f-bbb6-0eff6140c31b_resize.jpg"
+        }
+      ],
+      "prompt": "Edit this exact truck illustration. Preserve truck silhouette, position, blue cab, camera perspective, rear doors left, trailer and wheels, background and soft detailed 2D illustration style. Redesign ONLY the cargo arrangement inside to communicate four loading choices clearly at phone size. Simplify clutter radically: no scattered small cartons of different heights. Exactly two coherent horizontal levels: a single floor, and one common aligned TOP level of the low cargo blocks. No extra shelving, no invented second deck.\nLeft to right along trailer: (1) two broad wooden heavy-goods crates near rear doors/axles, both tops aligned, discreet kettlebell pictograms; free open space above these crates and NO straps at this position. (2) one broad crockery carton whose top is at exactly same height as crates, subtle plate/cup pictogram and thin protective cloth on top, generous EMPTY space above it all the way toward roof. Two red securing straps against far wall spanning the FULL WIDTH of this second loading cell, terminating at cell boundaries, not short fragments. (3) a small empty recessed floor niche, visibly BEHIND exactly THREE simple equally tall front-row cartons. Keep three boxes only, aligned at same shared top level; the niche must remain visible from this angle. No tall stacks behind it. (4) an empty tall floor bay next to front wall behind cab, clear floor-to-roof capacity, with two red securing straps spanning the FULL WIDTH of this bay from corner to corner, no diagonal floating rods. Two tidy pillow cartons with neutral outlined pillow pictograms immediately beside bay, aligned with other low boxes.\nRemove all other cartons. Preserve ample visible empty upper half of cargo compartment. No numbers, UI, colored selection volumes, blue rectangles or labels. Gray fine outlines, subtle soft shading, neutral cardboard, light blue glass. Cargo should look carefully organized, not a jumble. Clear actual support surfaces, no multiple confusing horizontal ledges. Make straps unmistakably attached at both ends to real wall anchors. Do not place gift in any slot yet.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_093338_13c7b711-1099-4371-94e7-57a7411252b4.png",
+    "status": "completed"
+  }
+]

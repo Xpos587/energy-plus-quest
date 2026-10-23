@@ -1,0 +1,22 @@
+{
+  "blend": "painted-vehicles-driver-fixed-optimized.blend",
+  "script": "fix_blue_glazing_v2.py",
+  "stills": ["repaired-stills/4k-driver-fixed-0001.png", "repaired-stills/4k-driver-fixed-0769.png"],
+  "native_dimensions": [3840, 2667],
+  "samples": 8,
+  "render_wall_seconds": {"1": 6.322, "769": 7.995},
+  "geometry_change": "Blue full-width opaque front glazing follows tapered windshield and wraps both corners; final depth offset 0.08 m hides reconstructed paint-bearing front surfaces. Existing single head/torso relief and new empty gray seat sit in front of it.",
+  "visual_review": "Both native crops show one simple skin-colored relief head and empty neutral passenger seat; no additional painted heads visible.",
+  "exhaustive_native_pixel_raycast": {
+    "frame_1_original_painted_head_points": 0,
+    "frame_769_original_painted_head_points": 0,
+    "frame_1_visible_existing_relief_head_pixels": 66,
+    "frame_769_visible_existing_relief_head_pixels": 31,
+    "scope": "All pixels in inspected blue cab regions, checked against both original crew front-view head texture regions."
+  },
+  "other_trucks_frame769_native_crop_rmse": {"red": 0, "green": 0, "yellow": 0},
+  "textures_changed": false,
+  "routes_camera_changed": false,
+  "full_animation_rendered": false,
+  "limits": ["Driver is a simple native relief, not a detailed painted portrait.", "Human-count verification covers two requested views; full-loop visibility remains unverified."]
+}

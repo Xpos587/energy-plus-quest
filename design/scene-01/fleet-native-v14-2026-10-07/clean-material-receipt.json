@@ -1,0 +1,50 @@
+[
+  {
+    "truck": 1,
+    "material_face_counts": {
+      "paint": 1354,
+      "rubber": 22477,
+      "metal": 9142,
+      "glass": 0,
+      "trim": 17755,
+      "lamp": 0
+    },
+    "original_tread_hub_mesh_retained": true
+  },
+  {
+    "truck": 2,
+    "material_face_counts": {
+      "paint": 7635,
+      "rubber": 22477,
+      "metal": 9696,
+      "glass": 197,
+      "trim": 18429,
+      "lamp": 0
+    },
+    "original_tread_hub_mesh_retained": true
+  },
+  {
+    "truck": 3,
+    "material_face_counts": {
+      "paint": 7635,
+      "rubber": 22477,
+      "metal": 9696,
+      "glass": 197,
+      "trim": 18429,
+      "lamp": 0
+    },
+    "original_tread_hub_mesh_retained": true
+  },
+  {
+    "truck": 4,
+    "material_face_counts": {
+      "paint": 1354,
+      "rubber": 22477,
+      "metal": 9142,
+      "glass": 0,
+      "trim": 17755,
+      "lamp": 0
+    },
+    "original_tread_hub_mesh_retained": true
+  }
+]

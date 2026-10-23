@@ -1,0 +1,68 @@
+{
+  "candidate_duration_seconds": 25,
+  "frames": 600,
+  "fps": 24,
+  "seams": [
+    {
+      "from": "1",
+      "to": "2a",
+      "centroid_step_px": 1.1501337941756768,
+      "centroid_vector_px": [
+        -0.5684235632982109,
+        -0.9998511875235749
+      ],
+      "alpha_iou": 0.8414670215912452,
+      "previous_step_px": 0.7754863266094526,
+      "next_step_px": 0.20136506445241725
+    },
+    {
+      "from": "2a",
+      "to": "2b",
+      "centroid_step_px": 3.5311557570748398,
+      "centroid_vector_px": [
+        -3.523815487692673,
+        0.22756403366972222
+      ],
+      "alpha_iou": 0.8474025974025974,
+      "previous_step_px": 0.46246999572542735,
+      "next_step_px": 1.3621035310056049
+    },
+    {
+      "from": "2b",
+      "to": "3",
+      "centroid_step_px": 5.496864154530908,
+      "centroid_vector_px": [
+        -1.0262725779967923,
+        5.400211118930315
+      ],
+      "alpha_iou": 0.8639587362991619,
+      "previous_step_px": 2.514407231676691,
+      "next_step_px": 3.2821472296751333
+    },
+    {
+      "from": "3",
+      "to": "4-translated",
+      "centroid_step_px": 0.4187884994476324,
+      "centroid_vector_px": [
+        0.15545778750481531,
+        -0.38886589407366046
+      ],
+      "alpha_iou": 0.9451559020044543,
+      "previous_step_px": 0.0315030470892339,
+      "next_step_px": 3.0254975984792174
+    },
+    {
+      "from": "4-translated",
+      "to": "1",
+      "centroid_step_px": 2.6841723265838637,
+      "centroid_vector_px": [
+        0.0537560041980214,
+        -2.6836339859994496
+      ],
+      "alpha_iou": 0.8716558206796818,
+      "previous_step_px": 2.557886767542366,
+      "next_step_px": 1.0896920715830032
+    }
+  ],
+  "status": "PENDING actual seam visual review; only green vehicle layer on exact empty static map"
+}

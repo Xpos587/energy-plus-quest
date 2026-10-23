@@ -1,0 +1,23 @@
+{
+  "tool": "built-in image_gen",
+  "base": "petr-socks-v8.png",
+  "approval": {
+    "by": "Michael",
+    "scope": "Attached socks image composition and faces; continue variants",
+    "source": "/home/michael/.cache/tmp/codex-clipboard-4d2dd528-99f4-42ae-a68a-7a22cb0a98de.png",
+    "fedyaApproval": false
+  },
+  "variants": [
+    {
+      "key": "petr-camera-v8",
+      "ref": "design/scene-01/assets/current/choices/camera.webp",
+      "change": "Replace ONLY the two socks inside the foreground carton with the exact navy DSLR camera, large lens and orange strap from image2. Natural actual camera inside carton, not printed on it. Keep plain kraft carton same position and angle; believable packing support."
+    },
+    {
+      "key": "petr-boat-v8",
+      "ref": "design/barge-style-2026-09-30/petr-boat-v2.png",
+      "change": "Replace ONLY foreground socks carton with the folded navy inflatable boat bundle, orange handles/oar blades and separate compact gray motor shown at bottomright of image2. Image2 is gift identity reference ONLY: NEVER copy its workers/faces/background. Bundle resting on same foreground pallet/deck, motor next to it, coherent contact shadows. No socks/cardboard remaining, gift completely inside frame. Folded transport configuration, not inflated open boat."
+    }
+  ],
+  "invariants": "Only foreground gift changes. Preserve adult faces, PPE, poses, composition, lighting, geography exactly."
+}

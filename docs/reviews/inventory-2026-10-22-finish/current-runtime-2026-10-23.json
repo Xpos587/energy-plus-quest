@@ -1,0 +1,99 @@
+{
+  "base": "http://127.0.0.1:4344",
+  "isolatedContexts": true,
+  "userBrowserProgressTouched": false,
+  "candidateIntegrated": false,
+  "rows": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "httpStatus": 200,
+      "currentSrc": "http://127.0.0.1:4344/assets/desktop-detail-overview-receiving-parallel-labels-v1-D-YYvlcR.avif",
+      "displayed": [
+        986.140625,
+        648.703125
+      ],
+      "rect": {
+        "x": 226.921875,
+        "y": 56,
+        "width": 986.140625,
+        "height": 648.703125,
+        "top": 56,
+        "right": 1213.0625,
+        "bottom": 704.703125,
+        "left": 226.921875
+      },
+      "dpr": 1,
+      "page": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "choiceNames": [
+        "У приёмки",
+        "Стеллаж «Л»",
+        "Кладовщик",
+        "Система WMS"
+      ],
+      "url": "http://127.0.0.1:4344/",
+      "decodedResourcePixels": [
+        1546,
+        1017
+      ],
+      "intrinsicBrowserSize": [
+        1546,
+        1017
+      ]
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "httpStatus": 200,
+      "currentSrc": "http://127.0.0.1:4344/assets/optimized-overview-mobile-native-v3-DdM5UyGk.avif",
+      "displayed": [
+        390,
+        585
+      ],
+      "rect": {
+        "x": 0,
+        "y": 57.09375,
+        "width": 390,
+        "height": 585,
+        "top": 57.09375,
+        "right": 390,
+        "bottom": 642.09375,
+        "left": 0
+      },
+      "dpr": 1,
+      "page": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "choiceNames": [
+        "У приёмки",
+        "Стеллаж «Л»",
+        "Кладовщик",
+        "Система WMS"
+      ],
+      "url": "http://127.0.0.1:4344/",
+      "decodedResourcePixels": [
+        1024,
+        1536
+      ],
+      "intrinsicBrowserSize": [
+        1687,
+        2531
+      ]
+    }
+  ],
+  "resourceReadbackAt": "2026-10-22T22:31:37.191Z"
+}

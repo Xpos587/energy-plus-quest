@@ -1,0 +1,137 @@
+[
+  {
+    "device": "desktop",
+    "name": "carrier-ready",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-inspection-old",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-result-old",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-inspection-old4",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-result-old4",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-inspection-near",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-result-near",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-inspection-crew",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-result-crew",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-inspection-express",
+    "overflow": false
+  },
+  {
+    "device": "desktop",
+    "name": "carrier-result-express",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-ready",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-inspection-old",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-result-old",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-inspection-old4",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-result-old4",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-inspection-near",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-result-near",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-inspection-crew",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-result-crew",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-inspection-express",
+    "overflow": false
+  },
+  {
+    "device": "mobile",
+    "name": "carrier-result-express",
+    "overflow": false
+  },
+  {
+    "device": "small",
+    "name": "carrier-ready",
+    "overflow": false
+  },
+  {
+    "device": "small",
+    "name": "compact",
+    "overflow": false
+  },
+  {
+    "device": "small",
+    "name": "inventory",
+    "overflow": false
+  },
+  {
+    "device": "small",
+    "name": "crane",
+    "overflow": false
+  },
+  {
+    "device": "small",
+    "name": "lastmile",
+    "overflow": false
+  }
+]

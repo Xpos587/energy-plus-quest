@@ -1,0 +1,9 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {chromium} from '@playwright/test';
+const dir=path.dirname(new URL(import.meta.url).pathname);
+const uri=async p=>'data:image/png;base64,'+(await fs.readFile(path.resolve(dir,p))).toString('base64');
+const before=await uri('lastmile-boat-v14-pilot.png'),after=await uri('lastmile-boat-v16-pilot.png'),ref=await uri('../style-audit-2026-09-28/reference.png');
+const page=(title,label,body)=>`<section><header><h1>${title}</h1><small>${label}</small></header><main>${body}</main><footer><span>Сцена 5 · Последняя миля</span><span>1672 × 941 px · 16:9</span></footer></section>`;
+const html=`<!doctype html><meta charset="utf-8"><style>@page{size:A4 landscape;margin:0}*{box-sizing:border-box}body{margin:0;font-family:Arial;color:#173c55}section{width:297mm;height:210mm;padding:9mm;break-after:page;display:flex;flex-direction:column}header,footer{display:flex;justify-content:space-between}h1{font-size:21px;margin:0}small,footer{font-size:11px}main{flex:1;display:flex;align-items:center;justify-content:center;gap:5mm;min-height:0}.panel{flex:1;min-width:0;text-align:center}img{max-width:100%;max-height:173mm}h2{font-size:15px}</style>`+page('Последняя миля','V16 · Пилот',`<img src="${after}">`)+page('До / После','V14 → V16',`<div class="panel"><h2>До · V14</h2><img src="${before}"></div><div class="panel"><h2>После · V16</h2><img src="${after}"></div>`)+page('Эталон / Пилот','Стиль',`<div class="panel"><h2>Эталон</h2><img src="${ref}"></div><div class="panel"><h2>V16</h2><img src="${after}"></div>`);
+const browser=await chromium.launch({headless:true});const p=await browser.newPage();await p.setContent(html);await p.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()));});await p.pdf({path:path.join(dir,'energy-plus-lastmile-v16.pdf'),printBackground:true,preferCSSPageSize:true});await browser.close();

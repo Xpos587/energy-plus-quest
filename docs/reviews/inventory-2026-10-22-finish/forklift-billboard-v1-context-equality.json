@@ -1,0 +1,18 @@
+{
+  "source_crop_xyxy": [
+    616,
+    459,
+    988,
+    824
+  ],
+  "crop_dimensions": [
+    372,
+    365
+  ],
+  "outside_mask_changed_pixels": 0,
+  "outside_mask_max_channel_difference": 0,
+  "mask": "Union old visible silhouette + mapped new alpha, dilated 2px. Original source retained everywhere else including original visible contact shadow.",
+  "native_sprite_modified": false,
+  "raw_regional_render_preserved": true,
+  "production_changed": false
+}

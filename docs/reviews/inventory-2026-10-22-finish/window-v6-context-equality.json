@@ -1,0 +1,32 @@
+{
+  "status": "local window comparison, not promotion",
+  "crop_source_xyxy": [
+    660,
+    97,
+    832,
+    323
+  ],
+  "requested_border_xyxy": [
+    660,
+    96,
+    833,
+    322
+  ],
+  "border_rounding_note": "Actual crop derives floor(integer_resolution \u00d7 saved float32 Blender border): x660..832, bottom677..903, hence top-left source y97..323.",
+  "crop_dimensions": [
+    172,
+    226
+  ],
+  "semantic_mask": "Actual Cycles glass-only white emission visibility render. Wall/frame/mullion/sill/lamp/other geometry black; fake foliage and sky plates remain camera-hidden. Eight samples, no denoising.",
+  "proof_composite_policy": "Use original v3 pixels where window semantic mask is zero; antialias-weighted candidate glass where nonzero. Native texture unedited.",
+  "outside_semantic_mask_pixels_checked": 24641,
+  "outside_semantic_mask_changed_pixels": 0,
+  "outside_semantic_mask_max_channel_difference": 0,
+  "raw_rerender_outside_changed_pixels": 22073,
+  "raw_rerender_note": "Cycles regional denoising/shading alters other pixels; raw crop retained. Context-protected proof explicitly preserves exact v3 pixels outside visible glass.",
+  "native_texture_edited": false,
+  "geometry_or_transform_changes": [],
+  "window_count": 5,
+  "other_objects_styled": false,
+  "keeper_billboard_retained_in_scene": true
+}

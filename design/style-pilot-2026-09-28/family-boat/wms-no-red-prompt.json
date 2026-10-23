@@ -1,0 +1,4 @@
+{
+  "tool": "built-in imagegen",
+  "prompt": "One microscopic color correction only. In image1 woman's hanging LEFT forearm image-right at x37-39%, y50-53%, silver wrist reflective ring has erroneous thin RED edging. REMOVE red edging there, replace red pixels with sleeve NAVY BLUE around the silver stripe. Keep silver ring itself. Jacket silver stripes have NO red outlines. Do NOT remove correct red edges on trouser calf bands. Absolutely no other modifications: face, eyes, hair, uniform, hands, barcode, scanner, objects, entire background identical. Image2 exact character/uniform reference and image3 immutable style."
+}

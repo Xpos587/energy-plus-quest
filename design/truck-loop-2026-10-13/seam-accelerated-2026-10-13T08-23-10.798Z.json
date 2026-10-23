@@ -1,0 +1,1712 @@
+[
+  {
+    "name": "desktop",
+    "selected": false,
+    "boundary": 0,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-desktop.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5502,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 100,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 5488.399999976158,
+          "decoder": 1,
+          "media": 0.06311,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 100,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        },
+        {
+          "dt": 100,
+          "from": 0.291667,
+          "to": 0.375,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 100,
+          "from": 0.458333,
+          "to": 0.541667,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 100,
+          "from": 0.958333,
+          "to": 1.083333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 83.39999999999964,
+          "from": 63.125,
+          "to": 63.208333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 2914.899999976158,
+          "media": 61.503883,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 4958,
+          "media": 0.000984,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 5041.600000023842,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 5041.699999988079,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 5194.800000011921,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 5411.699999988079,
+          "media": 0,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "waiting",
+          "wall": 5411.800000011921,
+          "media": 0,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "pause",
+          "wall": 5421.399999976158,
+          "media": 0,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 5421.5,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 5489.899999976158,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "waiting",
+          "wall": 5591.300000011921,
+          "media": 0.165722,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 5598.399999976158,
+          "media": 0.166797,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "seeked",
+          "wall": 5758.199999988079,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 4,
+      "motion": "playing",
+      "inspection": false
+    },
+    "errors": []
+  },
+  {
+    "name": "desktop",
+    "selected": false,
+    "boundary": 1,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-desktop.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.599999964237,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 83.29999999999927,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 11268,
+          "decoder": 0,
+          "media": 0.051577,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 116.79999999999927,
+          "from": 2.416667,
+          "to": 2.5,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 116.69999999999891,
+          "from": 2.666667,
+          "to": 2.791667,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 100,
+          "from": 63.5,
+          "to": 63.583333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 100,
+          "from": 0.25,
+          "to": 0.333333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 99.89999999999964,
+          "from": 2.125,
+          "to": 2.208333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 8741.199999988079,
+          "media": 61.501419,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 10735.100000023842,
+          "media": 0.000961,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 10819.600000023842,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 10819.600000023842,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 11003.699999988079,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 11219.100000023842,
+          "media": 63.976433,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 11219.199999988079,
+          "media": 0.002805,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 11292.699999988079,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "waiting",
+          "wall": 11446.899999976158,
+          "media": 0.229712,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 11463.100000023842,
+          "media": 0.23089,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "seeked",
+          "wall": 11466.300000011921,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 3,
+      "motion": "playing",
+      "inspection": false
+    },
+    "errors": []
+  },
+  {
+    "name": "desktop",
+    "selected": true,
+    "boundary": 0,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-desktop.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.700000047684,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 116.59999999999854,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 17225.19999998808,
+          "decoder": 1,
+          "media": 0.054461,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 116.59999999999854,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        },
+        {
+          "dt": 99.90000000000146,
+          "from": 63.708333,
+          "to": 63.75,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 83.40000000000146,
+          "from": 63.916667,
+          "to": 63.958333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 83.39999999999782,
+          "from": 63.666667,
+          "to": 63.708333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 83.39999999999782,
+          "from": 0.208333,
+          "to": 0.291667,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 14674.399999976158,
+          "media": 61.501851,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 16683.899999976158,
+          "media": 0.001349,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 16770,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 16770.19999998808,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 16935.30000001192,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 17174.19999998808,
+          "media": 63.997907,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 17174.399999976158,
+          "media": 0.003641,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 17226.30000001192,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 17408.5,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 2,
+      "motion": "playing",
+      "inspection": true
+    },
+    "errors": []
+  },
+  {
+    "name": "desktop",
+    "selected": true,
+    "boundary": 1,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-desktop.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.400000035763,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 66.59999999999854,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 23015.899999976158,
+          "decoder": 0,
+          "media": 0.033529,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 100,
+          "from": 63.708333,
+          "to": 63.791667,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 83.40000000000146,
+          "from": 0.208333,
+          "to": 0.25,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 0.166667,
+          "to": 0.208333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 0.916667,
+          "to": 0.958333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 2.25,
+          "to": 2.291667,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 20524.100000023842,
+          "media": 61.501366,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 22525.600000023842,
+          "media": 0.001594,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 22567.30000001192,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 22567.399999976158,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 22758.399999976158,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 22984.399999976158,
+          "media": 63.959519,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 22984.5,
+          "media": 0.002122,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 23017.69999998808,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 23207.30000001192,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 2,
+      "motion": "playing",
+      "inspection": true
+    },
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "selected": false,
+    "boundary": 0,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-mobile.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5503,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 83.19999999999982,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 3429.699999988079,
+          "decoder": 1,
+          "media": 0.0499,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 83.19999999999982,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 1.833333,
+          "to": 1.875,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 2.333333,
+          "to": 2.375,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.69999999999982,
+          "from": 63.333333,
+          "to": 63.375,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.69999999999982,
+          "from": 63.833333,
+          "to": 63.875,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 927.1999999880791,
+          "media": 61.50334,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 2930.599999964237,
+          "media": 0.001002,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 2980.099999964237,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 2980.199999988079,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 3030.199999988079,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 3382.2999999523163,
+          "media": 63.955552,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 3382.399999976158,
+          "media": 0.002648,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 3430.699999988079,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 3489,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 3,
+      "motion": "playing",
+      "inspection": false
+    },
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "selected": false,
+    "boundary": 1,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-mobile.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.300000011921,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 83.30000000000109,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 9046.399999976158,
+          "decoder": 0,
+          "media": 0.050206,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 83.30000000000109,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.79999999999927,
+          "from": 2.666667,
+          "to": 2.708333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 63.666667,
+          "to": 63.708333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 2,
+          "to": 2.041667,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 2.75,
+          "to": 2.791667,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 6539.5,
+          "media": 61.50062,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 8546.799999952316,
+          "media": 0.001079,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 8579.899999976158,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 8579.899999976158,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 8631.399999976158,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 8999.199999988079,
+          "media": 63.95695,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 8999.399999976158,
+          "media": 0.003189,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 9047.599999964237,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 9100.699999988079,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 3,
+      "motion": "playing",
+      "inspection": false
+    },
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "selected": true,
+    "boundary": 0,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-mobile.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.199999988079,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 66.70000000000073,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 14712.799999952316,
+          "decoder": 1,
+          "media": 0.033917,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 66.70000000000073,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 1.583333,
+          "to": 1.625,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.60000000000036,
+          "from": 61.833333,
+          "to": 61.875,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.60000000000036,
+          "from": 0.083333,
+          "to": 0.125,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 50.100000000000364,
+          "from": 62.333333,
+          "to": 62.375,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 12216.199999988079,
+          "media": 61.503155,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 14213.299999952316,
+          "media": 0.001067,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 14263.799999952316,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 14263.899999976158,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 14317.099999964237,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 14681.199999988079,
+          "media": 63.965735,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 14681.299999952316,
+          "media": 0.002411,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 14714,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 14764.599999964237,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 2,
+      "motion": "playing",
+      "inspection": true
+    },
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "selected": true,
+    "boundary": 1,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-mobile.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.400000035763,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 83.40000000000146,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 20345.799999952316,
+          "decoder": 0,
+          "media": 0.050453,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 83.40000000000146,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        },
+        {
+          "dt": 50.10000000000218,
+          "from": 62.916667,
+          "to": 62.958333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 50.10000000000218,
+          "from": 63.166667,
+          "to": 63.208333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 50.10000000000218,
+          "from": 0.583333,
+          "to": 0.625,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 50.10000000000218,
+          "from": 2.916667,
+          "to": 2.958333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 17826,
+          "media": 61.500883,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 19829.799999952316,
+          "media": 0.00106,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 19880.19999998808,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 19880.19999998808,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 19929.69999998808,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 20297.299999952316,
+          "media": 63.970122,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 20297.399999976158,
+          "media": 0.001988,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 20349.69999998808,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 20398,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 3,
+      "motion": "playing",
+      "inspection": true
+    },
+    "errors": []
+  },
+  {
+    "name": "tablet",
+    "selected": false,
+    "boundary": 0,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-tablet.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5501.300000011921,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 66.69999999999982,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 3633.5,
+          "decoder": 1,
+          "media": 0.049459,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 66.70000000000073,
+          "from": 1.916667,
+          "to": 1.958333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 2.666667,
+          "to": 2.708333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.70000000000005,
+          "from": 61.541667,
+          "to": 61.583333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000005,
+          "from": 62.333333,
+          "to": 62.375,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.69999999999982,
+          "from": 61.75,
+          "to": 61.791667,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 1138.5,
+          "media": 61.505749,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 3134.699999988079,
+          "media": 0.001054,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 3184.5,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 3184.5,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 3254.400000035763,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 3587.300000011921,
+          "media": 63.950988,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 3587.5,
+          "media": 0.003393,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 3634.5,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 3719.400000035763,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 3,
+      "motion": "playing",
+      "inspection": false
+    },
+    "errors": []
+  },
+  {
+    "name": "tablet",
+    "selected": false,
+    "boundary": 1,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-tablet.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.599999964237,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 83.29999999999927,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 9349.800000011921,
+          "decoder": 0,
+          "media": 0.049978,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 83.29999999999927,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.79999999999927,
+          "from": 0.833333,
+          "to": 0.875,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 0.666667,
+          "to": 0.708333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 1.833333,
+          "to": 1.875,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.69999999999982,
+          "from": 62.333333,
+          "to": 62.375,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 6826.199999988079,
+          "media": 61.501308,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 8834.600000023842,
+          "media": 0.001269,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 8867.300000011921,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 8867.300000011921,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 8951.100000023842,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 9302.100000023842,
+          "media": 63.974865,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 9302.199999988079,
+          "media": 0.002284,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 9350.699999988079,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 9435.199999988079,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 3,
+      "motion": "playing",
+      "inspection": false
+    },
+    "errors": []
+  },
+  {
+    "name": "tablet",
+    "selected": true,
+    "boundary": 0,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-tablet.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.600000023842,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 83.39999999999964,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 15049.800000011921,
+          "decoder": 1,
+          "media": 0.050033,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 83.39999999999964,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.60000000000036,
+          "from": 0.583333,
+          "to": 0.625,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.59999999999854,
+          "from": 1.916667,
+          "to": 1.958333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 50.100000000000364,
+          "from": 62.333333,
+          "to": 62.375,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 50.100000000000364,
+          "from": 1.166667,
+          "to": 1.208333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 12537.400000035763,
+          "media": 61.503654,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 14534.699999988079,
+          "media": 0.001354,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 14583.800000011921,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 14583.800000011921,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 14663.900000035763,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 15002.199999988079,
+          "media": 63.965826,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 15002.400000035763,
+          "media": 0.002593,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 15050.600000023842,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 15129.600000023842,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 3,
+      "motion": "playing",
+      "inspection": true
+    },
+    "errors": []
+  },
+  {
+    "name": "tablet",
+    "selected": true,
+    "boundary": 1,
+    "natural": false,
+    "url": "http://127.0.0.1:4187/",
+    "observation": {
+      "source": "http://127.0.0.1:4187/scene1-live/separated-routes/city-motion-tablet.mp4?v=23",
+      "duration": 64,
+      "elapsed": 5500.400000035763,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 83.29999999999927,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 20732.80000001192,
+          "decoder": 0,
+          "media": 0.049984,
+          "readyState": 4,
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 83.29999999999927,
+          "from": 63.958333,
+          "to": 0.083333,
+          "fromDecoder": 1,
+          "toDecoder": 0
+        },
+        {
+          "dt": 66.70000000000073,
+          "from": 61.666667,
+          "to": 61.708333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.69999999999709,
+          "from": 61.833333,
+          "to": 61.875,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        },
+        {
+          "dt": 66.60000000000218,
+          "from": 1.666667,
+          "to": 1.708333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 50.10000000000218,
+          "from": 63.166667,
+          "to": 63.208333,
+          "fromDecoder": 1,
+          "toDecoder": 1
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "playing",
+          "wall": 18214.900000035763,
+          "media": 61.500948,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 20217.30000001192,
+          "media": 0.001236,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 20267,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 20267.400000035763,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 20346.400000035763,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 20685.19999998808,
+          "media": 63.96866,
+          "decoder": 1,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 20685.30000001192,
+          "media": 0.002505,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeking",
+          "wall": 20733.600000023842,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 20815.19999998808,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 3,
+      "motion": "playing",
+      "inspection": true
+    },
+    "errors": []
+  }
+]

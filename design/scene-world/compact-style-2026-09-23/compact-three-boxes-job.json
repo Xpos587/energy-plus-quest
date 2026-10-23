@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-23T13:17:31.757721Z",
+    "display_name": "Nano Banana Pro",
+    "id": "2d1bea04-da67-46f7-b9c4-d175cce9e046",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_131731_2d1bea04-da67-46f7-b9c4-d175cce9e046_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "ab6f39d3-a6a2-4021-80d1-168878ca8600",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/ab6f39d3-a6a2-4021-80d1-168878ca8600_resize.jpg"
+        }
+      ],
+      "prompt": "Make ONE local correction to this image. In the center foreground of the trailer, immediately RIGHT of the orange-camera/tableware stack and LEFT of the two pillow-symbol boxes, there are currently TWO small plain taped cardboard cartons standing in front of the pale niche. Replace those TWO cartons with exactly THREE narrower small plain taped cartons side by side, in the SAME combined footprint. Each of the three boxes must have its own clearly visible front face, top face, taped seam and separated vertical edges. Keep them low enough that the niche floor and red restraint behind them remain visible. THREE plain foreground boxes, not two. Do not change the other cargo, truck, proportions, camera gift, outlines, lighting, shadows, background or composition at all. No labels or numbers.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_131731_2d1bea04-da67-46f7-b9c4-d175cce9e046.png",
+    "status": "completed"
+  }
+]

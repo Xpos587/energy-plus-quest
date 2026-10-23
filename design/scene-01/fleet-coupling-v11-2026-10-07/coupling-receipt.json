@@ -1,0 +1,78 @@
+{
+  "source": "../fleet-lookdev-v10-2026-10-07/fleet-v10-age.blend",
+  "hitch_local_before": [
+    -2.3,
+    0,
+    0
+  ],
+  "hitch_local_after": [
+    -1.45,
+    0,
+    0
+  ],
+  "trailer_kingpin_local": [
+    0,
+    0,
+    0
+  ],
+  "straight_gap_before": 1.6917903557419776,
+  "straight_gap_after": 0.8417903557419777,
+  "camera": {
+    "name": "desktop",
+    "location": [
+      1.7741494178771973,
+      -84.67687225341797,
+      131.3314208984375
+    ],
+    "rotation": [
+      0.574134349822998,
+      -1.8925381262135943e-09,
+      0.07982999086380005
+    ],
+    "ortho_scale": 111.80000305175781
+  },
+  "validation": {
+    "frames": 1152,
+    "truck_frames": 4608,
+    "max_pin_error_world": 2.9802322387695312e-08,
+    "min_cab_separating_clearance_local": 0.31615796621761727,
+    "max_turns": {
+      "1": {
+        "frame": 230,
+        "angle_deg": 45.77764355913373
+      },
+      "2": {
+        "frame": 918,
+        "angle_deg": 39.75485742635516
+      },
+      "3": {
+        "frame": 154,
+        "angle_deg": 45.77764355913373
+      },
+      "4": {
+        "frame": 806,
+        "angle_deg": 45.77763354122107
+      }
+    }
+  },
+  "preservation": "all source hide_render flags, tractor root locations/rotations, trailer headings, camera, materials, source geometry except exhaust translation; source crew faces/materials untouched",
+  "exhaust_relocation": "visible stack and smoke on trucks 1 and 4 moved +0.90 tractor local X beside actual imported cab rear; required to avoid new trailer collision",
+  "bounds": {
+    "1": {
+      "cab_rear_x": 0.09179035574197769,
+      "cab_halfwidth": 1.073897361755371
+    },
+    "2": {
+      "cab_rear_x": 0.09179011732339859,
+      "cab_halfwidth": 1.073897361755371
+    },
+    "3": {
+      "cab_rear_x": 0.0917905941605568,
+      "cab_halfwidth": 1.073898196220398
+    },
+    "4": {
+      "cab_rear_x": 0.09179041534662247,
+      "cab_halfwidth": 1.073897361755371
+    }
+  }
+}

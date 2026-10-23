@@ -1,0 +1,52 @@
+{
+  "outputs": [
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-alva.webp",
+      "frozen": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-alva-helicopter-final.png",
+      "dimensions": [
+        5120,
+        2047
+      ],
+      "basis": "original revision4, SOURCE-resolution semantic correction then ordinary Lanczos interpolation, no Flowers or recovered-detail claim",
+      "heliSourceBox": [
+        850,
+        15,
+        1300,
+        260
+      ]
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-khor.webp",
+      "frozen": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-khor-helicopter-final.png",
+      "dimensions": [
+        5120,
+        2047
+      ],
+      "basis": "original revision4, SOURCE-resolution semantic correction then ordinary Lanczos interpolation, no Flowers or recovered-detail claim",
+      "heliSourceBox": [
+        850,
+        15,
+        1300,
+        260
+      ]
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-arseniy.webp",
+      "frozen": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-arseniy-helicopter-final.png",
+      "dimensions": [
+        5120,
+        2047
+      ],
+      "basis": "original revision4, SOURCE-resolution semantic correction then ordinary Lanczos interpolation, no Flowers or recovered-detail claim",
+      "heliSourceBox": [
+        850,
+        15,
+        1300,
+        260
+      ]
+    }
+  ],
+  "method": "Bapproved aircraftonly alpha + v4 localcleanplate; additional oldtail-only originalsource local inpaint before upscale",
+  "supersedes": "all earlier P2base/broadmask candidates HOLD",
+  "publicOriginalsUntouched": true
+}

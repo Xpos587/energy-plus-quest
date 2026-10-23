@@ -1,0 +1,202 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-old-portrait-v2-CeJjDvRg.avif",
+      "decoded": [
+        1122,
+        1402
+      ],
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 514.25,
+        "top": 48,
+        "right": 390,
+        "bottom": 562.25,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-old-portrait-v2-CeJjDvRg.avif",
+      "decoded": [
+        1122,
+        1402
+      ],
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 514.25,
+        "top": 48,
+        "right": 390,
+        "bottom": 562.25,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-old-v5-1280-iJ23PKmW.avif",
+      "decoded": [
+        1280,
+        853
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 472.640625,
+        "height": 334,
+        "top": 56,
+        "right": 472.640625,
+        "bottom": 390,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-old-v5-DvSCNtL8.avif",
+      "decoded": [
+        1536,
+        1024
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 472.640625,
+        "height": 334,
+        "top": 56,
+        "right": 472.640625,
+        "bottom": 390,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-old-wide-v8-kdAcLDw9.avif",
+      "decoded": [
+        4093,
+        1637
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 618.609375,
+        "top": 56,
+        "right": 1440,
+        "bottom": 674.609375,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-old-wide-v8-kdAcLDw9.avif",
+      "decoded": [
+        4093,
+        1637
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 618.609375,
+        "top": 56,
+        "right": 1440,
+        "bottom": 674.609375,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-old-wide-v8-kdAcLDw9.avif",
+      "decoded": [
+        4093,
+        1637
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1920,
+        "height": 781.828125,
+        "top": 56,
+        "right": 1920,
+        "bottom": 837.828125,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-old-wide-v8-kdAcLDw9.avif",
+      "decoded": [
+        4093,
+        1637
+      ],
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1920,
+        "height": 781.828125,
+        "top": 56,
+        "right": 1920,
+        "bottom": 837.828125,
+        "left": 0
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  }
+]

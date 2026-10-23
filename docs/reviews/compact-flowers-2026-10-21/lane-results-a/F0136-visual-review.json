@@ -1,0 +1,32 @@
+{
+  "id": "F0136",
+  "decision": "accepted_for_runtime",
+  "processingMode": "selective_flowers",
+  "acceptedP2Count": 4,
+  "freshAssemblyReview": "Fresh General P2-run-001 master inspected whole and cargo/axle/cab focal crops; rear-axle failure, counts and source-protected geometry preserved",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "fullNativeReconstruction": false,
+  "master": ".tmp-work/flowers-all-2026-10-20/F0136/pass2-master.png",
+  "inspection": [
+    "whole final",
+    "100% boat material and counts",
+    "100% broken axle retains tilted wheel and broken spring",
+    "100% cargo seam",
+    "smooth warehouse/floor protected after rejected visible tonal seams"
+  ],
+  "evidence": [
+    "F0136-final-whole.png",
+    "F0136-final-boat100.png",
+    "F0136-final-axle100.png",
+    "F0136-final-seam100.png"
+  ],
+  "retainedP1": [
+    "p1-00",
+    "p1-02",
+    "p1-11",
+    "p1-20"
+  ],
+  "limitations": "Selective detail reconstruction: native accepted5 P1 tiles and4 P2 ROIs; protected background + retained cores use original pixels. Native whole scene8192 not claimed.",
+  "requiredP2Rois": 4
+}

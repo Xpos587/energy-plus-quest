@@ -1,0 +1,27 @@
+{
+  "source": "hailuo.mp4",
+  "cleanup": true,
+  "model": "gemini-2.5-flash",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 556,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 12951,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 327
+      },
+      {
+        "modality": "VIDEO",
+        "token_count": 12624
+      }
+    ],
+    "thoughts_token_count": 1686,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 15193,
+    "traffic_type": null
+  }
+}

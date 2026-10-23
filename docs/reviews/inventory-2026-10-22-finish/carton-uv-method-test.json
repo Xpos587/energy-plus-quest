@@ -1,0 +1,229 @@
+{
+  "status": "isolated unsaved scene test passed",
+  "cartons_checked": 37,
+  "object_count_unchanged": true,
+  "rows": [
+    {
+      "object": "Floor staged cartons",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay1 carton",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay1 carton.001",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay1 carton.002",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay1 carton.003",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay1 carton.004",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay1 carton.005",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay2 carton",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay2 carton.001",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay2 carton.002",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay2 carton.003",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay2 carton.004",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack1 bay2 carton.005",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay1 carton",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay1 carton.001",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay1 carton.002",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay1 carton.003",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay1 carton.004",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay1 carton.005",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay2 carton",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay2 carton.001",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay2 carton.002",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay2 carton.003",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay2 carton.004",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack2 bay2 carton.005",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay1 carton",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay1 carton.001",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay1 carton.002",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay1 carton.003",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay1 carton.004",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay1 carton.005",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay2 carton",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay2 carton.001",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay2 carton.002",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay2 carton.003",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay2 carton.004",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    },
+    {
+      "object": "Rack3 bay2 carton.005",
+      "vertex_count": 8,
+      "uv_layer": "CartonFlatSurface",
+      "geometry_unchanged": true
+    }
+  ]
+}

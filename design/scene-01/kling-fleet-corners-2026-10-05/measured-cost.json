@@ -1,0 +1,71 @@
+{
+  "transaction_count": 10,
+  "measured_spend_credits": 62.5,
+  "per_job_observed_credits": [
+    6.25
+  ],
+  "source": "transactions.json",
+  "matching_basis": "exact batch submission timestamp window; account transaction records lack job IDs",
+  "transactions": [
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:49:41.450648Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:49:38.743891Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:48:12.310775Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:48:06.449554Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:48:05.886943Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:46:16.231388Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:46:15.899875Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:44:21.831739Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:44:17.517Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:44:16.801913Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    }
+  ]
+}

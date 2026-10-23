@@ -1,0 +1,119 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-behavior-v16-2026-10-07/fleet-v16.blend",
+  "proof_frames": [
+    1,
+    192
+  ],
+  "proof_seconds": 8.0,
+  "fps": 24.0,
+  "stats": {
+    "1": {
+      "source_phase": 1,
+      "source_rate": 1.0,
+      "mean_scene_units_per_second": 6.89290543069895,
+      "speed_range": [
+        6.892709767010603,
+        6.8930052713816465
+      ],
+      "distance_8_seconds": 55.1432434455916,
+      "start_xyz": [
+        29.799999237060547,
+        -1.7035030126571655,
+        0.0
+      ],
+      "end_xyz": [
+        2.765103578567505,
+        29.307994842529297,
+        0.0
+      ],
+      "independent_period_seconds": 48.0
+    },
+    "2": {
+      "source_phase": 1,
+      "source_rate": 0.45,
+      "mean_scene_units_per_second": 0.9103410981986944,
+      "speed_range": [
+        0.9103088332867462,
+        0.9103775205678116
+      ],
+      "distance_8_seconds": 7.282728785589555,
+      "start_xyz": [
+        -29.799999237060547,
+        -1.4842771291732788,
+        0.0
+      ],
+      "end_xyz": [
+        -29.799999237060547,
+        -8.767005920410156,
+        0.0
+      ],
+      "independent_period_seconds": 106.66666666666666
+    },
+    "3": {
+      "source_phase": 1,
+      "source_rate": 1.0,
+      "mean_scene_units_per_second": 6.892859354980313,
+      "speed_range": [
+        6.892709767010603,
+        6.8930052713816465
+      ],
+      "distance_8_seconds": 55.142874839842506,
+      "start_xyz": [
+        29.799999237060547,
+        20.124311447143555,
+        0.0
+      ],
+      "end_xyz": [
+        -2.5,
+        9.447664260864258,
+        0.0
+      ],
+      "independent_period_seconds": 48.0
+    },
+    "4": {
+      "source_phase": 1,
+      "source_rate": 0.6,
+      "mean_scene_units_per_second": 4.135700081125851,
+      "speed_range": [
+        4.135218945476053,
+        4.135849037276387
+      ],
+      "distance_8_seconds": 33.08560064900681,
+      "start_xyz": [
+        -2.5,
+        3.703503131866455,
+        0.0
+      ],
+      "end_xyz": [
+        2.860265016555786,
+        -27.357746124267578,
+        0.0
+      ],
+      "independent_period_seconds": 80.0
+    }
+  },
+  "minimum_separating_axis_clearance_scene_units": {
+    "vehicles": [
+      6.481568336486816,
+      {
+        "frame": 68,
+        "trucks": [
+          1,
+          3
+        ]
+      }
+    ],
+    "buildings": [
+      2.6286110877990723,
+      {
+        "frame": 1,
+        "truck": 4,
+        "building": "outer residential -1 2 body"
+      }
+    ]
+  },
+  "envelope_overlaps": [],
+  "obstacle_count": 47,
+  "method": "Conservative XY rectangles of all visible truck mesh bounds, separately tractor/trailer; pairwise and major architecture every rendered proof frame. Smoke excluded. Positive gap guarantees disjoint envelopes; street furniture and exact swept subframes not qualified. Both truck roots sampled at identical source time.",
+  "loop_status": "8-second excerpt is not seamless. Independent route periods differ; full least-common loop collisions not qualified."
+}

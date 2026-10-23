@@ -1,0 +1,270 @@
+{
+  "status": "ONE fixed-world-plane proof complete; parent/root art review required; no further iteration",
+  "geometry_source": "rack-open-cap-preparation-v1.blend",
+  "source_crop_xyxy": [
+    542,
+    240,
+    793,
+    575
+  ],
+  "source_full_dimensions": [
+    1440,
+    1000
+  ],
+  "faces": [
+    {
+      "name": "rack-worldplane-v1 front Y=3.5",
+      "exact_world_corners": [
+        [
+          1.5,
+          3.5,
+          0
+        ],
+        [
+          3.3,
+          3.5,
+          0
+        ],
+        [
+          3.3,
+          3.5,
+          2.7
+        ],
+        [
+          1.5,
+          3.5,
+          2.7
+        ]
+      ],
+      "source_projected_corners": [
+        [
+          587.8032302856445,
+          481.6531538963318
+        ],
+        [
+          694.6968126296997,
+          529.8246443271637
+        ],
+        [
+          694.6968126296997,
+          371.7861771583557
+        ],
+        [
+          587.8032732009888,
+          323.6147165298462
+        ]
+      ],
+      "native_corner_anchor_names": [
+        "front-left-foot",
+        "front-right-foot",
+        "front-right-top",
+        "front-left-top"
+      ],
+      "native_corner_uv_pixels": [
+        [
+          149.0,
+          1121.0
+        ],
+        [
+          660.0,
+          1380.0
+        ],
+        [
+          662.0,
+          517.0
+        ],
+        [
+          150.0,
+          248.0
+        ]
+      ]
+    },
+    {
+      "name": "rack-worldplane-v1 right X=3.3",
+      "exact_world_corners": [
+        [
+          3.3,
+          3.5,
+          0
+        ],
+        [
+          3.3,
+          4.7,
+          0
+        ],
+        [
+          3.3,
+          4.7,
+          2.7
+        ],
+        [
+          3.3,
+          3.5,
+          2.7
+        ]
+      ],
+      "source_projected_corners": [
+        [
+          694.6968126296997,
+          529.8246443271637
+        ],
+        [
+          747.3690032958984,
+          486.3758683204651
+        ],
+        [
+          747.3690032958984,
+          328.3374309539795
+        ],
+        [
+          694.6968126296997,
+          371.7861771583557
+        ]
+      ],
+      "native_corner_anchor_names": [
+        "front-right-foot",
+        "back-right-foot",
+        "back-right-top",
+        "front-right-top"
+      ],
+      "native_corner_uv_pixels": [
+        [
+          660.0,
+          1380.0
+        ],
+        [
+          934.0,
+          1171.0
+        ],
+        [
+          929.0,
+          314.0
+        ],
+        [
+          662.0,
+          517.0
+        ]
+      ]
+    },
+    {
+      "name": "rack-worldplane-v1 top Z=2.7",
+      "exact_world_corners": [
+        [
+          1.5,
+          3.5,
+          2.7
+        ],
+        [
+          3.3,
+          3.5,
+          2.7
+        ],
+        [
+          3.3,
+          4.7,
+          2.7
+        ],
+        [
+          1.5,
+          4.7,
+          2.7
+        ]
+      ],
+      "source_projected_corners": [
+        [
+          587.8032732009888,
+          323.6147165298462
+        ],
+        [
+          694.6968126296997,
+          371.7861771583557
+        ],
+        [
+          747.3690032958984,
+          328.3374309539795
+        ],
+        [
+          640.4754209518433,
+          280.16597032546997
+        ]
+      ],
+      "native_corner_anchor_names": [
+        "front-left-top",
+        "front-right-top",
+        "back-right-top",
+        "back-left-top"
+      ],
+      "native_corner_uv_pixels": [
+        [
+          150.0,
+          248.0
+        ],
+        [
+          662.0,
+          517.0
+        ],
+        [
+          929.0,
+          314.0
+        ],
+        [
+          386.5,
+          34.0
+        ]
+      ]
+    }
+  ],
+  "all_existing_meshes_checked": 724,
+  "all_existing_cameras_checked": 4,
+  "coordinate_or_transform_changes": [],
+  "original_209_geometry_preserved": true,
+  "native_unchanged": true,
+  "texture_native": "rack-sprite-v1-native.png",
+  "alpha_cutoff": 0.7529411764705882,
+  "physical_envelope": [
+    [
+      1.5,
+      3.5,
+      0
+    ],
+    [
+      3.3,
+      4.7,
+      2.7
+    ]
+  ],
+  "original_boards_and_letters_retained": true,
+  "original_shadows_retained": true,
+  "mapping_limits": [
+    "2.5D camera-only texture surfaces, not true modeled stock/metal geometry.",
+    "Native post-center corner UVs shared exactly along adjacent faces. Native rounded post thickness outside these face splits is clipped to fixed physical envelope.",
+    "Top stock is painted on Z2.7 plane; apparent depth must be visually judged in the fixed source camera, no camera orbit supported.",
+    "Back plane not visible from approved source camera and not added."
+  ],
+  "measured_crop_render_seconds": 3.0001713120000204,
+  "production_changed": false,
+  "outside_context_changed_pixels": 0,
+  "protected_board_letter_changed_pixels": 0,
+  "shared_corner_uv_mismatches": [],
+  "fixed_world_face_corner_residual_m": 0,
+  "fixed_projected_face_corner_residual_px": 0,
+  "native_alpha_bound_before_mapping": [
+    119,
+    34,
+    963,
+    1381
+  ],
+  "rendered_visible_alpha_bounds_crop_xyxy": [
+    44,
+    40,
+    206,
+    278
+  ],
+  "visible_alpha_pixel_centers_outside_continuous_envelope": 273,
+  "maximum_edge_raster_overrun_source_px": 1.3032373875345111,
+  "visual_limits": [
+    "All three outer face boundaries and shared UV edge corners match exact fixed world geometry. This is not a claim that every painted carton/post internal edge is a newly modeled 3D surface.",
+    "Native rounded post widths are clipped at native post-center UV split; post caps become thinner. Top cartons remain a flat painted camera surface.",
+    "One source camera and deterministic viewport crops only; do not orbit camera or extrapolate new views."
+  ]
+}

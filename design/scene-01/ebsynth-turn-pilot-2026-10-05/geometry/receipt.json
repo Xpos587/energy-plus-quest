@@ -1,0 +1,49 @@
+{
+  "source_blend": "design/scene-01/painted-layer-2026-10-05/painted-vehicles-driver-fixed-optimized.blend",
+  "authoring": "Blender direct Python, isolated candidate; no native source mutation",
+  "geometry": "retained PILOT 3 reconstructed crew-cab curved mesh and REPAIRED 3 detailed archived chassis; no UV cube; existing mirrors/wheels retained",
+  "source_frame_interval": [
+    85,
+    217
+  ],
+  "frames": 72,
+  "fps": 12,
+  "duration_s": 6,
+  "dimensions": [
+    960,
+    909
+  ],
+  "fixed_camera": "desktop",
+  "ROI": [
+    0.5026819949150085,
+    0.5004279260635376,
+    0.7752962465286255,
+    0.872302209854126
+  ],
+  "full_render_resolution": [
+    3522,
+    2446
+  ],
+  "tractor_heading_change_deg": 89.99999567428901,
+  "trailer_heading_change_deg": 100.03637126335389,
+  "background": "one static seeded gray asphalt-style RGB image reused every frame",
+  "visibility": "all city objects and other cars hidden; full green vehicle isolated",
+  "passes": [
+    "RGBA source color",
+    "mapped world normal multilayer EXR",
+    "object alpha PNG",
+    "mapped world normal PNG"
+  ],
+  "driver_count": "two painted faces visually confirmed in structural-still/window detail at source120; rear heading naturally hides windshield",
+  "limitations": [
+    "Structural guide, not final approved painted style.",
+    "City hidden for turn physics isolation; does not establish map collision clearance.",
+    "Archived projected texture surface detail depends on heading.",
+    "Truck fixed union crop has smaller cabin detail; details/*.png are inspection crops, not animation camera."
+  ],
+  "verification": {
+    "video": "ffprobe:72frames,12fps,6.000s,960x910 padded from960x909",
+    "alpha": "72nonempty frames; none touches crop edge",
+    "visual": "9-frame contact, structural-still, enlarged windshield, normal-preview inspected"
+  }
+}

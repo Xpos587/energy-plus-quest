@@ -1,0 +1,30 @@
+{
+  "id": "F0137",
+  "decision": "accepted_for_runtime",
+  "processingMode": "selective_flowers",
+  "freshAssemblyReview": "General P2-run-001 after explicit quota scope defer inspected whole and boat/broken-dishes focal; scenario, counts and geometry preserved",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "fullNativeReconstruction": false,
+  "master": ".tmp-work/flowers-all-2026-10-20/F0137/pass2-master.png",
+  "inspection": [
+    "whole scene counts and failure preserved",
+    "100% boat/broken dishes",
+    "100% source-protected rails and feathered wall transition"
+  ],
+  "evidence": [
+    "F0137-final-whole.png",
+    "F0137-final-focal100.png",
+    "F0137-final-seam100.png"
+  ],
+  "retainedP1": [
+    "p1-00",
+    "p1-01",
+    "p1-02",
+    "p1-11",
+    "p1-20",
+    "p1-22"
+  ],
+  "limitations": "Partial detail reconstruction3acceptedP1+6retained;1acceptedP2. Original background/rails protected, mask feathered6sourcepx to avoid hard tonal transition. No fullscene native8192 claim.",
+  "scopeDecision": "docs/plans/2026-10-22-throughput-reset.md; unattempted formal extras preserved in job.deferredRois"
+}

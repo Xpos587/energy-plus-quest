@@ -1,0 +1,138 @@
+[
+  {
+    "name": "phone",
+    "stage": 0,
+    "text": "Раздвиньте пальцы, чтобы приблизить",
+    "color": "rgb(22, 75, 112)",
+    "background": "rgb(255, 255, 255)",
+    "font": "16px",
+    "animation": "_hintAttention_qub8v_1",
+    "iterations": "2",
+    "overflow": false,
+    "bounds": {
+      "x": 31.5,
+      "right": 358.5,
+      "y": 374.828125,
+      "bottom": 419.21875
+    }
+  },
+  {
+    "name": "phone",
+    "stage": 1,
+    "text": "Перетащите карту или нажмите на фуру",
+    "color": "rgb(22, 75, 112)",
+    "background": "rgb(255, 255, 255)",
+    "font": "16px",
+    "animation": "_hintAttention_qub8v_1",
+    "iterations": "2",
+    "overflow": false,
+    "bounds": {
+      "x": 27.5,
+      "right": 362.5,
+      "y": 374.828125,
+      "bottom": 419.21875
+    }
+  },
+  {
+    "name": "small",
+    "stage": 0,
+    "text": "Раздвиньте пальцы, чтобы приблизить",
+    "color": "rgb(22, 75, 112)",
+    "background": "rgb(255, 255, 255)",
+    "font": "16px",
+    "animation": "_hintAttention_qub8v_1",
+    "iterations": "2",
+    "overflow": false,
+    "bounds": {
+      "x": 16,
+      "right": 304,
+      "y": 205.21875,
+      "bottom": 272
+    }
+  },
+  {
+    "name": "small",
+    "stage": 1,
+    "text": "Перетащите карту или нажмите на фуру",
+    "color": "rgb(22, 75, 112)",
+    "background": "rgb(255, 255, 255)",
+    "font": "16px",
+    "animation": "_hintAttention_qub8v_1",
+    "iterations": "2",
+    "overflow": false,
+    "bounds": {
+      "x": 16,
+      "right": 304,
+      "y": 205.21875,
+      "bottom": 272
+    }
+  },
+  {
+    "name": "desktop",
+    "stage": 0,
+    "text": "Прокрутите колёсико, чтобы приблизить",
+    "color": "rgb(22, 75, 112)",
+    "background": "rgb(255, 255, 255)",
+    "font": "18px",
+    "animation": "_hintAttention_qub8v_1",
+    "iterations": "2",
+    "overflow": false,
+    "bounds": {
+      "x": 528.5,
+      "right": 911.5,
+      "y": 652.8125,
+      "bottom": 704
+    }
+  },
+  {
+    "name": "desktop",
+    "stage": 1,
+    "text": "Перетащите карту или нажмите на фуру",
+    "color": "rgb(22, 75, 112)",
+    "background": "rgb(255, 255, 255)",
+    "font": "18px",
+    "animation": "_hintAttention_qub8v_1",
+    "iterations": "2",
+    "overflow": false,
+    "bounds": {
+      "x": 532.5,
+      "right": 907.5,
+      "y": 652.8125,
+      "bottom": 704
+    }
+  },
+  {
+    "name": "reduced",
+    "stage": 0,
+    "text": "Раздвиньте пальцы, чтобы приблизить",
+    "color": "rgb(22, 75, 112)",
+    "background": "rgb(255, 255, 255)",
+    "font": "16px",
+    "animation": "none",
+    "iterations": "1",
+    "overflow": false,
+    "bounds": {
+      "x": 31.5,
+      "right": 358.5,
+      "y": 374.828125,
+      "bottom": 419.21875
+    }
+  },
+  {
+    "name": "reduced",
+    "stage": 1,
+    "text": "Перетащите карту или нажмите на фуру",
+    "color": "rgb(22, 75, 112)",
+    "background": "rgb(255, 255, 255)",
+    "font": "16px",
+    "animation": "none",
+    "iterations": "1",
+    "overflow": false,
+    "bounds": {
+      "x": 27.5,
+      "right": 362.5,
+      "y": 374.828125,
+      "bottom": 419.21875
+    }
+  }
+]

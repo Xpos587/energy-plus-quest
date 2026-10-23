@@ -1,0 +1,427 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "intro": {
+      "art": {
+        "y": 56,
+        "height": 564
+      },
+      "nav": {
+        "y": 824,
+        "height": 56
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "564px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "564px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "900px",
+          "rows": "56px 564px 280px",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_dialogueActions_x78gl_365",
+          "height": "56px",
+          "rows": "56px",
+          "maxHeight": "none",
+          "minHeight": "56px"
+        }
+      ]
+    },
+    "choice": {
+      "art": {
+        "y": 56,
+        "height": 564
+      },
+      "nav": {
+        "y": 824,
+        "height": 56
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "564px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "564px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "900px",
+          "rows": "56px 564px 280px",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_questionNavigation_x78gl_193",
+          "height": "56px",
+          "rows": "56px",
+          "maxHeight": "none",
+          "minHeight": "56px"
+        }
+      ]
+    },
+    "stable": true
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "intro": {
+      "art": {
+        "y": 56,
+        "height": 744
+      },
+      "nav": {
+        "y": 1004,
+        "height": 56
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "744px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "744px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "1080px",
+          "rows": "56px 744px 280px",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_dialogueActions_x78gl_365",
+          "height": "56px",
+          "rows": "56px",
+          "maxHeight": "none",
+          "minHeight": "56px"
+        }
+      ]
+    },
+    "choice": {
+      "art": {
+        "y": 56,
+        "height": 744
+      },
+      "nav": {
+        "y": 1021.1875,
+        "height": 56
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "744px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "744px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "1080px",
+          "rows": "56px 744px 280px",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_questionNavigation_x78gl_193",
+          "height": "56px",
+          "rows": "56px",
+          "maxHeight": "none",
+          "minHeight": "56px"
+        }
+      ]
+    },
+    "stable": false
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "intro": {
+      "art": {
+        "y": 48,
+        "height": 327.75
+      },
+      "nav": {
+        "y": 772,
+        "height": 52
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "327.75px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "327.75px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "844px",
+          "rows": "48px 327.75px 468.25px",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_dialogueActions_x78gl_365",
+          "height": "52px",
+          "rows": "52px",
+          "maxHeight": "none",
+          "minHeight": "52px"
+        }
+      ]
+    },
+    "choice": {
+      "art": {
+        "y": 48,
+        "height": 327.75
+      },
+      "nav": {
+        "y": 772,
+        "height": 52
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "327.75px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "327.75px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "844px",
+          "rows": "48px 327.75px 468.25px",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_questionNavigation_x78gl_193",
+          "height": "52px",
+          "rows": "52px",
+          "maxHeight": "none",
+          "minHeight": "52px"
+        }
+      ]
+    },
+    "stable": true
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "intro": {
+      "art": {
+        "y": 48,
+        "height": 689.109375
+      },
+      "nav": {
+        "y": 1094.40625,
+        "height": 65.59375
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "689.109px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "689.109px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "1180px",
+          "rows": "48px 689.109px 442.891px",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_dialogueActions_x78gl_365",
+          "height": "65.5938px",
+          "rows": "65.5938px",
+          "maxHeight": "none",
+          "minHeight": "65.6px"
+        }
+      ]
+    },
+    "choice": {
+      "art": {
+        "y": 48,
+        "height": 689.109375
+      },
+      "nav": {
+        "y": 1094.40625,
+        "height": 65.59375
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "689.109px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "689.109px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "1180px",
+          "rows": "48px 689.109px 442.891px",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_questionNavigation_x78gl_193",
+          "height": "65.5938px",
+          "rows": "65.5938px",
+          "maxHeight": "none",
+          "minHeight": "65.6px"
+        }
+      ]
+    },
+    "stable": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "intro": {
+      "art": {
+        "y": 48,
+        "height": 240
+      },
+      "nav": {
+        "y": 640,
+        "height": 48
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "240px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "240px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "708px",
+          "rows": "48px 240px 420px",
+          "maxHeight": "none",
+          "minHeight": "708px"
+        },
+        {
+          "class": "_dialogueActions_x78gl_365",
+          "height": "48px",
+          "rows": "48px",
+          "maxHeight": "none",
+          "minHeight": "48px"
+        }
+      ]
+    },
+    "choice": {
+      "art": {
+        "y": 48,
+        "height": 220
+      },
+      "nav": {
+        "y": 630.375,
+        "height": 48
+      },
+      "diagnostic": [
+        {
+          "class": "_stage_drsj5_1",
+          "height": "220px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_carrierMap_x78gl_90",
+          "height": "220px",
+          "rows": "none",
+          "maxHeight": "none",
+          "minHeight": "0px"
+        },
+        {
+          "class": "_frame_x78gl_21",
+          "height": "698.375px",
+          "rows": "48px 220px 430.375px",
+          "maxHeight": "none",
+          "minHeight": "568px"
+        },
+        {
+          "class": "_questionNavigation_x78gl_193",
+          "height": "48px",
+          "rows": "48px",
+          "maxHeight": "none",
+          "minHeight": "48px"
+        }
+      ]
+    },
+    "stable": false
+  }
+]

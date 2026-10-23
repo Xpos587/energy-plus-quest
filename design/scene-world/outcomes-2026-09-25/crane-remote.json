@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:08:11.503722Z",
+    "display_name": "Nano Banana Pro",
+    "id": "b953d3ca-2f1a-425b-8a1b-b4789a27937f",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090811_b953d3ca-2f1a-425b-8a1b-b4789a27937f_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "7f596d02-a416-4f64-baa4-497a21919126",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/7f596d02-a416-4f64-baa4-497a21919126_resize.jpg"
+        }
+      ],
+      "prompt": "Create ONE polished narrative result illustration for a Russian logistics game, wide 3:2, full bleed, no panel border. Attached picture defines the EXACT existing game visual style, materials and environment. Refined hand painted 2D editorial illustration, detailed but uncluttered, warm cream architecture, neutral light gray ground, pale light blue glass, thin soft gray outlines NO black outlines, soft dimensional shading, navy blue and vivid orange work uniforms and blue machinery. NOT 3D render, NOT flat vector infographic. Show the specified consequence as the dominant readable subject, with medium close framing readable on a small phone. Human and machine proportions realistic, no giant packages or people relative to machinery. No text, no captions, no speech bubbles, no numbers, no arrows, no UI, no watermarks. Gift is a modest closed cardboard shipping parcel; it must not display a particular sock or camera. Composition depicts a single coherent physical scene, not collage. View from inside comfortable port remote control office toward river through big pale blue glazed window. Ivan brown hair clean shaven orange navy PPE seated comfortably at ergonomic chair, operating two joysticks with screens showing simple crane camera feeds no text. Outside window tall blue crane and a large pipe-loaded barge departing with a modest gift carton safely on deck. Ivan pleased, no tiring climb needed. Frame both operator and successful barge dispatch clearly.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090811_b953d3ca-2f1a-425b-8a1b-b4789a27937f.png",
+    "status": "completed"
+  }
+]

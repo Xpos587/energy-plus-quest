@@ -1,0 +1,36 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/controlled-motion-2026-10-04/controlled-straight-start.blend",
+  "engine": "BLENDER_EEVEE",
+  "samples": 8,
+  "fps": 24,
+  "resolution": [
+    720,
+    500
+  ],
+  "native_frames": 1152,
+  "duration_seconds": 48,
+  "reused_preview_frames": [
+    1,
+    120
+  ],
+  "rendered_frames": [
+    121,
+    1152
+  ],
+  "threads": 4,
+  "camera": {
+    "name": "desktop",
+    "location": [
+      1.7741494178771973,
+      -84.67687225341797,
+      131.3314208984375
+    ],
+    "rotation": [
+      0.574134349822998,
+      -1.8925381262135943e-09,
+      0.07982999086380005
+    ],
+    "ortho_scale": 111.80000305175781
+  },
+  "source_scene_modified": false
+}

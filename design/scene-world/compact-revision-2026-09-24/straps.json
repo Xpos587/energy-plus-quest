@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-24T09:43:06.648373Z",
+    "display_name": "Nano Banana Pro",
+    "id": "6f18d63a-2034-4700-b4e2-e62da2b43d98",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_094306_6f18d63a-2034-4700-b4e2-e62da2b43d98_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "edbe0282-f233-40e9-bb5c-8f4c0aa8e3cb",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/edbe0282-f233-40e9-bb5c-8f4c0aa8e3cb_resize.jpg"
+        }
+      ],
+      "prompt": "Keep this image exactly unchanged except red straps. Remove ALL long red straps running along entire trailer length and red anchors on rear doors. Left heavy crate area must have NO red straps above it. Add only TWO short parallel horizontal red straps immediately above the crockery box with cloth, from image x33 percent to x45 percent. Straps span ONLY the width of that box, not trailer. Nothing red above heavy crates or above three central cartons. Keep TWO existing short red straps on RIGHT end wall from x73 to81 percent. No other edits. No structures or shelves. Preserve empty niche behind three cartons.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_094306_6f18d63a-2034-4700-b4e2-e62da2b43d98.png",
+    "status": "completed"
+  }
+]

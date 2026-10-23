@@ -1,0 +1,28 @@
+{
+  "savedAnchorProjectionChecks": 8,
+  "importedMeshChecks": 10,
+  "packedPropTextures": 9,
+  "proceduralPalletJackAbsent": true,
+  "unchangedCraneLastmileObjectAndCameraChecks": 669,
+  "unpackedExternalAssets": [],
+  "sourceSHA256": "15de029833dcaf5beb806e2df2733763d97199c40f8955f240d93118dc6217bd",
+  "originalObjectGeometryTransformParentMaterialChecks": 1765,
+  "reusedMeshChecks": 176,
+  "independentMeshDatablocks": true,
+  "fifthWheelKingpinDistance": 0.0,
+  "wheelGroundClearances": [
+    0.017499963641166683,
+    0.017499963641166683,
+    0.017499963641166683,
+    0.017499963641166683,
+    0.017499963641166683,
+    0.017499963641166683,
+    0.017499963641166683,
+    0.017499963641166683,
+    0.017499963641166683,
+    0.017499963641166683
+  ],
+  "lowestTreadGroundClearance": 0.012249986529350276,
+  "sourceUnchanged": true,
+  "cargoBoundsChecks": 22
+}

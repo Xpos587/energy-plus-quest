@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-10-04T16:07:08.660745Z",
+    "display_name": "Seedance 1.5 Pro",
+    "id": "f3df47de-be07-4059-ba99-6d78c052fb89",
+    "job_type": "seedance1_5",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "4:3",
+      "duration": 4,
+      "fixed_lens": false,
+      "generate_audio": false,
+      "height": 480,
+      "medias": [
+        {
+          "data": {
+            "id": "84098802-c639-4520-82b4-0ca1272aa21f",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/84098802-c639-4520-82b4-0ca1272aa21f.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "054aa945-4b2d-4936-86dd-52396bc2606c",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/054aa945-4b2d-4936-86dd-52396bc2606c.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "prompt": "Locked camera, stationary city. Exactly ONE green tractor with ONE white semitrailer. Animate continuous forward driving between the supplied poses. Tractor steers ahead on the road, trailer pivots freely at connected fifth wheel and follows behind, rear wheels trace an inside curve. Preserve rigid cab and rigid trailer as two distinct connected bodies with changing angle, never rotate the whole rig like a flat picture. No reversing, no sliding, no duplicates or extra cars. No second turn. No camera motion. Match provided ending exactly. Smooth constant slow forward motion throughout, keep all wheels on asphalt.",
+      "resolution": "480p",
+      "seed": 882130,
+      "width": 640
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_160708_f3df47de-be07-4059-ba99-6d78c052fb89.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_160708_f3df47de-be07-4059-ba99-6d78c052fb89_thumbnail.webp"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "source": "F0100-original.png",
+  "roiBox": [
+    40,
+    0,
+    1140,
+    390
+  ],
+  "preserveCabinBox": [
+    614,
+    244,
+    762,
+    327
+  ],
+  "preserveRiggingFromY": 344,
+  "strategy": "Generate one common aircraft crop; deterministic protected transfer only if geometry review allows; preserve original gifts/cabins/rigging/background for each variant."
+}

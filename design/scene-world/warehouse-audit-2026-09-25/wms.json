@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:36:24.705873Z",
+    "display_name": "Nano Banana Pro",
+    "id": "d6b8267c-28d6-4a34-ad1b-fdd21856dd1e",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_093624_d6b8267c-28d6-4a34-ad1b-fdd21856dd1e_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "1ae6c92a-1c8f-4e9e-8635-94376f39f7f8",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/1ae6c92a-1c8f-4e9e-8635-94376f39f7f8.webp"
+        }
+      ],
+      "prompt": "Preserve the refined existing warm 2D illustrated game style exactly: warm cream walls, light gray floor, pale blue glass, soft gray contours, navy orange PPE, soft shadows. No new UI or floating labels. Realistic scale. Make a tiny lettering correction only. The large right-hand rack beside dispatch currently has А on left plate and Б on right plate. Swap them: Б on its LEFT plate and А on its RIGHT plate, closest to dispatch. The farther middle rack currently Л left Н right must become Н left Л right. This makes alphabetical progression А Б Л Н away from right dispatch. Keep worker, scanner, parcel, pallet mover, screen, lighting, framing, all geometry unchanged.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_093624_d6b8267c-28d6-4a34-ad1b-fdd21856dd1e.png",
+    "status": "completed"
+  }
+]

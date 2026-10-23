@@ -1,0 +1,16 @@
+{
+  "status": "rendering",
+  "last_checked_frame": 1152,
+  "completed_frame_count": 1152,
+  "newly_rendered": 1150,
+  "reused_exact_stills": [
+    1,
+    769
+  ],
+  "elapsed_seconds": 6852.417,
+  "root_pose_mismatches": [],
+  "driver_channel_mismatches": [],
+  "failures": [],
+  "candidate_only": true,
+  "style_accepted": false
+}

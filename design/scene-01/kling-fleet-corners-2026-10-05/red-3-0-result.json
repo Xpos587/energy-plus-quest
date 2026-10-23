@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T14:46:15.691204Z",
+    "display_name": "Kling v3.0",
+    "id": "b2fb21a0-25d9-4aaa-886d-f371b8f67678",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "34741166-d928-4595-a7a5-3aad440f091a",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/34741166-d928-4595-a7a5-3aad440f091a.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "87eeb47c-7cb3-4989-9dab-225df568ab79",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/87eeb47c-7cb3-4989-9dab-225df568ab79.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera and fixed clean bright 2D illustrated city. Exactly ONE RED tractor connected to ONE rigid cream tarp semitrailer. Same cab and attached trailer as supplied keys, preserve scale, structural identity, wheels, detailed grille and mirrors. EXACTLY ONE adult driver, empty passenger seat; no second human, no head duplication. ONLY forward motion, CAB ALWAYS LEADING. Single connected articulated rig, fifth-wheel coupling stays attached; trailer rear axle follows inner curve. No swapping ends, no reverse, no U-turn, no duplicates, no morphing, no disappearance, no roof crossing. Entire rig stays on BLUE ASPHALT inside visible city crop, NEVER enters white padding. City/background/camera/lighting totally locked and unchanged; bright cream/apricot buildings, powder-blue roads, soft colored contours and contact shadows, no black outlines or grey veil. Five second continuous SILENT shot. Required exact first and last supplied poses. Start facing RIGHT. Drive forward east along the starting lower horizontal street, make ONE broad left turn into starting eastern vertical blue street, proceed UP. Finish facing UP at exact supplied end location, smoothly completing this route quarter. Cab leads, no reversing.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_144615_b2fb21a0-25d9-4aaa-886d-f371b8f67678.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_144615_b2fb21a0-25d9-4aaa-886d-f371b8f67678_thumbnail.webp"
+  }
+]

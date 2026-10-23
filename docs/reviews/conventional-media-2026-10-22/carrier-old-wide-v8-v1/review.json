@@ -1,0 +1,20 @@
+{
+  "decision": "accepted_for_runtime",
+  "processingMode": "conventional_interpolation",
+  "detailRecovery": false,
+  "source": "public/scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
+  "sourceDimensions": [
+    1983,
+    793
+  ],
+  "runtimeDimensions": [
+    4093,
+    1637
+  ],
+  "measurementReceipt": "docs/reviews/media-coverage-2026-10-22/receipt.md",
+  "owner": "carrier",
+  "ownerReview": "Owner visually accepted 1920 before/preview pair: faithful geometry/content, ordinary interpolation; no AI/detail claim.",
+  "generalReview": "Viewed 1920 DPR2 preview: composition and objects preserved, no reconstructed detail claim.",
+  "runtimeVerification": "docs/reviews/conventional-media-2026-10-22/carrier-old-wide-v8-v1/after/runtime.json",
+  "originalPreserved": true
+}

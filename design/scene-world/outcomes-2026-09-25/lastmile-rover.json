@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:08:51.945165Z",
+    "display_name": "Nano Banana Pro",
+    "id": "d7c04c90-f88d-45c2-984f-5896a9aaf611",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090851_d7c04c90-f88d-45c2-984f-5896a9aaf611_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "83f4d557-a6c2-477c-9313-78ea673109a5",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/83f4d557-a6c2-477c-9313-78ea673109a5_resize.jpg"
+        }
+      ],
+      "prompt": "Create ONE polished narrative result illustration for a Russian logistics game, wide 3:2, full bleed, no panel border. Attached picture defines the EXACT existing game visual style, materials and environment. Refined hand painted 2D editorial illustration, detailed but uncluttered, warm cream architecture, neutral light gray ground, pale light blue glass, thin soft gray outlines NO black outlines, soft dimensional shading, navy blue and vivid orange work uniforms and blue machinery. NOT 3D render, NOT flat vector infographic. Show the specified consequence as the dominant readable subject, with medium close framing readable on a small phone. Human and machine proportions realistic, no giant packages or people relative to machinery. No text, no captions, no speech bubbles, no numbers, no arrows, no UI, no watermarks. Gift is a modest closed cardboard shipping parcel; it must not display a particular sock or camera. Composition depicts a single coherent physical scene, not collage. Successful amphibious delivery: a modern enclosed blue snow-and-swamp vehicle with FOUR huge low-pressure balloon tires floating safely across a narrow northern river. Small thin plates of first ice pushed aside, gentle wake. Marsh reeds on near bank, firmer opposite bank ahead. Modest sealed gift carton secured inside visible through cargo window. Vehicle remains upright, no sinking. Focus close enough to understand tires and flotation.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090851_d7c04c90-f88d-45c2-984f-5896a9aaf611.png",
+    "status": "completed"
+  }
+]

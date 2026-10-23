@@ -1,0 +1,16 @@
+{
+  "name": "yellow-3-0",
+  "crop_mode": "full",
+  "start_input": "yellow-key-3-padded.png",
+  "end_input": "yellow-key-0-padded.png",
+  "status": "downloaded",
+  "prompt_file": "yellow-3-0-prompt.txt",
+  "returncode": 0,
+  "measured_job_elapsed_seconds": 123.104,
+  "job_id": "2de016ff-0389-400e-bfa9-f3ac8f9ed3be",
+  "provider_status": "completed",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_144941_2de016ff-0389-400e-bfa9-f3ac8f9ed3be.mp4",
+  "media_file": "yellow-3-0.mp4",
+  "actual_duration_seconds": 5.041667,
+  "contact_sheet": "yellow-3-0-quarter-second-contact.png"
+}

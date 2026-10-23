@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {chromium} from '@playwright/test';
+const dir=path.dirname(new URL(import.meta.url).pathname);
+const uri=async name=>'data:image/png;base64,'+(await fs.readFile(path.resolve(dir,name))).toString('base64');
+const rows=[['Вертолёт · Перелёт','R3','helicopter-flight-result-v3.png','helicopter-flight-result-v1.png','R1'],['Вертолёт · Доставка к Альве','R3','helicopter-ground-boat-result-v3.png','helicopter-ground-boat-result-v1.png','R1'],['Трубовоз · Препятствие','R2','pipecarrier-boat-result-v2.png','pipecarrier-boat-result-v1.png','R1']];
+const page=(title,label,body)=>`<section><header><h1>${title}</h1><span>${label} · Пилот</span></header><main>${body}</main><footer><span>Сцена 5 · Последняя миля</span><span>1672 × 941 px · 16:9</span></footer></section>`;
+let html=`<!doctype html><meta charset="utf-8"><style>@page{size:A4 landscape;margin:0}*{box-sizing:border-box}body{margin:0;font-family:Arial;color:#173c55}section{width:297mm;height:210mm;padding:9mm;break-after:page;display:flex;flex-direction:column}header,footer{display:flex;justify-content:space-between}h1{font-size:21px;margin:0}header span,footer{font-size:11px}main{flex:1;display:flex;align-items:center;justify-content:center;gap:5mm;min-height:0}.panel{flex:1;min-width:0;text-align:center}img{max-width:100%;max-height:173mm}h2{font-size:15px}</style>`;
+for(const [title,ver,after] of rows)html+=page(title,ver,`<img src="${await uri(after)}">`);
+for(const [title,ver,after,before,old] of rows)html+=page(title+' · До / После',old+' → '+ver,`<div class="panel"><h2>До · ${old}</h2><img src="${await uri(before)}"></div><div class="panel"><h2>После · ${ver}</h2><img src="${await uri(after)}"></div>`);
+html+=page('Эталон','Стиль',`<img src="${await uri('../style-audit-2026-09-28/reference.png')}">`);
+const browser=await chromium.launch({headless:true});const p=await browser.newPage();await p.setContent(html);await p.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()));});await p.pdf({path:path.join(dir,'energy-plus-results-batch01.pdf'),printBackground:true,preferCSSPageSize:true});await browser.close();

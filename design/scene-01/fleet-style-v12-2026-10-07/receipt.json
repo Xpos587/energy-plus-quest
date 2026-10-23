@@ -1,0 +1,47 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-video-v11-2026-10-07/fleet-v11-video.blend",
+  "pipeline": "Standard / None / exposure 0 / gamma 1; brightness corrected in material pigment and canvas, no global exposure change",
+  "root_transform_checks": [
+    1,
+    385,
+    769,
+    1152
+  ],
+  "crew": "existing windshield materials untouched",
+  "changes": [
+    "All four trailers painted to match cab colors; directionally shaded red, blue, green and yellow",
+    "Only old red/yellow: faded stitched repair patches, two broad worn regions, denser compact smoke",
+    "Locally stronger red/blue/golden yellow/moderate green cab pigments; crew and windows preserved",
+    "Broad local lower sill abrasion only old trucks",
+    "Mounted fridge, seated yellow hatch, attached exhaust stacks, structural catwalk supports"
+  ],
+  "camera_preserved": true,
+  "routes_and_coupling_preserved": true,
+  "render_dimensions": [
+    1920,
+    1334
+  ],
+  "authoring_order": [
+    "build_v12.py",
+    "refine_v12.py",
+    "fix_attachments.py",
+    "mount_hardware.py",
+    "palette_final.py",
+    "render_final.py",
+    "package_v12.py",
+    "add_exhaust_mounts.py",
+    "paint_entire_trailers.py",
+    "render_turn_color.py",
+    "render_turn_shadow.py",
+    "composite_turn_video.py",
+    "render_attachment_sideproof.py",
+    "render_final.py",
+    "package_delivery_v12.py"
+  ],
+  "attachment_evidence": "attachment-fix.json",
+  "animation_evidence": "verification.json",
+  "visual_review": "Fresh review required; this receipt confirms execution and source invariants, not artistic approval",
+  "latest_direction": "2026-10-07 user relayed Grisha feedback: entire trailer roof, sides and front match cab red/blue/green/yellow; supersedes previous cream/white palette.",
+  "video": "fleet-v12-turn-check-5s.mp4",
+  "video_scope": "Проверка поворота 5 с; source frames301-420 at24fps, not full loop"
+}

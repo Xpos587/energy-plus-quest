@@ -1,0 +1,80 @@
+{
+  "records": [
+    {
+      "truck": 1,
+      "family": "old-cab",
+      "dimensions": [
+        2.2221209999999996,
+        1.71666,
+        2.19351
+      ],
+      "mapping_scale": [
+        0.7417289992418571,
+        0.7595840740017514,
+        0.8594295495141964
+      ],
+      "native_front_parts_hidden": true,
+      "front_wheels": "archived mesh only",
+      "driver_source": "old painted single driver"
+    },
+    {
+      "truck": 2,
+      "family": "near-cab",
+      "dimensions": [
+        2.2221209999999996,
+        1.71666,
+        2.19351
+      ],
+      "mapping_scale": [
+        0.8276253363555051,
+        0.7595840740017514,
+        0.8064375080848695
+      ],
+      "native_front_parts_hidden": true,
+      "front_wheels": "archived mesh only",
+      "driver_source": "crew painted pair; near requires one-driver opaque overlay"
+    },
+    {
+      "truck": 3,
+      "family": "crew-cab",
+      "dimensions": [
+        2.2221209999999996,
+        1.71666,
+        2.317491
+      ],
+      "mapping_scale": [
+        0.8276253363555051,
+        0.7595840740017514,
+        0.7673811448733102
+      ],
+      "native_front_parts_hidden": true,
+      "front_wheels": "archived mesh only",
+      "driver_source": "crew painted pair; near requires one-driver opaque overlay"
+    },
+    {
+      "truck": 4,
+      "family": "old-cab",
+      "dimensions": [
+        2.2221209999999996,
+        1.71666,
+        1.7834189999999999
+      ],
+      "mapping_scale": [
+        0.7417289992418571,
+        0.7595840740017514,
+        0.6987535902571944
+      ],
+      "native_front_parts_hidden": true,
+      "front_wheels": "archived mesh only",
+      "driver_source": "old painted single driver"
+    }
+  ],
+  "camera_and_routes": "unchanged",
+  "textures": "archived source textures packed; no raster modification",
+  "tint": "HSV chroma selection with dark/neutral pixel exclusion",
+  "limitations": [
+    "Baked texture linework and shading remain present, although renderer outlines and cast shadows are disabled.",
+    "85 percent footprint changes cab-to-chassis alignment; first three frames only, not whole-loop verified.",
+    "Painted single/pair count depends on archived camera-projected views; green count must be inspected at headings with windshield visible."
+  ]
+}

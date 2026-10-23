@@ -1,0 +1,94 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/whole-map-v06-2026-10-06/fleet/fleet-textured-v07.blend",
+  "frames_verified": 1152,
+  "root_count": 8,
+  "max_root_matrix_delta": 0.0,
+  "actions": {
+    "truck-1-tractor": "truck-1-tractorAction",
+    "truck-1-trailer": "truck-1-trailerAction",
+    "truck-2-tractor": "truck-2-tractorAction",
+    "truck-2-trailer": "truck-2-trailerAction",
+    "truck-3-tractor": "truck-3-tractorAction",
+    "truck-3-trailer": "truck-3-trailerAction",
+    "truck-4-tractor": "truck-4-tractorAction",
+    "truck-4-trailer": "truck-4-trailerAction"
+  },
+  "camera": {
+    "name": "desktop",
+    "matrix": [
+      [
+        0.9968152642250061,
+        -0.06695909798145294,
+        0.04331028088927269,
+        1.7741494178771973
+      ],
+      [
+        0.07974522560834885,
+        0.8369886875152588,
+        -0.5413784980773926,
+        -84.67687225341797
+      ],
+      [
+        1.8925381262135943e-09,
+        0.5431081652641296,
+        0.8396627306938171,
+        131.3314208984375
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "scale": 111.80000305175781
+  },
+  "shape_records": [
+    {
+      "truck": 1,
+      "upper_roof_vertices_raised": 0,
+      "raise_model_z": 0
+    },
+    {
+      "truck": 2,
+      "upper_roof_vertices_raised": 0,
+      "raise_model_z": 0
+    },
+    {
+      "truck": 3,
+      "upper_roof_vertices_raised": 0,
+      "raise_model_z": 0
+    },
+    {
+      "truck": 4,
+      "upper_roof_vertices_raised": 4018,
+      "raise_model_z": 0.065
+    }
+  ],
+  "shape_changes": [
+    "Original detailed tractor retained. Yellow older roof raised .065 model units only above .33, red remains lower.",
+    "Blue front refrigeration unit with recessed six-louver face and small control panel.",
+    "Red canvas 10 broad folds per side + 3 subdued worn patches; yellow 10 folds + 1 patch per side.",
+    "Local rear chassis catwalk fills skeletal deck; rear hitch and root transforms unchanged.",
+    "Yellow discrete roof hatch and lowered original exhaust. Green high sleeper/2-driver windshield unchanged.",
+    "Restrained 3-lobe pale exhaust cue physically parented to original red/yellow exhaust tip; transparent material opacity30%, no black cloud."
+  ],
+  "material_changes": [
+    "Neutral cab ink .016/.022/.026 replaced .115/.18/.22, blend .78 retains only 22 percent original atlas detail.",
+    "Cab pigment updated warm red, blue, green, ochre; diffuse/emission mix .46, no metallic specular.",
+    "Trailers/hardware use diffuse-emission with 38 percent fill, pale metal and charcoal rubber; old canvas warm beige, modern ivory.",
+    "Area lights minimum size18 for soft shadows."
+  ],
+  "driver_images": "Unmodified packed source; parent owns texture finishing",
+  "contact_tyres": "No wheel mesh vertices changed; detailed cab contact/rear zones unchanged.",
+  "hitch": "No source objects or rig roots moved; catwalk is new child geometry",
+  "render_frames": [
+    1,
+    385,
+    769
+  ],
+  "resolution": [
+    1920,
+    1334
+  ]
+}

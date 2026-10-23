@@ -1,0 +1,74 @@
+{
+  "status": "candidate inputs, not accepted; DOWN originals require repair",
+  "tool": "built-in image_gen",
+  "identityRefs": {
+    "red": "public/scene-art/carrier-results-2026-10-02/old-wide-v6.webp",
+    "yellow": "public/scene-art/carrier-results-2026-10-02/old4-wide-v6.webp"
+  },
+  "keys": [
+    {
+      "color": "red",
+      "key": 0,
+      "direction": "UP",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-e9affbe4-2c81-4241-a204-aff9d8f29928.png",
+      "target": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-keys-2026-10-05/red-key-0.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET, a completed cardinal waypoint city map. Image 2 is ONLY the truck identity reference, never its composition. Make one edited copy of Image 1. Replace ONLY its single green truck with the red truck from Image 2, adapted to the exact existing aerial view. Truck identity: mid-age red-orange cab-over tractor: tall roof fairing, rounded cab corners, single broad black grille with horizontal slats, swept side door; cream curtain-side trailer with soft fabric folds and blue lower fastening straps. Maintain EXACT target map camera, background, framing, every building/tree/street/crosswalk, dimensions and daylight colors. The truck must occupy the EXACT SAME footprint, center, orientation, trailer length, cab length, width and wheel contact positions as the target truck. Cardinal direction UP (cab above trailer). Do not enlarge or move it. Keep target soft colored outlines, bright clean 2D illustrated style and soft shadows; no black cartoon outlines, sepia, acid exposure, photoreal or flat 3D toy look. Exactly ONE truck. Exactly ONE driver inside cab, in vehicle's left-hand driving seat, and empty passenger seat; never two heads, faces, silhouettes or human-colored shapes. If windshield is hidden in the overhead/back view, do not invent visible people. No officers, additional vehicles, text or additions. Return one full map image, not a crop or grid."
+    },
+    {
+      "color": "red",
+      "key": 1,
+      "direction": "LEFT",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-205cdeba-044e-4dfd-b106-f4268e46e50d.png",
+      "target": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-keys-2026-10-05/red-key-1.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET, a completed cardinal waypoint city map. Image 2 is ONLY the truck identity reference, never its composition. Make one edited copy of Image 1. Replace ONLY its single green truck with the red truck from Image 2, adapted to the exact existing aerial view. Truck identity: mid-age red-orange cab-over tractor: tall roof fairing, rounded cab corners, single broad black grille with horizontal slats, swept side door; cream curtain-side trailer with soft fabric folds and blue lower fastening straps. Maintain EXACT target map camera, background, framing, every building/tree/street/crosswalk, dimensions and daylight colors. The truck must occupy the EXACT SAME footprint, center, orientation, trailer length, cab length, width and wheel contact positions as the target truck. Cardinal direction LEFT (cab left of trailer). Do not enlarge or move it. Keep target soft colored outlines, bright clean 2D illustrated style and soft shadows; no black cartoon outlines, sepia, acid exposure, photoreal or flat 3D toy look. Exactly ONE truck. Exactly ONE driver inside cab, in vehicle's left-hand driving seat, and empty passenger seat; never two heads, faces, silhouettes or human-colored shapes. If windshield is hidden in the overhead/back view, do not invent visible people. No officers, additional vehicles, text or additions. Return one full map image, not a crop or grid."
+    },
+    {
+      "color": "red",
+      "key": 2,
+      "direction": "DOWN",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-81e7880f-8853-41fa-85ec-5b4e63d3a2d9.png",
+      "target": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-keys-2026-10-05/red-key-2.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET, a completed cardinal waypoint city map. Image 2 is ONLY the truck identity reference, never its composition. Make one edited copy of Image 1. Replace ONLY its single green truck with the red truck from Image 2, adapted to the exact existing aerial view. Truck identity: mid-age red-orange cab-over tractor: tall roof fairing, rounded cab corners, single broad black grille with horizontal slats, swept side door; cream curtain-side trailer with soft fabric folds and blue lower fastening straps. Maintain EXACT target map camera, background, framing, every building/tree/street/crosswalk, dimensions and daylight colors. The truck must occupy the EXACT SAME footprint, center, orientation, trailer length, cab length, width and wheel contact positions as the target truck. Cardinal direction DOWN (cab below trailer). Do not enlarge or move it. Keep target soft colored outlines, bright clean 2D illustrated style and soft shadows; no black cartoon outlines, sepia, acid exposure, photoreal or flat 3D toy look. Exactly ONE truck. Exactly ONE driver inside cab, in vehicle's left-hand driving seat, and empty passenger seat; never two heads, faces, silhouettes or human-colored shapes. If windshield is hidden in the overhead/back view, do not invent visible people. No officers, additional vehicles, text or additions. Return one full map image, not a crop or grid."
+    },
+    {
+      "color": "red",
+      "key": 3,
+      "direction": "RIGHT",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-78fe83f6-a0a8-408d-98f4-d635e5de201c.png",
+      "target": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-keys-2026-10-05/red-key-3.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET, a completed cardinal waypoint city map. Image 2 is ONLY the truck identity reference, never its composition. Make one edited copy of Image 1. Replace ONLY its single green truck with the red truck from Image 2, adapted to the exact existing aerial view. Truck identity: mid-age red-orange cab-over tractor: tall roof fairing, rounded cab corners, single broad black grille with horizontal slats, swept side door; cream curtain-side trailer with soft fabric folds and blue lower fastening straps. Maintain EXACT target map camera, background, framing, every building/tree/street/crosswalk, dimensions and daylight colors. The truck must occupy the EXACT SAME footprint, center, orientation, trailer length, cab length, width and wheel contact positions as the target truck. Cardinal direction RIGHT (cab right of trailer). Do not enlarge or move it. Keep target soft colored outlines, bright clean 2D illustrated style and soft shadows; no black cartoon outlines, sepia, acid exposure, photoreal or flat 3D toy look. Exactly ONE truck. Exactly ONE driver inside cab, in vehicle's left-hand driving seat, and empty passenger seat; never two heads, faces, silhouettes or human-colored shapes. If windshield is hidden in the overhead/back view, do not invent visible people. No officers, additional vehicles, text or additions. Return one full map image, not a crop or grid."
+    },
+    {
+      "color": "yellow",
+      "key": 0,
+      "direction": "UP",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-528b5d5d-13cc-483c-a22f-c3406f50d407.png",
+      "target": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-keys-2026-10-05/yellow-key-0.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET, a completed cardinal waypoint city map. Image 2 is ONLY the truck identity reference, never its composition. Make one edited copy of Image 1. Replace ONLY its single green truck with the yellow truck from Image 2, adapted to the exact existing aerial view. Truck identity: older yellow boxy cab-over tractor: angular flat front, broad upper black grille and separate lower black grille, rectangular lamps, flatter roof and subtle wear; cream ribbed curtain trailer with vertical fabric seams, gray metal corners and dark lower chassis. Maintain EXACT target map camera, background, framing, every building/tree/street/crosswalk, dimensions and daylight colors. The truck must occupy the EXACT SAME footprint, center, orientation, trailer length, cab length, width and wheel contact positions as the target truck. Cardinal direction UP (cab above trailer). Do not enlarge or move it. Keep target soft colored outlines, bright clean 2D illustrated style and soft shadows; no black cartoon outlines, sepia, acid exposure, photoreal or flat 3D toy look. Exactly ONE truck. Exactly ONE driver inside cab, in vehicle's left-hand driving seat, and empty passenger seat; never two heads, faces, silhouettes or human-colored shapes. If windshield is hidden in the overhead/back view, do not invent visible people. No officers, additional vehicles, text or additions. Return one full map image, not a crop or grid."
+    },
+    {
+      "color": "yellow",
+      "key": 1,
+      "direction": "LEFT",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-04bb0566-d2b5-4ac6-a427-2383d8c05191.png",
+      "target": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-keys-2026-10-05/yellow-key-1.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET, a completed cardinal waypoint city map. Image 2 is ONLY the truck identity reference, never its composition. Make one edited copy of Image 1. Replace ONLY its single green truck with the yellow truck from Image 2, adapted to the exact existing aerial view. Truck identity: older yellow boxy cab-over tractor: angular flat front, broad upper black grille and separate lower black grille, rectangular lamps, flatter roof and subtle wear; cream ribbed curtain trailer with vertical fabric seams, gray metal corners and dark lower chassis. Maintain EXACT target map camera, background, framing, every building/tree/street/crosswalk, dimensions and daylight colors. The truck must occupy the EXACT SAME footprint, center, orientation, trailer length, cab length, width and wheel contact positions as the target truck. Cardinal direction LEFT (cab left of trailer). Do not enlarge or move it. Keep target soft colored outlines, bright clean 2D illustrated style and soft shadows; no black cartoon outlines, sepia, acid exposure, photoreal or flat 3D toy look. Exactly ONE truck. Exactly ONE driver inside cab, in vehicle's left-hand driving seat, and empty passenger seat; never two heads, faces, silhouettes or human-colored shapes. If windshield is hidden in the overhead/back view, do not invent visible people. No officers, additional vehicles, text or additions. Return one full map image, not a crop or grid."
+    },
+    {
+      "color": "yellow",
+      "key": 2,
+      "direction": "DOWN",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-4462ea86-d5be-4a3d-926c-dfcd72634a9c.png",
+      "target": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-keys-2026-10-05/yellow-key-2.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET, a completed cardinal waypoint city map. Image 2 is ONLY the truck identity reference, never its composition. Make one edited copy of Image 1. Replace ONLY its single green truck with the yellow truck from Image 2, adapted to the exact existing aerial view. Truck identity: older yellow boxy cab-over tractor: angular flat front, broad upper black grille and separate lower black grille, rectangular lamps, flatter roof and subtle wear; cream ribbed curtain trailer with vertical fabric seams, gray metal corners and dark lower chassis. Maintain EXACT target map camera, background, framing, every building/tree/street/crosswalk, dimensions and daylight colors. The truck must occupy the EXACT SAME footprint, center, orientation, trailer length, cab length, width and wheel contact positions as the target truck. Cardinal direction DOWN (cab below trailer). Do not enlarge or move it. Keep target soft colored outlines, bright clean 2D illustrated style and soft shadows; no black cartoon outlines, sepia, acid exposure, photoreal or flat 3D toy look. Exactly ONE truck. Exactly ONE driver inside cab, in vehicle's left-hand driving seat, and empty passenger seat; never two heads, faces, silhouettes or human-colored shapes. If windshield is hidden in the overhead/back view, do not invent visible people. No officers, additional vehicles, text or additions. Return one full map image, not a crop or grid."
+    },
+    {
+      "color": "yellow",
+      "key": 3,
+      "direction": "RIGHT",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-c8e809b0-1a9b-441b-ad9d-9a6670b6503f.png",
+      "target": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-keys-2026-10-05/yellow-key-3.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET, a completed cardinal waypoint city map. Image 2 is ONLY the truck identity reference, never its composition. Make one edited copy of Image 1. Replace ONLY its single green truck with the yellow truck from Image 2, adapted to the exact existing aerial view. Truck identity: older yellow boxy cab-over tractor: angular flat front, broad upper black grille and separate lower black grille, rectangular lamps, flatter roof and subtle wear; cream ribbed curtain trailer with vertical fabric seams, gray metal corners and dark lower chassis. Maintain EXACT target map camera, background, framing, every building/tree/street/crosswalk, dimensions and daylight colors. The truck must occupy the EXACT SAME footprint, center, orientation, trailer length, cab length, width and wheel contact positions as the target truck. Cardinal direction RIGHT (cab right of trailer). Do not enlarge or move it. Keep target soft colored outlines, bright clean 2D illustrated style and soft shadows; no black cartoon outlines, sepia, acid exposure, photoreal or flat 3D toy look. Exactly ONE truck. Exactly ONE driver inside cab, in vehicle's left-hand driving seat, and empty passenger seat; never two heads, faces, silhouettes or human-colored shapes. If windshield is hidden in the overhead/back view, do not invent visible people. No officers, additional vehicles, text or additions. Return one full map image, not a crop or grid."
+    }
+  ]
+}

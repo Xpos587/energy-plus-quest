@@ -1,0 +1,207 @@
+{
+  "cases": [
+    {
+      "view": "desktop",
+      "profile": "student",
+      "type": "efficiency",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "desktop",
+      "profile": "student",
+      "type": "future",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "desktop",
+      "profile": "student",
+      "type": "energy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "desktop",
+      "profile": "student",
+      "type": "empathy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "desktop",
+      "profile": "professional",
+      "type": "efficiency",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "desktop",
+      "profile": "professional",
+      "type": "energy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "desktop",
+      "profile": "professional",
+      "type": "empathy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "mobile",
+      "profile": "student",
+      "type": "efficiency",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "mobile",
+      "profile": "student",
+      "type": "future",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "mobile",
+      "profile": "student",
+      "type": "energy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "mobile",
+      "profile": "student",
+      "type": "empathy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "mobile",
+      "profile": "professional",
+      "type": "efficiency",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "mobile",
+      "profile": "professional",
+      "type": "energy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "mobile",
+      "profile": "professional",
+      "type": "empathy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "small",
+      "profile": "student",
+      "type": "efficiency",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "small",
+      "profile": "student",
+      "type": "future",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "small",
+      "profile": "student",
+      "type": "energy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "small",
+      "profile": "student",
+      "type": "empathy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "small",
+      "profile": "professional",
+      "type": "efficiency",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "small",
+      "profile": "professional",
+      "type": "energy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "small",
+      "profile": "professional",
+      "type": "empathy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "tablet",
+      "profile": "student",
+      "type": "efficiency",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "tablet",
+      "profile": "student",
+      "type": "future",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "tablet",
+      "profile": "student",
+      "type": "energy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "tablet",
+      "profile": "student",
+      "type": "empathy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "tablet",
+      "profile": "professional",
+      "type": "efficiency",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "tablet",
+      "profile": "professional",
+      "type": "energy",
+      "loaded": true,
+      "certificateRestored": true
+    },
+    {
+      "view": "tablet",
+      "profile": "professional",
+      "type": "empathy",
+      "loaded": true,
+      "certificateRestored": true
+    }
+  ],
+  "native": {
+    "name": "dostavlyaem-radost-efficiency.png",
+    "type": "image/png",
+    "title": "Вы — логистический гик!"
+  },
+  "home": "cover including reload",
+  "restart": "sender selection"
+}

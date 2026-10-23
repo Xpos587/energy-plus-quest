@@ -1,0 +1,12 @@
+{
+  "native_root_pose_equality_all_requested_frames": true,
+  "camera_equality": true,
+  "frames": [
+    1,
+    133,
+    169,
+    769
+  ],
+  "four_stills_present": true,
+  "animation_rendered": false
+}

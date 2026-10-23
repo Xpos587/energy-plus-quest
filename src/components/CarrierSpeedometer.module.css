@@ -1,0 +1,21 @@
+.instrument {
+  display: block;
+  width: 88px;
+  max-width: 100%;
+  line-height: 0;
+}
+.dial {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.needle {
+  transform-origin: 52px 52px;
+  transform: rotate(var(--needle-angle, -90deg));
+  transition: transform 180ms linear;
+}
+.progress {
+  stroke-dashoffset: var(--dial-offset, 100);
+  transition: stroke-dashoffset 180ms linear;
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:24:06.180484Z",
+    "display_name": "Nano Banana Pro",
+    "id": "b9cc5372-498d-4217-986c-a6c5eb531c04",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_092406_b9cc5372-498d-4217-986c-a6c5eb531c04_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "93cc9937-99ba-4576-a95c-f5a00c526de4",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/93cc9937-99ba-4576-a95c-f5a00c526de4.webp"
+        }
+      ],
+      "prompt": "Edit only the small traditional conical tent at right in this exact illustration: replace the tent with empty northern tundra vegetation and low distant hills. Keep all other elements precisely: tired workers carrying the parcel onward, all terrain vehicle, distant helicopter and helipad and industrial building, river, colors, composition. This result is shared for two remote recipients, so do not depict any recipient-specific home or person. No new objects, no text. Preserve current polished 2D style.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_092406_b9cc5372-498d-4217-986c-a6c5eb531c04.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-24T07:48:29.629885Z",
+    "display_name": "Nano Banana Pro",
+    "id": "0651e825-4d05-4ee0-9039-bbaace2c0b56",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_074829_0651e825-4d05-4ee0-9039-bbaace2c0b56_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "8f2dbada-9f95-4e07-b8f3-0c2ef2bbb58c",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/8f2dbada-9f95-4e07-b8f3-0c2ef2bbb58c.png"
+        }
+      ],
+      "prompt": "AUTHORITATIVE STYLE REFERENCE is the attached city illustration with three characters. Match its actual sophisticated drawing language: richly modeled hand-painted 2D editorial game illustration, smooth nuanced dimensional shading, refined detailed machinery, expressive human drawing, warm yellow/apricot cream buildings, living lush green vegetation. NOT flat isometric vector art, NOT washed out pink/purple monochrome line drawings, NOT a 3D render. Keep the reference saturation and richness. Make pavement LIGHT NEUTRAL GRAY instead of blue. Make window GLASS PALE LIGHT BLUE instead of saturated blue. Remove black outlines or replace with delicate neutral GRAY lines; preserve volume through shading. Blue and orange remain vivid on uniforms and machinery. Soft shadows. Reference provides STYLE ONLY: DO NOT reproduce city, trucks or giant foreground characters. Draw only the requested scene, without UI or decorative captions. Believable relative physical scale.\nCreate river barge loading game scene, wide side-view panorama with mild elevated perspective, believable scale throughout. Left to right: cream logistics warehouse, small separate port control office with subtle Cyrillic ПРУ sign, quay with TWO large blue lattice cranes, broad Ob river with long cargo barge moored parallel to quay. Barge is the largest object, realistically several times longer than a truck, loaded with bundles of steel pipes. Cranes tall enough to handle this cargo, one near office and one farther right. Small normal-sized blue tow tractor and small cardboard gift carton on trolley on quay, NOT an enormous camera or oversized parcel. One worker Ivan at office, another Peter at far crane, all in orange navy PPE, normal tiny human scale against cranes. Remote control panel visible through office window. Soft light gray quay, pale blue water, cream office, limited brand orange/blue accents. No large text, no floating badges, no game UI.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_074829_0651e825-4d05-4ee0-9039-bbaace2c0b56.png",
+    "status": "completed"
+  }
+]

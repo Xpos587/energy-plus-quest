@@ -1,0 +1,33 @@
+{
+  "method": "actual visible animated mesh ground projection along approved SUN direction; no generic proxy shapes; translucent smoke excluded",
+  "source": "v22-4k-source.blend",
+  "light_position": [
+    -40,
+    35,
+    70
+  ],
+  "projection_z": -0.002,
+  "render_resolution": [
+    1920,
+    1334
+  ],
+  "frames_requested": [
+    1,
+    384,
+    768
+  ],
+  "timings": [
+    {
+      "frame": 1,
+      "seconds": 2.8889959000080125
+    },
+    {
+      "frame": 384,
+      "seconds": 1.3302126319904346
+    },
+    {
+      "frame": 768,
+      "seconds": 0.9248383060039487
+    }
+  ]
+}

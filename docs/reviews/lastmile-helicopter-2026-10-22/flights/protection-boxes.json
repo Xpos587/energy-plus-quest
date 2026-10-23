@@ -1,0 +1,13 @@
+{
+  "sourceCoordinateProtectedBoxes": [
+    [
+      614,
+      243,
+      764,
+      328
+    ]
+  ],
+  "exactUnchangedRegion": "All pixels outside[40,0,1140,390], including all below y390; original cabin protected exactly.",
+  "reason": "Preserve original scenario-specific cabin gift/boat pack and complete external cargo rigging/destination. Aircraft landing gear and immediate cable attachment corrected with aircraft model.",
+  "obsoleteMask": "aircraft-transfer-mask.png is preliminary rejected union-mask evidence; final extraction uses aircraft-new-silhouette.png"
+}

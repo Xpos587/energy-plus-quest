@@ -1,0 +1,427 @@
+[
+  {
+    "w": 320,
+    "id": "choice",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 320,
+      "height": 230
+    },
+    "plane": {
+      "x": 0,
+      "y": 48,
+      "width": 320,
+      "height": 230
+    },
+    "covered": true
+  },
+  {
+    "w": 320,
+    "id": "place-1",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 320,
+      "height": 230
+    },
+    "plane": {
+      "x": 0,
+      "y": -126.8125,
+      "width": 756.359375,
+      "height": 635.625
+    },
+    "covered": true
+  },
+  {
+    "w": 320,
+    "id": "place-2",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 320,
+      "height": 230
+    },
+    "plane": {
+      "x": -78.90625,
+      "y": -158.8125,
+      "width": 756.359375,
+      "height": 635.625
+    },
+    "covered": true
+  },
+  {
+    "w": 320,
+    "id": "place-3",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 320,
+      "height": 230
+    },
+    "plane": {
+      "x": -204.359375,
+      "y": -120.625,
+      "width": 756.359375,
+      "height": 635.625
+    },
+    "covered": true
+  },
+  {
+    "w": 320,
+    "id": "place-4",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 320,
+      "height": 230
+    },
+    "plane": {
+      "x": -380.71875,
+      "y": -188.265625,
+      "width": 756.359375,
+      "height": 635.625
+    },
+    "covered": true
+  },
+  {
+    "w": 393,
+    "id": "choice",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 393,
+      "height": 505.8125
+    },
+    "plane": {
+      "x": 0,
+      "y": 48.0078125,
+      "width": 393,
+      "height": 505.796875
+    },
+    "covered": true
+  },
+  {
+    "w": 393,
+    "id": "place-1",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 393,
+      "height": 505.8125
+    },
+    "plane": {
+      "x": 0,
+      "y": -55.015625,
+      "width": 928.90625,
+      "height": 780.625
+    },
+    "covered": true
+  },
+  {
+    "w": 393,
+    "id": "place-2",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 393,
+      "height": 505.8125
+    },
+    "plane": {
+      "x": -96.90625,
+      "y": -94.3125,
+      "width": 928.90625,
+      "height": 780.625
+    },
+    "covered": true
+  },
+  {
+    "w": 393,
+    "id": "place-3",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 393,
+      "height": 505.8125
+    },
+    "plane": {
+      "x": -250.96875,
+      "y": -47.421875,
+      "width": 928.90625,
+      "height": 780.625
+    },
+    "covered": true
+  },
+  {
+    "w": 393,
+    "id": "place-4",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 393,
+      "height": 505.8125
+    },
+    "plane": {
+      "x": -467.578125,
+      "y": -130.5,
+      "width": 928.90625,
+      "height": 780.625
+    },
+    "covered": true
+  },
+  {
+    "w": 820,
+    "id": "choice",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 820,
+      "height": 892
+    },
+    "plane": {
+      "x": 0,
+      "y": 48,
+      "width": 820,
+      "height": 892
+    },
+    "covered": true
+  },
+  {
+    "w": 820,
+    "id": "place-1",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 820,
+      "height": 892
+    },
+    "plane": {
+      "x": 0,
+      "y": -248.65625,
+      "width": 1938.171875,
+      "height": 1628.796875
+    },
+    "covered": true
+  },
+  {
+    "w": 820,
+    "id": "place-2",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 820,
+      "height": 892
+    },
+    "plane": {
+      "x": -202.203125,
+      "y": -330.65625,
+      "width": 1938.171875,
+      "height": 1628.796875
+    },
+    "covered": true
+  },
+  {
+    "w": 820,
+    "id": "place-3",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 820,
+      "height": 892
+    },
+    "plane": {
+      "x": -523.671875,
+      "y": -232.8125,
+      "width": 1938.171875,
+      "height": 1628.796875
+    },
+    "covered": true
+  },
+  {
+    "w": 820,
+    "id": "place-4",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 820,
+      "height": 892
+    },
+    "plane": {
+      "x": -975.609375,
+      "y": -406.125,
+      "width": 1938.171875,
+      "height": 1628.796875
+    },
+    "covered": true
+  },
+  {
+    "w": 1440,
+    "id": "choice",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1440,
+      "height": 663.203125
+    },
+    "plane": {
+      "x": 0,
+      "y": 55.9921875,
+      "width": 1440,
+      "height": 663.203125
+    },
+    "covered": true
+  },
+  {
+    "w": 1440,
+    "id": "place-1",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1440,
+      "height": 592
+    },
+    "plane": {
+      "x": 0,
+      "y": -403.046875,
+      "width": 1970.515625,
+      "height": 1655.984375
+    },
+    "covered": true
+  },
+  {
+    "w": 1440,
+    "id": "place-2",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1440,
+      "height": 592
+    },
+    "plane": {
+      "x": 0,
+      "y": -486.40625,
+      "width": 1970.515625,
+      "height": 1655.984375
+    },
+    "covered": true
+  },
+  {
+    "w": 1440,
+    "id": "place-3",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1440,
+      "height": 592
+    },
+    "plane": {
+      "x": -229.25,
+      "y": -386.9375,
+      "width": 1970.515625,
+      "height": 1655.984375
+    },
+    "covered": true
+  },
+  {
+    "w": 1440,
+    "id": "place-4",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1440,
+      "height": 592
+    },
+    "plane": {
+      "x": -530.515625,
+      "y": -563.15625,
+      "width": 1970.515625,
+      "height": 1655.984375
+    },
+    "covered": true
+  },
+  {
+    "w": 844,
+    "id": "choice",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 489.53125,
+      "height": 334
+    },
+    "plane": {
+      "x": 0,
+      "y": 56,
+      "width": 489.53125,
+      "height": 334
+    },
+    "covered": true
+  },
+  {
+    "w": 844,
+    "id": "place-1",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 489.53125,
+      "height": 334
+    },
+    "plane": {
+      "x": 0,
+      "y": -33.671875,
+      "width": 669.875,
+      "height": 562.9375
+    },
+    "covered": true
+  },
+  {
+    "w": 844,
+    "id": "place-2",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 489.53125,
+      "height": 334
+    },
+    "plane": {
+      "x": 0,
+      "y": -62.015625,
+      "width": 669.875,
+      "height": 562.9375
+    },
+    "covered": true
+  },
+  {
+    "w": 844,
+    "id": "place-3",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 489.53125,
+      "height": 334
+    },
+    "plane": {
+      "x": -77.9375,
+      "y": -28.203125,
+      "width": 669.875,
+      "height": 562.9375
+    },
+    "covered": true
+  },
+  {
+    "w": 844,
+    "id": "place-4",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 489.53125,
+      "height": 334
+    },
+    "plane": {
+      "x": -180.34375,
+      "y": -88.109375,
+      "width": 669.875,
+      "height": 562.9375
+    },
+    "covered": true
+  }
+]

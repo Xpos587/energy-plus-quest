@@ -1,0 +1,30 @@
+{
+  "source": "../whole-map-v06-2026-10-06/backdrop/city-v06.png",
+  "generated_source": "backdrop-generated.png",
+  "method": "Imagegen asphalt edit, composited only through original connected road mask and asphalt chroma; original white road markings retained",
+  "resolution": [
+    1920,
+    1334
+  ],
+  "protected_pixel_difference": 0,
+  "asphalt_mean_rgb_before": [
+    138.0984144537705,
+    198.06635041026286,
+    239.38670856165362
+  ],
+  "asphalt_mean_rgb_after": [
+    165.44377215583327,
+    174.3776353085086,
+    180.79150865299934
+  ],
+  "asphalt_mean_hsv_before": [
+    144.34575205342878,
+    107.43444305005936,
+    239.38670856165362
+  ],
+  "asphalt_mean_hsv_after": [
+    144.77640066098786,
+    21.17491333256507,
+    180.80161166011354
+  ]
+}

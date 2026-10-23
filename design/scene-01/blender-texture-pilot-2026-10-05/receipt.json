@@ -1,0 +1,31 @@
+{
+  "candidate_only": true,
+  "style_accepted": false,
+  "source": "../painted-layer-2026-10-05/painted-vehicles-driver-fixed-optimized.blend",
+  "frame": 769,
+  "resolution": [
+    3840,
+    2667
+  ],
+  "render_seconds": 13.881,
+  "texture_resolution": [
+    1254,
+    1254
+  ],
+  "texture": "green-cab-uv-atlas.png",
+  "mapping": "separate front, side and roof UV quadrants; no camera projection",
+  "green_cab_bounds_pixels": [
+    1996.7138671875,
+    973.8303431868553,
+    2065.583724975586,
+    1091.6939474344254
+  ],
+  "routes_and_other_trucks": "unchanged",
+  "drivers": "painted two-driver front glass; count needs visual inspection",
+  "limitations": [
+    "New cabin is a bounded look-development prototype, not a finished truck model.",
+    "Interior faces are baked into glass paint, not independent 3D characters.",
+    "Contact-shadow pass and all-angle silhouette checks remain pending.",
+    "No animation rendered and no runtime assets changed."
+  ]
+}

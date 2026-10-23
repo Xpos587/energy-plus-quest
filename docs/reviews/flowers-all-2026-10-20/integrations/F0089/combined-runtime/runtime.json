@@ -1,0 +1,130 @@
+[
+  {
+    "screen": "desktop",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-student-efficiency-aQpBKdHK.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-student-efficiency-BEsY68bR.webp",
+      "rect": {
+        "x": 239.984375,
+        "y": 227.296875,
+        "width": 350,
+        "height": 350,
+        "top": 227.296875,
+        "right": 589.984375,
+        "bottom": 577.296875,
+        "left": 239.984375
+      },
+      "natural": [
+        2560,
+        2560
+      ],
+      "decodedNative": [
+        2560,
+        2560
+      ],
+      "picture": "<source type=\"image/avif\" media=\"(min-width: 1100px)\" srcset=\"./assets/desktop-detail-student-efficiency-aQpBKdHK.avif\"><source type=\"image/avif\" srcset=\"./assets/optimized-student-efficiency-1280-DCYLs5Wz.avif 1280w, ./assets/optimized-student-efficiency-1600-BXsU1-Ti.avif 1600w, ./assets/optimized-student-efficiency-4oICZ439.avif 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><source type=\"image/webp\" srcset=\"./assets/optimized-student-efficiency-1280-DvkePPP8.webp 1280w, ./assets/optimized-student-efficiency-1600-Dg-keTf8.webp 1600w, ./assets/optimized-student-efficiency-BEsY68bR.webp 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><img data-certificate-art=\"true\" width=\"1024\" height=\"1024\" alt=\"\" src=\"./assets/optimized-student-efficiency-BEsY68bR.webp\">"
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "desktop",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-student-efficiency-aQpBKdHK.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-student-efficiency-BEsY68bR.webp",
+      "rect": {
+        "x": 239.984375,
+        "y": 227.296875,
+        "width": 350,
+        "height": 350,
+        "top": 227.296875,
+        "right": 589.984375,
+        "bottom": 577.296875,
+        "left": 239.984375
+      },
+      "natural": [
+        2560,
+        2560
+      ],
+      "decodedNative": [
+        2560,
+        2560
+      ],
+      "picture": "<source type=\"image/avif\" media=\"(min-width: 1100px)\" srcset=\"./assets/desktop-detail-student-efficiency-aQpBKdHK.avif\"><source type=\"image/avif\" srcset=\"./assets/optimized-student-efficiency-1280-DCYLs5Wz.avif 1280w, ./assets/optimized-student-efficiency-1600-BXsU1-Ti.avif 1600w, ./assets/optimized-student-efficiency-4oICZ439.avif 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><source type=\"image/webp\" srcset=\"./assets/optimized-student-efficiency-1280-DvkePPP8.webp 1280w, ./assets/optimized-student-efficiency-1600-Dg-keTf8.webp 1600w, ./assets/optimized-student-efficiency-BEsY68bR.webp 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><img data-certificate-art=\"true\" width=\"1024\" height=\"1024\" alt=\"\" src=\"./assets/optimized-student-efficiency-BEsY68bR.webp\">"
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "mobile",
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-student-efficiency-1280-DCYLs5Wz.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-student-efficiency-BEsY68bR.webp",
+      "rect": {
+        "x": 120,
+        "y": 167.78125,
+        "width": 150,
+        "height": 150,
+        "top": 167.78125,
+        "right": 270,
+        "bottom": 317.78125,
+        "left": 120
+      },
+      "natural": [
+        180,
+        180
+      ],
+      "decodedNative": [
+        1280,
+        1280
+      ],
+      "picture": "<source type=\"image/avif\" media=\"(min-width: 1100px)\" srcset=\"./assets/desktop-detail-student-efficiency-aQpBKdHK.avif\"><source type=\"image/avif\" srcset=\"./assets/optimized-student-efficiency-1280-DCYLs5Wz.avif 1280w, ./assets/optimized-student-efficiency-1600-BXsU1-Ti.avif 1600w, ./assets/optimized-student-efficiency-4oICZ439.avif 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><source type=\"image/webp\" srcset=\"./assets/optimized-student-efficiency-1280-DvkePPP8.webp 1280w, ./assets/optimized-student-efficiency-1600-Dg-keTf8.webp 1600w, ./assets/optimized-student-efficiency-BEsY68bR.webp 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><img data-certificate-art=\"true\" width=\"1024\" height=\"1024\" alt=\"\" src=\"./assets/optimized-student-efficiency-BEsY68bR.webp\">"
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "mobile",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-student-efficiency-1280-DCYLs5Wz.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-student-efficiency-BEsY68bR.webp",
+      "rect": {
+        "x": 120,
+        "y": 167.78125,
+        "width": 150,
+        "height": 150,
+        "top": 167.78125,
+        "right": 270,
+        "bottom": 317.78125,
+        "left": 120
+      },
+      "natural": [
+        180,
+        180
+      ],
+      "decodedNative": [
+        1280,
+        1280
+      ],
+      "picture": "<source type=\"image/avif\" media=\"(min-width: 1100px)\" srcset=\"./assets/desktop-detail-student-efficiency-aQpBKdHK.avif\"><source type=\"image/avif\" srcset=\"./assets/optimized-student-efficiency-1280-DCYLs5Wz.avif 1280w, ./assets/optimized-student-efficiency-1600-BXsU1-Ti.avif 1600w, ./assets/optimized-student-efficiency-4oICZ439.avif 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><source type=\"image/webp\" srcset=\"./assets/optimized-student-efficiency-1280-DvkePPP8.webp 1280w, ./assets/optimized-student-efficiency-1600-Dg-keTf8.webp 1600w, ./assets/optimized-student-efficiency-BEsY68bR.webp 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><img data-certificate-art=\"true\" width=\"1024\" height=\"1024\" alt=\"\" src=\"./assets/optimized-student-efficiency-BEsY68bR.webp\">"
+    },
+    "status": 200,
+    "errors": []
+  }
+]

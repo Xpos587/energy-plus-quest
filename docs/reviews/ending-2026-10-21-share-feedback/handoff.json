@@ -1,0 +1,21 @@
+{
+  "state": "owner_accepted_actual4344_verified",
+  "productionFiles": [
+    "src/scenes/LogistCertificate.tsx",
+    "src/scenes/LogistCertificate.module.css",
+    "public/brand/max-official.svg"
+  ],
+  "behavior": "Labelled share trigger opens native modal dialog; social channels and labelled certificate download are inside. Escape, close button, outside click, explicit Tab boundary loop and trigger focus restoration are implemented.",
+  "copy": "Scenario result paragraphs, titles and CTA unchanged. Only requested service controls and dialog explanation added.",
+  "visualReview": "Actual dev screenshots inspected at320x568,390x844,844x390,1440x900, result and popup. Desktop follows the reference result-card hierarchy; mobile uses illustration above title. No horizontal overflow in captured geometry.",
+  "officialMaxSource": "max-source.json",
+  "before": "before-*-result.png",
+  "afterDev": "after-*-result.png and after-*-popup.png",
+  "download": "after-certificate.png, actual browser PNG download",
+  "validation": "TypeScript passed;16unit tests passed; final combined22e2e tests passed in46.9s on desktop/mobile Chromium, including all7profiles at4viewport sizes, share cancellation/error/retry, download error/retry, keyboard focus and modal dismissal.",
+  "runtime4344": "ActualnormalURLhttp://127.0.0.1:4344/, fourviewportresult/popupcaptures(runtime-*.png) visuallyinspected; nooverflow; actualPNGdownloadruntime-certificate.pnginspected. Desktop/mobileChromiumbehavior2/2pass8.4s:open/download/focustrap/Escape/close/restore.",
+  "reporting": "Supply runtime after screenshots to the single consolidated PDF executor. Do not generate one PDF per interim change.",
+  "knownLimit": "Practice signup remains the existing unavailable-link placeholder. Native file share is available only on supported browsers after PNG preparation. Social links share text and URL.",
+  "runtimeGeometry": "runtime-geometry.json",
+  "runtimeBehaviorCommand": "bunx playwright test --config docs/reviews/ending-2026-10-21-share-feedback/runtime.config.ts --workers=1"
+}

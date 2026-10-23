@@ -1,0 +1,17 @@
+{
+  "source": "public/compact-art/loading-clean-v17.png",
+  "image": "compact-environment-portrait-v1.png",
+  "width": 1368,
+  "height": 1149,
+  "targetArea": [
+    624,
+    524
+  ],
+  "status": "proposal_not_integrated",
+  "notes": [
+    "Vertical expansion for existing runtime layout only",
+    "Truck and cargo redrawn by imagegen: not pixel-identical",
+    "No runtime, hotspot, UI or source-copy changes",
+    "Environment is proposed, not approved warehouse identity"
+  ]
+}

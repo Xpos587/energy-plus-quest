@@ -1,0 +1,34 @@
+[
+  {
+    "created_at": "2026-10-04T20:30:08.288688Z",
+    "display_name": "Kling O1 Video Edit",
+    "id": "d3b984ad-132d-4ba0-98bf-cb0edb185127",
+    "job_type": "kling_video_edit",
+    "min_result_url": null,
+    "params": {
+      "height": 700,
+      "input_images": [
+        {
+          "id": "a4a06c16-2670-4435-b7cb-bcd84fd0f4a4",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/a4a06c16-2670-4435-b7cb-bcd84fd0f4a4.png"
+        }
+      ],
+      "input_videos": [
+        {
+          "id": "584cee6c-603a-4c5f-920c-76a3e90b1970",
+          "type": "video_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/584cee6c-603a-4c5f-920c-76a3e90b1970.mp4"
+        }
+      ],
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "mode": "pro",
+      "model": "kling-video-edit-o3",
+      "prompt": "Transform the video into the detailed hand-painted game illustration in the image reference. Replace the low-poly miniature rendering with crisp illustrated European semi-trucks, individually articulated chassis and trailers, leafy trees and illustrated cream buildings. Match the reference powder-blue road, colors, fine details and soft colored edges. Keep exact source-video positions, vehicle scale, paths, timing, articulation, building silhouettes and locked camera in every frame. Four trucks total: blue, yellow, red, green. The source VIDEO determines where each truck moves; the IMAGE determines illustrated material style only. No miniature toy look, no extra vehicles, no roof crossings, no blur. The green cab has two drivers and other cabs one each where windshield faces camera.",
+      "width": 1008
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_203008_d3b984ad-132d-4ba0-98bf-cb0edb185127.mp4",
+    "status": "completed"
+  }
+]

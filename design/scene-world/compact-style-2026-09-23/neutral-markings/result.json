@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-23T20:13:25.659614Z",
+    "display_name": "Nano Banana Pro",
+    "id": "dc0e76e4-0f09-4792-a681-add615edf4c8",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_201325_dc0e76e4-0f09-4792-a681-add615edf4c8_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "06cc90a1-bcab-4ee1-b463-8d640953b136",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/06cc90a1-bcab-4ee1-b463-8d640953b136_resize.jpg"
+        }
+      ],
+      "prompt": "Edit the reference with surgical restraint. Preserve the exact truck, camera, composition, every box footprint, proportions, background, shading, all empty cargo spaces and red straps. Do not redraw the scene. Only improve the existing content symbols on the FRONT FACES of the cargo boxes. They must look like discreet single-ink packaging illustrations stamped directly onto cardboard/wood, perspective-aligned, not stickers, not separate objects, not shiny emoji, no white label backgrounds. Muted warm gray-brown ink matching existing outlines, thin clean lines, modest scale, calm and elegant. Left wooden crates: recognizable kettlebell outline (round body and loop handle), approximately 20 percent of the crate front-face width. Fragile cardboard box immediately right of wooden crates: a simple plate and cup outline, 30 percent of front face width. Two rightmost pillow boxes: small recognizably soft pillow outline with curved edges and a subtle seam, same ink, no white fill. Retain the natural cardboard color through all symbols. Keep personal parcels unchanged. Keep the free volume above the fragile box empty; keep small niche behind three foreground parcels and tall empty right-hand space untouched. No additional cargo, no text, no numbers, no banners, no colored icons. The original neutral illustrated scene must remain visually dominant. Same soft 2D illustration, muted gray outlines, original palette and shadows.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_201325_dc0e76e4-0f09-4792-a681-add615edf4c8.png",
+    "status": "completed"
+  }
+]

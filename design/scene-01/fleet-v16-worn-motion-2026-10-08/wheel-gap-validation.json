@@ -1,0 +1,8 @@
+{
+  "frames_checked": 192,
+  "minimum_cab_vertex_clearance_from_front_tire_envelope_local": {
+    "1": 0.11591264789885475,
+    "4": 0.11448847322356853
+  },
+  "method": "all main-cab vertices versus conservative front-tire cylinders; existing front-fender trim remains chassis-mounted; all tire world matrices separately identical to source"
+}

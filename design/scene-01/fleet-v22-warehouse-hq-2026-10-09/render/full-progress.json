@@ -1,0 +1,20 @@
+{
+  "last_batch": {
+    "script": "render_shadow.py",
+    "first": 1537,
+    "last": 1537,
+    "rendered_frames": [
+      1537
+    ],
+    "exit": 0,
+    "missing": [],
+    "seconds": 5.564060838019941,
+    "decoded": true
+  },
+  "vehicles": 1537,
+  "shadows": 1537,
+  "requested_first": 1,
+  "requested_last": 1537,
+  "started_epoch": 1791545890.333719,
+  "updated_epoch": 1791553001.803002
+}

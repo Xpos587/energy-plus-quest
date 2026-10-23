@@ -1,0 +1,24 @@
+{
+  "status": "scenario-question-open",
+  "runtimeIntegrated": false,
+  "source": "scenario-evidence/1709-image3.png",
+  "accessFrame": "camera-zone3-access-v34.png",
+  "restoredFrame": "camera-zone3-restored-v35.png",
+  "rejectedProposal": "failure-prototype-v33.html",
+  "sourceFacts": {
+    "camera": "Three boxes must be extracted and camera secured with straps",
+    "socks": "Fits compactly, difficult access",
+    "boat": "Cannot fit"
+  },
+  "hypotheses": [
+    "The three central boxes are those extracted",
+    "Boxes are subsequently returned",
+    "Depth may explain need for working access to straps"
+  ],
+  "unresolved": "What specifically requires all three boxes to be removed: passage, gift trajectory, or access to strap anchors? Source does not establish depth or geometry.",
+  "limits": [
+    "Generated frames illustrate operation, not prove necessity",
+    "No human comprehension test",
+    "Do not transfer manual camera cost to auto branch"
+  ]
+}

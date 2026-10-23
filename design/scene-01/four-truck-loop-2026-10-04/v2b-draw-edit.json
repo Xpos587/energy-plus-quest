@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-10-05T09:10:21.931305Z",
+    "display_name": "Draw To Video",
+    "id": "77170304-1d22-4eea-99a7-7b16da828f09",
+    "job_type": "draw_to_video",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "4:3",
+      "duration": 5,
+      "enhancer": false,
+      "folder_id": null,
+      "generate_audio": false,
+      "prompt": "Apply the painted first frame consistently throughout the source video. Detailed clean bright2D illustrated city: blue asphalt, cream/apricot walls, blue glass and detailed leafy trees. Use precisely the source four semi-trucks motion, scale, camera, timing and articulated rigid trailer geometry. Blue andyellow drive downward, green andred drive upward thenleft around uppercorner, staying separately onroad. Image is the replacement art treatment; video is the exact movement guide. All four trucks remain one each with same colors. Preserve fixed background and frame boundaries. No added vehicles, no bending trailers, no camera motion, no grey3Dtoy rendering. Sharp illustrated details, soft colored outlines and soft shadows.",
+      "ref_image": null,
+      "resolution": "480p",
+      "sketch": {
+        "id": "8bb72ed0-51e1-4b11-b6ac-cab49c7a5016",
+        "type": "media_input",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/8bb72ed0-51e1-4b11-b6ac-cab49c7a5016.png"
+      },
+      "timestamp": 0,
+      "video": {
+        "id": "92e791ec-541f-472a-a407-1552ac933697",
+        "type": "video_input",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/92e791ec-541f-472a-a407-1552ac933697.mp4"
+      }
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_091021_77170304-1d22-4eea-99a7-7b16da828f09.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_091021_77170304-1d22-4eea-99a7-7b16da828f09_thumbnail.webp"
+  }
+]

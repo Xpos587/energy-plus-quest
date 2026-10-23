@@ -1,0 +1,158 @@
+{
+  "target": "http://127.0.0.1:4344/",
+  "runtimeQualityVerifiedAssets": 23,
+  "selectiveFlowersRuntimeAssets": 19,
+  "conventionalEnlargementRuntimeAssets": 4,
+  "uniqueRuntimeReceiptCases": 120,
+  "httpErrors": 0,
+  "javascriptErrors": 0,
+  "counterSource": "docs/reviews/flowers-all-2026-10-20/progress.json",
+  "sources": [
+    {
+      "source": "public/scene-art/certificates-v1/professional-efficiency.webp",
+      "id": "F0086",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0086/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-alva.webp",
+      "id": "F0114",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0114/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/certificates-v1/professional-empathy.webp",
+      "id": "F0087",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0087/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/certificates-v1/professional-energy.webp",
+      "id": "F0088",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0088/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/certificates-v1/student-efficiency.webp",
+      "id": "F0089",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0089/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-alva.webp",
+      "id": "F0111",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0111/combined-runtime/runtime.json"
+    },
+    {
+      "source": "design/preparation-outpaint-2026-10-11/alva.webp",
+      "id": "F0001",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0001/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/carrier-results-2026-10-02/crew-v3.webp",
+      "id": "F0075",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0075/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/compact-art/compact-environment-v54-wide.png",
+      "id": "F0144",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0144/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/helicopter-ground-boat-final-v5.webp",
+      "id": "F0095",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0095/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/compact-art/boat-zone3-no-fit-v48.webp",
+      "id": "F0025",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/compact-art/boat-zone3-no-fit-wide-crew-v50.webp",
+      "id": "F0026",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/compact-art/boat-zone3-no-fit-wide-old-v50.webp",
+      "id": "F0027",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/compact-art/boat-zone3-no-fit-wide-old4-v50.webp",
+      "id": "F0028",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/compact-art/socks-zone1-unsecured-v53.png",
+      "id": "F0145",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/compact-art/socks-zone2-v53.png",
+      "id": "F0146",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/compact-art/boat-zone1-axle-v53.png",
+      "id": "F0136",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0136/after/runtime.json"
+    },
+    {
+      "source": "public/compact-art/boat-zone2-v53.png",
+      "id": "F0137",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0137/after/runtime.json"
+    },
+    {
+      "source": "public/compact-art/boat-zone3-no-fit-wide-v48.webp",
+      "id": "F0029",
+      "method": "selective_flowers",
+      "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0029/after/runtime.json"
+    },
+    {
+      "source": "public/scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
+      "id": "F0082",
+      "method": "conventional_interpolation",
+      "runtimeReceipt": "docs/reviews/conventional-media-2026-10-22/carrier-old-wide-v8-v1/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-2/rover-boat-khor.webp",
+      "id": "F0107",
+      "method": "conventional_interpolation",
+      "runtimeReceipt": "docs/reviews/conventional-media-2026-10-22/rover-boat-khor-v1/combined-runtime/runtime.json"
+    },
+    {
+      "source": "public/scene-art/barge-family-v1/choice-neutral-tall-v7.webp",
+      "id": "F0061",
+      "method": "conventional_interpolation",
+      "runtimeReceipt": "docs/reviews/conventional-media-2026-10-22/barge-choice-tall-v1/after/runtime.json"
+    },
+    {
+      "source": "public/scene-art/barge-family-v1/petr-boat-v13.png",
+      "id": "F0063",
+      "method": "conventional_interpolation",
+      "runtimeReceipt": "docs/reviews/conventional-media-2026-10-22/barge-petr-boat-v1/after/runtime.json"
+    }
+  ],
+  "uiAcceptance": "docs/reviews/general-ux-2026-10-22/ending/publication.json",
+  "heavyQueue": "idle; mandatory113 drain remains stopped",
+  "limits": [
+    "Selective Flowers includes disclosed original/source-retained regions; no whole-scene native8192 claim",
+    "Conventional interpolation does not recover detail",
+    "Warehouse and new helicopter family remain content HOLD; not integrated",
+    "Local4344 only; no external deployment"
+  ]
+}

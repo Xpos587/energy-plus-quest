@@ -1,0 +1,605 @@
+{
+  "cursor": "100",
+  "items": [
+    {
+      "action": "refund",
+      "created_at": "2026-10-05T14:29:07.633917Z",
+      "credits": 33,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T14:29:06.090761Z",
+      "credits": -33,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T13:48:56.790702Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T13:48:54.362274Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T13:48:53.366949Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T13:48:44.871972Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T12:55:08.734228Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T12:55:01.693237Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T12:35:19.042757Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T12:25:34.590568Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T12:19:08.20507Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T12:12:30.715769Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T12:11:29.492859Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T10:52:20.010505Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T10:30:24.497174Z",
+      "credits": -7.5,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T09:10:22.047321Z",
+      "credits": -18.5,
+      "display_name": "Draw To Video"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T20:30:08.375253Z",
+      "credits": -10,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T20:21:14.640161Z",
+      "credits": -7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "refund",
+      "created_at": "2026-10-04T20:11:54.429849Z",
+      "credits": 7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T20:11:47.747961Z",
+      "credits": -7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T19:49:58.185343Z",
+      "credits": -18.75,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T19:45:44.946346Z",
+      "credits": -7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T19:37:50.484787Z",
+      "credits": -7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T18:52:44.861963Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T17:51:22.625157Z",
+      "credits": -12,
+      "display_name": "Google Veo 3.1 Lite"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T17:51:20.639842Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T16:13:35.541335Z",
+      "credits": -6,
+      "display_name": "Minimax Hailuo 02 Fast"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T16:07:08.683765Z",
+      "credits": -1.2,
+      "display_name": "Seedance 1.5 Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T16:07:08.408195Z",
+      "credits": -1.2,
+      "display_name": "Seedance 1.5 Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T15:04:47.247524Z",
+      "credits": -2.4,
+      "display_name": "Seedance 1.5 Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T14:41:41.115675Z",
+      "credits": -2.4,
+      "display_name": "Seedance 1.5 Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T14:30:04.402161Z",
+      "credits": -2.4,
+      "display_name": "Seedance 1.5 Pro"
+    },
+    {
+      "action": "refund",
+      "created_at": "2026-10-04T14:23:01.444552Z",
+      "credits": 2.4,
+      "display_name": "Seedance 1.5 Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T14:22:59.388498Z",
+      "credits": -2.4,
+      "display_name": "Seedance 1.5 Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T10:27:14.317542Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T10:15:16.751635Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T09:42:12.57527Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T09:35:56.790248Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T09:34:45.611231Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T09:33:46.86424Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T09:32:46.410124Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T09:31:53.517041Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T09:29:41.589924Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T00:22:27.129148Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T00:20:00.989105Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T00:19:59.514197Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-28T00:09:35.644888Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:40:17.04537Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:40:15.158877Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:40:14.909958Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:36:24.753467Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:36:21.886875Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:35:57.50519Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:35:42.372054Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:35:42.234509Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:24:06.323242Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:12:43.96331Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:11:10.469739Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:11:09.515996Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:09:51.321047Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:09:23.513266Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:08:56.482485Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:08:52.049565Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:08:23.230901Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:08:11.541834Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:08:06.646016Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:07:12.113611Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:07:10.241552Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:07:07.813033Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:06:15.065073Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:06:14.938855Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-25T09:06:14.809971Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T09:43:07.110122Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T09:39:40.187995Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T09:33:39.003921Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T07:48:32.417641Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T07:48:30.036909Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T07:48:29.750835Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T07:44:30.341962Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T07:44:30.11288Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T07:44:26.332397Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-24T07:44:23.333306Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T20:13:25.754779Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "grant",
+      "created_at": "2026-09-23T15:29:31.591513Z",
+      "credits": 1000,
+      "display_name": "Credit Package"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T13:37:31.586471Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T13:17:32.104892Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T13:11:31.901844Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T13:07:06.775622Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T13:04:18.252602Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T13:01:18.704259Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:32:44.569253Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:29:05.507638Z",
+      "credits": -6.5,
+      "display_name": "GPT Image 2.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:23:26.915096Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:19:01.743486Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:19:00.714792Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:18:58.768773Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:14:22.682588Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:04:08.405117Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T12:01:53.698389Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-09-23T11:58:52.612046Z",
+      "credits": -2,
+      "display_name": "Nano Banana Pro"
+    }
+  ]
+}

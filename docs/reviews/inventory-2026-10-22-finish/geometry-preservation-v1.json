@@ -1,0 +1,70 @@
+{
+  "original_mesh_objects_checked": 209,
+  "mesh_coordinate_or_transform_changes": [],
+  "original_cameras_checked": 4,
+  "source": "design/warehouse-blockout-2026-10-21/warehouse-blockout-v4.blend",
+  "render": [
+    1440,
+    1000
+  ],
+  "seed": 0,
+  "engine": "CYCLES",
+  "samples": 32,
+  "geometry_policy": "Original mesh vertices/object transforms/cameras unchanged. Keeper source silhouettes hidden, additive person at same position, original truck skin revealed. Additive surface detail only.",
+  "source_contract": {
+    "full_source": "source-v4-clean.png",
+    "dimensions": [
+      1440,
+      1000
+    ],
+    "origin": "top-left",
+    "all_four_anchor_px": {
+      "receiving": [
+        456.5100860595703,
+        413.32441568374634
+      ],
+      "keeper": [
+        1028.0291748046875,
+        659.4267785549164
+      ],
+      "wms": [
+        948.7626457214355,
+        725.501537322998
+      ],
+      "alphabet": [
+        816.3334465026855,
+        452.7631998062134
+      ]
+    },
+    "portrait_initial_viewport_source_xyxy": [
+      341.8014714937448,
+      9.252056359842499,
+      986.1407553525422,
+      984.0218729561262
+    ],
+    "portrait_initial_frame": "portrait-v4-clean.png",
+    "portrait_policy": "same full overscan source plane; initial viewport fully inside source; horizontal pan reaches all four targets",
+    "projection_mapping_uv": {
+      "matrix": [
+        [
+          0.4474575438573918,
+          -2.9215566199614074e-07
+        ],
+        [
+          -2.9957761124577154e-07,
+          0.9747695170186724
+        ]
+      ],
+      "translation": [
+        0.23736242513742922,
+        0.015978426621485076
+      ]
+    },
+    "desktop_viewport_source_xyxy": [
+      0,
+      50,
+      1440,
+      950
+    ]
+  }
+}

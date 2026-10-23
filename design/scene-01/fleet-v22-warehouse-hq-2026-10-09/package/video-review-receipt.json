@@ -1,0 +1,30 @@
+{
+  "source": "city-motion-desktop.mp4",
+  "coverage_seconds": 64,
+  "sampling_fps": 4,
+  "model": "gemini-2.5-flash",
+  "cleanup": true,
+  "authorization": "Earlier explicit user request to use Gemini/analyzing-videos for this ongoing map task",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 363,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 67462,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 134
+      },
+      {
+        "modality": "VIDEO",
+        "token_count": 67328
+      }
+    ],
+    "thoughts_token_count": 405,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 68230,
+    "traffic_type": null
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "segment": 0,
+    "frames": 121,
+    "cab_center_opacity_failures": [],
+    "opaque_area_minmax": [
+      2475,
+      4186
+    ],
+    "white_trailer_pixels_minmax": [
+      1033,
+      2352
+    ]
+  },
+  {
+    "segment": 1,
+    "frames": 121,
+    "cab_center_opacity_failures": [],
+    "opaque_area_minmax": [
+      2064,
+      4524
+    ],
+    "white_trailer_pixels_minmax": [
+      1200,
+      2717
+    ]
+  },
+  {
+    "segment": 2,
+    "frames": 121,
+    "cab_center_opacity_failures": [],
+    "opaque_area_minmax": [
+      2076,
+      3392
+    ],
+    "white_trailer_pixels_minmax": [
+      1159,
+      2160
+    ]
+  },
+  {
+    "segment": 3,
+    "frames": 121,
+    "cab_center_opacity_failures": [],
+    "opaque_area_minmax": [
+      2338,
+      3519
+    ],
+    "white_trailer_pixels_minmax": [
+      931,
+      1970
+    ]
+  }
+]

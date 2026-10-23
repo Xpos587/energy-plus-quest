@@ -1,0 +1,26 @@
+{
+  "decision": "HOLD",
+  "reason": "Bounded deterministic cleanplate attempts failed visual review. Local cloning sampled obsolete aircraft/other scene details and introduced visible duplicates; prior inpainting left smears and pad joins. Do not integrate generated review composites.",
+  "noFurtherAttempts": true,
+  "generationCalls": 0,
+  "retainRuntime": "Keep existing clean original art until a reliable cleanplate/background restoration is available.",
+  "approvedReusableSubjectAssets": [
+    "common-tall-aircraft-alpha.png",
+    "common-tall-aircraft-only.png",
+    "common-wide-aircraft-native.png"
+  ],
+  "bestReviewCandidates": {
+    "wide": "F0093-helicopter-corrected-v4.png",
+    "wideLimit": "Previously approved seam repair reopened due obsolete tail/rotor ghost; not currently approved for integration.",
+    "tall": "common-tall-representative-v2.png",
+    "tallLimit": "Gray reconstruction and old-tail clearing cause background artifacts; HOLD."
+  },
+  "failedFinalAttemptProof": [
+    "common-tall-final-attempt.png",
+    "common-tall-display-review.png",
+    "common-wide-tail-final-detail.png"
+  ],
+  "supersedesFrozenIntroReceipt": "intro-transfer-v4-frozen-receipt.json",
+  "stakeholderAcceptance": false,
+  "publicOrAliasesMutated": false
+}

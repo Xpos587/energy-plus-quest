@@ -1,0 +1,19 @@
+{
+  "source": "v15; old upper cabs restored from v13",
+  "restoration": [
+    {
+      "truck": 1,
+      "restored_cab_vertices": 12315,
+      "crew_faces": 118,
+      "removed_lower_faces": 50807
+    },
+    {
+      "truck": 4,
+      "restored_cab_vertices": 12315,
+      "crew_faces": 118,
+      "removed_lower_faces": 50807
+    }
+  ],
+  "motion": "untouched; separate retime agent owns behavior",
+  "wear": "attached restrained material noise, no flat shell or decal mesh"
+}

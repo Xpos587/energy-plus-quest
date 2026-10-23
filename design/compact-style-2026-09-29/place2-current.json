@@ -1,0 +1,41 @@
+{
+  "status": "integrated-review",
+  "camera": "camera-zone2-v36.png",
+  "socks": "socks-zone2-v37.png",
+  "runtime": [
+    "public/compact-art/camera-zone2-v36.png",
+    "public/compact-art/socks-zone2-v37.png"
+  ],
+  "framing": "Selected place2 detail on result; fulltruck on selection and return",
+  "checkedViewports": [
+    [
+      320,
+      568
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      624,
+      794
+    ],
+    [
+      780,
+      992
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "evidence": "../../.tmp-work/compact-header/",
+  "reportedPackageWidth390CSSpx": 93.18,
+  "reviewPDF": "energy-plus-place2-mobile-v37.pdf",
+  "stakeholderApproval": false,
+  "zone3": "Unchanged; question sent to Grisha",
+  "limitations": [
+    "320 uses existing paginated result text",
+    "No preserved pre-framing camera2 screenshot: PDF before/after compares illustration only"
+  ]
+}

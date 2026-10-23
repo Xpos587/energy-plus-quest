@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:35:42.165507Z",
+    "display_name": "Nano Banana Pro",
+    "id": "6765cccb-ddd9-47ee-a558-e437d8ee6b17",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_093542_6765cccb-ddd9-47ee-a558-e437d8ee6b17_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "a5ae0792-951c-4286-a788-0d738e7259e5",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/a5ae0792-951c-4286-a788-0d738e7259e5.webp"
+        }
+      ],
+      "prompt": "Preserve the refined existing warm 2D illustrated game style exactly: warm cream walls, light gray floor, pale blue glass, soft gray contours, navy orange PPE, soft shadows. No new UI or floating labels. Realistic scale. Modify this narrative outcome so the warehouse alphabet logic is unmistakable. Two weary workers retrieving a modest sealed cardboard parcel from a rack at the MIDDLE of alphabetical warehouse racks. Above that exact retrieval shelf, place one prominent cream physical shelf sign with the single large Cyrillic letter Л. The parcel corresponds to лодка: use closed parcel packaging, no naked gift. Dispatch/loading door clearly visible FAR at the other end of aisle, with physical shelf sign А on rack immediately beside that far dispatch door; do not label the door А itself. Between workers and dispatch, orderly long racks show progression and distance. The selected letter is in middle row; last rows continue behind workers. Do not put contradictory letters on nearby racks; only target Л and distant А need be readable. Distinct real receiving/dispatch geography, no overlay arrows or text, no duplication of letter Л. Maintain same characters, equipment and reference drawing style.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_093542_6765cccb-ddd9-47ee-a558-e437d8ee6b17.png",
+    "status": "completed"
+  }
+]

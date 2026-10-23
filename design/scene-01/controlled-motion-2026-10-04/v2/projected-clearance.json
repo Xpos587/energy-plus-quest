@@ -1,0 +1,51 @@
+{
+  "render_resolution": [
+    720,
+    500
+  ],
+  "method": "Projected prisms enclosing actual native mesh XY hull and complete Z range, including empty volume. Conservative object-to-object gaps; building visibility is separately ray-tested.",
+  "pairs": {
+    "1-2": {
+      "minimum_pixels_full_cycle": 44.009632820512685,
+      "minimum_pixels_first5seconds": 353.1393093991288,
+      "first_frame_gap_pixels": 365.29321418717404,
+      "minimum_frame": 440,
+      "projected_overlap_frames": 0
+    },
+    "1-3": {
+      "minimum_pixels_full_cycle": 18.990928056004147,
+      "minimum_pixels_first5seconds": 19.036181339608632,
+      "first_frame_gap_pixels": 23.731015024232857,
+      "minimum_frame": 923,
+      "projected_overlap_frames": 0
+    },
+    "1-4": {
+      "minimum_pixels_full_cycle": 185.28242481719292,
+      "minimum_pixels_first5seconds": 185.559316317143,
+      "first_frame_gap_pixels": 185.74786445384265,
+      "minimum_frame": 1148,
+      "projected_overlap_frames": 0
+    },
+    "2-3": {
+      "minimum_pixels_full_cycle": 5.135948466005316,
+      "minimum_pixels_first5seconds": 247.5393907215993,
+      "first_frame_gap_pixels": 367.04795241550937,
+      "minimum_frame": 711,
+      "projected_overlap_frames": 0
+    },
+    "2-4": {
+      "minimum_pixels_full_cycle": 4.9636370068187174,
+      "minimum_pixels_first5seconds": 162.2281688739035,
+      "first_frame_gap_pixels": 163.1734851477392,
+      "minimum_frame": 584,
+      "projected_overlap_frames": 0
+    },
+    "3-4": {
+      "minimum_pixels_full_cycle": 179.9116176077883,
+      "minimum_pixels_first5seconds": 185.73383048790328,
+      "first_frame_gap_pixels": 185.73383048790328,
+      "minimum_frame": 263,
+      "projected_overlap_frames": 0
+    }
+  }
+}

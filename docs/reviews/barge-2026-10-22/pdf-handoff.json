@@ -1,0 +1,229 @@
+{
+  "date": "2026-10-22",
+  "surface": "barge",
+  "status": "finished_comparison_evidence",
+  "pairings": [
+    {
+      "size": "mobile",
+      "state": "choice",
+      "parcel": "boat",
+      "baseline": "frames/mobile-runtime-boat-choice.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/mobile-a-boat-choice.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/mobile-b-boat-choice.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/mobile-c-boat-choice.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "mobile",
+      "state": "remote",
+      "parcel": "boat",
+      "baseline": "frames/mobile-runtime-boat-remote.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/mobile-a-boat-remote.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/mobile-b-boat-remote.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/mobile-c-boat-remote.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "mobile",
+      "state": "rush",
+      "parcel": "boat",
+      "baseline": "frames/mobile-runtime-boat-rush.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/mobile-a-boat-rush.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/mobile-b-boat-rush.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/mobile-c-boat-rush.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "mobile",
+      "state": "wait",
+      "parcel": "boat",
+      "baseline": "frames/mobile-runtime-boat-wait.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/mobile-a-boat-wait.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/mobile-b-boat-wait.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/mobile-c-boat-wait.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "mobile",
+      "state": "petr",
+      "parcel": "boat",
+      "baseline": "frames/mobile-runtime-boat-petr.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/mobile-a-boat-petr.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/mobile-b-boat-petr.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/mobile-c-boat-petr.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "desktop",
+      "state": "choice",
+      "parcel": "boat",
+      "baseline": "frames/desktop-runtime-boat-choice.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/desktop-a-boat-choice.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/desktop-b-boat-choice.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/desktop-c-boat-choice.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "desktop",
+      "state": "remote",
+      "parcel": "boat",
+      "baseline": "frames/desktop-runtime-boat-remote.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/desktop-a-boat-remote.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/desktop-b-boat-remote.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/desktop-c-boat-remote.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "desktop",
+      "state": "rush",
+      "parcel": "boat",
+      "baseline": "frames/desktop-runtime-boat-rush.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/desktop-a-boat-rush.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/desktop-b-boat-rush.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/desktop-c-boat-rush.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "desktop",
+      "state": "wait",
+      "parcel": "boat",
+      "baseline": "frames/desktop-runtime-boat-wait.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/desktop-a-boat-wait.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/desktop-b-boat-wait.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/desktop-c-boat-wait.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    },
+    {
+      "size": "desktop",
+      "state": "petr",
+      "parcel": "boat",
+      "baseline": "frames/desktop-runtime-boat-petr.png",
+      "proposals": [
+        {
+          "variant": "a",
+          "file": "frames/desktop-a-boat-petr.png"
+        },
+        {
+          "variant": "b",
+          "file": "frames/desktop-b-boat-petr.png"
+        },
+        {
+          "variant": "c",
+          "file": "frames/desktop-c-boat-petr.png"
+        }
+      ],
+      "comparisonMeaning": "current runtime versus review-only prototypes, not implemented before/after"
+    }
+  ],
+  "readback": "readback.json",
+  "focus": "focus-readback.json",
+  "prototypeSource": "../barge-2026-10-17/revision-3/",
+  "critique": "../barge-2026-10-17/revision-3/critique.md",
+  "notImplemented": true,
+  "limitations": [
+    "No client/Fedya approval or real player test",
+    "Prototype Continue returns to comparison",
+    "Native crop768x512 not desktopDPR2 final art",
+    "Office/PRU and crane for small gifts unresolved"
+  ],
+  "flowersStatus": "Mass generation stopped; receipts preserved, F0061 P1 visual HOLD"
+}

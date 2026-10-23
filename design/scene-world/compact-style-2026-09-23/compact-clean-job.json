@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-23T13:07:06.481638Z",
+    "display_name": "Nano Banana Pro",
+    "id": "a4dee2e2-948c-489f-a84c-cf38ad0b60fe",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_130706_a4dee2e2-948c-489f-a84c-cf38ad0b60fe_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "9ac1055b-1163-40a4-ae73-027d93128083",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/9ac1055b-1163-40a4-ae73-027d93128083_resize.jpg"
+        }
+      ],
+      "prompt": "Edit the attached drawing. Keep the truck and its current lovely illustrated style, perspective, proportions, blue cab, wheels and soft ground shadow.\n\nErase ALL city scenery behind and above the truck: no buildings, no road, no trees, no tiny truck, no blue pavement. The entire background outside the truck must be a plain very light neutral gray studio backdrop. Do not fade scenery out: REMOVE it completely. Keep the truck fully opaque. Restore the top edge and far wall where the background overlapped them. No translucent walls.\n\nInside the truck, make the RIGHTMOST 15% of cargo floor (immediately left of the blue cab, at the front wall with red straps) completely EMPTY. Move the two pillow cartons left into the middle cluster. This leaves a tall empty space suitable for an upright boat, restrained by two red horizontal straps. Do NOT add a boat. In the middle cluster have three distinct small cartons across the front, with a narrow visible recess behind them. Keep heavy crates at the left. Keep the small orange camera carton above the fragile carton, but reduce the orange camera carton width and height by another third. It is a normal small camera shipping box, not a giant cube. Keep straps around it and lots of empty air above.\n\nMake brown outlines neutral gray and slightly lighter. Retain fine vehicle details and clean shading. The light-blue windows and warm ivory interior remain. No other edits. No text, numbers, diagrams or labels.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_130706_a4dee2e2-948c-489f-a84c-cf38ad0b60fe.png",
+    "status": "completed"
+  }
+]

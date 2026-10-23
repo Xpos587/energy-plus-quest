@@ -1,0 +1,45 @@
+.preview {
+  color: #344c65;
+  background: #eaf0f5;
+  border-bottom: 1px solid #d6e0e8;
+  padding: 0 20px;
+  font-size: 12px;
+}
+.preview summary {
+  min-height: 36px;
+  align-content: center;
+  cursor: pointer;
+  width: fit-content;
+}
+.preview form {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+.preview label {
+  display: grid;
+  gap: 6px;
+  flex: 1 1 160px;
+}
+.preview select,
+.preview button {
+  min-height: 44px;
+  border: 1px solid #bac9d9;
+  background: white;
+  color: #041327;
+  border-radius: 6px;
+  padding: 8px;
+  max-width: 100%;
+}
+.preview button {
+  padding: 8px 20px;
+  cursor: pointer;
+  color: white;
+  background: #003ca6;
+}
+.preview p {
+  margin: 0;
+  padding: 0 0 12px;
+}

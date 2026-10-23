@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-24T07:48:29.958016Z",
+    "display_name": "Nano Banana Pro",
+    "id": "cac1285d-9e23-4733-bb1a-3d4c0f66f409",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_074829_cac1285d-9e23-4733-bb1a-3d4c0f66f409_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "1aea79e6-3f2d-4dc7-a172-fbbf641341d0",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/1aea79e6-3f2d-4dc7-a172-fbbf641341d0.png"
+        }
+      ],
+      "prompt": "AUTHORITATIVE STYLE REFERENCE is the attached city illustration with three characters. Match its actual sophisticated drawing language: richly modeled hand-painted 2D editorial game illustration, smooth nuanced dimensional shading, refined detailed machinery, expressive human drawing, warm yellow/apricot cream buildings, living lush green vegetation. NOT flat isometric vector art, NOT washed out pink/purple monochrome line drawings, NOT a 3D render. Keep the reference saturation and richness. Make pavement LIGHT NEUTRAL GRAY instead of blue. Make window GLASS PALE LIGHT BLUE instead of saturated blue. Remove black outlines or replace with delicate neutral GRAY lines; preserve volume through shading. Blue and orange remain vivid on uniforms and machinery. Soft shadows. Reference provides STYLE ONLY: DO NOT reproduce city, trucks or giant foreground characters. Draw only the requested scene, without UI or decorative captions. Believable relative physical scale.\nCreate last-mile delivery game landscape in northern Russia in early cold autumn, elevated three-quarter view. Clear geographic progression left to right: river cargo dock with large barge carrying pipe bundles; a marshy stretch of land with reeds and muddy paths; THEN a narrow river with first thin ice along the shores and open water, no bridge and no safe ice crossing; beyond river a small workers' accommodation building and a distant separate chum campsite. At start a small staging area shows four correctly proportioned alternatives: helicopter on a landing pad, blue amphibious all-terrain wheeled vehicle, ordinary small hand cart, tracked pipe carrier. No oversized parcels or camera objects; small sock gift carton on dock table. Barge much larger than helicopter/vehicles, humans tiny compared to machines. Distances and relative object scales physically coherent. Leave enough landscape space, no labels, captions, titles, decorative UI or route arrows. Warm cream structures, muted green ochre landscape, pale blue water, navy/orange accents.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_074829_cac1285d-9e23-4733-bb1a-3d4c0f66f409.png",
+    "status": "completed"
+  }
+]

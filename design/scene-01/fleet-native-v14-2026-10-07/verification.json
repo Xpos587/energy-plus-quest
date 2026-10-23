@@ -1,0 +1,50 @@
+{
+  "source": "fleet-v14-native.blend",
+  "root_matrices_exact_vs_v13": [
+    1,
+    239,
+    385,
+    769,
+    1152
+  ],
+  "camera_exact_vs_v13": true,
+  "crew_uv_and_material_exact_vs_v13": {
+    "1": {
+      "faces": 118,
+      "material": "V02 1 Permanent high-detail two-driver windshield.001"
+    },
+    "2": {
+      "faces": 118,
+      "material": "V02 2 Permanent high-detail two-driver windshield.001"
+    },
+    "3": {
+      "faces": 118,
+      "material": "V02 3 Permanent high-detail two-driver windshield.001"
+    },
+    "4": {
+      "faces": 118,
+      "material": "V02 4 Permanent high-detail two-driver windshield.001"
+    }
+  },
+  "old_cab_checks": [
+    {
+      "truck": 1,
+      "crew_plane_x": 1.715,
+      "crew_z": [
+        1.3701103925704956,
+        1.9360170364379883
+      ],
+      "exhaust_behind_rear_bulkhead": true
+    },
+    {
+      "truck": 4,
+      "crew_plane_x": 1.715,
+      "crew_z": [
+        1.3700885772705078,
+        1.922799825668335
+      ],
+      "exhaust_behind_rear_bulkhead": true
+    }
+  ],
+  "limits": "Static pilot only, no claim of all-frame collision or production/mobile integration validation."
+}

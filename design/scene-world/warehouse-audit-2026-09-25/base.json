@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:35:57.338939Z",
+    "display_name": "Nano Banana Pro",
+    "id": "c868d628-c8cf-4dc1-bf8b-d4936534b4d0",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_093557_c868d628-c8cf-4dc1-bf8b-d4936534b4d0_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "7903b51b-a119-4fb4-9b6b-139fa0874c09",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/7903b51b-a119-4fb4-9b6b-139fa0874c09_resize.jpg"
+        }
+      ],
+      "prompt": "Preserve the refined existing warm 2D illustrated game style exactly: warm cream walls, light gray floor, pale blue glass, soft gray contours, navy orange PPE, soft shadows. No new UI or floating labels. Realistic scale. Precisely edit this warehouse illustration, preserve ALL geometry, shelves, windows, receiving doors LEFT, dispatch doors RIGHT, forklift, drone, worker, desk and perspective. Correct ONLY SIX large shelf-letter plates: in image left-to-right the plate characters must be exactly Я, Ф, Н, Л, Б, А (Cyrillic). This means Russian alphabet begins with А on rightmost plate nearest dispatch and advances away from dispatch toward leftmost Я. Both existing Ф plates must NOT remain duplicate: left one Я, right one Ф. Middle pair currently Л Н must become Н Л. Right pair currently А Б must become Б А. One large clear dark gray Cyrillic letter per cream existing plate. No additional plates. ALSO remove the sock drawing from the parcel on pallet at receiving leftforeground, leave plain sealed cardboard box, because this picture serves every selected gift. Do not change any other content. Preserve original image dimensions and camera.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_093557_c868d628-c8cf-4dc1-bf8b-d4936534b4d0.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,602 @@
+{
+  "status": "ONE last small whole-scene comparison for parent/root review; production HOLD",
+  "same_native_texture_reused_three_racks": "rack-sprite-v1-native.png",
+  "native_unchanged": true,
+  "new_surface_planes": 9,
+  "three_fixed_envelopes": [
+    [
+      [
+        1.5,
+        3.5,
+        0
+      ],
+      [
+        3.3,
+        4.7,
+        2.7
+      ]
+    ],
+    [
+      [
+        4.5,
+        3.5,
+        0
+      ],
+      [
+        6.300000000000001,
+        4.7,
+        2.7
+      ]
+    ],
+    [
+      [
+        7.5,
+        3.5,
+        0
+      ],
+      [
+        9.3,
+        4.7,
+        2.7
+      ]
+    ]
+  ],
+  "all_preexisting_meshes_checked": 727,
+  "all_preexisting_cameras_checked": 4,
+  "coordinate_or_transform_changes": [],
+  "camera_hidden_rack2_and3_objects": [
+    "Finish label barcode.039",
+    "Finish label barcode.040",
+    "Finish label barcode.041",
+    "Finish label barcode.042",
+    "Finish label barcode.043",
+    "Finish label barcode.044",
+    "Finish label barcode.045",
+    "Finish label barcode.046",
+    "Finish label barcode.047",
+    "Finish label barcode.048",
+    "Finish label barcode.049",
+    "Finish label barcode.050",
+    "Finish label barcode.051",
+    "Finish label barcode.052",
+    "Finish label barcode.053",
+    "Finish label barcode.054",
+    "Finish label barcode.055",
+    "Finish label barcode.056",
+    "Finish label barcode.057",
+    "Finish label barcode.058",
+    "Finish label barcode.059",
+    "Finish label barcode.060",
+    "Finish label barcode.061",
+    "Finish label barcode.062",
+    "Finish label barcode.063",
+    "Finish label barcode.064",
+    "Finish label barcode.065",
+    "Finish label barcode.066",
+    "Finish label barcode.067",
+    "Finish label barcode.068",
+    "Finish label barcode.069",
+    "Finish label barcode.070",
+    "Finish label barcode.071",
+    "Finish label barcode.072",
+    "Finish label barcode.073",
+    "Finish label barcode.074",
+    "Finish package front tape.013",
+    "Finish package front tape.014",
+    "Finish package front tape.015",
+    "Finish package front tape.016",
+    "Finish package front tape.017",
+    "Finish package front tape.018",
+    "Finish package front tape.019",
+    "Finish package front tape.020",
+    "Finish package front tape.021",
+    "Finish package front tape.022",
+    "Finish package front tape.023",
+    "Finish package front tape.024",
+    "Finish package label.013",
+    "Finish package label.014",
+    "Finish package label.015",
+    "Finish package label.016",
+    "Finish package label.017",
+    "Finish package label.018",
+    "Finish package label.019",
+    "Finish package label.020",
+    "Finish package label.021",
+    "Finish package label.022",
+    "Finish package label.023",
+    "Finish package label.024",
+    "Finish package top tape.013",
+    "Finish package top tape.014",
+    "Finish package top tape.015",
+    "Finish package top tape.016",
+    "Finish package top tape.017",
+    "Finish package top tape.018",
+    "Finish package top tape.019",
+    "Finish package top tape.020",
+    "Finish package top tape.021",
+    "Finish package top tape.022",
+    "Finish package top tape.023",
+    "Finish package top tape.024",
+    "Finish rack bolt.008",
+    "Finish rack bolt.009",
+    "Finish rack bolt.010",
+    "Finish rack bolt.011",
+    "Finish rack bolt.012",
+    "Finish rack bolt.013",
+    "Finish rack bolt.014",
+    "Finish rack bolt.015",
+    "Finish rack end diagonal.004",
+    "Finish rack end diagonal.005",
+    "Finish rack end diagonal.006",
+    "Finish rack end diagonal.007",
+    "forklift-combined-v3 rack2 bay1 stack1 depth1",
+    "forklift-combined-v3 rack2 bay1 stack1 depth2",
+    "forklift-combined-v3 rack2 bay1 stack2 depth1",
+    "forklift-combined-v3 rack2 bay1 stack2 depth2",
+    "forklift-combined-v3 rack2 bay1 stack3 depth1",
+    "forklift-combined-v3 rack2 bay1 stack3 depth2",
+    "forklift-combined-v3 rack2 bay2 stack1 depth1",
+    "forklift-combined-v3 rack2 bay2 stack1 depth2",
+    "forklift-combined-v3 rack2 bay2 stack2 depth1",
+    "forklift-combined-v3 rack2 bay2 stack2 depth2",
+    "forklift-combined-v3 rack2 bay2 stack3 depth1",
+    "forklift-combined-v3 rack2 bay2 stack3 depth2",
+    "forklift-combined-v3 rack2 beam face",
+    "forklift-combined-v3 rack2 beam face.001",
+    "forklift-combined-v3 rack2 beam face.002",
+    "forklift-combined-v3 rack2 beam face.003",
+    "forklift-combined-v3 rack2 beam face.004",
+    "forklift-combined-v3 rack2 beam face.005",
+    "forklift-combined-v3 rack2 beam face.006",
+    "forklift-combined-v3 rack2 beam face.007",
+    "forklift-combined-v3 rack2 inward upright casing",
+    "forklift-combined-v3 rack2 inward upright casing.001",
+    "forklift-combined-v3 rack2 inward upright casing.002",
+    "forklift-combined-v3 rack2 inward upright casing.003",
+    "forklift-combined-v3 rack2 inward upright casing.004",
+    "forklift-combined-v3 rack2 inward upright casing.005",
+    "Rack2 bay1 carton",
+    "Rack2 bay1 carton.001",
+    "Rack2 bay1 carton.002",
+    "Rack2 bay1 carton.003",
+    "Rack2 bay1 carton.004",
+    "Rack2 bay1 carton.005",
+    "Rack2 bay2 carton",
+    "Rack2 bay2 carton.001",
+    "Rack2 bay2 carton.002",
+    "Rack2 bay2 carton.003",
+    "Rack2 bay2 carton.004",
+    "Rack2 bay2 carton.005",
+    "Rack2 beam",
+    "Rack2 beam.001",
+    "Rack2 beam.002",
+    "Rack2 beam.003",
+    "Rack2 beam.004",
+    "Rack2 beam.005",
+    "Rack2 beam.006",
+    "Rack2 beam.007",
+    "Rack2 deck",
+    "Rack2 deck.001",
+    "Rack2 deck.002",
+    "Rack2 deck.003",
+    "Rack2 upright",
+    "Rack2 upright.001",
+    "Rack2 upright.002",
+    "Rack2 upright.003",
+    "Rack2 upright.004",
+    "Rack2 upright.005",
+    "Finish label barcode.075",
+    "Finish label barcode.076",
+    "Finish label barcode.077",
+    "Finish label barcode.078",
+    "Finish label barcode.079",
+    "Finish label barcode.080",
+    "Finish label barcode.081",
+    "Finish label barcode.082",
+    "Finish label barcode.083",
+    "Finish label barcode.084",
+    "Finish label barcode.085",
+    "Finish label barcode.086",
+    "Finish label barcode.087",
+    "Finish label barcode.088",
+    "Finish label barcode.089",
+    "Finish label barcode.090",
+    "Finish label barcode.091",
+    "Finish label barcode.092",
+    "Finish label barcode.093",
+    "Finish label barcode.094",
+    "Finish label barcode.095",
+    "Finish label barcode.096",
+    "Finish label barcode.097",
+    "Finish label barcode.098",
+    "Finish label barcode.099",
+    "Finish label barcode.100",
+    "Finish label barcode.101",
+    "Finish label barcode.102",
+    "Finish label barcode.103",
+    "Finish label barcode.104",
+    "Finish label barcode.105",
+    "Finish label barcode.106",
+    "Finish label barcode.107",
+    "Finish label barcode.108",
+    "Finish label barcode.109",
+    "Finish label barcode.110",
+    "Finish package front tape.025",
+    "Finish package front tape.026",
+    "Finish package front tape.027",
+    "Finish package front tape.028",
+    "Finish package front tape.029",
+    "Finish package front tape.030",
+    "Finish package front tape.031",
+    "Finish package front tape.032",
+    "Finish package front tape.033",
+    "Finish package front tape.034",
+    "Finish package front tape.035",
+    "Finish package front tape.036",
+    "Finish package label.025",
+    "Finish package label.026",
+    "Finish package label.027",
+    "Finish package label.028",
+    "Finish package label.029",
+    "Finish package label.030",
+    "Finish package label.031",
+    "Finish package label.032",
+    "Finish package label.033",
+    "Finish package label.034",
+    "Finish package label.035",
+    "Finish package label.036",
+    "Finish package top tape.025",
+    "Finish package top tape.026",
+    "Finish package top tape.027",
+    "Finish package top tape.028",
+    "Finish package top tape.029",
+    "Finish package top tape.030",
+    "Finish package top tape.031",
+    "Finish package top tape.032",
+    "Finish package top tape.033",
+    "Finish package top tape.034",
+    "Finish package top tape.035",
+    "Finish package top tape.036",
+    "Finish rack bolt.016",
+    "Finish rack bolt.017",
+    "Finish rack bolt.018",
+    "Finish rack bolt.019",
+    "Finish rack bolt.020",
+    "Finish rack bolt.021",
+    "Finish rack bolt.022",
+    "Finish rack bolt.023",
+    "Finish rack end diagonal.008",
+    "Finish rack end diagonal.009",
+    "Finish rack end diagonal.010",
+    "Finish rack end diagonal.011",
+    "forklift-combined-v3 rack3 bay1 stack1 depth1",
+    "forklift-combined-v3 rack3 bay1 stack1 depth2",
+    "forklift-combined-v3 rack3 bay1 stack2 depth1",
+    "forklift-combined-v3 rack3 bay1 stack2 depth2",
+    "forklift-combined-v3 rack3 bay1 stack3 depth1",
+    "forklift-combined-v3 rack3 bay1 stack3 depth2",
+    "forklift-combined-v3 rack3 bay2 stack1 depth1",
+    "forklift-combined-v3 rack3 bay2 stack1 depth2",
+    "forklift-combined-v3 rack3 bay2 stack2 depth1",
+    "forklift-combined-v3 rack3 bay2 stack2 depth2",
+    "forklift-combined-v3 rack3 bay2 stack3 depth1",
+    "forklift-combined-v3 rack3 bay2 stack3 depth2",
+    "forklift-combined-v3 rack3 beam face",
+    "forklift-combined-v3 rack3 beam face.001",
+    "forklift-combined-v3 rack3 beam face.002",
+    "forklift-combined-v3 rack3 beam face.003",
+    "forklift-combined-v3 rack3 beam face.004",
+    "forklift-combined-v3 rack3 beam face.005",
+    "forklift-combined-v3 rack3 beam face.006",
+    "forklift-combined-v3 rack3 beam face.007",
+    "forklift-combined-v3 rack3 inward upright casing",
+    "forklift-combined-v3 rack3 inward upright casing.001",
+    "forklift-combined-v3 rack3 inward upright casing.002",
+    "forklift-combined-v3 rack3 inward upright casing.003",
+    "forklift-combined-v3 rack3 inward upright casing.004",
+    "forklift-combined-v3 rack3 inward upright casing.005",
+    "Rack3 bay1 carton",
+    "Rack3 bay1 carton.001",
+    "Rack3 bay1 carton.002",
+    "Rack3 bay1 carton.003",
+    "Rack3 bay1 carton.004",
+    "Rack3 bay1 carton.005",
+    "Rack3 bay2 carton",
+    "Rack3 bay2 carton.001",
+    "Rack3 bay2 carton.002",
+    "Rack3 bay2 carton.003",
+    "Rack3 bay2 carton.004",
+    "Rack3 bay2 carton.005",
+    "Rack3 beam",
+    "Rack3 beam.001",
+    "Rack3 beam.002",
+    "Rack3 beam.003",
+    "Rack3 beam.004",
+    "Rack3 beam.005",
+    "Rack3 beam.006",
+    "Rack3 beam.007",
+    "Rack3 deck",
+    "Rack3 deck.001",
+    "Rack3 deck.002",
+    "Rack3 deck.003",
+    "Rack3 upright",
+    "Rack3 upright.001",
+    "Rack3 upright.002",
+    "Rack3 upright.003",
+    "Rack3 upright.004",
+    "Rack3 upright.005"
+  ],
+  "boards": [
+    {
+      "text": "А-Б",
+      "projected_board_bbox_corners_small": [
+        [
+          392.12273597717285,
+          240.1923262476921
+        ],
+        [
+          392.12273597717285,
+          226.92489421367645
+        ],
+        [
+          393.1468963623047,
+          226.08007287979126
+        ],
+        [
+          393.1468963623047,
+          239.34750491380692
+        ],
+        [
+          423.00310134887695,
+          254.10854130983353
+        ],
+        [
+          423.00310134887695,
+          240.84110927581787
+        ],
+        [
+          424.0272617340088,
+          239.9962481856346
+        ],
+        [
+          424.0272617340088,
+          253.26368021965027
+        ]
+      ],
+      "body": "А-Б"
+    },
+    {
+      "text": "В-К",
+      "projected_board_bbox_corners_small": [
+        [
+          427.75391578674316,
+          256.2494974732399
+        ],
+        [
+          427.75391578674316,
+          242.98206543922424
+        ],
+        [
+          428.7781047821045,
+          242.13720434904099
+        ],
+        [
+          428.7781047821045,
+          255.40463638305664
+        ],
+        [
+          458.6342525482178,
+          270.16567277908325
+        ],
+        [
+          458.6342525482178,
+          256.8982407450676
+        ],
+        [
+          459.6584415435791,
+          256.0534194111824
+        ],
+        [
+          459.6584415435791,
+          269.32085144519806
+        ]
+      ],
+      "body": "В-К"
+    },
+    {
+      "text": "Л-М",
+      "projected_board_bbox_corners_small": [
+        [
+          510.89332580566406,
+          293.71619057655334
+        ],
+        [
+          510.89332580566406,
+          280.4487585425377
+        ],
+        [
+          511.9175148010254,
+          279.60389745235443
+        ],
+        [
+          511.9175148010254,
+          292.8713294863701
+        ],
+        [
+          541.7737197875977,
+          307.6323658823967
+        ],
+        [
+          541.7737197875977,
+          294.36493384838104
+        ],
+        [
+          542.797908782959,
+          293.52011251449585
+        ],
+        [
+          542.797908782959,
+          306.7875445485115
+        ]
+      ],
+      "body": "Л-М"
+    },
+    {
+      "text": "Н-У",
+      "projected_board_bbox_corners_small": [
+        [
+          546.5245628356934,
+          309.77332204580307
+        ],
+        [
+          546.5245628356934,
+          296.5058900117874
+        ],
+        [
+          547.5486946105957,
+          295.6610686779022
+        ],
+        [
+          547.5486946105957,
+          308.9285007119179
+        ],
+        [
+          577.404899597168,
+          323.6895371079445
+        ],
+        [
+          577.404899597168,
+          310.42210507392883
+        ],
+        [
+          578.4290885925293,
+          309.5772439837456
+        ],
+        [
+          578.4290885925293,
+          322.84467601776123
+        ]
+      ],
+      "body": "Н-У"
+    },
+    {
+      "text": "Ф-Э",
+      "projected_board_bbox_corners_small": [
+        [
+          629.6639442443848,
+          347.2400151491165
+        ],
+        [
+          629.6639442443848,
+          333.97258311510086
+        ],
+        [
+          630.6881332397461,
+          333.12776178121567
+        ],
+        [
+          630.6881332397461,
+          346.3951938152313
+        ],
+        [
+          660.5443382263184,
+          361.15623021125793
+        ],
+        [
+          660.5443382263184,
+          347.8887981772423
+        ],
+        [
+          661.5685272216797,
+          347.04395696520805
+        ],
+        [
+          661.5685272216797,
+          360.3113889992237
+        ]
+      ],
+      "body": "Ф-Э"
+    },
+    {
+      "text": "Ю-Я",
+      "projected_board_bbox_corners_small": [
+        [
+          665.2951812744141,
+          363.2971664965153
+        ],
+        [
+          665.2951812744141,
+          350.0297344624996
+        ],
+        [
+          666.3193702697754,
+          349.1848932504654
+        ],
+        [
+          666.3193702697754,
+          362.4523451626301
+        ],
+        [
+          696.1755752563477,
+          377.2133815586567
+        ],
+        [
+          696.1755752563477,
+          363.94594952464104
+        ],
+        [
+          697.19970703125,
+          363.1011083126068
+        ],
+        [
+          697.19970703125,
+          376.3685602247715
+        ]
+      ],
+      "body": "Ю-Я"
+    }
+  ],
+  "render": [
+    960,
+    667
+  ],
+  "samples": 16,
+  "seed": 0,
+  "measured_render_seconds": 23.1643221129998,
+  "no_solid_roof": "Top uses native alpha and camera-only emission; original solid top decks hidden camera-only, original shadows retained.",
+  "limits": [
+    "2.5D front/right/top texture projection, not newly modeled rack/carton geometry.",
+    "Repeated existing texture on all three racks; original six boards/fonts preserved and protected in comparison.",
+    "Post caps narrow at native face UV splits and small base seam remains. No further cosmetic iterations.",
+    "Single approved source camera; desktop/portrait are deterministic crops, no camera orbit supported."
+  ],
+  "production_changed": false,
+  "all_six_boards_protected_decoded_difference": 0,
+  "board_protection_policy": "Reuse exact decoded V3 original six board/text pixels within projected board silhouette +1px. Raw small render retained separately. No native sprite edits.",
+  "canonical_source_plane": [
+    1440,
+    1000
+  ],
+  "crop_contract": {
+    "desktop": [
+      0,
+      50,
+      1440,
+      950
+    ],
+    "portrait": [
+      341.8014714937448,
+      9.252056359842499,
+      986.1407553525422,
+      984.0218729561262
+    ],
+    "pan_right": [
+      795.6607161412026,
+      9.252056359842499,
+      1440,
+      984.0218729561262
+    ],
+    "small_source_scale": 0.6666666666666666,
+    "small_source_y_offset": 0.16666666666668561
+  }
+}

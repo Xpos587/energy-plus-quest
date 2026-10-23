@@ -1,0 +1,2 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch(),page=await browser.newPage();await page.goto('file://'+process.cwd()+'/docs/reviews/barge-2026-10-17/revision-3/prototype.html?v=b&state=&parcel=boat');console.log(await page.locator('.context').evaluate(e=>({html:e.innerHTML,children:[...e.children].map(x=>({tag:x.tagName,classes:x.className,height:x.clientHeight}))})));await browser.close();

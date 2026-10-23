@@ -1,0 +1,125 @@
+{
+  "records": [
+    {
+      "truck": 1,
+      "height": 2.86,
+      "width": 1.92,
+      "length": 2.51,
+      "archived_shell_hidden": [
+        "PILOT 1 reconstructed old-cab"
+      ],
+      "native_front_wheels_restored": [
+        "1 hub center",
+        "1 hub center.001",
+        "1 recessed hub",
+        "1 recessed hub.001",
+        "1 seated tire",
+        "1 seated tire.001"
+      ],
+      "driver_count": 1,
+      "body_type": "aged lower sleeper"
+    },
+    {
+      "truck": 2,
+      "height": 3.18,
+      "width": 1.92,
+      "length": 2.51,
+      "archived_shell_hidden": [
+        "2 windshield",
+        "BLUE empty passenger seat back",
+        "BLUE empty passenger seat cushion",
+        "PILOT 2 driver head",
+        "PILOT 2 driver torso",
+        "PILOT 2 reconstructed near-cab"
+      ],
+      "native_front_wheels_restored": [
+        "2 hub center",
+        "2 hub center.001",
+        "2 recessed hub",
+        "2 recessed hub.001",
+        "2 seated tire",
+        "2 seated tire.001"
+      ],
+      "driver_count": 1,
+      "body_type": "modern tall sleeper"
+    },
+    {
+      "truck": 3,
+      "height": 3.26,
+      "width": 1.92,
+      "length": 2.51,
+      "archived_shell_hidden": [
+        "PILOT 3 reconstructed crew-cab"
+      ],
+      "native_front_wheels_restored": [
+        "3 hub center",
+        "3 hub center.001",
+        "3 recessed hub",
+        "3 recessed hub.001",
+        "3 seated tire",
+        "3 seated tire.001"
+      ],
+      "driver_count": 2,
+      "body_type": "modern tall sleeper"
+    },
+    {
+      "truck": 4,
+      "height": 2.65,
+      "width": 1.92,
+      "length": 2.51,
+      "archived_shell_hidden": [
+        "PILOT 4 reconstructed old-cab"
+      ],
+      "native_front_wheels_restored": [
+        "4 hub center",
+        "4 hub center.001",
+        "4 recessed hub",
+        "4 recessed hub.001",
+        "4 seated tire",
+        "4 seated tire.001"
+      ],
+      "driver_count": 1,
+      "body_type": "aged lower sleeper"
+    }
+  ],
+  "root_matrix_max_delta": 0.0,
+  "camera_matrix": [
+    [
+      0.9968152642250061,
+      -0.06695909798145294,
+      0.04331028088927269,
+      1.7741494178771973
+    ],
+    [
+      0.07974522560834885,
+      0.8369886875152588,
+      -0.5413784980773926,
+      -84.67687225341797
+    ],
+    [
+      1.8925381262135943e-09,
+      0.5431081652641296,
+      0.8396627306938171,
+      131.3314208984375
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "frames": [
+    1,
+    769
+  ],
+  "dimensions": [
+    1920,
+    1334
+  ],
+  "method": "native bevelled shell, sloped glass, roof hatch/channels, hardware, true small driver geometry; archive shell hidden",
+  "limitations": [
+    "Simple stylized native model; does not reproduce the fine drawn card artwork.",
+    "Driver heads and hands intentionally small, readability at full-map scale limited."
+  ]
+}

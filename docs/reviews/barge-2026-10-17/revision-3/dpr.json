@@ -1,0 +1,98 @@
+[
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 1,
+    "src": "file:///home/michael/Github/energy-plus-quest/docs/reviews/barge-2026-10-17/revision-3/outcomes-camera-v1.png",
+    "sheet": [
+      1536,
+      1024
+    ],
+    "effective": [
+      768,
+      512
+    ],
+    "display": [
+      286.390625,
+      190.921875
+    ],
+    "neededAtDpr": [
+      286.390625,
+      190.921875
+    ]
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "src": "file:///home/michael/Github/energy-plus-quest/docs/reviews/barge-2026-10-17/revision-3/outcomes-camera-v1.png",
+    "sheet": [
+      1536,
+      1024
+    ],
+    "effective": [
+      768,
+      512
+    ],
+    "display": [
+      286.390625,
+      190.921875
+    ],
+    "neededAtDpr": [
+      572.78125,
+      381.84375
+    ]
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "dpr": 1,
+    "src": "file:///home/michael/Github/energy-plus-quest/docs/reviews/barge-2026-10-17/revision-3/outcomes-camera-v1.png",
+    "sheet": [
+      1536,
+      1024
+    ],
+    "effective": [
+      768,
+      512
+    ],
+    "display": [
+      790.390625,
+      526.921875
+    ],
+    "neededAtDpr": [
+      790.390625,
+      526.921875
+    ]
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "dpr": 2,
+    "src": "file:///home/michael/Github/energy-plus-quest/docs/reviews/barge-2026-10-17/revision-3/outcomes-camera-v1.png",
+    "sheet": [
+      1536,
+      1024
+    ],
+    "effective": [
+      768,
+      512
+    ],
+    "display": [
+      790.390625,
+      526.921875
+    ],
+    "neededAtDpr": [
+      1580.78125,
+      1053.84375
+    ]
+  }
+]

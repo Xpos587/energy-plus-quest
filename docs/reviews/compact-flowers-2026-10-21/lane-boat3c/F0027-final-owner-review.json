@@ -1,0 +1,25 @@
+{
+  "id": "F0027",
+  "decision": "accepted_for_runtime",
+  "processingMode": "selective_flowers",
+  "acceptsRetainedRegions": true,
+  "passes": 2,
+  "master": ".tmp-work/flowers-all-2026-10-20/F0027/pass2-master.png",
+  "acceptedP1": 9,
+  "acceptedP2": 2,
+  "retainedTiles": 0,
+  "inspected": [
+    "whole final master",
+    "both face/collars100percent",
+    "boat rigging/stripes100percent",
+    "canvas edge transition100percent"
+  ],
+  "scenario": "Boat outside truck on trolley; workers/cargo/red cab preserved.",
+  "protection": "Feathered faces and flags retain source identity. Original exterior20px background retained with fade to70px after visual seam rejection; boundaries and faces remain source-limited, explicit original pixels not regenerated detail.",
+  "rejectedAssembly": "F0027-p2-before-edge-protection.png",
+  "nativeDimensions": "See native candidate receipts;8192 is assembled longest edge.",
+  "promoted": false,
+  "runtimeVerified": false,
+  "promotionHold": null,
+  "scopeDecision": "docs/plans/2026-10-22-throughput-reset.md; preserve actual selective coverage and source-protected faces/edges, no full-scene native8192 claim"
+}

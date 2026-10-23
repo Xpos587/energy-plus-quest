@@ -1,0 +1,3096 @@
+[
+  {
+    "id": "320x568-compact-camera-alva-place-1",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Дзынь!\n\nФотоаппарат заметался по кузову фуры и при падении повредил посуду. Кому-то придется есть из одноразовых тарелок!Изменить выбор-1Энергия0Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone1-fallen-v44.png",
+            "box": {
+              "x": -29.07349395751953,
+              "y": -165.328125,
+              "width": 756.35009765625,
+              "height": 635.625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-camera-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "393x852-compact-camera-alva-place-1",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Дзынь!\n\nФотоаппарат заметался по кузову фуры и при падении повредил посуду. Кому-то придется есть из одноразовых тарелок!Изменить выбор-1Энергия0Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone1-fallen-v44.png",
+            "box": {
+              "x": -35.7107048034668,
+              "y": -214,
+              "width": 928.89013671875,
+              "height": 780.625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-camera-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-camera-alva-place-2",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": false,
+        "text": "Хорошо закрепленный фотоаппарат доехал до склада в целости и сохранности.Изменить выбор+2Энергия0Эмпатия+1ЭффективностьЧитать дальше",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone2-v36.png",
+            "box": {
+              "x": -91.41644287109375,
+              "y": -184.375,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-camera-alva-place-2-page0.png"
+      },
+      {
+        "page": 1,
+        "last": true,
+        "text": "Но водитель все равно переживал: не побьется ли посуда в пути, а пространство над фотоаппаратом осталось неиспользованным.Изменить выбор+2Энергия0Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone2-v36.png",
+            "box": {
+              "x": -91.41644287109375,
+              "y": -184.375,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-camera-alva-place-2-page1.png"
+      }
+    ],
+    "pages": 2
+  },
+  {
+    "id": "393x852-compact-camera-alva-place-2",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Хорошо закрепленный фотоаппарат доехал до склада в целости и сохранности. Но водитель все равно переживал: не побьется ли посуда в пути, а пространство над фотоаппаратом осталось неиспользованным.Изменить выбор+2Энергия0Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone2-v36.png",
+            "box": {
+              "x": -112.27201080322266,
+              "y": -237.390625,
+              "width": 973.1221923828125,
+              "height": 817.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-camera-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "393x852-compact-camera-alva-place-3",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат доехал целым, но не без усилий: его пришлось надежно закрепить стропами, а погрузчику – достать из кузова сразу три коробки.Изменить выбор+2Энергия+1Эмпатия+3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone3-packed-v40.png",
+            "box": {
+              "x": -271.3345031738281,
+              "y": -232.703125,
+              "width": 973.1221923828125,
+              "height": 817.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-camera-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-camera-alva-place-3",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат доехал целым, но не без усилий: его пришлось надежно закрепить стропами, а погрузчику – достать из кузова сразу три коробки.Изменить выбор+2Энергия+1Эмпатия+3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone3-packed-v40.png",
+            "box": {
+              "x": -220.93206787109375,
+              "y": -180.5625,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-camera-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-camera-alva-place-4",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат закрепили на стене, и он доехал нормально, но как же тяжело до него было пробираться! А большое пространство кузова осталось пустым и было использовано неэффективно.Изменить выбор-3Энергия-1Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone4-v38.png",
+            "box": {
+              "x": -403.79144287109375,
+              "y": -172.953125,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-camera-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "393x852-compact-camera-alva-place-4",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат закрепили на стене, и он доехал нормально, но как же тяжело до него было пробираться! А большое пространство кузова осталось пустым и было использовано неэффективно.Изменить выбор-3Энергия-1Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone4-v38.png",
+            "box": {
+              "x": -495.9126281738281,
+              "y": -223.34375,
+              "width": 973.1221923828125,
+              "height": 817.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-camera-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-socks-alva-place-1",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Во время перевозки носки метались по кузову, не находя себе места. Перед вручением подарок придется привести в порядок.Изменить выбор0Энергия-4Эмпатия-1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone1-unsecured-v45.png",
+            "box": {
+              "x": -29.07349395751953,
+              "y": -165.328125,
+              "width": 756.35009765625,
+              "height": 635.625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-socks-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "393x852-compact-socks-alva-place-1",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Во время перевозки носки метались по кузову, не находя себе места. Перед вручением подарок придется привести в порядок.Изменить выбор0Энергия-4Эмпатия-1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone1-unsecured-v45.png",
+            "box": {
+              "x": -35.7107048034668,
+              "y": -214,
+              "width": 928.89013671875,
+              "height": 780.625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-socks-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "393x852-compact-socks-alva-place-2",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Носки надежно закрепили на ящике с посудой и даже дополнительно защитили посуду от лишних повреждений. \n\nПравда, в этом просторном месте вряд ли получится что-то еще разместить.Изменить выбор+3Энергия+3Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone2-v37.png",
+            "box": {
+              "x": -112.27201080322266,
+              "y": -237.390625,
+              "width": 973.1221923828125,
+              "height": 817.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-socks-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-socks-alva-place-2",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": false,
+        "text": "Носки надежно закрепили на ящике с посудой и даже дополнительно защитили посуду от лишних повреждений.Изменить выбор+3Энергия+3Эмпатия+1ЭффективностьЧитать дальше",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone2-v37.png",
+            "box": {
+              "x": -91.41644287109375,
+              "y": -184.375,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-socks-alva-place-2-page0.png"
+      },
+      {
+        "page": 1,
+        "last": true,
+        "text": "Правда, в этом просторном месте вряд ли получится что-то еще разместить.Изменить выбор+3Энергия+3Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone2-v37.png",
+            "box": {
+              "x": -91.41644287109375,
+              "y": -184.375,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-socks-alva-place-2-page1.png"
+      }
+    ],
+    "pages": 2
+  },
+  {
+    "id": "393x852-compact-socks-alva-place-3",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы разместили вязаный подарок компактно, закрепили его и сэкономили место для других грузов. Правда, грузчику пришлось добираться до нужного места. Альва получит носки в целости и сохранности.Изменить выбор+2Энергия+2Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone3-secured-v43.png",
+            "box": {
+              "x": -271.3345031738281,
+              "y": -232.703125,
+              "width": 973.1221923828125,
+              "height": 817.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-socks-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-socks-alva-place-3",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": false,
+        "text": "Вы разместили вязаный подарок компактно, закрепили его и сэкономили место для других грузов.Изменить выбор+2Энергия+2Эмпатия+4ЭффективностьЧитать дальше",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone3-secured-v43.png",
+            "box": {
+              "x": -220.93206787109375,
+              "y": -180.5625,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-socks-alva-place-3-page0.png"
+      },
+      {
+        "page": 1,
+        "last": true,
+        "text": "Правда, грузчику пришлось добираться до нужного места. Альва получит носки в целости и сохранности.Изменить выбор+2Энергия+2Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone3-secured-v43.png",
+            "box": {
+              "x": -220.93206787109375,
+              "y": -180.5625,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-socks-alva-place-3-page1.png"
+      }
+    ],
+    "pages": 2
+  },
+  {
+    "id": "393x852-compact-socks-alva-place-4",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы использовали пространство не очень эффективно – вязаный подарок занимает место, где можно было бы разместить три ящика важных товаров для общежития. Да и добраться до этого места при погрузке энергозатратно.Изменить выбор-3Энергия-3Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone4-v39.png",
+            "box": {
+              "x": -495.9126281738281,
+              "y": -237.390625,
+              "width": 973.1221923828125,
+              "height": 817.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-socks-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-socks-alva-place-4",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": false,
+        "text": "Вы использовали пространство не очень эффективно – вязаный подарок занимает место, где можно было быИзменить выбор-3Энергия-3Эмпатия-3ЭффективностьЧитать дальше",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone4-v39.png",
+            "box": {
+              "x": -403.79144287109375,
+              "y": -184.375,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-socks-alva-place-4-page0.png"
+      },
+      {
+        "page": 1,
+        "last": true,
+        "text": "разместить три ящика важных товаров для общежития. Да и добраться до этого места при погрузке энергозатратно.Изменить выбор-3Энергия-3Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone4-v39.png",
+            "box": {
+              "x": -403.79144287109375,
+              "y": -184.375,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-socks-alva-place-4-page1.png"
+      }
+    ],
+    "pages": 2
+  },
+  {
+    "id": "393x852-compact-boat-alva-place-1",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы поставили лодку на самые тяжелые ящики. Подарок стал последней каплей и перегрузил заднюю ось. Машина сломалась, и пришлось искать нового перевозчика. Лодка приехала на склад с большим опозданием.Изменить выбор-2Энергия+4Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone1-axle-v47.png",
+            "box": {
+              "x": 0.0032179635018110275,
+              "y": -146.234375,
+              "width": 704.6810302734375,
+              "height": 592.203125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-boat-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-boat-alva-place-1",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": false,
+        "text": "Вы поставили лодку на самые тяжелые ящики. Подарок стал последней каплей и перегрузил заднюю ось.Изменить выбор-2Энергия+4Эмпатия-5ЭффективностьЧитать дальше",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone1-axle-v47.png",
+            "box": {
+              "x": 0.0056135584600269794,
+              "y": -110.15625,
+              "width": 573.77001953125,
+              "height": 482.1875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-boat-alva-place-1-page0.png"
+      },
+      {
+        "page": 1,
+        "last": true,
+        "text": "Машина сломалась, и пришлось искать нового перевозчика. Лодка приехала на склад с большим опозданием.Изменить выбор-2Энергия+4Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone1-axle-v47.png",
+            "box": {
+              "x": 0.0056135584600269794,
+              "y": -110.15625,
+              "width": 573.77001953125,
+              "height": 482.1875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-boat-alva-place-1-page1.png"
+      }
+    ],
+    "pages": 2
+  },
+  {
+    "id": "393x852-compact-boat-alva-place-2",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Конечно, такой тяжелый груз, как лодка, не мог не повредить посуду при тряске. Хрупкие тарелки были просто раздавлены, и к вахтовикам в общежитие доехали осколки. Теперь им придется ждать новую поставку.Изменить выбор-3Энергия-3Эмпатия-4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone2-dishes-v46.png",
+            "box": {
+              "x": -85.96317291259766,
+              "y": -185.34375,
+              "width": 851.4888916015625,
+              "height": 715.578125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-boat-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-boat-alva-place-2",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": false,
+        "text": "Конечно, такой тяжелый груз, как лодка, не мог не повредить посуду при тряске.Изменить выбор-3Энергия-3Эмпатия-4ЭффективностьЧитать дальше",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone2-dishes-v46.png",
+            "box": {
+              "x": -69.99640655517578,
+              "y": -142,
+              "width": 693.3209228515625,
+              "height": 582.65625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-boat-alva-place-2-page0.png"
+      },
+      {
+        "page": 1,
+        "last": true,
+        "text": "Хрупкие тарелки были просто раздавлены, и к вахтовикам в общежитие доехали осколки. Теперь им придется ждать новую поставку.Изменить выбор-3Энергия-3Эмпатия-4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone2-dishes-v46.png",
+            "box": {
+              "x": -69.99640655517578,
+              "y": -142,
+              "width": 693.3209228515625,
+              "height": 582.65625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-boat-alva-place-2-page1.png"
+      }
+    ],
+    "pages": 2
+  },
+  {
+    "id": "393x852-compact-boat-alva-place-3",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Лодка физически не может поместиться в таком узком пространстве – не разбирать же ее на части!Изменить выбор-4Энергия-5Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-v48.webp",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 393,
+              "height": 262
+            },
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1536,
+            "naturalHeight": 1024
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-boat-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-boat-alva-place-3",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Лодка физически не может поместиться в таком узком пространстве – не разбирать же ее на части!Изменить выбор-4Энергия-5Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-v48.webp",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 213.328125
+            },
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1536,
+            "naturalHeight": 1024
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-boat-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "393x852-compact-boat-alva-place-4",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Отличное решение! Для такой погрузки придется доставать весь уже размещенный груз, но результат стоит того! Вертикальное расположение лодки и надежные крепления не дают ей задеть соседние грузы, а подушки станут мягкой прокладкой между лодкой и соседними грузами и защитят хрупкий багаж.Изменить выбор-3Энергия+3Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 393,
+          "height": 262
+        },
+        "panel": {
+          "x": 0,
+          "y": 310,
+          "width": 393,
+          "height": 542
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone4-v29.png",
+            "box": {
+              "x": -495.9126281738281,
+              "y": -237.390625,
+              "width": 973.1221923828125,
+              "height": 817.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/393x852-compact-boat-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "320x568-compact-boat-alva-place-4",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": false,
+        "text": "Отличное решение! Для такой погрузки придется доставать весь уже размещенный груз, но результат стоит того!Изменить выбор-3Энергия+3Эмпатия+4ЭффективностьЧитать дальше",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone4-v29.png",
+            "box": {
+              "x": -403.79144287109375,
+              "y": -184.375,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-boat-alva-place-4-page0.png"
+      },
+      {
+        "page": 2,
+        "last": true,
+        "text": "подушки станут мягкой прокладкой между лодкой и соседними грузами и защитят хрупкий багаж.Изменить выбор-3Энергия+3Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 320,
+          "height": 213.328125
+        },
+        "panel": {
+          "x": 0,
+          "y": 261.328125,
+          "width": 320,
+          "height": 306.671875
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone4-v29.png",
+            "box": {
+              "x": -403.79144287109375,
+              "y": -184.375,
+              "width": 792.3641357421875,
+              "height": 665.890625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/320x568-compact-boat-alva-place-4-page2.png"
+      }
+    ],
+    "pages": 3
+  },
+  {
+    "id": "820x1180-compact-camera-alva-place-1",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Дзынь!\n\nФотоаппарат заметался по кузову фуры и при падении повредил посуду. Кому-то придется есть из одноразовых тарелок!Изменить выбор-1Энергия0Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone1-fallen-v44.png",
+            "box": {
+              "x": -74.52354431152344,
+              "y": -498.671875,
+              "width": 1938.156494140625,
+              "height": 1628.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-camera-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-camera-alva-place-1",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Дзынь!\n\nФотоаппарат заметался по кузову фуры и при падении повредил посуду. Кому-то придется есть из одноразовых тарелок!Изменить выбор-1Энергия0Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone1-fallen-v44.png",
+            "box": {
+              "x": 0,
+              "y": -528,
+              "width": 2080,
+              "height": 1748
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-camera-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-camera-alva-place-2",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Хорошо закрепленный фотоаппарат доехал до склада в целости и сохранности. Но водитель все равно переживал: не побьется ли посуда в пути, а пространство над фотоаппаратом осталось неиспользованным.Изменить выбор+2Энергия0Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone2-v36.png",
+            "box": {
+              "x": -234.27212524414062,
+              "y": -547.46875,
+              "width": 2030.450439453125,
+              "height": 1706.359375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-camera-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-camera-alva-place-2",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Хорошо закрепленный фотоаппарат доехал до склада в целости и сохранности. Но водитель все равно переживал: не побьется ли посуда в пути, а пространство над фотоаппаратом осталось неиспользованным.Изменить выбор+2Энергия0Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone2-v36.png",
+            "box": {
+              "x": -21.16990852355957,
+              "y": -590.34375,
+              "width": 2202.33984375,
+              "height": 1850.8125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-camera-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-camera-alva-place-3",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат доехал целым, но не без усилий: его пришлось надежно закрепить стропами, а погрузчику – достать из кузова сразу три коробки.Изменить выбор+2Энергия+1Эмпатия+3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone3-packed-v40.png",
+            "box": {
+              "x": -566.1784057617188,
+              "y": -537.71875,
+              "width": 2030.450439453125,
+              "height": 1706.359375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-camera-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-camera-alva-place-3",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат доехал целым, но не без усилий: его пришлось надежно закрепить стропами, а погрузчику – достать из кузова сразу три коробки.Изменить выбор+2Энергия+1Эмпатия+3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone3-packed-v40.png",
+            "box": {
+              "x": -338.810546875,
+              "y": -579.75,
+              "width": 2202.33984375,
+              "height": 1850.8125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-camera-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-camera-alva-place-4",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат закрепили на стене, и он доехал нормально, но как же тяжело до него было пробираться! А большое пространство кузова осталось пустым и было использовано неэффективно.Изменить выбор-3Энергия-1Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone4-v38.png",
+            "box": {
+              "x": -1034.7408447265625,
+              "y": -518.1875,
+              "width": 2030.450439453125,
+              "height": 1706.359375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-camera-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-camera-alva-place-4",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат закрепили на стене, и он доехал нормально, но как же тяжело до него было пробираться! А большое пространство кузова осталось пустым и было использовано неэффективно.Изменить выбор-3Энергия-1Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone4-v38.png",
+            "box": {
+              "x": -762.341796875,
+              "y": -558.578125,
+              "width": 2202.33984375,
+              "height": 1850.8125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-camera-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-socks-alva-place-1",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Во время перевозки носки метались по кузову, не находя себе места. Перед вручением подарок придется привести в порядок.Изменить выбор0Энергия-4Эмпатия-1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone1-unsecured-v45.png",
+            "box": {
+              "x": -74.52354431152344,
+              "y": -498.671875,
+              "width": 1938.156494140625,
+              "height": 1628.796875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-socks-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-socks-alva-place-1",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Во время перевозки носки метались по кузову, не находя себе места. Перед вручением подарок придется привести в порядок.Изменить выбор0Энергия-4Эмпатия-1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone1-unsecured-v45.png",
+            "box": {
+              "x": 0,
+              "y": -528,
+              "width": 2080,
+              "height": 1748
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-socks-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-socks-alva-place-2",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Носки надежно закрепили на ящике с посудой и даже дополнительно защитили посуду от лишних повреждений. \n\nПравда, в этом просторном месте вряд ли получится что-то еще разместить.Изменить выбор+3Энергия+3Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone2-v37.png",
+            "box": {
+              "x": -234.27212524414062,
+              "y": -547.46875,
+              "width": 2030.450439453125,
+              "height": 1706.359375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-socks-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-socks-alva-place-2",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Носки надежно закрепили на ящике с посудой и даже дополнительно защитили посуду от лишних повреждений. \n\nПравда, в этом просторном месте вряд ли получится что-то еще разместить.Изменить выбор+3Энергия+3Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone2-v37.png",
+            "box": {
+              "x": -21.16990852355957,
+              "y": -590.34375,
+              "width": 2202.33984375,
+              "height": 1850.8125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-socks-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-socks-alva-place-3",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы разместили вязаный подарок компактно, закрепили его и сэкономили место для других грузов. Правда, грузчику пришлось добираться до нужного места. Альва получит носки в целости и сохранности.Изменить выбор+2Энергия+2Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone3-secured-v43.png",
+            "box": {
+              "x": -566.1784057617188,
+              "y": -537.71875,
+              "width": 2030.450439453125,
+              "height": 1706.359375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-socks-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-socks-alva-place-3",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы разместили вязаный подарок компактно, закрепили его и сэкономили место для других грузов. Правда, грузчику пришлось добираться до нужного места. Альва получит носки в целости и сохранности.Изменить выбор+2Энергия+2Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone3-secured-v43.png",
+            "box": {
+              "x": -338.810546875,
+              "y": -579.75,
+              "width": 2202.33984375,
+              "height": 1850.8125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-socks-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-socks-alva-place-4",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы использовали пространство не очень эффективно – вязаный подарок занимает место, где можно было бы разместить три ящика важных товаров для общежития. Да и добраться до этого места при погрузке энергозатратно.Изменить выбор-3Энергия-3Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone4-v39.png",
+            "box": {
+              "x": -1034.7408447265625,
+              "y": -547.46875,
+              "width": 2030.450439453125,
+              "height": 1706.359375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-socks-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-socks-alva-place-4",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы использовали пространство не очень эффективно – вязаный подарок занимает место, где можно было бы разместить три ящика важных товаров для общежития. Да и добраться до этого места при погрузке энергозатратно.Изменить выбор-3Энергия-3Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone4-v39.png",
+            "box": {
+              "x": -762.341796875,
+              "y": -590.34375,
+              "width": 2202.33984375,
+              "height": 1850.8125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-socks-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-boat-alva-place-1",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы поставили лодку на самые тяжелые ящики. Подарок стал последней каплей и перегрузил заднюю ось. Машина сломалась, и пришлось искать нового перевозчика. Лодка приехала на склад с большим опозданием.Изменить выбор-2Энергия+4Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone1-axle-v47.png",
+            "box": {
+              "x": 0.008116418495774269,
+              "y": -357.28125,
+              "width": 1470.32763671875,
+              "height": 1235.640625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-boat-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-boat-alva-place-1",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы поставили лодку на самые тяжелые ящики. Подарок стал последней каплей и перегрузил заднюю ось. Машина сломалась, и пришлось искать нового перевозчика. Лодка приехала на склад с большим опозданием.Изменить выбор-2Энергия+4Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone1-axle-v47.png",
+            "box": {
+              "x": 0.004683924373239279,
+              "y": -339.1875,
+              "width": 1497.58447265625,
+              "height": 1258.546875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-boat-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-boat-alva-place-2",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Конечно, такой тяжелый груз, как лодка, не мог не повредить посуду при тряске. Хрупкие тарелки были просто раздавлены, и к вахтовикам в общежитие доехали осколки. Теперь им придется ждать новую поставку.Изменить выбор-3Энергия-3Эмпатия-4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone2-dishes-v46.png",
+            "box": {
+              "x": -179.36781311035156,
+              "y": -438.875,
+              "width": 1776.641845703125,
+              "height": 1493.0625
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-boat-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-boat-alva-place-2",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Конечно, такой тяжелый груз, как лодка, не мог не повредить посуду при тряске. Хрупкие тарелки были просто раздавлены, и к вахтовикам в общежитие доехали осколки. Теперь им придется ждать новую поставку.Изменить выбор-3Энергия-3Эмпатия-4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone2-dishes-v46.png",
+            "box": {
+              "x": 0.0039509437046945095,
+              "y": -491.15625,
+              "width": 1970.5078125,
+              "height": 1655.984375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-boat-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-boat-alva-place-3",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Лодка физически не может поместиться в таком узком пространстве – не разбирать же ее на части!Изменить выбор-4Энергия-5Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-v48.webp",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 820,
+              "height": 546.65625
+            },
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1536,
+            "naturalHeight": 1024
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-boat-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-boat-alva-place-3",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Лодка физически не может поместиться в таком узком пространстве – не разбирать же ее на части!Изменить выбор-4Энергия-5Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-wide-v48.webp",
+            "box": {
+              "x": 0,
+              "y": 56,
+              "width": 1440,
+              "height": 592
+            },
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1983,
+            "naturalHeight": 793
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-boat-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "820x1180-compact-boat-alva-place-4",
+    "viewport": {
+      "width": 820,
+      "height": 1180
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Отличное решение! Для такой погрузки придется доставать весь уже размещенный груз, но результат стоит того! Вертикальное расположение лодки и надежные крепления не дают ей задеть соседние грузы, а подушки станут мягкой прокладкой между лодкой и соседними грузами и защитят хрупкий багаж.Изменить выбор-3Энергия+3Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 48,
+          "width": 820,
+          "height": 546.65625
+        },
+        "panel": {
+          "x": 0,
+          "y": 594.65625,
+          "width": 820,
+          "height": 585.34375
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone4-v29.png",
+            "box": {
+              "x": -1034.7408447265625,
+              "y": -547.46875,
+              "width": 2030.450439453125,
+              "height": 1706.359375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/820x1180-compact-boat-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "1440x900-compact-boat-alva-place-4",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Отличное решение! Для такой погрузки придется доставать весь уже размещенный груз, но результат стоит того! Вертикальное расположение лодки и надежные крепления не дают ей задеть соседние грузы, а подушки станут мягкой прокладкой между лодкой и соседними грузами и защитят хрупкий багаж.Изменить выбор-3Энергия+3Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 1440,
+          "height": 592
+        },
+        "panel": {
+          "x": 0,
+          "y": 648,
+          "width": 1440,
+          "height": 252
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone4-v29.png",
+            "box": {
+              "x": -762.341796875,
+              "y": -590.34375,
+              "width": 2202.33984375,
+              "height": 1850.8125
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/1440x900-compact-boat-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-camera-alva-place-1",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Дзынь!\n\nФотоаппарат заметался по кузову фуры и при падении повредил посуду. Кому-то придется есть из одноразовых тарелок!Изменить выбор-1Энергия0Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone1-fallen-v44.png",
+            "box": {
+              "x": 0.007115274667739868,
+              "y": -76.15625,
+              "width": 707.0794677734375,
+              "height": 594.21875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-camera-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-camera-alva-place-2",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Хорошо закрепленный фотоаппарат доехал до склада в целости и сохранности. Но водитель все равно переживал: не побьется ли посуда в пути, а пространство над фотоаппаратом осталось неиспользованным.Изменить выбор+2Энергия0Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone2-v36.png",
+            "box": {
+              "x": -7.17941951751709,
+              "y": -97.34375,
+              "width": 748.67138671875,
+              "height": 629.171875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-camera-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-camera-alva-place-3",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат доехал целым, но не без усилий: его пришлось надежно закрепить стропами, а погрузчику – достать из кузова сразу три коробки.Изменить выбор+2Энергия+1Эмпатия+3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone3-packed-v40.png",
+            "box": {
+              "x": -115.1637954711914,
+              "y": -93.75,
+              "width": 748.67138671875,
+              "height": 629.171875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-camera-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-camera-alva-place-4",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Фотоаппарат закрепили на стене, и он доехал нормально, но как же тяжело до него было пробираться! А большое пространство кузова осталось пустым и было использовано неэффективно.Изменить выбор-3Энергия-1Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/camera-zone4-v38.png",
+            "box": {
+              "x": -259.1481628417969,
+              "y": -86.546875,
+              "width": 748.67138671875,
+              "height": 629.171875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-camera-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-socks-alva-place-1",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Во время перевозки носки метались по кузову, не находя себе места. Перед вручением подарок придется привести в порядок.Изменить выбор0Энергия-4Эмпатия-1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone1-unsecured-v45.png",
+            "box": {
+              "x": 0.007115274667739868,
+              "y": -76.15625,
+              "width": 707.0794677734375,
+              "height": 594.21875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-socks-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-socks-alva-place-2",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Носки надежно закрепили на ящике с посудой и даже дополнительно защитили посуду от лишних повреждений. \n\nПравда, в этом просторном месте вряд ли получится что-то еще разместить.Изменить выбор+3Энергия+3Эмпатия+1ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone2-v37.png",
+            "box": {
+              "x": -7.17941951751709,
+              "y": -97.34375,
+              "width": 748.67138671875,
+              "height": 629.171875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-socks-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-socks-alva-place-3",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы разместили вязаный подарок компактно, закрепили его и сэкономили место для других грузов. Правда, грузчику пришлось добираться до нужного места. Альва получит носки в целости и сохранности.Изменить выбор+2Энергия+2Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone3-secured-v43.png",
+            "box": {
+              "x": -115.1637954711914,
+              "y": -93.75,
+              "width": 748.67138671875,
+              "height": 629.171875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-socks-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-socks-alva-place-4",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы использовали пространство не очень эффективно – вязаный подарок занимает место, где можно было бы разместить три ящика важных товаров для общежития. Да и добраться до этого места при погрузке энергозатратно.Изменить выбор-3Энергия-3Эмпатия-3ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/socks-zone4-v39.png",
+            "box": {
+              "x": -259.1481628417969,
+              "y": -97.34375,
+              "width": 748.67138671875,
+              "height": 629.171875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-socks-alva-place-4-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-boat-alva-place-1",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Вы поставили лодку на самые тяжелые ящики. Подарок стал последней каплей и перегрузил заднюю ось. Машина сломалась, и пришлось искать нового перевозчика. Лодка приехала на склад с большим опозданием.Изменить выбор-2Энергия+4Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone1-axle-v47.png",
+            "box": {
+              "x": 0.0023419621866196394,
+              "y": -11.96875,
+              "width": 509.10467529296875,
+              "height": 427.84375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-boat-alva-place-1-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-boat-alva-place-2",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Конечно, такой тяжелый груз, как лодка, не мог не повредить посуду при тряске. Хрупкие тарелки были просто раздавлены, и к вахтовикам в общежитие доехали осколки. Теперь им придется ждать новую поставку.Изменить выбор-3Энергия-3Эмпатия-4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone2-dishes-v46.png",
+            "box": {
+              "x": 0.009010297246277332,
+              "y": -63.625,
+              "width": 669.85693359375,
+              "height": 562.9375
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-boat-alva-place-2-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-boat-alva-place-3",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": true,
+        "text": "Лодка физически не может поместиться в таком узком пространстве – не разбирать же ее на части!Изменить выбор-4Энергия-5Эмпатия-5ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-v48.webp",
+            "box": {
+              "x": 0,
+              "y": 56,
+              "width": 489.53125,
+              "height": 334
+            },
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1536,
+            "naturalHeight": 1024
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-boat-alva-place-3-page0.png"
+      }
+    ],
+    "pages": 1
+  },
+  {
+    "id": "844x390-compact-boat-alva-place-4",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "recipient": "alva",
+    "captures": [
+      {
+        "page": 0,
+        "last": false,
+        "text": "Отличное решение! Для такой погрузки придется доставать весь уже размещенный груз, но результат стоит того!Изменить выбор-3Энергия+3Эмпатия+4ЭффективностьЧитать дальше",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone4-v29.png",
+            "box": {
+              "x": -259.1481628417969,
+              "y": -97.34375,
+              "width": 748.67138671875,
+              "height": 629.171875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-boat-alva-place-4-page0.png"
+      },
+      {
+        "page": 1,
+        "last": true,
+        "text": "Вертикальное расположение лодки и надежные крепления не дают ей задеть соседние грузы, а подушки станут мягкой прокладкой между лодкой и соседними грузами и защитят хрупкий багаж.Изменить выбор-3Энергия+3Эмпатия+4ЭффективностьПродолжить",
+        "beat": null,
+        "art": {
+          "x": 0,
+          "y": 56,
+          "width": 489.53125,
+          "height": 334
+        },
+        "panel": {
+          "x": 489.53125,
+          "y": 56,
+          "width": 354.46875,
+          "height": 334
+        },
+        "images": [
+          {
+            "src": "/compact-art/boat-zone4-v29.png",
+            "box": {
+              "x": -259.1481628417969,
+              "y": -97.34375,
+              "width": 748.67138671875,
+              "height": 629.171875
+            },
+            "fit": "fill",
+            "position": "50% 50%"
+          }
+        ],
+        "overflow": false,
+        "file": "design/media-audit-2026-10-05/compact-framing/results/844x390-compact-boat-alva-place-4-page1.png"
+      }
+    ],
+    "pages": 2
+  }
+]

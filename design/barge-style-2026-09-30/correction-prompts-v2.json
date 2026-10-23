@@ -1,0 +1,63 @@
+{
+  "tool": "built-in image_gen",
+  "changes": [
+    {
+      "key": "petr-camera-v3",
+      "prompt": "Edit illustration, create corrected \"ask Pyotr\" game outcome. Image1 PRIMARY immutable geographic/composition reference: keep its exact elevated camera angle, warehouse, PRU building, straight quay, TWO cranes on the same parallel rails at their exact positions, entire elongated barge with its bow lower-left and cabin upper-right, same scale, pipe bundles. Do NOT use cinematic low angle or relocate cranes. Image2 supplies ONLY two worker identities and their exact orange/navy reflective uniforms, NOT background geometry. Image3 supplies soft clean bright illustration style, no sepia or blotches. In image1 remove camera box from tractor cart leaving empty cart. Place same camera in a SMALL ordinary natural kraft cardboard shipping box on clear bow deck behind windlass, physically resting on deck. Box front shown in clean illustrative cutaway so real camera is visible, not printed on box. Plain brown box, no blue paint, no orange decorative panels, no giant display plinth, no giant camera. Camera orange strap. Two workers stand together on quay between near crane and tractor, safely away from edge, at plausible human scale; orange helmet Ivan content with modest smile, white helmet Pyotr mildly disappointed and gestures to three ordinary freight crates remaining on quay near far crane. No thumbs up needed. Keep helmets, two sleeve reflective bands, shoulder reflective patches, waist and hem bands, shin bands precisely matching image2. Workers readable but not huge. Ensure crane four legs grounded consistently onto the two continuous rails, parallel to quay; no leaning/melted supports, no invented extra crane. Barge hull straight and coherent, all pipe bundles straight parallel long axis. Final wide 16:9 polished raster illustration, same clean established art, no text overlays."
+    },
+    {
+      "key": "petr-boat-v3",
+      "refs": [
+        "design/barge-style-2026-09-30/petr-camera-v3.png",
+        "design/barge-style-2026-09-30/petr-boat-v2.png",
+        "design/style-audit-2026-09-28/reference.png"
+      ],
+      "prompt": "Precise local gift substitution ONLY. Image1 is edit target: preserve exact camera, entire barge hull, pipes, two cranes, rails, quay, buildings, two workers, freight crates, empty cart and colors. Replace ONLY small camera carton on bow deck with the folded navy inflatable boat and separate gray motor from image2 (image2 only gift reference, NEVER copy its setting). Fit the folded bundle at plausible modest cargo scale in that bow space behind windlass, fully supported on deck, do not stretch barge or move pipes. Navy folded boat, orange handles/oar blades, gray separate motor. No camera or cardboard box. Image3 permanent style reference. Clean illustration no sepia no texture stains. Wide16:9."
+    },
+    {
+      "key": "petr-socks-v3",
+      "refs": [
+        "design/barge-style-2026-09-30/petr-camera-v3.png",
+        "design/scene-01/assets/current/choices/socks.webp",
+        "design/style-audit-2026-09-28/reference.png"
+      ],
+      "prompt": "Precise local edit ONLY. Image1 preserve all geometry, camera, barge, cranes on rails, buildings, people and uniforms, crates and tractor exactly. ONLY replace camera inside small brown carton on bow deck with pair of cream knitted socks from image2, orange snowflakes and navy patterns. Carton remains plain natural kraft brown, realistic small parcel size with illustrative front cutaway revealing real contents, no painted blue/orange patches, no display plinth, no printed picture of socks. Matched perspective and soft contact shadow. Image3 permanent style reference, clean no sepia. Wide16:9."
+    },
+    {
+      "key": "rush-camera-v2",
+      "refs": [
+        "design/barge-style-2026-09-30/rush-camera-v1.png",
+        "design/barge-style-2026-09-30/petr-camera-v3.png",
+        "design/style-audit-2026-09-28/reference.png"
+      ],
+      "prompt": "Precise local edit of image1 ONLY the strange blue/orange painted carton on barge bow. Replace with ordinary SMALL plain brown kraft cardboard shipping box, camera inside visible through illustrative front cutaway, navy DSLR orange strap. Match small simple carton in image2. Remove decorative navy panels, orange paint, giant retail display look; keep camera actual object not print. Scale parcel realistically, sit directly on deck, soft contact shadow, no oversized pallet. Preserve barge entire hull and all pipes, workers, exact worker face pose/PPE, cranes, buildings, quay, lighting, water, perspective and framing. Image3 permanent style reference. Do not redraw scene or add objects. Wide16:9."
+    },
+    {
+      "key": "rush-socks-v2",
+      "refs": [
+        "design/barge-style-2026-09-30/rush-socks-v1.png",
+        "design/barge-style-2026-09-30/petr-camera-v3.png",
+        "design/style-audit-2026-09-28/reference.png"
+      ],
+      "prompt": "Precise local edit ONLY of image1. Replace ONLY the blue and orange decorative package on barge bow with plain natural brown kraft cardboard shipping carton with clean illustrative front cutaway showing actual pair of cream knitted socks with orange snowflakes and navy pattern inside. Image2 plain carton is packaging reference ONLY. Keep contents visually real not printed. Remove navy/orange paint panels, printed decoration and giant display crate look. Modest plausible parcel scale, ordinary cardboard edges, correct deck perspective and subtle contact shadow, no tall plinth. Preserve EVERYTHING outside that parcel: complete ship hull/pipes, both crane positions and geometry, warehouse, quay, exact worker face/body/pose/reflective uniform, empty trolley, lighting and composition. Image3 fixed style reference. No sepia, no blotches. Same wide16:9."
+    },
+    {
+      "key": "remote-camera-v3",
+      "refs": [
+        "design/barge-style-2026-09-30/remote-camera-v2.png",
+        "design/barge-style-2026-09-30/petr-camera-v3.png",
+        "design/style-audit-2026-09-28/reference.png"
+      ],
+      "prompt": "Precise local edit ONLY of image1. Replace ONLY the blue and orange decorative package on barge bow with plain natural brown kraft cardboard shipping carton with clean illustrative front cutaway showing actual navy DSLR camera with orange strap inside. Image2 plain carton is packaging reference ONLY. Keep contents visually real not printed. Remove navy/orange paint panels, printed decoration and giant display crate look. Modest plausible parcel scale, ordinary cardboard edges, correct deck perspective and subtle contact shadow, no tall plinth. Preserve EVERYTHING outside that parcel: complete ship hull/pipes, both crane positions and geometry, warehouse, quay, exact worker face/body/pose/reflective uniform, console and coffee, lighting and composition. Image3 fixed style reference. No sepia, no blotches. Same wide16:9."
+    },
+    {
+      "key": "remote-socks-v3",
+      "refs": [
+        "design/barge-style-2026-09-30/remote-socks-v2.png",
+        "design/barge-style-2026-09-30/petr-camera-v3.png",
+        "design/style-audit-2026-09-28/reference.png"
+      ],
+      "prompt": "Precise local edit ONLY of image1. Replace ONLY the blue and orange decorative package on barge bow with plain natural brown kraft cardboard shipping carton with clean illustrative front cutaway showing actual pair of cream knitted socks with orange snowflakes and navy pattern inside. Image2 plain carton is packaging reference ONLY. Keep contents visually real not printed. Remove navy/orange paint panels, printed decoration and giant display crate look. Modest plausible parcel scale, ordinary cardboard edges, correct deck perspective and subtle contact shadow, no tall plinth. Preserve EVERYTHING outside that parcel: complete ship hull/pipes, both crane positions and geometry, warehouse, quay, exact worker face/body/pose/reflective uniform, console and coffee, lighting and composition. Image3 fixed style reference. No sepia, no blotches. Same wide16:9."
+    }
+  ]
+}

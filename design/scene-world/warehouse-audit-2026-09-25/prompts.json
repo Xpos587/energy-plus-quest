@@ -1,0 +1,37 @@
+[
+  [
+    "base",
+    "public/scene-art/inventory.png",
+    "16:9",
+    "Preserve the refined existing warm 2D illustrated game style exactly: warm cream walls, light gray floor, pale blue glass, soft gray contours, navy orange PPE, soft shadows. No new UI or floating labels. Realistic scale. Precisely edit this warehouse illustration, preserve ALL geometry, shelves, windows, receiving doors LEFT, dispatch doors RIGHT, forklift, drone, worker, desk and perspective. Correct ONLY SIX large shelf-letter plates: in image left-to-right the plate characters must be exactly Я, Ф, Н, Л, Б, А (Cyrillic). This means Russian alphabet begins with А on rightmost plate nearest dispatch and advances away from dispatch toward leftmost Я. Both existing Ф plates must NOT remain duplicate: left one Я, right one Ф. Middle pair currently Л Н must become Н Л. Right pair currently А Б must become Б А. One large clear dark gray Cyrillic letter per cream existing plate. No additional plates. ALSO remove the sock drawing from the parcel on pallet at receiving leftforeground, leave plain sealed cardboard box, because this picture serves every selected gift. Do not change any other content. Preserve original image dimensions and camera.",
+    "public/scene-art/inventory-alphabet-v3.webp"
+  ],
+  [
+    "alphabet-socks",
+    "public/scene-art/outcomes/inventory-alphabet.webp",
+    "3:2",
+    "Preserve the refined existing warm 2D illustrated game style exactly: warm cream walls, light gray floor, pale blue glass, soft gray contours, navy orange PPE, soft shadows. No new UI or floating labels. Realistic scale. Modify this narrative outcome so the warehouse alphabet logic is unmistakable. Two weary workers retrieving a modest sealed cardboard parcel from a rack at the MIDDLE of alphabetical warehouse racks. Above that exact retrieval shelf, place one prominent cream physical shelf sign with the single large Cyrillic letter Н. The parcel corresponds to носки: use closed parcel packaging, no naked gift. Dispatch/loading door clearly visible FAR at the other end of aisle, with physical shelf sign А on rack immediately beside that far dispatch door; do not label the door А itself. Between workers and dispatch, orderly long racks show progression and distance. The selected letter is in middle row; last rows continue behind workers. Do not put contradictory letters on nearby racks; only target Н and distant А need be readable. Distinct real receiving/dispatch geography, no overlay arrows or text, no duplication of letter Н. Maintain same characters, equipment and reference drawing style.",
+    "public/scene-art/outcomes/inventory-alphabet-socks.webp"
+  ],
+  [
+    "alphabet-boat",
+    "public/scene-art/outcomes/inventory-alphabet.webp",
+    "3:2",
+    "Preserve the refined existing warm 2D illustrated game style exactly: warm cream walls, light gray floor, pale blue glass, soft gray contours, navy orange PPE, soft shadows. No new UI or floating labels. Realistic scale. Modify this narrative outcome so the warehouse alphabet logic is unmistakable. Two weary workers retrieving a modest sealed cardboard parcel from a rack at the MIDDLE of alphabetical warehouse racks. Above that exact retrieval shelf, place one prominent cream physical shelf sign with the single large Cyrillic letter Л. The parcel corresponds to лодка: use closed parcel packaging, no naked gift. Dispatch/loading door clearly visible FAR at the other end of aisle, with physical shelf sign А on rack immediately beside that far dispatch door; do not label the door А itself. Between workers and dispatch, orderly long racks show progression and distance. The selected letter is in middle row; last rows continue behind workers. Do not put contradictory letters on nearby racks; only target Л and distant А need be readable. Distinct real receiving/dispatch geography, no overlay arrows or text, no duplication of letter Л. Maintain same characters, equipment and reference drawing style.",
+    "public/scene-art/outcomes/inventory-alphabet-boat.webp"
+  ],
+  [
+    "alphabet-camera",
+    "public/scene-art/outcomes/inventory-alphabet.webp",
+    "3:2",
+    "Preserve the refined existing warm 2D illustrated game style exactly: warm cream walls, light gray floor, pale blue glass, soft gray contours, navy orange PPE, soft shadows. No new UI or floating labels. Realistic scale. Modify this narrative outcome so the warehouse alphabet logic is unmistakable. Two weary workers retrieving a modest sealed cardboard parcel from a rack at the far END of alphabetical warehouse racks. Above that exact retrieval shelf, place one prominent cream physical shelf sign with the single large Cyrillic letter Ф. The parcel corresponds to фотоаппарат: use closed parcel packaging, no naked gift. Dispatch/loading door clearly visible FAR at the other end of aisle, with physical shelf sign А on rack immediately beside that far dispatch door; do not label the door А itself. Between workers and dispatch, orderly long racks show progression and distance. Letter Ф is beyond middle racks Н and Л as viewed from dispatch. Do not put contradictory letters on nearby racks; only target Ф and distant А need be readable. Distinct real receiving/dispatch geography, no overlay arrows or text, no duplication of letter Ф. Maintain same characters, equipment and reference drawing style.",
+    "public/scene-art/outcomes/inventory-alphabet-camera.webp"
+  ],
+  [
+    "wms",
+    "public/scene-art/outcomes/inventory-wms.webp",
+    "3:2",
+    "Preserve the refined existing warm 2D illustrated game style exactly: warm cream walls, light gray floor, pale blue glass, soft gray contours, navy orange PPE, soft shadows. No new UI or floating labels. Realistic scale. Make a tiny lettering correction only. The large right-hand rack beside dispatch currently has А on left plate and Б on right plate. Swap them: Б on its LEFT plate and А on its RIGHT plate, closest to dispatch. The farther middle rack currently Л left Н right must become Н left Л right. This makes alphabetical progression А Б Л Н away from right dispatch. Keep worker, scanner, parcel, pallet mover, screen, lighting, framing, all geometry unchanged.",
+    "public/scene-art/outcomes/inventory-wms-v2.webp"
+  ]
+]

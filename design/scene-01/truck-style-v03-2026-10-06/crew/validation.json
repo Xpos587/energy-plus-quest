@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "crew_objects": 121,
+  "two_heads": 2,
+  "one_wheel": true,
+  "seated_body_parts": true,
+  "checks": {
+    "CREW_driver_sculpted_head": {
+      "front_glass_clearance_min": 0.04453786975163221,
+      "head_mesh_bbox_center": [
+        -0.7749999761581421,
+        -0.20000000298023224,
+        0.14499999955296516
+      ]
+    },
+    "CREW_passenger_sculpted_head": {
+      "front_glass_clearance_min": 0.04453786975163221,
+      "head_mesh_bbox_center": [
+        -0.7749999761581421,
+        0.20000000298023224,
+        0.14499999955296516
+      ]
+    },
+    "hand_-1": {
+      "center_to_rim_distance": 0.004240385259346644,
+      "hand_ellipsoid_radii": [
+        0.018,
+        0.017,
+        0.022
+      ]
+    },
+    "hand_1": {
+      "center_to_rim_distance": 0.004240396723134091,
+      "hand_ellipsoid_radii": [
+        0.018,
+        0.017,
+        0.022
+      ]
+    }
+  }
+}

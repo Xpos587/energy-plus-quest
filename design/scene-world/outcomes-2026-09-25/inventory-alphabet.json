@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:06:14.753845Z",
+    "display_name": "Nano Banana Pro",
+    "id": "d7e18a3a-7adc-42b7-af4b-1353e0670fda",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090614_d7e18a3a-7adc-42b7-af4b-1353e0670fda_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "5578bca5-fa36-4e39-92b7-d436fe2b6e3e",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/5578bca5-fa36-4e39-92b7-d436fe2b6e3e_resize.jpg"
+        }
+      ],
+      "prompt": "Create ONE polished narrative result illustration for a Russian logistics game, wide 3:2, full bleed, no panel border. Attached picture defines the EXACT existing game visual style, materials and environment. Refined hand painted 2D editorial illustration, detailed but uncluttered, warm cream architecture, neutral light gray ground, pale light blue glass, thin soft gray outlines NO black outlines, soft dimensional shading, navy blue and vivid orange work uniforms and blue machinery. NOT 3D render, NOT flat vector infographic. Show the specified consequence as the dominant readable subject, with medium close framing readable on a small phone. Human and machine proportions realistic, no giant packages or people relative to machinery. No text, no captions, no speech bubbles, no numbers, no arrows, no UI, no watermarks. Gift is a modest closed cardboard shipping parcel; it must not display a particular sock or camera. Composition depicts a single coherent physical scene, not collage. Warehouse goods neatly sorted alphabetically, long rows of racks. In foreground two tired workers in navy/orange PPE collect a modest parcel from the distant end of the racks; far down aisle is dispatch with other assembled goods. Illustrate costly extra walking despite neat storage. Abstract blank shelf plaques, no specific letter that would imply the wrong selected gift.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090614_d7e18a3a-7adc-42b7-af4b-1353e0670fda.png",
+    "status": "completed"
+  }
+]

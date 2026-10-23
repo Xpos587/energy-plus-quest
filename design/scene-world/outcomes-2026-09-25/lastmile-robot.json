@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:08:56.407533Z",
+    "display_name": "Nano Banana Pro",
+    "id": "e81c8a0c-d821-43ce-affd-428d1945e52e",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090856_e81c8a0c-d821-43ce-affd-428d1945e52e_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "0b896515-0898-4e9b-ad94-8c644a8b983e",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/0b896515-0898-4e9b-ad94-8c644a8b983e_resize.jpg"
+        }
+      ],
+      "prompt": "Create ONE polished narrative result illustration for a Russian logistics game, wide 3:2, full bleed, no panel border. Attached picture defines the EXACT existing game visual style, materials and environment. Refined hand painted 2D editorial illustration, detailed but uncluttered, warm cream architecture, neutral light gray ground, pale light blue glass, thin soft gray outlines NO black outlines, soft dimensional shading, navy blue and vivid orange work uniforms and blue machinery. NOT 3D render, NOT flat vector infographic. Show the specified consequence as the dominant readable subject, with medium close framing readable on a small phone. Human and machine proportions realistic, no giant packages or people relative to machinery. No text, no captions, no speech bubbles, no numbers, no arrows, no UI, no watermarks. Gift is a modest closed cardboard shipping parcel; it must not display a particular sock or camera. Composition depicts a single coherent physical scene, not collage. Failed robot cart delivery. Small autonomous airport luggage cart with tiny wheels and a modest secured gift carton is stuck axle deep in muddy marsh, motionless. A larger proper tracked recovery vehicle on firm ground uses a taut tow cable attached to low chassis of cart to pull it free. Navy/orange worker stands safely beside recovery vehicle. River visible farther away but cart is stuck in mud BEFORE river, not in water. Realistic scale and mechanisms.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090856_e81c8a0c-d821-43ce-affd-428d1945e52e.png",
+    "status": "completed"
+  }
+]

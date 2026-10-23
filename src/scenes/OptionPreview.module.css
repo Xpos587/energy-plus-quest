@@ -1,0 +1,38 @@
+.preview {
+  position: relative;
+  flex: none;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #eaf0f4;
+}
+
+.crop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  aspect-ratio: var(--preview-ratio);
+  transform: translate(
+    calc(-1 * var(--preview-x)),
+    calc(-1 * var(--preview-y))
+  );
+  pointer-events: none;
+}
+
+.crop > img,
+.crop > picture,
+.crop > picture > img,
+.crop > svg {
+  position: static;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+@media (max-height: 600px) {
+  .preview {
+    height: 110px;
+  }
+}

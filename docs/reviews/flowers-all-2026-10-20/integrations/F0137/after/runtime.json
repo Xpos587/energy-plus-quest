@@ -1,0 +1,114 @@
+[
+  {
+    "id": "F0137",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-2",
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-boat-zone2-v53-BS3lhMRi.avif",
+      "rect": {
+        "x": -85.3125,
+        "y": -70.5625,
+        "width": 845,
+        "height": 710.125,
+        "top": -70.5625,
+        "right": 759.6875,
+        "bottom": 639.5625,
+        "left": -85.3125
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0137",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-2",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-boat-zone2-v53-BS3lhMRi.avif",
+      "rect": {
+        "x": -85.3125,
+        "y": -70.5625,
+        "width": 845,
+        "height": 710.125,
+        "top": -70.5625,
+        "right": 759.6875,
+        "bottom": 639.5625,
+        "left": -85.3125
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0137",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-2",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-boat-zone2-v53-BS3lhMRi.avif",
+      "rect": {
+        "x": 0.0039509437046945095,
+        "y": -505.15625,
+        "width": 1970.5078125,
+        "height": 1655.984375,
+        "top": -505.15625,
+        "right": 1970.5117634437047,
+        "bottom": 1150.828125,
+        "left": 0.0039509437046945095
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0137",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-2",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-boat-zone2-v53-BS3lhMRi.avif",
+      "rect": {
+        "x": 0.0039509437046945095,
+        "y": -505.15625,
+        "width": 1970.5078125,
+        "height": 1655.984375,
+        "top": -505.15625,
+        "right": 1970.5117634437047,
+        "bottom": 1150.828125,
+        "left": 0.0039509437046945095
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  }
+]

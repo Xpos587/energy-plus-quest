@@ -1,0 +1,512 @@
+[
+  {
+    "view": "desktop",
+    "step": "profile",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "student",
+        "width": 350,
+        "height": 288,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/student.webp"
+      },
+      {
+        "id": "professional",
+        "width": 350,
+        "height": 288,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/professional.webp"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "step": "recipient",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "alva",
+        "width": 364.65625,
+        "height": 288,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/alva.webp"
+      },
+      {
+        "id": "khor",
+        "width": 364.671875,
+        "height": 288,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/khor.webp"
+      },
+      {
+        "id": "arseniy",
+        "width": 364.65625,
+        "height": 288,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/arseniy.webp"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "step": "parcel",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "camera",
+        "width": 364.65625,
+        "height": 288,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/camera.webp"
+      },
+      {
+        "id": "socks",
+        "width": 364.671875,
+        "height": 288,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/socks.webp"
+      },
+      {
+        "id": "boat",
+        "width": 364.65625,
+        "height": 288,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/boat.webp"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "step": "profile",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "student",
+        "width": 350,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/student.webp"
+      },
+      {
+        "id": "professional",
+        "width": 350,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/professional.webp"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "step": "recipient",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "alva",
+        "width": 364.65625,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/alva.webp"
+      },
+      {
+        "id": "khor",
+        "width": 364.671875,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/khor.webp"
+      },
+      {
+        "id": "arseniy",
+        "width": 364.65625,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/arseniy.webp"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "step": "parcel",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "camera",
+        "width": 364.65625,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/camera.webp"
+      },
+      {
+        "id": "socks",
+        "width": 364.671875,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/socks.webp"
+      },
+      {
+        "id": "boat",
+        "width": 364.65625,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/boat.webp"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "step": "profile",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "student",
+        "width": 165,
+        "height": 206.25,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/student.webp"
+      },
+      {
+        "id": "professional",
+        "width": 165,
+        "height": 206.25,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/professional.webp"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "step": "recipient",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "alva",
+        "width": 105.328125,
+        "height": 131.65625,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/alva.webp"
+      },
+      {
+        "id": "khor",
+        "width": 105.328125,
+        "height": 131.65625,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/khor.webp"
+      },
+      {
+        "id": "arseniy",
+        "width": 105.34375,
+        "height": 131.671875,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/arseniy.webp"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "step": "parcel",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "camera",
+        "width": 106.65625,
+        "height": 133.3125,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/camera.webp"
+      },
+      {
+        "id": "socks",
+        "width": 106.671875,
+        "height": 133.328125,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/socks.webp"
+      },
+      {
+        "id": "boat",
+        "width": 106.65625,
+        "height": 133.3125,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/boat.webp"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "step": "profile",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "student",
+        "width": 130,
+        "height": 162.5,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/student.webp"
+      },
+      {
+        "id": "professional",
+        "width": 130,
+        "height": 162.5,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/professional.webp"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "step": "recipient",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "alva",
+        "width": 82,
+        "height": 102.5,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/alva.webp"
+      },
+      {
+        "id": "khor",
+        "width": 82,
+        "height": 102.5,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/khor.webp"
+      },
+      {
+        "id": "arseniy",
+        "width": 82,
+        "height": 102.5,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/arseniy.webp"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "step": "parcel",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "camera",
+        "width": 83.328125,
+        "height": 104.15625,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/camera.webp"
+      },
+      {
+        "id": "socks",
+        "width": 83.328125,
+        "height": 104.15625,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/socks.webp"
+      },
+      {
+        "id": "boat",
+        "width": 83.34375,
+        "height": 104.171875,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/boat.webp"
+      }
+    ]
+  },
+  {
+    "view": "tablet",
+    "step": "profile",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "student",
+        "width": 343.203125,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/student.webp"
+      },
+      {
+        "id": "professional",
+        "width": 343.203125,
+        "height": 320,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/professional.webp"
+      }
+    ]
+  },
+  {
+    "view": "tablet",
+    "step": "recipient",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "alva",
+        "width": 222.796875,
+        "height": 278.484375,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/alva.webp"
+      },
+      {
+        "id": "khor",
+        "width": 222.796875,
+        "height": 278.484375,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/khor.webp"
+      },
+      {
+        "id": "arseniy",
+        "width": 222.796875,
+        "height": 278.484375,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/arseniy.webp"
+      }
+    ]
+  },
+  {
+    "view": "tablet",
+    "step": "parcel",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "camera",
+        "width": 222.796875,
+        "height": 278.484375,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/camera.webp"
+      },
+      {
+        "id": "socks",
+        "width": 222.796875,
+        "height": 278.484375,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/socks.webp"
+      },
+      {
+        "id": "boat",
+        "width": 222.796875,
+        "height": 278.484375,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/boat.webp"
+      }
+    ]
+  },
+  {
+    "view": "landscape",
+    "step": "profile",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "student",
+        "width": 190,
+        "height": 100,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/student.webp"
+      },
+      {
+        "id": "professional",
+        "width": 190,
+        "height": 100,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/professional.webp"
+      }
+    ]
+  },
+  {
+    "view": "landscape",
+    "step": "recipient",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "alva",
+        "width": 194,
+        "height": 100,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/alva.webp"
+      },
+      {
+        "id": "khor",
+        "width": 194,
+        "height": 100,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/khor.webp"
+      },
+      {
+        "id": "arseniy",
+        "width": 194,
+        "height": 100,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/arseniy.webp"
+      }
+    ]
+  },
+  {
+    "view": "landscape",
+    "step": "parcel",
+    "overflow": false,
+    "cards": [
+      {
+        "id": "camera",
+        "width": 194,
+        "height": 100,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/camera.webp"
+      },
+      {
+        "id": "socks",
+        "width": 194,
+        "height": 100,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/socks.webp"
+      },
+      {
+        "id": "boat",
+        "width": 194,
+        "height": 100,
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4173/design/preparation-outpaint-2026-10-11/boat.webp"
+      }
+    ]
+  }
+]

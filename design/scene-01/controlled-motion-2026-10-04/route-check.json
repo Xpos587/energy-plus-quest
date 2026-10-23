@@ -1,0 +1,86 @@
+{
+  "fps": 24,
+  "frames": 1152,
+  "duration_seconds": 48,
+  "phases": [
+    212,
+    780,
+    268,
+    516
+  ],
+  "route_definition": "Far rigs share unchanged source truck3 tractor/trailer motion with different cyclic shifts. Blue follows extended left asphalt loop with trailer hitch kinematics integrated at192Hz after144s settling.",
+  "blue_spec": [
+    -29.8,
+    1.8,
+    -29.8,
+    29.8,
+    12
+  ],
+  "laps": [
+    2,
+    1,
+    2,
+    2
+  ],
+  "initial_articulation_degrees": [
+    2.9985295419430678,
+    2.8961164138104065,
+    0.3215325194049502,
+    1.584543779967028
+  ],
+  "max_articulation_degrees": [
+    45.91624175777164,
+    45.96097665069939,
+    45.91624175777164,
+    45.91624175777164
+  ],
+  "offroad_swept_intervals": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "static_collision_intervals": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "warehouse_lot_swept_intervals": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "pair_clearance_min": 0.30378153125903273,
+  "hitch_error": 3.5649413589087993e-06,
+  "warehouse_distance_min": [
+    28.68141354990074,
+    0.681316814622484,
+    28.6814144227532,
+    28.681415843220005
+  ],
+  "warehouse_distance_max": [
+    60.41844900153648,
+    32.41849288595075,
+    60.41844695576324,
+    60.4184491589353
+  ],
+  "blue_nearest_warehouse_all_intervals": false,
+  "blue_near_fraction_under10": 0.6935763888888888,
+  "loop_position_error": 0.0,
+  "method": "Actual native evaluated mesh convex hulls, projected asphalt triangle unions and static geometry. Every key interval conservatively enclosed and buffered for angular interpolation. Scene-unit distances.",
+  "passed": true
+}

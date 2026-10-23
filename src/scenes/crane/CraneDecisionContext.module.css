@@ -1,0 +1,15 @@
+.context {
+  max-width: none;
+  margin: 0 0 8px;
+  font-size: var(--scene-body-size, 18px);
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+.context p { margin: 0; max-width: 68ch; }
+.context p + p { margin-top: 4px; }
+
+@media (min-width: 700px) {
+  .context {
+    font-size: var(--scene-body-size, 20px);
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "composite-raw-25s.mp4",
+    "decoded_frames": 600,
+    "fps": 24.0,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "duration_seconds": 25.0
+  },
+  {
+    "file": "composite-22.75s.mp4",
+    "decoded_frames": 546,
+    "fps": 24.0,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "duration_seconds": 22.75
+  },
+  {
+    "file": "seams-4x-review.mp4",
+    "decoded_frames": 240,
+    "fps": 24.0,
+    "dimensions": [
+      880,
+      720
+    ],
+    "duration_seconds": 10.0
+  }
+]

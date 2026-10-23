@@ -1,0 +1,27 @@
+{
+  "source_camera_identical": true,
+  "all_source_hide_flags_identical": true,
+  "source_image_paths_identical": true,
+  "all_material_slot_names_identical": true,
+  "all_parent_relationships_identical": true,
+  "all_animation_action_assignments_identical": true,
+  "resolution": [
+    1920,
+    1334
+  ],
+  "frame_range": [
+    1,
+    1152
+  ],
+  "changed_meshes_only": [
+    "1 exhaust stack",
+    "4 exhaust stack",
+    "V08 1 light exhaust 0",
+    "V08 1 light exhaust 1",
+    "V08 1 light exhaust 2",
+    "V08 4 light exhaust 0",
+    "V08 4 light exhaust 1",
+    "V08 4 light exhaust 2"
+  ],
+  "note": "trailer location keyframe values deliberately rebaked in existing actions; actions retained, trailer headings retained, source camera saved before QA"
+}

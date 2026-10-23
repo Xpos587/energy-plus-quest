@@ -1,0 +1,24 @@
+{
+  "decision": "accepted_for_runtime",
+  "processingMode": "selective_flowers",
+  "passes": 2,
+  "exportDimensions": [
+    8192,
+    6881
+  ],
+  "acceptsRetainedRegions": true,
+  "nativeP1Accepted": 5,
+  "nativeP1Retained": 4,
+  "nativeP2Accepted": 4,
+  "protection": "contours-v5; original warehouse/rail/trailer walls, entirecab, central/right cargo explicitly retained",
+  "review": "Preview plus salient socks/dishes/weights, rail and cab at100percent inspected. Context repair removed slipping-sock ROI rectangle. Source-retained central cargo eliminates doubled crate/strap edges from earlier rejected mask revisions. Counts and scenario maintained. Detail reconstruction is partial; no whole-scene-native8192 claim. General runtime acceptance still required. Added actual upper3weights/lower3weights/dishes details beforeSTOP; p95 .982/.746/1.192sourcepx. Whole+100percent reviewed, original scenario count/geometry maintained. Prior partialvisualacceptance preserved.",
+  "evidence": [
+    "F0146-socks-100pct.png",
+    "F0146-protection-contours-v5.json",
+    "F0146-heavy-4roi-100pct.png",
+    "F0146-dishes-4roi-100pct.png"
+  ],
+  "priorVisualDecision": "owner_visual_review_passed",
+  "protocolReason": null,
+  "protocol": "selective_flowers; reset22Oct cancels universal4ROIgate;4realROIs completed beforeSTOP"
+}

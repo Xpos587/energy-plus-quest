@@ -1,0 +1,169 @@
+{
+  "model": "MobileSAM vit_t",
+  "checkpoint": ".tmp-work/warehouse-segmentation-model/weights/mobile_sam.pt",
+  "device": "cpu",
+  "formats": {
+    "wide": {
+      "crane": {
+        "box": [
+          975,
+          35,
+          1420,
+          600
+        ],
+        "points": [
+          [
+            1100,
+            360
+          ],
+          [
+            1200,
+            250
+          ],
+          [
+            1180,
+            470
+          ],
+          [
+            1290,
+            98
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9689313173294067,
+        "contours": 1
+      },
+      "petr": {
+        "box": [
+          1510,
+          0,
+          1750,
+          365
+        ],
+        "points": [
+          [
+            1600,
+            200
+          ],
+          [
+            1640,
+            270
+          ],
+          [
+            1700,
+            100
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9656949043273926,
+        "contours": 1
+      },
+      "remote": {
+        "box": [
+          50,
+          200,
+          385,
+          540
+        ],
+        "points": [
+          [
+            215,
+            350
+          ],
+          [
+            230,
+            470
+          ],
+          [
+            190,
+            260
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9965753555297852,
+        "contours": 1
+      }
+    },
+    "tall": {
+      "crane": {
+        "box": [
+          550,
+          65,
+          965,
+          700
+        ],
+        "points": [
+          [
+            660,
+            470
+          ],
+          [
+            775,
+            270
+          ],
+          [
+            680,
+            555
+          ],
+          [
+            850,
+            115
+          ]
+        ],
+        "selectedCandidate": 2,
+        "predictedIoU": 0.9727387428283691,
+        "contours": 1
+      },
+      "petr": {
+        "box": [
+          930,
+          90,
+          1070,
+          365
+        ],
+        "points": [
+          [
+            975,
+            253
+          ],
+          [
+            1000,
+            290
+          ],
+          [
+            1020,
+            150
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9598805904388428,
+        "contours": 1
+      },
+      "remote": {
+        "box": [
+          0,
+          440,
+          435,
+          1140
+        ],
+        "points": [
+          [
+            180,
+            680
+          ],
+          [
+            140,
+            870
+          ],
+          [
+            270,
+            540
+          ]
+        ],
+        "selectedCandidate": 2,
+        "predictedIoU": 1.0000752210617065,
+        "contours": 1
+      }
+    }
+  }
+}

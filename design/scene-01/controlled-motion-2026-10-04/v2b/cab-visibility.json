@@ -1,0 +1,5125 @@
+{
+  "method": "48x48 projected full-rig silhouette rays, measuring each part only where visible in isolated complete rig; intrinsic trailer-over-chassis occlusion excluded. Every0.25seconds in first5seconds, every1second elsewhere. Camera fixed; all source occluders included.",
+  "first5_seconds_minimum": {
+    "truck-1-tractor": 1.0,
+    "truck-1-trailer": 1.0,
+    "truck-2-tractor": 1.0,
+    "truck-2-trailer": 1.0,
+    "truck-3-tractor": 0.975609756097561,
+    "truck-3-trailer": 0.9793926247288504,
+    "truck-4-tractor": 1.0,
+    "truck-4-trailer": 1.0
+  },
+  "full_cycle_sampled_minimum": {
+    "truck-1-tractor": 0.9950617283950617,
+    "truck-1-trailer": 0.9262295081967213,
+    "truck-2-tractor": 1.0,
+    "truck-2-trailer": 0.9530761209593326,
+    "truck-3-tractor": 0.975609756097561,
+    "truck-3-trailer": 0.9502840909090909,
+    "truck-4-tractor": 0.9946524064171123,
+    "truck-4-trailer": 0.9272237196765498
+  },
+  "records": [
+    {
+      "frame": 1,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 434.2614009216579,
+          "visible_pixel_area_estimate": 434.2614009216579,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 296,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1603.5395648897706,
+          "visible_pixel_area_estimate": 1603.5395648897706,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1093,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 668.3307125740776,
+          "visible_pixel_area_estimate": 668.3307125740776,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 462,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1453.8362903397142,
+          "visible_pixel_area_estimate": 1453.8362903397142,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1005,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 455.30807869578445,
+          "visible_pixel_area_estimate": 455.30807869578445,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 343,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1575.657986623604,
+          "visible_pixel_area_estimate": 1575.657986623604,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1187,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 604.34023339265,
+          "visible_pixel_area_estimate": 604.34023339265,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 397,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1539.0125339042045,
+          "visible_pixel_area_estimate": 1539.0125339042045,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1011,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 7,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 431.6352137983931,
+          "visible_pixel_area_estimate": 431.6352137983931,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 302,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1596.4785887841228,
+          "visible_pixel_area_estimate": 1596.4785887841228,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1117,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 675.2966637036363,
+          "visible_pixel_area_estimate": 675.2966637036363,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 469,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1455.7034690924868,
+          "visible_pixel_area_estimate": 1455.7034690924868,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1011,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 444.72726849844184,
+          "visible_pixel_area_estimate": 444.72726849844184,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 355,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1593.5016493803325,
+          "visible_pixel_area_estimate": 1593.5016493803325,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1272,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 596.0702440764013,
+          "visible_pixel_area_estimate": 596.0702440764013,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 402,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1534.6584642265555,
+          "visible_pixel_area_estimate": 1534.6584642265555,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1035,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 13,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 432.8119086824253,
+          "visible_pixel_area_estimate": 432.8119086824253,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 309,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1592.579741656691,
+          "visible_pixel_area_estimate": 1592.579741656691,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1137,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 678.1275957436559,
+          "visible_pixel_area_estimate": 678.1275957436559,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 473,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1448.0102995794766,
+          "visible_pixel_area_estimate": 1448.0102995794766,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1010,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 504.3504962262841,
+          "visible_pixel_area_estimate": 504.3504962262841,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 379,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1587.5729340315486,
+          "visible_pixel_area_estimate": 1587.5729340315486,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1193,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 595.7187014504543,
+          "visible_pixel_area_estimate": 595.7187014504543,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 410,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1524.168092247626,
+          "visible_pixel_area_estimate": 1524.168092247626,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1049,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 19,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 434.44141079280746,
+          "visible_pixel_area_estimate": 434.44141079280746,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 315,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1592.9518395736275,
+          "visible_pixel_area_estimate": 1592.9518395736275,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1155,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 676.85877700381,
+          "visible_pixel_area_estimate": 676.85877700381,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 474,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1447.9637128309355,
+          "visible_pixel_area_estimate": 1447.9637128309355,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1014,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 577.6770395248357,
+          "visible_pixel_area_estimate": 577.6770395248357,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 375,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1565.1196590859547,
+          "visible_pixel_area_estimate": 1565.1196590859547,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1016,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 602.2550802084863,
+          "visible_pixel_area_estimate": 602.2550802084863,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1517.7972448959715,
+          "visible_pixel_area_estimate": 1517.7972448959715,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1061,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 25,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 432.06948219044943,
+          "visible_pixel_area_estimate": 432.06948219044943,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 317,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1589.2524171421578,
+          "visible_pixel_area_estimate": 1589.2524171421578,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1166,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 675.7968205421832,
+          "visible_pixel_area_estimate": 675.7968205421832,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 475,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1448.3392911830367,
+          "visible_pixel_area_estimate": 1448.3392911830367,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1018,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 647.618495918165,
+          "visible_pixel_area_estimate": 647.618495918165,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 376,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1510.5356939367837,
+          "visible_pixel_area_estimate": 1510.5356939367837,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 877,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 595.152280256692,
+          "visible_pixel_area_estimate": 595.152280256692,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1515.4471364255912,
+          "visible_pixel_area_estimate": 1515.4471364255912,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1072,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 31,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 432.2673986327037,
+          "visible_pixel_area_estimate": 432.2673986327037,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 320,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1585.8810187337317,
+          "visible_pixel_area_estimate": 1585.8810187337317,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1174,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 672.0887871938266,
+          "visible_pixel_area_estimate": 672.0887871938266,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 474,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1446.2670104170952,
+          "visible_pixel_area_estimate": 1446.2670104170952,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1020,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 697.7285048854026,
+          "visible_pixel_area_estimate": 697.7285048854026,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 320,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1596.0539549253583,
+          "visible_pixel_area_estimate": 1596.0539549253583,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 732,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 598.2226294723961,
+          "visible_pixel_area_estimate": 598.2226294723961,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 427,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1514.469935502717,
+          "visible_pixel_area_estimate": 1514.469935502717,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1081,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 37,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 430.685788396658,
+          "visible_pixel_area_estimate": 430.685788396658,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 321,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1589.9148263241113,
+          "visible_pixel_area_estimate": 1589.9148263241113,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1185,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 668.5725258282187,
+          "visible_pixel_area_estimate": 668.5725258282187,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 473,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1445.9824395819612,
+          "visible_pixel_area_estimate": 1445.9824395819612,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1023,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 730.2580398794521,
+          "visible_pixel_area_estimate": 730.2580398794521,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 283,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1713.3969557595624,
+          "visible_pixel_area_estimate": 1713.3969557595624,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 664,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 603.8978996081858,
+          "visible_pixel_area_estimate": 603.8978996081858,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 434,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1512.5276886499953,
+          "visible_pixel_area_estimate": 1512.5276886499953,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1087,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 43,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 432.48936084537166,
+          "visible_pixel_area_estimate": 432.48936084537166,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 324,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1583.1246356870704,
+          "visible_pixel_area_estimate": 1583.1246356870704,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1186,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 668.0517193234916,
+          "visible_pixel_area_estimate": 668.0517193234916,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 474,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1447.4453918675654,
+          "visible_pixel_area_estimate": 1447.4453918675654,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1027,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 754.6356990401024,
+          "visible_pixel_area_estimate": 754.6356990401024,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 263,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1819.1598220206272,
+          "visible_pixel_area_estimate": 1819.1598220206272,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 634,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 602.1813294578523,
+          "visible_pixel_area_estimate": 602.1813294578523,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 435,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1506.1454860922834,
+          "visible_pixel_area_estimate": 1506.1454860922834,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1088,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 49,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 433.4810724446031,
+          "visible_pixel_area_estimate": 433.4810724446031,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 326,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1583.6685806181667,
+          "visible_pixel_area_estimate": 1583.6685806181667,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1191,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 670.4916827391118,
+          "visible_pixel_area_estimate": 670.4916827391118,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 477,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1445.0009430939347,
+          "visible_pixel_area_estimate": 1445.0009430939347,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1028,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 782.478463617478,
+          "visible_pixel_area_estimate": 782.478463617478,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 260,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1959.2056915960702,
+          "visible_pixel_area_estimate": 1959.2056915960702,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 651,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 599.8483926567998,
+          "visible_pixel_area_estimate": 599.8483926567998,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 435,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1505.8263098418972,
+          "visible_pixel_area_estimate": 1505.8263098418972,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1092,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 55,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 432.22286279166485,
+          "visible_pixel_area_estimate": 432.22286279166485,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 326,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1583.0493808995334,
+          "visible_pixel_area_estimate": 1583.0493808995334,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1194,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 671.6501634112329,
+          "visible_pixel_area_estimate": 671.6501634112329,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 479,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1442.8559877873877,
+          "visible_pixel_area_estimate": 1442.8559877873877,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1029,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 789.9550431457255,
+          "visible_pixel_area_estimate": 789.9550431457255,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 265,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2050.902149751921,
+          "visible_pixel_area_estimate": 2050.902149751921,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 688,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 598.0989842015173,
+          "visible_pixel_area_estimate": 598.0989842015173,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 435,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1505.5595119555437,
+          "visible_pixel_area_estimate": 1505.5595119555437,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1095,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 61,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 431.27578700055295,
+          "visible_pixel_area_estimate": 431.27578700055295,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 326,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1583.549438771969,
+          "visible_pixel_area_estimate": 1583.549438771969,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1197,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 674.3281236300932,
+          "visible_pixel_area_estimate": 674.3281236300932,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 482,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1443.7896754901578,
+          "visible_pixel_area_estimate": 1443.7896754901578,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1032,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 803.8925638023651,
+          "visible_pixel_area_estimate": 803.8925638023651,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 271,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2177.3326266824206,
+          "visible_pixel_area_estimate": 2177.3326266824206,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 734,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 596.7875027697146,
+          "visible_pixel_area_estimate": 596.7875027697146,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 435,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1505.0020472146596,
+          "visible_pixel_area_estimate": 1505.0020472146596,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1097,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 67,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 430.5689040991208,
+          "visible_pixel_area_estimate": 430.5689040991208,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 326,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1583.5954478983,
+          "visible_pixel_area_estimate": 1583.5954478983,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1199,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 678.5042207680675,
+          "visible_pixel_area_estimate": 678.5042207680675,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 486,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1440.7743947173778,
+          "visible_pixel_area_estimate": 1440.7743947173778,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1032,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 829.5875829605999,
+          "visible_pixel_area_estimate": 829.5875829605999,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 291,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2235.0400860519258,
+          "visible_pixel_area_estimate": 2235.0400860519258,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 784,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 595.7997323742915,
+          "visible_pixel_area_estimate": 595.7997323742915,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 435,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1505.250358343325,
+          "visible_pixel_area_estimate": 1505.250358343325,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1099,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 73,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 431.3579582086333,
+          "visible_pixel_area_estimate": 431.3579582086333,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 327,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1585.6032592256183,
+          "visible_pixel_area_estimate": 1585.6032592256183,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1202,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 678.5969969165471,
+          "visible_pixel_area_estimate": 678.5969969165471,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 487,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1440.7993733299995,
+          "visible_pixel_area_estimate": 1440.7993733299995,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1034,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 836.1557445553133,
+          "visible_pixel_area_estimate": 836.1557445553133,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 311,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2301.444750287293,
+          "visible_pixel_area_estimate": 2269.1815061243874,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.985981308411215,
+          "in_frame": 1.0,
+          "silhouette_samples": 856,
+          "occluders": {
+            "residential east wing parapet.003": 6,
+            "residential east wing roof": 4,
+            "residential east wing parapet.001": 2
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 597.7986263563163,
+          "visible_pixel_area_estimate": 597.7986263563163,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 437,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1503.3883074727496,
+          "visible_pixel_area_estimate": 1503.3883074727496,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1099,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 79,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 426.14709591956205,
+          "visible_pixel_area_estimate": 426.14709591956205,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 325,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1585.267196820771,
+          "visible_pixel_area_estimate": 1585.267196820771,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1209,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 678.7859418261392,
+          "visible_pixel_area_estimate": 678.7859418261392,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 488,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1435.4653523864254,
+          "visible_pixel_area_estimate": 1435.4653523864254,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1032,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 829.3191899356552,
+          "visible_pixel_area_estimate": 829.3191899356552,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 329,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2324.1103134366995,
+          "visible_pixel_area_estimate": 2276.21650003616,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9793926247288504,
+          "in_frame": 1.0,
+          "silhouette_samples": 922,
+          "occluders": {
+            "residential east wing parapet.003": 14,
+            "residential east wing roof": 5
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 595.710803241656,
+          "visible_pixel_area_estimate": 595.710803241656,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 438,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1506.9579223556048,
+          "visible_pixel_area_estimate": 1506.9579223556048,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1108,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 85,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 441.9413772418033,
+          "visible_pixel_area_estimate": 441.9413772418033,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 350,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1598.5650959660657,
+          "visible_pixel_area_estimate": 1598.5650959660657,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1266,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 677.680593932309,
+          "visible_pixel_area_estimate": 677.680593932309,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 488,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1434.5165031394984,
+          "visible_pixel_area_estimate": 1434.5165031394984,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1033,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 812.8282643741487,
+          "visible_pixel_area_estimate": 812.8282643741487,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 343,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2338.954801566428,
+          "visible_pixel_area_estimate": 2322.366469640425,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9929078014184397,
+          "in_frame": 1.0,
+          "silhouette_samples": 987,
+          "occluders": {
+            "residential east wing parapet.003": 7
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 601.1487477342284,
+          "visible_pixel_area_estimate": 601.1487477342284,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 459,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1534.9593297266138,
+          "visible_pixel_area_estimate": 1534.9593297266138,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1172,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 91,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 505.6989192469711,
+          "visible_pixel_area_estimate": 505.6989192469711,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 362,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1588.341633104437,
+          "visible_pixel_area_estimate": 1588.341633104437,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1137,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 676.6622481559432,
+          "visible_pixel_area_estimate": 676.6622481559432,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 488,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1433.7474684287813,
+          "visible_pixel_area_estimate": 1433.7474684287813,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1034,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 850.5640772148872,
+          "visible_pixel_area_estimate": 850.5640772148872,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 379,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2302.582435943204,
+          "visible_pixel_area_estimate": 2302.582435943204,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1026,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 658.0086440606341,
+          "visible_pixel_area_estimate": 658.0086440606341,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 455,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1515.5891406055923,
+          "visible_pixel_area_estimate": 1515.5891406055923,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1048,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 97,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 586.7969388881402,
+          "visible_pixel_area_estimate": 586.7969388881402,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 370,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1554.2189192172361,
+          "visible_pixel_area_estimate": 1554.2189192172361,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 980,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 677.110897570923,
+          "visible_pixel_area_estimate": 677.110897570923,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1435.9182020062315,
+          "visible_pixel_area_estimate": 1435.9182020062315,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1037,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 851.1545813544701,
+          "visible_pixel_area_estimate": 851.1545813544701,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 397,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2319.771428275911,
+          "visible_pixel_area_estimate": 2319.771428275911,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1082,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 702.5601506460678,
+          "visible_pixel_area_estimate": 702.5601506460678,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 429,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1470.627075245149,
+          "visible_pixel_area_estimate": 1470.627075245149,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 898,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 103,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 654.6225141705611,
+          "visible_pixel_area_estimate": 654.6225141705611,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 351,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1533.0475972883225,
+          "visible_pixel_area_estimate": 1533.0475972883225,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 822,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 676.2486724591105,
+          "visible_pixel_area_estimate": 676.2486724591105,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1436.8555637730385,
+          "visible_pixel_area_estimate": 1436.8555637730385,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1039,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 846.4899852234671,
+          "visible_pixel_area_estimate": 842.2255520485378,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9949622166246851,
+          "in_frame": 1.0,
+          "silhouette_samples": 397,
+          "occluders": {
+            "residential west wing parapet.003": 2
+          }
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2339.041596448724,
+          "visible_pixel_area_estimate": 2339.041596448724,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1097,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 737.6645343958385,
+          "visible_pixel_area_estimate": 737.6645343958385,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 384,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1484.934075749956,
+          "visible_pixel_area_estimate": 1484.934075749956,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 773,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 109,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 696.4312995090846,
+          "visible_pixel_area_estimate": 696.4312995090846,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 302,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1623.468989584091,
+          "visible_pixel_area_estimate": 1623.468989584091,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 704,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 675.4567765704511,
+          "visible_pixel_area_estimate": 675.4567765704511,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1437.935591840163,
+          "visible_pixel_area_estimate": 1437.935591840163,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1041,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 866.8940014208722,
+          "visible_pixel_area_estimate": 845.7502452886558,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.975609756097561,
+          "in_frame": 1.0,
+          "silhouette_samples": 410,
+          "occluders": {
+            "residential west wing parapet": 4,
+            "residential west wing parapet.003": 4,
+            "residential west wing roof": 2
+          }
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2325.8131745438036,
+          "visible_pixel_area_estimate": 2325.8131745438036,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1100,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 777.6899572049464,
+          "visible_pixel_area_estimate": 777.6899572049464,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 328,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1579.0899740807752,
+          "visible_pixel_area_estimate": 1579.0899740807752,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 666,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 115,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 726.569682484801,
+          "visible_pixel_area_estimate": 726.569682484801,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 272,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1738.9590562411965,
+          "visible_pixel_area_estimate": 1738.9590562411965,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 651,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 674.7288951661607,
+          "visible_pixel_area_estimate": 674.7288951661607,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1436.386052899741,
+          "visible_pixel_area_estimate": 1436.386052899741,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1041,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 877.8859323480193,
+          "visible_pixel_area_estimate": 871.7181154931152,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9929742388758782,
+          "in_frame": 1.0,
+          "silhouette_samples": 427,
+          "occluders": {
+            "residential west wing parapet": 2,
+            "residential west wing parapet.003": 1
+          }
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2333.490710105391,
+          "visible_pixel_area_estimate": 2327.3228932504867,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9973568281938326,
+          "in_frame": 1.0,
+          "silhouette_samples": 1135,
+          "occluders": {
+            "residential west wing parapet.003": 2,
+            "residential west wing parapet.001": 1
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 784.3599804333662,
+          "visible_pixel_area_estimate": 784.3599804333662,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 286,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1692.133244501353,
+          "visible_pixel_area_estimate": 1692.133244501353,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 617,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 120,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 746.0955396594825,
+          "visible_pixel_area_estimate": 746.0955396594825,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 259,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1855.1564769911456,
+          "visible_pixel_area_estimate": 1855.1564769911456,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 674.1686802121458,
+          "visible_pixel_area_estimate": 674.1686802121458,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1435.1934480589853,
+          "visible_pixel_area_estimate": 1435.1934480589853,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1041,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 866.2269017889457,
+          "visible_pixel_area_estimate": 855.3719280823174,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9874686716791979,
+          "in_frame": 1.0,
+          "silhouette_samples": 399,
+          "occluders": {
+            "residential west wing parapet.003": 5
+          }
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2318.6223837358248,
+          "visible_pixel_area_estimate": 2303.425420546545,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9934456928838952,
+          "in_frame": 1.0,
+          "silhouette_samples": 1068,
+          "occluders": {
+            "residential west wing parapet.003": 7
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 778.4010625023645,
+          "visible_pixel_area_estimate": 778.4010625023645,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 263,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1823.1751121728387,
+          "visible_pixel_area_estimate": 1823.1751121728387,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 616,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 121,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 753.6522986342356,
+          "visible_pixel_area_estimate": 753.6522986342356,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 259,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1873.946256063505,
+          "visible_pixel_area_estimate": 1873.946256063505,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 674.0598218747709,
+          "visible_pixel_area_estimate": 674.0598218747709,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1434.9617066904634,
+          "visible_pixel_area_estimate": 1434.9617066904634,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1041,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 883.8609008944622,
+          "visible_pixel_area_estimate": 879.4744944384103,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9950372208436724,
+          "in_frame": 1.0,
+          "silhouette_samples": 403,
+          "occluders": {
+            "residential west wing parapet.003": 2
+          }
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2305.056592655285,
+          "visible_pixel_area_estimate": 2287.510966831077,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9923882017126546,
+          "in_frame": 1.0,
+          "silhouette_samples": 1051,
+          "occluders": {
+            "residential west wing parapet.003": 8
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 799.1372720471771,
+          "visible_pixel_area_estimate": 799.1372720471771,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 267,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1819.7582824145456,
+          "visible_pixel_area_estimate": 1819.7582824145456,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 608,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 145,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 805.896437928033,
+          "visible_pixel_area_estimate": 805.896437928033,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 288,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2283.3732407960933,
+          "visible_pixel_area_estimate": 2283.3732407960933,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 816,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 673.2555803800568,
+          "visible_pixel_area_estimate": 673.2555803800568,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 490,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1433.0725925232637,
+          "visible_pixel_area_estimate": 1433.0725925232637,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1043,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 755.3590845551465,
+          "visible_pixel_area_estimate": 755.3590845551465,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 240,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2215.719981361763,
+          "visible_pixel_area_estimate": 2105.5634481974707,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9502840909090909,
+          "in_frame": 1.0,
+          "silhouette_samples": 704,
+          "occluders": {
+            "residential west wing roof": 22,
+            "residential west wing parapet.003": 7,
+            "residential west wing parapet": 6
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 796.8726144747579,
+          "visible_pixel_area_estimate": 796.8726144747579,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 276,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2263.5801802471383,
+          "visible_pixel_area_estimate": 2263.5801802471383,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 784,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 169,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 861.196174991964,
+          "visible_pixel_area_estimate": 861.196174991964,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 390,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2318.6050865168263,
+          "visible_pixel_area_estimate": 2318.6050865168263,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1050,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 671.6958309100205,
+          "visible_pixel_area_estimate": 671.6958309100205,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 490,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1432.4941700019824,
+          "visible_pixel_area_estimate": 1432.4941700019824,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1045,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 666.0627530901908,
+          "visible_pixel_area_estimate": 666.0627530901908,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 269,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1824.8633792842772,
+          "visible_pixel_area_estimate": 1824.8633792842772,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 737,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 806.9326697091865,
+          "visible_pixel_area_estimate": 806.9326697091865,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 351,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2312.747195804677,
+          "visible_pixel_area_estimate": 2312.747195804677,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1006,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 193,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 853.23849756165,
+          "visible_pixel_area_estimate": 849.024974116901,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9950617283950617,
+          "in_frame": 1.0,
+          "silhouette_samples": 405,
+          "occluders": {
+            "residential west wing parapet": 1,
+            "residential west wing parapet.003": 1
+          }
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2323.758179779012,
+          "visible_pixel_area_estimate": 2317.4378946118886,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9972801450589301,
+          "in_frame": 1.0,
+          "silhouette_samples": 1103,
+          "occluders": {
+            "residential west wing parapet.003": 3
+          }
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 668.2064811099996,
+          "visible_pixel_area_estimate": 668.2064811099996,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 513,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1445.826888951461,
+          "visible_pixel_area_estimate": 1445.826888951461,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1110,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 677.5127820132146,
+          "visible_pixel_area_estimate": 677.5127820132146,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 383,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1558.4562949181254,
+          "visible_pixel_area_estimate": 1558.4562949181254,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 881,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 782.8212539005264,
+          "visible_pixel_area_estimate": 782.8212539005264,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 416,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2318.355251936174,
+          "visible_pixel_area_estimate": 2318.355251936174,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1232,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 217,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 783.6554520872825,
+          "visible_pixel_area_estimate": 783.6554520872825,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 253,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2267.335142007473,
+          "visible_pixel_area_estimate": 2100.072713498725,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9262295081967213,
+          "in_frame": 1.0,
+          "silhouette_samples": 732,
+          "occluders": {
+            "residential west wing roof": 32,
+            "residential west wing parapet.003": 17,
+            "residential west wing parapet": 5
+          }
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 698.2465046173785,
+          "visible_pixel_area_estimate": 698.2465046173785,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 534,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1471.024939502904,
+          "visible_pixel_area_estimate": 1471.024939502904,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1125,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 671.1261678212682,
+          "visible_pixel_area_estimate": 671.1261678212682,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 449,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1461.8293811340764,
+          "visible_pixel_area_estimate": 1461.8293811340764,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 978,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 567.6276667120694,
+          "visible_pixel_area_estimate": 567.6276667120694,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 198,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2319.2463756063844,
+          "visible_pixel_area_estimate": 2319.2463756063844,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 809,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 241,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 678.4512150884564,
+          "visible_pixel_area_estimate": 678.4512150884564,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 258,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1901.2411957711392,
+          "visible_pixel_area_estimate": 1901.2411957711392,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 723,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 749.9187900015296,
+          "visible_pixel_area_estimate": 749.9187900015296,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 492,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1449.5381489663712,
+          "visible_pixel_area_estimate": 1449.5381489663712,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 951,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 677.1223070151256,
+          "visible_pixel_area_estimate": 677.1223070151256,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 482,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1444.1529701484421,
+          "visible_pixel_area_estimate": 1444.1529701484421,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1028,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 414.7260780613789,
+          "visible_pixel_area_estimate": 414.7260780613789,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 167,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2011.5456480821374,
+          "visible_pixel_area_estimate": 2011.5456480821374,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 810,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 265,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 678.9234965931948,
+          "visible_pixel_area_estimate": 678.9234965931948,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 367,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1583.5381827895771,
+          "visible_pixel_area_estimate": 1583.5381827895771,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 856,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 792.7206622312473,
+          "visible_pixel_area_estimate": 792.7206622312473,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 446,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1443.2492774254995,
+          "visible_pixel_area_estimate": 1443.2492774254995,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 812,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 672.9387155488992,
+          "visible_pixel_area_estimate": 672.9387155488992,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1435.3273626124783,
+          "visible_pixel_area_estimate": 1435.3273626124783,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1043,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 410.37154655495,
+          "visible_pixel_area_estimate": 410.37154655495,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 233,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1722.503744767129,
+          "visible_pixel_area_estimate": 1722.503744767129,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 978,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 289,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 677.4090747372242,
+          "visible_pixel_area_estimate": 677.4090747372242,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 445,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1468.988218250385,
+          "visible_pixel_area_estimate": 1468.988218250385,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 965,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 814.9093346689906,
+          "visible_pixel_area_estimate": 814.9093346689906,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 355,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1554.066534002554,
+          "visible_pixel_area_estimate": 1554.066534002554,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 677,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 672.598834710666,
+          "visible_pixel_area_estimate": 672.598834710666,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 492,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1434.0572715680662,
+          "visible_pixel_area_estimate": 1434.0572715680662,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1049,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 412.25916157443083,
+          "visible_pixel_area_estimate": 412.25916157443083,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 284,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1605.4881433145088,
+          "visible_pixel_area_estimate": 1605.4881433145088,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1106,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 313,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 668.6627726835042,
+          "visible_pixel_area_estimate": 668.6627726835042,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 473,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1446.177624641067,
+          "visible_pixel_area_estimate": 1446.177624641067,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1023,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 850.9919288631472,
+          "visible_pixel_area_estimate": 850.9919288631472,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 307,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1701.9838577262944,
+          "visible_pixel_area_estimate": 1701.9838577262944,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 614,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 807.357389901407,
+          "visible_pixel_area_estimate": 807.357389901407,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 458,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1419.0451940406826,
+          "visible_pixel_area_estimate": 1419.0451940406826,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 805,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 412.6750996009273,
+          "visible_pixel_area_estimate": 412.6750996009273,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 306,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1579.2239922636793,
+          "visible_pixel_area_estimate": 1579.2239922636793,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1171,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 337,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 674.312328018843,
+          "visible_pixel_area_estimate": 674.312328018843,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1435.4992504450215,
+          "visible_pixel_area_estimate": 1435.4992504450215,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1041,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 849.1945499468825,
+          "visible_pixel_area_estimate": 849.1945499468825,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 273,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1888.1358674643138,
+          "visible_pixel_area_estimate": 1888.1358674643138,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 607,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 862.8261137295711,
+          "visible_pixel_area_estimate": 862.8261137295711,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 280,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1916.7065812135475,
+          "visible_pixel_area_estimate": 1916.7065812135475,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 622,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 413.11452571149164,
+          "visible_pixel_area_estimate": 413.11452571149164,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 314,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1574.8346728555907,
+          "visible_pixel_area_estimate": 1574.8346728555907,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1197,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 361,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 673.0364367063463,
+          "visible_pixel_area_estimate": 673.0364367063463,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 492,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1432.2543683567978,
+          "visible_pixel_area_estimate": 1432.2543683567978,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1047,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 858.7017476976935,
+          "visible_pixel_area_estimate": 858.7017476976935,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 272,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2074.143559696267,
+          "visible_pixel_area_estimate": 2074.143559696267,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 657,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 860.6723318906187,
+          "visible_pixel_area_estimate": 860.6723318906187,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 310,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2290.4989477734207,
+          "visible_pixel_area_estimate": 2290.4989477734207,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 825,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 415.0542762419593,
+          "visible_pixel_area_estimate": 415.0542762419593,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 318,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1567.5477539829974,
+          "visible_pixel_area_estimate": 1567.5477539829974,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1201,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 385,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 781.1682751472514,
+          "visible_pixel_area_estimate": 781.1682751472514,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 477,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1434.598341779858,
+          "visible_pixel_area_estimate": 1434.598341779858,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 876,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 853.0935415648557,
+          "visible_pixel_area_estimate": 853.0935415648557,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 301,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2281.5292390688,
+          "visible_pixel_area_estimate": 2281.5292390688,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 805,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 876.3113982091812,
+          "visible_pixel_area_estimate": 876.3113982091812,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 392,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2318.201326385002,
+          "visible_pixel_area_estimate": 2318.201326385002,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1037,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 551.6578156756617,
+          "visible_pixel_area_estimate": 551.6578156756617,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 352,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1534.298299847934,
+          "visible_pixel_area_estimate": 1534.298299847934,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 979,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 409,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 870.969829512659,
+          "visible_pixel_area_estimate": 870.969829512659,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 291,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1819.7582692223255,
+          "visible_pixel_area_estimate": 1819.7582692223255,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 608,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 852.6886844736741,
+          "visible_pixel_area_estimate": 852.6886844736741,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 371,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2332.827532994014,
+          "visible_pixel_area_estimate": 2332.827532994014,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1015,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 836.5920526080453,
+          "visible_pixel_area_estimate": 836.5920526080453,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 405,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2290.816262573635,
+          "visible_pixel_area_estimate": 2290.816262573635,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1109,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 707.8541862312501,
+          "visible_pixel_area_estimate": 707.8541862312501,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 247,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1868.505787136741,
+          "visible_pixel_area_estimate": 1868.505787136741,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 652,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 433,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 857.504213401529,
+          "visible_pixel_area_estimate": 857.504213401529,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 297,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2263.5801458141373,
+          "visible_pixel_area_estimate": 2263.5801458141373,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 784,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 823.9416093152603,
+          "visible_pixel_area_estimate": 823.9416093152603,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 409,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2294.5464376774607,
+          "visible_pixel_area_estimate": 2294.5464376774607,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1139,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 564.9097805280454,
+          "visible_pixel_area_estimate": 564.9097805280454,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 189,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2289.528528489327,
+          "visible_pixel_area_estimate": 2289.528528489327,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 766,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 741.5371571972926,
+          "visible_pixel_area_estimate": 741.5371571972926,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 265,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2283.374793482984,
+          "visible_pixel_area_estimate": 2283.374793482984,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 816,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 457,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 869.0044006010569,
+          "visible_pixel_area_estimate": 869.0044006010569,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 378,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2312.747161387998,
+          "visible_pixel_area_estimate": 2312.747161387998,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1006,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 641.4416302512727,
+          "visible_pixel_area_estimate": 641.4416302512727,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 217,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2317.4665351013723,
+          "visible_pixel_area_estimate": 2317.4665351013723,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 784,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 446.4666435753556,
+          "visible_pixel_area_estimate": 446.4666435753556,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 187,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1938.6679924234693,
+          "visible_pixel_area_estimate": 1938.6679924234693,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 812,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 803.7809509639691,
+          "visible_pixel_area_estimate": 803.7809509639691,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 364,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2318.598897011449,
+          "visible_pixel_area_estimate": 2318.598897011449,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1050,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 481,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 822.9762763498688,
+          "visible_pixel_area_estimate": 822.9762763498688,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 423,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2326.902190341473,
+          "visible_pixel_area_estimate": 2326.902190341473,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1196,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 440.39054047240836,
+          "visible_pixel_area_estimate": 440.39054047240836,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 163,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2123.6010111123496,
+          "visible_pixel_area_estimate": 2123.6010111123496,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 786,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 444.1337503835531,
+          "visible_pixel_area_estimate": 444.1337503835531,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 259,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1701.0837080327592,
+          "visible_pixel_area_estimate": 1701.0837080327592,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 992,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 787.9290287625573,
+          "visible_pixel_area_estimate": 783.7155045445757,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9946524064171123,
+          "in_frame": 1.0,
+          "silhouette_samples": 374,
+          "occluders": {
+            "residential west wing parapet": 1,
+            "residential west wing parapet.003": 1
+          }
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2323.7586062168466,
+          "visible_pixel_area_estimate": 2317.4383198898745,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9972801450589301,
+          "in_frame": 1.0,
+          "silhouette_samples": 1103,
+          "occluders": {
+            "residential west wing parapet.003": 3
+          }
+        }
+      }
+    },
+    {
+      "frame": 505,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 603.7790825454043,
+          "visible_pixel_area_estimate": 603.7790825454043,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 207,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2318.861693833799,
+          "visible_pixel_area_estimate": 2318.861693833799,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 795,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 433.57819091239026,
+          "visible_pixel_area_estimate": 433.57819091239026,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 216,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1792.5246503924282,
+          "visible_pixel_area_estimate": 1792.5246503924282,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 893,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 451.1693331136035,
+          "visible_pixel_area_estimate": 451.1693331136035,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 311,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1595.7757762860574,
+          "visible_pixel_area_estimate": 1595.7757762860574,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1100,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 715.5124841229448,
+          "visible_pixel_area_estimate": 715.5124841229448,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 231,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2298.312827788853,
+          "visible_pixel_area_estimate": 2131.05016916271,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9272237196765498,
+          "in_frame": 1.0,
+          "silhouette_samples": 742,
+          "occluders": {
+            "residential west wing roof": 32,
+            "residential west wing parapet.003": 17,
+            "residential west wing parapet": 5
+          }
+        }
+      }
+    },
+    {
+      "frame": 529,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 434.5130881312505,
+          "visible_pixel_area_estimate": 434.5130881312505,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 173,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2009.3090780635862,
+          "visible_pixel_area_estimate": 2009.3090780635862,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 800,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 438.3779694090812,
+          "visible_pixel_area_estimate": 438.3779694090812,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 277,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1641.1478493762354,
+          "visible_pixel_area_estimate": 1641.1478493762354,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1037,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 451.4497146081266,
+          "visible_pixel_area_estimate": 451.4497146081266,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 331,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1583.4837421753323,
+          "visible_pixel_area_estimate": 1583.4837421753323,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1161,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 623.2274379252082,
+          "visible_pixel_area_estimate": 623.2274379252082,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 237,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1951.2015145168966,
+          "visible_pixel_area_estimate": 1951.2015145168966,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 742,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 553,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 432.57117706523286,
+          "visible_pixel_area_estimate": 432.57117706523286,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 243,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1726.7244516595715,
+          "visible_pixel_area_estimate": 1726.7244516595715,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 970,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 433.870903852682,
+          "visible_pixel_area_estimate": 433.870903852682,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 307,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1592.744327824015,
+          "visible_pixel_area_estimate": 1592.744327824015,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1127,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 456.97977377276015,
+          "visible_pixel_area_estimate": 456.97977377276015,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 342,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1575.377641163989,
+          "visible_pixel_area_estimate": 1575.377641163989,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1179,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 603.0776029649052,
+          "visible_pixel_area_estimate": 603.0776029649052,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 326,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1653.8385799098933,
+          "visible_pixel_area_estimate": 1653.8385799098933,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 894,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 577,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 434.2624627113498,
+          "visible_pixel_area_estimate": 434.2624627113498,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 296,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1603.5434856199506,
+          "visible_pixel_area_estimate": 1603.5434856199506,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1093,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 432.116218596414,
+          "visible_pixel_area_estimate": 432.116218596414,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 320,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1586.6767401587076,
+          "visible_pixel_area_estimate": 1586.6767401587076,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1175,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 455.30555637604925,
+          "visible_pixel_area_estimate": 455.30555637604925,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 343,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1575.6492577795057,
+          "visible_pixel_area_estimate": 1575.6492577795057,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1187,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 604.3417369174542,
+          "visible_pixel_area_estimate": 604.3417369174542,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 397,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1539.0163627797133,
+          "visible_pixel_area_estimate": 1539.0163627797133,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1011,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 601,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 432.0706346597554,
+          "visible_pixel_area_estimate": 432.0706346597554,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 317,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1589.2566561932958,
+          "visible_pixel_area_estimate": 1589.2566561932958,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1166,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 432.72381266215746,
+          "visible_pixel_area_estimate": 432.72381266215746,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 326,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1583.5567745581407,
+          "visible_pixel_area_estimate": 1583.5567745581407,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1193,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 647.6170018096767,
+          "visible_pixel_area_estimate": 647.6170018096767,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 376,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1510.5322090082088,
+          "visible_pixel_area_estimate": 1510.5322090082088,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 877,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 595.1539701170783,
+          "visible_pixel_area_estimate": 595.1539701170783,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1515.451439348,
+          "visible_pixel_area_estimate": 1515.451439348,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1072,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 625,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 433.47869120953277,
+          "visible_pixel_area_estimate": 433.47869120953277,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 326,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1583.6598810753176,
+          "visible_pixel_area_estimate": 1583.6598810753176,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1191,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 435.33127933695243,
+          "visible_pixel_area_estimate": 435.33127933695243,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 351,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1593.7341707919768,
+          "visible_pixel_area_estimate": 1593.7341707919768,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1285,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 782.478354467577,
+          "visible_pixel_area_estimate": 782.478354467577,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 260,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1959.20541830151,
+          "visible_pixel_area_estimate": 1959.20541830151,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 651,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 599.850094870054,
+          "visible_pixel_area_estimate": 599.850094870054,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 435,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1505.8305829841356,
+          "visible_pixel_area_estimate": 1505.8305829841356,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1092,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 649,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 431.35531994037115,
+          "visible_pixel_area_estimate": 431.35531994037115,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 327,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1585.593561371028,
+          "visible_pixel_area_estimate": 1585.593561371028,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1202,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 631.1432881005724,
+          "visible_pixel_area_estimate": 631.1432881005724,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 335,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1556.1921073763367,
+          "visible_pixel_area_estimate": 1556.1921073763367,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 826,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 836.1564239612084,
+          "visible_pixel_area_estimate": 836.1564239612084,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 311,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2301.4466202919434,
+          "visible_pixel_area_estimate": 2269.183349914019,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.985981308411215,
+          "in_frame": 1.0,
+          "silhouette_samples": 856,
+          "occluders": {
+            "residential east wing parapet.003": 6,
+            "residential east wing roof": 4,
+            "residential east wing parapet.001": 2
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 597.800343263598,
+          "visible_pixel_area_estimate": 597.800343263598,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 437,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1503.3926252784765,
+          "visible_pixel_area_estimate": 1503.3926252784765,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1099,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 673,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 586.7964453909703,
+          "visible_pixel_area_estimate": 586.7964453909703,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 370,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1554.2176121166242,
+          "visible_pixel_area_estimate": 1554.2176121166242,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 980,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 755.8939101156257,
+          "visible_pixel_area_estimate": 755.8939101156257,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 252,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1910.7318283478314,
+          "visible_pixel_area_estimate": 1910.7318283478314,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 637,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 851.1518207695675,
+          "visible_pixel_area_estimate": 851.1518207695675,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 397,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2319.7639044651687,
+          "visible_pixel_area_estimate": 2319.7639044651687,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1082,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 702.5602990560832,
+          "visible_pixel_area_estimate": 702.5602990560832,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 429,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1470.6273859029434,
+          "visible_pixel_area_estimate": 1470.6273859029434,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 898,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 697,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 753.6519109462694,
+          "visible_pixel_area_estimate": 753.6519109462694,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 259,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1873.9452920826157,
+          "visible_pixel_area_estimate": 1873.9452920826157,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 793.9280571549972,
+          "visible_pixel_area_estimate": 793.9280571549972,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 272,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2212.4906886892936,
+          "visible_pixel_area_estimate": 2212.4906886892936,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 758,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 883.8611444577105,
+          "visible_pixel_area_estimate": 879.474736792908,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9950372208436724,
+          "in_frame": 1.0,
+          "silhouette_samples": 403,
+          "occluders": {
+            "residential west wing parapet.003": 2
+          }
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2305.057227853731,
+          "visible_pixel_area_estimate": 2287.511597194521,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9923882017126546,
+          "in_frame": 1.0,
+          "silhouette_samples": 1051,
+          "occluders": {
+            "residential west wing parapet.003": 8
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 799.1385304852703,
+          "visible_pixel_area_estimate": 799.1385304852703,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 267,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1819.7611480713272,
+          "visible_pixel_area_estimate": 1819.7611480713272,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 608,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 721,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 805.8969900224139,
+          "visible_pixel_area_estimate": 805.8969900224139,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 288,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2283.374805063506,
+          "visible_pixel_area_estimate": 2283.374805063506,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 816,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 809.6366448034233,
+          "visible_pixel_area_estimate": 809.6366448034233,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 332,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2338.6793444773584,
+          "visible_pixel_area_estimate": 2228.9394378021957,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9530761209593326,
+          "in_frame": 1.0,
+          "silhouette_samples": 959,
+          "occluders": {
+            "outer residential -1 3 roof": 25,
+            "outer residential -1 3 parapet.003": 17,
+            "outer residential -1 3 parapet.001": 3
+          }
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 755.3589029317188,
+          "visible_pixel_area_estimate": 755.3589029317188,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 240,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2215.7194485997084,
+          "visible_pixel_area_estimate": 2105.5629419221664,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9502840909090909,
+          "in_frame": 1.0,
+          "silhouette_samples": 704,
+          "occluders": {
+            "residential west wing roof": 22,
+            "residential west wing parapet.003": 7,
+            "residential west wing parapet": 6
+          }
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 796.8731087930855,
+          "visible_pixel_area_estimate": 796.8731087930855,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 276,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2263.5815843977502,
+          "visible_pixel_area_estimate": 2263.5815843977502,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 784,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 745,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 861.1938801678945,
+          "visible_pixel_area_estimate": 861.1938801678945,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 390,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2318.5989081443313,
+          "visible_pixel_area_estimate": 2318.5989081443313,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1050,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 850.2063354116602,
+          "visible_pixel_area_estimate": 850.2063354116602,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 378,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2307.7029104030776,
+          "visible_pixel_area_estimate": 2251.4723326642115,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9756335282651072,
+          "in_frame": 1.0,
+          "silhouette_samples": 1026,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 21,
+            "outer residential -1 3 roof": 4
+          }
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 666.0634012314474,
+          "visible_pixel_area_estimate": 666.0634012314474,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 269,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1824.8651550467537,
+          "visible_pixel_area_estimate": 1824.8651550467537,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 737,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 806.9339929645702,
+          "visible_pixel_area_estimate": 806.9339929645702,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 351,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2312.750988382785,
+          "visible_pixel_area_estimate": 2312.750988382785,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1006,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 769,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 853.2383424617743,
+          "visible_pixel_area_estimate": 849.0248197829508,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9950617283950617,
+          "in_frame": 1.0,
+          "silhouette_samples": 405,
+          "occluders": {
+            "residential west wing parapet": 1,
+            "residential west wing parapet.003": 1
+          }
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2323.757757371203,
+          "visible_pixel_area_estimate": 2317.4374733529676,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9972801450589301,
+          "in_frame": 1.0,
+          "silhouette_samples": 1103,
+          "occluders": {
+            "residential west wing parapet.003": 3
+          }
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 866.757198446704,
+          "visible_pixel_area_estimate": 866.757198446704,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 417,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2325.902410220292,
+          "visible_pixel_area_estimate": 2319.6667469221143,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9973190348525469,
+          "in_frame": 1.0,
+          "silhouette_samples": 1119,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 3
+          }
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 677.5143156951681,
+          "visible_pixel_area_estimate": 677.5143156951681,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 383,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1558.4598227870576,
+          "visible_pixel_area_estimate": 1558.4598227870576,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 881,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 782.8212963723216,
+          "visible_pixel_area_estimate": 782.8212963723216,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 416,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2318.3553777180296,
+          "visible_pixel_area_estimate": 2318.3553777180296,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1232,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 793,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 783.6565727171921,
+          "visible_pixel_area_estimate": 783.6565727171921,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 253,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2267.338384304287,
+          "visible_pixel_area_estimate": 2100.0757166097087,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9262295081967213,
+          "in_frame": 1.0,
+          "silhouette_samples": 732,
+          "occluders": {
+            "residential west wing roof": 32,
+            "residential west wing parapet.003": 17,
+            "residential west wing parapet": 5
+          }
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 867.9556225206192,
+          "visible_pixel_area_estimate": 867.9556225206192,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 385,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2279.2289204372623,
+          "visible_pixel_area_estimate": 2274.7200600605315,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9980217606330366,
+          "in_frame": 1.0,
+          "silhouette_samples": 1011,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 2
+          }
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 671.1280343118462,
+          "visible_pixel_area_estimate": 671.1280343118462,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 449,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1461.8334466748008,
+          "visible_pixel_area_estimate": 1461.8334466748008,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 978,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 567.6272781640446,
+          "visible_pixel_area_estimate": 567.6272781640446,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 198,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2319.2447880541013,
+          "visible_pixel_area_estimate": 2319.2447880541013,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 809,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 817,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 678.4501845886418,
+          "visible_pixel_area_estimate": 678.4501845886418,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 258,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1901.2383079751473,
+          "visible_pixel_area_estimate": 1901.2383079751473,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 723,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 828.5404826918981,
+          "visible_pixel_area_estimate": 828.5404826918981,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 303,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2310.6161976061185,
+          "visible_pixel_area_estimate": 2305.147283528944,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9976331360946745,
+          "in_frame": 1.0,
+          "silhouette_samples": 845,
+          "occluders": {
+            "outer residential -1 3 parapet": 1,
+            "outer residential -1 3 parapet.003": 1
+          }
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 677.1243148761049,
+          "visible_pixel_area_estimate": 677.1243148761049,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 482,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1444.1572524743483,
+          "visible_pixel_area_estimate": 1444.1572524743483,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1028,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 414.72640989225397,
+          "visible_pixel_area_estimate": 414.72640989225397,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 167,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2011.5472575612318,
+          "visible_pixel_area_estimate": 2011.5472575612318,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 810,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 841,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 678.9248727295563,
+          "visible_pixel_area_estimate": 678.9248727295563,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 367,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1583.5413925245236,
+          "visible_pixel_area_estimate": 1583.5413925245236,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 856,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 810.6771978217012,
+          "visible_pixel_area_estimate": 810.6771978217012,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 265,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2291.3102685602043,
+          "visible_pixel_area_estimate": 2291.3102685602043,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 749,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 672.940750830466,
+          "visible_pixel_area_estimate": 672.940750830466,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1435.3317037140612,
+          "visible_pixel_area_estimate": 1435.3317037140612,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1043,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 410.37230433627235,
+          "visible_pixel_area_estimate": 410.37230433627235,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 233,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1722.5069254973148,
+          "visible_pixel_area_estimate": 1722.5069254973148,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 978,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 865,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 677.4108586891136,
+          "visible_pixel_area_estimate": 677.4108586891136,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 445,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1468.9920868202128,
+          "visible_pixel_area_estimate": 1468.9920868202128,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 965,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 781.7993032966799,
+          "visible_pixel_area_estimate": 781.7993032966799,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 243,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2239.2276341337006,
+          "visible_pixel_area_estimate": 2239.2276341337006,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 696,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 672.6009283185359,
+          "visible_pixel_area_estimate": 672.6009283185359,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 492,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1434.0617353783418,
+          "visible_pixel_area_estimate": 1434.0617353783418,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1049,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 412.26039953267946,
+          "visible_pixel_area_estimate": 412.26039953267946,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 284,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1605.492964377266,
+          "visible_pixel_area_estimate": 1605.492964377266,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1106,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 889,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 668.6647750168074,
+          "visible_pixel_area_estimate": 668.6647750168074,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 473,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1446.181955268909,
+          "visible_pixel_area_estimate": 1446.181955268909,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1023,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 720.3229677402127,
+          "visible_pixel_area_estimate": 720.3229677402127,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 226,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2154.594363683114,
+          "visible_pixel_area_estimate": 2154.594363683114,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 676,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 807.3555626039237,
+          "visible_pixel_area_estimate": 807.3555626039237,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 458,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1419.041982306023,
+          "visible_pixel_area_estimate": 1419.041982306023,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 805,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 412.6728990842659,
+          "visible_pixel_area_estimate": 412.6728990842659,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 306,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1579.2155713322725,
+          "visible_pixel_area_estimate": 1579.2155713322725,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1171,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 913,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 674.3143406707753,
+          "visible_pixel_area_estimate": 674.3143406707753,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1435.5035350476014,
+          "visible_pixel_area_estimate": 1435.5035350476014,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1041,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 663.673984817154,
+          "visible_pixel_area_estimate": 663.673984817154,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 225,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 2047.0655353915772,
+          "visible_pixel_area_estimate": 2047.0655353915772,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 694,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 862.8257021000355,
+          "visible_pixel_area_estimate": 862.8257021000355,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 280,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1916.705666807936,
+          "visible_pixel_area_estimate": 1916.705666807936,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 622,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 413.11564718240055,
+          "visible_pixel_area_estimate": 413.11564718240055,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 314,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1574.8389480169856,
+          "visible_pixel_area_estimate": 1574.8389480169856,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1197,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 937,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 673.038484922619,
+          "visible_pixel_area_estimate": 673.038484922619,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 492,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1432.258727060939,
+          "visible_pixel_area_estimate": 1432.258727060939,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1047,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 670.5217778834304,
+          "visible_pixel_area_estimate": 670.5217778834304,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 249,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1928.086718733077,
+          "visible_pixel_area_estimate": 1928.086718733077,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 716,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 860.6730129498604,
+          "visible_pixel_area_estimate": 860.6730129498604,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 310,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2290.5007602697897,
+          "visible_pixel_area_estimate": 2290.5007602697897,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 825,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 415.05542131279043,
+          "visible_pixel_area_estimate": 415.05542131279043,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 318,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1567.5520786058532,
+          "visible_pixel_area_estimate": 1567.5520786058532,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1201,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 961,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 781.1683967499486,
+          "visible_pixel_area_estimate": 781.1683967499486,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 477,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1434.5985651005344,
+          "visible_pixel_area_estimate": 1434.5985651005344,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 876,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 671.9412995617815,
+          "visible_pixel_area_estimate": 671.9412995617815,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 277,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1809.6325251736064,
+          "visible_pixel_area_estimate": 1809.6325251736064,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 746,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 876.312622785403,
+          "visible_pixel_area_estimate": 876.312622785403,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 392,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2318.204565888936,
+          "visible_pixel_area_estimate": 2318.204565888936,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1037,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 551.6580038102778,
+          "visible_pixel_area_estimate": 551.6580038102778,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 352,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1534.2988230973353,
+          "visible_pixel_area_estimate": 1534.2988230973353,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 979,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 985,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 870.9712354317124,
+          "visible_pixel_area_estimate": 870.9712354317124,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 291,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1819.7612066751929,
+          "visible_pixel_area_estimate": 1819.7612066751929,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 608,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 681.8942497339461,
+          "visible_pixel_area_estimate": 681.8942497339461,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 314,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1676.504333740785,
+          "visible_pixel_area_estimate": 1676.504333740785,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 772,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 836.5919821405694,
+          "visible_pixel_area_estimate": 836.5919821405694,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 405,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2290.8160696145464,
+          "visible_pixel_area_estimate": 2290.8160696145464,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1109,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 707.8538441229401,
+          "visible_pixel_area_estimate": 707.8538441229401,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 247,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1868.504884081607,
+          "visible_pixel_area_estimate": 1868.504884081607,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 652,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 1009,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 857.504745331024,
+          "visible_pixel_area_estimate": 857.504745331024,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 297,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2263.5815499647233,
+          "visible_pixel_area_estimate": 2263.5815499647233,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 784,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 668.9563388509271,
+          "visible_pixel_area_estimate": 668.9563388509271,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 341,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1624.3280016673536,
+          "visible_pixel_area_estimate": 1624.3280016673536,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 828,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 564.9094444518345,
+          "visible_pixel_area_estimate": 564.9094444518345,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 189,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 2289.527166402673,
+          "visible_pixel_area_estimate": 2289.527166402673,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 766,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 741.536251681722,
+          "visible_pixel_area_estimate": 741.536251681722,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 265,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2283.372005178435,
+          "visible_pixel_area_estimate": 2283.372005178435,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 816,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 1033,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 869.0058464738767,
+          "visible_pixel_area_estimate": 869.0058464738767,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 378,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2312.75100939873,
+          "visible_pixel_area_estimate": 2312.75100939873,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1006,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 676.753766443561,
+          "visible_pixel_area_estimate": 676.753766443561,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 376,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1569.4927774967691,
+          "visible_pixel_area_estimate": 1569.4927774967691,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 872,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 446.4656911044046,
+          "visible_pixel_area_estimate": 446.4656911044046,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 187,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1938.6638565603023,
+          "visible_pixel_area_estimate": 1938.6638565603023,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 812,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 803.7820112312196,
+          "visible_pixel_area_estimate": 803.7820112312196,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 364,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2318.6019554746717,
+          "visible_pixel_area_estimate": 2318.6019554746717,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1050,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 1057,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 822.9759552180395,
+          "visible_pixel_area_estimate": 822.9759552180395,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 423,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2326.901282365899,
+          "visible_pixel_area_estimate": 2326.901282365899,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1196,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 681.7049540791681,
+          "visible_pixel_area_estimate": 681.7049540791681,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 406,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1517.8849223831726,
+          "visible_pixel_area_estimate": 1517.8849223831726,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 904,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 444.1346250447781,
+          "visible_pixel_area_estimate": 444.1346250447781,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 259,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1701.0870580865633,
+          "visible_pixel_area_estimate": 1701.0870580865633,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 992,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 787.9286341480038,
+          "visible_pixel_area_estimate": 783.7151120402604,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9946524064171123,
+          "in_frame": 1.0,
+          "silhouette_samples": 374,
+          "occluders": {
+            "residential west wing parapet": 1,
+            "residential west wing parapet.003": 1
+          }
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2323.7574424204495,
+          "visible_pixel_area_estimate": 2317.4371592588345,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9972801450589301,
+          "in_frame": 1.0,
+          "silhouette_samples": 1103,
+          "occluders": {
+            "residential west wing parapet.003": 3
+          }
+        }
+      }
+    },
+    {
+      "frame": 1081,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 603.778665393878,
+          "visible_pixel_area_estimate": 603.778665393878,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 207,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2318.860091730111,
+          "visible_pixel_area_estimate": 2318.860091730111,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 795,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 680.7363179527244,
+          "visible_pixel_area_estimate": 680.7363179527244,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 428,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1491.8940799991954,
+          "visible_pixel_area_estimate": 1491.8940799991954,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 938,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 451.1670897895359,
+          "visible_pixel_area_estimate": 451.1670897895359,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 311,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1595.767841699323,
+          "visible_pixel_area_estimate": 1595.767841699323,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1100,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 715.5120142444891,
+          "visible_pixel_area_estimate": 715.5120142444891,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 231,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 2298.3113184822987,
+          "visible_pixel_area_estimate": 2131.0487696978726,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9272237196765498,
+          "in_frame": 1.0,
+          "silhouette_samples": 742,
+          "occluders": {
+            "residential west wing roof": 32,
+            "residential west wing parapet.003": 17,
+            "residential west wing parapet": 5
+          }
+        }
+      }
+    },
+    {
+      "frame": 1105,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 434.5134260227766,
+          "visible_pixel_area_estimate": 434.5134260227766,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 173,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 2009.3106405677531,
+          "visible_pixel_area_estimate": 2009.3106405677531,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 800,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 679.1787900808938,
+          "visible_pixel_area_estimate": 679.1787900808938,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 445,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1477.4046489849554,
+          "visible_pixel_area_estimate": 1477.4046489849554,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 968,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 451.4509123102441,
+          "visible_pixel_area_estimate": 451.4509123102441,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 331,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1583.4879431788322,
+          "visible_pixel_area_estimate": 1583.4879431788322,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1161,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 623.227892739543,
+          "visible_pixel_area_estimate": 623.227892739543,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 237,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1951.2029384503835,
+          "visible_pixel_area_estimate": 1951.2029384503835,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 742,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 1129,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 432.5719646099611,
+          "visible_pixel_area_estimate": 432.5719646099611,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 243,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1726.727595356635,
+          "visible_pixel_area_estimate": 1726.727595356635,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 970,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 676.3134449013068,
+          "visible_pixel_area_estimate": 676.3134449013068,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 457,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1457.6996569535825,
+          "visible_pixel_area_estimate": 1457.6996569535825,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 985,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 456.9812823781549,
+          "visible_pixel_area_estimate": 456.9812823781549,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 342,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1575.3828418825867,
+          "visible_pixel_area_estimate": 1575.3828418825867,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1179,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 603.0753743507082,
+          "visible_pixel_area_estimate": 603.0753743507082,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 326,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1653.8324683114515,
+          "visible_pixel_area_estimate": 1653.8324683114515,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 894,
+          "occluders": {}
+        }
+      }
+    },
+    {
+      "frame": 1153,
+      "parts": {
+        "truck-1-tractor": {
+          "isolated_pixel_area_estimate": 434.26375672355346,
+          "visible_pixel_area_estimate": 434.26375672355346,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 296,
+          "occluders": {}
+        },
+        "truck-1-trailer": {
+          "isolated_pixel_area_estimate": 1603.5482638474457,
+          "visible_pixel_area_estimate": 1603.5482638474457,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1093,
+          "occluders": {}
+        },
+        "truck-2-tractor": {
+          "isolated_pixel_area_estimate": 668.329871093275,
+          "visible_pixel_area_estimate": 668.329871093275,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 462,
+          "occluders": {}
+        },
+        "truck-2-trailer": {
+          "isolated_pixel_area_estimate": 1453.8344598457606,
+          "visible_pixel_area_estimate": 1453.8344598457606,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1005,
+          "occluders": {}
+        },
+        "truck-3-tractor": {
+          "isolated_pixel_area_estimate": 455.30680010922134,
+          "visible_pixel_area_estimate": 455.30680010922134,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 343,
+          "occluders": {}
+        },
+        "truck-3-trailer": {
+          "isolated_pixel_area_estimate": 1575.653561894011,
+          "visible_pixel_area_estimate": 1575.653561894011,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1187,
+          "occluders": {}
+        },
+        "truck-4-tractor": {
+          "isolated_pixel_area_estimate": 604.3386824921565,
+          "visible_pixel_area_estimate": 604.3386824921565,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 397,
+          "occluders": {}
+        },
+        "truck-4-trailer": {
+          "isolated_pixel_area_estimate": 1539.0085843817892,
+          "visible_pixel_area_estimate": 1539.0085843817892,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 1011,
+          "occluders": {}
+        }
+      }
+    }
+  ]
+}

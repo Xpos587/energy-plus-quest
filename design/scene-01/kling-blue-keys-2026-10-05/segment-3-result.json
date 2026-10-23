@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T13:48:44.715709Z",
+    "display_name": "Kling v3.0",
+    "id": "ed8cd6f5-04a4-4995-ac0a-a644061aded9",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "a2a6147a-dd4c-475b-9ea1-ae49d2ce4e9a",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/a2a6147a-dd4c-475b-9ea1-ae49d2ce4e9a.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "e87c45cf-1bd3-4023-94ef-997be44b0e0a",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/e87c45cf-1bd3-4023-94ef-997be44b0e0a.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera, perfectly fixed bright clean illustrated city and white side borders. Exactly ONE BLUE tractor with ONE rigid WHITE refrigerated semitrailer. Exactly ONE adult driver, empty gray passenger seat, never two people in cab. Preserve modern blue cab, refrigeration unit and rigid trailer size/color/wheels. Tractor steers first, rigid trailer follows via fifth-wheel with rear axles tracing inner curve. All tires on blue asphalt. No duplication, disappearance, rubber bend, cab/trailer-end swap, reverse, teleport, roof crossing, extra vehicles or camera move. Soft colored outlines and shadows. Reach exact supplied final pose, five second continuous shot. Start facing LEFT above central tall tower. Travel LEFT toward broad vertical road directly RIGHT/EAST of GLASS WAREHOUSE, turn ninety degrees DOWN onto that western road next to warehouse, finish straight DOWN at supplied endpoint. Do NOT turn into central street between apartment towers; it is behind truck now. Cab stays leading front end throughout, never swap ends.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_134844_ed8cd6f5-04a4-4995-ac0a-a644061aded9.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_134844_ed8cd6f5-04a4-4995-ac0a-a644061aded9_thumbnail.webp"
+  }
+]

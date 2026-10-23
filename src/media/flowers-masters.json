@@ -1,0 +1,311 @@
+{
+  "public/scene-art/certificates-v1/professional-efficiency.webp": {
+    "id": "F0086",
+    "master": "public/flowers-2pass-2026-10-20/F0086-v1.webp",
+    "passes": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      8192
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0086/review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0086/combined-runtime/runtime.json"
+  },
+  "public/scene-art/lastmile-family-v1/revision-4/choice-wide-alva.webp": {
+    "id": "F0114",
+    "master": "public/flowers-2pass-2026-10-20/F0114-v1.webp",
+    "passes": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      3276
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0114/review.json",
+    "retainedRegionsDisclosed": false,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0114/combined-runtime/runtime.json"
+  },
+  "public/scene-art/certificates-v1/professional-empathy.webp": {
+    "id": "F0087",
+    "master": "public/flowers-2pass-2026-10-20/F0087-v1.webp",
+    "passes": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      8192
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0087/review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0087/combined-runtime/runtime.json"
+  },
+  "public/scene-art/certificates-v1/professional-energy.webp": {
+    "id": "F0088",
+    "master": "public/flowers-2pass-2026-10-20/F0088-v1.webp",
+    "passes": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      8192
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0088/review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0088/combined-runtime/runtime.json"
+  },
+  "public/scene-art/certificates-v1/student-efficiency.webp": {
+    "id": "F0089",
+    "master": "public/flowers-2pass-2026-10-20/F0089-v1.webp",
+    "passes": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      8192
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0089/review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0089/combined-runtime/runtime.json"
+  },
+  "public/scene-art/lastmile-family-v1/revision-4/choice-tall-alva.webp": {
+    "id": "F0111",
+    "master": "public/flowers-2pass-2026-10-20/F0111-v1.png",
+    "passes": 2,
+    "version": 1,
+    "masterDimensions": [
+      4681,
+      8192
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0111/review.json",
+    "retainedRegionsDisclosed": false,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0111/combined-runtime/runtime.json"
+  },
+  "design/preparation-outpaint-2026-10-11/alva.webp": {
+    "id": "F0001",
+    "master": "public/flowers-2pass-2026-10-20/F0001-v1.png",
+    "passes": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      4096
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0001/review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0001/combined-runtime/runtime.json"
+  },
+  "public/scene-art/carrier-results-2026-10-02/crew-v3.webp": {
+    "id": "F0075",
+    "master": "public/flowers-2pass-2026-10-20/F0075-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 7,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      5461
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0075/review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0075/combined-runtime/runtime.json"
+  },
+  "public/compact-art/compact-environment-v54-wide.png": {
+    "id": "F0144",
+    "master": "public/flowers-2pass-2026-10-20/F0144-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 4,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      4096
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-choice/F0144-visual-review.json",
+    "retainedRegionsDisclosed": false,
+    "sourceAlphaPreserved": true,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0144/combined-runtime/runtime.json"
+  },
+  "public/scene-art/lastmile-family-v1/helicopter-ground-boat-final-v5.webp": {
+    "id": "F0095",
+    "master": "public/flowers-2pass-2026-10-20/F0095-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 7,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      4610
+    ],
+    "reviewReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0095/review.json",
+    "retainedRegionsDisclosed": false,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0095/combined-runtime/runtime.json"
+  },
+  "public/compact-art/boat-zone3-no-fit-v48.webp": {
+    "id": "F0025",
+    "master": "public/flowers-2pass-2026-10-20/F0025-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 3,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      5461
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-boat3c/F0025-final-owner-review.json",
+    "retainedRegionsDisclosed": false,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+  },
+  "public/compact-art/boat-zone3-no-fit-wide-crew-v50.webp": {
+    "id": "F0026",
+    "master": "public/flowers-2pass-2026-10-20/F0026-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      3276
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-boat3c/F0026-final-owner-review.json",
+    "retainedRegionsDisclosed": false,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+  },
+  "public/compact-art/boat-zone3-no-fit-wide-old-v50.webp": {
+    "id": "F0027",
+    "master": "public/flowers-2pass-2026-10-20/F0027-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      3276
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-boat3c/F0027-final-owner-review.json",
+    "retainedRegionsDisclosed": false,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+  },
+  "public/compact-art/boat-zone3-no-fit-wide-old4-v50.webp": {
+    "id": "F0028",
+    "master": "public/flowers-2pass-2026-10-20/F0028-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      3276
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-boat3c/F0028-final-owner-review.json",
+    "retainedRegionsDisclosed": false,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+  },
+  "public/compact-art/socks-zone1-unsecured-v53.png": {
+    "id": "F0145",
+    "master": "public/flowers-2pass-2026-10-20/F0145-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 4,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      6881
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-results-b/F0145-visual-review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": true,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+  },
+  "public/compact-art/socks-zone2-v53.png": {
+    "id": "F0146",
+    "master": "public/flowers-2pass-2026-10-20/F0146-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 4,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      6881
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-results-b/F0146-visual-review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": true,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/compact-six/combined-runtime/runtime.json"
+  },
+  "public/compact-art/boat-zone1-axle-v53.png": {
+    "id": "F0136",
+    "master": "public/flowers-2pass-2026-10-20/F0136-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 4,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      6876
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-results-a/F0136-visual-review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": true,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0136/after/runtime.json"
+  },
+  "public/compact-art/boat-zone2-v53.png": {
+    "id": "F0137",
+    "master": "public/flowers-2pass-2026-10-20/F0137-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 1,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      6881
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-results-a/F0137-visual-review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0137/after/runtime.json"
+  },
+  "public/compact-art/boat-zone3-no-fit-wide-v48.webp": {
+    "id": "F0029",
+    "master": "public/flowers-2pass-2026-10-20/F0029-v1.png",
+    "passes": 2,
+    "processingMode": "selective_flowers",
+    "p2RoiCount": 2,
+    "version": 1,
+    "masterDimensions": [
+      8192,
+      3276
+    ],
+    "reviewReceipt": "docs/reviews/compact-flowers-2026-10-21/lane-boat3c/F0029-final-owner-review.json",
+    "retainedRegionsDisclosed": true,
+    "sourceAlphaPreserved": false,
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/flowers-all-2026-10-20/integrations/F0029/after/runtime.json"
+  }
+}

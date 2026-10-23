@@ -1,0 +1,14 @@
+{
+  "assetId": "F0001",
+  "decision": "accepted_for_runtime",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "ownerReceipt": "docs/reviews/intro-2026-10-20-flowers/F0001-runtime-review.json",
+  "independentReview": "docs/reviews/flowers-all-2026-10-20/urgent-independent-visual-review.md",
+  "generalReview": "Owner and independent accepted verdicts used without redundant review. Geometry/identity stable, sampled sky seam repaired; four P2 native ROIs complete.",
+  "limitations": [
+    "Five P1 source retentions and protected sky remain source-soft",
+    "Partial reconstruction; not native full-scene8192",
+    "Runtime verification pending"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "yellow-2-3",
+  "crop_mode": "full",
+  "start_input": "yellow-key-2-local-repair-padded.png",
+  "end_input": "yellow-key-3-padded.png",
+  "status": "downloaded",
+  "prompt_file": "yellow-2-3-prompt.txt",
+  "returncode": 0,
+  "measured_job_elapsed_seconds": 98.655,
+  "job_id": "95cd9a6b-06f9-4045-a13a-ef5486f2f5e3",
+  "provider_status": "completed",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_144938_95cd9a6b-06f9-4045-a13a-ef5486f2f5e3.mp4",
+  "media_file": "yellow-2-3.mp4",
+  "actual_duration_seconds": 5.041667,
+  "contact_sheet": "yellow-2-3-quarter-second-contact.png"
+}

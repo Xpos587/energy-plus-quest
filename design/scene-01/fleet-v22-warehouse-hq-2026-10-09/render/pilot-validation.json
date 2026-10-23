@@ -1,0 +1,86 @@
+[
+  {
+    "path": "design/scene-01/fleet-v22-warehouse-hq-2026-10-09/render/turn-vehicles/0001.png",
+    "dimensions": [
+      3840,
+      2668
+    ],
+    "mode": "RGBA",
+    "alpha_bbox": [
+      1024,
+      431,
+      3133,
+      2215
+    ]
+  },
+  {
+    "path": "design/scene-01/fleet-v22-warehouse-hq-2026-10-09/render/turn-vehicles/0384.png",
+    "dimensions": [
+      3840,
+      2668
+    ],
+    "mode": "RGBA",
+    "alpha_bbox": [
+      1060,
+      353,
+      3122,
+      2145
+    ]
+  },
+  {
+    "path": "design/scene-01/fleet-v22-warehouse-hq-2026-10-09/render/turn-vehicles/0768.png",
+    "dimensions": [
+      3840,
+      2668
+    ],
+    "mode": "RGBA",
+    "alpha_bbox": [
+      1022,
+      433,
+      3131,
+      2215
+    ]
+  },
+  {
+    "path": "design/scene-01/fleet-v22-warehouse-hq-2026-10-09/render/turn-shadow/0001.png",
+    "dimensions": [
+      1920,
+      1334
+    ],
+    "mode": "RGBA",
+    "alpha_bbox": [
+      518,
+      242,
+      1596,
+      1135
+    ]
+  },
+  {
+    "path": "design/scene-01/fleet-v22-warehouse-hq-2026-10-09/render/turn-shadow/0384.png",
+    "dimensions": [
+      1920,
+      1334
+    ],
+    "mode": "RGBA",
+    "alpha_bbox": [
+      538,
+      240,
+      1592,
+      1096
+    ]
+  },
+  {
+    "path": "design/scene-01/fleet-v22-warehouse-hq-2026-10-09/render/turn-shadow/0768.png",
+    "dimensions": [
+      1920,
+      1334
+    ],
+    "mode": "RGBA",
+    "alpha_bbox": [
+      517,
+      243,
+      1598,
+      1134
+    ]
+  }
+]

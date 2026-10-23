@@ -1,0 +1,114 @@
+[
+  {
+    "id": "F0136",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-1",
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-boat-zone1-axle-v53-CQJWE5ZK.avif",
+      "rect": {
+        "x": 0.003843678394332528,
+        "y": -31.75,
+        "width": 699.2891845703125,
+        "height": 587.671875,
+        "top": -31.75,
+        "right": 699.2930282487068,
+        "bottom": 555.921875,
+        "left": 0.003843678394332528
+      },
+      "decoded": [
+        5120,
+        4298
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0136",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-1",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-boat-zone1-axle-v53-CQJWE5ZK.avif",
+      "rect": {
+        "x": 0.003843678394332528,
+        "y": -31.75,
+        "width": 699.2891845703125,
+        "height": 587.671875,
+        "top": -31.75,
+        "right": 699.2930282487068,
+        "bottom": 555.921875,
+        "left": 0.003843678394332528
+      },
+      "decoded": [
+        5120,
+        4298
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0136",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-1",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-boat-zone1-axle-v53-CQJWE5ZK.avif",
+      "rect": {
+        "x": 0.004683924373239279,
+        "y": -353.1875,
+        "width": 1497.58447265625,
+        "height": 1258.546875,
+        "top": -353.1875,
+        "right": 1497.5891565806232,
+        "bottom": 905.359375,
+        "left": 0.004683924373239279
+      },
+      "decoded": [
+        5120,
+        4298
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0136",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-1",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-boat-zone1-axle-v53-CQJWE5ZK.avif",
+      "rect": {
+        "x": 0.004683924373239279,
+        "y": -353.1875,
+        "width": 1497.58447265625,
+        "height": 1258.546875,
+        "top": -353.1875,
+        "right": 1497.5891565806232,
+        "bottom": 905.359375,
+        "left": 0.004683924373239279
+      },
+      "decoded": [
+        5120,
+        4298
+      ]
+    },
+    "status": 200,
+    "errors": []
+  }
+]

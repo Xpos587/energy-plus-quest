@@ -1,0 +1,23 @@
+{
+  "video": "fleet-v11-48s.mp4",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1334,
+        "r_frame_rate": "24/1",
+        "duration": "48.000000",
+        "nb_read_frames": "1152"
+      }
+    ]
+  },
+  "encode_seconds": 119.68951512600006,
+  "geometry_source": "fleet-v11-video.blend",
+  "background": "../fleet-road-v11-2026-10-07/backdrop-v11.png",
+  "receiver_mask": "../fleet-lookdev-v10-2026-10-07/road-receiver-mask.png",
+  "shadow": "animated actual mesh projection along same SUN direction; half-resolution coverage with1.3px Gaussian penumbra, upscaled LANCZOS; RGB83,91,96 alpha0.60; roadmask excludes painted roofs",
+  "frame_generation": "1152 separately evaluated and rendered source animation frames; no repeated still slideshow"
+}

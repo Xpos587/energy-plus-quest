@@ -1,0 +1,139 @@
+{
+  "status": "local proof only; visual acceptance pending",
+  "source_blend": "warehouse-window-proof-v6.blend",
+  "source_crop_xyxy": [
+    616,
+    459,
+    988,
+    824
+  ],
+  "source_full_dimensions": [
+    1440,
+    1000
+  ],
+  "sprite_native": {
+    "native_dimensions": [
+      1266,
+      1242
+    ],
+    "alpha_cutoff": 0.7529411764705882,
+    "alpha_bounds_xyxy": [
+      76,
+      126,
+      1189,
+      1133
+    ]
+  },
+  "target_visible_silhouette_xyxy": [
+    677.5,
+    505.5,
+    902.0,
+    726.5
+  ],
+  "camera": "FullSourceOverscan",
+  "camera_matrix": [
+    [
+      0.8041760921478271,
+      -0.3624010980129242,
+      0.47113293409347534,
+      20.799999237060547
+    ],
+    [
+      0.5943911075592041,
+      0.4903072416782379,
+      -0.6374151110649109,
+      -19.600000381469727
+    ],
+    [
+      5.250659995681417e-08,
+      0.792631208896637,
+      0.6097013354301453,
+      22.799999237060547
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "camera_ortho_scale": 19.5,
+  "card_world_corners": [
+    [
+      5.711326599121094,
+      -0.1541672945022583,
+      0.0028003454208374023
+    ],
+    [
+      8.156105995178223,
+      1.652843713760376,
+      0.002800583839416504
+    ],
+    [
+      7.071544647216797,
+      3.120190382003784,
+      2.3749146461486816
+    ],
+    [
+      4.626765251159668,
+      1.31317937374115,
+      2.3749146461486816
+    ]
+  ],
+  "physical_geometry_moved": false,
+  "original_objects_hidden_camera_only": [
+    "Finish driver boot",
+    "Finish driver boot.001",
+    "Finish driver eye",
+    "Finish driver eye.001",
+    "Finish driver forearm",
+    "Finish driver forearm.001",
+    "Finish driver hair",
+    "Finish driver hand",
+    "Finish driver hand.001",
+    "Finish driver head",
+    "Finish driver jacket",
+    "Finish driver neck",
+    "Finish driver nose",
+    "Finish driver reflective band",
+    "Finish driver seated shin",
+    "Finish driver seated shin.001",
+    "Finish driver seated thigh",
+    "Finish driver seated thigh.001",
+    "Finish driver sleeve",
+    "Finish driver sleeve.001",
+    "Finish driver vest",
+    "Finish forklift backrest",
+    "Finish forklift beacon",
+    "Finish forklift seat",
+    "Finish overhead guard edge",
+    "Finish overhead guard edge.001",
+    "Finish overhead guard edge.002",
+    "Finish overhead guard edge.003",
+    "Finish overhead guard safety bar",
+    "Finish overhead guard safety bar.001",
+    "Finish overhead guard safety bar.002",
+    "Finish steering column",
+    "Finish steering wheel",
+    "Forklift body",
+    "Forklift fork",
+    "Forklift fork.001",
+    "Forklift guard post",
+    "Forklift guard post.001",
+    "Forklift guard post.002",
+    "Forklift guard post.003",
+    "Forklift mast",
+    "Forklift overhead guard",
+    "Forklift wheel",
+    "Forklift wheel.001",
+    "Forklift wheel.002",
+    "Forklift wheel.003"
+  ],
+  "original_shadow_casters_retained": true,
+  "native_modified": false,
+  "shader_alpha_cutoff": 0.7529411764705882,
+  "mapping_note": "Fit native opaque alpha envelope to actual visible old semantic silhouette, not context or hidden original roof. Independent axis mapping disclosed; verify forks/wheel contacts before acceptance.",
+  "relative_y_to_x_scale": 1.0880318837182044,
+  "local_visual_verdict": "PASS for local style comparison, parent review required before any integration. Forks point along original left/up axis; both fork tips and outer wheel contact envelope remain aligned. Original source shadow retained outside silhouette. Detailed wheel hubs/driver improve illustration, no room/rack/gate/WMS moves.",
+  "limitations": "Visible silhouette bounds fit applies independent X/Y scaling (ratio disclosed). Individual original wheel centers are not claimed pixel-identical; generated illustrated body contours differ within the original silhouette envelope. Full-scene readability and parent acceptance still required."
+}

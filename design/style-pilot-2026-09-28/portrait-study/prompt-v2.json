@@ -1,0 +1,4 @@
+{
+  "tool": "built-in imagegen",
+  "prompt": "Precise local refinement of portrait image1. Keep exactly same woman, head size, face geometry, nose, cheeks, jaw, age, mouth, hair, jacket, background, composition and hand-drawn medium. ONLY refine BOTH EYES toward ordinary adult anatomy: reduce vertical eye opening slightly, reduce iris diameter around 15 percent so they are not huge dark disks, let upper eyelids naturally cover top of irises, muted medium brown irises with small dark pupils and one tiny soft catchlight. Remove eyeliner-like heavy upper contours and fan-shaped eyelashes; use a few short subtle individual lashes, thinner warm-brown lines and softly indicated lids. Relax staring-wide-open look to calm attentive gaze. NO other aging, no new wrinkles, no photorealism. Soften just the heavy black line under chin into a thin warm brown shadow edge. Image2 is immutable palette/style only, do not copy its character eye proportions. Square."
+}

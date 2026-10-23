@@ -1,0 +1,72 @@
+{
+  "frames": [
+    1,
+    133,
+    169,
+    769
+  ],
+  "dimensions": [
+    1280,
+    889
+  ],
+  "routes_and_camera": "unchanged",
+  "repairs": [
+    {
+      "truck": 1,
+      "cab_shift_x_m": -0.4059769570827484,
+      "cab_height_factor": 1.3084052624113702,
+      "cab_top_z_m": 2.95,
+      "upper_cab_rear_x_target_m": -0.85,
+      "rear_chassis": "matching archived mesh; native duplicate rear wheels/tanks/ladder hidden",
+      "native_fifth_wheel": "retained at x=-2.3 covering trailer pivot -2.5806",
+      "support_deck_bounds_x": [
+        -2.64,
+        -1.24
+      ]
+    },
+    {
+      "truck": 2,
+      "cab_shift_x_m": -0.142820930480957,
+      "cab_height_factor": 1.3084052624113702,
+      "cab_top_z_m": 2.95,
+      "upper_cab_rear_x_target_m": -0.85,
+      "rear_chassis": "matching archived mesh; native duplicate rear wheels/tanks/ladder hidden",
+      "native_fifth_wheel": "retained at x=-2.3 covering trailer pivot -2.5806",
+      "support_deck_bounds_x": [
+        -2.64,
+        -1.24
+      ]
+    },
+    {
+      "truck": 3,
+      "cab_shift_x_m": -0.142820930480957,
+      "cab_height_factor": 1.294503421228882,
+      "cab_top_z_m": 3.08,
+      "upper_cab_rear_x_target_m": -0.85,
+      "rear_chassis": "matching archived mesh; native duplicate rear wheels/tanks/ladder hidden",
+      "native_fifth_wheel": "retained at x=-2.3 covering trailer pivot -2.5806",
+      "support_deck_bounds_x": [
+        -2.64,
+        -1.24
+      ]
+    },
+    {
+      "truck": 4,
+      "cab_shift_x_m": -0.4059769570827484,
+      "cab_height_factor": 1.368158533393982,
+      "cab_top_z_m": 2.52,
+      "upper_cab_rear_x_target_m": -0.85,
+      "rear_chassis": "matching archived mesh; native duplicate rear wheels/tanks/ladder hidden",
+      "native_fifth_wheel": "retained at x=-2.3 covering trailer pivot -2.5806",
+      "support_deck_bounds_x": [
+        -2.64,
+        -1.24
+      ]
+    }
+  ],
+  "limitations": [
+    "Matching archived chassis wheelbase now replaces generic native rear running gear; still-only verification.",
+    "Projected texture detail and very small faces remain departures from final approved truck cards.",
+    "No full animation render."
+  ]
+}

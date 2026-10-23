@@ -1,0 +1,26 @@
+{
+  "status": "v14 bounded static visual pilot; geometry frozen",
+  "source": "fleet-v14-native.blend",
+  "pdf": "energy-plus-fleet-v14.pdf",
+  "pdf_pages": 7,
+  "whole_map_renders": ["map-v14-0001.png", "map-v14-0385.png"],
+  "matched_close_renders": ["v14-front-1.png", "v14-front-2.png", "v14-front-3.png", "v14-front-4.png"],
+  "validation": "verification.json",
+  "changes": [
+    "Red and yellow original modern cab body replaced by distinct older low shells; round headlamps, separate bumpers, different radiator designs",
+    "One continuous arched canvas shell with attached broad fold geometry for old trucks",
+    "Blue modern roof lowered above unchanged windshield; green high sleeper preserved",
+    "Original fragmented undercarriage/wheel geometry removed and rebuilt as clean native tyre, rim, frame, tank and guard geometry",
+    "Unified broad warm/cool body shading and actual Cycles ground contact shadows aligned to the same sun vector",
+    "Modern original UV masks retained to preserve clean glazing/grille boundaries; bright roof texture fringe reduced per shading point",
+    "Lower windshield gasket closes source seam without modifying crew UVs"
+  ],
+  "preserved": ["animated tractor/trailer roots at verified frames", "camera", "global fleet scale", "warehouse/city backdrop", "routes and hitch animation", "crew face UVs and crew materials; two drivers green, one others", "full trailer colors matching cab families"],
+  "limitations": [
+    "Smoke is unfinished: granular detached oval puffs hidden in this pilot; old exhaust stacks remain",
+    "Modern upper cab source texture detail remains; complete artist style equivalence is not claimed",
+    "Static frames only; no all-frame collision validation, full video, production integration or mobile interaction verification"
+  ],
+  "rebuild_order": ["build_v14.py", "refine_v14.py", "final_polish.py", "clean_geometry_materials.py", "polish_wheels.py", "finish_surfaces.py", "restore_modern_masks.py", "rebuild_underframe.py", "seat_front_wings.py", "correct_wing_normals.py", "repair_final_seams.py"],
+  "render_order": ["render_v14.py", "render_physical_shadow.py", "compose_pilot.py", "render_evidence.py", "package_v14.py", "verify_v14.py"]
+}

@@ -1,0 +1,15 @@
+{
+  "prompt": "OUTPAINT / EXTEND CANVAS HORIZONTALLY ONLY. First image is locked 1672x941 warehouse scene. Output requested 2400x941 panoramic image (aspect 2.5505:1). Place original image at exact original scale centered: x364 through2036, y0 through941. Extend ONLY364px on LEFT and364px on RIGHT, not top/bottom. Original full rectangle must remain visually identical, all pixels there preserved as faithfully as possible, NO zoom, no reframing, no face or uniform changes. Woman, hands, scanner, motor, entire boat, trolley, wheels, dispatch door, truck, original racks and monitor remain same size and relative positions. Second image immutable clean light illustrative style reference, only for color/light/linework matching. Left extension: quiet continuation of existing blue/orange rack structure and its existing cardboard boxes and pale-blue floor in correct perspective, no new workstation, vehicle, person, labels or door. Right extension: quiet continuation of existing cream warehouse wall, foreground boxes already cut by edge and pale-blue floor, correctly extending existing perspective, no new door, window, transport, equipment, people or markings. Original dispatch door remains only dispatch door. Soft neutral daylight, clean flat illustrated 2D surfaces, no sepia, no black smudges, no random texture or grain. Preserve original shadows/light direction and clean blue/orange colors. Wide panorama is achieved by adding side margins, NEVER by squeezing or scaling existing image. Requested final canvas2400x941.",
+  "status": "Desktop pilot; pending in-game check",
+  "requested": [
+    2400,
+    941
+  ],
+  "actual": [
+    2001,
+    786
+  ],
+  "original": "../clean-colors/wms-v11.png",
+  "style": "../../style-audit-2026-09-28/reference.png",
+  "limitation": "Full-image generative edit; center not pixel-identical. Mobile retains original."
+}

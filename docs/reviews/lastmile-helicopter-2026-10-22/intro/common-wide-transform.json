@@ -1,0 +1,21 @@
+{
+  "refinedToSourceCrop": [
+    [
+      0.2647893677677788,
+      3.1957913216322826e-05,
+      -0.09040573320818526
+    ],
+    [
+      -3.196177286767745e-05,
+      0.26482134716002126,
+      0.05007784130523339
+    ]
+  ],
+  "sourceBox": [
+    850,
+    15,
+    1300,
+    260
+  ],
+  "method": "aircraft-only alpha; old-aircraft-only inpaint; hidden H continuation, visible original pad untouched"
+}

@@ -1,0 +1,14 @@
+{
+  "pid": 1034294,
+  "started_epoch": 1791545890.2172694,
+  "command": [
+    "/home/michael/.local/bin/uv",
+    "run",
+    "--with",
+    "pillow",
+    "python",
+    "-u",
+    "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-v22-warehouse-hq-2026-10-09/render/render_all.py",
+    "--full-approved"
+  ]
+}

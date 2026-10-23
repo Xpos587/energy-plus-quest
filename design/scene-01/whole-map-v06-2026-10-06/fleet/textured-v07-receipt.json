@@ -1,0 +1,185 @@
+{
+  "parent": "fleet-textured-v06.blend",
+  "candidate": "fleet-textured-v07.blend",
+  "records": [
+    {
+      "truck": 1,
+      "cab_bounds_before_model_space": [
+        [
+          -0.9479129910469055,
+          -0.315593957901001
+        ],
+        [
+          -0.458469957113266,
+          0.4605049788951874
+        ],
+        [
+          -0.1499459594488144,
+          0.3851051926612854
+        ]
+      ],
+      "cab_bounds_after_model_space": [
+        [
+          -1.1098912954330444,
+          -0.3194924592971802
+        ],
+        [
+          -0.4859781563282013,
+          0.48813527822494507
+        ],
+        [
+          -0.14993244409561157,
+          0.5188814997673035
+        ]
+      ],
+      "cab_factors": [
+        1.25,
+        1.06,
+        1.25
+      ],
+      "cab_pivot_x": -0.3,
+      "height_pivot_z": -0.15,
+      "rear_zone_x_ge_0_max_delta": 0,
+      "ground_contact_z_max_delta": 0,
+      "front_wheel_vertices_rigid_x_translation": 7070,
+      "front_axle_x_shift_model": -0.06874999999999999,
+      "front_axle_x_shift_local_world": 0.15125
+    },
+    {
+      "truck": 2,
+      "cab_bounds_before_model_space": [
+        [
+          -0.9479129910469055,
+          -0.315593957901001
+        ],
+        [
+          -0.458469957113266,
+          0.4605049788951874
+        ],
+        [
+          -0.1499459594488144,
+          0.583683967590332
+        ]
+      ],
+      "cab_bounds_after_model_space": [
+        [
+          -1.1098912954330444,
+          -0.3194924592971802
+        ],
+        [
+          -0.4859781563282013,
+          0.48813527822494507
+        ],
+        [
+          -0.14993244409561157,
+          0.767104983329773
+        ]
+      ],
+      "cab_factors": [
+        1.25,
+        1.06,
+        1.25
+      ],
+      "cab_pivot_x": -0.3,
+      "height_pivot_z": -0.15,
+      "rear_zone_x_ge_0_max_delta": 0,
+      "ground_contact_z_max_delta": 0,
+      "front_wheel_vertices_rigid_x_translation": 7070,
+      "front_axle_x_shift_model": -0.06874999999999999,
+      "front_axle_x_shift_local_world": 0.15125
+    },
+    {
+      "truck": 3,
+      "cab_bounds_before_model_space": [
+        [
+          -0.9479129910469055,
+          -0.315593957901001
+        ],
+        [
+          -0.458469957113266,
+          0.4605049788951874
+        ],
+        [
+          -0.1499459594488144,
+          0.583683967590332
+        ]
+      ],
+      "cab_bounds_after_model_space": [
+        [
+          -1.1098912954330444,
+          -0.3194924592971802
+        ],
+        [
+          -0.4859781563282013,
+          0.48813527822494507
+        ],
+        [
+          -0.14993244409561157,
+          0.767104983329773
+        ]
+      ],
+      "cab_factors": [
+        1.25,
+        1.06,
+        1.25
+      ],
+      "cab_pivot_x": -0.3,
+      "height_pivot_z": -0.15,
+      "rear_zone_x_ge_0_max_delta": 0,
+      "ground_contact_z_max_delta": 0,
+      "front_wheel_vertices_rigid_x_translation": 7070,
+      "front_axle_x_shift_model": -0.06874999999999999,
+      "front_axle_x_shift_local_world": 0.15125
+    },
+    {
+      "truck": 4,
+      "cab_bounds_before_model_space": [
+        [
+          -0.9479129910469055,
+          -0.315593957901001
+        ],
+        [
+          -0.458469957113266,
+          0.4605049788951874
+        ],
+        [
+          -0.1499459594488144,
+          0.3624104857444763
+        ]
+      ],
+      "cab_bounds_after_model_space": [
+        [
+          -1.1098912954330444,
+          -0.3194924592971802
+        ],
+        [
+          -0.4859781563282013,
+          0.48813527822494507
+        ],
+        [
+          -0.14993244409561157,
+          0.4905131161212921
+        ]
+      ],
+      "cab_factors": [
+        1.25,
+        1.06,
+        1.25
+      ],
+      "cab_pivot_x": -0.3,
+      "height_pivot_z": -0.15,
+      "rear_zone_x_ge_0_max_delta": 0,
+      "ground_contact_z_max_delta": 0,
+      "front_wheel_vertices_rigid_x_translation": 7070,
+      "front_axle_x_shift_model": -0.06874999999999999,
+      "front_axle_x_shift_local_world": 0.15125
+    }
+  ],
+  "blue_curtain_buckles_hidden": 22,
+  "limitations": [
+    "Cab upper body length/height expanded25%; width6%; old lower roofs retained.",
+    "Front axle moves forward.15125 local units with rigid tyre-region translation; contact heights and rear hitch geometry remain exact.",
+    "No existing reefer unit asset in scene: blue only loses inappropriate curtain buckles; original trailer dimensions and actions unchanged.",
+    "Perceptual size remains a visual judgement; geometry factors are measured."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "frames_verified": 1152,
+  "roots": 8,
+  "max_root_matrix_delta": 0.0,
+  "camera_equal": true,
+  "actions_equal": true,
+  "range_equal": true,
+  "cab_contact_tyre_region_max_vertex_delta": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0
+  },
+  "cab_rear_hitch_region_max_vertex_delta": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0
+  },
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/whole-map-v06-2026-10-06/fleet/fleet-textured-v07.blend",
+  "candidate": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/native/fleet-illustrated-v08.blend"
+}

@@ -1,0 +1,74 @@
+{
+  "frames": 1152,
+  "truck_frames": 4608,
+  "actual_mesh_surface_intersections": [],
+  "actual_exhaust_surface_intersections": [],
+  "axles": {
+    "1": [
+      {
+        "contact_patch_x_bounds": [
+          -2.2569525241851807,
+          -2.124495029449463
+        ],
+        "axle_x_from_ground_contact_midpoint": -2.1907237768173218
+      },
+      {
+        "contact_patch_x_bounds": [
+          -1.423159122467041,
+          -1.2755852937698364
+        ],
+        "axle_x_from_ground_contact_midpoint": -1.3493722081184387
+      }
+    ],
+    "2": [
+      {
+        "contact_patch_x_bounds": [
+          -2.2569527626037598,
+          -2.124495267868042
+        ],
+        "axle_x_from_ground_contact_midpoint": -2.190724015235901
+      },
+      {
+        "contact_patch_x_bounds": [
+          -1.4231593608856201,
+          -1.2755855321884155
+        ],
+        "axle_x_from_ground_contact_midpoint": -1.3493724465370178
+      }
+    ],
+    "3": [
+      {
+        "contact_patch_x_bounds": [
+          -2.2569522857666016,
+          -2.124494791030884
+        ],
+        "axle_x_from_ground_contact_midpoint": -2.1907235383987427
+      },
+      {
+        "contact_patch_x_bounds": [
+          -1.423158884048462,
+          -1.2755850553512573
+        ],
+        "axle_x_from_ground_contact_midpoint": -1.3493719696998596
+      }
+    ],
+    "4": [
+      {
+        "contact_patch_x_bounds": [
+          -2.2569525241851807,
+          -2.124495029449463
+        ],
+        "axle_x_from_ground_contact_midpoint": -2.1907237768173218
+      },
+      {
+        "contact_patch_x_bounds": [
+          -1.4231590032577515,
+          -1.2755852937698364
+        ],
+        "axle_x_from_ground_contact_midpoint": -1.349372148513794
+      }
+    ]
+  },
+  "method": "BVHTree triangle overlap of full actual visible imported tractor mesh and actual long semitrailer body mesh transformed into tractor space for each frame; separate actual relocated exhaust mesh; supporting whole-body separating-plane proof in coupling-receipt.json",
+  "limitations": "contact patch midpoint is measured mesh-derived axle-center proxy, not labeled CAD joint; trailer chassis bearing contact intentionally excluded from body collision test"
+}

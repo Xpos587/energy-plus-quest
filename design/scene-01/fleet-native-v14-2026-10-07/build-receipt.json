@@ -1,0 +1,31 @@
+{
+  "source": "../fleet-clean-v13-2026-10-07/fleet-v13-clean.blend",
+  "geometry": [
+    {
+      "truck": 1,
+      "removed_modern_cab_faces": 7706,
+      "crew_uv_loops_unchanged": 354,
+      "roof_height": 2.13,
+      "canvas_vertices": 3367
+    },
+    {
+      "truck": 4,
+      "removed_modern_cab_faces": 7890,
+      "crew_uv_loops_unchanged": 354,
+      "roof_height": 1.99,
+      "canvas_vertices": 3367
+    }
+  ],
+  "animated_roots_exact_at_frames": [
+    1,
+    385,
+    769,
+    1152
+  ],
+  "illumination_vector": [
+    -0.45510411262512207,
+    0.3982160985469818,
+    0.7964321970939636
+  ],
+  "scale_camera_routes_unchanged": true
+}

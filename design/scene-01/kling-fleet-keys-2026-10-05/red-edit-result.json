@@ -1,0 +1,39 @@
+[
+  {
+    "created_at": "2026-10-05T14:29:05.196081Z",
+    "display_name": "Kling O1 Video Edit",
+    "id": "3a64a832-8726-4e25-92be-240a0bdf5c6c",
+    "job_type": "kling_video_edit",
+    "min_result_url": null,
+    "params": {
+      "height": 720,
+      "input_images": [
+        {
+          "id": "537d7d8e-a119-4b9c-b040-87c5f6892e73",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/537d7d8e-a119-4b9c-b040-87c5f6892e73.png"
+        },
+        {
+          "id": "32234588-93f0-4ce2-89be-1cd1d26c40f6",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/32234588-93f0-4ce2-89be-1cd1d26c40f6.png"
+        }
+      ],
+      "input_videos": [
+        {
+          "id": "1b4d1cc7-03a1-4662-aea7-ddb2cd310a77",
+          "type": "video_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/1b4d1cc7-03a1-4662-aea7-ddb2cd310a77.mp4"
+        }
+      ],
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "mode": "std",
+      "model": "kling-video-edit-o3",
+      "prompt": "Edit the single moving green articulated truck in the input video into the RED TRUCK shown in the reference images. Keep the camera completely fixed and preserve the input video frame-by-frame driving trajectory, turning articulation, road position, scale, speed, timing and duration. The tractor is an older red European/Russian road truck; the long semitrailer has a cream beige canvas curtain body with visible modest ribs and tied curtain edges, not a white refrigerated box. Preserve one red cab and one attached beige trailer throughout; the tractor pulls the trailer cab-first through every turn. Exactly ONE adult male driver in the driver's seat; passenger seat empty. The reference images show different views of the same truck and are appearance references only: do not move the vehicle to their positions. Keep every building, pavement, tree, road marking and background pixel stable. Bright clean illustrated 2D game art, soft coloured contours and soft shadows, matching the original map. No extra vehicles, no green truck, no second driver, no camera movement, no road or city redesign, no reversing, no teleporting, no trailer deformation, no duplication. The final frame must match the opening truck pose for an endless loop.",
+      "width": 1280
+    },
+    "result_url": null,
+    "status": "failed"
+  }
+]

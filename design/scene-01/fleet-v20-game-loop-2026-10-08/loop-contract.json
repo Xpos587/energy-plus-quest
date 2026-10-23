@@ -1,0 +1,252 @@
+{
+  "frames": 1536,
+  "fps": 24,
+  "seconds": 64.0,
+  "routes": "routes/report.json",
+  "visible_object_boundary_max_matrix_error": 6.548438977915794e-05,
+  "wheels": [
+    {
+      "name": "WHEEL steering 1 tractor 0 -1",
+      "rolling_speed_correction_percent": -0.2800479426721014,
+      "max_steer_degrees": 14.592787023156879
+    },
+    {
+      "name": "WHEEL steering 1 tractor 0 1",
+      "rolling_speed_correction_percent": -0.3330113088644393,
+      "max_steer_degrees": 17.273851750671085
+    },
+    {
+      "name": "WHEEL steering 1 tractor 1 -1",
+      "rolling_speed_correction_percent": 0.20930968190875365,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 tractor 1 1",
+      "rolling_speed_correction_percent": 0.1392595337921243,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 tractor 2 -1",
+      "rolling_speed_correction_percent": 0.3179384024457388,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 tractor 2 1",
+      "rolling_speed_correction_percent": 0.1297303684897111,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 trailer 0 -1",
+      "rolling_speed_correction_percent": -0.23220417617944022,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 trailer 0 1",
+      "rolling_speed_correction_percent": -0.27440735900208235,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 trailer 1 -1",
+      "rolling_speed_correction_percent": -0.1289282182372009,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 trailer 1 1",
+      "rolling_speed_correction_percent": -0.14319664310809,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 trailer 2 -1",
+      "rolling_speed_correction_percent": -0.23599935236156,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 1 trailer 2 1",
+      "rolling_speed_correction_percent": -0.2791789562333613,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 tractor 0 -1",
+      "rolling_speed_correction_percent": 0.3045782764378391,
+      "max_steer_degrees": 12.469951825753336
+    },
+    {
+      "name": "WHEEL steering 2 tractor 0 1",
+      "rolling_speed_correction_percent": 0.3016854635949473,
+      "max_steer_degrees": 14.393113085178488
+    },
+    {
+      "name": "WHEEL steering 2 tractor 1 -1",
+      "rolling_speed_correction_percent": 0.08808398853326072,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 tractor 1 1",
+      "rolling_speed_correction_percent": 0.032208730561267274,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 tractor 2 -1",
+      "rolling_speed_correction_percent": 0.298025800046231,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 tractor 2 1",
+      "rolling_speed_correction_percent": 0.16567223978951606,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 trailer 0 -1",
+      "rolling_speed_correction_percent": 0.027189137698835353,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 trailer 0 1",
+      "rolling_speed_correction_percent": 0.008973775417109309,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 trailer 1 -1",
+      "rolling_speed_correction_percent": 0.12111030944208512,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 trailer 1 1",
+      "rolling_speed_correction_percent": 0.1254784712989121,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 trailer 2 -1",
+      "rolling_speed_correction_percent": 0.02264571389525294,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 2 trailer 2 1",
+      "rolling_speed_correction_percent": 0.0033653710585834773,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 tractor 0 -1",
+      "rolling_speed_correction_percent": -0.16643812435116478,
+      "max_steer_degrees": 12.468950640242202
+    },
+    {
+      "name": "WHEEL steering 3 tractor 0 1",
+      "rolling_speed_correction_percent": -0.19374522860303722,
+      "max_steer_degrees": 14.391786292740221
+    },
+    {
+      "name": "WHEEL steering 3 tractor 1 -1",
+      "rolling_speed_correction_percent": 0.23926509827993936,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 tractor 1 1",
+      "rolling_speed_correction_percent": 0.20648170013655154,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 tractor 2 -1",
+      "rolling_speed_correction_percent": -0.16754940782529593,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 tractor 2 1",
+      "rolling_speed_correction_percent": -0.2887631638623933,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 trailer 0 -1",
+      "rolling_speed_correction_percent": 0.044143245466421455,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 trailer 0 1",
+      "rolling_speed_correction_percent": 0.0327523049099776,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 trailer 1 -1",
+      "rolling_speed_correction_percent": 0.11023608875320168,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 trailer 1 1",
+      "rolling_speed_correction_percent": 0.11281432004965897,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 trailer 2 -1",
+      "rolling_speed_correction_percent": 0.040753205468768705,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 3 trailer 2 1",
+      "rolling_speed_correction_percent": 0.028659373422179613,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 tractor 0 -1",
+      "rolling_speed_correction_percent": -0.27994905747427135,
+      "max_steer_degrees": 14.592770257415806
+    },
+    {
+      "name": "WHEEL steering 4 tractor 0 1",
+      "rolling_speed_correction_percent": -0.3328620698729079,
+      "max_steer_degrees": 17.273828462398072
+    },
+    {
+      "name": "WHEEL steering 4 tractor 1 -1",
+      "rolling_speed_correction_percent": 0.20965583291872036,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 tractor 1 1",
+      "rolling_speed_correction_percent": 0.13974181743774405,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 tractor 2 -1",
+      "rolling_speed_correction_percent": 0.31894128618612516,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 tractor 2 1",
+      "rolling_speed_correction_percent": 0.13107055823846636,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 trailer 0 -1",
+      "rolling_speed_correction_percent": -0.23221906382081547,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 trailer 0 1",
+      "rolling_speed_correction_percent": -0.27441378036573427,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 trailer 1 -1",
+      "rolling_speed_correction_percent": -0.1289747087696802,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 trailer 1 1",
+      "rolling_speed_correction_percent": -0.14323881550044604,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 trailer 2 -1",
+      "rolling_speed_correction_percent": -0.23602194825814715,
+      "max_steer_degrees": 0.0
+    },
+    {
+      "name": "WHEEL steering 4 trailer 2 1",
+      "rolling_speed_correction_percent": -0.2791956288218267,
+      "max_steer_degrees": 0.0
+    }
+  ],
+  "smoke": "12parcels24frame lifetime; periodic historicalstack births and noise",
+  "cab": "integer-cycle harmonics; accepted amplitudes preserved",
+  "root_source": "routes/motion.npy"
+}

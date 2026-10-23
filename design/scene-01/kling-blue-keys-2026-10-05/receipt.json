@@ -1,0 +1,36 @@
+{
+  "status": "four candidate image inputs saved",
+  "candidate_only": true,
+  "tool": "built-in image_gen editing",
+  "canonical_keys": ["key-0.png", "key-1-1505.png", "key-2-1505.png", "key-3.png"],
+  "dimensions": [1505, 1045],
+  "source_frames": [1, 385, 577, 769],
+  "source_seconds": [0, 16, 24, 32],
+  "source_scene": "../painted-layer-2026-10-05/painted-vehicles-driver-fixed-optimized.blend",
+  "source_render": "../painted-layer-2026-10-05/final-4k-frames/",
+  "route": "DOWN west warehouse street -> RIGHT lower street -> UP central street -> LEFT upper street -> DOWN west street",
+  "placement_evidence": "source-placement.json",
+  "identity_reference": "../../../public/scene-art/carrier-results-2026-10-02/near-wide-v6.webp",
+  "background": "../four-truck-loop-2026-10-04/v2b-empty-map.png",
+  "style_reference": "../kling-green-loop-2026-10-05/key-0.png",
+  "prompts": "prompts.json",
+  "source_guides": ["guide-0.png", "guide-1.png", "guide-2.png", "guide-3.png"],
+  "inspection_crops": ["crop-0.png", "crop-1.png", "crop-2.png", "crop-3.png"],
+  "visually_checked": {
+    "single_blue_vehicle_each_frame": true,
+    "all_four_trucks_on_powder_blue_asphalt": true,
+    "no_other_three_vehicles": true,
+    "modern_blue_high_roof_cab_white_refrigerated_trailer": true,
+    "no_visible_second_head_in_native_crops": true,
+    "exactly_one_head_certified_all_views": false,
+    "whole_city_composition_preserved": true,
+    "background_pixel_equality_certified": false
+  },
+  "limits": [
+    "Generative edit placement is approximate. Key 1 has a visibly wider cab and modestly longer overall silhouette than its native guide; exact source bbox is recorded, not claimed achieved.",
+    "Native driver pixels are tiny; exactly one adult was explicitly requested in every prompt, but visual head count cannot be certified for all views, especially the UP rear-facing cab.",
+    "Imagegen preserves map geometry visually but may alter background texture pixels. City pixel identity is not certified.",
+    "Frames 385 and 769 retain the frozen articulated trailer rather than idealized cardinal alignment.",
+    "No style acceptance, video jobs, production promotion, app edits, driver pixel painting or previous full-render modifications."
+  ]
+}

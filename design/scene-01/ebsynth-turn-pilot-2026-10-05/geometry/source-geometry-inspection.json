@@ -1,0 +1,4746 @@
+{
+  "source_frames": [
+    85,
+    217
+  ],
+  "output_frames": 72,
+  "fps": 12,
+  "camera": "desktop",
+  "camera_matrix": [
+    [
+      0.9968152642250061,
+      -0.06695909798145294,
+      0.04331028088927269,
+      1.7741494178771973
+    ],
+    [
+      0.07974522560834885,
+      0.8369886875152588,
+      -0.5413784980773926,
+      -84.67687225341797
+    ],
+    [
+      1.8925381262135943e-09,
+      0.5431081652641296,
+      0.8396627306938171,
+      131.3314208984375
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "roi_normalized": [
+    0.5026819949150085,
+    0.5004279260635376,
+    0.7752962465286255,
+    0.872302209854126
+  ],
+  "full_render": [
+    3522,
+    2446
+  ],
+  "visible_meshes": [
+    {
+      "name": "3 rim recess.043",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 trailer roof rail.001",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 clay cargo"
+      ]
+    },
+    {
+      "name": "3 hub center.009",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 fifth wheel",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.008",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.009",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.033",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.058",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.064",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 recessed hub.007",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rear underrun bar",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.048",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.042",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 trailer roof rail",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 clay cargo"
+      ]
+    },
+    {
+      "name": "REPAIRED 3 detailed archived chassis",
+      "vertices": 36191,
+      "polygons": 20330,
+      "materials": [
+        "PILOT 3 projected paint 0",
+        "PILOT 3 projected paint 1",
+        "PILOT 3 projected paint 2",
+        "PILOT 3 projected paint 3",
+        "PILOT 3 projected paint 4"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.003",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.032",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 seated tire.005",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.057",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 recessed hub.006",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.079",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.047",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 seated tire.006",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.041",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 trailer lower rail.001",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 long semitrailer",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 clay cargo"
+      ]
+    },
+    {
+      "name": "3 hub center.007",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.017",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.072",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 seated tire.004",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.001",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.056",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.078",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.046",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.040",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 trailer lower rail",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 hub center.006",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.016",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.071",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "REPAIRED 3 fifth wheel support deck",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "PILOT soft slate fittings"
+      ]
+    },
+    {
+      "name": "3 curtain buckle",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.002",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.011",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.055",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.077",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.039",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 trailer chassis",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 hub center.005",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.015",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.070",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.052",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 recessed hub.005",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.054",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.076",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.038",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 hub center.004",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.014",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.069",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.063",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 recessed hub.004",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.053",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.075",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.037",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rear locking bar.001",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.021",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.013",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.068",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.007",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.062",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.005",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 hub center.008",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.074",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rear locking bar",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.020",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.036",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 seated tire.009",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.012",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.067",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.006",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.061",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.045",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.051",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.073",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 trailer side guard.001",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rear doors",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 clay cargo"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.019",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.035",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.066",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 seated tire.008",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.060",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 recessed hub.009",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.050",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 rim recess.044",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 trailer side guard",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "PILOT 3 reconstructed crew-cab",
+      "vertices": 14675,
+      "polygons": 9725,
+      "materials": [
+        "PILOT 3 projected paint 0",
+        "PILOT 3 projected paint 1",
+        "PILOT 3 projected paint 2",
+        "PILOT 3 projected paint 3",
+        "PILOT 3 projected paint 4"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.018",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.034",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 seated tire.007",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.010",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.065",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 curtain buckle.004",
+      "vertices": 8,
+      "polygons": 6,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.059",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "3 recessed hub.008",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 metal form"
+      ]
+    },
+    {
+      "name": "3 rim recess.049",
+      "vertices": 80,
+      "polygons": 42,
+      "materials": [
+        "3 rubber form"
+      ]
+    }
+  ],
+  "transforms": [
+    {
+      "frame": 85,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            11.758173942565918,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            14.338773727416992,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.62333297729492
+          ]
+        }
+      }
+    },
+    {
+      "frame": 86,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            11.470965385437012,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            14.051566123962402,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.633445739746094
+          ]
+        }
+      }
+    },
+    {
+      "frame": 87,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            11.183757781982422,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            13.764357566833496,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.643089294433594
+          ]
+        }
+      }
+    },
+    {
+      "frame": 88,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            10.896549224853516,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            13.477149963378906,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.65229415893555
+          ]
+        }
+      }
+    },
+    {
+      "frame": 89,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            10.609341621398926,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            13.18994140625,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.66107177734375
+          ]
+        }
+      }
+    },
+    {
+      "frame": 90,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            10.32213306427002,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            12.90273380279541,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.66944885253906
+          ]
+        }
+      }
+    },
+    {
+      "frame": 91,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            10.03492546081543,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            12.615525245666504,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.67743682861328
+          ]
+        }
+      }
+    },
+    {
+      "frame": 92,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            9.747716903686523,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            12.328317642211914,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.685054779052734
+          ]
+        }
+      }
+    },
+    {
+      "frame": 93,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            9.460509300231934,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            12.041109085083008,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.692317962646484
+          ]
+        }
+      }
+    },
+    {
+      "frame": 94,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            9.173300743103027,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            11.753901481628418,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.699249267578125
+          ]
+        }
+      }
+    },
+    {
+      "frame": 95,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            8.886093139648438,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            11.466692924499512,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.70585632324219
+          ]
+        }
+      }
+    },
+    {
+      "frame": 96,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            8.598884582519531,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            11.179485321044922,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.712154388427734
+          ]
+        }
+      }
+    },
+    {
+      "frame": 97,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            8.311676979064941,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            10.892276763916016,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.718162536621094
+          ]
+        }
+      }
+    },
+    {
+      "frame": 98,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            8.024468421936035,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            10.605069160461426,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.72389221191406
+          ]
+        }
+      }
+    },
+    {
+      "frame": 99,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            7.737260818481445,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1415927410125732
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            10.31786060333252,
+            30.5,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.72935485839844
+          ]
+        }
+      }
+    },
+    {
+      "frame": 100,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            7.450052738189697,
+            30.499876022338867,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.146587371826172
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            10.030620574951172,
+            30.51276397705078,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.732452392578125
+          ]
+        }
+      }
+    },
+    {
+      "frame": 101,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            7.162908554077148,
+            30.49431610107422,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.1753082275390625
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            9.74204158782959,
+            30.58130645751953,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.7264289855957
+          ]
+        }
+      }
+    },
+    {
+      "frame": 102,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            6.876041889190674,
+            30.480514526367188,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.204029083251953
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            9.451613426208496,
+            30.64153289794922,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.72208023071289
+          ]
+        }
+      }
+    },
+    {
+      "frame": 103,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            6.589690208435059,
+            30.458480834960938,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.2327497005462646
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            9.159575462341309,
+            30.693395614624023,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.719322204589844
+          ]
+        }
+      }
+    },
+    {
+      "frame": 104,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            6.304089546203613,
+            30.428232192993164,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.2614705562591553
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            8.866168975830078,
+            30.736848831176758,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.71809005737305
+          ]
+        }
+      }
+    },
+    {
+      "frame": 105,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            6.019474983215332,
+            30.389795303344727,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.290191411972046
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            8.571635246276855,
+            30.771860122680664,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.71830368041992
+          ]
+        }
+      }
+    },
+    {
+      "frame": 106,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            5.736081600189209,
+            30.34320068359375,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.3189122676849365
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            8.27621841430664,
+            30.798397064208984,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.71989440917969
+          ]
+        }
+      }
+    },
+    {
+      "frame": 107,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            5.454143524169922,
+            30.28848648071289,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.347633123397827
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            7.980160236358643,
+            30.81644058227539,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.72279739379883
+          ]
+        }
+      }
+    },
+    {
+      "frame": 108,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            5.173892498016357,
+            30.225698471069336,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.3763537406921387
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            7.683706283569336,
+            30.825973510742188,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.72694396972656
+          ]
+        }
+      }
+    },
+    {
+      "frame": 109,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            4.895560264587402,
+            30.154890060424805,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.4050745964050293
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            7.387101173400879,
+            30.82699203491211,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.732276916503906
+          ]
+        }
+      }
+    },
+    {
+      "frame": 110,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            4.619376182556152,
+            30.07611656188965,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.43379545211792
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            7.0905890464782715,
+            30.819490432739258,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.738731384277344
+          ]
+        }
+      }
+    },
+    {
+      "frame": 111,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            4.3455681800842285,
+            29.989444732666016,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.4625163078308105
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            6.794414520263672,
+            30.803478240966797,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.74625015258789
+          ]
+        }
+      }
+    },
+    {
+      "frame": 112,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            4.074362277984619,
+            29.89494514465332,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.491237163543701
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            6.49882173538208,
+            30.77896499633789,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.754783630371094
+          ]
+        }
+      }
+    },
+    {
+      "frame": 113,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            3.8059816360473633,
+            29.79269790649414,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.5199577808380127
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            6.204055309295654,
+            30.745975494384766,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.76427459716797
+          ]
+        }
+      }
+    },
+    {
+      "frame": 114,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            3.5406479835510254,
+            29.682785034179688,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.5486786365509033
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            5.910357475280762,
+            30.70453453063965,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.77467727661133
+          ]
+        }
+      }
+    },
+    {
+      "frame": 115,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            3.2785801887512207,
+            29.565298080444336,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.577399492263794
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            5.617970943450928,
+            30.65467643737793,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.785945892333984
+          ]
+        }
+      }
+    },
+    {
+      "frame": 116,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            3.0199942588806152,
+            29.440332412719727,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.6061203479766846
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            5.327136516571045,
+            30.59644317626953,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.79803466796875
+          ]
+        }
+      }
+    },
+    {
+      "frame": 117,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            2.765103578567505,
+            29.307994842529297,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.634841203689575
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            5.038094520568848,
+            30.52988052368164,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.8109016418457
+          ]
+        }
+      }
+    },
+    {
+      "frame": 118,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            2.5141184329986572,
+            29.16839027404785,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.6635618209838867
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            4.7510833740234375,
+            30.455045700073242,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.82450866699219
+          ]
+        }
+      }
+    },
+    {
+      "frame": 119,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            2.2672457695007324,
+            29.021636962890625,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.6922826766967773
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            4.466339111328125,
+            30.37200164794922,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.83881759643555
+          ]
+        }
+      }
+    },
+    {
+      "frame": 120,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            2.024689197540283,
+            28.86785316467285,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.721003532409668
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            4.1840972900390625,
+            30.280811309814453,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.853790283203125
+          ]
+        }
+      }
+    },
+    {
+      "frame": 121,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            1.7866488695144653,
+            28.707168579101562,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.7497243881225586
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            3.9045908451080322,
+            30.181556701660156,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.86940002441406
+          ]
+        }
+      }
+    },
+    {
+      "frame": 122,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            1.5533210039138794,
+            28.539714813232422,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.778445243835449
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            3.628049850463867,
+            30.07431411743164,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.8856086730957
+          ]
+        }
+      }
+    },
+    {
+      "frame": 123,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            1.32489812374115,
+            28.365629196166992,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.8071658611297607
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            3.3547022342681885,
+            29.95917510986328,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.90238571166992
+          ]
+        }
+      }
+    },
+    {
+      "frame": 124,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            1.1015686988830566,
+            28.185054779052734,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.8358867168426514
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            3.0847740173339844,
+            29.83623504638672,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.919708251953125
+          ]
+        }
+      }
+    },
+    {
+      "frame": 125,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            0.8835168480873108,
+            27.99814224243164,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.864607572555542
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            2.8184876441955566,
+            29.70559310913086,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.93754959106445
+          ]
+        }
+      }
+    },
+    {
+      "frame": 126,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            0.6709224581718445,
+            27.80504608154297,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.8933284282684326
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            2.556062698364258,
+            29.567358016967773,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.955875396728516
+          ]
+        }
+      }
+    },
+    {
+      "frame": 127,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            0.4639608860015869,
+            27.605924606323242,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.9220492839813232
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            2.297715663909912,
+            29.42164421081543,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.97467041015625
+          ]
+        }
+      }
+    },
+    {
+      "frame": 128,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            0.2628028392791748,
+            27.40093994140625,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.9507699012756348
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            2.0436594486236572,
+            29.268571853637695,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            40.99391174316406
+          ]
+        }
+      }
+    },
+    {
+      "frame": 129,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            0.06761421263217926,
+            27.190263748168945,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            3.9794907569885254
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            1.794103980064392,
+            29.108266830444336,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.013572692871094
+          ]
+        }
+      }
+    },
+    {
+      "frame": 130,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -0.12144395709037781,
+            26.974071502685547,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.008211612701416
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            1.5492547750473022,
+            28.940860748291016,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.033634185791016
+          ]
+        }
+      }
+    },
+    {
+      "frame": 131,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -0.3042157292366028,
+            26.75253677368164,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.036932468414307
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            1.3093138933181763,
+            28.76649284362793,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.054080963134766
+          ]
+        }
+      }
+    },
+    {
+      "frame": 132,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -0.4805504083633423,
+            26.525846481323242,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.065653324127197
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            1.074479341506958,
+            28.58530616760254,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.07489013671875
+          ]
+        }
+      }
+    },
+    {
+      "frame": 133,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -0.6503024697303772,
+            26.2941837310791,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.094374179840088
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            0.8449447154998779,
+            28.397451400756836,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.096046447753906
+          ]
+        }
+      }
+    },
+    {
+      "frame": 134,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -0.8133319616317749,
+            26.057743072509766,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.1230950355529785
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            0.6208993196487427,
+            28.203081130981445,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.11753463745117
+          ]
+        }
+      }
+    },
+    {
+      "frame": 135,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -0.9695043563842773,
+            25.81671905517578,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.151815891265869
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            0.4025280475616455,
+            28.00235939025879,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.139339447021484
+          ]
+        }
+      }
+    },
+    {
+      "frame": 136,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -1.118690848350525,
+            25.571308135986328,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.180536270141602
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            0.19001096487045288,
+            27.795448303222656,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.161441802978516
+          ]
+        }
+      }
+    },
+    {
+      "frame": 137,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -1.2607684135437012,
+            25.321714401245117,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.209257125854492
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -0.016476638615131378,
+            27.58251953125,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.18383026123047
+          ]
+        }
+      }
+    },
+    {
+      "frame": 138,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -1.3956198692321777,
+            25.068143844604492,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.237977981567383
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -0.216764435172081,
+            27.36374855041504,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.20649337768555
+          ]
+        }
+      }
+    },
+    {
+      "frame": 139,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -1.5231339931488037,
+            24.810806274414062,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.266698837280273
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -0.41068723797798157,
+            27.13931655883789,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.22941589355469
+          ]
+        }
+      }
+    },
+    {
+      "frame": 140,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -1.6432055234909058,
+            24.54991340637207,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.295419692993164
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -0.5980851054191589,
+            26.909408569335938,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.25259017944336
+          ]
+        }
+      }
+    },
+    {
+      "frame": 141,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -1.7557355165481567,
+            24.28567886352539,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.324140548706055
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -0.7788034081459045,
+            26.674213409423828,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.275997161865234
+          ]
+        }
+      }
+    },
+    {
+      "frame": 142,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -1.8606311082839966,
+            24.018321990966797,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.352861404418945
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -0.9526931047439575,
+            26.43392562866211,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.29963302612305
+          ]
+        }
+      }
+    },
+    {
+      "frame": 143,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -1.9578057527542114,
+            23.748062133789062,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.381582260131836
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -1.1196107864379883,
+            26.188743591308594,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.323486328125
+          ]
+        }
+      }
+    },
+    {
+      "frame": 144,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.0471794605255127,
+            23.47512435913086,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.410303115844727
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -1.2794188261032104,
+            25.93886947631836,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.3475456237793
+          ]
+        }
+      }
+    },
+    {
+      "frame": 145,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.128678321838379,
+            23.199731826782227,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.439023971557617
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -1.4319853782653809,
+            25.68450927734375,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.37179946899414
+          ]
+        }
+      }
+    },
+    {
+      "frame": 146,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.202234983444214,
+            22.9221134185791,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.46774435043335
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -1.5771844387054443,
+            25.425872802734375,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.396244049072266
+          ]
+        }
+      }
+    },
+    {
+      "frame": 147,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.267789363861084,
+            22.64249610900879,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.49646520614624
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -1.7148964405059814,
+            25.163171768188477,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.420867919921875
+          ]
+        }
+      }
+    },
+    {
+      "frame": 148,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.325286626815796,
+            22.361112594604492,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.525186061859131
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -1.8450077772140503,
+            24.89662742614746,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.44566345214844
+          ]
+        }
+      }
+    },
+    {
+      "frame": 149,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.3746798038482666,
+            22.07819366455078,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.5539069175720215
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -1.9674111604690552,
+            24.626453399658203,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.47062683105469
+          ]
+        }
+      }
+    },
+    {
+      "frame": 150,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.4159281253814697,
+            21.793973922729492,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.582627773284912
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.082005500793457,
+            24.35287857055664,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.49574279785156
+          ]
+        }
+      }
+    },
+    {
+      "frame": 151,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.4489974975585938,
+            21.508686065673828,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.611348628997803
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.1886961460113525,
+            24.07612419128418,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.52101135253906
+          ]
+        }
+      }
+    },
+    {
+      "frame": 152,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.473860740661621,
+            21.222564697265625,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.640069484710693
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.287395477294922,
+            23.79642105102539,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.546424865722656
+          ]
+        }
+      }
+    },
+    {
+      "frame": 153,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.490497350692749,
+            20.935850143432617,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.668790340423584
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.3780219554901123,
+            23.51399803161621,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.57197189331055
+          ]
+        }
+      }
+    },
+    {
+      "frame": 154,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.4988932609558105,
+            20.648775100708008,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.697511196136475
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.460500478744507,
+            23.229087829589844,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.597652435302734
+          ]
+        }
+      }
+    },
+    {
+      "frame": 155,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            20.361572265625,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            22.942171096801758,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.62746047973633
+          ]
+        }
+      }
+    },
+    {
+      "frame": 156,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            20.074363708496094,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            22.654964447021484,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.660743713378906
+          ]
+        }
+      }
+    },
+    {
+      "frame": 157,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            19.787155151367188,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            22.367755889892578,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.6928825378418
+          ]
+        }
+      }
+    },
+    {
+      "frame": 158,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            19.49994659423828,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            22.080547332763672,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.7238883972168
+          ]
+        }
+      }
+    },
+    {
+      "frame": 159,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            19.212739944458008,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            21.793338775634766,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.75376510620117
+          ]
+        }
+      }
+    },
+    {
+      "frame": 160,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            18.9255313873291,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            21.506132125854492,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.78253173828125
+          ]
+        }
+      }
+    },
+    {
+      "frame": 161,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            18.638322830200195,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            21.218923568725586,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.81020736694336
+          ]
+        }
+      }
+    },
+    {
+      "frame": 162,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            18.35111427307129,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            20.93171501159668,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.83680725097656
+          ]
+        }
+      }
+    },
+    {
+      "frame": 163,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            18.063907623291016,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            20.644506454467773,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.862361907958984
+          ]
+        }
+      }
+    },
+    {
+      "frame": 164,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            17.77669906616211,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            20.3572998046875,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.88689041137695
+          ]
+        }
+      }
+    },
+    {
+      "frame": 165,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            17.489490509033203,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            20.070091247558594,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.910423278808594
+          ]
+        }
+      }
+    },
+    {
+      "frame": 166,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            17.202281951904297,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            19.782882690429688,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.93299102783203
+          ]
+        }
+      }
+    },
+    {
+      "frame": 167,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            16.915075302124023,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            19.49567413330078,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.954612731933594
+          ]
+        }
+      }
+    },
+    {
+      "frame": 168,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            16.627866744995117,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            19.208467483520508,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.9753303527832
+          ]
+        }
+      }
+    },
+    {
+      "frame": 169,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            16.34065818786621,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            18.9212589263916,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            41.99516296386719
+          ]
+        }
+      }
+    },
+    {
+      "frame": 170,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            16.053449630737305,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            18.634050369262695,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.01414489746094
+          ]
+        }
+      }
+    },
+    {
+      "frame": 171,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            15.766242027282715,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            18.34684181213379,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.03230667114258
+          ]
+        }
+      }
+    },
+    {
+      "frame": 172,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            15.479034423828125,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            18.059635162353516,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.04967498779297
+          ]
+        }
+      }
+    },
+    {
+      "frame": 173,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            15.191825866699219,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            17.77242660522461,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.0662841796875
+          ]
+        }
+      }
+    },
+    {
+      "frame": 174,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            14.904618263244629,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            17.485218048095703,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.08216094970703
+          ]
+        }
+      }
+    },
+    {
+      "frame": 175,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            14.617409706115723,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            17.198009490966797,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.09733200073242
+          ]
+        }
+      }
+    },
+    {
+      "frame": 176,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            14.330202102661133,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            16.910802841186523,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.11182403564453
+          ]
+        }
+      }
+    },
+    {
+      "frame": 177,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            14.042993545532227,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            16.623594284057617,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.12567138671875
+          ]
+        }
+      }
+    },
+    {
+      "frame": 178,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            13.755785942077637,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            16.33638572692871,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.138893127441406
+          ]
+        }
+      }
+    },
+    {
+      "frame": 179,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            13.46857738494873,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            16.049177169799805,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.151519775390625
+          ]
+        }
+      }
+    },
+    {
+      "frame": 180,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            13.18136978149414,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            15.761969566345215,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.163570404052734
+          ]
+        }
+      }
+    },
+    {
+      "frame": 181,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            12.894161224365234,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            15.474761962890625,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.17507553100586
+          ]
+        }
+      }
+    },
+    {
+      "frame": 182,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            12.606953620910645,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            15.187553405761719,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.186058044433594
+          ]
+        }
+      }
+    },
+    {
+      "frame": 183,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            12.319745063781738,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            14.900345802307129,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.196537017822266
+          ]
+        }
+      }
+    },
+    {
+      "frame": 184,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            12.032537460327148,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            14.613137245178223,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.206539154052734
+          ]
+        }
+      }
+    },
+    {
+      "frame": 185,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            11.745328903198242,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            14.325929641723633,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.21607971191406
+          ]
+        }
+      }
+    },
+    {
+      "frame": 186,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            11.458121299743652,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            14.038721084594727,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.225181579589844
+          ]
+        }
+      }
+    },
+    {
+      "frame": 187,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            11.170912742614746,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            13.751513481140137,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.233863830566406
+          ]
+        }
+      }
+    },
+    {
+      "frame": 188,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            10.883705139160156,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            13.46430492401123,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.24214553833008
+          ]
+        }
+      }
+    },
+    {
+      "frame": 189,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            10.59649658203125,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            13.17709732055664,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.25004577636719
+          ]
+        }
+      }
+    },
+    {
+      "frame": 190,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            10.30928897857666,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            12.889888763427734,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.2575798034668
+          ]
+        }
+      }
+    },
+    {
+      "frame": 191,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            10.022080421447754,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            12.602681159973145,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.264766693115234
+          ]
+        }
+      }
+    },
+    {
+      "frame": 192,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            9.734872817993164,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            12.315472602844238,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.2716178894043
+          ]
+        }
+      }
+    },
+    {
+      "frame": 193,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            9.447664260864258,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            12.028264999389648,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.27815246582031
+          ]
+        }
+      }
+    },
+    {
+      "frame": 194,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            9.160456657409668,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            11.741056442260742,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.28438186645508
+          ]
+        }
+      }
+    },
+    {
+      "frame": 195,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            8.873248100280762,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            11.453848838806152,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.29032516479492
+          ]
+        }
+      }
+    },
+    {
+      "frame": 196,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            8.586040496826172,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            11.166640281677246,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.295989990234375
+          ]
+        }
+      }
+    },
+    {
+      "frame": 197,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            8.298831939697266,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            10.879432678222656,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.3013916015625
+          ]
+        }
+      }
+    },
+    {
+      "frame": 198,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            8.011624336242676,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            10.59222412109375,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.306541442871094
+          ]
+        }
+      }
+    },
+    {
+      "frame": 199,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            7.724416255950928,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            10.30501651763916,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.31145095825195
+          ]
+        }
+      }
+    },
+    {
+      "frame": 200,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            7.43720817565918,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            10.017807960510254,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.316131591796875
+          ]
+        }
+      }
+    },
+    {
+      "frame": 201,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            7.150000095367432,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            9.730600357055664,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.320594787597656
+          ]
+        }
+      }
+    },
+    {
+      "frame": 202,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            6.862792015075684,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            9.443391799926758,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.32484817504883
+          ]
+        }
+      }
+    },
+    {
+      "frame": 203,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            6.5755839347839355,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            9.156184196472168,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.32890319824219
+          ]
+        }
+      }
+    },
+    {
+      "frame": 204,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            6.2883758544921875,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            8.868975639343262,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.332767486572266
+          ]
+        }
+      }
+    },
+    {
+      "frame": 205,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            6.0011677742004395,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            8.581768035888672,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.336456298828125
+          ]
+        }
+      }
+    },
+    {
+      "frame": 206,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            5.713959693908691,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            8.294559478759766,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.339969635009766
+          ]
+        }
+      }
+    },
+    {
+      "frame": 207,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            5.426751613616943,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            8.007351875305176,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.34331512451172
+          ]
+        }
+      }
+    },
+    {
+      "frame": 208,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            5.139543533325195,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            7.7201433181762695,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.34650802612305
+          ]
+        }
+      }
+    },
+    {
+      "frame": 209,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            4.852335453033447,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            7.4329352378845215,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.349552154541016
+          ]
+        }
+      }
+    },
+    {
+      "frame": 210,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            4.565127372741699,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            7.145727157592773,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.352455139160156
+          ]
+        }
+      }
+    },
+    {
+      "frame": 211,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            4.277919292449951,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            6.858519077301025,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.355220794677734
+          ]
+        }
+      }
+    },
+    {
+      "frame": 212,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            3.990711212158203,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            6.571310997009277,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.35785675048828
+          ]
+        }
+      }
+    },
+    {
+      "frame": 213,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            3.703503131866455,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            6.284102916717529,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.36036682128906
+          ]
+        }
+      }
+    },
+    {
+      "frame": 214,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            3.416295051574707,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            5.996894836425781,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.362762451171875
+          ]
+        }
+      }
+    },
+    {
+      "frame": 215,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            3.129086971282959,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            5.709686756134033,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.36504364013672
+          ]
+        }
+      }
+    },
+    {
+      "frame": 216,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            2.841878890991211,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            5.422478675842285,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.36722183227539
+          ]
+        }
+      }
+    },
+    {
+      "frame": 217,
+      "roots": {
+        "truck-3-tractor": {
+          "loc": [
+            -2.5,
+            2.554670810699463,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            4.71238899230957
+          ]
+        },
+        "truck-3-trailer": {
+          "loc": [
+            -2.5,
+            5.135270595550537,
+            0.0
+          ],
+          "rot": [
+            0.0,
+            0.0,
+            42.36929702758789
+          ]
+        }
+      }
+    }
+  ]
+}

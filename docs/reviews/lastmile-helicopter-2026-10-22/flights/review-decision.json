@@ -1,0 +1,119 @@
+{
+  "decision": "accepted_for_integration_review",
+  "assets": [
+    "F0098",
+    "F0099",
+    "F0100",
+    "F0101"
+  ],
+  "correction": "Five main rotor blades, three tail rotor blades, orange body with black upper engine housing and black tail boom, white-orange-white tail bands, circular windows and white abstract body graphic; no lettering/logo/registration.",
+  "visualReview": {
+    "allFourFullFrames": true,
+    "allFourAircraftAt100Percent": true,
+    "allFourCabinGiftAt100Percent": true,
+    "allFourRiggingAt100Percent": true,
+    "result": "Aircraft silhouette clean; one coherent common correction; variant-specific original cabin contents retained; slung pipes/straps/cable connection and destination composition remain coherent."
+  },
+  "measuredPreservation": [
+    {
+      "asset": "F0098",
+      "output": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0098-flight-corrected.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "nativeDimensions": [
+        2106,
+        747
+      ],
+      "roiBox": [
+        40,
+        0,
+        1140,
+        390
+      ],
+      "changedPixels": 119196,
+      "changedOutsideAircraftROI": 0,
+      "belowROIIncludingAllSlungRiggingPipesAndDestinationPixelIdentical": true,
+      "originalCabinAndGiftPixelIdentical": true
+    },
+    {
+      "asset": "F0099",
+      "output": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0099-flight-corrected.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "nativeDimensions": [
+        2106,
+        747
+      ],
+      "roiBox": [
+        40,
+        0,
+        1140,
+        390
+      ],
+      "changedPixels": 118824,
+      "changedOutsideAircraftROI": 0,
+      "belowROIIncludingAllSlungRiggingPipesAndDestinationPixelIdentical": true,
+      "originalCabinAndGiftPixelIdentical": true
+    },
+    {
+      "asset": "F0100",
+      "output": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0100-flight-corrected.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "nativeDimensions": [
+        2106,
+        747
+      ],
+      "roiBox": [
+        40,
+        0,
+        1140,
+        390
+      ],
+      "changedPixels": 118941,
+      "changedOutsideAircraftROI": 0,
+      "belowROIIncludingAllSlungRiggingPipesAndDestinationPixelIdentical": true,
+      "originalCabinAndGiftPixelIdentical": true
+    },
+    {
+      "asset": "F0101",
+      "output": "docs/reviews/lastmile-helicopter-2026-10-22/flights/F0101-flight-corrected.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "nativeDimensions": [
+        2106,
+        747
+      ],
+      "roiBox": [
+        40,
+        0,
+        1140,
+        390
+      ],
+      "changedPixels": 119176,
+      "changedOutsideAircraftROI": 0,
+      "belowROIIncludingAllSlungRiggingPipesAndDestinationPixelIdentical": true,
+      "originalCabinAndGiftPixelIdentical": true
+    }
+  ],
+  "limits": [
+    "Semantic model/livery repair at original1672x941, not Flowers/upscale.",
+    "Aircraft outline and immediate cable attachment legitimately changed; obsolete silhouette locally cleaned against original sky.",
+    "General owns runtime integration and actual browser verification; originals/public/code untouched."
+  ],
+  "evidence": [
+    "common-flight-native.png",
+    "common-flight-generation.json",
+    "common-flight-prompt.txt",
+    "common-flight-request.json",
+    "transfer-receipt.json"
+  ]
+}

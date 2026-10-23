@@ -1,0 +1,132 @@
+{
+  "period_seconds": 45.5,
+  "fps": 24,
+  "frames_checked": 1092,
+  "phases_source_frames": {
+    "green": 0,
+    "red": 138,
+    "yellow": 278,
+    "blue": 195
+  },
+  "phases_source_seconds": {
+    "green": 0,
+    "red": 5.75,
+    "yellow": 11.583333333333334,
+    "blue": 8.125
+  },
+  "blue_phase_output_seconds": 18.484375,
+  "pairs": [
+    {
+      "pair": [
+        "green",
+        "red"
+      ],
+      "conservative_body_gap_px": 5.0,
+      "min_gap_time_s": 4.708333333333333,
+      "overlap_frames": 0,
+      "total_overlap_pixels_across_frames": 0,
+      "max_overlap_pixels": 0,
+      "max_overlap_time_s": 0.0,
+      "source_frames_at_max_overlap": [
+        0,
+        138
+      ]
+    },
+    {
+      "pair": [
+        "green",
+        "yellow"
+      ],
+      "conservative_body_gap_px": 246.46500765828807,
+      "min_gap_time_s": 13.291666666666666,
+      "overlap_frames": 0,
+      "total_overlap_pixels_across_frames": 0,
+      "max_overlap_pixels": 0,
+      "max_overlap_time_s": 0.0,
+      "source_frames_at_max_overlap": [
+        0,
+        278
+      ]
+    },
+    {
+      "pair": [
+        "green",
+        "blue"
+      ],
+      "conservative_body_gap_px": 0.0,
+      "min_gap_time_s": 9.083333333333334,
+      "overlap_frames": 47,
+      "total_overlap_pixels_across_frames": 1096,
+      "max_overlap_pixels": 62,
+      "max_overlap_time_s": 10.458333333333334,
+      "source_frames_at_max_overlap": [
+        251,
+        305
+      ]
+    },
+    {
+      "pair": [
+        "red",
+        "yellow"
+      ],
+      "conservative_body_gap_px": 6.0,
+      "min_gap_time_s": 21.625,
+      "overlap_frames": 0,
+      "total_overlap_pixels_across_frames": 0,
+      "max_overlap_pixels": 0,
+      "max_overlap_time_s": 0.0,
+      "source_frames_at_max_overlap": [
+        138,
+        278
+      ]
+    },
+    {
+      "pair": [
+        "red",
+        "blue"
+      ],
+      "conservative_body_gap_px": 0.0,
+      "min_gap_time_s": 6.125,
+      "overlap_frames": 0,
+      "total_overlap_pixels_across_frames": 0,
+      "max_overlap_pixels": 0,
+      "max_overlap_time_s": 0.0,
+      "source_frames_at_max_overlap": [
+        138,
+        195
+      ]
+    },
+    {
+      "pair": [
+        "yellow",
+        "blue"
+      ],
+      "conservative_body_gap_px": 0.0,
+      "min_gap_time_s": 1.5833333333333333,
+      "overlap_frames": 19,
+      "total_overlap_pixels_across_frames": 291,
+      "max_overlap_pixels": 41,
+      "max_overlap_time_s": 2.125,
+      "source_frames_at_max_overlap": [
+        329,
+        217
+      ]
+    }
+  ],
+  "search": {
+    "opening_straight_rule": "trailer PCA axis cardinal<=12deg; cab-to-trailer axis articulation<=8deg; neighbors+-3frames also qualify",
+    "source_phase_lattice_stride": 3,
+    "green_opening_anchor": 0,
+    "valid_far3_combinations_min4px": 119,
+    "green_opening_candidates": 117,
+    "blue_opening_candidates": 67
+  },
+  "geometry": "alpha>127 at actual native pixels. AABB positive separation provides conservative gap; overlapping AABBs are refined with exact pixel intersection and contour KDTree nearest-distance minus sqrt(2) to account for pixel extent. Every opaque alpha pixel included, including extraction fringe.",
+  "assumptions": [
+    "Red/yellow use actual green RGBA geometry with phase only; future appearance-edit motion not yet available and must be separately checked.",
+    "Blue20s source slowed to45.5s using floor source sampling; green22.75s repeats twice.",
+    "All four opening poses gated on observed geometry, not native routes.",
+    "No road/world collision claim; check is rendered cab/trailer alpha envelope."
+  ],
+  "status": "COLLISIONS REMAIN; DO NOT CALL PASS"
+}

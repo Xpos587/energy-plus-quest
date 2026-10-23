@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-04T18:52:44.75454Z",
+    "display_name": "Kling v3.0",
+    "id": "1e9d9228-9a0e-4c67-b91b-e27d43cbaec8",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "87ddd973-1aa4-4407-920c-2e865b328541",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/87ddd973-1aa4-4407-920c-2e865b328541.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "7da067e7-0391-432a-9faf-ce59c502b46e",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/7da067e7-0391-432a-9faf-ce59c502b46e.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera, same city throughout. Exactly TWO articulated trucks: red cab beige trailer, green cab white trailer. Red moves straight to screen RIGHT at a steady slow speed, staying fully visible in frame. Green initially drives DOWN the vertical street and lets the red trailer clear the junction, then makes ONE left turn from its driver's view toward screen RIGHT, merging behind red with a safe clear gap. End precisely at supplied positions: red ahead, green behind, both straight and facing right. Cab turns first, trailer pivots at the fifth-wheel hitch, rear wheels follow a tighter curve. Tractor and trailer are two rigid connected bodies; each trailer has straight rectangular edges, never bending or stretching. No extra vehicles, no splitting, no collision, no overtaking. Neither truck leaves the frame. All tires on blue asphalt. No camera movement, background changes, zoom or second turn. Preserve illustrative style and truck identities.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_185244_1e9d9228-9a0e-4c67-b91b-e27d43cbaec8.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_185244_1e9d9228-9a0e-4c67-b91b-e27d43cbaec8_thumbnail.webp"
+  }
+]

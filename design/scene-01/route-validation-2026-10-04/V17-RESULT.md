@@ -1,0 +1,11 @@
+# V17 road-candidate check
+
+V17 creates the missing road connection, but the existing R80, 180px screen-space rig does not fit it. See `v17-explicit-obstructions.png` and `v17-obstructions.json`. These intersect the required swept corridor plus 6px margin with manually recorded rectangles inside recognizable buildings/sidewalk; curved edges are deliberately omitted. Red areas are lower-bound examples, not the complete edit mask.
+
+The straight plaza gap is approximately x725–780. Its midpoint x752.5 could hold the 43px-wide tractor with about 6px each side. However, the earlier chosen x765 path needs x737.5–792.5: V17's eastern curb intrudes. Shifting only the centerline does not resolve either pair of turns.
+
+The lower left turn still intersects the southwest corner of the low right building (roughly x805–835/y650–674). The full required corridor broadens farther east below it, reaching x882 by y687. The top turns remain substantially obstructed by visible roof regions of the left and right towers; the road corridor also overlaps the upper block near y91–112. The complete nonrectangular construction target remains `proposed-road.geojson`; use its actual polygon, never the full bounding rectangle.
+
+**Do not claim physical swept-path proof from these pixels.** The illustration is oblique, with vehicle size varying by heading and possibly distance: the vertical green rig is about180px while the horizontal orange and yellow rigs are roughly240px and210px. Those are different trucks and cannot define a unique projection. Set an explicit ground-plane scale, vehicle wheelbases, hitch/axle offsets and common projection, then project each articulated body. The current body rectangles keep screen-space length constant at every heading; their results establish only screen-overlap feasibility of that stated model. Roof projection may obscure a legitimate ground road, but the desired visible animation still must handle that occlusion deliberately.
+
+There is no verified parameter-only fix for V17 at the stated vehicle size. A practical next implementation is to reconstruct the road using the already supplied corridor mask, or establish the projected vehicle model first and regenerate its mask. Avoid presenting the existing V17 plaza edit as completed geometric validation.

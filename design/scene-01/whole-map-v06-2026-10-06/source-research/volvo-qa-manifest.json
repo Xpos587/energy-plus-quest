@@ -1,0 +1,47 @@
+{
+  "source": "free3d-volvo-fh-green.glb",
+  "bounds": {
+    "min": [
+      -0.2090301811695099,
+      -0.5000242590904236,
+      -0.27353212237358093
+    ],
+    "max": [
+      0.2124537229537964,
+      0.4998651146888733,
+      0.2844524383544922
+    ]
+  },
+  "front_axis": "-Y",
+  "triangles": 18471,
+  "cameras": {
+    "front3q": {
+      "location": [
+        1.6017117500305176,
+        -2.2000796794891357,
+        1.0054601430892944
+      ],
+      "rotation": [
+        1.2185227870941162,
+        9.530452871331363e-09,
+        0.6287963390350342
+      ],
+      "ortho_scale": 1.649999976158142,
+      "render": "/home/michael/Github/energy-plus-quest/design/scene-01/whole-map-v06-2026-10-06/source-research/volvo-front3q.png"
+    },
+    "desktop-high": {
+      "location": [
+        1.4017117023468018,
+        -1.800079584121704,
+        2.4054603576660156
+      ],
+      "rotation": [
+        0.7598395347595215,
+        1.1222486828721401e-10,
+        0.6610431671142578
+      ],
+      "ortho_scale": 1.649999976158142,
+      "render": "/home/michael/Github/energy-plus-quest/design/scene-01/whole-map-v06-2026-10-06/source-research/volvo-desktop-high.png"
+    }
+  }
+}

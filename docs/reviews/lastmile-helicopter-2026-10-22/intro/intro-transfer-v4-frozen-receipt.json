@@ -1,0 +1,45 @@
+{
+  "canonicalId": "F0093",
+  "decision": "frozen_after_owner_and_root_visual_review",
+  "version": "v4",
+  "frozenOutput": "docs/reviews/lastmile-helicopter-2026-10-22/intro/F0093-helicopter-corrected-v4.png",
+  "supersedesRejected": [
+    "F0093-helicopter-corrected.png",
+    "F0093-helicopter-corrected-v2.png",
+    "F0093-helicopter-corrected-v3.png"
+  ],
+  "source": "public/scene-art/lastmile-family-v1/choice-final-wide-v10.webp",
+  "sourceDimensions": [
+    1983,
+    793
+  ],
+  "sourceBox": [
+    850,
+    15,
+    1300,
+    260
+  ],
+  "transformReceipt": "common-wide-transform.json",
+  "generationCalls": 0,
+  "method": "Existing corrected illustration aircraft-only alpha, registered through original background; obsolete aircraft and shadow removed using local original graypad fit and concealed H-leg continuation; soft body and wheel contactshadow added. No generated background/pad transfer.",
+  "subjectAlpha": "common-wide-aircraft-native.png",
+  "alignedRgb": "common-wide-aircraft-aligned-rgb.png",
+  "alignedAlpha": "common-wide-aircraft-aligned-alpha.png",
+  "cleanPlate": "common-wide-cleanplate-v4.png",
+  "removalMask": "common-wide-old-aircraft-removal-mask-v4.png",
+  "newShadowAlpha": "common-wide-new-shadow-alpha.png",
+  "visualReview": {
+    "full": "F0093-helicopter-corrected-v4.png",
+    "actual100pct": "detail-review-v4-100pct.png",
+    "magnifiedInspection": "detail-review-v4-2x.png",
+    "reviewedBy": [
+      "owner",
+      "root"
+    ],
+    "rootDecision": "APPROVED intro seam repair",
+    "findings": "No generated-pad angular seams; obsolete topcenter rotor shadow removed. Orange Mi-8 type fuselage, black engine and tailboom, white-orange bands, white body graphic, circular windows and five main blades. No logo/name/flag/registration/text. Source vehicles, people, buildings, water, visible pad edges, cones and windsock preserved.",
+    "limitations": "Original source-resolution composite; no native-upscale claim. Shared alpha is manually traced. Hidden pad region reconstructed locally; stakeholder approval and runtime integration remain separate."
+  },
+  "publicSourceMutated": false,
+  "aliasMutated": false
+}

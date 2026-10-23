@@ -1,0 +1,202 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-rover-boat-khor-BnDf2vhR.avif",
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 219.484375,
+        "top": 48,
+        "right": 390,
+        "bottom": 267.484375,
+        "left": 0
+      },
+      "decoded": [
+        3842,
+        2162
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-rover-boat-khor-BnDf2vhR.avif",
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 219.484375,
+        "top": 48,
+        "right": 390,
+        "bottom": 267.484375,
+        "left": 0
+      },
+      "decoded": [
+        3842,
+        2162
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-rover-boat-khor-1280-DzF8VMQ3.avif",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 472.640625,
+        "height": 334,
+        "top": 56,
+        "right": 472.640625,
+        "bottom": 390,
+        "left": 0
+      },
+      "decoded": [
+        1280,
+        720
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-rover-boat-khor-BnDf2vhR.avif",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 472.640625,
+        "height": 334,
+        "top": 56,
+        "right": 472.640625,
+        "bottom": 390,
+        "left": 0
+      },
+      "decoded": [
+        3842,
+        2162
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-rover-boat-khor-BHS9ALeH.avif",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 566.8125,
+        "top": 56,
+        "right": 1440,
+        "bottom": 622.8125,
+        "left": 0
+      },
+      "decoded": [
+        3842,
+        2162
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-rover-boat-khor-BHS9ALeH.avif",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 566.8125,
+        "top": 56,
+        "right": 1440,
+        "bottom": 622.8125,
+        "left": 0
+      },
+      "decoded": [
+        3842,
+        2162
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-rover-boat-khor-BHS9ALeH.avif",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1920,
+        "height": 746.8125,
+        "top": 56,
+        "right": 1920,
+        "bottom": 802.8125,
+        "left": 0
+      },
+      "decoded": [
+        3842,
+        2162
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-rover-boat-khor-BHS9ALeH.avif",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1920,
+        "height": 746.8125,
+        "top": 56,
+        "right": 1920,
+        "bottom": 802.8125,
+        "left": 0
+      },
+      "decoded": [
+        3842,
+        2162
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  }
+]

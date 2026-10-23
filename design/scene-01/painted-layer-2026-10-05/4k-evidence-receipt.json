@@ -1,0 +1,14 @@
+{
+  "source": "painted-vehicles-repaired.blend",
+  "frame": 769,
+  "dimensions": [
+    3840,
+    2667
+  ],
+  "samples": 8,
+  "threads": 4,
+  "measured_render_wall_seconds": 11.875,
+  "upscaled": false,
+  "source_materials": "archived projected painted textures; native geometry, Cryptomatte against city beauty",
+  "full_animation_rendered": false
+}

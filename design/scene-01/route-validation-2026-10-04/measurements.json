@@ -1,0 +1,85 @@
+{
+  "source_dimensions": [
+    1506,
+    1045
+  ],
+  "model": {
+    "tractor_length": 80,
+    "tractor_width": 43,
+    "trailer_length": 110,
+    "trailer_width": 36,
+    "straight_total_length": 180,
+    "hitch_to_trailer_axle": 85,
+    "rounding_radius": 40
+  },
+  "manual_road_rectangles": [
+    {
+      "name": "central_north",
+      "xyxy": [
+        724,
+        0,
+        795,
+        478
+      ]
+    },
+    {
+      "name": "middle_cross",
+      "xyxy": [
+        401,
+        483,
+        1506,
+        571
+      ]
+    },
+    {
+      "name": "west_avenue",
+      "xyxy": [
+        405,
+        0,
+        492,
+        1045
+      ]
+    },
+    {
+      "name": "bottom_cross",
+      "xyxy": [
+        492,
+        697,
+        1506,
+        756
+      ]
+    },
+    {
+      "name": "central_south",
+      "xyxy": [
+        741,
+        756,
+        795,
+        1045
+      ]
+    },
+    {
+      "name": "right_avenue",
+      "xyxy": [
+        1076,
+        0,
+        1167,
+        1045
+      ]
+    },
+    {
+      "name": "top_cross",
+      "xyxy": [
+        0,
+        120,
+        1506,
+        160
+      ]
+    }
+  ],
+  "sample_count": 2037,
+  "outside_samples": 1481,
+  "max_outside_area_px2": 6132.98,
+  "max_articulation_degrees": 66.46,
+  "verdict": "FAIL; missing north-south roadway across y571..697 at x742. Raster diagnostic only."
+}

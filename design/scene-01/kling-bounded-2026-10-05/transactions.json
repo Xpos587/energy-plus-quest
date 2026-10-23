@@ -1,0 +1,65 @@
+{
+  "cursor": "10",
+  "items": [
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T10:30:24.497174Z",
+      "credits": -7.5,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-05T09:10:22.047321Z",
+      "credits": -18.5,
+      "display_name": "Draw To Video"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T20:30:08.375253Z",
+      "credits": -10,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T20:21:14.640161Z",
+      "credits": -7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "refund",
+      "created_at": "2026-10-04T20:11:54.429849Z",
+      "credits": 7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T20:11:47.747961Z",
+      "credits": -7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T19:49:58.185343Z",
+      "credits": -18.75,
+      "display_name": "Kling v3.0"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T19:45:44.946346Z",
+      "credits": -7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T19:37:50.484787Z",
+      "credits": -7.5,
+      "display_name": "Kling O3 Video Edit"
+    },
+    {
+      "action": "spend",
+      "created_at": "2026-10-04T18:52:44.861963Z",
+      "credits": -6.25,
+      "display_name": "Kling v3.0"
+    }
+  ]
+}

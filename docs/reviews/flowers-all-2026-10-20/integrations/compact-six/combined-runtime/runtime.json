@@ -1,0 +1,450 @@
+[
+  {
+    "id": "F0025",
+    "carrier": "near",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-v48-DrnkxUCQ.webp",
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 260,
+        "top": 48,
+        "right": 390,
+        "bottom": 308,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        3413
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0025",
+    "carrier": "near",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-v48-DrnkxUCQ.webp",
+      "rect": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 260,
+        "top": 48,
+        "right": 390,
+        "bottom": 308,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        3413
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0026",
+    "carrier": "crew",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-crew-v50-Be0o0ho2.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 564,
+        "top": 56,
+        "right": 1440,
+        "bottom": 620,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0026",
+    "carrier": "crew",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-crew-v50-Be0o0ho2.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 564,
+        "top": 56,
+        "right": 1440,
+        "bottom": 620,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0027",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-old-v50-Z-hoejf2.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 564,
+        "top": 56,
+        "right": 1440,
+        "bottom": 620,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0027",
+    "carrier": "old",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-old-v50-Z-hoejf2.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 564,
+        "top": 56,
+        "right": 1440,
+        "bottom": 620,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0028",
+    "carrier": "old4",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-old4-v50--cZ2ecsN.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 564,
+        "top": 56,
+        "right": 1440,
+        "bottom": 620,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0028",
+    "carrier": "old4",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-old4-v50--cZ2ecsN.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 564,
+        "top": 56,
+        "right": 1440,
+        "bottom": 620,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0145",
+    "carrier": "old",
+    "parcel": "socks",
+    "selected": "place-1",
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-socks-zone1-unsecured-v53-DUBtQ8fu.avif",
+      "rect": {
+        "x": -35.450050354003906,
+        "y": -99,
+        "width": 921.806396484375,
+        "height": 774.671875,
+        "top": -99,
+        "right": 886.3563461303711,
+        "bottom": 675.671875,
+        "left": -35.450050354003906
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0145",
+    "carrier": "old",
+    "parcel": "socks",
+    "selected": "place-1",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-socks-zone1-unsecured-v53-DUBtQ8fu.avif",
+      "rect": {
+        "x": -35.450050354003906,
+        "y": -99,
+        "width": 921.806396484375,
+        "height": 774.671875,
+        "top": -99,
+        "right": 886.3563461303711,
+        "bottom": 675.671875,
+        "left": -35.450050354003906
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0145",
+    "carrier": "old",
+    "parcel": "socks",
+    "selected": "place-1",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-socks-zone1-unsecured-v53-DUBtQ8fu.avif",
+      "rect": {
+        "x": 0,
+        "y": -542,
+        "width": 2080,
+        "height": 1748,
+        "top": -542,
+        "right": 2080,
+        "bottom": 1206,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0145",
+    "carrier": "old",
+    "parcel": "socks",
+    "selected": "place-1",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-socks-zone1-unsecured-v53-DUBtQ8fu.avif",
+      "rect": {
+        "x": 0,
+        "y": -542,
+        "width": 2080,
+        "height": 1748,
+        "top": -542,
+        "right": 2080,
+        "bottom": 1206,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0146",
+    "carrier": "old",
+    "parcel": "socks",
+    "selected": "place-2",
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-socks-zone2-v53-o7PhXEar.avif",
+      "rect": {
+        "x": -111.41284942626953,
+        "y": -122.203125,
+        "width": 965.68505859375,
+        "height": 811.546875,
+        "top": -122.203125,
+        "right": 854.2722091674805,
+        "bottom": 689.34375,
+        "left": -111.41284942626953
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0146",
+    "carrier": "old",
+    "parcel": "socks",
+    "selected": "place-2",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-socks-zone2-v53-o7PhXEar.avif",
+      "rect": {
+        "x": -111.41284942626953,
+        "y": -122.203125,
+        "width": 965.68505859375,
+        "height": 811.546875,
+        "top": -122.203125,
+        "right": 854.2722091674805,
+        "bottom": 689.34375,
+        "left": -111.41284942626953
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0146",
+    "carrier": "old",
+    "parcel": "socks",
+    "selected": "place-2",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-socks-zone2-v53-o7PhXEar.avif",
+      "rect": {
+        "x": -21.16990852355957,
+        "y": -604.34375,
+        "width": 2202.33984375,
+        "height": 1850.8125,
+        "top": -604.34375,
+        "right": 2181.1699352264404,
+        "bottom": 1246.46875,
+        "left": -21.16990852355957
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0146",
+    "carrier": "old",
+    "parcel": "socks",
+    "selected": "place-2",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-socks-zone2-v53-o7PhXEar.avif",
+      "rect": {
+        "x": -21.16990852355957,
+        "y": -604.34375,
+        "width": 2202.33984375,
+        "height": 1850.8125,
+        "top": -604.34375,
+        "right": 2181.1699352264404,
+        "bottom": 1246.46875,
+        "left": -21.16990852355957
+      },
+      "decoded": [
+        5120,
+        4301
+      ]
+    },
+    "status": 200,
+    "errors": []
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "name": "desktop",
+    "phase": "intro-0",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "desktop",
+    "phase": "intro-1",
+    "overflow": false,
+    "bodyFont": "30.72px"
+  },
+  {
+    "name": "desktop",
+    "phase": "intro-2",
+    "overflow": false,
+    "bodyFont": "30.72px"
+  },
+  {
+    "name": "desktop",
+    "phase": "carrier-briefing",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "desktop",
+    "phase": "carrier-inspect",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "desktop",
+    "radius": "16px"
+  },
+  {
+    "name": "mobile",
+    "phase": "intro-0",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "mobile",
+    "phase": "intro-1",
+    "overflow": false,
+    "bodyFont": "20px"
+  },
+  {
+    "name": "mobile",
+    "phase": "intro-2",
+    "overflow": false,
+    "bodyFont": "20px"
+  },
+  {
+    "name": "mobile",
+    "phase": "carrier-briefing",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "mobile",
+    "phase": "carrier-inspect",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "mobile",
+    "radius": "16px"
+  },
+  {
+    "name": "small",
+    "phase": "intro-0",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "small",
+    "phase": "intro-1",
+    "overflow": false,
+    "bodyFont": "20px"
+  },
+  {
+    "name": "small",
+    "phase": "intro-2",
+    "overflow": false,
+    "bodyFont": "20px"
+  },
+  {
+    "name": "small",
+    "phase": "carrier-briefing",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "small",
+    "phase": "carrier-inspect",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "small",
+    "radius": "16px"
+  },
+  {
+    "name": "tablet",
+    "phase": "intro-0",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "tablet",
+    "phase": "intro-1",
+    "overflow": false,
+    "bodyFont": "22px"
+  },
+  {
+    "name": "tablet",
+    "phase": "intro-2",
+    "overflow": false,
+    "bodyFont": "22px"
+  },
+  {
+    "name": "tablet",
+    "phase": "carrier-briefing",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "tablet",
+    "phase": "carrier-inspect",
+    "overflow": false,
+    "bodyFont": "16px"
+  },
+  {
+    "name": "tablet",
+    "radius": "16px"
+  }
+]

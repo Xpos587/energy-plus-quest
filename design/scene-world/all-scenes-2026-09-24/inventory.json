@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-24T07:44:26.222194Z",
+    "display_name": "Nano Banana Pro",
+    "id": "c5e0194e-1370-40c2-9696-20084b5eb2ec",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_074426_c5e0194e-1370-40c2-9696-20084b5eb2ec_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "c466aa31-cdf0-4821-9a89-a128ac706b62",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/c466aa31-cdf0-4821-9a89-a128ac706b62_resize.jpg"
+        }
+      ],
+      "prompt": "AUTHORITATIVE STYLE: the user's original city illustration, not a 3D render and not flat schematic vector art. Preserve its warm cream/apricot palette, light-blue glass, clean smooth illustrated surfaces, nuanced soft shading, refined vehicle details, appealing character drawing where people are needed. Thin light-to-medium neutral-gray contours, no black or dark brown uniform outlines. Edges should mainly read through color and shading. Cast shadows light neutral gray with visibly soft feathered penumbras; no sharp dark polygon shadows. Pavement light neutral gray. Saturated orange and blue only as small purposeful accents. Preserve readability and believable physical proportions; never enlarge a parcel into a vehicle-sized object for legibility. Use a small printed content pictogram instead. Do not imitate photorealistic texture, grunge, game-engine rendering or technical drafting. \nCreate one finished 16:9 illustration for the same coherent game art collection. Reference image is authoritative for drawing and shading.\nCreate warehouse storage game scene. Elevated near-top-down cutaway view of a spacious single warehouse, light gray floor and cream walls. Receiving docks at left, dispatch docks at right. Three groups of shelves with cardboard cartons: racks nearest dispatch marked А Б, central racks Л Н, farthest racks Ф. Clear spacious aisle paths. Include a proportionate small blue forklift, one employee in navy and orange PPE holding a barcode scanner, and small indoor inventory drone near shelves. Ordinary small gift carton on pallet near receiving with discreet neutral sock pictogram, NEVER giant. Functional tiny signs ПРИЁМКА and ОТГРУЗКА only, no other captions or UI. Four distinct potential locations: free receiving shelf, middle alphabet shelf, keeper desk toward dispatch, recorded dispatch shelf with scanner. Believable consistent human and machinery scale. Rich illustrated detail, readable objects, subtle soft shading. Match reference rendering style; do not put its truck in this interior.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_074426_c5e0194e-1370-40c2-9696-20084b5eb2ec.png",
+    "status": "completed"
+  }
+]

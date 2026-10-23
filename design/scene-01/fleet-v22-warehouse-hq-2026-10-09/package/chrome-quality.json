@@ -1,0 +1,13 @@
+{
+  "browser": "User Chrome through CUA/CDP, normal visible window",
+  "source": "city-motion-desktop.mp4?v=22",
+  "decoded": [3600, 2500],
+  "viewport": [1517, 877],
+  "devicePixelRatio": 2.5,
+  "mapScale": 2.4,
+  "start": {"timeMs": 130413, "total": 3114, "dropped": 10},
+  "end": {"timeMs": 236925.40000000596, "total": 5669, "dropped": 21},
+  "intervalFrames": 2555,
+  "intervalDroppedFrames": 11,
+  "notes": "Real browser verification after fixing false slow-transfer downgrade. Includes inspection camera following and screenshot capture. Headless software-decoder results are separately retained in runtime-quality.json; these are different environments."
+}

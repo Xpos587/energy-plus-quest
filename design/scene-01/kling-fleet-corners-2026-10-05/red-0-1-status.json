@@ -1,0 +1,16 @@
+{
+  "name": "red-0-1",
+  "crop_mode": "full",
+  "start_input": "red-key-0-padded.png",
+  "end_input": "red-key-1-padded.png",
+  "status": "downloaded",
+  "prompt_file": "red-0-1-prompt.txt",
+  "returncode": 0,
+  "measured_job_elapsed_seconds": 112.569,
+  "job_id": "26992fcd-b175-4944-9fbe-7aefe5968270",
+  "provider_status": "completed",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_144421_26992fcd-b175-4944-9fbe-7aefe5968270.mp4",
+  "media_file": "red-0-1.mp4",
+  "actual_duration_seconds": 5.041667,
+  "contact_sheet": "red-0-1-quarter-second-contact.png"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "energy-plus-quest",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "media:hydrate": "bun scripts/media-artifacts.ts",
+    "media:verify": "bun scripts/media-artifacts.ts --verify",
+    "check:storage": "bun scripts/repository-budget.ts --head",
+    "setup:hooks": "git config core.hooksPath .githooks",
+    "preview:current": "bun scripts/preview-current.ts",
+    "dev": "bun run media:hydrate && vite",
+    "deploy": "bun scripts/deploy-dokploy.mjs",
+    "build": "sh scripts/package-static.sh --build-to-dist",
+    "build:app": "bun scripts/repository-budget.ts --local-only && bun run media:hydrate && tsc --noEmit && vite build",
+    "build:media": "bun scripts/repository-budget.ts --local-only && bun run media:hydrate && vite build",
+    "package": "sh scripts/package-static.sh",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:watch": "vitest",
+    "check": "biome check .",
+    "format": "biome format --write ."
+  },
+  "dependencies": {
+    "lucide-react": "^1.51.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.6",
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "esbuild": "^0.28.2",
+    "jsdom": "^30.0.1",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.0",
+    "vite-plugin-singlefile": "^2.3.3",
+    "vitest": "^4.1.11"
+  }
+}

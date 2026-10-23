@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T12:35:18.897331Z",
+    "display_name": "Kling v3.0",
+    "id": "24f16fed-0d5a-435f-b58d-90aecaa60b68",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "d14753c0-82b5-48cb-aac2-4d473c6f8230",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/d14753c0-82b5-48cb-aac2-4d473c6f8230.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "89c984a1-6d79-4ee4-8a79-b8eedb85f916",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/89c984a1-6d79-4ee4-8a79-b8eedb85f916.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked camera. One GREEN tractor and one rigid WHITE semitrailer. Truck begins heading LEFT across the top of this local intersection. Drive LEFT a short distance, then make one smooth ninety degree turn DOWN into the vertical road at the center of this crop. Finish straight DOWN exactly at final image. Cab is always the front end leading forward; never exchange cab and trailer ends, never reverse, no U-turn, no overshoot. Tractor steers down first and trailer rigidly follows via fifth-wheel hitch and rear axle inner sweep. Exactly one coupled truck, stable scale, no disappearance/duplication, all tires on blue asphalt. No roof crossing. This shot contains only the required corner, no other destination. Locked camera and perfectly still buildings/trees/white sidebars. Match bright clean detailed illustration and soft colored edges/shadows. Two drivers. Five second single continuous articulated corner.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_123518_24f16fed-0d5a-435f-b58d-90aecaa60b68.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_123518_24f16fed-0d5a-435f-b58d-90aecaa60b68_thumbnail.webp"
+  }
+]

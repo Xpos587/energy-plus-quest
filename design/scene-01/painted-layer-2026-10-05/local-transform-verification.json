@@ -1,0 +1,8 @@
+{
+  "reconstructed_cab_count": 4,
+  "cab_local_transform_channels_unchanged": true,
+  "changed_channels": [],
+  "matrix_local_max_numeric_delta": 5.7220458984375e-06,
+  "rigid_relative_to_native_tractor": true,
+  "cause_of_prior_exact_matrix_false": "parent transform inversion float roundoff; replace exact matrix equality with channel equality plus measured matrix tolerance"
+}

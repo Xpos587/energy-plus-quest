@@ -1,0 +1,72 @@
+{
+  "backgroundRegistration": {
+    "matches": 612,
+    "inliers": 543,
+    "p95": 2.118556022644043,
+    "matrix": [
+      [
+        1.0938742992895572,
+        0.00013202169037587584,
+        -0.3734761289644809
+      ],
+      [
+        -0.00013202169037587584,
+        1.0938742992895572,
+        0.20685214449345385
+      ]
+    ],
+    "basis": "background only; broad aircraft/shadow rectangles excluded"
+  },
+  "mask": "aircraft-shadow-union-target-mask.png",
+  "outputs": [
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-alva.webp",
+      "output": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-alva-helicopter-corrected.png",
+      "dimensions": [
+        8192,
+        3276
+      ],
+      "basis": "accepted P2 F0114",
+      "patchBox": [
+        3511,
+        62,
+        5370,
+        1074
+      ],
+      "preservation": "outside feathered union aircraft+shadow mask retains selected base pixels; original public source untouched"
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-khor.webp",
+      "output": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-khor-helicopter-corrected.png",
+      "dimensions": [
+        5120,
+        2047
+      ],
+      "basis": "ordinary Lanczos interpolation from original; not Flowers",
+      "patchBox": [
+        2194,
+        39,
+        3356,
+        671
+      ],
+      "preservation": "outside feathered union aircraft+shadow mask retains selected base pixels; original public source untouched"
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-arseniy.webp",
+      "output": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-wide-arseniy-helicopter-corrected.png",
+      "dimensions": [
+        5120,
+        2047
+      ],
+      "basis": "ordinary Lanczos interpolation from original; not Flowers",
+      "patchBox": [
+        2194,
+        39,
+        3356,
+        671
+      ],
+      "preservation": "outside feathered union aircraft+shadow mask retains selected base pixels; original public source untouched"
+    }
+  ],
+  "limitations": "Three wide only. Tall transfer invalid global similarity; dedicated tall crop edit needed. Interpolation does not recover details."
+}

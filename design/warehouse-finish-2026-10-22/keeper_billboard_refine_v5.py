@@ -1,0 +1,9 @@
+import bpy,json,math
+from pathlib import Path
+from mathutils import Vector
+ROOT=Path('/home/michael/Github/energy-plus-quest');D=ROOT/'design/warehouse-finish-2026-10-22';R=ROOT/'docs/reviews/inventory-2026-10-22-finish';bpy.ops.wm.open_mainfile(filepath=str(D/'warehouse-keeper-proof-v4.blend'));S=bpy.context.scene;cam=S.camera;m=json.loads((R/'keeper-billboard-v4.json').read_text());bbox=m['original_keeper_projected_bounds'];old=m['billboard_projected_bounds'];xcenter=(bbox[0]+bbox[2])/2;ycenter=(bbox[1]+bbox[3])/2;h=bbox[3]-bbox[1];w=h*(780-242)/(1459-116);right=cam.matrix_world.to_quaternion()@Vector((1,0,0));up=cam.matrix_world.to_quaternion()@Vector((0,1,0));normal=cam.matrix_world.to_quaternion()@Vector((0,0,1));scale=cam.data.ortho_scale/1440
+center=(Vector(m['physical_head_world'])+Vector(m['physical_feet_world']))/2;center+=right*(xcenter-(old[0]+old[2])/2)*scale-up*(ycenter-(old[1]+old[3])/2)*scale
+verts=[center-right*w*scale/2-up*h*scale/2,center+right*w*scale/2-up*h*scale/2,center+right*w*scale/2+up*h*scale/2,center-right*w*scale/2+up*h*scale/2];o=bpy.data.objects['Keeper illustrated proof card']
+for v,p in zip(o.data.vertices,verts):v.co=p
+o.data.update();S.render.filepath=str(R/'keeper-v5-native-render.png');bpy.ops.wm.save_as_mainfile(filepath=str(D/'warehouse-keeper-proof-v5.blend'));bpy.ops.render.render(write_still=True)
+m.update({'status':'v5 local style proof only','actual_silhouette_mapping':'Native opaque character top/bottom align original evaluated 3D keeper head and shoe projected envelope, including projected shoe depth. Quad centered within old horizontal silhouette bounds. Physical landmark positions unchanged.','billboard_projected_bounds':[xcenter-w/2,bbox[1],xcenter+w/2,bbox[3]],'billboard_world_dimensions':[w*scale,h*scale],'quad_screen_offset_px':[xcenter-(old[0]+old[2])/2,ycenter-(old[1]+old[3])/2]});(R/'keeper-billboard-v5.json').write_text(json.dumps(m,indent=2));print('V5 LOCAL PROOF COMPLETE')

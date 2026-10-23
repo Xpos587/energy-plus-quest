@@ -1,0 +1,55 @@
+.status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  padding: 10px 14px;
+  border: 1px solid #b8cfdd;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 94%);
+  color: #0b3d5c;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.status button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #075d9b;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.status button:focus-visible {
+  outline: 3px solid #075d9b;
+  outline-offset: 3px;
+}
+.status button > svg { flex: none; }
+.inline {
+  position: static;
+  width: auto;
+  max-width: none;
+  transform: none;
+}
+.viewport {
+  position: fixed;
+  z-index: 100;
+}

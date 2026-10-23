@@ -1,0 +1,99 @@
+{
+  "source": "../fleet-style-v08-2026-10-07/projected/clean/fleet-v09-clean-sill.blend",
+  "method": "Cycles real geometry shadow catcher, camera-invisible fleet, horizontal receiver at tyre z=0; diffuse sky + single SUN",
+  "camera": {
+    "name": "desktop",
+    "location": [
+      1.7741494178771973,
+      -84.67687225341797,
+      131.3314208984375
+    ],
+    "rotation": [
+      0.574134349822998,
+      -1.8925381262135943e-09,
+      0.07982999086380005
+    ],
+    "ortho_scale": 111.80000305175781
+  },
+  "ground_z": -0.002,
+  "key": {
+    "position": [
+      -40.0,
+      35.0,
+      70.0
+    ],
+    "rotation": [
+      0.6494241952896118,
+      1.0459238097837442e-07,
+      -2.289626359939575
+    ],
+    "energy": 3.0,
+    "angular_diameter_deg": 8
+  },
+  "frames": [
+    1,
+    385,
+    769
+  ],
+  "resolution": [
+    1920,
+    1334
+  ],
+  "samples": 48,
+  "preserved": "all source vehicle roots, mesh geometry, materials, animation data, camera transform unchanged; pass camera ray visibility only altered",
+  "source_issue": "Cryptomatte Matte replaces Combined alpha, omitting ground shadows; source overhead sun has no shadows.",
+  "composite": {
+    "alpha_scale": 0.6,
+    "shadow_tint_srgb": [
+      64,
+      101,
+      129
+    ],
+    "semantics": "straight RGBA tinted physical shadow coverage; standard shadow alpha-over then vehicle alpha-over",
+    "vehicle_light_change": false
+  },
+  "render_result": {
+    "engine": "CYCLES",
+    "cpu_threads": 6,
+    "elapsed_total_seconds": 358.816,
+    "frames": {
+      "1": {
+        "shadow_rgba": "shadows-0001.png",
+        "vehicle_rgba": "vehicles-0001.png",
+        "raw_catcher": "shadow-raw-0001.png",
+        "diagnostic_composite": "pilot-composite-0001.png",
+        "dimensions": [
+          1920,
+          1334
+        ],
+        "final_max_shadow_alpha": 144,
+        "alpha_scaling_verified": true
+      },
+      "385": {
+        "shadow_rgba": "shadows-0385.png",
+        "vehicle_rgba": "vehicles-0385.png",
+        "raw_catcher": "shadow-raw-0385.png",
+        "diagnostic_composite": "pilot-composite-0385.png",
+        "dimensions": [
+          1920,
+          1334
+        ],
+        "final_max_shadow_alpha": 145,
+        "alpha_scaling_verified": true
+      },
+      "769": {
+        "shadow_rgba": "shadows-0769.png",
+        "vehicle_rgba": "vehicles-0769.png",
+        "raw_catcher": "shadow-raw-0769.png",
+        "diagnostic_composite": "pilot-composite-0769.png",
+        "dimensions": [
+          1920,
+          1334
+        ],
+        "final_max_shadow_alpha": 145,
+        "alpha_scaling_verified": true
+      }
+    }
+  },
+  "raster_occlusion_limitation": "Horizontal upper-row vehicle shadows in frame769 can overlap painted roof pixels because receiver is flat world ground and raster background has no depth; parent composite must evaluate building occlusion. Truck positions/routes/camera preserved."
+}

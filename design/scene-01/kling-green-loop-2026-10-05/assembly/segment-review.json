@@ -1,0 +1,97 @@
+{
+  "segment2_original": {
+    "verdict": "rejected",
+    "video": "segment-2.mp4",
+    "evidence": [
+      "segment-2-quarter-contact.jpg",
+      "segment-2-inspect-096.png"
+    ],
+    "failure": "At 2s turns down western warehouse street instead of central street. By 3s takes an extra corner. At 4s native frame97 shows two green trucks; endpoint reached through duplication/teleport."
+  },
+  "segment3": {
+    "verdict": "sampled_motion_gate_pass",
+    "video": "segment-3.mp4",
+    "evidence": [
+      "segment-3-quarter-contact.jpg",
+      "segment-3-detail-contact.jpg"
+    ],
+    "sampling": "Every 0.25s from0 through5s. Singletruck on central vertical street, one right turn onto lower road; no visibleduplication or roofcrossing at sampledframes. RGBA extraction inspected at0,1.75,2.5,4.75; remaining two samples pending.",
+    "extraction": {
+      "rgba_frames": 121,
+      "rgba_channels": 4,
+      "alpha_outside_roi": 0,
+      "sample_times": [
+        0,
+        0.5,
+        1.75,
+        2.5,
+        3.5,
+        4.75
+      ]
+    },
+    "sampled_layer_result": "All six native source/layer/composite sample strips inspected: main cab/trailer preserved, no visible city fragments. Soft-shadow and tiny silhouette-edge limitations retained; not independent pixel ground truth."
+  },
+  "segment4": {
+    "verdict": "sampled_motion_gate_pass",
+    "video": "segment-4.mp4",
+    "evidence": [
+      "segment-4-quarter-contact.jpg",
+      "segment-4-detail-contact.jpg"
+    ],
+    "sampling": "Every0.25s from0 through5s. Singletruck on lower road, one up turn on easternstreet; no visibleduplication or roofcrossing at sampledframes.",
+    "extraction": {
+      "rgba_frames": 121,
+      "rgba_channels": 4,
+      "alpha_outside_roi": 0,
+      "sample_times": [
+        0,
+        0.5,
+        1.75,
+        2.5,
+        3.5,
+        4.75
+      ]
+    },
+    "sampled_layer_result": "All six native source/layer/composite sample strips inspected: main cab/trailer preserved, no visible city fragments. Soft-shadow and tiny silhouette-edge limitations retained; not independent pixel ground truth."
+  },
+  "assembly": "No20second loop assembled: original2, retry2, andlocalcrop2 each fail motion/camera gate. Validated extracted3/4 preserved. Final4to1 translation-only seam candidate undergoing independent visual review.",
+  "segment2_retry": {
+    "verdict": "rejected",
+    "video": "segment-2-retry.mp4",
+    "failure": "Overshoots central junction to west while heading left. Between native49 at2s and61 at2.5s cab changes from left end to right end of horizontal trailer without a physical turn; drives back right before turning down at3.5s. Invalid forward one-corner identity/motion.",
+    "evidence": [
+      "segment-2-retry-inspect-048.png",
+      "segment-2-retry-inspect-060.png",
+      "segment-2-retry-inspect-072.png",
+      "segment-2-retry-quarter-contact.jpg"
+    ]
+  },
+  "available_seams": [
+    {
+      "join": "3 to 4",
+      "last_kept_native_frame": 120,
+      "next_native_frame": 1,
+      "body_center_displacement_pixels": 0.4187884994476324,
+      "binary_alpha_iou": 0.9451559020044543,
+      "status": "Measured only; visually inspect before accepting."
+    },
+    {
+      "join": "4 to 1",
+      "last_kept_native_frame": 120,
+      "next_native_frame": 1,
+      "body_center_displacement_pixels": 6.734139655067631,
+      "binary_alpha_iou": 0.8091736694677871,
+      "status": "Measured only; visually inspect before accepting."
+    }
+  ],
+  "segment2_crop": {
+    "verdict": "rejected",
+    "video": "segment-2-crop.mp4",
+    "failure": "Cab/rig exits the left camera crop into white padding by1.5s. At2s it reappears heading right with trailer still clipped outside camera, then turns down. Missing rig pixels cannot be extracted; invalid forward one-corner route.",
+    "evidence": [
+      "segment-2-crop-inspect-036.png",
+      "segment-2-crop-inspect-048.png",
+      "segment-2-crop-quarter-contact.jpg"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "source": "source-v3-clean.png",
+  "viewport_source_xyxy": [
+    795.6607161412026,
+    9.252056359842499,
+    1440,
+    984.0218729561262
+  ],
+  "all_source_targets": {
+    "receiving": [
+      456.5100860595703,
+      413.32441568374634
+    ],
+    "keeper": [
+      1028.0291748046875,
+      659.4267785549164
+    ],
+    "wms": [
+      948.7626457214355,
+      725.501537322998
+    ],
+    "alphabet": [
+      816.3334465026855,
+      452.7631998062134
+    ]
+  },
+  "policy": "Same source plane, rightmost horizontal pan. Keeper/WMS remain in raster; no new scene or camera."
+}

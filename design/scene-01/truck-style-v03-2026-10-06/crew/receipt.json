@@ -1,0 +1,53 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/truck-native-quality-2026-10-05/image-to-3d/green-tractor-detailed.blend",
+  "crew_asset": "crew.blend",
+  "objects": 121,
+  "volumetric_humans": true,
+  "head_centers": {
+    "driver": [
+      -0.775,
+      -0.2,
+      0.145
+    ],
+    "passenger": [
+      -0.775,
+      0.2,
+      0.145
+    ]
+  },
+  "hips": {
+    "driver": [
+      -0.53,
+      -0.2,
+      -0.235
+    ],
+    "passenger": [
+      -0.53,
+      0.2,
+      -0.235
+    ]
+  },
+  "wheel_center": [
+    -0.7900000214576721,
+    -0.20000000298023224,
+    -0.03500000014901161
+  ],
+  "wheel_radius": 0.077,
+  "wheel_normal": [
+    -0.952424168586731,
+    0.0,
+    0.3047757148742676
+  ],
+  "windshield_faces_removed_in_preview": 202,
+  "render_engine": "CYCLES",
+  "samples": 24,
+  "resolution": [
+    1000,
+    720
+  ],
+  "limitations": [
+    "stylized geometric faces do not replicate approved face identity exactly",
+    "cab preview front windshield removed only in new copy",
+    "roof can occlude crew at steep aerial angles"
+  ]
+}

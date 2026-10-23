@@ -1,0 +1,89 @@
+[
+  {
+    "view": "desktop",
+    "recipient": "alva",
+    "parcel": "socks",
+    "profile": "student",
+    "type": "empathy",
+    "carrier": "old",
+    "answers": {
+      "compact": "place-1",
+      "inventory": "alphabet",
+      "crane": "petr",
+      "lastmile": "rover"
+    },
+    "images": [
+      {
+        "src": "https://energy-plus-quest.hypcat.net/brand/energy-plus-logo.svg",
+        "loaded": true
+      },
+      {
+        "src": "https://energy-plus-quest.hypcat.net/brand/gpn-snabzhenie.svg",
+        "loaded": true
+      },
+      {
+        "src": "https://energy-plus-quest.hypcat.net/scene-art/certificates-v1/student-empathy.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "view": "mobile",
+    "recipient": "alva",
+    "parcel": "socks",
+    "profile": "student",
+    "type": "empathy",
+    "carrier": "old",
+    "answers": {
+      "compact": "place-1",
+      "inventory": "alphabet",
+      "crane": "petr",
+      "lastmile": "rover"
+    },
+    "images": [
+      {
+        "src": "https://energy-plus-quest.hypcat.net/brand/energy-plus-logo.svg",
+        "loaded": true
+      },
+      {
+        "src": "https://energy-plus-quest.hypcat.net/brand/gpn-snabzhenie.svg",
+        "loaded": true
+      },
+      {
+        "src": "https://energy-plus-quest.hypcat.net/scene-art/certificates-v1/student-empathy.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "view": "small",
+    "recipient": "alva",
+    "parcel": "socks",
+    "profile": "student",
+    "type": "empathy",
+    "carrier": "old",
+    "answers": {
+      "compact": "place-1",
+      "inventory": "alphabet",
+      "crane": "petr",
+      "lastmile": "rover"
+    },
+    "images": [
+      {
+        "src": "https://energy-plus-quest.hypcat.net/brand/energy-plus-logo.svg",
+        "loaded": true
+      },
+      {
+        "src": "https://energy-plus-quest.hypcat.net/brand/gpn-snabzhenie.svg",
+        "loaded": true
+      },
+      {
+        "src": "https://energy-plus-quest.hypcat.net/scene-art/certificates-v1/student-empathy.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  }
+]

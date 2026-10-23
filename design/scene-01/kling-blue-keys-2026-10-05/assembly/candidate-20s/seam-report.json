@@ -1,0 +1,311 @@
+{
+  "fps": 24,
+  "frames": 480,
+  "duration_seconds": 20,
+  "seams": [
+    {
+      "from": 0,
+      "to": 1,
+      "cab_step_px": 4.875087826080577,
+      "cab_vector_px": [
+        -0.8295171107924943,
+        -4.803996531524717
+      ],
+      "previous_step_px": 0.32662342265111705,
+      "segment_typical_step_median_px": 2.649223051182182,
+      "next_step_px": 6.05597453861803,
+      "alpha_iou": 0.7172523961661342
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "cab_step_px": 7.174091748929782,
+      "cab_vector_px": [
+        1.763179343097704,
+        -6.95404853492812
+      ],
+      "previous_step_px": 3.148121470346766,
+      "segment_typical_step_median_px": 3.1248905979039985,
+      "next_step_px": 3.0956489156231752,
+      "alpha_iou": 0.820785597381342
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "cab_step_px": 5.653271067389296,
+      "cab_vector_px": [
+        -5.486266295971689,
+        1.3639486394531133
+      ],
+      "previous_step_px": 3.7940204071788157,
+      "segment_typical_step_median_px": 3.139175613748574,
+      "next_step_px": 0.2706501011604821,
+      "alpha_iou": 0.6620790629575403
+    },
+    {
+      "from": 3,
+      "to": 0,
+      "cab_step_px": 9.64933736426692,
+      "cab_vector_px": [
+        -0.9469741183978613,
+        9.602757499204188
+      ],
+      "previous_step_px": 2.180472006607548,
+      "segment_typical_step_median_px": 2.3984441584328624,
+      "next_step_px": 0.8772116318207531,
+      "alpha_iou": 0.8044084821428571
+    }
+  ],
+  "retiming": false,
+  "translation": false,
+  "crossfade": false,
+  "driver_count": "Exactly one and empty passenger seat remain uncertain at native scale",
+  "status": "REVIEW CANDIDATE: all four intended road corners pass21 quarter-second motion samples each. Main cab/trailer intact at updated six native alpha samples each; small pale/neutral city fringe remains2end/3start. All four raw seams have position/drawing changes; no seamless or exact-driver-count PASS.40s retiming withheld pending clean gate.",
+  "decoded_video": {
+    "frames": 480,
+    "fps": 24,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "duration_seconds": 20
+  },
+  "cab_center_alpha_failures": [
+    {
+      "frame": 170,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 171,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 172,
+      "alpha_at_cab_center": 114
+    },
+    {
+      "frame": 173,
+      "alpha_at_cab_center": 114
+    },
+    {
+      "frame": 174,
+      "alpha_at_cab_center": 109
+    },
+    {
+      "frame": 175,
+      "alpha_at_cab_center": 113
+    },
+    {
+      "frame": 176,
+      "alpha_at_cab_center": 108
+    },
+    {
+      "frame": 177,
+      "alpha_at_cab_center": 108
+    },
+    {
+      "frame": 178,
+      "alpha_at_cab_center": 89
+    },
+    {
+      "frame": 179,
+      "alpha_at_cab_center": 80
+    },
+    {
+      "frame": 180,
+      "alpha_at_cab_center": 100
+    },
+    {
+      "frame": 181,
+      "alpha_at_cab_center": 89
+    },
+    {
+      "frame": 182,
+      "alpha_at_cab_center": 80
+    },
+    {
+      "frame": 183,
+      "alpha_at_cab_center": 37
+    },
+    {
+      "frame": 184,
+      "alpha_at_cab_center": 34
+    },
+    {
+      "frame": 271,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 272,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 273,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 274,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 275,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 276,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 277,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 278,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 279,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 280,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 281,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 282,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 283,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 284,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 285,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 286,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 287,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 288,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 289,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 290,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 291,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 292,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 293,
+      "alpha_at_cab_center": 6
+    },
+    {
+      "frame": 294,
+      "alpha_at_cab_center": 0
+    },
+    {
+      "frame": 295,
+      "alpha_at_cab_center": 34
+    },
+    {
+      "frame": 296,
+      "alpha_at_cab_center": 34
+    },
+    {
+      "frame": 297,
+      "alpha_at_cab_center": 80
+    },
+    {
+      "frame": 298,
+      "alpha_at_cab_center": 80
+    },
+    {
+      "frame": 299,
+      "alpha_at_cab_center": 108
+    },
+    {
+      "frame": 300,
+      "alpha_at_cab_center": 80
+    },
+    {
+      "frame": 301,
+      "alpha_at_cab_center": 113
+    },
+    {
+      "frame": 302,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 303,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 304,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 305,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 306,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 307,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 308,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 309,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 310,
+      "alpha_at_cab_center": 115
+    },
+    {
+      "frame": 311,
+      "alpha_at_cab_center": 108
+    },
+    {
+      "frame": 312,
+      "alpha_at_cab_center": 108
+    },
+    {
+      "frame": 313,
+      "alpha_at_cab_center": 80
+    },
+    {
+      "frame": 314,
+      "alpha_at_cab_center": 80
+    }
+  ]
+}

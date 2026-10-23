@@ -1,0 +1,18 @@
+{
+  "two_volumetric_seated_actors": true,
+  "one_wheel": true,
+  "cab_transform_preserved": true,
+  "trajectory_changed": false,
+  "frames": 144,
+  "fps": 24,
+  "resolution": [
+    960,
+    800
+  ],
+  "limitations": [
+    "facial style remains simplified and requires visual approval",
+    "generated cab geometry has panel artifacts",
+    "wheels remain part of original static mesh",
+    "maneuver is not a complete city loop"
+  ]
+}

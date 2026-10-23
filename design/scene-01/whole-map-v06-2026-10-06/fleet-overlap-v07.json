@@ -1,0 +1,6 @@
+{
+  "frames": 1152,
+  "method": "Conservative convex ground footprints from visible mesh bounding boxes; SAT over tractor and trailer separately",
+  "truck_truck_overlap_candidates": [],
+  "limitations": "World geometry only; does not certify rendered illustrated-building registration, close-up style, or mirror clearance."
+}

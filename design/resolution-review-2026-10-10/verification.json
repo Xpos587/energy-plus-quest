@@ -1,0 +1,326 @@
+[
+  {
+    "view": "desktop",
+    "recipient": "alva",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-socks.webp",
+    "alt": "Майма прижимает подаренные носки к груди. Позади — чумы и её семья.",
+    "overflow": false
+  },
+  {
+    "view": "desktop",
+    "recipient": "alva",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-boat.webp",
+    "alt": "Майма плывёт на подаренной лодке. На берегу — чумы и её семья.",
+    "overflow": false
+  },
+  {
+    "view": "desktop",
+    "recipient": "alva",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-camera.webp",
+    "alt": "Фотооткрытка Маймы с семьёй, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "desktop",
+    "recipient": "khor",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-socks.webp",
+    "alt": "Хабт в подаренных носках на фоне тундры, реки и стада.",
+    "overflow": false
+  },
+  {
+    "view": "desktop",
+    "recipient": "khor",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-boat.webp",
+    "alt": "Хабт плывёт на подаренной лодке, другие олени стоят на берегу.",
+    "overflow": false
+  },
+  {
+    "view": "desktop",
+    "recipient": "khor",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-camera.webp",
+    "alt": "Фотооткрытка Хабта на фоне тундры и стада, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "desktop",
+    "recipient": "arseniy",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-socks.webp",
+    "alt": "Арсений держит подаренные носки. Позади — общежитие и коллеги.",
+    "overflow": false
+  },
+  {
+    "view": "desktop",
+    "recipient": "arseniy",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-boat.webp",
+    "alt": "Арсений плывёт на подаренной лодке рядом с общежитием.",
+    "overflow": false
+  },
+  {
+    "view": "desktop",
+    "recipient": "arseniy",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-camera.webp",
+    "alt": "Фотооткрытка Арсения с коллегами у общежития, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "alva",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-socks.webp",
+    "alt": "Майма прижимает подаренные носки к груди. Позади — чумы и её семья.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "alva",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-boat.webp",
+    "alt": "Майма плывёт на подаренной лодке. На берегу — чумы и её семья.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "alva",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-camera.webp",
+    "alt": "Фотооткрытка Маймы с семьёй, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "khor",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-socks.webp",
+    "alt": "Хабт в подаренных носках на фоне тундры, реки и стада.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "khor",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-boat.webp",
+    "alt": "Хабт плывёт на подаренной лодке, другие олени стоят на берегу.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "khor",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-camera.webp",
+    "alt": "Фотооткрытка Хабта на фоне тундры и стада, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "arseniy",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-socks.webp",
+    "alt": "Арсений держит подаренные носки. Позади — общежитие и коллеги.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "arseniy",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-boat.webp",
+    "alt": "Арсений плывёт на подаренной лодке рядом с общежитием.",
+    "overflow": false
+  },
+  {
+    "view": "mobile",
+    "recipient": "arseniy",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-camera.webp",
+    "alt": "Фотооткрытка Арсения с коллегами у общежития, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "alva",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-socks.webp",
+    "alt": "Майма прижимает подаренные носки к груди. Позади — чумы и её семья.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "alva",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-boat.webp",
+    "alt": "Майма плывёт на подаренной лодке. На берегу — чумы и её семья.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "alva",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-camera.webp",
+    "alt": "Фотооткрытка Маймы с семьёй, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "khor",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-socks.webp",
+    "alt": "Хабт в подаренных носках на фоне тундры, реки и стада.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "khor",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-boat.webp",
+    "alt": "Хабт плывёт на подаренной лодке, другие олени стоят на берегу.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "khor",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-camera.webp",
+    "alt": "Фотооткрытка Хабта на фоне тундры и стада, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "arseniy",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-socks.webp",
+    "alt": "Арсений держит подаренные носки. Позади — общежитие и коллеги.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "arseniy",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-boat.webp",
+    "alt": "Арсений плывёт на подаренной лодке рядом с общежитием.",
+    "overflow": false
+  },
+  {
+    "view": "small",
+    "recipient": "arseniy",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-camera.webp",
+    "alt": "Фотооткрытка Арсения с коллегами у общежития, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "alva",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-socks.webp",
+    "alt": "Майма прижимает подаренные носки к груди. Позади — чумы и её семья.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "alva",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-boat.webp",
+    "alt": "Майма плывёт на подаренной лодке. На берегу — чумы и её семья.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "alva",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/alva-camera.webp",
+    "alt": "Фотооткрытка Маймы с семьёй, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "khor",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-socks.webp",
+    "alt": "Хабт в подаренных носках на фоне тундры, реки и стада.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "khor",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-boat.webp",
+    "alt": "Хабт плывёт на подаренной лодке, другие олени стоят на берегу.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "khor",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/khor-camera.webp",
+    "alt": "Фотооткрытка Хабта на фоне тундры и стада, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "arseniy",
+    "parcel": "socks",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-socks.webp",
+    "alt": "Арсений держит подаренные носки. Позади — общежитие и коллеги.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "arseniy",
+    "parcel": "boat",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-boat.webp",
+    "alt": "Арсений плывёт на подаренной лодке рядом с общежитием.",
+    "overflow": false
+  },
+  {
+    "view": "tablet",
+    "recipient": "arseniy",
+    "parcel": "camera",
+    "loaded": true,
+    "src": "http://127.0.0.1:4173/scene-art/resolution-v1/arseniy-camera.webp",
+    "alt": "Фотооткрытка Арсения с коллегами у общежития, снятая на доставленный фотоаппарат.",
+    "overflow": false
+  }
+]

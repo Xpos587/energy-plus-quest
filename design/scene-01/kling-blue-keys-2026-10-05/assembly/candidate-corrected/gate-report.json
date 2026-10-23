@@ -1,0 +1,4453 @@
+{
+  "raw_seams": [
+    {
+      "from": 0,
+      "to": 1,
+      "cab_step_px": 0.9633152086260445
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "cab_step_px": 7.174091748929782
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "cab_step_px": 5.653271067389296
+    },
+    {
+      "from": 3,
+      "to": 0,
+      "cab_step_px": 9.64933736426692
+    }
+  ],
+  "corrected_seams": [
+    {
+      "from": 0,
+      "to": 1,
+      "cab_step_px": 0.9633152086260445,
+      "previous_step_px": 0.32662342265111705,
+      "next_step_px": 1.9281222984833826,
+      "segment_typical_median_step_px": 2.649223051182182,
+      "alpha_iou": 0.7179188054129725
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "cab_step_px": 2.387778101232019,
+      "previous_step_px": 3.148121470346766,
+      "next_step_px": 3.120509183817372,
+      "segment_typical_median_step_px": 3.1118615704657833,
+      "alpha_iou": 0.8659885006634233
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "cab_step_px": 2.551739885753463,
+      "previous_step_px": 3.7940204071788157,
+      "next_step_px": 0.2864830545758866,
+      "segment_typical_median_step_px": 3.2481505678523273,
+      "alpha_iou": 0.8132982719759579
+    },
+    {
+      "from": 3,
+      "to": 0,
+      "cab_step_px": 2.3981617560753925,
+      "previous_step_px": 1.8005646219537184,
+      "next_step_px": 0.8772116318207531,
+      "segment_typical_median_step_px": 2.476545119235184,
+      "alpha_iou": 0.9170471841704718
+    }
+  ],
+  "ramp_frames": 24,
+  "start_translations": {
+    "2": [
+      -1.8569113802695938,
+      4.568110864759262
+    ],
+    "3": [
+      2.935905785974171,
+      -1.4478397211620688
+    ]
+  },
+  "last_segment_end_translation": [
+    -0.7798802959464979,
+    7.210424022700295
+  ],
+  "max_translation_norm_px": 7.8929692058888055,
+  "corrected_end_cab_center_road_clearance_px": 56.0,
+  "whole_loop_cab_center_road_min_px": 2.0,
+  "cab_opacity_failures": [],
+  "scale": 1,
+  "rotation": 0,
+  "deformation": false,
+  "crossfade": false,
+  "slow_factor": 2.275,
+  "slow_frames": 1092,
+  "slow_duration_seconds": 45.5,
+  "road_metric": "Cab image-center distance to blue asphalt mask after21px closing fills white lane/crosswalks; not world wheel clearance.",
+  "status": "CONDITIONAL visual candidate: sampled route/body intact; residual neutral matte fringe and source pose seams visible at4x; driver count uncertain",
+  "translation_rows": [
+    {
+      "frame": 0,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 56.0
+    },
+    {
+      "frame": 1,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 56.0
+    },
+    {
+      "frame": 2,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 57.0
+    },
+    {
+      "frame": 3,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 56.0
+    },
+    {
+      "frame": 4,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 57.03507614135742
+    },
+    {
+      "frame": 5,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 57.314918518066406
+    },
+    {
+      "frame": 6,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 57.55866622924805
+    },
+    {
+      "frame": 7,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 58.24946594238281
+    },
+    {
+      "frame": 8,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 58.94064712524414
+    },
+    {
+      "frame": 9,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 61.032779693603516
+    },
+    {
+      "frame": 10,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 61.6846809387207
+    },
+    {
+      "frame": 11,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 63.15853500366211
+    },
+    {
+      "frame": 12,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 65.30696868896484
+    },
+    {
+      "frame": 13,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 66.64083099365234
+    },
+    {
+      "frame": 14,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 67.5351791381836
+    },
+    {
+      "frame": 15,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 68.88395690917969
+    },
+    {
+      "frame": 16,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 70.03570556640625
+    },
+    {
+      "frame": 17,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 68.01470184326172
+    },
+    {
+      "frame": 18,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 66.06814575195312
+    },
+    {
+      "frame": 19,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 64.20280456542969
+    },
+    {
+      "frame": 20,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 62.42595672607422
+    },
+    {
+      "frame": 21,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 61.29437255859375
+    },
+    {
+      "frame": 22,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 59.682491302490234
+    },
+    {
+      "frame": 23,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 59.53989791870117
+    },
+    {
+      "frame": 24,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 57.697486877441406
+    },
+    {
+      "frame": 25,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 56.85947799682617
+    },
+    {
+      "frame": 26,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 55.71355056762695
+    },
+    {
+      "frame": 27,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 54.4058837890625
+    },
+    {
+      "frame": 28,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 53.85165023803711
+    },
+    {
+      "frame": 29,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 54.120235443115234
+    },
+    {
+      "frame": 30,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 53.60037612915039
+    },
+    {
+      "frame": 31,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.95280838012695
+    },
+    {
+      "frame": 32,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.46903991699219
+    },
+    {
+      "frame": 33,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.153621673583984
+    },
+    {
+      "frame": 34,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.038448333740234
+    },
+    {
+      "frame": 35,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.95280838012695
+    },
+    {
+      "frame": 36,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.46903991699219
+    },
+    {
+      "frame": 37,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.239830017089844
+    },
+    {
+      "frame": 38,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.038448333740234
+    },
+    {
+      "frame": 39,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.0
+    },
+    {
+      "frame": 40,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 51.62363815307617
+    },
+    {
+      "frame": 41,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 51.35173034667969
+    },
+    {
+      "frame": 42,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 51.088157653808594
+    },
+    {
+      "frame": 43,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.990196228027344
+    },
+    {
+      "frame": 44,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.635955810546875
+    },
+    {
+      "frame": 45,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.35871505737305
+    },
+    {
+      "frame": 46,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 51.156620025634766
+    },
+    {
+      "frame": 47,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.03998565673828
+    },
+    {
+      "frame": 48,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.80354309082031
+    },
+    {
+      "frame": 49,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.48762512207031
+    },
+    {
+      "frame": 50,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.24937438964844
+    },
+    {
+      "frame": 51,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.08992004394531
+    },
+    {
+      "frame": 52,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 53,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 54,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 55,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 56,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 57,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 58,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 59,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 60,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 49.0
+    },
+    {
+      "frame": 61,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 49.0
+    },
+    {
+      "frame": 62,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 49.0
+    },
+    {
+      "frame": 63,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 48.0
+    },
+    {
+      "frame": 64,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 47.0
+    },
+    {
+      "frame": 65,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 46.0
+    },
+    {
+      "frame": 66,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 46.04345703125
+    },
+    {
+      "frame": 67,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 45.27692794799805
+    },
+    {
+      "frame": 68,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 43.5660400390625
+    },
+    {
+      "frame": 69,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 42.95346450805664
+    },
+    {
+      "frame": 70,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 41.48493957519531
+    },
+    {
+      "frame": 71,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 41.1096076965332
+    },
+    {
+      "frame": 72,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 39.924930572509766
+    },
+    {
+      "frame": 73,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 38.910152435302734
+    },
+    {
+      "frame": 74,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 38.013153076171875
+    },
+    {
+      "frame": 75,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 37.121421813964844
+    },
+    {
+      "frame": 76,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 35.35533905029297
+    },
+    {
+      "frame": 77,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 34.13209533691406
+    },
+    {
+      "frame": 78,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 32.75667953491211
+    },
+    {
+      "frame": 79,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 32.202484130859375
+    },
+    {
+      "frame": 80,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 30.479501724243164
+    },
+    {
+      "frame": 81,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 29.698484420776367
+    },
+    {
+      "frame": 82,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.284273147583008
+    },
+    {
+      "frame": 83,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.58622932434082
+    },
+    {
+      "frame": 84,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.87005615234375
+    },
+    {
+      "frame": 85,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.4007568359375
+    },
+    {
+      "frame": 86,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.553863525390625
+    },
+    {
+      "frame": 87,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.05992889404297
+    },
+    {
+      "frame": 88,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.59674644470215
+    },
+    {
+      "frame": 89,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.166091918945312
+    },
+    {
+      "frame": 90,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.041629791259766
+    },
+    {
+      "frame": 91,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.1867733001709
+    },
+    {
+      "frame": 92,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 93,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 94,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 95,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.0
+    },
+    {
+      "frame": 96,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.0
+    },
+    {
+      "frame": 97,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.0
+    },
+    {
+      "frame": 98,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.0
+    },
+    {
+      "frame": 99,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.0
+    },
+    {
+      "frame": 100,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.0
+    },
+    {
+      "frame": 101,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.0
+    },
+    {
+      "frame": 102,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 103,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 104,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.179357528686523
+    },
+    {
+      "frame": 105,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.495098114013672
+    },
+    {
+      "frame": 106,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 107,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 108,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 109,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 110,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 111,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 112,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 113,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 114,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 115,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.020824432373047
+    },
+    {
+      "frame": 116,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.020824432373047
+    },
+    {
+      "frame": 117,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.08319091796875
+    },
+    {
+      "frame": 118,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.08319091796875
+    },
+    {
+      "frame": 119,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.08319091796875
+    },
+    {
+      "frame": 120,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.1867733001709
+    },
+    {
+      "frame": 121,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.515302658081055
+    },
+    {
+      "frame": 122,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.317977905273438
+    },
+    {
+      "frame": 123,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 124,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.298221588134766
+    },
+    {
+      "frame": 125,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.1867733001709
+    },
+    {
+      "frame": 126,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 127,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 128,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 129,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 130,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 131,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.317977905273438
+    },
+    {
+      "frame": 132,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.179357528686523
+    },
+    {
+      "frame": 133,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 134,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.0
+    },
+    {
+      "frame": 135,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.0
+    },
+    {
+      "frame": 136,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.0
+    },
+    {
+      "frame": 137,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 20.0
+    },
+    {
+      "frame": 138,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 19.026296615600586
+    },
+    {
+      "frame": 139,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 18.681541442871094
+    },
+    {
+      "frame": 140,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 18.788293838500977
+    },
+    {
+      "frame": 141,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 18.788293838500977
+    },
+    {
+      "frame": 142,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 19.235383987426758
+    },
+    {
+      "frame": 143,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 19.416486740112305
+    },
+    {
+      "frame": 144,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 20.808652877807617
+    },
+    {
+      "frame": 145,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.21320343017578
+    },
+    {
+      "frame": 146,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.931711196899414
+    },
+    {
+      "frame": 147,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.34523582458496
+    },
+    {
+      "frame": 148,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.75883674621582
+    },
+    {
+      "frame": 149,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.806976318359375
+    },
+    {
+      "frame": 150,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.20294189453125
+    },
+    {
+      "frame": 151,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.65309715270996
+    },
+    {
+      "frame": 152,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 30.41381072998047
+    },
+    {
+      "frame": 153,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 31.304950714111328
+    },
+    {
+      "frame": 154,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 32.893768310546875
+    },
+    {
+      "frame": 155,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 34.481876373291016
+    },
+    {
+      "frame": 156,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 35.44009017944336
+    },
+    {
+      "frame": 157,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 38.07886505126953
+    },
+    {
+      "frame": 158,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 39.458839416503906
+    },
+    {
+      "frame": 159,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 41.0
+    },
+    {
+      "frame": 160,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 40.31128692626953
+    },
+    {
+      "frame": 161,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 37.121421813964844
+    },
+    {
+      "frame": 162,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 34.438350677490234
+    },
+    {
+      "frame": 163,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 32.31098937988281
+    },
+    {
+      "frame": 164,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 30.364452362060547
+    },
+    {
+      "frame": 165,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.635643005371094
+    },
+    {
+      "frame": 166,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.17250633239746
+    },
+    {
+      "frame": 167,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.01999282836914
+    },
+    {
+      "frame": 168,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 169,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.0
+    },
+    {
+      "frame": 170,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.0
+    },
+    {
+      "frame": 171,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.0
+    },
+    {
+      "frame": 172,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.0
+    },
+    {
+      "frame": 173,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.0
+    },
+    {
+      "frame": 174,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.0
+    },
+    {
+      "frame": 175,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 20.02498435974121
+    },
+    {
+      "frame": 176,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 20.39607810974121
+    },
+    {
+      "frame": 177,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 19.92485809326172
+    },
+    {
+      "frame": 178,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.02379608154297
+    },
+    {
+      "frame": 179,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.472204208374023
+    },
+    {
+      "frame": 180,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.600847244262695
+    },
+    {
+      "frame": 181,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.495098114013672
+    },
+    {
+      "frame": 182,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.58622932434082
+    },
+    {
+      "frame": 183,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 29.832868576049805
+    },
+    {
+      "frame": 184,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 31.016122817993164
+    },
+    {
+      "frame": 185,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 31.780498504638672
+    },
+    {
+      "frame": 186,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 33.5261116027832
+    },
+    {
+      "frame": 187,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 33.61547088623047
+    },
+    {
+      "frame": 188,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 35.34119415283203
+    },
+    {
+      "frame": 189,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 36.40054702758789
+    },
+    {
+      "frame": 190,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 37.57658767700195
+    },
+    {
+      "frame": 191,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 38.470767974853516
+    },
+    {
+      "frame": 192,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 39.96248245239258
+    },
+    {
+      "frame": 193,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 42.20189666748047
+    },
+    {
+      "frame": 194,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 43.416587829589844
+    },
+    {
+      "frame": 195,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 44.68780517578125
+    },
+    {
+      "frame": 196,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 46.69047164916992
+    },
+    {
+      "frame": 197,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 48.795494079589844
+    },
+    {
+      "frame": 198,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.24937438964844
+    },
+    {
+      "frame": 199,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 51.62363815307617
+    },
+    {
+      "frame": 200,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 53.25410842895508
+    },
+    {
+      "frame": 201,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 54.4058837890625
+    },
+    {
+      "frame": 202,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 54.64430236816406
+    },
+    {
+      "frame": 203,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 51.61395263671875
+    },
+    {
+      "frame": 204,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0
+    },
+    {
+      "frame": 205,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 47.6340217590332
+    },
+    {
+      "frame": 206,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 45.343135833740234
+    },
+    {
+      "frame": 207,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 43.185646057128906
+    },
+    {
+      "frame": 208,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 41.72529220581055
+    },
+    {
+      "frame": 209,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 38.20994567871094
+    },
+    {
+      "frame": 210,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 36.878177642822266
+    },
+    {
+      "frame": 211,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 35.0
+    },
+    {
+      "frame": 212,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 33.2866325378418
+    },
+    {
+      "frame": 213,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 30.886890411376953
+    },
+    {
+      "frame": 214,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 29.15475845336914
+    },
+    {
+      "frame": 215,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.513633728027344
+    },
+    {
+      "frame": 216,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.476404190063477
+    },
+    {
+      "frame": 217,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.17250633239746
+    },
+    {
+      "frame": 218,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 219,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 220,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 221,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 222,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 223,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 224,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 225,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.0
+    },
+    {
+      "frame": 226,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.0
+    },
+    {
+      "frame": 227,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.0867919921875
+    },
+    {
+      "frame": 228,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.360681533813477
+    },
+    {
+      "frame": 229,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.0
+    },
+    {
+      "frame": 230,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.022714614868164
+    },
+    {
+      "frame": 231,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.360681533813477
+    },
+    {
+      "frame": 232,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.022714614868164
+    },
+    {
+      "frame": 233,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.56102752685547
+    },
+    {
+      "frame": 234,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.409399032592773
+    },
+    {
+      "frame": 235,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.25940704345703
+    },
+    {
+      "frame": 236,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.698177337646484
+    },
+    {
+      "frame": 237,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.4007568359375
+    },
+    {
+      "frame": 238,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.284273147583008
+    },
+    {
+      "frame": 239,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 30.479501724243164
+    },
+    {
+      "frame": 240,
+      "translation_px": [
+        -1.8569113802695938,
+        4.568110864759262
+      ],
+      "translation_norm_px": 4.931100967016022,
+      "cab_center_road_clearance_px": 32.80244064331055
+    },
+    {
+      "frame": 241,
+      "translation_px": [
+        -1.846685929256356,
+        4.542955655756313
+      ],
+      "translation_norm_px": 4.903946880980838,
+      "cab_center_road_clearance_px": 35.22782897949219
+    },
+    {
+      "frame": 242,
+      "translation_px": [
+        -1.8172305255913581,
+        4.4704936357925975
+      ],
+      "translation_norm_px": 4.825726901804863,
+      "cab_center_road_clearance_px": 38.27531814575195
+    },
+    {
+      "frame": 243,
+      "translation_px": [
+        -1.770376593336672,
+        4.355230215435805
+      ],
+      "translation_norm_px": 4.701304447882456,
+      "cab_center_road_clearance_px": 39.96248245239258
+    },
+    {
+      "frame": 244,
+      "translation_px": [
+        -1.7079555565543703,
+        4.201670805253629
+      ],
+      "translation_norm_px": 4.535542937607981,
+      "cab_center_road_clearance_px": 41.03657150268555
+    },
+    {
+      "frame": 245,
+      "translation_px": [
+        -1.6317988393065255,
+        4.014320815813761
+      ],
+      "translation_norm_px": 4.333305789375795,
+      "cab_center_road_clearance_px": 39.59798049926758
+    },
+    {
+      "frame": 246,
+      "translation_px": [
+        -1.54373786565521,
+        3.797685657683894
+      ],
+      "translation_norm_px": 4.099456421580263,
+      "cab_center_road_clearance_px": 37.53664779663086
+    },
+    {
+      "frame": 247,
+      "translation_px": [
+        -1.4456040596624962,
+        3.5562707414317196
+      ],
+      "translation_norm_px": 3.838858252615744,
+      "cab_center_road_clearance_px": 35.608985900878906
+    },
+    {
+      "frame": 248,
+      "translation_px": [
+        -1.3392288453904568,
+        3.2945814776249307
+      ],
+      "translation_norm_px": 3.5563747008766002,
+      "cab_center_road_clearance_px": 33.83784866333008
+    },
+    {
+      "frame": 249,
+      "translation_px": [
+        -1.2264436469011633,
+        3.017123276831218
+      ],
+      "translation_norm_px": 3.2568691847571913,
+      "cab_center_road_clearance_px": 30.886890411376953
+    },
+    {
+      "frame": 250,
+      "translation_px": [
+        -1.1090798882566892,
+        2.7284015496182756
+      ],
+      "translation_norm_px": 2.9452051226518803,
+      "cab_center_road_clearance_px": 29.96664810180664
+    },
+    {
+      "frame": 251,
+      "translation_px": [
+        -0.9889689935191062,
+        2.432921706553794
+      ],
+      "translation_norm_px": 2.626245932955027,
+      "cab_center_road_clearance_px": 28.792360305786133
+    },
+    {
+      "frame": 252,
+      "translation_px": [
+        -0.8679423867504875,
+        2.135189158205468
+      ],
+      "translation_norm_px": 2.3048550340609943,
+      "cab_center_road_clearance_px": 26.925825119018555
+    },
+    {
+      "frame": 253,
+      "translation_px": [
+        -0.7478314920129046,
+        1.8397093151409867
+      ],
+      "translation_norm_px": 1.985895844364141,
+      "cab_center_road_clearance_px": 26.17250633239746
+    },
+    {
+      "frame": 254,
+      "translation_px": [
+        -0.6304677333684301,
+        1.5509875879280435
+      ],
+      "translation_norm_px": 1.6742317822588293,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 255,
+      "translation_px": [
+        -0.5176825348791373,
+        1.2735293871343323
+      ],
+      "translation_norm_px": 1.3747262661394222,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 256,
+      "translation_px": [
+        -0.41130732060709757,
+        1.011840123327543
+      ],
+      "translation_norm_px": 1.092242714400278,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 257,
+      "translation_px": [
+        -0.3131735146143835,
+        0.7704252070753678
+      ],
+      "translation_norm_px": 0.8316445454357582,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 258,
+      "translation_px": [
+        -0.22511254096306807,
+        0.5537900489455008
+      ],
+      "translation_norm_px": 0.5977951776402258,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 259,
+      "translation_px": [
+        -0.14895582371522384,
+        0.36644005950563424
+      ],
+      "translation_norm_px": 0.39555802940804224,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 260,
+      "translation_px": [
+        -0.08653478693292213,
+        0.21288064932345782
+      ],
+      "translation_norm_px": 0.22979651913356577,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 261,
+      "translation_px": [
+        -0.03968085467823554,
+        0.09761722896666408
+      ],
+      "translation_norm_px": 0.10537406521115796,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 262,
+      "translation_px": [
+        -0.010225451013237234,
+        0.025155209002947102
+      ],
+      "translation_norm_px": 0.027154086035181987,
+      "cab_center_road_clearance_px": 24.0
+    },
+    {
+      "frame": 263,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.020824432373047
+    },
+    {
+      "frame": 264,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.1867733001709
+    },
+    {
+      "frame": 265,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 266,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 267,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 268,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.179357528686523
+    },
+    {
+      "frame": 269,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.709918975830078
+    },
+    {
+      "frame": 270,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 271,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 272,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.179357528686523
+    },
+    {
+      "frame": 273,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.495098114013672
+    },
+    {
+      "frame": 274,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.961509704589844
+    },
+    {
+      "frame": 275,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 276,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.0
+    },
+    {
+      "frame": 277,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.07987403869629
+    },
+    {
+      "frame": 278,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.709918975830078
+    },
+    {
+      "frame": 279,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.019224166870117
+    },
+    {
+      "frame": 280,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.305892944335938
+    },
+    {
+      "frame": 281,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.925825119018555
+    },
+    {
+      "frame": 282,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.0
+    },
+    {
+      "frame": 283,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.073972702026367
+    },
+    {
+      "frame": 284,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.294687271118164
+    },
+    {
+      "frame": 285,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.892650604248047
+    },
+    {
+      "frame": 286,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.0
+    },
+    {
+      "frame": 287,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.07133674621582
+    },
+    {
+      "frame": 288,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.44292449951172
+    },
+    {
+      "frame": 289,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 29.832868576049805
+    },
+    {
+      "frame": 290,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 31.016122817993164
+    },
+    {
+      "frame": 291,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 33.13608169555664
+    },
+    {
+      "frame": 292,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 34.36568069458008
+    },
+    {
+      "frame": 293,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 35.693138122558594
+    },
+    {
+      "frame": 294,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 37.0
+    },
+    {
+      "frame": 295,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 38.013153076171875
+    },
+    {
+      "frame": 296,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 39.11521530151367
+    },
+    {
+      "frame": 297,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 40.31128692626953
+    },
+    {
+      "frame": 298,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 41.59326934814453
+    },
+    {
+      "frame": 299,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 42.7551155090332
+    },
+    {
+      "frame": 300,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 45.0111083984375
+    },
+    {
+      "frame": 301,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 46.097721099853516
+    },
+    {
+      "frame": 302,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 48.08325958251953
+    },
+    {
+      "frame": 303,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 45.25483322143555
+    },
+    {
+      "frame": 304,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 43.84062194824219
+    },
+    {
+      "frame": 305,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 41.01219177246094
+    },
+    {
+      "frame": 306,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 38.897300720214844
+    },
+    {
+      "frame": 307,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 35.35533905029297
+    },
+    {
+      "frame": 308,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 33.241539001464844
+    },
+    {
+      "frame": 309,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 31.14482307434082
+    },
+    {
+      "frame": 310,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.425338745117188
+    },
+    {
+      "frame": 311,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.806976318359375
+    },
+    {
+      "frame": 312,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.323806762695312
+    },
+    {
+      "frame": 313,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 20.808652877807617
+    },
+    {
+      "frame": 314,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 18.357559204101562
+    },
+    {
+      "frame": 315,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 16.124515533447266
+    },
+    {
+      "frame": 316,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 14.764823913574219
+    },
+    {
+      "frame": 317,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 12.529964447021484
+    },
+    {
+      "frame": 318,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 10.770329475402832
+    },
+    {
+      "frame": 319,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 8.5440034866333
+    },
+    {
+      "frame": 320,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 8.0
+    },
+    {
+      "frame": 321,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 8.0
+    },
+    {
+      "frame": 322,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 8.0
+    },
+    {
+      "frame": 323,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 7.0
+    },
+    {
+      "frame": 324,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 7.0
+    },
+    {
+      "frame": 325,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 6.0
+    },
+    {
+      "frame": 326,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 6.0
+    },
+    {
+      "frame": 327,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 5.0
+    },
+    {
+      "frame": 328,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 5.0
+    },
+    {
+      "frame": 329,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 5.0
+    },
+    {
+      "frame": 330,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 4.0
+    },
+    {
+      "frame": 331,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 5.0
+    },
+    {
+      "frame": 332,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 4.0
+    },
+    {
+      "frame": 333,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 4.0
+    },
+    {
+      "frame": 334,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 335,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 4.0
+    },
+    {
+      "frame": 336,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 337,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 338,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 339,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 2.2360680103302
+    },
+    {
+      "frame": 340,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 341,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 342,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 2.0
+    },
+    {
+      "frame": 343,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 2.2360680103302
+    },
+    {
+      "frame": 344,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 345,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 346,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 347,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 3.0
+    },
+    {
+      "frame": 348,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 4.0
+    },
+    {
+      "frame": 349,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 4.0
+    },
+    {
+      "frame": 350,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 4.0
+    },
+    {
+      "frame": 351,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 4.0
+    },
+    {
+      "frame": 352,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 5.099019527435303
+    },
+    {
+      "frame": 353,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 6.0
+    },
+    {
+      "frame": 354,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 6.324555397033691
+    },
+    {
+      "frame": 355,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 7.280109405517578
+    },
+    {
+      "frame": 356,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 9.219544410705566
+    },
+    {
+      "frame": 357,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 10.770329475402832
+    },
+    {
+      "frame": 358,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 13.0
+    },
+    {
+      "frame": 359,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 15.652475357055664
+    },
+    {
+      "frame": 360,
+      "translation_px": [
+        2.935905785974171,
+        -1.4478397211620688
+      ],
+      "translation_norm_px": 3.2734970050835956,
+      "cab_center_road_clearance_px": 16.552946090698242
+    },
+    {
+      "frame": 361,
+      "translation_px": [
+        2.9197386381431305,
+        -1.4398669044185939
+      ],
+      "translation_norm_px": 3.2554708442106937,
+      "cab_center_road_clearance_px": 16.552946090698242
+    },
+    {
+      "frame": 362,
+      "translation_px": [
+        2.873167600361178,
+        -1.4169004323067933
+      ],
+      "translation_norm_px": 3.203544739009647,
+      "cab_center_road_clearance_px": 18.027755737304688
+    },
+    {
+      "frame": 363,
+      "translation_px": [
+        2.799088281195067,
+        -1.3803682720046024
+      ],
+      "translation_norm_px": 3.120947255606946,
+      "cab_center_road_clearance_px": 19.84943389892578
+    },
+    {
+      "frame": 364,
+      "translation_px": [
+        2.7003962892115516,
+        -1.3316983906899575
+      ],
+      "translation_norm_px": 3.0109069601290805,
+      "cab_center_road_clearance_px": 21.6333065032959
+    },
+    {
+      "frame": 365,
+      "translation_px": [
+        2.5799872329773845,
+        -1.272318755540794
+      ],
+      "translation_norm_px": 2.87665241870254,
+      "cab_center_road_clearance_px": 23.430747985839844
+    },
+    {
+      "frame": 366,
+      "translation_px": [
+        2.4407567210593193,
+        -1.2036573337350478
+      ],
+      "translation_norm_px": 2.7214121974538155,
+      "cab_center_road_clearance_px": 25.45584487915039
+    },
+    {
+      "frame": 367,
+      "translation_px": [
+        2.28560036202411,
+        -1.1271420924506548
+      ],
+      "translation_norm_px": 2.5484148625093956,
+      "cab_center_road_clearance_px": 27.58622932434082
+    },
+    {
+      "frame": 368,
+      "translation_px": [
+        2.1174137644385103,
+        -1.0442009988655507
+      ],
+      "translation_norm_px": 2.360888979995772,
+      "cab_center_road_clearance_px": 30.41381072998047
+    },
+    {
+      "frame": 369,
+      "translation_px": [
+        1.9390925368692724,
+        -0.9562620201576711
+      ],
+      "translation_norm_px": 2.1620631160394326,
+      "cab_center_road_clearance_px": 32.526912689208984
+    },
+    {
+      "frame": 370,
+      "translation_px": [
+        1.7535322878831512,
+        -0.8647531235049523
+      ],
+      "translation_norm_px": 1.9551658367668687,
+      "cab_center_road_clearance_px": 34.65544891357422
+    },
+    {
+      "frame": 371,
+      "translation_px": [
+        1.5636286260468995,
+        -0.7711022760853296
+      ],
+      "translation_norm_px": 1.7434257083045697,
+      "cab_center_road_clearance_px": 36.769554138183594
+    },
+    {
+      "frame": 372,
+      "translation_px": [
+        1.3722771599272716,
+        -0.6767374450767393
+      ],
+      "translation_norm_px": 1.5300712967790262,
+      "cab_center_road_clearance_px": 38.94868469238281
+    },
+    {
+      "frame": 373,
+      "translation_px": [
+        1.1823734980910199,
+        -0.5830865976571166
+      ],
+      "translation_norm_px": 1.3183311683167271,
+      "cab_center_road_clearance_px": 41.231056213378906
+    },
+    {
+      "frame": 374,
+      "translation_px": [
+        0.9968132491048982,
+        -0.4915777010043975
+      ],
+      "translation_norm_px": 1.111433889044163,
+      "cab_center_road_clearance_px": 43.416587829589844
+    },
+    {
+      "frame": 375,
+      "translation_px": [
+        0.8184920215356611,
+        -0.4036387222965183
+      ],
+      "translation_norm_px": 0.9126080250878243,
+      "cab_center_road_clearance_px": 45.803932189941406
+    },
+    {
+      "frame": 376,
+      "translation_px": [
+        0.650305423950061,
+        -0.32069762871141416
+      ],
+      "translation_norm_px": 0.7250821425742001,
+      "cab_center_road_clearance_px": 47.434165954589844
+    },
+    {
+      "frame": 377,
+      "translation_px": [
+        0.4951490649148513,
+        -0.2441823874270209
+      ],
+      "translation_norm_px": 0.5520848076297802,
+      "cab_center_road_clearance_px": 49.64876937866211
+    },
+    {
+      "frame": 378,
+      "translation_px": [
+        0.3559185529967864,
+        -0.17552096562127478
+      ],
+      "translation_norm_px": 0.3968445863810554,
+      "cab_center_road_clearance_px": 51.312767028808594
+    },
+    {
+      "frame": 379,
+      "translation_px": [
+        0.2355094967626201,
+        -0.1161413304721117
+      ],
+      "translation_norm_px": 0.26259004495451616,
+      "cab_center_road_clearance_px": 54.37830352783203
+    },
+    {
+      "frame": 380,
+      "translation_px": [
+        0.13681750477910423,
+        -0.0674714491574666
+      ],
+      "translation_norm_px": 0.15254974947665043,
+      "cab_center_road_clearance_px": 56.035701751708984
+    },
+    {
+      "frame": 381,
+      "translation_px": [
+        0.06273818561299255,
+        -0.03093928885527541
+      ],
+      "translation_norm_px": 0.06995226607394842,
+      "cab_center_road_clearance_px": 55.317264556884766
+    },
+    {
+      "frame": 382,
+      "translation_px": [
+        0.01616714783103978,
+        -0.007972816743474515
+      ],
+      "translation_norm_px": 0.018026160872901414,
+      "cab_center_road_clearance_px": 53.36665725708008
+    },
+    {
+      "frame": 383,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.172786712646484
+    },
+    {
+      "frame": 384,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 50.0099983215332
+    },
+    {
+      "frame": 385,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 48.05205535888672
+    },
+    {
+      "frame": 386,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 46.87216567993164
+    },
+    {
+      "frame": 387,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 44.72136306762695
+    },
+    {
+      "frame": 388,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 43.73785400390625
+    },
+    {
+      "frame": 389,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 41.59326934814453
+    },
+    {
+      "frame": 390,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 40.4474983215332
+    },
+    {
+      "frame": 391,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 39.31920623779297
+    },
+    {
+      "frame": 392,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 38.20994567871094
+    },
+    {
+      "frame": 393,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 36.124786376953125
+    },
+    {
+      "frame": 394,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 36.055511474609375
+    },
+    {
+      "frame": 395,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 35.0142822265625
+    },
+    {
+      "frame": 396,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 33.0
+    },
+    {
+      "frame": 397,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 33.0
+    },
+    {
+      "frame": 398,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 32.0
+    },
+    {
+      "frame": 399,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 31.0
+    },
+    {
+      "frame": 400,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 31.0
+    },
+    {
+      "frame": 401,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 31.0
+    },
+    {
+      "frame": 402,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 30.0
+    },
+    {
+      "frame": 403,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 29.0
+    },
+    {
+      "frame": 404,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 29.0
+    },
+    {
+      "frame": 405,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.0
+    },
+    {
+      "frame": 406,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.0
+    },
+    {
+      "frame": 407,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 26.17250633239746
+    },
+    {
+      "frame": 408,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 24.83948516845703
+    },
+    {
+      "frame": 409,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.600847244262695
+    },
+    {
+      "frame": 410,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 22.203603744506836
+    },
+    {
+      "frame": 411,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.095022201538086
+    },
+    {
+      "frame": 412,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 20.124610900878906
+    },
+    {
+      "frame": 413,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 19.313207626342773
+    },
+    {
+      "frame": 414,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 18.681541442871094
+    },
+    {
+      "frame": 415,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 17.11724281311035
+    },
+    {
+      "frame": 416,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 17.0
+    },
+    {
+      "frame": 417,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 17.0
+    },
+    {
+      "frame": 418,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 17.0
+    },
+    {
+      "frame": 419,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 17.0
+    },
+    {
+      "frame": 420,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 17.0
+    },
+    {
+      "frame": 421,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 16.0
+    },
+    {
+      "frame": 422,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 16.0
+    },
+    {
+      "frame": 423,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 16.0
+    },
+    {
+      "frame": 424,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 16.0
+    },
+    {
+      "frame": 425,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 16.0
+    },
+    {
+      "frame": 426,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 15.033295631408691
+    },
+    {
+      "frame": 427,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 16.278820037841797
+    },
+    {
+      "frame": 428,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 17.464248657226562
+    },
+    {
+      "frame": 429,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 18.867961883544922
+    },
+    {
+      "frame": 430,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 19.209373474121094
+    },
+    {
+      "frame": 431,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 21.260292053222656
+    },
+    {
+      "frame": 432,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 23.430747985839844
+    },
+    {
+      "frame": 433,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 25.0
+    },
+    {
+      "frame": 434,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.0
+    },
+    {
+      "frame": 435,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.0
+    },
+    {
+      "frame": 436,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.018512725830078
+    },
+    {
+      "frame": 437,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.166156768798828
+    },
+    {
+      "frame": 438,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 27.658632278442383
+    },
+    {
+      "frame": 439,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.16025733947754
+    },
+    {
+      "frame": 440,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 28.231189727783203
+    },
+    {
+      "frame": 441,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 29.529647827148438
+    },
+    {
+      "frame": 442,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 30.528675079345703
+    },
+    {
+      "frame": 443,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 32.202484130859375
+    },
+    {
+      "frame": 444,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 33.42155075073242
+    },
+    {
+      "frame": 445,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 35.38361358642578
+    },
+    {
+      "frame": 446,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 37.48332977294922
+    },
+    {
+      "frame": 447,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 39.69886779785156
+    },
+    {
+      "frame": 448,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 42.20189666748047
+    },
+    {
+      "frame": 449,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 43.82921600341797
+    },
+    {
+      "frame": 450,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 45.79301452636719
+    },
+    {
+      "frame": 451,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 49.73931884765625
+    },
+    {
+      "frame": 452,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 51.478153228759766
+    },
+    {
+      "frame": 453,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 52.773101806640625
+    },
+    {
+      "frame": 454,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 55.46169662475586
+    },
+    {
+      "frame": 455,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 57.48912811279297
+    },
+    {
+      "frame": 456,
+      "translation_px": [
+        0.0,
+        0.0
+      ],
+      "translation_norm_px": 0.0,
+      "cab_center_road_clearance_px": 57.07012939453125
+    },
+    {
+      "frame": 457,
+      "translation_px": [
+        0.0011883252286072673,
+        0.058149642943985023
+      ],
+      "translation_norm_px": 0.058161783770461266,
+      "cab_center_road_clearance_px": 56.568546295166016
+    },
+    {
+      "frame": 458,
+      "translation_px": [
+        0.004269195624214343,
+        0.22450414417852893
+      ],
+      "translation_norm_px": 0.22454473225754265,
+      "cab_center_road_clearance_px": 57.218875885009766
+    },
+    {
+      "frame": 459,
+      "translation_px": [
+        0.008516453251499134,
+        0.486921862307515
+      ],
+      "translation_norm_px": 0.4869963346566415,
+      "cab_center_road_clearance_px": 55.57877731323242
+    },
+    {
+      "frame": 460,
+      "translation_px": [
+        0.013203940175139567,
+        0.8332611559348264
+      ],
+      "translation_norm_px": 0.8333657648511797,
+      "cab_center_road_clearance_px": 56.22277069091797
+    },
+    {
+      "frame": 461,
+      "translation_px": [
+        0.017605498459813546,
+        1.2513803836643465
+      ],
+      "translation_norm_px": 1.2515042222046018,
+      "cab_center_road_clearance_px": 56.035701751708984
+    },
+    {
+      "frame": 462,
+      "translation_px": [
+        0.020994970170198995,
+        1.7291379040999584
+      ],
+      "translation_norm_px": 1.729265358517207,
+      "cab_center_road_clearance_px": 55.90169906616211
+    },
+    {
+      "frame": 463,
+      "translation_px": [
+        0.022646197370973786,
+        2.254392075845546
+      ],
+      "translation_norm_px": 2.2545058176661588,
+      "cab_center_road_clearance_px": 55.3263053894043
+    },
+    {
+      "frame": 464,
+      "translation_px": [
+        0.02183302212681587,
+        2.815001257504991
+      ],
+      "translation_norm_px": 2.8150859241966084,
+      "cab_center_road_clearance_px": 55.03635025024414
+    },
+    {
+      "frame": 465,
+      "translation_px": [
+        0.01782928650240323,
+        3.398823807682179
+      ],
+      "translation_norm_px": 3.398870571105109,
+      "cab_center_road_clearance_px": 55.73149871826172
+    },
+    {
+      "frame": 466,
+      "translation_px": [
+        0.009908832562413594,
+        3.9937180849809906
+      ],
+      "translation_norm_px": 3.9937303773874095,
+      "cab_center_road_clearance_px": 55.226806640625
+    },
+    {
+      "frame": 467,
+      "translation_px": [
+        -0.0026544976284751387,
+        4.587542448005312
+      ],
+      "translation_norm_px": 4.587543215993527,
+      "cab_center_road_clearance_px": 55.009090423583984
+    },
+    {
+      "frame": 468,
+      "translation_px": [
+        -0.020586862005584627,
+        5.168155255359022
+      ],
+      "translation_norm_px": 5.168196258113881,
+      "cab_center_road_clearance_px": 55.0
+    },
+    {
+      "frame": 469,
+      "translation_px": [
+        -0.04461441850423753,
+        5.723414865646009
+      ],
+      "translation_norm_px": 5.7235887492583,
+      "cab_center_road_clearance_px": 54.45181655883789
+    },
+    {
+      "frame": 470,
+      "translation_px": [
+        -0.07546332505975556,
+        6.241179637470154
+      ],
+      "translation_norm_px": 6.241635841716589,
+      "cab_center_road_clearance_px": 54.147945404052734
+    },
+    {
+      "frame": 471,
+      "translation_px": [
+        -0.11385973960746082,
+        6.709307929435338
+      ],
+      "translation_norm_px": 6.71027398339944,
+      "cab_center_road_clearance_px": 55.0
+    },
+    {
+      "frame": 472,
+      "translation_px": [
+        -0.16052982008267558,
+        7.115658100145449
+      ],
+      "translation_norm_px": 7.117468652639175,
+      "cab_center_road_clearance_px": 55.0
+    },
+    {
+      "frame": 473,
+      "translation_px": [
+        -0.21619972442072205,
+        7.448088508204366
+      ],
+      "translation_norm_px": 7.451225721106933,
+      "cab_center_road_clearance_px": 55.0
+    },
+    {
+      "frame": 474,
+      "translation_px": [
+        -0.2815956105569218,
+        7.694457512215974
+      ],
+      "translation_norm_px": 7.699608593635249,
+      "cab_center_road_clearance_px": 56.0
+    },
+    {
+      "frame": 475,
+      "translation_px": [
+        -0.35744363642659716,
+        7.842623470784155
+      ],
+      "translation_norm_px": 7.850764858134293,
+      "cab_center_road_clearance_px": 56.0
+    },
+    {
+      "frame": 476,
+      "translation_px": [
+        -0.4444699599650704,
+        7.880444742512799
+      ],
+      "translation_norm_px": 7.8929692058888055,
+      "cab_center_road_clearance_px": 56.0
+    },
+    {
+      "frame": 477,
+      "translation_px": [
+        -0.5434007391076637,
+        7.795779686005777
+      ],
+      "translation_norm_px": 7.814695469178763,
+      "cab_center_road_clearance_px": 56.0
+    },
+    {
+      "frame": 478,
+      "translation_px": [
+        -0.654962131789699,
+        7.576486659866984
+      ],
+      "translation_norm_px": 7.604743618375368,
+      "cab_center_road_clearance_px": 56.0
+    },
+    {
+      "frame": 479,
+      "translation_px": [
+        -0.7798802959464979,
+        7.210424022700295
+      ],
+      "translation_norm_px": 7.252477360401692,
+      "cab_center_road_clearance_px": 56.0
+    }
+  ],
+  "decoded_outputs": {
+    "composite-20s.mp4": {
+      "decoded_frames": 480,
+      "fps": 24.0,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "duration_seconds": 20.0
+    },
+    "composite-45.5s.mp4": {
+      "decoded_frames": 1092,
+      "fps": 24.0,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "duration_seconds": 45.5
+    },
+    "seams-4x-review.mp4": {
+      "decoded_frames": 192,
+      "fps": 24.0,
+      "dimensions": [
+        880,
+        720
+      ],
+      "duration_seconds": 8.0
+    }
+  },
+  "visual_limitations": [
+    "Thin neutral/cream curb-like fringe remains above trailer in some segment1 samples; visible at2x/4x, conditional1x acceptance required",
+    "Source trailer drawing/angle differences remain at clip seams; translation cannot repair perspective",
+    "Exactly one driver and empty passenger seat cannot be certified at this native resolution",
+    "Slow version repeats original frames2 or3times, no synthesized poses; judge held-frame motion in final fleet"
+  ],
+  "repaired_notch": {
+    "segment": 1,
+    "source_frame": 108,
+    "alpha_white_roof_at_x703_y358": 255,
+    "view": "../repaired-trailer-108-4x.png"
+  }
+}

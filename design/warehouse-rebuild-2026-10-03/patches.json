@@ -1,0 +1,38 @@
+[
+  {
+    "name": "keeper",
+    "id": "5bd522e2-96ba-4d93-9f46-bbba57723879",
+    "x": 1290,
+    "y": 465,
+    "w": 145,
+    "h": 220,
+    "file": "design/warehouse-rebuild-2026-10-03/keeper-detail.png"
+  },
+  {
+    "name": "drone",
+    "id": "ff2e83d3-563f-443d-905d-6fe76c069299",
+    "x": 1020,
+    "y": 235,
+    "w": 120,
+    "h": 110,
+    "file": "design/warehouse-rebuild-2026-10-03/drone-detail.png"
+  },
+  {
+    "name": "forklift",
+    "id": "7cc88e2e-23b5-437e-9d07-c6e21c7c412c",
+    "x": 580,
+    "y": 540,
+    "w": 270,
+    "h": 245,
+    "file": "design/warehouse-rebuild-2026-10-03/forklift-detail.png"
+  },
+  {
+    "name": "rear",
+    "id": "2dce90cb-12e6-422a-9062-8d92b5e43229",
+    "x": 690,
+    "y": 225,
+    "w": 70,
+    "h": 120,
+    "file": "design/warehouse-rebuild-2026-10-03/rear-detail.png"
+  }
+]

@@ -1,0 +1,415 @@
+{
+  "integrationGate": "Parent visual approval and frontend manifest synchronization required; no deployment authorized",
+  "files": [
+    {
+      "path": "design/scene-world/README.md",
+      "sha256": "f888a8857683dbd8d964dc413ce9d6de3d9b883616390599280e059d759b8d74",
+      "bytes": 8543
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/CableDrum/CableDrum.fbx",
+      "sha256": "28966de54bf77db4ba3e42dfc8b8891d12f1b157547a913f7f443f1ea98c6f25",
+      "bytes": 82752
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/CableDrum/CableDrum_Base_Color.png",
+      "sha256": "65c464766ba0bad6dc4a5b47ef44fb0137211c6ba060eea87cd81b4438765fa6",
+      "bytes": 2681603
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/CableDrum/CableDrum_Metallic.png",
+      "sha256": "4f3e62a797bd5bdb9d72bd73b1d679bbe5ea94f77259d2bdac5b147ab555331c",
+      "bytes": 31226
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/CableDrum/CableDrum_Roughness.png",
+      "sha256": "ac8c94cf9256134296a4a3d9faef0fcf8c10e41288487829ad5983fe568c8dbd",
+      "bytes": 173097
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/ElectricalBox/ElectricalBox.fbx",
+      "sha256": "23992044238a4f441c046bf398da2c64501e5f88b472c7907139c9a74b6d81d9",
+      "bytes": 90256
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/ElectricalBox/ElectricalBox_Base_Color.png",
+      "sha256": "76388615f3671e17b36eeecffee3e8a28a810b70d97b9ccfe0e23ebef5b403a6",
+      "bytes": 1401037
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/ElectricalBox/ElectricalBox_Metallic.png",
+      "sha256": "adc73e9e91b4b63d734c4c024d8bd2da4b9f75cb7eb111fd119b47022e1e7c11",
+      "bytes": 136369
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/ElectricalBox/ElectricalBox_Roughness.png",
+      "sha256": "dcafaf01d6a8d490581711e68000a73b4e0e2b75015ddebe459145762c46a587",
+      "bytes": 1958438
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/LICENSE.md",
+      "sha256": "5dc6fafe3d36ad806c98ceb59e3853bae25126801f1a345d5bad029b7e065365",
+      "bytes": 442
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/PalletTruck/PalletTruck.fbx",
+      "sha256": "8bae7607335be03e253a639265dfb619630f81e4db2b1ebc09aa82cbe8fea272",
+      "bytes": 152336
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/PalletTruck/PalletTruck_Base_Color.png",
+      "sha256": "3ed98661696a210a540f8b2b27dac7f2efea908412962917ebc24fac75221e78",
+      "bytes": 1417009
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/PalletTruck/PalletTruck_Metallic.png",
+      "sha256": "bec67cee8f2137e287331d39672d7682d1c7c01f03a68978e985002bbc9e99a4",
+      "bytes": 370109
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/PalletTruck/PalletTruck_Roughness.png",
+      "sha256": "87a1d3399a1cd06c76ef7207315fd56cda95a71d7bf07cce7ada5dc1e1a39ea0",
+      "bytes": 1107905
+    },
+    {
+      "path": "design/scene-world/assets/industrial-pack/author-license-evidence.json",
+      "sha256": "1447b2ee015a70d09bc605ee3aa28f4693c586553f8a67eebf99e8c9c8059ce6",
+      "bytes": 5284
+    },
+    {
+      "path": "design/scene-world/compact-desktop-edges.png",
+      "sha256": "60c7d8c51d3b91da06bf9633ec83d790a8f24f8f1c3069377577c1deb7d4c0e3",
+      "bytes": 394127
+    },
+    {
+      "path": "design/scene-world/compact-desktop-id.png",
+      "sha256": "5b0fc276b5d87577ec41117331a87fafb744fa16819e100158af130b36399ff5",
+      "bytes": 1325119
+    },
+    {
+      "path": "design/scene-world/compact-desktop-normal.png",
+      "sha256": "637b7963385e690816891d656bbc0bc957c1fdd54bf9494d08c1e6b948b3f863",
+      "bytes": 4171664
+    },
+    {
+      "path": "design/scene-world/compact-desktop.png",
+      "sha256": "41495bacf5a72ef851132c7ebf175b52f32834a53d9f9e74f06cf17ee4e50d85",
+      "bytes": 1681147
+    },
+    {
+      "path": "design/scene-world/compact-mobile-edges.png",
+      "sha256": "eff3a0d147e26865e63c22ccbfce2730eefa191135677da8451e6c80830d65ca",
+      "bytes": 336736
+    },
+    {
+      "path": "design/scene-world/compact-mobile-id.png",
+      "sha256": "1c0933813c9f6c87df88fa714306e696dec32c8f8d3ecc8ebe26edd8557ab1da",
+      "bytes": 1193588
+    },
+    {
+      "path": "design/scene-world/compact-mobile-normal.png",
+      "sha256": "7a285210a75a29180f36223a682dbeeb63323ddafc7f815c2e78e75883ab3881",
+      "bytes": 3611597
+    },
+    {
+      "path": "design/scene-world/compact-mobile.png",
+      "sha256": "84a400563d640f7e255930a6a6878a781bb755d4e0f3d83833b3314fda94f4c4",
+      "bytes": 1534662
+    },
+    {
+      "path": "design/scene-world/inventory-desktop-edges.png",
+      "sha256": "d3f4a2fe93e3f7012264f0c9ce8b002b573816fc618b65d9ff78bbd8fa2b77c1",
+      "bytes": 434241
+    },
+    {
+      "path": "design/scene-world/inventory-desktop-id.png",
+      "sha256": "2e1c3c64d86892ad94b4f6612ee8a9b078b20c66a4ca525b21923ef37e0725be",
+      "bytes": 1705263
+    },
+    {
+      "path": "design/scene-world/inventory-desktop-normal.png",
+      "sha256": "d584d996ab7d21a9e1a8230a4e29e86b82ee571385e3c28338a3c134613240a2",
+      "bytes": 3642822
+    },
+    {
+      "path": "design/scene-world/inventory-desktop.png",
+      "sha256": "9877af99b0791f245a90166f8525823949158694011095c47aa84901fea2a335",
+      "bytes": 2091703
+    },
+    {
+      "path": "design/scene-world/inventory-mobile-edges.png",
+      "sha256": "a676d8707898da02aa90ea15bef964dfd7c0d6a0fd2d30d0d18f1c719980239f",
+      "bytes": 405930
+    },
+    {
+      "path": "design/scene-world/inventory-mobile-id.png",
+      "sha256": "338989f010e8886852e67e71cd5fb6dbf644371856187a161b69e8e3699e9185",
+      "bytes": 1545924
+    },
+    {
+      "path": "design/scene-world/inventory-mobile-normal.png",
+      "sha256": "56bea03a4b1fa96a4ba860d2a2a369f3281b68fbfe2f19f6076db0fb6600255d",
+      "bytes": 3435079
+    },
+    {
+      "path": "design/scene-world/inventory-mobile.png",
+      "sha256": "881186b10ca7a551af2b75aa7cfb25470ecf9ff2aa14d66803f2a9d39119b20d",
+      "bytes": 1884265
+    },
+    {
+      "path": "design/scene-world/provenance.json",
+      "sha256": "453b1c97a1046d4cc01b282dd815e148b9758effbd917755e3cedaa10229d547",
+      "bytes": 620526
+    },
+    {
+      "path": "design/scene-world/quest-world.blend",
+      "sha256": "e392435217a4847081822b6cb5a4d60b40c0b1f75bdf3c513c3c8aad69c40718",
+      "bytes": 14424505
+    },
+    {
+      "path": "design/scene-world/reuse-review/baseline-hashes.json",
+      "sha256": "d4d052acc8c5e60468cebad3d83d56984c45372dee614401f5c65d3139accfe9",
+      "bytes": 5253
+    },
+    {
+      "path": "design/scene-world/reuse-review/candidate-front.png",
+      "sha256": "9410ebb74afcf79dfb0d631b2d72da85506332149773abac981b7c826e6b6d5b",
+      "bytes": 1048758
+    },
+    {
+      "path": "design/scene-world/reuse-review/candidate-rear.png",
+      "sha256": "43cbd8070005ebd4199adf01c021223a6ed2b0bb5a83f1f2fcf2170361bc5b80",
+      "bytes": 948170
+    },
+    {
+      "path": "design/scene-world/reuse-review/candidate-side.png",
+      "sha256": "3a428bb3f82d69ba3b3a39285e7dd90df99a2734d7b6fec6bfd8ffbdaeee5ba7",
+      "bytes": 968406
+    },
+    {
+      "path": "design/scene-world/reuse-review/candidate-wheel.png",
+      "sha256": "74509a04eaf0757af02b0505087ce8be6c73a28e95dd16e3017f93b114932c7b",
+      "bytes": 1095863
+    },
+    {
+      "path": "design/scene-world/reuse-review/compact-anchor-validation.json",
+      "sha256": "c9a484db61da86cde18180ff0c055d0ffdf4377d634044b414ffaa3299d3bab2",
+      "bytes": 6042
+    },
+    {
+      "path": "design/scene-world/reuse-review/compact-short-landscape.png",
+      "sha256": "647288a3e80b292db78e46b5dc89a3eecd65a674635975d6ada94cb972f0c19d",
+      "bytes": 54459
+    },
+    {
+      "path": "design/scene-world/reuse-review/comparison-front.png",
+      "sha256": "2c011a1b18acade300c20aab40394411356e58bd867f3f774818ce92591b71de",
+      "bytes": 642042
+    },
+    {
+      "path": "design/scene-world/reuse-review/comparison-rear.png",
+      "sha256": "3311b4f3414e3701b7bfebb4e47f91db2c3a36527713d37f5a2c89ef603f4cea",
+      "bytes": 592932
+    },
+    {
+      "path": "design/scene-world/reuse-review/comparison-side.png",
+      "sha256": "fe465813d1e37c793126eff42b4d4a35140b29a196322cb4a1eac66eee9bb490",
+      "bytes": 551485
+    },
+    {
+      "path": "design/scene-world/reuse-review/comparison-wheel.png",
+      "sha256": "90c9631e4bd98da37fb59c0efb2fcf4d635d547f496301fb13a018fe9c3a154e",
+      "bytes": 821119
+    },
+    {
+      "path": "design/scene-world/reuse-review/detail-inventory.json",
+      "sha256": "b0485f7b93abf7cac2dc91b40c1c2fc41cc53c8ed45acbc7bc31e2f0a5c0692c",
+      "bytes": 2598
+    },
+    {
+      "path": "design/scene-world/reuse-review/display-desktop.png",
+      "sha256": "7c3e1cde76e7cc817f47a2bd7657d4f3081536870538c707695a9e821ef9d1b2",
+      "bytes": 838141
+    },
+    {
+      "path": "design/scene-world/reuse-review/display-mobile.png",
+      "sha256": "9e24a3fd9902ba97f339d6fe1447fc92caf05e0a97fc3d3150dccafab5119cd4",
+      "bytes": 278406
+    },
+    {
+      "path": "design/scene-world/reuse-review/imported-assets.json",
+      "sha256": "eb2a88241fec2235f23427a77b5812404679e2ce2ced1b00f17dc4c5d06c84ff",
+      "bytes": 6137
+    },
+    {
+      "path": "design/scene-world/reuse-review/imported-pallet-jack.png",
+      "sha256": "af0e0a2dc1a85a6bdeb901055c190d6b12ba5b19b45350a36ba4ff6a9e3f6af4",
+      "bytes": 1438972
+    },
+    {
+      "path": "design/scene-world/reuse-review/imported-service-props.png",
+      "sha256": "dd89b5ab7d4637f318759307e60c9ab325274a1086af564d2711a883a2790caf",
+      "bytes": 1344337
+    },
+    {
+      "path": "design/scene-world/reuse-review/imported-visibility.json",
+      "sha256": "7a7504a50a9f7b1aa42fd0da780572361bd2aef4c1b4000c70c14af27e7c0433",
+      "bytes": 1455
+    },
+    {
+      "path": "design/scene-world/reuse-review/master-audit.json",
+      "sha256": "27e7b7382e5cc6b7891e0439cf5f330aeb4b91fc240a2870bb8251709d11ce29",
+      "bytes": 867
+    },
+    {
+      "path": "design/scene-world/reuse-review/pre-import-hashes.json",
+      "sha256": "770ed05c4c6f59a3960ad3d548da3da7507fee22cb4808055d017a4f15d79841",
+      "bytes": 5253
+    },
+    {
+      "path": "design/scene-world/reuse-review/prop-source-inspection.json",
+      "sha256": "fdabf69e572c787f33b4576d45c4347a98b3bc6352a571b9e230639499f0094a",
+      "bytes": 4962
+    },
+    {
+      "path": "design/scene-world/reuse-review/source-front.png",
+      "sha256": "40ba88b0a50600fc2a7f89fb75ce570427187f50b264823d0dab527a5b9c52d8",
+      "bytes": 1033810
+    },
+    {
+      "path": "design/scene-world/reuse-review/source-inventory.json",
+      "sha256": "56c2150e1560aff11df17d499a7e461c6fe15d9a1ab434ac08d0532f6d3e9050",
+      "bytes": 82006
+    },
+    {
+      "path": "design/scene-world/reuse-review/source-rear.png",
+      "sha256": "b910e243eee1e92a5702d21ef391d33b9591399b5f6464708902d3caf207a0f7",
+      "bytes": 938423
+    },
+    {
+      "path": "design/scene-world/reuse-review/source-side.png",
+      "sha256": "41b1ea8360fec5761310b012ed0a4f2cfb598729f6f31366e571b5efff9b1063",
+      "bytes": 961233
+    },
+    {
+      "path": "design/scene-world/reuse-review/source-wheel.png",
+      "sha256": "3fac1f8dca0c36637703763347f5c1224d2ad88627a712cdf076753c224e5a9a",
+      "bytes": 1033100
+    },
+    {
+      "path": "design/scene-world/reuse-review/unaffected-geometry-baseline.json",
+      "sha256": "b79600c580ed87a6b3cb210ab94825c2ea3bee9372bbec3f4e95de1cbcef82cd",
+      "bytes": 400229
+    },
+    {
+      "path": "design/scene-world/reuse-review/visual-review.json",
+      "sha256": "a113c7ec0c0d828d2a3bc1a4810f79fb82429122f3690ece3178a9fd33e78751",
+      "bytes": 5785
+    },
+    {
+      "path": "design/scene-world/validation.json",
+      "sha256": "be7b4926f07bd679021bf51a2502b21b6d08f1a951da3dcaab554a641af56a42",
+      "bytes": 5634
+    },
+    {
+      "path": "public/scene-world/compact-desktop.webp",
+      "sha256": "e1ac7b5846cba95464ec89921b282097f869769ed0d9a57fbac3b9e5e86f8eff",
+      "bytes": 53366
+    },
+    {
+      "path": "public/scene-world/compact-mobile.webp",
+      "sha256": "7904067ff3716fbe161f2dce83db286c61129f99806e67569d4438b98f42ea5d",
+      "bytes": 37860
+    },
+    {
+      "path": "public/scene-world/inventory-desktop.webp",
+      "sha256": "38f2cb2812acf7df9ef82149718690957fe7783d59ea47683823f0e9647ea830",
+      "bytes": 124724
+    },
+    {
+      "path": "public/scene-world/inventory-mobile.webp",
+      "sha256": "8e6530ecec83b5962edd95f44846012410b1683e453afa398f6f6e925421b337",
+      "bytes": 111182
+    },
+    {
+      "path": "public/scene-world/manifest.json",
+      "sha256": "86aa36b04ec261652e12b19d9f72f1638ea7321e24d3420657a2cd4208f6b601",
+      "bytes": 60866
+    },
+    {
+      "path": "scripts/scene-world/audit_master.py",
+      "sha256": "3cf9930262da2c32c4723129e7eeaacd9a45e79fa62aa080be8d6d2a28e27d15",
+      "bytes": 7049
+    },
+    {
+      "path": "scripts/scene-world/build.py",
+      "sha256": "3f1924d66df06363d55e45457a0d56e34708670f4cf65f9cd31ebe979a12a9ae",
+      "bytes": 27034
+    },
+    {
+      "path": "scripts/scene-world/compact_anchors.py",
+      "sha256": "661e78f2515c3feef83f5a058dd1cad19e52178087141e1224f50f8bce101906",
+      "bytes": 964
+    },
+    {
+      "path": "scripts/scene-world/display_review.py",
+      "sha256": "bbbd654325aff50454315966bc1ec4f22db0930385d84498caf74a1dc2a4828b",
+      "bytes": 2666
+    },
+    {
+      "path": "scripts/scene-world/export.py",
+      "sha256": "a27d594747bfd5f30404eb0e5ebca4c1ae4b8933f688f3383a264c24b49f8621",
+      "bytes": 3989
+    },
+    {
+      "path": "scripts/scene-world/handoff.py",
+      "sha256": "cd2b96f014bc62734b7d3bdab870c8a9faeb97b2e2b0a08a23c2c44c841dd3b4",
+      "bytes": 1482
+    },
+    {
+      "path": "scripts/scene-world/import_props.py",
+      "sha256": "8fa63cee9b0d6208cacfff45e0757c353b843f9f1f6571adbdc6cdc38e4d2645",
+      "bytes": 7740
+    },
+    {
+      "path": "scripts/scene-world/inspect_props.py",
+      "sha256": "b6ae2e1febe56104a4550a70aee53f0d83bf0eba45babafb9efa89a1da477e15",
+      "bytes": 970
+    },
+    {
+      "path": "scripts/scene-world/render.py",
+      "sha256": "9937d1d5dc44e7cc21ef742c09f183b0308e079625f9068275a64d8f598708f1",
+      "bytes": 2585
+    },
+    {
+      "path": "scripts/scene-world/reuse_truck.py",
+      "sha256": "48ffd52a61c5c195662e82200e4d09a760316cdcbcc49ed364748f8158936297",
+      "bytes": 3688
+    },
+    {
+      "path": "scripts/scene-world/review.py",
+      "sha256": "b3e8617a33ac1028d4b9d569f828045240ca8c426939bbd8e85e3eae0f600071",
+      "bytes": 2844
+    },
+    {
+      "path": "scripts/scene-world/review_props.py",
+      "sha256": "2cfaa4f4fea2375e0384b2ef0a6f54b86287122b11fbb582cb7df5ce5570f0ad",
+      "bytes": 1281
+    },
+    {
+      "path": "scripts/scene-world/test_world.py",
+      "sha256": "6ccae63986629057137f25d250b504a0ca58f3e347f32b49c8dd5dd334739a04",
+      "bytes": 7841
+    },
+    {
+      "path": "scripts/scene-world/update_compact_anchors.py",
+      "sha256": "6f29f19c528215988f10b798ee1da903fa9f2da88816f6f57d87a7fe2dce9b06",
+      "bytes": 4300
+    },
+    {
+      "path": "scripts/scene-world/warehouse_detail.py",
+      "sha256": "07ff22bf0a2559e2754129631e9ae10885ec2b16010f2d79cdd19cc41fafb96a",
+      "bytes": 6341
+    }
+  ]
+}

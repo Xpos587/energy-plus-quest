@@ -1,0 +1,49 @@
+{
+  "source": "https://3dmodelscc0.itch.io/free-cc0-industrial-3d-models",
+  "license": "CC0",
+  "objects": {
+    "PalletTruck": [
+      "CC0 PalletTruck Base",
+      "CC0 PalletTruck Handle",
+      "CC0 PalletTruck Lever",
+      "CC0 PalletTruck Wheel_Left_1",
+      "CC0 PalletTruck Wheel_Left_2",
+      "CC0 PalletTruck Wheel_Right_1",
+      "CC0 PalletTruck Wheel_Right_1_2",
+      "CC0 PalletTruck Wheels_2"
+    ],
+    "CableDrum": [
+      "CC0 CableDrum Cylinder_7"
+    ],
+    "ElectricalBox": [
+      "CC0 ElectricalBox Polygon_Reduction"
+    ]
+  },
+  "views": {
+    "desktop": {
+      "CC0 PalletTruck Base": 603,
+      "CC0 PalletTruck Handle": 44,
+      "CC0 CableDrum Cylinder_7": 1338,
+      "CC0 ElectricalBox Polygon_Reduction": 604,
+      "group: CC0 PalletTruck ": 659,
+      "group: CC0 CableDrum ": 1338,
+      "group: CC0 ElectricalBox ": 604
+    },
+    "mobile": {
+      "CC0 PalletTruck Base": 462,
+      "CC0 PalletTruck Handle": 17,
+      "CC0 CableDrum Cylinder_7": 1329,
+      "CC0 ElectricalBox Polygon_Reduction": 470,
+      "group: CC0 PalletTruck ": 483,
+      "group: CC0 CableDrum ": 1329,
+      "group: CC0 ElectricalBox ": 470
+    }
+  },
+  "normalMaps": "omitted",
+  "packedPBRTextures": 9,
+  "geometryBuild": "Imported source FBX meshes; no procedural replacement",
+  "reviewImages": [
+    "design/scene-world/reuse-review/imported-pallet-jack.png",
+    "design/scene-world/reuse-review/imported-service-props.png"
+  ]
+}

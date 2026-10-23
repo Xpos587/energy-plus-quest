@@ -1,0 +1,24 @@
+{
+  "source_mesh": "../green-tractor-detailed.blend Mesh_0.data copy",
+  "object_transform_preserved": true,
+  "rotation_mode": "XYZ",
+  "tractor_parent": "truck-3-tractor",
+  "camera_unchanged": true,
+  "root_actions_unchanged": true,
+  "frames": [
+    1,
+    144
+  ],
+  "fps": 24,
+  "duration_seconds": 6,
+  "engine": "BLENDER_EEVEE",
+  "resolution": [
+    768,
+    640
+  ],
+  "limitations": [
+    "Whole tractor remains one mesh; wheels do not independently rotate.",
+    "Occupants and one steering wheel are projected texture on original windshield faces, not volumetric humans.",
+    "Original trailer retains6.38degree exit articulation."
+  ]
+}

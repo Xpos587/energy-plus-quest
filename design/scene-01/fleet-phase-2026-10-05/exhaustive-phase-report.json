@@ -1,0 +1,169 @@
+{
+  "status": "NO PASS: opaque overlap remains",
+  "period_seconds": 45.5,
+  "fps": 24,
+  "frames_checked": 1092,
+  "phases_source_frames": {
+    "green": 112,
+    "red": 274,
+    "yellow": 436,
+    "blue": 1
+  },
+  "phases_source_seconds": {
+    "green": 4.666666666666667,
+    "red": 11.416666666666666,
+    "yellow": 18.166666666666668,
+    "blue": 0.041666666666666664
+  },
+  "blue_phase_output_seconds": 0.09479166666666666,
+  "pairs": [
+    {
+      "pair": [
+        "green",
+        "red"
+      ],
+      "conservative_body_gap_px": 20.808652046684813,
+      "min_gap_time_s": 22.5,
+      "opaque_overlap_frames": 0,
+      "total_overlap_pixels_across_frames": 0,
+      "max_overlap_pixels": 0,
+      "max_overlap_time_s": 0.0,
+      "source_frames_at_max_overlap": [
+        112,
+        274
+      ],
+      "soft_overlap_frames": 0,
+      "soft_overlap_pixels_across_frames": 0,
+      "max_soft_overlap_pixels": 0
+    },
+    {
+      "pair": [
+        "green",
+        "yellow"
+      ],
+      "conservative_body_gap_px": 133.86933928274988,
+      "min_gap_time_s": 8.041666666666666,
+      "opaque_overlap_frames": 0,
+      "total_overlap_pixels_across_frames": 0,
+      "max_overlap_pixels": 0,
+      "max_overlap_time_s": 0.0,
+      "source_frames_at_max_overlap": [
+        112,
+        436
+      ],
+      "soft_overlap_frames": 0,
+      "soft_overlap_pixels_across_frames": 0,
+      "max_soft_overlap_pixels": 0
+    },
+    {
+      "pair": [
+        "green",
+        "blue"
+      ],
+      "conservative_body_gap_px": 0.0,
+      "min_gap_time_s": 27.166666666666668,
+      "opaque_overlap_frames": 34,
+      "total_overlap_pixels_across_frames": 357,
+      "max_overlap_pixels": 27,
+      "max_overlap_time_s": 27.541666666666668,
+      "source_frames_at_max_overlap": [
+        227,
+        291
+      ],
+      "soft_overlap_frames": 57,
+      "soft_overlap_pixels_across_frames": 11318,
+      "max_soft_overlap_pixels": 438
+    },
+    {
+      "pair": [
+        "red",
+        "yellow"
+      ],
+      "conservative_body_gap_px": 20.808652046684813,
+      "min_gap_time_s": 15.75,
+      "opaque_overlap_frames": 0,
+      "total_overlap_pixels_across_frames": 0,
+      "max_overlap_pixels": 0,
+      "max_overlap_time_s": 0.0,
+      "source_frames_at_max_overlap": [
+        274,
+        436
+      ],
+      "soft_overlap_frames": 0,
+      "soft_overlap_pixels_across_frames": 0,
+      "max_soft_overlap_pixels": 0
+    },
+    {
+      "pair": [
+        "red",
+        "blue"
+      ],
+      "conservative_body_gap_px": 0.0,
+      "min_gap_time_s": 23.166666666666668,
+      "opaque_overlap_frames": 0,
+      "total_overlap_pixels_across_frames": 0,
+      "max_overlap_pixels": 0,
+      "max_overlap_time_s": 0.0,
+      "source_frames_at_max_overlap": [
+        274,
+        1
+      ],
+      "soft_overlap_frames": 48,
+      "soft_overlap_pixels_across_frames": 5540,
+      "max_soft_overlap_pixels": 243
+    },
+    {
+      "pair": [
+        "yellow",
+        "blue"
+      ],
+      "conservative_body_gap_px": 0.0,
+      "min_gap_time_s": 18.25,
+      "opaque_overlap_frames": 34,
+      "total_overlap_pixels_across_frames": 1848,
+      "max_overlap_pixels": 118,
+      "max_overlap_time_s": 18.916666666666668,
+      "source_frames_at_max_overlap": [
+        344,
+        200
+      ],
+      "soft_overlap_frames": 39,
+      "soft_overlap_pixels_across_frames": 13906,
+      "max_soft_overlap_pixels": 652
+    }
+  ],
+  "opening_cab_px": {
+    "green": [
+      717.329268292683,
+      124.47154471544715
+    ],
+    "red": [
+      676.8450704225352,
+      252.96901408450705
+    ],
+    "yellow": [
+      907.6738738738738,
+      571.8
+    ],
+    "blue": [
+      409.73107529958895,
+      346.34976353562394
+    ]
+  },
+  "search": {
+    "green_opening_anchor": "unrestricted",
+    "source_phase_lattice_stride": 1,
+    "valid_far3_combinations_min20px": 70116,
+    "green_opening_candidates": 350,
+    "blue_opening_candidates": 200,
+    "local_refinement": "all eligible +-3 integer source frames around coarse four-phase winner",
+    "coverage": "all eligible integer-source-frame opening phases; floor sampling at24fps only"
+  },
+  "geometry_reference": "refined-phase-report.json geometry/assumptions; same actual alpha pixel and contour matrices",
+  "limitations": [
+    "Far3 uses actual green geometry for future red/yellow; newly generated appearance edits must be rechecked.",
+    "Clearance includes all opaque alpha, including extraction fringes. Blue fringe cleanup may alter tiny intersections but has not been assumed.",
+    "Opaque no-overlap is not sufficient for comfortable visible spacing; enforce positive margin before acceptance.",
+    "Phases alone do not change lane positions or speed within source footage."
+  ]
+}

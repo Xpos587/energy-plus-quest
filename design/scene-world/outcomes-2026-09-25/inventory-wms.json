@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:07:07.73394Z",
+    "display_name": "Nano Banana Pro",
+    "id": "08c31c81-62db-4262-b902-0e798151df35",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090707_08c31c81-62db-4262-b902-0e798151df35_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "c025fe09-9ee2-4352-a606-6b66ce039051",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/c025fe09-9ee2-4352-a606-6b66ce039051_resize.jpg"
+        }
+      ],
+      "prompt": "Create ONE polished narrative result illustration for a Russian logistics game, wide 3:2, full bleed, no panel border. Attached picture defines the EXACT existing game visual style, materials and environment. Refined hand painted 2D editorial illustration, detailed but uncluttered, warm cream architecture, neutral light gray ground, pale light blue glass, thin soft gray outlines NO black outlines, soft dimensional shading, navy blue and vivid orange work uniforms and blue machinery. NOT 3D render, NOT flat vector infographic. Show the specified consequence as the dominant readable subject, with medium close framing readable on a small phone. Human and machine proportions realistic, no giant packages or people relative to machinery. No text, no captions, no speech bubbles, no numbers, no arrows, no UI, no watermarks. Gift is a modest closed cardboard shipping parcel; it must not display a particular sock or camera. Composition depicts a single coherent physical scene, not collage. Successful warehouse dispatch. A worker in orange/navy PPE holds a handheld barcode scanner to a modest parcel at the low shelf immediately beside dispatch dock. A small blue electric pallet mover ready to take parcel to waiting vehicle. Modern screen shows a simple green confirmation shape without text, clear shelf address labels as tiny abstract marks. Cheerful confident efficient handover, short direct physical path to dispatch.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090707_08c31c81-62db-4262-b902-0e798151df35.png",
+    "status": "completed"
+  }
+]

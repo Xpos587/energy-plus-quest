@@ -1,0 +1,229 @@
+{
+  "source": "design/scene-01/painted-layer-2026-10-05/painted-vehicles-driver-fixed-optimized.blend",
+  "records": [
+    {
+      "truck": 1,
+      "cab": "PILOT 1 reconstructed old-cab",
+      "original_bounds": [
+        [
+          -1.4309768676757812,
+          0.7911440134048462
+        ],
+        [
+          -0.8583299517631531,
+          0.8583299517631531
+        ],
+        [
+          0.07999999076128006,
+          2.9499998092651367
+        ]
+      ],
+      "changed_bounds": [
+        [
+          -1.4309768676757812,
+          1.023197889328003
+        ],
+        [
+          -0.9441630244255066,
+          0.9441630244255066
+        ],
+        [
+          0.07999999076128006,
+          3.114000082015991
+        ]
+      ],
+      "factors": [
+        1.22,
+        1.1,
+        1.08
+      ],
+      "changed_objects": [
+        "PILOT 1 reconstructed old-cab"
+      ],
+      "wheel_rule": "vertex z <= 0.90 unchanged; smooth x/y transition 0.90..1.35",
+      "bevel_width": 0.008
+    },
+    {
+      "truck": 2,
+      "cab": "PILOT 2 reconstructed near-cab",
+      "original_bounds": [
+        [
+          -1.167820930480957,
+          1.0542998313903809
+        ],
+        [
+          -0.8583299517631531,
+          0.8583299517631531
+        ],
+        [
+          0.07999999076128006,
+          2.9499998092651367
+        ]
+      ],
+      "changed_bounds": [
+        [
+          -1.167820930480957,
+          1.2688384056091309
+        ],
+        [
+          -0.9441630244255066,
+          0.9441630244255066
+        ],
+        [
+          0.07999999076128006,
+          3.196000099182129
+        ]
+      ],
+      "factors": [
+        1.22,
+        1.1,
+        1.12
+      ],
+      "changed_objects": [
+        "2 windshield",
+        "BLUE empty passenger seat back",
+        "BLUE empty passenger seat cushion",
+        "PILOT 2 driver head",
+        "PILOT 2 driver torso",
+        "PILOT 2 reconstructed near-cab"
+      ],
+      "wheel_rule": "vertex z <= 0.90 unchanged; smooth x/y transition 0.90..1.35",
+      "bevel_width": 0.008
+    },
+    {
+      "truck": 3,
+      "cab": "PILOT 3 reconstructed crew-cab",
+      "original_bounds": [
+        [
+          -1.1678189039230347,
+          1.0543018579483032
+        ],
+        [
+          -0.8583299517631531,
+          0.8583299517631531
+        ],
+        [
+          0.07999999076128006,
+          3.0799996852874756
+        ]
+      ],
+      "changed_bounds": [
+        [
+          -1.1678189039230347,
+          1.2688404321670532
+        ],
+        [
+          -0.9441630244255066,
+          0.9441630244255066
+        ],
+        [
+          0.07999999076128006,
+          3.341599941253662
+        ]
+      ],
+      "factors": [
+        1.22,
+        1.1,
+        1.12
+      ],
+      "changed_objects": [
+        "PILOT 3 reconstructed crew-cab"
+      ],
+      "wheel_rule": "vertex z <= 0.90 unchanged; smooth x/y transition 0.90..1.35",
+      "bevel_width": 0.008
+    },
+    {
+      "truck": 4,
+      "cab": "PILOT 4 reconstructed old-cab",
+      "original_bounds": [
+        [
+          -1.4309766292572021,
+          0.7911442518234253
+        ],
+        [
+          -0.8583299517631531,
+          0.8583299517631531
+        ],
+        [
+          0.07999999076128006,
+          2.5199997425079346
+        ]
+      ],
+      "changed_bounds": [
+        [
+          -1.4309766292572021,
+          1.0219535827636719
+        ],
+        [
+          -0.9441630244255066,
+          0.9441630244255066
+        ],
+        [
+          0.07999999076128006,
+          2.64959979057312
+        ]
+      ],
+      "factors": [
+        1.22,
+        1.1,
+        1.08
+      ],
+      "changed_objects": [
+        "PILOT 4 reconstructed old-cab"
+      ],
+      "wheel_rule": "vertex z <= 0.90 unchanged; smooth x/y transition 0.90..1.35",
+      "bevel_width": 0.008
+    }
+  ],
+  "root_matrix_max_delta": 0.0,
+  "poses_checked": [
+    "1",
+    "97",
+    "385",
+    "769",
+    "1152"
+  ],
+  "camera": {
+    "name": "desktop",
+    "matrix": [
+      [
+        0.9968152642250061,
+        -0.06695909798145294,
+        0.04331028088927269,
+        1.7741494178771973
+      ],
+      [
+        0.07974522560834885,
+        0.8369886875152588,
+        -0.5413784980773926,
+        -84.67687225341797
+      ],
+      [
+        1.8925381262135943e-09,
+        0.5431081652641296,
+        0.8396627306938171,
+        131.3314208984375
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "scale": 111.80000305175781
+  },
+  "dimensions": [
+    1920,
+    1334
+  ],
+  "frame_range": [
+    1,
+    1152
+  ],
+  "limitations": [
+    "Visible cabs are archived textured projected meshes, not individually editable native panels.",
+    "Mild upper-body deformation and tiny bevel improve proportions; this is not a newly modelled photorealistic cab.",
+    "Baked artwork and single/pair driver identities are inherited; blue native glazing/driver overlay transformed together."
+  ]
+}

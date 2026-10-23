@@ -1,0 +1,18 @@
+{
+  "method": "Blender source hierarchy deep-copy; img2threejs observation/decomposition and multi-view comparison principles, not its procedural ThreeJS pipeline",
+  "referenceImages": ["public/review/map-geometry/pass-06/truck-4.png", "public/review/map-geometry/pass-06/truck-2.png", "public/review/map-geometry/pass-06/warehouse.png"],
+  "truck": {
+    "macro": ["independent tractor and trailer roots", "formed orange cab with wheel arches", "long enclosed semitrailer adapted to a reversible architectural cutaway"],
+    "preservedMeso": ["ladder frame", "fifth wheel", "three trailer axles and two tractor axles", "rear locking bars and underrun protection", "side guards and curtain buckles"],
+    "preservedMicro": ["four grille louvres", "split windshield", "side glazing", "mirror arms and mirrors", "door seams and handles", "recessed steps", "fuel tanks", "exhaust stack", "round headlamps", "metal hub centers and eight rim recesses per wheel"],
+    "addedDetail": ["rounded tire shoulders", "40 rubber tread segments per tire", "sidewall bead", "machined rim lip", "8 lug fasteners per wheel", "five axle tubes and suspension saddles"],
+    "materials": "Original source orange cab paint, pale cargo enclosure, dark rubber, blue gray glazing and metal retained without gray override",
+    "connections": "Source-local geometry uniformly scaled 1.75. Tractor fifth-wheel center (-2.3 local X) coincides with trailer root/kingpin. Tires sit on the .13 yard plane. Independent copied datablocks prevent source mutation."
+  },
+  "warehouse": {
+    "preserved": ["canonical building footprint", "original loading shutters, columns, canopy and approach", "existing racks and stock, keeper, scanner, WMS, forklift and drone"],
+    "addedDetail": ["uprights and wall bracing", "eave beams and rear lintel", "rack diagonal braces and load beams", "slatted pallet decks and runners", "rack foot guards", "clear marked pedestrian lanes and cross aisles", "dock safety bollards", "receiving pallet with wrap bands", "manual pallet jack", "ventilation louvres", "cable trays and task lights", "WMS stand/display/keyboard", "scanner grip/tether", "drone landing gear, optical module and prop guards"],
+    "limits": "Roof is removed for architectural readability. Lighting is shared source-neutral presentation, not final stylized artwork. Small text and hardware cannot all resolve at 320px overview size."
+  },
+  "reviewViews": ["source/candidate front", "source/candidate rear", "source/candidate side", "source/candidate wheel", "compact desktop and mobile", "inventory desktop and mobile"]
+}

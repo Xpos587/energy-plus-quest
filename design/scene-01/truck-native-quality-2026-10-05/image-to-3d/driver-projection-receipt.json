@@ -1,0 +1,7 @@
+{
+  "projected_faces": 118,
+  "windshield_only": true,
+  "reference": "../cab-detail-pilot-2026-10-05/green-detail-reference.png",
+  "method": "permanent world-YZ to UV projection onto existing front windshield faces",
+  "volumetric_crew": false
+}

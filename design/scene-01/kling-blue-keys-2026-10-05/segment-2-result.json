@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T13:48:56.577299Z",
+    "display_name": "Kling v3.0",
+    "id": "0e590f0b-085b-4801-9ab5-1161eec4dc37",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "58d7e4b7-6309-477d-929e-c1893d6f4431",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/58d7e4b7-6309-477d-929e-c1893d6f4431.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "27fa2998-c439-407d-874b-8b9d8466853d",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/27fa2998-c439-407d-874b-8b9d8466853d.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera, perfectly fixed bright clean illustrated city and white side borders. Exactly ONE BLUE tractor with ONE rigid WHITE refrigerated semitrailer. Exactly ONE adult driver, empty gray passenger seat, never two people in cab. Preserve modern blue cab, refrigeration unit and rigid trailer size/color/wheels. Tractor steers first, rigid trailer follows via fifth-wheel with rear axles tracing inner curve. All tires on blue asphalt. No duplication, disappearance, rubber bend, cab/trailer-end swap, reverse, teleport, roof crossing, extra vehicles or camera move. Soft colored outlines and shadows. Reach exact supplied final pose, five second continuous shot. Start facing UP on central vertical street. Drive UP along RIGHT side of tall central beige tower to its northern edge. Turn ninety degrees LEFT into upper horizontal street ABOVE that central tower, continue LEFT to supplied final pose. Only one corner; no westward overshoot.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_134856_0e590f0b-085b-4801-9ab5-1161eec4dc37.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_134856_0e590f0b-085b-4801-9ab5-1161eec4dc37_thumbnail.webp"
+  }
+]

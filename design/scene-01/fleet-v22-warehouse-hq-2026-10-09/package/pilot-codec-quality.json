@@ -1,0 +1,7 @@
+{
+  "codec": "H264 CRF15 slow yuv420p",
+  "decoded_width": 3840,
+  "decoded_height": 2668,
+  "first_frame_psnr_vs_composite_db": 38.98968465032774,
+  "scope": "codec distortion only, not ground-truth source detail"
+}

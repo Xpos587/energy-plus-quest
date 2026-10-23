@@ -1,0 +1,674 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "boat",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-boat-v1.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "boat",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-boat-v1.png"
+    ],
+    "pages": 3,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "boat",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-v12.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "boat",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-boat-v2.png"
+    ],
+    "pages": 4,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "camera",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-camera-v2.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "camera",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-camera-v1.png"
+    ],
+    "pages": 3,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "camera",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-camera-v8.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "camera",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-camera-v3.png"
+    ],
+    "pages": 4,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "socks",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-socks-v2.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "socks",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-socks-v2.png"
+    ],
+    "pages": 3,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "socks",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-socks-v8.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "socks",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-socks-v3.png"
+    ],
+    "pages": 4,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "boat",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-boat-v1.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "boat",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-boat-v1.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "boat",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-v12.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "boat",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-boat-v2.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "camera",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-camera-v2.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "camera",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-camera-v1.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "camera",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-camera-v8.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "camera",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-camera-v3.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "socks",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-socks-v2.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "socks",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-socks-v2.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "socks",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-socks-v8.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "socks",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-socks-v3.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "boat",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-boat-v1.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "boat",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-boat-v1.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "boat",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-v12.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "boat",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-boat-v2.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "camera",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-camera-v2.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "camera",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-camera-v1.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "camera",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-camera-v8.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "camera",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-camera-v3.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "socks",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-socks-v2.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "socks",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-socks-v2.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "socks",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-socks-v8.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "socks",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-tall-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-socks-v3.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "boat",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-boat-wide-v1.webp"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "boat",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-boat-v1.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "boat",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-v12.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "boat",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-boat-v2.png"
+    ],
+    "pages": 3,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "camera",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-camera-v2.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "camera",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-camera-v1.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "camera",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-camera-v8.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "camera",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-camera-v3.png"
+    ],
+    "pages": 3,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "socks",
+    "option": "rush",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-socks-v2.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "socks",
+    "option": "wait",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-socks-v2.png"
+    ],
+    "pages": 2,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "socks",
+    "option": "petr",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-socks-v8.png"
+    ],
+    "pages": 1,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "socks",
+    "option": "remote",
+    "choice": "/scene-art/barge-family-v1/choice-neutral-wide-v3.webp",
+    "sources": [
+      "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-socks-v3.png"
+    ],
+    "pages": 3,
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  }
+]

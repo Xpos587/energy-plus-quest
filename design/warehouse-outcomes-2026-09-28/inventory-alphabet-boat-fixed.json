@@ -1,0 +1,34 @@
+[
+  {
+    "created_at": "2026-09-28T09:42:12.482922Z",
+    "display_name": "Nano Banana Pro",
+    "id": "a538006f-4054-41ce-a1d5-b12c657d4f80",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260928_094212_a538006f-4054-41ce-a1d5-b12c657d4f80_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "f973f46b-8448-4fd5-92b5-f402de6416bf",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/f973f46b-8448-4fd5-92b5-f402de6416bf_resize.jpg"
+        },
+        {
+          "id": "763a76d8-fd71-4380-a539-7f3822aae59d",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/763a76d8-fd71-4380-a539-7f3822aae59d.png"
+        }
+      ],
+      "prompt": "Image1 edit target, image2 style reference. Change ONLY enormous upright inflated boat: replace it completely with a compact folded DEFLATED inflatable boat inside a rectangular dark navy zippered carry bag, two webbing handles and straps, about 90cm long 45cm high, sitting horizontally on the same low trolley. Bag no taller than workers waist. Absolutely no boat silhouette, no inflated tubes, no upright kayak. Keep worker face, blue orange uniform, exact warehouse, Л shelf sign, trolley position, illustrated style, and other people unchanged. Worker hand rests naturally on bag handle at waist height. Show this as sensible packed cargo ready for storage.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260928_094212_a538006f-4054-41ce-a1d5-b12c657d4f80.png",
+    "status": "completed"
+  }
+]

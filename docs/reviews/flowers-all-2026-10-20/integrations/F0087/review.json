@@ -1,0 +1,20 @@
+{
+  "assetId": "F0087",
+  "source": "public/scene-art/certificates-v1/professional-empathy.webp",
+  "decision": "accepted_for_runtime",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "generalReview": [
+    "Original full source compared with P2 preview",
+    "Presenter/team/hands/object focal pairs inspected at 100 percent",
+    "Owner seam pairs inspected at 100 percent"
+  ],
+  "findings": "Composition, pose, people and object count preserved; reviewed focal detail improves without visible doubling.",
+  "ownerReceipt": "docs/reviews/ending-2026-10-20-flowers/prepared/F0087/owner-handoff.json",
+  "limitations": [
+    "Partial reconstruction: P1 accepted5/retained4, P2 accepted4",
+    "Not native full-scene8192; protected/source-retained regions disclosed",
+    "Technical runtime acceptance; user artistic approval not implied"
+  ],
+  "runtimeVerification": "pending actual4344 currentSrc/decode/DPR and certificate download"
+}

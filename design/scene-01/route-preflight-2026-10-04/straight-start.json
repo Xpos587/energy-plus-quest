@@ -1,0 +1,38 @@
+[
+  {
+    "truck": 1,
+    "source_frame": 687,
+    "articulation_degrees": 5.450184963384125,
+    "screen_cab": [
+      0.8228458166122437,
+      0.34007513523101807
+    ]
+  },
+  {
+    "truck": 2,
+    "source_frame": 212,
+    "articulation_degrees": 8.913011643291835,
+    "screen_cab": [
+      0.28304407000541687,
+      0.4157029986381531
+    ]
+  },
+  {
+    "truck": 3,
+    "source_frame": 557,
+    "articulation_degrees": 0.32145055713491005,
+    "screen_cab": [
+      0.5160143971443176,
+      0.691940575838089
+    ]
+  },
+  {
+    "truck": 4,
+    "source_frame": 772,
+    "articulation_degrees": 16.902581710797943,
+    "screen_cab": [
+      0.6294853687286377,
+      0.5797919929027557
+    ]
+  }
+]

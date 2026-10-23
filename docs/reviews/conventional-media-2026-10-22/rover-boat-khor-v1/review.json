@@ -1,0 +1,11 @@
+{
+  "decision": "accepted_for_runtime",
+  "processingMode": "conventional_interpolation",
+  "detailRecovery": false,
+  "owner": "lastmile",
+  "independentReview": "Lastmile lane C reviewed original and before/preview390,1440,1920 DPR2. Same rover, driver, strapped boat/motor, reindeer/ice; no new artifacts/crop regression. Ordinary interpolation only.",
+  "generalReview": "Viewed390 and1920 DPR2 previews. Existing full mobile frame and desktop crop preserved; no newly reconstructed detail claimed.",
+  "measurementReceipt": "docs/reviews/media-coverage-2026-10-22/receipt.md",
+  "originalPreserved": true,
+  "runtimeVerification": "pending actual4344"
+}

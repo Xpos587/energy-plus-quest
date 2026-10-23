@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:40:14.838847Z",
+    "display_name": "Nano Banana Pro",
+    "id": "31eec538-2e68-448a-8093-bb683b9db397",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_094014_31eec538-2e68-448a-8093-bb683b9db397_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "27e398bd-ca91-4097-8eff-0000f06d7fb5",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/27e398bd-ca91-4097-8eff-0000f06d7fb5.webp"
+        }
+      ],
+      "prompt": "Change ONLY the smaller duplicated Л sign in middle distance (near center of picture) to Cyrillic Б. Keep LARGE FOREGROUND Л unchanged. Keep tiny distant А unchanged. Final sequence viewed from distant dispatch toward foreground is А, Б, Л. Exactly ONE Л in whole picture. Preserve everything else precisely.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_094014_31eec538-2e68-448a-8093-bb683b9db397.png",
+    "status": "completed"
+  }
+]

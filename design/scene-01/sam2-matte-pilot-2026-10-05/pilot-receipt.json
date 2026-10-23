@@ -1,0 +1,310 @@
+{
+  "model": "facebook/sam2.1-hiera-tiny",
+  "cached_snapshot": "/home/michael/.cache/huggingface/hub/models--facebook--sam2.1-hiera-tiny/snapshots/de431c4043854a71d8101e17995dfe596bf101a5",
+  "runtime": {
+    "torch": "2.10.0+cu128",
+    "transformers": "5.2.0",
+    "device": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "autocast": "float16"
+  },
+  "load_seconds": 0.471,
+  "elapsed_seconds": 4.44,
+  "frames": [
+    {
+      "frame": 0,
+      "crop": [
+        731,
+        507,
+        940,
+        640
+      ],
+      "box": [
+        776,
+        552,
+        895,
+        595
+      ],
+      "positive_points": [
+        [
+          882,
+          575
+        ],
+        [
+          821,
+          570
+        ],
+        [
+          791,
+          585
+        ],
+        [
+          854,
+          585
+        ]
+      ],
+      "negative_points": [
+        [
+          810,
+          542
+        ],
+        [
+          758,
+          593
+        ],
+        [
+          901,
+          575
+        ]
+      ],
+      "mask_pixels": 3385,
+      "inference_seconds": 1.571,
+      "score": 0.9638671875,
+      "rgb_retained_exactly": true
+    },
+    {
+      "frame": 12,
+      "crop": [
+        765,
+        506,
+        974,
+        639
+      ],
+      "box": [
+        810,
+        551,
+        929,
+        594
+      ],
+      "positive_points": [
+        [
+          912,
+          568
+        ],
+        [
+          855,
+          567
+        ],
+        [
+          829,
+          583
+        ],
+        [
+          889,
+          583
+        ]
+      ],
+      "negative_points": [
+        [
+          850,
+          543
+        ],
+        [
+          940,
+          570
+        ],
+        [
+          809,
+          600
+        ]
+      ],
+      "mask_pixels": 3513,
+      "inference_seconds": 0.471,
+      "score": 0.96484375,
+      "rgb_retained_exactly": true
+    },
+    {
+      "frame": 30,
+      "crop": [
+        812,
+        472,
+        1003,
+        633
+      ],
+      "box": [
+        857,
+        517,
+        958,
+        588
+      ],
+      "positive_points": [
+        [
+          944,
+          533
+        ],
+        [
+          907,
+          558
+        ],
+        [
+          878,
+          578
+        ],
+        [
+          924,
+          568
+        ]
+      ],
+      "negative_points": [
+        [
+          899,
+          505
+        ],
+        [
+          970,
+          552
+        ],
+        [
+          886,
+          600
+        ]
+      ],
+      "mask_pixels": 3188,
+      "inference_seconds": 0.427,
+      "score": 0.9501953125,
+      "rgb_retained_exactly": true
+    },
+    {
+      "frame": 60,
+      "crop": [
+        880,
+        386,
+        1018,
+        581
+      ],
+      "box": [
+        925,
+        431,
+        973,
+        536
+      ],
+      "positive_points": [
+        [
+          956,
+          443
+        ],
+        [
+          948,
+          482
+        ],
+        [
+          938,
+          525
+        ]
+      ],
+      "negative_points": [
+        [
+          983,
+          486
+        ],
+        [
+          918,
+          481
+        ],
+        [
+          962,
+          549
+        ]
+      ],
+      "mask_pixels": 2307,
+      "inference_seconds": 0.403,
+      "score": 0.9541015625,
+      "rgb_retained_exactly": true
+    },
+    {
+      "frame": 90,
+      "crop": [
+        899,
+        274,
+        1026,
+        477
+      ],
+      "box": [
+        944,
+        319,
+        981,
+        432
+      ],
+      "positive_points": [
+        [
+          966,
+          331
+        ],
+        [
+          961,
+          380
+        ],
+        [
+          952,
+          424
+        ]
+      ],
+      "negative_points": [
+        [
+          991,
+          368
+        ],
+        [
+          932,
+          385
+        ],
+        [
+          957,
+          442
+        ]
+      ],
+      "mask_pixels": 2327,
+      "inference_seconds": 0.387,
+      "score": 0.9716796875,
+      "rgb_retained_exactly": true
+    },
+    {
+      "frame": 120,
+      "crop": [
+        910,
+        155,
+        1038,
+        360
+      ],
+      "box": [
+        955,
+        200,
+        993,
+        315
+      ],
+      "positive_points": [
+        [
+          979,
+          213
+        ],
+        [
+          975,
+          257
+        ],
+        [
+          966,
+          307
+        ]
+      ],
+      "negative_points": [
+        [
+          1004,
+          245
+        ],
+        [
+          944,
+          260
+        ],
+        [
+          973,
+          325
+        ]
+      ],
+      "mask_pixels": 2335,
+      "inference_seconds": 0.346,
+      "score": 0.96826171875,
+      "rgb_retained_exactly": true
+    }
+  ],
+  "docs": "https://github.com/huggingface/transformers/blob/main/docs/source/en/model_doc/sam2.md",
+  "review_pass_claimed": false
+}

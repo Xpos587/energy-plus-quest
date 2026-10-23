@@ -1,0 +1,326 @@
+[
+  {
+    "view": "mobile",
+    "name": "compact-briefing",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "К этапу «Перевозчик»",
+        "clipped": false
+      },
+      {
+        "text": "К выбору",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "compact-choice",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "1Место",
+        "clipped": false
+      },
+      {
+        "text": "2Место",
+        "clipped": false
+      },
+      {
+        "text": "3Место",
+        "clipped": false
+      },
+      {
+        "text": "4Место",
+        "clipped": false
+      },
+      {
+        "text": "Поручить размещение Compact",
+        "clipped": false
+      },
+      {
+        "text": "К этапу «Перевозчик»",
+        "clipped": false
+      },
+      {
+        "text": "О задаче",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "compact-inspect",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "К вариантам",
+        "clipped": false
+      },
+      {
+        "text": "Подтвердить выбор",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "compact-result",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "Изменить выбор",
+        "clipped": false
+      },
+      {
+        "text": "Продолжить",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "inventory-briefing",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "К этапу «Загрузка»",
+        "clipped": false
+      },
+      {
+        "text": "К выбору",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "inventory-choice",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "У приёмки",
+        "clipped": false
+      },
+      {
+        "text": "Стеллаж «Л»",
+        "clipped": false
+      },
+      {
+        "text": "Кладовщик",
+        "clipped": false
+      },
+      {
+        "text": "Система WMS",
+        "clipped": false
+      },
+      {
+        "text": "К этапу «Загрузка»",
+        "clipped": false
+      },
+      {
+        "text": "О задаче",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "inventory-inspect",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "К вариантам",
+        "clipped": false
+      },
+      {
+        "text": "Подтвердить выбор",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "inventory-result",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "Изменить выбор",
+        "clipped": false
+      },
+      {
+        "text": "Читать дальше",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "crane-briefing",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "К этапу «Склад»",
+        "clipped": false
+      },
+      {
+        "text": "Далее",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "crane-choice",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "1Иван управляет краном из офиса",
+        "clipped": false
+      },
+      {
+        "text": "2Отправить Ивана на кран",
+        "clipped": false
+      },
+      {
+        "text": "3Дождаться плановой работы крана через 3 часа.",
+        "clipped": false
+      },
+      {
+        "text": "4Попросить Петра помочь",
+        "clipped": false
+      },
+      {
+        "text": "К этапу «Склад»",
+        "clipped": false
+      },
+      {
+        "text": "О задаче",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "crane-inspect",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "К вариантам",
+        "clipped": false
+      },
+      {
+        "text": "Подтвердить выбор",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "crane-result",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "Изменить выбор",
+        "clipped": false
+      },
+      {
+        "text": "Читать дальше",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "lastmile-briefing",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "К этапу «Баржа»",
+        "clipped": false
+      },
+      {
+        "text": "Далее",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "lastmile-choice",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "Вертолёт",
+        "clipped": false
+      },
+      {
+        "text": "Снегоболотоход",
+        "clipped": false
+      },
+      {
+        "text": "Роботизированная тележка",
+        "clipped": false
+      },
+      {
+        "text": "Трубовоз",
+        "clipped": false
+      },
+      {
+        "text": "К этапу «Баржа»",
+        "clipped": false
+      },
+      {
+        "text": "О задаче",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "lastmile-inspect",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "К вариантам",
+        "clipped": false
+      },
+      {
+        "text": "Подтвердить выбор",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "name": "lastmile-result",
+    "overflow": false,
+    "buttons": [
+      {
+        "text": "Изменить выбор",
+        "clipped": false
+      },
+      {
+        "text": "К вручению подарка",
+        "clipped": false
+      }
+    ],
+    "bodyHeight": 844
+  }
+]

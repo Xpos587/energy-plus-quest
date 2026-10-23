@@ -1,0 +1,26 @@
+{
+  "video": "v19-full-current-8s.mp4",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1334,
+        "r_frame_rate": "24/1",
+        "duration": "8.000000",
+        "nb_read_frames": "192"
+      }
+    ]
+  },
+  "decode_exit": 0,
+  "source_frames": [
+    1,
+    192
+  ],
+  "complete_current_source": true,
+  "source": "../fleet-v19-city-occlusion-2026-10-08/occlusion/city-occlusion.blend",
+  "city": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-v19-city-occlusion-2026-10-08/city/city-brand-final.png",
+  "shadow_source": "freshly rendered matching192 current compact-axle frames",
+  "scope": "complete8second current source; not previous48second old game clip; not assumed seamless loop; no gameplay mutation"
+}

@@ -1,0 +1,19 @@
+{
+  "removed_original_broken_wheel_faces": {
+    "1": 25892,
+    "2": 25892,
+    "3": 25892,
+    "4": 25892
+  },
+  "new_wheels": "Same axle centers and near-identical radius, machined recessed rims and blue charcoal rubber",
+  "fifth_wheel_platform_center": [
+    -1.7,
+    0,
+    1.105
+  ],
+  "rigid_body_edge_radius": 0.065,
+  "rigid_panel_tone_range": [
+    0.96,
+    1.04
+  ]
+}

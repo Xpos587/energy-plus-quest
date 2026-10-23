@@ -1,0 +1,22 @@
+{
+  "fridge_objects": [
+    "V08 2 refrigeration housing",
+    "V08 2 refrigeration lower control panel",
+    "V08 2 refrigeration vent louver 0",
+    "V08 2 refrigeration vent louver 1",
+    "V08 2 refrigeration vent louver 2",
+    "V08 2 refrigeration vent louver 3",
+    "V08 2 refrigeration vent louver 4",
+    "V08 2 refrigeration vent louver 5",
+    "V08 2 vent recess"
+  ],
+  "fridge_local_x_shift": -0.38,
+  "housing_rear_local_x": 0.68,
+  "trailer_front_local_x": 0.7,
+  "overlap": 0.02,
+  "yellow_hatch_local_z_shift": -0.28,
+  "exhaust_stack_and_cloud_local_x_shift": 0.2,
+  "catwalk_supports_per_truck": 2,
+  "fridge_all_frame_min_clearance_tractor_local": 0.25827048,
+  "fridge_worst_frame": 239
+}

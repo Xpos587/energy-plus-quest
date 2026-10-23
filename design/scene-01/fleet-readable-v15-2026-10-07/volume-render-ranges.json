@@ -1,0 +1,44 @@
+[
+  {
+    "render": "map-385",
+    "start": 137.03497314453125,
+    "end": 169.27183532714844,
+    "tile_size": 2,
+    "samples": 96
+  },
+  {
+    "render": "map-1",
+    "start": 147.97816467285156,
+    "end": 158.07470703125,
+    "tile_size": 2,
+    "samples": 96
+  },
+  {
+    "render": "close-1",
+    "start": 12.024428367614746,
+    "end": 17.767807006835938,
+    "tile_size": 2,
+    "samples": 96
+  },
+  {
+    "render": "close-4",
+    "start": 11.940431594848633,
+    "end": 17.683809280395508,
+    "tile_size": 2,
+    "samples": 96
+  },
+  {
+    "render": "close-2",
+    "start": 0.1,
+    "end": 50,
+    "tile_size": 2,
+    "samples": 96
+  },
+  {
+    "render": "close-3",
+    "start": 0.1,
+    "end": 50,
+    "tile_size": 2,
+    "samples": 96
+  }
+]

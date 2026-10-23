@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T12:55:01.539901Z",
+    "display_name": "Kling v3.0",
+    "id": "6c0401d9-db7f-43a3-82ae-d46f410b0aef",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "e384ec35-caee-4bb9-9df8-8c46ca732ba2",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/e384ec35-caee-4bb9-9df8-8c46ca732ba2.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "f8c59a84-be3a-45b6-a575-114112aaa7b4",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/f8c59a84-be3a-45b6-a575-114112aaa7b4.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera and fixed clean bright illustrated city. Exactly ONE green tractor connected to ONE rigid white box semitrailer. Preserve size, wheels, two drivers and one steering wheel. ONLY forward motion, cab always at leading end. No swapping cab and trailer ends, no reverse, no U-turn, no duplicate, no morphing, no disappearance, no roof crossing. Truck moves entirely on blue asphalt inside city crop, NEVER enters white sidebars. Tractor steers first with semitrailer rear axle following inner curve through coupled fifth-wheel hitch. Background/camera/lighting unchanged, softcoloredoutlines/shadows. Five second continuous shot. This is ONLY THE FIRST HALF of the corner. Start cab-facing LEFT. Move LEFT a SHORT distance toward the intersection, begin steering cab diagonally DOWN-LEFT. End in exactly supplied bent pose: cab diagonally DOWN-LEFT and trailer still mostly horizontal behind to RIGHT. Do not complete turn, do not continue west past this junction. Final image is a required midpoint pose, not a new vehicle.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_125501_6c0401d9-db7f-43a3-82ae-d46f410b0aef.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_125501_6c0401d9-db7f-43a3-82ae-d46f410b0aef_thumbnail.webp"
+  }
+]

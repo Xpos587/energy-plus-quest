@@ -1,0 +1,20 @@
+{
+  "engine": "BLENDER_EEVEE",
+  "resolution": [
+    3840,
+    2668
+  ],
+  "taa": 8,
+  "volume_samples": 32,
+  "volume_tile": 4,
+  "camera": "desktop",
+  "frames_deliverable": [
+    1,
+    1536
+  ],
+  "boundary_frame": 1537,
+  "fps": 24,
+  "duration_seconds": 64,
+  "gpu_launch": "prime-run",
+  "approved_by": "parent after visual tile2/tile4 comparison"
+}

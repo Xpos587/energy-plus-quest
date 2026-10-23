@@ -1,0 +1,146 @@
+.stage {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  aspect-ratio: 8 / 5;
+  overflow: clip;
+}
+
+.stage[data-crane-overview="true"] {
+  background: #dceaf3;
+}
+
+.plane {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image,
+.illustration,
+.illustration > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stage .marker {
+  width: 44px;
+  height: 44px;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.stage .marker::before {
+  inset: 6px;
+  border: 2px solid white;
+  background: var(--blue, #003ca6);
+  box-shadow: 0 2px 7px rgb(4 19 39 / 35%);
+}
+
+/* Keep the tiny trolley visible; the hit target remains 44 px. */
+.stage .marker[data-hotspot="robot"] {
+  margin-top: -34px;
+}
+
+.stage .marker:hover::before,
+.stage .marker[aria-pressed="true"]::before {
+  background: var(--orange);
+}
+
+.stage .marker[aria-pressed="true"] {
+  z-index: 7;
+}
+
+.stage .marker[aria-pressed="true"]::before,
+.stage .marker:focus-visible::before {
+  outline: 2px solid var(--blue, #003ca6);
+  outline-offset: 2px;
+}
+
+.marker:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.stage[data-selected] .marker:not([aria-pressed="true"]) {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.selectedMarker {
+  pointer-events: none;
+}
+
+.markerPair {
+  position: absolute;
+  width: 68px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  border: 0;
+  background: none;
+  pointer-events: none;
+  z-index: 2;
+}
+.stage[data-world-scene="crane"] .marker[data-hotspot="rush"] { transform: translate(-100%, -50%); }
+.stage[data-world-scene="crane"] .marker[data-hotspot="wait"] { transform: translate(0, -50%); }
+
+/* The reviewed crane family differs from the manifest by one source pixel.
+   Cover that rounding fringe instead of exposing the stage underneath. */
+.stage[data-world-scene="crane"] .image {
+  object-fit: cover;
+}
+
+/* Inventory uses the whole reviewed drawing: the WMS desk remains in frame. */
+.stage[data-world-scene="inventory"] { background: var(--pale-blue, #dfeafb); }
+.stage[data-world-scene="inventory"][data-camera-moving="true"] .plane {
+  transition: width 280ms cubic-bezier(0.23, 1, 0.32, 1), height 280ms cubic-bezier(0.23, 1, 0.32, 1), left 280ms cubic-bezier(0.23, 1, 0.32, 1), top 280ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.warehouseSurround { position:absolute; left:0; top:0; width:1942px; height:809px; max-width:none; transform-origin:0 0; pointer-events:none; }
+.stage[data-camera-moving="true"] .warehouseSurround { transition: transform 280ms cubic-bezier(0.23, 1, 0.32, 1); }
+.stage[data-world-scene="inventory"] .plane > picture { display:block; width:100%; height:100%; mask-image:linear-gradient(to right,transparent,#000 12px,#000 calc(100% - 12px),transparent); }
+@media (prefers-reduced-motion: reduce) {
+  .stage[data-world-scene="inventory"][data-camera-moving="true"] .plane { transition: none; }
+  .stage[data-camera-moving="true"] .warehouseSurround { transition: none; }
+}
+.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker { width: 44px; height: 44px; min-width: 44px; min-height: 44px; font-size: 12px; font-weight: 700; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker::before { inset: 12px; border: 1px solid white; border-radius: 5px; background: #075d9b; box-shadow: 0 1px 4px #04132730; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker[aria-pressed="true"]::before,
+.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker:focus-visible::before { outline: 1.5px solid #075d9b; outline-offset: 2px; }
+@media (min-width: 1001px) {
+  .stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker { font-size: 14px; }
+  .stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker::before { inset: 10px; }
+}
+
+.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker:hover::before,
+.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker[aria-pressed="true"]::before {
+  background: var(--orange, #ff5500);
+}
+/* Warehouse art uses numbered badges only; labels belong to choice controls. */
+.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker::after { content: none; }
+
+
+.stage[data-world-scene="lastmile"] .marker[data-hotspot="robot"] { margin-top: 0; }
+
+/* Two actions share the crane: match their walking/clock cues to the cards. */
+.stage[data-world-scene="crane"] .marker:is([data-hotspot="rush"], [data-hotspot="wait"]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  gap: 6px;
+  font-size: 14px;
+}
+.stage[data-world-scene="crane"] .marker:is([data-hotspot="rush"], [data-hotspot="wait"])::before {
+  inset: 6px 2px;
+  border-radius: 7px;
+}
+.stage[data-world-scene="crane"] .marker[data-hotspot="rush"] { margin-left: -3px; }
+.stage[data-world-scene="crane"] .marker[data-hotspot="wait"] { margin-left: 3px; }
+.actionIcon { width: 18px; height: 18px; position: relative; flex-shrink: 0; }

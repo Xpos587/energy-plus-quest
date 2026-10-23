@@ -1,0 +1,77 @@
+{
+  "recordedAt": "2026-10-22T21:51:36.947562+00:00",
+  "policy": "2026-10-22 throughput reset: no mandatory Flowers coverage of all manifest assets; selective accepted work and measured conventional enlargement have separate counters.",
+  "evidence": "Registered attempts only; retained regions are not native reconstruction. Assembly and alias registration do not prove runtime quality. Runtime-verified Flowers count includes accepted historical two-pass work reused selectively.",
+  "totals": {
+    "assets": 113,
+    "preparedAssets": 105,
+    "registeredNativeAttempts": 993,
+    "acceptedNativeTiles": 639,
+    "retainedTiles": 243,
+    "p1Assembled": 54,
+    "p2Assembled": 19,
+    "integratedAssets": 19,
+    "aliasRegisteredAssets": 19,
+    "selectiveFlowersRuntimeAssets": 19,
+    "conventionalEnlargementRuntimeAssets": 4,
+    "runtimeQualityVerifiedAssets": 23
+  },
+  "owners": {
+    "intro": {
+      "assets": 18,
+      "prepared": 18,
+      "registeredNativeAttempts": 166,
+      "acceptedNativeTiles": 72,
+      "retainedTiles": 94,
+      "p2Assembled": 1
+    },
+    "compact": {
+      "assets": 22,
+      "prepared": 22,
+      "registeredNativeAttempts": 178,
+      "acceptedNativeTiles": 115,
+      "retainedTiles": 43,
+      "p2Assembled": 10
+    },
+    "barge": {
+      "assets": 14,
+      "prepared": 10,
+      "registeredNativeAttempts": 43,
+      "acceptedNativeTiles": 22,
+      "retainedTiles": 11,
+      "p2Assembled": 0
+    },
+    "carrier": {
+      "assets": 12,
+      "prepared": 12,
+      "registeredNativeAttempts": 148,
+      "acceptedNativeTiles": 96,
+      "retainedTiles": 14,
+      "p2Assembled": 1
+    },
+    "ending": {
+      "assets": 16,
+      "prepared": 16,
+      "registeredNativeAttempts": 161,
+      "acceptedNativeTiles": 108,
+      "retainedTiles": 53,
+      "p2Assembled": 4
+    },
+    "lastmile": {
+      "assets": 25,
+      "prepared": 25,
+      "registeredNativeAttempts": 273,
+      "acceptedNativeTiles": 211,
+      "retainedTiles": 25,
+      "p2Assembled": 3
+    },
+    "inventory": {
+      "assets": 6,
+      "prepared": 2,
+      "registeredNativeAttempts": 24,
+      "acceptedNativeTiles": 15,
+      "retainedTiles": 3,
+      "p2Assembled": 0
+    }
+  }
+}

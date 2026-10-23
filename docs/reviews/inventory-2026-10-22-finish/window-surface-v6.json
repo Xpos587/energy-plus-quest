@@ -1,0 +1,296 @@
+{
+  "status": "window-only local surface proof, not production",
+  "source_scene": "warehouse-keeper-proof-v5.blend",
+  "candidate_scene": "warehouse-window-proof-v6.blend",
+  "texture_native": "window-view-texture-v1-native.png",
+  "native_texture_edited": false,
+  "window_count": 5,
+  "windows": [
+    {
+      "object": "Finish window glass",
+      "position": [
+        1.25,
+        7.451000213623047,
+        2.0999999046325684
+      ],
+      "dimensions": [
+        1.7999999523162842,
+        0.017999999225139618,
+        1.9700000286102295
+      ],
+      "mirror_u": false,
+      "projected_vertices": [
+        [
+          692.5383424758911,
+          242.88374185562134
+        ],
+        [
+          692.5383424758911,
+          127.5741457939148
+        ],
+        [
+          693.3284139633179,
+          242.23202466964722
+        ],
+        [
+          693.3284139633179,
+          126.92242860794067
+        ],
+        [
+          799.4319248199463,
+          291.05520248413086
+        ],
+        [
+          799.4319248199463,
+          175.7456660270691
+        ],
+        [
+          800.221996307373,
+          290.40348529815674
+        ],
+        [
+          800.221996307373,
+          175.09394884109497
+        ]
+      ],
+      "uv_layer": "Window painted view"
+    },
+    {
+      "object": "Finish window glass.001",
+      "position": [
+        3.6500000953674316,
+        7.451000213623047,
+        2.0999999046325684
+      ],
+      "dimensions": [
+        1.7999999523162842,
+        0.017999999225139618,
+        1.9700000286102295
+      ],
+      "mirror_u": true,
+      "projected_vertices": [
+        [
+          835.0630760192871,
+          307.11233615875244
+        ],
+        [
+          835.0630760192871,
+          191.80279970169067
+        ],
+        [
+          835.8531475067139,
+          306.4606189727783
+        ],
+        [
+          835.8531475067139,
+          191.15108251571655
+        ],
+        [
+          941.956615447998,
+          355.28385639190674
+        ],
+        [
+          941.9567012786865,
+          239.9742603302002
+        ],
+        [
+          942.7466869354248,
+          354.6321392059326
+        ],
+        [
+          942.7466869354248,
+          239.32254314422607
+        ]
+      ],
+      "uv_layer": "Window painted view"
+    },
+    {
+      "object": "Finish window glass.002",
+      "position": [
+        6.050000190734863,
+        7.451000213623047,
+        2.0999999046325684
+      ],
+      "dimensions": [
+        1.7999999523162842,
+        0.017999999225139618,
+        1.9700000286102295
+      ],
+      "mirror_u": false,
+      "projected_vertices": [
+        [
+          977.5878524780273,
+          371.3409900665283
+        ],
+        [
+          977.5878524780273,
+          256.03145360946655
+        ],
+        [
+          978.3779239654541,
+          370.6892728805542
+        ],
+        [
+          978.3779239654541,
+          255.37973642349243
+        ],
+        [
+          1084.4813919067383,
+          419.51245069503784
+        ],
+        [
+          1084.4813919067383,
+          304.2028546333313
+        ],
+        [
+          1085.271463394165,
+          418.8607335090637
+        ],
+        [
+          1085.271463394165,
+          303.55119705200195
+        ]
+      ],
+      "uv_layer": "Window painted view"
+    },
+    {
+      "object": "Finish window glass.003",
+      "position": [
+        8.449999809265137,
+        7.451000213623047,
+        2.0999999046325684
+      ],
+      "dimensions": [
+        1.7999999523162842,
+        0.017999999225139618,
+        1.9700000286102295
+      ],
+      "mirror_u": true,
+      "projected_vertices": [
+        [
+          1120.112543106079,
+          435.5695843696594
+        ],
+        [
+          1120.112543106079,
+          320.26004791259766
+        ],
+        [
+          1120.9026145935059,
+          434.9178671836853
+        ],
+        [
+          1120.9026145935059,
+          319.60833072662354
+        ],
+        [
+          1227.00608253479,
+          483.74104499816895
+        ],
+        [
+          1227.00608253479,
+          368.4315085411072
+        ],
+        [
+          1227.7961540222168,
+          483.0893278121948
+        ],
+        [
+          1227.7961540222168,
+          367.77979135513306
+        ]
+      ],
+      "uv_layer": "Window painted view"
+    },
+    {
+      "object": "Finish window glass.004",
+      "position": [
+        10.850000381469727,
+        7.451000213623047,
+        2.0999999046325684
+      ],
+      "dimensions": [
+        1.7999999523162842,
+        0.017999999225139618,
+        1.9700000286102295
+      ],
+      "mirror_u": false,
+      "projected_vertices": [
+        [
+          1262.6373195648193,
+          499.7982382774353
+        ],
+        [
+          1262.6373195648193,
+          384.48870182037354
+        ],
+        [
+          1263.427391052246,
+          499.1465210914612
+        ],
+        [
+          1263.427391052246,
+          383.8369846343994
+        ],
+        [
+          1369.5308589935303,
+          547.9696989059448
+        ],
+        [
+          1369.5308589935303,
+          432.66016244888306
+        ],
+        [
+          1370.3210163116455,
+          547.3179817199707
+        ],
+        [
+          1370.3210163116455,
+          432.00844526290894
+        ]
+      ],
+      "uv_layer": "Window painted view"
+    }
+  ],
+  "source_crop_xyxy": [
+    660,
+    96,
+    833,
+    322
+  ],
+  "source_dimensions": [
+    1440,
+    1000
+  ],
+  "camera_hidden_fake_surface_objects": [
+    "Finish distant foliage",
+    "Finish distant foliage.001",
+    "Finish distant foliage.002",
+    "Finish distant foliage.003",
+    "Finish distant foliage.004",
+    "Finish distant foliage.005",
+    "Finish distant foliage.006",
+    "Finish distant foliage.007",
+    "Finish distant foliage.008",
+    "Finish distant foliage.009",
+    "Finish distant foliage.010",
+    "Finish distant foliage.011",
+    "Finish distant foliage.012",
+    "Finish distant foliage.013",
+    "Finish distant foliage.014",
+    "Finish window horizon",
+    "Finish window horizon.001",
+    "Finish window horizon.002",
+    "Finish window horizon.003",
+    "Finish window horizon.004",
+    "Finish window sky top",
+    "Finish window sky top.001",
+    "Finish window sky top.002",
+    "Finish window sky top.003",
+    "Finish window sky top.004"
+  ],
+  "original_mesh_objects_checked": 631,
+  "geometry_or_transform_changes": [],
+  "frame_mullion_sill_wall_moved": false,
+  "shading": "72% emission at1.05 strength +28% rough diffuse; same physical glass panel meshes. No window invented. Keeper billboard proof retained."
+}

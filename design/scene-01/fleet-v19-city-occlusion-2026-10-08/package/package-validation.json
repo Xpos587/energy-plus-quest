@@ -1,0 +1,26 @@
+{
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1334,
+        "r_frame_rate": "24/1",
+        "duration": "2.000000",
+        "nb_read_frames": "48"
+      }
+    ]
+  },
+  "decode_exit": 0,
+  "pdf_pages": 3,
+  "frames": [
+    129,
+    176
+  ],
+  "city": "../city/city-brand-final.png",
+  "vehicle_alpha": "../occlusion/passage",
+  "shadow_source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-v16-wheels-style-2026-10-08/turn-shadow",
+  "shadow_note": "Original matching frame mesh shadows reuse pre-compact axle source; small axle-position difference possible. Road receiver mask excludes roofs.",
+  "scope": "Visual proof only, not deployed game"
+}

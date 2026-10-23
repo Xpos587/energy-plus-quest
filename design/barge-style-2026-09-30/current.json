@@ -1,0 +1,147 @@
+{
+  "version": "V3",
+  "status": "integrated-for-review",
+  "stakeholderApproval": false,
+  "choice": {
+    "boat": "choice-boat-v1.png",
+    "camera": "choice-camera-v1.png",
+    "socks": "choice-socks-v1.png"
+  },
+  "outcomes": {
+    "rush": {
+      "boat": "rush-boat-v1.png",
+      "camera": "rush-camera-v2.png",
+      "socks": "rush-socks-v2.png"
+    },
+    "wait": {
+      "boat": "wait-boat-v1.png",
+      "camera": "wait-camera-v1.png",
+      "socks": "wait-socks-v1.png"
+    },
+    "petr": {
+      "boat": "petr-boat-v12-candidate.png",
+      "camera": "petr-camera-v8.png",
+      "socks": "petr-socks-v8.png"
+    },
+    "remote": {
+      "boat": "remote-boat-v2.png",
+      "camera": "remote-camera-v3.png",
+      "socks": "remote-socks-v3.png"
+    }
+  },
+  "screenshots": "../../.tmp-work/barge-final-2026-09-30-v2/",
+  "beforeScreenshots": "../../.tmp-work/barge-style-before/",
+  "runtimeResolver": "../../src/scenes/crane/artworkFamily.ts",
+  "pdf": "energy-plus-petr-motor-v12.pdf",
+  "constraints": {
+    "scenarioCopyAndScores": "unchanged",
+    "animation": "none",
+    "styleReference": "../style-audit-2026-09-28/reference.png",
+    "uniformContract": "../style-pilot-2026-09-28/uniform-contract.md"
+  },
+  "limitations": [
+    "Tiny generated corporate marks are not certified as exact brand artwork",
+    "No stakeholder approval or human player comprehension test recorded",
+    "Portrait experiments are not selected for integration; retain complete landscape story composition",
+    "Existing mobile white space and text pagination remain UX limitations; all story content can be read",
+    "Petr desktop shows full-width complete image; result text and controls reached by normal vertical scrolling"
+  ],
+  "verification": {
+    "previousPass": {
+      "runtimeCasesPassed": 60,
+      "unitTestsPassed": 23,
+      "typecheck": "passed",
+      "reportedBy": "UX thread 01a0e848-0314-7590-ac6d-6ed20f22e9fc",
+      "viewports": [
+        [
+          320,
+          568
+        ],
+        [
+          390,
+          844
+        ],
+        [
+          624,
+          794
+        ],
+        [
+          780,
+          992
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "finalFramingRetestsPassed": 18,
+      "visualReview": "30 final screens at 390 and 1440 reviewed; Petr framing corrected; representative 320 and 780 inspected"
+    },
+    "correctionRuntimeCasesPassed": 14,
+    "correctionUnitTestsPassed": 5,
+    "viewports": [
+      [
+        390,
+        844
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "reportedBy": "UX thread 01a0e848-0314-7590-ac6d-6ed20f22e9fc",
+    "petrV8": {
+      "runtimeCasesPassed": 9,
+      "unitTestsPassed": 5,
+      "typecheck": "passed",
+      "viewports": [
+        [
+          320,
+          568
+        ],
+        [
+          390,
+          844
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "visual": "Parent inspected desktop entry and scrolled state, mobile boat; independent reviewer confirmed gift-only edits preserved approved faces and setting",
+      "reportedBy": "UX thread 01a0e848-0314-7590-ac6d-6ed20f22e9fc"
+    },
+    "motorV9": {
+      "visual": "Parent inspected mobile390; independent reviewer verified motor readability and no visible boat/people/background changes",
+      "runtime": "Connected by UX thread; 390 and1440 screenshots available"
+    },
+    "motorV12": {
+      "runtimeCasesPassed": 2,
+      "unitMappingPassed": 1,
+      "viewports": [
+        [
+          390,
+          844
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "flow": "choice-result-change-repeat-continue-lastmile initial briefing",
+      "reportedBy": "UX thread 01a0e848-0314-7590-ac6d-6ed20f22e9fc"
+    }
+  },
+  "correctionScreenshots": "../../.tmp-work/barge-revision-v3-final/",
+  "correctionPrompts": "correction-prompts-v2.json",
+  "petrScreenshots": "../../.tmp-work/barge-petr-v8-final/",
+  "petrRecipe": "petr-v8-recipe.json",
+  "userApproval": {
+    "scope": "Exact supplied socks image: composition, faces, continue gift variants",
+    "base": "petr-socks-v8.png",
+    "by": "Michael"
+  },
+  "motorRecipe": "motor-v9-recipe.json",
+  "motorScreenshots": "../../.tmp-work/barge-motor-v12/",
+  "familyPdf": "energy-plus-petr-family-v8.pdf"
+}

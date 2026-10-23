@@ -1,0 +1,27 @@
+{
+  "source": "full-map.mp4",
+  "cleanup": true,
+  "model": "gemini-2.5-flash",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1871,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 31691,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 131
+      },
+      {
+        "modality": "VIDEO",
+        "token_count": 31560
+      }
+    ],
+    "thoughts_token_count": 2704,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 36266,
+    "traffic_type": null
+  }
+}

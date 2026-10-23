@@ -1,0 +1,723 @@
+{
+  "status": "NO PASS at tested scales down to0.92",
+  "selected": null,
+  "results": [
+    {
+      "scale": 1,
+      "green_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -17.0,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 1048,
+        "worst_clearance_source_frame": 68,
+        "max_outside_source_frame": 90
+      },
+      "blue_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -18.681541442871094,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 1540,
+        "worst_clearance_source_frame": 342,
+        "max_outside_source_frame": 348
+      },
+      "scenarios": [
+        {
+          "scenario": "common-best",
+          "scale": 1,
+          "far_source_phases_frames": [
+            96,
+            259,
+            479
+          ],
+          "blue_source_phase_frames": 11,
+          "far3_minimum_aabb_gap_px": 22.47220505424423,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 30,
+          "opaque_overlap_pixels_across_frames": 382,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 9.291666666666666,
+              "opaque_overlap_frames": 26,
+              "max_opaque_overlap_pixels": 34,
+              "max_overlap_time_s": 9.75,
+              "minimum_gap_source_frames": [
+                319,
+                207
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 71.0,
+              "minimum_gap_time_s": 6.958333333333333,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                426,
+                157
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.25,
+              "opaque_overlap_frames": 4,
+              "max_opaque_overlap_pixels": 7,
+              "max_overlap_time_s": 12.291666666666666,
+              "minimum_gap_source_frames": [
+                227,
+                269
+              ]
+            }
+          ]
+        },
+        {
+          "scenario": "comfortable",
+          "scale": 1,
+          "far_source_phases_frames": [
+            114,
+            296,
+            478
+          ],
+          "blue_source_phase_frames": 18,
+          "far3_minimum_aabb_gap_px": 47.4236228055175,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 60,
+          "opaque_overlap_pixels_across_frames": 1134,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 8.75,
+              "opaque_overlap_frames": 28,
+              "max_opaque_overlap_pixels": 72,
+              "max_overlap_time_s": 9.208333333333334,
+              "minimum_gap_source_frames": [
+                324,
+                202
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 5.0,
+              "minimum_gap_time_s": 14.833333333333334,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                106,
+                330
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.333333333333334,
+              "opaque_overlap_frames": 32,
+              "max_opaque_overlap_pixels": 17,
+              "max_overlap_time_s": 12.541666666666666,
+              "minimum_gap_source_frames": [
+                228,
+                278
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scale": 0.98,
+      "green_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -15.231547355651855,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 1013,
+        "worst_clearance_source_frame": 169,
+        "max_outside_source_frame": 88
+      },
+      "blue_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -18.439088821411133,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 1490,
+        "worst_clearance_source_frame": 342,
+        "max_outside_source_frame": 348
+      },
+      "scenarios": [
+        {
+          "scenario": "common-best",
+          "scale": 0.98,
+          "far_source_phases_frames": [
+            96,
+            259,
+            479
+          ],
+          "blue_source_phase_frames": 11,
+          "far3_minimum_aabb_gap_px": 25.079872407968907,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 28,
+          "opaque_overlap_pixels_across_frames": 334,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 9.291666666666666,
+              "opaque_overlap_frames": 24,
+              "max_opaque_overlap_pixels": 32,
+              "max_overlap_time_s": 9.75,
+              "minimum_gap_source_frames": [
+                319,
+                207
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 73.0,
+              "minimum_gap_time_s": 6.958333333333333,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                426,
+                157
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.291666666666666,
+              "opaque_overlap_frames": 4,
+              "max_opaque_overlap_pixels": 5,
+              "max_overlap_time_s": 12.291666666666666,
+              "minimum_gap_source_frames": [
+                228,
+                270
+              ]
+            }
+          ]
+        },
+        {
+          "scenario": "comfortable",
+          "scale": 0.98,
+          "far_source_phases_frames": [
+            114,
+            296,
+            478
+          ],
+          "blue_source_phase_frames": 18,
+          "far3_minimum_aabb_gap_px": 49.678969393496885,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 56,
+          "opaque_overlap_pixels_across_frames": 980,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 8.75,
+              "opaque_overlap_frames": 28,
+              "max_opaque_overlap_pixels": 72,
+              "max_overlap_time_s": 9.208333333333334,
+              "minimum_gap_source_frames": [
+                324,
+                202
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 7.0,
+              "minimum_gap_time_s": 14.833333333333334,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                106,
+                330
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.333333333333334,
+              "opaque_overlap_frames": 28,
+              "max_opaque_overlap_pixels": 9,
+              "max_overlap_time_s": 12.416666666666666,
+              "minimum_gap_source_frames": [
+                228,
+                278
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scale": 0.96,
+      "green_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -14.317821502685547,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 892,
+        "worst_clearance_source_frame": 65,
+        "max_outside_source_frame": 89
+      },
+      "blue_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -17.72004508972168,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 1388,
+        "worst_clearance_source_frame": 342,
+        "max_outside_source_frame": 348
+      },
+      "scenarios": [
+        {
+          "scenario": "common-best",
+          "scale": 0.96,
+          "far_source_phases_frames": [
+            96,
+            259,
+            479
+          ],
+          "blue_source_phase_frames": 11,
+          "far3_minimum_aabb_gap_px": 27.65863337187866,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 10,
+          "opaque_overlap_pixels_across_frames": 38,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 9.333333333333334,
+              "opaque_overlap_frames": 10,
+              "max_opaque_overlap_pixels": 5,
+              "max_overlap_time_s": 9.75,
+              "minimum_gap_source_frames": [
+                320,
+                207
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 77.0,
+              "minimum_gap_time_s": 6.958333333333333,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                426,
+                157
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.291666666666666,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                228,
+                270
+              ]
+            }
+          ]
+        },
+        {
+          "scenario": "comfortable",
+          "scale": 0.96,
+          "far_source_phases_frames": [
+            114,
+            296,
+            478
+          ],
+          "blue_source_phase_frames": 19,
+          "far3_minimum_aabb_gap_px": 52.49761899362675,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 38,
+          "opaque_overlap_pixels_across_frames": 134,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 8.75,
+              "opaque_overlap_frames": 10,
+              "max_opaque_overlap_pixels": 12,
+              "max_overlap_time_s": 9.166666666666666,
+              "minimum_gap_source_frames": [
+                324,
+                203
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 13.0,
+              "minimum_gap_time_s": 14.833333333333334,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                106,
+                331
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.333333333333334,
+              "opaque_overlap_frames": 28,
+              "max_opaque_overlap_pixels": 8,
+              "max_overlap_time_s": 12.458333333333334,
+              "minimum_gap_source_frames": [
+                228,
+                279
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scale": 0.94,
+      "green_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -15.0,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 843,
+        "worst_clearance_source_frame": 68,
+        "max_outside_source_frame": 89
+      },
+      "blue_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -17.464248657226562,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 1310,
+        "worst_clearance_source_frame": 342,
+        "max_outside_source_frame": 348
+      },
+      "scenarios": [
+        {
+          "scenario": "common-best",
+          "scale": 0.94,
+          "far_source_phases_frames": [
+            96,
+            259,
+            479
+          ],
+          "blue_source_phase_frames": 11,
+          "far3_minimum_aabb_gap_px": 29.5296461204668,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 8,
+          "opaque_overlap_pixels_across_frames": 30,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 9.333333333333334,
+              "opaque_overlap_frames": 8,
+              "max_opaque_overlap_pixels": 5,
+              "max_overlap_time_s": 9.791666666666666,
+              "minimum_gap_source_frames": [
+                320,
+                207
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 79.0,
+              "minimum_gap_time_s": 6.958333333333333,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                426,
+                157
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.291666666666666,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                228,
+                270
+              ]
+            }
+          ]
+        },
+        {
+          "scenario": "comfortable",
+          "scale": 0.94,
+          "far_source_phases_frames": [
+            114,
+            296,
+            478
+          ],
+          "blue_source_phase_frames": 20,
+          "far3_minimum_aabb_gap_px": 54.037024344425184,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 18,
+          "opaque_overlap_pixels_across_frames": 50,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 8.75,
+              "opaque_overlap_frames": 4,
+              "max_opaque_overlap_pixels": 4,
+              "max_overlap_time_s": 9.166666666666666,
+              "minimum_gap_source_frames": [
+                324,
+                204
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 18.0,
+              "minimum_gap_time_s": 14.833333333333334,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                106,
+                332
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.291666666666666,
+              "opaque_overlap_frames": 14,
+              "max_opaque_overlap_pixels": 4,
+              "max_overlap_time_s": 13.75,
+              "minimum_gap_source_frames": [
+                227,
+                279
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scale": 0.92,
+      "green_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -13.928387641906738,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 815,
+        "worst_clearance_source_frame": 65,
+        "max_outside_source_frame": 88
+      },
+      "blue_roadmask": {
+        "minimum_signed_roadmask_clearance_px": -17.0,
+        "max_opaque_pixels_outside_roadmask_in_source_frame": 1230,
+        "worst_clearance_source_frame": 342,
+        "max_outside_source_frame": 348
+      },
+      "scenarios": [
+        {
+          "scenario": "common-best",
+          "scale": 0.92,
+          "far_source_phases_frames": [
+            96,
+            259,
+            479
+          ],
+          "blue_source_phase_frames": 11,
+          "far3_minimum_aabb_gap_px": 31.76476034853718,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 6,
+          "opaque_overlap_pixels_across_frames": 12,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 9.333333333333334,
+              "opaque_overlap_frames": 6,
+              "max_opaque_overlap_pixels": 3,
+              "max_overlap_time_s": 9.791666666666666,
+              "minimum_gap_source_frames": [
+                320,
+                207
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 82.0,
+              "minimum_gap_time_s": 6.958333333333333,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                426,
+                157
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.5857864376269049,
+              "minimum_gap_time_s": 13.666666666666666,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                261,
+                299
+              ]
+            }
+          ]
+        },
+        {
+          "scenario": "comfortable",
+          "scale": 0.92,
+          "far_source_phases_frames": [
+            114,
+            296,
+            478
+          ],
+          "blue_source_phase_frames": 19,
+          "far3_minimum_aabb_gap_px": 56.22277118748239,
+          "fleet_minimum_conservative_pixel_extent_gap_px": 0.0,
+          "opaque_overlap_frame_pairs": 12,
+          "opaque_overlap_pixels_across_frames": 16,
+          "passes_opaque_and_2px_margin": false,
+          "pairs": [
+            {
+              "pair": [
+                "green",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 8.75,
+              "opaque_overlap_frames": 6,
+              "max_opaque_overlap_pixels": 1,
+              "max_overlap_time_s": 8.75,
+              "minimum_gap_source_frames": [
+                324,
+                203
+              ]
+            },
+            {
+              "pair": [
+                "red",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 17.0,
+              "minimum_gap_time_s": 14.583333333333334,
+              "opaque_overlap_frames": 0,
+              "max_opaque_overlap_pixels": 0,
+              "max_overlap_time_s": 0.0,
+              "minimum_gap_source_frames": [
+                100,
+                326
+              ]
+            },
+            {
+              "pair": [
+                "yellow",
+                "blue"
+              ],
+              "conservative_pixel_extent_gap_px": 0.0,
+              "minimum_gap_time_s": 12.333333333333334,
+              "opaque_overlap_frames": 6,
+              "max_opaque_overlap_pixels": 2,
+              "max_overlap_time_s": 13.291666666666666,
+              "minimum_gap_source_frames": [
+                228,
+                279
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "period_seconds": 22.75,
+  "diagnostic_duration_seconds": 45.5,
+  "fps": 24,
+  "frames_checked_per_scenario": 1092,
+  "anchor": "Each actual observed cab-roof centroid in source tracking; xprime=anchor+s*(x-anchor), yprime analogous. Whole RGBA rig scaled uniformly, no east translation, articulation/timing/source phases preserved.",
+  "margin": "2px rendered-footprint clearance. For close boxes, closest contour pixel-center distance minus sqrt(2) conservatively accounts for pixel squares. For distant boxes, positive AABB gap is a conservative lower bound.",
+  "limitations": [
+    "Red/yellow use green RGBA geometry proxies until real alpha exists.",
+    "Roadmask metric includes extracted matte fringe and color segmentation error; not physical ground-clearance truth.",
+    "Entire truck/scenario scale, not separate cab/trailer adjustment.",
+    "Only four requested reductions0.98/0.96/0.94/0.92 were tested; stop at0.92."
+  ]
+}

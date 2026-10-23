@@ -1,0 +1,20 @@
+{
+  "assetId": "F0114",
+  "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-alva.webp",
+  "decision": "accepted_for_runtime",
+  "passes": 2,
+  "generalReview": [
+    "Original R4 wide source and final full preview",
+    "100 percent foliage/heli/pipe/rover/robot detail contact",
+    "100 percent repaired ship cabin windows, rails and shore seam"
+  ],
+  "findings": "Macro composition, vehicle count/silhouettes, gift/ship docking and recipient placement preserved. Repaired cabin railings/windows show no reviewed double-edge seam. Native vehicle details are visibly reconstructed.",
+  "ownerReceipt": "docs/reviews/lastmile-2026-10-20-flowers/prepared/lastmile-01/review-decision.json",
+  "limitations": [
+    "Only wide-alva choice source, not all six maps",
+    "P1 nine and P2 six accepted; one rejected attempt preserved as evidence",
+    "Recipient identity protected from source and softer at100percent",
+    "8192 assembled export, not native full-scene response; no client artistic acceptance"
+  ],
+  "runtimeVerification": "pending actual4344 wide vs tall branches"
+}

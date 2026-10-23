@@ -1,0 +1,27 @@
+{
+  "source": "turn.mp4",
+  "cleanup": true,
+  "model": "gemini-2.5-flash",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 586,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 17105,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 273
+      },
+      {
+        "modality": "VIDEO",
+        "token_count": 16832
+      }
+    ],
+    "thoughts_token_count": 1221,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 18912,
+    "traffic_type": null
+  }
+}

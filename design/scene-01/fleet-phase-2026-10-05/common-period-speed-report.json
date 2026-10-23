@@ -1,0 +1,8 @@
+{
+  "period_seconds": 22.75,
+  "blue_source_20s_retime_factor": 1.1375,
+  "blue_mean_image_speed_px_s": 60.377396359203125,
+  "far3_mean_image_speed_px_s": 75.74340726099034,
+  "rank": "green = red = yellow > blue",
+  "note": "Image-plane centroid distance including noise. Red/yellow actual videos not available, geometries are green proxies."
+}

@@ -1,0 +1,786 @@
+.header {
+  position: absolute;
+  z-index: 20;
+  top: 16px;
+  right: 20px;
+  left: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 48px;
+  color: var(--navy, #003b71);
+  pointer-events: none;
+}
+
+.selectionHeaderCard {
+  display: grid;
+  grid-template-rows: 42px minmax(0, 1fr);
+  width: min(360px, calc(100vw - 100px));
+  flex: none;
+  height: 98px;
+  padding: 9px 12px;
+  border: 1px solid #e5ebef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 30px #173a5b12;
+  pointer-events: auto;
+}
+
+.selectionHeaderCard .brandCluster {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.resultHeaderCard {
+  display: grid;
+  grid-template-rows: 42px minmax(0, 1fr);
+  flex: none;
+  width: min(420px, calc(100vw - 100px));
+  height: 98px;
+  min-width: 0;
+  padding: 9px 12px;
+  border: 1px solid #e5ebef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 30px #173a5b12;
+  pointer-events: auto;
+}
+.resultHeaderCard .brandCluster {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.header[data-header-result] {
+  gap: 0;
+  border: 1px solid #e5ebef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 30px #173a5b12;
+}
+.header[data-header-result] .resultHeaderCard {
+  flex: 1;
+  width: auto;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.header[data-header-result] .progressToggle {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.headerRow {
+  grid-template-rows: minmax(0, 1fr);
+  min-height: 0;
+  padding-top: 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerRow > h1,
+.headerRow > h2,
+.resultHeading > span {
+  grid-row: 1;
+  align-self: center;
+  transform: translateY(1px);
+}
+
+.resultHeading {
+  composes: headerRow;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  color: #082946;
+  font-size: clamp(18px, 1.4vw, 20px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.selectionHeading {
+  composes: headerRow;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+}
+
+.selectionHeading h1 {
+  grid-column: 2;
+  margin: 0;
+  font-size: clamp(18px, 1.4vw, 20px);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.selectionBack,
+.selectionIcon {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  background: #edf4f9;
+  color: var(--navy, #003b71);
+  cursor: pointer;
+}
+
+.selectionIcon {
+  color: #006db6;
+}
+
+/* Keep the approved arrow compact while making it easy to tap. */
+.selectionBack {
+  position: relative;
+  touch-action: manipulation;
+}
+.selectionBack::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+}
+
+.selectionStep {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  padding: 6px 4px;
+  color: #d95812;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.selectionStep span {
+  color: #8da0af;
+  font-size: 14px;
+}
+
+.selectionBack svg,
+.selectionIcon svg,
+.progressChevron svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.selectionIcon circle {
+  fill: none;
+}
+
+.selectionBack:hover,
+.selectionBack:focus-visible {
+  background: #dcebf5;
+}
+
+.brandCluster {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fff;
+  pointer-events: auto;
+}
+
+.energyMark,
+.projectMark {
+  display: flex;
+  align-items: center;
+  /* Leave breathing room above the divider without moving the title row. */
+  transform: none;
+}
+
+/* Center the wordmarks' visual mass, rather than the tall flame's SVG box.
+   Move the pair together so the approved relative alignment stays intact. */
+.brandPair {
+  display: flex;
+  align-items: center;
+  gap: inherit;
+  min-width: 0;
+  max-width: 100%;
+  transform: translateY(-8%);
+}
+
+.energyMark {
+  /* Align the bar with the wordmark's visual mass, below the tall flame. */
+  transform: none;
+}
+
+.energyMark img {
+  display: block;
+  width: 128px;
+  height: auto;
+  object-fit: contain;
+}
+
+.companyLogo {
+  display: block;
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+}
+
+.routeProgress {
+  position: relative;
+  flex: none;
+  pointer-events: auto;
+}
+
+.progressToggle {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: start;
+  align-content: center;
+  gap: 9px 10px;
+  width: 180px;
+  height: 98px;
+  padding: 10px 12px;
+  border: 1px solid #e5ebef;
+  border-radius: 14px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  box-shadow: 0 12px 30px #173a5b12;
+  cursor: default;
+}
+
+.progressText {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  gap: 3px;
+  min-width: 122px;
+  text-align: left;
+}
+
+.progressToggle:focus-visible {
+  outline: 3px solid var(--blue, #0079c2);
+  outline-offset: 3px;
+}
+
+.progressChevron {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf4f9;
+  transition: transform 160ms ease-out;
+}
+
+.progressToggle[aria-expanded="true"] .progressChevron {
+  transform: rotate(180deg);
+}
+
+.routePopover {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: min(320px, calc(100vw - 24px));
+  max-height: none;
+  overflow: hidden;
+  padding: 18px;
+  border: 1px solid #dce5eb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 40px #173a5b30;
+}
+
+.routePopover > strong {
+  display: block;
+  font-size: 17px;
+}
+
+.routeMission {
+  margin: 8px 0 14px;
+  color: #53697d;
+  font-size: 14px;
+}
+
+.routeList {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.routeList li {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 5px 8px;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.routeList li[data-route-state="current"] {
+  background: #eaf3fa;
+  font-weight: 700;
+}
+
+.routeList li[data-route-state="upcoming"] {
+  color: #6a7b89;
+}
+
+.routeList small {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.routeNumber {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e5edf3;
+  color: #315a78;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.routeList li[data-route-state="done"] .routeNumber,
+.routeList li[data-route-state="current"] .routeNumber {
+  background: var(--blue, #0079c2);
+  color: white;
+}
+
+.progressCaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+@media (min-width: 601px) {
+  .progressChevron { display: none; }
+}
+
+.progressTrack {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.progressItem {
+  position: relative;
+  flex: 1;
+  height: 5px;
+  border-radius: 999px;
+  background: #cad5df;
+}
+
+.progressItem[data-current="true"] {
+  background: var(--blue, #0079c2);
+}
+
+.progressItem > span,
+.progressItem i,
+.selectionSummary {
+  position: absolute;
+  width: 1px;
+  min-width: 0;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.progressCount {
+  color: #546d83;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.progressCountCompact {
+  display: none;
+}
+.progressRouteIcon {
+  display: none;
+}
+
+@media (min-width: 601px) and (max-width: 760px) {
+  .header {
+    right: 12px;
+    left: 12px;
+    gap: 8px;
+  }
+
+  .progressToggle {
+    width: min(300px, calc(100vw - 392px));
+  }
+}
+
+@media (max-width: 600px) {
+  .headerRow {
+    gap: 4px;
+  }
+
+  .header {
+    top: 8px;
+    right: 12px;
+    left: 12px;
+    gap: 8px;
+    min-height: 44px;
+  }
+
+  .selectionHeaderCard {
+    width: calc(100vw - 24px);
+    height: 94px;
+    grid-template-rows: 34px minmax(0, 1fr);
+    padding: 8px 10px;
+  }
+
+  .selectionHeaderCard .brandCluster {
+    min-height: 0;
+    padding: 0;
+  }
+
+  .selectionHeading {
+    grid-template-columns: 32px minmax(0, 1fr);
+    min-height: 0;
+    gap: 4px;
+  }
+
+  .selectionHeading h1 {
+    font-size: clamp(14px, 4vw, 17px);
+  }
+
+  .selectionBack,
+  .selectionIcon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+
+  .selectionStep {
+    font-size: 15px;
+    padding-inline: 0;
+  }
+
+  .selectionStep span {
+    font-size: 12px;
+  }
+
+  .brandCluster {
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  .energyMark img {
+    width: 108px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .companyLogo {
+    width: 144px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .energyMark {
+    flex: 0 1 108px;
+    min-width: 0;
+  }
+
+  .projectMark {
+    flex: 0 1 144px;
+    min-width: 0;
+  }
+
+  .progressToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: 60px;
+    height: 48px;
+    padding: 6px;
+    border-radius: 10px;
+  }
+
+  .header[data-header-result] .resultHeaderCard {
+    width: 100%;
+    height: 94px;
+    grid-template-rows: 34px minmax(0, 1fr);
+    padding: 8px 10px;
+    border-right: 1px solid #e5ebef;
+    border-radius: 14px;
+  }
+  .header[data-header-result] .resultHeaderCard .brandCluster {
+    min-height: 0;
+    padding-right: 70px;
+  }
+  .header[data-header-result] .resultHeading {
+    min-height: 0;
+    font-size: clamp(14px, 4vw, 17px);
+  }
+  .header[data-header-result] .progressToggle {
+    border-radius: 7px;
+  }
+  .header[data-header-result] .routeProgress {
+    top: 8px;
+  }
+
+  .progressText {
+    min-width: 0;
+  }
+
+  .progressCaption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .progressCount {
+    display: none;
+  }
+
+  .progressCountCompact {
+    display: block;
+    color: #315a78;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .progressChevron {
+    width: 24px;
+    height: 26px;
+  }
+
+  .progressChevron svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .progressTrack {
+    display: none;
+  }
+
+  .progressItem {
+    width: 5px;
+    height: 5px;
+  }
+
+  .progressItem[data-current="true"] {
+    width: 12px;
+  }
+}
+
+@media (max-width: 359px) {
+  .progressCountCompact {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    top: 12px;
+    right: 16px;
+    left: 16px;
+    gap: 0;
+  }
+  .selectionHeaderCard {
+    width: 100%;
+  }
+  .routeProgress,
+  .progressToggle {
+    width: min(260px, 34vw);
+  }
+  .progressToggle {
+    border-radius: 0 14px 14px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    top: 8px;
+    right: 12px;
+    left: 12px;
+    display: block;
+  }
+  .selectionHeaderCard {
+    width: 100%;
+    border-right: 1px solid #e5ebef;
+    border-radius: 14px;
+  }
+  .header:has(.selectionHeaderCard) .routeProgress {
+    display: none;
+  }
+  .routeProgress {
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    width: auto;
+  }
+  .progressToggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: auto;
+    min-width: 58px;
+    height: 27px;
+    padding: 2px 7px;
+    border: 1px solid #c4dbe9;
+    border-radius: 7px;
+    background: #edf4f9;
+    box-shadow: none;
+  }
+  .progressChevron { display: none; }
+  .progressRouteIcon {
+    display: block;
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: #20618c;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .progressCountCompact { font-size: 11px; }
+  .routePopover {
+    top: 82px;
+    right: 0;
+    width: min(280px, calc(100vw - 24px));
+    max-height: calc(100dvh - 110px);
+    padding: 12px;
+    border-radius: 12px;
+  }
+  .routePopover > strong { font-size: 14px; }
+  .routeMission { margin: 4px 0 8px; font-size: 11px; }
+  .routeList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3px;
+  }
+  .routeList li {
+    grid-template-columns: 22px 1fr;
+    min-height: 33px;
+    gap: 4px;
+    padding: 3px 4px;
+    font-size: 11px;
+  }
+  .routeNumber { width: 21px; height: 21px; font-size: 10px; }
+  .routeList small { display: none; }
+}
+@media (max-width: 359px) {
+  .progressToggle {
+    min-width: 53px;
+    padding-inline: 5px;
+  }
+}
+
+@media (max-height: 500px) and (min-width: 600px) {
+  .routePopover { position: fixed; top: 12px; right: 12px; width: min(540px, calc(100vw - 24px)); padding: 12px; }
+  .routeList { grid-template-columns: 1fr 1fr; }
+  .routeMission { margin: 6px 0; }
+}
+
+/* Results use one compact brand/progress row; navigation lives with the story. */
+.header[data-header-result] {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  min-height: 0;
+}
+.header[data-header-result] .resultHeaderCard {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 6px 12px;
+  border: 0;
+}
+.header[data-header-result] .resultHeaderCard .brandCluster {
+  padding: 0;
+  min-height: 0;
+}
+.header[data-header-result] .routeProgress {
+  position: static;
+  width: auto;
+  flex: none;
+  padding-right: 12px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.header[data-header-result] .progressToggle {
+  height: 100%;
+  padding-block: 6px;
+}
+@media (max-width: 600px) {
+  .header[data-header-result] { height: 48px; }
+  .header[data-header-result] .resultHeaderCard {
+    padding: 6px 10px;
+    width: auto;
+  }
+  .header[data-header-result] .resultHeaderCard .brandCluster { gap: 8px; }
+  .header[data-header-result] .energyMark { flex-basis: 90px; }
+  .header[data-header-result] .projectMark { flex-basis: 126px; }
+  .header[data-header-result] .routeProgress { width: auto; flex: none; padding-right: 10px; }
+  .header[data-header-result] .progressToggle {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 8px 0 0;
+  }
+  .header[data-header-result] .progressText {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+  .header[data-header-result] .progressCountCompact { line-height: 1; }
+  .header[data-header-result] .progressRouteIcon { flex: none; }
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .header[data-header-result] {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: calc(48px + env(safe-area-inset-top, 0px));
+    padding-top: env(safe-area-inset-top, 0px);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+  }
+}
+
+/* R4: align the result wordmark with the scene row. The SVG retains its
+   approved internal padding; content cards keep their own spacing. */
+.header[data-header-result] .resultHeaderCard {
+  padding-inline-start: 0;
+}

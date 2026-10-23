@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-23T11:58:47.540024Z",
+    "display_name": "Nano Banana Pro",
+    "id": "d44862d2-9885-42a9-aa85-844c49e9806b",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_115847_d44862d2-9885-42a9-aa85-844c49e9806b_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "009680de-fc45-4430-a708-5f14a0bed553",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/009680de-fc45-4430-a708-5f14a0bed553_resize.jpg"
+        }
+      ],
+      "prompt": "Edit this illustration in the SAME refined 2D hand-drawn editorial style, preserving the exact overall composition, two cranes, buildings, barge, autumn palette and camera angle. Make only these essential corrections:\n1. Exactly TWO people in the entire image. Ivan remains the one clearly visible man in the office. Petr becomes the one man INSIDE the distant right crane cabin, with helmet and orange vest. Remove the man standing outside that distant cabin. The near large crane cabin must be visibly EMPTY: show its chair and controls, absolutely no human silhouette. No third worker or duplicated person anywhere.\n2. The pipe bundle is ALREADY resting flat on the barge deck. Completely remove the thin vertical cable/rope running from the large near crane hook down to the orange pipe slings. Keep the near crane's main hoist cable and its large hook hanging idle ABOVE the barge, ending in clear air. Keep the orange tie-down straps around the pipes but remove any raised lifting sling going up from them. Nothing is being lifted yet.\n3. Replace the agricultural-looking blue tractor with a compact modern AUTONOMOUS ELECTRIC INDUSTRIAL TOW TRACTOR: enclosed low cobalt chassis, dark solid rubber wheels, small lidar/sensor mast, NO driver's seat, NO steering wheel, NO human. Same footprint/location and attachment to the existing cart with the one orange camera gift box. The cart and camera pictogram stay.\nEverything else retains its drawing quality and realistic detail. Do not add text, extra gifts or extra cranes. No 3D render, no photographic textures.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_115847_d44862d2-9885-42a9-aa85-844c49e9806b.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "display_name": "Kling 3.0 Omni Edit",
+  "job_type": "kling_video_edit",
+  "params": [
+    {
+      "name": "image_references",
+      "type": "array",
+      "default": null,
+      "required": false
+    },
+    {
+      "name": "mode",
+      "type": "string",
+      "default": "pro",
+      "required": false,
+      "enum": [
+        "std",
+        "pro",
+        "4k"
+      ]
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "video_references",
+      "type": "array",
+      "default": null,
+      "required": true
+    }
+  ],
+  "rules": [],
+  "type": "video"
+}

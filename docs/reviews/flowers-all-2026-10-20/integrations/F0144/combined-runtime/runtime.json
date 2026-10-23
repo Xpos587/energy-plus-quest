@@ -1,0 +1,202 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-compact-environment-v53-portrait-B2jJD8NY.avif",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "decoded": [
+        1368,
+        1149
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-compact-environment-v53-portrait-B2jJD8NY.avif",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "decoded": [
+        1368,
+        1149
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-compact-environment-v53-portrait-B2jJD8NY.avif",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "decoded": [
+        1368,
+        1149
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-compact-environment-v53-portrait-B2jJD8NY.avif",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "decoded": [
+        1368,
+        1149
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-compact-environment-v54-wide-B_fCKzyL.avif",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2560
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-compact-environment-v54-wide-B_fCKzyL.avif",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2560
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-compact-environment-v54-wide-B_fCKzyL.avif",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2560
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-compact-environment-v54-wide-B_fCKzyL.avif",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2560
+      ]
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  }
+]

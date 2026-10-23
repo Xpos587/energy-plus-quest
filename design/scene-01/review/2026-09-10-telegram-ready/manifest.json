@@ -1,0 +1,524 @@
+{
+  "source": "http://127.0.0.1:4173/",
+  "journey": {
+    "profile": "professional",
+    "recipient": "arseniy",
+    "parcel": "camera"
+  },
+  "screens": [
+    {
+      "file": "desktop/01-profile.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "dabeb86afe81060007ab2a587907b736520ce8f45d269e575cb1e5c59d1316cf",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/map/carrier-desktop.webp?t=1789047612815",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022"
+      ],
+      "decodedRgbSha256": "dfec9019ccc819f40db21c273c43f4407ab66f9fd5e4bea2d1c2fef1cbff97bd"
+    },
+    {
+      "file": "desktop/02-recipient.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "b9ff277ef38c6fee58e9931faa639fa55a8f2aafcd180eef249bee35679700b3",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/map/carrier-desktop.webp?t=1789047612815",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/khor.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317"
+      ],
+      "decodedRgbSha256": "33df5e3586f95321c90ae7816306f7d1aada88e38206c9e26cf3f5a69beff958"
+    },
+    {
+      "file": "desktop/03-parcel.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "8e2f3f993d06ecc056a59bb562cc2861d29c59b61d22c9ee275542b381bc9dc7",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/map/carrier-desktop.webp?t=1789047612815",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/socks.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp"
+      ],
+      "decodedRgbSha256": "7033948b8c9eb4b33226823962bd133b81ba73868af548f28ed92a309e9237c4"
+    },
+    {
+      "file": "desktop/04-map.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "35c73e3df1a6853b5b8d7a5d89c71e126a306951156154e734379698f2b4a8ce",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/map/extension-desktop-clean.webp?t=1789040427980"
+      ],
+      "video": "http://127.0.0.1:4173/design/scene-01/assets/current/map/carrier-desktop.mp4?t=1789047612813",
+      "time": 31.598719,
+      "decodedRgbSha256": "2d57eef1ddf8a96742dae4eadde3dea2a20f4b82270e3c126effcccbda020d4e"
+    },
+    {
+      "file": "desktop/05-outcome-crew.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "1595bb3666b5805b3df4d6d67e06bdd740e301a2690df68e936e38e2b0f1b730",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/crew-desktop.webp"
+      ],
+      "decodedRgbSha256": "e173452cde5fad441e2ce79fe2def5a90ff4b9e7a05a6d4f10238b620ad3cc5e"
+    },
+    {
+      "file": "desktop/extras/06-outcome-old1.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "8cac2b92b9b49debe2a5338e60a41638b8f7d227a55de3ad35fb055efac549e6",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/old-desktop.webp"
+      ],
+      "decodedRgbSha256": "3225e976d763af70c9c64825640a5c62406163f140d282536814064dc19e5483"
+    },
+    {
+      "file": "desktop/extras/07-outcome-old4.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "025fc02268aa386f47d37f167e80212a9f3cb3b0082ceea0a4d4e85050c4e1a3",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/old4-desktop.webp"
+      ],
+      "decodedRgbSha256": "aa9dd1e5e4415ebe52ad7553a388b24992e5fbeaf78adf2bd5a01ced7763f7e8"
+    },
+    {
+      "file": "desktop/extras/08-outcome-near.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "4e0d3b38263d8969eb35d6d22a576d56e62681162041df364123b092450f8608",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/near-desktop.webp"
+      ],
+      "decodedRgbSha256": "cd1cb08c151de95a4f7a8f388b572521ad49523a1daac29f998c21914d096fe2"
+    },
+    {
+      "file": "desktop/extras/09-outcome-express.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "1894daf2a7e8275dfcc29ec481f93a77cbf940a3ea284458120a575e693ef143",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 132
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 160
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/express-desktop.webp"
+      ],
+      "decodedRgbSha256": "525945cfa448679be90f9c2660e3be2b746dda6a70a6f33489c6fe9612749dcc"
+    },
+    {
+      "file": "mobile/01-profile.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "2af533b5cfcf21dd3d64bb8c1ebd7e28b3690b74ed11dd650bd9f655bf86fcd8",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/map/carrier-mobile.webp?t=1789047612888",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022"
+      ],
+      "decodedRgbSha256": "a96f9893ffa144740685489c880a1328427f58aecfcedea84d8161ddc271131c"
+    },
+    {
+      "file": "mobile/02-recipient.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "ddda23fbd81b2d793b88d0cd1043355349293af71ad66dddce9401a358fd0f7d",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/map/carrier-mobile.webp?t=1789047612888",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/khor.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317"
+      ],
+      "decodedRgbSha256": "356919bf91e81a0a2514b0b07a71333115ac92e456de80cecf98a5fafa33fa76"
+    },
+    {
+      "file": "mobile/03-parcel.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "d1d6dc5f5368b535e1b0c1e0e6fddfe234f3f2de75e9af0c66f9c35758a37056",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/map/carrier-mobile.webp?t=1789047612888",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/socks.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp"
+      ],
+      "decodedRgbSha256": "3e24718b7c4b440ebe1f0f2e21c6f0dc68a07a11ea8df88791d19a77b116ec93"
+    },
+    {
+      "file": "mobile/04-map.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "9b5c587614eccdd418b53d06142c3bc830bf4503d1d1cf9f0e3b8ffa637f9fda",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/map/extension-mobile-clean.webp?t=1789040431163"
+      ],
+      "video": "http://127.0.0.1:4173/design/scene-01/assets/current/map/carrier-mobile.mp4?t=1789047612886",
+      "time": 31.599834,
+      "decodedRgbSha256": "643451160e240eba5b5b0c58eaeee9d8e3fff286400cd072d30ade42aa529d19"
+    },
+    {
+      "file": "mobile/05-outcome-crew.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "584c5e796618fbba26558d262bc70d343b2936cf196ffadc6d4625d450d9788a",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/crew-mobile.webp"
+      ],
+      "decodedRgbSha256": "efbfabda01df5aa68db22ce5103821ea0e219e5bfc1ea9a2134c5fb0073b3e53"
+    },
+    {
+      "file": "mobile/extras/06-outcome-old1.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "32882b732450ecf40928075a3147947edb4b915f3fa827febd01c0d5c36cfc29",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/old-mobile.webp"
+      ],
+      "decodedRgbSha256": "131837f23bef768edfcbaffe8abd257408963020172a85e579c5b454f8a6d2db"
+    },
+    {
+      "file": "mobile/extras/07-outcome-old4.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "caacf0e827d4c791e351e7325b8248b72e0faa259570cef7676733053cd549ef",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/old4-mobile.webp"
+      ],
+      "decodedRgbSha256": "5f8dca793d43c5d40742739af0f80e1ac29f93c8ee39c3454af1331f7f55c654"
+    },
+    {
+      "file": "mobile/extras/08-outcome-near.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "daa6bebe53fbde99f57e22698107d86ef7fbde394f0de3c04f71b2653cd57681",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/near-mobile.webp"
+      ],
+      "decodedRgbSha256": "77b61e7155477095c75456180f3fba3a8ec87af644564a3907dcd806e0b9b677"
+    },
+    {
+      "file": "mobile/extras/09-outcome-express.png",
+      "width": 1170,
+      "height": 2532,
+      "sha256": "ce268830106074b4a28f8a4fafeb9ebc2834417f1a55414b8c797f2245de51b5",
+      "overflow": false,
+      "logos": [
+        {
+          "alt": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f+",
+          "source": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+          "width": 91
+        },
+        {
+          "alt": "\u0413\u0430\u0437\u043f\u0440\u043e\u043c \u043d\u0435\u0444\u0442\u044c \u2014 \u0413\u0430\u0437\u043f\u0440\u043e\u043c\u043d\u0435\u0444\u0442\u044c-\u0421\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u0435",
+          "source": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+          "width": 112
+        }
+      ],
+      "images": [
+        "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+        "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp?t=1788965664022",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp?t=1788963730317",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "http://127.0.0.1:4173/design/scene-01/assets/current/outcomes/express-mobile.webp"
+      ],
+      "decodedRgbSha256": "c17364d52f34bb2da641617b09dcb50fad8cffa6f56b88e53f75d2cdc5f98237"
+    }
+  ],
+  "errors": [],
+  "losslessOptimization": "Opaque alpha removed; RGB pixels verified identical after PNG compression."
+}

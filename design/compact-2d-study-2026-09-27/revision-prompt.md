@@ -1,0 +1,24 @@
+# Переработка по свежим карточкам сцены 1
+
+Инструмент: встроенный ImageGen. Референсы: `public/review/carrier-art-2026-09-27/near.png` и `crew.png`.
+Источники требований к грузу: `docs/reviews/2026-09-22-meeting-by-screen.md`, разделы 2.2–2.3; `docs/reviews/2026-09-23-scenes-feedback.md`.
+
+## Первый проход
+
+Rebuild this loading game illustration substantially. Input 1 is the rejected earlier cutaway truck, use ONLY its four cargo scenario meanings and left-to-right orientation, NOT its proportions, door construction, belt construction or polished toy style. Inputs 2 and 3 are the CURRENT approved first-scene truck cards and are the PRIMARY visual/construction reference. Match their fine grey linework, muted illustrated materials, believable cab-over tractor shape, soft restrained shadows, and detailed but not glossy painted surfaces. Especially use blue truck in image 2. Produce ONE wide polished raster game illustration, no UI, text, numbers, watermarks or brand logos.
+
+Composition: almost perfectly SIDE-ON 2D cutaway of an articulated European/Russian-road cab-over tractor and separate semitrailer, rear to LEFT, cab to RIGHT. Show whole vehicle. Horizontal roof/floor, no isometric diagonal grid. Very shallow visible object edges/contact shadows give subtle 3D flavor only. Do NOT inherit elevated three-quarter reference camera. Pale neutral ground/background and soft contact shadow.
+
+CRITICAL PROPORTIONS: previous image has a giant tall cargo box and tiny low cab. Reduce trailer wall HEIGHT substantially and modestly shorten its cargo space; enlarge the cab's height and breadth to believable reference proportions. Top of blue aerodynamic cab should reach almost trailer roof level. Trailer roof should not tower above cab. Cab wheels and trailer wheels coherent size. Two tractor axles, separate three-axle trailer rear bogie. Proper articulation/coupling and landing support; no stretched continuous rigid truck chassis disguised as semitrailer. Compact full-vehicle silhouette, bay roughly three cab lengths, illustrated proportions not technical dimension annotations.
+
+TRAILER CONSTRUCTION: this is a deliberate cutaway of the NEAR SIDE wall, NOT giant side-opening doors. Rear door aperture is at LEFT end only. Show just ONE clearly hinged rear door leaf swung outward at the rear left jamb, matching aperture height; opposite leaf folded away out of view. No pair of tall decorative fins attached to side frame. At RIGHT inside bay is a simple solid front bulkhead immediately behind tractor: no door, no extra narrow room, no overlapping perpendicular fake panels, no elevator-shaft effect. Far wall and front bulkhead connect cleanly to roof and floor.
+
+RESTRAINTS: restrained engineering detail. Few small metal anchor points fastened to actual wall structure. Short red webbing straps with plausible buckles/local attachments, no long red rail spanning the whole bay. Keep EMPTY area above LEFT heavy crates entirely without straps/anchors. Two simple straps available at dish area; short strap within small central recess; two simple short restraints at front-wall tall slot, no dangling geometric nonsense or rigid red bars.
+
+CARGO = controlled irregular packing / readable Tetris. Increase occupation by lowering roof and packing different rectangular carton sizes in staggered, believable stacks, NOT one neat identical parade of boxes across empty floor, NOT a chaotic heap. Preserve FOUR unmistakable intentional empty regions. Leave required headroom above dishes and tall front slot, while eliminate huge redundant empty roof band. Four situations left-to-right:
+(1) Rear, above trailer rear wheels: heavy wooden crates with small kettlebell pictograms, with a broad available top area and NO tie-down fittings in that empty area.
+(2) Dishes: wide fragile carton, small plate/glass pictograms, folded protective pale-blue cloth on top, medium rectangular free volume above with available red restraints.
+(3) Small recessed pocket flanked by asymmetrical stacks of cartons. Exactly THREE small cartons stand IN FRONT of its lower entrance. Recess has visible back/side edges and short strap; clear obstructed access, not a fake shelf on top of cartons. Preserve readability through local shallow depth despite side-on global camera.
+(4) Tall narrow standing-load space at far RIGHT/front wall; leave genuinely usable height, floor connected continuously to trailer deck. Adjacent boxed pillows with small pillow pictograms, NOT loose pillows. Do not turn this into a separate cubicle with vertical partition. Front wall fixes straps directly.
+
+Cargo sizes, cab, wheels and interior height must feel in proportion. Materials of cardboard/wood/metal like reference cards. Less shiny gradient-heavy commercial rendering than input 1. No arbitrary extra objects, no people, no warehouse scenery. A clearly revised candidate, not a recolor of input 1.

@@ -1,0 +1,22 @@
+{
+  "decision": "HOLD",
+  "allSixAccepted": false,
+  "integrationAuthorized": false,
+  "publicOriginalsUntouched": true,
+  "reason": "Bounded deterministic transfer attempts failed exact local background restoration. Wide latest source-resolution representative still has peach/red old-tail smear behind new tail rotor and jagged source-resolution edge; tall cleanplate has old aircraft duplicates or planar/paving mismatches. No complete family freeze or runtime release.",
+  "bestReviewCandidates": {
+    "wideSource": "choice-wide-khor-final-source-detail.png",
+    "wideDisplayDensity": "choice-wide-khor-final-detail.png",
+    "wideFull": "choice-wide-khor-final-full.png",
+    "tallRejectedRepresentative": "tall-representative-v3.png",
+    "approvedReusableTallAlpha": "../intro/common-tall-aircraft-alpha.png",
+    "peerHoldReceipt": "../intro/cleanup-HOLD-receipt.json"
+  },
+  "supersedes": [
+    "visual-review.json earlier wide acceptance",
+    "final-wide-receipt.json any implicit readiness",
+    "all filenames containing final or corrected are review candidates only"
+  ],
+  "preservedWork": "Original public6 maps unchanged; correctedwide/tall native AI candidates, prompts, background registration matrices, rejected composites/masks/scripts preserved. No further E or deterministic cleanup loop.",
+  "limits": "Ordinary source interpolation does not recover detail. Corrected aircraft silhouette exists, but seamless exact world restoration is unproven."
+}

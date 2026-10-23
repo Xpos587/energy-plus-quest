@@ -1,0 +1,32 @@
+{
+  "owner": "carrier",
+  "decision": "accepted_for_runtime",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "revision": "r3-driver-source",
+  "exportDimensions": [
+    8192,
+    5461
+  ],
+  "nativeFullScene8192": false,
+  "nativeAttempts": 21,
+  "limitations": "Partial reconstruction: original right driver with exterior margin, original identity/key masks and p1-22 core retained. No whole-scene native8192 claim or client artistic acceptance.",
+  "visualReview": [
+    "pass2-preview.png whole composition",
+    "p2-r3-right-driver-review.png entire repaired silhouette",
+    "p2-r3-driver-pairs-100pct.png source-left/master-right face/hand/trousers samples"
+  ],
+  "findings": "Independent rejection pale duplicate contours removed by clean source retention. Single nose/chin/shoulder/raised-hand/trouser silhouettes in repaired samples; two drivers/key/cup and truck composition preserved. Truck detail improvement remains. Runtime integration/currentSrc remains General responsibility.",
+  "processingMode": "selective_flowers",
+  "generalReview": {
+    "decision": "accepted_for_runtime",
+    "inspected": [
+      "pass2-preview.png",
+      "p2-r3-right-driver-review.png",
+      "p2-r3-driver-pairs-100pct.png"
+    ],
+    "findings": "Whole composition preserved. Repaired right driver has single visible nose/chin/shoulder/hand/trouser contours; earlier pale duplicates absent in inspected source/master crops. Source-retained character remains visibly softer than reconstructed truck, disclosed and accepted.",
+    "runtimeVerification": "pending"
+  },
+  "ownerReceipt": ".tmp-work/flowers-all-2026-10-20/F0075/runtime-review.json"
+}

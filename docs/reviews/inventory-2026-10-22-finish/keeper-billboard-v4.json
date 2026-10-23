@@ -1,0 +1,63 @@
+{
+  "status": "local style proof only, not production",
+  "native_sprite": "keeper-sprite-v1-native.png",
+  "native_dimensions": [
+    1024,
+    1536
+  ],
+  "native_texture_bbox": [
+    242,
+    116,
+    780,
+    1459
+  ],
+  "alpha_cutoff": 0.7529411764705882,
+  "alpha_policy": "Shader threshold only. Native pixels untouched. Camera-ray-only emission; original 3D keeper invisible to camera but retains shadow.",
+  "physical_head_world": [
+    9.800000190734863,
+    2.299999952316284,
+    1.7599999904632568
+  ],
+  "physical_feet_world": [
+    9.800000190734863,
+    2.299999952316284,
+    0.0
+  ],
+  "projected_head": [
+    1028.0291748046875,
+    644.2082524299622
+  ],
+  "projected_feet": [
+    1028.029088973999,
+    747.2259402275085
+  ],
+  "original_keeper_projected_bounds": [
+    997.4787712097168,
+    640.9903168678284,
+    1049.2265224456787,
+    760.9925717115402
+  ],
+  "billboard_projected_bounds": [
+    1007.3948764801025,
+    644.2082524299622,
+    1048.663387298584,
+    747.2259402275085
+  ],
+  "billboard_world_dimensions": [
+    0.5588433840162969,
+    1.3950309753417969
+  ],
+  "physical_landmark_height_m": 1.76,
+  "card_height_note": "Camera-facing plane height equals projection of physical 1.76m vertical, not 1.76m in camera-up direction. Prevents inflated projected scale.",
+  "source_crop_xyxy": [
+    875,
+    605,
+    1125,
+    805
+  ],
+  "source_full_dimensions": [
+    1440,
+    1000
+  ],
+  "original_geometry_moved": false
+}

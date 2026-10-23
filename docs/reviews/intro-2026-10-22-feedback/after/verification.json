@@ -1,0 +1,13 @@
+{
+  "phase": "after",
+  "screens": 15,
+  "checks": [
+    "document fits",
+    "actions visible and >=44px",
+    "nav edges match",
+    "exact scenario metric reading order",
+    "absolute CSS background URL",
+    "zero HTTP errors"
+  ],
+  "status": "passed"
+}

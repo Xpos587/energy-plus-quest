@@ -1,0 +1,1969 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-blue-keys-2026-10-05/assembly/segment-3.mp4",
+  "empty_map": "/home/michael/Github/energy-plus-quest/design/scene-01/four-truck-loop-2026-10-04/v2b-empty-map.png",
+  "fps": 24.0,
+  "frames": 121,
+  "duration_seconds": 5.041666666666667,
+  "provider_dimensions": [
+    1280,
+    720
+  ],
+  "empty_map_native_dimensions": [
+    1505,
+    1045
+  ],
+  "map_scale": 0.6889952153110048,
+  "map_padded_bounds": [
+    121,
+    0,
+    1158,
+    720
+  ],
+  "roi_box": [
+    340,
+    40,
+    610,
+    410
+  ],
+  "method": "Per-channel temporal median; per-pixel MAD threshold; connected moving blue cab seeded rig clipped to separate cab/trailer convex supports expanded 4px/3px; trailer excludes saturated blue asphalt; 1px feather and 7px neutral black soft-shadow region. No learned model.",
+  "static_other_trucks_included": false,
+  "visual_acceptance": "PENDING: inspect all six native detail strips before judging mask quality.",
+  "frames_metrics": [
+    {
+      "frame": 1,
+      "time": 0.0,
+      "cab_center": [
+        497.9285664087002,
+        113.33315217382206
+      ],
+      "opaque_mask_pixels": 2450,
+      "alpha_bbox": [
+        481,
+        93,
+        588,
+        130
+      ],
+      "motion_components": 19
+    },
+    {
+      "frame": 2,
+      "time": 0.041666666666666664,
+      "cab_center": [
+        497.77607764510236,
+        113.55675596232884
+      ],
+      "opaque_mask_pixels": 2446,
+      "alpha_bbox": [
+        481,
+        93,
+        588,
+        130
+      ],
+      "motion_components": 18
+    },
+    {
+      "frame": 3,
+      "time": 0.08333333333333333,
+      "cab_center": [
+        495.47980241821864,
+        113.36957907364368
+      ],
+      "opaque_mask_pixels": 2469,
+      "alpha_bbox": [
+        479,
+        92,
+        586,
+        130
+      ],
+      "motion_components": 11
+    },
+    {
+      "frame": 4,
+      "time": 0.125,
+      "cab_center": [
+        492.38495904168497,
+        113.50278856882015
+      ],
+      "opaque_mask_pixels": 2553,
+      "alpha_bbox": [
+        476,
+        92,
+        583,
+        131
+      ],
+      "motion_components": 12
+    },
+    {
+      "frame": 5,
+      "time": 0.16666666666666666,
+      "cab_center": [
+        489.6025858970153,
+        113.31736380118458
+      ],
+      "opaque_mask_pixels": 2662,
+      "alpha_bbox": [
+        473,
+        88,
+        580,
+        131
+      ],
+      "motion_components": 8
+    },
+    {
+      "frame": 6,
+      "time": 0.20833333333333334,
+      "cab_center": [
+        486.78938575651193,
+        113.0404915783256
+      ],
+      "opaque_mask_pixels": 2729,
+      "alpha_bbox": [
+        470,
+        87,
+        578,
+        131
+      ],
+      "motion_components": 7
+    },
+    {
+      "frame": 7,
+      "time": 0.25,
+      "cab_center": [
+        483.408735081518,
+        112.91175009136036
+      ],
+      "opaque_mask_pixels": 3007,
+      "alpha_bbox": [
+        467,
+        89,
+        575,
+        131
+      ],
+      "motion_components": 8
+    },
+    {
+      "frame": 8,
+      "time": 0.2916666666666667,
+      "cab_center": [
+        480.72130662617747,
+        113.49938844641555
+      ],
+      "opaque_mask_pixels": 3082,
+      "alpha_bbox": [
+        464,
+        89,
+        573,
+        132
+      ],
+      "motion_components": 9
+    },
+    {
+      "frame": 9,
+      "time": 0.3333333333333333,
+      "cab_center": [
+        477.6030443204758,
+        113.65447941992568
+      ],
+      "opaque_mask_pixels": 3126,
+      "alpha_bbox": [
+        461,
+        89,
+        570,
+        132
+      ],
+      "motion_components": 9
+    },
+    {
+      "frame": 10,
+      "time": 0.375,
+      "cab_center": [
+        474.79717483469665,
+        113.93232953035114
+      ],
+      "opaque_mask_pixels": 3105,
+      "alpha_bbox": [
+        459,
+        89,
+        568,
+        132
+      ],
+      "motion_components": 8
+    },
+    {
+      "frame": 11,
+      "time": 0.4166666666666667,
+      "cab_center": [
+        472.2527323812343,
+        114.02486151896402
+      ],
+      "opaque_mask_pixels": 3116,
+      "alpha_bbox": [
+        456,
+        88,
+        565,
+        132
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 12,
+      "time": 0.4583333333333333,
+      "cab_center": [
+        470.0841206632387,
+        114.38809173498014
+      ],
+      "opaque_mask_pixels": 3179,
+      "alpha_bbox": [
+        453,
+        88,
+        562,
+        133
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 13,
+      "time": 0.5,
+      "cab_center": [
+        467.7402134774883,
+        114.71913158484094
+      ],
+      "opaque_mask_pixels": 3198,
+      "alpha_bbox": [
+        451,
+        88,
+        560,
+        133
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 14,
+      "time": 0.5416666666666666,
+      "cab_center": [
+        465.13501287437816,
+        115.01193253991968
+      ],
+      "opaque_mask_pixels": 3198,
+      "alpha_bbox": [
+        448,
+        88,
+        558,
+        134
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 15,
+      "time": 0.5833333333333334,
+      "cab_center": [
+        462.85689637066827,
+        115.32090841766333
+      ],
+      "opaque_mask_pixels": 3193,
+      "alpha_bbox": [
+        446,
+        88,
+        555,
+        134
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 16,
+      "time": 0.625,
+      "cab_center": [
+        460.65918115774014,
+        115.38054505512471
+      ],
+      "opaque_mask_pixels": 3242,
+      "alpha_bbox": [
+        443,
+        88,
+        553,
+        134
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 17,
+      "time": 0.6666666666666666,
+      "cab_center": [
+        458.54428113826793,
+        115.75770119423947
+      ],
+      "opaque_mask_pixels": 3259,
+      "alpha_bbox": [
+        441,
+        88,
+        550,
+        135
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 18,
+      "time": 0.7083333333333334,
+      "cab_center": [
+        456.1884806613621,
+        116.20796610974041
+      ],
+      "opaque_mask_pixels": 3293,
+      "alpha_bbox": [
+        439,
+        88,
+        548,
+        135
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 19,
+      "time": 0.75,
+      "cab_center": [
+        454.1840755393555,
+        116.5478059466962
+      ],
+      "opaque_mask_pixels": 3303,
+      "alpha_bbox": [
+        437,
+        88,
+        546,
+        135
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 20,
+      "time": 0.7916666666666666,
+      "cab_center": [
+        451.97787210619674,
+        117.02591038601189
+      ],
+      "opaque_mask_pixels": 3315,
+      "alpha_bbox": [
+        434,
+        88,
+        545,
+        136
+      ],
+      "motion_components": 3
+    },
+    {
+      "frame": 21,
+      "time": 0.8333333333333334,
+      "cab_center": [
+        450.08441803368066,
+        117.44889201891284
+      ],
+      "opaque_mask_pixels": 3327,
+      "alpha_bbox": [
+        432,
+        88,
+        542,
+        136
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 22,
+      "time": 0.875,
+      "cab_center": [
+        448.11861615401426,
+        117.91661712889027
+      ],
+      "opaque_mask_pixels": 3345,
+      "alpha_bbox": [
+        431,
+        89,
+        540,
+        137
+      ],
+      "motion_components": 3
+    },
+    {
+      "frame": 23,
+      "time": 0.9166666666666666,
+      "cab_center": [
+        446.36232087668816,
+        118.48395682178153
+      ],
+      "opaque_mask_pixels": 3356,
+      "alpha_bbox": [
+        429,
+        89,
+        538,
+        137
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 24,
+      "time": 0.9583333333333334,
+      "cab_center": [
+        444.52433152903376,
+        118.84469073724038
+      ],
+      "opaque_mask_pixels": 3401,
+      "alpha_bbox": [
+        427,
+        89,
+        536,
+        138
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 25,
+      "time": 1.0,
+      "cab_center": [
+        442.5466573838444,
+        119.55091468996797
+      ],
+      "opaque_mask_pixels": 3385,
+      "alpha_bbox": [
+        426,
+        90,
+        534,
+        138
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 26,
+      "time": 1.0416666666666667,
+      "cab_center": [
+        440.8578307746284,
+        120.35255132803546
+      ],
+      "opaque_mask_pixels": 3385,
+      "alpha_bbox": [
+        424,
+        90,
+        532,
+        139
+      ],
+      "motion_components": 7
+    },
+    {
+      "frame": 27,
+      "time": 1.0833333333333333,
+      "cab_center": [
+        439.65148264814786,
+        120.8188272179322
+      ],
+      "opaque_mask_pixels": 3413,
+      "alpha_bbox": [
+        423,
+        90,
+        530,
+        140
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 28,
+      "time": 1.125,
+      "cab_center": [
+        437.96083149029914,
+        121.72138139417743
+      ],
+      "opaque_mask_pixels": 3425,
+      "alpha_bbox": [
+        421,
+        90,
+        528,
+        140
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 29,
+      "time": 1.1666666666666667,
+      "cab_center": [
+        436.55676924592717,
+        122.48525424401357
+      ],
+      "opaque_mask_pixels": 3439,
+      "alpha_bbox": [
+        420,
+        90,
+        526,
+        141
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 30,
+      "time": 1.2083333333333333,
+      "cab_center": [
+        435.0843239007019,
+        123.33696286861819
+      ],
+      "opaque_mask_pixels": 3421,
+      "alpha_bbox": [
+        419,
+        90,
+        525,
+        142
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 31,
+      "time": 1.25,
+      "cab_center": [
+        434.1651418596339,
+        123.97865067313127
+      ],
+      "opaque_mask_pixels": 3471,
+      "alpha_bbox": [
+        417,
+        90,
+        524,
+        143
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 32,
+      "time": 1.2916666666666667,
+      "cab_center": [
+        432.8033808230143,
+        124.55408981930982
+      ],
+      "opaque_mask_pixels": 3509,
+      "alpha_bbox": [
+        416,
+        90,
+        522,
+        144
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 33,
+      "time": 1.3333333333333333,
+      "cab_center": [
+        431.635006360455,
+        126.2155784755817
+      ],
+      "opaque_mask_pixels": 3479,
+      "alpha_bbox": [
+        415,
+        90,
+        520,
+        145
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 34,
+      "time": 1.375,
+      "cab_center": [
+        430.29085825271494,
+        127.13508886700633
+      ],
+      "opaque_mask_pixels": 3453,
+      "alpha_bbox": [
+        414,
+        90,
+        518,
+        146
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 35,
+      "time": 1.4166666666666667,
+      "cab_center": [
+        429.5908612746788,
+        128.3737653879154
+      ],
+      "opaque_mask_pixels": 3457,
+      "alpha_bbox": [
+        414,
+        90,
+        516,
+        147
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 36,
+      "time": 1.4583333333333333,
+      "cab_center": [
+        428.6249020085384,
+        129.30778863531978
+      ],
+      "opaque_mask_pixels": 3464,
+      "alpha_bbox": [
+        413,
+        90,
+        514,
+        148
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 37,
+      "time": 1.5,
+      "cab_center": [
+        427.22264864360926,
+        131.3251193921501
+      ],
+      "opaque_mask_pixels": 3465,
+      "alpha_bbox": [
+        412,
+        89,
+        512,
+        149
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 38,
+      "time": 1.5416666666666667,
+      "cab_center": [
+        426.93086056788127,
+        131.57556181697834
+      ],
+      "opaque_mask_pixels": 3478,
+      "alpha_bbox": [
+        412,
+        89,
+        512,
+        151
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 39,
+      "time": 1.5833333333333333,
+      "cab_center": [
+        426.0339206627351,
+        133.77707363753143
+      ],
+      "opaque_mask_pixels": 3468,
+      "alpha_bbox": [
+        411,
+        89,
+        510,
+        152
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 40,
+      "time": 1.625,
+      "cab_center": [
+        425.476468861518,
+        134.71547674270457
+      ],
+      "opaque_mask_pixels": 3462,
+      "alpha_bbox": [
+        410,
+        89,
+        508,
+        153
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 41,
+      "time": 1.6666666666666667,
+      "cab_center": [
+        424.57081692948935,
+        135.82785539578964
+      ],
+      "opaque_mask_pixels": 3499,
+      "alpha_bbox": [
+        410,
+        89,
+        508,
+        155
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 42,
+      "time": 1.7083333333333333,
+      "cab_center": [
+        424.5880095900874,
+        137.35522952824633
+      ],
+      "opaque_mask_pixels": 3486,
+      "alpha_bbox": [
+        409,
+        89,
+        506,
+        156
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 43,
+      "time": 1.75,
+      "cab_center": [
+        423.52221013027133,
+        139.21999024630662
+      ],
+      "opaque_mask_pixels": 3460,
+      "alpha_bbox": [
+        409,
+        89,
+        504,
+        158
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 44,
+      "time": 1.7916666666666667,
+      "cab_center": [
+        423.0677450099669,
+        140.232697929289
+      ],
+      "opaque_mask_pixels": 3444,
+      "alpha_bbox": [
+        408,
+        90,
+        502,
+        160
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 45,
+      "time": 1.8333333333333333,
+      "cab_center": [
+        422.55665998960603,
+        141.21322054015383
+      ],
+      "opaque_mask_pixels": 3450,
+      "alpha_bbox": [
+        408,
+        90,
+        501,
+        161
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 46,
+      "time": 1.875,
+      "cab_center": [
+        422.30324777109877,
+        142.84111056196534
+      ],
+      "opaque_mask_pixels": 3444,
+      "alpha_bbox": [
+        408,
+        90,
+        500,
+        163
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 47,
+      "time": 1.9166666666666667,
+      "cab_center": [
+        421.85658910227244,
+        144.40122764065347
+      ],
+      "opaque_mask_pixels": 3451,
+      "alpha_bbox": [
+        408,
+        90,
+        498,
+        165
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 48,
+      "time": 1.9583333333333333,
+      "cab_center": [
+        421.37386093747875,
+        146.26866871378138
+      ],
+      "opaque_mask_pixels": 3425,
+      "alpha_bbox": [
+        408,
+        90,
+        497,
+        166
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 49,
+      "time": 2.0,
+      "cab_center": [
+        421.0735153732749,
+        147.82617034199876
+      ],
+      "opaque_mask_pixels": 3518,
+      "alpha_bbox": [
+        402,
+        90,
+        495,
+        169
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 50,
+      "time": 2.0416666666666665,
+      "cab_center": [
+        420.87415673594086,
+        149.50943283258948
+      ],
+      "opaque_mask_pixels": 3496,
+      "alpha_bbox": [
+        402,
+        90,
+        494,
+        170
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 51,
+      "time": 2.0833333333333335,
+      "cab_center": [
+        420.2719857500799,
+        151.0781283297801
+      ],
+      "opaque_mask_pixels": 3437,
+      "alpha_bbox": [
+        401,
+        91,
+        492,
+        172
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 52,
+      "time": 2.125,
+      "cab_center": [
+        420.1115225498551,
+        153.26594247947955
+      ],
+      "opaque_mask_pixels": 3451,
+      "alpha_bbox": [
+        400,
+        91,
+        491,
+        174
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 53,
+      "time": 2.1666666666666665,
+      "cab_center": [
+        419.9800951719632,
+        155.46006951121615
+      ],
+      "opaque_mask_pixels": 3406,
+      "alpha_bbox": [
+        402,
+        91,
+        490,
+        176
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 54,
+      "time": 2.2083333333333335,
+      "cab_center": [
+        419.7334119544749,
+        156.92582472954768
+      ],
+      "opaque_mask_pixels": 3374,
+      "alpha_bbox": [
+        402,
+        92,
+        488,
+        178
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 55,
+      "time": 2.25,
+      "cab_center": [
+        419.5215520384359,
+        158.89572535177916
+      ],
+      "opaque_mask_pixels": 3301,
+      "alpha_bbox": [
+        406,
+        93,
+        486,
+        180
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 56,
+      "time": 2.2916666666666665,
+      "cab_center": [
+        419.27740634052793,
+        161.50637707604776
+      ],
+      "opaque_mask_pixels": 3276,
+      "alpha_bbox": [
+        406,
+        93,
+        485,
+        182
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 57,
+      "time": 2.3333333333333335,
+      "cab_center": [
+        418.973594532342,
+        163.7694550776297
+      ],
+      "opaque_mask_pixels": 3267,
+      "alpha_bbox": [
+        402,
+        94,
+        483,
+        185
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 58,
+      "time": 2.375,
+      "cab_center": [
+        418.8385256913666,
+        165.98688949791148
+      ],
+      "opaque_mask_pixels": 3215,
+      "alpha_bbox": [
+        402,
+        95,
+        481,
+        187
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 59,
+      "time": 2.4166666666666665,
+      "cab_center": [
+        418.6320402612263,
+        167.73882584555554
+      ],
+      "opaque_mask_pixels": 3228,
+      "alpha_bbox": [
+        402,
+        95,
+        479,
+        192
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 60,
+      "time": 2.4583333333333335,
+      "cab_center": [
+        418.792702632379,
+        170.20681507040695
+      ],
+      "opaque_mask_pixels": 3218,
+      "alpha_bbox": [
+        401,
+        97,
+        477,
+        192
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 61,
+      "time": 2.5,
+      "cab_center": [
+        418.62897211700454,
+        172.82801540657678
+      ],
+      "opaque_mask_pixels": 3237,
+      "alpha_bbox": [
+        402,
+        97,
+        475,
+        196
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 62,
+      "time": 2.5416666666666665,
+      "cab_center": [
+        418.3529975864422,
+        175.3898446660015
+      ],
+      "opaque_mask_pixels": 3154,
+      "alpha_bbox": [
+        401,
+        99,
+        473,
+        197
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 63,
+      "time": 2.5833333333333335,
+      "cab_center": [
+        418.17616658489374,
+        177.34884676583638
+      ],
+      "opaque_mask_pixels": 3173,
+      "alpha_bbox": [
+        402,
+        100,
+        471,
+        204
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 64,
+      "time": 2.625,
+      "cab_center": [
+        418.01384228827936,
+        179.27414610265822
+      ],
+      "opaque_mask_pixels": 3170,
+      "alpha_bbox": [
+        400,
+        101,
+        469,
+        205
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 65,
+      "time": 2.6666666666666665,
+      "cab_center": [
+        417.9593255627311,
+        182.12459390990702
+      ],
+      "opaque_mask_pixels": 3084,
+      "alpha_bbox": [
+        402,
+        103,
+        467,
+        205
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 66,
+      "time": 2.7083333333333335,
+      "cab_center": [
+        417.6635485495654,
+        185.52045044841068
+      ],
+      "opaque_mask_pixels": 2983,
+      "alpha_bbox": [
+        402,
+        105,
+        465,
+        206
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 67,
+      "time": 2.75,
+      "cab_center": [
+        417.40990307863933,
+        186.6741341305702
+      ],
+      "opaque_mask_pixels": 2966,
+      "alpha_bbox": [
+        402,
+        106,
+        463,
+        207
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 68,
+      "time": 2.7916666666666665,
+      "cab_center": [
+        417.88255547279186,
+        189.38786787381008
+      ],
+      "opaque_mask_pixels": 2917,
+      "alpha_bbox": [
+        403,
+        108,
+        461,
+        210
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 69,
+      "time": 2.8333333333333335,
+      "cab_center": [
+        417.94272170362626,
+        192.73847963684506
+      ],
+      "opaque_mask_pixels": 2865,
+      "alpha_bbox": [
+        403,
+        109,
+        459,
+        213
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 70,
+      "time": 2.875,
+      "cab_center": [
+        417.73109180606156,
+        195.98098896133627
+      ],
+      "opaque_mask_pixels": 2860,
+      "alpha_bbox": [
+        401,
+        111,
+        458,
+        215
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 71,
+      "time": 2.9166666666666665,
+      "cab_center": [
+        417.4167007040916,
+        197.5996227738972
+      ],
+      "opaque_mask_pixels": 2849,
+      "alpha_bbox": [
+        400,
+        113,
+        456,
+        218
+      ],
+      "motion_components": 3
+    },
+    {
+      "frame": 72,
+      "time": 2.9583333333333335,
+      "cab_center": [
+        417.6198011605336,
+        200.36591616323705
+      ],
+      "opaque_mask_pixels": 2874,
+      "alpha_bbox": [
+        400,
+        115,
+        454,
+        221
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 73,
+      "time": 3.0,
+      "cab_center": [
+        417.42724548831325,
+        203.59618029362966
+      ],
+      "opaque_mask_pixels": 2894,
+      "alpha_bbox": [
+        400,
+        117,
+        452,
+        224
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 74,
+      "time": 3.0416666666666665,
+      "cab_center": [
+        417.18898272383854,
+        205.81599937533693
+      ],
+      "opaque_mask_pixels": 2862,
+      "alpha_bbox": [
+        400,
+        119,
+        451,
+        227
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 75,
+      "time": 3.0833333333333335,
+      "cab_center": [
+        417.1798771634253,
+        208.84776449703278
+      ],
+      "opaque_mask_pixels": 2871,
+      "alpha_bbox": [
+        400,
+        121,
+        449,
+        229
+      ],
+      "motion_components": 3
+    },
+    {
+      "frame": 76,
+      "time": 3.125,
+      "cab_center": [
+        417.1008580432174,
+        212.10522014603637
+      ],
+      "opaque_mask_pixels": 2857,
+      "alpha_bbox": [
+        400,
+        123,
+        448,
+        232
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 77,
+      "time": 3.1666666666666665,
+      "cab_center": [
+        416.81884417966944,
+        214.58195021136927
+      ],
+      "opaque_mask_pixels": 2818,
+      "alpha_bbox": [
+        400,
+        125,
+        446,
+        235
+      ],
+      "motion_components": 3
+    },
+    {
+      "frame": 78,
+      "time": 3.2083333333333335,
+      "cab_center": [
+        417.11823368402617,
+        217.32565224993235
+      ],
+      "opaque_mask_pixels": 2807,
+      "alpha_bbox": [
+        400,
+        128,
+        445,
+        237
+      ],
+      "motion_components": 3
+    },
+    {
+      "frame": 79,
+      "time": 3.25,
+      "cab_center": [
+        416.89963770687285,
+        220.1376278161863
+      ],
+      "opaque_mask_pixels": 2800,
+      "alpha_bbox": [
+        399,
+        130,
+        444,
+        240
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 80,
+      "time": 3.2916666666666665,
+      "cab_center": [
+        416.7420100197507,
+        221.95929162507443
+      ],
+      "opaque_mask_pixels": 2828,
+      "alpha_bbox": [
+        399,
+        132,
+        444,
+        243
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 81,
+      "time": 3.3333333333333335,
+      "cab_center": [
+        416.4947943046786,
+        224.85928277537522
+      ],
+      "opaque_mask_pixels": 2825,
+      "alpha_bbox": [
+        399,
+        135,
+        442,
+        246
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 82,
+      "time": 3.375,
+      "cab_center": [
+        416.12458700452333,
+        227.59195903517778
+      ],
+      "opaque_mask_pixels": 2807,
+      "alpha_bbox": [
+        398,
+        137,
+        442,
+        248
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 83,
+      "time": 3.4166666666666665,
+      "cab_center": [
+        416.1538696069497,
+        229.99732696818643
+      ],
+      "opaque_mask_pixels": 2840,
+      "alpha_bbox": [
+        398,
+        140,
+        441,
+        251
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 84,
+      "time": 3.4583333333333335,
+      "cab_center": [
+        415.81918283268067,
+        233.03481362251253
+      ],
+      "opaque_mask_pixels": 2837,
+      "alpha_bbox": [
+        398,
+        142,
+        440,
+        254
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 85,
+      "time": 3.5,
+      "cab_center": [
+        416.0505173059447,
+        235.3975270761596
+      ],
+      "opaque_mask_pixels": 2829,
+      "alpha_bbox": [
+        400,
+        145,
+        439,
+        257
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 86,
+      "time": 3.5416666666666665,
+      "cab_center": [
+        415.8926637312901,
+        237.86274481580608
+      ],
+      "opaque_mask_pixels": 2824,
+      "alpha_bbox": [
+        397,
+        148,
+        438,
+        260
+      ],
+      "motion_components": 3
+    },
+    {
+      "frame": 87,
+      "time": 3.5833333333333335,
+      "cab_center": [
+        415.5836524510769,
+        240.6677688860516
+      ],
+      "opaque_mask_pixels": 2783,
+      "alpha_bbox": [
+        400,
+        150,
+        438,
+        263
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 88,
+      "time": 3.625,
+      "cab_center": [
+        415.7184744251231,
+        244.01092550390766
+      ],
+      "opaque_mask_pixels": 2740,
+      "alpha_bbox": [
+        400,
+        153,
+        437,
+        266
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 89,
+      "time": 3.6666666666666665,
+      "cab_center": [
+        415.0190935546802,
+        247.56341193294924
+      ],
+      "opaque_mask_pixels": 2715,
+      "alpha_bbox": [
+        400,
+        156,
+        437,
+        269
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 90,
+      "time": 3.7083333333333335,
+      "cab_center": [
+        415.0918082232981,
+        250.48319046950434
+      ],
+      "opaque_mask_pixels": 2719,
+      "alpha_bbox": [
+        399,
+        159,
+        436,
+        272
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 91,
+      "time": 3.75,
+      "cab_center": [
+        414.39713326034433,
+        252.95945037690643
+      ],
+      "opaque_mask_pixels": 2695,
+      "alpha_bbox": [
+        398,
+        162,
+        436,
+        274
+      ],
+      "motion_components": 4
+    },
+    {
+      "frame": 92,
+      "time": 3.7916666666666665,
+      "cab_center": [
+        414.76060853935496,
+        256.81805675760717
+      ],
+      "opaque_mask_pixels": 2694,
+      "alpha_bbox": [
+        399,
+        165,
+        435,
+        278
+      ],
+      "motion_components": 3
+    },
+    {
+      "frame": 93,
+      "time": 3.8333333333333335,
+      "cab_center": [
+        414.5839793468802,
+        258.9511750352332
+      ],
+      "opaque_mask_pixels": 2709,
+      "alpha_bbox": [
+        398,
+        168,
+        435,
+        280
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 94,
+      "time": 3.875,
+      "cab_center": [
+        414.46549378634825,
+        261.4426627962098
+      ],
+      "opaque_mask_pixels": 2717,
+      "alpha_bbox": [
+        398,
+        170,
+        435,
+        283
+      ],
+      "motion_components": 7
+    },
+    {
+      "frame": 95,
+      "time": 3.9166666666666665,
+      "cab_center": [
+        414.3279884177057,
+        263.91538760928586
+      ],
+      "opaque_mask_pixels": 2708,
+      "alpha_bbox": [
+        398,
+        174,
+        434,
+        286
+      ],
+      "motion_components": 8
+    },
+    {
+      "frame": 96,
+      "time": 3.9583333333333335,
+      "cab_center": [
+        414.25341302786825,
+        266.8768240663654
+      ],
+      "opaque_mask_pixels": 2725,
+      "alpha_bbox": [
+        398,
+        176,
+        434,
+        289
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 97,
+      "time": 4.0,
+      "cab_center": [
+        413.83304466991876,
+        269.15077769696404
+      ],
+      "opaque_mask_pixels": 2706,
+      "alpha_bbox": [
+        398,
+        179,
+        434,
+        292
+      ],
+      "motion_components": 7
+    },
+    {
+      "frame": 98,
+      "time": 4.041666666666667,
+      "cab_center": [
+        413.80189507582577,
+        271.58366511972827
+      ],
+      "opaque_mask_pixels": 2715,
+      "alpha_bbox": [
+        398,
+        182,
+        434,
+        295
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 99,
+      "time": 4.083333333333333,
+      "cab_center": [
+        413.43062611839184,
+        274.5562211808194
+      ],
+      "opaque_mask_pixels": 2338,
+      "alpha_bbox": [
+        398,
+        203,
+        434,
+        298
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 100,
+      "time": 4.125,
+      "cab_center": [
+        413.5910974509856,
+        278.1473184203777
+      ],
+      "opaque_mask_pixels": 2408,
+      "alpha_bbox": [
+        398,
+        203,
+        434,
+        302
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 101,
+      "time": 4.166666666666667,
+      "cab_center": [
+        413.2328289908722,
+        281.0199053989736
+      ],
+      "opaque_mask_pixels": 2453,
+      "alpha_bbox": [
+        394,
+        203,
+        433,
+        305
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 102,
+      "time": 4.208333333333333,
+      "cab_center": [
+        413.17374573100074,
+        284.1364401230297
+      ],
+      "opaque_mask_pixels": 2505,
+      "alpha_bbox": [
+        394,
+        203,
+        432,
+        308
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 103,
+      "time": 4.25,
+      "cab_center": [
+        412.7554461622927,
+        286.75356340208384
+      ],
+      "opaque_mask_pixels": 2544,
+      "alpha_bbox": [
+        393,
+        203,
+        432,
+        310
+      ],
+      "motion_components": 7
+    },
+    {
+      "frame": 104,
+      "time": 4.291666666666667,
+      "cab_center": [
+        412.8779532393057,
+        290.1714853635897
+      ],
+      "opaque_mask_pixels": 2599,
+      "alpha_bbox": [
+        394,
+        203,
+        432,
+        313
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 105,
+      "time": 4.333333333333333,
+      "cab_center": [
+        412.4871560897846,
+        293.3251155161211
+      ],
+      "opaque_mask_pixels": 2639,
+      "alpha_bbox": [
+        394,
+        204,
+        432,
+        317
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 106,
+      "time": 4.375,
+      "cab_center": [
+        412.29842513245603,
+        296.42907031504734
+      ],
+      "opaque_mask_pixels": 2603,
+      "alpha_bbox": [
+        397,
+        207,
+        431,
+        320
+      ],
+      "motion_components": 7
+    },
+    {
+      "frame": 107,
+      "time": 4.416666666666667,
+      "cab_center": [
+        411.97726999873396,
+        299.6617928264945
+      ],
+      "opaque_mask_pixels": 2607,
+      "alpha_bbox": [
+        397,
+        210,
+        431,
+        323
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 108,
+      "time": 4.458333333333333,
+      "cab_center": [
+        411.957270670782,
+        302.95633683745683
+      ],
+      "opaque_mask_pixels": 2613,
+      "alpha_bbox": [
+        397,
+        214,
+        431,
+        326
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 109,
+      "time": 4.5,
+      "cab_center": [
+        411.92446178243233,
+        305.201022804669
+      ],
+      "opaque_mask_pixels": 2601,
+      "alpha_bbox": [
+        396,
+        217,
+        431,
+        329
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 110,
+      "time": 4.541666666666667,
+      "cab_center": [
+        411.8194641225365,
+        308.4067224776401
+      ],
+      "opaque_mask_pixels": 2601,
+      "alpha_bbox": [
+        396,
+        220,
+        431,
+        332
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 111,
+      "time": 4.583333333333333,
+      "cab_center": [
+        411.5922159761942,
+        310.75206927554115
+      ],
+      "opaque_mask_pixels": 2598,
+      "alpha_bbox": [
+        396,
+        223,
+        431,
+        335
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 112,
+      "time": 4.625,
+      "cab_center": [
+        411.60150567252236,
+        313.95949646829246
+      ],
+      "opaque_mask_pixels": 2601,
+      "alpha_bbox": [
+        396,
+        226,
+        431,
+        338
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 113,
+      "time": 4.666666666666667,
+      "cab_center": [
+        411.3451050191077,
+        317.7007124372183
+      ],
+      "opaque_mask_pixels": 2584,
+      "alpha_bbox": [
+        396,
+        230,
+        430,
+        342
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 114,
+      "time": 4.708333333333333,
+      "cab_center": [
+        410.80828339761945,
+        321.05948669092476
+      ],
+      "opaque_mask_pixels": 2554,
+      "alpha_bbox": [
+        396,
+        233,
+        430,
+        344
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 115,
+      "time": 4.75,
+      "cab_center": [
+        410.6293838428871,
+        323.70518877769194
+      ],
+      "opaque_mask_pixels": 2523,
+      "alpha_bbox": [
+        395,
+        236,
+        429,
+        347
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 116,
+      "time": 4.791666666666667,
+      "cab_center": [
+        410.650158887035,
+        326.9920823108337
+      ],
+      "opaque_mask_pixels": 2615,
+      "alpha_bbox": [
+        392,
+        240,
+        430,
+        350
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 117,
+      "time": 4.833333333333333,
+      "cab_center": [
+        410.8442977375619,
+        330.15727646697394
+      ],
+      "opaque_mask_pixels": 2580,
+      "alpha_bbox": [
+        392,
+        242,
+        430,
+        353
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 118,
+      "time": 4.875,
+      "cab_center": [
+        410.533700047917,
+        333.17135100211345
+      ],
+      "opaque_mask_pixels": 2525,
+      "alpha_bbox": [
+        395,
+        246,
+        430,
+        356
+      ],
+      "motion_components": 5
+    },
+    {
+      "frame": 119,
+      "time": 4.916666666666667,
+      "cab_center": [
+        410.3575325747124,
+        335.47043756441116
+      ],
+      "opaque_mask_pixels": 2519,
+      "alpha_bbox": [
+        395,
+        250,
+        430,
+        360
+      ],
+      "motion_components": 6
+    },
+    {
+      "frame": 120,
+      "time": 4.958333333333333,
+      "cab_center": [
+        410.69928847026296,
+        337.6239605105289
+      ],
+      "opaque_mask_pixels": 2515,
+      "alpha_bbox": [
+        395,
+        253,
+        430,
+        362
+      ],
+      "motion_components": 7
+    },
+    {
+      "frame": 121,
+      "time": 5.0,
+      "cab_center": [
+        410.4739715422567,
+        341.049878768295
+      ],
+      "opaque_mask_pixels": 2464,
+      "alpha_bbox": [
+        395,
+        256,
+        429,
+        365
+      ],
+      "motion_components": 6
+    }
+  ]
+}

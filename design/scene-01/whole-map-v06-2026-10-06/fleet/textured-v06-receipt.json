@@ -1,0 +1,62 @@
+{
+  "parent_candidate": "fleet-textured-v02.blend",
+  "candidate": "fleet-textured-v06.blend",
+  "roof_records": [
+    {
+      "truck": 1,
+      "roof_factor": 0.3,
+      "pivot_z": 0.3,
+      "roof_vertices_changed": 2935,
+      "old_z_bounds": [
+        -0.5855209231376648,
+        0.5556418895721436
+      ],
+      "new_z_bounds": [
+        -0.5855209231376648,
+        0.3851051926612854
+      ],
+      "windshield_max_vertex_delta": 0,
+      "wheel_max_vertex_delta": 0
+    },
+    {
+      "truck": 4,
+      "roof_factor": 0.22,
+      "pivot_z": 0.3,
+      "roof_vertices_changed": 2935,
+      "old_z_bounds": [
+        -0.5855209231376648,
+        0.5369471907615662
+      ],
+      "new_z_bounds": [
+        -0.5855209231376648,
+        0.3624104857444763
+      ],
+      "windshield_max_vertex_delta": 0,
+      "wheel_max_vertex_delta": 0
+    }
+  ],
+  "restored_exhaust_hardware": [
+    "1 exhaust stack",
+    "4 exhaust stack"
+  ],
+  "exhaust_plumes": "No named smoke/puff/plume objects exist in frozen source. Nothing invented.",
+  "frames": [
+    1,
+    385,
+    769
+  ],
+  "dimensions": [
+    1920,
+    1334
+  ],
+  "scenario": {
+    "red": "lower older roof, beige trailer, one driver",
+    "yellow": "lowest older roof, beige trailer, one driver",
+    "blue": "tall modern roof, white trailer, one driver",
+    "green": "tall modern roof, white trailer, two crew"
+  },
+  "limitations": [
+    "Old red/yellow identity is approximated with compressed modern base; exact card shapes remain unmodelled.",
+    "Driver details remain permanent projected windshield textures."
+  ]
+}

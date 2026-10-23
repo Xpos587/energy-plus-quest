@@ -1,0 +1,35 @@
+[
+  {
+    "created_at": "2026-10-04T16:13:35.324497Z",
+    "display_name": "Minimax Hailuo",
+    "id": "08be9abb-2e78-4584-a8d9-3ed4d182c76d",
+    "job_type": "minimax_hailuo",
+    "min_result_url": null,
+    "params": {
+      "application": null,
+      "draw_input_image": null,
+      "duration": 6,
+      "enhance_prompt": false,
+      "height": 1024,
+      "input_image": {
+        "id": "c2a7d342-a8bf-4eb4-99be-994a4eeb92f3",
+        "type": "media_input",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/c2a7d342-a8bf-4eb4-99be-994a4eeb92f3.png"
+      },
+      "input_image_end": {
+        "id": "309edd23-59f8-4333-86ca-72758b399f18",
+        "type": "media_input",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/309edd23-59f8-4333-86ca-72758b399f18.png"
+      },
+      "is_draw": false,
+      "model": "minimax-fast",
+      "motion": null,
+      "motion_id": null,
+      "prompt": "Static locked aerial camera. Exactly ONE green tractor with ONE white articulated semitrailer, already halfway through a turn. The tractor moves slowly FORWARD toward SCREEN RIGHT while pulling its connected semitrailer. Trailer rear wheels continue down the vertical street and then curve onto horizontal road; trailer pivots at hitch, progressively straightening behind cab. Finish with whole truck aligned horizontally facing right at the provided end pose. Only finish this single turn, no other maneuvers. Truck never reverses. Do not move left. Do not spin. Do not change the tractor or trailer length. Preserve exactly the city buildings and road and bright illustrated style. No other vehicles appear. No second turn. Vehicle stays on asphalt, no building or sidewalk intersection. Camera absolutely motionless.",
+      "resolution": "768",
+      "width": 1024
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_161335_08be9abb-2e78-4584-a8d9-3ed4d182c76d.mp4",
+    "status": "completed"
+  }
+]

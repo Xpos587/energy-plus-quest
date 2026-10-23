@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "source_blend": "painted-vehicles-driver-fixed-optimized.blend",
+  "candidate_only": true,
+  "style_accepted": false,
+  "required_frame_count": 1152,
+  "completed_frame_count": 1152,
+  "fps": 24,
+  "duration_seconds": 48,
+  "dimensions": [
+    3840,
+    2667
+  ],
+  "samples": 8,
+  "threads": 4,
+  "measured_render_elapsed_seconds": 6852.465,
+  "new_frames_rendered": 1150,
+  "reused_exact_driver_fixed_stills": [
+    1,
+    769
+  ],
+  "preexisting_frames": [
+    1,
+    769
+  ],
+  "last_checked_frame": 1152,
+  "native_root_pose_mismatch_frames": [],
+  "boundary_frame_1153_matches_frozen_source": true,
+  "driver_local_transform_mismatches": [],
+  "driver_mesh_vertices_unchanged": true,
+  "failures": [],
+  "missing_frames": [],
+  "full_loop_verified": true,
+  "mutations": "current frame and render output filepath only"
+}

@@ -1,0 +1,170 @@
+{
+  "source_blend": "/home/michael/Github/energy-plus-quest/design/scene-01/truck-native-quality-2026-10-05/image-to-3d/green-tractor-finished.blend",
+  "object": "Mesh_0",
+  "matrix_world": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "material": "Material_0",
+  "albedo_image": "Image_0",
+  "texture_nodes": [
+    [
+      "Image Texture",
+      "Image_0"
+    ]
+  ],
+  "image_dimensions": [
+    2048,
+    2048
+  ],
+  "uv_layer": "UVMap",
+  "front_direction": "-X",
+  "measured_blue_front_faces": 66,
+  "face_ids": [
+    2412,
+    2449,
+    2548,
+    2571,
+    2742,
+    2750,
+    2804,
+    2805,
+    2879,
+    2933,
+    2962,
+    2985,
+    3006,
+    3020,
+    3041,
+    3070,
+    3149,
+    3153,
+    3157,
+    3231,
+    3258,
+    3260,
+    3295,
+    3375,
+    3457,
+    3519,
+    3558,
+    3602,
+    3695,
+    3702,
+    3703,
+    3745,
+    3779,
+    3803,
+    3845,
+    3871,
+    3877,
+    3944,
+    3945,
+    3950,
+    3970,
+    3997,
+    4063,
+    4131,
+    4242,
+    4251,
+    4292,
+    4320,
+    4428,
+    4438,
+    4571,
+    4639,
+    4667,
+    4668,
+    4746,
+    4767,
+    4805,
+    4843,
+    4860,
+    4933,
+    5030,
+    5085,
+    5448,
+    5517,
+    5593,
+    5779
+  ],
+  "world_bbox_of_blue_face_vertices": {
+    "min": [
+      -0.9163129329681396,
+      -0.41117197275161743,
+      0.012539025396108627
+    ],
+    "max": [
+      -0.8052389621734619,
+      0.39550796151161194,
+      0.25182297825813293
+    ]
+  },
+  "central_windshield_plane_x_of_z": {
+    "slope": 0.18733806734551375,
+    "intercept": -0.9138839066561714,
+    "equation": "X = slope * Z + intercept",
+    "central_samples": 33,
+    "max_fit_residual": 0.012378229954361997,
+    "outward_normal_approx": [
+      -1,
+      0,
+      0.18733806734551375
+    ]
+  },
+  "uv_bbox_of_selected_faces": {
+    "min": [
+      0.13538600504398346,
+      0.0842440128326416
+    ],
+    "max": [
+      0.9119179844856262,
+      0.8432319760322571
+    ]
+  },
+  "recommended_projection_frame": {
+    "u": "-Y increasing left-to-right when looking toward +X at cab front with +Z up",
+    "v": "Z increasing bottom-to-top",
+    "windshield_inner_y_range": [
+      -0.33,
+      0.33
+    ],
+    "windshield_inner_z_range": [
+      0.07,
+      0.235
+    ],
+    "plane_offset_toward_viewer": "negative X; avoid modifying geometry for permanent texture reprojection"
+  },
+  "front_grille_distinction": {
+    "region": "below windshield, approximately Z < 0, front X around -0.93 to -0.95",
+    "avoid": "Do not select dark blue/gray pixels alone: chassis/wheels/grille also satisfy weak blue color test. Require upper-front spatial region plus -X normal."
+  },
+  "limitations": [
+    "Blue mask sampled triangle-centroid UV color; geometry bounding vertices includes transition-edge triangles. Bounds are measured candidate envelope, not semantic ground truth.",
+    "UVs occupy multiple atlas islands; UV bounding rectangle alone is unsuitable as windshield paint mask. Reproject in world Y/Z onto selected front faces.",
+    "Image is named Image_0 in this blend, not Material_0Image_0.",
+    "No scene save, render, GLB modification or runtime edit performed."
+  ]
+}

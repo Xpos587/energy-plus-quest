@@ -1,0 +1,25 @@
+{
+  "paired_region_dimensions": [
+    372,
+    365
+  ],
+  "source_crop_xyxy": [
+    616,
+    459,
+    988,
+    824
+  ],
+  "samples": 16,
+  "seed": 0,
+  "denoising": false,
+  "support_threshold_max_rgb_difference": 8,
+  "support_bounds_crop_xyxy": [
+    0,
+    0,
+    372,
+    365
+  ],
+  "limitation": "Paired on/off difference includes indirect lighting and Monte Carlo sample variation. It is conservative replacement support, not an exact shadow alpha. Preserve source shadow where sprite does not overlap it.",
+  "production_changed": false,
+  "support_verdict": "REJECTED as local shadow mask: threshold support spans entire crop due Cycles variation. Do not composite using this difference. Native source shadow remains the authority."
+}

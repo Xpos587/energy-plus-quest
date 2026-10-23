@@ -1,0 +1,2795 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "completed": true,
+    "errors": [],
+    "failedRequests": [],
+    "shots": [
+      {
+        "id": "intro-0",
+        "file": "main-flow/1440-00-intro-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Начать ",
+            "x": 1240.8125,
+            "y": 732.765625,
+            "w": 156,
+            "h": 52,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "setup-professional",
+        "file": "main-flow/1440-01-setup-professional.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Студент",
+            "x": 270,
+            "y": 325,
+            "w": 438,
+            "h": 462,
+            "fits": true
+          },
+          {
+            "text": "Профессионал",
+            "x": 732,
+            "y": 325,
+            "w": 438,
+            "h": 462,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "setup-alva",
+        "file": "main-flow/1440-02-setup-alva.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Альва",
+            "x": 159,
+            "y": 325,
+            "w": 358,
+            "h": 462,
+            "fits": true
+          },
+          {
+            "text": "Хор",
+            "x": 541,
+            "y": 325,
+            "w": 358,
+            "h": 462,
+            "fits": true
+          },
+          {
+            "text": "Арсений",
+            "x": 923,
+            "y": 322,
+            "w": 358,
+            "h": 462,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/khor.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "setup-boat",
+        "file": "main-flow/1440-03-setup-boat.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Фотоаппарат",
+            "x": 417.3125,
+            "y": 325,
+            "w": 271.890625,
+            "h": 462,
+            "fits": true
+          },
+          {
+            "text": "Вязаные носки",
+            "x": 713.203125,
+            "y": 325,
+            "w": 271.890625,
+            "h": 462,
+            "fits": true
+          },
+          {
+            "text": "Лодка",
+            "x": 1009.09375,
+            "y": 325,
+            "w": 271.90625,
+            "h": 462,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/socks.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-briefing-0",
+        "file": "main-flow/1440-04-carrier-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-briefing-1",
+        "file": "main-flow/1440-05-carrier-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-briefing-2",
+        "file": "main-flow/1440-06-carrier-briefing-2.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-choice",
+        "file": "main-flow/1440-07-carrier-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-inspection",
+        "file": "main-flow/1440-08-carrier-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 1000,
+            "y": 824,
+            "w": 199,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 1209,
+            "y": 824,
+            "w": 199,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-result-0",
+        "file": "main-flow/1440-09-carrier-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К машинам",
+            "x": 170,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "К следующей сцене",
+            "x": 1000,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-wide-v6.webp",
+            "loaded": true
+          }
+        ],
+        "copy": "Благодаря посменной работе водителей фура добралась до Лабытнанги без остановок на сон - на три дня раньше срока! Но аренда такого транспорта оказалась очень дорогой – на следующей остановке вам лучше сэкономить."
+      },
+      {
+        "id": "compact-briefing-0",
+        "file": "main-flow/1440-10-compact-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "compact-briefing-1",
+        "file": "main-flow/1440-11-compact-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "compact-choice",
+        "file": "main-flow/1440-12-compact-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "compact-inspection",
+        "file": "main-flow/1440-13-compact-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 170,
+            "y": 840,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 1000,
+            "y": 840,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "compact-result-0",
+        "file": "main-flow/1440-14-compact-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 170,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Продолжить",
+            "x": 1000,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-wide-v48.webp",
+            "loaded": true
+          }
+        ],
+        "copy": "Лодка физически не может поместиться в таком узком пространстве – не разбирать же ее на части!"
+      },
+      {
+        "id": "inventory-briefing-0",
+        "file": "main-flow/1440-15-inventory-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-master-v4.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "inventory-briefing-1",
+        "file": "main-flow/1440-16-inventory-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-master-v4.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "inventory-choice",
+        "file": "main-flow/1440-17-inventory-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-master-v4.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "inventory-inspection",
+        "file": "main-flow/1440-18-inventory-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 170,
+            "y": 840,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 1000,
+            "y": 840,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-master-v4.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "inventory-result-0",
+        "file": "main-flow/1440-19-inventory-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 170,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Читать дальше",
+            "x": 1000,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/warehouse-neutral-2026-10-03/alphabet-v2.webp",
+            "loaded": true
+          }
+        ],
+        "copy": "Результат: действительно теперь все выстроено «по нотам». Только вот зона отгрузки находится рядом с началом алфавита, основной груз для баржи – там же, а ваш подарок – в середине."
+      },
+      {
+        "id": "inventory-result-1",
+        "file": "main-flow/1440-20-inventory-result-1.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 170,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Продолжить",
+            "x": 1000,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/warehouse-neutral-2026-10-03/alphabet-v2.webp",
+            "loaded": true
+          }
+        ],
+        "copy": "Работники склада сбились с ног, комплектуя общую поставку, но справились."
+      },
+      {
+        "id": "crane-briefing-0",
+        "file": "main-flow/1440-21-crane-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-boat-v1.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-briefing-1",
+        "file": "main-flow/1440-22-crane-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-boat-v1.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-briefing-2",
+        "file": "main-flow/1440-23-crane-briefing-2.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-boat-v1.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-choice",
+        "file": "main-flow/1440-24-crane-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-boat-v1.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-inspection",
+        "file": "main-flow/1440-25-crane-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 170,
+            "y": 840,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 1000,
+            "y": 840,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-boat-v1.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-result-0",
+        "file": "main-flow/1440-26-crane-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 1136,
+            "y": 840,
+            "w": 140,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Продолжить",
+            "x": 1284,
+            "y": 840,
+            "w": 140,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-v12.png",
+            "loaded": true
+          }
+        ],
+        "copy": "Петр согласился помочь по старой дружбе, пересел на нужный кран и вовремя погрузил лодку на баржу. Теперь она придет Альве вовремя!\n\nПетр выручил вас, вовремя погрузив подарок, но его собственная погрузка началась позже. Часть груза пришлось отправлять следующим рейсом."
+      },
+      {
+        "id": "lastmile-briefing-0",
+        "file": "main-flow/1440-27-lastmile-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-wide-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-briefing-1",
+        "file": "main-flow/1440-28-lastmile-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-wide-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-briefing-2",
+        "file": "main-flow/1440-29-lastmile-briefing-2.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-wide-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-choice",
+        "file": "main-flow/1440-30-lastmile-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-wide-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-inspection",
+        "file": "main-flow/1440-31-lastmile-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 170,
+            "y": 840,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 1000,
+            "y": 840,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-wide-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-result-0",
+        "file": "main-flow/1440-32-lastmile-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 170,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Читать дальше",
+            "x": 1000,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+            "loaded": true
+          }
+        ],
+        "leg": "flight",
+        "copy": "Вертолет действительно очень быстрый, только вот такая доставка обошлась очень дорого. Зато им получилось перевезти и часть труб на месторождение."
+      },
+      {
+        "id": "lastmile-result-1",
+        "file": "main-flow/1440-33-lastmile-result-1.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 170,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Завершить",
+            "x": 1000,
+            "y": 839,
+            "w": 270,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-ground-boat-result-v3.webp",
+            "loaded": true
+          }
+        ],
+        "leg": "ground",
+        "copy": "Кроме того, от посадочной площадки до чума – не меньше 10 километров. Добросердечные вахтовики помогли доставить ваш подарок на вездеходе, но порядком устали;"
+      },
+      {
+        "id": "ending",
+        "file": "main-flow/1440-34-ending.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Пройти заново",
+            "x": 810.90625,
+            "y": 644.390625,
+            "w": 212,
+            "h": 58,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "completed": true,
+    "errors": [],
+    "failedRequests": [],
+    "shots": [
+      {
+        "id": "intro-0",
+        "file": "main-flow/393-00-intro-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Далее ",
+            "x": 16,
+            "y": 788,
+            "w": 361,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "intro-1",
+        "file": "main-flow/393-01-intro-1.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Начать ",
+            "x": 202.5,
+            "y": 788,
+            "w": 174.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "setup-professional",
+        "file": "main-flow/393-02-setup-professional.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Студент",
+            "x": 15.71875,
+            "y": 355.21875,
+            "w": 175.78125,
+            "h": 358,
+            "fits": true
+          },
+          {
+            "text": "Профессионал",
+            "x": 201.5,
+            "y": 355.21875,
+            "w": 175.78125,
+            "h": 358,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "setup-alva",
+        "file": "main-flow/393-03-setup-alva.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Альва",
+            "x": 15.71875,
+            "y": 355.21875,
+            "w": 113.84375,
+            "h": 358,
+            "fits": true
+          },
+          {
+            "text": "Хор",
+            "x": 139.5625,
+            "y": 355.21875,
+            "w": 113.859375,
+            "h": 358,
+            "fits": true
+          },
+          {
+            "text": "Арсений",
+            "x": 263.421875,
+            "y": 352.21875,
+            "w": 113.84375,
+            "h": 358,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/khor.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/arseniy.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "setup-boat",
+        "file": "main-flow/393-04-setup-boat.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Фотоаппарат",
+            "x": 150.015625,
+            "y": 389.21875,
+            "w": 227.265625,
+            "h": 90,
+            "fits": true
+          },
+          {
+            "text": "Вязаные носки",
+            "x": 150.015625,
+            "y": 489.21875,
+            "w": 227.265625,
+            "h": 90,
+            "fits": true
+          },
+          {
+            "text": "Лодка",
+            "x": 150.015625,
+            "y": 589.21875,
+            "w": 227.265625,
+            "h": 90,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-poster.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/socks.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-briefing-0",
+        "file": "main-flow/393-05-carrier-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-briefing-1",
+        "file": "main-flow/393-06-carrier-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-briefing-2",
+        "file": "main-flow/393-07-carrier-briefing-2.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-choice",
+        "file": "main-flow/393-08-carrier-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-inspection",
+        "file": "main-flow/393-09-carrier-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "carrier-result-0",
+        "file": "main-flow/393-10-carrier-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К машинам",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "К следующей сцене",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-v3.webp",
+            "loaded": true
+          }
+        ],
+        "copy": "Благодаря посменной работе водителей фура добралась до Лабытнанги без остановок на сон - на три дня раньше срока! Но аренда такого транспорта оказалась очень дорогой – на следующей остановке вам лучше сэкономить."
+      },
+      {
+        "id": "compact-briefing-0",
+        "file": "main-flow/393-11-compact-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "compact-briefing-1",
+        "file": "main-flow/393-12-compact-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "compact-choice",
+        "file": "main-flow/393-13-compact-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "compact-inspection",
+        "file": "main-flow/393-14-compact-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "compact-result-0",
+        "file": "main-flow/393-15-compact-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Продолжить",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-v48.webp",
+            "loaded": true
+          }
+        ],
+        "copy": "Лодка физически не может поместиться в таком узком пространстве – не разбирать же ее на части!"
+      },
+      {
+        "id": "inventory-briefing-0",
+        "file": "main-flow/393-16-inventory-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-master-v4.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "inventory-briefing-1",
+        "file": "main-flow/393-17-inventory-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-master-v4.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "inventory-choice",
+        "file": "main-flow/393-18-inventory-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-master-v4.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "inventory-inspection",
+        "file": "main-flow/393-19-inventory-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-master-v4.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "inventory-result-0",
+        "file": "main-flow/393-20-inventory-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Продолжить",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/warehouse-neutral-2026-10-03/alphabet-v2.webp",
+            "loaded": true
+          }
+        ],
+        "copy": "Результат: действительно теперь все выстроено «по нотам». Только вот зона отгрузки находится рядом с началом алфавита, основной груз для баржи – там же, а ваш подарок – в середине. Работники склада сбились с ног, комплектуя общую поставку, но справились."
+      },
+      {
+        "id": "crane-briefing-0",
+        "file": "main-flow/393-21-crane-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-briefing-1",
+        "file": "main-flow/393-22-crane-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-briefing-2",
+        "file": "main-flow/393-23-crane-briefing-2.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-briefing-3",
+        "file": "main-flow/393-24-crane-briefing-3.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-choice",
+        "file": "main-flow/393-25-crane-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-inspection",
+        "file": "main-flow/393-26-crane-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "crane-result-0",
+        "file": "main-flow/393-27-crane-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Продолжить",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-v12.png",
+            "loaded": true
+          }
+        ],
+        "copy": "Петр согласился помочь по старой дружбе, пересел на нужный кран и вовремя погрузил лодку на баржу. Теперь она придет Альве вовремя!\n\nПетр выручил вас, вовремя погрузив подарок, но его собственная погрузка началась позже. Часть груза пришлось отправлять следующим рейсом."
+      },
+      {
+        "id": "lastmile-briefing-0",
+        "file": "main-flow/393-28-lastmile-briefing-0.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-briefing-1",
+        "file": "main-flow/393-29-lastmile-briefing-1.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-briefing-2",
+        "file": "main-flow/393-30-lastmile-briefing-2.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-choice",
+        "file": "main-flow/393-31-lastmile-choice.png",
+        "overflow": false,
+        "controls": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-inspection",
+        "file": "main-flow/393-32-lastmile-inspection.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "К вариантам",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Подтвердить выбор",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "id": "lastmile-result-0",
+        "file": "main-flow/393-33-lastmile-result-0.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Читать дальше",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+            "loaded": true
+          }
+        ],
+        "leg": "flight",
+        "copy": "Вертолет действительно очень быстрый, только вот такая доставка обошлась очень дорого. Зато им получилось перевезти и часть труб на месторождение."
+      },
+      {
+        "id": "lastmile-result-1",
+        "file": "main-flow/393-34-lastmile-result-1.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Изменить выбор",
+            "x": 12,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          },
+          {
+            "text": "Завершить",
+            "x": 201.5,
+            "y": 794,
+            "w": 179.5,
+            "h": 48,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/professional.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-ground-boat-result-v3.webp",
+            "loaded": true
+          }
+        ],
+        "leg": "ground",
+        "copy": "Кроме того, от посадочной площадки до чума – не меньше 10 километров. Добросердечные вахтовики помогли доставить ваш подарок на вездеходе, но порядком устали;"
+      },
+      {
+        "id": "ending",
+        "file": "main-flow/393-35-ending.png",
+        "overflow": false,
+        "controls": [
+          {
+            "text": "Пройти заново",
+            "x": 16,
+            "y": 707.5,
+            "w": 361,
+            "h": 58,
+            "fits": true
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "status": "isolated-prototype",
+  "runtimeIntegrated": false,
+  "sourceScene": "compact-environment-v26-portrait-v2.png",
+  "gift": "boat-footprint-v33.png",
+  "comparison": {
+    "space": [
+      139,
+      46
+    ],
+    "boatLength": 280,
+    "displayScale": 0.75,
+    "note": "Illustrative ratio from V26 scene and V29 upright boat; not physical measurements. Depth unknown. Requires comprehension testing."
+  },
+  "renders": [
+    {
+      "width": 390,
+      "height": 844,
+      "file": "failure-prototype-v33-390x844.png",
+      "layout": {
+        "viewport": 844,
+        "content": 844,
+        "overflowX": false,
+        "buttons": [
+          {
+            "label": "Изменить выбор",
+            "height": 50
+          },
+          {
+            "label": "Продолжить",
+            "height": 50
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "file": "failure-prototype-v33-320x568.png",
+      "layout": {
+        "viewport": 568,
+        "content": 647,
+        "overflowX": false,
+        "buttons": [
+          {
+            "label": "Изменить выбор",
+            "height": 50
+          },
+          {
+            "label": "Продолжить",
+            "height": 50
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-23T12:14:22.534362Z",
+    "display_name": "Nano Banana Pro",
+    "id": "de82aad4-5c42-4d76-b0a3-0d4b2b20e438",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_121422_de82aad4-5c42-4d76-b0a3-0d4b2b20e438_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "094a6270-ff9d-4979-ae25-dccdfe890cca",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/094a6270-ff9d-4979-ae25-dccdfe890cca.png"
+        }
+      ],
+      "prompt": "Edit the supplied illustration with exactly three art-director corrections. Preserve its exact composition, camera, all buildings, all FOUR numbered trucks 1/2/3/4, road geometry, markings, warehouse, fences, trees, all three foreground characters, their faces/clothing/poses and existing signage. Do not redesign or move anything. Keep the warm friendly detailed 2D illustrated game style and delicate drawn shading. Not a 3D render.\n1. Recolor ALL blue asphalt roads, intersections, and the warehouse paved yard to LIGHT NEUTRAL GRAY, approximately #d9dad8. Absolutely no blue cast on asphalt. Retain white lane markings and zebra crossings. Retain soft neutral-gray cast shadows and depth differences. Pavements remain warm cream.\n2. Remove the heavy black or dark-blue ink contours throughout the picture; where an edge needs a line, use a thin, soft MEDIUM GRAY, low-contrast contour instead. Buildings, trees, vehicles and characters must retain their detail and legibility. Preserve pupils and fine facial features, but no thick black comic outlines. Soft edge definition and local color transitions, not flat featureless shapes.\n3. Recolor ALL architectural window glass and truck windshield/side-window glass to PALE LIGHT SKY BLUE, approximately #c9e5ef, with gentle white reflections. No deep saturated blue windowpanes. Blue clothing, truck cabin paint, awnings and brand signs stay their existing blue colors: only glass is lightened.\nKeep the original warm cream/apricot buildings, gentle green trees, vivid restrained orange/blue clothing, white trailers and readable gray roof numerals. Output a faithful cleaned style-reference image, full original frame, 3:2 aspect ratio. No added text or objects, no cropping.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_121422_de82aad4-5c42-4d76-b0a3-0d4b2b20e438.png",
+    "status": "completed"
+  }
+]

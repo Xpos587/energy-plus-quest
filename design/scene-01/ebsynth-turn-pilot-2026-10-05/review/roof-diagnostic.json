@@ -1,0 +1,883 @@
+{
+  "scope": "diagnostic on flat white trailer roof; not full art or temporal quality score",
+  "mask": "guide alpha >250 and local generated z >249 and source RGB min >200; no painted-output selection",
+  "blue_patch_threshold": "output B-R >8 and R <225",
+  "results": {
+    "transfer-three": {
+      "frames": [
+        {
+          "frame": 0,
+          "roof_pixels": 3965,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 2.5078117935535773
+        },
+        {
+          "frame": 1,
+          "roof_pixels": 3964,
+          "blue_patch_fraction": 0.0002522704339051463,
+          "luminance_std": 2.6785938441655115
+        },
+        {
+          "frame": 2,
+          "roof_pixels": 3961,
+          "blue_patch_fraction": 0.00025246149962130775,
+          "luminance_std": 2.497861536602474
+        },
+        {
+          "frame": 3,
+          "roof_pixels": 3959,
+          "blue_patch_fraction": 0.00025258903763576663,
+          "luminance_std": 2.387089198489454
+        },
+        {
+          "frame": 4,
+          "roof_pixels": 3965,
+          "blue_patch_fraction": 0.00025220680958385876,
+          "luminance_std": 2.5502118607137465
+        },
+        {
+          "frame": 5,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 2.1943468446836873
+        },
+        {
+          "frame": 6,
+          "roof_pixels": 3960,
+          "blue_patch_fraction": 0.0002525252525252525,
+          "luminance_std": 2.403135758403809
+        },
+        {
+          "frame": 7,
+          "roof_pixels": 3962,
+          "blue_patch_fraction": 0.0002523977788995457,
+          "luminance_std": 2.3814571705656737
+        },
+        {
+          "frame": 8,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.00025303643724696357,
+          "luminance_std": 2.9272810491584353
+        },
+        {
+          "frame": 9,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.00025290844714213456,
+          "luminance_std": 2.735314061470545
+        },
+        {
+          "frame": 10,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 2.504040309806756
+        },
+        {
+          "frame": 11,
+          "roof_pixels": 3956,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 2.3080689939988006
+        },
+        {
+          "frame": 12,
+          "roof_pixels": 3962,
+          "blue_patch_fraction": 0.0002523977788995457,
+          "luminance_std": 2.4200305792408248
+        },
+        {
+          "frame": 13,
+          "roof_pixels": 3959,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 2.3869914208998018
+        },
+        {
+          "frame": 14,
+          "roof_pixels": 3959,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 2.3944498395640217
+        },
+        {
+          "frame": 15,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.00025284450063211124,
+          "luminance_std": 2.8810241543269193
+        },
+        {
+          "frame": 16,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 2.0765085384215887
+        },
+        {
+          "frame": 17,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 1.895076277395474
+        },
+        {
+          "frame": 18,
+          "roof_pixels": 3962,
+          "blue_patch_fraction": 0.007319535588086825,
+          "luminance_std": 3.3792682167755244
+        },
+        {
+          "frame": 19,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.013154566152289401,
+          "luminance_std": 5.112866314634781
+        },
+        {
+          "frame": 20,
+          "roof_pixels": 3930,
+          "blue_patch_fraction": 0.008651399491094147,
+          "luminance_std": 3.6127431815841304
+        },
+        {
+          "frame": 21,
+          "roof_pixels": 3917,
+          "blue_patch_fraction": 0.0015317845289762573,
+          "luminance_std": 3.4347082078058673
+        },
+        {
+          "frame": 22,
+          "roof_pixels": 3968,
+          "blue_patch_fraction": 0.010584677419354838,
+          "luminance_std": 5.315319966522579
+        },
+        {
+          "frame": 23,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.009359979762205919,
+          "luminance_std": 6.064455449749266
+        },
+        {
+          "frame": 24,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.009362348178137652,
+          "luminance_std": 5.646186438734043
+        },
+        {
+          "frame": 25,
+          "roof_pixels": 3946,
+          "blue_patch_fraction": 0.007095793208312215,
+          "luminance_std": 4.814733144401204
+        },
+        {
+          "frame": 26,
+          "roof_pixels": 3947,
+          "blue_patch_fraction": 0.007854066379528755,
+          "luminance_std": 4.248876540739171
+        },
+        {
+          "frame": 27,
+          "roof_pixels": 3949,
+          "blue_patch_fraction": 0.006583945302608255,
+          "luminance_std": 4.365093861945459
+        },
+        {
+          "frame": 28,
+          "roof_pixels": 3944,
+          "blue_patch_fraction": 0.007352941176470588,
+          "luminance_std": 4.062681816879326
+        },
+        {
+          "frame": 29,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.009870918754745633,
+          "luminance_std": 4.523878714713401
+        },
+        {
+          "frame": 30,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.008348090058183658,
+          "luminance_std": 3.3676708187820092
+        },
+        {
+          "frame": 31,
+          "roof_pixels": 3950,
+          "blue_patch_fraction": 0.00810126582278481,
+          "luminance_std": 4.354238530592022
+        },
+        {
+          "frame": 32,
+          "roof_pixels": 3948,
+          "blue_patch_fraction": 0.00911854103343465,
+          "luminance_std": 3.530361076705174
+        },
+        {
+          "frame": 33,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.009615384615384616,
+          "luminance_std": 3.6108053660540405
+        },
+        {
+          "frame": 34,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.011136421159200202,
+          "luminance_std": 3.9565794296613577
+        },
+        {
+          "frame": 35,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.010877814318239311,
+          "luminance_std": 4.366602913381533
+        },
+        {
+          "frame": 36,
+          "roof_pixels": 3945,
+          "blue_patch_fraction": 0.00861850443599493,
+          "luminance_std": 3.790208406612416
+        },
+        {
+          "frame": 37,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.009612952188211486,
+          "luminance_std": 4.510774717262943
+        },
+        {
+          "frame": 38,
+          "roof_pixels": 3958,
+          "blue_patch_fraction": 0.009095502779181405,
+          "luminance_std": 3.5282799234005697
+        },
+        {
+          "frame": 39,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.009860935524652338,
+          "luminance_std": 4.3844400603255655
+        },
+        {
+          "frame": 40,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.008601062484189223,
+          "luminance_std": 4.353734308531881
+        },
+        {
+          "frame": 41,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.00809102402022756,
+          "luminance_std": 3.392572910794571
+        },
+        {
+          "frame": 42,
+          "roof_pixels": 3962,
+          "blue_patch_fraction": 0.00757193336698637,
+          "luminance_std": 3.728489018580603
+        },
+        {
+          "frame": 43,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.008348090058183658,
+          "luminance_std": 3.995041242235636
+        },
+        {
+          "frame": 44,
+          "roof_pixels": 3949,
+          "blue_patch_fraction": 0.006837173968093188,
+          "luminance_std": 3.6026749178473736
+        },
+        {
+          "frame": 45,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.006828528072837633,
+          "luminance_std": 3.177703245796763
+        },
+        {
+          "frame": 46,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.006828528072837633,
+          "luminance_std": 3.9639777371938236
+        },
+        {
+          "frame": 47,
+          "roof_pixels": 3959,
+          "blue_patch_fraction": 0.006567314978529932,
+          "luminance_std": 3.7449829268608306
+        },
+        {
+          "frame": 48,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.00480890913692736,
+          "luminance_std": 2.8115606082195197
+        },
+        {
+          "frame": 49,
+          "roof_pixels": 3949,
+          "blue_patch_fraction": 0.0050645733096986575,
+          "luminance_std": 3.6017071834206744
+        },
+        {
+          "frame": 50,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.0048052604957005566,
+          "luminance_std": 3.3615554022218763
+        },
+        {
+          "frame": 51,
+          "roof_pixels": 3948,
+          "blue_patch_fraction": 0.004305977710233029,
+          "luminance_std": 2.9715558991187185
+        },
+        {
+          "frame": 52,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.00430161943319838,
+          "luminance_std": 2.8266793161326866
+        },
+        {
+          "frame": 53,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.005060728744939271,
+          "luminance_std": 2.858617842973695
+        },
+        {
+          "frame": 54,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.18866970156803237,
+          "luminance_std": 19.50753819939417
+        },
+        {
+          "frame": 55,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.18269230769230768,
+          "luminance_std": 23.902382046917722
+        },
+        {
+          "frame": 56,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.19853313100657563,
+          "luminance_std": 20.535928891941158
+        },
+        {
+          "frame": 57,
+          "roof_pixels": 3956,
+          "blue_patch_fraction": 0.17745197168857432,
+          "luminance_std": 19.833205894846262
+        },
+        {
+          "frame": 58,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.19089759797724398,
+          "luminance_std": 21.766543306498214
+        },
+        {
+          "frame": 59,
+          "roof_pixels": 3960,
+          "blue_patch_fraction": 0.20656565656565656,
+          "luminance_std": 22.374327459897568
+        },
+        {
+          "frame": 60,
+          "roof_pixels": 3958,
+          "blue_patch_fraction": 0.19201616978271854,
+          "luminance_std": 20.843342052340464
+        },
+        {
+          "frame": 61,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.18664643399089528,
+          "luminance_std": 20.685308336670428
+        },
+        {
+          "frame": 62,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.2219974715549937,
+          "luminance_std": 20.224139413328402
+        },
+        {
+          "frame": 63,
+          "roof_pixels": 3957,
+          "blue_patch_fraction": 0.19711902956785443,
+          "luminance_std": 20.50431722924337
+        },
+        {
+          "frame": 64,
+          "roof_pixels": 3947,
+          "blue_patch_fraction": 0.19863187230808207,
+          "luminance_std": 19.05418668715149
+        },
+        {
+          "frame": 65,
+          "roof_pixels": 3948,
+          "blue_patch_fraction": 0.2001013171225937,
+          "luminance_std": 19.446060496660746
+        },
+        {
+          "frame": 66,
+          "roof_pixels": 3950,
+          "blue_patch_fraction": 0.2389873417721519,
+          "luminance_std": 20.92675371259235
+        },
+        {
+          "frame": 67,
+          "roof_pixels": 3945,
+          "blue_patch_fraction": 0.26692015209125475,
+          "luminance_std": 21.455675688473935
+        },
+        {
+          "frame": 68,
+          "roof_pixels": 3944,
+          "blue_patch_fraction": 0.2682555780933063,
+          "luminance_std": 21.517314178420612
+        },
+        {
+          "frame": 69,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.24449506454062261,
+          "luminance_std": 20.162177698500486
+        },
+        {
+          "frame": 70,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.23076923076923078,
+          "luminance_std": 20.00831157404762
+        },
+        {
+          "frame": 71,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.24791297748545407,
+          "luminance_std": 19.385342018908048
+        }
+      ],
+      "mean_blue_patch_fraction": 0.057254399101156955,
+      "mean_roof_luminance_std": 7.758802413534517
+    },
+    "transfer-coordinates": {
+      "frames": [
+        {
+          "frame": 0,
+          "roof_pixels": 3965,
+          "blue_patch_fraction": 0.0,
+          "luminance_std": 2.592830060619692
+        },
+        {
+          "frame": 1,
+          "roof_pixels": 3964,
+          "blue_patch_fraction": 0.0002522704339051463,
+          "luminance_std": 2.794170365343553
+        },
+        {
+          "frame": 2,
+          "roof_pixels": 3961,
+          "blue_patch_fraction": 0.0005049229992426155,
+          "luminance_std": 2.6441450839117095
+        },
+        {
+          "frame": 3,
+          "roof_pixels": 3959,
+          "blue_patch_fraction": 0.0005051780752715333,
+          "luminance_std": 2.5272500087433247
+        },
+        {
+          "frame": 4,
+          "roof_pixels": 3965,
+          "blue_patch_fraction": 0.001008827238335435,
+          "luminance_std": 3.0896300551350806
+        },
+        {
+          "frame": 5,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.0007589172780166962,
+          "luminance_std": 2.540254024880505
+        },
+        {
+          "frame": 6,
+          "roof_pixels": 3960,
+          "blue_patch_fraction": 0.00101010101010101,
+          "luminance_std": 2.7523260000575918
+        },
+        {
+          "frame": 7,
+          "roof_pixels": 3962,
+          "blue_patch_fraction": 0.0010095911155981827,
+          "luminance_std": 2.814200571636641
+        },
+        {
+          "frame": 8,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.0005060728744939271,
+          "luminance_std": 3.0922144904647015
+        },
+        {
+          "frame": 9,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.0010116337885685382,
+          "luminance_std": 3.0368272940779835
+        },
+        {
+          "frame": 10,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.0007591093117408907,
+          "luminance_std": 2.5214773974254037
+        },
+        {
+          "frame": 11,
+          "roof_pixels": 3956,
+          "blue_patch_fraction": 0.0010111223458038423,
+          "luminance_std": 2.7721669878208743
+        },
+        {
+          "frame": 12,
+          "roof_pixels": 3962,
+          "blue_patch_fraction": 0.0017667844522968198,
+          "luminance_std": 3.0265587422068916
+        },
+        {
+          "frame": 13,
+          "roof_pixels": 3959,
+          "blue_patch_fraction": 0.001262945188178833,
+          "luminance_std": 2.8795871194200733
+        },
+        {
+          "frame": 14,
+          "roof_pixels": 3959,
+          "blue_patch_fraction": 0.001262945188178833,
+          "luminance_std": 2.9758689468863726
+        },
+        {
+          "frame": 15,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.0012642225031605564,
+          "luminance_std": 2.91288376875638
+        },
+        {
+          "frame": 16,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.0020248038471273096,
+          "luminance_std": 3.6897510999738015
+        },
+        {
+          "frame": 17,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.0025297242600556538,
+          "luminance_std": 2.8793113075233028
+        },
+        {
+          "frame": 18,
+          "roof_pixels": 3962,
+          "blue_patch_fraction": 0.00757193336698637,
+          "luminance_std": 3.4045405404289935
+        },
+        {
+          "frame": 19,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.00986592461421705,
+          "luminance_std": 3.9765419724394686
+        },
+        {
+          "frame": 20,
+          "roof_pixels": 3930,
+          "blue_patch_fraction": 0.010687022900763359,
+          "luminance_std": 4.439326881007893
+        },
+        {
+          "frame": 21,
+          "roof_pixels": 3917,
+          "blue_patch_fraction": 0.0051059484299208575,
+          "luminance_std": 3.2012125535969145
+        },
+        {
+          "frame": 22,
+          "roof_pixels": 3968,
+          "blue_patch_fraction": 0.009072580645161291,
+          "luminance_std": 5.1501596778701595
+        },
+        {
+          "frame": 23,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.011130786744244878,
+          "luminance_std": 5.594766164590173
+        },
+        {
+          "frame": 24,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.010121457489878543,
+          "luminance_std": 5.0217927251627
+        },
+        {
+          "frame": 25,
+          "roof_pixels": 3946,
+          "blue_patch_fraction": 0.00963000506842372,
+          "luminance_std": 4.47025535293355
+        },
+        {
+          "frame": 26,
+          "roof_pixels": 3947,
+          "blue_patch_fraction": 0.010134279199391943,
+          "luminance_std": 4.417404080797217
+        },
+        {
+          "frame": 27,
+          "roof_pixels": 3949,
+          "blue_patch_fraction": 0.007596859964547987,
+          "luminance_std": 4.377117913741096
+        },
+        {
+          "frame": 28,
+          "roof_pixels": 3944,
+          "blue_patch_fraction": 0.008113590263691683,
+          "luminance_std": 3.4653673564480205
+        },
+        {
+          "frame": 29,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.009870918754745633,
+          "luminance_std": 4.433670637461532
+        },
+        {
+          "frame": 30,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.009359979762205919,
+          "luminance_std": 3.7006430166351123
+        },
+        {
+          "frame": 31,
+          "roof_pixels": 3950,
+          "blue_patch_fraction": 0.007848101265822785,
+          "luminance_std": 3.964650536066561
+        },
+        {
+          "frame": 32,
+          "roof_pixels": 3948,
+          "blue_patch_fraction": 0.00911854103343465,
+          "luminance_std": 3.4966327675114686
+        },
+        {
+          "frame": 33,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.009615384615384616,
+          "luminance_std": 3.6324020913052926
+        },
+        {
+          "frame": 34,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.011136421159200202,
+          "luminance_std": 3.8150866412524516
+        },
+        {
+          "frame": 35,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.010624841892233746,
+          "luminance_std": 4.439282059018185
+        },
+        {
+          "frame": 36,
+          "roof_pixels": 3945,
+          "blue_patch_fraction": 0.00988593155893536,
+          "luminance_std": 4.150935446576114
+        },
+        {
+          "frame": 37,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.009359979762205919,
+          "luminance_std": 4.532437766993011
+        },
+        {
+          "frame": 38,
+          "roof_pixels": 3958,
+          "blue_patch_fraction": 0.009600808489135927,
+          "luminance_std": 3.565599600912814
+        },
+        {
+          "frame": 39,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.009608091024020228,
+          "luminance_std": 4.228635482496806
+        },
+        {
+          "frame": 40,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.007336200354161397,
+          "luminance_std": 4.30334448475521
+        },
+        {
+          "frame": 41,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.0073324905183312266,
+          "luminance_std": 3.340485991756662
+        },
+        {
+          "frame": 42,
+          "roof_pixels": 3962,
+          "blue_patch_fraction": 0.00757193336698637,
+          "luminance_std": 4.067684114853017
+        },
+        {
+          "frame": 43,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.0065772830761447005,
+          "luminance_std": 3.425173134610654
+        },
+        {
+          "frame": 44,
+          "roof_pixels": 3949,
+          "blue_patch_fraction": 0.005571030640668524,
+          "luminance_std": 3.442551770302542
+        },
+        {
+          "frame": 45,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.0065756196256954984,
+          "luminance_std": 4.099244434339899
+        },
+        {
+          "frame": 46,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.00556398583712696,
+          "luminance_std": 4.393001860805557
+        },
+        {
+          "frame": 47,
+          "roof_pixels": 3959,
+          "blue_patch_fraction": 0.006062136903258399,
+          "luminance_std": 4.738782908628269
+        },
+        {
+          "frame": 48,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.005315110098709187,
+          "luminance_std": 5.00996290562671
+        },
+        {
+          "frame": 49,
+          "roof_pixels": 3949,
+          "blue_patch_fraction": 0.0037984299822739933,
+          "luminance_std": 6.513332771518832
+        },
+        {
+          "frame": 50,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.004552352048558422,
+          "luminance_std": 6.048249451683752
+        },
+        {
+          "frame": 51,
+          "roof_pixels": 3948,
+          "blue_patch_fraction": 0.003799392097264438,
+          "luminance_std": 6.790919239939459
+        },
+        {
+          "frame": 52,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.004554655870445344,
+          "luminance_std": 7.996743919170053
+        },
+        {
+          "frame": 53,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.00354251012145749,
+          "luminance_std": 8.006087333261558
+        },
+        {
+          "frame": 54,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.14466363176530095,
+          "luminance_std": 19.6787650024216
+        },
+        {
+          "frame": 55,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.1417004048582996,
+          "luminance_std": 19.366433968611155
+        },
+        {
+          "frame": 56,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.1449165402124431,
+          "luminance_std": 18.974973757752863
+        },
+        {
+          "frame": 57,
+          "roof_pixels": 3956,
+          "blue_patch_fraction": 0.15596562184024268,
+          "luminance_std": 18.756989510546962
+        },
+        {
+          "frame": 58,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.14563843236409607,
+          "luminance_std": 18.816069453789385
+        },
+        {
+          "frame": 59,
+          "roof_pixels": 3960,
+          "blue_patch_fraction": 0.1340909090909091,
+          "luminance_std": 19.146892822004524
+        },
+        {
+          "frame": 60,
+          "roof_pixels": 3958,
+          "blue_patch_fraction": 0.13845376452753916,
+          "luminance_std": 21.030721899775916
+        },
+        {
+          "frame": 61,
+          "roof_pixels": 3954,
+          "blue_patch_fraction": 0.1479514415781487,
+          "luminance_std": 20.833574228025384
+        },
+        {
+          "frame": 62,
+          "roof_pixels": 3955,
+          "blue_patch_fraction": 0.15195954487989885,
+          "luminance_std": 19.79180206806192
+        },
+        {
+          "frame": 63,
+          "roof_pixels": 3957,
+          "blue_patch_fraction": 0.14682840535759414,
+          "luminance_std": 19.27458547206788
+        },
+        {
+          "frame": 64,
+          "roof_pixels": 3947,
+          "blue_patch_fraction": 0.14796047631112239,
+          "luminance_std": 18.305959360207186
+        },
+        {
+          "frame": 65,
+          "roof_pixels": 3948,
+          "blue_patch_fraction": 0.14437689969604864,
+          "luminance_std": 18.042416538110434
+        },
+        {
+          "frame": 66,
+          "roof_pixels": 3950,
+          "blue_patch_fraction": 0.15215189873417723,
+          "luminance_std": 19.793579070020325
+        },
+        {
+          "frame": 67,
+          "roof_pixels": 3945,
+          "blue_patch_fraction": 0.16248415716096323,
+          "luminance_std": 19.354084374101532
+        },
+        {
+          "frame": 68,
+          "roof_pixels": 3944,
+          "blue_patch_fraction": 0.1432555780933063,
+          "luminance_std": 19.70341598231397
+        },
+        {
+          "frame": 69,
+          "roof_pixels": 3951,
+          "blue_patch_fraction": 0.13718046064287523,
+          "luminance_std": 20.474676024825897
+        },
+        {
+          "frame": 70,
+          "roof_pixels": 3952,
+          "blue_patch_fraction": 0.14347165991902833,
+          "luminance_std": 19.919414216195825
+        },
+        {
+          "frame": 71,
+          "roof_pixels": 3953,
+          "blue_patch_fraction": 0.15026562104730584,
+          "luminance_std": 19.282357509509055
+        }
+      ],
+      "mean_blue_patch_fraction": 0.04076357136854181,
+      "mean_roof_luminance_std": 7.857530419023937
+    }
+  }
+}

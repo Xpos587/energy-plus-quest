@@ -1,0 +1,31 @@
+# Allow only build inputs; hydration restores media inside the builder.
+**
+!package.json
+!bun.lock
+!index.html
+!tsconfig.json
+!vite.config.ts
+!repository-budget.json
+!media-artifacts.json
+!public/
+!public/**/
+!public/**/*.svg
+!public/**/*.txt
+!public/**/*.md
+!src/
+!src/**
+!scripts/
+!scripts/**
+!deploy/
+!deploy/**
+!docs/
+!docs/**/
+!docs/**/*.json
+# Never send credentials, caches or binary masters nested in source directories.
+**/.env
+**/.env.*
+**/node_modules/
+**/__pycache__/
+**/*.blend
+**/*.psd
+**/*.xcf

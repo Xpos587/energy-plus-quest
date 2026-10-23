@@ -1,0 +1,20 @@
+{
+  "assetId": "F0086",
+  "source": "public/scene-art/certificates-v1/professional-efficiency.webp",
+  "decision": "accepted_for_runtime",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "generalReview": [
+    "Original full source and P2 preview compared",
+    "100 percent focal pairs: presenter face, young colleague, hands and mug",
+    "100 percent seams: hair shoulder, map route, garment, foreground focus"
+  ],
+  "findings": "Scene, character identity, hand/object count and framing remain consistent; focal reconstruction is sharper; intentionally soft foreground remains protected. No doubling seen at reviewed interfaces.",
+  "ownerReceipt": "docs/reviews/ending-2026-10-20-flowers/prepared/F0086/owner-handoff.json",
+  "limitations": [
+    "P1 accepted3 and retained6; P2 accepted4",
+    "Partial detail reconstruction, not native full-scene8192",
+    "Technical runtime acceptance only; no user artistic approval or factual recovery claim"
+  ],
+  "runtimeVerification": "pending actual4344 before/after resource and DPR check"
+}

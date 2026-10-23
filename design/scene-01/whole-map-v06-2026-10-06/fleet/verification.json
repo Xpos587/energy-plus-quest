@@ -1,0 +1,30 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/painted-layer-2026-10-05/painted-vehicles-driver-fixed-optimized.blend",
+  "candidate": "/home/michael/Github/energy-plus-quest/design/scene-01/whole-map-v06-2026-10-06/fleet/improved-fleet.blend",
+  "frames_verified": 1152,
+  "root_count": 8,
+  "max_root_matrix_delta": 0.0,
+  "camera_equal": true,
+  "actions_equal": true,
+  "frame_range_equal": true,
+  "actions": {
+    "truck-1-tractor": "truck-1-tractorAction",
+    "truck-1-trailer": "truck-1-trailerAction",
+    "truck-2-tractor": "truck-2-tractorAction",
+    "truck-2-trailer": "truck-2-trailerAction",
+    "truck-3-tractor": "truck-3-tractorAction",
+    "truck-3-trailer": "truck-3-trailerAction",
+    "truck-4-tractor": "truck-4-tractorAction",
+    "truck-4-trailer": "truck-4-trailerAction"
+  },
+  "visual_inspection": {
+    "map_frames": [
+      1,
+      385,
+      769
+    ],
+    "all_four_present_each": true,
+    "green_front_test": "Two faces visible; texture patchiness and crude low-poly body persist in original and candidate",
+    "original_close_comparison": "Patchy dark/green body and windshield defects inherited from source, not bevel regression"
+  }
+}

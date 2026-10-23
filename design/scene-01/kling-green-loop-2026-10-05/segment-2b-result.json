@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T12:55:08.563704Z",
+    "display_name": "Kling v3.0",
+    "id": "e310262c-fb76-432b-abf9-b1c60827092d",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "e4cc8d43-f3c3-45de-9c91-1f8bb6d12c41",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/e4cc8d43-f3c3-45de-9c91-1f8bb6d12c41.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "e858b946-182c-487d-a8f2-480f92669ef0",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/e858b946-182c-487d-a8f2-480f92669ef0.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera and fixed clean bright illustrated city. Exactly ONE green tractor connected to ONE rigid white box semitrailer. Preserve size, wheels, two drivers and one steering wheel. ONLY forward motion, cab always at leading end. No swapping cab and trailer ends, no reverse, no U-turn, no duplicate, no morphing, no disappearance, no roof crossing. Truck moves entirely on blue asphalt inside city crop, NEVER enters white sidebars. Tractor steers first with semitrailer rear axle following inner curve through coupled fifth-wheel hitch. Background/camera/lighting unchanged, softcoloredoutlines/shadows. Five second continuous shot. This is ONLY THE SECOND HALF of a corner already begun. Start in supplied bent rig pose with green cab diagonally DOWN-LEFT and white trailer behind to RIGHT. Continue steering cab toward DOWN, trailer follows smoothly, then entire rig straightens vertically facing DOWN. Drive DOWN toward exact final frame. No leftward straight drive and no westward road: the cab proceeds DOWN immediately. End straight downward with cab at BOTTOM and trailer behind ABOVE.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_125508_e310262c-fb76-432b-abf9-b1c60827092d.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_125508_e310262c-fb76-432b-abf9-b1c60827092d_thumbnail.webp"
+  }
+]

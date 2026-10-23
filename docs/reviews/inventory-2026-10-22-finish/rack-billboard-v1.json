@@ -1,0 +1,243 @@
+{
+  "status": "REJECT for strict geometry promotion; retain as final bounded stylistic alternative only. One affine cannot make native opposite Y depth directions parallel, and mapped silhouette overruns fixed projected physical envelope. No further generation/iteration authorized in this lane.",
+  "source_crop_xyxy": [
+    542,
+    240,
+    793,
+    575
+  ],
+  "full_source_dimensions": [
+    1440,
+    1000
+  ],
+  "mapped_card_source_corners": [
+    [
+      586.3110621477188,
+      530.8515284064881
+    ],
+    [
+      752.0476369378853,
+      525.1493112102819
+    ],
+    [
+      752.4840484860566,
+      278.63531207090136
+    ],
+    [
+      586.7474736958901,
+      284.33752926710747
+    ]
+  ],
+  "world_card_corners": [
+    [
+      2.8392648696899414,
+      1.6540578603744507,
+      0.9136677980422974
+    ],
+    [
+      4.616133689880371,
+      3.025939464569092,
+      0.9748728275299072
+    ],
+    [
+      3.4111146926879883,
+      4.666201114654541,
+      3.620842695236206
+    ],
+    [
+      1.6342462301254272,
+      3.2943193912506104,
+      3.5596377849578857
+    ]
+  ],
+  "projected_physical_envelope_corners": [
+    [
+      587.8032302856445,
+      481.6531538963318
+    ],
+    [
+      587.8032732009888,
+      323.6147165298462
+    ],
+    [
+      640.4754209518433,
+      438.20440769195557
+    ],
+    [
+      640.4754209518433,
+      280.16597032546997
+    ],
+    [
+      694.6968126296997,
+      529.8246443271637
+    ],
+    [
+      694.6968126296997,
+      371.7861771583557
+    ],
+    [
+      747.3690032958984,
+      486.3758683204651
+    ],
+    [
+      747.3690032958984,
+      328.3374309539795
+    ]
+  ],
+  "hidden_camera_only": [
+    "forklift-combined-v3 rack1 bay1 stack1 depth1",
+    "forklift-combined-v3 rack1 bay1 stack1 depth2",
+    "forklift-combined-v3 rack1 bay1 stack2 depth1",
+    "forklift-combined-v3 rack1 bay1 stack2 depth2",
+    "forklift-combined-v3 rack1 bay1 stack3 depth1",
+    "forklift-combined-v3 rack1 bay1 stack3 depth2",
+    "forklift-combined-v3 rack1 bay2 stack1 depth1",
+    "forklift-combined-v3 rack1 bay2 stack1 depth2",
+    "forklift-combined-v3 rack1 bay2 stack2 depth1",
+    "forklift-combined-v3 rack1 bay2 stack2 depth2",
+    "forklift-combined-v3 rack1 bay2 stack3 depth1",
+    "forklift-combined-v3 rack1 bay2 stack3 depth2",
+    "forklift-combined-v3 rack1 beam face",
+    "forklift-combined-v3 rack1 beam face.001",
+    "forklift-combined-v3 rack1 beam face.002",
+    "forklift-combined-v3 rack1 beam face.003",
+    "forklift-combined-v3 rack1 beam face.004",
+    "forklift-combined-v3 rack1 beam face.005",
+    "forklift-combined-v3 rack1 beam face.006",
+    "forklift-combined-v3 rack1 beam face.007",
+    "forklift-combined-v3 rack1 inward upright casing",
+    "forklift-combined-v3 rack1 inward upright casing.001",
+    "forklift-combined-v3 rack1 inward upright casing.002",
+    "forklift-combined-v3 rack1 inward upright casing.003",
+    "forklift-combined-v3 rack1 inward upright casing.004",
+    "forklift-combined-v3 rack1 inward upright casing.005",
+    "Rack1 bay1 carton",
+    "Rack1 bay1 carton.001",
+    "Rack1 bay1 carton.002",
+    "Rack1 bay1 carton.003",
+    "Rack1 bay1 carton.004",
+    "Rack1 bay1 carton.005",
+    "Rack1 bay2 carton",
+    "Rack1 bay2 carton.001",
+    "Rack1 bay2 carton.002",
+    "Rack1 bay2 carton.003",
+    "Rack1 bay2 carton.004",
+    "Rack1 bay2 carton.005",
+    "Rack1 beam",
+    "Rack1 beam.001",
+    "Rack1 beam.002",
+    "Rack1 beam.003",
+    "Rack1 beam.004",
+    "Rack1 beam.005",
+    "Rack1 beam.006",
+    "Rack1 beam.007",
+    "Rack1 deck",
+    "Rack1 deck.001",
+    "Rack1 deck.002",
+    "Rack1 deck.003",
+    "Rack1 upright",
+    "Rack1 upright.001",
+    "Rack1 upright.002",
+    "Rack1 upright.003",
+    "Rack1 upright.004",
+    "Rack1 upright.005",
+    "Finish label barcode.003",
+    "Finish label barcode.004",
+    "Finish label barcode.005",
+    "Finish label barcode.006",
+    "Finish label barcode.007",
+    "Finish label barcode.008",
+    "Finish label barcode.009",
+    "Finish label barcode.010",
+    "Finish label barcode.011",
+    "Finish label barcode.012",
+    "Finish label barcode.013",
+    "Finish label barcode.014",
+    "Finish label barcode.015",
+    "Finish label barcode.016",
+    "Finish label barcode.017",
+    "Finish label barcode.018",
+    "Finish label barcode.019",
+    "Finish label barcode.020",
+    "Finish label barcode.021",
+    "Finish label barcode.022",
+    "Finish label barcode.023",
+    "Finish label barcode.024",
+    "Finish label barcode.025",
+    "Finish label barcode.026",
+    "Finish label barcode.027",
+    "Finish label barcode.028",
+    "Finish label barcode.029",
+    "Finish label barcode.030",
+    "Finish label barcode.031",
+    "Finish label barcode.032",
+    "Finish label barcode.033",
+    "Finish label barcode.034",
+    "Finish label barcode.035",
+    "Finish label barcode.036",
+    "Finish label barcode.037",
+    "Finish label barcode.038",
+    "Finish package front tape.001",
+    "Finish package front tape.002",
+    "Finish package front tape.003",
+    "Finish package front tape.004",
+    "Finish package front tape.005",
+    "Finish package front tape.006",
+    "Finish package front tape.007",
+    "Finish package front tape.008",
+    "Finish package front tape.009",
+    "Finish package front tape.010",
+    "Finish package front tape.011",
+    "Finish package front tape.012",
+    "Finish package label.001",
+    "Finish package label.002",
+    "Finish package label.003",
+    "Finish package label.004",
+    "Finish package label.005",
+    "Finish package label.006",
+    "Finish package label.007",
+    "Finish package label.008",
+    "Finish package label.009",
+    "Finish package label.010",
+    "Finish package label.011",
+    "Finish package label.012",
+    "Finish package top tape.001",
+    "Finish package top tape.002",
+    "Finish package top tape.003",
+    "Finish package top tape.004",
+    "Finish package top tape.005",
+    "Finish package top tape.006",
+    "Finish package top tape.007",
+    "Finish package top tape.008",
+    "Finish package top tape.009",
+    "Finish package top tape.010",
+    "Finish package top tape.011",
+    "Finish package top tape.012",
+    "Finish rack bolt",
+    "Finish rack bolt.001",
+    "Finish rack bolt.002",
+    "Finish rack bolt.003",
+    "Finish rack bolt.004",
+    "Finish rack bolt.005",
+    "Finish rack bolt.006",
+    "Finish rack bolt.007",
+    "Finish rack end diagonal",
+    "Finish rack end diagonal.001",
+    "Finish rack end diagonal.002",
+    "Finish rack end diagonal.003"
+  ],
+  "exact_3d_boards_and_fonts_retained": [
+    "А-Б plaque",
+    "В-К plaque",
+    "Plaque А-Б",
+    "Plaque В-К"
+  ],
+  "original_shadow_casters_retained": true,
+  "native_modified": false,
+  "alpha_cutoff": 0.7529411764705882,
+  "measured_crop_render_seconds": 3.2360130839988415,
+  "production_changed": false,
+  "card_depth_policy": "Camera-only plane shifted toward camera, with no shadow/indirect visibility, to avoid physically intersecting the floor. Original board/text geometry remains intact; exact protected board/text pixels restored in paired composite. Camera-plane offset does not change projected registration.",
+  "outside_context_changed_pixels": 0,
+  "plaque_protected_changed_pixels": 0
+}

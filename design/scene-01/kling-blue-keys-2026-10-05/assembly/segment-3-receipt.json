@@ -1,0 +1,14 @@
+{
+  "segment": 3,
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-blue-keys-2026-10-05/assembly/segment-3.mp4",
+  "fps": 24.0,
+  "frames": 121,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "duration_seconds": 5.041666666666667,
+  "gate": "motion_pass",
+  "driver": "uncertified; exactly one person and empty passenger seat require review, not prompt inference",
+  "motion_evidence": "21 quarter-second source samples: connected rig left then down warehouse street, no sampled hard failure."
+}

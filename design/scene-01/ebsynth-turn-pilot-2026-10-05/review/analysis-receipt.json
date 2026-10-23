@@ -1,0 +1,43 @@
+{
+  "sources": [
+    "transfer-three-map.mp4",
+    "transfer-three-turn.mp4"
+  ],
+  "coverage": "both complete 6-second videos at 12 fps",
+  "key_switches": [
+    "17->18",
+    "53->54"
+  ],
+  "model": "gemini-2.5-flash",
+  "official_guide": "https://ai.google.dev/gemini-api/docs/video-understanding",
+  "cleanup": true,
+  "status": "completed",
+  "verdict": "FAIL",
+  "local_frame_check": {
+    "frames": [0, 9, 17, 18, 27, 36, 45, 53, 54, 63, 71],
+    "coverage": "both videos; full-path samples plus adjacent key switches",
+    "finding": "hard vehicle-style discontinuities at 17->18 and 53->54; two drivers unreadable"
+  },
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 645,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 38322,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 450
+      },
+      {
+        "modality": "VIDEO",
+        "token_count": 37872
+      }
+    ],
+    "thoughts_token_count": 2241,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 41208,
+    "traffic_type": null
+  }
+}

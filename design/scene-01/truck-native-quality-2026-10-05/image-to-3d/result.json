@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-10-05T21:01:34.112933Z",
+  "display_name": "Multi-Image to 3D",
+  "id": "a111683d-1acc-4a5a-add9-ac906f0a6d36",
+  "job_type": "multi_image_to_3d",
+  "min_result_url": null,
+  "params": {
+    "enable_animation": false,
+    "enable_pbr": false,
+    "enable_rigging": false,
+    "folder_id": null,
+    "medias": [
+      {
+        "data": {
+          "id": "3173d555-37e8-43b2-95e7-ca265047cacd",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/3173d555-37e8-43b2-95e7-ca265047cacd.png"
+        },
+        "role": "image"
+      }
+    ],
+    "seed": 42,
+    "should_remesh": true,
+    "should_texture": true,
+    "target_polycount": 60000,
+    "topology": "triangle"
+  },
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_210134_a111683d-1acc-4a5a-add9-ac906f0a6d36.glb",
+  "status": "completed"
+}

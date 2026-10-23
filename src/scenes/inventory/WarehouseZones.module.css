@@ -1,0 +1,6 @@
+.overlay { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.drawing { display: block; width: 100%; height: 100%; overflow: visible; }
+.understroke { display: none; }
+/* Paths remain transparent hit targets; focus stays on the numbered controls. */
+.zone { fill: transparent; stroke: none; }
+.zone[data-interactive="true"] { pointer-events: auto; cursor: pointer; }

@@ -1,0 +1,130 @@
+[
+  {
+    "screen": "desktop",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-professional-empathy-BsPVjv5O.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-professional-empathy-Dm91xgZZ.webp",
+      "rect": {
+        "x": 239.984375,
+        "y": 240.578125,
+        "width": 350,
+        "height": 350,
+        "top": 240.578125,
+        "right": 589.984375,
+        "bottom": 590.578125,
+        "left": 239.984375
+      },
+      "natural": [
+        2560,
+        2560
+      ],
+      "decodedNative": [
+        2560,
+        2560
+      ],
+      "picture": "<source type=\"image/avif\" media=\"(min-width: 1100px)\" srcset=\"./assets/desktop-detail-professional-empathy-BsPVjv5O.avif\"><source type=\"image/avif\" srcset=\"./assets/optimized-professional-empathy-1280-OH8qYfUA.avif 1280w, ./assets/optimized-professional-empathy-1600-BeEhczbB.avif 1600w, ./assets/optimized-professional-empathy-vh68-f1T.avif 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><source type=\"image/webp\" srcset=\"./assets/optimized-professional-empathy-1280-Oir6qq7H.webp 1280w, ./assets/optimized-professional-empathy-1600-C-P6-vO1.webp 1600w, ./assets/optimized-professional-empathy-Dm91xgZZ.webp 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><img data-certificate-art=\"true\" width=\"1024\" height=\"1024\" alt=\"\" src=\"./assets/optimized-professional-empathy-Dm91xgZZ.webp\">"
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "desktop",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/desktop-detail-professional-empathy-BsPVjv5O.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-professional-empathy-Dm91xgZZ.webp",
+      "rect": {
+        "x": 239.984375,
+        "y": 240.578125,
+        "width": 350,
+        "height": 350,
+        "top": 240.578125,
+        "right": 589.984375,
+        "bottom": 590.578125,
+        "left": 239.984375
+      },
+      "natural": [
+        2560,
+        2560
+      ],
+      "decodedNative": [
+        2560,
+        2560
+      ],
+      "picture": "<source type=\"image/avif\" media=\"(min-width: 1100px)\" srcset=\"./assets/desktop-detail-professional-empathy-BsPVjv5O.avif\"><source type=\"image/avif\" srcset=\"./assets/optimized-professional-empathy-1280-OH8qYfUA.avif 1280w, ./assets/optimized-professional-empathy-1600-BeEhczbB.avif 1600w, ./assets/optimized-professional-empathy-vh68-f1T.avif 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><source type=\"image/webp\" srcset=\"./assets/optimized-professional-empathy-1280-Oir6qq7H.webp 1280w, ./assets/optimized-professional-empathy-1600-C-P6-vO1.webp 1600w, ./assets/optimized-professional-empathy-Dm91xgZZ.webp 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><img data-certificate-art=\"true\" width=\"1024\" height=\"1024\" alt=\"\" src=\"./assets/optimized-professional-empathy-Dm91xgZZ.webp\">"
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "mobile",
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-professional-empathy-1280-OH8qYfUA.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-professional-empathy-Dm91xgZZ.webp",
+      "rect": {
+        "x": 120,
+        "y": 190.546875,
+        "width": 150,
+        "height": 150,
+        "top": 190.546875,
+        "right": 270,
+        "bottom": 340.546875,
+        "left": 120
+      },
+      "natural": [
+        180,
+        180
+      ],
+      "decodedNative": [
+        1280,
+        1280
+      ],
+      "picture": "<source type=\"image/avif\" media=\"(min-width: 1100px)\" srcset=\"./assets/desktop-detail-professional-empathy-BsPVjv5O.avif\"><source type=\"image/avif\" srcset=\"./assets/optimized-professional-empathy-1280-OH8qYfUA.avif 1280w, ./assets/optimized-professional-empathy-1600-BeEhczbB.avif 1600w, ./assets/optimized-professional-empathy-vh68-f1T.avif 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><source type=\"image/webp\" srcset=\"./assets/optimized-professional-empathy-1280-Oir6qq7H.webp 1280w, ./assets/optimized-professional-empathy-1600-C-P6-vO1.webp 1600w, ./assets/optimized-professional-empathy-Dm91xgZZ.webp 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><img data-certificate-art=\"true\" width=\"1024\" height=\"1024\" alt=\"\" src=\"./assets/optimized-professional-empathy-Dm91xgZZ.webp\">"
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "mobile",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-professional-empathy-1280-OH8qYfUA.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-professional-empathy-Dm91xgZZ.webp",
+      "rect": {
+        "x": 120,
+        "y": 190.546875,
+        "width": 150,
+        "height": 150,
+        "top": 190.546875,
+        "right": 270,
+        "bottom": 340.546875,
+        "left": 120
+      },
+      "natural": [
+        180,
+        180
+      ],
+      "decodedNative": [
+        1280,
+        1280
+      ],
+      "picture": "<source type=\"image/avif\" media=\"(min-width: 1100px)\" srcset=\"./assets/desktop-detail-professional-empathy-BsPVjv5O.avif\"><source type=\"image/avif\" srcset=\"./assets/optimized-professional-empathy-1280-OH8qYfUA.avif 1280w, ./assets/optimized-professional-empathy-1600-BeEhczbB.avif 1600w, ./assets/optimized-professional-empathy-vh68-f1T.avif 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><source type=\"image/webp\" srcset=\"./assets/optimized-professional-empathy-1280-Oir6qq7H.webp 1280w, ./assets/optimized-professional-empathy-1600-C-P6-vO1.webp 1600w, ./assets/optimized-professional-empathy-Dm91xgZZ.webp 2560w\" sizes=\"(max-width: 360px) 100px, (max-width: 700px) 180px, 390px\"><img data-certificate-art=\"true\" width=\"1024\" height=\"1024\" alt=\"\" src=\"./assets/optimized-professional-empathy-Dm91xgZZ.webp\">"
+    },
+    "status": 200,
+    "errors": []
+  }
+]

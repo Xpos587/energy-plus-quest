@@ -1,0 +1,43 @@
+{
+  "balance_before": 105,
+  "balance_after": 93,
+  "credits_used": 12,
+  "jobs": [
+    {
+      "name": "barge",
+      "model": "nano_banana_pro",
+      "status": "completed",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_115548_505b17d1-5a9a-43d3-95eb-3b2b343f94ed.png"
+    },
+    {
+      "name": "barge-refined",
+      "model": "nano_banana_pro",
+      "status": "completed",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_115847_d44862d2-9885-42a9-aa85-844c49e9806b.png"
+    },
+    {
+      "name": "warehouse",
+      "model": "nano_banana_pro",
+      "status": "completed",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_115851_4453b50a-9142-4770-bbdf-81df5f71cbab.png"
+    },
+    {
+      "name": "lastmile",
+      "model": "nano_banana_pro",
+      "status": "completed",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_115847_ccf0a391-b8b0-4226-9b26-4fa4e5a9d983.png"
+    },
+    {
+      "name": "lastmile-refined",
+      "model": "nano_banana_pro",
+      "status": "completed",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_120153_936955b6-c082-4db2-ae91-7ff90f3cf78d.png"
+    },
+    {
+      "name": "lastmile-topology",
+      "model": "nano_banana_pro",
+      "status": "completed",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_120408_3668b900-86e9-4a86-b754-c91389fa382e.png"
+    }
+  ]
+}

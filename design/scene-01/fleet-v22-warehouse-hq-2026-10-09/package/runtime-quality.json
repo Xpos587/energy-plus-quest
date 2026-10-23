@@ -1,0 +1,38 @@
+[
+  {
+    "device": "desktop",
+    "before": {
+      "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-motion-desktop.mp4?v=22",
+      "time": 12
+    },
+    "after": {
+      "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-motion-desktop.mp4?v=22",
+      "time": 12,
+      "width": 3600,
+      "height": 2500
+    },
+    "quality": {
+      "total": 144,
+      "dropped": 28,
+      "time": 19.001299
+    }
+  },
+  {
+    "device": "phone-dpr3",
+    "before": {
+      "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-motion-tablet.mp4?v=22",
+      "time": 12
+    },
+    "after": {
+      "src": "http://127.0.0.1:4173/scene1-live/separated-routes/city-motion-tablet.mp4?v=22",
+      "time": 12,
+      "width": 2560,
+      "height": 1778
+    },
+    "quality": {
+      "total": 144,
+      "dropped": 1,
+      "time": 19.000772
+    }
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "native_dimensions": [
+    3840,
+    2667
+  ],
+  "sample_step_pixels": 2,
+  "known_source_head_regions": {
+    "crew-cab-paint-0.png": [
+      [
+        155,
+        181,
+        413,
+        442
+      ],
+      [
+        215,
+        243,
+        459,
+        490
+      ]
+    ],
+    "crew-cab-paint-1.png": [
+      [
+        570,
+        602,
+        460,
+        490
+      ],
+      [
+        628,
+        655,
+        410,
+        445
+      ]
+    ]
+  },
+  "views": {
+    "1": {
+      "sampled_visible_original_painted_head_points": [],
+      "single_existing_relief_head_sampled_points": 16,
+      "opaque_fitted_glass_sampled_points": 338
+    },
+    "769": {
+      "sampled_visible_original_painted_head_points": [],
+      "single_existing_relief_head_sampled_points": 8,
+      "opaque_fitted_glass_sampled_points": 208
+    }
+  },
+  "textures_edited": false,
+  "claim_scope": "Two rendered views only; no full-loop human-visibility certification."
+}

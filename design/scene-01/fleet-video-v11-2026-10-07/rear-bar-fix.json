@@ -1,0 +1,10 @@
+{
+  "source": "../fleet-coupling-v11-2026-10-07/fleet-v11-coupling.blend",
+  "change": "hide four unsupported floating rear underrun bars in video master; no other edits",
+  "objects": [
+    "1 rear underrun bar",
+    "2 rear underrun bar",
+    "3 rear underrun bar",
+    "4 rear underrun bar"
+  ]
+}

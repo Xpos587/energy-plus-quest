@@ -1,0 +1,1526 @@
+.app {
+  --company-logo-width: 160px;
+  --energy-logo-width: 156px;
+  height: 100svh;
+  height: 100dvh;
+  padding: var(--safe-area-top) var(--safe-area-right) var(--safe-area-bottom)
+    var(--safe-area-left);
+  display: flex;
+  flex-direction: column;
+  color: var(--navy);
+  background: var(--mist);
+}
+.app[data-step="carrier"] {
+  background: var(--white);
+}
+.header {
+  flex: none;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) 108px;
+  align-items: center;
+  gap: 20px;
+  padding: 12px clamp(12px, 3vw, 44px);
+  border-bottom: 1px solid var(--panel-border);
+  background: white;
+}
+.brandCluster {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 40px;
+}
+.companyLogo,
+.energyMark img {
+  display: block;
+  height: auto;
+}
+.companyLogo {
+  width: var(--company-logo-width);
+}
+.energyMark img {
+  width: var(--energy-logo-width);
+  transform: translateY(3px);
+}
+.projectMark {
+  padding-left: 14px;
+  border-left: 1px solid var(--panel-border);
+}
+.routeProgress {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  max-width: 820px;
+  justify-self: center;
+}
+.progressCaption,
+.progressCount {
+  display: none;
+}
+.progressTrack {
+  display: contents;
+}
+.progressItem {
+  display: flex;
+  flex: 1;
+  position: relative;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+  color: #49658d;
+  font-size: 14px;
+  line-height: 1.15;
+}
+.progressItem:last-child {
+  flex: 0 0 auto;
+}
+.progressItem:not(:last-child)::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  min-width: 6px;
+  margin-right: 6px;
+  background: #9bb7e0;
+}
+.progressItem i {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.progressItem i span {
+  display: block;
+  transform: translateY(0.5px);
+}
+/* This font's '1' has a wider right sidebearing than the other digits. */
+.progressItem:first-child i span {
+  transform: translate(0.9px, 0.5px);
+}
+.progressItem[data-current="true"] {
+  color: var(--blue);
+}
+.progressItem[data-current="true"] i {
+  color: white;
+  background: var(--orange);
+  border-color: var(--orange);
+}
+.selectionSummary {
+  display: flex;
+  justify-self: end;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.selectionSummary [data-selection-context] {
+  display: flex;
+}
+.selectionSummary i {
+  display: none;
+}
+.selectionSummary img {
+  display: block;
+  width: 32px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.main {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  container-type: size;
+}
+.screen {
+  height: 100%;
+  min-height: 0;
+}
+.sceneStage {
+  position: relative;
+  isolation: isolate;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  padding: clamp(112px, 16cqh, 160px) clamp(8px, 2cqh, 28px) 12px;
+}
+.sceneStage > .cityMap,
+.mapBackdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+}
+.mapBackdrop .cityMap,
+.cityMap[data-mode="soft"] > div {
+  height: 100%;
+}
+.cityMap[data-mode="soft"] .mapPicture,
+.cityMap[data-mode="soft"] .mapImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cityMap[data-mode="soft"] .mapImage {
+  object-fit: cover;
+  opacity: 0.72;
+  filter: blur(8px);
+  transform: scale(1.03);
+}
+.mapVeil,
+.mapShade,
+.outcomeVeil {
+  display: none;
+}
+
+.textButton,
+.backButton,
+.nextButton,
+.carrierChoices button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--panel-border);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.backButton,
+.textButton {
+  color: var(--blue);
+  border-radius: 999px;
+  background: white;
+}
+button:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+.dialogPanel,
+.missionBar,
+.resultPanel {
+  border: 1px solid var(--panel-border);
+  border-radius: 28px;
+  box-shadow: 0 16px 40px #04132718;
+}
+
+.dialogPanel {
+  width: min(100%, 1240px);
+  margin-inline: auto;
+  padding: clamp(10px, 1.5cqh, 16px);
+  background: #fffffff0;
+}
+.dialogPanel:has(.choiceGrid[data-count="2"]) {
+  width: min(100%, 850px);
+}
+.selectionQuestion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.selectionQuestion h1 {
+  margin: 0;
+  font-size: clamp(20px, 3cqh, 30px);
+  line-height: 1.15;
+}
+.sceneStage:has([data-selection-panel]) {
+  padding-top: 84px;
+}
+.screenHeading h2 {
+  margin: clamp(8px, 1.6cqh, 20px) 0;
+  font-size: clamp(24px, 4cqh, 42px);
+  line-height: 1.1;
+}
+.choiceGrid {
+  --image-share: 52%;
+  --card-height: min(360px, calc(100cqh - 180px));
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.choiceGrid[data-count="2"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.choiceGrid[data-count="3"] .choiceCard {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: clamp(340px, 60cqh, 560px);
+  align-items: stretch;
+  background: #f8f5ef;
+}
+.choiceGrid[data-count="3"] .choiceSymbol {
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: #edf3f5;
+}
+.choiceGrid[data-count="3"] .choiceSymbol img {
+  object-fit: cover;
+}
+.choiceGrid[data-count="3"] .choiceText {
+  display: grid;
+  min-height: 64px;
+  place-items: center;
+  text-align: center;
+  background: #e8f1f7;
+  border-top: 1px solid #c9dce9;
+}
+.choiceGrid[data-count="3"] .choiceText strong {
+  font-size: clamp(22px, 2vw, 30px);
+}
+.choiceCard {
+  display: grid;
+  grid-template-columns: min(var(--image-share), calc(var(--card-height) * 0.8)) minmax(
+      0,
+      1fr
+    );
+  align-items: center;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  color: var(--navy);
+  border: 1px solid var(--panel-border);
+  border-radius: 22px;
+  background: var(--paper);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.choiceSymbol {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.choiceSymbol picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.choiceSymbol img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+  transform: none;
+}
+.choiceText {
+  padding: 12px;
+  text-align: left;
+}
+.choiceText strong {
+  font-size: clamp(20px, 3cqh, 28px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.choiceGrid[data-count="2"] .choiceCard {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: clamp(340px, 60cqh, 560px);
+  align-items: stretch;
+  background: #fff5e6;
+}
+.choiceGrid[data-count="2"] .choiceSymbol {
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  padding: clamp(10px, 1.6cqh, 18px);
+  background: #f7f2e8;
+}
+.choiceGrid[data-count="2"] .choiceSymbol img {
+  object-fit: contain;
+}
+.choiceGrid[data-count="2"] .choiceText {
+  display: grid;
+  min-height: 64px;
+  place-items: center;
+  text-align: center;
+}
+.choiceGrid[data-count="2"] .choiceText strong {
+  font-size: clamp(22px, 2vw, 30px);
+}
+.choiceGrid[data-count="2"] .choiceCard[data-choice="professional"] {
+  color: white;
+  background: #072b5a;
+}
+.choiceGrid[data-count="2"] .choiceCard[data-choice="student"] .choiceText {
+  background: #f7cf98;
+  border-top: 1px solid #dfaf70;
+}
+.carrierScene {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  overflow: hidden;
+  isolation: isolate;
+}
+.cityMap[data-mode="live"] {
+  grid-area: 1 / 1;
+  min-height: 0;
+  min-width: 0;
+  container-type: size;
+  position: relative;
+  overflow: visible;
+}
+/* Match the authored 1280x788 video so labels share its pixel plane. */
+.liveMapSurface {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* Keep the full 44px moving targets inside the map's clipping ancestors. */
+  width: min(calc(100cqw - 44px), calc((100cqh - 44px) * 1280 / 788));
+  aspect-ratio: 1280 / 788;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+  border-radius: 0;
+}
+.liveMapSurface .mapPicture,
+.liveMapSurface .mapImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.liveMapSurface .mapPicture {
+  position: relative;
+}
+.liveMapSurface .mapPicture > .mapImage {
+  position: absolute;
+  inset: 0;
+}
+.cityExtension {
+  position: absolute;
+  width: 146.875%;
+  height: auto;
+  max-width: none;
+  left: -23.4375%;
+  top: -12.690355%;
+  pointer-events: none;
+  z-index: -1;
+}
+.cityExtension[data-format="mobile"] {
+  width: 213.888889%;
+  left: -58.333333%;
+  top: 0;
+}
+.liveMapSurface .mapImage {
+  object-fit: contain;
+}
+.mapFallback {
+  background: #d8e3e7;
+}
+.truckNumber,
+.pickupLabel {
+  position: absolute;
+  display: grid;
+  min-width: 28px;
+  min-height: 28px;
+  place-items: center;
+  padding: 1px 6px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: var(--orange);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  pointer-events: none;
+}
+.truckNumber {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+.truckNumber[data-truck="truck-1"] {
+  left: 12%;
+  top: 63%;
+}
+.truckNumber[data-truck="truck-2"] {
+  left: 37.5%;
+  top: 43%;
+}
+.truckNumber[data-truck="truck-3"] {
+  left: 32%;
+  top: 78%;
+}
+.truckNumber[data-truck="truck-4"] {
+  left: 45%;
+  top: 71%;
+}
+.pickupLabel {
+  left: 48.9%;
+  top: 25.55%;
+  padding: 5px 10px;
+  color: var(--navy);
+  border: 1px solid #c4ced7;
+  border-radius: 4px;
+  background: #fffaf1;
+  box-shadow: 0 2px 6px #04132726;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.motionControls {
+  grid-column: 1 / -1;
+}
+.motionToggle {
+  min-height: 44px;
+  padding: 7px 11px;
+  width: 100%;
+  color: var(--blue);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  background: white;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.motionIcon {
+  display: none;
+}
+.motionDescription {
+  margin: 6px 0 0;
+  color: var(--blue);
+  font-size: 12px;
+  line-height: 1.25;
+}
+.motionDescriptionHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.missionBar {
+  z-index: 1;
+  grid-area: 1 / 1;
+  align-self: start;
+  justify-self: end;
+  width: min(430px, 30%);
+  margin: 16px 2%;
+  padding: 20px;
+  background: #fffaf1;
+}
+.missionHeading h2 {
+  margin: 12px 0;
+  font-size: clamp(18px, 2.4cqh, 27px);
+  line-height: 1.15;
+}
+.carrierChoices {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.carrierChoices button {
+  min-width: 0;
+  color: var(--blue);
+  border-radius: 12px;
+  background: white;
+}
+.carrierChoices button:last-child {
+  grid-column: 1 / -1;
+}
+.outcomeScene {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  align-items: safe center;
+  overflow-y: auto;
+  background: #041e43;
+}
+.outcomePicture {
+  position: relative;
+  grid-area: 1 / 1;
+  display: block;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  container-type: size;
+}
+.outcomeBackdrop {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+/* Keep the mobile-derived story clear of the desktop result panel. */
+.outcomeBackdrop[data-format="desktop"][data-outcome-art="old"],
+.outcomeBackdrop[data-format="desktop"][data-outcome-art="near"] {
+  object-position: 55% center;
+}
+.outcomeBackdrop[data-format="desktop"][data-outcome-art="old4"] {
+  object-position: 25% center;
+}
+.outcomeBackdrop[data-format="desktop"][data-outcome-art="crew"] {
+  object-position: right center;
+}
+.outcomeBackdrop[data-format="mobile"][data-outcome-art="old"],
+.outcomeBackdrop[data-format="mobile"][data-outcome-art="near"] {
+  object-position: left center;
+}
+.outcomeBackdrop[data-format="mobile"][data-outcome-art="old4"] {
+  object-position: 15% center;
+}
+.outcomeBackdrop[data-format="mobile"][data-outcome-art="crew"] {
+  object-position: 60% center;
+}
+.outcomeBackdrop[data-format="mobile"] {
+  display: none;
+}
+@container (max-aspect-ratio: 1.4) {
+  .outcomeBackdrop[data-format="desktop"] {
+    display: none;
+  }
+  .outcomeBackdrop[data-format="mobile"] {
+    display: block;
+    object-position: center;
+  }
+}
+
+@container (max-aspect-ratio: 1.607143) {
+  .liveMapSurface {
+    width: min(calc(100cqw - 44px), calc((100cqh - 44px) * 720 / 1088));
+    aspect-ratio: 720 / 1088;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .truckNumber[data-truck="truck-1"] {
+    left: 22.1%;
+    top: 63%;
+  }
+  .truckNumber[data-truck="truck-2"] {
+    left: 68.1%;
+    top: 45.3%;
+  }
+  .truckNumber[data-truck="truck-3"] {
+    left: 58.2%;
+    top: 80.9%;
+  }
+  .truckNumber[data-truck="truck-4"] {
+    left: 78.5%;
+    top: 65%;
+  }
+  .pickupLabel {
+    left: 48.6%;
+    top: 30.66%;
+  }
+}
+
+.resultPanel {
+  position: relative;
+  grid-area: 1 / 1;
+  z-index: 1;
+  justify-self: end;
+  width: min(500px, 37%);
+  margin: 16px 3%;
+  padding: clamp(16px, 2.5cqh, 32px);
+  color: white;
+  border-color: #526173;
+  background: #041e43;
+}
+.outcomeCopy > .descriptionSheet {
+  max-height: clamp(180px, 43cqh, 420px);
+  margin-top: 12px;
+}
+.outcomeCopy .sheetToggle {
+  color: #d3dfee;
+  font-size: 16px;
+}
+.outcomeCopy .sheetCopy {
+  scrollbar-width: thin;
+  scrollbar-color: #82b9ff #102e51;
+  scrollbar-gutter: stable;
+}
+.outcomeCopy .panelLead {
+  white-space: pre-line;
+  line-height: 1.4;
+}
+.outcomeCopy h2 {
+  margin: 0;
+  font-size: clamp(24px, 4cqh, 40px);
+  line-height: 1.1;
+}
+.panelLead {
+  margin: clamp(10px, 2cqh, 20px) 0;
+  color: #e2e9f2;
+  font-size: clamp(16px, 2.5cqh, 21.333px);
+  line-height: 1.25;
+}
+.scoreDelta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  gap: 6px;
+  margin: clamp(10px, 2cqh, 20px) 0;
+  padding: clamp(8px, 1.3cqh, 14px) 6px;
+  border: 1px solid #355170;
+  border-radius: 14px;
+  background: #102e51;
+}
+.scoreDelta > div {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 3px;
+  text-align: center;
+}
+.scoreDelta span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #d3dfee;
+}
+.deltaIcon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+.deltaLabel {
+  color: #d3dfee;
+  white-space: nowrap;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.1;
+}
+.scoreDelta strong {
+  color: #ff9b67;
+  font-size: clamp(22px, 3.5cqh, 28px);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.scoreDelta strong[data-positive="true"] {
+  color: #82b9ff;
+}
+.scoreDelta strong[data-neutral="true"] {
+  color: #d3dfee;
+}
+.resultActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.resultActions button {
+  min-width: 0;
+  padding-inline: 8px;
+}
+.resultActions .textButton {
+  color: var(--blue);
+  background: white;
+  border-color: white;
+}
+.nextButton {
+  color: #c4cfdd;
+  background: #314964;
+  border-color: #526a86;
+  border-radius: 999px;
+  cursor: not-allowed;
+}
+.eyebrow {
+  color: #ff9b67;
+  font-size: 14px;
+}
+@media (hover: hover) {
+  .choiceCard:hover {
+    border-color: var(--blue);
+  }
+  .backButton:hover,
+  .carrierChoices button:hover {
+    color: white;
+    background: var(--blue);
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding-block: 8px;
+  }
+  .routeProgress {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+  .selectionSummary {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .choiceText {
+    padding: 8px;
+  }
+  .choiceText strong {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .carrierScene {
+    grid-template: minmax(160px, 1fr) auto / minmax(0, 1fr);
+    gap: 8px;
+    padding-bottom: 8px;
+    overflow-y: auto;
+  }
+  .missionBar {
+    grid-area: 2 / 1;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) 44px;
+    gap: 6px;
+    width: calc(100% - 16px);
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 12px;
+    align-items: center;
+  }
+  .missionBar:not(:has(.motionToggle)) {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .motionControls {
+    display: contents;
+  }
+  .missionHeading {
+    grid-column: 2;
+  }
+  .motionToggle {
+    grid-column: 3;
+    grid-row: 1;
+    width: 44px;
+    padding: 10px;
+  }
+  .motionIcon {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+  .motionToggle span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .motionDescription {
+    grid-column: 1 / -1;
+  }
+  .missionHeading h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  .carrierChoices {
+    grid-column: 1 / -1;
+    gap: 6px;
+  }
+  .outcomeScene {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: #041e43;
+  }
+  .outcomePicture {
+    flex: 1 0 140px;
+    width: 100%;
+  }
+  .resultPanel {
+    flex: none;
+    width: 100%;
+    max-width: 720px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 14px;
+    box-shadow: none;
+  }
+  .outcomeCopy h2 {
+    font-size: clamp(24px, 3.8cqh, 32px);
+  }
+  .panelLead {
+    font-size: clamp(16px, 2.5cqh, 20px);
+  }
+}
+@media (max-width: 600px) {
+  .app {
+    --company-logo-width: clamp(96px, calc((100vw - 122px) / 2), 142px);
+    --energy-logo-width: clamp(94px, calc((100vw - 126px) / 2), 138px);
+  }
+  .sceneStage {
+    padding-top: max(132px, 16cqh);
+  }
+  .header {
+    padding: 8px 10px;
+    row-gap: 8px;
+  }
+  .brandCluster {
+    gap: 7px;
+    min-height: 30px;
+  }
+  .projectMark {
+    padding-left: 7px;
+  }
+  .selectionSummary {
+    gap: 3px;
+  }
+  .selectionSummary img {
+    width: 24px;
+    height: 30px;
+  }
+
+  .choiceGrid,
+  .choiceGrid[data-count="2"] {
+    --image-share: 35%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .choiceGrid {
+    --card-height: min(180px, calc((100cqh - 176px) / 3));
+  }
+  .choiceGrid[data-count="2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .choiceGrid[data-count="2"] .choiceCard {
+    height: clamp(276px, 49cqh, 420px);
+  }
+  .choiceGrid[data-count="2"] .choiceSymbol {
+    padding: 6px;
+  }
+  .choiceGrid[data-count="2"] .choiceSymbol img {
+    object-fit: cover;
+  }
+  .choiceGrid[data-count="3"] .choiceCard {
+    grid-template-columns: 40% minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    height: clamp(90px, calc((100cqh - 204px) / 3), 200px);
+  }
+  .choiceGrid[data-count="3"] .choiceSymbol {
+    height: 100%;
+  }
+  .choiceGrid[data-count="3"] .choiceText {
+    min-height: 0;
+    justify-items: start;
+    padding: 12px;
+    text-align: left;
+    border-top: 0;
+    border-left: 1px solid #c9dce9;
+  }
+  .choiceGrid[data-count="3"] .choiceText strong {
+    font-size: clamp(17px, 5vw, 22px);
+  }
+  .dialogPanel {
+    padding: 12px;
+  }
+  .screenHeading h2 {
+    font-size: clamp(24px, 3.8cqh, 30px);
+    margin: 8px 0 16px;
+  }
+  .choiceText {
+    padding: 12px 14px;
+  }
+  .choiceText strong {
+    font-size: 22px;
+  }
+  .choiceGrid[data-count="2"] .choiceText {
+    min-width: 0;
+    min-height: 44px;
+    padding: 8px 4px;
+  }
+  .choiceGrid[data-count="2"] .choiceText strong {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+}
+@media (max-width: 600px) and (min-height: 760px) {
+  .choiceGrid {
+    --image-share: 40%;
+  }
+  .choiceGrid[data-count="2"] {
+    gap: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .app {
+    --company-logo-width: 94px;
+    --energy-logo-width: 92px;
+  }
+  .progressItem {
+    font-size: 12px;
+  }
+  .resultPanel {
+    padding: 10px;
+  }
+  .panelLead {
+    margin-block: 8px;
+  }
+  .scoreDelta {
+    margin-block: 8px;
+    padding-block: 6px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .header {
+    padding-block: 6px;
+    gap: 6px;
+  }
+  .brandCluster {
+    min-height: 30px;
+  }
+  .selectionSummary img {
+    width: 24px;
+    height: 30px;
+  }
+  .choiceGrid {
+    --card-height: calc(100cqh - 132px);
+  }
+  .dialogPanel {
+    padding: 12px;
+  }
+  .screenHeading h2 {
+    margin: 8px 0;
+    font-size: 24px;
+  }
+  .carrierScene {
+    grid-template: minmax(0, 1fr) / minmax(0, 1fr) minmax(290px, 38%);
+    gap: 8px;
+  }
+  .missionBar {
+    grid-area: 1 / 2;
+    align-self: center;
+    width: auto;
+    margin: 0 8px 0 0;
+    padding: 12px;
+  }
+  .missionHeading h2 {
+    margin: 8px 0;
+    font-size: 20px;
+  }
+  .carrierChoices {
+    gap: 6px;
+  }
+  .outcomeScene {
+    grid-template: minmax(0, 1fr) / minmax(0, 0.8fr) minmax(0, 1.2fr);
+    background: #041e43;
+  }
+  .outcomePicture {
+    grid-area: 1 / 1;
+  }
+  .resultPanel {
+    grid-area: 1 / 2;
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    border: 0;
+    box-shadow: none;
+  }
+  .outcomeCopy h2 {
+    font-size: 24px;
+  }
+  .panelLead {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  .scoreDelta {
+    margin: 8px 0;
+    padding: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app *,
+  .app *::before,
+  .app *::after {
+    animation: none;
+    transition: none;
+    scroll-behavior: auto;
+  }
+}
+
+.mapNumber {
+  position: absolute;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.mapNumber::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  z-index: -1;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 2px 5px rgb(4 19 39 / 35%);
+}
+.mapNumber:hover::before {
+  background: var(--blue);
+}
+.mapNumber:focus-visible {
+  z-index: 4;
+}
+
+.nextButton:not(:disabled) {
+  color: white;
+  background: var(--blue);
+  cursor: pointer;
+}
+.carrierChoices[data-count="4"] button:last-child {
+  grid-column: auto;
+}
+.descriptionSheet {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  grid-column: 1 / -1;
+}
+.sheetToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 44px;
+  flex: none;
+  padding: 8px 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+.sheetChevron {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  transition: transform 160ms ease-out;
+}
+.sheetToggle[aria-expanded="true"] .sheetChevron {
+  transform: rotate(180deg);
+}
+.sheetCopy {
+  overflow-y: auto;
+  min-height: 0;
+  padding: 0 6px 0 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+.sheetCopy p {
+  margin: 0 0 12px;
+}
+.sheetCopy[hidden] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .routeProgress {
+    align-items: center;
+    gap: 10px;
+  }
+  .progressCaption,
+  .progressCount {
+    display: block;
+    flex: none;
+    font-size: 12px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+  .progressCount {
+    color: #49658d;
+    font-variant-numeric: tabular-nums;
+  }
+  .progressTrack {
+    display: flex;
+    flex: 1;
+    gap: 4px;
+    min-width: 0;
+  }
+  .progressItem,
+  .progressItem:last-child {
+    flex: 1;
+    height: 4px;
+    border-radius: 999px;
+    background: #c5d3e5;
+  }
+  .progressItem[data-current="true"] {
+    background: var(--orange);
+  }
+  .progressItem i,
+  .progressItem:not(:last-child)::after {
+    display: none;
+  }
+  /* Retain every stage name for screen readers without five rows of labels. */
+  .progressItem > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+/* One visual language for the delivery brief and its outcome. */
+.missionBar,
+.resultPanel {
+  border: 1px solid #dce3ea;
+  border-radius: 22px;
+  padding: 20px;
+  color: var(--navy);
+  background: #fffefa;
+  box-shadow: 0 8px 28px #20365312;
+}
+.missionHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  grid-column: 1 / -1;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e9ed;
+}
+.missionHeading h2,
+.outcomeCopy h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.missionHeading .backButton {
+  flex: none;
+  padding: 6px 8px 6px 0;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #52677e;
+}
+.sheetToggle,
+.outcomeCopy .sheetToggle {
+  position: relative;
+  gap: 8px;
+  justify-content: flex-start;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: #536980;
+  background: #f0f4f7;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  touch-action: none;
+  user-select: none;
+}
+.sheetHandle {
+  display: block;
+  width: 24px;
+  height: 4px;
+  flex: none;
+  border-radius: 3px;
+  background: #a9b9c6;
+}
+.sheetChevron {
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+}
+.sheetCopy,
+.outcomeCopy .panelLead {
+  color: #34485c;
+  font-size: 16px;
+  line-height: 1.5;
+  scrollbar-color: #b4c4d0 transparent;
+  scrollbar-width: thin;
+}
+.sheetCopy {
+  margin: 10px 0 0;
+  overscroll-behavior: contain;
+}
+.sheetCopy[hidden] {
+  margin: 0;
+}
+.carrierChoices button,
+.resultActions button {
+  min-height: 44px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: none;
+}
+.carrierChoices button {
+  background: #f5f8fb;
+  border-color: #d5e0eb;
+}
+.carrierChoices [data-choice-id="auto"] {
+  color: #164d83;
+  background: #e6eff6;
+  border-color: #d5e0eb;
+}
+.resultActions .textButton {
+  border-color: #d5e0eb;
+  background: #f5f8fb;
+}
+.scoreDelta {
+  background: #eef4f8;
+  border-color: #dce5ec;
+  margin: 4px 0;
+}
+.scoreDelta span,
+.deltaLabel {
+  color: #52677e;
+}
+.scoreDelta strong {
+  color: #b84b18;
+}
+.scoreDelta strong[data-positive="true"] {
+  color: #176094;
+}
+.scoreDelta strong[data-neutral="true"] {
+  color: #52677e;
+}
+.outcomeCopy .panelLead {
+  margin: 0;
+}
+.outcomeCopy > .descriptionSheet {
+  margin-block: 14px;
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .missionBar,
+  .resultPanel {
+    padding: 14px;
+    border-radius: 20px;
+  }
+  .missionHeading h2,
+  .outcomeCopy h2 {
+    font-size: 20px;
+  }
+  .outcomeScene {
+    background: var(--mist);
+  }
+}
+@media (hover: hover) {
+  .sheetToggle:hover,
+  .carrierChoices button:hover {
+    background: #e4edf4;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sheetChevron {
+    transition: none;
+  }
+}
+
+.missionHeading h2:focus {
+  outline: none;
+}
+@media (hover: hover) {
+  .backButton:hover,
+  .carrierChoices button:hover {
+    color: var(--blue);
+    background: #e4edf4;
+  }
+}
+
+/* Result surfaces belong to the device edge; artwork is independent underneath. */
+.outcomeScene {
+  background: var(--mist);
+}
+.resultPanel .outcomeCopy {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.resultPanel .outcomeCopy > :not(.descriptionSheet) {
+  flex-shrink: 0;
+}
+.resultPanel .outcomeCopy > .descriptionSheet {
+  min-height: 0;
+}
+.scoreDelta {
+  background: #f0f6fb;
+  border-color: #dce8f1;
+  padding: 12px 6px;
+}
+.scoreDelta .deltaIcon {
+  width: 21px;
+  height: 21px;
+  flex-basis: 21px;
+}
+.scoreDelta strong {
+  color: #c64708;
+}
+.scoreDelta strong[data-positive="true"] {
+  color: #0076bb;
+}
+.scoreDelta strong[data-neutral="true"] {
+  color: #536980;
+}
+@media (max-width: 1100px) and (min-height: 501px),
+  (max-width: 600px) and (orientation: portrait) {
+  .outcomeScene {
+    display: block;
+    overflow: hidden;
+  }
+  .outcomeScene .outcomePicture {
+    position: absolute;
+    inset: 0 0 auto;
+    width: 100%;
+    height: 68%;
+  }
+  .outcomeScene .resultPanel {
+    position: absolute;
+    inset: auto 0 0;
+    width: 100%;
+    max-width: none;
+    max-height: 78%;
+    margin: 0;
+    border-radius: 0;
+    border-inline: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px max(16px, env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 28px #20365316;
+  }
+  .outcomeCopy > .descriptionSheet {
+    max-height: none;
+  }
+}
+/* Shared reading rhythm; scenario strings remain untouched. */
+.screenHeading h2 {
+  font-weight: 500;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+.screenHeading > p:not(.eyebrow),
+.choiceText p,
+.sheetCopy,
+.outcomeCopy .panelLead {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: normal;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+.screenHeading > p:not(.eyebrow) {
+  max-width: 65ch;
+  margin: 12px 0 20px;
+}
+.choiceText strong {
+  display: block;
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.choiceText p {
+  margin: 8px 0 0;
+}
+.sheetCopy p {
+  margin: 0 0 1em;
+  max-width: 65ch;
+}
+.sheetCopy p:last-child {
+  margin-bottom: 0;
+}
+.missionHeading h2,
+.outcomeCopy h2 {
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+.missionHeading {
+  border-bottom-color: #dce5ec;
+}
+.missionHeading h2 {
+  position: relative;
+  padding-left: 12px;
+}
+.missionHeading h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  bottom: 0.2em;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--orange);
+}
+.resultActions button,
+.carrierChoices button {
+  line-height: 1.3;
+  text-wrap: balance;
+}
+@media (max-width: 380px), (max-height: 500px) {
+  .sheetCopy,
+  .outcomeCopy .panelLead,
+  .choiceText p,
+  .screenHeading > p:not(.eyebrow) {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .missionHeading h2,
+  .outcomeCopy h2 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 500px) and (orientation: landscape) {
+  .sceneStage:has(.choiceGrid[data-count="2"]) {
+    align-items: end;
+    padding: 130px 8px 8px;
+  }
+  .dialogPanel:has(.choiceGrid[data-count="2"]) {
+    padding: 8px;
+  }
+  .choiceGrid[data-count="2"] .choiceCard {
+    grid-template-columns: 42% minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    height: min(180px, calc(100dvh - 166px));
+  }
+  .choiceGrid[data-count="2"] .choiceText {
+    min-height: 0;
+    padding: 6px;
+  }
+  .choiceGrid[data-count="2"] .choiceText strong {
+    font-size: clamp(14px, 2.5vw, 17px);
+  }
+}
+
+.missionIntro { max-width: 64ch; margin: 0 auto 16px; color: #173851; }
+.missionIntro h2 { margin: 0 0 8px; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.15; }
+.missionIntro p { margin: 6px 0; font-size: 17px; line-height: 1.35; }
+@media (max-width: 600px) {
+  .missionIntro { margin-bottom: 12px; }
+  .missionIntro p { font-size: 15px; }
+  .dialogPanel:has(.missionIntro) .choiceCard { max-height: 210px; }
+}
+.dialogPanel:has(.missionIntro) .choiceCard { height: clamp(140px, calc(100dvh - 390px), 400px); }
+@media (min-width: 901px) { .missionIntro { max-width: none; } }

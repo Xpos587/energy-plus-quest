@@ -1,0 +1,58 @@
+[
+  {
+    "script": "render_map.py",
+    "first": 1,
+    "last": 48,
+    "exit": 0,
+    "seconds": 200.13290535299893
+  },
+  {
+    "script": "render_shadow.py",
+    "first": 1,
+    "last": 48,
+    "exit": 0,
+    "seconds": 19.9468963229956
+  },
+  {
+    "script": "render_map.py",
+    "first": 49,
+    "last": 96,
+    "exit": 0,
+    "seconds": 195.31522418000532
+  },
+  {
+    "script": "render_shadow.py",
+    "first": 49,
+    "last": 96,
+    "exit": 0,
+    "seconds": 20.48081239300518
+  },
+  {
+    "script": "render_map.py",
+    "first": 97,
+    "last": 144,
+    "exit": 0,
+    "seconds": 193.39640436199988
+  },
+  {
+    "script": "render_shadow.py",
+    "first": 97,
+    "last": 144,
+    "exit": 0,
+    "seconds": 21.308681285001512
+  },
+  {
+    "script": "render_map.py",
+    "first": 145,
+    "last": 192,
+    "exit": 0,
+    "seconds": 197.5247870700041
+  },
+  {
+    "script": "render_shadow.py",
+    "first": 145,
+    "last": 192,
+    "exit": 0,
+    "seconds": 21.160787425003946
+  }
+]

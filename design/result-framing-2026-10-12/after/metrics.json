@@ -1,0 +1,2434 @@
+[
+  {
+    "view": "desktop",
+    "scene": "carrier",
+    "choice": "old",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/old-wide-v6.webp",
+        "width": 1440,
+        "height": 618.609375,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "carrier",
+    "choice": "old4",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/old4-wide-v6.webp",
+        "width": 1440,
+        "height": 618.609375,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "carrier",
+    "choice": "near",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/near-wide-v6.webp",
+        "width": 1440,
+        "height": 585.5,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "carrier",
+    "choice": "crew",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-wide-v6.webp",
+        "width": 1440,
+        "height": 554.703125,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "carrier",
+    "choice": "express",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-wide-v6.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-wide-v48.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-boat-wide-v1.webp",
+        "width": 1440,
+        "height": 594.8125,
+        "naturalWidth": 1959,
+        "naturalHeight": 803,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-boat-v1.png",
+        "width": 1440,
+        "height": 566.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-wide-v1.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 2172,
+        "naturalHeight": 724,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-boat-v2.png",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1671,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-camera-v2.png",
+        "width": 1440,
+        "height": 594.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-camera-v1.png",
+        "width": 1440,
+        "height": 566.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-camera-wide-v1.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 2172,
+        "naturalHeight": 724,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-camera-v3.png",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-socks-v2.png",
+        "width": 1440,
+        "height": 594.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-socks-v2.png",
+        "width": 1440,
+        "height": 566.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-socks-wide-v1.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 2172,
+        "naturalHeight": 724,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-socks-v3.png",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "inventory",
+    "choice": "entrance",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/entrance.webp",
+        "width": 1040,
+        "height": 844,
+        "naturalWidth": 2004,
+        "naturalHeight": 785,
+        "fit": "cover",
+        "position": "40% 70%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "inventory",
+    "choice": "alphabet",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/alphabet.webp",
+        "width": 1040,
+        "height": 844,
+        "naturalWidth": 1999,
+        "naturalHeight": 786,
+        "fit": "cover",
+        "position": "48% 70%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "inventory",
+    "choice": "keeper",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/keeper.webp",
+        "width": 1040,
+        "height": 844,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 70%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "inventory",
+    "choice": "wms",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/wms.webp",
+        "width": 1040,
+        "height": 844,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 70%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": "rover",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/rusak-boat-final-v5.webp",
+        "width": 1440,
+        "height": 566.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "51% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": "robot",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/robot-boat-result-v3.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": "pipe-carrier",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": "helicopter",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 0%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": "rover",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/rusak-parcel-final-v5.webp",
+        "width": 1440,
+        "height": 566.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "51% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": "robot",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/robot-parcel-result-v1.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": "pipe-carrier",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": "helicopter",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+        "width": 1440,
+        "height": 564,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 0%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "carrier",
+    "choice": "old",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/old-wide-v6.webp",
+        "width": 1920,
+        "height": 818.21875,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "carrier",
+    "choice": "old4",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/old4-wide-v6.webp",
+        "width": 1920,
+        "height": 818.21875,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "carrier",
+    "choice": "near",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/near-wide-v6.webp",
+        "width": 1920,
+        "height": 742.734375,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "carrier",
+    "choice": "crew",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-wide-v6.webp",
+        "width": 1920,
+        "height": 706.34375,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "carrier",
+    "choice": "express",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-wide-v6.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-wide-v48.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1983,
+        "naturalHeight": 793,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-boat-wide-v1.webp",
+        "width": 1920,
+        "height": 774.8125,
+        "naturalWidth": 1959,
+        "naturalHeight": 803,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-boat-v1.png",
+        "width": 1920,
+        "height": 746.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-wide-v1.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 2172,
+        "naturalHeight": 724,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-boat-v2.png",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1671,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-camera-v2.png",
+        "width": 1920,
+        "height": 774.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-camera-v1.png",
+        "width": 1920,
+        "height": 746.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-camera-wide-v1.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 2172,
+        "naturalHeight": 724,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-camera-v3.png",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-socks-v2.png",
+        "width": 1920,
+        "height": 774.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-socks-v2.png",
+        "width": 1920,
+        "height": 746.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-socks-wide-v1.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 2172,
+        "naturalHeight": 724,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-socks-v3.png",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "inventory",
+    "choice": "entrance",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/entrance.webp",
+        "width": 1520,
+        "height": 1024,
+        "naturalWidth": 2004,
+        "naturalHeight": 785,
+        "fit": "cover",
+        "position": "40% 70%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "inventory",
+    "choice": "alphabet",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/alphabet.webp",
+        "width": 1520,
+        "height": 1024,
+        "naturalWidth": 1999,
+        "naturalHeight": 786,
+        "fit": "cover",
+        "position": "48% 70%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "inventory",
+    "choice": "keeper",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/keeper.webp",
+        "width": 1520,
+        "height": 1024,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 70%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "inventory",
+    "choice": "wms",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/wms.webp",
+        "width": 1520,
+        "height": 1024,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 70%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "lastmile",
+    "choice": "rover",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/rusak-boat-final-v5.webp",
+        "width": 1920,
+        "height": 746.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "51% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "lastmile",
+    "choice": "robot",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/robot-boat-result-v3.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "lastmile",
+    "choice": "pipe-carrier",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "lastmile",
+    "choice": "helicopter",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 0%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "lastmile",
+    "choice": "rover",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/rusak-parcel-final-v5.webp",
+        "width": 1920,
+        "height": 746.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "51% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "lastmile",
+    "choice": "robot",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/robot-parcel-result-v1.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "lastmile",
+    "choice": "pipe-carrier",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "wide",
+    "scene": "lastmile",
+    "choice": "helicopter",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+        "width": 1920,
+        "height": 744,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 0%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "carrier",
+    "choice": "old",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/old-v3.webp",
+        "width": 390,
+        "height": 514.25,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "carrier",
+    "choice": "old4",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/old4-v3.webp",
+        "width": 390,
+        "height": 514.25,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "carrier",
+    "choice": "near",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/near-v5.webp",
+        "width": 390,
+        "height": 486.65625,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "carrier",
+    "choice": "crew",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-v3.webp",
+        "width": 390,
+        "height": 436.28125,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "carrier",
+    "choice": "express",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-v3.webp",
+        "width": 390,
+        "height": 456,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-v48.webp",
+        "width": 390,
+        "height": 260,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-boat-v1.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-boat-v1.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-v12.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "contain",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-boat-v2.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1671,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-camera-v2.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-camera-v1.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-camera-v8.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "contain",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-camera-v3.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-socks-v2.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-socks-v2.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-socks-v8.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "contain",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-socks-v3.png",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "inventory",
+    "choice": "entrance",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/entrance.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 2004,
+        "naturalHeight": 785,
+        "fit": "cover",
+        "position": "40% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "inventory",
+    "choice": "alphabet",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/alphabet.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1999,
+        "naturalHeight": 786,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "inventory",
+    "choice": "keeper",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/keeper.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "inventory",
+    "choice": "wms",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/wms.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": "rover",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/rusak-boat-final-v5.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "51% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": "robot",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/robot-boat-result-v3.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": "pipe-carrier",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": "helicopter",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+        "width": 390,
+        "height": 305.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": "rover",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/rusak-parcel-final-v5.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "51% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": "robot",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/robot-parcel-result-v1.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": "pipe-carrier",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+        "width": 390,
+        "height": 219.484375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": "helicopter",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+        "width": 390,
+        "height": 305.8125,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "carrier",
+    "choice": "old",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/old-v3.webp",
+        "width": 320,
+        "height": 257.8125,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "carrier",
+    "choice": "old4",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/old4-v3.webp",
+        "width": 320,
+        "height": 257.8125,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "carrier",
+    "choice": "near",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/near-v5.webp",
+        "width": 320,
+        "height": 208.71875,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "carrier",
+    "choice": "crew",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-v3.webp",
+        "width": 320,
+        "height": 184.921875,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "carrier",
+    "choice": "express",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/carrier-results-2026-10-02/crew-v3.webp",
+        "width": 320,
+        "height": 230,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/compact-art/boat-zone3-no-fit-v48.webp",
+        "width": 320,
+        "height": 213.328125,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "boat",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-boat-v1.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-boat-v1.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-boat-v12.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "contain",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-boat-v2.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1671,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "camera",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-camera-v2.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-camera-v1.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-camera-v8.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "contain",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-camera-v3.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-1",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-2",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-3",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "place-4",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "compact",
+    "choice": "auto",
+    "parcel": "socks",
+    "images": []
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "rush",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/rush-socks-v2.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "wait",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/wait-socks-v2.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "petr",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/petr-socks-v8.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "contain",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": "remote",
+    "parcel": "socks",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-family-v1/remote-socks-v3.png",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "30% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "inventory",
+    "choice": "entrance",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/entrance.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 2004,
+        "naturalHeight": 785,
+        "fit": "cover",
+        "position": "40% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "inventory",
+    "choice": "alphabet",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/alphabet.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1999,
+        "naturalHeight": 786,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "inventory",
+    "choice": "keeper",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/keeper.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "inventory",
+    "choice": "wms",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/warehouse-restored-2026-10-11/wms.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": "rover",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/rusak-boat-final-v5.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "51% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": "robot",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/robot-boat-result-v3.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": "pipe-carrier",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": "helicopter",
+    "parcel": "boat",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+        "width": 320,
+        "height": 250.921875,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": "rover",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/rusak-parcel-final-v5.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "51% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": "robot",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/robot-parcel-result-v1.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "48% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": "pipe-carrier",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v5.webp",
+        "width": 320,
+        "height": 180.09375,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "50% 50%"
+      }
+    ]
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": "helicopter",
+    "parcel": "camera",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/scene-art/lastmile-family-v1/helicopter-flight-result-v3.webp",
+        "width": 320,
+        "height": 250.921875,
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "fit": "cover",
+        "position": "0% 50%"
+      }
+    ]
+  }
+]

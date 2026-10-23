@@ -1,0 +1,12 @@
+{
+  "1": {
+    "max_axis_rounding_error_source_px": 0.49976474046707153,
+    "max_axis_false_interframe_shift_at4x_px": 3.743252992630005,
+    "max_euclidean_false_interframe_shift_at4x_px": 4.02148228450731
+  },
+  "4": {
+    "max_axis_rounding_error_source_px": 0.4961891174316406,
+    "max_axis_false_interframe_shift_at4x_px": 3.550157070159912,
+    "max_euclidean_false_interframe_shift_at4x_px": 4.661063156467187
+  }
+}

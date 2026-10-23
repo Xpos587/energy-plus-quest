@@ -1,0 +1,84 @@
+{
+  "frame": 769,
+  "resolution": [
+    3840,
+    2667
+  ],
+  "source_head_regions_xyxy": {
+    "source_left_head": [
+      155,
+      181,
+      413,
+      442
+    ],
+    "source_right_head": [
+      215,
+      243,
+      459,
+      490
+    ]
+  },
+  "visible_blue_mesh_points_sampling_original_crew_heads": [
+    {
+      "source_head_region": "source_right_head",
+      "render_pixel": [
+        1356,
+        434
+      ],
+      "face_index": 1181,
+      "material_slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture": "crew-cab-paint-0.png",
+      "source_pixel": [
+        235.97455024719238,
+        461.94331645965576
+      ]
+    },
+    {
+      "source_head_region": "source_right_head",
+      "render_pixel": [
+        1356,
+        436
+      ],
+      "face_index": 1181,
+      "material_slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture": "crew-cab-paint-0.png",
+      "source_pixel": [
+        237.99822330474854,
+        470.01123428344727
+      ]
+    },
+    {
+      "source_head_region": "source_right_head",
+      "render_pixel": [
+        1356,
+        438
+      ],
+      "face_index": 1153,
+      "material_slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture": "crew-cab-paint-0.png",
+      "source_pixel": [
+        239.7430419921875,
+        478.3949851989746
+      ]
+    },
+    {
+      "source_head_region": "source_right_head",
+      "render_pixel": [
+        1356,
+        440
+      ],
+      "face_index": 926,
+      "material_slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture": "crew-cab-paint-0.png",
+      "source_pixel": [
+        240.3742551803589,
+        488.02490234375
+      ]
+    }
+  ],
+  "interpretation": "Hits are rendered-visible mesh faces, after viewport-only hiding of render-hidden duplicates. Original crew head texture remains on these specific projected surfaces."
+}

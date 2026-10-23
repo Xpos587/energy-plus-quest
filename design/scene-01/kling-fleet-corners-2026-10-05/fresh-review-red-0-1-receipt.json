@@ -1,0 +1,12 @@
+{
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-corners-2026-10-05/red-0-1.mp4",
+  "evidence": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-corners-2026-10-05/fresh-red-0-1-contact.jpg",
+  "coverage": "16 cropped actual frames from0 through5s; not entire continuous playback",
+  "usage": {
+    "prompt_tokens": 4534,
+    "completion_tokens": 827,
+    "total_tokens": 5361
+  }
+}

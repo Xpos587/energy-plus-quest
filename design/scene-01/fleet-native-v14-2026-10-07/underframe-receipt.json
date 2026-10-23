@@ -1,0 +1,11 @@
+{
+  "removed_source_faces": {
+    "1": 23164,
+    "2": 23243,
+    "3": 23243,
+    "4": 23164
+  },
+  "old_scan_retained": "crew faces only",
+  "new_underframe": "Continuous double rails, crossmembers, twin fuel tanks, curved rear wheelguards",
+  "modern_original_geometry": "Cab upper and front body only; all old lower/axle fragments removed by any-vertex region"
+}

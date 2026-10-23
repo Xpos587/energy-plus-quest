@@ -1,0 +1,45 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/projected/fleet-painted-projected-v09.blend",
+  "candidate": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/projected/clean/fleet-v09-clean-sill.blend",
+  "frames_verified": 1152,
+  "roots": 8,
+  "root_matrix_max_delta": 0.0,
+  "camera_equal": true,
+  "actions_equal": true,
+  "frame_range_equal": true,
+  "cabs": {
+    "1": {
+      "all_existing_vertex_coordinates_equal": true,
+      "driver_geometry_material_images_equal": true,
+      "driverpolygons": 118,
+      "images": [
+        "single-illustrated-shared-driver.png"
+      ]
+    },
+    "2": {
+      "all_existing_vertex_coordinates_equal": true,
+      "driver_geometry_material_images_equal": true,
+      "driverpolygons": 118,
+      "images": [
+        "single-illustrated-shared-driver.png"
+      ]
+    },
+    "3": {
+      "all_existing_vertex_coordinates_equal": true,
+      "driver_geometry_material_images_equal": true,
+      "driverpolygons": 118,
+      "images": [
+        "crew-illustrated.png"
+      ]
+    },
+    "4": {
+      "all_existing_vertex_coordinates_equal": true,
+      "driver_geometry_material_images_equal": true,
+      "driverpolygons": 118,
+      "images": [
+        "single-illustrated-shared-driver.png"
+      ]
+    }
+  },
+  "no_broad_shape_edit": "Original mesh vertex coordinates exactly unchanged; only bounded frontbody faces removed and separate local repaired hardware added."
+}

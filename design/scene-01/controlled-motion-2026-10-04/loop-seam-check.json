@@ -1,0 +1,173 @@
+{
+  "passed": true,
+  "fps": 24,
+  "rendered_pose_count": 1152,
+  "comparison": "Encoded last frame1152 to encoded first frame1. Native frame1153 is not encoded. All seam displacement and yaw steps are within regular-cycle maxima.",
+  "maximum_seam_velocity_vector_change": 0.17692577909833193,
+  "objects": [
+    {
+      "object": "truck-1-tractor",
+      "seam_displacement": [
+        0.0,
+        0.28089964389801025,
+        0.0
+      ],
+      "seam_step_distance": 0.28089964389801025,
+      "maximum_nonseam_step_distance": 0.2809009574616056,
+      "seam_speed_scene_units_per_second": 6.741591453552246,
+      "previous_speed": 6.741594314575195,
+      "next_speed": 6.741594314575195,
+      "seam_angular_step_degrees": 2.8066837194139504e-14,
+      "angular_step_before_degrees": 0.0,
+      "angular_step_after_degrees": 0.0,
+      "velocity_vector_change_into_seam": 2.86102294921875e-06,
+      "velocity_vector_change_out_of_seam": 2.86102294921875e-06
+    },
+    {
+      "object": "truck-1-trailer",
+      "seam_displacement": [
+        0.0,
+        0.28089964389801025,
+        0.0
+      ],
+      "seam_step_distance": 0.28089964389801025,
+      "maximum_nonseam_step_distance": 0.2897453627901183,
+      "seam_speed_scene_units_per_second": 6.741591453552246,
+      "previous_speed": 6.741594314575195,
+      "next_speed": 6.741592884063721,
+      "seam_angular_step_degrees": 0.12195985781977574,
+      "angular_step_before_degrees": 0.12676831099543664,
+      "angular_step_after_degrees": 0.11715140464405871,
+      "velocity_vector_change_into_seam": 2.86102294921875e-06,
+      "velocity_vector_change_out_of_seam": 1.430511474609375e-06
+    },
+    {
+      "object": "truck-2-tractor",
+      "seam_displacement": [
+        0.0,
+        -0.08521678535106503,
+        0.0
+      ],
+      "seam_step_distance": 0.08521678535106503,
+      "maximum_nonseam_step_distance": 0.2556268085201907,
+      "seam_speed_scene_units_per_second": 2.0452028484255607,
+      "previous_speed": 2.045202848426243,
+      "next_speed": 2.045202848426243,
+      "seam_angular_step_degrees": 1.4033418597069752e-14,
+      "angular_step_before_degrees": 0.0,
+      "angular_step_after_degrees": 0.0,
+      "velocity_vector_change_into_seam": 6.821210263296962e-13,
+      "velocity_vector_change_out_of_seam": 6.821210263296962e-13
+    },
+    {
+      "object": "truck-2-trailer",
+      "seam_displacement": [
+        0.0,
+        -0.08521678535106503,
+        0.0
+      ],
+      "seam_step_distance": 0.08521678535106503,
+      "maximum_nonseam_step_distance": 0.26367612673689356,
+      "seam_speed_scene_units_per_second": 2.0452028484255607,
+      "previous_speed": 2.045202848426243,
+      "next_speed": 2.045202848426243,
+      "seam_angular_step_degrees": 0.03517040372281497,
+      "angular_step_before_degrees": 0.03559713459778382,
+      "angular_step_after_degrees": 0.03474877528213046,
+      "velocity_vector_change_into_seam": 6.821210263296962e-13,
+      "velocity_vector_change_out_of_seam": 6.821210263296962e-13
+    },
+    {
+      "object": "truck-3-tractor",
+      "seam_displacement": [
+        0.0,
+        0.2808990478515625,
+        0.0
+      ],
+      "seam_step_distance": 0.2808990478515625,
+      "maximum_nonseam_step_distance": 0.2809009574616056,
+      "seam_speed_scene_units_per_second": 6.7415771484375,
+      "previous_speed": 6.7415771484375,
+      "next_speed": 6.741622975158598,
+      "seam_angular_step_degrees": 2.8066837194139504e-14,
+      "angular_step_before_degrees": 0.0,
+      "angular_step_after_degrees": 0.139800311931821,
+      "velocity_vector_change_into_seam": 0.0,
+      "velocity_vector_change_out_of_seam": 0.0008252451954949926
+    },
+    {
+      "object": "truck-3-trailer",
+      "seam_displacement": [
+        0.0,
+        0.2809000015258789,
+        0.0
+      ],
+      "seam_step_distance": 0.2809000015258789,
+      "maximum_nonseam_step_distance": 0.2897453627901183,
+      "seam_speed_scene_units_per_second": 6.741600036621094,
+      "previous_speed": 6.7415771484375,
+      "next_speed": 6.744127166558135,
+      "seam_angular_step_degrees": 0.013113963206452549,
+      "angular_step_before_degrees": 0.0135510953133053,
+      "angular_step_after_degrees": -0.04721026754312813,
+      "velocity_vector_change_into_seam": 2.288818359375e-05,
+      "velocity_vector_change_out_of_seam": 0.17692577909833193
+    },
+    {
+      "object": "truck-4-tractor",
+      "seam_displacement": [
+        0.0,
+        -0.2808995246887207,
+        0.0
+      ],
+      "seam_step_distance": 0.2808995246887207,
+      "maximum_nonseam_step_distance": 0.2809009574616056,
+      "seam_speed_scene_units_per_second": 6.741588592529297,
+      "previous_speed": 6.741600036621094,
+      "next_speed": 6.741600036621094,
+      "seam_angular_step_degrees": 2.8066837194139504e-14,
+      "angular_step_before_degrees": 0.0,
+      "angular_step_after_degrees": 0.0,
+      "velocity_vector_change_into_seam": 1.1444091796875e-05,
+      "velocity_vector_change_out_of_seam": 1.1444091796875e-05
+    },
+    {
+      "object": "truck-4-trailer",
+      "seam_displacement": [
+        0.0,
+        -0.2808995246887207,
+        0.0
+      ],
+      "seam_step_distance": 0.2808995246887207,
+      "maximum_nonseam_step_distance": 0.2897453627901183,
+      "seam_speed_scene_units_per_second": 6.741588592529297,
+      "previous_speed": 6.741594314575195,
+      "next_speed": 6.741594314575195,
+      "seam_angular_step_degrees": 0.06447698576494844,
+      "angular_step_before_degrees": 0.06709977840620526,
+      "angular_step_after_degrees": 0.06207275917707588,
+      "velocity_vector_change_into_seam": 5.7220458984375e-06,
+      "velocity_vector_change_out_of_seam": 5.7220458984375e-06
+    }
+  ],
+  "screen_seam_step_norm": [
+    0.0030348668621479774,
+    0.003034862927064392,
+    0.0009206939249618085,
+    0.0009206958924321072,
+    0.003034833189742596,
+    0.00303483712486474,
+    0.0030348668621479774,
+    0.003034862927064392
+  ],
+  "maximum_regular_screen_step_norm": [
+    0.003037891262005632,
+    0.003133536228232688,
+    0.002764541164727408,
+    0.002851497728267087,
+    0.003037891262005632,
+    0.003133536228232688,
+    0.003037891262005632,
+    0.003133536228232688
+  ]
+}

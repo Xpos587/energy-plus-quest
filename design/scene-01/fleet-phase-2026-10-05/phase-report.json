@@ -1,0 +1,175 @@
+{
+  "period_seconds": 45.5,
+  "output_fps": 24,
+  "output_frames": 1092,
+  "green_source_frames": 546,
+  "blue_source_frames": 480,
+  "phases_source_frames": {
+    "green": 0,
+    "red": 6,
+    "yellow": 12,
+    "blue": 0
+  },
+  "phases_source_seconds": {
+    "green": 0,
+    "red": 0.25,
+    "yellow": 0.5,
+    "blue": 0.0
+  },
+  "blue_phase_output_seconds": 0.0,
+  "minimum_opaque_aabb_gap_px": 0.0,
+  "minimum_soft_aabb_gap_px": 0.0,
+  "pairs": [
+    {
+      "pair": [
+        "green",
+        "red"
+      ],
+      "opaque_aabb_min_gap_px": 0.0,
+      "opaque_min_time_s": 0.0,
+      "soft_aabb_min_gap_px": 0.0,
+      "soft_min_time_s": 0.0,
+      "opaque_box_overlap_frames": 1092,
+      "soft_box_overlap_frames": 1092,
+      "source_frames_at_opaque_min": [
+        0,
+        6
+      ]
+    },
+    {
+      "pair": [
+        "green",
+        "yellow"
+      ],
+      "opaque_aabb_min_gap_px": 0.0,
+      "opaque_min_time_s": 0.0,
+      "soft_aabb_min_gap_px": 0.0,
+      "soft_min_time_s": 0.0,
+      "opaque_box_overlap_frames": 1092,
+      "soft_box_overlap_frames": 1092,
+      "source_frames_at_opaque_min": [
+        0,
+        12
+      ]
+    },
+    {
+      "pair": [
+        "green",
+        "blue"
+      ],
+      "opaque_aabb_min_gap_px": 0.0,
+      "opaque_min_time_s": 14.541666666666666,
+      "soft_aabb_min_gap_px": 0.0,
+      "soft_min_time_s": 14.541666666666666,
+      "opaque_box_overlap_frames": 136,
+      "soft_box_overlap_frames": 148,
+      "source_frames_at_opaque_min": [
+        349,
+        153
+      ]
+    },
+    {
+      "pair": [
+        "red",
+        "yellow"
+      ],
+      "opaque_aabb_min_gap_px": 0.0,
+      "opaque_min_time_s": 0.0,
+      "soft_aabb_min_gap_px": 0.0,
+      "soft_min_time_s": 0.0,
+      "opaque_box_overlap_frames": 1092,
+      "soft_box_overlap_frames": 1092,
+      "source_frames_at_opaque_min": [
+        6,
+        12
+      ]
+    },
+    {
+      "pair": [
+        "red",
+        "blue"
+      ],
+      "opaque_aabb_min_gap_px": 0.0,
+      "opaque_min_time_s": 14.583333333333334,
+      "soft_aabb_min_gap_px": 0.0,
+      "soft_min_time_s": 14.541666666666666,
+      "opaque_box_overlap_frames": 131,
+      "soft_box_overlap_frames": 144,
+      "source_frames_at_opaque_min": [
+        356,
+        153
+      ]
+    },
+    {
+      "pair": [
+        "yellow",
+        "blue"
+      ],
+      "opaque_aabb_min_gap_px": 0.0,
+      "opaque_min_time_s": 14.375,
+      "soft_aabb_min_gap_px": 0.0,
+      "soft_min_time_s": 14.333333333333334,
+      "opaque_box_overlap_frames": 127,
+      "soft_box_overlap_frames": 142,
+      "source_frames_at_opaque_min": [
+        357,
+        151
+      ]
+    }
+  ],
+  "opening_geometry": {
+    "green": {
+      "source_frame": 0,
+      "cab_px": [
+        976.0602409638554,
+        209.96385542168676
+      ],
+      "articulation_deg": 2.2230379165390506,
+      "trailer_cardinal_deviation_deg": 4.053513124606538
+    },
+    "red": {
+      "source_frame": 6,
+      "cab_px": [
+        977.2198581560284,
+        195.63356973995272
+      ],
+      "articulation_deg": 2.1388787968884397,
+      "trailer_cardinal_deviation_deg": 4.111229920296407
+    },
+    "yellow": {
+      "source_frame": 12,
+      "cab_px": [
+        977.6549295774648,
+        181.11267605633802
+      ],
+      "articulation_deg": 0.8022010333949419,
+      "trailer_cardinal_deviation_deg": 4.872655569464886
+    },
+    "blue": {
+      "source_frame": 0,
+      "cab_px": [
+        409.7523143518651,
+        347.2267180097331
+      ],
+      "articulation_deg": 3.4484876063354735,
+      "trailer_cardinal_deviation_deg": 8.243937745014684
+    }
+  },
+  "search": {
+    "green_anchor_frame": 0,
+    "green_start_candidates": 59,
+    "blue_start_candidates": 34,
+    "candidate_stride": 6,
+    "straight_max_articulation_deg": 8,
+    "straight_max_cardinal_deviation_deg": 12,
+    "stability_neighbor_frames": 3,
+    "method": "maximin distance between all-alpha-threshold AABBs at every 24fps output frame; no translation or route editing"
+  },
+  "assumptions": [
+    "Red and yellow use green frame geometry with phase only; future generated videos may differ and must be revalidated.",
+    "Alpha above127 for opaque envelope, above16 for soft envelope; all alpha pixels included, including extraction fringe.",
+    "AABB envelopes include all cab/trailer pixels; AABB separation is sufficient for no alpha overlap and conservative for articulated vehicles.",
+    "Blue uses whole20s source slowed to45.5s, floor source-frame sampling, phase in source frames.",
+    "Rendered poses, not native route coordinates; no physical world collision claim."
+  ]
+}

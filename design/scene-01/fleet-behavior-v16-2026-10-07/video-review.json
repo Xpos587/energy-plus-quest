@@ -1,0 +1,50 @@
+{
+  "artifact": "fleet-v16-behavior-proof-8s.mp4",
+  "coverage": {
+    "start": "00:00.000",
+    "end": "00:08.000",
+    "scope": "complete eight-second proof only, not full independent route loops",
+    "local_sampling": {
+      "full_timeline_seconds": 0.5,
+      "turn_sequences_seconds": 0.25
+    }
+  },
+  "verdicts": {
+    "relative_speeds": {
+      "status": "supported_qualitatively",
+      "observation": "Blue advances much less than the other trucks. Red covers visibly more route than yellow, but differing route geometry prevents a visual numeric ratio claim.",
+      "supporting_readback_scene_units": {
+        "red": 55.143243445591644,
+        "yellow": 33.085600649006814,
+        "blue": 7.282728785589573
+      }
+    },
+    "smoke_causality": {
+      "status": "not_proven",
+      "red": "A faint dark wisp is intermittently visible close behind the cab around 00:04.000-00:05.750, but it can be mistaken for shadow at map zoom.",
+      "yellow": "Smoke is not reliably distinguishable around 00:06.000-00:07.750."
+    },
+    "overlap": {
+      "status": "no_overlap_observed_in_covered_samples",
+      "observation": "No simultaneous truck-truck or truck-building overlap is visible; red and green use the upper-right area at different moments.",
+      "geometry_receipt": "motion-analysis.json reports envelope_overlaps=[] across rendered proof frames"
+    },
+    "turning_and_hitch": {
+      "status": "supported",
+      "green": "Connected and smoothly articulated at 00:01.500-00:03.250.",
+      "red": "Connected and smoothly articulated at 00:04.000-00:05.750.",
+      "yellow": "Connected and smoothly articulated at 00:06.000-00:07.750.",
+      "blue": "No comparable turn occurs in this excerpt."
+    },
+    "visible_old_age": {
+      "status": "not_assessed_from_motion",
+      "observation": "The motion proof does not establish that red or yellow visibly reads as old."
+    }
+  },
+  "gemini": {
+    "status": "unavailable",
+    "error": "400 FAILED_PRECONDITION: User location is not supported for the API use.",
+    "remote_file_created": false,
+    "remote_cleanup": "not_applicable"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "fps": 24,
+  "frames": 1152,
+  "row_count": 1152,
+  "points_per_row": 4,
+  "range_x": [
+    0.2661057412624359,
+    0.8261942267417908
+  ],
+  "range_y": [
+    0.13733339309692383,
+    0.8032128363847733
+  ],
+  "visual_checks": {
+    "native_frames": [
+      1,
+      385,
+      769
+    ],
+    "times_seconds": [
+      0,
+      16,
+      32
+    ],
+    "result": "All four markers visually on the corresponding trailer roofs."
+  },
+  "browser_check": {
+    "url": "http://localhost:4173/design/scene-01/four-truck-loop-2026-10-04/preview.html",
+    "default_source": "../controlled-motion-2026-10-04/v2b/source-loop-48s.mp4",
+    "duration_seconds": 48,
+    "native_dimensions": [
+      720,
+      500
+    ],
+    "playback": "passed",
+    "source_switching": "older and rejected styled draft passed; appropriate tracking loaded",
+    "origin_overlay": "eight origin dots visible after replacing SVG hidden property with toggleAttribute",
+    "still_link": "present"
+  },
+  "source_modified": false,
+  "production_assets_modified": false
+}

@@ -1,0 +1,11 @@
+import {writeFile} from 'node:fs/promises';
+const dir='design/scene-world/warehouse-audit-2026-09-25';
+const jobs=[
+['boat','Change ONLY the smaller duplicated Л sign in middle distance (near center of picture) to Cyrillic Б. Keep LARGE FOREGROUND Л unchanged. Keep tiny distant А unchanged. Final sequence viewed from distant dispatch toward foreground is А, Б, Л. Exactly ONE Л in whole picture. Preserve everything else precisely.'],
+['socks','Change ONLY the smaller duplicated Н sign in middle distance (near center of picture) to Cyrillic Л. Keep LARGE FOREGROUND Н unchanged. Keep tiny distant А unchanged. Final sequence viewed from distant dispatch toward foreground is А, Л, Н. Exactly ONE Н in whole picture. Preserve everything else precisely.'],
+['camera','Correct ONLY three letter signs. The LARGE FOREGROUND sign in UPPER RIGHT directly ABOVE the workers currently says А: replace this with Cyrillic Ф. The SMALLER sign on left rack in middle distance currently says Ф: replace this with Cyrillic Н. Keep tiny DISTANT А near dispatch door unchanged. Final sequence from far dispatch toward foreground workers must be А, Н, Ф, with ONE of each. Workers are retrieving parcel directly below the large Ф sign, at far end of alphabet. Do NOT move workers, shelves, camera or other objects.']];
+await Promise.all(jobs.map(async([id,prompt])=>{await writeFile(`${dir}/${id}-fix.txt`,prompt);
+const p=Bun.spawn(['higgsfield','generate','create','nano_banana_2','--image',`public/scene-art/outcomes/inventory-alphabet-${id}.webp`,'--aspect_ratio','3:2','--resolution','2k','--wait','--json'],{stdin:new Blob([prompt]),stdout:'pipe',stderr:'pipe'});
+const [out,err,code]=await Promise.all([new Response(p.stdout).text(),new Response(p.stderr).text(),p.exited]);await writeFile(`${dir}/${id}-fix.json`,out);await writeFile(`${dir}/${id}-fix.log`,err);if(code){console.log(id,'FAILED');return;}
+const d=Bun.spawn(['curl','-fsSL','--retry','3','--retry-all-errors',JSON.parse(out)[0].result_url,'-o',`${dir}/${id}-fix.png`]);await d.exited;
+const c=Bun.spawn(['magick',`${dir}/${id}-fix.png`,'-resize','1200x800>','-quality','90',`${dir}/${id}-fix.webp`]);await c.exited;console.log(id,'READY');}));

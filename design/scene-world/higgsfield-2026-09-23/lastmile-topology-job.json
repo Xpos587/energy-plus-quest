@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-23T12:04:08.356169Z",
+    "display_name": "Nano Banana Pro",
+    "id": "3668b900-86e9-4a86-b754-c91389fa382e",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_120408_3668b900-86e9-4a86-b754-c91389fa382e_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "62d8d7f4-a559-4430-8bbd-eb6f5a341fe8",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/62d8d7f4-a559-4430-8bbd-eb6f5a341fe8_resize.jpg"
+        }
+      ],
+      "prompt": "Precise local topology correction to this otherwise finished 2D illustrated map. Preserve every vehicle, the one gift at the quay, the woman/tent, the river, the barge and the hand-drawn style. Only repaint the LEFT-bank terrain behind the vehicles.\nThe brown-green bog must form ONE CONNECTED CONTINUOUS VERTICAL BELT running from the TOP EDGE all the way to the BOTTOM EDGE of the landscape between the quay coast and the river. At the TOP EDGE, between x=30% and x=57% of image width, paint wet muddy bog, pools and reeds right to the image boundary, replacing ALL dry yellow grass and the three yellow trees there. Join this seamlessly to existing center bog. At the BOTTOM EDGE behind the off-white vehicle display strip, continue the SAME wet bog from the central bog toward and beyond the lower image boundary. Extend bog rightward to touch the riverbank everywhere. NO dry yellow path, no strip of grass, no clearing between bog and river. A small dry quay footprint at upper left can remain. The vehicle lineup sits on a foreground OFF-WHITE LEGEND PANEL, not geographically driveable ground, so leave that panel and its four vehicles intact. The unavoidable wetland belt must be unmistakable. This is not a lake: keep many islands of muddy soil, reeds and small puddles within the swamp, but do not connect these into a dry bypass. Keep the right bank dry and unchanged.\nDo NOT change any other object. No arrows/text/numbers. Single coherent map, no3D.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_120408_3668b900-86e9-4a86-b754-c91389fa382e.png",
+    "status": "completed"
+  }
+]

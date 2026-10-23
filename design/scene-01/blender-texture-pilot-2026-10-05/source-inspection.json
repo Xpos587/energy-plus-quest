@@ -1,0 +1,151 @@
+{
+  "frame": 769,
+  "camera": "desktop",
+  "root_matrix": [
+    [
+      -3.25454863059349e-07,
+      1.1220000982284546,
+      0.0,
+      -2.5
+    ],
+    [
+      -1.1220000982284546,
+      -3.25454863059349e-07,
+      0.0,
+      9.447664260864258
+    ],
+    [
+      0.0,
+      0.0,
+      1.1220000982284546,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "visible_green_meshes": [
+    {
+      "name": "3 fifth wheel",
+      "location": [
+        -2.299999952316284,
+        0.0,
+        0.949999988079071
+      ],
+      "bounds": [
+        [
+          -0.32500022649765015,
+          0.32499960064888
+        ],
+        [
+          -0.3500000536441803,
+          0.35000014305114746
+        ],
+        [
+          -0.050000011920928955,
+          0.050000011920928955
+        ]
+      ],
+      "materials": [
+        "3 rubber form"
+      ]
+    },
+    {
+      "name": "PILOT 3 reconstructed crew-cab",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -1.1678211688995361,
+          1.0542994737625122
+        ],
+        [
+          -0.8583298921585083,
+          0.8583301305770874
+        ],
+        [
+          0.07999999821186066,
+          3.0799999237060547
+        ]
+      ],
+      "materials": [
+        "PILOT 3 projected paint 0",
+        "PILOT 3 projected paint 1",
+        "PILOT 3 projected paint 2",
+        "PILOT 3 projected paint 3",
+        "PILOT 3 projected paint 4"
+      ]
+    },
+    {
+      "name": "REPAIRED 3 detailed archived chassis",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          -2.504488945007324,
+          -0.5951588153839111
+        ],
+        [
+          -0.7018764615058899,
+          0.7019016146659851
+        ],
+        [
+          0.12117215245962143,
+          1.078003168106079
+        ]
+      ],
+      "materials": [
+        "PILOT 3 projected paint 0",
+        "PILOT 3 projected paint 1",
+        "PILOT 3 projected paint 2",
+        "PILOT 3 projected paint 3",
+        "PILOT 3 projected paint 4"
+      ]
+    },
+    {
+      "name": "REPAIRED 3 fifth wheel support deck",
+      "location": [
+        -1.940000057220459,
+        0.0,
+        0.8500000238418579
+      ],
+      "bounds": [
+        [
+          -0.5000003576278687,
+          0.49999988079071045
+        ],
+        [
+          -0.5,
+          0.5000001192092896
+        ],
+        [
+          -0.5,
+          0.5
+        ]
+      ],
+      "materials": [
+        "PILOT soft slate fittings"
+      ]
+    }
+  ],
+  "resolution": [
+    3840,
+    2667
+  ],
+  "engine": "BLENDER_EEVEE",
+  "compositor": [
+    "R_LAYERS",
+    "CRYPTOMATTE_V2",
+    "SETALPHA",
+    "GROUP_OUTPUT"
+  ]
+}

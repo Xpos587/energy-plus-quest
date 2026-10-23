@@ -1,0 +1,4142 @@
+{
+  "saved_pose_max_error": 1.9066055330085874e-06,
+  "camera_preserved": true,
+  "static_meshes_preserved": 1827,
+  "number_roofs_hidden": true,
+  "warehouse_visibility": {
+    "isolated_pixel_area_estimate": 21143.95172739611,
+    "visible_pixel_area_estimate": 21035.149231371775,
+    "visible_glazed_entrance_pixel_area_estimate": 380.8087360851787,
+    "visible": 0.9948542024013722,
+    "in_frame": 1.0,
+    "silhouette_samples": 1166,
+    "occluders": {
+      "continuous raised pavement": 4,
+      "street lamp luminaires": 1,
+      "street lamp poles and arms": 1
+    }
+  },
+  "truck_visibility_minimum": [
+    0.9490740740740741,
+    0.9587458745874587,
+    0.9500998003992016,
+    0.9485981308411215
+  ],
+  "visibility_samples": [
+    {
+      "frame": 1,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2069.710376183206,
+          "visible_pixel_area_estimate": 2069.710376183206,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 627,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2144.951004478817,
+          "visible_pixel_area_estimate": 2144.951004478817,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 659,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2036.9394949232692,
+          "visible_pixel_area_estimate": 2036.9394949232692,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2164.6645135625904,
+          "visible_pixel_area_estimate": 2164.6645135625904,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 632,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2054.8060519000583,
+          "visible_pixel_area_estimate": 2054.8060519000583,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 652,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2138.682539007608,
+          "visible_pixel_area_estimate": 2138.682539007608,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 663,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2140.82812877054,
+          "visible_pixel_area_estimate": 2140.82812877054,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 715,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2147.856513217401,
+          "visible_pixel_area_estimate": 2147.856513217401,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 657,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2042.4483251179447,
+          "visible_pixel_area_estimate": 2042.4483251179447,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 666,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2128.759984707877,
+          "visible_pixel_area_estimate": 2128.759984707877,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 665,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2127.5817741566843,
+          "visible_pixel_area_estimate": 2127.5817741566843,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 549,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2131.097535598488,
+          "visible_pixel_area_estimate": 2131.097535598488,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 670,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2034.6884676122488,
+          "visible_pixel_area_estimate": 2034.6884676122488,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 674,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2133.9902132540233,
+          "visible_pixel_area_estimate": 2133.9902132540233,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 671,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2415.2704075164916,
+          "visible_pixel_area_estimate": 2415.2704075164916,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 416,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2122.6872024246254,
+          "visible_pixel_area_estimate": 2122.6872024246254,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 678,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2025.4602564455267,
+          "visible_pixel_area_estimate": 2025.4602564455267,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 677,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2134.8202162683983,
+          "visible_pixel_area_estimate": 2134.8202162683983,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 675,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2722.122193623111,
+          "visible_pixel_area_estimate": 2722.122193623111,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 402,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2119.1195802651423,
+          "visible_pixel_area_estimate": 2119.1195802651423,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 683,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2030.0389421851185,
+          "visible_pixel_area_estimate": 2030.0389421851185,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2131.058743401534,
+          "visible_pixel_area_estimate": 2131.058743401534,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 677,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3030.1706786867744,
+          "visible_pixel_area_estimate": 3030.1706786867744,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 454,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2114.4798589513166,
+          "visible_pixel_area_estimate": 2114.4798589513166,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 685,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 73,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2021.2484142666008,
+          "visible_pixel_area_estimate": 2021.2484142666008,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 681,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2128.801975439949,
+          "visible_pixel_area_estimate": 2128.801975439949,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3139.6169476027885,
+          "visible_pixel_area_estimate": 3115.419514480609,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9922928709055877,
+          "in_frame": 1.0,
+          "silhouette_samples": 519,
+          "occluders": {
+            "residential east wing roof": 2,
+            "residential east wing parapet.003": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2111.446635654403,
+          "visible_pixel_area_estimate": 2111.446635654403,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 686,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 85,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2091.014059178361,
+          "visible_pixel_area_estimate": 2091.014059178361,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 736,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2130.9444085842792,
+          "visible_pixel_area_estimate": 2130.9444085842792,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3215.174191514946,
+          "visible_pixel_area_estimate": 3193.8463361815134,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9933665008291874,
+          "in_frame": 1.0,
+          "silhouette_samples": 603,
+          "occluders": {
+            "residential east wing parapet.003": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2177.690806743112,
+          "visible_pixel_area_estimate": 2177.690806743112,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 739,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 97,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2123.1740592878314,
+          "visible_pixel_area_estimate": 2123.1740592878314,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 595,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2124.7989209050747,
+          "visible_pixel_area_estimate": 2124.7989209050747,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3207.909426578403,
+          "visible_pixel_area_estimate": 3207.909426578403,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 665,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2192.429840739914,
+          "visible_pixel_area_estimate": 2192.429840739914,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 595,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 109,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2324.5124169044943,
+          "visible_pixel_area_estimate": 2324.5124169044943,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 448,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2122.716158271249,
+          "visible_pixel_area_estimate": 2122.716158271249,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 683,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3192.178582061371,
+          "visible_pixel_area_estimate": 3177.906546672125,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9955290611028316,
+          "in_frame": 1.0,
+          "silhouette_samples": 671,
+          "occluders": {
+            "residential west wing parapet.003": 2,
+            "residential west wing roof": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2331.2916171395227,
+          "visible_pixel_area_estimate": 2331.2916171395227,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 437,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 121,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2645.057681307028,
+          "visible_pixel_area_estimate": 2645.057681307028,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 404,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2121.4275375567945,
+          "visible_pixel_area_estimate": 2121.4275375567945,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3202.62501372491,
+          "visible_pixel_area_estimate": 3177.951477409618,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9922958397534669,
+          "in_frame": 1.0,
+          "silhouette_samples": 649,
+          "occluders": {
+            "residential west wing parapet.003": 5
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2612.9095074800957,
+          "visible_pixel_area_estimate": 2612.9095074800957,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 388,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 133,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2893.1837594746785,
+          "visible_pixel_area_estimate": 2893.1837594746785,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 434,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2117.7052826322465,
+          "visible_pixel_area_estimate": 2117.7052826322465,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3160.9446359884682,
+          "visible_pixel_area_estimate": 3003.2128677255705,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9500998003992016,
+          "in_frame": 1.0,
+          "silhouette_samples": 501,
+          "occluders": {
+            "residential west wing parapet.003": 13,
+            "residential west wing roof": 10,
+            "residential west wing parapet": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2851.823241372891,
+          "visible_pixel_area_estimate": 2851.823241372891,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 418,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 145,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3078.7762355219384,
+          "visible_pixel_area_estimate": 3078.7762355219384,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2120.755078197179,
+          "visible_pixel_area_estimate": 2120.755078197179,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 686,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2960.06341260048,
+          "visible_pixel_area_estimate": 2860.9225327526174,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9665071770334929,
+          "in_frame": 1.0,
+          "silhouette_samples": 418,
+          "occluders": {
+            "residential west wing roof": 9,
+            "residential west wing parapet.003": 4,
+            "residential west wing parapet": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3072.72347809696,
+          "visible_pixel_area_estimate": 3066.2272339572205,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9978858350951374,
+          "in_frame": 1.0,
+          "silhouette_samples": 473,
+          "occluders": {
+            "street lamp poles and arms": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 157,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3176.277118181373,
+          "visible_pixel_area_estimate": 3126.30072995824,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9842657342657343,
+          "in_frame": 1.0,
+          "silhouette_samples": 572,
+          "occluders": {
+            "residential east wing parapet.003": 7,
+            "residential east wing roof": 1,
+            "residential east wing parapet.001": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2118.086259127758,
+          "visible_pixel_area_estimate": 2118.086259127758,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 686,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2735.766896323044,
+          "visible_pixel_area_estimate": 2735.766896323044,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3082.7551374346017,
+          "visible_pixel_area_estimate": 3082.7551374346017,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 536,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 169,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3199.6750193932203,
+          "visible_pixel_area_estimate": 3199.6750193932203,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2118.9261849574777,
+          "visible_pixel_area_estimate": 2118.9261849574777,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 687,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2507.0205855160525,
+          "visible_pixel_area_estimate": 2507.0205855160525,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 450,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3129.450417782422,
+          "visible_pixel_area_estimate": 3129.450417782422,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 605,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 181,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3176.6868244483817,
+          "visible_pixel_area_estimate": 3162.2254276754757,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9954476479514416,
+          "in_frame": 1.0,
+          "silhouette_samples": 659,
+          "occluders": {
+            "residential west wing parapet.003": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2113.716292891931,
+          "visible_pixel_area_estimate": 2113.716292891931,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 688,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2336.2208511217004,
+          "visible_pixel_area_estimate": 2336.2208511217004,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 505,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3098.84875140807,
+          "visible_pixel_area_estimate": 3098.84875140807,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 647,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 193,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3194.9041519808447,
+          "visible_pixel_area_estimate": 3185.4237242301597,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9970326409495549,
+          "in_frame": 1.0,
+          "silhouette_samples": 674,
+          "occluders": {
+            "residential west wing parapet.003": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2127.710110902893,
+          "visible_pixel_area_estimate": 2127.710110902893,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 726,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2252.774224265872,
+          "visible_pixel_area_estimate": 2252.774224265872,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 566,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3111.996751533643,
+          "visible_pixel_area_estimate": 3111.996751533643,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 735,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 205,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3148.5112329307753,
+          "visible_pixel_area_estimate": 3049.9390580508066,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9686924493554327,
+          "in_frame": 1.0,
+          "silhouette_samples": 543,
+          "occluders": {
+            "residential west wing parapet.003": 15,
+            "residential west wing roof": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2177.4637759834022,
+          "visible_pixel_area_estimate": 2177.4637759834022,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 751,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2189.650845053303,
+          "visible_pixel_area_estimate": 2189.650845053303,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 610,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3067.3587704861934,
+          "visible_pixel_area_estimate": 3067.3587704861934,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 573,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 217,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3010.7237131574648,
+          "visible_pixel_area_estimate": 2857.399820357779,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9490740740740741,
+          "in_frame": 1.0,
+          "silhouette_samples": 432,
+          "occluders": {
+            "residential west wing roof": 12,
+            "residential west wing parapet.003": 6,
+            "residential west wing parapet": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2180.0589603433036,
+          "visible_pixel_area_estimate": 2180.0589603433036,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 741,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2165.839236465518,
+          "visible_pixel_area_estimate": 2165.839236465518,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2876.840219927079,
+          "visible_pixel_area_estimate": 2876.840219927079,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 446,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 229,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2823.5622654686813,
+          "visible_pixel_area_estimate": 2823.5622654686813,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 419,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2202.0529595960857,
+          "visible_pixel_area_estimate": 2202.0529595960857,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 688,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2137.6420999744805,
+          "visible_pixel_area_estimate": 2137.6420999744805,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 661,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2642.0506613236134,
+          "visible_pixel_area_estimate": 2642.0506613236134,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 241,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2556.0255080076727,
+          "visible_pixel_area_estimate": 2556.0255080076727,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 432,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2191.4547567575187,
+          "visible_pixel_area_estimate": 2191.4547567575187,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 639,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2133.5674352266024,
+          "visible_pixel_area_estimate": 2133.5674352266024,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 675,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2408.2671508983367,
+          "visible_pixel_area_estimate": 2408.2671508983367,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 431,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 253,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2347.6554057693484,
+          "visible_pixel_area_estimate": 2347.6554057693484,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 478,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2202.3996434310898,
+          "visible_pixel_area_estimate": 2202.3996434310898,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 608,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2127.5589389633224,
+          "visible_pixel_area_estimate": 2127.5589389633224,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2253.1569467388813,
+          "visible_pixel_area_estimate": 2253.1569467388813,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 483,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 265,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2268.473944679578,
+          "visible_pixel_area_estimate": 2268.473944679578,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 545,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2243.523892155587,
+          "visible_pixel_area_estimate": 2243.523892155587,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 561,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2117.899147709112,
+          "visible_pixel_area_estimate": 2117.899147709112,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2128.031850321967,
+          "visible_pixel_area_estimate": 2128.031850321967,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 537,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 277,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2188.8631368133692,
+          "visible_pixel_area_estimate": 2188.8631368133692,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 592,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2312.9860477588177,
+          "visible_pixel_area_estimate": 2312.9860477588177,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 505,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2121.2856432233166,
+          "visible_pixel_area_estimate": 2121.2856432233166,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 688,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2079.1552655968353,
+          "visible_pixel_area_estimate": 2079.1552655968353,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 590,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 289,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2168.089606055037,
+          "visible_pixel_area_estimate": 2168.089606055037,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 633,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2375.8624264293107,
+          "visible_pixel_area_estimate": 2375.8624264293107,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 460,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2116.2256018945345,
+          "visible_pixel_area_estimate": 2116.2256018945345,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 688,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2044.602215061922,
+          "visible_pixel_area_estimate": 2044.602215061922,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 626,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 301,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2151.125691621926,
+          "visible_pixel_area_estimate": 2151.125691621926,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 658,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2455.3985041132814,
+          "visible_pixel_area_estimate": 2455.3985041132814,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 429,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2193.4678670092158,
+          "visible_pixel_area_estimate": 2193.4678670092158,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 712,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2030.0049473610409,
+          "visible_pixel_area_estimate": 2030.0049473610409,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 651,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 313,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2134.2782686235105,
+          "visible_pixel_area_estimate": 2134.2782686235105,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 671,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2544.659904548434,
+          "visible_pixel_area_estimate": 2544.659904548434,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 408,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2240.9455936946806,
+          "visible_pixel_area_estimate": 2240.9455936946806,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 565,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2020.8942377516,
+          "visible_pixel_area_estimate": 2020.8942377516,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 666,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 325,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2125.8179999512136,
+          "visible_pixel_area_estimate": 2125.8179999512136,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2622.4281755592515,
+          "visible_pixel_area_estimate": 2622.4281755592515,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 393,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2498.108511936923,
+          "visible_pixel_area_estimate": 2498.108511936923,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 422,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2016.1850261570055,
+          "visible_pixel_area_estimate": 2016.1850261570055,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 675,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 337,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2122.2222348077694,
+          "visible_pixel_area_estimate": 2122.2222348077694,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2750.5504790861937,
+          "visible_pixel_area_estimate": 2750.5504790861937,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 393,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2780.3030754018055,
+          "visible_pixel_area_estimate": 2780.3030754018055,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 401,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2009.9863587762147,
+          "visible_pixel_area_estimate": 2009.9863587762147,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 349,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2117.566681316228,
+          "visible_pixel_area_estimate": 2117.566681316228,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 686,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2819.974202352007,
+          "visible_pixel_area_estimate": 2819.974202352007,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 393,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3036.8206334010347,
+          "visible_pixel_area_estimate": 3036.8206334010347,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 444,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2008.6119286762166,
+          "visible_pixel_area_estimate": 2008.6119286762166,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 361,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2114.524536664298,
+          "visible_pixel_area_estimate": 2114.524536664298,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 687,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2912.324861217361,
+          "visible_pixel_area_estimate": 2912.324861217361,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 410,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3154.6417326152114,
+          "visible_pixel_area_estimate": 3142.1481019909925,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.996039603960396,
+          "in_frame": 1.0,
+          "silhouette_samples": 505,
+          "occluders": {
+            "street lamp poles and arms": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2002.8326631864356,
+          "visible_pixel_area_estimate": 2002.8326631864356,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 373,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2183.584393755534,
+          "visible_pixel_area_estimate": 2183.584393755534,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 741,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3071.5171577407978,
+          "visible_pixel_area_estimate": 3071.5171577407978,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 452,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3170.125612088782,
+          "visible_pixel_area_estimate": 3164.5931066575627,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9982547993019197,
+          "in_frame": 1.0,
+          "silhouette_samples": 573,
+          "occluders": {
+            "street lamp poles and arms": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2063.2627803326927,
+          "visible_pixel_area_estimate": 2063.2627803326927,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 734,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 385,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2229.2773889815426,
+          "visible_pixel_area_estimate": 2229.2773889815426,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 605,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3143.8339235243056,
+          "visible_pixel_area_estimate": 3143.8339235243056,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 493,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3188.92400394234,
+          "visible_pixel_area_estimate": 3188.92400394234,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 634,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2087.5233252272196,
+          "visible_pixel_area_estimate": 2087.5233252272196,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 592,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 397,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2395.308778250905,
+          "visible_pixel_area_estimate": 2395.308778250905,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 449,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3159.6888769911147,
+          "visible_pixel_area_estimate": 3159.6888769911147,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 545,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3198.2207101179265,
+          "visible_pixel_area_estimate": 3198.2207101179265,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 680,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2284.8549979947493,
+          "visible_pixel_area_estimate": 2284.8549979947493,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 447,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 409,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2686.98681939859,
+          "visible_pixel_area_estimate": 2686.98681939859,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 399,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3159.6597546635676,
+          "visible_pixel_area_estimate": 3159.6597546635676,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 611,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3174.4020662849716,
+          "visible_pixel_area_estimate": 3174.4020662849716,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 683,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2585.673844239455,
+          "visible_pixel_area_estimate": 2585.673844239455,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 401,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 421,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2933.693715248838,
+          "visible_pixel_area_estimate": 2933.693715248838,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 430,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3180.0058582598463,
+          "visible_pixel_area_estimate": 3180.0058582598463,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 673,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3055.0132130105662,
+          "visible_pixel_area_estimate": 3055.0132130105662,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 506,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2833.187053399637,
+          "visible_pixel_area_estimate": 2833.187053399637,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 425,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 433,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3137.685871764686,
+          "visible_pixel_area_estimate": 3131.189627723765,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9979296066252588,
+          "in_frame": 1.0,
+          "silhouette_samples": 483,
+          "occluders": {
+            "street lamp poles and arms": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3172.880280370501,
+          "visible_pixel_area_estimate": 3172.880280370501,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 700,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2837.9991355099423,
+          "visible_pixel_area_estimate": 2837.9991355099423,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 422,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3028.409767459508,
+          "visible_pixel_area_estimate": 3028.409767459508,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 481,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 445,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3151.7719966609016,
+          "visible_pixel_area_estimate": 3151.7719966609016,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 548,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3106.2449664245337,
+          "visible_pixel_area_estimate": 3106.2449664245337,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 539,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2638.990076330487,
+          "visible_pixel_area_estimate": 2638.990076330487,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 425,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3120.7513673994595,
+          "visible_pixel_area_estimate": 3070.7749220140586,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9839857651245552,
+          "in_frame": 1.0,
+          "silhouette_samples": 562,
+          "occluders": {
+            "residential east wing parapet.003": 7,
+            "residential east wing roof": 1,
+            "residential east wing parapet.001": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 457,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3196.6947593538875,
+          "visible_pixel_area_estimate": 3196.6947593538875,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 618,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2946.3453684468022,
+          "visible_pixel_area_estimate": 2946.3453684468022,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 443,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2385.134635998825,
+          "visible_pixel_area_estimate": 2385.134635998825,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 444,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3140.0453633812194,
+          "visible_pixel_area_estimate": 3140.0453633812194,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 632,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 469,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3161.1131195930793,
+          "visible_pixel_area_estimate": 3161.1131195930793,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 660,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2778.7673627406807,
+          "visible_pixel_area_estimate": 2778.7673627406807,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 409,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2234.0819429833755,
+          "visible_pixel_area_estimate": 2234.0819429833755,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 499,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3114.0255269003947,
+          "visible_pixel_area_estimate": 3099.5641080448204,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9953560371517027,
+          "in_frame": 1.0,
+          "silhouette_samples": 646,
+          "occluders": {
+            "residential west wing parapet.003": 3
+          }
+        }
+      ]
+    },
+    {
+      "frame": 481,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3151.8240370846047,
+          "visible_pixel_area_estimate": 3151.8240370846047,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 720,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2577.500463869188,
+          "visible_pixel_area_estimate": 2577.500463869188,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 424,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2149.0757631976367,
+          "visible_pixel_area_estimate": 2149.0757631976367,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 557,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3128.5417318513305,
+          "visible_pixel_area_estimate": 3119.061302360872,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.996969696969697,
+          "in_frame": 1.0,
+          "silhouette_samples": 660,
+          "occluders": {
+            "residential west wing parapet.003": 2
+          }
+        }
+      ]
+    },
+    {
+      "frame": 493,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3110.2545587635145,
+          "visible_pixel_area_estimate": 3110.2545587635145,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 565,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2350.3166586871635,
+          "visible_pixel_area_estimate": 2350.3166586871635,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 443,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2106.9082705361157,
+          "visible_pixel_area_estimate": 2106.9082705361157,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 605,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3096.3211296243153,
+          "visible_pixel_area_estimate": 2997.749108643766,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9681647940074907,
+          "in_frame": 1.0,
+          "silhouette_samples": 534,
+          "occluders": {
+            "residential west wing parapet.003": 15,
+            "residential west wing roof": 2
+          }
+        }
+      ]
+    },
+    {
+      "frame": 505,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2927.015987122286,
+          "visible_pixel_area_estimate": 2927.015987122286,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 446,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2231.1211074033417,
+          "visible_pixel_area_estimate": 2231.1211074033417,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 494,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2079.2233012381744,
+          "visible_pixel_area_estimate": 2079.2233012381744,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 637,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2982.8507454995492,
+          "visible_pixel_area_estimate": 2829.5266417589182,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9485981308411215,
+          "in_frame": 1.0,
+          "silhouette_samples": 428,
+          "occluders": {
+            "residential west wing roof": 12,
+            "residential west wing parapet.003": 6,
+            "residential west wing parapet": 4
+          }
+        }
+      ]
+    },
+    {
+      "frame": 517,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2682.8110674980376,
+          "visible_pixel_area_estimate": 2682.8110674980376,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 422,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2134.544681897706,
+          "visible_pixel_area_estimate": 2134.544681897706,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 542,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2072.0111214401927,
+          "visible_pixel_area_estimate": 2072.0111214401927,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 660,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2803.3458756722225,
+          "visible_pixel_area_estimate": 2803.3458756722225,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 416,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 529,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2430.0081662831494,
+          "visible_pixel_area_estimate": 2430.0081662831494,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 430,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2093.7691463112433,
+          "visible_pixel_area_estimate": 2093.7691463112433,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 588,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2065.2801521007723,
+          "visible_pixel_area_estimate": 2065.2801521007723,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 673,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2550.104674801564,
+          "visible_pixel_area_estimate": 2550.104674801564,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 431,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 541,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2291.7871109520506,
+          "visible_pixel_area_estimate": 2291.7871109520506,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 486,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2074.6275982361694,
+          "visible_pixel_area_estimate": 2074.6275982361694,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 624,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2053.6001466794264,
+          "visible_pixel_area_estimate": 2053.6001466794264,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 678,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2342.747150238034,
+          "visible_pixel_area_estimate": 2342.747150238034,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 477,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 553,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2138.8241532669845,
+          "visible_pixel_area_estimate": 2138.8241532669845,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 534,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2063.713313846511,
+          "visible_pixel_area_estimate": 2063.713313846511,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 649,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2044.383198457085,
+          "visible_pixel_area_estimate": 2044.383198457085,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 680,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2264.3159080645514,
+          "visible_pixel_area_estimate": 2264.3159080645514,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 544,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 565,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2094.231908967283,
+          "visible_pixel_area_estimate": 2094.231908967283,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 588,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2037.4301705555586,
+          "visible_pixel_area_estimate": 2037.4301705555586,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 659,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2047.763154382614,
+          "visible_pixel_area_estimate": 2047.763154382614,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2181.473322239744,
+          "visible_pixel_area_estimate": 2181.473322239744,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 590,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 577,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2069.7154367230974,
+          "visible_pixel_area_estimate": 2069.7154367230974,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 627,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2041.7491328680558,
+          "visible_pixel_area_estimate": 2041.7491328680558,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 672,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2036.9282106677772,
+          "visible_pixel_area_estimate": 2036.9282106677772,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2164.6698989839288,
+          "visible_pixel_area_estimate": 2164.6698989839288,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 632,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 589,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2054.8113722852772,
+          "visible_pixel_area_estimate": 2054.8113722852772,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 652,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2035.1043274994267,
+          "visible_pixel_area_estimate": 2035.1043274994267,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 677,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2140.827584807286,
+          "visible_pixel_area_estimate": 2140.827584807286,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 715,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2147.8447651007646,
+          "visible_pixel_area_estimate": 2147.8447651007646,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 657,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 601,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2042.4537729894116,
+          "visible_pixel_area_estimate": 2042.4537729894116,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 666,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2021.9219252688076,
+          "visible_pixel_area_estimate": 2021.9219252688076,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 677,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2127.576865652668,
+          "visible_pixel_area_estimate": 2127.576865652668,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 549,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2131.103586583125,
+          "visible_pixel_area_estimate": 2131.103586583125,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 670,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 613,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2034.6773796331508,
+          "visible_pixel_area_estimate": 2034.6773796331508,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 674,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2028.850885665943,
+          "visible_pixel_area_estimate": 2028.850885665943,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2415.267589560441,
+          "visible_pixel_area_estimate": 2415.267589560441,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 416,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2122.6932238596196,
+          "visible_pixel_area_estimate": 2122.6932238596196,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 678,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 625,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2025.4491300150942,
+          "visible_pixel_area_estimate": 2025.4491300150942,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 677,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2073.4047470984333,
+          "visible_pixel_area_estimate": 2073.4047470984333,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 743,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2722.1218139073976,
+          "visible_pixel_area_estimate": 2722.1218139073976,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 402,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2119.1255937736905,
+          "visible_pixel_area_estimate": 2119.1255937736905,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 683,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 637,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2030.0445259857236,
+          "visible_pixel_area_estimate": 2030.0445259857236,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2118.2356963552966,
+          "visible_pixel_area_estimate": 2118.2356963552966,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 651,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3030.1700484353923,
+          "visible_pixel_area_estimate": 3030.1700484353923,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 454,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2114.4673999887195,
+          "visible_pixel_area_estimate": 2114.4673999887195,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 685,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 649,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2021.2360519224271,
+          "visible_pixel_area_estimate": 2021.2360519224271,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 681,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2204.291483813939,
+          "visible_pixel_area_estimate": 2204.291483813939,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 520,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3139.6194986517717,
+          "visible_pixel_area_estimate": 3115.4220458683285,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9922928709055877,
+          "in_frame": 1.0,
+          "silhouette_samples": 519,
+          "occluders": {
+            "residential east wing roof": 2,
+            "residential east wing parapet.003": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2111.4526998337838,
+          "visible_pixel_area_estimate": 2111.4526998337838,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 686,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 661,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2091.0014252071956,
+          "visible_pixel_area_estimate": 2091.0014252071956,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 736,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2400.185486836188,
+          "visible_pixel_area_estimate": 2400.185486836188,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 416,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3215.166404459326,
+          "visible_pixel_area_estimate": 3193.83860078132,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9933665008291874,
+          "in_frame": 1.0,
+          "silhouette_samples": 603,
+          "occluders": {
+            "residential east wing parapet.003": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2177.6973908469845,
+          "visible_pixel_area_estimate": 2177.6973908469845,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 739,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 673,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2123.1722736950314,
+          "visible_pixel_area_estimate": 2123.1722736950314,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 595,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2665.8758437113584,
+          "visible_pixel_area_estimate": 2665.8758437113584,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 395,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3207.8990222329107,
+          "visible_pixel_area_estimate": 3207.8990222329107,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 665,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2192.4303038725675,
+          "visible_pixel_area_estimate": 2192.4303038725675,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 595,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 685,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2324.5092402827736,
+          "visible_pixel_area_estimate": 2324.5092402827736,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 448,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2879.462450666037,
+          "visible_pixel_area_estimate": 2879.462450666037,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 418,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3192.1829296388664,
+          "visible_pixel_area_estimate": 3177.910874811867,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9955290611028316,
+          "in_frame": 1.0,
+          "silhouette_samples": 671,
+          "occluders": {
+            "residential west wing parapet.003": 2,
+            "residential west wing roof": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2331.288162304838,
+          "visible_pixel_area_estimate": 2331.288162304838,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 437,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 697,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2645.0563206569836,
+          "visible_pixel_area_estimate": 2645.0563206569836,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 404,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3040.7152703721263,
+          "visible_pixel_area_estimate": 3040.7152703721263,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 463,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3202.6258962639495,
+          "visible_pixel_area_estimate": 3177.952353149435,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9922958397534669,
+          "in_frame": 1.0,
+          "silhouette_samples": 649,
+          "occluders": {
+            "residential west wing parapet.003": 5
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2612.9136221484678,
+          "visible_pixel_area_estimate": 2612.9136221484678,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 388,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 709,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2893.1839724555075,
+          "visible_pixel_area_estimate": 2893.1839724555075,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 434,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3123.5738007176838,
+          "visible_pixel_area_estimate": 3099.5463099429326,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9923076923076923,
+          "in_frame": 1.0,
+          "silhouette_samples": 520,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 2,
+            "outer residential -1 3 parapet.001": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3160.951099497081,
+          "visible_pixel_area_estimate": 3003.2190087038134,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9500998003992016,
+          "in_frame": 1.0,
+          "silhouette_samples": 501,
+          "occluders": {
+            "residential west wing parapet.003": 13,
+            "residential west wing roof": 10,
+            "residential west wing parapet": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2851.8227411265148,
+          "visible_pixel_area_estimate": 2851.8227411265148,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 418,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 721,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3078.778344695003,
+          "visible_pixel_area_estimate": 3078.778344695003,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 489,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3182.4572935797214,
+          "visible_pixel_area_estimate": 3056.2564009032844,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9603448275862069,
+          "in_frame": 1.0,
+          "silhouette_samples": 580,
+          "occluders": {
+            "outer residential -1 3 roof": 11,
+            "outer residential -1 3 parapet.003": 7,
+            "outer residential -1 3 parapet.001": 5
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2960.062700863673,
+          "visible_pixel_area_estimate": 2860.921844853885,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9665071770334929,
+          "in_frame": 1.0,
+          "silhouette_samples": 418,
+          "occluders": {
+            "residential west wing roof": 9,
+            "residential west wing parapet.003": 4,
+            "residential west wing parapet": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3072.725384177686,
+          "visible_pixel_area_estimate": 3066.229136008177,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9978858350951374,
+          "in_frame": 1.0,
+          "silhouette_samples": 473,
+          "occluders": {
+            "street lamp poles and arms": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 733,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3176.280766603984,
+          "visible_pixel_area_estimate": 3126.3043209755997,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9842657342657343,
+          "in_frame": 1.0,
+          "silhouette_samples": 572,
+          "occluders": {
+            "residential east wing parapet.003": 7,
+            "residential east wing roof": 1,
+            "residential east wing parapet.001": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3156.0045627533163,
+          "visible_pixel_area_estimate": 3025.8063547189386,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9587458745874587,
+          "in_frame": 1.0,
+          "silhouette_samples": 606,
+          "occluders": {
+            "outer residential -1 3 roof": 13,
+            "outer residential -1 3 parapet.003": 12
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2735.7654001567935,
+          "visible_pixel_area_estimate": 2735.7654001567935,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3082.758224870508,
+          "visible_pixel_area_estimate": 3082.758224870508,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 536,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 745,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3199.6664932391773,
+          "visible_pixel_area_estimate": 3199.6664932391773,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3193.334509790224,
+          "visible_pixel_area_estimate": 3132.6054858322477,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9809825673534073,
+          "in_frame": 1.0,
+          "silhouette_samples": 631,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 10,
+            "outer residential -1 3 roof": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2507.0230250811915,
+          "visible_pixel_area_estimate": 2507.0230250811915,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 450,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3129.4555496382372,
+          "visible_pixel_area_estimate": 3129.4555496382372,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 605,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 757,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3176.6916590056117,
+          "visible_pixel_area_estimate": 3162.2302402240994,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9954476479514416,
+          "in_frame": 1.0,
+          "silhouette_samples": 659,
+          "occluders": {
+            "residential west wing parapet.003": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3203.440666114583,
+          "visible_pixel_area_estimate": 3179.640958342558,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9925705794947994,
+          "in_frame": 1.0,
+          "silhouette_samples": 673,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 5
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2336.2133691016425,
+          "visible_pixel_area_estimate": 2336.2133691016425,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 505,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3098.8389722990314,
+          "visible_pixel_area_estimate": 3098.8389722990314,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 647,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 769,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3194.9035712179775,
+          "visible_pixel_area_estimate": 3185.4231451906244,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9970326409495549,
+          "in_frame": 1.0,
+          "silhouette_samples": 674,
+          "occluders": {
+            "residential west wing parapet.003": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3184.865029544274,
+          "visible_pixel_area_estimate": 3180.1882820706405,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9985315712187959,
+          "in_frame": 1.0,
+          "silhouette_samples": 681,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2252.779323858477,
+          "visible_pixel_area_estimate": 2252.779323858477,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 566,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3111.996920374344,
+          "visible_pixel_area_estimate": 3111.996920374344,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 735,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 781,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3148.506279863586,
+          "visible_pixel_area_estimate": 3049.934260052019,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9686924493554327,
+          "in_frame": 1.0,
+          "silhouette_samples": 543,
+          "occluders": {
+            "residential west wing parapet.003": 15,
+            "residential west wing roof": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3212.9212378578204,
+          "visible_pixel_area_estimate": 3212.9212378578204,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 662,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2189.6563436648908,
+          "visible_pixel_area_estimate": 2189.6563436648908,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 610,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3067.367110159307,
+          "visible_pixel_area_estimate": 3067.367110159307,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 573,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 793,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3010.7280185024138,
+          "visible_pixel_area_estimate": 2857.4039064490503,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9490740740740741,
+          "in_frame": 1.0,
+          "silhouette_samples": 432,
+          "occluders": {
+            "residential west wing roof": 12,
+            "residential west wing parapet.003": 6,
+            "residential west wing parapet": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3195.654792007734,
+          "visible_pixel_area_estimate": 3190.582324083912,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9984126984126984,
+          "in_frame": 1.0,
+          "silhouette_samples": 630,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2165.845259950702,
+          "visible_pixel_area_estimate": 2165.845259950702,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2876.8382506950443,
+          "visible_pixel_area_estimate": 2876.8382506950443,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 446,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 805,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2823.5621979068287,
+          "visible_pixel_area_estimate": 2823.5621979068287,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 419,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3165.7357004501046,
+          "visible_pixel_area_estimate": 3148.7764020548366,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9946428571428572,
+          "in_frame": 1.0,
+          "silhouette_samples": 560,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 2,
+            "crosswalk.044": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2137.6483565208136,
+          "visible_pixel_area_estimate": 2137.6483565208136,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 661,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2642.050716745711,
+          "visible_pixel_area_estimate": 2642.050716745711,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 817,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2556.021625659534,
+          "visible_pixel_area_estimate": 2556.021625659534,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 432,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3150.094508452365,
+          "visible_pixel_area_estimate": 3143.941980115544,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.998046875,
+          "in_frame": 1.0,
+          "silhouette_samples": 512,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2133.5737618632456,
+          "visible_pixel_area_estimate": 2133.5737618632456,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 675,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2408.2690778024744,
+          "visible_pixel_area_estimate": 2408.2690778024744,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 431,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 829,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2347.6588276605385,
+          "visible_pixel_area_estimate": 2347.6588276605385,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 478,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3158.100638460994,
+          "visible_pixel_area_estimate": 3158.100638460994,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 481,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2127.5653770685512,
+          "visible_pixel_area_estimate": 2127.5653770685512,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2253.1504571118257,
+          "visible_pixel_area_estimate": 2253.1504571118257,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 483,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 841,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2268.47854273738,
+          "visible_pixel_area_estimate": 2268.47854273738,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 545,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3083.6325109595273,
+          "visible_pixel_area_estimate": 3083.6325109595273,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 448,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2117.905553227172,
+          "visible_pixel_area_estimate": 2117.905553227172,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2128.0357798897044,
+          "visible_pixel_area_estimate": 2128.0357798897044,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 537,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 853,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2188.8684360398274,
+          "visible_pixel_area_estimate": 2188.8684360398274,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 592,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3067.575843221157,
+          "visible_pixel_area_estimate": 3067.575843221157,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 432,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2121.2919896674875,
+          "visible_pixel_area_estimate": 2121.2919896674875,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 688,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2079.146148726556,
+          "visible_pixel_area_estimate": 2079.146148726556,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 590,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 865,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2168.0953157033036,
+          "visible_pixel_area_estimate": 2168.0953157033036,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 633,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3033.0917414936007,
+          "visible_pixel_area_estimate": 3033.0917414936007,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 419,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2116.2321890997837,
+          "visible_pixel_area_estimate": 2116.2321890997837,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 688,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2044.608354724574,
+          "visible_pixel_area_estimate": 2044.608354724574,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 626,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 877,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2151.114257495701,
+          "visible_pixel_area_estimate": 2151.114257495701,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 658,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2927.266674730405,
+          "visible_pixel_area_estimate": 2927.266674730405,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 403,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2193.468404505943,
+          "visible_pixel_area_estimate": 2193.468404505943,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 712,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2030.0100138014386,
+          "visible_pixel_area_estimate": 2030.0100138014386,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 651,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 889,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2134.284659792019,
+          "visible_pixel_area_estimate": 2134.284659792019,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 671,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2868.5427918858027,
+          "visible_pixel_area_estimate": 2868.5427918858027,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 400,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2240.9405217472445,
+          "visible_pixel_area_estimate": 2240.9405217472445,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 565,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2020.8834616920667,
+          "visible_pixel_area_estimate": 2020.8834616920667,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 666,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 901,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2125.8243646231304,
+          "visible_pixel_area_estimate": 2125.8243646231304,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2833.762288709216,
+          "visible_pixel_area_estimate": 2833.762288709216,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 407,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2498.114748930809,
+          "visible_pixel_area_estimate": 2498.114748930809,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 422,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2016.1904378084182,
+          "visible_pixel_area_estimate": 2016.1904378084182,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 675,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 913,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2122.2285691049556,
+          "visible_pixel_area_estimate": 2122.2285691049556,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2714.42659790216,
+          "visible_pixel_area_estimate": 2714.42659790216,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 409,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2780.301748999132,
+          "visible_pixel_area_estimate": 2780.301748999132,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 401,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2009.991815232205,
+          "visible_pixel_area_estimate": 2009.991815232205,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 925,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2117.554516821584,
+          "visible_pixel_area_estimate": 2117.554516821584,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 686,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2666.7810697085138,
+          "visible_pixel_area_estimate": 2666.7810697085138,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3036.8206587604686,
+          "visible_pixel_area_estimate": 3036.8206587604686,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 444,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2008.617454527582,
+          "visible_pixel_area_estimate": 2008.617454527582,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 937,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2114.5309716852403,
+          "visible_pixel_area_estimate": 2114.5309716852403,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 687,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2617.4585064365237,
+          "visible_pixel_area_estimate": 2617.4585064365237,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 432,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3154.6442289170286,
+          "visible_pixel_area_estimate": 3142.150588406466,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.996039603960396,
+          "in_frame": 1.0,
+          "silhouette_samples": 505,
+          "occluders": {
+            "street lamp poles and arms": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2002.8381886933234,
+          "visible_pixel_area_estimate": 2002.8381886933234,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 949,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2183.5910520013354,
+          "visible_pixel_area_estimate": 2183.5910520013354,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 741,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2553.167929750074,
+          "visible_pixel_area_estimate": 2553.167929750074,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 443,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3170.129055833059,
+          "visible_pixel_area_estimate": 3164.5965443918144,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9982547993019197,
+          "in_frame": 1.0,
+          "silhouette_samples": 573,
+          "occluders": {
+            "street lamp poles and arms": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2063.269397702718,
+          "visible_pixel_area_estimate": 2063.269397702718,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 734,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 961,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2229.2777360081077,
+          "visible_pixel_area_estimate": 2229.2777360081077,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 605,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2483.393160384021,
+          "visible_pixel_area_estimate": 2483.393160384021,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 455,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3188.9284602126977,
+          "visible_pixel_area_estimate": 3188.9284602126977,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 634,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2087.5240371457107,
+          "visible_pixel_area_estimate": 2087.5240371457107,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 592,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 973,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2395.305214707426,
+          "visible_pixel_area_estimate": 2395.305214707426,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 449,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2426.1040679912835,
+          "visible_pixel_area_estimate": 2426.1040679912835,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 470,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3198.2125642851197,
+          "visible_pixel_area_estimate": 3198.2125642851197,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 680,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2284.8616698906803,
+          "visible_pixel_area_estimate": 2284.8616698906803,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 447,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 985,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2686.9911567313397,
+          "visible_pixel_area_estimate": 2686.9911567313397,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 399,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2335.5963872256657,
+          "visible_pixel_area_estimate": 2335.5963872256657,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 478,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3174.4017989000486,
+          "visible_pixel_area_estimate": 3174.4017989000486,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 683,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2585.672594574586,
+          "visible_pixel_area_estimate": 2585.672594574586,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 401,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 997,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2933.693200641304,
+          "visible_pixel_area_estimate": 2933.693200641304,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 430,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2336.6663860325307,
+          "visible_pixel_area_estimate": 2336.6663860325307,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 504,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3055.0106167126005,
+          "visible_pixel_area_estimate": 3055.0106167126005,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 506,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2833.187861546629,
+          "visible_pixel_area_estimate": 2833.187861546629,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 425,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1009,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3137.687818143065,
+          "visible_pixel_area_estimate": 3131.1915700723757,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9979296066252588,
+          "in_frame": 1.0,
+          "silhouette_samples": 483,
+          "occluders": {
+            "street lamp poles and arms": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2308.4878936739838,
+          "visible_pixel_area_estimate": 2308.4878936739838,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 523,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2837.9974471270734,
+          "visible_pixel_area_estimate": 2837.9974471270734,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 422,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3028.406069368089,
+          "visible_pixel_area_estimate": 3028.406069368089,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 481,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1021,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3151.775153218461,
+          "visible_pixel_area_estimate": 3151.775153218461,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 548,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2274.041180516538,
+          "visible_pixel_area_estimate": 2274.041180516538,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 539,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2638.989856930589,
+          "visible_pixel_area_estimate": 2638.989856930589,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 425,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3120.74515339448,
+          "visible_pixel_area_estimate": 3070.7688075216147,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9839857651245552,
+          "in_frame": 1.0,
+          "silhouette_samples": 562,
+          "occluders": {
+            "residential east wing parapet.003": 7,
+            "residential east wing roof": 1,
+            "residential east wing parapet.001": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1033,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3196.700078100332,
+          "visible_pixel_area_estimate": 3196.700078100332,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 618,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2247.59645171914,
+          "visible_pixel_area_estimate": 2247.59645171914,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 555,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2385.129547664707,
+          "visible_pixel_area_estimate": 2385.129547664707,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 444,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3140.04950541427,
+          "visible_pixel_area_estimate": 3140.04950541427,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 632,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1045,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3161.104188879811,
+          "visible_pixel_area_estimate": 3161.104188879811,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 660,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2225.0100203281136,
+          "visible_pixel_area_estimate": 2225.0100203281136,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 570,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2234.085517158658,
+          "visible_pixel_area_estimate": 2234.085517158658,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 499,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3114.0301903347204,
+          "visible_pixel_area_estimate": 3099.56874982233,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9953560371517027,
+          "in_frame": 1.0,
+          "silhouette_samples": 646,
+          "occluders": {
+            "residential west wing parapet.003": 3
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1057,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3151.8228072180236,
+          "visible_pixel_area_estimate": 3151.8228072180236,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 720,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2206.3061814286384,
+          "visible_pixel_area_estimate": 2206.3061814286384,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 584,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2149.0799955110742,
+          "visible_pixel_area_estimate": 2149.0799955110742,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 557,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3128.540164999426,
+          "visible_pixel_area_estimate": 3119.0597402570033,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.996969696969697,
+          "in_frame": 1.0,
+          "silhouette_samples": 660,
+          "occluders": {
+            "residential west wing parapet.003": 2
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1069,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3110.2630814667923,
+          "visible_pixel_area_estimate": 3110.2630814667923,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 565,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2180.2212822200204,
+          "visible_pixel_area_estimate": 2180.2212822200204,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 594,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2106.8975723450017,
+          "visible_pixel_area_estimate": 2106.8975723450017,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 605,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3096.3173011632434,
+          "visible_pixel_area_estimate": 2997.745402062541,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9681647940074907,
+          "in_frame": 1.0,
+          "silhouette_samples": 534,
+          "occluders": {
+            "residential west wing parapet.003": 15,
+            "residential west wing roof": 2
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1081,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2927.013964844235,
+          "visible_pixel_area_estimate": 2927.013964844235,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 446,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2182.968683154473,
+          "visible_pixel_area_estimate": 2182.968683154473,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 610,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2079.2129628323223,
+          "visible_pixel_area_estimate": 2079.2129628323223,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 637,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2982.848786655598,
+          "visible_pixel_area_estimate": 2829.524783603207,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9485981308411215,
+          "in_frame": 1.0,
+          "silhouette_samples": 428,
+          "occluders": {
+            "residential west wing roof": 12,
+            "residential west wing parapet.003": 6,
+            "residential west wing parapet": 4
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1093,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2682.811194933278,
+          "visible_pixel_area_estimate": 2682.811194933278,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 422,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2159.7990608145756,
+          "visible_pixel_area_estimate": 2159.7990608145756,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 617,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2071.9990470664175,
+          "visible_pixel_area_estimate": 2071.9990470664175,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 660,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2803.3453428620305,
+          "visible_pixel_area_estimate": 2803.3453428620305,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 416,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1105,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2430.010055936626,
+          "visible_pixel_area_estimate": 2430.010055936626,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 430,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2170.319639314677,
+          "visible_pixel_area_estimate": 2170.319639314677,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 632,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2065.2856313165776,
+          "visible_pixel_area_estimate": 2065.2856313165776,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 673,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2550.1065357981934,
+          "visible_pixel_area_estimate": 2550.1065357981934,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 431,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1117,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2291.7804389901335,
+          "visible_pixel_area_estimate": 2291.7804389901335,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 486,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2161.689154712772,
+          "visible_pixel_area_estimate": 2161.689154712772,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 640,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2053.6057149933554,
+          "visible_pixel_area_estimate": 2053.6057149933554,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 678,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2342.7508557340834,
+          "visible_pixel_area_estimate": 2342.7508557340834,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 477,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1129,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2138.828047238141,
+          "visible_pixel_area_estimate": 2138.828047238141,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 534,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2137.7128471771066,
+          "visible_pixel_area_estimate": 2137.7128471771066,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 642,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2044.3899474812195,
+          "visible_pixel_area_estimate": 2044.3899474812195,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 680,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2264.3075405069535,
+          "visible_pixel_area_estimate": 2264.3075405069535,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 544,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1141,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2094.2226658214577,
+          "visible_pixel_area_estimate": 2094.2226658214577,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 588,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2157.7229574921744,
+          "visible_pixel_area_estimate": 2157.7229574921744,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 656,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2047.769897148271,
+          "visible_pixel_area_estimate": 2047.769897148271,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2181.4782793310033,
+          "visible_pixel_area_estimate": 2181.4782793310033,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 590,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1153,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2069.7216040464627,
+          "visible_pixel_area_estimate": 2069.7216040464627,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 627,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2144.9483038172157,
+          "visible_pixel_area_estimate": 2144.9483038172157,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 659,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2036.9337748326534,
+          "visible_pixel_area_estimate": 2036.9337748326534,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2164.658958447976,
+          "visible_pixel_area_estimate": 2164.658958447976,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 632,
+          "occluders": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Visibility sampled every0.5second with32x32 projected silhouette rays; not a full-frame visual guarantee. Full swept collision verification is in route-check.json.",
+  "passed": true
+}

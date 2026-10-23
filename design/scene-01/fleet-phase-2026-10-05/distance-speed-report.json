@@ -1,0 +1,38 @@
+{
+  "tracks": {
+    "green": {
+      "source": "design/scene-01/kling-green-loop-2026-10-05/assembly/candidate-22.75s/green-tracking.json",
+      "raw_closed_cab_centroid_distance_px": 1723.1625151875303,
+      "loop_closure_step_px": 3.4415474296839745,
+      "maximum_frame_step_px": 27.427116601188377,
+      "note": "Observed tracking includes centroid jitter, roof-shape movement, and source seams. Image-plane distance, not vehicle ground distance."
+    },
+    "blue": {
+      "source": "design/scene-01/kling-blue-keys-2026-10-05/assembly/candidate-20s/blue-tracking.json",
+      "raw_closed_cab_centroid_distance_px": 1373.585767171871,
+      "loop_closure_step_px": 9.64933736426692,
+      "maximum_frame_step_px": 9.64933736426692,
+      "note": "Observed tracking includes centroid jitter, roof-shape movement, and source seams. Image-plane distance, not vehicle ground distance."
+    }
+  },
+  "45.5s_mean_image_speed_px_s": {
+    "green": 75.74340726099034,
+    "red": 75.74340726099034,
+    "yellow": 75.74340726099034,
+    "blue": 30.188698179601563
+  },
+  "91s_mean_image_speed_px_s": {
+    "green": 75.74340726099034,
+    "red": 56.80755544574276,
+    "yellow": 37.87170363049517,
+    "blue": 30.188698179601563
+  },
+  "91s_period_seconds": {
+    "green": 22.75,
+    "red": 30.333333333333332,
+    "yellow": 45.5,
+    "blue": 45.5
+  },
+  "rank91": "green > red > yellow > blue",
+  "collision_limit91": "Three vehicles sharing the same closed lane with different circuit counts (4,3,2) must overtake. Phase alone cannot prevent their continuous-path position coincidences across91s; separate lanes or routes needed. This is independent of blue central-edge conflict."
+}

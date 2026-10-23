@@ -1,0 +1,11 @@
+{
+  "status": "art-review",
+  "base": "compact-environment-v26-portrait-v2.png",
+  "giftReference": "../scene-01/assets/current/choices/boat.webp",
+  "successZone4": "boat-zone4-v29.png",
+  "failureZone3": "boat-zone3-v32.png",
+  "supersedesSuccess": "boat-clean-belts-v27.png",
+  "runtimeIntegrated": false,
+  "uxRequirement": "Keep selected top niche 3 identifiable on failure result alongside original scenario text; do not obscure cargo or hide empty zone4.",
+  "reviewLimit": "Art pair checked; in-game responsiveness and motor readability remain to verify with UX."
+}

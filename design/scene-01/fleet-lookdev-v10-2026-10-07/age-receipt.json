@@ -1,0 +1,22 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/projected/clean/fleet-v09-clean-sill.blend",
+  "old_trucks_only": [
+    1,
+    4
+  ],
+  "changes": [
+    "Object-fixed lower paint scuffs restricted to pigmented body; no crew or window edit",
+    "Moderate faded paint, clean modern trucks untouched",
+    "Existing old exhaust clouds enlarged 1.8 with softer rim and upward opacity decay"
+  ],
+  "root_transforms_equal_at_frames": [
+    1,
+    385,
+    769
+  ],
+  "render_dimensions": [
+    1920,
+    1334
+  ],
+  "pilot_only": true
+}

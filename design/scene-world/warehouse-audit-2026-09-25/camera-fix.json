@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:40:16.929866Z",
+    "display_name": "Nano Banana Pro",
+    "id": "25eb516f-c3d8-4821-83e0-8b4da8438cb8",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_094016_25eb516f-c3d8-4821-83e0-8b4da8438cb8_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "9f79a069-967f-470a-b9da-8758b90db48b",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/9f79a069-967f-470a-b9da-8758b90db48b.webp"
+        }
+      ],
+      "prompt": "Correct ONLY three letter signs. The LARGE FOREGROUND sign in UPPER RIGHT directly ABOVE the workers currently says А: replace this with Cyrillic Ф. The SMALLER sign on left rack in middle distance currently says Ф: replace this with Cyrillic Н. Keep tiny DISTANT А near dispatch door unchanged. Final sequence from far dispatch toward foreground workers must be А, Н, Ф, with ONE of each. Workers are retrieving parcel directly below the large Ф sign, at far end of alphabet. Do NOT move workers, shelves, camera or other objects.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_094016_25eb516f-c3d8-4821-83e0-8b4da8438cb8.png",
+    "status": "completed"
+  }
+]

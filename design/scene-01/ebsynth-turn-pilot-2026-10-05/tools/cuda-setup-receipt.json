@@ -1,0 +1,10 @@
+{
+  "build_exit": 124,
+  "build_elapsed_seconds": 300.015,
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "compute_capability": "8.6",
+  "arch": "sm_86",
+  "nvcc": "13.4.92",
+  "host_compiler": "GCC 16.2.1",
+  "attempts": 1
+}

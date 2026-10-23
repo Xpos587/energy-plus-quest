@@ -1,0 +1,8 @@
+{
+  "attempted_video": "green-tractor-turn-detailed.mp4",
+  "requested_coverage_seconds": 6,
+  "upload_completed": false,
+  "analysis_completed": false,
+  "cleanup": "not_required_no_remote_file_created",
+  "blocker": "Gemini Files API HTTP 400 FAILED_PRECONDITION: User location is not supported for the API use."
+}

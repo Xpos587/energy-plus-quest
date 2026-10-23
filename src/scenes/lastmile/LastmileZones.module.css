@@ -1,0 +1,6 @@
+.overlay { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.drawing { display: block; width: 100%; height: 100%; overflow: visible; }
+.understroke { fill: none; stroke: none; pointer-events: none; }
+/* Selection/hover never paints the scene; the invisible paths still receive clicks. */
+.zone { fill: transparent; fill-opacity: 0; stroke: none; }
+.zone[data-interactive="true"] { pointer-events: auto; cursor: pointer; }

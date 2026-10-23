@@ -1,0 +1,79 @@
+{
+  "fleet_source": "/home/michael/Github/energy-plus-quest/design/scene-01/painted-layer-2026-10-05/final-4k-frames",
+  "background": "/home/michael/Github/energy-plus-quest/design/scene-01/four-truck-loop-2026-10-04/v2b-empty-map.png",
+  "render_source": "../painted-layer-2026-10-05/painted-vehicles-driver-fixed-optimized.blend",
+  "motion_changed": false,
+  "four_trucks": true,
+  "frame_count": 1152,
+  "fps": 24,
+  "duration_seconds": 48,
+  "stills": [
+    {
+      "frame": 1,
+      "seconds": 0.0,
+      "dimensions": [
+        3840,
+        2667
+      ],
+      "image": "map-0001.png"
+    },
+    {
+      "frame": 97,
+      "seconds": 4.0,
+      "dimensions": [
+        3840,
+        2667
+      ],
+      "image": "map-0097.png"
+    },
+    {
+      "frame": 385,
+      "seconds": 16.0,
+      "dimensions": [
+        3840,
+        2667
+      ],
+      "image": "map-0385.png"
+    },
+    {
+      "frame": 577,
+      "seconds": 24.0,
+      "dimensions": [
+        3840,
+        2667
+      ],
+      "image": "map-0577.png"
+    },
+    {
+      "frame": 769,
+      "seconds": 32.0,
+      "dimensions": [
+        3840,
+        2667
+      ],
+      "image": "map-0769.png"
+    },
+    {
+      "frame": 961,
+      "seconds": 40.0,
+      "dimensions": [
+        3840,
+        2667
+      ],
+      "image": "map-0961.png"
+    },
+    {
+      "frame": 1152,
+      "seconds": 47.958333333333336,
+      "dimensions": [
+        3840,
+        2667
+      ],
+      "image": "map-1152.png"
+    }
+  ],
+  "limitations": [
+    "Prior native vehicle geometry and driver appearance retained; isolated green v04 image is not an animated fleet asset.",
+    "Illustrated backdrop registration requires visual review; no pixel-exact geometry claim."
+  ]
+}

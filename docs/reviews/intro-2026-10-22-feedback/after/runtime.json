@@ -1,0 +1,682 @@
+[
+  {
+    "screen": "cover",
+    "width": 320,
+    "height": 568,
+    "document": [
+      320,
+      568
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "buttons": [
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 18,
+          "y": 221,
+          "width": 184,
+          "height": 44,
+          "top": 221,
+          "right": 202,
+          "bottom": 265,
+          "left": 18
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": null
+  },
+  {
+    "screen": "story",
+    "width": 320,
+    "height": 568,
+    "document": [
+      320,
+      568
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 12,
+      "y": 347.96875,
+      "width": 296,
+      "height": 44,
+      "top": 347.96875,
+      "right": 308,
+      "bottom": 391.96875,
+      "left": 12
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 12,
+          "y": 347.96875,
+          "width": 142,
+          "height": 44,
+          "top": 347.96875,
+          "right": 154,
+          "bottom": 391.96875,
+          "left": 12
+        }
+      },
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 166,
+          "y": 347.96875,
+          "width": 142,
+          "height": 44,
+          "top": 347.96875,
+          "right": 308,
+          "bottom": 391.96875,
+          "left": 166
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "screen": "scores",
+    "width": 320,
+    "height": 568,
+    "document": [
+      320,
+      568
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 12,
+      "y": 519.125,
+      "width": 296,
+      "height": 44,
+      "top": 519.125,
+      "right": 308,
+      "bottom": 563.125,
+      "left": 12
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 12,
+          "y": 519.125,
+          "width": 142,
+          "height": 44,
+          "top": 519.125,
+          "right": 154,
+          "bottom": 563.125,
+          "left": 12
+        }
+      },
+      {
+        "name": "Начать ",
+        "rect": {
+          "x": 166,
+          "y": 519.125,
+          "width": 142,
+          "height": 44,
+          "top": 519.125,
+          "right": 308,
+          "bottom": 563.125,
+          "left": 166
+        }
+      }
+    ],
+    "metrics": [
+      "экономите ресурсы (Энергия)",
+      "проявляете заботу (Эмпатия)",
+      "принимаете наиболее эффективные решения (Эффективность)"
+    ],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "errors": []
+  },
+  {
+    "screen": "cover",
+    "width": 390,
+    "height": 844,
+    "document": [
+      390,
+      844
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "buttons": [
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 24,
+          "y": 318.3125,
+          "width": 184,
+          "height": 56,
+          "top": 318.3125,
+          "right": 208,
+          "bottom": 374.3125,
+          "left": 24
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": null
+  },
+  {
+    "screen": "story",
+    "width": 390,
+    "height": 844,
+    "document": [
+      390,
+      844
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 24,
+      "y": 762,
+      "width": 342,
+      "height": 66,
+      "top": 762,
+      "right": 366,
+      "bottom": 828,
+      "left": 24
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 24,
+          "y": 762,
+          "width": 165,
+          "height": 54,
+          "top": 762,
+          "right": 189,
+          "bottom": 816,
+          "left": 24
+        }
+      },
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 201,
+          "y": 762,
+          "width": 165,
+          "height": 54,
+          "top": 762,
+          "right": 366,
+          "bottom": 816,
+          "left": 201
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "screen": "scores",
+    "width": 390,
+    "height": 844,
+    "document": [
+      390,
+      844
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 24,
+      "y": 730.25,
+      "width": 342,
+      "height": 102,
+      "top": 730.25,
+      "right": 366,
+      "bottom": 832.25,
+      "left": 24
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 24,
+          "y": 730.25,
+          "width": 165,
+          "height": 54,
+          "top": 730.25,
+          "right": 189,
+          "bottom": 784.25,
+          "left": 24
+        }
+      },
+      {
+        "name": "Начать ",
+        "rect": {
+          "x": 201,
+          "y": 730.25,
+          "width": 165,
+          "height": 54,
+          "top": 730.25,
+          "right": 366,
+          "bottom": 784.25,
+          "left": 201
+        }
+      }
+    ],
+    "metrics": [
+      "экономите ресурсы (Энергия)",
+      "проявляете заботу (Эмпатия)",
+      "принимаете наиболее эффективные решения (Эффективность)"
+    ],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "errors": []
+  },
+  {
+    "screen": "cover",
+    "width": 844,
+    "height": 390,
+    "document": [
+      844,
+      390
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "buttons": [
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 46.40625,
+          "y": 250.265625,
+          "width": 210,
+          "height": 49,
+          "top": 250.265625,
+          "right": 256.40625,
+          "bottom": 299.265625,
+          "left": 46.40625
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": null
+  },
+  {
+    "screen": "story",
+    "width": 844,
+    "height": 390,
+    "document": [
+      844,
+      390
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 18,
+      "y": 279.9375,
+      "width": 808,
+      "height": 44,
+      "top": 279.9375,
+      "right": 826,
+      "bottom": 323.9375,
+      "left": 18
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 18,
+          "y": 279.9375,
+          "width": 98,
+          "height": 44,
+          "top": 279.9375,
+          "right": 116,
+          "bottom": 323.9375,
+          "left": 18
+        }
+      },
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 616,
+          "y": 279.9375,
+          "width": 210,
+          "height": 44,
+          "top": 279.9375,
+          "right": 826,
+          "bottom": 323.9375,
+          "left": 616
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "screen": "scores",
+    "width": 844,
+    "height": 390,
+    "document": [
+      844,
+      390
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 18,
+      "y": 302.40625,
+      "width": 808,
+      "height": 44,
+      "top": 302.40625,
+      "right": 826,
+      "bottom": 346.40625,
+      "left": 18
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 18,
+          "y": 302.40625,
+          "width": 98,
+          "height": 44,
+          "top": 302.40625,
+          "right": 116,
+          "bottom": 346.40625,
+          "left": 18
+        }
+      },
+      {
+        "name": "Начать ",
+        "rect": {
+          "x": 616,
+          "y": 302.40625,
+          "width": 210,
+          "height": 44,
+          "top": 302.40625,
+          "right": 826,
+          "bottom": 346.40625,
+          "left": 616
+        }
+      }
+    ],
+    "metrics": [
+      "экономите ресурсы (Энергия)",
+      "проявляете заботу (Эмпатия)",
+      "принимаете наиболее эффективные решения (Эффективность)"
+    ],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "errors": []
+  },
+  {
+    "screen": "cover",
+    "width": 1440,
+    "height": 900,
+    "document": [
+      1440,
+      900
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "buttons": [
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 79.1875,
+          "y": 494.84375,
+          "width": 210,
+          "height": 60,
+          "top": 494.84375,
+          "right": 289.1875,
+          "bottom": 554.84375,
+          "left": 79.1875
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": null
+  },
+  {
+    "screen": "story",
+    "width": 1440,
+    "height": 900,
+    "document": [
+      1440,
+      900
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 72,
+      "y": 792,
+      "width": 1296,
+      "height": 72,
+      "top": 792,
+      "right": 1368,
+      "bottom": 864,
+      "left": 72
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 72,
+          "y": 792,
+          "width": 142,
+          "height": 60,
+          "top": 792,
+          "right": 214,
+          "bottom": 852,
+          "left": 72
+        }
+      },
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 1158,
+          "y": 792,
+          "width": 210,
+          "height": 60,
+          "top": 792,
+          "right": 1368,
+          "bottom": 852,
+          "left": 1158
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "screen": "scores",
+    "width": 1440,
+    "height": 900,
+    "document": [
+      1440,
+      900
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 72,
+      "y": 792,
+      "width": 1296,
+      "height": 72,
+      "top": 792,
+      "right": 1368,
+      "bottom": 864,
+      "left": 72
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 72,
+          "y": 792,
+          "width": 142,
+          "height": 60,
+          "top": 792,
+          "right": 214,
+          "bottom": 852,
+          "left": 72
+        }
+      },
+      {
+        "name": "Начать ",
+        "rect": {
+          "x": 1158,
+          "y": 792,
+          "width": 210,
+          "height": 60,
+          "top": 792,
+          "right": 1368,
+          "bottom": 852,
+          "left": 1158
+        }
+      }
+    ],
+    "metrics": [
+      "экономите ресурсы (Энергия)",
+      "проявляете заботу (Эмпатия)",
+      "принимаете наиболее эффективные решения (Эффективность)"
+    ],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "errors": []
+  },
+  {
+    "screen": "cover",
+    "width": 1920,
+    "height": 1080,
+    "document": [
+      1920,
+      1080
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "buttons": [
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 105.59375,
+          "y": 554.703125,
+          "width": 210,
+          "height": 60,
+          "top": 554.703125,
+          "right": 315.59375,
+          "bottom": 614.703125,
+          "left": 105.59375
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": null
+  },
+  {
+    "screen": "story",
+    "width": 1920,
+    "height": 1080,
+    "document": [
+      1920,
+      1080
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 260,
+      "y": 972,
+      "width": 1400,
+      "height": 72,
+      "top": 972,
+      "right": 1660,
+      "bottom": 1044,
+      "left": 260
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 260,
+          "y": 972,
+          "width": 148,
+          "height": 60,
+          "top": 972,
+          "right": 408,
+          "bottom": 1032,
+          "left": 260
+        }
+      },
+      {
+        "name": "Далее ",
+        "rect": {
+          "x": 1450,
+          "y": 972,
+          "width": 210,
+          "height": 60,
+          "top": 972,
+          "right": 1660,
+          "bottom": 1032,
+          "left": 1450
+        }
+      }
+    ],
+    "metrics": [],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "screen": "scores",
+    "width": 1920,
+    "height": 1080,
+    "document": [
+      1920,
+      1080
+    ],
+    "background": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")",
+    "nav": {
+      "x": 260,
+      "y": 972,
+      "width": 1400,
+      "height": 72,
+      "top": 972,
+      "right": 1660,
+      "bottom": 1044,
+      "left": 260
+    },
+    "buttons": [
+      {
+        "name": "Назад",
+        "rect": {
+          "x": 260,
+          "y": 972,
+          "width": 148,
+          "height": 60,
+          "top": 972,
+          "right": 408,
+          "bottom": 1032,
+          "left": 260
+        }
+      },
+      {
+        "name": "Начать ",
+        "rect": {
+          "x": 1450,
+          "y": 972,
+          "width": 210,
+          "height": 60,
+          "top": 972,
+          "right": 1660,
+          "bottom": 1032,
+          "left": 1450
+        }
+      }
+    ],
+    "metrics": [
+      "экономите ресурсы (Энергия)",
+      "проявляете заботу (Эмпатия)",
+      "принимаете наиболее эффективные решения (Эффективность)"
+    ],
+    "lessonBefore": "url(\"http://127.0.0.1:4344/assets/optimized-choice-final-wide-v10-U7o-85AN.webp\")"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "errors": []
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "source": "whole-map-v07.mp4",
+  "coverage_seconds": 48,
+  "sampling_fps": 4,
+  "model": "gemini-2.5-flash",
+  "cleanup": true,
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 2006,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 50635,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 139
+      },
+      {
+        "modality": "VIDEO",
+        "token_count": 50496
+      }
+    ],
+    "thoughts_token_count": 490,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 53131,
+    "traffic_type": null
+  }
+}

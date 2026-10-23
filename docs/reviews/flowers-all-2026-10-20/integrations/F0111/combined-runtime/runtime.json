@@ -1,0 +1,386 @@
+[
+  {
+    "screen": "mobile",
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-CXTPe_ms.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-Buqk4Yd_.webp",
+      "decodedNative": [
+        2926,
+        5120
+      ],
+      "rect": {
+        "x": 0,
+        "y": -0.046875,
+        "width": 390,
+        "height": 682.5,
+        "top": -0.046875,
+        "right": 390,
+        "bottom": 682.453125,
+        "left": 0
+      },
+      "stage": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 586.40625,
+        "top": 48,
+        "right": 390,
+        "bottom": 634.40625,
+        "left": 0
+      },
+      "plane": {
+        "x": 0,
+        "y": -0.046875,
+        "width": 390,
+        "height": 682.5,
+        "top": -0.046875,
+        "right": 390,
+        "bottom": 682.453125,
+        "left": 0
+      },
+      "dpr": 1
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "mobile",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-CXTPe_ms.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-Buqk4Yd_.webp",
+      "decodedNative": [
+        2926,
+        5120
+      ],
+      "rect": {
+        "x": 0,
+        "y": -0.046875,
+        "width": 390,
+        "height": 682.5,
+        "top": -0.046875,
+        "right": 390,
+        "bottom": 682.453125,
+        "left": 0
+      },
+      "stage": {
+        "x": 0,
+        "y": 48,
+        "width": 390,
+        "height": 586.40625,
+        "top": 48,
+        "right": 390,
+        "bottom": 634.40625,
+        "left": 0
+      },
+      "plane": {
+        "x": 0,
+        "y": -0.046875,
+        "width": 390,
+        "height": 682.5,
+        "top": -0.046875,
+        "right": 390,
+        "bottom": 682.453125,
+        "left": 0
+      },
+      "dpr": 2
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "desktop",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-Buqk4Yd_.webp",
+      "src": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-Buqk4Yd_.webp",
+      "decodedNative": [
+        2926,
+        5120
+      ],
+      "rect": {
+        "x": 0,
+        "y": -388.296875,
+        "width": 1080,
+        "height": 1890,
+        "top": -388.296875,
+        "right": 1080,
+        "bottom": 1501.703125,
+        "left": 0
+      },
+      "stage": {
+        "x": 0,
+        "y": 56,
+        "width": 1080,
+        "height": 844,
+        "top": 56,
+        "right": 1080,
+        "bottom": 900,
+        "left": 0
+      },
+      "plane": {
+        "x": 0,
+        "y": -388.296875,
+        "width": 1080,
+        "height": 1890,
+        "top": -388.296875,
+        "right": 1080,
+        "bottom": 1501.703125,
+        "left": 0
+      },
+      "dpr": 1
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "desktop",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-Buqk4Yd_.webp",
+      "src": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-Buqk4Yd_.webp",
+      "decodedNative": [
+        2926,
+        5120
+      ],
+      "rect": {
+        "x": 0,
+        "y": -388.296875,
+        "width": 1080,
+        "height": 1890,
+        "top": -388.296875,
+        "right": 1080,
+        "bottom": 1501.703125,
+        "left": 0
+      },
+      "stage": {
+        "x": 0,
+        "y": 56,
+        "width": 1080,
+        "height": 844,
+        "top": 56,
+        "right": 1080,
+        "bottom": 900,
+        "left": 0
+      },
+      "plane": {
+        "x": 0,
+        "y": -388.296875,
+        "width": 1080,
+        "height": 1890,
+        "top": -388.296875,
+        "right": 1080,
+        "bottom": 1501.703125,
+        "left": 0
+      },
+      "dpr": 2
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "wide",
+    "width": 2560,
+    "height": 900,
+    "dpr": 1,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-choice-wide-alva-B9jN0EdI.webp",
+      "src": "http://127.0.0.1:4344/assets/optimized-choice-wide-alva-B9jN0EdI.webp",
+      "decodedNative": [
+        5120,
+        2048
+      ],
+      "rect": {
+        "x": 0,
+        "y": 50.109375,
+        "width": 2140,
+        "height": 855.78125,
+        "top": 50.109375,
+        "right": 2140,
+        "bottom": 905.890625,
+        "left": 0
+      },
+      "stage": {
+        "x": 0,
+        "y": 56,
+        "width": 2140,
+        "height": 844,
+        "top": 56,
+        "right": 2140,
+        "bottom": 900,
+        "left": 0
+      },
+      "plane": {
+        "x": 0,
+        "y": 50.109375,
+        "width": 2140,
+        "height": 855.78125,
+        "top": 50.109375,
+        "right": 2140,
+        "bottom": 905.890625,
+        "left": 0
+      },
+      "dpr": 1
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "wide",
+    "width": 2560,
+    "height": 900,
+    "dpr": 2,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-choice-wide-alva-B9jN0EdI.webp",
+      "src": "http://127.0.0.1:4344/assets/optimized-choice-wide-alva-B9jN0EdI.webp",
+      "decodedNative": [
+        5120,
+        2048
+      ],
+      "rect": {
+        "x": 0,
+        "y": 50.109375,
+        "width": 2140,
+        "height": 855.78125,
+        "top": 50.109375,
+        "right": 2140,
+        "bottom": 905.890625,
+        "left": 0
+      },
+      "stage": {
+        "x": 0,
+        "y": 56,
+        "width": 2140,
+        "height": 844,
+        "top": 56,
+        "right": 2140,
+        "bottom": 900,
+        "left": 0
+      },
+      "plane": {
+        "x": 0,
+        "y": 50.109375,
+        "width": 2140,
+        "height": 855.78125,
+        "top": 50.109375,
+        "right": 2140,
+        "bottom": 905.890625,
+        "left": 0
+      },
+      "dpr": 2
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "small-mobile",
+    "width": 320,
+    "height": 568,
+    "dpr": 1,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-1280-DrTwixsA.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-Buqk4Yd_.webp",
+      "decodedNative": [
+        1280,
+        2240
+      ],
+      "rect": {
+        "x": 0,
+        "y": -83.640625,
+        "width": 320,
+        "height": 560,
+        "top": -83.640625,
+        "right": 320,
+        "bottom": 476.359375,
+        "left": 0
+      },
+      "stage": {
+        "x": 0,
+        "y": 48,
+        "width": 320,
+        "height": 277.59375,
+        "top": 48,
+        "right": 320,
+        "bottom": 325.59375,
+        "left": 0
+      },
+      "plane": {
+        "x": 0,
+        "y": -83.640625,
+        "width": 320,
+        "height": 560,
+        "top": -83.640625,
+        "right": 320,
+        "bottom": 476.359375,
+        "left": 0
+      },
+      "dpr": 1
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "screen": "small-mobile",
+    "width": 320,
+    "height": 568,
+    "dpr": 2,
+    "url": "http://127.0.0.1:4344/",
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-CXTPe_ms.avif",
+      "src": "http://127.0.0.1:4344/assets/optimized-choice-tall-alva-Buqk4Yd_.webp",
+      "decodedNative": [
+        2926,
+        5120
+      ],
+      "rect": {
+        "x": 0,
+        "y": -83.640625,
+        "width": 320,
+        "height": 560,
+        "top": -83.640625,
+        "right": 320,
+        "bottom": 476.359375,
+        "left": 0
+      },
+      "stage": {
+        "x": 0,
+        "y": 48,
+        "width": 320,
+        "height": 277.59375,
+        "top": 48,
+        "right": 320,
+        "bottom": 325.59375,
+        "left": 0
+      },
+      "plane": {
+        "x": 0,
+        "y": -83.640625,
+        "width": 320,
+        "height": 560,
+        "top": -83.640625,
+        "right": 320,
+        "bottom": 476.359375,
+        "left": 0
+      },
+      "dpr": 2
+    },
+    "status": 200,
+    "errors": []
+  }
+]

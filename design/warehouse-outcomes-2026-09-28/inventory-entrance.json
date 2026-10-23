@@ -1,0 +1,34 @@
+[
+  {
+    "created_at": "2026-09-28T09:29:41.305402Z",
+    "display_name": "Nano Banana Pro",
+    "id": "1f83157f-f021-4689-833b-28778475f956",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260928_092941_1f83157f-f021-4689-833b-28778475f956_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "b5d11870-f88a-4a3e-b6e0-d53755ec239b",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/b5d11870-f88a-4a3e-b6e0-d53755ec239b.png"
+        },
+        {
+          "id": "4affe55b-ad15-4f6a-9da5-ffa1618eef76",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/4affe55b-ad15-4f6a-9da5-ffa1618eef76_resize.jpg"
+        }
+      ],
+      "prompt": "Create a polished narrative game illustration. Image1 is the MANDATORY visual style and character drawing reference: clean hand-drawn editorial cartoon, thin grey contours, calm flat pastel color areas, soft restrained shadows, appealing friendly human faces like the three reference characters, not photorealism or plastic 3D. Image2 is the EXACT warehouse setting reference: cream walls, tall windows, blue rack uprights with orange crossbeams, cardboard parcels, grey floor yellow lane markings; receiving at LEFT and dispatch at RIGHT. New scene: consequence of leaving a gift at receiving. One alert friendly warehouse employee in blue-orange uniform uses a small manual trolley to take a modest wrapped gift parcel from the receiving area, while the dispatch dock and consolidated shipment are visibly far away at the other end beyond shelving. Show long walk through warehouse, not injury or sadness. Worker looks composed and engaged, upright active posture, slight natural smile, no exhaustion, no slumped body, no frown. Central action and worker in middle third of composition and upper-middle height, generous environment to sides; keep all meaningful action above bottom quarter for UI. Medium wide interior cutaway perspective, readable at small size, only one clear narrative action. No giant foreground character, no floating UI, no arrows, no captions, no logos, no text except unobtrusive correct Russian signs ПРИЁМКА on left and ОТГРУЗКА at distant right. Avoid deep shadows, gloomy mood, rough texture, visual clutter. Single finished coherent frame.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260928_092941_1f83157f-f021-4689-833b-28778475f956.png",
+    "status": "completed"
+  }
+]

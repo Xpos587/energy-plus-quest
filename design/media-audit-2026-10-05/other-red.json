@@ -1,0 +1,1566 @@
+[
+  {
+    "id": "crane-camera-alva-briefing",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-camera-alva-choice",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-camera-alva-inspection-rush",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-camera-alva-inspection-wait",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-camera-alva-inspection-petr",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-camera-alva-inspection-remote",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-socks-alva-briefing",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-socks-alva-choice",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-socks-alva-inspection-rush",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-socks-alva-inspection-wait",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-socks-alva-inspection-petr",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-socks-alva-inspection-remote",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-boat-alva-briefing",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-boat-alva-choice",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-boat-alva-inspection-rush",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-boat-alva-inspection-wait",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-boat-alva-inspection-petr",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "crane-boat-alva-inspection-remote",
+    "width": 320,
+    "height": 568,
+    "redPixels": 2560,
+    "percent": 1.41,
+    "bbox": [
+      0,
+      48,
+      319,
+      277
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        51
+      ],
+      [
+        274,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-briefing",
+    "width": 393,
+    "height": 852,
+    "redPixels": 68382,
+    "percent": 20.42,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        134
+      ],
+      [
+        467,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-choice",
+    "width": 393,
+    "height": 852,
+    "redPixels": 68382,
+    "percent": 20.42,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        134
+      ],
+      [
+        467,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-place-1",
+    "width": 393,
+    "height": 852,
+    "redPixels": 68382,
+    "percent": 20.42,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        134
+      ],
+      [
+        467,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-place-2",
+    "width": 393,
+    "height": 852,
+    "redPixels": 68382,
+    "percent": 20.42,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        134
+      ],
+      [
+        467,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-place-3",
+    "width": 393,
+    "height": 852,
+    "redPixels": 68382,
+    "percent": 20.42,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        134
+      ],
+      [
+        467,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-place-4",
+    "width": 393,
+    "height": 852,
+    "redPixels": 68382,
+    "percent": 20.42,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        134
+      ],
+      [
+        467,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-auto",
+    "width": 393,
+    "height": 852,
+    "redPixels": 68382,
+    "percent": 20.42,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        134
+      ],
+      [
+        467,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-briefing",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-choice",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-inspection-entrance",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-inspection-alphabet",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-inspection-keeper",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-inspection-wms",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-briefing",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-choice",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-inspection-entrance",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-inspection-alphabet",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-inspection-keeper",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-inspection-wms",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-briefing",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-choice",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-inspection-entrance",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-inspection-alphabet",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-inspection-keeper",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-inspection-wms",
+    "width": 393,
+    "height": 852,
+    "redPixels": 69954,
+    "percent": 20.89,
+    "bbox": [
+      0,
+      48,
+      392,
+      553
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        136
+      ],
+      [
+        465,
+        553
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-briefing",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 165640,
+    "percent": 17.12,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        148
+      ],
+      [
+        839,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-choice",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 165640,
+    "percent": 17.12,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        148
+      ],
+      [
+        839,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-place-1",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 165640,
+    "percent": 17.12,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        148
+      ],
+      [
+        839,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-place-2",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 165640,
+    "percent": 17.12,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        148
+      ],
+      [
+        839,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-place-3",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 165640,
+    "percent": 17.12,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        148
+      ],
+      [
+        839,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-place-4",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 165640,
+    "percent": 17.12,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        148
+      ],
+      [
+        839,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "compact-boat-alva-inspection-auto",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 165640,
+    "percent": 17.12,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        148
+      ],
+      [
+        839,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-briefing",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-choice",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-inspection-entrance",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-inspection-alphabet",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-inspection-keeper",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-camera-alva-inspection-wms",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-briefing",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-choice",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-inspection-entrance",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-inspection-alphabet",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-inspection-keeper",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-socks-alva-inspection-wms",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-briefing",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-choice",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-inspection-entrance",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-inspection-alphabet",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-inspection-keeper",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "inventory-boat-alva-inspection-wms",
+    "width": 820,
+    "height": 1180,
+    "redPixels": 129560,
+    "percent": 13.39,
+    "bbox": [
+      0,
+      48,
+      819,
+      939
+    ],
+    "fullWidthBands": [
+      [
+        48,
+        126
+      ],
+      [
+        861,
+        939
+      ]
+    ]
+  }
+]

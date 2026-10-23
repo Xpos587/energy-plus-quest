@@ -1,0 +1,27 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-green-loop-2026-10-05/assembly/segment-2b.mp4",
+  "cleanup": true,
+  "model": "gemini-3-flash-preview",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 208,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 2749,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 109
+      },
+      {
+        "modality": "VIDEO",
+        "token_count": 2640
+      }
+    ],
+    "thoughts_token_count": 2058,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 5015,
+    "traffic_type": null
+  }
+}

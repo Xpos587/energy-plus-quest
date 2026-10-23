@@ -1,0 +1,25 @@
+{
+  "route_roots_compared": [
+    "truck-1-tractor",
+    "truck-1-trailer",
+    "truck-2-tractor",
+    "truck-2-trailer",
+    "truck-3-tractor",
+    "truck-3-trailer",
+    "truck-4-tractor",
+    "truck-4-trailer"
+  ],
+  "frames_compared": [
+    1,
+    48,
+    96,
+    144,
+    192
+  ],
+  "root_world_matrices_exactly_equal": true,
+  "camera_world_matrix_exactly_equal": true,
+  "worldspace_unparented_puffs": 22,
+  "stack_emission_checks": 22,
+  "max_stack_emission_error_world_units": 0.0,
+  "old_plumes_hidden": true
+}

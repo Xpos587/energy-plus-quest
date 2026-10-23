@@ -1,0 +1,56 @@
+[
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "a",
+    "file": "frames/mobile-a-boat-focus-rush.png",
+    "choiceStillOpen": true
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "b",
+    "file": "frames/mobile-b-boat-focus-rush.png",
+    "choiceStillOpen": true
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "c",
+    "file": "frames/mobile-c-boat-focus-rush.png",
+    "choiceStillOpen": true
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "a",
+    "file": "frames/desktop-a-boat-focus-rush.png",
+    "choiceStillOpen": true
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "b",
+    "file": "frames/desktop-b-boat-focus-rush.png",
+    "choiceStillOpen": true
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "c",
+    "file": "frames/desktop-c-boat-focus-rush.png",
+    "choiceStillOpen": true
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:11:09.460746Z",
+    "display_name": "Nano Banana Pro",
+    "id": "6b98aa27-6fdb-408e-846a-71cbdad701cc",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_091109_6b98aa27-6fdb-408e-846a-71cbdad701cc_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "57942835-0a50-4192-9f5b-4f9a00cdecf3",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/57942835-0a50-4192-9f5b-4f9a00cdecf3.webp"
+        }
+      ],
+      "prompt": "Edit this exact picture, preserve both workers, their expressions, their clothing, dock, background, camera and polished 2D drawing. Fix ONLY departing barge cargo: it must already carry LARGE BUNDLES OF STEEL PIPES tied down along deck, PLUS the modest gift carton. The barge cannot have an otherwise empty deck. Make barge longer if needed while preserving realistic proportions. Keep the separate delayed pipes on quay as well. No added labels.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_091109_6b98aa27-6fdb-408e-846a-71cbdad701cc.png",
+    "status": "completed"
+  }
+]

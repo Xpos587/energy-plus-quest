@@ -1,0 +1,61 @@
+{
+  "baseline_seconds": 11.875,
+  "optimized_seconds": 9.609,
+  "seconds_saved": 2.266,
+  "measured_percent_reduction": 19.082,
+  "visible_image_normalized_rmse_over_neutral": 0.000322474,
+  "alpha_normalized_rmse": 1.22541e-06,
+  "visual_inspection": "Green pair and truck surface treatment unchanged at native pixels; differences negligible on neutral composition.",
+  "shadow_overflow_after_optimization": false,
+  "remaining_blue_human_paint": {
+    "mesh": "PILOT 2 reconstructed near-cab",
+    "material_slot_zero_based": 1,
+    "material": "PILOT 2 projected paint 1",
+    "texture": "crew-cab-paint-0.png",
+    "projected_view": 0,
+    "face_indices": [
+      1181,
+      1153,
+      926
+    ],
+    "render_pixels_4k_frame769": [
+      [
+        1356,
+        434
+      ],
+      [
+        1356,
+        436
+      ],
+      [
+        1356,
+        438
+      ],
+      [
+        1356,
+        440
+      ]
+    ],
+    "source_texture_pixels": [
+      [
+        235.97455,
+        461.94332
+      ],
+      [
+        237.99822,
+        470.01123
+      ],
+      [
+        239.74304,
+        478.39499
+      ],
+      [
+        240.37426,
+        488.0249
+      ]
+    ],
+    "cause": "Opaque native glazing overlay leaves a visible edge of the imported textured windshield; original painted right-hand crew head remains there."
+  },
+  "textures_modified": false,
+  "full_animation_rendered": false
+}

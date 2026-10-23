@@ -1,0 +1,13 @@
+.unavailable {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  margin-top: 0;
+  color: #526b7f;
+  font-size: 14px;
+  line-height: 1.35;
+}
+.unavailable small {
+  font-size: 12px;
+}

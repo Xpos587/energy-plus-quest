@@ -1,0 +1,202 @@
+[
+  {
+    "name": "small",
+    "phase": "intro",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 320,
+      "height": 280
+    },
+    "image": {
+      "x": 0,
+      "y": 30.890625,
+      "width": 320,
+      "height": 399.84375
+    },
+    "covers": true
+  },
+  {
+    "name": "small",
+    "phase": "choice",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 320,
+      "height": 223.40625
+    },
+    "image": {
+      "x": 0,
+      "y": 30.890625,
+      "width": 320,
+      "height": 399.84375
+    },
+    "covers": true
+  },
+  {
+    "name": "phone",
+    "phase": "intro",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 390,
+      "height": 509.046875
+    },
+    "image": {
+      "x": -8.6875,
+      "y": 48,
+      "width": 407.375,
+      "height": 509.046875
+    },
+    "covers": true
+  },
+  {
+    "name": "phone",
+    "phase": "choice",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 390,
+      "height": 255.78125
+    },
+    "image": {
+      "x": 0,
+      "y": 27.15625,
+      "width": 390,
+      "height": 487.3125
+    },
+    "covers": true
+  },
+  {
+    "name": "tall",
+    "phase": "intro",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 412,
+      "height": 567
+    },
+    "image": {
+      "x": -40.6875,
+      "y": 48,
+      "width": 453.75,
+      "height": 567
+    },
+    "covers": true
+  },
+  {
+    "name": "tall",
+    "phase": "choice",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 48,
+      "width": 412,
+      "height": 324.09375
+    },
+    "image": {
+      "x": 0,
+      "y": 25.96875,
+      "width": 412,
+      "height": 514.8125
+    },
+    "covers": true
+  },
+  {
+    "name": "desktop",
+    "phase": "intro",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1080,
+      "height": 844
+    },
+    "image": {
+      "x": 0,
+      "y": -1.75,
+      "width": 1080,
+      "height": 1349.515625
+    },
+    "covers": true
+  },
+  {
+    "name": "desktop",
+    "phase": "choice",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1020,
+      "height": 844
+    },
+    "image": {
+      "x": 0,
+      "y": 1.46875,
+      "width": 1020,
+      "height": 1274.53125
+    },
+    "covers": true
+  },
+  {
+    "name": "wide",
+    "phase": "intro",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1500,
+      "height": 1024
+    },
+    "image": {
+      "x": 0,
+      "y": -24.203125,
+      "width": 1500,
+      "height": 1874.328125
+    },
+    "covers": true
+  },
+  {
+    "name": "wide",
+    "phase": "choice",
+    "count": 1,
+    "src": "https://energy-plus-quest.hypcat.net/scene-art/barge-family-v1/choice-neutral-tall-v6.webp",
+    "mask": "none",
+    "stage": {
+      "x": 0,
+      "y": 56,
+      "width": 1500,
+      "height": 1024
+    },
+    "image": {
+      "x": 0,
+      "y": -24.203125,
+      "width": 1500,
+      "height": 1874.328125
+    },
+    "covers": true
+  }
+]

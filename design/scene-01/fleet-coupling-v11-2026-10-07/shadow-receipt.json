@@ -1,0 +1,21 @@
+{
+  "source": "fleet-v11-coupling.blend",
+  "method": "actual relocated fleet geometry Cycles shadow catcher; source hide_render preserved",
+  "sun_angle_degrees": 8,
+  "alpha_scale": 0.6,
+  "tint_srgb": [
+    83,
+    91,
+    96
+  ],
+  "frames": [
+    1,
+    385,
+    769
+  ],
+  "samples": 48,
+  "dimensions": [
+    1920,
+    1334
+  ]
+}

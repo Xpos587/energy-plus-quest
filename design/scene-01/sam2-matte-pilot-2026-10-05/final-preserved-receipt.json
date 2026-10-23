@@ -1,0 +1,58 @@
+{
+  "status": "processing finished; visual review stopped by user approach change",
+  "no_active_jobs": true,
+  "no_further_jobs": "STOP_GREEN_BLUE sentinel saved",
+  "source_rgb_retained_exactly": true,
+  "source_camera_retained": true,
+  "native_dimensions": [
+    1280,
+    720
+  ],
+  "indexing": "zero-based 0000..0120",
+  "preserved_completed_sequences": {
+    "red3-0": "video-layers/%04d.png",
+    "remaining_red4_yellow5": "{red,yellow}-{0-1,1-mid,mid-2,2-3,3-0}/layers/%04d.png; red3-0 stays original root",
+    "green5_blue4": "{green-1,green-2a,green-2b,green-3,green-4,blue-0,blue-1,blue-2,blue-3}/layers/%04d.png"
+  },
+  "frames_per_sequence": 121,
+  "sequence_count": 19,
+  "rgba_frame_count": 2299,
+  "receipts": [
+    "pilot-receipt.json",
+    "tracking-receipt.json",
+    "batch-tracking-receipt.json",
+    "green-blue-receipt.json"
+  ],
+  "timing_seconds": {
+    "red3-0": 50.841,
+    "remaining_red4_yellow5": 421.319,
+    "green5_blue4": 436.267
+  },
+  "visually_inspected_native_quarter_contacts": [
+    "red0-1",
+    "red1-mid",
+    "redmid-2",
+    "red2-3",
+    "yellow0-1",
+    "yellow1-mid",
+    "yellowmid-2",
+    "yellow2-3",
+    "yellow3-0",
+    "green1",
+    "green2a"
+  ],
+  "six_anchor_inspection": [
+    "red3-0"
+  ],
+  "saved_but_not_fully_visually_inspected": [
+    "green2b",
+    "green3",
+    "green4",
+    "blue0",
+    "blue1",
+    "blue2",
+    "blue3"
+  ],
+  "review_pass_claimed": false,
+  "production_assets_modified": false
+}

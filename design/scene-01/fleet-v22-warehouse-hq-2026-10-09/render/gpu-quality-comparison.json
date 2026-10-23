@@ -1,0 +1,32 @@
+[
+  {
+    "frame": 1,
+    "rgba_dimensions": [
+      2668,
+      3840,
+      4
+    ],
+    "visible_union_mean_abs_premultiplied_rgb": 0.09794207350425106,
+    "visible_union_mean_abs_alpha": 0.06622733896057865
+  },
+  {
+    "frame": 384,
+    "rgba_dimensions": [
+      2668,
+      3840,
+      4
+    ],
+    "visible_union_mean_abs_premultiplied_rgb": 0.15964939424936633,
+    "visible_union_mean_abs_alpha": 0.2851158152592159
+  },
+  {
+    "frame": 768,
+    "rgba_dimensions": [
+      2668,
+      3840,
+      4
+    ],
+    "visible_union_mean_abs_premultiplied_rgb": 0.1022420010118476,
+    "visible_union_mean_abs_alpha": 0.055629401845055056
+  }
+]

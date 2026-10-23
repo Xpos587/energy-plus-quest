@@ -1,0 +1,85 @@
+{
+  "method": "Lossless WebP; dimensions and decoded RGBA bytes compared without hashes",
+  "results": [
+    {
+      "id": "F0086",
+      "status": "compressed",
+      "before": 42053036,
+      "after": 24372984,
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "hasAlpha": false,
+      "decodedPixelsEqual": true,
+      "previous": "public/flowers-2pass-2026-10-20/F0086-v1.png",
+      "master": "public/flowers-2pass-2026-10-20/F0086-v1.webp",
+      "seconds": 57.485
+    },
+    {
+      "id": "F0114",
+      "status": "compressed",
+      "before": 32367955,
+      "after": 22151810,
+      "dimensions": [
+        8192,
+        3276
+      ],
+      "hasAlpha": false,
+      "decodedPixelsEqual": true,
+      "previous": "public/flowers-2pass-2026-10-20/F0114-v1.png",
+      "master": "public/flowers-2pass-2026-10-20/F0114-v1.webp",
+      "seconds": 50.028
+    },
+    {
+      "id": "F0087",
+      "status": "compressed",
+      "before": 49875361,
+      "after": 29309342,
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "hasAlpha": false,
+      "decodedPixelsEqual": true,
+      "previous": "public/flowers-2pass-2026-10-20/F0087-v1.png",
+      "master": "public/flowers-2pass-2026-10-20/F0087-v1.webp",
+      "seconds": 68.053
+    },
+    {
+      "id": "F0088",
+      "status": "compressed",
+      "before": 45063080,
+      "after": 27014646,
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "hasAlpha": false,
+      "decodedPixelsEqual": true,
+      "previous": "public/flowers-2pass-2026-10-20/F0088-v1.png",
+      "master": "public/flowers-2pass-2026-10-20/F0088-v1.webp",
+      "seconds": 72.14
+    },
+    {
+      "id": "F0089",
+      "status": "compressed",
+      "before": 49766247,
+      "after": 30839984,
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "hasAlpha": false,
+      "decodedPixelsEqual": true,
+      "previous": "public/flowers-2pass-2026-10-20/F0089-v1.png",
+      "master": "public/flowers-2pass-2026-10-20/F0089-v1.webp",
+      "seconds": 71.806
+    }
+  ],
+  "wallSeconds": 319.515,
+  "stopped": "Bounded compression stopped. Five conversions completed before the stop signal; all remaining PNGs retained. No partial candidate retained.",
+  "beforeCompletedBytes": 219125679,
+  "afterCompletedBytes": 133688766,
+  "savedBytes": 85436913
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "frame": 1,
+    "dimensions": [
+      1920,
+      1334
+    ],
+    "nonzero_alpha_pixels": 237359,
+    "max_alpha": 144,
+    "tint_exact": true,
+    "alpha_exact": true
+  },
+  {
+    "frame": 385,
+    "dimensions": [
+      1920,
+      1334
+    ],
+    "nonzero_alpha_pixels": 240565,
+    "max_alpha": 145,
+    "tint_exact": true,
+    "alpha_exact": true
+  },
+  {
+    "frame": 769,
+    "dimensions": [
+      1920,
+      1334
+    ],
+    "nonzero_alpha_pixels": 236718,
+    "max_alpha": 144,
+    "tint_exact": true,
+    "alpha_exact": true
+  }
+]

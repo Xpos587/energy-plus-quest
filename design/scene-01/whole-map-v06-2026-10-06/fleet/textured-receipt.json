@@ -1,0 +1,117 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/truck-native-quality-2026-10-05/image-to-3d/green-tractor-detailed.blend",
+  "records": [
+    {
+      "truck": 1,
+      "object": "V02 DETAILED 1 complete tractor",
+      "hidden_original_tractor_meshes": 81,
+      "uniform_scale": 2.2,
+      "rotation_z": 3.141592653589793,
+      "location": [
+        -0.6110931634902954,
+        0.0,
+        1.2881460189819336
+      ],
+      "roof_above_z": 0.35,
+      "roof_factor": 0.88,
+      "driver_texture_count": 1,
+      "materials_copied": 2
+    },
+    {
+      "truck": 2,
+      "object": "V02 DETAILED 2 complete tractor",
+      "hidden_original_tractor_meshes": 82,
+      "uniform_scale": 2.2,
+      "rotation_z": 3.141592653589793,
+      "location": [
+        -0.6110931634902954,
+        0.0,
+        1.2881460189819336
+      ],
+      "roof_above_z": 0.35,
+      "roof_factor": 1,
+      "driver_texture_count": 1,
+      "materials_copied": 2
+    },
+    {
+      "truck": 3,
+      "object": "V02 DETAILED 3 complete tractor",
+      "hidden_original_tractor_meshes": 82,
+      "uniform_scale": 2.2,
+      "rotation_z": 3.141592653589793,
+      "location": [
+        -0.6110931634902954,
+        0.0,
+        1.2881460189819336
+      ],
+      "roof_above_z": 0.35,
+      "roof_factor": 1,
+      "driver_texture_count": 2,
+      "materials_copied": 2
+    },
+    {
+      "truck": 4,
+      "object": "V02 DETAILED 4 complete tractor",
+      "hidden_original_tractor_meshes": 81,
+      "uniform_scale": 2.2,
+      "rotation_z": 3.141592653589793,
+      "location": [
+        -0.6110931634902954,
+        0.0,
+        1.2881460189819336
+      ],
+      "roof_above_z": 0.35,
+      "roof_factor": 0.8,
+      "driver_texture_count": 1,
+      "materials_copied": 2
+    }
+  ],
+  "root_matrix_max_delta": 0.0,
+  "camera_matrix": [
+    [
+      0.9968152642250061,
+      -0.06695909798145294,
+      0.04331028088927269,
+      1.7741494178771973
+    ],
+    [
+      0.07974522560834885,
+      0.8369886875152588,
+      -0.5413784980773926,
+      -84.67687225341797
+    ],
+    [
+      1.8925381262135943e-09,
+      0.5431081652641296,
+      0.8396627306938171,
+      131.3314208984375
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "frames": [
+    1,
+    769
+  ],
+  "dimensions": [
+    1920,
+    1334
+  ],
+  "single_reference": "design/scene-01/cab-detail-pilot-2026-10-05/single-driver-detail-reference.png",
+  "single_reference_crop": [
+    455,
+    229,
+    338,
+    150
+  ],
+  "windshield_method": "reuse permanent shader and UV projection from restore_driver_detail.py; swap only windshield material texture",
+  "limitations": [
+    "Red/yellow use modern detailed source with roof compression and pigment change; exact historical cab shapes not reconstructed.",
+    "Drivers are windshield textures, not volumetric people.",
+    "Trailer geometry retained unchanged."
+  ]
+}

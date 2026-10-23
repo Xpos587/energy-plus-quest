@@ -1,0 +1,40 @@
+[
+  {
+    "created_at": "2026-10-04T17:51:22.544199Z",
+    "display_name": "Google Veo 3.1 Lite",
+    "id": "bbb7096e-814e-4980-bb2a-8bc847630ac2",
+    "job_type": "veo3_1_lite",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "duration": 8,
+      "generate_audio": false,
+      "height": 768,
+      "medias": [
+        {
+          "data": {
+            "id": "9cd2af74-6d6e-4422-9ce9-245b939ed164",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/9cd2af74-6d6e-4422-9ce9-245b939ed164.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "500192e4-4349-4b4f-bc57-db2ff222d423",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/500192e4-4349-4b4f-bc57-db2ff222d423.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "prompt": "Locked aerial camera. A single green semi truck performs ONE smooth 90-degree left turn, going from downward on screen to rightward on screen. It starts straight on the vertical street, drives forward to the junction, turns toward screen right and finishes straight on the horizontal street in exactly the supplied end position. Real articulated vehicle mechanics: the green tractor steers first, the long white semitrailer stays rigid and follows through the fifth-wheel hitch, with rear wheels tracing a tighter curve. The angle between cab and trailer changes gradually. The trailer is a rigid rectangular box with perfectly straight side edges throughout; NEVER bend, stretch or curve the trailer body. Do not spin the whole vehicle rigidly around its center. Only one cab and one trailer; no splitting or duplicate vehicles. All wheels stay on asphalt, no driving through buildings or sidewalks. No reversing, second turn or loops. Preserve vehicle size and original illustrated colors, fixed buildings and fixed camera. No camera tracking, zoom, scene transitions or cut. End after completing this one turn, completely straightened, before the next intersection.",
+      "resolution": "720p",
+      "seed": 543478,
+      "width": 1344
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_175122_bbb7096e-814e-4980-bb2a-8bc847630ac2.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_175122_bbb7096e-814e-4980-bb2a-8bc847630ac2_thumbnail.webp"
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "color": "red",
+  "gate": "REJECTED alpha: source3-0 loses trailer and includes curb0.5\u20131.25s; source2-3 includes curb3.5\u20134.25s. Technical output only, not for fleet.",
+  "frames": 546,
+  "fps": 24,
+  "duration_seconds": 22.75,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "trim": {
+    "1-mid": "Retain source54..119; remove2.25s initial hold"
+  },
+  "seams": [
+    {
+      "from": "0-1",
+      "to": "1-mid",
+      "raw_step_px": 12.130627829420531,
+      "corrected_step_px": 0.2591959841945606,
+      "previous_step_px": 5.103551531445043,
+      "next_step_px": 0.33750873510886387,
+      "ordinary_median_step_px": 2.543631634751182
+    },
+    {
+      "from": "1-mid",
+      "to": "mid-2",
+      "raw_step_px": 3.8910386143007227,
+      "corrected_step_px": 0.718633816593778,
+      "previous_step_px": 1.0954824343149896,
+      "next_step_px": 0.5452952609367774,
+      "ordinary_median_step_px": 0.9915629646150611
+    },
+    {
+      "from": "mid-2",
+      "to": "2-3",
+      "raw_step_px": 1.2453384615209957,
+      "corrected_step_px": 4.324397383565673,
+      "previous_step_px": 0.9361357383717439,
+      "next_step_px": 1.5496878026667311,
+      "ordinary_median_step_px": 1.4308086203087598
+    },
+    {
+      "from": "2-3",
+      "to": "3-0",
+      "raw_step_px": 9.387278052028428,
+      "corrected_step_px": 2.8926089259250793,
+      "previous_step_px": 4.605257540931292,
+      "next_step_px": 2.3263796535015633,
+      "ordinary_median_step_px": 3.4958225978173196
+    },
+    {
+      "from": "3-0",
+      "to": "0-1",
+      "raw_step_px": 8.878352336258638,
+      "corrected_step_px": 2.0606498904521757,
+      "previous_step_px": 2.5540144118248294,
+      "next_step_px": 2.216884778957161,
+      "ordinary_median_step_px": 3.3560510308871208
+    }
+  ],
+  "max_translation_px": 12.750632253518207,
+  "ramp_frames": 24,
+  "scale": 1,
+  "rotation": 0,
+  "deformation": false,
+  "crossfade": false,
+  "cab_opacity_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "source": "painted-vehicles-pilot.blend",
+  "change": "Opaque nonglossy blue glass; existing driver meshes moved into shallow native relief on windshield to avoid enclosed cab hiding figures and transparent crypto stipple. This is stylized illustration, not physically seated interior placement.",
+  "head_counts": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "routes_and_camera": "unchanged",
+  "frames": [
+    1,
+    97,
+    385
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "assetId": "F0111",
+  "source": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-alva.webp",
+  "decision": "accepted_for_runtime",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "generalReview": "Original tall source/full final preview and9detail panels inspected; transport, ship, settlement, ice and shoreline positions preserved. Appended final foliage junction repair inspected.",
+  "nativeStatus": "P1 accepted9, P2 accepted8",
+  "ownerReceipt": "docs/reviews/lastmile-2026-10-20-flowers/prepared/lastmile-02/review-decision.json",
+  "registrationAudit": "docs/reviews/flowers-all-2026-10-20/registration-full-audit-2026-10-21.json",
+  "limitations": [
+    "Source-protected recipient face remains softer",
+    "Localized foliage softness remains; no uniform recovered-detail claim",
+    "Not native full-scene8192; technical acceptance only"
+  ],
+  "runtimeVerification": "pending actual4344 before/after currentSrc/decode/DPR"
+}

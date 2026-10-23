@@ -1,0 +1,126 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/fleet-v08-finished.blend",
+  "artwork": "design/scene-01/fleet-style-v08-2026-10-07/projected/textures/green-painted.png",
+  "projection_camera_local": {
+    "location": [
+      11.0,
+      -8.0,
+      7.0
+    ],
+    "target": [
+      0.25,
+      0.0,
+      1.649999976158142
+    ],
+    "ortho_scale": 6.5,
+    "image_aspect": 1
+  },
+  "records": [
+    {
+      "truck": 1,
+      "painted_body_polygons": 3968,
+      "clean_windshield_trim_polygons": 1600,
+      "clean_nontyre_rear_hardware_polygons": 0,
+      "driver_material_polygons_excluded": 118,
+      "rear_lower_region_polygons_excluded": 52120,
+      "uv": "V09 fixed painted cab projection",
+      "original_uv_active_index_preserved": 0,
+      "geometry_vertex_delta": 0
+    },
+    {
+      "truck": 2,
+      "painted_body_polygons": 3803,
+      "clean_windshield_trim_polygons": 1600,
+      "clean_nontyre_rear_hardware_polygons": 0,
+      "driver_material_polygons_excluded": 118,
+      "rear_lower_region_polygons_excluded": 52120,
+      "uv": "V09 fixed painted cab projection",
+      "original_uv_active_index_preserved": 0,
+      "geometry_vertex_delta": 0
+    },
+    {
+      "truck": 3,
+      "painted_body_polygons": 3803,
+      "clean_windshield_trim_polygons": 1600,
+      "clean_nontyre_rear_hardware_polygons": 0,
+      "driver_material_polygons_excluded": 118,
+      "rear_lower_region_polygons_excluded": 52120,
+      "uv": "V09 fixed painted cab projection",
+      "original_uv_active_index_preserved": 0,
+      "geometry_vertex_delta": 0
+    },
+    {
+      "truck": 4,
+      "painted_body_polygons": 4007,
+      "clean_windshield_trim_polygons": 1600,
+      "clean_nontyre_rear_hardware_polygons": 0,
+      "driver_material_polygons_excluded": 118,
+      "rear_lower_region_polygons_excluded": 52120,
+      "uv": "V09 fixed painted cab projection",
+      "original_uv_active_index_preserved": 0,
+      "geometry_vertex_delta": 0
+    }
+  ],
+  "frames_verified": 1152,
+  "roots": 8,
+  "max_root_matrix_delta": 0.0,
+  "geometry_delta": 0,
+  "camera_preserved": true,
+  "actions": {
+    "truck-1-tractor": "truck-1-tractorAction",
+    "truck-1-trailer": "truck-1-trailerAction",
+    "truck-2-tractor": "truck-2-tractorAction",
+    "truck-2-trailer": "truck-2-trailerAction",
+    "truck-3-tractor": "truck-3-tractorAction",
+    "truck-3-trailer": "truck-3-trailerAction",
+    "truck-4-tractor": "truck-4-tractorAction",
+    "truck-4-trailer": "truck-4-trailerAction"
+  },
+  "driver_slots": "Existing material slot1 unchanged; no image changes or UV overrides.",
+  "registration_fit": {
+    "uv_u_scale": 1.18,
+    "uv_u_offset": -0.076,
+    "uv_v_scale": 1.1,
+    "uv_v_offset": -0.066,
+    "reason": "Generated painting expands cab right and downward; roof and frontal lower-body anchors fit back onto native geometry."
+  },
+  "windshield_margin_exclusion": "Front x<-.90 and model z between0 and.40 upper brow gets clean slate, lower sill gets body pigment; center border retains original base. Generated paintedpeople never projected there.",
+  "method": "Matched canonical green mesh indices yield fixed per-loop cab UVs on each existing real mesh; subset visibility chosen in canonical object space. No image plane, no billboard, no runtime camera projection.",
+  "limitations": [
+    "Projection covers reference-visible front/near-side/roof only. Opposite sides retain original light shader.",
+    "Painted reflections are baked in canonical illustration; native geometry and object rotation remain real.",
+    "Source photogrammetry mesh has jagged windshield sill, mirror seam and lower front tear/triangle boundaries. Materials and UV projection cannot heal that silhouette while geometry is frozen.",
+    "Source tyres and rear hardware retain noisy atlas details: projection deliberately excludes these unsupported areas.",
+    "Whole-mesh clean hardware material trial rejected after visible triangular material patches. Final candidate retains source hardware.",
+    "Generated image expanded cab horizontally/downwards; manual fixed UV affine fit corrects major registration but small outline and hatch offsets remain.",
+    "Opposite side retains native colored material without projected artwork; seen in green-opposite-side.png."
+  ],
+  "render_frames": [
+    1,
+    385,
+    769
+  ],
+  "final_build_script": "project_registration_v4.py",
+  "visual_status": "Bounded illustration projection pilot; not approved final visual quality.",
+  "color_treatment": {
+    "paint_saturation": 1.12,
+    "emission_strength": 1.0,
+    "emission_mix": 0.95,
+    "purpose": "Retain artwork color without repeated scene shading washing pigment."
+  },
+  "exports": {
+    "fleet": [
+      "vehicles-0001.png",
+      "vehicles-0385.png",
+      "vehicles-0769.png"
+    ],
+    "front": [
+      "front-1.png",
+      "front-2.png",
+      "front-3.png",
+      "front-4.png"
+    ],
+    "contact": "front-contact-sheet.png",
+    "opposite": "green-opposite-side.png"
+  }
+}

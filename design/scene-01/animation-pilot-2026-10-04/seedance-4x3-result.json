@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-10-04T14:30:04.341831Z",
+    "display_name": "Seedance 1.5 Pro",
+    "id": "47f5be01-b3d9-4f09-bfdf-2ca9016b2f6c",
+    "job_type": "seedance1_5",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "4:3",
+      "duration": 4,
+      "fixed_lens": false,
+      "generate_audio": false,
+      "height": 720,
+      "medias": [
+        {
+          "data": {
+            "id": "b467a695-dff7-48ea-b809-3591bb962fd7",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/b467a695-dff7-48ea-b809-3591bb962fd7.png"
+          },
+          "role": "start_image"
+        }
+      ],
+      "prompt": "Locked overhead camera. The only green truck drives smoothly straight down its existing road lane, moving only half a cab length during the entire shot. Cabin and trailer stay straight, same shape and size. Exactly two men remain visible behind the windshield, one steering wheel. Completely static buildings road trees and camera. Preserve this precise clean 2D illustration and all colors. No pan, no zoom, no tracking camera, no turn, no cuts, no new vehicles. Silent.",
+      "resolution": "720p",
+      "seed": 913944,
+      "width": 960
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_143004_47f5be01-b3d9-4f09-bfdf-2ca9016b2f6c.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_143004_47f5be01-b3d9-4f09-bfdf-2ca9016b2f6c_thumbnail.webp"
+  }
+]

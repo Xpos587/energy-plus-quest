@@ -1,0 +1,285 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-exhaust-v17-2026-10-08/fleet-v17-exhaust.blend",
+  "parts": [
+    {
+      "truck": 1,
+      "part": 7,
+      "polygons": 84,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 6,
+      "polygons": 82,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 5,
+      "polygons": 28,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 4,
+      "polygons": 656,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 3,
+      "polygons": 1497,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 2,
+      "polygons": 748,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 19,
+      "polygons": 12,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 18,
+      "polygons": 4,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 17,
+      "polygons": 558,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 16,
+      "polygons": 882,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 15,
+      "polygons": 74,
+      "driver_panel_faces": 24
+    },
+    {
+      "truck": 1,
+      "part": 14,
+      "polygons": 48,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 13,
+      "polygons": 200,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 12,
+      "polygons": 288,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 11,
+      "polygons": 272,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 1,
+      "part": 10,
+      "polygons": 2494,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 7,
+      "polygons": 84,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 6,
+      "polygons": 82,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 5,
+      "polygons": 28,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 4,
+      "polygons": 656,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 3,
+      "polygons": 1497,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 2,
+      "polygons": 748,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 19,
+      "polygons": 12,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 18,
+      "polygons": 4,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 17,
+      "polygons": 558,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 16,
+      "polygons": 882,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 15,
+      "polygons": 74,
+      "driver_panel_faces": 24
+    },
+    {
+      "truck": 4,
+      "part": 14,
+      "polygons": 48,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 13,
+      "polygons": 200,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 12,
+      "polygons": 288,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 11,
+      "polygons": 272,
+      "driver_panel_faces": 0
+    },
+    {
+      "truck": 4,
+      "part": 10,
+      "polygons": 2494,
+      "driver_panel_faces": 0
+    }
+  ],
+  "hidden_old_cab_objects": [
+    "V02 DETAILED 1 complete tractor",
+    "V09 CLEAN 1 continuous cab sill",
+    "V09 CLEAN 1 mirror housing -1",
+    "V09 CLEAN 1 mirror housing 1",
+    "V09 CLEAN 1 mirror mounting stem -1",
+    "V09 CLEAN 1 mirror mounting stem 1",
+    "V09 CLEAN 1 windshield side facing -1",
+    "V09 CLEAN 1 windshield side facing 1",
+    "V14 1 rolled wheel arch -1 0",
+    "V14 1 rolled wheel arch -1 1",
+    "V14 1 rolled wheel arch -1 10",
+    "V14 1 rolled wheel arch -1 11",
+    "V14 1 rolled wheel arch -1 12",
+    "V14 1 rolled wheel arch -1 13",
+    "V14 1 rolled wheel arch -1 14",
+    "V14 1 rolled wheel arch -1 15",
+    "V14 1 rolled wheel arch -1 2",
+    "V14 1 rolled wheel arch -1 3",
+    "V14 1 rolled wheel arch -1 4",
+    "V14 1 rolled wheel arch -1 5",
+    "V14 1 rolled wheel arch -1 6",
+    "V14 1 rolled wheel arch -1 7",
+    "V14 1 rolled wheel arch -1 8",
+    "V14 1 rolled wheel arch -1 9",
+    "V14 1 rolled wheel arch 1 0",
+    "V14 1 rolled wheel arch 1 1",
+    "V14 1 rolled wheel arch 1 10",
+    "V14 1 rolled wheel arch 1 11",
+    "V14 1 rolled wheel arch 1 12",
+    "V14 1 rolled wheel arch 1 13",
+    "V14 1 rolled wheel arch 1 14",
+    "V14 1 rolled wheel arch 1 15",
+    "V14 1 rolled wheel arch 1 2",
+    "V14 1 rolled wheel arch 1 3",
+    "V14 1 rolled wheel arch 1 4",
+    "V14 1 rolled wheel arch 1 5",
+    "V14 1 rolled wheel arch 1 6",
+    "V14 1 rolled wheel arch 1 7",
+    "V14 1 rolled wheel arch 1 8",
+    "V14 1 rolled wheel arch 1 9",
+    "V14 1 seated lower windshield gasket",
+    "V02 DETAILED 4 complete tractor",
+    "V09 CLEAN 4 continuous cab sill",
+    "V09 CLEAN 4 mirror housing -1",
+    "V09 CLEAN 4 mirror housing 1",
+    "V09 CLEAN 4 mirror mounting stem -1",
+    "V09 CLEAN 4 mirror mounting stem 1",
+    "V09 CLEAN 4 windshield side facing -1",
+    "V09 CLEAN 4 windshield side facing 1",
+    "V14 4 rolled wheel arch -1 0",
+    "V14 4 rolled wheel arch -1 1",
+    "V14 4 rolled wheel arch -1 10",
+    "V14 4 rolled wheel arch -1 11",
+    "V14 4 rolled wheel arch -1 12",
+    "V14 4 rolled wheel arch -1 13",
+    "V14 4 rolled wheel arch -1 14",
+    "V14 4 rolled wheel arch -1 15",
+    "V14 4 rolled wheel arch -1 2",
+    "V14 4 rolled wheel arch -1 3",
+    "V14 4 rolled wheel arch -1 4",
+    "V14 4 rolled wheel arch -1 5",
+    "V14 4 rolled wheel arch -1 6",
+    "V14 4 rolled wheel arch -1 7",
+    "V14 4 rolled wheel arch -1 8",
+    "V14 4 rolled wheel arch -1 9",
+    "V14 4 rolled wheel arch 1 0",
+    "V14 4 rolled wheel arch 1 1",
+    "V14 4 rolled wheel arch 1 10",
+    "V14 4 rolled wheel arch 1 11",
+    "V14 4 rolled wheel arch 1 12",
+    "V14 4 rolled wheel arch 1 13",
+    "V14 4 rolled wheel arch 1 14",
+    "V14 4 rolled wheel arch 1 15",
+    "V14 4 rolled wheel arch 1 2",
+    "V14 4 rolled wheel arch 1 3",
+    "V14 4 rolled wheel arch 1 4",
+    "V14 4 rolled wheel arch 1 5",
+    "V14 4 rolled wheel arch 1 6",
+    "V14 4 rolled wheel arch 1 7",
+    "V14 4 rolled wheel arch 1 8",
+    "V14 4 rolled wheel arch 1 9",
+    "V14 4 seated lower windshield gasket"
+  ],
+  "baseline_object_matrices_mesh_vertex_counts_and_other_visibility_unchanged": true,
+  "existing_driver_image_reprojected_onto_actual_split_glass": true,
+  "source_to_root_transform": "x=-0.64*(x+3.80)+0.80; y=-0.64*y; z=0.64*(z-0.893)+0.355",
+  "geometry_validation_errors": []
+}

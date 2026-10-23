@@ -1,0 +1,17 @@
+{
+  "frame": 769,
+  "native_render_dimensions": [3840, 2667],
+  "native_green_crop": "repaired-stills/4k-green-native-crop.png",
+  "native_blue_crop": "repaired-stills/4k-blue-native-crop.png",
+  "upscaled": false,
+  "green_observation": "Two separate warm-colored heads and two upper bodies are clearly visible in the front windshield at native 4K pixels.",
+  "blue_observation": "Oblique view shows one procedural relief edge, but residual painted side-window details make exactly one human uncertain from this frame.",
+  "render_wall_seconds": 11.875,
+  "runtime_warning": "EEVEE shadow buffer full, 2158/2048 and 2159/2048 pages; Blender reports possible missing shadows and lower performance.",
+  "pipeline_limits": [
+    "Cryptomatte vehicle extraction still renders the complete city beauty pass for occlusion, including static-city lighting/shadow work.",
+    "Cab surface detail comes from archived camera-projected textures; increasing output pixels does not create new source texture detail.",
+    "Blue one-driver overlay remains a separate simplified native relief rather than a matched painted human portrait."
+  ],
+  "full_animation_rendered": false
+}

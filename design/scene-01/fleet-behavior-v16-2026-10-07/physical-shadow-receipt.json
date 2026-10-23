@@ -1,0 +1,22 @@
+{
+  "method": "Cycles actual mesh shadow catcher including tyre contact and fifth wheel",
+  "samples": 8,
+  "sun": [
+    -40,
+    35,
+    70
+  ],
+  "sun_angle_deg": 9,
+  "sky_fill": 0.9,
+  "resolution_percentage": 50,
+  "timings": [
+    {
+      "frame": 385,
+      "seconds": 7.450702955000452
+    },
+    {
+      "frame": 1,
+      "seconds": 7.352100533000339
+    }
+  ]
+}

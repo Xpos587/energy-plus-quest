@@ -1,0 +1,8 @@
+{
+  "prompt": "Precise local face-only correction to FIRST image. SECOND image immutable style reference for clean light illustrated finish, not face design. Keep FIRST image exact pose: worker pauses holding trolley with one hand and wipes forehead with other. Keep entire scene, cargo, uniform, all reflector bands, head size, hairstyle, adult age and natural anatomy unchanged. CHANGE facial acting: current expression looks sly/smirking or secretly sad, must remove that. Face turned slightly more squarely toward viewer, level head, open direct friendly gaze rather than looking sideways or up from under brows. Both eyebrows level, relaxed, parallel to natural eye contours; no raised inner brow, no single raised eyebrow, no worried arch, no lowered brow. Normal adult eyes, don't enlarge. Mouth a small relaxed symmetrical gentle closed-mouth smile with BOTH corners at the SAME height, no one-sided smirk, no crooked smile, no grin. Cheeks subtly softened, no sadness. The man is sincerely kind and approachable, mildly tired after work; fatigue communicated by wiping sweat gesture and tiny sweat drops, NOT by sad eyebrows or eye bags. Natural mature Slavic man, no anime, no cuteness, no caricature. Clean matte 2D illustration, absolutely no sepia, stains, paper grain or mottled shading. Keep all background and composition identical. Output full uncropped landscape.",
+  "status": "На ревью; V7 отклонён пользователем: ухмылка и скрытая печаль.",
+  "references": [
+    "alphabet-v7.png",
+    "../../style-audit-2026-09-28/reference.png"
+  ]
+}

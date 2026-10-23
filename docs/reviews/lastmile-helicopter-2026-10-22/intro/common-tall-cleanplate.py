@@ -1,0 +1,15 @@
+from pathlib import Path
+from PIL import Image,ImageDraw,ImageFilter
+import cv2,numpy as np
+P=Path(__file__).resolve().parent;D=P.parent;old=np.array(Image.open(D/'choice-tall-helicopter-target.png').convert('RGB'));m=Image.new('L',(1580,938));d=ImageDraw.Draw(m)
+polys=[[(400,550),(404,507),(431,448),(483,399),(550,352),(578,309),(586,276),(610,247),(660,237),(698,253),(719,264),(770,268),(818,283),(851,322),(846,365),(833,409),(810,447),(785,471),(791,489),(820,482),(822,510),(802,533),(779,537),(755,527),(690,553),(624,581),(603,613),(580,630),(555,619),(547,589),(501,585),(447,582),(417,569)],[(782,284),(871,245),(928,214),(958,169),(984,79),(1005,36),(1037,33),(1040,52),(1011,172),(987,218),(1052,241),(1057,250),(1040,262),(978,243),(935,274),(849,320)]]
+for p in polys:d.polygon(p,fill=255)
+for a,b,w in [((640,253),(361,189),32),((640,253),(920,140),32),((640,253),(1025,375),35),((640,253),(260,380),33),((1015,124),(962,89),28),((1015,124),(1080,120),26),((1015,124),(1075,176),28)]:d.line([a,b],fill=255,width=w)
+d.polygon([(418,566),(500,544),(662,497),(835,403),(984,325),(1125,322),(1140,338),(1055,370),(983,429),(857,470),(789,527),(680,577),(603,626),(502,626),(430,596)],fill=255)
+m=m.filter(ImageFilter.MaxFilter(9));ma=np.array(m);m.save(P/'common-tall-old-removal-mask.png')
+quad=np.float32([[563,211],[1272,415],[826,765],[111,541]]);dst=np.float32([[0,0],[1000,0],[1000,500],[0,500]]);H=cv2.getPerspectiveTransform(quad,dst);rect=cv2.warpPerspective(old,H,(1000,500));rm=cv2.warpPerspective(ma,H,(1000,500));yy,xx=np.indices(rect.shape[:2]);h,s,v=cv2.split(cv2.cvtColor(rect,cv2.COLOR_RGB2HSV));sel=(rm==0)&(s<80)&(v>100)&(v<220)&(xx>15)&(xx<985)&(yy>15)&(yy<485);A=np.stack([np.ones(xx.shape),xx/1000,yy/500],-1)
+for _ in range(3):
+ c=np.linalg.lstsq(A[sel],rect[sel],rcond=None)[0];fit=A@c;sel=sel&(np.linalg.norm(fit-rect,axis=2)<20)
+plane=np.clip(fit,0,255).astype('uint8');cv2.rectangle(plane,(190,140),(280,380),(245,246,251),-1);cv2.rectangle(plane,(680,140),(775,380),(245,246,251),-1);cv2.rectangle(plane,(280,235),(680,285),(245,246,251),-1);plate=cv2.warpPerspective(plane,np.linalg.inv(H),(1580,938));pad=np.zeros((938,1580),np.uint8);cv2.fillPoly(pad,[quad.astype('int32')],255);pad=cv2.erode(pad,np.ones((7,7),np.uint8));clean=cv2.inpaint(old,ma,10,cv2.INPAINT_TELEA);take=(ma>0)&(pad>0);clean[take]=plate[take]
+# Border remains original wherever visible; no fitted plane spills onto paving.
+Image.fromarray(clean).save(P/'common-tall-cleanplate.png');new=Image.open(D/'choices/tall-aligned.png').convert('RGB');alpha=Image.open(P/'common-tall-aircraft-alpha.png');shadow=Image.new('L',(1580,938));dd=ImageDraw.Draw(shadow);dd.polygon([(404,578),(525,543),(726,490),(884,467),(941,486),(876,528),(699,595),(527,637),(427,619)],fill=42);shadow=shadow.filter(ImageFilter.GaussianBlur(15));shadow=np.array(shadow);shadow[pad==0]=0;ground=Image.composite(Image.new('RGB',(1580,938),(48,61,92)),Image.fromarray(clean),Image.fromarray(shadow));comp=Image.composite(new,ground,alpha);comp.save(P/'common-tall-representative.png')

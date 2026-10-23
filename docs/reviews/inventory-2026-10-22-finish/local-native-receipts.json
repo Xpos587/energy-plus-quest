@@ -1,0 +1,40 @@
+{
+  "status": "local_style_proofs_only_not_promoted",
+  "geometryAuthority": "../inventory-2026-10-21-geometry/source-v4-clean.png",
+  "calls": [
+    {
+      "asset": "keeper-sprite-v1-native.png",
+      "engine": "builtin_image_gen",
+      "nativeOutput": "/home/michael/.config/codex/generated_images/01a14b18-7131-7270-9281-5b2835801234/exec-42b3aa76-ced5-4f4f-a083-2e48a34de66a.png",
+      "inputs": ["keeper-geometry-crop.png", "../../../public/scene-art/warehouse-corrections-2026-10-20/outcomes/keeper-v2-labels-v1.png"],
+      "purpose": "Transparent isolated illustrated keeper; fixed high camera/standing pose from geometry crop, identity from existing keeper outcome. No environment generated.",
+      "nativePreserved": true,
+      "alpha": "RGBA; local Blender shader cutoff documented separately"
+    },
+    {
+      "asset": "window-view-texture-v1-native.png",
+      "engine": "builtin_image_gen",
+      "nativeOutput": "/home/michael/.config/codex/generated_images/01a14b18-7131-7270-9281-5b2835801234/exec-50f50486-c55d-404d-bbf1-36d3433d5806.png",
+      "inputs": ["../../../public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v11-local.png"],
+      "purpose": "Flat painted sky/greenery background texture only, no window frames or room geometry. Map to existing fixed glass plane.",
+      "nativePreserved": true
+    },
+    {
+      "asset": "forklift-sprite-v1-native.png",
+      "engine": "builtin_image_gen",
+      "nativeOutput": "/home/michael/.config/codex/generated_images/01a14b18-7131-7270-9281-5b2835801234/exec-ef9f7806-b962-4c29-b190-1f2e26542c87.png",
+      "inputs": ["forklift-geometry-crop-native.png", "../../../public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v11-local.png"],
+      "purpose": "Isolated transparent illustrated forklift and seated driver, fixed high camera and left-facing fork direction. Local mapping and fit limits documented separately.",
+      "nativePreserved": true
+    },
+    {
+      "asset": "rack-sprite-v1-native.png",
+      "engine": "builtin_image_gen",
+      "nativeOutput": "/home/michael/.config/codex/generated_images/01a14b18-7131-7270-9281-5b2835801234/exec-7c8fc13f-e019-4516-8805-5ec77e949e56.png",
+      "inputs": ["rack-geometry-open-cap-crop-native.png", "rack-original-illustrative-style-reference.png"],
+      "purpose": "One bounded open-rack stylistic alternative only. Geometry reference controls shallow proportions; original illustration controls surfaces. Native boards intentionally blank; exact original labels protected separately. Registration and final style are pending review.",
+      "nativePreserved": true
+    }
+  ],
+  "restriction": "No repeated whole-frame generation; room/rack/gate geometry and full-source cameras remain deterministic. These are not Flowers masters."
+}

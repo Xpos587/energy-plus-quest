@@ -1,0 +1,16 @@
+{
+  "sampled_frames": 144,
+  "root_resample_max_abs_error": 0.0,
+  "tractor_trailer_original_hitch_xy_max_distance": 0.0002666811723759964,
+  "all_frame_projected_bounds": {
+    "xmin": 0.07439139485359192,
+    "xmax": 0.9254486560821533,
+    "ymin": 0.057522207498550415,
+    "ymax": 0.9424779415130615
+  },
+  "render_engine": "BLENDER_EEVEE",
+  "mesh_count": 101,
+  "camera_fixed": true,
+  "source_tractor_turn_degrees": 90.00000250447816,
+  "source_trailer_turn_degrees": 83.69287605129416
+}

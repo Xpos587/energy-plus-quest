@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-04T19:49:58.122106Z",
+    "display_name": "Kling v3.0",
+    "id": "71d596fc-f9a8-489f-9cfd-1ddd534a72aa",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 15,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "8ad974c9-36b5-4b1a-817f-dc7b0318cca2",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/8ad974c9-36b5-4b1a-817f-dc7b0318cca2.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "8ad974c9-36b5-4b1a-817f-dc7b0318cca2",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/8ad974c9-36b5-4b1a-817f-dc7b0318cca2.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Animate this exact illustrated city as a seamless looping game map. Locked orthographic camera, absolutely no zoom/pan/cuts. Exactly FOUR existing semi trucks throughout, same size and colors: BLUE beside warehouse on left, GREEN on central vertical road, RED on middle horizontal road, YELLOW on lower horizontal road. Each drives FORWARD on connected BLUE asphalt streets following a clockwise street-block circuit and returns to its exact initial position and heading at end. BLUE stays on left warehouse block, RED circulates upper middle block, GREEN circulates distant right-hand city blocks using outer right avenue, YELLOW circulates lower middle block. Stay entirely within visible frame. Coordinate crossings so trucks pass with safe gaps, never collide, overlap, split or duplicate. At every corner tractor steers first and connected rigid semitrailer pivots naturally at fifth wheel, trailer rear axles follow inside curved path. White or canvas trailer remains a straight rigid rectangular box, never bends. No drifting sideways, no spin in place, no reversing, no cutting across buildings or sidewalks. All four trucks remain visible, drive slowly smoothly and continuously, including loop boundary. Preserve exact identity and illustrated details, wheels, two occupants in green and one in others. Preserve original bright warm cream/apricot buildings, powder blue streets, green yellow foliage, clean soft contours and shadows. The background is absolutely static. Match supplied ending image exactly and continue same forward velocities across the loop. No extra moving subjects or scene changes.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_194958_71d596fc-f9a8-489f-9cfd-1ddd534a72aa.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_194958_71d596fc-f9a8-489f-9cfd-1ddd534a72aa_thumbnail.webp"
+  }
+]

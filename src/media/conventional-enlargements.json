@@ -1,0 +1,70 @@
+{
+  "public/scene-art/carrier-results-2026-10-02/old-wide-v8.webp": {
+    "id": "F0082",
+    "width": 4093,
+    "sourceDimensions": [
+      1983,
+      793
+    ],
+    "runtimeDimensions": [
+      4093,
+      1637
+    ],
+    "processingMode": "conventional_interpolation",
+    "detailRecovery": false,
+    "reviewReceipt": "docs/reviews/conventional-media-2026-10-22/carrier-old-wide-v8-v1/review.json",
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/conventional-media-2026-10-22/carrier-old-wide-v8-v1/combined-runtime/runtime.json"
+  },
+  "public/scene-art/lastmile-family-v1/revision-2/rover-boat-khor.webp": {
+    "id": "F0107",
+    "width": 3842,
+    "sourceDimensions": [
+      1672,
+      941
+    ],
+    "runtimeDimensions": [
+      3842,
+      2162
+    ],
+    "processingMode": "conventional_interpolation",
+    "detailRecovery": false,
+    "reviewReceipt": "docs/reviews/conventional-media-2026-10-22/rover-boat-khor-v1/review.json",
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/conventional-media-2026-10-22/rover-boat-khor-v1/combined-runtime/runtime.json"
+  },
+  "public/scene-art/barge-family-v1/choice-neutral-tall-v7.webp": {
+    "id": "F0061",
+    "width": 1639,
+    "sourceDimensions": [
+      1122,
+      1402
+    ],
+    "runtimeDimensions": [
+      1639,
+      2048
+    ],
+    "processingMode": "conventional_interpolation",
+    "detailRecovery": false,
+    "reviewReceipt": "docs/reviews/conventional-media-2026-10-22/barge-choice-tall-v1/review.json",
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/conventional-media-2026-10-22/barge-choice-tall-v1/after/runtime.json"
+  },
+  "public/scene-art/barge-family-v1/petr-boat-v13.png": {
+    "id": "F0063",
+    "width": 2420,
+    "sourceDimensions": [
+      1672,
+      941
+    ],
+    "runtimeDimensions": [
+      2420,
+      1362
+    ],
+    "processingMode": "conventional_interpolation",
+    "detailRecovery": false,
+    "reviewReceipt": "docs/reviews/conventional-media-2026-10-22/barge-petr-boat-v1/review.json",
+    "runtimeVerified": true,
+    "runtimeReceipt": "docs/reviews/conventional-media-2026-10-22/barge-petr-boat-v1/after/runtime.json"
+  }
+}

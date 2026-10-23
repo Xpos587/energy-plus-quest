@@ -1,0 +1,129 @@
+[
+  {
+    "name": "desktop",
+    "selected": false,
+    "boundary": 0,
+    "natural": true,
+    "url": "https://energy-plus-quest.hypcat.net/",
+    "observation": {
+      "source": "https://energy-plus-quest.hypcat.net/scene1-live/separated-routes/city-motion-desktop.mp4?v=23",
+      "duration": 64,
+      "elapsed": 67501.30000001192,
+      "decoderCount": 2,
+      "seams": [
+        {
+          "dt": 200,
+          "from": 63.958333,
+          "to": 0,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        }
+      ],
+      "swaps": [
+        {
+          "wall": 65643.69999998808,
+          "decoder": 1,
+          "media": 0.010459,
+          "presentedMedia": 0,
+          "readyState": 3,
+          "opacity": "1",
+          "visibility": "visible",
+          "roof": [
+            0.564229,
+            0.77386
+          ],
+          "nearestTrackingFrame": {
+            "i": 0,
+            "distance": 4.7298881467747785e-7
+          }
+        }
+      ],
+      "largestFrameGaps": [
+        {
+          "dt": 450,
+          "from": 25,
+          "to": 25.125,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 200,
+          "from": 63.958333,
+          "to": 0,
+          "fromDecoder": 0,
+          "toDecoder": 1
+        },
+        {
+          "dt": 116.70000000000073,
+          "from": 20.333333,
+          "to": 20.458333,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 116.60000000000218,
+          "from": 24.875,
+          "to": 25,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        },
+        {
+          "dt": 100,
+          "from": 21.333333,
+          "to": 21.416667,
+          "fromDecoder": 0,
+          "toDecoder": 0
+        }
+      ],
+      "largestVisiblePixelGaps": [],
+      "events": [
+        {
+          "event": "waiting",
+          "wall": 26981,
+          "media": 25.497841,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 26981.899999976158,
+          "media": 25.498658,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "playing",
+          "wall": 64992.39999997616,
+          "media": 0,
+          "decoder": 1,
+          "visible": false
+        },
+        {
+          "event": "pause",
+          "wall": 65447.5,
+          "media": 63.962555,
+          "decoder": 0,
+          "visible": true
+        },
+        {
+          "event": "seeking",
+          "wall": 65646.5,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        },
+        {
+          "event": "seeked",
+          "wall": 65921.59999996424,
+          "media": 0,
+          "decoder": 0,
+          "visible": false
+        }
+      ],
+      "pausedSamples": 12,
+      "motion": "playing",
+      "inspection": false
+    },
+    "errors": []
+  }
+]

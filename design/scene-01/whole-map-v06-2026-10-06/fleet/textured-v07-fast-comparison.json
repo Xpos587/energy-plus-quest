@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "frame": 1,
+      "normal_visible_alpha_pixels": 32483,
+      "fast_visible_alpha_pixels": 32485,
+      "new_visible_pixels_when_city_hidden": 2,
+      "lost_visible_pixels_when_city_hidden": 0,
+      "alpha_changed_pixels_gt_2_255": 242,
+      "alpha_max_delta_0_to_1": 0.09019607305526733,
+      "premultiplied_rgb_mean_abs_delta_on_union_0_to_1": 0.005626161117106676,
+      "premultiplied_rgb_max_delta_0_to_1": 0.3442676067352295
+    },
+    {
+      "frame": 385,
+      "normal_visible_alpha_pixels": 40068,
+      "fast_visible_alpha_pixels": 40080,
+      "new_visible_pixels_when_city_hidden": 12,
+      "lost_visible_pixels_when_city_hidden": 0,
+      "alpha_changed_pixels_gt_2_255": 371,
+      "alpha_max_delta_0_to_1": 0.9686274528503418,
+      "premultiplied_rgb_mean_abs_delta_on_union_0_to_1": 0.006053162273019552,
+      "premultiplied_rgb_max_delta_0_to_1": 0.7176470756530762
+    }
+  ],
+  "scope": "Two pilot frames only; no all-timeline occlusion guarantee"
+}

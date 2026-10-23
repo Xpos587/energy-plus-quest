@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:12:43.91972Z",
+    "display_name": "Nano Banana Pro",
+    "id": "ec8779b0-5290-4aa5-89ab-86a2c9502e67",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_091243_ec8779b0-5290-4aa5-89ab-86a2c9502e67_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "95d37cbd-b5b7-4278-bdfa-05bee756f147",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/95d37cbd-b5b7-4278-bdfa-05bee756f147.webp"
+        }
+      ],
+      "prompt": "Edit this exact illustration, preserve composition, stopped tracked pipe carrier on near bank, workers and gift carton secured in blue rover. CRITICAL: the BLUE AMPHIBIOUS ROVER MUST FLOAT IN OPEN WATER, not drive over an ice bridge! Remove white continuous ice underneath rover completely. Put blue water around hull reaching halfway up all tires, tires lower halves submerged. Only a few scattered thin ice fragments at outer edges of water, light wake behind floating rover. Pipe carrier remains on shore with pipes, no drone. Match refined soft gray outlines and existing 2D drawing. No captions no UI.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_091243_ec8779b0-5290-4aa5-89ab-86a2c9502e67.png",
+    "status": "completed"
+  }
+]

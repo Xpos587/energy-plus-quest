@@ -1,0 +1,33 @@
+{
+  "original_background": "fleet-road-v11-2026-10-07/backdrop-v11.png",
+  "generated_candidate": "generated-candidate.png",
+  "candidate_resized": [
+    1920,
+    1334
+  ],
+  "alignment": "alignment.json; regional measured shifts below 1px, visual overlay inspected",
+  "restored_original_regions": [
+    "blank facade under generated text; \u0421\u041a\u041b\u0410\u0414 replaced with adjacent vector label"
+  ],
+  "brand_source": "/home/michael/Github/energy-plus-quest/public/brand/gpn-snabzhenie.svg",
+  "brand_svg_viewbox": "0 0 207 100.04",
+  "sign_corners": [
+    [
+      244.0,
+      370.0
+    ],
+    [
+      416.0,
+      380.0
+    ],
+    [
+      416.0,
+      413.0
+    ],
+    [
+      244.0,
+      403.0
+    ]
+  ],
+  "scope": "Concept city backdrop with exact existing brand; not deployed game"
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "baseURL": "http://127.0.0.1:4344",
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px",
+      "outline": "rgb(0, 0, 0) none 3px",
+      "shadow": "none",
+      "selected": "true"
+    },
+    "keyboard": {
+      "focused": true,
+      "background": "rgba(255, 244, 229, 0.18)",
+      "outline": "rgb(0, 60, 166) solid 3px"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "baseURL": "http://127.0.0.1:4344",
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px",
+      "outline": "rgb(0, 0, 0) none 3px",
+      "shadow": "none",
+      "selected": "true"
+    },
+    "keyboard": {
+      "focused": true,
+      "background": "rgba(255, 244, 229, 0.18)",
+      "outline": "rgb(0, 60, 166) solid 3px"
+    }
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "baseURL": "http://127.0.0.1:4344",
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px",
+      "outline": "rgb(0, 0, 0) none 3px",
+      "shadow": "none",
+      "selected": "true"
+    },
+    "keyboard": {
+      "focused": true,
+      "background": "rgba(255, 244, 229, 0.18)",
+      "outline": "rgb(0, 60, 166) solid 3px"
+    }
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "baseURL": "http://127.0.0.1:4344",
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px",
+      "outline": "rgb(0, 0, 0) none 3px",
+      "shadow": "none",
+      "selected": "true"
+    },
+    "keyboard": {
+      "focused": true,
+      "background": "rgba(255, 244, 229, 0.18)",
+      "outline": "rgb(0, 60, 166) solid 3px"
+    }
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "baseURL": "http://127.0.0.1:4344",
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px",
+      "outline": "rgb(0, 0, 0) none 3px",
+      "shadow": "none",
+      "selected": "true"
+    },
+    "keyboard": {
+      "focused": true,
+      "background": "rgba(255, 244, 229, 0.18)",
+      "outline": "rgb(0, 60, 166) solid 3px"
+    }
+  }
+]

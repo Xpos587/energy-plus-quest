@@ -1,0 +1,19 @@
+{
+  "required_frames": 288,
+  "rendered_sequence_complete": true,
+  "missing_frames": [],
+  "native_route_pose_changes_vs_frozen_source": [],
+  "render_elapsed_seconds_from_log": 527.314,
+  "dimensions": [
+    1280,
+    889
+  ],
+  "fps": 24,
+  "samples": 8,
+  "full_loop_rendered": false,
+  "driver_counts_at_native_resolution": "uncertain; see front-evidence/receipt.json",
+  "cab_parent_transform_exact_matrix_equality": false,
+  "cab_parent_transform_constant": true,
+  "cab_local_matrix_numeric_delta": 5.7220458984375e-06,
+  "reconstructed_cab_count": 4
+}

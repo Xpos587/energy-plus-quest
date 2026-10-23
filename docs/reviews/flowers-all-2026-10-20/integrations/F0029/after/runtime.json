@@ -1,0 +1,114 @@
+[
+  {
+    "id": "F0029",
+    "carrier": "near",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-v48-CdH5JRFW.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 564,
+        "top": 56,
+        "right": 1440,
+        "bottom": 620,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0029",
+    "carrier": "near",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-v48-CdH5JRFW.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1440,
+        "height": 564,
+        "top": 56,
+        "right": 1440,
+        "bottom": 620,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0029",
+    "carrier": "near",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1920,
+    "height": 1080,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-v48-CdH5JRFW.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1920,
+        "height": 744,
+        "top": 56,
+        "right": 1920,
+        "bottom": 800,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  },
+  {
+    "id": "F0029",
+    "carrier": "near",
+    "parcel": "boat",
+    "selected": "place-3",
+    "width": 1920,
+    "height": 1080,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/optimized-boat-zone3-no-fit-wide-v48-CdH5JRFW.webp",
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "width": 1920,
+        "height": 744,
+        "top": 56,
+        "right": 1920,
+        "bottom": 800,
+        "left": 0
+      },
+      "decoded": [
+        5120,
+        2048
+      ]
+    },
+    "status": 200,
+    "errors": []
+  }
+]

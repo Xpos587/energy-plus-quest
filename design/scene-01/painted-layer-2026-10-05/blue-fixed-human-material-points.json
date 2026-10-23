@@ -1,0 +1,23 @@
+{
+  "frame": 769,
+  "resolution": [
+    3840,
+    2667
+  ],
+  "source_head_regions_xyxy": {
+    "source_left_head": [
+      155,
+      181,
+      413,
+      442
+    ],
+    "source_right_head": [
+      215,
+      243,
+      459,
+      490
+    ]
+  },
+  "visible_blue_mesh_points_sampling_original_crew_heads": [],
+  "interpretation": "No sampled blue mesh surface landed inside either original crew head region at this view; source-view head bounds and sampling do not certify other views."
+}

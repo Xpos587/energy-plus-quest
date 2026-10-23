@@ -1,0 +1,36 @@
+{
+  "video": "fleet-v16-smoke-proof-8s.mp4",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1334,
+        "r_frame_rate": "24/1",
+        "duration": "8.000000",
+        "nb_read_frames": "192"
+      }
+    ]
+  },
+  "source": "fleet-v16-smoke.blend",
+  "frames": "192 separately evaluated Blender frames",
+  "shadow": "read-only v16 actual geometry shadow PNGs, appropriate because cabs and routes unchanged",
+  "composite": "read-only v16 compositor/backdrop/road receiver mask",
+  "encode_seconds": 22.820022480998887,
+  "full_video_ffmpeg_decode_exit": 0,
+  "tracking_video": "smoke-tracking-crops-8s.mp4",
+  "tracking_video_dimensions": [
+    720,
+    480
+  ],
+  "tracking_video_frames": 192,
+  "tracking_video_duration": 8,
+  "tracking_video_fps": 24,
+  "tracking_video_ffmpeg_decode_exit": 0,
+  "decoded_contact_sheet": "decoded-tracking-contact-sheet.png",
+  "temporal_contact_sheet": "motion-evolution-contact-sheet.png",
+  "source_invariants": "source-validation.json",
+  "render_chunks": "chunk-receipts.json"
+}

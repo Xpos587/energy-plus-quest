@@ -1,0 +1,102 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/flowers-alva-CXDmq5xb.webp",
+      "decoded": [
+        1600,
+        800
+      ],
+      "rect": {
+        "x": 25,
+        "y": 410.453125,
+        "width": 105.328125,
+        "height": 131.65625,
+        "top": 410.453125,
+        "right": 130.328125,
+        "bottom": 542.109375,
+        "left": 25
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/flowers-alva-CXDmq5xb.webp",
+      "decoded": [
+        1600,
+        800
+      ],
+      "rect": {
+        "x": 25,
+        "y": 410.453125,
+        "width": 105.328125,
+        "height": 131.65625,
+        "top": 410.453125,
+        "right": 130.328125,
+        "bottom": 542.109375,
+        "left": 25
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/flowers-alva-CXDmq5xb.webp",
+      "decoded": [
+        1600,
+        800
+      ],
+      "rect": {
+        "x": 155,
+        "y": 373.046875,
+        "width": 364.65625,
+        "height": 288,
+        "top": 373.046875,
+        "right": 519.65625,
+        "bottom": 661.046875,
+        "left": 155
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "dpr": 2,
+    "art": {
+      "url": "http://127.0.0.1:4344/assets/flowers-alva-CXDmq5xb.webp",
+      "decoded": [
+        1600,
+        800
+      ],
+      "rect": {
+        "x": 155,
+        "y": 373.046875,
+        "width": 364.65625,
+        "height": 288,
+        "top": 373.046875,
+        "right": 519.65625,
+        "bottom": 661.046875,
+        "left": 155
+      }
+    },
+    "status": 200,
+    "errors": [],
+    "url": "http://127.0.0.1:4344/"
+  }
+]

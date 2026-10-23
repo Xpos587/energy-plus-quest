@@ -1,0 +1,18 @@
+{
+  "matrix": [
+    [
+      0.9734576839155747,
+      -0.0002441574085471366,
+      -0.21409052428984185
+    ],
+    [
+      0.0002441574085471366,
+      0.9734576839155747,
+      -0.6495013059338772
+    ]
+  ],
+  "matches": 229,
+  "inliers": 120,
+  "p95TargetPx": 2.023366689682007,
+  "basis": "background only broad aircraft exclusion, similarity transform only"
+}

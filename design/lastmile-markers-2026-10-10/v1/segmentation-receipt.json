@@ -1,0 +1,241 @@
+{
+  "model": "MobileSAM vit_t",
+  "checkpoint": ".tmp-work/warehouse-segmentation-model/weights/mobile_sam.pt",
+  "device": "cpu",
+  "formats": {
+    "wide": {
+      "helicopter": {
+        "box": [
+          925,
+          30,
+          1170,
+          190
+        ],
+        "points": [
+          [
+            1042,
+            138
+          ],
+          [
+            1073,
+            96
+          ],
+          [
+            1040,
+            110
+          ],
+          [
+            1110,
+            173
+          ],
+          [
+            980,
+            160
+          ]
+        ],
+        "labels": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "selectedCandidate": 0,
+        "predictedIoU": 0.8678577542304993,
+        "contours": 1
+      },
+      "pipe-carrier": {
+        "box": [
+          550,
+          425,
+          865,
+          670
+        ],
+        "points": [
+          [
+            635,
+            581
+          ],
+          [
+            735,
+            516
+          ],
+          [
+            784,
+            600
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9758893251419067,
+        "contours": 1
+      },
+      "rover": {
+        "box": [
+          850,
+          480,
+          1082,
+          675
+        ],
+        "points": [
+          [
+            925,
+            582
+          ],
+          [
+            1015,
+            549
+          ],
+          [
+            995,
+            626
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9837219715118408,
+        "contours": 1
+      },
+      "robot": {
+        "box": [
+          1120,
+          610,
+          1250,
+          718
+        ],
+        "points": [
+          [
+            1185,
+            662
+          ],
+          [
+            1150,
+            681
+          ],
+          [
+            1220,
+            682
+          ]
+        ],
+        "selectedCandidate": 2,
+        "predictedIoU": 0.9669651985168457,
+        "contours": 1
+      }
+    },
+    "tall": {
+      "helicopter": {
+        "box": [
+          328,
+          420,
+          510,
+          555
+        ],
+        "points": [
+          [
+            408,
+            515
+          ],
+          [
+            450,
+            500
+          ],
+          [
+            414,
+            488
+          ],
+          [
+            489,
+            543
+          ],
+          [
+            338,
+            538
+          ]
+        ],
+        "labels": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "selectedCandidate": 0,
+        "predictedIoU": 0.8567423224449158,
+        "contours": 1
+      },
+      "pipe-carrier": {
+        "box": [
+          120,
+          780,
+          320,
+          935
+        ],
+        "points": [
+          [
+            180,
+            876
+          ],
+          [
+            253,
+            823
+          ],
+          [
+            270,
+            886
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9871983528137207,
+        "contours": 1
+      },
+      "rover": {
+        "box": [
+          313,
+          795,
+          472,
+          935
+        ],
+        "points": [
+          [
+            354,
+            874
+          ],
+          [
+            415,
+            839
+          ],
+          [
+            426,
+            880
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9766107797622681,
+        "contours": 1
+      },
+      "robot": {
+        "box": [
+          490,
+          880,
+          585,
+          962
+        ],
+        "points": [
+          [
+            530,
+            922
+          ],
+          [
+            550,
+            922
+          ],
+          [
+            518,
+            941
+          ]
+        ],
+        "selectedCandidate": 1,
+        "predictedIoU": 0.9632853269577026,
+        "contours": 1
+      }
+    }
+  }
+}

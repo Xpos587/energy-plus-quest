@@ -1,0 +1,862 @@
+[
+  {
+    "scene": "compact",
+    "w": 320,
+    "h": 568,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_130p7_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 320,
+          "h": 230
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "svg",
+        "cls": "_art_130p7_30",
+        "src": null,
+        "viewBox": "0 0 1040 747.5",
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 320,
+          "h": 230
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "image",
+        "cls": null,
+        "src": "/compact-art/compact-environment-v26-portrait-v2.png",
+        "viewBox": null,
+        "preserveAspectRatio": "xMidYMid meet",
+        "rect": {
+          "x": 0,
+          "y": 28.538461685180664,
+          "w": 320,
+          "h": 268.923095703125
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "w": 320,
+    "h": 568,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 320,
+          "h": 230
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/inventory-master-v4.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": -44.328125,
+          "y": 48,
+          "w": 408.65625,
+          "h": 230
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "w": 320,
+    "h": 568,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 320,
+          "h": 230
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/barge-family-v1/choice-boat-v1.png",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": -27.609375,
+          "y": 52.1875,
+          "w": 397.078125,
+          "h": 221.59375
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "w": 320,
+    "h": 568,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 320,
+          "h": 230
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": -86.78125,
+          "w": 320,
+          "h": 560
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "compact",
+    "w": 393,
+    "h": 852,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_130p7_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 393,
+          "h": 505.8125
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "svg",
+        "cls": "_art_130p7_30",
+        "src": null,
+        "viewBox": "0 0 1040 1338.5368956743002",
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48.0078125,
+          "w": 393,
+          "h": 505.796875
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "image",
+        "cls": null,
+        "src": "/compact-art/compact-environment-v26-portrait-v2.png",
+        "viewBox": null,
+        "preserveAspectRatio": "xMidYMid meet",
+        "rect": {
+          "x": 0.006065592169761658,
+          "y": 135.77578735351562,
+          "w": 392.98785400390625,
+          "h": 330.2609558105469
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "w": 393,
+    "h": 852,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 393,
+          "h": 505.8125
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/inventory-master-v4.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": -95.453125,
+          "y": 136.90625,
+          "w": 582.765625,
+          "h": 327.96875
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "w": 393,
+    "h": 852,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 393,
+          "h": 505.8125
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 0.359375,
+          "w": 393,
+          "h": 687.75
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "w": 393,
+    "h": 852,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 393,
+          "h": 505.8125
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": -5.859375,
+          "w": 393,
+          "h": 687.75
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "compact",
+    "w": 820,
+    "h": 1180,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_130p7_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 820,
+          "h": 892
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "svg",
+        "cls": "_art_130p7_30",
+        "src": null,
+        "viewBox": "0 0 1040 1131.3170731707316",
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 820,
+          "h": 892
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "image",
+        "cls": null,
+        "src": "/compact-art/compact-environment-v26-portrait-v2.png",
+        "viewBox": null,
+        "preserveAspectRatio": "xMidYMid meet",
+        "rect": {
+          "x": 0,
+          "y": 149.44232177734375,
+          "w": 820,
+          "h": 689.1154174804688
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "w": 820,
+    "h": 1180,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 820,
+          "h": 892
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/inventory-master-v4.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": -243.328125,
+          "y": 127.03125,
+          "w": 1304.046875,
+          "h": 733.90625
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "w": 820,
+    "h": 1180,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 820,
+          "h": 892
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/barge-family-v1/choice-parcel-tall-v1.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": -133.109375,
+          "w": 820,
+          "h": 1435
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "w": 820,
+    "h": 1180,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 48,
+          "w": 820,
+          "h": 892
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": -146.078125,
+          "w": 820,
+          "h": 1435
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "compact",
+    "w": 1440,
+    "h": 900,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_130p7_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 1440,
+          "h": 592
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "svg",
+        "cls": "_art_130p7_30",
+        "src": null,
+        "viewBox": "0 0 1040 427.55555555555554",
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 1440,
+          "h": 592
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "image",
+        "cls": null,
+        "src": "/compact-art/loading-clean-belts-v26.png",
+        "viewBox": null,
+        "preserveAspectRatio": "xMidYMid meet",
+        "rect": {
+          "x": 0,
+          "y": -7.999988555908203,
+          "w": 1440,
+          "h": 720
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "w": 1440,
+    "h": 900,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 1440,
+          "h": 592
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/inventory-master-v4.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": -56.984375,
+          "w": 1440,
+          "h": 810.421875
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "w": 1440,
+    "h": 900,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 1440,
+          "h": 592
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/barge-family-v1/choice-boat-v1.png",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": -49.796875,
+          "w": 1440,
+          "h": 803.609375
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "w": 1440,
+    "h": 900,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 1440,
+          "h": 592
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/lastmile-family-v1/lastmile-choice-wide-v2.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": -40.359375,
+          "y": 56,
+          "w": 1480.359375,
+          "h": 592
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "compact",
+    "w": 844,
+    "h": 390,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_130p7_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 489.53125,
+          "h": 334
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "svg",
+        "cls": "_art_130p7_30",
+        "src": null,
+        "viewBox": "0 0 1040 709.5767634854772",
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 489.53125,
+          "h": 334
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      },
+      {
+        "tag": "image",
+        "cls": null,
+        "src": "/compact-art/compact-environment-v26-portrait-v2.png",
+        "viewBox": null,
+        "preserveAspectRatio": "xMidYMid meet",
+        "rect": {
+          "x": 0.000006464661055360921,
+          "y": 17.302734375,
+          "w": 489.53125,
+          "h": 411.39453125
+        },
+        "objectFit": "fill",
+        "overflow": "hidden",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "inventory",
+    "w": 844,
+    "h": 390,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 489.53125,
+          "h": 334
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/inventory-master-v4.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": -51.953125,
+          "y": 56,
+          "w": 593.453125,
+          "h": 334
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "crane",
+    "w": 844,
+    "h": 390,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 489.53125,
+          "h": 334
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/barge-family-v1/choice-boat-v1.png",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": -53.796875,
+          "y": 56,
+          "w": 598.484375,
+          "h": 334
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "scene": "lastmile",
+    "w": 844,
+    "h": 390,
+    "elements": [
+      {
+        "tag": "FIGURE",
+        "cls": "_stage_101z2_1",
+        "src": null,
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": 56,
+          "w": 489.53125,
+          "h": 334
+        },
+        "objectFit": "fill",
+        "overflow": "clip",
+        "transform": "none"
+      },
+      {
+        "tag": "IMG",
+        "cls": "_image_101z2_20",
+        "src": "/scene-art/lastmile-family-v1/lastmile-choice-tall-v2.webp",
+        "viewBox": null,
+        "preserveAspectRatio": null,
+        "rect": {
+          "x": 0,
+          "y": -159.109375,
+          "w": 489.53125,
+          "h": 856.671875
+        },
+        "objectFit": "contain",
+        "overflow": "clip",
+        "transform": "none"
+      }
+    ]
+  }
+]

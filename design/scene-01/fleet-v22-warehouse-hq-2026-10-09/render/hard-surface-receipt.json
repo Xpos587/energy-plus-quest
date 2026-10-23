@@ -1,0 +1,55 @@
+{
+  "gpu": {
+    "vendor": "AMD",
+    "renderer": "AMD Radeon Graphics (radeonsi, renoir, ACO, DRM 3.64, 7.2.9-1-cachyos)",
+    "version": "4.6 (Core Profile) Mesa 26.2.4-arch1.1",
+    "backend": "OPENGL"
+  },
+  "hidden_volume_objects": [
+    "V16 smoke truck 1 exhaust puff 0",
+    "V16 smoke truck 1 exhaust puff 1",
+    "V16 smoke truck 1 exhaust puff 2",
+    "V16 smoke truck 1 exhaust puff 3",
+    "V16 smoke truck 1 exhaust puff 4",
+    "V16 smoke truck 1 exhaust puff 5",
+    "V16 smoke truck 1 exhaust puff 6",
+    "V16 smoke truck 1 exhaust puff 7",
+    "V16 smoke truck 1 exhaust puff 8",
+    "V16 smoke truck 1 exhaust puff 9",
+    "V16 smoke truck 1 exhaust puff 10",
+    "V16 smoke truck 1 exhaust puff 11",
+    "V16 smoke truck 1 exhaust puff 12",
+    "V16 smoke truck 4 exhaust puff 0",
+    "V16 smoke truck 4 exhaust puff 1",
+    "V16 smoke truck 4 exhaust puff 2",
+    "V16 smoke truck 4 exhaust puff 3",
+    "V16 smoke truck 4 exhaust puff 4",
+    "V16 smoke truck 4 exhaust puff 5",
+    "V16 smoke truck 4 exhaust puff 6",
+    "V16 smoke truck 4 exhaust puff 7",
+    "V16 smoke truck 4 exhaust puff 8",
+    "V16 smoke truck 4 exhaust puff 9",
+    "V16 smoke truck 4 exhaust puff 10",
+    "V16 smoke truck 4 exhaust puff 11",
+    "V16 smoke truck 4 exhaust puff 12"
+  ],
+  "timings": [
+    {
+      "frame": 1,
+      "seconds": 6.49797607200162
+    },
+    {
+      "frame": 384,
+      "seconds": 4.663300975997117
+    },
+    {
+      "frame": 768,
+      "seconds": 4.494750161000411
+    }
+  ],
+  "dimensions": [
+    3840,
+    2668
+  ],
+  "taa": 8
+}

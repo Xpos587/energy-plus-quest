@@ -1,0 +1,10 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch();const page=await browser.newPage({baseURL:'http://127.0.0.1:4344',viewport:{width:1440,height:900},hasTouch:true});
+await page.goto('/');for(const s of ['[data-intro-enter]','[data-intro-next]','[data-intro-start]','[data-choice="professional"]','[data-choice="arseniy"]','[data-choice="boat"]'])await page.locator(s).click();
+const t=page.locator('[data-carrier-choice="old4"]');
+await page.locator('[data-scene-choice="old4"]').click();await page.locator('[data-choice-cancel]').click();
+await t.focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');await page.keyboard.press('Enter');await page.locator('[data-choice-cancel]').click();
+await page.locator('[data-city-video]').evaluate(v=>v.pause());await page.waitForTimeout(600);
+console.log(JSON.stringify(await t.evaluate(e=>{const b=e.getBoundingClientRect(),x=b.x+b.width/2,y=b.y+b.height/2,h=document.elementFromPoint(x,y);return {rect:b.toJSON(),centerHit:h?.outerHTML,mapScale:document.querySelector('[data-map-viewport]').dataset.mapScale};}),null,2));
+await page.screenshot({path:'docs/reviews/feedback-2026-10-22/carrier/touch-diagnostic.png'});
+await browser.close();

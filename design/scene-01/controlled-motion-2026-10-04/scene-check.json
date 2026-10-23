@@ -1,0 +1,2369 @@
+{
+  "saved_pose_max_error": 1.3033654369110081e-06,
+  "camera_preserved": true,
+  "static_meshes_preserved": 1827,
+  "number_roofs_hidden": true,
+  "warehouse_visibility": {
+    "isolated_pixel_area_estimate": 21143.95172739611,
+    "visible_pixel_area_estimate": 21035.149231371775,
+    "visible_glazed_entrance_pixel_area_estimate": 380.8087360851787,
+    "visible": 0.9948542024013722,
+    "in_frame": 1.0,
+    "silhouette_samples": 1166,
+    "occluders": {
+      "continuous raised pavement": 4,
+      "street lamp luminaires": 1,
+      "street lamp poles and arms": 1
+    }
+  },
+  "truck_visibility_minimum": [
+    0.7799607072691552,
+    0.8923076923076924,
+    0.796875,
+    0.8240963855421687
+  ],
+  "visibility_samples": [
+    {
+      "frame": 1,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2862.4152277196963,
+          "visible_pixel_area_estimate": 2862.4152277196963,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 625,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2997.2507621772284,
+          "visible_pixel_area_estimate": 2997.2507621772284,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 633,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2834.41315154042,
+          "visible_pixel_area_estimate": 2821.8899711948807,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9955817378497791,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {
+            "1 formed enclosed cab": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2965.8193688893857,
+          "visible_pixel_area_estimate": 2965.8193688893857,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 657,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2821.4624753120947,
+          "visible_pixel_area_estimate": 2821.4624753120947,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 659,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2961.3306956065626,
+          "visible_pixel_area_estimate": 2961.3306956065626,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 642,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2964.531098855373,
+          "visible_pixel_area_estimate": 2964.531098855373,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 595,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2943.777554822801,
+          "visible_pixel_area_estimate": 2943.777554822801,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 677,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2815.8506577341177,
+          "visible_pixel_area_estimate": 2815.8506577341177,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 676,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2979.058499377802,
+          "visible_pixel_area_estimate": 2979.058499377802,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 659,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3539.303838568667,
+          "visible_pixel_area_estimate": 3504.519525658901,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9901719901719902,
+          "in_frame": 1.0,
+          "silhouette_samples": 407,
+          "occluders": {
+            "residential east wing roof": 2,
+            "1 formed enclosed cab": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3000.020971619615,
+          "visible_pixel_area_estimate": 3000.020971619615,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 734,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 73,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2950.3252536862674,
+          "visible_pixel_area_estimate": 2950.3252536862674,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 685,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2951.2588691628393,
+          "visible_pixel_area_estimate": 2951.2588691628393,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 663,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4142.488052660596,
+          "visible_pixel_area_estimate": 4003.7886758974064,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9665178571428571,
+          "in_frame": 1.0,
+          "silhouette_samples": 448,
+          "occluders": {
+            "residential east wing roof": 6,
+            "residential east wing parapet.003": 4,
+            "residential east wing parapet.001": 4,
+            "1 formed enclosed cab": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3111.3358451264853,
+          "visible_pixel_area_estimate": 3111.3358451264853,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 503,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 97,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3269.9700458567268,
+          "visible_pixel_area_estimate": 3269.9700458567268,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 437,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2952.0213694940353,
+          "visible_pixel_area_estimate": 2952.0213694940353,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 671,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4385.946118955061,
+          "visible_pixel_area_estimate": 3889.130983356612,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8867256637168142,
+          "in_frame": 1.0,
+          "silhouette_samples": 565,
+          "occluders": {
+            "residential east wing roof": 36,
+            "residential east wing parapet.003": 13,
+            "residential west wing parapet.003": 8,
+            "residential west wing roof": 6,
+            "residential west wing parapet.001": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3714.8378198367823,
+          "visible_pixel_area_estimate": 3695.738396598547,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9948586118251928,
+          "in_frame": 1.0,
+          "silhouette_samples": 389,
+          "occluders": {
+            "city block 8.4 -41 parapet.003": 1,
+            "tree 16 crown 0": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 121,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3939.3229852031295,
+          "visible_pixel_area_estimate": 3930.0101649071407,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9976359338061466,
+          "in_frame": 1.0,
+          "silhouette_samples": 423,
+          "occluders": {
+            "residential east wing parapet.001": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2947.687278598679,
+          "visible_pixel_area_estimate": 2947.687278598679,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 676,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4438.817228093118,
+          "visible_pixel_area_estimate": 3961.5250530293415,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8924731182795699,
+          "in_frame": 1.0,
+          "silhouette_samples": 651,
+          "occluders": {
+            "residential west wing roof": 40,
+            "residential west wing parapet.003": 20,
+            "residential north wing parapet.003": 7,
+            "residential west wing parapet.001": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4197.675798385799,
+          "visible_pixel_area_estimate": 4124.672741022568,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9826086956521739,
+          "in_frame": 1.0,
+          "silhouette_samples": 460,
+          "occluders": {
+            "street lamp luminaires": 3,
+            "city block 17 -41 parapet.003": 3,
+            "city block 8.4 -41 parapet.003": 2
+          }
+        }
+      ]
+    },
+    {
+      "frame": 145,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4309.698037618844,
+          "visible_pixel_area_estimate": 3837.2888296490855,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8903846153846153,
+          "in_frame": 1.0,
+          "silhouette_samples": 520,
+          "occluders": {
+            "residential east wing roof": 38,
+            "residential east wing parapet.003": 13,
+            "residential west wing parapet.001": 3,
+            "residential west wing roof": 1,
+            "residential west wing parapet.003": 1,
+            "residential east wing window frames mullions and sills": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2940.940337365413,
+          "visible_pixel_area_estimate": 2940.940337365413,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4237.497576201539,
+          "visible_pixel_area_estimate": 3376.7558810356018,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.796875,
+          "in_frame": 1.0,
+          "silhouette_samples": 448,
+          "occluders": {
+            "residential west wing roof": 76,
+            "residential west wing parapet.003": 12,
+            "residential west wing window frames mullions and sills": 2,
+            "residential west wing parapet": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4297.60164693811,
+          "visible_pixel_area_estimate": 4185.878900483914,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9740034662045061,
+          "in_frame": 1.0,
+          "silhouette_samples": 577,
+          "occluders": {
+            "tree 17 crown 0": 4,
+            "city block 17 -41 roof": 4,
+            "tree 17 crown 1": 4,
+            "city block 17 -41 parapet.003": 2,
+            "street lamp luminaires": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 169,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4407.0529750359665,
+          "visible_pixel_area_estimate": 3846.6584837048626,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8728414442700158,
+          "in_frame": 1.0,
+          "silhouette_samples": 637,
+          "occluders": {
+            "residential west wing roof": 41,
+            "residential west wing parapet.003": 17,
+            "residential north wing parapet.003": 8,
+            "3 long semitrailer": 6,
+            "residential north wing roof": 3,
+            "residential west wing parapet": 2,
+            "residential east wing parapet.003": 2,
+            "residential west wing parapet.001": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2939.0255018811467,
+          "visible_pixel_area_estimate": 2939.0255018811467,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3725.4365182899614,
+          "visible_pixel_area_estimate": 3654.979090048071,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9810874704491725,
+          "in_frame": 1.0,
+          "silhouette_samples": 423,
+          "occluders": {
+            "residential west wing parapet": 4,
+            "residential west wing window frames mullions and sills": 2,
+            "residential west wing roof": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4222.01767362307,
+          "visible_pixel_area_estimate": 4215.358339753002,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.998422712933754,
+          "in_frame": 1.0,
+          "silhouette_samples": 634,
+          "occluders": {
+            "tree 17 crown 1": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 193,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4362.978138627543,
+          "visible_pixel_area_estimate": 3402.9515148038004,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.7799607072691552,
+          "in_frame": 1.0,
+          "silhouette_samples": 509,
+          "occluders": {
+            "residential west wing roof": 78,
+            "residential west wing parapet.003": 16,
+            "3 long semitrailer": 12,
+            "residential west wing parapet.001": 4,
+            "residential west wing parapet": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2941.5528246131616,
+          "visible_pixel_area_estimate": 2941.5528246131616,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 699,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3276.852424600584,
+          "visible_pixel_area_estimate": 3276.852424600584,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 499,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3885.577109886451,
+          "visible_pixel_area_estimate": 3885.577109886451,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 429,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 217,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3902.057786228426,
+          "visible_pixel_area_estimate": 3396.755339090932,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8705035971223022,
+          "in_frame": 1.0,
+          "silhouette_samples": 417,
+          "occluders": {
+            "residential west wing roof": 37,
+            "3 long semitrailer": 10,
+            "residential west wing parapet": 4,
+            "residential west wing parapet.003": 2,
+            "residential west wing window frames mullions and sills": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3034.9088516584557,
+          "visible_pixel_area_estimate": 3034.9088516584557,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 740,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3048.2999536751054,
+          "visible_pixel_area_estimate": 3048.2999536751054,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 587,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3318.8264943254985,
+          "visible_pixel_area_estimate": 3318.8264943254985,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 435,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 241,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3363.598504335222,
+          "visible_pixel_area_estimate": 3239.829728201675,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9632034632034632,
+          "in_frame": 1.0,
+          "silhouette_samples": 462,
+          "occluders": {
+            "3 long semitrailer": 17
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3074.155807060283,
+          "visible_pixel_area_estimate": 3074.155807060283,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 664,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2971.867319476581,
+          "visible_pixel_area_estimate": 2971.867319476581,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2961.549828527191,
+          "visible_pixel_area_estimate": 2961.549828527191,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 520,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 265,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3115.5048225516102,
+          "visible_pixel_area_estimate": 2993.762182949238,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9609236234458259,
+          "in_frame": 1.0,
+          "silhouette_samples": 563,
+          "occluders": {
+            "3 long semitrailer": 22
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3059.4970181419553,
+          "visible_pixel_area_estimate": 3059.4970181419553,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 590,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2965.8002201460154,
+          "visible_pixel_area_estimate": 2965.8002201460154,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 676,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2858.2794844941573,
+          "visible_pixel_area_estimate": 2858.2794844941573,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 607,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 289,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3003.3376162568184,
+          "visible_pixel_area_estimate": 2879.782587739924,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9588607594936709,
+          "in_frame": 1.0,
+          "silhouette_samples": 632,
+          "occluders": {
+            "3 long semitrailer": 26
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3192.4418173338536,
+          "visible_pixel_area_estimate": 3192.4418173338536,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 503,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2940.6888923627002,
+          "visible_pixel_area_estimate": 2940.6888923627002,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2811.7336936726324,
+          "visible_pixel_area_estimate": 2811.7336936726324,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 653,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 313,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2948.67978620627,
+          "visible_pixel_area_estimate": 2873.1864784268923,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9743975903614458,
+          "in_frame": 1.0,
+          "silhouette_samples": 664,
+          "occluders": {
+            "3 long semitrailer": 17
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3396.2392236160567,
+          "visible_pixel_area_estimate": 3396.2392236160567,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 433,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3075.542926644841,
+          "visible_pixel_area_estimate": 3075.542926644841,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 602,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2791.8905560247144,
+          "visible_pixel_area_estimate": 2791.8905560247144,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 673,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 337,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2946.17828546958,
+          "visible_pixel_area_estimate": 2825.2208192039666,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9589442815249267,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {
+            "3 long semitrailer": 28
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3683.036030128304,
+          "visible_pixel_area_estimate": 3683.036030128304,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 406,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3578.785117318125,
+          "visible_pixel_area_estimate": 3578.785117318125,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 404,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2849.4590383742207,
+          "visible_pixel_area_estimate": 2849.4590383742207,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 731,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 361,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3077.0350515839323,
+          "visible_pixel_area_estimate": 3054.7376961376717,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9927536231884058,
+          "in_frame": 1.0,
+          "silhouette_samples": 690,
+          "occluders": {
+            "3 long semitrailer": 5
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3920.5430210985714,
+          "visible_pixel_area_estimate": 3862.4609022674817,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9851851851851852,
+          "in_frame": 1.0,
+          "silhouette_samples": 405,
+          "occluders": {
+            "city block -17 -41 parapet.003": 3,
+            "tree 14 crown 0": 2,
+            "tree 14 crown 1": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4149.537313071785,
+          "visible_pixel_area_estimate": 4016.9037003251983,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9680365296803652,
+          "in_frame": 1.0,
+          "silhouette_samples": 438,
+          "occluders": {
+            "city block 8.4 -41 parapet.003": 4,
+            "tree 16 crown 0": 3,
+            "street lamp luminaires": 3,
+            "tree 16 crown 1": 2,
+            "city block 17 -41 parapet": 1,
+            "city block 17 -41 parapet.003": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3016.6613355051504,
+          "visible_pixel_area_estimate": 3016.6613355051504,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 509,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 385,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3361.3541553517757,
+          "visible_pixel_area_estimate": 3361.3541553517757,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 437,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4243.245390256286,
+          "visible_pixel_area_estimate": 4112.396413464242,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9691629955947136,
+          "in_frame": 1.0,
+          "silhouette_samples": 454,
+          "occluders": {
+            "city block -17 -41 parapet.003": 5,
+            "street lamp poles and arms": 3,
+            "tree 14 crown 0": 2,
+            "tree 14 crown 1": 2,
+            "street lamp luminaires": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4373.707821232903,
+          "visible_pixel_area_estimate": 4246.472684615219,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9709090909090909,
+          "in_frame": 1.0,
+          "silhouette_samples": 550,
+          "occluders": {
+            "city block 17 -41 parapet.003": 8,
+            "tree 17 crown 0": 4,
+            "tree 17 crown 1": 3,
+            "street lamp luminaires": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3648.125578412551,
+          "visible_pixel_area_estimate": 3648.125578412551,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 400,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 409,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3962.0853230549455,
+          "visible_pixel_area_estimate": 3884.9644408543627,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9805352798053528,
+          "in_frame": 1.0,
+          "silhouette_samples": 411,
+          "occluders": {
+            "tree 16 crown 0": 3,
+            "tree 16 crown 1": 3,
+            "city block 8.4 -41 parapet.003": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4361.032873443478,
+          "visible_pixel_area_estimate": 4264.833618882224,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9779411764705882,
+          "in_frame": 1.0,
+          "silhouette_samples": 544,
+          "occluders": {
+            "city block -17 -41 parapet.003": 3,
+            "tree 15 crown 0": 3,
+            "tree 15 crown 1": 3,
+            "city block -8.4 -41 parapet.003": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4377.294349120868,
+          "visible_pixel_area_estimate": 4377.294349120868,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 685,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4204.589610412542,
+          "visible_pixel_area_estimate": 3930.184814785618,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9347368421052632,
+          "in_frame": 1.0,
+          "silhouette_samples": 475,
+          "occluders": {
+            "residential east wing roof": 16,
+            "residential east wing parapet.003": 8,
+            "residential east wing parapet.001": 7
+          }
+        }
+      ]
+    },
+    {
+      "frame": 433,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4331.922343663062,
+          "visible_pixel_area_estimate": 4229.189007449709,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9762845849802372,
+          "in_frame": 1.0,
+          "silhouette_samples": 506,
+          "occluders": {
+            "city block 17 -41 parapet.003": 5,
+            "tree 17 crown 0": 4,
+            "street lamp luminaires": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4375.398134222421,
+          "visible_pixel_area_estimate": 4369.200686440236,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9985835694050992,
+          "in_frame": 1.0,
+          "silhouette_samples": 706,
+          "occluders": {
+            "city block -8.4 -41 parapet.003": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4114.459411296979,
+          "visible_pixel_area_estimate": 4114.459411296979,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 457,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4335.171764477171,
+          "visible_pixel_area_estimate": 3839.294231625362,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8856152512998267,
+          "in_frame": 1.0,
+          "silhouette_samples": 577,
+          "occluders": {
+            "residential west wing roof": 21,
+            "residential east wing roof": 17,
+            "residential west wing parapet.003": 13,
+            "residential east wing parapet.003": 7,
+            "residential north wing parapet.003": 4,
+            "residential west wing parapet.001": 2,
+            "residential north wing roof": 2
+          }
+        }
+      ]
+    },
+    {
+      "frame": 457,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4349.439703839864,
+          "visible_pixel_area_estimate": 4295.071707541866,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9875,
+          "in_frame": 1.0,
+          "silhouette_samples": 640,
+          "occluders": {
+            "street lamp luminaires": 3,
+            "city block 17 -41 parapet.003": 3,
+            "tree 17 crown 1": 1,
+            "city block 17 -41 roof": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4184.726155678174,
+          "visible_pixel_area_estimate": 4184.726155678174,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 496,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3551.844713236392,
+          "visible_pixel_area_estimate": 3551.844713236392,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4308.071406265767,
+          "visible_pixel_area_estimate": 3651.3972053106836,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.847571189279732,
+          "in_frame": 1.0,
+          "silhouette_samples": 597,
+          "occluders": {
+            "residential west wing roof": 64,
+            "residential west wing parapet.003": 18,
+            "residential west wing parapet": 5,
+            "residential north wing parapet.003": 3,
+            "residential north wing parapet": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 481,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4239.108536315482,
+          "visible_pixel_area_estimate": 4222.897796214848,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9961759082217974,
+          "in_frame": 1.0,
+          "silhouette_samples": 523,
+          "occluders": {
+            "tree 17 crown 0": 1,
+            "tree 17 crown 1": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3691.6627989168514,
+          "visible_pixel_area_estimate": 3691.6627989168514,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3138.3745091367537,
+          "visible_pixel_area_estimate": 3119.315554627826,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9939271255060729,
+          "in_frame": 1.0,
+          "silhouette_samples": 494,
+          "occluders": {
+            "1 formed enclosed cab": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4056.0817166377124,
+          "visible_pixel_area_estimate": 3342.602282144813,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8240963855421687,
+          "in_frame": 1.0,
+          "silhouette_samples": 415,
+          "occluders": {
+            "residential west wing roof": 61,
+            "residential west wing parapet.003": 7,
+            "residential west wing parapet": 5
+          }
+        }
+      ]
+    },
+    {
+      "frame": 505,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3715.2252254691584,
+          "visible_pixel_area_estimate": 3715.2252254691584,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3261.4602173601997,
+          "visible_pixel_area_estimate": 3261.4602173601997,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 458,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2931.2143362565944,
+          "visible_pixel_area_estimate": 2911.0685332582675,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.993127147766323,
+          "in_frame": 1.0,
+          "silhouette_samples": 582,
+          "occluders": {
+            "1 formed enclosed cab": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3536.0547680478867,
+          "visible_pixel_area_estimate": 3536.0547680478867,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 438,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 529,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3231.985697283938,
+          "visible_pixel_area_estimate": 3231.985697283938,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 463,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2965.496350542271,
+          "visible_pixel_area_estimate": 2965.496350542271,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 538,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2871.0739576368187,
+          "visible_pixel_area_estimate": 2853.1577394924393,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9937597503900156,
+          "in_frame": 1.0,
+          "silhouette_samples": 641,
+          "occluders": {
+            "1 formed enclosed cab": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3165.880506316355,
+          "visible_pixel_area_estimate": 3165.880506316355,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 529,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 553,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2967.1708056167663,
+          "visible_pixel_area_estimate": 2967.1708056167663,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 557,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2875.401987705517,
+          "visible_pixel_area_estimate": 2875.401987705517,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 611,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2853.8102641700957,
+          "visible_pixel_area_estimate": 2836.77259095117,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9940298507462687,
+          "in_frame": 1.0,
+          "silhouette_samples": 670,
+          "occluders": {
+            "1 formed enclosed cab": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3012.990204139145,
+          "visible_pixel_area_estimate": 3012.990204139145,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 610,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 577,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2862.421556785611,
+          "visible_pixel_area_estimate": 2862.421556785611,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 625,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2837.645907709197,
+          "visible_pixel_area_estimate": 2837.645907709197,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 652,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2834.4216660687225,
+          "visible_pixel_area_estimate": 2821.8984481037646,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9955817378497791,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {
+            "1 formed enclosed cab": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2965.8038085711673,
+          "visible_pixel_area_estimate": 2965.8038085711673,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 657,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 601,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2821.445720148251,
+          "visible_pixel_area_estimate": 2821.445720148251,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 659,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2823.6310516719177,
+          "visible_pixel_area_estimate": 2823.6310516719177,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 672,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2964.5290570016223,
+          "visible_pixel_area_estimate": 2964.5290570016223,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 595,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2943.7863322658477,
+          "visible_pixel_area_estimate": 2943.7863322658477,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 677,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 625,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2815.8334699747556,
+          "visible_pixel_area_estimate": 2815.8334699747556,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 676,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2794.57704822212,
+          "visible_pixel_area_estimate": 2794.57704822212,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 693,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3539.311368776912,
+          "visible_pixel_area_estimate": 3504.526981860185,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9901719901719902,
+          "in_frame": 1.0,
+          "silhouette_samples": 407,
+          "occluders": {
+            "residential east wing roof": 2,
+            "1 formed enclosed cab": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3000.030439391185,
+          "visible_pixel_area_estimate": 3000.030439391185,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 734,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 649,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2950.324397258296,
+          "visible_pixel_area_estimate": 2950.324397258296,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 685,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2903.873494276444,
+          "visible_pixel_area_estimate": 2903.873494276444,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 576,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4142.488342630732,
+          "visible_pixel_area_estimate": 4003.7889561587212,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9665178571428571,
+          "in_frame": 1.0,
+          "silhouette_samples": 448,
+          "occluders": {
+            "residential east wing roof": 6,
+            "residential east wing parapet.003": 4,
+            "residential east wing parapet.001": 4,
+            "1 formed enclosed cab": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3111.348277979821,
+          "visible_pixel_area_estimate": 3111.348277979821,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 503,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 673,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3269.964039302064,
+          "visible_pixel_area_estimate": 3269.964039302064,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 437,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3454.1163247042737,
+          "visible_pixel_area_estimate": 3454.1163247042737,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 404,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4385.950106840975,
+          "visible_pixel_area_estimate": 3889.1345195173963,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8867256637168142,
+          "in_frame": 1.0,
+          "silhouette_samples": 565,
+          "occluders": {
+            "residential east wing roof": 36,
+            "residential east wing parapet.003": 13,
+            "residential west wing parapet.003": 8,
+            "residential west wing roof": 6,
+            "residential west wing parapet.001": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3714.8428553999333,
+          "visible_pixel_area_estimate": 3695.743406271913,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9948586118251928,
+          "in_frame": 1.0,
+          "silhouette_samples": 389,
+          "occluders": {
+            "city block 8.4 -41 parapet.003": 1,
+            "tree 16 crown 0": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 697,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3939.32527757914,
+          "visible_pixel_area_estimate": 3930.012451863823,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9976359338061466,
+          "in_frame": 1.0,
+          "silhouette_samples": 423,
+          "occluders": {
+            "residential east wing parapet.001": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4016.873442971892,
+          "visible_pixel_area_estimate": 3998.362505446676,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9953917050691244,
+          "in_frame": 1.0,
+          "silhouette_samples": 434,
+          "occluders": {
+            "outer residential -1 3 parapet.003": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4438.815045119761,
+          "visible_pixel_area_estimate": 3961.523104784302,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8924731182795699,
+          "in_frame": 1.0,
+          "silhouette_samples": 651,
+          "occluders": {
+            "residential west wing roof": 40,
+            "residential west wing parapet.003": 20,
+            "residential north wing parapet.003": 7,
+            "residential west wing parapet.001": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4197.678018266654,
+          "visible_pixel_area_estimate": 4124.674922296799,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9826086956521739,
+          "in_frame": 1.0,
+          "silhouette_samples": 460,
+          "occluders": {
+            "street lamp luminaires": 3,
+            "city block 17 -41 parapet.003": 3,
+            "city block 8.4 -41 parapet.003": 2
+          }
+        }
+      ]
+    },
+    {
+      "frame": 721,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4309.702396067295,
+          "visible_pixel_area_estimate": 3837.292710344534,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8903846153846153,
+          "in_frame": 1.0,
+          "silhouette_samples": 520,
+          "occluders": {
+            "residential east wing roof": 38,
+            "residential east wing parapet.003": 13,
+            "residential west wing parapet.001": 3,
+            "residential west wing roof": 1,
+            "residential west wing parapet.003": 1,
+            "residential east wing window frames mullions and sills": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4310.383793193259,
+          "visible_pixel_area_estimate": 4003.6834079083546,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9288461538461539,
+          "in_frame": 1.0,
+          "silhouette_samples": 520,
+          "occluders": {
+            "outer residential -1 3 roof": 17,
+            "outer residential -1 3 parapet.003": 13,
+            "outer residential -1 3 parapet.001": 4,
+            "outer residential -1 3 window frames mullions and sills": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4237.494591851571,
+          "visible_pixel_area_estimate": 3376.7535028817206,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.796875,
+          "in_frame": 1.0,
+          "silhouette_samples": 448,
+          "occluders": {
+            "residential west wing roof": 76,
+            "residential west wing parapet.003": 12,
+            "residential west wing window frames mullions and sills": 2,
+            "residential west wing parapet": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4297.592189363612,
+          "visible_pixel_area_estimate": 4185.8696887735705,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9740034662045061,
+          "in_frame": 1.0,
+          "silhouette_samples": 577,
+          "occluders": {
+            "tree 17 crown 0": 4,
+            "city block 17 -41 roof": 4,
+            "tree 17 crown 1": 4,
+            "city block 17 -41 parapet.003": 2,
+            "street lamp luminaires": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 745,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4407.060679035061,
+          "visible_pixel_area_estimate": 3846.6652080745584,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8728414442700158,
+          "in_frame": 1.0,
+          "silhouette_samples": 637,
+          "occluders": {
+            "residential west wing roof": 41,
+            "residential west wing parapet.003": 17,
+            "residential north wing parapet.003": 8,
+            "3 long semitrailer": 6,
+            "residential north wing roof": 3,
+            "residential west wing parapet": 2,
+            "residential east wing parapet.003": 2,
+            "residential west wing parapet.001": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4432.1830206195855,
+          "visible_pixel_area_estimate": 3954.8710030144,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8923076923076924,
+          "in_frame": 1.0,
+          "silhouette_samples": 585,
+          "occluders": {
+            "outer residential -1 3 roof": 47,
+            "outer residential -1 3 parapet.003": 16
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3725.438677808376,
+          "visible_pixel_area_estimate": 3654.981208724529,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9810874704491725,
+          "in_frame": 1.0,
+          "silhouette_samples": 423,
+          "occluders": {
+            "residential west wing parapet": 4,
+            "residential west wing window frames mullions and sills": 2,
+            "residential west wing roof": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4222.012314472658,
+          "visible_pixel_area_estimate": 4215.352989055508,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.998422712933754,
+          "in_frame": 1.0,
+          "silhouette_samples": 634,
+          "occluders": {
+            "tree 17 crown 1": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 769,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4362.972129694637,
+          "visible_pixel_area_estimate": 3402.9468280722417,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.7799607072691552,
+          "in_frame": 1.0,
+          "silhouette_samples": 509,
+          "occluders": {
+            "residential west wing roof": 78,
+            "residential west wing parapet.003": 16,
+            "3 long semitrailer": 12,
+            "residential west wing parapet.001": 4,
+            "residential west wing parapet": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4405.135223184548,
+          "visible_pixel_area_estimate": 4141.637870877496,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9401840490797546,
+          "in_frame": 1.0,
+          "silhouette_samples": 652,
+          "occluders": {
+            "outer residential -1 3 roof": 24,
+            "outer residential -1 3 parapet.003": 15
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3276.857627530855,
+          "visible_pixel_area_estimate": 3276.857627530855,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 499,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3885.5806305218216,
+          "visible_pixel_area_estimate": 3885.5806305218216,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 429,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 793,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3902.0571475524775,
+          "visible_pixel_area_estimate": 3396.7547831212214,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8705035971223022,
+          "in_frame": 1.0,
+          "silhouette_samples": 417,
+          "occluders": {
+            "residential west wing roof": 37,
+            "3 long semitrailer": 10,
+            "residential west wing parapet": 4,
+            "residential west wing parapet.003": 2,
+            "residential west wing window frames mullions and sills": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4426.764417273409,
+          "visible_pixel_area_estimate": 4176.192846484348,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9433962264150944,
+          "in_frame": 1.0,
+          "silhouette_samples": 636,
+          "occluders": {
+            "outer residential -1 3 roof": 20,
+            "outer residential -1 3 parapet.003": 16
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3048.3069837707317,
+          "visible_pixel_area_estimate": 3048.3069837707317,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 587,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3318.820811038076,
+          "visible_pixel_area_estimate": 3318.820811038076,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 435,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 817,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3363.590596775066,
+          "visible_pixel_area_estimate": 3239.822111612347,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9632034632034632,
+          "in_frame": 1.0,
+          "silhouette_samples": 462,
+          "occluders": {
+            "3 long semitrailer": 17
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4369.717806586533,
+          "visible_pixel_area_estimate": 4230.996606377437,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9682539682539683,
+          "in_frame": 1.0,
+          "silhouette_samples": 567,
+          "occluders": {
+            "outer residential -1 3 roof": 12,
+            "outer residential -1 3 parapet.003": 6
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2971.8756878099853,
+          "visible_pixel_area_estimate": 2971.8756878099853,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 644,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2961.5387967704432,
+          "visible_pixel_area_estimate": 2961.5387967704432,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 520,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 841,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3115.5115580663473,
+          "visible_pixel_area_estimate": 2993.7686552644655,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9609236234458259,
+          "in_frame": 1.0,
+          "silhouette_samples": 563,
+          "occluders": {
+            "3 long semitrailer": 22
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4301.9575077844265,
+          "visible_pixel_area_estimate": 4266.477445864555,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9917525773195877,
+          "in_frame": 1.0,
+          "silhouette_samples": 485,
+          "occluders": {
+            "outer residential -1 3 roof": 2,
+            "outer residential -1 3 parapet.003": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2965.783652990659,
+          "visible_pixel_area_estimate": 2965.783652990659,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 676,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2858.2658450274835,
+          "visible_pixel_area_estimate": 2858.2658450274835,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 607,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 865,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3003.345727940557,
+          "visible_pixel_area_estimate": 2879.7903657151546,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9588607594936709,
+          "in_frame": 1.0,
+          "silhouette_samples": 632,
+          "occluders": {
+            "3 long semitrailer": 26
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4175.041798958776,
+          "visible_pixel_area_estimate": 4175.041798958776,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 436,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2940.697901924505,
+          "visible_pixel_area_estimate": 2940.697901924505,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 684,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2811.7174187620644,
+          "visible_pixel_area_estimate": 2811.7174187620644,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 653,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 889,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2948.6884344801674,
+          "visible_pixel_area_estimate": 2873.194905284139,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9743975903614458,
+          "in_frame": 1.0,
+          "silhouette_samples": 664,
+          "occluders": {
+            "3 long semitrailer": 17
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4051.1586764066947,
+          "visible_pixel_area_estimate": 4051.1586764066947,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 415,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3075.5411226864867,
+          "visible_pixel_area_estimate": 3075.5411226864867,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 602,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2791.873540551251,
+          "visible_pixel_area_estimate": 2791.873540551251,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 673,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 913,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2946.1871854187266,
+          "visible_pixel_area_estimate": 2825.229353759307,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9589442815249267,
+          "in_frame": 1.0,
+          "silhouette_samples": 682,
+          "occluders": {
+            "3 long semitrailer": 28
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3902.8496043954724,
+          "visible_pixel_area_estimate": 3902.8496043954724,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 418,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3578.79199766356,
+          "visible_pixel_area_estimate": 3578.79199766356,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 404,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2849.467059873662,
+          "visible_pixel_area_estimate": 2849.467059873662,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 731,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 937,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3077.036484839896,
+          "visible_pixel_area_estimate": 3054.7391190077224,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9927536231884058,
+          "in_frame": 1.0,
+          "silhouette_samples": 690,
+          "occluders": {
+            "3 long semitrailer": 5
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3760.4653044070774,
+          "visible_pixel_area_estimate": 3760.4653044070774,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 425,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4149.538259181576,
+          "visible_pixel_area_estimate": 4016.904616194037,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9680365296803652,
+          "in_frame": 1.0,
+          "silhouette_samples": 438,
+          "occluders": {
+            "city block 8.4 -41 parapet.003": 4,
+            "tree 16 crown 0": 3,
+            "street lamp luminaires": 3,
+            "tree 16 crown 1": 2,
+            "city block 17 -41 parapet": 1,
+            "city block 17 -41 parapet.003": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3016.6734377315374,
+          "visible_pixel_area_estimate": 3016.6734377315374,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 509,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 961,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3361.363906138386,
+          "visible_pixel_area_estimate": 3361.363906138386,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 437,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3533.4086844589356,
+          "visible_pixel_area_estimate": 3533.4086844589356,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 431,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4373.699699692305,
+          "visible_pixel_area_estimate": 4246.46479933762,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9709090909090909,
+          "in_frame": 1.0,
+          "silhouette_samples": 550,
+          "occluders": {
+            "city block 17 -41 parapet.003": 8,
+            "tree 17 crown 0": 4,
+            "tree 17 crown 1": 3,
+            "street lamp luminaires": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3648.129318920062,
+          "visible_pixel_area_estimate": 3648.129318920062,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 400,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 985,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3962.0873860273095,
+          "visible_pixel_area_estimate": 3884.966463671547,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9805352798053528,
+          "in_frame": 1.0,
+          "silhouette_samples": 411,
+          "occluders": {
+            "tree 16 crown 0": 3,
+            "tree 16 crown 1": 3,
+            "city block 8.4 -41 parapet.003": 2
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3424.0065159202672,
+          "visible_pixel_area_estimate": 3424.0065159202672,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 458,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4377.2940577855825,
+          "visible_pixel_area_estimate": 4377.2940577855825,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 685,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4204.584679740924,
+          "visible_pixel_area_estimate": 3930.1802059052006,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9347368421052632,
+          "in_frame": 1.0,
+          "silhouette_samples": 475,
+          "occluders": {
+            "residential east wing roof": 16,
+            "residential east wing parapet.003": 8,
+            "residential east wing parapet.001": 7
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1009,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4331.925673092755,
+          "visible_pixel_area_estimate": 4229.192257920595,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9762845849802372,
+          "in_frame": 1.0,
+          "silhouette_samples": 506,
+          "occluders": {
+            "city block 17 -41 parapet.003": 5,
+            "tree 17 crown 0": 4,
+            "street lamp luminaires": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3249.156558532931,
+          "visible_pixel_area_estimate": 3249.156558532931,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 478,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4114.464067020454,
+          "visible_pixel_area_estimate": 4114.464067020454,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 457,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4335.177494976731,
+          "visible_pixel_area_estimate": 3839.2993066431713,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8856152512998267,
+          "in_frame": 1.0,
+          "silhouette_samples": 577,
+          "occluders": {
+            "residential west wing roof": 21,
+            "residential east wing roof": 17,
+            "residential west wing parapet.003": 13,
+            "residential east wing parapet.003": 7,
+            "residential north wing parapet.003": 4,
+            "residential west wing parapet.001": 2,
+            "residential north wing roof": 2
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1033,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4349.4272896828215,
+          "visible_pixel_area_estimate": 4295.059448561787,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9875,
+          "in_frame": 1.0,
+          "silhouette_samples": 640,
+          "occluders": {
+            "street lamp luminaires": 3,
+            "city block 17 -41 parapet.003": 3,
+            "tree 17 crown 1": 1,
+            "city block 17 -41 roof": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3215.919766636813,
+          "visible_pixel_area_estimate": 3215.919766636813,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 517,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3551.845969516634,
+          "visible_pixel_area_estimate": 3551.845969516634,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 4308.08397936982,
+          "visible_pixel_area_estimate": 3651.4078619114384,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.847571189279732,
+          "in_frame": 1.0,
+          "silhouette_samples": 597,
+          "occluders": {
+            "residential west wing roof": 64,
+            "residential west wing parapet.003": 18,
+            "residential west wing parapet": 5,
+            "residential north wing parapet.003": 3,
+            "residential north wing parapet": 1
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1057,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 4239.117869258275,
+          "visible_pixel_area_estimate": 4222.907093467613,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9961759082217974,
+          "in_frame": 1.0,
+          "silhouette_samples": 523,
+          "occluders": {
+            "tree 17 crown 0": 1,
+            "tree 17 crown 1": 1
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3136.6560232383026,
+          "visible_pixel_area_estimate": 3136.6560232383026,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 545,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3138.378921979791,
+          "visible_pixel_area_estimate": 3119.319940672221,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9939271255060729,
+          "in_frame": 1.0,
+          "silhouette_samples": 494,
+          "occluders": {
+            "1 formed enclosed cab": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 4056.080594115545,
+          "visible_pixel_area_estimate": 3342.601357078353,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.8240963855421687,
+          "in_frame": 1.0,
+          "silhouette_samples": 415,
+          "occluders": {
+            "residential west wing roof": 61,
+            "residential west wing parapet.003": 7,
+            "residential west wing parapet": 5
+          }
+        }
+      ]
+    },
+    {
+      "frame": 1081,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3715.224734962174,
+          "visible_pixel_area_estimate": 3715.224734962174,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 421,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3078.4847548342455,
+          "visible_pixel_area_estimate": 3078.4847548342455,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 571,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2931.2202286856814,
+          "visible_pixel_area_estimate": 2911.07438518956,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.993127147766323,
+          "in_frame": 1.0,
+          "silhouette_samples": 582,
+          "occluders": {
+            "1 formed enclosed cab": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3536.0570214445534,
+          "visible_pixel_area_estimate": 3536.0570214445534,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 438,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1105,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 3231.9771973975635,
+          "visible_pixel_area_estimate": 3231.9771973975635,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 463,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3035.906437949104,
+          "visible_pixel_area_estimate": 3035.906437949104,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 594,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2871.057550429192,
+          "visible_pixel_area_estimate": 2853.141434669883,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9937597503900156,
+          "in_frame": 1.0,
+          "silhouette_samples": 641,
+          "occluders": {
+            "1 formed enclosed cab": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3165.885755272141,
+          "visible_pixel_area_estimate": 3165.885755272141,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 529,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1129,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2967.1760630971385,
+          "visible_pixel_area_estimate": 2967.1760630971385,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 557,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 3021.493552570689,
+          "visible_pixel_area_estimate": 3021.493552570689,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 617,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2853.794589070138,
+          "visible_pixel_area_estimate": 2836.7570094338985,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9940298507462687,
+          "in_frame": 1.0,
+          "silhouette_samples": 670,
+          "occluders": {
+            "1 formed enclosed cab": 4
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 3012.974520428494,
+          "visible_pixel_area_estimate": 3012.974520428494,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 610,
+          "occluders": {}
+        }
+      ]
+    },
+    {
+      "frame": 1153,
+      "trucks": [
+        {
+          "isolated_pixel_area_estimate": 2862.407112445453,
+          "visible_pixel_area_estimate": 2862.407112445453,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 625,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2997.24716143714,
+          "visible_pixel_area_estimate": 2997.24716143714,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 633,
+          "occluders": {}
+        },
+        {
+          "isolated_pixel_area_estimate": 2834.4041788996656,
+          "visible_pixel_area_estimate": 2821.8810381976054,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 0.9955817378497791,
+          "in_frame": 1.0,
+          "silhouette_samples": 679,
+          "occluders": {
+            "1 formed enclosed cab": 3
+          }
+        },
+        {
+          "isolated_pixel_area_estimate": 2965.8109006851946,
+          "visible_pixel_area_estimate": 2965.8109006851946,
+          "visible_glazed_entrance_pixel_area_estimate": 0.0,
+          "visible": 1.0,
+          "in_frame": 1.0,
+          "silhouette_samples": 657,
+          "occluders": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Visibility sampled every1second with32x32 projected silhouette rays; not a full-frame visual guarantee. Full swept collision verification is in route-check.json.",
+  "passed": true
+}

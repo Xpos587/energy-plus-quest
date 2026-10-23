@@ -1,0 +1,19 @@
+{
+  "source": "../fleet-behavior-v16-2026-10-07/fleet-v16-motion.blend",
+  "vehicles": [
+    1,
+    4
+  ],
+  "puffs_per_vehicle": 11,
+  "emission_every_frames": 2,
+  "lifetime_frames": 22,
+  "fps": 24,
+  "origin": "stack upper cap world-space bounding-box center",
+  "motion": "overlapping ellipsoids aligned to emission-path tangent, drifting and expanding in world space; individually keyed density fades",
+  "frames": 192,
+  "camera": "desktop",
+  "resolution": [
+    1920,
+    1334
+  ]
+}

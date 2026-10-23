@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Доставляем радость — эскиз игровой обложки</title>
+<style>
+@font-face{font-family:Normalidad;src:url('/fonts/normalidad-proxy-regular.woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Normalidad;src:url('/fonts/normalidad-proxy-bold.woff2');font-weight:700;font-display:swap}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;color:#06466d;background:#d9edf6;font-family:Normalidad,sans-serif}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #ff5500;outline-offset:5px}
+.brand{position:relative;z-index:3;display:flex;align-items:center;gap:22px;padding:22px 3.5vw;background:#d9edf6}
+.energy{width:180px;height:auto;transform:translateY(5px)}.company{width:250px;height:auto}
+.cover{position:relative;min-height:calc(100dvh - 92px);overflow:hidden;background:linear-gradient(180deg,#d9edf6 0%,#d9edf6 40%,#cde6f2 100%);isolation:isolate}
+.coverArt{position:absolute;right:-1px;bottom:-1px;width:100%;height:auto;display:block;z-index:-2;mask-image:linear-gradient(to bottom,transparent 0%,#000 8%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 8%)}
+.cover::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#d9edf6 0%,#d9edf6e8 22%,#d9edf677 40%,transparent 65%);pointer-events:none}
+.copy{width:min(53%,740px);padding:clamp(44px,7vh,76px) 0 100px 5.5vw}
+h1{font-size:clamp(72px,7.4vw,120px);font-weight:700;line-height:.94;letter-spacing:-.03em;margin:0 0 28px;color:#075d9b}
+.promise{max-width:440px;font-size:clamp(24px,2.2vw,30px);line-height:1.25;margin:0 0 32px;color:#173851}
+.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;border:0;border-radius:12px;min-height:60px;font-size:24px;font-weight:700;background:#075d9b;color:white;min-width:210px;box-shadow:0 8px 20px #075d9b18}.primary:hover{background:#004b80}.primary svg{width:25px;height:25px}.secondary{background:#edf3f8;color:#31556f;min-width:0;box-shadow:none}
+.lesson{position:relative;isolation:isolate;min-height:calc(100dvh - 92px);padding:42px clamp(24px,5vw,72px) 36px;background:#d9edf6;overflow:hidden}.lesson::before{content:"";position:absolute;inset:0;z-index:-2;background:url('/scene-art/lastmile-family-v1/choice-neutral-wide-v1.webp') center bottom/100% auto no-repeat;opacity:.25}.lesson::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#d9edf6 0%,#d9edf6f0 45%,#d9edf680 100%)}.lesson[hidden],.cover[hidden]{display:none}.lessonInner{max-width:1080px;margin:0 auto}.lesson h2{font-size:48px;line-height:1.05;margin:0 0 28px;color:#075d9b;letter-spacing:-.02em}.briefing{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:48px;align-items:start;min-height:350px}.authored{color:#173851;font-size:22px;line-height:1.38}.authored p{margin:0 0 24px}.authored p:first-child{font-weight:700}.authored p:last-child{margin-bottom:0}.parcelDrawing{width:100%;height:250px;object-fit:contain;display:block;align-self:center}.metrics{list-style:none;margin:12px 0 20px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.metrics li{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.metrics svg{width:30px;height:30px;flex:none;color:#075d9b}.metrics strong{display:block;font-weight:700}.metrics span{display:block;font-size:19px;line-height:1.3;color:#31556f;margin-top:4px}.metricLead{font-size:21px;margin:20px 0 12px}.preparation{font-size:21px}.lessonActions{display:flex;justify-content:space-between;gap:16px;width:calc(100% - 308px);margin-top:24px;padding-bottom:max(12px,env(safe-area-inset-bottom))}.lessonActions svg{width:24px;height:24px;flex:none}.primary{text-decoration:none}.secondary svg{width:24px;height:24px}.error{font-size:20px;line-height:1.3;max-width:440px;color:#8a3500;margin:20px 0 0}
+@media(min-width:1700px){.coverArt{bottom:-6vw}.copy{padding-top:8vh}}
+@media(max-width:700px){.brand{gap:14px;padding:16px}.energy{width:128px}.company{width:180px}.cover{display:flex;flex-direction:column;min-height:calc(100dvh - 62px);overflow:hidden}.copy{width:100%;padding:36px 24px 6px}.copy h1{font-size:clamp(48px,13.8vw,76px);line-height:1;margin-bottom:22px}.promise{font-size:23px;max-width:350px;margin-bottom:24px}.primary{min-height:56px;font-size:22px;min-width:184px;padding:14px 24px}.coverArt{order:1;position:relative;width:100%;height:clamp(290px,43dvh,420px);object-fit:cover;object-position:42% center;right:0;bottom:0;flex:1;min-height:290px;margin-top:12px;mask-image:linear-gradient(to bottom,transparent,#000 8%);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 8%)}.cover::after{display:none}.lesson{padding:18px 24px 16px}.lesson h2{font-size:34px;margin-bottom:16px;padding-right:96px;min-height:72px}.briefing{display:block;min-height:432px}.parcelDrawing{position:absolute;top:13px;right:18px;width:100px;height:100px}.authored{font-size:20px}.authored p{margin-bottom:20px}.metrics{grid-template-columns:1fr;gap:14px;margin-bottom:20px}.metrics li{flex-direction:row;align-items:center;gap:12px}.metrics li>div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px}.metrics span{margin-top:0}.metrics span,.metricLead,.preparation{font-size:18px}.lessonActions{width:100%;margin-top:24px;gap:12px}.lessonActions>button,.lessonActions>a{flex:1;min-width:0;font-size:20px;padding:14px 16px;min-height:54px}.lesson::before{background-size:auto 330px;opacity:.16}}
+@media(min-width:701px) and (max-width:1000px) and (min-height:501px){
+.lesson{padding:32px 36px 28px}.lesson h2{font-size:42px;min-height:88px;padding-right:140px;margin-bottom:24px}
+.briefing{display:block;min-height:432px}.parcelDrawing{position:absolute;top:24px;right:32px;width:120px;height:120px}
+.metrics{grid-template-columns:1fr;gap:14px;margin-bottom:20px}.metrics li{flex-direction:row;align-items:center;gap:14px}.metrics li>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px}.metrics span{margin-top:0;font-size:20px}.metricLead,.preparation{font-size:20px}
+.lessonActions{width:100%;margin-top:24px}.lesson::before{opacity:.16}
+}
+@media(max-width:360px){.briefing{min-height:0}.metrics li>div{display:block}.metrics span{margin-top:3px}.lesson h2{font-size:30px;padding-right:88px;min-height:64px}.lesson{padding-left:20px;padding-right:20px}.parcelDrawing{width:88px;height:88px;right:14px}.brand{gap:10px;padding:12px}.energy{width:112px}.company{width:158px}.copy{padding:28px 20px 4px}.copy h1{font-size:48px;margin-bottom:18px}.promise{font-size:21px;margin-bottom:20px}.coverArt{height:260px;min-height:260px}.primary{min-height:52px}}
+@media(max-height:500px) and (min-width:701px){.lesson{padding-top:24px}.lesson h2{font-size:36px;margin-bottom:20px}.briefing{min-height:0}.authored{font-size:20px}.lessonActions{margin-top:24px}.brand{padding:10px 24px}.energy{width:140px}.company{width:210px}.cover{min-height:calc(100dvh - 70px)}.copy{padding:20px 0 24px 5.5vw;width:52%}h1{font-size:52px;margin-bottom:16px}.promise{font-size:20px;margin-bottom:18px}.cover .primary{min-height:48px;font-size:20px;padding:12px 24px}}
+/* The two briefings share the available viewport; long copy grows the page naturally. */
+body{min-height:100dvh;display:flex;flex-direction:column}.brand{flex:none}main{flex:1;display:flex;flex-direction:column}
+.lesson{display:flex;flex:1;min-height:0}.lessonInner{flex:1;display:flex;flex-direction:column;width:100%;min-height:0}.lesson h2{flex:none}.briefing{flex:1;min-height:0}.lessonActions{flex:none;margin-top:24px}
+@media(max-width:700px){.metrics li>div{display:block}.metrics span{margin-top:3px}.briefing{min-height:0}}
+@media(min-width:701px) and (max-width:1000px) and (min-height:501px){.briefing{min-height:0}}
+@media(max-width:360px),(max-height:500px){.briefing{flex:none}.lesson{flex:none}.lessonInner{flex:none}}
+@media(prefers-reduced-motion:no-preference){.copy{animation:arrive .45s ease-out}@keyframes arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<header class="brand"><img class="energy" src="/brand/energy-plus-logo.svg" alt="Энергия+"><img class="company" src="/brand/gpn-snabzhenie.svg" alt="Газпром нефть — Газпромнефть-Снабжение"></header>
+<main>
+<section class="cover" aria-labelledby="cover-title">
+  <img class="coverArt" src="/scene-art/lastmile-family-v1/choice-neutral-wide-v1.webp" alt="">
+  <div class="copy"><h1 id="cover-title">Доставляем<br>радость</h1>
+    <p class="promise">Вам предстоит доставить важный груз на Крайний Север.</p>
+    <button class="primary" id="enter" type="button">Далее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button><p class="error" id="load-error" role="alert" hidden></p>
+  </div>
+</section>
+<section class="lesson" aria-labelledby="lesson-title" hidden data-page="0">
+  <div class="lessonInner"><h2 id="lesson-title" tabindex="-1">Доставляем радость</h2>
+    <div class="briefing"><div class="authored" id="scenario"></div>
+      <img class="parcelDrawing" src="/opening/parcel-heart-v2.webp" alt="">
+    </div>
+    <nav class="lessonActions" aria-label="Вступление"><button class="secondary" id="back" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"/></svg>Назад</button><button class="primary" id="lesson-next" type="button">Далее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button><a class="primary" id="start" href="http://127.0.0.1:4173/" hidden>Начать <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></nav>
+  </div>
+</section>
+</main>
+<script>
+const cover=document.querySelector('.cover'),lesson=document.querySelector('.lesson'),scenario=document.getElementById('scenario');
+let authored, page=0;
+async function loadScenario(){
+  if(authored)return authored;
+  const response=await fetch('/docs/scenario.md');if(!response.ok)throw new Error('Не удалось загрузить сценарий. Нажмите «Далее», чтобы повторить.');
+  const markdown=await response.text();authored={};
+  for(const id of ['24D093EF','42DF6085','38763B42','4C9AA992']){
+    const match=markdown.match(new RegExp('<!-- scenario-block id="'+id+'"[^>]*-->\\s*([\\s\\S]*?)<!-- /scenario-block -->'));
+    if(!match){authored=undefined;throw new Error('Не удалось загрузить сценарий. Нажмите «Далее», чтобы повторить.')}
+    authored[id]=match[1].split('\n').map(line=>line.replace(/^>\s?/,'')).join('\n').trim();
+  }return authored;
+}
+const symbols={energy:'<path d="m13 2-9 12h7l-1 8 10-12h-7l1-8Z"/>',empathy:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>',efficiency:'<path d="M3 3v18h18M7 14l4-4 4 3 6-7"/>'};
+function paragraph(text,className=''){const p=document.createElement('p');p.textContent=text;if(className)p.className=className;scenario.append(p)}
+function showPage(next){
+ page=next;lesson.dataset.page=page;scenario.replaceChildren();
+ if(page===0){paragraph(authored['24D093EF']);paragraph(authored['42DF6085'])}
+ else{
+   paragraph(authored['38763B42']);
+   const parts=authored['4C9AA992'].match(/^(.*?) (В пути вы будете получать баллы за то, что) (.*?) \(Энергия\), (.*?) \(Эмпатия\) и (.*?) \(Эффективность\)\. (.*)$/);
+   if(!parts){paragraph(authored['4C9AA992'])}else{
+     paragraph(parts[1]);paragraph(parts[2],'metricLead');
+     const list=document.createElement('ul');list.className='metrics';list.setAttribute('aria-label','Показатели');
+     [['Энергия',parts[3],'energy'],['Эмпатия',parts[4],'empathy'],['Эффективность',parts[5],'efficiency']].forEach(([title,text,icon])=>{
+       const li=document.createElement('li');li.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+symbols[icon]+'</svg>';
+       const detail=document.createElement('div'),name=document.createElement('strong'),meaning=document.createElement('span');name.textContent=title;meaning.textContent=text;detail.append(name,meaning);li.append(detail);list.append(li)
+     });scenario.append(list);paragraph(parts[6],'preparation');
+   }
+ }
+ document.getElementById('lesson-next').hidden=page===1;document.getElementById('start').hidden=page!==1;
+ cover.hidden=true;lesson.hidden=false;window.scrollTo(0,0);document.getElementById('lesson-title').focus({preventScroll:true});
+}
+document.getElementById('enter').addEventListener('click',async()=>{try{await loadScenario();document.getElementById('load-error').hidden=true;showPage(0)}catch(error){const notice=document.getElementById('load-error');notice.textContent=error.message;notice.hidden=false}});
+document.getElementById('lesson-next').addEventListener('click',()=>showPage(1));
+document.getElementById('back').addEventListener('click',()=>{if(page===1)showPage(0);else{lesson.hidden=true;cover.hidden=false;window.scrollTo(0,0);document.getElementById('enter').focus({preventScroll:true})}});
+</script>
+</body>
+</html>

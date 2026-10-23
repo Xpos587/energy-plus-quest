@@ -1,0 +1,27 @@
+{
+  "decision": "accepted_local_runtime",
+  "target": "http://127.0.0.1:4344/",
+  "buildReceipt": "docs/reviews/general-ux-2026-10-22/ending/combined-build.json",
+  "uiSourceSnapshot": ".tmp-work/ui-source-snapshots/combined-approved-ui-build",
+  "indexBackup": ".tmp-work/4344-before-combined-ui/index.html",
+  "expectedChanges": [
+    "accepted Ending share popup/MAX",
+    "accepted Intro navigation/metric reading order/absolute background URL",
+    "already accepted Carrier focus"
+  ],
+  "preserved": "B floating layout, radial, all18 accepted media; no old assets removed",
+  "previewChecks": {
+    "introScreens": 15,
+    "carrierTests": 13,
+    "endingPopupProjects": 2,
+    "mediaFallbackSources": 18,
+    "unexpectedCSSRuleChanges": 0
+  },
+  "publicationOrder": "new immutable assets, worker, index last",
+  "storageModified": false,
+  "actualEndingOwnerReceipt": "docs/reviews/ending-2026-10-21-share-feedback/handoff.json",
+  "actualMediaReceipt": "docs/reviews/general-ux-2026-10-22/ending/actual-media.json",
+  "actualCarrierVerification": ".tmp-work/combined-ui-carrier-actual.log",
+  "actualIntroOwnerVerification": "docs/reviews/intro-2026-10-22-feedback/after/verification.json",
+  "externalDeployment": false
+}

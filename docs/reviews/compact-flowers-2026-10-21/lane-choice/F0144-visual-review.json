@@ -1,0 +1,15 @@
+{
+  "id": "F0144",
+  "decision": "accepted_for_runtime",
+  "processingMode": "selective_flowers",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "fullNativeReconstruction": false,
+  "master": ".tmp-work/flowers-all-2026-10-20/F0144/pass2-master.png",
+  "reviewedAssemblyReceipt": "docs/reviews/flowers-all-2026-10-20/general-assemblies/F0144-P2-run-001.json",
+  "acceptedP1Tiles": 9,
+  "acceptedP2Rois": ["p2-cargo", "p2-cab", "p2-rear-chassis", "p2-pillows-straps"],
+  "inspection": ["fresh assembled whole image", "100 percent cargo and dishes", "100 percent rear wheels and chassis", "100 percent pillow seams and ratchet straps", "cab and protected glazing", "unchanged six left weights, three center weights, four cups and pillow counts"],
+  "evidence": [".tmp-work/flowers-all-2026-10-20/F0144/release-whole.png", ".tmp-work/flowers-all-2026-10-20/F0144/release-wheels-100.png", ".tmp-work/flowers-all-2026-10-20/F0144/release-pillows-100.png", ".tmp-work/flowers-all-2026-10-20/F0144/release-cargo-100.png"],
+  "limitations": "Selective AI detail reconstruction with original glazing and alpha protected. 8192 is assembled export, not native full-scene AI resolution. This does not resolve carrier-specific cabin shape. No additional E needed under the 22 October throughput reset."
+}

@@ -1,0 +1,16 @@
+{
+  "assetId": "F0089",
+  "source": "public/scene-art/certificates-v1/student-efficiency.webp",
+  "decision": "accepted_for_runtime",
+  "passes": 2,
+  "acceptsRetainedRegions": true,
+  "generalReview": "Original and final full frame preserve two characters, pose, glasses, hands, pen, notebook and four chart bars. Focal and seam pairs inspected at100%; no doubling seen.",
+  "nativeStatus": "P1 accepted6/retained3, P2 accepted4",
+  "ownerReceipt": "docs/reviews/ending-2026-10-20-flowers/prepared/F0089/owner-handoff.json",
+  "registrationAudit": "docs/reviews/flowers-all-2026-10-20/registration-full-audit-2026-10-21.json",
+  "limitations": [
+    "Partial reconstruction: three P1 cores retained from source",
+    "Not native full-scene8192; technical acceptance only"
+  ],
+  "runtimeVerification": "pending actual4344 before/after currentSrc/decode/DPR"
+}

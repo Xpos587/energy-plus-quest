@@ -1,0 +1,21 @@
+{
+  "source": "painted-vehicles-repaired-optimized.blend",
+  "change": "Blue-only wrapped opaque windshield, moved existing one-driver relief, added empty neutral passenger seat",
+  "textures_modified": false,
+  "other_trucks_modified": false,
+  "routes_camera_modified": false,
+  "frames": [
+    1,
+    769
+  ],
+  "dimensions": [
+    3840,
+    2667
+  ],
+  "samples": 8,
+  "render_wall_seconds": {
+    "1": 6.322,
+    "769": 7.995
+  },
+  "full_animation_rendered": false
+}

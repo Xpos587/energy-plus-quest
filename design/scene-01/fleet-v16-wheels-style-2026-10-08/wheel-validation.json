@@ -1,0 +1,57 @@
+{
+  "source_objects_compared": 3689,
+  "source_object_transforms_parents_mesh_vertex_counts_material_slots_unchanged": true,
+  "only_original_visibility_changes": 552,
+  "all_source_animation_keys_handles_interpolation_unchanged": true,
+  "wheel_count": 48,
+  "consolidated_wheel_meshes": 48,
+  "frames_checked": 192,
+  "front_steering_maximum": {
+    "1": {
+      "degrees": 17.272549495796135,
+      "frame": 102
+    },
+    "2": {
+      "degrees": 0.0,
+      "frame": 0
+    },
+    "3": {
+      "degrees": 17.272571693910937,
+      "frame": 130
+    },
+    "4": {
+      "degrees": 17.290219195178956,
+      "frame": 192
+    }
+  },
+  "maximum_distance_radius_roll_residual_radians": 2.2463252491888852e-05,
+  "analytic_tyre_road_tangency": "Z=0 for all wheels at all frames",
+  "actual_polygon_crown_lowest_world_z_range": [
+    -1.4901161193847656e-08,
+    0.00048360228538513184
+  ],
+  "conservative_steered_tyre_clearance_in_cab_opening_local": {
+    "1": 0.023564487679528345,
+    "2": 0.0309999654567944,
+    "3": 0.023584564070711744,
+    "4": 0.025605582120945936
+  },
+  "trailer_axles_steering_zero": true,
+  "contact_layer": "48 tight alpha .28 radial contact patches; excluded from broad SUN shadow by render lane",
+  "boundary": "tyre profile vs conservative opening envelope, not full collision simulation; visual close/map gate required",
+  "persistent_saved_wheel_materials": [
+    "V14 clean blue charcoal rubber",
+    "V14 satin charcoal trim",
+    "V14 soft warm alloy"
+  ],
+  "shortened_guard_first_tyre_local_clearance": {
+    "1 trailer side guard": 0.12199904632568437,
+    "1 trailer side guard.001": 0.12199856948852617,
+    "2 trailer side guard": 0.12200047683715898,
+    "2 trailer side guard.001": 0.12200023841857988,
+    "3 trailer side guard": 0.12200190734863359,
+    "3 trailer side guard.001": 0.12200166893005449,
+    "4 trailer side guard": 0.12200023841857988,
+    "4 trailer side guard.001": 0.12199952316284257
+  }
+}

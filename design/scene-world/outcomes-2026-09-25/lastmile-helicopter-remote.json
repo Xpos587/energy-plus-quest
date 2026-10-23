@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:08:22.329978Z",
+    "display_name": "Nano Banana Pro",
+    "id": "a732d7c6-ad0b-4337-a3fa-d134bd492696",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090822_a732d7c6-ad0b-4337-a3fa-d134bd492696_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "1406c6f8-248a-4ffd-a94f-0f91651cd17d",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/1406c6f8-248a-4ffd-a94f-0f91651cd17d_resize.jpg"
+        }
+      ],
+      "prompt": "Create ONE polished narrative result illustration for a Russian logistics game, wide 3:2, full bleed, no panel border. Attached picture defines the EXACT existing game visual style, materials and environment. Refined hand painted 2D editorial illustration, detailed but uncluttered, warm cream architecture, neutral light gray ground, pale light blue glass, thin soft gray outlines NO black outlines, soft dimensional shading, navy blue and vivid orange work uniforms and blue machinery. NOT 3D render, NOT flat vector infographic. Show the specified consequence as the dominant readable subject, with medium close framing readable on a small phone. Human and machine proportions realistic, no giant packages or people relative to machinery. No text, no captions, no speech bubbles, no numbers, no arrows, no UI, no watermarks. Gift is a modest closed cardboard shipping parcel; it must not display a particular sock or camera. Composition depicts a single coherent physical scene, not collage. Northern tundra logistics result. Foreground two tired orange/navy workers at blue all terrain vehicle carry modest gift carton onward along track toward a distant small traditional chum tent beyond marsh. Behind them far away is helicopter on helipad beside industrial building and delivered pipe bundles. Clear sense helicopter could land only far from recipient and onward ground journey is needed. Vehicle with large low pressure tires. No text.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090822_a732d7c6-ad0b-4337-a3fa-d134bd492696.png",
+    "status": "completed"
+  }
+]

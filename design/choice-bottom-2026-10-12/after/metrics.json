@@ -1,0 +1,573 @@
+[
+  {
+    "view": "mobile",
+    "scene": "inventory",
+    "page": 0,
+    "bottom": 824,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 844,
+    "text": "Ваш подарок наконец приехал на склад в Лабытнанги. Здесь он проведет пару дней, а далее отправится на барже на Север. Давайте решим, где его разместить.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "mobile",
+    "scene": "inventory",
+    "choice": true,
+    "labels": [
+      {
+        "text": "У приёмки",
+        "overflow": 0
+      },
+      {
+        "text": "Стеллаж «Н»",
+        "overflow": 0
+      },
+      {
+        "text": "Кладовщик",
+        "overflow": 0
+      },
+      {
+        "text": "Система WMS",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 18,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "page": 0,
+    "bottom": 824,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 844,
+    "text": "Ваши вязаные носки уже на причале — их вместе с другими грузами привезли со склада на беспилотном тягаче.\n\nТеперь подарок нужно погрузить на баржу, которая доставит его по Оби в точку разгрузки — Новый порт. ",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "page": 1,
+    "bottom": 824,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 844,
+    "text": "Одно судно уже загружено и готово к отправке, но ближайший кран освободится только через три часа.\n\nКрановщик Иван ждет ваших распоряжений.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "mobile",
+    "scene": "crane",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Иван управляет краном из офиса",
+        "overflow": 0
+      },
+      {
+        "text": "Отправить Ивана на кран",
+        "overflow": 0
+      },
+      {
+        "text": "Дождаться плановой работы крана через 3 часа.",
+        "overflow": 0
+      },
+      {
+        "text": "Попросить Петра помочь",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 18,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 844
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "page": 0,
+    "bottom": 824,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 844,
+    "text": "Баржа причалила к берегу в Новом Порту. Капитан довольно потирает усы. Остался последний рывок навстречу Арсению.\n\nВремя на Ямале стоит непростое.\n\n",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "page": 1,
+    "bottom": 824,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 844,
+    "text": "Зимник еще не работает, вокруг много болот, а на небольшой речке неподалеку только встал первый лед.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "mobile",
+    "scene": "lastmile",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Вертолёт",
+        "overflow": 0
+      },
+      {
+        "text": "Снегоболотоход",
+        "overflow": 0
+      },
+      {
+        "text": "Роботизированная тележка",
+        "overflow": 1
+      },
+      {
+        "text": "Трубовоз",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 18,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 844
+  },
+  {
+    "view": "small",
+    "scene": "inventory",
+    "page": 0,
+    "bottom": 548,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 568,
+    "text": "Ваш подарок наконец приехал на склад в Лабытнанги. Здесь он проведет пару дней, а далее отправится на барже на Север. Давайте решим, где его разместить.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "small",
+    "scene": "inventory",
+    "choice": true,
+    "labels": [
+      {
+        "text": "У приёмки",
+        "overflow": 0
+      },
+      {
+        "text": "Стеллаж «Н»",
+        "overflow": 0
+      },
+      {
+        "text": "Кладовщик",
+        "overflow": 0
+      },
+      {
+        "text": "Система WMS",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 12,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 568
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "page": 0,
+    "bottom": 548,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 568,
+    "text": "Ваши вязаные носки уже на причале — их вместе с другими грузами привезли со склада на беспилотном тягаче.\n\n",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "page": 1,
+    "bottom": 548,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 568,
+    "text": "Теперь подарок нужно погрузить на баржу, которая доставит его по Оби в точку разгрузки — Новый порт. ",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "page": 2,
+    "bottom": 548,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 568,
+    "text": "Одно судно уже загружено и готово к отправке, но ближайший кран освободится только через три часа.\n\nКрановщик Иван ждет ваших распоряжений.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "small",
+    "scene": "crane",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Иван управляет краном из офиса",
+        "overflow": 0
+      },
+      {
+        "text": "Отправить Ивана на кран",
+        "overflow": 0
+      },
+      {
+        "text": "Дождаться плановой работы крана через 3 часа.",
+        "overflow": 0
+      },
+      {
+        "text": "Попросить Петра помочь",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 12,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 568
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "page": 0,
+    "bottom": 548,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 568,
+    "text": "Баржа причалила к берегу в Новом Порту. Капитан довольно потирает усы. Остался последний рывок навстречу Арсению.\n\nВремя на Ямале стоит непростое.\n\n",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "page": 1,
+    "bottom": 548,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 568,
+    "text": "Зимник еще не работает, вокруг много болот, а на небольшой речке неподалеку только встал первый лед.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "small",
+    "scene": "lastmile",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Вертолёт",
+        "overflow": 0
+      },
+      {
+        "text": "Снегоболотоход",
+        "overflow": 0
+      },
+      {
+        "text": "Роботизированная тележка",
+        "overflow": 0
+      },
+      {
+        "text": "Трубовоз",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 12,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 568
+  },
+  {
+    "view": "tall",
+    "scene": "inventory",
+    "page": 0,
+    "bottom": 895,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 915,
+    "text": "Ваш подарок наконец приехал на склад в Лабытнанги. Здесь он проведет пару дней, а далее отправится на барже на Север. Давайте решим, где его разместить.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "tall",
+    "scene": "inventory",
+    "choice": true,
+    "labels": [
+      {
+        "text": "У приёмки",
+        "overflow": 0
+      },
+      {
+        "text": "Стеллаж «Н»",
+        "overflow": 0
+      },
+      {
+        "text": "Кладовщик",
+        "overflow": 0
+      },
+      {
+        "text": "Система WMS",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 18,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 915
+  },
+  {
+    "view": "tall",
+    "scene": "crane",
+    "page": 0,
+    "bottom": 895,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 915,
+    "text": "Ваши вязаные носки уже на причале — их вместе с другими грузами привезли со склада на беспилотном тягаче.\n\nТеперь подарок нужно погрузить на баржу, которая доставит его по Оби в точку разгрузки — Новый порт. ",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "tall",
+    "scene": "crane",
+    "page": 1,
+    "bottom": 895,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 915,
+    "text": "Одно судно уже загружено и готово к отправке, но ближайший кран освободится только через три часа.\n\nКрановщик Иван ждет ваших распоряжений.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "tall",
+    "scene": "crane",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Иван управляет краном из офиса",
+        "overflow": 0
+      },
+      {
+        "text": "Отправить Ивана на кран",
+        "overflow": 0
+      },
+      {
+        "text": "Дождаться плановой работы крана через 3 часа.",
+        "overflow": 0
+      },
+      {
+        "text": "Попросить Петра помочь",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 18,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 915
+  },
+  {
+    "view": "tall",
+    "scene": "lastmile",
+    "page": 0,
+    "bottom": 895,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 915,
+    "text": "Баржа причалила к берегу в Новом Порту. Капитан довольно потирает усы. Остался последний рывок навстречу Арсению.\n\nВремя на Ямале стоит непростое.\n\n",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "tall",
+    "scene": "lastmile",
+    "page": 1,
+    "bottom": 895,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 915,
+    "text": "Зимник еще не работает, вокруг много болот, а на небольшой речке неподалеку только встал первый лед.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "tall",
+    "scene": "lastmile",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Вертолёт",
+        "overflow": 0
+      },
+      {
+        "text": "Снегоболотоход",
+        "overflow": 0
+      },
+      {
+        "text": "Роботизированная тележка",
+        "overflow": 0
+      },
+      {
+        "text": "Трубовоз",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 18,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 915
+  },
+  {
+    "view": "desktop",
+    "scene": "inventory",
+    "page": 0,
+    "bottom": 880,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 900,
+    "text": "Ваш подарок наконец приехал на склад в Лабытнанги. Здесь он проведет пару дней, а далее отправится на барже на Север. Давайте решим, где его разместить.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "desktop",
+    "scene": "inventory",
+    "choice": true,
+    "labels": [
+      {
+        "text": "У приёмки",
+        "overflow": 0
+      },
+      {
+        "text": "Стеллаж «Н»",
+        "overflow": 0
+      },
+      {
+        "text": "Кладовщик",
+        "overflow": 0
+      },
+      {
+        "text": "Система WMS",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 20,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 900
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "page": 0,
+    "bottom": 880,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 900,
+    "text": "Ваши вязаные носки уже на причале — их вместе с другими грузами привезли со склада на беспилотном тягаче.\n\nТеперь подарок нужно погрузить на баржу, которая доставит его по Оби в точку разгрузки — Новый порт. Одно судно уже загружено и готово к отправке, но ближайший кран освободится только через три часа.\n\nКрановщик Иван ждет ваших распоряжений.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "desktop",
+    "scene": "crane",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Иван управляет краном из офиса",
+        "overflow": 0
+      },
+      {
+        "text": "Отправить Ивана на кран",
+        "overflow": 0
+      },
+      {
+        "text": "Дождаться плановой работы крана через 3 часа.",
+        "overflow": 0
+      },
+      {
+        "text": "Попросить Петра помочь",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 20,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 900
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "page": 0,
+    "bottom": 880,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 900,
+    "text": "Баржа причалила к берегу в Новом Порту. Капитан довольно потирает усы. Остался последний рывок навстречу Арсению.\n\nВремя на Ямале стоит непростое.\n\nЗимник еще не работает, вокруг много болот, а на небольшой речке неподалеку только встал первый лед.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "desktop",
+    "scene": "lastmile",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Вертолёт",
+        "overflow": 0
+      },
+      {
+        "text": "Снегоболотоход",
+        "overflow": 0
+      },
+      {
+        "text": "Роботизированная тележка",
+        "overflow": 0
+      },
+      {
+        "text": "Трубовоз",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 20,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 900
+  }
+]

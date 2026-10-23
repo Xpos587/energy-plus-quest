@@ -1,0 +1,27 @@
+{
+  "source": "public/scene-art/barge-family-v1/choice-neutral-tall-v7.webp",
+  "decision": "accepted_for_runtime",
+  "processingMode": "conventional_interpolation",
+  "detailRecovery": false,
+  "reviewedPairs": [
+    "390-dpr2",
+    "1440-dpr2"
+  ],
+  "reviewEvidence": "../../reviews/conventional-media-2026-10-22/barge-choice-tall-v1/",
+  "focalEvidence": [
+    "tall-before-100pct.png",
+    "tall-preview-100pct.png"
+  ],
+  "finding": "No visible geometry, framing, identity, color or marker regression in paired fullframes and desktop DPR2 native-pixel crop. No meaningful new detail claim. Existing source softness remains.",
+  "limits": [
+    "Ordinary resampling only, not Flowers",
+    "Does not resolve office/PRU narrative or composition questions",
+    "Preview4346 accepted; final4344 actual currentSrc remains General responsibility"
+  ],
+  "originalPreserved": true,
+  "externalDeploymentAuthorized": false,
+  "publicationScope": "local4344",
+  "ownerReceipt": "docs/reviews/barge-2026-10-22/tall-conventional-verdict.json",
+  "generalReview": "Eight preview states HTTP200/JS0. Source content frozen by owner; exact source dimensions and measured DPR deficit retained in overlay receipt.",
+  "runtimeVerification": "pending actual4344"
+}

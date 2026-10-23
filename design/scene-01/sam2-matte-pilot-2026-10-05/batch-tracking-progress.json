@@ -1,0 +1,65 @@
+[
+  {
+    "name": "red-0-1",
+    "frames": 121,
+    "elapsed_seconds": 46.771,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  },
+  {
+    "name": "red-1-mid",
+    "frames": 121,
+    "elapsed_seconds": 41.671,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  },
+  {
+    "name": "red-mid-2",
+    "frames": 121,
+    "elapsed_seconds": 43.682,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  },
+  {
+    "name": "red-2-3",
+    "frames": 121,
+    "elapsed_seconds": 48.765,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  },
+  {
+    "name": "yellow-0-1",
+    "frames": 121,
+    "elapsed_seconds": 48.718,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  },
+  {
+    "name": "yellow-1-mid",
+    "frames": 121,
+    "elapsed_seconds": 42.12,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  },
+  {
+    "name": "yellow-mid-2",
+    "frames": 121,
+    "elapsed_seconds": 42.894,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  },
+  {
+    "name": "yellow-2-3",
+    "frames": 121,
+    "elapsed_seconds": 48.869,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  },
+  {
+    "name": "yellow-3-0",
+    "frames": 121,
+    "elapsed_seconds": 49.787,
+    "rgba": "layers/%04d.png",
+    "initial_anchor_only": true
+  }
+]

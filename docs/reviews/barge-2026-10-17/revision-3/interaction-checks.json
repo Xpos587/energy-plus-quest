@@ -1,0 +1,1190 @@
+[
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "a",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "a",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "a",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "b",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "b",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "b",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "c",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "c",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "v": "c",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": true,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "a",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "a",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "a",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "b",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "b",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "b",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "c",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "c",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "v": "c",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "a",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "a",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "a",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "b",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "b",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "b",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "c",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "c",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "v": "c",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "18px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "18px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "a",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "a",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "a",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "b",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "b",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "b",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "c",
+    "parcel": "boat",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "c",
+    "parcel": "camera",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "v": "c",
+    "parcel": "socks",
+    "neutralFirstEntry": true,
+    "petryAvailabilityVisible": true,
+    "exactSourceCopy": true,
+    "actions": [
+      {
+        "id": "remote",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "rush",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "wait",
+        "paged": false,
+        "font": "20px"
+      },
+      {
+        "id": "petr",
+        "paged": false,
+        "font": "20px"
+      }
+    ]
+  }
+]

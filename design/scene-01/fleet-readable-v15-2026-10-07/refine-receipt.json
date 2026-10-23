@@ -1,0 +1,35 @@
+{
+  "smoke_true_outlets": [
+    {
+      "truck": 1,
+      "true_pipe_tip": [
+        -0.11999976634979248,
+        -0.6899985074996948,
+        2.741999864578247
+      ],
+      "smoke_base_ring_center": [
+        -0.11999976634979248,
+        -0.6899985074996948,
+        2.741999864578247
+      ]
+    },
+    {
+      "truck": 4,
+      "true_pipe_tip": [
+        0.09999990463256836,
+        -0.6899997591972351,
+        2.4861598014831543
+      ],
+      "smoke_base_ring_center": [
+        0.09999990463256836,
+        -0.6899997591972351,
+        2.4861598014831543
+      ]
+    }
+  ],
+  "smoke": "connected volume begins at actual transformed pipe cap; parent inverse handled",
+  "canvas_seams": "same fabric pigment, no bright decorative roof stripes",
+  "wear": "irregular attached exposed-lip chips, straight door decal-like marks removed",
+  "reefer": "compact blue-grey housing with horizontal louvers",
+  "green_sleeper_vertices_above_2_2_raised_12_percent": 2855
+}

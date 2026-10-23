@@ -1,0 +1,77 @@
+{
+  "status": "bounded v15 static pilot",
+  "source": "fleet-v15-readable.blend",
+  "pdf": "energy-plus-fleet-v15.pdf",
+  "whole_maps": [
+    "map-v15-0001.png",
+    "map-v15-0385.png"
+  ],
+  "matched_profiles": [
+    "v15-front-1.png",
+    "v15-front-2.png",
+    "v15-front-3.png",
+    "v15-front-4.png"
+  ],
+  "structural_passes": [
+    "ids-0385.png",
+    "normals-0385.png",
+    "edges-0385.png"
+  ],
+  "features": {
+    "old_red_yellow": "Low old cabs with exposed-lip wear, continuous draped canvas roofs, fabric-colored attached seams and curtain ties; volumetric smoke starts at true pipe outlet and drifts outside cargo silhouette",
+    "blue": "Lower modern day cab, one driver, ribbed rigid roof and paneled body, compact light-blue front-mounted refrigeration with horizontal louvers",
+    "green": "Raised high sleeper, two drivers, broad fitted roof panels and toned integral side joints"
+  },
+  "lighting": "New materials have one geometric light response; 16 legacy stacked normal-multiply responses removed. Fresh physical contact shadows use the same directional key.",
+  "validation_receipts": [
+    "verification.json",
+    "smoke-outlet-validation.json",
+    "single-light-response.json",
+    "physical-shadow-receipt.json",
+    "volume-render-ranges.json"
+  ],
+  "preserved": [
+    "camera",
+    "animation roots and routes",
+    "hitch animation",
+    "global fleet scale",
+    "crew face UVs/materials",
+    "warehouse and city backdrop",
+    "clean rebuilt lower geometry from v14"
+  ],
+  "limits": [
+    "Static pilot only; no full video or production changes",
+    "No claim of all-frame collision verification or complete artist style equivalence",
+    "Smoke is a coherent static volume attached to the moving tractor, not yet a temporal smoke simulation"
+  ],
+  "rebuild_order": [
+    "build_v15.py",
+    "calibrate_light_once.py",
+    "refine_v15.py",
+    "smoke_map_readability.py",
+    "smoke_side_drift.py",
+    "smoke_open_road.py"
+  ],
+  "render_order": [
+    "render_pilot.py",
+    "render_physical_shadow.py",
+    "compose_pilot.py",
+    "render_evidence.py",
+    "package_v15.py",
+    "restore_camera_exact.py",
+    "verify_v15.py",
+    "verify_smoke.py"
+  ],
+  "volume_render_fix": {
+    "confirmed_map_smoke_depth_range": [
+      149.978,
+      156.075
+    ],
+    "previous_volume_end": 100,
+    "final_method": "per-camera custom range enclosing smoke bounds by 2 units; 2 pixel volume tiles, 96 depth samples",
+    "map_artifacts_visually_checked": [
+      "map-v15-0001.png",
+      "map-v15-0385.png"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "script": "render_motion.py",
+    "start": 73,
+    "end": 120,
+    "exit": 0,
+    "seconds": 87.62052897099784
+  },
+  {
+    "script": "render_motion_shadow.py",
+    "start": 73,
+    "end": 120,
+    "exit": 0,
+    "seconds": 19.959528063001926
+  },
+  {
+    "script": "render_motion.py",
+    "start": 121,
+    "end": 168,
+    "exit": 0,
+    "seconds": 87.39155200999812
+  },
+  {
+    "script": "render_motion_shadow.py",
+    "start": 121,
+    "end": 168,
+    "exit": 0,
+    "seconds": 19.201764999997977
+  }
+]

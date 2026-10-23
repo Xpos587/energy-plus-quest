@@ -1,0 +1,386 @@
+[
+  {
+    "created_at": "2026-10-05T12:12:30.451021Z",
+    "display_name": "Kling v3.0",
+    "id": "a6a1b26c-a237-419a-8631-f89f8b876ea5",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "37efc34b-80c6-4002-a9e6-7baeb0863a39",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/37efc34b-80c6-4002-a9e6-7baeb0863a39.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "fbf84b32-4728-41e0-b350-4aca60c692b4",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/fbf84b32-4728-41e0-b350-4aca60c692b4.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera, unchanged bright clean illustrated city and white side borders. Exactly ONE green articulated semi-truck and NO other vehicles. Preserve the rigid white semitrailer and green tractor identity, scale, wheels, two drivers and one steering wheel. Tractor steers first, trailer follows through fifth wheel coupling; wheels stay on asphalt. Smooth forward driving, no reversing, no spinning around body center, no duplication, no cuts, no teleportation, no roof overlap. Camera and background perfectly still. End exactly at supplied final pose. Soft colored outlines, soft shadows, same illustration. Five second continuous shot. Start facing DOWN on central vertical street. Drive DOWN on this street past the small building, turn ninety degrees RIGHT at the lower horizontal road, straighten facing RIGHT at supplied endpoint. Only one corner.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_121230_a6a1b26c-a237-419a-8631-f89f8b876ea5.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_121230_a6a1b26c-a237-419a-8631-f89f8b876ea5_thumbnail.webp"
+  },
+  {
+    "created_at": "2026-10-05T12:11:28.947592Z",
+    "display_name": "Kling v3.0",
+    "id": "ec142c67-13c7-4f71-9244-504346450ca9",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "1bd1f994-a7b3-4d08-a8a3-4fc168b5e39a",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/1bd1f994-a7b3-4d08-a8a3-4fc168b5e39a.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "9393c585-9849-4880-8ede-e1aed9d0c82a",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/9393c585-9849-4880-8ede-e1aed9d0c82a.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera, unchanged bright clean illustrated city and white side borders. Exactly ONE green articulated semi-truck and NO other vehicles. Preserve the rigid white semitrailer and green tractor identity, scale, wheels, two drivers and one steering wheel. Tractor steers first, trailer follows through fifth wheel coupling; wheels stay on asphalt. Smooth forward driving, no reversing, no spinning around body center, no duplication, no cuts, no teleportation, no roof overlap. Camera and background perfectly still. End exactly at supplied final pose. Soft colored outlines, soft shadows, same illustration. Five second continuous shot. Start heading LEFT on upper horizontal street. Drive LEFT toward the junction beside the central tall building, turn ninety degrees DOWN into the vertical street along its RIGHT side, then straighten facing DOWN at the supplied endpoint. Only one corner.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_121128_ec142c67-13c7-4f71-9244-504346450ca9.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_121128_ec142c67-13c7-4f71-9244-504346450ca9_thumbnail.webp"
+  },
+  {
+    "created_at": "2026-10-05T10:52:19.931354Z",
+    "display_name": "Kling v3.0",
+    "id": "09d422e1-6d5a-4ce6-aa38-1663f8666e59",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "da9c37d8-0874-4db2-961e-4a98d878982e",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/da9c37d8-0874-4db2-961e-4a98d878982e.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "40b3643f-8df8-4fb7-9ede-25f222cd3dc4",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/40b3643f-8df8-4fb7-9ede-25f222cd3dc4.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera. Exactly ONE vehicle moves: the GREEN semi-truck. Blue, red and yellow trucks remain perfectly stationary at their starting positions for the entire shot. Buildings, trees, streets, white side borders and lighting also remain perfectly motionless. Green begins straight facing UP on upper-right vertical road, drives forward to the upperjunction, makes ONE smooth90degreeleftturn toward screenLEFT, then straightens on upperhorizontalroad to exactly the suppliedENDgreenpose. Finish before the next corner; no secondturn. Real articulatedsemi-truck: green tractor steers first, rigidwhitebox semitrailer follows over fifth-wheel, rear axles traceinnercurve. Onegreen cab and onelongrigidtrailer stay coupled. Preservegreenlength, color, wheels, illustrateddetailsandstyle. Greenhas2drivers. Fourtruckstotalalways, onlygreentranslates/turns. Smoothphysicallyreadableforwardmotion, alltiresonroad. No duplication, splitting, reversing, bendingtrailer or rigidbodyspinning. No colorchanges orteleport. No camera motion/zoom/cuts ornewvehicles. Matchsuppliedlightcleanillustration, softcoloredoutlinesandsoftshadows. Reach exactendgreenposition gently aftercompletingone90degreecorner. Five-secondsinglecontinuousshot, notaloop.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_105219_09d422e1-6d5a-4ce6-aa38-1663f8666e59.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_105219_09d422e1-6d5a-4ce6-aa38-1663f8666e59_thumbnail.webp"
+  },
+  {
+    "created_at": "2026-10-05T10:30:24.33299Z",
+    "display_name": "Kling v3.0",
+    "id": "fc813a0c-1694-40bd-8828-df44a8d663be",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 6,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "cfb315b0-3efb-4d46-8887-bd0fd85a6ccd",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/cfb315b0-3efb-4d46-8887-bd0fd85a6ccd.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "cefc7293-a02b-43d2-8f7c-d0b1411b86f9",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/cefc7293-a02b-43d2-8f7c-d0b1411b86f9.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera, fixed bright illustrated city, all buildings and roads perfectly motionless. Animate exactly FOUR articulated semi-trucks to the supplied END frame over six seconds, preserving their colors, total lengths and identities. BLUE at left near glass warehouse drives slowly DOWN on the same vertical lane; no turn. YELLOW in middle drives DOWN, then ONE smooth left vehicle-steering turn toward screen RIGHT on bottom horizontal road. GREEN upper-right drives UP on right vertical street, turns LEFT onto upper horizontal road, then toward DOWN at the next junction, ending in the exact supplied angled green pose. RED lower-right follows UP that same right lane at a safe distance behind green, then begins LEFT turn onto upper horizontal road, finishing in exact end red pose. Green leads red; never overtake, collide, merge or leave asphalt. Tractor steers and rigid long semitrailer follows through a real fifth-wheel hitch, rear axles trace an inner curve. Never rotate a whole rigid truck around its center; never bend the trailer rectangle. One cab and one trailer per truck at every frame. No duplicate trucks, no disappearing, no extra parked vehicles, no morphing colors. Each path stays on its road, never crosses building or sidewalk. Smooth slow readable motion, physically coupled wheels/tractor/trailer, intact illustrated details. Only green has TWO normal male drivers; others exactly ONE, empty passenger seat. Match supplied images' clean soft illustrated style, light colored linework, soft blue shadows, no black contour, no plastic3D, no gray veil, no sepia. No camera motion, zoom, cuts, transitions or extra effects. This is a single continuous short road segment, NOT a whole loop. Reach end frame smoothly, no teleporting. White side borders are fixed framing only; keep both borders completely static.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_103024_fc813a0c-1694-40bd-8828-df44a8d663be.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_103024_fc813a0c-1694-40bd-8828-df44a8d663be_thumbnail.webp"
+  },
+  {
+    "created_at": "2026-10-05T09:10:21.931305Z",
+    "display_name": "Draw To Video",
+    "id": "77170304-1d22-4eea-99a7-7b16da828f09",
+    "job_type": "draw_to_video",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "4:3",
+      "duration": 5,
+      "enhancer": false,
+      "folder_id": null,
+      "generate_audio": false,
+      "prompt": "Apply the painted first frame consistently throughout the source video. Detailed clean bright2D illustrated city: blue asphalt, cream/apricot walls, blue glass and detailed leafy trees. Use precisely the source four semi-trucks motion, scale, camera, timing and articulated rigid trailer geometry. Blue andyellow drive downward, green andred drive upward thenleft around uppercorner, staying separately onroad. Image is the replacement art treatment; video is the exact movement guide. All four trucks remain one each with same colors. Preserve fixed background and frame boundaries. No added vehicles, no bending trailers, no camera motion, no grey3Dtoy rendering. Sharp illustrated details, soft colored outlines and soft shadows.",
+      "ref_image": null,
+      "resolution": "480p",
+      "sketch": {
+        "id": "8bb72ed0-51e1-4b11-b6ac-cab49c7a5016",
+        "type": "media_input",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/8bb72ed0-51e1-4b11-b6ac-cab49c7a5016.png"
+      },
+      "timestamp": 0,
+      "video": {
+        "id": "92e791ec-541f-472a-a407-1552ac933697",
+        "type": "video_input",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/92e791ec-541f-472a-a407-1552ac933697.mp4"
+      }
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_091021_77170304-1d22-4eea-99a7-7b16da828f09.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_091021_77170304-1d22-4eea-99a7-7b16da828f09_thumbnail.webp"
+  },
+  {
+    "created_at": "2026-10-04T20:30:08.288688Z",
+    "display_name": "Kling O1 Video Edit",
+    "id": "d3b984ad-132d-4ba0-98bf-cb0edb185127",
+    "job_type": "kling_video_edit",
+    "min_result_url": null,
+    "params": {
+      "height": 700,
+      "input_images": [
+        {
+          "id": "a4a06c16-2670-4435-b7cb-bcd84fd0f4a4",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/a4a06c16-2670-4435-b7cb-bcd84fd0f4a4.png"
+        }
+      ],
+      "input_videos": [
+        {
+          "id": "584cee6c-603a-4c5f-920c-76a3e90b1970",
+          "type": "video_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/584cee6c-603a-4c5f-920c-76a3e90b1970.mp4"
+        }
+      ],
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "mode": "pro",
+      "model": "kling-video-edit-o3",
+      "prompt": "Transform the video into the detailed hand-painted game illustration in the image reference. Replace the low-poly miniature rendering with crisp illustrated European semi-trucks, individually articulated chassis and trailers, leafy trees and illustrated cream buildings. Match the reference powder-blue road, colors, fine details and soft colored edges. Keep exact source-video positions, vehicle scale, paths, timing, articulation, building silhouettes and locked camera in every frame. Four trucks total: blue, yellow, red, green. The source VIDEO determines where each truck moves; the IMAGE determines illustrated material style only. No miniature toy look, no extra vehicles, no roof crossings, no blur. The green cab has two drivers and other cabs one each where windshield faces camera.",
+      "width": 1008
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_203008_d3b984ad-132d-4ba0-98bf-cb0edb185127.mp4",
+    "status": "completed"
+  },
+  {
+    "created_at": "2026-10-04T20:21:14.56785Z",
+    "display_name": "Kling O1 Video Edit",
+    "id": "15d4c851-3ef5-40d4-9f2b-f989259c0e9c",
+    "job_type": "kling_video_edit",
+    "min_result_url": null,
+    "params": {
+      "height": 700,
+      "input_images": [
+        {
+          "id": "18dcd498-1445-4a81-b31a-8d2dd26567eb",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/18dcd498-1445-4a81-b31a-8d2dd26567eb.png"
+        }
+      ],
+      "input_videos": [
+        {
+          "id": "5052becb-8b85-4cf7-9f42-c20e9fe3e65c",
+          "type": "video_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/5052becb-8b85-4cf7-9f42-c20e9fe3e65c.mp4"
+        }
+      ],
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "mode": "std",
+      "model": "kling-video-edit-o3",
+      "prompt": "Restyle source video in the illustrated first-frame reference style. Source video is authoritative for motion, four truck positions, camera and building layout. Exactly one blue, one yellow, one red and one green truck. Preserve their original frame-by-frame paths and articulated rigid bodies. Bright clean2D illustration, powder blue roads, cream/apricot facades, blue windows, leafy autumn trees, soft contours. Static camera/background. Preserve four trucks without parked copies. Match illustration appearance while maintaining original video movements.",
+      "width": 1008
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_202114_15d4c851-3ef5-40d4-9f2b-f989259c0e9c.mp4",
+    "status": "completed"
+  },
+  {
+    "created_at": "2026-10-04T20:11:47.608482Z",
+    "display_name": "Kling O1 Video Edit",
+    "id": "0b8d0770-9f7b-4367-a46f-36f4157ec452",
+    "job_type": "kling_video_edit",
+    "min_result_url": null,
+    "params": {
+      "height": 500,
+      "input_images": [
+        {
+          "id": "21845474-0c3b-48bd-9b34-411b8a7a0ccf",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/21845474-0c3b-48bd-9b34-411b8a7a0ccf.png"
+        }
+      ],
+      "input_videos": [
+        {
+          "id": "39c09efe-b32d-4113-a379-f4e7b6861eee",
+          "type": "video_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/39c09efe-b32d-4113-a379-f4e7b6861eee.mp4"
+        }
+      ],
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "mode": "std",
+      "model": "kling-video-edit-o3",
+      "prompt": "Restyle the video to match the supplied illustrated first-frame reference. Preserve exactly four trucks and their source-video trajectories, articulated rigid-body motion, size and timing. Blue by warehouse, yellow center, red and green on right. Fixed camera, static background. Use bright cream/apricot illustrated buildings, soft blue roads, leafy autumn trees and crisp soft-contour hand-painted trucks. The reference sets appearance, the VIDEO controls all movement and object positions. Match this scene, not a new layout. Keep all trailer bodies straight and rigid. Each truck remains one original vehicle; no parked copies, additional vehicles or disappearing trucks.",
+      "width": 720
+    },
+    "result_url": null,
+    "status": "failed"
+  },
+  {
+    "created_at": "2026-10-04T19:49:58.122106Z",
+    "display_name": "Kling v3.0",
+    "id": "71d596fc-f9a8-489f-9cfd-1ddd534a72aa",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 15,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "8ad974c9-36b5-4b1a-817f-dc7b0318cca2",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/8ad974c9-36b5-4b1a-817f-dc7b0318cca2.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "8ad974c9-36b5-4b1a-817f-dc7b0318cca2",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/8ad974c9-36b5-4b1a-817f-dc7b0318cca2.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Animate this exact illustrated city as a seamless looping game map. Locked orthographic camera, absolutely no zoom/pan/cuts. Exactly FOUR existing semi trucks throughout, same size and colors: BLUE beside warehouse on left, GREEN on central vertical road, RED on middle horizontal road, YELLOW on lower horizontal road. Each drives FORWARD on connected BLUE asphalt streets following a clockwise street-block circuit and returns to its exact initial position and heading at end. BLUE stays on left warehouse block, RED circulates upper middle block, GREEN circulates distant right-hand city blocks using outer right avenue, YELLOW circulates lower middle block. Stay entirely within visible frame. Coordinate crossings so trucks pass with safe gaps, never collide, overlap, split or duplicate. At every corner tractor steers first and connected rigid semitrailer pivots naturally at fifth wheel, trailer rear axles follow inside curved path. White or canvas trailer remains a straight rigid rectangular box, never bends. No drifting sideways, no spin in place, no reversing, no cutting across buildings or sidewalks. All four trucks remain visible, drive slowly smoothly and continuously, including loop boundary. Preserve exact identity and illustrated details, wheels, two occupants in green and one in others. Preserve original bright warm cream/apricot buildings, powder blue streets, green yellow foliage, clean soft contours and shadows. The background is absolutely static. Match supplied ending image exactly and continue same forward velocities across the loop. No extra moving subjects or scene changes.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_194958_71d596fc-f9a8-489f-9cfd-1ddd534a72aa.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_194958_71d596fc-f9a8-489f-9cfd-1ddd534a72aa_thumbnail.webp"
+  },
+  {
+    "created_at": "2026-10-04T19:45:44.801926Z",
+    "display_name": "Kling O1 Video Edit",
+    "id": "e64b0706-529d-47f0-89b8-9535aa7b8b18",
+    "job_type": "kling_video_edit",
+    "min_result_url": null,
+    "params": {
+      "height": 700,
+      "input_images": [
+        {
+          "id": "9f9938c8-4a73-4de8-830b-05692e101b14",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/9f9938c8-4a73-4de8-830b-05692e101b14.png"
+        }
+      ],
+      "input_videos": [
+        {
+          "id": "46176bf0-a84f-404f-8dbf-c6fe748f7ffa",
+          "type": "video_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/46176bf0-a84f-404f-8dbf-c6fe748f7ffa.mp4"
+        }
+      ],
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "mode": "std",
+      "model": "kling-video-edit-o3",
+      "prompt": "Convert source video rendering into bright illustrated 2D game art using the image reference for surface style ONLY. Exactly FOUR trucks total throughout the frame: ONE BLUE, ONE GREEN, ONE RED, ONE YELLOW. No parked extra vehicles or duplicate tractors. Keep ALL source paths, locations, sizes, articulation and exact timing. Do not create a new composition. Same fixed camera and exact building footprints. Style: clean hand-painted 2D illustration, soft colored grey contours, pastel blue roads, cream and muted apricot facades, crisp blue windows, green-yellow leafy trees. Soft diffuse illumination, no sharp black contour, no dark shading, no plastic glossy 3D, no clay miniature. Each truck keeps its source moving location and rigid body, only surface details become illustrated. Background must stay perfectly stationary. All motion MUST match source frame by frame, including roof centers. Only restyle, no choreography changes.",
+      "width": 1008
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_194544_e64b0706-529d-47f0-89b8-9535aa7b8b18.mp4",
+    "status": "completed"
+  }
+]

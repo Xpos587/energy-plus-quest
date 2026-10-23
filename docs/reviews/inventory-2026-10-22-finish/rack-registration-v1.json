@@ -1,0 +1,388 @@
+{
+  "native_dimensions": [
+    1085,
+    1449
+  ],
+  "native_alpha_bbox_192": [
+    119,
+    34,
+    963,
+    1381
+  ],
+  "anchor_method": "Blue top/foot extremity within explicitly recorded native post windows; target original post centers at physical z2.7/z0. Rounded cap details introduce <=~1px source landmark uncertainty.",
+  "native_anchor_windows": [
+    [
+      120,
+      170,
+      235,
+      280,
+      "top"
+    ],
+    [
+      365,
+      420,
+      365,
+      415,
+      "top"
+    ],
+    [
+      638,
+      694,
+      505,
+      555,
+      "top"
+    ],
+    [
+      355,
+      411,
+      20,
+      70,
+      "top"
+    ],
+    [
+      912,
+      965,
+      305,
+      355,
+      "top"
+    ],
+    [
+      115,
+      180,
+      1080,
+      1140,
+      "bottom"
+    ],
+    [
+      365,
+      425,
+      1210,
+      1270,
+      "bottom"
+    ],
+    [
+      635,
+      700,
+      1340,
+      1400,
+      "bottom"
+    ],
+    [
+      910,
+      970,
+      1125,
+      1185,
+      "bottom"
+    ]
+  ],
+  "affine_native_to_source": [
+    [
+      0.19637034927744848,
+      -0.0003239877863187024,
+      563.3904177166086
+    ],
+    [
+      -0.006756181512092572,
+      0.18300965043755058,
+      278.91918675216976
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "anchor_residuals": [
+    {
+      "name": "front-left-top",
+      "world": [
+        1.5275,
+        3.5275,
+        2.7
+      ],
+      "source_xy": [
+        590.6434106826782,
+        323.35495948791504
+      ],
+      "native_xy": [
+        150.0,
+        248.0
+      ],
+      "registered_source_xy": [
+        592.7656211372188,
+        323.29215283386844
+      ],
+      "residual_source_px": 2.1231396301594807
+    },
+    {
+      "name": "front-middle-top",
+      "world": [
+        2.4,
+        3.5275,
+        2.7
+      ],
+      "source_xy": [
+        642.4570798873901,
+        346.70472145080566
+      ],
+      "native_xy": [
+        397.0,
+        374.0
+      ],
+      "registered_source_xy": [
+        641.2282749476724,
+        344.6825919555129
+      ],
+      "residual_source_px": 2.3662141229414613
+    },
+    {
+      "name": "front-right-top",
+      "world": [
+        3.2725,
+        3.5275,
+        2.7
+      ],
+      "source_xy": [
+        694.270749092102,
+        370.05454301834106
+      ],
+      "native_xy": [
+        662.0,
+        517.0
+      ],
+      "registered_source_xy": [
+        693.2200872527527,
+        369.0625838673781
+      ],
+      "residual_source_px": 1.4449474931097215
+    },
+    {
+      "name": "back-left-top",
+      "world": [
+        1.5275,
+        4.6725,
+        2.7
+      ],
+      "source_xy": [
+        640.9014844894409,
+        281.89754486083984
+      ],
+      "native_xy": [
+        386.5,
+        34.0
+      ],
+      "registered_source_xy": [
+        639.2765421276076,
+        282.5302507126227
+      ],
+      "residual_source_px": 1.7437758956243907
+    },
+    {
+      "name": "back-right-top",
+      "world": [
+        3.2725,
+        4.6725,
+        2.7
+      ],
+      "source_xy": [
+        744.528865814209,
+        328.59712839126587
+      ],
+      "native_xy": [
+        929.0,
+        314.0
+      ],
+      "registered_source_xy": [
+        745.7167400304542,
+        330.10772436482665
+      ],
+      "residual_source_px": 1.921703762019043
+    },
+    {
+      "name": "front-left-foot",
+      "world": [
+        1.5275,
+        3.5275,
+        0
+      ],
+      "source_xy": [
+        590.6434106826782,
+        481.3934564590454
+      ],
+      "native_xy": [
+        149.0,
+        1121.0
+      ],
+      "registered_source_xy": [
+        592.2864094504852,
+        483.06633384736216
+      ],
+      "residual_source_px": 2.344773700670622
+    },
+    {
+      "name": "front-middle-foot",
+      "world": [
+        2.4,
+        3.5275,
+        0
+      ],
+      "source_xy": [
+        642.4570798873901,
+        504.74321842193604
+      ],
+      "native_xy": [
+        398.5,
+        1249.0
+      ],
+      "registered_source_xy": [
+        641.2393411585597,
+        504.80590181610154
+      ],
+      "residual_source_px": 1.2193509829403997
+    },
+    {
+      "name": "front-right-foot",
+      "world": [
+        3.2725,
+        3.5275,
+        0
+      ],
+      "source_xy": [
+        694.270749092102,
+        528.0929803848267
+      ],
+      "native_xy": [
+        660.0,
+        1380.0
+      ],
+      "registered_source_xy": [
+        692.5477450946048,
+        527.0134245580084
+      ],
+      "residual_source_px": 2.033269180066604
+    },
+    {
+      "name": "back-right-foot",
+      "world": [
+        3.2725,
+        4.6725,
+        0
+      ],
+      "source_xy": [
+        744.528865814209,
+        486.63562536239624
+      ],
+      "native_xy": [
+        934.0,
+        1171.0
+      ],
+      "registered_source_xy": [
+        746.4209342439663,
+        486.913213882247
+      ],
+      "residual_source_px": 1.912322757600584
+    }
+  ],
+  "rms_source_px": 1.9351774699128406,
+  "max_source_px": 2.3662141229414613,
+  "native_modified": false,
+  "axis_direction_residuals": [
+    {
+      "axis": "X-front",
+      "direction_error_degrees": 0.2369311932140839,
+      "target_vector": [
+        103.62733840942383,
+        46.699583530426025
+      ],
+      "registered_vector": [
+        100.45446611553393,
+        45.77043103350968
+      ]
+    },
+    {
+      "axis": "X-back",
+      "direction_error_degrees": 0.1746020280273323,
+      "target_vector": [
+        103.62738132476807,
+        46.699583530426025
+      ],
+      "registered_vector": [
+        106.44019790284653,
+        47.577473652203935
+      ]
+    },
+    {
+      "axis": "Y-left",
+      "direction_error_degrees": 1.712234453485587,
+      "target_vector": [
+        50.258073806762695,
+        -41.457414627075195
+      ],
+      "registered_vector": [
+        46.510920990388854,
+        -40.761902121245726
+      ]
+    },
+    {
+      "axis": "Y-right",
+      "direction_error_degrees": 2.941814442020171,
+      "target_vector": [
+        50.258116722106934,
+        -41.457414627075195
+      ],
+      "registered_vector": [
+        52.496652777701456,
+        -38.95485950255147
+      ]
+    },
+    {
+      "axis": "Z-front-left",
+      "direction_error_degrees": 0.17184706964215987,
+      "target_vector": [
+        0.0,
+        -158.03849697113037
+      ],
+      "registered_vector": [
+        0.47921168673360626,
+        -159.77418101349372
+      ]
+    },
+    {
+      "axis": "Z-front-right",
+      "direction_error_degrees": 0.2438868651854893,
+      "target_vector": [
+        0.0,
+        -158.0384373664856
+      ],
+      "registered_vector": [
+        0.6723421581478988,
+        -157.9508406906303
+      ]
+    },
+    {
+      "axis": "Z-back-right",
+      "direction_error_degrees": 0.25730658587115235,
+      "target_vector": [
+        0.0,
+        -158.03849697113037
+      ],
+      "registered_vector": [
+        -0.7041942135120962,
+        -156.80548951742037
+      ]
+    }
+  ],
+  "mapped_alpha_bounds_crop_xyxy": [
+    44,
+    43,
+    210,
+    287
+  ],
+  "alpha_pixels_outside_projected_physical_envelope": 617,
+  "maximum_alpha_overrun_source_px": 3.6309967041015625,
+  "verdict": "REJECT for strict geometry promotion; retain as final bounded stylistic alternative only. One affine cannot make native opposite Y depth directions parallel, and mapped silhouette overruns fixed projected physical envelope. No further generation/iteration authorized in this lane.",
+  "outside_context_changed_pixels": 0,
+  "plaque_protected_changed_pixels": 0,
+  "mask_policy": "Union original rack silhouette and transformed native alpha, dilated2px, minus original board+letter protection dilated1px. All original board/text and all outside pixels copied exactly from original native crop.",
+  "production_changed": false
+}

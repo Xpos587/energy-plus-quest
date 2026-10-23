@@ -1,0 +1,29 @@
+{
+  "original_meshes_checked": 209,
+  "original_cameras_checked": 4,
+  "coordinate_or_transform_changes": [],
+  "literal_labels": [
+    "А-Б",
+    "В-К",
+    "Л-М",
+    "Н-У",
+    "Ф-Э",
+    "Ю-Я"
+  ],
+  "full_source": [
+    1440,
+    1000
+  ],
+  "source_provenance": "warehouse-blockout-v4.blend",
+  "changed_visibility": [
+    "Original keeper cuboid silhouettes hidden; additive keeper same location",
+    "Original solid guard roof hidden; additive grille in same envelope",
+    "Original truck roof and side skins revealed"
+  ],
+  "additional_sprite_changes": [
+    "Keeper illustrated proof card camera-only; original keeper shadow retained",
+    "Window panorama surface textures in existing window planes",
+    "Forklift painted proof card camera-only; original forklift/driver/grille/steering remain non-camera shadow casters"
+  ],
+  "production_touched": false
+}

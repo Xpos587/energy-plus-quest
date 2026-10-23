@@ -1,0 +1,35 @@
+{
+  "source": "public/scene-art/barge-family-v1/petr-boat-v13.png",
+  "decision": "accepted_for_runtime",
+  "processingMode": "conventional_interpolation",
+  "detailRecovery": false,
+  "sourceDimensions": [
+    1672,
+    941
+  ],
+  "derivativeDimensions": [
+    2420,
+    1362
+  ],
+  "reviewedPairs": [
+    "390-dpr2",
+    "1440-dpr2"
+  ],
+  "evidence": "../conventional-media-2026-10-22/barge-petr-boat-v1/",
+  "nativePixelCrops": [
+    "petr-before-100pct.png",
+    "petr-preview-100pct.png"
+  ],
+  "finding": "Paired fullframes and native-pixel face/hand/uniform/cargo crop show no visible identity, geometry, gift placement, palette, framing or text regression. Marginal resampling difference only; no recovered details claim.",
+  "limits": [
+    "Ordinary interpolation, not Flowers",
+    "Existing composition and nautical-direction questions remain",
+    "Preview4346 accepted; General must verify actual4344 currentSrc after publication"
+  ],
+  "originalPreserved": true,
+  "externalDeploymentAuthorized": false,
+  "publicationScope": "local4344",
+  "ownerReceipt": "docs/reviews/barge-2026-10-22/petr-conventional-verdict.json",
+  "generalReview": "Viewed desktop DPR2 preview. Composition, workers, folded boat and motor, ship/crane framing remain faithful. No detail recovery claimed.",
+  "runtimeVerification": "pending actual4344"
+}

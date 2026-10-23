@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-24T09:39:40.070215Z",
+    "display_name": "Nano Banana Pro",
+    "id": "16f91cc8-5628-4272-8a0e-a3cf0cbad91a",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_093940_16f91cc8-5628-4272-8a0e-a3cf0cbad91a_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "1b365b8c-3a84-4a89-8f7a-50fc9e72af8c",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/1b365b8c-3a84-4a89-8f7a-50fc9e72af8c_resize.jpg"
+        }
+      ],
+      "prompt": "Correct this illustration precisely. Keep truck exterior, camera, framing and existing cargo groups. REMOVE BOTH vertical white divider posts inside the open side of the trailer, including vertical white lines at x approx 46% and 66% of image. This is ONE continuous open trailer, not separate cabinets. Replace the huge X straps at right with TWO PARALLEL horizontal red straps spanning the full width of the right empty bay, attached at left and right anchors on far wall, following perspective of the trailer's horizontal wall rails, never diagonal X. Short straps over crockery should also be parallel to horizontal trailer rails, not slant down right. Lower the TWO pillow boxes to the SAME top plane as the three center cartons, moving both into a tidy side-by-side group directly right of those three cartons; no staggered heights. Keep a visible EMPTY narrow floor pocket behind the three middle front cartons, with floor visible from above. Exactly three front cartons, no extras. Preserve the heavy wooden crates and crockery box with protective cloth. Tops of wooden crates, crockery and center cartons should all align on ONE common physical height from floor. Empty air above all cargo. No labels, numbers, blue UI rectangles or new partitions. Soft refined illustrated style, gray contours. Only make these fixes.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260924_093940_16f91cc8-5628-4272-8a0e-a3cf0cbad91a.png",
+    "status": "completed"
+  }
+]

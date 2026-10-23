@@ -1,0 +1,226 @@
+{
+  "source": "../../fleet-v21-coupling-geometry-2026-10-09/v21-compact-trailer.blend",
+  "before": {
+    "camera": "desktop",
+    "camera_matrix": [
+      [
+        0.9968152046203613,
+        -0.06695910543203354,
+        0.04331028461456299,
+        1.7741494178771973
+      ],
+      [
+        0.07974522560834885,
+        0.836988627910614,
+        -0.5413784980773926,
+        -84.67687225341797
+      ],
+      [
+        2.559161771387153e-09,
+        0.5431081652641296,
+        0.8396626710891724,
+        131.3314208984375
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      1920,
+      1334
+    ],
+    "taa": 8,
+    "engine": "BLENDER_EEVEE",
+    "frame_end": 1536,
+    "objects": 3965,
+    "collections": [
+      "Collection",
+      "Edge expansion - source-derived additions",
+      "FX - soft exhaust, old trucks only",
+      "NEW warehouse - corrected volumetric model",
+      "V16 smoke worldspace exhaust puffs",
+      "WHEELS path-derived running gear"
+    ]
+  },
+  "textures": [
+    {
+      "name": "crew-cab-paint-0.png",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/crew-cab-paint-0.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "crew-cab-paint-0.png.001",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/crew-cab-paint-0.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "crew-cab-paint-1.png",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/crew-cab-paint-1.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "crew-cab-paint-1.png.001",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/crew-cab-paint-1.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "crew-cab-paint-2.png",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/crew-cab-paint-2.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "crew-cab-paint-2.png.001",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/crew-cab-paint-2.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "crew-cab-paint-3.png",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/crew-cab-paint-3.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "crew-cab-paint-3.png.001",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/crew-cab-paint-3.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "crew-illustrated.png",
+      "path": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/textures/crew-illustrated.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "green-painted.png",
+      "path": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/projected/textures/green-painted.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "green-painted.png.001",
+      "path": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/projected/textures/green-painted.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "Image_0",
+      "path": "/home/michael/Github/energy-plus-quest",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "Image_0.001",
+      "path": "/home/michael/Github/energy-plus-quest",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "Image_0.002",
+      "path": "/home/michael/Github/energy-plus-quest",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "Image_0.003",
+      "path": "/home/michael/Github/energy-plus-quest",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "Image_0.004",
+      "path": "/home/michael/Github/energy-plus-quest",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "Image_0.005",
+      "path": "/home/michael/Github/energy-plus-quest",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "Image_0.006",
+      "path": "/home/michael/Github/energy-plus-quest",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "old-cab-paint-0.png",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/old-cab-paint-0.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "old-cab-paint-0.png.001",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/old-cab-paint-0.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "old-cab-paint-1.png",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/old-cab-paint-1.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "old-cab-paint-1.png.001",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/old-cab-paint-1.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "old-cab-paint-2.png",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/old-cab-paint-2.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "old-cab-paint-2.png.001",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/old-cab-paint-2.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "old-cab-paint-3.png",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/old-cab-paint-3.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "old-cab-paint-3.png.001",
+      "path": "/home/michael/.local/state/energy-plus-quest/production/2026-09-16-geometry-reference/pass-20-live/old-cab-paint-3.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "single-illustrated-shared-driver.png",
+      "path": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-style-v08-2026-10-07/textures/single-illustrated-shared-driver.png",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "name": "trailer-painted-albedo-imagegen.png",
+      "path": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-v16-wheels-style-2026-10-08/textures/trailer-painted-albedo-imagegen.png",
+      "exists": true,
+      "packed": true
+    }
+  ],
+  "after": {
+    "resolution": [
+      3840,
+      2668
+    ],
+    "taa": 8,
+    "volume_samples": 32
+  }
+}

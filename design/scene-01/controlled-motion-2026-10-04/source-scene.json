@@ -1,0 +1,3635 @@
+{
+  "frame_start": 1,
+  "frame_end": 1152,
+  "fps": 24,
+  "engine": "BLENDER_EEVEE",
+  "camera": {
+    "name": "desktop",
+    "location": [
+      1.7741494178771973,
+      -84.67687225341797,
+      131.3314208984375
+    ],
+    "rotation": [
+      0.574134349822998,
+      -1.8925381262135943e-09,
+      0.07982999086380005
+    ],
+    "type": "ORTHO",
+    "ortho_scale": 111.80000305175781
+  },
+  "resolution": [
+    1008,
+    700
+  ],
+  "roots": [
+    {
+      "name": "truck-1-tractor",
+      "children": [
+        [
+          "1 bumper",
+          "MESH",
+          false
+        ],
+        [
+          "1 close-set mirror",
+          "MESH",
+          false
+        ],
+        [
+          "1 close-set mirror.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 door handle",
+          "MESH",
+          false
+        ],
+        [
+          "1 door handle.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 door seam",
+          "MESH",
+          false
+        ],
+        [
+          "1 door seam.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 exhaust stack",
+          "MESH",
+          false
+        ],
+        [
+          "1 fifth wheel",
+          "MESH",
+          false
+        ],
+        [
+          "1 formed enclosed cab",
+          "MESH",
+          false
+        ],
+        [
+          "1 fuel tank",
+          "MESH",
+          false
+        ],
+        [
+          "1 fuel tank.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 grille louvre",
+          "MESH",
+          false
+        ],
+        [
+          "1 grille louvre.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 grille louvre.002",
+          "MESH",
+          false
+        ],
+        [
+          "1 grille louvre.003",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.002",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.003",
+          "MESH",
+          false
+        ],
+        [
+          "1 ladder frame",
+          "MESH",
+          false
+        ],
+        [
+          "1 lamp housing",
+          "MESH",
+          false
+        ],
+        [
+          "1 lamp housing.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 mirror arm",
+          "MESH",
+          false
+        ],
+        [
+          "1 mirror arm.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 radiator inset",
+          "MESH",
+          false
+        ],
+        [
+          "1 rear mudguard",
+          "MESH",
+          false
+        ],
+        [
+          "1 rear mudguard.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.002",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.003",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed step",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed step.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed step.002",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed step.003",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.002",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.003",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.004",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.005",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.006",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.007",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.008",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.009",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.010",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.011",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.012",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.013",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.014",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.015",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.016",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.017",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.018",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.019",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.020",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.021",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.022",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.023",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.024",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.025",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.026",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.027",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.028",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.029",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.030",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.031",
+          "MESH",
+          false
+        ],
+        [
+          "1 roof aerodynamic deflector",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.002",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.003",
+          "MESH",
+          false
+        ],
+        [
+          "1 side window",
+          "MESH",
+          false
+        ],
+        [
+          "1 side window.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 windshield",
+          "MESH",
+          false
+        ]
+      ]
+    },
+    {
+      "name": "truck-1-trailer",
+      "children": [
+        [
+          "1 curtain buckle",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.002",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.003",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.004",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.005",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.006",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.007",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.008",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.009",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.010",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.011",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.012",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.013",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.014",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.015",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.016",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.017",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.018",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.019",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.020",
+          "MESH",
+          false
+        ],
+        [
+          "1 curtain buckle.021",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.004",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.005",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.006",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.007",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.008",
+          "MESH",
+          false
+        ],
+        [
+          "1 hub center.009",
+          "MESH",
+          false
+        ],
+        [
+          "1 long semitrailer",
+          "MESH",
+          false
+        ],
+        [
+          "1 rear doors",
+          "MESH",
+          false
+        ],
+        [
+          "1 rear locking bar",
+          "MESH",
+          false
+        ],
+        [
+          "1 rear locking bar.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 rear underrun bar",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.004",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.005",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.006",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.007",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.008",
+          "MESH",
+          false
+        ],
+        [
+          "1 recessed hub.009",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.032",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.033",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.034",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.035",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.036",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.037",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.038",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.039",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.040",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.041",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.042",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.043",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.044",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.045",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.046",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.047",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.048",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.049",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.050",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.051",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.052",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.053",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.054",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.055",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.056",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.057",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.058",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.059",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.060",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.061",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.062",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.063",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.064",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.065",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.066",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.067",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.068",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.069",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.070",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.071",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.072",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.073",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.074",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.075",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.076",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.077",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.078",
+          "MESH",
+          false
+        ],
+        [
+          "1 rim recess.079",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.004",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.005",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.006",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.007",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.008",
+          "MESH",
+          false
+        ],
+        [
+          "1 seated tire.009",
+          "MESH",
+          false
+        ],
+        [
+          "1 trailer chassis",
+          "MESH",
+          false
+        ],
+        [
+          "1 trailer lower rail",
+          "MESH",
+          false
+        ],
+        [
+          "1 trailer lower rail.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 trailer roof rail",
+          "MESH",
+          false
+        ],
+        [
+          "1 trailer roof rail.001",
+          "MESH",
+          false
+        ],
+        [
+          "1 trailer side guard",
+          "MESH",
+          false
+        ],
+        [
+          "1 trailer side guard.001",
+          "MESH",
+          false
+        ],
+        [
+          "vehicle 1 identification",
+          "FONT",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "truck-2-tractor",
+      "children": [
+        [
+          "2 bumper",
+          "MESH",
+          false
+        ],
+        [
+          "2 close-set mirror",
+          "MESH",
+          false
+        ],
+        [
+          "2 close-set mirror.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 door handle",
+          "MESH",
+          false
+        ],
+        [
+          "2 door handle.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 door seam",
+          "MESH",
+          false
+        ],
+        [
+          "2 door seam.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 fifth wheel",
+          "MESH",
+          false
+        ],
+        [
+          "2 formed enclosed cab",
+          "MESH",
+          false
+        ],
+        [
+          "2 fuel tank",
+          "MESH",
+          false
+        ],
+        [
+          "2 fuel tank.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 grille louvre",
+          "MESH",
+          false
+        ],
+        [
+          "2 grille louvre.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 grille louvre.002",
+          "MESH",
+          false
+        ],
+        [
+          "2 grille louvre.003",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.002",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.003",
+          "MESH",
+          false
+        ],
+        [
+          "2 ladder frame",
+          "MESH",
+          false
+        ],
+        [
+          "2 lamp housing",
+          "MESH",
+          false
+        ],
+        [
+          "2 lamp housing.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 mirror arm",
+          "MESH",
+          false
+        ],
+        [
+          "2 mirror arm.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 radiator inset",
+          "MESH",
+          false
+        ],
+        [
+          "2 rear mudguard",
+          "MESH",
+          false
+        ],
+        [
+          "2 rear mudguard.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.002",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.003",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed step",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed step.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed step.002",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed step.003",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.002",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.003",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.004",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.005",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.006",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.007",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.008",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.009",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.010",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.011",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.012",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.013",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.014",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.015",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.016",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.017",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.018",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.019",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.020",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.021",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.022",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.023",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.024",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.025",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.026",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.027",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.028",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.029",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.030",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.031",
+          "MESH",
+          false
+        ],
+        [
+          "2 roof aerodynamic deflector",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.002",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.003",
+          "MESH",
+          false
+        ],
+        [
+          "2 side window",
+          "MESH",
+          false
+        ],
+        [
+          "2 side window.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 windshield",
+          "MESH",
+          false
+        ]
+      ]
+    },
+    {
+      "name": "truck-2-trailer",
+      "children": [
+        [
+          "2 curtain buckle",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.002",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.003",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.004",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.005",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.006",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.007",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.008",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.009",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.010",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.011",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.012",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.013",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.014",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.015",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.016",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.017",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.018",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.019",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.020",
+          "MESH",
+          false
+        ],
+        [
+          "2 curtain buckle.021",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.004",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.005",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.006",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.007",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.008",
+          "MESH",
+          false
+        ],
+        [
+          "2 hub center.009",
+          "MESH",
+          false
+        ],
+        [
+          "2 long semitrailer",
+          "MESH",
+          false
+        ],
+        [
+          "2 rear doors",
+          "MESH",
+          false
+        ],
+        [
+          "2 rear locking bar",
+          "MESH",
+          false
+        ],
+        [
+          "2 rear locking bar.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 rear underrun bar",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.004",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.005",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.006",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.007",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.008",
+          "MESH",
+          false
+        ],
+        [
+          "2 recessed hub.009",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.032",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.033",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.034",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.035",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.036",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.037",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.038",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.039",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.040",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.041",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.042",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.043",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.044",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.045",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.046",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.047",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.048",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.049",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.050",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.051",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.052",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.053",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.054",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.055",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.056",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.057",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.058",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.059",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.060",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.061",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.062",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.063",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.064",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.065",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.066",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.067",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.068",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.069",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.070",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.071",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.072",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.073",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.074",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.075",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.076",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.077",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.078",
+          "MESH",
+          false
+        ],
+        [
+          "2 rim recess.079",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.004",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.005",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.006",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.007",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.008",
+          "MESH",
+          false
+        ],
+        [
+          "2 seated tire.009",
+          "MESH",
+          false
+        ],
+        [
+          "2 trailer chassis",
+          "MESH",
+          false
+        ],
+        [
+          "2 trailer lower rail",
+          "MESH",
+          false
+        ],
+        [
+          "2 trailer lower rail.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 trailer roof rail",
+          "MESH",
+          false
+        ],
+        [
+          "2 trailer roof rail.001",
+          "MESH",
+          false
+        ],
+        [
+          "2 trailer side guard",
+          "MESH",
+          false
+        ],
+        [
+          "2 trailer side guard.001",
+          "MESH",
+          false
+        ],
+        [
+          "vehicle 2 identification",
+          "FONT",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "truck-3-tractor",
+      "children": [
+        [
+          "3 bumper",
+          "MESH",
+          false
+        ],
+        [
+          "3 close-set mirror",
+          "MESH",
+          false
+        ],
+        [
+          "3 close-set mirror.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 door handle",
+          "MESH",
+          false
+        ],
+        [
+          "3 door handle.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 door seam",
+          "MESH",
+          false
+        ],
+        [
+          "3 door seam.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 fifth wheel",
+          "MESH",
+          false
+        ],
+        [
+          "3 formed enclosed cab",
+          "MESH",
+          false
+        ],
+        [
+          "3 fuel tank",
+          "MESH",
+          false
+        ],
+        [
+          "3 fuel tank.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 grille louvre",
+          "MESH",
+          false
+        ],
+        [
+          "3 grille louvre.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 grille louvre.002",
+          "MESH",
+          false
+        ],
+        [
+          "3 grille louvre.003",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.002",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.003",
+          "MESH",
+          false
+        ],
+        [
+          "3 ladder frame",
+          "MESH",
+          false
+        ],
+        [
+          "3 lamp housing",
+          "MESH",
+          false
+        ],
+        [
+          "3 lamp housing.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 mirror arm",
+          "MESH",
+          false
+        ],
+        [
+          "3 mirror arm.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 radiator inset",
+          "MESH",
+          false
+        ],
+        [
+          "3 rear mudguard",
+          "MESH",
+          false
+        ],
+        [
+          "3 rear mudguard.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.002",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.003",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed step",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed step.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed step.002",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed step.003",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.002",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.003",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.004",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.005",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.006",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.007",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.008",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.009",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.010",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.011",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.012",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.013",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.014",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.015",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.016",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.017",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.018",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.019",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.020",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.021",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.022",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.023",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.024",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.025",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.026",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.027",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.028",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.029",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.030",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.031",
+          "MESH",
+          false
+        ],
+        [
+          "3 roof aerodynamic deflector",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.002",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.003",
+          "MESH",
+          false
+        ],
+        [
+          "3 side window",
+          "MESH",
+          false
+        ],
+        [
+          "3 side window.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 windshield",
+          "MESH",
+          false
+        ],
+        [
+          "FIX crew driver head",
+          "MESH",
+          false
+        ],
+        [
+          "FIX crew driver head.001",
+          "MESH",
+          false
+        ],
+        [
+          "FIX crew driver torso",
+          "MESH",
+          false
+        ],
+        [
+          "FIX crew driver torso.001",
+          "MESH",
+          false
+        ]
+      ]
+    },
+    {
+      "name": "truck-3-trailer",
+      "children": [
+        [
+          "3 curtain buckle",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.002",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.003",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.004",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.005",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.006",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.007",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.008",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.009",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.010",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.011",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.012",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.013",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.014",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.015",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.016",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.017",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.018",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.019",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.020",
+          "MESH",
+          false
+        ],
+        [
+          "3 curtain buckle.021",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.004",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.005",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.006",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.007",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.008",
+          "MESH",
+          false
+        ],
+        [
+          "3 hub center.009",
+          "MESH",
+          false
+        ],
+        [
+          "3 long semitrailer",
+          "MESH",
+          false
+        ],
+        [
+          "3 rear doors",
+          "MESH",
+          false
+        ],
+        [
+          "3 rear locking bar",
+          "MESH",
+          false
+        ],
+        [
+          "3 rear locking bar.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 rear underrun bar",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.004",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.005",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.006",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.007",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.008",
+          "MESH",
+          false
+        ],
+        [
+          "3 recessed hub.009",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.032",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.033",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.034",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.035",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.036",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.037",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.038",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.039",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.040",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.041",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.042",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.043",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.044",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.045",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.046",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.047",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.048",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.049",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.050",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.051",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.052",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.053",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.054",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.055",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.056",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.057",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.058",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.059",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.060",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.061",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.062",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.063",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.064",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.065",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.066",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.067",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.068",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.069",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.070",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.071",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.072",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.073",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.074",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.075",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.076",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.077",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.078",
+          "MESH",
+          false
+        ],
+        [
+          "3 rim recess.079",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.004",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.005",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.006",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.007",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.008",
+          "MESH",
+          false
+        ],
+        [
+          "3 seated tire.009",
+          "MESH",
+          false
+        ],
+        [
+          "3 trailer chassis",
+          "MESH",
+          false
+        ],
+        [
+          "3 trailer lower rail",
+          "MESH",
+          false
+        ],
+        [
+          "3 trailer lower rail.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 trailer roof rail",
+          "MESH",
+          false
+        ],
+        [
+          "3 trailer roof rail.001",
+          "MESH",
+          false
+        ],
+        [
+          "3 trailer side guard",
+          "MESH",
+          false
+        ],
+        [
+          "3 trailer side guard.001",
+          "MESH",
+          false
+        ],
+        [
+          "vehicle 3 identification",
+          "FONT",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "truck-4-tractor",
+      "children": [
+        [
+          "4 bumper",
+          "MESH",
+          false
+        ],
+        [
+          "4 classic round headlamp",
+          "MESH",
+          false
+        ],
+        [
+          "4 classic round headlamp.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 close-set mirror",
+          "MESH",
+          false
+        ],
+        [
+          "4 close-set mirror.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 door handle",
+          "MESH",
+          false
+        ],
+        [
+          "4 door handle.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 door seam",
+          "MESH",
+          false
+        ],
+        [
+          "4 door seam.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 exhaust stack",
+          "MESH",
+          false
+        ],
+        [
+          "4 fifth wheel",
+          "MESH",
+          false
+        ],
+        [
+          "4 formed enclosed cab",
+          "MESH",
+          false
+        ],
+        [
+          "4 fuel tank",
+          "MESH",
+          false
+        ],
+        [
+          "4 fuel tank.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 grille louvre",
+          "MESH",
+          false
+        ],
+        [
+          "4 grille louvre.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 grille louvre.002",
+          "MESH",
+          false
+        ],
+        [
+          "4 grille louvre.003",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.002",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.003",
+          "MESH",
+          false
+        ],
+        [
+          "4 ladder frame",
+          "MESH",
+          false
+        ],
+        [
+          "4 mirror arm",
+          "MESH",
+          false
+        ],
+        [
+          "4 mirror arm.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 radiator inset",
+          "MESH",
+          false
+        ],
+        [
+          "4 rear mudguard",
+          "MESH",
+          false
+        ],
+        [
+          "4 rear mudguard.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.002",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.003",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed step",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed step.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed step.002",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed step.003",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.002",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.003",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.004",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.005",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.006",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.007",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.008",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.009",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.010",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.011",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.012",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.013",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.014",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.015",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.016",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.017",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.018",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.019",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.020",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.021",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.022",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.023",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.024",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.025",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.026",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.027",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.028",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.029",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.030",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.031",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.002",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.003",
+          "MESH",
+          false
+        ],
+        [
+          "4 side window",
+          "MESH",
+          false
+        ],
+        [
+          "4 side window.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 windshield",
+          "MESH",
+          false
+        ],
+        [
+          "4 windshield.001",
+          "MESH",
+          false
+        ]
+      ]
+    },
+    {
+      "name": "truck-4-trailer",
+      "children": [
+        [
+          "4 curtain buckle",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.002",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.003",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.004",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.005",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.006",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.007",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.008",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.009",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.010",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.011",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.012",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.013",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.014",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.015",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.016",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.017",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.018",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.019",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.020",
+          "MESH",
+          false
+        ],
+        [
+          "4 curtain buckle.021",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.004",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.005",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.006",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.007",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.008",
+          "MESH",
+          false
+        ],
+        [
+          "4 hub center.009",
+          "MESH",
+          false
+        ],
+        [
+          "4 long semitrailer",
+          "MESH",
+          false
+        ],
+        [
+          "4 rear doors",
+          "MESH",
+          false
+        ],
+        [
+          "4 rear locking bar",
+          "MESH",
+          false
+        ],
+        [
+          "4 rear locking bar.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 rear underrun bar",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.004",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.005",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.006",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.007",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.008",
+          "MESH",
+          false
+        ],
+        [
+          "4 recessed hub.009",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.032",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.033",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.034",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.035",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.036",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.037",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.038",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.039",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.040",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.041",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.042",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.043",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.044",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.045",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.046",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.047",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.048",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.049",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.050",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.051",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.052",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.053",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.054",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.055",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.056",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.057",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.058",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.059",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.060",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.061",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.062",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.063",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.064",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.065",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.066",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.067",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.068",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.069",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.070",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.071",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.072",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.073",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.074",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.075",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.076",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.077",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.078",
+          "MESH",
+          false
+        ],
+        [
+          "4 rim recess.079",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.004",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.005",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.006",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.007",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.008",
+          "MESH",
+          false
+        ],
+        [
+          "4 seated tire.009",
+          "MESH",
+          false
+        ],
+        [
+          "4 trailer chassis",
+          "MESH",
+          false
+        ],
+        [
+          "4 trailer lower rail",
+          "MESH",
+          false
+        ],
+        [
+          "4 trailer lower rail.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 trailer roof rail",
+          "MESH",
+          false
+        ],
+        [
+          "4 trailer roof rail.001",
+          "MESH",
+          false
+        ],
+        [
+          "4 trailer side guard",
+          "MESH",
+          false
+        ],
+        [
+          "4 trailer side guard.001",
+          "MESH",
+          false
+        ],
+        [
+          "vehicle 4 identification",
+          "FONT",
+          true
+        ]
+      ]
+    }
+  ],
+  "identification": [
+    [
+      "vehicle 1 identification",
+      true
+    ],
+    [
+      "vehicle 2 identification",
+      true
+    ],
+    [
+      "vehicle 3 identification",
+      true
+    ],
+    [
+      "vehicle 4 identification",
+      true
+    ]
+  ]
+}

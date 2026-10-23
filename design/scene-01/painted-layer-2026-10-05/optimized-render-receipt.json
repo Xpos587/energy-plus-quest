@@ -1,0 +1,19 @@
+{
+  "source": "painted-vehicles-repaired.blend",
+  "mutation": "only light visibility and retained sun shadow setting; resolution increased for test",
+  "light_object_count_before": 3,
+  "retained_sun": "OPTIMIZED unshadowed sun",
+  "retained_sun_shadow": false,
+  "light_objects_disabled": 3,
+  "dimensions": [
+    3840,
+    2667
+  ],
+  "frame": 769,
+  "samples": 8,
+  "threads": 4,
+  "render_wall_seconds": 9.609,
+  "baseline_wall_seconds": 11.875,
+  "geometry_camera_routes_textures": "unchanged",
+  "full_animation_rendered": false
+}

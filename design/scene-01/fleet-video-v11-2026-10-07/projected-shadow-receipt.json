@@ -1,0 +1,48 @@
+{
+  "method": "actual visible animated mesh ground projection along approved SUN direction; no generic proxy shapes; translucent smoke excluded",
+  "source": "fleet-v11-video.blend",
+  "light_position": [
+    -40,
+    35,
+    70
+  ],
+  "projection_z": -0.002,
+  "render_resolution": [
+    960,
+    667
+  ],
+  "frames_requested": [
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032
+  ],
+  "timings": [
+    {
+      "frame": 1027,
+      "seconds": 0.9314549779996923
+    },
+    {
+      "frame": 1028,
+      "seconds": 0.3268328859999201
+    },
+    {
+      "frame": 1029,
+      "seconds": 0.31954076200008785
+    },
+    {
+      "frame": 1030,
+      "seconds": 0.30329335700025695
+    },
+    {
+      "frame": 1031,
+      "seconds": 0.3056247310000799
+    },
+    {
+      "frame": 1032,
+      "seconds": 0.30327714700024444
+    }
+  ]
+}

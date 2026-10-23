@@ -1,0 +1,25 @@
+{
+  "input": "green-tractor.glb",
+  "bounds": {
+    "minimum": [
+      -0.9504969120025635,
+      -0.458469957113266,
+      -0.5855209231376648
+    ],
+    "maximum": [
+      0.9473159313201904,
+      0.4605049788951874,
+      0.583683967590332
+    ]
+  },
+  "mesh_objects": [
+    "Mesh_0"
+  ],
+  "triangles": 60187,
+  "resolution": [
+    900,
+    900
+  ],
+  "texture_render": "unlit original generated texture",
+  "animation": false
+}

@@ -1,0 +1,29 @@
+{
+  "status": "DOWN cropped repairs pass visual one-driver check; candidate inputs only",
+  "tool": "built-in image_gen for edits; ImageMagick AI patch assembly",
+  "assembly": "AI-generated enlarged cab crop resized to native 80x80; only windshield rectangle 34x17 at map x781 y459 pasted into original candidate",
+  "selected": [
+    "red-key-2-local-repair.png",
+    "yellow-key-2-local-repair.png"
+  ],
+  "sources": [
+    {
+      "color": "red",
+      "cropSource": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-5dfdf9a8-0ed1-476f-b27b-d95c25fc5894.png",
+      "cropPrompt": "Edit this magnified truck crop. Remove the PERSON on LEFT of the windshield entirely, including head, hair, tan face and blue shirt. That LEFT HALF must become pure blue glass with an EMPTY dark-blue seat. KEEP exactly ONE person on the RIGHT. The passenger seat on LEFT is empty. Do not just preserve input. The visible error is TWO tan heads; output must show only ONE tan head on RIGHT and NONE on LEFT. Same truck, same cab contours, same overhead pose, same pixel-art texture, same crop/background.",
+      "failedRepairSources": [
+        "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-19d663a0-7762-41a0-9e1f-c57c2556142a.png",
+        "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-42f4803c-6cfd-4618-a8f6-b4f9a7b746bc.png"
+      ]
+    },
+    {
+      "color": "yellow",
+      "cropSource": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-5606e3c5-aa31-47ba-92d9-d61f31a315bc.png",
+      "cropPrompt": "Edit this magnified truck crop. Remove the PERSON on LEFT of the windshield entirely, including head, hair, tan face and blue shirt. That LEFT HALF must become pure blue glass with an EMPTY dark-blue seat. KEEP exactly ONE person on the RIGHT. The passenger seat on LEFT is empty. Do not just preserve input. The visible error is TWO tan heads; output must show only ONE tan head on RIGHT and NONE on LEFT. Same truck, same cab contours, same overhead pose, same pixel-art texture, same crop/background.",
+      "failedRepairSources": [
+        "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-a43413d6-7fb3-446a-8cc6-f96d8d6db783.png",
+        "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-a3595fa4-95e2-43c1-b4c5-f69297064f7e.png"
+      ]
+    }
+  ]
+}

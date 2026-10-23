@@ -1,0 +1,78 @@
+{
+  "reference": [
+    "design/style-audit-2026-09-28/reference.png"
+  ],
+  "choices": [
+    "design/scene-01/assets/current/choices/student.webp",
+    "design/scene-01/assets/current/choices/professional.webp",
+    "design/scene-01/assets/current/choices/alva.webp",
+    "design/scene-01/assets/current/choices/khor.webp",
+    "design/scene-01/assets/current/choices/arseniy.webp",
+    "design/scene-01/assets/current/choices/camera.webp",
+    "design/scene-01/assets/current/choices/socks.webp",
+    "design/scene-01/assets/current/choices/boat.webp"
+  ],
+  "scenes": [
+    "public/scene1-live/separated-routes/city-poster.webp",
+    "public/compact-art/loading-side-packed-v11.png",
+    "public/scene-art/inventory-barge-style-v6.webp",
+    "public/scene-art/crane-v2.png",
+    "public/scene-art/lastmile-fifth-scene-v9.png"
+  ],
+  "carrier": [
+    "public/scene1-live/old-desktop.webp",
+    "public/scene1-live/old-mobile.webp",
+    "public/scene1-live/old4-desktop.webp",
+    "public/scene1-live/old4-mobile.webp",
+    "public/scene1-live/near-desktop.webp",
+    "public/scene1-live/near-mobile.webp",
+    "public/scene1-live/crew-desktop.webp",
+    "public/scene1-live/crew-mobile.webp",
+    "public/scene1-live/express-desktop.webp",
+    "public/scene1-live/express-mobile.webp"
+  ],
+  "inspection": [
+    "public/review/carrier-art-2026-09-27/closer-old.png",
+    "public/review/carrier-art-2026-09-27/closer-old4.png",
+    "public/review/carrier-art-2026-09-27/closer-near.png",
+    "public/review/carrier-art-2026-09-27/closer-crew.png"
+  ],
+  "compact": [
+    "public/compact-art/outcomes/socks-scatter.png",
+    "public/compact-art/outcomes/socks-dishes.png",
+    "public/compact-art/outcomes/socks-niche.png",
+    "public/compact-art/outcomes/socks-space.png",
+    "public/compact-art/outcomes/camera-dishes-broken.png",
+    "public/compact-art/outcomes/camera-dishes.png",
+    "public/compact-art/outcomes/camera-unload-three.png",
+    "public/compact-art/outcomes/camera-space.png",
+    "public/compact-art/outcomes/camera-niche.png",
+    "public/compact-art/outcomes/boat-axle.png",
+    "public/compact-art/outcomes/boat-dishes.png",
+    "public/compact-art/outcomes/boat-no-fit.png",
+    "public/compact-art/outcomes/boat-reload.png",
+    "public/compact-art/outcomes/boat-upright.png"
+  ],
+  "inventory": [
+    "public/scene-art/outcomes/inventory-entrance-v8.webp",
+    "public/scene-art/outcomes/inventory-keeper-v8.webp",
+    "public/scene-art/outcomes/inventory-wms-v8.webp",
+    "public/scene-art/outcomes/inventory-alphabet-camera-v8.webp",
+    "public/scene-art/outcomes/inventory-alphabet-socks-v8.webp",
+    "public/scene-art/outcomes/inventory-alphabet-boat-v8.webp"
+  ],
+  "crane": [
+    "public/scene-art/outcomes/crane-rush-v4-desktop.png",
+    "public/scene-art/outcomes/crane-wait-v4-desktop.png",
+    "public/scene-art/outcomes/crane-petr-v7-desktop.png",
+    "public/scene-art/outcomes/crane-remote-v4-desktop.png"
+  ],
+  "lastmile": [
+    "public/scene-art/outcomes/lastmile-helicopter-v3.png",
+    "public/scene-art/outcomes/lastmile-helicopter-remote-v3.png",
+    "public/scene-art/outcomes/lastmile-rover-v3.png",
+    "public/scene-art/outcomes/lastmile-robot-v3.png",
+    "public/scene-art/outcomes/lastmile-pipe-carrier-v3.png",
+    "public/scene-art/outcomes/lastmile-pipe-carrier-boat-v3.png"
+  ]
+}

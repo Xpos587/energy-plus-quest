@@ -1,0 +1,86 @@
+{
+  "width": 1024,
+  "height": 1536,
+  "source": "scene-art/warehouse-corrections-2026-10-20/mobile/overview-mobile-native-v3.png",
+  "method": "Manual native portrait composition regions with six plaques on one left-to-right horizontal line",
+  "regions": {
+    "entrance": {
+      "path": "M 49 1047 L 52 934 L 95 896 L 126 887 L 177 904 L 225 923 L 229 960 L 239 947 L 240 920 L 256 900 L 268 903 L 274 922 L 260 943 L 260 1024 L 281 1031 L 278 1062 L 251 1081 L 228 1083 L 187 1094 L 144 1082 L 74 1069 Z",
+      "anchorPixel": [
+        156,
+        1100
+      ],
+      "anchor": {
+        "x": 0.15234375,
+        "y": 0.7161458333333334
+      },
+      "contourCount": 1
+    },
+    "alphabet-camera": {
+      "path": "M 691 817 L 691 536 L 702 493 L 699 450 L 755 439 L 780 454 L 784 511 L 784 820 Z",
+      "anchorPixel": [
+        735,
+        535
+      ],
+      "anchor": {
+        "x": 0.7177734375,
+        "y": 0.3483072916666667
+      },
+      "contourCount": 1
+    },
+    "alphabet-socks": {
+      "path": "M 534 821 L 532 539 L 544 491 L 550 451 L 608 443 L 665 455 L 681 513 L 681 823 Z",
+      "anchorPixel": [
+        607,
+        535
+      ],
+      "anchor": {
+        "x": 0.5927734375,
+        "y": 0.3483072916666667
+      },
+      "contourCount": 1
+    },
+    "alphabet-boat": {
+      "path": "M 383 818 L 382 537 L 397 493 L 404 445 L 451 442 L 501 453 L 530 511 L 530 821 Z",
+      "anchorPixel": [
+        453,
+        535
+      ],
+      "anchor": {
+        "x": 0.4423828125,
+        "y": 0.3483072916666667
+      },
+      "contourCount": 1
+    },
+    "keeper": {
+      "path": "M 877 1173 L 887 1168 L 892 1136 L 908 1122 L 934 1128 L 943 1152 L 942 1166 L 959 1181 L 963 1240 L 949 1257 L 946 1307 L 925 1330 L 908 1328 L 907 1311 L 889 1319 L 879 1308 L 881 1270 L 878 1229 L 865 1202 Z",
+      "anchorPixel": [
+        850,
+        1120
+      ],
+      "anchor": {
+        "x": 0.830078125,
+        "y": 0.7291666666666666
+      },
+      "contourCount": 1
+    },
+    "wms": {
+      "path": "M 399 1378 L 404 1320 L 436 1308 L 442 1284 L 473 1272 L 507 1264 L 528 1239 L 572 1250 L 575 1314 L 619 1333 L 641 1345 L 649 1337 L 660 1346 L 658 1412 L 648 1422 L 664 1452 L 645 1470 L 620 1464 L 596 1454 L 553 1465 L 441 1429 L 442 1398 Z",
+      "anchorPixel": [
+        350,
+        1370
+      ],
+      "anchor": {
+        "x": 0.341796875,
+        "y": 0.8919270833333334
+      },
+      "contourCount": 1
+    }
+  },
+  "overviewRequiredBounds": {
+    "left": 25,
+    "top": 160,
+    "right": 1010,
+    "bottom": 1490
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:09:51.28374Z",
+    "display_name": "Nano Banana Pro",
+    "id": "e0c6ae65-8f42-4636-abac-21b7985c0366",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090951_e0c6ae65-8f42-4636-abac-21b7985c0366_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "bb235b38-1021-4a03-918d-e9a5d87dac7b",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/bb235b38-1021-4a03-918d-e9a5d87dac7b_resize.jpg"
+        }
+      ],
+      "prompt": "Create ONE polished narrative result illustration for a Russian logistics game, wide 3:2, full bleed, no panel border. Attached picture defines the EXACT existing game visual style, materials and environment. Refined hand painted 2D editorial illustration, detailed but uncluttered, warm cream architecture, neutral light gray ground, pale light blue glass, thin soft gray outlines NO black outlines, soft dimensional shading, navy blue and vivid orange work uniforms and blue machinery. NOT 3D render, NOT flat vector infographic. Show the specified consequence as the dominant readable subject, with medium close framing readable on a small phone. Human and machine proportions realistic, no giant packages or people relative to machinery. No text, no captions, no speech bubbles, no numbers, no arrows, no UI, no watermarks. Gift is a modest closed cardboard shipping parcel; it must not display a particular sock or camera. Composition depicts a single coherent physical scene, not collage. Northern river obstruction, alternative rescue for large boat gift. A tracked pipe carrier carrying steel pipes is stopped on NEAR river bank and cannot float. Beside it a blue amphibious snow-and-swamp rover with four huge low-pressure tires is now floating across river, transporting a safely strapped compact folded inflatable-boat package in its cargo area. Pipe bundles stay on stopped pipe carrier. NO DRONE anywhere. Emphasize rover carrying rescued gift across water, realistic scale.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_090951_e0c6ae65-8f42-4636-abac-21b7985c0366.png",
+    "status": "completed"
+  }
+]

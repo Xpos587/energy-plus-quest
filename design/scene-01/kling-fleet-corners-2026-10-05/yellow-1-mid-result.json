@@ -1,0 +1,47 @@
+[
+  {
+    "created_at": "2026-10-05T14:48:05.696852Z",
+    "display_name": "Kling v3.0",
+    "id": "b1dbad6c-0385-4572-a045-de25b34c110b",
+    "job_type": "kling3_0",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "16:9",
+      "cfg_scale": 0.5,
+      "duration": 5,
+      "enhance_prompt": false,
+      "height": 720,
+      "kling_element_ids": [],
+      "kling_elements": [],
+      "medias": [
+        {
+          "data": {
+            "id": "0597db31-22da-480a-9090-3c437864bb36",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/0597db31-22da-480a-9090-3c437864bb36.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "0f80571e-8198-4c36-a6f3-951bca6469aa",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/0f80571e-8198-4c36-a6f3-951bca6469aa.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "mode": "std",
+      "multi_prompt": [],
+      "multi_shot_mode": "custom",
+      "multi_shots": false,
+      "prompt": "Locked aerial camera and fixed clean bright 2D illustrated city. Exactly ONE YELLOW tractor connected to ONE rigid cream tarp semitrailer. Same cab and attached trailer as supplied keys, preserve scale, structural identity, wheels, detailed grille and mirrors. EXACTLY ONE adult driver, empty passenger seat; no second human, no head duplication. ONLY forward motion, CAB ALWAYS LEADING. Single connected articulated rig, fifth-wheel coupling stays attached; trailer rear axle follows inner curve. No swapping ends, no reverse, no U-turn, no duplicates, no morphing, no disappearance, no roof crossing. Entire rig stays on BLUE ASPHALT inside visible city crop, NEVER enters white padding. City/background/camera/lighting totally locked and unchanged; bright cream/apricot buildings, powder-blue roads, soft colored contours and contact shadows, no black outlines or grey veil. Five second continuous SILENT shot. Required exact first and last supplied poses. ONLY FIRST HALF of left-to-down corner. Start cab facing LEFT. Drive a SHORT distance left toward the junction then steer diagonally DOWN-LEFT. Finish exactly at supplied bent midpoint: cab DOWN-LEFT, trailer still behind toward RIGHT. Do NOT complete the turn, do NOT continue west out of crop.",
+      "reference_elements": [],
+      "sound": "off",
+      "width": 1280
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_144805_b1dbad6c-0385-4572-a045-de25b34c110b.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261005_144805_b1dbad6c-0385-4572-a045-de25b34c110b_thumbnail.webp"
+  }
+]

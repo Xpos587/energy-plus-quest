@@ -1,0 +1,2196 @@
+{
+  "frame": 769,
+  "resolution": [
+    3840,
+    2667
+  ],
+  "raycast_hits": [
+    {
+      "render_pixel": [
+        1386,
+        378
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7335,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.31552988290786743,
+          0.6679055094718933
+        ],
+        [
+          0.36923667788505554,
+          0.7141554355621338
+        ],
+        [
+          0.3287595808506012,
+          0.7071588039398193
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        378
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7603,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.5720755457878113,
+          0.5841871500015259
+        ],
+        [
+          0.5404800176620483,
+          0.6197575926780701
+        ],
+        [
+          0.5289129614830017,
+          0.6055825352668762
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        378
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 8663,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.5848205089569092,
+          0.676495373249054
+        ],
+        [
+          0.5114075541496277,
+          0.6169530749320984
+        ],
+        [
+          0.5404800176620483,
+          0.6197575926780701
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1374,
+        384
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5334,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.5980909466743469,
+          0.5105425715446472
+        ],
+        [
+          0.5979423522949219,
+          0.5382158756256104
+        ],
+        [
+          0.5556222796440125,
+          0.5480157732963562
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1380,
+        384
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5662,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.5979423522949219,
+          0.5382158756256104
+        ],
+        [
+          0.593176543712616,
+          0.5576688647270203
+        ],
+        [
+          0.5662911534309387,
+          0.5747267603874207
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1386,
+        384
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6599,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3121758997440338,
+          0.6484736800193787
+        ],
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ],
+        [
+          0.3401831090450287,
+          0.6683661341667175
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        384
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7482,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ],
+        [
+          0.38141852617263794,
+          0.6946880221366882
+        ],
+        [
+          0.3401831090450287,
+          0.6683661341667175
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        384
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7639,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ],
+        [
+          0.465065062046051,
+          0.6178813576698303
+        ],
+        [
+          0.38141852617263794,
+          0.6946880221366882
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1404,
+        384
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 8958,
+      "slot": 3,
+      "material": "PILOT 2 projected paint 3",
+      "texture_names": [
+        "crew-cab-paint-2.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.5571808815002441,
+          0.7370449900627136
+        ],
+        [
+          0.516104519367218,
+          0.7631694078445435
+        ],
+        [
+          0.6120212078094482,
+          0.6695833206176758
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1368,
+        390
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 3872,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6201329231262207,
+          0.5143260359764099
+        ],
+        [
+          0.5980909466743469,
+          0.5105425715446472
+        ],
+        [
+          0.6067864298820496,
+          0.4958588182926178
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1374,
+        390
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 4202,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.27869006991386414,
+          0.6250698566436768
+        ],
+        [
+          0.37276631593704224,
+          0.5219873189926147
+        ],
+        [
+          0.29248371720314026,
+          0.643341064453125
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1380,
+        390
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5244,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.29248371720314026,
+          0.643341064453125
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.3121758997440338,
+          0.6484736800193787
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1386,
+        390
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6599,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3121758997440338,
+          0.6484736800193787
+        ],
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ],
+        [
+          0.3401831090450287,
+          0.6683661341667175
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        390
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7482,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ],
+        [
+          0.38141852617263794,
+          0.6946880221366882
+        ],
+        [
+          0.3401831090450287,
+          0.6683661341667175
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        390
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7482,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ],
+        [
+          0.38141852617263794,
+          0.6946880221366882
+        ],
+        [
+          0.3401831090450287,
+          0.6683661341667175
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1404,
+        390
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 8228,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.465065062046051,
+          0.6178813576698303
+        ],
+        [
+          0.44281908869743347,
+          0.6499775052070618
+        ],
+        [
+          0.38141852617263794,
+          0.6946880221366882
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1356,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2682,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6584944725036621,
+          0.45478183031082153
+        ],
+        [
+          0.6261711120605469,
+          0.4852167069911957
+        ],
+        [
+          0.6386306285858154,
+          0.4525124132633209
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1362,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2682,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6584944725036621,
+          0.45478183031082153
+        ],
+        [
+          0.6261711120605469,
+          0.4852167069911957
+        ],
+        [
+          0.6386306285858154,
+          0.4525124132633209
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1368,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 3527,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6394607424736023,
+          0.5052461624145508
+        ],
+        [
+          0.6373395919799805,
+          0.5204955339431763
+        ],
+        [
+          0.6277884840965271,
+          0.504051923751831
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1374,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 4202,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.27869006991386414,
+          0.6250698566436768
+        ],
+        [
+          0.37276631593704224,
+          0.5219873189926147
+        ],
+        [
+          0.29248371720314026,
+          0.643341064453125
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1380,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5185,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3878147304058075,
+          0.5239636301994324
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.29248371720314026,
+          0.643341064453125
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1386,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6217,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3121758997440338,
+          0.6484736800193787
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6217,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3121758997440338,
+          0.6484736800193787
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7482,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ],
+        [
+          0.38141852617263794,
+          0.6946880221366882
+        ],
+        [
+          0.3401831090450287,
+          0.6683661341667175
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1404,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7639,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ],
+        [
+          0.465065062046051,
+          0.6178813576698303
+        ],
+        [
+          0.38141852617263794,
+          0.6946880221366882
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1410,
+        396
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 8821,
+      "slot": 3,
+      "material": "PILOT 2 projected paint 3",
+      "texture_names": [
+        "crew-cab-paint-2.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.5571808815002441,
+          0.7370449900627136
+        ],
+        [
+          0.5203004479408264,
+          0.7676993608474731
+        ],
+        [
+          0.516104519367218,
+          0.7631694078445435
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1350,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2014,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6808340549468994,
+          0.41782820224761963
+        ],
+        [
+          0.7021524906158447,
+          0.4673885703086853
+        ],
+        [
+          0.6584944725036621,
+          0.45478183031082153
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1356,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2301,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6834256649017334,
+          0.471182256937027
+        ],
+        [
+          0.6698306798934937,
+          0.48179924488067627
+        ],
+        [
+          0.6584944725036621,
+          0.45478183031082153
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1362,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2862,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6698306798934937,
+          0.48179924488067627
+        ],
+        [
+          0.6806737184524536,
+          0.5111178159713745
+        ],
+        [
+          0.6261711120605469,
+          0.4852167069911957
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1368,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2904,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.27946582436561584,
+          0.5493596792221069
+        ],
+        [
+          0.292961061000824,
+          0.5623185634613037
+        ],
+        [
+          0.2625472843647003,
+          0.5919802188873291
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1374,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 3933,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.2817632555961609,
+          0.5981081128120422
+        ],
+        [
+          0.37276631593704224,
+          0.5219873189926147
+        ],
+        [
+          0.27869006991386414,
+          0.6250698566436768
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1380,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5185,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3878147304058075,
+          0.5239636301994324
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.29248371720314026,
+          0.643341064453125
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1386,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6217,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3121758997440338,
+          0.6484736800193787
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6217,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3121758997440338,
+          0.6484736800193787
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6217,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3121758997440338,
+          0.6484736800193787
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1404,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7168,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6727046966552734,
+          0.6808677911758423
+        ],
+        [
+          0.6451765894889832,
+          0.7102410793304443
+        ],
+        [
+          0.6364659667015076,
+          0.6998341679573059
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1410,
+        402
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 8624,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.6464890241622925,
+          0.7291895151138306
+        ],
+        [
+          0.6248432993888855,
+          0.7202140092849731
+        ],
+        [
+          0.6337564587593079,
+          0.7110003232955933
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1350,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 1419,
+      "slot": 2,
+      "material": "PILOT 2 projected paint 2",
+      "texture_names": [
+        "crew-cab-paint-1.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.7274657487869263,
+          0.4548795819282532
+        ],
+        [
+          0.7021524906158447,
+          0.4673885703086853
+        ],
+        [
+          0.6808340549468994,
+          0.41782820224761963
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1356,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2044,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.2518230974674225,
+          0.511454701423645
+        ],
+        [
+          0.28379279375076294,
+          0.5151316523551941
+        ],
+        [
+          0.230763778090477,
+          0.5535088181495667
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1362,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2326,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.28379279375076294,
+          0.5151316523551941
+        ],
+        [
+          0.27946582436561584,
+          0.5493596792221069
+        ],
+        [
+          0.24556881189346313,
+          0.5629648566246033
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1368,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 3012,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.27946582436561584,
+          0.5493596792221069
+        ],
+        [
+          0.3547503650188446,
+          0.504185676574707
+        ],
+        [
+          0.292961061000824,
+          0.5623185634613037
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1374,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 3517,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.2750590443611145,
+          0.5872557759284973
+        ],
+        [
+          0.36541748046875,
+          0.5165442228317261
+        ],
+        [
+          0.2817632555961609,
+          0.5981081128120422
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1380,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 4325,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.37276631593704224,
+          0.5219873189926147
+        ],
+        [
+          0.3878147304058075,
+          0.5239636301994324
+        ],
+        [
+          0.29248371720314026,
+          0.643341064453125
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1386,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5185,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3878147304058075,
+          0.5239636301994324
+        ],
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.29248371720314026,
+          0.643341064453125
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6809,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.40370193123817444,
+          0.558673083782196
+        ],
+        [
+          0.41374489665031433,
+          0.5550656318664551
+        ],
+        [
+          0.4470275342464447,
+          0.601243793964386
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6790,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4363485276699066,
+          0.5445275902748108
+        ],
+        [
+          0.4719778299331665,
+          0.5714079737663269
+        ],
+        [
+          0.44076916575431824,
+          0.5720002055168152
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1404,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7362,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4395444393157959,
+          0.543434739112854
+        ],
+        [
+          0.4976229667663574,
+          0.5866603851318359
+        ],
+        [
+          0.4719778299331665,
+          0.5714079737663269
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1410,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7593,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.45997393131256104,
+          0.5155404210090637
+        ],
+        [
+          0.4994000792503357,
+          0.5318191051483154
+        ],
+        [
+          0.4976229667663574,
+          0.5866603851318359
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1416,
+        408
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 9362,
+      "slot": 4,
+      "material": "PILOT 2 projected paint 4",
+      "texture_names": [
+        "crew-cab-paint-3.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.36139968037605286,
+          0.5912861227989197
+        ],
+        [
+          0.36956003308296204,
+          0.5894749164581299
+        ],
+        [
+          0.3683105409145355,
+          0.6208211779594421
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1356,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2032,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.292690634727478,
+          0.48206108808517456
+        ],
+        [
+          0.28379279375076294,
+          0.5151316523551941
+        ],
+        [
+          0.2518230974674225,
+          0.511454701423645
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1362,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2150,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.292690634727478,
+          0.48206108808517456
+        ],
+        [
+          0.3099927604198456,
+          0.5058525800704956
+        ],
+        [
+          0.28379279375076294,
+          0.5151316523551941
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1368,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2850,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3099927604198456,
+          0.5058525800704956
+        ],
+        [
+          0.3547503650188446,
+          0.504185676574707
+        ],
+        [
+          0.27946582436561584,
+          0.5493596792221069
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1374,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 3012,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.27946582436561584,
+          0.5493596792221069
+        ],
+        [
+          0.3547503650188446,
+          0.504185676574707
+        ],
+        [
+          0.292961061000824,
+          0.5623185634613037
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1380,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 4325,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.37276631593704224,
+          0.5219873189926147
+        ],
+        [
+          0.3878147304058075,
+          0.5239636301994324
+        ],
+        [
+          0.29248371720314026,
+          0.643341064453125
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1386,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5832,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.39711201190948486,
+          0.5339720845222473
+        ],
+        [
+          0.41903582215309143,
+          0.5257264375686646
+        ],
+        [
+          0.4363485276699066,
+          0.5445275902748108
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5958,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4363485276699066,
+          0.5445275902748108
+        ],
+        [
+          0.41903582215309143,
+          0.5257264375686646
+        ],
+        [
+          0.4395444393157959,
+          0.543434739112854
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7369,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4395444393157959,
+          0.543434739112854
+        ],
+        [
+          0.45997393131256104,
+          0.5155404210090637
+        ],
+        [
+          0.4976229667663574,
+          0.5866603851318359
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1404,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7593,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.45997393131256104,
+          0.5155404210090637
+        ],
+        [
+          0.4994000792503357,
+          0.5318191051483154
+        ],
+        [
+          0.4976229667663574,
+          0.5866603851318359
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1410,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 8167,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4930746257305145,
+          0.497012197971344
+        ],
+        [
+          0.5166824460029602,
+          0.5397127270698547
+        ],
+        [
+          0.4824428856372833,
+          0.5242878794670105
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1416,
+        414
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 9343,
+      "slot": 4,
+      "material": "PILOT 2 projected paint 4",
+      "texture_names": [
+        "crew-cab-paint-3.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.35924673080444336,
+          0.5603896975517273
+        ],
+        [
+          0.3733723759651184,
+          0.5895479321479797
+        ],
+        [
+          0.36213651299476624,
+          0.5913844704627991
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1356,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 1677,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.2518230974674225,
+          0.511454701423645
+        ],
+        [
+          0.28420722484588623,
+          0.44698745012283325
+        ],
+        [
+          0.292690634727478,
+          0.48206108808517456
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1362,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2249,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.292690634727478,
+          0.48206108808517456
+        ],
+        [
+          0.33056315779685974,
+          0.4690433144569397
+        ],
+        [
+          0.3099927604198456,
+          0.5058525800704956
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1368,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2386,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.33056315779685974,
+          0.4690433144569397
+        ],
+        [
+          0.35921069979667664,
+          0.47151458263397217
+        ],
+        [
+          0.3099927604198456,
+          0.5058525800704956
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1374,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2854,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.35921069979667664,
+          0.47151458263397217
+        ],
+        [
+          0.3547503650188446,
+          0.504185676574707
+        ],
+        [
+          0.3099927604198456,
+          0.5058525800704956
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1380,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 3636,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.373121440410614,
+          0.4985676109790802
+        ],
+        [
+          0.39344215393066406,
+          0.49795156717300415
+        ],
+        [
+          0.38032063841819763,
+          0.5138059854507446
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1386,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 4498,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.40355372428894043,
+          0.5086650252342224
+        ],
+        [
+          0.3969324231147766,
+          0.49723905324935913
+        ],
+        [
+          0.45997393131256104,
+          0.5155404210090637
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6804,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.42426490783691406,
+          0.4963403642177582
+        ],
+        [
+          0.4693948030471802,
+          0.5175161361694336
+        ],
+        [
+          0.45997393131256104,
+          0.5155404210090637
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7232,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.46367397904396057,
+          0.5153688788414001
+        ],
+        [
+          0.4378131330013275,
+          0.47619205713272095
+        ],
+        [
+          0.4824428856372833,
+          0.5242878794670105
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1404,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7378,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4378131330013275,
+          0.47619205713272095
+        ],
+        [
+          0.4930746257305145,
+          0.497012197971344
+        ],
+        [
+          0.4824428856372833,
+          0.5242878794670105
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1410,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7909,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.48022541403770447,
+          0.48839667439460754
+        ],
+        [
+          0.5038135051727295,
+          0.4940636456012726
+        ],
+        [
+          0.5053765177726746,
+          0.4986254870891571
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1416,
+        420
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 9399,
+      "slot": 4,
+      "material": "PILOT 2 projected paint 4",
+      "texture_names": [
+        "crew-cab-paint-3.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3552480638027191,
+          0.5353164672851562
+        ],
+        [
+          0.3697085678577423,
+          0.5329285264015198
+        ],
+        [
+          0.37153446674346924,
+          0.5600317716598511
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1362,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2080,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.31228357553482056,
+          0.4581575095653534
+        ],
+        [
+          0.33056315779685974,
+          0.4690433144569397
+        ],
+        [
+          0.292690634727478,
+          0.48206108808517456
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1368,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2420,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.33056315779685974,
+          0.4690433144569397
+        ],
+        [
+          0.3573947548866272,
+          0.4503718316555023
+        ],
+        [
+          0.35921069979667664,
+          0.47151458263397217
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1374,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 2721,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.3573947548866272,
+          0.4503718316555023
+        ],
+        [
+          0.37118223309516907,
+          0.45884108543395996
+        ],
+        [
+          0.35921069979667664,
+          0.47151458263397217
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1380,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 3486,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.37118223309516907,
+          0.45884108543395996
+        ],
+        [
+          0.39162570238113403,
+          0.4696992039680481
+        ],
+        [
+          0.387593537569046,
+          0.4730365574359894
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1386,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 5242,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.39664679765701294,
+          0.47760093212127686
+        ],
+        [
+          0.40982121229171753,
+          0.46380046010017395
+        ],
+        [
+          0.4378131330013275,
+          0.47619205713272095
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1392,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6156,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4254973530769348,
+          0.4677342474460602
+        ],
+        [
+          0.4009959399700165,
+          0.4434796869754791
+        ],
+        [
+          0.48022541403770447,
+          0.48839667439460754
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1398,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7071,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4376090466976166,
+          0.44406792521476746
+        ],
+        [
+          0.5033506751060486,
+          0.47347167134284973
+        ],
+        [
+          0.48022541403770447,
+          0.48839667439460754
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1404,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 6410,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4376090466976166,
+          0.44406792521476746
+        ],
+        [
+          0.4395884871482849,
+          0.39648517966270447
+        ],
+        [
+          0.5033506751060486,
+          0.47347167134284973
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1410,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 7085,
+      "slot": 1,
+      "material": "PILOT 2 projected paint 1",
+      "texture_names": [
+        "crew-cab-paint-0.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.4395884871482849,
+          0.39648517966270447
+        ],
+        [
+          0.5046758651733398,
+          0.44240275025367737
+        ],
+        [
+          0.5033506751060486,
+          0.47347167134284973
+        ]
+      ]
+    },
+    {
+      "render_pixel": [
+        1416,
+        426
+      ],
+      "mesh": "PILOT 2 reconstructed near-cab",
+      "face_index": 9394,
+      "slot": 4,
+      "material": "PILOT 2 projected paint 4",
+      "texture_names": [
+        "crew-cab-paint-3.png"
+      ],
+      "projected_uv_triangle": [
+        [
+          0.355815589427948,
+          0.5334940552711487
+        ],
+        [
+          0.3567172884941101,
+          0.49514514207839966
+        ],
+        [
+          0.3678090274333954,
+          0.5073003768920898
+        ]
+      ]
+    }
+  ]
+}

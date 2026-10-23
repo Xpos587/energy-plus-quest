@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/normalidad-proxy-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/normalidad-proxy-medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/normalidad-proxy-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+  /* Canonical brand colors plus explicitly derived prototype surfaces. */
+  --orange: #ff5500;
+  --blue: #003ca6;
+  --navy: #041327;
+  --white: #ffffff;
+  --line: #6b3f26;
+  --mist: #edf3f8;
+  --pale-blue: #dfeafb;
+  --paper: #f8fbfd;
+  --font-brand: "Normalidad Compact", "Roboto Condensed", Verdana, sans-serif;
+  --header-height: 72px;
+  --action-primary: #075d9b;
+  --action-primary-hover: #004b80;
+  --action-secondary: #edf3f8;
+  --action-secondary-text: #31556f;
+  --action-icon-gap: 8px;
+  --type-body: clamp(22px, 1.5vw, 26px);
+  --type-title: clamp(26px, 2vw, 34px);
+  --type-feature-title: clamp(34px, 3vw, 48px);
+  --type-choice: clamp(18px, 1.35vw, 22px);
+  --type-action: clamp(18px, 1.2vw, 20px);
+  --type-support: clamp(14px, 0.9vw, 16px);
+  --type-body-leading: 1.4;
+  --type-title-leading: 1.15;
+  --type-control-leading: 1.25;
+  --action-font-size: var(--type-action);
+  --action-bottom-inset: calc(20px + var(--safe-area-bottom));
+  --panel-border: rgba(0, 60, 166, 0.16);
+  --panel-shadow: 0 22px 70px rgba(0, 60, 166, 0.12);
+  font-family: var(--font-brand);
+  font-size: 16px;
+  line-height: 1.5;
+  color: #041327;
+  background: #041327;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+}
+
+html {
+  /* Page panning is allowed; pinch is handled only by the game viewports. */
+  touch-action: pan-x pan-y;
+  min-width: 320px;
+  min-height: 100%;
+  background: #041327;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #ff5500;
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #ffffff;
+  background: #003ca6;
+}
+
+@media (max-width: 350px), (max-height: 500px) {
+  :root { --action-bottom-inset: calc(14px + var(--safe-area-bottom)); }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) and (orientation: portrait) {
+  :root { --type-body: 22px; --type-title: 30px; --type-feature-title: 38px; --type-choice: 20px; --type-action: 18px; }
+}
+@media (max-width: 600px) {
+  :root { --type-body: 18px; --type-title: 24px; --type-feature-title: 30px; --type-choice: 18px; --type-action: 16px; --type-support: 14px; }
+}
+@media (max-width: 360px) {
+  :root { --type-body: 17px; --type-title: 22px; --type-feature-title: 28px; --type-choice: 16px; --type-action: 15px; --type-support: 13px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  :root { --type-body: 18px; --type-title: 24px; --type-feature-title: 30px; --type-choice: 16px; --type-action: 16px; --type-support: 13px; }
+}

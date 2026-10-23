@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-23T11:58:47.96739Z",
+    "display_name": "Nano Banana Pro",
+    "id": "ccf0a391-b8b0-4226-9b26-4fa4e5a9d983",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_115847_ccf0a391-b8b0-4226-9b26-4fa4e5a9d983_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "16:9",
+      "batch_size": 1,
+      "height": 1536,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "4ddd3b05-e8b1-45da-9428-89aae812445c",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/4ddd3b05-e8b1-45da-9428-89aae812445c_resize.jpg"
+        }
+      ],
+      "prompt": "Create a finished 2D illustrated route map for an adult Russian logistics educational game. Supplied reference is ONLY for visual style: sophisticated contemporary hand-drawn editorial illustration, precise dark navy contours, clean flat colors, cobalt machinery, warm orange focal accents, pale blue atmosphere, muted sage/ochre Siberian autumn vegetation. Same family of illustration and craft. A beautiful illustrated story map, NOT a basic SVG diagram or stock corporate clipart. Absolutely no 3D, isometric models, toy rendering, photorealism, sepia, paper grain or retro styling.\n\nA single cohesive landscape 16:9 composition, calm overhead map with small side-on illustrated landmarks, fully 2D. Setting: remote Siberian September tundra, a few larches in autumn yellow, sparse reeds, low scrub, gentle ground texture drawn selectively. Clear journey LEFT to RIGHT with exactly TWO natural obstacles in order. Start at a river-port loading spot at far LEFT: a short quay, one moored low cobalt cargo barge holding a bundle of real cylindrical steel pipes and ONE orange gift box with camera pictogram. Immediately east/right of the quay lies obstacle ONE: a broad sodden bog area across the land route, reed patches, dark pools and wet muddy soil, clearly impossible for airport trolley wheels. Farther RIGHT, obstacle TWO: a narrow but continuous river extending fully from TOP edge to BOTTOM edge of image, separating destination bank from start bank. The river is mostly open blue water, with just a thin fringe of FIRST ICE, a few small floating pale slivers at shore, NOT a solid frozen road. River must be continuous barrier with NO bridge, NO ford, NO road crossing, NO safe ice route. Do not add a second inland river or third obstacle. A short broken foot-track stops at the bog, does not magically cross water. Both obstacles clearly visible at once.\n\nOn the far RIGHT bank: a carefully drawn Nenets chum (conical tent on a framework), one warmly dressed young Nenets woman in contemporary autumn outdoor clothing near its entrance, and a small separate modern administrative modular building further up the bank. No cultural caricature, no costumes used as decoration, no snow. A small open landing clearing on the same far bank but spatially well separated from the tent, connected by a faint land track to indicate a later off-road last leg. No aircraft has landed yet.\n\nAt bottom LEFT/CENTRE, on a clear pale apron OUTSIDE the obstacles, show four large DISTINCT selectable transport illustrations lined up with generous space as part of the map's staging area: a compact utility helicopter with rotor and landing skids; a cab-over amphibious all-terrain vehicle with FOUR very large ultra-low-pressure balloon tires; a small airport robot luggage cart with tiny wheels and sensor; a TRACKED pipe carrier with a cab, continuous caterpillar tracks and a few steel pipes on its rear bed. These are carefully drawn believable vehicles, not icons. Use cobalt, navy, gray and small orange details; gift remains at quay, not duplicated on vehicles. All four vehicle silhouettes must be clearly distinguishable and entirely visible. No vehicle crossing either obstacle in this initial scene.\n\nNo text at all, no numbers, no labels, no UI cards, no logo, no watermark. Leave breathing room around obstacles and transport. Strong visual hierarchy, charming industrial detail and tasteful editorial craft. The actual map must remain easy to read, never just decorative scenery.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2752
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260923_115847_ccf0a391-b8b0-4226-9b26-4fa4e5a9d983.png",
+    "status": "completed"
+  }
+]

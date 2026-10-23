@@ -1,0 +1,35 @@
+{
+  "maxFileBytes": 1048576,
+  "maxTrackedBytes": 41943040,
+  "maxPngBytes": 262144,
+  "maxPdfBytes": 1048576,
+  "maxLocalGeneratedBytes": 2147483648,
+  "localGeneratedPaths": [
+    ".tmp-work",
+    "build",
+    "release"
+  ],
+  "maxGitBytes": 67108864,
+  "forbiddenPatterns": [
+    ".tmp-work/**",
+    ".agents/**",
+    "node_modules/**",
+    "**/__pycache__/**",
+    "design/**/frames/**",
+    "design/**/*-frames/**",
+    "dist/**",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.webp",
+    "**/*.avif",
+    "**/*.mp4",
+    "**/*.webm",
+    "**/*.pdf",
+    "**/*.woff2",
+    "**/*.ttf",
+    "**/*.blend",
+    "**/*.zip"
+  ],
+  "exceptions": []
+}

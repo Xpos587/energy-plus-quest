@@ -1,0 +1,29 @@
+[
+  {
+    "created_at": "2026-09-25T09:11:10.39803Z",
+    "display_name": "Nano Banana Pro",
+    "id": "87a28eea-a1fd-4a86-a190-57c7325c20f3",
+    "job_type": "nano_banana_pro",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_091110_87a28eea-a1fd-4a86-a190-57c7325c20f3_min.webp",
+    "params": {
+      "application": null,
+      "aspect_ratio": "3:2",
+      "batch_size": 1,
+      "height": 1696,
+      "input_image": null,
+      "input_images": [
+        {
+          "id": "af5cac75-b6e8-4df6-b263-8b6b70265aa8",
+          "type": "media_input",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/af5cac75-b6e8-4df6-b263-8b6b70265aa8.webp"
+        }
+      ],
+      "prompt": "Edit this exact illustration. Critical correction: this amphibious vehicle must be FLOATING IN OPEN WATER, not driving on ice or solid ground. Preserve body shape, blue color, four huge balloon tires, gift parcel visible in rear window, landscape and current refined 2D style. Replace continuous ice platform under rover with open blue river water. Water line reaches lower HALF of all tires, hull is buoyant, wheels partly submerged. Small separated thin fragments of broken first ice only around vehicle, gentle visible wake behind it. No white solid ice surface beneath vehicle. Vehicle upright safely floating, not sinking.",
+      "resolution": "2k",
+      "surface": null,
+      "width": 2528
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20260925_091110_87a28eea-a1fd-4a86-a190-57c7325c20f3.png",
+    "status": "completed"
+  }
+]

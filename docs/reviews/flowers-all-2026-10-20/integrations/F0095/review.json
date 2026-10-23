@@ -1,0 +1,42 @@
+{
+  "canonicalId": "F0095",
+  "peerId": "lastmile-03",
+  "decision": "accepted_for_runtime",
+  "master": ".tmp-work/flowers-all-2026-10-20/F0095/pass2-master.png",
+  "dimensions": [
+    8192,
+    4610
+  ],
+  "passes": 2,
+  "acceptedP1": 9,
+  "acceptedP2": 7,
+  "nativeFullScene8192": false,
+  "visualChecks": [
+    "original full source vs final repaired full preview",
+    "100 percent cargo/straps/motor, wheels, garment motifs, tent, original protected faces",
+    "100 percent mirror junction repaired after inherited overlap ghost rejection"
+  ],
+  "evidence": [
+    "p2-final-details-contact.png",
+    "p2-final-mirror-100.png"
+  ],
+  "limitations": [
+    "Approved faces retained from original, softer than reconstructed clothes/mechanical details at100percent",
+    "No client artistic acceptance claimed"
+  ],
+  "helicopterContent": false,
+  "sharedOriginalsChanged": false,
+  "processingMode": "selective_flowers",
+  "acceptsRetainedRegions": true,
+  "ownerReceipt": "docs/reviews/lastmile-2026-10-20-flowers/prepared/lastmile-03/review-decision.json",
+  "generalReview": {
+    "decision": "accepted_for_runtime",
+    "inspected": [
+      "pass2-preview.png",
+      "p2-final-details-contact.png",
+      "p2-final-mirror-100.png"
+    ],
+    "findings": "Whole scene contains rover arrival and no helicopter. Standalone final mirror crop shows clean junction and supersedes historical ghosted cell6 in contact sheet. Source-protected faces remain softer than reconstructed vehicle/cargo, disclosed and accepted.",
+    "runtimeVerification": "pending"
+  }
+}

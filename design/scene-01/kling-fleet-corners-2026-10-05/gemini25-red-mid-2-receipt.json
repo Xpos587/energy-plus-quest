@@ -1,0 +1,27 @@
+{
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/kling-fleet-corners-2026-10-05/red-mid-2.mp4",
+  "model": "gemini-2.5-flash",
+  "cleanup": true,
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 163,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 10691,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 171
+      },
+      {
+        "modality": "VIDEO",
+        "token_count": 10520
+      }
+    ],
+    "thoughts_token_count": 1260,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 12114,
+    "traffic_type": null
+  }
+}

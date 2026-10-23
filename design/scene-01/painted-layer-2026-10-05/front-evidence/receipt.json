@@ -1,0 +1,15 @@
+{
+  "full_frame_dimensions": [1280, 889],
+  "crops_resampled": false,
+  "source_art_inspection": {
+    "old-cab-paint-0.png": "One distinct human drawn at the steering wheel; directly inspected.",
+    "crew-cab-paint-0.png": "Two distinct seated humans; directly inspected."
+  },
+  "delivered_map_evidence": {
+    "blue_frame_1": "One simple native windshield relief mark, not a detailed recognizable face.",
+    "red_frame_385": "Front-facing windshield visible; individual human count too small to determine from native map pixels.",
+    "yellow_frame_97": "Front-facing windshield visible; individual human count too small to determine from native map pixels.",
+    "green_frame_769": "Two warm-colored windshield marks can be distinguished in enlarged view, but humans are not reliably recognizable at native map size."
+  },
+  "conclusion": "Source artwork has requested one/one/two/one provenance, but delivered map does not visually establish all four driver counts at native resolution."
+}

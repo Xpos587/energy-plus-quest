@@ -1,0 +1,12 @@
+{
+  "prompt": "Edit image 1 locally, preserving full composition, all warehouse structures and text, trolley, boat and uniform unchanged. Image 2 is immutable light clean 2D style reference, not character proportions. Change only facial expression and raised hand gesture of same mature gray-haired worker. His brows rest softly in their neutral shape, inner ends NOT raised or knitted. His cheeks rise just a little, gently lifting lower eyelids while upper eyelids remain relaxed; both eyes visible, normal adult size, warm open direct gaze. The closed lips have an almost neutral line with a tiny equal lift at both corners, not a deep curved cartoon smile, no dimples or one-sided pull. Calm sincere friendliness during a brief break after effort, no worry, sadness, smirk, grin or misery. Keep adult face shape/nose/jaw/age, no anime, no added wrinkles. Adjust raised fingers from curled scratching hair to gently straightened joined fingers, back/side of hand wiping exposed upper forehead just below hairline; do not cover eyes or eyebrows. Anatomically plausible wrist and five fingers, not salute. A couple tiny transparent sweat beads and the wipe convey mild fatigue, not facial distress. Other hand remains firmly on trolley. Preserve exact silver shoulder tab, TWO bands on each sleeve, back short silver strip above logo and plain navy lower back, pants and patches exactly. Preserve clean matte surfaces and neutral daylight; absolutely no sepia, yellow overlay, blotches, black marks, grain or mottled texture. Full landscape composition same size.",
+  "status": "Проба на ревью. Жест изменён; изменение мимики слабое, задача выражения не считается закрытой.",
+  "references": [
+    "alphabet-v8.png",
+    "../../style-audit-2026-09-28/reference.png"
+  ],
+  "skills": [
+    "https://github.com/NPR9/cinematic-prompt-skills/blob/main/skills/facial-expression-prompts/SKILL.md",
+    "https://github.com/omer-metin/skills-for-antigravity/blob/main/skills/character-design/SKILL.md"
+  ]
+}

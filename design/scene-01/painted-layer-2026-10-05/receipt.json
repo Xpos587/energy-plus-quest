@@ -1,0 +1,81 @@
+{
+  "source": "design/scene-01/controlled-motion-2026-10-04/v2b/controlled-straight-start.blend",
+  "camera": {
+    "name": "desktop",
+    "matrix": [
+      [
+        0.9968152642250061,
+        -0.06695909798145294,
+        0.04331028088927269,
+        1.7741494178771973
+      ],
+      [
+        0.07974522560834885,
+        0.8369886875152588,
+        -0.5413784980773926,
+        -84.67687225341797
+      ],
+      [
+        1.8925381262135943e-09,
+        0.5431081652641296,
+        0.8396627306938171,
+        131.3314208984375
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "ortho_scale": 111.80000305175781
+  },
+  "routes": {
+    "truck-1-tractor": {
+      "action": "truck-1-tractorAction"
+    },
+    "truck-1-trailer": {
+      "action": "truck-1-trailerAction"
+    },
+    "truck-2-tractor": {
+      "action": "truck-2-tractorAction"
+    },
+    "truck-2-trailer": {
+      "action": "truck-2-trailerAction"
+    },
+    "truck-3-tractor": {
+      "action": "truck-3-tractorAction"
+    },
+    "truck-3-trailer": {
+      "action": "truck-3-trailerAction"
+    },
+    "truck-4-tractor": {
+      "action": "truck-4-tractorAction"
+    },
+    "truck-4-trailer": {
+      "action": "truck-4-trailerAction"
+    }
+  },
+  "frames": [
+    1,
+    97,
+    385
+  ],
+  "dimensions": [
+    2048,
+    1422
+  ],
+  "driver_head_geometry_counts": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 1
+  },
+  "treatment": "native soft orientation shading; emission removes gloss and cast shadows; subtle generated enamel variation; no raster textures",
+  "occlusion": "Cryptomatte against full native city",
+  "limitations": [
+    "No AI painted cab textures exist in this frozen source; fine detail comes from existing native fittings.",
+    "Native cabin opaque shell may occlude interior figures at some headings; head geometry counts do not establish face readability.",
+    "No ground shadow pass: user requires shadow-free artwork."
+  ]
+}

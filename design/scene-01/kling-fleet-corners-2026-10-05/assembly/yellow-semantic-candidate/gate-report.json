@@ -1,0 +1,3702 @@
+{
+  "color": "yellow",
+  "gate": "CONDITIONAL technical layer candidate; all videos fully decoded; native endpoint pairs and8motion samples per seam inspected. Final actual fleet placement/phase pending.",
+  "raw_frames": 600,
+  "raw_duration_seconds": 25.0,
+  "common_frames": 546,
+  "common_duration_seconds": 22.75,
+  "fps": 24,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "trim": {
+    "yellow1-mid": "all120preserved; entire600pose route maps explicitly into546common frames"
+  },
+  "mapping": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    417,
+    418,
+    419,
+    420,
+    421,
+    422,
+    423,
+    424,
+    425,
+    426,
+    428,
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    435,
+    436,
+    437,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    450,
+    451,
+    452,
+    453,
+    454,
+    455,
+    456,
+    457,
+    458,
+    459,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    492,
+    493,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    568,
+    569,
+    570,
+    572,
+    573,
+    574,
+    575,
+    576,
+    577,
+    578,
+    579,
+    580,
+    581,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588,
+    589,
+    590,
+    591,
+    592,
+    594,
+    595,
+    596,
+    597,
+    598,
+    599
+  ],
+  "seams": [
+    {
+      "from": "0-1",
+      "to": "1-mid",
+      "raw_roof_step_px": 6.990443097996799,
+      "corrected_roof_step_px": 0.6084330200693798,
+      "previous_step_px": 4.796801898845494,
+      "next_step_px": 0.5699648671845738,
+      "ordinary_median_step_px": 2.676153628099919,
+      "alpha_iou": 0.8581150051037768
+    },
+    {
+      "from": "1-mid",
+      "to": "mid-2",
+      "raw_roof_step_px": 3.151511973016715,
+      "corrected_roof_step_px": 0.9609825111716145,
+      "previous_step_px": 0.8376417989429807,
+      "next_step_px": 1.527715992671559,
+      "ordinary_median_step_px": 0.5064069937162904,
+      "alpha_iou": 0.9046529366895499
+    },
+    {
+      "from": "mid-2",
+      "to": "2-3",
+      "raw_roof_step_px": 7.093663777201959,
+      "corrected_roof_step_px": 2.9903865357585198,
+      "previous_step_px": 2.1697589275483837,
+      "next_step_px": 1.9789388690513658,
+      "ordinary_median_step_px": 1.5630118552497925,
+      "alpha_iou": 0.9600790513833992
+    },
+    {
+      "from": "2-3",
+      "to": "3-0",
+      "raw_roof_step_px": 8.194003328685966,
+      "corrected_roof_step_px": 2.9927761390241763,
+      "previous_step_px": 4.28870688079327,
+      "next_step_px": 2.865868771291414,
+      "ordinary_median_step_px": 3.6367971129215424,
+      "alpha_iou": 0.8487115544472152
+    },
+    {
+      "from": "3-0",
+      "to": "0-1",
+      "raw_roof_step_px": 8.476915645323606,
+      "corrected_roof_step_px": 1.998883324792893,
+      "previous_step_px": 1.7893617015168939,
+      "next_step_px": 2.254318687175403,
+      "ordinary_median_step_px": 3.2938511927658474,
+      "alpha_iou": 0.8671433948061724
+    }
+  ],
+  "ramp_frames": 24,
+  "max_translation_px": 12.41476736318251,
+  "start_translations": {
+    "1": [
+      6.272799843248208,
+      1.1872068625444712
+    ],
+    "2": [
+      0.027230668064589736,
+      -2.3759029810869094
+    ],
+    "3": [
+      1.1071755038179845,
+      -3.9732417772134454
+    ],
+    "4": [
+      -5.093324140390223,
+      -2.093220451516686
+    ]
+  },
+  "end_translation": [
+    1.8294893929595446,
+    -6.42030647507994
+  ],
+  "scale": 1,
+  "rotation": 0,
+  "deformation": false,
+  "crossfade": false,
+  "opticalflow": false,
+  "added_shadow": false,
+  "cab_roof_alpha_failures": [],
+  "min_roof_image_road_clearance_px": 2.0,
+  "end_roof_image_road_clearance_px": 21.0,
+  "road_metric_limit": "Distance at projected ROOF image point to blue road with21px closing. Not wheel/world clearance; body coverage excludes curbs/crosswalk mask uncertainty.",
+  "road_metrics": [
+    {
+      "frame": 0,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 1,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 2,
+      "cab_roof_image_road_clearance_px": 25.01999282836914,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 3,
+      "cab_roof_image_road_clearance_px": 25.317977905273438,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 4,
+      "cab_roof_image_road_clearance_px": 25.495098114013672,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 5,
+      "cab_roof_image_road_clearance_px": 25.961509704589844,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 6,
+      "cab_roof_image_road_clearance_px": 26.570661544799805,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 7,
+      "cab_roof_image_road_clearance_px": 26.4007568359375,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 8,
+      "cab_roof_image_road_clearance_px": 27.294687271118164,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 9,
+      "cab_roof_image_road_clearance_px": 28.301942825317383,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 10,
+      "cab_roof_image_road_clearance_px": 29.41088104248047,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 11,
+      "cab_roof_image_road_clearance_px": 30.610454559326172,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 12,
+      "cab_roof_image_road_clearance_px": 30.886890411376953,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 13,
+      "cab_roof_image_road_clearance_px": 32.4499626159668,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 14,
+      "cab_roof_image_road_clearance_px": 33.60059356689453,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 15,
+      "cab_roof_image_road_clearance_px": 34.828147888183594,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 16,
+      "cab_roof_image_road_clearance_px": 36.124786376953125,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 17,
+      "cab_roof_image_road_clearance_px": 37.48332977294922,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 18,
+      "cab_roof_image_road_clearance_px": 38.897300720214844,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 19,
+      "cab_roof_image_road_clearance_px": 40.31128692626953,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 20,
+      "cab_roof_image_road_clearance_px": 41.773197174072266,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 21,
+      "cab_roof_image_road_clearance_px": 43.278167724609375,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 22,
+      "cab_roof_image_road_clearance_px": 44.82187271118164,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 23,
+      "cab_roof_image_road_clearance_px": 45.803932189941406,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 24,
+      "cab_roof_image_road_clearance_px": 47.434165954589844,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 25,
+      "cab_roof_image_road_clearance_px": 49.09175109863281,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 26,
+      "cab_roof_image_road_clearance_px": 50.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 27,
+      "cab_roof_image_road_clearance_px": 50.0099983215332,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 28,
+      "cab_roof_image_road_clearance_px": 50.08992004394531,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 29,
+      "cab_roof_image_road_clearance_px": 49.25444030761719,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 30,
+      "cab_roof_image_road_clearance_px": 49.64876937866211,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 31,
+      "cab_roof_image_road_clearance_px": 49.64876937866211,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 32,
+      "cab_roof_image_road_clearance_px": 50.0099983215332,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 33,
+      "cab_roof_image_road_clearance_px": 50.447994232177734,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 34,
+      "cab_roof_image_road_clearance_px": 50.96076583862305,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 35,
+      "cab_roof_image_road_clearance_px": 51.54609298706055,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 36,
+      "cab_roof_image_road_clearance_px": 51.86520767211914,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 37,
+      "cab_roof_image_road_clearance_px": 52.20153045654297,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 38,
+      "cab_roof_image_road_clearance_px": 52.92447280883789,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 39,
+      "cab_roof_image_road_clearance_px": 51.429561614990234,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 40,
+      "cab_roof_image_road_clearance_px": 50.53711700439453,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 41,
+      "cab_roof_image_road_clearance_px": 49.1934928894043,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 42,
+      "cab_roof_image_road_clearance_px": 47.85394287109375,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 43,
+      "cab_roof_image_road_clearance_px": 46.51881408691406,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 44,
+      "cab_roof_image_road_clearance_px": 45.177425384521484,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 45,
+      "cab_roof_image_road_clearance_px": 42.94182205200195,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 46,
+      "cab_roof_image_road_clearance_px": 41.59326934814453,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 47,
+      "cab_roof_image_road_clearance_px": 40.70626449584961,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 48,
+      "cab_roof_image_road_clearance_px": 38.470767974853516,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 49,
+      "cab_roof_image_road_clearance_px": 36.2353401184082,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 50,
+      "cab_roof_image_road_clearance_px": 34.438350677490234,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 51,
+      "cab_roof_image_road_clearance_px": 32.202484130859375,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 52,
+      "cab_roof_image_road_clearance_px": 30.41381072998047,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 53,
+      "cab_roof_image_road_clearance_px": 28.17800521850586,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 54,
+      "cab_roof_image_road_clearance_px": 25.495098114013672,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 55,
+      "cab_roof_image_road_clearance_px": 23.25940704345703,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 56,
+      "cab_roof_image_road_clearance_px": 21.470911026000977,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 57,
+      "cab_roof_image_road_clearance_px": 18.867961883544922,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 58,
+      "cab_roof_image_road_clearance_px": 16.401220321655273,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 59,
+      "cab_roof_image_road_clearance_px": 13.892443656921387,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 60,
+      "cab_roof_image_road_clearance_px": 11.401753425598145,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 61,
+      "cab_roof_image_road_clearance_px": 9.219544410705566,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 62,
+      "cab_roof_image_road_clearance_px": 6.70820426940918,
+      "body_over_blue_road_fraction": 0.9957310565635006
+    },
+    {
+      "frame": 63,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.9866432337434095
+    },
+    {
+      "frame": 64,
+      "cab_roof_image_road_clearance_px": 4.242640495300293,
+      "body_over_blue_road_fraction": 0.977288609364081
+    },
+    {
+      "frame": 65,
+      "cab_roof_image_road_clearance_px": 4.242640495300293,
+      "body_over_blue_road_fraction": 0.9663077457450504
+    },
+    {
+      "frame": 66,
+      "cab_roof_image_road_clearance_px": 3.605551242828369,
+      "body_over_blue_road_fraction": 0.954514128187457
+    },
+    {
+      "frame": 67,
+      "cab_roof_image_road_clearance_px": 2.8284270763397217,
+      "body_over_blue_road_fraction": 0.9415959252971138
+    },
+    {
+      "frame": 68,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.9332879509870661
+    },
+    {
+      "frame": 69,
+      "cab_roof_image_road_clearance_px": 2.8284270763397217,
+      "body_over_blue_road_fraction": 0.9255533199195171
+    },
+    {
+      "frame": 70,
+      "cab_roof_image_road_clearance_px": 3.605551242828369,
+      "body_over_blue_road_fraction": 0.921105866486851
+    },
+    {
+      "frame": 71,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.9049833887043189
+    },
+    {
+      "frame": 72,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.8976897689768977
+    },
+    {
+      "frame": 73,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.8828740157480315
+    },
+    {
+      "frame": 74,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.868541530412034
+    },
+    {
+      "frame": 75,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.8559684314370273
+    },
+    {
+      "frame": 76,
+      "cab_roof_image_road_clearance_px": 2.0,
+      "body_over_blue_road_fraction": 0.8471902727571475
+    },
+    {
+      "frame": 77,
+      "cab_roof_image_road_clearance_px": 2.0,
+      "body_over_blue_road_fraction": 0.8394088669950739
+    },
+    {
+      "frame": 78,
+      "cab_roof_image_road_clearance_px": 2.0,
+      "body_over_blue_road_fraction": 0.823394495412844
+    },
+    {
+      "frame": 79,
+      "cab_roof_image_road_clearance_px": 2.2360680103302,
+      "body_over_blue_road_fraction": 0.816688567674113
+    },
+    {
+      "frame": 80,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.8091149273447821
+    },
+    {
+      "frame": 81,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.7931713722915299
+    },
+    {
+      "frame": 82,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.7799535346830402
+    },
+    {
+      "frame": 83,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.7803986710963455
+    },
+    {
+      "frame": 84,
+      "cab_roof_image_road_clearance_px": 3.605551242828369,
+      "body_over_blue_road_fraction": 0.7634770889487871
+    },
+    {
+      "frame": 85,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.7533738191632928
+    },
+    {
+      "frame": 86,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.7309371850856567
+    },
+    {
+      "frame": 87,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.7210314802411253
+    },
+    {
+      "frame": 88,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.7098289164709829
+    },
+    {
+      "frame": 89,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.6994278020868394
+    },
+    {
+      "frame": 90,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.6903878583473861
+    },
+    {
+      "frame": 91,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.6883642495784148
+    },
+    {
+      "frame": 92,
+      "cab_roof_image_road_clearance_px": 3.605551242828369,
+      "body_over_blue_road_fraction": 0.6854428232100441
+    },
+    {
+      "frame": 93,
+      "cab_roof_image_road_clearance_px": 5.830951690673828,
+      "body_over_blue_road_fraction": 0.6758691206543967
+    },
+    {
+      "frame": 94,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.670299727520436
+    },
+    {
+      "frame": 95,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.6704158145875937
+    },
+    {
+      "frame": 96,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.6690696876072777
+    },
+    {
+      "frame": 97,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.6779487179487179
+    },
+    {
+      "frame": 98,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.6773972602739726
+    },
+    {
+      "frame": 99,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.6789148351648352
+    },
+    {
+      "frame": 100,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.681025641025641
+    },
+    {
+      "frame": 101,
+      "cab_roof_image_road_clearance_px": 2.0,
+      "body_over_blue_road_fraction": 0.6764907470870459
+    },
+    {
+      "frame": 102,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.6791997240427734
+    },
+    {
+      "frame": 103,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.6806896551724138
+    },
+    {
+      "frame": 104,
+      "cab_roof_image_road_clearance_px": 3.0,
+      "body_over_blue_road_fraction": 0.6987783595113438
+    },
+    {
+      "frame": 105,
+      "cab_roof_image_road_clearance_px": 3.1622776985168457,
+      "body_over_blue_road_fraction": 0.6978516978516979
+    },
+    {
+      "frame": 106,
+      "cab_roof_image_road_clearance_px": 4.123105525970459,
+      "body_over_blue_road_fraction": 0.7006567576909782
+    },
+    {
+      "frame": 107,
+      "cab_roof_image_road_clearance_px": 4.4721360206604,
+      "body_over_blue_road_fraction": 0.7092419522326064
+    },
+    {
+      "frame": 108,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.7162022703818369
+    },
+    {
+      "frame": 109,
+      "cab_roof_image_road_clearance_px": 5.385164737701416,
+      "body_over_blue_road_fraction": 0.7214310524487669
+    },
+    {
+      "frame": 110,
+      "cab_roof_image_road_clearance_px": 6.70820426940918,
+      "body_over_blue_road_fraction": 0.7286659700452804
+    },
+    {
+      "frame": 111,
+      "cab_roof_image_road_clearance_px": 7.615773677825928,
+      "body_over_blue_road_fraction": 0.7360529986052998
+    },
+    {
+      "frame": 112,
+      "cab_roof_image_road_clearance_px": 9.899495124816895,
+      "body_over_blue_road_fraction": 0.7520027864855451
+    },
+    {
+      "frame": 113,
+      "cab_roof_image_road_clearance_px": 12.727922439575195,
+      "body_over_blue_road_fraction": 0.7727905358385525
+    },
+    {
+      "frame": 114,
+      "cab_roof_image_road_clearance_px": 16.970561981201172,
+      "body_over_blue_road_fraction": 0.7931155602388479
+    },
+    {
+      "frame": 115,
+      "cab_roof_image_road_clearance_px": 19.10497283935547,
+      "body_over_blue_road_fraction": 0.8097236796082546
+    },
+    {
+      "frame": 116,
+      "cab_roof_image_road_clearance_px": 20.880613327026367,
+      "body_over_blue_road_fraction": 0.8029925187032418
+    },
+    {
+      "frame": 117,
+      "cab_roof_image_road_clearance_px": 22.360681533813477,
+      "body_over_blue_road_fraction": 0.8103262818214414
+    },
+    {
+      "frame": 118,
+      "cab_roof_image_road_clearance_px": 24.698177337646484,
+      "body_over_blue_road_fraction": 0.8231511254019293
+    },
+    {
+      "frame": 119,
+      "cab_roof_image_road_clearance_px": 26.90724754333496,
+      "body_over_blue_road_fraction": 0.8361299535880042
+    },
+    {
+      "frame": 120,
+      "cab_roof_image_road_clearance_px": 27.58622932434082,
+      "body_over_blue_road_fraction": 0.8537593984962406
+    },
+    {
+      "frame": 121,
+      "cab_roof_image_road_clearance_px": 28.319602966308594,
+      "body_over_blue_road_fraction": 0.8560803272592041
+    },
+    {
+      "frame": 122,
+      "cab_roof_image_road_clearance_px": 28.284273147583008,
+      "body_over_blue_road_fraction": 0.8575168287210172
+    },
+    {
+      "frame": 123,
+      "cab_roof_image_road_clearance_px": 29.698484420776367,
+      "body_over_blue_road_fraction": 0.8596360935759376
+    },
+    {
+      "frame": 124,
+      "cab_roof_image_road_clearance_px": 30.41381072998047,
+      "body_over_blue_road_fraction": 0.8612652608213096
+    },
+    {
+      "frame": 125,
+      "cab_roof_image_road_clearance_px": 30.41381072998047,
+      "body_over_blue_road_fraction": 0.8645948945615982
+    },
+    {
+      "frame": 126,
+      "cab_roof_image_road_clearance_px": 31.11269760131836,
+      "body_over_blue_road_fraction": 0.8674074074074074
+    },
+    {
+      "frame": 127,
+      "cab_roof_image_road_clearance_px": 31.827659606933594,
+      "body_over_blue_road_fraction": 0.8700186219739292
+    },
+    {
+      "frame": 128,
+      "cab_roof_image_road_clearance_px": 32.557640075683594,
+      "body_over_blue_road_fraction": 0.8770764119601329
+    },
+    {
+      "frame": 129,
+      "cab_roof_image_road_clearance_px": 33.30165100097656,
+      "body_over_blue_road_fraction": 0.8779761904761905
+    },
+    {
+      "frame": 130,
+      "cab_roof_image_road_clearance_px": 34.058773040771484,
+      "body_over_blue_road_fraction": 0.8794910179640718
+    },
+    {
+      "frame": 131,
+      "cab_roof_image_road_clearance_px": 34.828147888183594,
+      "body_over_blue_road_fraction": 0.8841121495327103
+    },
+    {
+      "frame": 132,
+      "cab_roof_image_road_clearance_px": 35.46829605102539,
+      "body_over_blue_road_fraction": 0.8853006681514477
+    },
+    {
+      "frame": 133,
+      "cab_roof_image_road_clearance_px": 37.013511657714844,
+      "body_over_blue_road_fraction": 0.8813808299669482
+    },
+    {
+      "frame": 134,
+      "cab_roof_image_road_clearance_px": 37.013511657714844,
+      "body_over_blue_road_fraction": 0.8840102451518478
+    },
+    {
+      "frame": 135,
+      "cab_roof_image_road_clearance_px": 38.60051727294922,
+      "body_over_blue_road_fraction": 0.8866471019809244
+    },
+    {
+      "frame": 136,
+      "cab_roof_image_road_clearance_px": 38.60051727294922,
+      "body_over_blue_road_fraction": 0.8866130212143379
+    },
+    {
+      "frame": 137,
+      "cab_roof_image_road_clearance_px": 39.408119201660156,
+      "body_over_blue_road_fraction": 0.8897005113221329
+    },
+    {
+      "frame": 138,
+      "cab_roof_image_road_clearance_px": 40.224369049072266,
+      "body_over_blue_road_fraction": 0.8907103825136612
+    },
+    {
+      "frame": 139,
+      "cab_roof_image_road_clearance_px": 41.04875183105469,
+      "body_over_blue_road_fraction": 0.8931047063115651
+    },
+    {
+      "frame": 140,
+      "cab_roof_image_road_clearance_px": 41.88078308105469,
+      "body_over_blue_road_fraction": 0.8976234003656307
+    },
+    {
+      "frame": 141,
+      "cab_roof_image_road_clearance_px": 42.43819046020508,
+      "body_over_blue_road_fraction": 0.900331004045605
+    },
+    {
+      "frame": 142,
+      "cab_roof_image_road_clearance_px": 42.72001647949219,
+      "body_over_blue_road_fraction": 0.9005869405722671
+    },
+    {
+      "frame": 143,
+      "cab_roof_image_road_clearance_px": 43.2666130065918,
+      "body_over_blue_road_fraction": 0.9015733626051957
+    },
+    {
+      "frame": 144,
+      "cab_roof_image_road_clearance_px": 43.2666130065918,
+      "body_over_blue_road_fraction": 0.9041346505671424
+    },
+    {
+      "frame": 145,
+      "cab_roof_image_road_clearance_px": 44.10215377807617,
+      "body_over_blue_road_fraction": 0.904029304029304
+    },
+    {
+      "frame": 146,
+      "cab_roof_image_road_clearance_px": 44.10215377807617,
+      "body_over_blue_road_fraction": 0.9065454545454545
+    },
+    {
+      "frame": 147,
+      "cab_roof_image_road_clearance_px": 43.82921600341797,
+      "body_over_blue_road_fraction": 0.9064433927921369
+    },
+    {
+      "frame": 148,
+      "cab_roof_image_road_clearance_px": 43.82921600341797,
+      "body_over_blue_road_fraction": 0.9067150635208712
+    },
+    {
+      "frame": 149,
+      "cab_roof_image_road_clearance_px": 43.82921600341797,
+      "body_over_blue_road_fraction": 0.9086608442503639
+    },
+    {
+      "frame": 150,
+      "cab_roof_image_road_clearance_px": 42.94182205200195,
+      "body_over_blue_road_fraction": 0.910844250363901
+    },
+    {
+      "frame": 151,
+      "cab_roof_image_road_clearance_px": 42.94182205200195,
+      "body_over_blue_road_fraction": 0.9111758281761922
+    },
+    {
+      "frame": 152,
+      "cab_roof_image_road_clearance_px": 42.94182205200195,
+      "body_over_blue_road_fraction": 0.9124909222948439
+    },
+    {
+      "frame": 153,
+      "cab_roof_image_road_clearance_px": 42.94182205200195,
+      "body_over_blue_road_fraction": 0.9136116152450091
+    },
+    {
+      "frame": 154,
+      "cab_roof_image_road_clearance_px": 42.05948257446289,
+      "body_over_blue_road_fraction": 0.9139941690962099
+    },
+    {
+      "frame": 155,
+      "cab_roof_image_road_clearance_px": 42.05948257446289,
+      "body_over_blue_road_fraction": 0.9141926140477915
+    },
+    {
+      "frame": 156,
+      "cab_roof_image_road_clearance_px": 42.05948257446289,
+      "body_over_blue_road_fraction": 0.9142033165104542
+    },
+    {
+      "frame": 157,
+      "cab_roof_image_road_clearance_px": 42.05948257446289,
+      "body_over_blue_road_fraction": 0.9134823359769286
+    },
+    {
+      "frame": 158,
+      "cab_roof_image_road_clearance_px": 42.05948257446289,
+      "body_over_blue_road_fraction": 0.9148629148629148
+    },
+    {
+      "frame": 159,
+      "cab_roof_image_road_clearance_px": 42.05948257446289,
+      "body_over_blue_road_fraction": 0.9151011560693642
+    },
+    {
+      "frame": 160,
+      "cab_roof_image_road_clearance_px": 41.18252182006836,
+      "body_over_blue_road_fraction": 0.9155844155844156
+    },
+    {
+      "frame": 161,
+      "cab_roof_image_road_clearance_px": 41.18252182006836,
+      "body_over_blue_road_fraction": 0.9156452775775054
+    },
+    {
+      "frame": 162,
+      "cab_roof_image_road_clearance_px": 41.18252182006836,
+      "body_over_blue_road_fraction": 0.915945165945166
+    },
+    {
+      "frame": 163,
+      "cab_roof_image_road_clearance_px": 41.18252182006836,
+      "body_over_blue_road_fraction": 0.9177785791561486
+    },
+    {
+      "frame": 164,
+      "cab_roof_image_road_clearance_px": 41.18252182006836,
+      "body_over_blue_road_fraction": 0.9187725631768953
+    },
+    {
+      "frame": 165,
+      "cab_roof_image_road_clearance_px": 40.31128692626953,
+      "body_over_blue_road_fraction": 0.9178378378378378
+    },
+    {
+      "frame": 166,
+      "cab_roof_image_road_clearance_px": 40.31128692626953,
+      "body_over_blue_road_fraction": 0.9185585585585586
+    },
+    {
+      "frame": 167,
+      "cab_roof_image_road_clearance_px": 40.31128692626953,
+      "body_over_blue_road_fraction": 0.9182276657060519
+    },
+    {
+      "frame": 168,
+      "cab_roof_image_road_clearance_px": 40.31128692626953,
+      "body_over_blue_road_fraction": 0.9183159409859661
+    },
+    {
+      "frame": 169,
+      "cab_roof_image_road_clearance_px": 39.824615478515625,
+      "body_over_blue_road_fraction": 0.9199423007573025
+    },
+    {
+      "frame": 170,
+      "cab_roof_image_road_clearance_px": 39.824615478515625,
+      "body_over_blue_road_fraction": 0.9212230215827338
+    },
+    {
+      "frame": 171,
+      "cab_roof_image_road_clearance_px": 38.94868469238281,
+      "body_over_blue_road_fraction": 0.9223300970873787
+    },
+    {
+      "frame": 172,
+      "cab_roof_image_road_clearance_px": 38.94868469238281,
+      "body_over_blue_road_fraction": 0.9231597845601436
+    },
+    {
+      "frame": 173,
+      "cab_roof_image_road_clearance_px": 38.94868469238281,
+      "body_over_blue_road_fraction": 0.922911437791323
+    },
+    {
+      "frame": 174,
+      "cab_roof_image_road_clearance_px": 38.07886505126953,
+      "body_over_blue_road_fraction": 0.9244745279657998
+    },
+    {
+      "frame": 175,
+      "cab_roof_image_road_clearance_px": 38.07886505126953,
+      "body_over_blue_road_fraction": 0.925821264570823
+    },
+    {
+      "frame": 176,
+      "cab_roof_image_road_clearance_px": 37.2155876159668,
+      "body_over_blue_road_fraction": 0.9259908803928446
+    },
+    {
+      "frame": 177,
+      "cab_roof_image_road_clearance_px": 37.2155876159668,
+      "body_over_blue_road_fraction": 0.9265064437478231
+    },
+    {
+      "frame": 178,
+      "cab_roof_image_road_clearance_px": 36.359317779541016,
+      "body_over_blue_road_fraction": 0.9253990284524636
+    },
+    {
+      "frame": 179,
+      "cab_roof_image_road_clearance_px": 34.985713958740234,
+      "body_over_blue_road_fraction": 0.9258620689655173
+    },
+    {
+      "frame": 180,
+      "cab_roof_image_road_clearance_px": 34.13209533691406,
+      "body_over_blue_road_fraction": 0.9293552812071331
+    },
+    {
+      "frame": 181,
+      "cab_roof_image_road_clearance_px": 34.13209533691406,
+      "body_over_blue_road_fraction": 0.9304703476482618
+    },
+    {
+      "frame": 182,
+      "cab_roof_image_road_clearance_px": 33.2866325378418,
+      "body_over_blue_road_fraction": 0.9306397306397306
+    },
+    {
+      "frame": 183,
+      "cab_roof_image_road_clearance_px": 33.2866325378418,
+      "body_over_blue_road_fraction": 0.9315525876460768
+    },
+    {
+      "frame": 184,
+      "cab_roof_image_road_clearance_px": 32.4499626159668,
+      "body_over_blue_road_fraction": 0.9335097585180284
+    },
+    {
+      "frame": 185,
+      "cab_roof_image_road_clearance_px": 31.90611457824707,
+      "body_over_blue_road_fraction": 0.9340515834149526
+    },
+    {
+      "frame": 186,
+      "cab_roof_image_road_clearance_px": 31.064449310302734,
+      "body_over_blue_road_fraction": 0.9383317104836092
+    },
+    {
+      "frame": 187,
+      "cab_roof_image_road_clearance_px": 31.064449310302734,
+      "body_over_blue_road_fraction": 0.937843962447394
+    },
+    {
+      "frame": 188,
+      "cab_roof_image_road_clearance_px": 30.232433319091797,
+      "body_over_blue_road_fraction": 0.9379820051413882
+    },
+    {
+      "frame": 189,
+      "cab_roof_image_road_clearance_px": 30.232433319091797,
+      "body_over_blue_road_fraction": 0.9389971255190035
+    },
+    {
+      "frame": 190,
+      "cab_roof_image_road_clearance_px": 30.232433319091797,
+      "body_over_blue_road_fraction": 0.9410459587955626
+    },
+    {
+      "frame": 191,
+      "cab_roof_image_road_clearance_px": 29.41088104248047,
+      "body_over_blue_road_fraction": 0.9408619062598301
+    },
+    {
+      "frame": 192,
+      "cab_roof_image_road_clearance_px": 29.41088104248047,
+      "body_over_blue_road_fraction": 0.941875
+    },
+    {
+      "frame": 193,
+      "cab_roof_image_road_clearance_px": 29.41088104248047,
+      "body_over_blue_road_fraction": 0.9431221020092736
+    },
+    {
+      "frame": 194,
+      "cab_roof_image_road_clearance_px": 28.60070037841797,
+      "body_over_blue_road_fraction": 0.9429622815087396
+    },
+    {
+      "frame": 195,
+      "cab_roof_image_road_clearance_px": 28.60070037841797,
+      "body_over_blue_road_fraction": 0.9433962264150944
+    },
+    {
+      "frame": 196,
+      "cab_roof_image_road_clearance_px": 28.60070037841797,
+      "body_over_blue_road_fraction": 0.9441256418000604
+    },
+    {
+      "frame": 197,
+      "cab_roof_image_road_clearance_px": 28.60070037841797,
+      "body_over_blue_road_fraction": 0.9440622195632665
+    },
+    {
+      "frame": 198,
+      "cab_roof_image_road_clearance_px": 27.80287742614746,
+      "body_over_blue_road_fraction": 0.9444444444444444
+    },
+    {
+      "frame": 199,
+      "cab_roof_image_road_clearance_px": 27.80287742614746,
+      "body_over_blue_road_fraction": 0.9447708578143361
+    },
+    {
+      "frame": 200,
+      "cab_roof_image_road_clearance_px": 27.018512725830078,
+      "body_over_blue_road_fraction": 0.9461426491994177
+    },
+    {
+      "frame": 201,
+      "cab_roof_image_road_clearance_px": 27.018512725830078,
+      "body_over_blue_road_fraction": 0.947871416159861
+    },
+    {
+      "frame": 202,
+      "cab_roof_image_road_clearance_px": 26.248807907104492,
+      "body_over_blue_road_fraction": 0.9465824238943136
+    },
+    {
+      "frame": 203,
+      "cab_roof_image_road_clearance_px": 26.248807907104492,
+      "body_over_blue_road_fraction": 0.9457762557077626
+    },
+    {
+      "frame": 204,
+      "cab_roof_image_road_clearance_px": 25.495098114013672,
+      "body_over_blue_road_fraction": 0.9449801474758933
+    },
+    {
+      "frame": 205,
+      "cab_roof_image_road_clearance_px": 25.495098114013672,
+      "body_over_blue_road_fraction": 0.9449747332959012
+    },
+    {
+      "frame": 206,
+      "cab_roof_image_road_clearance_px": 25.495098114013672,
+      "body_over_blue_road_fraction": 0.9449081803005008
+    },
+    {
+      "frame": 207,
+      "cab_roof_image_road_clearance_px": 24.75883674621582,
+      "body_over_blue_road_fraction": 0.9447513812154696
+    },
+    {
+      "frame": 208,
+      "cab_roof_image_road_clearance_px": 24.75883674621582,
+      "body_over_blue_road_fraction": 0.945849367784497
+    },
+    {
+      "frame": 209,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9445506692160612
+    },
+    {
+      "frame": 210,
+      "cab_roof_image_road_clearance_px": 24.75883674621582,
+      "body_over_blue_road_fraction": 0.9439024390243902
+    },
+    {
+      "frame": 211,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9446394815014852
+    },
+    {
+      "frame": 212,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9445337620578779
+    },
+    {
+      "frame": 213,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9417553191489362
+    },
+    {
+      "frame": 214,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9419713831478538
+    },
+    {
+      "frame": 215,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9426381178958498
+    },
+    {
+      "frame": 216,
+      "cab_roof_image_road_clearance_px": 23.34523582458496,
+      "body_over_blue_road_fraction": 0.942459274829217
+    },
+    {
+      "frame": 217,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9438559322033898
+    },
+    {
+      "frame": 218,
+      "cab_roof_image_road_clearance_px": 23.34523582458496,
+      "body_over_blue_road_fraction": 0.9447382337387625
+    },
+    {
+      "frame": 219,
+      "cab_roof_image_road_clearance_px": 23.34523582458496,
+      "body_over_blue_road_fraction": 0.9459245581640728
+    },
+    {
+      "frame": 220,
+      "cab_roof_image_road_clearance_px": 23.34523582458496,
+      "body_over_blue_road_fraction": 0.945230607966457
+    },
+    {
+      "frame": 221,
+      "cab_roof_image_road_clearance_px": 23.34523582458496,
+      "body_over_blue_road_fraction": 0.9471342580476315
+    },
+    {
+      "frame": 222,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9487779511180447
+    },
+    {
+      "frame": 223,
+      "cab_roof_image_road_clearance_px": 23.34523582458496,
+      "body_over_blue_road_fraction": 0.9459318949831037
+    },
+    {
+      "frame": 224,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9477650727650727
+    },
+    {
+      "frame": 225,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.9495841995841996
+    },
+    {
+      "frame": 226,
+      "cab_roof_image_road_clearance_px": 24.041629791259766,
+      "body_over_blue_road_fraction": 0.950533715178339
+    },
+    {
+      "frame": 227,
+      "cab_roof_image_road_clearance_px": 24.08319091796875,
+      "body_over_blue_road_fraction": 0.9528301886792453
+    },
+    {
+      "frame": 228,
+      "cab_roof_image_road_clearance_px": 24.08319091796875,
+      "body_over_blue_road_fraction": 0.9518072289156626
+    },
+    {
+      "frame": 229,
+      "cab_roof_image_road_clearance_px": 24.83948516845703,
+      "body_over_blue_road_fraction": 0.9521318336385038
+    },
+    {
+      "frame": 230,
+      "cab_roof_image_road_clearance_px": 24.83948516845703,
+      "body_over_blue_road_fraction": 0.9534096824570536
+    },
+    {
+      "frame": 231,
+      "cab_roof_image_road_clearance_px": 25.0,
+      "body_over_blue_road_fraction": 0.9531085353003161
+    },
+    {
+      "frame": 232,
+      "cab_roof_image_road_clearance_px": 25.806976318359375,
+      "body_over_blue_road_fraction": 0.9556830031282586
+    },
+    {
+      "frame": 233,
+      "cab_roof_image_road_clearance_px": 25.806976318359375,
+      "body_over_blue_road_fraction": 0.9571129707112971
+    },
+    {
+      "frame": 234,
+      "cab_roof_image_road_clearance_px": 26.076810836791992,
+      "body_over_blue_road_fraction": 0.957919498170413
+    },
+    {
+      "frame": 235,
+      "cab_roof_image_road_clearance_px": 26.076810836791992,
+      "body_over_blue_road_fraction": 0.9602438377948582
+    },
+    {
+      "frame": 236,
+      "cab_roof_image_road_clearance_px": 26.925825119018555,
+      "body_over_blue_road_fraction": 0.9628351473320945
+    },
+    {
+      "frame": 237,
+      "cab_roof_image_road_clearance_px": 27.20294189453125,
+      "body_over_blue_road_fraction": 0.9637757800105764
+    },
+    {
+      "frame": 238,
+      "cab_roof_image_road_clearance_px": 27.20294189453125,
+      "body_over_blue_road_fraction": 0.9667019027484144
+    },
+    {
+      "frame": 239,
+      "cab_roof_image_road_clearance_px": 27.459060668945312,
+      "body_over_blue_road_fraction": 0.9691358024691358
+    },
+    {
+      "frame": 240,
+      "cab_roof_image_road_clearance_px": 27.459060668945312,
+      "body_over_blue_road_fraction": 0.9694555112881806
+    },
+    {
+      "frame": 241,
+      "cab_roof_image_road_clearance_px": 26.076810836791992,
+      "body_over_blue_road_fraction": 0.9783248595129783
+    },
+    {
+      "frame": 242,
+      "cab_roof_image_road_clearance_px": 26.419689178466797,
+      "body_over_blue_road_fraction": 0.9834180262102167
+    },
+    {
+      "frame": 243,
+      "cab_roof_image_road_clearance_px": 27.294687271118164,
+      "body_over_blue_road_fraction": 0.990043057050592
+    },
+    {
+      "frame": 244,
+      "cab_roof_image_road_clearance_px": 27.73084831237793,
+      "body_over_blue_road_fraction": 0.9953966964527484
+    },
+    {
+      "frame": 245,
+      "cab_roof_image_road_clearance_px": 28.635643005371094,
+      "body_over_blue_road_fraction": 0.9989020038429866
+    },
+    {
+      "frame": 246,
+      "cab_roof_image_road_clearance_px": 29.06888198852539,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 247,
+      "cab_roof_image_road_clearance_px": 29.529647827148438,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 248,
+      "cab_roof_image_road_clearance_px": 31.304950714111328,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 249,
+      "cab_roof_image_road_clearance_px": 31.764759063720703,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 250,
+      "cab_roof_image_road_clearance_px": 32.202484130859375,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 251,
+      "cab_roof_image_road_clearance_px": 33.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 252,
+      "cab_roof_image_road_clearance_px": 33.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 253,
+      "cab_roof_image_road_clearance_px": 33.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 254,
+      "cab_roof_image_road_clearance_px": 33.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 255,
+      "cab_roof_image_road_clearance_px": 33.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 256,
+      "cab_roof_image_road_clearance_px": 33.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 257,
+      "cab_roof_image_road_clearance_px": 33.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 258,
+      "cab_roof_image_road_clearance_px": 34.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 259,
+      "cab_roof_image_road_clearance_px": 34.985713958740234,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 260,
+      "cab_roof_image_road_clearance_px": 34.13209533691406,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 261,
+      "cab_roof_image_road_clearance_px": 33.83784866333008,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 262,
+      "cab_roof_image_road_clearance_px": 33.60059356689453,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 263,
+      "cab_roof_image_road_clearance_px": 32.80244064331055,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 264,
+      "cab_roof_image_road_clearance_px": 32.649654388427734,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 265,
+      "cab_roof_image_road_clearance_px": 32.4499626159668,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 266,
+      "cab_roof_image_road_clearance_px": 32.202484130859375,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 267,
+      "cab_roof_image_road_clearance_px": 31.400634765625,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 268,
+      "cab_roof_image_road_clearance_px": 31.24100112915039,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 269,
+      "cab_roof_image_road_clearance_px": 30.479501724243164,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 270,
+      "cab_roof_image_road_clearance_px": 30.41381072998047,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 271,
+      "cab_roof_image_road_clearance_px": 30.41381072998047,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 272,
+      "cab_roof_image_road_clearance_px": 29.698484420776367,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 273,
+      "cab_roof_image_road_clearance_px": 30.41381072998047,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 274,
+      "cab_roof_image_road_clearance_px": 30.479501724243164,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 275,
+      "cab_roof_image_road_clearance_px": 29.20616340637207,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 276,
+      "cab_roof_image_road_clearance_px": 29.41088104248047,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 277,
+      "cab_roof_image_road_clearance_px": 28.844409942626953,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 278,
+      "cab_roof_image_road_clearance_px": 29.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 279,
+      "cab_roof_image_road_clearance_px": 28.319602966308594,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 280,
+      "cab_roof_image_road_clearance_px": 27.658632278442383,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 281,
+      "cab_roof_image_road_clearance_px": 27.80287742614746,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 282,
+      "cab_roof_image_road_clearance_px": 27.20294189453125,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 283,
+      "cab_roof_image_road_clearance_px": 26.62705421447754,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 284,
+      "cab_roof_image_road_clearance_px": 25.553863525390625,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 285,
+      "cab_roof_image_road_clearance_px": 25.05992889404297,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 286,
+      "cab_roof_image_road_clearance_px": 24.166091918945312,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 287,
+      "cab_roof_image_road_clearance_px": 23.706539154052734,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 288,
+      "cab_roof_image_road_clearance_px": 22.825424194335938,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 289,
+      "cab_roof_image_road_clearance_px": 22.360681533813477,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 290,
+      "cab_roof_image_road_clearance_px": 21.540658950805664,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 291,
+      "cab_roof_image_road_clearance_px": 21.189619064331055,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 292,
+      "cab_roof_image_road_clearance_px": 19.646883010864258,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 293,
+      "cab_roof_image_road_clearance_px": 19.313207626342773,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 294,
+      "cab_roof_image_road_clearance_px": 18.97366714477539,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 295,
+      "cab_roof_image_road_clearance_px": 18.439088821411133,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 296,
+      "cab_roof_image_road_clearance_px": 18.248287200927734,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 297,
+      "cab_roof_image_road_clearance_px": 18.11077117919922,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 298,
+      "cab_roof_image_road_clearance_px": 17.029386520385742,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 299,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 300,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 301,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 302,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 303,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 304,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 305,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 306,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 307,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 308,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 309,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 310,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 311,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 312,
+      "cab_roof_image_road_clearance_px": 17.029386520385742,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 313,
+      "cab_roof_image_road_clearance_px": 17.11724281311035,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 314,
+      "cab_roof_image_road_clearance_px": 17.262676239013672,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 315,
+      "cab_roof_image_road_clearance_px": 17.464248657226562,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 316,
+      "cab_roof_image_road_clearance_px": 17.72004508972168,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 317,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 318,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 319,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 320,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 321,
+      "cab_roof_image_road_clearance_px": 18.027755737304688,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 322,
+      "cab_roof_image_road_clearance_px": 18.248287200927734,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 323,
+      "cab_roof_image_road_clearance_px": 18.681541442871094,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 324,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 325,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 326,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 327,
+      "cab_roof_image_road_clearance_px": 18.027755737304688,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 328,
+      "cab_roof_image_road_clearance_px": 18.248287200927734,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 329,
+      "cab_roof_image_road_clearance_px": 18.681541442871094,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 330,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 331,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 332,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 333,
+      "cab_roof_image_road_clearance_px": 19.10497283935547,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 334,
+      "cab_roof_image_road_clearance_px": 19.416486740112305,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 335,
+      "cab_roof_image_road_clearance_px": 19.92485809326172,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 336,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 337,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 338,
+      "cab_roof_image_road_clearance_px": 19.026296615600586,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 339,
+      "cab_roof_image_road_clearance_px": 19.235383987426758,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 340,
+      "cab_roof_image_road_clearance_px": 19.646883010864258,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 341,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 342,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 343,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 344,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 345,
+      "cab_roof_image_road_clearance_px": 20.099750518798828,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 346,
+      "cab_roof_image_road_clearance_px": 20.39607810974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 347,
+      "cab_roof_image_road_clearance_px": 20.880613327026367,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 348,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 349,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 350,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 351,
+      "cab_roof_image_road_clearance_px": 21.095022201538086,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 352,
+      "cab_roof_image_road_clearance_px": 21.21320343017578,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 353,
+      "cab_roof_image_road_clearance_px": 21.587032318115234,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 354,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 355,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 356,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 357,
+      "cab_roof_image_road_clearance_px": 22.022714614868164,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 358,
+      "cab_roof_image_road_clearance_px": 21.21320343017578,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 359,
+      "cab_roof_image_road_clearance_px": 21.840330123901367,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 360,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 361,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 362,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 363,
+      "cab_roof_image_road_clearance_px": 20.2237491607666,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 364,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 365,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 366,
+      "cab_roof_image_road_clearance_px": 21.21320343017578,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 367,
+      "cab_roof_image_road_clearance_px": 20.880613327026367,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 368,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 369,
+      "cab_roof_image_road_clearance_px": 20.2237491607666,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 370,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 371,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 372,
+      "cab_roof_image_road_clearance_px": 19.646883010864258,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 373,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 374,
+      "cab_roof_image_road_clearance_px": 19.235383987426758,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 375,
+      "cab_roof_image_road_clearance_px": 20.099750518798828,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 376,
+      "cab_roof_image_road_clearance_px": 19.416486740112305,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 377,
+      "cab_roof_image_road_clearance_px": 20.248456954956055,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 378,
+      "cab_roof_image_road_clearance_px": 21.931711196899414,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 379,
+      "cab_roof_image_road_clearance_px": 23.25940704345703,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 380,
+      "cab_roof_image_road_clearance_px": 25.05992889404297,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 381,
+      "cab_roof_image_road_clearance_px": 26.419689178466797,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 382,
+      "cab_roof_image_road_clearance_px": 27.20294189453125,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 383,
+      "cab_roof_image_road_clearance_px": 29.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 384,
+      "cab_roof_image_road_clearance_px": 31.11269760131836,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 385,
+      "cab_roof_image_road_clearance_px": 33.941123962402344,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 386,
+      "cab_roof_image_road_clearance_px": 35.35533905029297,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 387,
+      "cab_roof_image_road_clearance_px": 37.48332977294922,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 388,
+      "cab_roof_image_road_clearance_px": 39.59798049926758,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 389,
+      "cab_roof_image_road_clearance_px": 41.773197174072266,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 390,
+      "cab_roof_image_road_clearance_px": 44.04542922973633,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 391,
+      "cab_roof_image_road_clearance_px": 46.04345703125,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 392,
+      "cab_roof_image_road_clearance_px": 42.20189666748047,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 393,
+      "cab_roof_image_road_clearance_px": 39.051246643066406,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 394,
+      "cab_roof_image_road_clearance_px": 36.79673767089844,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 395,
+      "cab_roof_image_road_clearance_px": 34.65544891357422,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 396,
+      "cab_roof_image_road_clearance_px": 32.649654388427734,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 397,
+      "cab_roof_image_road_clearance_px": 31.400634765625,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 398,
+      "cab_roof_image_road_clearance_px": 29.15475845336914,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 399,
+      "cab_roof_image_road_clearance_px": 26.83281707763672,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 400,
+      "cab_roof_image_road_clearance_px": 25.298221588134766,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 401,
+      "cab_roof_image_road_clearance_px": 23.53720474243164,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 402,
+      "cab_roof_image_road_clearance_px": 23.0867919921875,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 403,
+      "cab_roof_image_road_clearance_px": 24.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 404,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 405,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 406,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 407,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 408,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 409,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 410,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 411,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 412,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 413,
+      "cab_roof_image_road_clearance_px": 20.099750518798828,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 414,
+      "cab_roof_image_road_clearance_px": 21.3775577545166,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 415,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 416,
+      "cab_roof_image_road_clearance_px": 22.203603744506836,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 417,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 418,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 419,
+      "cab_roof_image_road_clearance_px": 23.0867919921875,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 420,
+      "cab_roof_image_road_clearance_px": 24.73863410949707,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 421,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 422,
+      "cab_roof_image_road_clearance_px": 24.1867733001709,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 423,
+      "cab_roof_image_road_clearance_px": 26.476404190063477,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 424,
+      "cab_roof_image_road_clearance_px": 28.861738204956055,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 425,
+      "cab_roof_image_road_clearance_px": 30.41381072998047,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 426,
+      "cab_roof_image_road_clearance_px": 32.280025482177734,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 427,
+      "cab_roof_image_road_clearance_px": 35.735137939453125,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 428,
+      "cab_roof_image_road_clearance_px": 38.60051727294922,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 429,
+      "cab_roof_image_road_clearance_px": 42.37923812866211,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 430,
+      "cab_roof_image_road_clearance_px": 46.2385139465332,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 431,
+      "cab_roof_image_road_clearance_px": 49.76947021484375,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 432,
+      "cab_roof_image_road_clearance_px": 49.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 433,
+      "cab_roof_image_road_clearance_px": 46.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 434,
+      "cab_roof_image_road_clearance_px": 43.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 435,
+      "cab_roof_image_road_clearance_px": 40.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 436,
+      "cab_roof_image_road_clearance_px": 36.013885498046875,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 437,
+      "cab_roof_image_road_clearance_px": 33.13608169555664,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 438,
+      "cab_roof_image_road_clearance_px": 29.42787742614746,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 439,
+      "cab_roof_image_road_clearance_px": 25.709918975830078,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 440,
+      "cab_roof_image_road_clearance_px": 23.0867919921875,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 441,
+      "cab_roof_image_road_clearance_px": 18.788293838500977,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 442,
+      "cab_roof_image_road_clearance_px": 15.811387062072754,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 443,
+      "cab_roof_image_road_clearance_px": 12.727922439575195,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 444,
+      "cab_roof_image_road_clearance_px": 10.29563045501709,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 445,
+      "cab_roof_image_road_clearance_px": 8.9442720413208,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 446,
+      "cab_roof_image_road_clearance_px": 8.0,
+      "body_over_blue_road_fraction": 0.99971870604782
+    },
+    {
+      "frame": 447,
+      "cab_roof_image_road_clearance_px": 8.062257766723633,
+      "body_over_blue_road_fraction": 0.9974846282839576
+    },
+    {
+      "frame": 448,
+      "cab_roof_image_road_clearance_px": 9.0,
+      "body_over_blue_road_fraction": 0.9947499309201436
+    },
+    {
+      "frame": 449,
+      "cab_roof_image_road_clearance_px": 8.246211051940918,
+      "body_over_blue_road_fraction": 0.9900689655172413
+    },
+    {
+      "frame": 450,
+      "cab_roof_image_road_clearance_px": 8.0,
+      "body_over_blue_road_fraction": 0.9843792819950672
+    },
+    {
+      "frame": 451,
+      "cab_roof_image_road_clearance_px": 8.0,
+      "body_over_blue_road_fraction": 0.9809004092769441
+    },
+    {
+      "frame": 452,
+      "cab_roof_image_road_clearance_px": 7.615773677825928,
+      "body_over_blue_road_fraction": 0.9727371864776445
+    },
+    {
+      "frame": 453,
+      "cab_roof_image_road_clearance_px": 7.0,
+      "body_over_blue_road_fraction": 0.9669849931787176
+    },
+    {
+      "frame": 454,
+      "cab_roof_image_road_clearance_px": 7.0,
+      "body_over_blue_road_fraction": 0.9574876577070762
+    },
+    {
+      "frame": 455,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.9553669222343921
+    },
+    {
+      "frame": 456,
+      "cab_roof_image_road_clearance_px": 7.0,
+      "body_over_blue_road_fraction": 0.9506139154160982
+    },
+    {
+      "frame": 457,
+      "cab_roof_image_road_clearance_px": 6.082762241363525,
+      "body_over_blue_road_fraction": 0.9448256931100741
+    },
+    {
+      "frame": 458,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.9321141590468274
+    },
+    {
+      "frame": 459,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.9365826640819718
+    },
+    {
+      "frame": 460,
+      "cab_roof_image_road_clearance_px": 7.0,
+      "body_over_blue_road_fraction": 0.9273991655076496
+    },
+    {
+      "frame": 461,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.9244755244755245
+    },
+    {
+      "frame": 462,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.9174157303370787
+    },
+    {
+      "frame": 463,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.9160348216793036
+    },
+    {
+      "frame": 464,
+      "cab_roof_image_road_clearance_px": 5.830951690673828,
+      "body_over_blue_road_fraction": 0.9090400223901484
+    },
+    {
+      "frame": 465,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.9048423423423423
+    },
+    {
+      "frame": 466,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.9009060022650056
+    },
+    {
+      "frame": 467,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.9006810442678774
+    },
+    {
+      "frame": 468,
+      "cab_roof_image_road_clearance_px": 5.385164737701416,
+      "body_over_blue_road_fraction": 0.8998292544109278
+    },
+    {
+      "frame": 469,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.8894285714285715
+    },
+    {
+      "frame": 470,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.8845265588914549
+    },
+    {
+      "frame": 471,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.8768261243196792
+    },
+    {
+      "frame": 472,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.879196556671449
+    },
+    {
+      "frame": 473,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.8741017533774073
+    },
+    {
+      "frame": 474,
+      "cab_roof_image_road_clearance_px": 4.0,
+      "body_over_blue_road_fraction": 0.8771370617212402
+    },
+    {
+      "frame": 475,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.8842135809634358
+    },
+    {
+      "frame": 476,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.879079254079254
+    },
+    {
+      "frame": 477,
+      "cab_roof_image_road_clearance_px": 5.0,
+      "body_over_blue_road_fraction": 0.8811705586757316
+    },
+    {
+      "frame": 478,
+      "cab_roof_image_road_clearance_px": 6.0,
+      "body_over_blue_road_fraction": 0.8852606351108449
+    },
+    {
+      "frame": 479,
+      "cab_roof_image_road_clearance_px": 7.0,
+      "body_over_blue_road_fraction": 0.8850950118764845
+    },
+    {
+      "frame": 480,
+      "cab_roof_image_road_clearance_px": 6.70820426940918,
+      "body_over_blue_road_fraction": 0.8507869249394673
+    },
+    {
+      "frame": 481,
+      "cab_roof_image_road_clearance_px": 7.071068286895752,
+      "body_over_blue_road_fraction": 0.8540167865707434
+    },
+    {
+      "frame": 482,
+      "cab_roof_image_road_clearance_px": 10.81665325164795,
+      "body_over_blue_road_fraction": 0.8646864686468647
+    },
+    {
+      "frame": 483,
+      "cab_roof_image_road_clearance_px": 12.083045959472656,
+      "body_over_blue_road_fraction": 0.8725431804645623
+    },
+    {
+      "frame": 484,
+      "cab_roof_image_road_clearance_px": 13.928387641906738,
+      "body_over_blue_road_fraction": 0.8702767033620946
+    },
+    {
+      "frame": 485,
+      "cab_roof_image_road_clearance_px": 17.72004508972168,
+      "body_over_blue_road_fraction": 0.8776830344016465
+    },
+    {
+      "frame": 486,
+      "cab_roof_image_road_clearance_px": 20.39607810974121,
+      "body_over_blue_road_fraction": 0.8738262910798122
+    },
+    {
+      "frame": 487,
+      "cab_roof_image_road_clearance_px": 25.317977905273438,
+      "body_over_blue_road_fraction": 0.8764208685514427
+    },
+    {
+      "frame": 488,
+      "cab_roof_image_road_clearance_px": 27.166156768798828,
+      "body_over_blue_road_fraction": 0.8822690992018244
+    },
+    {
+      "frame": 489,
+      "cab_roof_image_road_clearance_px": 30.066591262817383,
+      "body_over_blue_road_fraction": 0.9056159952955013
+    },
+    {
+      "frame": 490,
+      "cab_roof_image_road_clearance_px": 34.0,
+      "body_over_blue_road_fraction": 0.9093023255813953
+    },
+    {
+      "frame": 491,
+      "cab_roof_image_road_clearance_px": 37.0,
+      "body_over_blue_road_fraction": 0.9214037122969838
+    },
+    {
+      "frame": 492,
+      "cab_roof_image_road_clearance_px": 41.0,
+      "body_over_blue_road_fraction": 0.9235909355026147
+    },
+    {
+      "frame": 493,
+      "cab_roof_image_road_clearance_px": 43.0,
+      "body_over_blue_road_fraction": 0.9242203439230545
+    },
+    {
+      "frame": 494,
+      "cab_roof_image_road_clearance_px": 46.51881408691406,
+      "body_over_blue_road_fraction": 0.9316661820296598
+    },
+    {
+      "frame": 495,
+      "cab_roof_image_road_clearance_px": 47.01063919067383,
+      "body_over_blue_road_fraction": 0.9344688221709007
+    },
+    {
+      "frame": 496,
+      "cab_roof_image_road_clearance_px": 47.16990661621094,
+      "body_over_blue_road_fraction": 0.9404995790064552
+    },
+    {
+      "frame": 497,
+      "cab_roof_image_road_clearance_px": 45.0444221496582,
+      "body_over_blue_road_fraction": 0.9596399535423926
+    },
+    {
+      "frame": 498,
+      "cab_roof_image_road_clearance_px": 43.0,
+      "body_over_blue_road_fraction": 0.962478184991274
+    },
+    {
+      "frame": 499,
+      "cab_roof_image_road_clearance_px": 39.0,
+      "body_over_blue_road_fraction": 0.9663768115942029
+    },
+    {
+      "frame": 500,
+      "cab_roof_image_road_clearance_px": 38.0,
+      "body_over_blue_road_fraction": 0.971319871232075
+    },
+    {
+      "frame": 501,
+      "cab_roof_image_road_clearance_px": 36.0,
+      "body_over_blue_road_fraction": 0.9738639738639738
+    },
+    {
+      "frame": 502,
+      "cab_roof_image_road_clearance_px": 34.0,
+      "body_over_blue_road_fraction": 0.9780545670225386
+    },
+    {
+      "frame": 503,
+      "cab_roof_image_road_clearance_px": 32.0,
+      "body_over_blue_road_fraction": 0.9821428571428571
+    },
+    {
+      "frame": 504,
+      "cab_roof_image_road_clearance_px": 30.0,
+      "body_over_blue_road_fraction": 0.9883338318875262
+    },
+    {
+      "frame": 505,
+      "cab_roof_image_road_clearance_px": 28.0,
+      "body_over_blue_road_fraction": 0.9912755716004813
+    },
+    {
+      "frame": 506,
+      "cab_roof_image_road_clearance_px": 27.0,
+      "body_over_blue_road_fraction": 0.9951174855050351
+    },
+    {
+      "frame": 507,
+      "cab_roof_image_road_clearance_px": 26.0,
+      "body_over_blue_road_fraction": 0.9972602739726028
+    },
+    {
+      "frame": 508,
+      "cab_roof_image_road_clearance_px": 25.0,
+      "body_over_blue_road_fraction": 0.9990791896869244
+    },
+    {
+      "frame": 509,
+      "cab_roof_image_road_clearance_px": 24.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 510,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 511,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 512,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 513,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 514,
+      "cab_roof_image_road_clearance_px": 19.026296615600586,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 515,
+      "cab_roof_image_road_clearance_px": 19.235383987426758,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 516,
+      "cab_roof_image_road_clearance_px": 18.027755737304688,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 517,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 518,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 519,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 520,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 521,
+      "cab_roof_image_road_clearance_px": 17.029386520385742,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 522,
+      "cab_roof_image_road_clearance_px": 17.464248657226562,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 523,
+      "cab_roof_image_road_clearance_px": 18.384777069091797,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 524,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 525,
+      "cab_roof_image_road_clearance_px": 18.11077117919922,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 526,
+      "cab_roof_image_road_clearance_px": 18.97366714477539,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 527,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 528,
+      "cab_roof_image_road_clearance_px": 19.235383987426758,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 529,
+      "cab_roof_image_road_clearance_px": 19.92485809326172,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 530,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 531,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 532,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 533,
+      "cab_roof_image_road_clearance_px": 20.39607810974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 534,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 535,
+      "cab_roof_image_road_clearance_px": 20.615528106689453,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 536,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 537,
+      "cab_roof_image_road_clearance_px": 21.02379608154297,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 538,
+      "cab_roof_image_road_clearance_px": 21.587032318115234,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 539,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 540,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 541,
+      "cab_roof_image_road_clearance_px": 20.2237491607666,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 542,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 543,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 544,
+      "cab_roof_image_road_clearance_px": 21.02379608154297,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 545,
+      "cab_roof_image_road_clearance_px": 20.880613327026367,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 546,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 547,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 548,
+      "cab_roof_image_road_clearance_px": 20.39607810974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 549,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 550,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 551,
+      "cab_roof_image_road_clearance_px": 19.235383987426758,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 552,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 553,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 554,
+      "cab_roof_image_road_clearance_px": 20.2237491607666,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 555,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 556,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 557,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 558,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 559,
+      "cab_roof_image_road_clearance_px": 19.646883010864258,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 560,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 561,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 562,
+      "cab_roof_image_road_clearance_px": 20.615528106689453,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 563,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 564,
+      "cab_roof_image_road_clearance_px": 20.2237491607666,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 565,
+      "cab_roof_image_road_clearance_px": 20.880613327026367,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 566,
+      "cab_roof_image_road_clearance_px": 23.323806762695312,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 567,
+      "cab_roof_image_road_clearance_px": 23.34523582458496,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 568,
+      "cab_roof_image_road_clearance_px": 23.0867919921875,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 569,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 570,
+      "cab_roof_image_road_clearance_px": 23.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 571,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 572,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 573,
+      "cab_roof_image_road_clearance_px": 22.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 574,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 575,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 576,
+      "cab_roof_image_road_clearance_px": 20.880613327026367,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 577,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 578,
+      "cab_roof_image_road_clearance_px": 21.587032318115234,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 579,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 580,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 581,
+      "cab_roof_image_road_clearance_px": 19.92485809326172,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 582,
+      "cab_roof_image_road_clearance_px": 20.02498435974121,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 583,
+      "cab_roof_image_road_clearance_px": 20.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 584,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 585,
+      "cab_roof_image_road_clearance_px": 19.10497283935547,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 586,
+      "cab_roof_image_road_clearance_px": 19.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 587,
+      "cab_roof_image_road_clearance_px": 17.029386520385742,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 588,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 589,
+      "cab_roof_image_road_clearance_px": 17.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 590,
+      "cab_roof_image_road_clearance_px": 17.464248657226562,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 591,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 592,
+      "cab_roof_image_road_clearance_px": 17.11724281311035,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 593,
+      "cab_roof_image_road_clearance_px": 18.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 594,
+      "cab_roof_image_road_clearance_px": 18.384777069091797,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 595,
+      "cab_roof_image_road_clearance_px": 20.124610900878906,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 596,
+      "cab_roof_image_road_clearance_px": 20.880613327026367,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 597,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 598,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    },
+    {
+      "frame": 599,
+      "cab_roof_image_road_clearance_px": 21.0,
+      "body_over_blue_road_fraction": 1.0
+    }
+  ],
+  "driver_count": "UNCERTAIN",
+  "common_seams": [
+    {
+      "from": "0-1",
+      "to": "1-mid",
+      "end_common_frame": 108,
+      "start_common_frame": 109,
+      "end_source_frame": 119,
+      "start_source_frame": 0,
+      "roof_step_px": 0.6084330200693798
+    },
+    {
+      "from": "1-mid",
+      "to": "mid-2",
+      "end_common_frame": 217,
+      "start_common_frame": 218,
+      "end_source_frame": 119,
+      "start_source_frame": 0,
+      "roof_step_px": 0.9609825111716146
+    },
+    {
+      "from": "mid-2",
+      "to": "2-3",
+      "end_common_frame": 327,
+      "start_common_frame": 328,
+      "end_source_frame": 119,
+      "start_source_frame": 0,
+      "roof_step_px": 2.9903865357585198
+    },
+    {
+      "from": "2-3",
+      "to": "3-0",
+      "end_common_frame": 436,
+      "start_common_frame": 437,
+      "end_source_frame": 119,
+      "start_source_frame": 0,
+      "roof_step_px": 2.9927761390241763
+    },
+    {
+      "from": "3-0",
+      "to": "0-1",
+      "end_common_frame": 545,
+      "start_common_frame": 0,
+      "end_source_frame": 119,
+      "start_source_frame": 0,
+      "roof_step_px": 1.998883324792893
+    }
+  ],
+  "native_seam_visual": "All5 native endpoint pairs and8motion samples per seam viewed. Clean truck body; no observed attached curb/tree. Source appearance/detail changes at0-1\u21921-mid and mid-2\u21922-3 remain. No body morph or blend attempted.",
+  "decoded_validation": "decoded-validation.json"
+}

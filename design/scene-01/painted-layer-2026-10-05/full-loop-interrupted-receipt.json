@@ -1,0 +1,21 @@
+{
+  "status": "interrupted_on_parent_request",
+  "reason": "fresh visual review rejected hitch disconnection and pasted cab treatment; source repair required before more rendering",
+  "completed_frame_count": 506,
+  "last_completed_render_frame": 506,
+  "continuous_completed_through": 492,
+  "additional_evidence_frames": [
+    769
+  ],
+  "fps": 24,
+  "intended_duration_seconds": 48,
+  "measured_elapsed_to_last_completed_frame_seconds": 374.936,
+  "failures": [
+    {
+      "frame": 493,
+      "reason": "SIGINT render cancellation requested by parent"
+    }
+  ],
+  "stop": "SIGINT cancelled one render but Python exception handler continued; SIGTERM then stopped renderer, preserving all completed PNGs",
+  "complete": false
+}

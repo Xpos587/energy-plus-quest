@@ -1,0 +1,117 @@
+{
+  "method": "Remove redundant upstream Geometry-Normal multiply shading; preserve nearest response and image luminance/UV color masks",
+  "changed": [
+    {
+      "material": "V12 1 clean hardware",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 3 rubber",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 3 blue gray trim.001",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 2 blue gray trim.001",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 1 blue gray trim",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 2 rubber",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 3 bright sill.001",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 4 bright sill",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 4 rubber",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 2 bright sill.001",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 3 clean hardware",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 1 bright sill",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 1 rubber",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 4 blue gray trim",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 4 clean hardware",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    },
+    {
+      "material": "V12 2 clean hardware",
+      "normal_multiply_responses_before": 2,
+      "removed_inner_responses": [
+        "Mix (Legacy)"
+      ]
+    }
+  ]
+}

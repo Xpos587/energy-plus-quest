@@ -1,0 +1,17 @@
+{
+  "source": "../fleet-native-v14-2026-10-07/fleet-v14-native.blend",
+  "changes": [
+    "continuous draped canvas roofs and attached ties",
+    "localized exposed-edge wear",
+    "connected volumetric exhaust from true pipe tip",
+    "blue ribbed rigid roof and twin-fan mounted reefer",
+    "green broad fitted roof panels and side construction",
+    "light alloy hubs/tanks and higher shadow floor"
+  ],
+  "preserved": [
+    "crew",
+    "root animation",
+    "map camera",
+    "fleet scale"
+  ]
+}

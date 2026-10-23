@@ -1,0 +1,62 @@
+[
+  {
+    "frame": 129,
+    "pixels_alpha_reduced_gt32": 1169,
+    "bounds": [
+      1116,
+      212,
+      1276,
+      313
+    ]
+  },
+  {
+    "frame": 134,
+    "pixels_alpha_reduced_gt32": 1208,
+    "bounds": [
+      1115,
+      212,
+      1257,
+      318
+    ]
+  },
+  {
+    "frame": 150,
+    "pixels_alpha_reduced_gt32": 512,
+    "bounds": [
+      1113,
+      212,
+      1508,
+      348
+    ]
+  },
+  {
+    "frame": 154,
+    "pixels_alpha_reduced_gt32": 405,
+    "bounds": [
+      1380,
+      248,
+      1508,
+      343
+    ]
+  },
+  {
+    "frame": 158,
+    "pixels_alpha_reduced_gt32": 190,
+    "bounds": [
+      1366,
+      247,
+      1484,
+      337
+    ]
+  },
+  {
+    "frame": 184,
+    "pixels_alpha_reduced_gt32": 128,
+    "bounds": [
+      1116,
+      212,
+      1340,
+      311
+    ]
+  }
+]

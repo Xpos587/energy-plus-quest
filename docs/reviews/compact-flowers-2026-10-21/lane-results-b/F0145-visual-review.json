@@ -1,0 +1,24 @@
+{
+  "decision": "accepted_for_runtime",
+  "processingMode": "selective_flowers",
+  "passes": 2,
+  "exportDimensions": [
+    8192,
+    6881
+  ],
+  "acceptsRetainedRegions": true,
+  "nativeP1Accepted": 6,
+  "nativeP1Retained": 3,
+  "nativeP2Accepted": 4,
+  "protection": "contours-v5; original warehouse/rail/trailer walls, entirecab, central/right cargo explicitly retained",
+  "review": "Preview plus salient socks/dishes/weights, rail and cab at100percent inspected. Context repair removed slipping-sock ROI rectangle. Source-retained central cargo eliminates doubled crate/strap edges from earlier rejected mask revisions. Counts and scenario maintained. Detail reconstruction is partial; no whole-scene-native8192 claim. General runtime acceptance still required. Added fourth meaningful ROI sixweights+wood/hardware; accepted p95.682sourcepx. Reassembled and inspected whole/100percent focal and seam. No new overlap artifacts.",
+  "evidence": [
+    "F0145-cargo-v5-100pct.png",
+    "F0145-protection-contours-v5.json",
+    "F0145-heavy-4roi-100pct.png",
+    "F0145-slip-4roi-100pct.png"
+  ],
+  "priorVisualDecision": "owner_visual_review_passed",
+  "protocolReason": null,
+  "protocol": "4realP2ROIs accepted; original rack/slip/context repair plus heavycargo detail"
+}

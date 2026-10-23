@@ -1,0 +1,3506 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-22T21:51:36.947562+00:00",
+  "sourceRegistry": ".tmp-work/flowers-warehouse-compact-build/static-image-replacements.json",
+  "retiredSources": [
+    {
+      "id": "F0030",
+      "source": "public/compact-art/boat-zone4-v29.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0037",
+      "source": "public/compact-art/loading-clean-belts-v26.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0020",
+      "source": "public/compact-art/boat-zone1-axle-v49.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0021",
+      "source": "public/compact-art/boat-zone2-dishes-v46.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0134",
+      "source": "public/compact-art/boat-zone4-supported-v52.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0031",
+      "source": "public/compact-art/camera-zone1-fallen-v44.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0032",
+      "source": "public/compact-art/camera-zone2-v36.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0033",
+      "source": "public/compact-art/camera-zone3-packed-v40.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0034",
+      "source": "public/compact-art/camera-zone4-v38.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0035",
+      "source": "public/compact-art/compact-environment-v26-portrait-v2.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0135",
+      "source": "public/compact-art/compact-environment-v51-wide.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0052",
+      "source": "public/compact-art/socks-zone1-unsecured-v45.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0053",
+      "source": "public/compact-art/socks-zone2-v37.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0054",
+      "source": "public/compact-art/socks-zone3-secured-v43.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0055",
+      "source": "public/compact-art/socks-zone4-v39.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0129",
+      "source": "public/scene-art/warehouse-polish-2026-10-17/entrance.webp",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0130",
+      "source": "public/scene-art/warehouse-restored-2026-10-11/keeper-v2.webp",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    },
+    {
+      "id": "F0132",
+      "source": "public/scene-art/warehouse-revision-4-2026-10-18/overview-r4-v11-local.png",
+      "reason": "source version replaced in newer active build; prior processing is not attributed to replacement"
+    }
+  ],
+  "authority": "Two passes,8192 longest edge; active canonical originals only. Path deduplication; no file hashes/sizes.",
+  "status": "owner_audit_and_native_generation_in_progress",
+  "passes": 2,
+  "exportLongestEdge": 8192,
+  "assets": [
+    {
+      "id": "F0001",
+      "source": "design/preparation-outpaint-2026-10-11/alva.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0001",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 5,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0001/job.json",
+      "presentInSourceRegistry": false,
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0002",
+      "source": "design/preparation-outpaint-2026-10-11/arseniy.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p2_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0002",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 4,
+        "rejectedTiles": 0,
+        "retainedTiles": 5,
+        "pendingTiles": 4
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0002/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0003",
+      "source": "design/preparation-outpaint-2026-10-11/boat.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0003",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 5,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0003/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0004",
+      "source": "design/preparation-outpaint-2026-10-11/camera.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0004",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 2,
+        "rejectedTiles": 0,
+        "retainedTiles": 7,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0004/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0005",
+      "source": "design/preparation-outpaint-2026-10-11/khor.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0005",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 1,
+        "rejectedTiles": 0,
+        "retainedTiles": 8,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0005/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0006",
+      "source": "design/preparation-outpaint-2026-10-11/professional.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0006",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 2,
+        "rejectedTiles": 0,
+        "retainedTiles": 7,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0006/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0007",
+      "source": "design/preparation-outpaint-2026-10-11/socks.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0007",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 3,
+        "rejectedTiles": 0,
+        "retainedTiles": 6,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0007/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0008",
+      "source": "design/preparation-outpaint-2026-10-11/student.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1774,
+        "height": 887
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0008",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 3,
+        "rejectedTiles": 0,
+        "retainedTiles": 6,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0008/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0009",
+      "source": "design/scene-01/assets/current/choices/alva.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 768,
+        "height": 960
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0009",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0009/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0010",
+      "source": "design/scene-01/assets/current/choices/arseniy.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1920
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0010",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 4,
+        "rejectedTiles": 0,
+        "retainedTiles": 5,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0010/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0012",
+      "source": "design/scene-01/assets/current/choices/boat.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 768,
+        "height": 960
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0012",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 4,
+        "rejectedTiles": 0,
+        "retainedTiles": 5,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0012/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0014",
+      "source": "design/scene-01/assets/current/choices/camera.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 768,
+        "height": 960
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0014",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 2,
+        "rejectedTiles": 0,
+        "retainedTiles": 7,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0014/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0015",
+      "source": "design/scene-01/assets/current/choices/khor.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 768,
+        "height": 960
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0015",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 3,
+        "rejectedTiles": 0,
+        "retainedTiles": 6,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0015/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0016",
+      "source": "design/scene-01/assets/current/choices/professional.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1920
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0016",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 5,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0016/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0018",
+      "source": "design/scene-01/assets/current/choices/socks.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 768,
+        "height": 960
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0018",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0018/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0019",
+      "source": "design/scene-01/assets/current/choices/student.webp",
+      "uses": [
+        "preparation/cards/selected thumbnails; src/game/artwork.ts"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 768,
+        "height": 960
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0019",
+      "runtimeFallback": null,
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0019/job.json",
+      "presentInSourceRegistry": false
+    },
+    {
+      "id": "F0136",
+      "source": "public/compact-art/boat-zone1-axle-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1369,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0136",
+      "runtimeFallback": "assets/optimized-boat-zone1-axle-v53-D_0l-k8w.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 14,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0136/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0137",
+      "source": "public/compact-art/boat-zone2-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0137",
+      "runtimeFallback": "assets/optimized-boat-zone2-v53-CxnXeJTR.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 4,
+        "rejectedTiles": 0,
+        "retainedTiles": 6,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0137/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0022",
+      "source": "public/compact-art/boat-zone3-no-fit-crew-v50.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0022",
+      "runtimeFallback": "assets/optimized-boat-zone3-no-fit-crew-v50-BfCcwgzw.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0022/job.json"
+    },
+    {
+      "id": "F0023",
+      "source": "public/compact-art/boat-zone3-no-fit-old-v50.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0023",
+      "runtimeFallback": "assets/optimized-boat-zone3-no-fit-old-v50-DC7INTrS.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0023/job.json"
+    },
+    {
+      "id": "F0024",
+      "source": "public/compact-art/boat-zone3-no-fit-old4-v50.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0024",
+      "runtimeFallback": "assets/optimized-boat-zone3-no-fit-old4-v50-JUlJdR_A.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0024/job.json"
+    },
+    {
+      "id": "F0025",
+      "source": "public/compact-art/boat-zone3-no-fit-v48.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0025",
+      "runtimeFallback": "assets/optimized-boat-zone3-no-fit-v48-MpOjAYY8.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 16,
+        "acceptedNativeTiles": 12,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0025/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0026",
+      "source": "public/compact-art/boat-zone3-no-fit-wide-crew-v50.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0026",
+      "runtimeFallback": "assets/optimized-boat-zone3-no-fit-wide-crew-v50-cNlIuIqn.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 16,
+        "acceptedNativeTiles": 11,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0026/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0027",
+      "source": "public/compact-art/boat-zone3-no-fit-wide-old-v50.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0027",
+      "runtimeFallback": "assets/optimized-boat-zone3-no-fit-wide-old-v50-B_Vn8Eay.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 14,
+        "acceptedNativeTiles": 11,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0027/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0028",
+      "source": "public/compact-art/boat-zone3-no-fit-wide-old4-v50.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0028",
+      "runtimeFallback": "assets/optimized-boat-zone3-no-fit-wide-old4-v50-BJ-e1648.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 12,
+        "acceptedNativeTiles": 11,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0028/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0029",
+      "source": "public/compact-art/boat-zone3-no-fit-wide-v48.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0029",
+      "runtimeFallback": "assets/optimized-boat-zone3-no-fit-wide-v48-CzH3zJUA.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 11,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0029/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0138",
+      "source": "public/compact-art/boat-zone4-supported-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p2_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0138",
+      "runtimeFallback": "assets/optimized-boat-zone4-supported-v53-CuJcOz1X.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 5,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 1
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0138/job.json"
+    },
+    {
+      "id": "F0139",
+      "source": "public/compact-art/camera-zone1-fallen-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0139",
+      "runtimeFallback": "assets/optimized-camera-zone1-fallen-v53-CTSB6XAi.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 2,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 1,
+        "retainedTiles": 1,
+        "pendingTiles": 7
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0139/job.json"
+    },
+    {
+      "id": "F0140",
+      "source": "public/compact-art/camera-zone2-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0140",
+      "runtimeFallback": "assets/optimized-camera-zone2-v53-DjxLhy-i.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0140/job.json"
+    },
+    {
+      "id": "F0141",
+      "source": "public/compact-art/camera-zone3-packed-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0141",
+      "runtimeFallback": "assets/optimized-camera-zone3-packed-v53-CaNnHTG3.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0141/job.json"
+    },
+    {
+      "id": "F0142",
+      "source": "public/compact-art/camera-zone4-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0142",
+      "runtimeFallback": "assets/optimized-camera-zone4-v53-BNGGjHE_.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0142/job.json"
+    },
+    {
+      "id": "F0143",
+      "source": "public/compact-art/compact-environment-v53-portrait.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p2_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0143",
+      "runtimeFallback": "assets/optimized-compact-environment-v53-portrait-zYArD7er.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 4,
+        "rejectedTiles": 0,
+        "retainedTiles": 5,
+        "pendingTiles": 4
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0143/job.json"
+    },
+    {
+      "id": "F0144",
+      "source": "public/compact-art/compact-environment-v54-wide.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 684
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0144",
+      "runtimeFallback": "assets/optimized-compact-environment-v54-wide-DmU18byl.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 13,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0144/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0036",
+      "source": "public/compact-art/loading-background-tall-v1.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p2_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 887,
+        "height": 1774
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0036",
+      "runtimeFallback": "assets/optimized-loading-background-tall-v1-I-RLm408.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 3,
+        "rejectedTiles": 0,
+        "retainedTiles": 6,
+        "pendingTiles": 4
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0036/job.json"
+    },
+    {
+      "id": "F0145",
+      "source": "public/compact-art/socks-zone1-unsecured-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0145",
+      "runtimeFallback": "assets/optimized-socks-zone1-unsecured-v53-DYrhdyCg.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 17,
+        "acceptedNativeTiles": 10,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0145/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0146",
+      "source": "public/compact-art/socks-zone2-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0146",
+      "runtimeFallback": "assets/optimized-socks-zone2-v53-B5e1nix2.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0146/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0147",
+      "source": "public/compact-art/socks-zone3-secured-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p2_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0147",
+      "runtimeFallback": "assets/optimized-socks-zone3-secured-v53-BRw9JJoN.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 5,
+        "rejectedTiles": 0,
+        "retainedTiles": 5,
+        "pendingTiles": 3
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0147/job.json"
+    },
+    {
+      "id": "F0148",
+      "source": "public/compact-art/socks-zone4-v53.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "compact",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1368,
+        "height": 1149
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0148",
+      "runtimeFallback": "assets/optimized-socks-zone4-v53-CX64v3b7.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/compact-full-audit-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 3,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 1,
+        "retainedTiles": 2,
+        "pendingTiles": 6
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0148/job.json"
+    },
+    {
+      "id": "F0056",
+      "source": "public/opening/parcel-heart-v2.webp",
+      "uses": [
+        "GameIntro parcel drawing",
+        "current production raster registry"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 640,
+        "height": 583
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0056",
+      "runtimeFallback": "assets/optimized-parcel-heart-v2-Cqv-DwwS.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 1,
+        "rejectedTiles": 0,
+        "retainedTiles": 8,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0056/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0061",
+      "source": "public/scene-art/barge-family-v1/choice-neutral-tall-v7.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1122,
+        "height": 1402
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0061",
+      "runtimeFallback": "assets/optimized-choice-neutral-tall-v7-CauCu3v-.webp",
+      "activityStatus": "owner_confirmed",
+      "progress": {
+        "registeredNativeAttempts": 14,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0061/job.json",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "integrationStatus": "runtime_verified_conventional_interpolation",
+      "runtimeAliasRegistry": "src/media/conventional-enlargements.json"
+    },
+    {
+      "id": "F0062",
+      "source": "public/scene-art/barge-family-v1/choice-neutral-wide-v7.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0062",
+      "runtimeFallback": "assets/optimized-choice-neutral-wide-v7-DUns0pfQ.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 2,
+        "acceptedNativeTiles": 2,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 7
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0062/job.json"
+    },
+    {
+      "id": "F0063",
+      "source": "public/scene-art/barge-family-v1/petr-boat-v13.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0063",
+      "runtimeFallback": "assets/optimized-petr-boat-v13-CkYNtr1Z.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 4,
+        "rejectedTiles": 0,
+        "retainedTiles": 5,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0063/job.json",
+      "integrationStatus": "runtime_verified_conventional_interpolation",
+      "runtimeAliasRegistry": "src/media/conventional-enlargements.json"
+    },
+    {
+      "id": "F0064",
+      "source": "public/scene-art/barge-family-v1/petr-camera-v13.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0064",
+      "runtimeFallback": "assets/optimized-petr-camera-v13-B6XAAOpn.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 8,
+        "acceptedNativeTiles": 4,
+        "rejectedTiles": 4,
+        "retainedTiles": 0,
+        "pendingTiles": 1
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0064/job.json"
+    },
+    {
+      "id": "F0065",
+      "source": "public/scene-art/barge-family-v1/petr-socks-v13.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0065",
+      "runtimeFallback": "assets/optimized-petr-socks-v13-Cgm4l-xi.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0065/job.json"
+    },
+    {
+      "id": "F0066",
+      "source": "public/scene-art/barge-family-v1/remote-boat-v4.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0066",
+      "runtimeFallback": "assets/optimized-remote-boat-v4-DDpTDpJT.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0066/job.json"
+    },
+    {
+      "id": "F0067",
+      "source": "public/scene-art/barge-family-v1/remote-camera-v4.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0067",
+      "runtimeFallback": "assets/optimized-remote-camera-v4-8gCIHQKo.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0067/job.json"
+    },
+    {
+      "id": "F0068",
+      "source": "public/scene-art/barge-family-v1/remote-socks-v4.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0068",
+      "runtimeFallback": "assets/optimized-remote-socks-v4-CAlSP0J2.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0068/job.json"
+    },
+    {
+      "id": "F0069",
+      "source": "public/scene-art/barge-family-v1/rush-boat-v3.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0069",
+      "runtimeFallback": "assets/optimized-rush-boat-v3-C_x2WPM9.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0069/job.json"
+    },
+    {
+      "id": "F0070",
+      "source": "public/scene-art/barge-family-v1/rush-camera-v3.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0070",
+      "runtimeFallback": "assets/optimized-rush-camera-v3-CqgniYLn.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0070/job.json"
+    },
+    {
+      "id": "F0071",
+      "source": "public/scene-art/barge-family-v1/rush-socks-v3.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "not_started",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0071",
+      "runtimeFallback": "assets/optimized-rush-socks-v3-C5uM-5T4.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0072",
+      "source": "public/scene-art/barge-family-v1/wait-boat-v3.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "not_started",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0072",
+      "runtimeFallback": "assets/optimized-wait-boat-v3-CaKB2wPG.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0073",
+      "source": "public/scene-art/barge-family-v1/wait-camera-v1.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "not_started",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0073",
+      "runtimeFallback": "assets/optimized-wait-camera-v1-BWMdZjeW.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0074",
+      "source": "public/scene-art/barge-family-v1/wait-socks-v2.png",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "barge",
+      "processingStatus": "not_started",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0074",
+      "runtimeFallback": "assets/optimized-wait-socks-v2-B6CF02yK.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/flowers-all-2026-10-20/barge/active-upscale-sources.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0075",
+      "source": "public/scene-art/carrier-results-2026-10-02/crew-v3.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0075",
+      "runtimeFallback": "assets/optimized-crew-v3-qhQbdjUL.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "progress": {
+        "registeredNativeAttempts": 21,
+        "acceptedNativeTiles": 15,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0075/job.json",
+      "presentInSourceRegistry": true,
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0076",
+      "source": "public/scene-art/carrier-results-2026-10-02/crew-wide-v6.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0076",
+      "runtimeFallback": "assets/optimized-crew-wide-v6-BS4wmzr2.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "progress": {
+        "registeredNativeAttempts": 12,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0076/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0077",
+      "source": "public/scene-art/carrier-results-2026-10-02/near-portrait-v1.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1105,
+        "height": 1423
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0077",
+      "runtimeFallback": "assets/optimized-near-portrait-v1-YGhx7dwE.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 11,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0077/job.json"
+    },
+    {
+      "id": "F0078",
+      "source": "public/scene-art/carrier-results-2026-10-02/near-v6.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0078",
+      "runtimeFallback": "assets/optimized-near-v6-D_KLFZLT.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 11,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0078/job.json"
+    },
+    {
+      "id": "F0079",
+      "source": "public/scene-art/carrier-results-2026-10-02/near-wide-v7.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0079",
+      "runtimeFallback": "assets/optimized-near-wide-v7-DWmzx6Go.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 11,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0079/job.json"
+    },
+    {
+      "id": "F0080",
+      "source": "public/scene-art/carrier-results-2026-10-02/old-portrait-v2.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1122,
+        "height": 1402
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0080",
+      "runtimeFallback": "assets/optimized-old-portrait-v2-CauEc0KI.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0080/job.json"
+    },
+    {
+      "id": "F0081",
+      "source": "public/scene-art/carrier-results-2026-10-02/old-v5.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0081",
+      "runtimeFallback": "assets/optimized-old-v5-CybEDSvp.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 11,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0081/job.json"
+    },
+    {
+      "id": "F0082",
+      "source": "public/scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0082",
+      "runtimeFallback": "assets/optimized-old-wide-v8-Bq6tpb4H.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 12,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 3,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0082/job.json",
+      "integrationStatus": "runtime_verified_conventional_interpolation",
+      "runtimeAliasRegistry": "src/media/conventional-enlargements.json"
+    },
+    {
+      "id": "F0083",
+      "source": "public/scene-art/carrier-results-2026-10-02/old4-portrait-v1.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1122,
+        "height": 1402
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0083",
+      "runtimeFallback": "assets/optimized-old4-portrait-v1-DX1EgR8Q.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 14,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0083/job.json"
+    },
+    {
+      "id": "F0084",
+      "source": "public/scene-art/carrier-results-2026-10-02/old4-v5.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0084",
+      "runtimeFallback": "assets/optimized-old4-v5-dz6Hw5CY.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 12,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 1,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0084/job.json"
+    },
+    {
+      "id": "F0085",
+      "source": "public/scene-art/carrier-results-2026-10-02/old4-wide-v8.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0085",
+      "runtimeFallback": "assets/optimized-old4-wide-v8-DZHhrK_b.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 1,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0085/job.json"
+    },
+    {
+      "id": "F0086",
+      "source": "public/scene-art/certificates-v1/professional-efficiency.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0086",
+      "runtimeFallback": "assets/optimized-professional-efficiency-Cg6-w6xT.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 6,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0086/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0087",
+      "source": "public/scene-art/certificates-v1/professional-empathy.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0087",
+      "runtimeFallback": "assets/optimized-professional-empathy-Dm91xgZZ.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0087/job.json",
+      "presentInSourceRegistry": true,
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0088",
+      "source": "public/scene-art/certificates-v1/professional-energy.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0088",
+      "runtimeFallback": "assets/optimized-professional-energy-C63WNpf_.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0088/job.json",
+      "presentInSourceRegistry": true,
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0089",
+      "source": "public/scene-art/certificates-v1/student-efficiency.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "master_partial_reconstruction_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0089",
+      "runtimeFallback": "assets/optimized-student-efficiency-CLLrUAm6.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 10,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0089/job.json",
+      "presentInSourceRegistry": true,
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0090",
+      "source": "public/scene-art/certificates-v1/student-empathy.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p2_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0090",
+      "runtimeFallback": "assets/optimized-student-empathy-DXUB0Yj4.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 3
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0090/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0091",
+      "source": "public/scene-art/certificates-v1/student-energy.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p2_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0091",
+      "runtimeFallback": "assets/optimized-student-energy-Dt3X7iGX.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 3,
+        "rejectedTiles": 0,
+        "retainedTiles": 6,
+        "pendingTiles": 4
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0091/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0092",
+      "source": "public/scene-art/certificates-v1/student-future.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0092",
+      "runtimeFallback": "assets/optimized-student-future-DtixSy7C.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0092/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0093",
+      "source": "public/scene-art/lastmile-family-v1/choice-final-wide-v10.webp",
+      "uses": [
+        "GameIntro cover/background via sceneChoiceImage(lastmile), NOT active Lastmile choice"
+      ],
+      "owner": "intro",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0093",
+      "runtimeFallback": "assets/optimized-choice-final-wide-v10-U7o-85AN.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "Intro owner audit 2026-10-20, eighteen active sources",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0093/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0094",
+      "source": "public/scene-art/lastmile-family-v1/helicopter-ground-alva-parcel-v6.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"camera\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"socks\",\"option\":\"helicopter\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0094",
+      "runtimeFallback": "assets/optimized-helicopter-ground-alva-parcel-v6-Bw7QmZlF.webp",
+      "peerId": "lastmile-08",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0094/job.json"
+    },
+    {
+      "id": "F0095",
+      "source": "public/scene-art/lastmile-family-v1/helicopter-ground-boat-final-v5.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"boat\",\"option\":\"helicopter\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "master_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0095",
+      "runtimeFallback": "assets/optimized-helicopter-ground-boat-final-v5-wzwszyEm.webp",
+      "peerId": "lastmile-03",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 16,
+        "acceptedNativeTiles": 16,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0095/job.json",
+      "presentInSourceRegistry": true,
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0096",
+      "source": "public/scene-art/lastmile-family-v1/helicopter-ground-khor-boat-v6.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"boat\",\"option\":\"helicopter\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0096",
+      "runtimeFallback": "assets/optimized-helicopter-ground-khor-boat-v6-BKmNwMhB.webp",
+      "peerId": "lastmile-14",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0096/job.json"
+    },
+    {
+      "id": "F0097",
+      "source": "public/scene-art/lastmile-family-v1/helicopter-ground-khor-parcel-v6.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"camera\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"socks\",\"option\":\"helicopter\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0097",
+      "runtimeFallback": "assets/optimized-helicopter-ground-khor-parcel-v6--ujx9tw9.webp",
+      "peerId": "lastmile-17",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0097/job.json"
+    },
+    {
+      "id": "F0098",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/flight-boat-arseniy.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"boat\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"flight\",\"recipient\":\"arseniy\",\"parcel\":\"boat\",\"option\":\"helicopter\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0098",
+      "runtimeFallback": "assets/optimized-flight-boat-arseniy-ofhOvmHp.webp",
+      "peerId": "lastmile-21",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 14,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0098/job.json"
+    },
+    {
+      "id": "F0099",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/flight-boat.webp",
+      "uses": [
+        "{\"phase\":\"flight\",\"recipient\":\"alva\",\"parcel\":\"boat\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"flight\",\"recipient\":\"khor\",\"parcel\":\"boat\",\"option\":\"helicopter\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0099",
+      "runtimeFallback": "assets/optimized-flight-boat-Dp0Ogtyo.webp",
+      "peerId": "lastmile-07",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0099/job.json"
+    },
+    {
+      "id": "F0100",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/flight-parcel-arseniy.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"camera\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"flight\",\"recipient\":\"arseniy\",\"parcel\":\"camera\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"socks\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"flight\",\"recipient\":\"arseniy\",\"parcel\":\"socks\",\"option\":\"helicopter\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0100",
+      "runtimeFallback": "assets/optimized-flight-parcel-arseniy-Co7Bu6nc.webp",
+      "peerId": "lastmile-24",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 0,
+        "acceptedNativeTiles": 0,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 9
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0100/job.json"
+    },
+    {
+      "id": "F0101",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/flight-parcel.webp",
+      "uses": [
+        "{\"phase\":\"flight\",\"recipient\":\"alva\",\"parcel\":\"camera\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"flight\",\"recipient\":\"alva\",\"parcel\":\"socks\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"flight\",\"recipient\":\"khor\",\"parcel\":\"camera\",\"option\":\"helicopter\"}",
+        "{\"phase\":\"flight\",\"recipient\":\"khor\",\"parcel\":\"socks\",\"option\":\"helicopter\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0101",
+      "runtimeFallback": "assets/optimized-flight-parcel-BobAYck_.webp",
+      "peerId": "lastmile-11",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 11,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 1,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0101/job.json"
+    },
+    {
+      "id": "F0102",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/pipe-carrier-alva.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"boat\",\"option\":\"pipe-carrier\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"camera\",\"option\":\"pipe-carrier\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"socks\",\"option\":\"pipe-carrier\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0102",
+      "runtimeFallback": "assets/optimized-pipe-carrier-alva-D4rPFsRc.webp",
+      "peerId": "lastmile-06",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0102/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0103",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/pipe-carrier-arseniy.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"boat\",\"option\":\"pipe-carrier\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"camera\",\"option\":\"pipe-carrier\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"socks\",\"option\":\"pipe-carrier\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0103",
+      "runtimeFallback": "assets/optimized-pipe-carrier-arseniy-yPvDgDv-.webp",
+      "peerId": "lastmile-23",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0103/job.json"
+    },
+    {
+      "id": "F0104",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/pipe-carrier-khor.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"boat\",\"option\":\"pipe-carrier\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"camera\",\"option\":\"pipe-carrier\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"socks\",\"option\":\"pipe-carrier\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0104",
+      "runtimeFallback": "assets/optimized-pipe-carrier-khor-D1o-BQ6V.webp",
+      "peerId": "lastmile-16",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0104/job.json"
+    },
+    {
+      "id": "F0105",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/rover-boat-alva.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"boat\",\"option\":\"rover\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0105",
+      "runtimeFallback": "assets/optimized-rover-boat-alva-DS5JMds6.webp",
+      "peerId": "lastmile-04",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 12,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0105/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0106",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/rover-boat-arseniy.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"boat\",\"option\":\"rover\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0106",
+      "runtimeFallback": "assets/optimized-rover-boat-arseniy-B0oN2Avf.webp",
+      "peerId": "lastmile-22",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0106/job.json"
+    },
+    {
+      "id": "F0107",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/rover-boat-khor.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"boat\",\"option\":\"rover\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0107",
+      "runtimeFallback": "assets/optimized-rover-boat-khor-9NoJuAXZ.webp",
+      "peerId": "lastmile-15",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0107/job.json",
+      "integrationStatus": "runtime_verified_conventional_interpolation",
+      "runtimeAliasRegistry": "src/media/conventional-enlargements.json"
+    },
+    {
+      "id": "F0108",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/rover-parcel-alva.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"camera\",\"option\":\"rover\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"socks\",\"option\":\"rover\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0108",
+      "runtimeFallback": "assets/optimized-rover-parcel-alva-BUZWvnlt.webp",
+      "peerId": "lastmile-09",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0108/job.json"
+    },
+    {
+      "id": "F0109",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/rover-parcel-arseniy.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"camera\",\"option\":\"rover\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"socks\",\"option\":\"rover\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0109",
+      "runtimeFallback": "assets/optimized-rover-parcel-arseniy-C6bNHYOy.webp",
+      "peerId": "lastmile-25",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 5,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0109/job.json"
+    },
+    {
+      "id": "F0110",
+      "source": "public/scene-art/lastmile-family-v1/revision-2/rover-parcel-khor.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"camera\",\"option\":\"rover\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"socks\",\"option\":\"rover\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0110",
+      "runtimeFallback": "assets/optimized-rover-parcel-khor-Crs9LLr5.webp",
+      "peerId": "lastmile-18",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 12,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0110/job.json"
+    },
+    {
+      "id": "F0111",
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-alva.webp",
+      "uses": [
+        "{\"phase\":\"choice\",\"recipient\":\"alva\",\"format\":\"tall\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "master_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 948,
+        "height": 1659
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0111",
+      "runtimeFallback": "assets/optimized-choice-tall-alva-DF07XxmC.webp",
+      "peerId": "lastmile-02",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 22,
+        "acceptedNativeTiles": 17,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0111/job.json",
+      "presentInSourceRegistry": true,
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json"
+    },
+    {
+      "id": "F0112",
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-arseniy.webp",
+      "uses": [
+        "{\"phase\":\"choice\",\"recipient\":\"arseniy\",\"format\":\"tall\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 948,
+        "height": 1659
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0112",
+      "runtimeFallback": "assets/optimized-choice-tall-arseniy-BvLotyFQ.webp",
+      "peerId": "lastmile-20",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0112/job.json"
+    },
+    {
+      "id": "F0113",
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-khor.webp",
+      "uses": [
+        "{\"phase\":\"choice\",\"recipient\":\"khor\",\"format\":\"tall\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 948,
+        "height": 1659
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0113",
+      "runtimeFallback": "assets/optimized-choice-tall-khor-CiaATBSL.webp",
+      "peerId": "lastmile-13",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 13,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0113/job.json"
+    },
+    {
+      "id": "F0114",
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-alva.webp",
+      "uses": [
+        "{\"phase\":\"choice\",\"recipient\":\"alva\",\"format\":\"wide\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "master_ready_for_visual_review",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0114",
+      "runtimeFallback": "assets/optimized-choice-wide-alva-B9jN0EdI.webp",
+      "peerId": "lastmile-01",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 16,
+        "acceptedNativeTiles": 15,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0114/job.json",
+      "integrationStatus": "runtime_verified",
+      "runtimeAliasRegistry": "src/media/flowers-masters.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0115",
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-arseniy.webp",
+      "uses": [
+        "{\"phase\":\"choice\",\"recipient\":\"arseniy\",\"format\":\"wide\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0115",
+      "runtimeFallback": "assets/optimized-choice-wide-arseniy-DWaSCuLR.webp",
+      "peerId": "lastmile-19",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0115/job.json"
+    },
+    {
+      "id": "F0116",
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-wide-khor.webp",
+      "uses": [
+        "{\"phase\":\"choice\",\"recipient\":\"khor\",\"format\":\"wide\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1983,
+        "height": 793
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0116",
+      "runtimeFallback": "assets/optimized-choice-wide-khor-C0TgDZpQ.webp",
+      "peerId": "lastmile-12",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0116/job.json"
+    },
+    {
+      "id": "F0117",
+      "source": "public/scene-art/lastmile-family-v1/robot-boat-result-v3.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"boat\",\"option\":\"robot\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"boat\",\"option\":\"robot\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"boat\",\"option\":\"robot\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0117",
+      "runtimeFallback": "assets/optimized-robot-boat-result-v3-BMaK9PlW.webp",
+      "peerId": "lastmile-05",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 5,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0117/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0118",
+      "source": "public/scene-art/lastmile-family-v1/robot-parcel-result-v1.webp",
+      "uses": [
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"camera\",\"option\":\"robot\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"alva\",\"parcel\":\"socks\",\"option\":\"robot\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"camera\",\"option\":\"robot\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"khor\",\"parcel\":\"socks\",\"option\":\"robot\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"camera\",\"option\":\"robot\"}",
+        "{\"phase\":\"outcome\",\"recipient\":\"arseniy\",\"parcel\":\"socks\",\"option\":\"robot\"}"
+      ],
+      "owner": "lastmile",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0118",
+      "runtimeFallback": "assets/optimized-robot-parcel-result-v1-OQvbo5-V.webp",
+      "peerId": "lastmile-10",
+      "peerReceipt": "docs/reviews/lastmile-2026-10-20-flowers",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/lastmile-2026-10-20-flowers/active-sources.json",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0118/job.json"
+    },
+    {
+      "id": "F0119",
+      "source": "public/scene-art/resolution-v2/alva-boat.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0119",
+      "runtimeFallback": "assets/optimized-alva-boat-DgNT_7ob.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 4,
+        "rejectedTiles": 0,
+        "retainedTiles": 5,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0119/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0120",
+      "source": "public/scene-art/resolution-v2/alva-camera.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p2_prepared",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0120",
+      "runtimeFallback": "assets/optimized-alva-camera-DqtN6NnW.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 5,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 4
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0120/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0121",
+      "source": "public/scene-art/resolution-v2/alva-socks.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0121",
+      "runtimeFallback": "assets/optimized-alva-socks-BJUqjdBY.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 5,
+        "rejectedTiles": 0,
+        "retainedTiles": 4,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0121/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0122",
+      "source": "public/scene-art/resolution-v2/arseniy-boat.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0122",
+      "runtimeFallback": "assets/optimized-arseniy-boat-DkXTxgp0.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0122/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0123",
+      "source": "public/scene-art/resolution-v2/arseniy-camera.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0123",
+      "runtimeFallback": "assets/optimized-arseniy-camera-CE5y_FKj.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0123/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0124",
+      "source": "public/scene-art/resolution-v2/arseniy-socks.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0124",
+      "runtimeFallback": "assets/optimized-arseniy-socks-cDRBDBiH.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0124/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0125",
+      "source": "public/scene-art/resolution-v2/khor-boat.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0125",
+      "runtimeFallback": "assets/optimized-khor-boat-3ITTBUgy.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0125/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0126",
+      "source": "public/scene-art/resolution-v2/khor-camera.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0126",
+      "runtimeFallback": "assets/optimized-khor-camera-kVdFMAr6.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 6,
+        "rejectedTiles": 0,
+        "retainedTiles": 3,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0126/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0127",
+      "source": "public/scene-art/resolution-v2/khor-socks.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "ending",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0127",
+      "runtimeFallback": "assets/optimized-khor-socks-B7BrSqWx.webp",
+      "peerReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/ending-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 9,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0127/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0149",
+      "source": "public/scene-art/warehouse-corrections-2026-10-20/mobile/overview-mobile-native-v3.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "inventory",
+      "processingStatus": "not_started",
+      "freezeStatus": "hold_semantic_correction",
+      "sourceDimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0149",
+      "runtimeFallback": "assets/optimized-overview-mobile-native-v3-CTLdpwI4.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "holdReason": "User rejected warehouse geometry21Oct; hold for deterministic projection/blocking and revised semantic freeze. See docs/plans/review-rounds/2026-10-21-layout-and-warehouse-rejection.md"
+    },
+    {
+      "id": "F0150",
+      "source": "public/scene-art/warehouse-corrections-2026-10-20/outcomes/entrance-labels-v1.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "inventory",
+      "processingStatus": "not_started",
+      "freezeStatus": "hold_semantic_correction",
+      "sourceDimensions": {
+        "width": 2004,
+        "height": 785
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0150",
+      "runtimeFallback": "assets/optimized-entrance-labels-v1-BbcrEp1h.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "holdReason": "User rejected warehouse geometry21Oct; hold for deterministic projection/blocking and revised semantic freeze. See docs/plans/review-rounds/2026-10-21-layout-and-warehouse-rejection.md"
+    },
+    {
+      "id": "F0151",
+      "source": "public/scene-art/warehouse-corrections-2026-10-20/outcomes/keeper-v2-labels-v1.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "inventory",
+      "processingStatus": "not_started",
+      "freezeStatus": "hold_semantic_correction",
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0151",
+      "runtimeFallback": "assets/optimized-keeper-v2-labels-v1-DZIRxREq.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "holdReason": "User rejected warehouse geometry21Oct; hold for deterministic projection/blocking and revised semantic freeze. See docs/plans/review-rounds/2026-10-21-layout-and-warehouse-rejection.md"
+    },
+    {
+      "id": "F0152",
+      "source": "public/scene-art/warehouse-corrections-2026-10-20/overview-receiving-parallel-labels-v1.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "inventory",
+      "processingStatus": "not_started",
+      "freezeStatus": "hold_semantic_correction",
+      "sourceDimensions": {
+        "width": 1546,
+        "height": 1017
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0152",
+      "runtimeFallback": "assets/optimized-overview-receiving-parallel-labels-v1-DGRtU9CZ.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json",
+      "presentInSourceRegistry": true,
+      "holdReason": "User rejected warehouse geometry21Oct; hold for deterministic projection/blocking and revised semantic freeze. See docs/plans/review-rounds/2026-10-21-layout-and-warehouse-rejection.md"
+    },
+    {
+      "id": "F0128",
+      "source": "public/scene-art/warehouse-polish-2026-10-17/alphabet.webp",
+      "uses": [
+        "owner-frozen active source; docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "inventory",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1999,
+        "height": 786
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0128",
+      "runtimeFallback": "assets/optimized-alphabet-DSVMSaKN.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 10,
+        "acceptedNativeTiles": 8,
+        "rejectedTiles": 0,
+        "retainedTiles": 1,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0128/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0131",
+      "source": "public/scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png",
+      "uses": [
+        "owner-frozen active source; docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json"
+      ],
+      "owner": "inventory",
+      "processingStatus": "p1_assembled",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 1671,
+        "height": 941
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0131",
+      "runtimeFallback": "assets/optimized-wms-stylized-v3-CC_r08H1.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "docs/reviews/inventory-flowers-2026-10-20/active-upscale-sources.json",
+      "progress": {
+        "registeredNativeAttempts": 14,
+        "acceptedNativeTiles": 7,
+        "rejectedTiles": 0,
+        "retainedTiles": 2,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0131/job.json",
+      "presentInSourceRegistry": true
+    },
+    {
+      "id": "F0133",
+      "source": "public/scene1-live/separated-routes/city-poster.webp",
+      "uses": [
+        "current production raster registry"
+      ],
+      "owner": "carrier",
+      "processingStatus": "p1_in_progress",
+      "freezeStatus": "owner_frozen",
+      "sourceDimensions": {
+        "width": 3840,
+        "height": 2668
+      },
+      "passes": 2,
+      "exportLongestEdge": 8192,
+      "outputRoot": ".tmp-work/flowers-all-2026-10-20/F0133",
+      "runtimeFallback": "assets/optimized-city-poster-x5cUMN-u.webp",
+      "activityStatus": "owner_confirmed",
+      "freezeReceipt": "owner thread audit 2026-10-20, twelve active sources",
+      "presentInSourceRegistry": true,
+      "progress": {
+        "registeredNativeAttempts": 11,
+        "acceptedNativeTiles": 9,
+        "rejectedTiles": 0,
+        "retainedTiles": 0,
+        "pendingTiles": 0
+      },
+      "jobReceipt": ".tmp-work/flowers-all-2026-10-20/F0133/job.json"
+    }
+  ],
+  "excluded": [
+    "public/scene-art/crane-v2.png",
+    "public/scene-art/outcomes/crane-petr-v7-desktop.png",
+    "public/scene-art/outcomes/crane-remote-v4-desktop.png",
+    "public/scene-art/outcomes/crane-rush-v4-desktop.png",
+    "public/scene-art/outcomes/crane-wait-v4-desktop.png",
+    "public/scene-art/lastmile-fifth-scene-v9.png",
+    "public/scene-art/lastmile-family-v1/choice-final-tall-v10.webp",
+    "design/scene-01/assets/current/choices/boat-tall.webp",
+    "design/scene-01/assets/current/choices/camera-tall.webp",
+    "design/scene-01/assets/current/choices/socks-tall.webp",
+    "public/review/carrier-art-2026-09-27/closer-crew.png",
+    "public/review/carrier-art-2026-09-27/closer-near.png",
+    "public/review/carrier-art-2026-09-27/closer-old.png",
+    "public/review/carrier-art-2026-09-27/closer-old4.png",
+    "public/compact-art/outcomes/boat-axle.png",
+    "public/compact-art/outcomes/boat-dishes.png",
+    "public/compact-art/outcomes/boat-no-fit.png",
+    "public/compact-art/outcomes/boat-reload.png",
+    "public/compact-art/outcomes/boat-upright.png",
+    "public/compact-art/outcomes/camera-dishes-broken.png",
+    "public/compact-art/outcomes/camera-dishes.png",
+    "public/compact-art/outcomes/camera-niche.png",
+    "public/compact-art/outcomes/camera-space.png",
+    "public/compact-art/outcomes/camera-unload-three.png",
+    "public/compact-art/outcomes/socks-dishes.png",
+    "public/compact-art/outcomes/socks-niche.png",
+    "public/compact-art/outcomes/socks-scatter.png",
+    "public/compact-art/outcomes/socks-space.png"
+  ],
+  "nonPhotoAssets": [
+    {
+      "type": "SVG",
+      "source": "public/brand/quest-brand-lockup.svg",
+      "status": "preserve_vector_no_photo_upscale"
+    },
+    {
+      "type": "video",
+      "source": "public/scene1-live/separated-routes/city-motion-{mobile,tablet,desktop}.mp4",
+      "status": "separate_video_workflow"
+    },
+    {
+      "type": "raster UI derivatives",
+      "source": "public/brand/{favicon-32,icon-192,apple-touch-icon}.png",
+      "status": "preserve_vector_derived_UI_no_photo_reconstruction"
+    }
+  ]
+}

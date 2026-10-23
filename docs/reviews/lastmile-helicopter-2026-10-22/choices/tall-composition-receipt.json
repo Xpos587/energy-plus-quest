@@ -1,0 +1,69 @@
+{
+  "registration": {
+    "matrix": [
+      [
+        0.9734576839155747,
+        -0.0002441574085471366,
+        -0.21409052428984185
+      ],
+      [
+        0.0002441574085471366,
+        0.9734576839155747,
+        -0.6495013059338772
+      ]
+    ],
+    "matches": 229,
+    "inliers": 120,
+    "p95TargetPx": 2.023366689682007,
+    "basis": "background only broad aircraft exclusion, similarity transform only"
+  },
+  "outputs": [
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-alva.webp",
+      "output": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-tall-alva-helicopter-corrected.png",
+      "dimensions": [
+        4681,
+        8192
+      ],
+      "basis": "accepted P2 F0111",
+      "patchBox": [
+        1383,
+        2074,
+        2963,
+        3012
+      ]
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-khor.webp",
+      "output": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-tall-khor-helicopter-corrected.png",
+      "dimensions": [
+        3000,
+        5250
+      ],
+      "basis": "ordinary Lanczos interpolation; not Flowers",
+      "patchBox": [
+        886,
+        1329,
+        1899,
+        1930
+      ]
+    },
+    {
+      "source": "public/scene-art/lastmile-family-v1/revision-4/choice-tall-arseniy.webp",
+      "output": "/home/michael/Github/energy-plus-quest/docs/reviews/lastmile-helicopter-2026-10-22/choices/choice-tall-arseniy-helicopter-corrected.png",
+      "dimensions": [
+        3000,
+        5250
+      ],
+      "basis": "ordinary Lanczos interpolation; not Flowers",
+      "patchBox": [
+        886,
+        1329,
+        1899,
+        1930
+      ]
+    }
+  ],
+  "mask": "tall-aircraft-shadow-union-target-mask.png",
+  "limits": "Only masked aircraft/shadow area changes; cones/windsock protected. Ordinary resized bases do not recover details."
+}

@@ -1,0 +1,15 @@
+# Lower cab repair
+
+The front tires were present. The missing piece was the lower side cladding between the detailed cab shell and its separate wheel arch. The source `geometry_v16.py` removed faces below local Z 0.90 in the cab-side region and hid the previous formed side profiles; only isolated arch lips remained. The accepted suspension then moved the upper shell while the arch lips stayed on the chassis, widening the opening at positive heave.
+
+Evidence: `before-truck1-side-f0091.png` exposes the open strip; `before-truck1-front-f0091.png` shows both front tires. `before-cladding-test.log` records four failed geometric side-coverage probes, one per red/yellow cab side.
+
+The candidate restores only the lower portion of the existing formed profile, below Z 1.07, with its upper edge tapered inward beneath the existing detailed shell. The rear edge starts at local X 0.30; the forward corner wraps inward up to X 1.66 to meet the existing bumper, instead of projecting as an external plate. Solidified panels have rolled edges and a curved inward wheel-well return. Existing painted arch lips follow the unchanged cab suspension. The opening radius is 0.49 to accommodate the accepted suspension travel. Upper cab shape, textures, driver image, and motion were not changed.
+
+`test_lower_cladding.py` passes all four coverage probes after repair. `verify_geometry.py` compares source and candidate directly: upper-cab vertices/polygons, original material slots, every source animation curve/key/handle/interpolation, and 3,617 original objects' local matrices, parents, and visibility remain unchanged. The intentional exception is the 64 front arch-lip objects.
+
+Across all 192 frames, evaluated added cladding and lip vertices retain at least 0.026265 scene units clearance from the red front-tire envelope and 0.028137 from yellow. Tires, chassis, hitch, trailer, exhaust stack and smoke retain source transforms and animation. This is a vertex/envelope check; final front/side/turn images remain the visual acceptance gate.
+
+Final pixel readback: `final-truck1-side-f0144.png`, `final-truck1-threequarter-f0144.png`, `final-map-0144.png` and `final-user-region-0144.png` show the marked large pale opening closed. The lower panel is attached beneath the detailed shell; the upper appearance and map framing are retained. A small lower vertical opening remains between the front end of the wheel arch and original bumper, below the panel's diagonal lower edge (approximately local X 1.30–1.55, Z 0.35–0.60). It is disclosed rather than presented as a watertight joint; it does not reproduce the marked large missing strip at map scale. No additional aesthetic or upper-cab changes were made after this final gate.
+
+Geometry source: `fleet-v16-cab-repair.blend`. Reproduction: run `repair_lower_cab.py` in factory-startup Blender with disabled autoexec. `geometry-validation.json` and the before/after test logs are the verification receipts. All artifacts remain candidates; no production replacement or external delivery is implied.

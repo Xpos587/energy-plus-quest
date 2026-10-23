@@ -1,0 +1,8 @@
+/* This arrangement is isolated from the production entry. */
+[data-hints-preview] [data-testid="scene-question"] > div:first-child > span:not(.hint-control) { display: none; }
+[data-hints-preview] .hint-control { color: #49677e; font-size: 15px; font-weight: 400; line-height: 1.3; order: -1; }
+[data-hints-preview] [data-choice-inspection] > [data-hint-question],
+[data-hints-preview] [data-choice-inspection] > [data-inspection-question] { display: none; }
+@media (max-width: 600px) {
+  [data-hints-preview] .hint-control { font-size: 14px; }
+}

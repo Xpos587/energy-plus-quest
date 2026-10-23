@@ -1,0 +1,3 @@
+import sharp from 'sharp';import{readFile,writeFile}from'node:fs/promises';
+const r='docs/reviews/inventory-2026-10-22-finish';
+for(const v of ['source','desktop','portrait']){let svg=await readFile(`docs/reviews/inventory-2026-10-21-geometry/${v}-v4-guides.svg`,'utf8');svg=svg.replace('Roof / south / dispatch surface / truck sides CUT AWAY','Roof / south / dispatch surface CUT AWAY; truck skin restored');await writeFile(`${r}/${v}-v2-guides.svg`,svg);await sharp(`${r}/${v}-v2-clean.png`).composite([{input:Buffer.from(svg)}]).png().toFile(`${r}/${v}-v2-guides.png`);await sharp(`${r}/${v}-v2-clean.png`).greyscale().convolve({width:3,height:3,kernel:[-1,-1,-1,-1,8,-1,-1,-1,-1]}).png().toFile(`${r}/${v}-v2-edges.png`);}

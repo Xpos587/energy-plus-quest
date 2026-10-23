@@ -1,0 +1,2088 @@
+[
+  {
+    "scene": "carrier",
+    "width": 1440,
+    "height": 900,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Доставить лодку на край света? Для логистов нет ничего невозможного. Давайте найдем подход",
+        "font": "22px",
+        "line": "30.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1440,
+    "height": 900,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Выберите грузовик, который лучше всего справится с такой задачей.",
+        "font": "28.8px",
+        "line": "33.12px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Красная фура",
+        "font": "19.44px",
+        "line": "24.3px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Синяя фура",
+        "font": "19.44px",
+        "line": "24.3px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Зелёная фура",
+        "font": "19.44px",
+        "line": "24.3px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Жёлтая фура",
+        "font": "19.44px",
+        "line": "24.3px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подобрать автоматически",
+        "font": "19.44px",
+        "line": "24.3px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Прокрутите колёсико, чтобы приблизить",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1440,
+    "height": 900,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуть карту",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Синяя фура",
+        "font": "28.8px",
+        "line": "33.12px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Максимальная скорость",
+        "font": "14px",
+        "line": "18.2px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "17 км/ч",
+        "font": "19.44px",
+        "line": "22.356px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Год выпуска",
+        "font": "14px",
+        "line": "18.2px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "2021",
+        "font": "19.44px",
+        "line": "22.356px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1440,
+    "height": 900,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Близко — не значит быстро!",
+        "font": "28.8px",
+        "line": "33.12px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваш перевозчик был рядом с офисом и сразу же завернул в логистический центр. Однако водите",
+        "font": "22px",
+        "line": "30.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К машинам",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К следующей сцене",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Доставить лодку на край света? Для логистов нет ничего невозможного. Давайте найдем подход",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Выберите грузовик, который лучше всего справится с такой задачей.",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Красная фура",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Синяя фура",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Зелёная фура",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Жёлтая фура",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подобрать автоматически",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Прокрутите колёсико, чтобы приблизить",
+        "font": "14px",
+        "line": "19.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуть карту",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Синяя фура",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Максимальная скорость",
+        "font": "14px",
+        "line": "18.2px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "17 км/ч",
+        "font": "18px",
+        "line": "20.7px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Год выпуска",
+        "font": "14px",
+        "line": "18.2px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "2021",
+        "font": "18px",
+        "line": "20.7px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Близко — не значит быстро!",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваш перевозчик был рядом с офисом и сразу же завернул в логистический центр. Однако водите",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К машинам",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К следующей сцене",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 320,
+    "height": 568,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Доставить лодку на край света? Для логистов нет ничего невозможного. Давайте найдем подход",
+        "font": "17px",
+        "line": "23.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "15px",
+        "line": "18.75px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору",
+        "font": "15px",
+        "line": "18.75px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 320,
+    "height": 568,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Выберите грузовик, который лучше всего справится с такой задачей.",
+        "font": "22px",
+        "line": "25.3px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Красная фура",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Синяя фура",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Зелёная фура",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Жёлтая фура",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подобрать автоматически",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "15px",
+        "line": "18.75px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "15px",
+        "line": "18.75px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Прокрутите колёсико, чтобы приблизить",
+        "font": "14px",
+        "line": "19.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 320,
+    "height": 568,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуть карту",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Синяя фура",
+        "font": "22px",
+        "line": "25.3px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Максимальная скорость",
+        "font": "13px",
+        "line": "16.9px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "17 км/ч",
+        "font": "16px",
+        "line": "18.4px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Год выпуска",
+        "font": "13px",
+        "line": "16.9px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "2021",
+        "font": "16px",
+        "line": "18.4px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "15px",
+        "line": "18.75px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "15px",
+        "line": "18.75px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 320,
+    "height": 568,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Близко — не значит быстро!",
+        "font": "22px",
+        "line": "25.3px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваш перевозчик был рядом с офисом и сразу же завернул в логистический центр. Однако водите",
+        "font": "17px",
+        "line": "23.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К машинам",
+        "font": "15px",
+        "line": "18.75px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К следующей сцене",
+        "font": "15px",
+        "line": "18.75px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 820,
+    "height": 1180,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Доставить лодку на край света? Для логистов нет ничего невозможного. Давайте найдем подход",
+        "font": "22px",
+        "line": "30.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 820,
+    "height": 1180,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Выберите грузовик, который лучше всего справится с такой задачей.",
+        "font": "30px",
+        "line": "34.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Красная фура",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Синяя фура",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Зелёная фура",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Жёлтая фура",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подобрать автоматически",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Прокрутите колёсико, чтобы приблизить",
+        "font": "14px",
+        "line": "19.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 820,
+    "height": 1180,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуть карту",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Синяя фура",
+        "font": "30px",
+        "line": "34.5px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Максимальная скорость",
+        "font": "14px",
+        "line": "18.2px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "17 км/ч",
+        "font": "20px",
+        "line": "23px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Год выпуска",
+        "font": "14px",
+        "line": "18.2px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "2021",
+        "font": "20px",
+        "line": "23px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 820,
+    "height": 1180,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Близко — не значит быстро!",
+        "font": "30px",
+        "line": "34.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваш перевозчик был рядом с офисом и сразу же завернул в логистический центр. Однако водите",
+        "font": "22px",
+        "line": "30.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К машинам",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К следующей сцене",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1920,
+    "height": 1080,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Доставить лодку на край света? Для логистов нет ничего невозможного. Давайте найдем подход",
+        "font": "26px",
+        "line": "36.4px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1920,
+    "height": 1080,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Выберите грузовик, который лучше всего справится с такой задачей.",
+        "font": "34px",
+        "line": "39.1px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Красная фура",
+        "font": "22px",
+        "line": "27.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Синяя фура",
+        "font": "22px",
+        "line": "27.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Зелёная фура",
+        "font": "22px",
+        "line": "27.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Жёлтая фура",
+        "font": "22px",
+        "line": "27.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подобрать автоматически",
+        "font": "22px",
+        "line": "27.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Прокрутите колёсико, чтобы приблизить",
+        "font": "22px",
+        "line": "30.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1920,
+    "height": 1080,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуть карту",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Синяя фура",
+        "font": "34px",
+        "line": "39.1px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Максимальная скорость",
+        "font": "16px",
+        "line": "20.8px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "17 км/ч",
+        "font": "22px",
+        "line": "25.3px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Год выпуска",
+        "font": "16px",
+        "line": "20.8px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "2021",
+        "font": "22px",
+        "line": "25.3px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1920,
+    "height": 1080,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Близко — не значит быстро!",
+        "font": "34px",
+        "line": "39.1px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваш перевозчик был рядом с офисом и сразу же завернул в логистический центр. Однако водите",
+        "font": "26px",
+        "line": "36.4px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К машинам",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К следующей сцене",
+        "font": "20px",
+        "line": "25px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1180,
+    "height": 820,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Доставить лодку на край света? Для логистов нет ничего невозможного. Давайте найдем подход",
+        "font": "22px",
+        "line": "30.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1180,
+    "height": 820,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Выберите грузовик, который лучше всего справится с такой задачей.",
+        "font": "26px",
+        "line": "29.9px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Красная фура",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Синяя фура",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Зелёная фура",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Жёлтая фура",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подобрать автоматически",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Прокрутите колёсико, чтобы приблизить",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1180,
+    "height": 820,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуть карту",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Синяя фура",
+        "font": "26px",
+        "line": "29.9px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Максимальная скорость",
+        "font": "14px",
+        "line": "18.2px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "17 км/ч",
+        "font": "18px",
+        "line": "20.7px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Год выпуска",
+        "font": "14px",
+        "line": "18.2px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "2021",
+        "font": "18px",
+        "line": "20.7px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 1180,
+    "height": 820,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Близко — не значит быстро!",
+        "font": "26px",
+        "line": "29.9px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваш перевозчик был рядом с офисом и сразу же завернул в логистический центр. Однако водите",
+        "font": "22px",
+        "line": "30.8px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К машинам",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К следующей сцене",
+        "font": "18px",
+        "line": "22.5px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Доставить лодку на край света? Для логистов нет ничего невозможного.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Далее",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Выберите грузовик, который лучше всего справится с такой задачей.",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Красная фура",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Синяя фура",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Зелёная фура",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Жёлтая фура",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подобрать автоматически",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К выбору подарка",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "О задаче",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Прокрутите колёсико, чтобы приблизить",
+        "font": "14px",
+        "line": "19.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Выбор перевозчика",
+        "font": "18px",
+        "line": "21.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуть карту",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере используйте колёси",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "H3",
+        "text": "Синяя фура",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Максимальная скорость",
+        "font": "13px",
+        "line": "16.9px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "17 км/ч",
+        "font": "16px",
+        "line": "18.4px",
+        "clipped": false
+      },
+      {
+        "tag": "DT",
+        "text": "Год выпуска",
+        "font": "13px",
+        "line": "16.9px",
+        "clipped": false
+      },
+      {
+        "tag": "DD",
+        "text": "2021",
+        "font": "16px",
+        "line": "18.4px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К вариантам",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Подтвердить выбор",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 844,
+    "height": 390,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H2",
+        "text": "Близко — не значит быстро!",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Ваш перевозчик был рядом с офисом и сразу же завернул в логистический центр. Однако водите",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К машинам",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "К следующей сцене",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  }
+]

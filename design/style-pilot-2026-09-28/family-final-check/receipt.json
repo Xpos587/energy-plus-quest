@@ -1,0 +1,3996 @@
+{
+  "assets": {
+    "inventory-barge-style-v6": "clean-colors/warehouse-v4.png",
+    "inventory-entrance-v8": "clean-colors/entrance-v3.png",
+    "inventory-alphabet-boat-v8": "clean-colors/alphabet-v12.png",
+    "inventory-keeper-v8": "clean-colors/keeper-v7.png",
+    "inventory-wms-v8": "clean-colors/wms-v11.png"
+  },
+  "checks": [
+    {
+      "branch": "entrance",
+      "textSameAcrossViewports": true
+    },
+    {
+      "branch": "alphabet",
+      "textSameAcrossViewports": true
+    },
+    {
+      "branch": "keeper",
+      "textSameAcrossViewports": true
+    },
+    {
+      "branch": "wms",
+      "textSameAcrossViewports": true
+    }
+  ],
+  "pageErrors": [],
+  "overflow": [],
+  "records": [
+    {
+      "device": "desktop",
+      "stage": "choices",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "overflowX": false,
+        "overflowY": false,
+        "art": null,
+        "panel": null,
+        "overlap": null,
+        "reader": null,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true,
+            "naturalWidth": 1803,
+            "naturalHeight": 264,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true,
+            "naturalWidth": 665,
+            "naturalHeight": 133,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 1417,
+              "y": 16,
+              "width": 768,
+              "height": 960,
+              "right": 2185,
+              "bottom": 976
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 2185,
+              "y": 16,
+              "width": 768,
+              "height": 960,
+              "right": 2953,
+              "bottom": 976
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 2953,
+              "y": 16,
+              "width": 768,
+              "height": 960,
+              "right": 3721,
+              "bottom": 976
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true,
+            "naturalWidth": 1803,
+            "naturalHeight": 264,
+            "rect": {
+              "x": 33,
+              "y": 32,
+              "width": 128,
+              "height": 28,
+              "right": 161,
+              "bottom": 60
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true,
+            "naturalWidth": 665,
+            "naturalHeight": 133,
+            "rect": {
+              "x": 179,
+              "y": 25.5,
+              "width": 170,
+              "height": 35,
+              "right": 349,
+              "bottom": 60.5
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+            "loaded": true,
+            "naturalWidth": 1678,
+            "naturalHeight": 937,
+            "rect": {
+              "x": -86.25,
+              "y": 0,
+              "width": 1612.5,
+              "height": 900,
+              "right": 1526.25,
+              "bottom": 900
+            },
+            "objectFit": "contain"
+          }
+        ]
+      }
+    },
+    {
+      "device": "desktop",
+      "stage": "entrance",
+      "pages": [
+        {
+          "copy": "Когда приходит время собирать груз для баржи, до вашего подарка оказывается дальше всего идти. Сотрудникам приходится делать лишний крюк, и на поиски лодки уходит драгоценное время.",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900,
+              "right": 1440,
+              "bottom": 900
+            },
+            "panel": {
+              "x": 20,
+              "y": 652.71875,
+              "width": 760,
+              "height": 227.28125,
+              "right": 780,
+              "bottom": 880
+            },
+            "overlap": {
+              "width": 760,
+              "height": 227.28125
+            },
+            "reader": {
+              "x": 37,
+              "y": 706.828125,
+              "width": 638,
+              "height": 85.78125,
+              "right": 675,
+              "bottom": 792.609375
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 33,
+                  "y": 29,
+                  "width": 128,
+                  "height": 28,
+                  "right": 161,
+                  "bottom": 57
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 179,
+                  "y": 22.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 349,
+                  "bottom": 57.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 23,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 791,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 791,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1559,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1559,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2327,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 900,
+                  "right": 1440,
+                  "bottom": 900
+                },
+                "objectFit": "cover"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "stage": "alphabet",
+      "pages": [
+        {
+          "copy": "Результат: действительно теперь все выстроено «по нотам». Только вот зона отгрузки находится рядом с началом алфавита, основной груз для баржи – там же, а ваш подарок – в середине. Работники склада сбились с ног, комплектуя общую поставку, но справились.",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900,
+              "right": 1440,
+              "bottom": 900
+            },
+            "panel": {
+              "x": 20,
+              "y": 624.125,
+              "width": 760,
+              "height": 255.875,
+              "right": 780,
+              "bottom": 880
+            },
+            "overlap": {
+              "width": 760,
+              "height": 255.875
+            },
+            "reader": {
+              "x": 37,
+              "y": 678.234375,
+              "width": 638,
+              "height": 114.375,
+              "right": 675,
+              "bottom": 792.609375
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 33,
+                  "y": 29,
+                  "width": 128,
+                  "height": 28,
+                  "right": 161,
+                  "bottom": 57
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 179,
+                  "y": 22.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 349,
+                  "bottom": 57.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 23,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 791,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 791,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1559,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1559,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2327,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 900,
+                  "right": 1440,
+                  "bottom": 900
+                },
+                "objectFit": "cover"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "stage": "keeper",
+      "pages": [
+        {
+          "copy": "Результат: Опыт и знание топологии склада не подвели – Павел Михайлович сразу предложил отличное место рядом с зоной отгрузки. \n\n",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900,
+              "right": 1440,
+              "bottom": 900
+            },
+            "panel": {
+              "x": 20,
+              "y": 617.515625,
+              "width": 760,
+              "height": 262.484375,
+              "right": 780,
+              "bottom": 880
+            },
+            "overlap": {
+              "width": 760,
+              "height": 262.484375
+            },
+            "reader": {
+              "x": 37,
+              "y": 671.625,
+              "width": 638,
+              "height": 114.375,
+              "right": 675,
+              "bottom": 786
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 33,
+                  "y": 29,
+                  "width": 128,
+                  "height": 28,
+                  "right": 161,
+                  "bottom": 57
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 179,
+                  "y": 22.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 349,
+                  "bottom": 57.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 23,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 791,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 791,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1559,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1559,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2327,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 900,
+                  "right": 1440,
+                  "bottom": 900
+                },
+                "objectFit": "cover"
+              }
+            ]
+          }
+        },
+        {
+          "copy": "Но решение осталось только у него в голове – он не рассказал о лодке коллегам из новой смены. Им пришлось срочно собрать груз на баржу. Сменщики с трудом нашли нужный подарок – и отправка лодки на причал задержалась.",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900,
+              "right": 1440,
+              "bottom": 900
+            },
+            "panel": {
+              "x": 20,
+              "y": 624.125,
+              "width": 760,
+              "height": 255.875,
+              "right": 780,
+              "bottom": 880
+            },
+            "overlap": {
+              "width": 760,
+              "height": 255.875
+            },
+            "reader": {
+              "x": 37,
+              "y": 678.234375,
+              "width": 638,
+              "height": 114.375,
+              "right": 675,
+              "bottom": 792.609375
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 33,
+                  "y": 29,
+                  "width": 128,
+                  "height": 28,
+                  "right": 161,
+                  "bottom": 57
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 179,
+                  "y": 22.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 349,
+                  "bottom": 57.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 23,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 791,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 791,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1559,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1559,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2327,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 900,
+                  "right": 1440,
+                  "bottom": 900
+                },
+                "objectFit": "cover"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+          "asset": "clean-colors/keeper-v7.png"
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "stage": "wms",
+      "pages": [
+        {
+          "copy": "WMS-система Inventory Logotech сама на основе ABC-анализа выбрала подходящее место в самой «горячей» зоне рядом с зоной отгрузки. Когда настало время, коробку быстро забрали и отвезли на причал первой машиной.",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900,
+              "right": 1440,
+              "bottom": 900
+            },
+            "panel": {
+              "x": 20,
+              "y": 597.234375,
+              "width": 760,
+              "height": 282.765625,
+              "right": 780,
+              "bottom": 880
+            },
+            "overlap": {
+              "width": 760,
+              "height": 282.765625
+            },
+            "reader": {
+              "x": 37,
+              "y": 651.34375,
+              "width": 638,
+              "height": 114.375,
+              "right": 675,
+              "bottom": 765.71875
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 33,
+                  "y": 29,
+                  "width": 128,
+                  "height": 28,
+                  "right": 161,
+                  "bottom": 57
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 179,
+                  "y": 22.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 349,
+                  "bottom": 57.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 23,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 791,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 791,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1559,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1559,
+                  "y": 43.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2327,
+                  "bottom": 1003.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 900,
+                  "right": 1440,
+                  "bottom": 900
+                },
+                "objectFit": "cover"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+          "asset": "clean-colors/keeper-v7.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+          "asset": "clean-colors/wms-v11.png"
+        }
+      ]
+    },
+    {
+      "device": "tablet",
+      "stage": "choices",
+      "metrics": {
+        "viewport": {
+          "width": 820,
+          "height": 1180
+        },
+        "overflowX": false,
+        "overflowY": false,
+        "art": null,
+        "panel": null,
+        "overlap": null,
+        "reader": null,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true,
+            "naturalWidth": 1803,
+            "naturalHeight": 264,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true,
+            "naturalWidth": 665,
+            "naturalHeight": 133,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 801,
+              "y": 12,
+              "width": 768,
+              "height": 960,
+              "right": 1569,
+              "bottom": 972
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 1569,
+              "y": 12,
+              "width": 768,
+              "height": 960,
+              "right": 2337,
+              "bottom": 972
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 2337,
+              "y": 12,
+              "width": 768,
+              "height": 960,
+              "right": 3105,
+              "bottom": 972
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true,
+            "naturalWidth": 1803,
+            "naturalHeight": 264,
+            "rect": {
+              "x": 29,
+              "y": 28,
+              "width": 128,
+              "height": 28,
+              "right": 157,
+              "bottom": 56
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true,
+            "naturalWidth": 665,
+            "naturalHeight": 133,
+            "rect": {
+              "x": 175,
+              "y": 21.5,
+              "width": 170,
+              "height": 35,
+              "right": 345,
+              "bottom": 56.5
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+            "loaded": true,
+            "naturalWidth": 1678,
+            "naturalHeight": 937,
+            "rect": {
+              "x": -647.0833129882812,
+              "y": -1.1368683772161603e-13,
+              "width": 2114.15625,
+              "height": 1180,
+              "right": 1467.0729370117188,
+              "bottom": 1180
+            },
+            "objectFit": "contain"
+          }
+        ]
+      }
+    },
+    {
+      "device": "tablet",
+      "stage": "entrance",
+      "pages": [
+        {
+          "copy": "Когда приходит время собирать груз для баржи, до вашего подарка оказывается дальше всего идти. Сотрудникам приходится делать лишний крюк, и на поиски лодки уходит драгоценное время.",
+          "metrics": {
+            "viewport": {
+              "width": 820,
+              "height": 1180
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 820,
+              "height": 461.484375,
+              "right": 820,
+              "bottom": 509.484375
+            },
+            "panel": {
+              "x": 0,
+              "y": 509.484375,
+              "width": 820,
+              "height": 216.796875,
+              "right": 820,
+              "bottom": 726.28125
+            },
+            "overlap": {
+              "width": 820,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 556.109375,
+              "width": 638,
+              "height": 85.78125,
+              "right": 654,
+              "bottom": 641.890625
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 12,
+                  "y": 9,
+                  "width": 128,
+                  "height": 28,
+                  "right": 140,
+                  "bottom": 37
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 158,
+                  "y": 2.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 328,
+                  "bottom": 37.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 820,
+                  "height": 461.484375,
+                  "right": 820,
+                  "bottom": 509.484375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        }
+      ]
+    },
+    {
+      "device": "tablet",
+      "stage": "alphabet",
+      "pages": [
+        {
+          "copy": "Результат: действительно теперь все выстроено «по нотам». Только вот зона отгрузки находится рядом с началом алфавита, основной груз для баржи – там же, а ваш подарок – в середине. Работники склада сбились с ног, комплектуя общую поставку, но справились.",
+          "metrics": {
+            "viewport": {
+              "width": 820,
+              "height": 1180
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 820,
+              "height": 461.484375,
+              "right": 820,
+              "bottom": 509.484375
+            },
+            "panel": {
+              "x": 0,
+              "y": 509.484375,
+              "width": 820,
+              "height": 245.390625,
+              "right": 820,
+              "bottom": 754.875
+            },
+            "overlap": {
+              "width": 820,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 556.109375,
+              "width": 638,
+              "height": 114.375,
+              "right": 654,
+              "bottom": 670.484375
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 12,
+                  "y": 9,
+                  "width": 128,
+                  "height": 28,
+                  "right": 140,
+                  "bottom": 37
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 158,
+                  "y": 2.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 328,
+                  "bottom": 37.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 820,
+                  "height": 461.484375,
+                  "right": 820,
+                  "bottom": 509.484375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        }
+      ]
+    },
+    {
+      "device": "tablet",
+      "stage": "keeper",
+      "pages": [
+        {
+          "copy": "Результат: Опыт и знание топологии склада не подвели – Павел Михайлович сразу предложил отличное место рядом с зоной отгрузки. \n\nНо решение осталось только у него в голове – он не рассказал о лодке коллегам из новой смены. Им пришлось срочно собрать груз на баржу. Сменщики с трудом нашли нужный подарок – и отправка лодки на причал задержалась.",
+          "metrics": {
+            "viewport": {
+              "width": 820,
+              "height": 1180
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 820,
+              "height": 461.484375,
+              "right": 820,
+              "bottom": 509.484375
+            },
+            "panel": {
+              "x": 0,
+              "y": 509.484375,
+              "width": 820,
+              "height": 359.765625,
+              "right": 820,
+              "bottom": 869.25
+            },
+            "overlap": {
+              "width": 820,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 556.109375,
+              "width": 638,
+              "height": 228.75,
+              "right": 654,
+              "bottom": 784.859375
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 12,
+                  "y": 9,
+                  "width": 128,
+                  "height": 28,
+                  "right": 140,
+                  "bottom": 37
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 158,
+                  "y": 2.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 328,
+                  "bottom": 37.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 820,
+                  "height": 461.484375,
+                  "right": 820,
+                  "bottom": 509.484375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+          "asset": "clean-colors/keeper-v7.png"
+        }
+      ]
+    },
+    {
+      "device": "tablet",
+      "stage": "wms",
+      "pages": [
+        {
+          "copy": "WMS-система Inventory Logotech сама на основе ABC-анализа выбрала подходящее место в самой «горячей» зоне рядом с зоной отгрузки. Когда настало время, коробку быстро забрали и отвезли на причал первой машиной.",
+          "metrics": {
+            "viewport": {
+              "width": 820,
+              "height": 1180
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 820,
+              "height": 461.484375,
+              "right": 820,
+              "bottom": 509.484375
+            },
+            "panel": {
+              "x": 0,
+              "y": 509.484375,
+              "width": 820,
+              "height": 272.28125,
+              "right": 820,
+              "bottom": 781.765625
+            },
+            "overlap": {
+              "width": 820,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 556.109375,
+              "width": 638,
+              "height": 114.375,
+              "right": 654,
+              "bottom": 670.484375
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 12,
+                  "y": 9,
+                  "width": 128,
+                  "height": 28,
+                  "right": 140,
+                  "bottom": 37
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 158,
+                  "y": 2.5,
+                  "width": 170,
+                  "height": 35,
+                  "right": 328,
+                  "bottom": 37.5
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 820,
+                  "height": 461.484375,
+                  "right": 820,
+                  "bottom": 509.484375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+          "asset": "clean-colors/keeper-v7.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+          "asset": "clean-colors/wms-v11.png"
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "stage": "choices",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overflowX": false,
+        "overflowY": false,
+        "art": null,
+        "panel": null,
+        "overlap": null,
+        "reader": null,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true,
+            "naturalWidth": 1803,
+            "naturalHeight": 264,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true,
+            "naturalWidth": 665,
+            "naturalHeight": 133,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 14,
+              "y": 8,
+              "width": 768,
+              "height": 960,
+              "right": 782,
+              "bottom": 968
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 782,
+              "y": 8,
+              "width": 768,
+              "height": 960,
+              "right": 1550,
+              "bottom": 968
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 1550,
+              "y": 8,
+              "width": 768,
+              "height": 960,
+              "right": 2318,
+              "bottom": 968
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true,
+            "naturalWidth": 1803,
+            "naturalHeight": 264,
+            "rect": {
+              "x": 23,
+              "y": 20,
+              "width": 108,
+              "height": 26,
+              "right": 131,
+              "bottom": 46
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true,
+            "naturalWidth": 665,
+            "naturalHeight": 133,
+            "rect": {
+              "x": 141,
+              "y": 14,
+              "width": 144,
+              "height": 32,
+              "right": 285,
+              "bottom": 46
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+            "loaded": true,
+            "naturalWidth": 1678,
+            "naturalHeight": 937,
+            "rect": {
+              "x": -561.0833129882812,
+              "y": 0,
+              "width": 1512.15625,
+              "height": 844,
+              "right": 951.0729370117188,
+              "bottom": 844
+            },
+            "objectFit": "contain"
+          }
+        ]
+      }
+    },
+    {
+      "device": "mobile",
+      "stage": "entrance",
+      "pages": [
+        {
+          "copy": "Когда приходит время собирать груз для баржи, до вашего подарка оказывается дальше всего идти. Сотрудникам приходится делать лишний крюк, и на поиски лодки уходит драгоценное время.",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 390,
+              "height": 219.484375,
+              "right": 390,
+              "bottom": 267.484375
+            },
+            "panel": {
+              "x": 0,
+              "y": 267.484375,
+              "width": 390,
+              "height": 294.0625,
+              "right": 390,
+              "bottom": 561.546875
+            },
+            "overlap": {
+              "width": 390,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 310.203125,
+              "width": 358,
+              "height": 116.953125,
+              "right": 374,
+              "bottom": 427.15625
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 390,
+                  "height": 219.484375,
+                  "right": 390,
+                  "bottom": 267.484375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "stage": "alphabet",
+      "pages": [
+        {
+          "copy": "Результат: действительно теперь все выстроено «по нотам». Только вот зона отгрузки находится рядом с началом алфавита, основной груз для баржи – там же, а ваш подарок – в середине. Работники склада сбились с ног, комплектуя общую поставку, но справились.",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 390,
+              "height": 219.484375,
+              "right": 390,
+              "bottom": 267.484375
+            },
+            "panel": {
+              "x": 0,
+              "y": 267.484375,
+              "width": 390,
+              "height": 340.84375,
+              "right": 390,
+              "bottom": 608.328125
+            },
+            "overlap": {
+              "width": 390,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 310.203125,
+              "width": 358,
+              "height": 163.734375,
+              "right": 374,
+              "bottom": 473.9375
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 390,
+                  "height": 219.484375,
+                  "right": 390,
+                  "bottom": 267.484375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "stage": "keeper",
+      "pages": [
+        {
+          "copy": "Результат: Опыт и знание топологии склада не подвели – Павел Михайлович сразу предложил отличное место рядом с зоной отгрузки. \n\nНо решение осталось только у него в голове – он не рассказал о лодке коллегам из новой смены. Им пришлось срочно собрать груз на баржу. Сменщики с трудом нашли нужный подарок – и отправка лодки на причал задержалась.",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 390,
+              "height": 219.484375,
+              "right": 390,
+              "bottom": 267.484375
+            },
+            "panel": {
+              "x": 0,
+              "y": 267.484375,
+              "width": 390,
+              "height": 411.015625,
+              "right": 390,
+              "bottom": 678.5
+            },
+            "overlap": {
+              "width": 390,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 310.203125,
+              "width": 358,
+              "height": 233.90625,
+              "right": 374,
+              "bottom": 544.109375
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 390,
+                  "height": 219.484375,
+                  "right": 390,
+                  "bottom": 267.484375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+          "asset": "clean-colors/keeper-v7.png"
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "stage": "wms",
+      "pages": [
+        {
+          "copy": "WMS-система Inventory Logotech сама на основе ABC-анализа выбрала подходящее место в самой «горячей» зоне рядом с зоной отгрузки. Когда настало время, коробку быстро забрали и отвезли на причал первой машиной.",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 390,
+              "height": 219.484375,
+              "right": 390,
+              "bottom": 267.484375
+            },
+            "panel": {
+              "x": 0,
+              "y": 267.484375,
+              "width": 390,
+              "height": 344.34375,
+              "right": 390,
+              "bottom": 611.828125
+            },
+            "overlap": {
+              "width": 390,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 310.203125,
+              "width": 358,
+              "height": 140.34375,
+              "right": 374,
+              "bottom": 450.546875
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 390,
+                  "height": 219.484375,
+                  "right": 390,
+                  "bottom": 267.484375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+          "asset": "clean-colors/keeper-v7.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+          "asset": "clean-colors/wms-v11.png"
+        }
+      ]
+    },
+    {
+      "device": "small",
+      "stage": "choices",
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "overflowX": false,
+        "overflowY": false,
+        "art": null,
+        "panel": null,
+        "overlap": null,
+        "reader": null,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true,
+            "naturalWidth": 1803,
+            "naturalHeight": 264,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true,
+            "naturalWidth": 665,
+            "naturalHeight": 133,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 14,
+              "y": 8,
+              "width": 768,
+              "height": 960,
+              "right": 782,
+              "bottom": 968
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 782,
+              "y": 8,
+              "width": 768,
+              "height": 960,
+              "right": 1550,
+              "bottom": 968
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+            "loaded": true,
+            "naturalWidth": 768,
+            "naturalHeight": 960,
+            "rect": {
+              "x": 1550,
+              "y": 8,
+              "width": 768,
+              "height": 960,
+              "right": 2318,
+              "bottom": 968
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+            "loaded": true,
+            "naturalWidth": 1803,
+            "naturalHeight": 264,
+            "rect": {
+              "x": 23,
+              "y": 20,
+              "width": 83.140625,
+              "height": 26,
+              "right": 106.140625,
+              "bottom": 46
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+            "loaded": true,
+            "naturalWidth": 665,
+            "naturalHeight": 133,
+            "rect": {
+              "x": 116.140625,
+              "y": 14,
+              "width": 110.859375,
+              "height": 32,
+              "right": 227,
+              "bottom": 46
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+            "loaded": true,
+            "naturalWidth": 1678,
+            "naturalHeight": 937,
+            "rect": {
+              "x": -348.8333435058594,
+              "y": 0,
+              "width": 1017.65625,
+              "height": 568,
+              "right": 668.8229064941406,
+              "bottom": 568
+            },
+            "objectFit": "contain"
+          }
+        ]
+      }
+    },
+    {
+      "device": "small",
+      "stage": "entrance",
+      "pages": [
+        {
+          "copy": "Когда приходит время собирать груз для баржи, до вашего подарка оказывается дальше всего идти. ",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 257.4375,
+              "right": 320,
+              "bottom": 485.53125
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 70.171875,
+              "right": 304,
+              "bottom": 337.140625
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        },
+        {
+          "copy": "Сотрудникам приходится делать лишний крюк, и на поиски лодки уходит драгоценное время.",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 257.4375,
+              "right": 320,
+              "bottom": 485.53125
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 70.171875,
+              "right": 304,
+              "bottom": 337.140625
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        }
+      ]
+    },
+    {
+      "device": "small",
+      "stage": "alphabet",
+      "pages": [
+        {
+          "copy": "Результат: действительно теперь все выстроено «по нотам». ",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 234.046875,
+              "right": 320,
+              "bottom": 462.140625
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 46.78125,
+              "right": 304,
+              "bottom": 313.75
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        },
+        {
+          "copy": "Только вот зона отгрузки находится рядом с началом алфавита, основной груз для баржи – там же, а ваш подарок – в середине. ",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 280.828125,
+              "right": 320,
+              "bottom": 508.921875
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 93.5625,
+              "right": 304,
+              "bottom": 360.53125
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        },
+        {
+          "copy": "Работники склада сбились с ног, комплектуя общую поставку, но справились.",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 257.4375,
+              "right": 320,
+              "bottom": 485.53125
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 70.171875,
+              "right": 304,
+              "bottom": 337.140625
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        }
+      ]
+    },
+    {
+      "device": "small",
+      "stage": "keeper",
+      "pages": [
+        {
+          "copy": "Результат: Опыт и знание топологии склада не подвели – Павел Михайлович сразу предложил отличное место рядом с зоной отгрузки. \n",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 304.21875,
+              "right": 320,
+              "bottom": 532.3125
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 116.953125,
+              "right": 304,
+              "bottom": 383.921875
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        },
+        {
+          "copy": "\nНо решение осталось только у него в голове – он не рассказал о лодке коллегам из новой смены. ",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 280.828125,
+              "right": 320,
+              "bottom": 508.921875
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 93.5625,
+              "right": 304,
+              "bottom": 360.53125
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        },
+        {
+          "copy": "Им пришлось срочно собрать груз на баржу. Сменщики с трудом нашли нужный подарок – и отправка лодки на причал задержалась.",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 280.828125,
+              "right": 320,
+              "bottom": 508.921875
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 93.5625,
+              "right": 304,
+              "bottom": 360.53125
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+          "asset": "clean-colors/keeper-v7.png"
+        }
+      ]
+    },
+    {
+      "device": "small",
+      "stage": "wms",
+      "pages": [
+        {
+          "copy": "WMS-система Inventory Logotech сама на основе ABC-анализа выбрала подходящее место в самой «горячей» зоне рядом с зоной отгрузки. ",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 325.90625,
+              "right": 320,
+              "bottom": 554
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 93.5625,
+              "right": 304,
+              "bottom": 360.53125
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        },
+        {
+          "copy": "Когда настало время, коробку быстро забрали и отвезли на причал первой машиной.",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 568
+            },
+            "overflowX": false,
+            "overflowY": false,
+            "art": {
+              "x": 0,
+              "y": 48,
+              "width": 320,
+              "height": 180.09375,
+              "right": 320,
+              "bottom": 228.09375
+            },
+            "panel": {
+              "x": 0,
+              "y": 228.09375,
+              "width": 320,
+              "height": 302.515625,
+              "right": 320,
+              "bottom": 530.609375
+            },
+            "overlap": {
+              "width": 320,
+              "height": 0
+            },
+            "reader": {
+              "x": 16,
+              "y": 266.96875,
+              "width": 288,
+              "height": 70.171875,
+              "right": 304,
+              "bottom": 337.140625
+            },
+            "images": [
+              {
+                "src": "http://127.0.0.1:4173/brand/energy-plus-logo.svg",
+                "loaded": true,
+                "naturalWidth": 1803,
+                "naturalHeight": 264,
+                "rect": {
+                  "x": 10,
+                  "y": 10,
+                  "width": 90,
+                  "height": 26,
+                  "right": 100,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/brand/gpn-snabzhenie.svg",
+                "loaded": true,
+                "naturalWidth": 665,
+                "naturalHeight": 133,
+                "rect": {
+                  "x": 108,
+                  "y": 4,
+                  "width": 126,
+                  "height": 32,
+                  "right": 234,
+                  "bottom": 36
+                },
+                "objectFit": "contain"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 2,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 770,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 770,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 1538,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/boat.webp",
+                "loaded": true,
+                "naturalWidth": 768,
+                "naturalHeight": 960,
+                "rect": {
+                  "x": 1538,
+                  "y": 23.5,
+                  "width": 768,
+                  "height": 960,
+                  "right": 2306,
+                  "bottom": 983.5
+                },
+                "objectFit": "fill"
+              },
+              {
+                "src": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+                "loaded": true,
+                "naturalWidth": 1672,
+                "naturalHeight": 941,
+                "rect": {
+                  "x": 0,
+                  "y": 48,
+                  "width": 320,
+                  "height": 180.09375,
+                  "right": 320,
+                  "bottom": 228.09375
+                },
+                "objectFit": "contain"
+              }
+            ]
+          }
+        }
+      ],
+      "returnVerified": true,
+      "selectionMethod": "hotspot keyboard focus + Enter",
+      "errors": [],
+      "routed": [
+        {
+          "url": "http://127.0.0.1:4173/scene-art/inventory-barge-style-v6.webp",
+          "asset": "clean-colors/warehouse-v4.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-entrance-v8.webp",
+          "asset": "clean-colors/entrance-v3.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-alphabet-boat-v8.webp",
+          "asset": "clean-colors/alphabet-v12.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-keeper-v8.webp",
+          "asset": "clean-colors/keeper-v7.png"
+        },
+        {
+          "url": "http://127.0.0.1:4173/scene-art/outcomes/inventory-wms-v8.webp",
+          "asset": "clean-colors/wms-v11.png"
+        }
+      ]
+    }
+  ]
+}

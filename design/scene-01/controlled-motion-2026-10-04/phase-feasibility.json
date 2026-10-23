@@ -1,0 +1,132 @@
+{
+  "source": "/home/michael/.local/state/energy-plus-quest/research/2026-09-27-numberless-map-render/separated-city-without-numbers.blend",
+  "duration_seconds": 48.0,
+  "fps": 24,
+  "frames": 1152,
+  "required_start_articulation_degrees": 3,
+  "allowed_operation": "Independent cyclic phase shifts of existing native animation only",
+  "trucks": [
+    {
+      "truck": 1,
+      "minimum_articulation_degrees": 5.450184963384244,
+      "minimum_source_frame": 687,
+      "eligible_integer_frames": 0,
+      "initial_articulation_degrees": 41.115718431709155,
+      "yaw_curves": [
+        {
+          "part": "tractor",
+          "yaw_key_count": 1153,
+          "interpolations": [
+            "LINEAR"
+          ],
+          "first_key_frame": 1.0,
+          "last_key_frame": 1153.0,
+          "modifiers": []
+        },
+        {
+          "part": "trailer",
+          "yaw_key_count": 1153,
+          "interpolations": [
+            "LINEAR"
+          ],
+          "first_key_frame": 1.0,
+          "last_key_frame": 1153.0,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "truck": 2,
+      "minimum_articulation_degrees": 8.913011643291792,
+      "minimum_source_frame": 212,
+      "eligible_integer_frames": 0,
+      "initial_articulation_degrees": 45.91023392428326,
+      "yaw_curves": [
+        {
+          "part": "tractor",
+          "yaw_key_count": 1153,
+          "interpolations": [
+            "LINEAR"
+          ],
+          "first_key_frame": 1.0,
+          "last_key_frame": 1153.0,
+          "modifiers": []
+        },
+        {
+          "part": "trailer",
+          "yaw_key_count": 1153,
+          "interpolations": [
+            "LINEAR"
+          ],
+          "first_key_frame": 1.0,
+          "last_key_frame": 1153.0,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "truck": 3,
+      "minimum_articulation_degrees": 0.3214505571350294,
+      "minimum_source_frame": 557,
+      "eligible_integer_frames": 236,
+      "initial_articulation_degrees": 25.617821129464293,
+      "yaw_curves": [
+        {
+          "part": "tractor",
+          "yaw_key_count": 1153,
+          "interpolations": [
+            "LINEAR"
+          ],
+          "first_key_frame": 1.0,
+          "last_key_frame": 1153.0,
+          "modifiers": []
+        },
+        {
+          "part": "trailer",
+          "yaw_key_count": 1153,
+          "interpolations": [
+            "LINEAR"
+          ],
+          "first_key_frame": 1.0,
+          "last_key_frame": 1153.0,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "truck": 4,
+      "minimum_articulation_degrees": 16.902581710798064,
+      "minimum_source_frame": 772,
+      "eligible_integer_frames": 0,
+      "initial_articulation_degrees": 44.708001784164004,
+      "yaw_curves": [
+        {
+          "part": "tractor",
+          "yaw_key_count": 1153,
+          "interpolations": [
+            "LINEAR"
+          ],
+          "first_key_frame": 1.0,
+          "last_key_frame": 1153.0,
+          "modifiers": []
+        },
+        {
+          "part": "trailer",
+          "yaw_key_count": 1153,
+          "interpolations": [
+            "LINEAR"
+          ],
+          "first_key_frame": 1.0,
+          "last_key_frame": 1153.0,
+          "modifiers": []
+        }
+      ]
+    }
+  ],
+  "camera_preserved": true,
+  "geometry_modified": false,
+  "render_started": false,
+  "continuous_interval_proof": "Both yaw channels have matching frame1..1153 linear keys, no modifiers. Signed cab-minus-trailer yaw stays positive and below90deg. Its linear interpolation has its minimum at an endpoint; subframes cannot improve these minima.",
+  "feasible": false,
+  "limitation": "A straight initial pose requires changing the articulation trajectory or routes, beyond allowed phase-only edits. No candidate or preview presented as satisfying this constraint."
+}

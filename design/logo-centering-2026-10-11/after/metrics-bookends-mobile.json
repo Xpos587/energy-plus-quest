@@ -1,0 +1,411 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H1",
+        "text": "Доставляем радость",
+        "font": "53.82px",
+        "line": "53.82px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Вам предстоит доставить важный груз на Крайний Север.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Далее",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H1",
+        "text": "Доставляем радость",
+        "font": "30px",
+        "line": "34.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Представьте, что вы хотите отправить подарок близкому человеку в другой город. Нужно решит",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Профессиональные логисты решают похожие задачи. Только вместо одной посылки у них — тысячи",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Назад",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Далее",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H1",
+        "text": "Доставляем радость",
+        "font": "30px",
+        "line": "34.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Главное правило логистов — все грузы важны: будь то многотонная турбина или небольшая коро",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Вам предстоит доставить важный груз на Крайний Север.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "В пути вы будете получать баллы за то, что",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Но сначала выберите роль, подарок и получателя.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Назад",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Начать",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "BUTTON",
+        "text": "Назад",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "H1",
+        "text": "Кто отправит подарок?",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Студент",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Профессионал",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "BUTTON",
+        "text": "Назад",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "H1",
+        "text": "Кому отправим подарок?",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Майма",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Хабт",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Арсений",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "scene": "carrier",
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "BUTTON",
+        "text": "Назад",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "H1",
+        "text": "Что отправим Арсению?",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Фотоаппарат",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вязаные носки",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Лодка",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H1",
+        "text": "Миссия выполнена: вы успешно доставили подарок!",
+        "font": "30px",
+        "line": "34.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Сюрприз по-настоящему порадовал Майму. Теперь ей не страшен самый лютый мороз!",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Узнать, какой вы логист",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H1",
+        "text": "Вы — логистический гик!",
+        "font": "30px",
+        "line": "34.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "В течение всего путешествия вы находили наиболее эффективные решения.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Делать маленькие чудеса с помощью современных технологий — это ежедневная задача «Газпромн",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Узнайте больше о компании и приходите к нам на практику, чтобы увидеть эти технологии в ра",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Поделиться профилем",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Пройти заново",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуться на главную",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "text": [
+      {
+        "tag": "H1",
+        "text": "Вы — логистический гик!",
+        "font": "30px",
+        "line": "34.5px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "В течение всего путешествия вы находили наиболее эффективные решения.",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Делать маленькие чудеса с помощью современных технологий — это ежедневная задача «Газпромн",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Узнайте больше о компании и приходите к нам на практику, чтобы увидеть эти технологии в ра",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Поделиться профилем",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Пройти заново",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вернуться на главную",
+        "font": "16px",
+        "line": "20px",
+        "clipped": false
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "16px",
+        "line": "24px",
+        "clipped": false
+      },
+      {
+        "tag": "H2",
+        "text": "Поделиться профилем",
+        "font": "24px",
+        "line": "27.6px",
+        "clipped": false
+      },
+      {
+        "tag": "P",
+        "text": "Сохраните сертификат и прикрепите его в Telegram. Кнопка Telegram отправляет текст и ссылк",
+        "font": "18px",
+        "line": "25.2px",
+        "clipped": false
+      }
+    ]
+  }
+]

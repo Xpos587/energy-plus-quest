@@ -1,0 +1,3791 @@
+/* Reserve the real action rows before paging the small helicopter result. */
+@media (max-width: 360px) and (max-height: 650px) and (orientation: portrait) {
+  .app[data-scene="lastmile"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence^="lastmile-helicopter"]) [data-result-reading] {
+    --result-fit-viewport: 1;
+    max-height: var(--result-reading-height, 80px);
+  }
+}
+
+/* Keep the yellow truck's smoke and driver together in the portrait crop. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene="carrier"] .frame.frame.frame[data-layout="result"][data-carrier="old4"] [data-outcome-art="old4"] {
+    object-position: 15% center;
+  }
+}
+
+@media (max-height: 450px) and (orientation: landscape) {
+  /* Petr's benefit and cost remain one story; the old 48px paging cap must not clip it. */
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] [data-result-reading] {
+    max-height: none;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) .result {
+    padding-block: 4px;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) {
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 56%);
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-outcome-scene] img {
+    object-fit: contain;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] footer {
+    padding-top: 4px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] footer button {
+    grid-row: 2;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] footer button:first-child {
+    grid-column: 1;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] footer button:last-child {
+    grid-column: 2;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-result-feedback] {
+    grid-row: 1;
+    grid-column: 1 / -1;
+  }
+}
+
+/* Express shares the manual card shell while retaining the overview camera. */
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"]:has([data-choice-inspection="express"]) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr);
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"] [data-choice-inspection="express"] {
+    position: absolute;
+    inset: auto 16px 16px auto;
+    width: 440px;
+    height: auto;
+    padding: 24px;
+    gap: 16px;
+    border-radius: 16px;
+    box-shadow: 0 6px 28px #08294626;
+    z-index: 8;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"] [data-choice-inspection="express"] .inspectionCopy {
+    flex: none;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] strong {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] em {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] svg {
+    width: 22px;
+    height: 22px;
+    flex-basis: 22px;
+  }
+}
+
+/* The scene is the canvas. Controls float above it without reserving bands. */
+.app {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  min-height: 320px;
+  overflow: hidden;
+  background: var(--mist);
+}
+@media (prefers-reduced-motion: reduce) {
+  .app > header,
+  .app .headerCard,
+  .app .question,
+  .app .panHint,
+  .app [data-sheet-panel] {
+    transition: none;
+  }
+}
+
+@media (max-height: 450px) {
+  .frame[data-layout="result"] .result { padding: 8px 12px; gap: 4px; }
+  .frame[data-layout="result"] .result h2 { font-size: 18px; }
+}
+.main {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  padding: 0;
+}
+.screen {
+  position: absolute;
+  inset: 0;
+}
+.frame {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #e8edf0;
+}
+/* Reading comes before choosing: show the artwork without option overlays. */
+.frame:has([data-scene-briefing][data-reading="true"]) :is(
+  [data-choice-id],
+  [data-carrier-choice],
+  [data-scene-choice],
+  [data-callout],
+  [data-loading-zone],
+  [data-warehouse-annotations]
+) {
+  visibility: hidden;
+  pointer-events: none;
+}
+/* Keep on-image alternatives visible while inspecting; other controls retain their flow. */
+.frame[data-inspecting="true"] [data-choice-id]:not([aria-pressed="true"]):not([data-hotspot]):not([data-callout-target]),
+.frame [data-inspection-occluded] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.frame[data-inspecting="true"] [data-callout-target]:not([aria-pressed="true"]) {
+  pointer-events: none;
+}
+.frame[data-inspecting="true"] .inspection {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+@media (max-width: 360px), (max-height: 500px) {
+  .frame .inspectionHeading h3 {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  .frame .inspection:not([data-choice-media]) {
+    padding: 12px;
+    gap: 8px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene="lastmile"] .question {
+    left: auto;
+    right: 0;
+    width: 230px;
+    transform: none;
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+  .frame .inspection:not([data-choice-media]) {
+    width: min(400px, 44%);
+  }
+}
+.carrierMap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.briefing {
+  position: absolute;
+  inset: 80px 24px 24px;
+  z-index: 4;
+  pointer-events: none;
+  color: var(--navy);
+}
+.briefingHeading {
+  composes: headerRow from "./QuestChrome.module.css";
+  display: flex;
+}
+.briefingHeading h2 {
+  margin: 0;
+  font-size: clamp(21px, 2vw, 28px);
+  line-height: 1.15;
+  padding: 9px 14px;
+  border-radius: 10px;
+  background: #fff;
+}
+.briefingHeading > button {
+  pointer-events: auto;
+}
+.question {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  gap: 7px;
+  width: min(760px, 100%);
+  margin: 0;
+  padding: 13px 18px 15px;
+  border: 1px solid #e5ebef;
+  border-radius: 14px;
+  background: #fff;
+  font-size: clamp(17px, 1.35vw, 19px);
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: left;
+  box-shadow: 0 12px 30px #173a5b1f;
+  pointer-events: auto;
+}
+.questionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.questionLabel {
+  color: #082946;
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.questionPrompt {
+  margin: 0;
+  max-width: 56ch;
+  color: #082946;
+  font-weight: 600;
+}
+.questionLead {
+  margin: 0;
+  color: #31556f;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.questionAction {
+  flex: none;
+}
+.questionAction button {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 5px 10px;
+  border: 1px solid #c4d7e4;
+  border-radius: 8px;
+  background: white;
+  color: #082946;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+@media (hover: hover) and (pointer: fine) {
+.questionAction button:hover {
+  background: #edf4f9;
+  color: #145276;
+}
+}
+.questionAction button:focus-visible {
+  outline: 2px solid #0079c2;
+  outline-offset: 2px;
+}
+.questionAction button svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.questionNavigation {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+.questionContext {
+  color: #49677e;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.questionHint {
+  color: #53697d;
+  font-size: 15px;
+  font-weight: 400;
+}
+.questionHint[data-persistent] { color: #075d9b; font-weight: 600; }
+.question .condition {
+  flex: none;
+  padding: 8px 10px;
+  background: #edf4f9;
+  font-size: 14px;
+}
+.briefing:has(.briefingCard) .question,
+.frame[data-inspecting="true"] .question {
+  visibility: hidden;
+}
+.condition,
+.close,
+.primary,
+.secondary {
+  min-height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: white;
+  color: var(--navy);
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.close {
+  width: 44px;
+  flex: 0 0 44px;
+  padding: 0;
+  font-size: 24px;
+}
+.close,
+.headerCard .condition {
+  position: relative;
+}
+/* A larger hit area leaves room for fingers without enlarging the artwork. */
+.close::after,
+.headerCard .condition::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, 44px);
+  height: max(100%, 44px);
+  transform: translate(-50%, -50%);
+}
+.condition {
+  font-size: 15px;
+}
+.questionTask {
+  margin-left: auto;
+}
+.close {
+  background: transparent;
+}
+.briefingCard,
+.inspection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid #20365315;
+  border-radius: 16px;
+  background: white;
+  color: var(--navy);
+  box-shadow: 0 8px 32px #20365318;
+  pointer-events: auto;
+}
+.briefingCard {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(760px, 100%);
+  max-height: min(61dvh, 470px);
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e5ebef;
+  border-top: 4px solid #0079c2;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 18px 52px #173a5b30;
+}
+.briefingCardHeading,
+.inspectionHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.briefingCardHeading > span {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 600;
+}
+.briefingCardHeading {
+  justify-content: flex-start;
+  min-height: 52px;
+  padding: 8px 18px;
+  border-bottom: 1px solid #e5ebef;
+  background: #f8fbfd;
+}
+.briefingCardHeading .dialogueEyebrow {
+  margin-right: auto;
+  color: #082946;
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.briefingCardHeading .dialogueCount {
+  color: #163857;
+  font-size: 17px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.dialogueCount span {
+  color: #7e93a0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.briefingCardHeading .close {
+  display: grid;
+  width: 34px;
+  min-height: 34px;
+  flex-basis: 34px;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf4f9;
+}
+.briefingCardHeading .close svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.briefingCard .briefingCopy {
+  padding: 18px 24px 0;
+  color: #142d46;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 500;
+  line-height: 1.45;
+  scrollbar-width: none;
+}
+.briefingCard .briefingCopy::-webkit-scrollbar {
+  display: none;
+}
+.briefingCard .briefingCopy p {
+  max-width: 66ch;
+  margin: 0;
+}
+.dialogueActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: none;
+  min-height: 78px;
+  padding: 16px 24px 18px;
+}
+.dialogueActions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 44px;
+  border: 0;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.dialoguePrevious {
+  padding: 0 16px;
+  background: #edf4f9;
+  color: #24415a;
+}
+.dialogueNext {
+  min-width: 148px;
+  margin-left: auto;
+  padding: 0 18px;
+  background: #075d9b;
+  color: white;
+}
+@media (hover: hover) and (pointer: fine) {
+.dialogueActions button:hover {
+  filter: brightness(0.96);
+}
+}
+.inspectionHeading h3 {
+  margin: 0;
+  font-size: clamp(21px, 2vw, 26px);
+  line-height: 1.2;
+}
+.briefingCopy,
+.inspectionCopy {
+  min-height: 0;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+  font-size: 19px;
+  line-height: 1.45;
+}
+.briefingCopy p,
+.inspectionCopy > p {
+  margin: 0 0 12px;
+}
+.briefingCopy p:last-child,
+.inspectionCopy > p:last-child {
+  margin-bottom: 0;
+}
+.inspection {
+  position: absolute;
+  z-index: 6;
+  right: 24px;
+  bottom: 24px;
+  width: min(560px, calc(100% - 48px));
+  max-height: calc(100% - 150px);
+}
+.inspection:not([data-choice-media]) {
+  width: min(480px, calc(100% - 48px));
+  gap: 12px;
+  padding: 18px;
+  background: #fff;
+}
+@media (min-width: 601px) and (min-height: 501px) {
+  .inspection[data-choice-media] {
+    width: min(420px, calc(100% - 48px));
+    gap: 12px;
+    padding: 16px;
+  }
+}
+.inspectionHeading {
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e2ebf0;
+}
+.inspectionHeading .close {
+  display: grid;
+  flex-basis: 36px;
+  width: 36px;
+  min-height: 36px;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf4f9;
+}
+.inspectionHeading .close svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.inspection:not([data-choice-media]) .inspectionCopy {
+  color: #173851;
+  font-size: 17px;
+  line-height: 1.4;
+}
+.inspection:not([data-choice-media]) .inspectionCopy > p:first-child {
+  font-weight: 650;
+}
+.inspection:not([data-choice-media]) .inspectionCopy > p + p {
+  color: #526b7f;
+  font-size: 15px;
+}
+.inspection:not([data-choice-media]) .actions {
+  margin-top: 2px;
+}
+.inspection .actions button,
+.questionNavigation button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+.inspection .actions button > svg,
+.questionNavigation button > svg,
+.dialogueActions button > svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+.actions {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.primary {
+  flex: 1;
+  background: #075d9b;
+  color: white;
+}
+.secondary {
+  background: var(--mist);
+}
+.completionStatus {
+  align-self: center;
+  padding: 8px;
+  color: #53697d;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.actions button {
+  font-size: 16px;
+  line-height: 1.25;
+}
+.briefingHeading h2:focus {
+  outline: none;
+}
+.frame button:focus-visible,
+.inspectionCopy:focus-visible,
+.briefingCopy:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+.inspectionHeading h3:focus {
+  outline: none;
+}
+.preview {
+  height: 180px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #edf2f5;
+  background-repeat: no-repeat;
+  background-size: 230%;
+  margin-bottom: 16px;
+}
+.result {
+  position: absolute;
+  z-index: 5;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(760px, calc(100% - 48px));
+  max-height: calc(100% - 110px);
+  overflow: auto;
+  padding: 24px;
+  border-radius: 16px;
+  background: white;
+  color: var(--navy);
+  box-shadow: 0 8px 32px #20365318;
+}
+.result h2 {
+  margin: 0 0 16px;
+  font-size: 30px;
+}
+@media (max-width: 600px) {
+  .briefing {
+    inset: 72px 12px 12px;
+  }
+  .briefingHeading {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .briefingHeading h2 {
+    font-size: 19px;
+    padding: 10px;
+  }
+  .condition {
+    padding: 10px;
+  }
+  .question {
+    gap: 5px;
+    padding: 9px 11px 11px;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+  .questionContext,
+  .questionHint {
+    font-size: 14px;
+  }
+  .questionAction button {
+    min-height: 44px;
+    padding: 4px 7px;
+    font-size: 14px;
+  }
+  .briefingCard,
+  .inspection {
+    padding: 16px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+  .briefingCard {
+    max-height: min(72dvh, 440px);
+    padding: 0;
+    gap: 0;
+  }
+  .briefingCardHeading {
+    min-height: 46px;
+    padding: 6px 12px;
+  }
+  .briefingCard .briefingCopy {
+    padding: 12px 16px;
+    font-size: 17px;
+  }
+  .dialogueActions {
+    gap: 7px;
+    min-height: 58px;
+    padding: 7px 12px;
+  }
+  .dialoguePrevious {
+    padding-inline: 10px;
+  }
+  .dialogueNext {
+    min-width: 112px;
+  }
+  .briefingCopy,
+  .inspectionCopy {
+    font-size: 17px;
+  }
+  .inspectionHeading h3 {
+    font-size: 22px;
+  }
+  .result h2 {
+    font-size: clamp(22px, 5vw, 26px);
+  }
+  .inspection {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+    max-height: calc(100% - 140px);
+  }
+  .inspection:not([data-choice-media]) {
+    width: calc(100% - 24px);
+    padding: 14px;
+  }
+  .preview {
+    height: 150px;
+  }
+  .result {
+    bottom: 12px;
+    width: calc(100% - 24px);
+    padding: 18px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene="inventory"] .question {
+    top: 112px;
+    bottom: auto;
+    width: min(340px, calc(100% - 32px));
+    padding: 7px 12px;
+  }
+  .briefing {
+    inset: 65px 16px 12px;
+  }
+  .briefingCard {
+    left: auto;
+    right: 0;
+    transform: none;
+    width: 45%;
+    max-height: calc(100% - 4px);
+    padding: 0;
+  }
+  .inspection {
+    right: 12px;
+    bottom: 12px;
+    width: 44%;
+    max-height: calc(100% - 78px);
+    padding: 12px;
+    gap: 8px;
+  }
+  .briefingCopy,
+  .inspectionCopy {
+    font-size: 16px;
+  }
+  .preview {
+    height: 100px;
+  }
+  .result {
+    left: auto;
+    right: 12px;
+    transform: none;
+    width: 48%;
+    bottom: 12px;
+    max-height: calc(100% - 78px);
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 16px;
+}
+.resultInner {
+  display: contents;
+}
+.result h2 {
+  flex-shrink: 0;
+  margin: 0;
+}
+.resultTrail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  color: #53697d;
+  font-size: 13px;
+  line-height: 1.3;
+}
+.resultTrail span:last-child {
+  color: var(--navy);
+  font-weight: 600;
+}
+.resultCopy {
+  overflow: auto;
+  min-height: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.resultCopy p {
+  margin: 0 0 12px;
+}
+.resultCopy p:last-child {
+  margin-bottom: 0;
+}
+.result > :not(.resultCopy) {
+  flex-shrink: 0;
+}
+.result .resultCopy {
+  flex-shrink: 1;
+}
+.outcomePicture {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  touch-action: auto;
+  cursor: default;
+}
+.outcomePicture::-webkit-scrollbar { display: none; }
+.outcomePicture:active { cursor: default; }
+.outcomePicture > picture {
+  display: block;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+}
+.outcomeBackdrop {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--outcome-focus, 50%) 50%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+@media (max-width: 600px) {
+  .resultCopy {
+    font-size: 16px;
+  }
+}
+
+.frame:has(.briefingCard) [data-map-controls],
+.frame[data-inspecting="true"]:not([data-camera-inspection="true"]) [data-map-controls] {
+  visibility: hidden;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #53697d;
+}
+.pagination button {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  color: var(--navy);
+  background: var(--mist);
+  cursor: pointer;
+}
+.pagination button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* Branding and scene navigation form one compact header card. */
+.app:has([data-scene-briefing]) [data-quest-brand] {
+  display: none;
+}
+.app:has([data-scene-briefing]) > header {
+  justify-content: flex-end;
+}
+.briefing {
+  top: 16px;
+  left: 20px;
+}
+.headerCard {
+  display: grid;
+  grid-template-rows: 42px auto;
+  width: min(420px, calc(100vw - 100px));
+  max-width: 100%;
+  min-height: 98px;
+  padding: 9px 12px;
+  border: 1px solid #e5ebef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 30px #173a5b12;
+  pointer-events: auto;
+}
+.headerCard > div:first-child {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+.headerCard .briefingHeading {
+  flex-wrap: nowrap;
+  min-height: 36px;
+  padding-top: 0;
+}
+.headerCard .briefingHeading h2 {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: clamp(18px, 1.4vw, 20px);
+  text-wrap: balance;
+}
+.headerCard .condition {
+  margin-left: auto;
+  min-height: 32px;
+  padding: 4px 10px;
+  background: #edf4f9;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .briefing {
+    top: 8px;
+    left: 12px;
+  }
+  .headerCard {
+    min-height: 94px;
+    grid-template-rows: 34px auto;
+    padding: 8px 10px;
+  }
+  .headerCard .briefingHeading {
+    gap: 4px;
+    min-height: 0;
+    flex-wrap: nowrap;
+  }
+  .headerCard .briefingHeading h2 {
+    max-width: none;
+    font-size: clamp(14px, 4vw, 17px);
+  }
+  .headerCard > div:first-child {
+    min-height: 0;
+    padding: 0;
+  }
+  .headerCard .condition {
+    min-height: 32px;
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .briefing {
+    top: 12px;
+  }
+  .headerCard {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerCard {
+    width: min(360px, calc(100vw - 100px));
+  }
+  .app:has([data-scene-briefing]) > header nav {
+    background: transparent;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .app[data-scene="crane"] .frame[data-layout="result"] .result {
+    gap: 4px;
+    padding: 8px;
+  }
+  .app[data-scene="crane"] .frame[data-layout="result"] .resultPreviewText {
+    -webkit-line-clamp: 1;
+  }
+  .app[data-scene="crane"] .frame[data-layout="result"] .resultDisclosure summary {
+    min-height: 30px;
+    padding: 4px 8px;
+  }
+  .app[data-scene="crane"] .frame[data-layout="result"] [data-score-delta] {
+    padding: 3px 4px;
+  }
+  .frame[data-score-result] > .result {
+    gap: 10px;
+    padding: 14px;
+  }
+  .frame[data-score-result] > .result h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .briefing {
+    top: 12px;
+    left: 16px;
+  }
+  .headerCard {
+    width: calc(100vw - 32px - min(260px, 34vw));
+    border-right: 0;
+    border-radius: 14px 0 0 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .briefing {
+    top: 8px;
+    left: 12px;
+  }
+  .headerCard {
+    width: calc(100vw - 24px);
+    border-right: 1px solid #e5ebef;
+    border-radius: 14px;
+  }
+}
+
+.panHint {
+  position: absolute;
+  bottom: clamp(130px, 24dvh, 230px);
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateX(-50%);
+  padding: clamp(12px, 1.4vw, 16px) clamp(18px, 2vw, 26px);
+  border: 1px solid #9fc8e3;
+  border-radius: 14px;
+  background: #fafdff;
+  color: #145276;
+  box-shadow: 0 6px 20px #092a4826;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  animation:
+    panHintEnter 180ms ease-out both,
+    panHintPulse 3.6s ease-in-out 180ms infinite;
+}
+.panHint svg {
+  width: clamp(38px, 4vw, 48px);
+  height: 24px;
+  flex-shrink: 0;
+  animation: panHintSwipe 3.6s ease-in-out infinite;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.carrierTutorial {
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  padding: 10px 16px;
+  gap: 10px;
+  line-height: 1.4;
+  white-space: normal;
+  animation: panHintEnter 180ms ease-out both;
+}
+.carrierTutorial > span {
+  white-space: nowrap;
+}
+.carrierTutorial[data-navigation="zoom"] {
+  top: 102px;
+  bottom: auto;
+  padding: 8px 14px;
+}
+.carrierTutorial[data-navigation="zoom"] svg { width: 88px; height: 55px; }
+@media (min-width: 900px) {
+  .carrierTutorial[data-navigation="zoom"] { left: 0; transform: none; }
+}
+.carrierTutorial svg {
+  width: 96px;
+  height: 60px;
+  animation: none;
+}
+.tutorialTruck {
+  fill: #e9f3fa;
+}
+.tutorialHand {
+  fill: #fafdff;
+  stroke-width: 2;
+  animation: tutorialGesture 6s ease-in-out infinite;
+}
+.tutorialTap {
+  fill: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tutorialTap 6s ease-out infinite;
+}
+.tutorialSwipe {
+  opacity: 0.65;
+}
+.tutorialPinch {
+  fill: #fafdff;
+  stroke-width: 2;
+}
+.tutorialPinch circle { fill: none; opacity: 0.35; }
+.pinchArrows { fill: none; opacity: 0.5; }
+.pinchFingerFirst { animation: pinchFingerFirst 6s ease-in-out infinite; }
+.pinchFingerSecond { animation: pinchFingerSecond 6s ease-in-out infinite; }
+@keyframes pinchFingerFirst {
+  0%, 8%, 36% { transform: translate(24px, 25px); opacity: 1; }
+  24%, 48% { transform: translate(14px, 13px); opacity: 1; }
+  56%, 92% { transform: translate(14px, 13px); opacity: 0; }
+  100% { transform: translate(24px, 25px); opacity: 1; }
+}
+@keyframes pinchFingerSecond {
+  0%, 8%, 36% { transform: translate(36px, 31px); opacity: 1; }
+  24%, 48% { transform: translate(46px, 43px); opacity: 1; }
+  56%, 92% { transform: translate(46px, 43px); opacity: 0; }
+  100% { transform: translate(36px, 31px); opacity: 1; }
+}
+.carrierTutorial[data-can-pan="false"] .tutorialHand {
+  animation-name: tutorialPress;
+}
+.carrierTutorial[data-navigation="zoom"] .tutorialHand {
+  animation-name: tutorialZoomPress;
+}
+@keyframes tutorialZoomPress {
+  0%, 48% { transform: translate(83px, 24px); opacity: 0; }
+  58%, 62% { transform: translate(83px, 24px); opacity: 1; }
+  68% { transform: translate(83px, 26px) scale(0.93); opacity: 1; }
+  76%, 84% { transform: translate(83px, 24px); opacity: 1; }
+  92%, 100% { transform: translate(83px, 24px); opacity: 0; }
+}
+@keyframes tutorialGesture {
+  0%, 8% { transform: translate(40px, 29px); opacity: 0; }
+  12% { transform: translate(40px, 29px); opacity: 1; }
+  32%, 40% { transform: translate(13px, 29px); opacity: 1; }
+  56%, 62% { transform: translate(83px, 24px); opacity: 1; }
+  68% { transform: translate(83px, 26px) scale(0.93); opacity: 1; }
+  76%, 84% { transform: translate(83px, 24px); opacity: 1; }
+  92%, 100% { transform: translate(83px, 24px); opacity: 0; }
+}
+@keyframes tutorialPress {
+  0%, 12% { transform: translate(83px, 24px); opacity: 0; }
+  24%, 62% { transform: translate(83px, 24px); opacity: 1; }
+  68% { transform: translate(83px, 26px) scale(0.93); opacity: 1; }
+  76%, 84% { transform: translate(83px, 24px); opacity: 1; }
+  92%, 100% { transform: translate(83px, 24px); opacity: 0; }
+}
+@keyframes tutorialTap {
+  0%, 62% { opacity: 0; transform: scale(0.4); }
+  68% { opacity: 0.8; transform: scale(0.75); }
+  82%, 100% { opacity: 0; transform: scale(1.6); }
+}
+@keyframes panHintEnter {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes panHintPulse {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.045);
+  }
+}
+@keyframes panHintSwipe {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+@media (max-width: 600px) {
+  .panHint {
+    bottom: clamp(130px, 24dvh, 210px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .panHint,
+  .panHint svg {
+    animation: none;
+  }
+  .tutorialHand {
+    animation: none;
+    transform: translate(83px, 24px);
+  }
+  .tutorialTap {
+    animation: none;
+    opacity: 0;
+  }
+  .pinchFingerFirst { animation: none; transform: translate(14px, 13px); }
+  .pinchFingerSecond { animation: none; transform: translate(46px, 43px); }
+}
+
+.frame[data-layout="result"] .result {
+  right: auto;
+  bottom: 20px;
+  left: 20px;
+  transform: none;
+  width: min(560px, calc(100% - 40px));
+  max-height: calc(100% - 136px);
+  gap: 7px;
+  padding: clamp(16px, 2vw, 22px);
+  border: 1px solid #dce7ed;
+  background: #fff;
+  box-shadow: 0 16px 45px #173a5b2b;
+}
+.resultStory,
+.resultControls {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+}
+.resultControls {
+  justify-content: flex-start;
+  align-self: center;
+}
+.frame[data-layout="result"] .resultTrail {
+  color: #20618c;
+  font-size: 12px;
+  font-weight: 800;
+}
+.frame[data-layout="result"] .resultTrail span:last-child {
+  color: #20618c;
+}
+.frame[data-layout="result"] .result h2 {
+  color: #082946;
+  font-size: clamp(22px, 2vw, 26px);
+  line-height: 1.12;
+}
+.resultDisclosure {
+  min-height: 0;
+  border: 1px solid #d8e6ef;
+  border-radius: 10px;
+  background: #f7fafc;
+}
+.resultDisclosure summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 38px;
+  padding: 7px 12px;
+  color: #145276;
+  font-size: 13px;
+  font-weight: 750;
+  list-style: none;
+  cursor: pointer;
+}
+.resultPreview {
+  min-width: 0;
+}
+.resultPreviewLabel {
+  display: block;
+  margin-bottom: 2px;
+  color: #1673a8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.resultPreviewText {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #173851;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.resultReadMore {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 3px;
+  margin-left: 8px;
+  white-space: nowrap;
+  font-size: 11px;
+}
+.resultDisclosure[open] .resultPreviewText {
+  display: none;
+}
+.resultDisclosure summary::-webkit-details-marker {
+  display: none;
+}
+.resultDisclosure summary:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+.resultDisclosure summary svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 160ms ease-out;
+}
+.resultDisclosure[open] summary svg {
+  transform: rotate(180deg);
+}
+.resultDisclosure[open] {
+  max-height: min(34dvh, 270px);
+}
+.resultDisclosure .resultCopy {
+  min-height: 0;
+  padding: 0 12px 12px;
+  overflow-y: hidden;
+  color: #173851;
+  font-size: 15px;
+  line-height: 1.45;
+  scrollbar-width: none;
+}
+.resultDisclosure[open] .resultCopy {
+  max-height: calc(min(34dvh, 270px) - 40px);
+}
+.resultDisclosure .resultCopy::-webkit-scrollbar {
+  display: none;
+}
+.frame[data-layout="result"] .actions {
+  margin-top: 2px;
+}
+.frame[data-layout="result"] .actions button {
+  font-size: 14px;
+}
+
+@media (min-width: 751px) {
+  .frame[data-layout="result"] .result {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    width: min(760px, calc(100% - 40px));
+    gap: 10px;
+    padding: 14px 16px;
+  }
+  .frame[data-layout="result"] .resultStory {
+    display: contents;
+  }
+  .frame[data-layout="result"] .resultStory > h2 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .frame[data-layout="result"] .resultStory > section {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .frame[data-layout="result"] .resultControls {
+    grid-column: 1;
+    grid-row: 3;
+    flex-direction: row;
+    align-items: center;
+    align-self: start;
+  }
+  .frame[data-layout="result"] [data-score-delta] {
+    margin: 0;
+    flex: 1;
+    padding: 6px;
+  }
+  .frame[data-layout="result"] .resultPreviewText {
+    font-size: 17px;
+  }
+  .frame[data-layout="result"] .actions {
+    margin: 0;
+    flex: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .frame[data-layout="result"] .result {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    width: auto;
+    max-height: calc(100% - 126px);
+    gap: 5px;
+    padding: 10px;
+  }
+  .frame[data-layout="result"] .result h2 {
+    font-size: clamp(17px, 5.5vw, 21px);
+    line-height: 1.13;
+  }
+  .frame[data-layout="result"] .resultStory,
+  .frame[data-layout="result"] .resultControls {
+    display: contents;
+  }
+  .frame[data-layout="result"] .resultPreviewText {
+    font-size: 14px;
+    -webkit-line-clamp: 2;
+  }
+  .frame[data-layout="result"] [data-score-delta] {
+    margin: 0;
+    padding: 6px 4px;
+  }
+  .frame[data-layout="result"] [data-score-delta] > div {
+    gap: 1px;
+  }
+  .frame[data-layout="result"] [data-score-delta] strong {
+    font-size: 20px;
+  }
+  .frame[data-layout="result"] [data-score-delta] em {
+    font-size: 10px;
+  }
+  .frame[data-layout="result"] [data-score-delta] svg {
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
+  }
+  .frame[data-layout="result"] .resultDisclosure summary {
+    min-height: 32px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .frame[data-layout="result"] .resultReadMore span {
+    display: none;
+  }
+  .frame[data-layout="result"] .actions {
+    flex-wrap: wrap;
+  }
+  .frame[data-layout="result"] .actions > button {
+    flex: 1 1 120px;
+  }
+  .frame[data-layout="result"] .actions button {
+    min-height: 44px;
+    padding: 6px 9px;
+    font-size: 13px;
+  }
+  .resultDisclosure[open] {
+    max-height: min(30dvh, 220px);
+  }
+  .resultDisclosure[open] .resultCopy {
+    max-height: calc(min(30dvh, 220px) - 40px);
+  }
+}
+@media (max-width: 600px) {
+  .frame[data-score-result] > .result {
+    gap: 7px;
+    padding: 12px;
+  }
+  .frame[data-score-result] .actions button {
+    min-height: 44px;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  .frame[data-score-result] [aria-label="Изменение показателей"] {
+    padding-block: 6px;
+  }
+  .frame[data-score-result] [aria-label="Изменение показателей"] strong {
+    font-size: 20px;
+  }
+  .frame[data-score-result] [aria-label="Изменение показателей"] em {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resultDisclosure summary svg {
+    transition: none;
+  }
+}
+
+/* Text advances with buttons; each page is measured against this reading area. */
+.briefingCard .briefingCopy {
+  position: relative;
+  flex: none;
+  height: auto;
+  max-height: clamp(100px, 27dvh, 220px);
+  overflow: hidden;
+}
+.briefingCard .briefingCopy p {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.app[data-scene="crane"] .briefingCard .briefingCopy {
+  max-height: clamp(150px, 35dvh, 240px);
+}
+
+/* Portrait illustrated outcomes keep the artwork above the reading panel. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="carrier"] .frame.frame[data-carrier="near"] .outcomeBackdrop { object-position: left center; }
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame[data-layout="result"] {
+    display: grid;
+    grid-template-rows: 68px auto minmax(0, 1fr);
+    gap: 8px;
+    padding-bottom: 12px;
+  }
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame[data-layout="result"] .carrierMap {
+    position: relative;
+    inset: auto;
+    grid-row: 2;
+    min-height: 0;
+    aspect-ratio: 1672 / 941;
+  }
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame[data-layout="result"] .result {
+    position: relative;
+    inset: auto;
+    transform: none;
+    grid-row: 3;
+    width: calc(100% - 24px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    max-height: none;
+    box-shadow: none;
+  }
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame[data-layout="result"] [data-result-reader] {
+    flex: 1;
+    min-height: 0;
+  }
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame[data-layout="result"] [data-result-narrative] {
+    flex: 1;
+    min-height: 0;
+  }
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame[data-layout="result"] [data-result-reading] {
+    max-height: none;
+    height: 100%;
+  }
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame[data-layout="result"] [data-result-link][data-visible="false"] {
+    display: block;
+    visibility: hidden;
+  }
+
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame[data-layout="result"] {
+    grid-template-rows: 56px auto minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="carrier"] .outcomePicture {
+    position: relative;
+    inset: auto;
+    grid-row: 2;
+    aspect-ratio: 1672 / 941;
+    min-height: 0;
+    overflow: hidden;
+    cursor: default;
+  }
+  .app[data-scene="carrier"] .outcomePicture > picture {
+    width: 100%;
+  }
+  .app[data-scene="carrier"] .outcomeBackdrop {
+    width: 100%;
+    min-width: 0;
+    object-fit: contain;
+  }
+  .app[data-scene="carrier"] .resultStory {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+/* Mobile cutscenes form a continuous header / image / story surface. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene] .frame[data-layout="result"] {
+    grid-template-rows: calc(48px + env(safe-area-inset-top, 0px)) auto minmax(0, 1fr);
+    gap: 0;
+    padding: 0;
+    background: #fff;
+  }
+  .app[data-scene] .frame[data-layout="result"] .result {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 12px 16px max(12px, env(safe-area-inset-bottom, 0px));
+    background: #fff;
+  }
+  .app[data-scene="compact"] .frame[data-layout="result"] .carrierMap { aspect-ratio: 1040 / 550; }
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene] .frame[data-layout="result"] .result {
+    align-self: start;
+  }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader],
+  .app[data-scene] .frame[data-layout="result"] [data-result-narrative] {
+    flex: none;
+  }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] {
+    gap: 6px;
+  }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reading] {
+    height: auto;
+    --result-fit-viewport: 1;
+    max-height: var(--result-reading-height, 80px);
+  }
+}
+
+/* Result navigation and metrics share one grid and one control size. */
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer {
+  --result-control-height: 56px;
+  flex: none;
+  grid-template-columns: minmax(0, 144px) minmax(0, 1fr) minmax(0, 144px);
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e1e9ee;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button {
+  box-sizing: border-box;
+  grid-column: auto;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  min-height: var(--result-control-height);
+  height: var(--result-control-height);
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button > span {
+  position: static;
+  min-width: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: normal;
+  text-align: center;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button > svg {
+  width: 17px;
+  height: 17px;
+  flex: none;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:first-child {
+  background: #fff;
+  border-color: #cbdce7;
+  color: #365b73;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:first-child > svg { order: -1; }
+@media (hover: hover) and (pointer: fine) {
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:first-child:hover { background: #f0f5f8; border-color: #86a9bf; }
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:last-child { background: #075d9b; color: #fff; }
+@media (hover: hover) and (pointer: fine) {
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:last-child:hover { background: #004b80; }
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-delta] {
+  box-sizing: border-box;
+  grid-column: auto;
+  grid-row: 1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  height: var(--result-control-height);
+  margin: 0;
+  padding: 6px 2px;
+  gap: 0;
+  border: 0;
+  border-radius: 8px;
+  background: #f3f6f8;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-key] {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 20px 15px;
+  justify-items: center;
+  align-content: center;
+  gap: 3px;
+  text-align: center;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-key] > span { display: flex; align-items: center; justify-content: center; gap: 5px; }
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-key] + [data-score-key] { border-left: 1px solid #dae4eb; }
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-delta] strong { font-size: 20px; line-height: 20px; font-variant-numeric: tabular-nums; }
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-delta] em { font-size: 12px; line-height: 15px; }
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-delta] svg { width: 15px; height: 15px; flex-basis: 15px; }
+@media (max-width: 600px) {
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer { --result-control-height: 52px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-delta] { grid-row: 1; grid-column: 1 / -1; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button { grid-row: 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button { transition: none; }
+}
+
+/* The explicit answer row owns discovery; the picture identifies the inspected answer. */
+.frame[data-inspecting="false"]:has([data-scene-choice]) :is(
+  [data-world-scene]:not([data-world-scene="compact"]) button[data-choice-id],
+  [data-callout],
+  [data-warehouse-annotations]
+) {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Warehouse outcomes need the complete composition, with no UI over the cargo. */
+@media (min-width: 901px), (orientation: landscape) {
+  .app[data-scene="inventory"] .frame[data-layout="result"] {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 16px;
+    padding: 110px 24px 24px;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] .carrierMap {
+    position: relative;
+    inset: auto;
+    min-height: 0;
+    grid-row: 1;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] .result {
+    position: relative;
+    inset: auto;
+    transform: none;
+    grid-row: 2;
+    justify-self: center;
+    width: min(900px, 100%);
+    max-height: min(40dvh, 360px);
+    padding: 16px 20px;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="inventory"] > header[data-header-result] {
+    inset: 0 0 auto;
+    height: 56px;
+    border-radius: 0;
+    background: #fff;
+    padding-inline: 20px;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] {
+    gap: 0;
+    padding: 56px 0 0;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] .result {
+    width: 100%;
+    border-radius: 0;
+    padding: 16px 32px;
+    box-shadow: none;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] .resultStory {
+    display: block;
+    width: min(1100px, 100%);
+    margin-inline: auto;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] [data-result-reading] {
+    max-width: none;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene="inventory"] .frame[data-layout="result"] {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-rows: minmax(0, 1fr);
+    padding: 78px 12px 12px;
+    gap: 12px;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] .result {
+    grid-row: 1;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+    padding: 10px 12px;
+    gap: 6px;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] :is(.resultStory, [data-result-reader], [data-result-narrative]) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] [data-result-reading] {
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] [data-result-reader] footer {
+    --result-control-height: 52px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex: none;
+    gap: 8px;
+    padding-top: 6px;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] [data-result-reader] footer [data-score-delta] {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .app[data-scene="inventory"] .frame[data-layout="result"] [data-result-reader] footer button { grid-row: 2; }
+}
+
+/* Shared scene shell: chrome, playfield and the active panel occupy distinct rows. */
+.app[data-scene] { --scene-header-height: 98px; }
+.app[data-scene]:has([data-scene-briefing]) > header {
+  inset: 0 0 auto;
+  height: var(--scene-header-height);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  gap: 0;
+  padding: 0;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .briefing { display: contents; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .headerCard {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  height: var(--scene-header-height);
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #fff;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .carrierMap {
+  grid-row: 2;
+  grid-column: 1;
+  position: relative;
+  inset: auto;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+  position: relative;
+  inset: auto;
+  transform: none;
+  grid-row: 3;
+  grid-column: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #fff;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .question { padding: 12px 16px; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard { max-height: 45dvh; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .inspection { max-height: 48dvh; padding: 12px 16px; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"]:has(.briefingCard) .question,
+.app[data-scene] .frame[data-interaction="inspect-confirm"][data-inspecting="true"] .question { display: none; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .panHint { display: none; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .questionPrompt { max-width: none; }
+@media (max-width: 600px) {
+  .app[data-scene] { --scene-header-height: 94px; }
+}
+
+/* Wide cutscenes share the warehouse's image / narrative split. */
+@media (min-width: 901px), (orientation: landscape) {
+  .app[data-scene] > header[data-header-result] {
+    inset: 0 0 auto;
+    height: 56px;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+  }
+  .app[data-scene] .frame[data-layout="result"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0;
+    padding: 56px 0 0;
+  }
+  .app[data-scene] .frame[data-layout="result"] :is(.carrierMap, .outcomePicture) {
+    position: relative;
+    inset: auto;
+    grid-row: 1;
+    grid-column: 1;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .app[data-scene] .frame[data-layout="result"] .outcomePicture > picture { width: 100%; height: 100%; }
+  .app[data-scene] .frame[data-layout="result"] .outcomeBackdrop { width: 100%; height: 100%; min-width: 0; object-fit: contain; object-position: center; }
+  .app[data-scene] .frame[data-layout="result"] .result {
+    position: relative;
+    inset: auto;
+    transform: none;
+    grid-row: 2;
+    grid-column: 1;
+    width: 100%;
+    max-height: 42dvh;
+    padding: 16px 32px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+  }
+  .app[data-scene] .frame[data-layout="result"] .resultStory {
+    display: block;
+    width: min(1100px, 100%);
+    margin-inline: auto;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene] { --scene-header-height: 78px; }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 42%);
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr);
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .headerCard { grid-column: 1 / -1; padding-block: 0; }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+    grid-row: 2;
+    grid-column: 2;
+    max-height: 100%;
+    align-self: stretch;
+    align-content: center;
+  }
+  .app[data-scene] .frame[data-layout="result"] {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-rows: minmax(0, 1fr);
+    padding: 56px 0 0;
+    gap: 0;
+  }
+  .app[data-scene] .frame[data-layout="result"] .result {
+    grid-row: 1;
+    grid-column: 2;
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+    padding: 10px 12px;
+  }
+  .app[data-scene] .frame[data-layout="result"] :is(.resultInner, .resultStory, [data-result-reader], [data-result-narrative]) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reading] { height: 100%; max-height: none; min-height: 0; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer {
+    --result-control-height: 52px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding-top: 6px;
+  }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer [data-score-delta] { grid-column: 1 / -1; grid-row: 1; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button { grid-row: 2; }
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .inspection > * {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .inspection > [data-carrier-inspection] {
+  width: min(100%, 600px);
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCopy > p {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+/* Zone numbers remain visual landmarks while the answer buttons own input. */
+.app[data-scene="compact"] [data-loading-zone] { visibility: visible; }
+
+/* Portrait loading keeps the truck at its native wide composition. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"] {
+    grid-template-rows: var(--scene-header-height) minmax(0, min(52.885vw, calc(100dvh - var(--scene-header-height) - 270px))) auto;
+    align-content: start;
+    background: #fff;
+  }
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
+    grid-template-rows: var(--scene-header-height) minmax(0, min(52.885vw, calc(100dvh - var(--scene-header-height) - 200px))) minmax(0, 1fr);
+  }
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"] .briefingCard {
+    max-height: none;
+    align-self: start;
+  }
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"] .briefingCopy {
+    max-height: max(90px, calc(100dvh - var(--scene-header-height) - min(52.885vw, calc(100dvh - var(--scene-header-height) - 200px)) - 78px));
+  }
+}
+
+/* Brand and scene identity form two balanced columns, not detached overlays. */
+.app[data-scene] { --scene-header-height: 80px; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .headerCard {
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: 1fr;
+  align-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.app[data-scene] .headerCard .briefingHeading {
+  height: auto;
+  min-height: 44px;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.sceneIdentity { display: grid; gap: 3px; min-width: 0; }
+.app[data-scene] .headerCard .sceneIdentity h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.sceneProgress {
+  flex: none;
+  color: #526f85;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 540px) {
+  .app[data-scene] { --scene-header-height: 98px; }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .headerCard {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 36px 44px;
+    gap: 0;
+  }
+  .app[data-scene] .headerCard .briefingHeading { width: 100%; }
+  .sceneIdentity { flex: 1; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+  .app[data-scene] .headerCard .sceneIdentity h2 { grid-column: 1; grid-row: 1; font-size: 18px; }
+  .sceneProgress { grid-column: 2; grid-row: 1; font-size: 14px; }
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .inspection[data-continuous-description] {
+  max-height: none;
+  height: auto;
+}
+.app[data-scene] .inspection[data-continuous-description] .inspectionCopy {
+  flex: none;
+  max-height: none;
+  height: auto;
+  overflow: visible;
+}
+.inlineCondition { margin-bottom: 12px; }
+.inlineCondition p {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.inlineCondition p:last-child { margin-bottom: 0; }
+@media (min-width: 600px) and (min-height: 700px) {
+  .app[data-scene="compact"] .frame:has([data-combined-condition]) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+  .app[data-scene="compact"] .frame:has([data-combined-condition]) .question {
+    padding: 14px 24px 18px;
+  }
+  .app[data-scene="compact"] .frame:has([data-combined-condition]) .question > * {
+    width: min(100%, 1000px);
+    margin-inline: auto;
+  }
+  .app[data-scene="compact"] .frame:has([data-combined-condition]) .questionAction { margin-top: 12px; }
+}
+
+/* Short loading outcomes give spare portrait height to the scene, not a blank footer. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame[data-layout="result"] {
+    grid-template-rows: calc(48px + env(safe-area-inset-top, 0px)) minmax(0, 1fr) auto;
+  }
+  .app[data-scene="compact"] .frame[data-layout="result"] .carrierMap {
+    aspect-ratio: auto;
+    height: 100%;
+    width: 100%;
+  }
+  .app[data-scene="compact"] .frame[data-layout="result"] [data-result-reading] {
+    --result-fit-viewport: 0;
+    max-height: clamp(80px, calc(100dvh - 420px), 240px);
+  }
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"],
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+}
+@media (min-width: 360px) and (max-width: 599px) and (min-height: 740px) {
+  .app[data-scene="compact"] .inlineCondition p { font-size: 22px; line-height: 1.4; }
+}
+
+
+/* Fixed result shell: image, complete text fragments and controls stay visible. */
+@media (min-height: 501px) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) clamp(200px, 35dvh, 310px);
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard {
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+    align-self: stretch;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="lastmile"] .frame[data-layout="result"]:has([data-delivery-leg]) {
+    grid-template-rows: minmax(0, 66vw) minmax(0, 1fr);
+  }
+}
+.app[data-scene] .frame[data-layout="result"] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(240px, 30%);
+  padding: 56px 0 0;
+  gap: 0;
+  overflow: hidden;
+}
+.app[data-scene] .frame[data-layout="result"] :is(.carrierMap, .outcomePicture) {
+  position: relative; inset: auto; grid-column: 1; grid-row: 1;
+  height: 100%; width: 100%; min-height: 0; aspect-ratio: auto;
+}
+.app[data-scene] .frame[data-layout="result"] .result {
+  position: relative; inset: auto; transform: none; grid-column: 1; grid-row: 2;
+  display: flex; flex-direction: column; align-self: stretch;
+  height: 100%; min-height: 0; max-height: none; width: 100%; margin: 0;
+  padding: 12px 20px; overflow: hidden; background: #fff;
+}
+.app[data-scene] .frame[data-layout="result"] :is(.resultInner, .resultStory, [data-result-reader], [data-result-narrative]) {
+  display: flex; flex-direction: column; flex: 1; min-height: 0; height: auto;
+  width: 100%; max-width: 1100px; margin-inline: auto;
+}
+.app[data-scene] .frame[data-layout="result"] .result h2 { flex: none; margin: 0 0 8px; }
+.app[data-scene] .frame[data-layout="result"] [data-result-reading] {
+  --result-fit-viewport: 0;
+  width: 100%; max-width: none; flex: 1; min-height: 0; height: 100%; max-height: none; overflow: hidden;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer { flex: none; }
+.app[data-scene] .frame[data-layout="result"] [data-result-feedback] { grid-column: 2; grid-row: 1; min-width: 0; }
+.app[data-scene] .frame[data-layout="result"] [data-result-link] { display: none; }
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer {
+    grid-template-columns: minmax(180px, 1fr) minmax(300px, 2fr) minmax(180px, 1fr);
+    gap: 20px;
+    --result-control-height: 56px;
+  }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button { font-size: 18px; }
+}
+.frame[data-inspecting="false"]:has([data-scene-briefing][data-reading="false"]) [data-navigation="fixed"] button[data-choice-id] { visibility: visible; pointer-events: auto; }
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene] .frame[data-layout="result"] { padding-top: 48px; grid-template-rows: minmax(0, 34%) minmax(0, 1fr); }
+  .app[data-scene] .frame[data-layout="result"] .result { padding: 10px 12px; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer { grid-template-columns: 1fr 1fr; gap: 6px; padding-top: 8px; --result-control-height: 44px; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-feedback] { grid-column: 1 / -1; grid-row: 1; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button { grid-row: 2; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene] .frame[data-layout="result"] { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); grid-template-rows: minmax(0, 1fr); }
+  .app[data-scene] .frame[data-layout="result"] .result { grid-column: 2; grid-row: 1; padding: 8px 12px; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer { grid-template-columns: 1fr 1fr; gap: 4px; --result-control-height: 44px; padding-top: 4px; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-feedback] { grid-column: 1 / -1; grid-row: 1; }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button { grid-row: 2; }
+}
+/* The reserved panel depends only on the viewport, never on pagination density.
+   Short and long outcomes therefore share one image boundary and control baseline. */
+@media (min-height: 501px) {
+  .app[data-scene] { --scene-panel-height: clamp(280px, 40dvh, 360px); }
+  .app[data-scene] .frame[data-layout="result"] {
+    grid-template-rows: minmax(0, 1fr) var(--scene-panel-height);
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"][data-inspecting] {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) var(--scene-panel-height);
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    align-self: stretch;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .question {
+    align-content: center;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) > * {
+    width: min(100%, 1100px);
+    margin-inline: auto;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .inspection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .inspection .actions {
+    margin-top: auto;
+  }
+
+}
+
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene] { --scene-panel-height: clamp(240px, 30dvh, 300px); }
+}
+
+/* A single chrome footprint keeps the playfield fixed across reading and choice. */
+.app[data-scene] { --scene-header-height: 56px; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .headerCard {
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: minmax(0, 1fr);
+  gap: 12px;
+  padding: 6px 12px;
+}
+.app[data-scene] .headerCard .briefingHeading { width: auto; min-height: 0; }
+.app[data-scene] .headerCard .sceneIdentity { display: block; }
+.app[data-scene] .headerCard .sceneIdentity h2 {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .inspection[data-choice-media] .inspectionCopy {
+  flex: 1; min-height: 0; max-height: none; overflow: hidden;
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene] { --scene-header-height: 48px; }
+  .app[data-scene] .frame[data-layout="result"] { padding-top: 48px; }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .headerCard { padding: 6px 10px; }
+  .app[data-scene] .headerCard .sceneProgress { font-size: 12px; }
+  .app[data-scene] .headerCard > :first-child { max-width: calc(100vw - 104px); gap: 8px; padding: 0; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene] .frame[data-layout="result"] {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 42%);
+  }
+}
+
+/* One reading surface and one navigation baseline across every scene state. */
+.app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .inspection > * {
+  width: 100%;
+  max-width: none;
+}
+.app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .inspection[data-choice-inspection] .actions {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .inspection[data-choice-inspection] .actions > button:last-child {
+  grid-column: 2;
+}
+.app[data-scene] {
+  --scene-panel-gutter: 16px;
+  --scene-panel-inset: 12px;
+  --scene-action-height: 48px;
+}
+@media (min-height: 501px) {
+  .app[data-scene] { --scene-panel-height: clamp(290px, 35dvh, 300px); }
+  .app[data-scene] .frame[data-layout="result"]:has([data-delivery-leg]) {
+    grid-template-rows: minmax(0, 1fr) var(--scene-panel-height);
+  }
+}
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene] { --scene-panel-height: clamp(220px, 28dvh, 260px); }
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection),
+.app[data-scene] .frame[data-layout="result"] .result {
+  padding: var(--scene-panel-inset) var(--scene-panel-gutter);
+  gap: 10px;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.question, .inspection) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: start;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+  padding: 0;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  max-height: none;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  flex: none;
+  gap: 10px;
+  min-height: var(--scene-action-height);
+  margin-top: auto;
+  padding: 0;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) button,
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button {
+  height: var(--scene-action-height);
+  min-height: var(--scene-action-height);
+  min-width: 0;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .dialogueNext { grid-column: 2; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .questionTask { grid-column: 2; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 16px; line-height: 1.3; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"]:has(.briefingCard) .question,
+.app[data-scene] .frame[data-interaction="inspect-confirm"][data-inspecting="true"] .question { display: none; }
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer {
+  --result-control-height: var(--scene-action-height);
+  margin-top: auto;
+  gap: 10px;
+  padding-top: 8px;
+}
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) {
+    grid-template-columns: minmax(180px, 1fr) minmax(300px, 2fr) minmax(180px, 1fr);
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask, .inspection .actions > button:last-child) { grid-column: 3; }
+}
+@media (max-width: 600px), (max-height: 500px) {
+  .app[data-scene] { --scene-panel-gutter: 12px; --scene-panel-inset: 10px; }
+}
+@media (max-width: 360px) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .question { gap: 6px; }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { padding: 4px 6px; font-size: 14px; line-height: 16px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .questionAction > :has([data-scene-choice]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] [data-scene-choice]:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (min-width: 601px) and (max-width: 900px) and (min-height: 501px) {
+  .app[data-scene] { --scene-panel-height: 240px; }
+  .app:is([data-scene="compact"], [data-scene="carrier"]) .frame[data-interaction="inspect-confirm"] .questionAction > :has([data-scene-choice]) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .app:is([data-scene="compact"], [data-scene="carrier"]) .frame[data-interaction="inspect-confirm"] [data-scene-choice]:last-child:nth-child(odd) { grid-column: auto; }
+}
+
+/* Choice rows share the available panel space, above a stable navigation row. */
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .questionAction {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] {
+  flex: 1;
+  width: 100%;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .question .questionNavigation {
+  margin-top: 4px;
+}
+@media (min-width: 601px) and (max-width: 900px) and (min-height: 501px) {
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"] [data-scene-choice="auto"]:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant="carriers"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] [data-choice-variant="carriers"] [data-scene-choice="express"]:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}
+.app[data-scene="carrier"] .frame[data-camera-inspection="true"] {
+  --scene-panel-height: 190px;
+}
+.app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"][data-camera-inspection="true"] .inspection[data-choice-media] .inspectionCopy {
+  flex: none;
+  height: auto;
+}
+@media (max-width: 600px) and (min-height: 501px) {
+  .app[data-scene="carrier"] .frame[data-camera-inspection="true"] { --scene-panel-height: 190px; }
+}
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"][data-camera-inspection="true"] {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr);
+  }
+  .app[data-scene="carrier"] .frame[data-camera-inspection="true"] .inspection {
+    position: absolute;
+    inset: auto 16px 16px auto;
+    width: 440px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 28px #08294626;
+    z-index: 8;
+  }
+}
+
+/* Desktop choices use control-sized rows; surplus height belongs to the scene. */
+@media (min-width: 901px) and (min-height: 501px) and (min-aspect-ratio: 6/5) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .question {
+    height: auto;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .questionAction {
+    flex: none;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] {
+    grid-auto-rows: 64px;
+  }
+}
+
+/* Warehouse controls keep their natural height; spare space belongs to the aisle. */
+.app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"] .question {
+  height: auto;
+}
+.app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"] .questionPrompt {
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.25;
+}
+.app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"] .questionAction {
+  flex: none;
+}
+.app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(72px, auto);
+}
+.app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] [data-scene-choice] {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child {
+  overflow-wrap: anywhere;
+}
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(64px, auto);
+  }
+  .app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] [data-scene-choice] {
+    min-height: 64px;
+    font-size: clamp(18px, 1vw, 24px);
+  }
+}
+
+/* Loading choices give the long Compact label room alongside the four places. */
+@media (min-width: 901px) and (min-height: 501px) and (min-aspect-ratio: 6/5) {
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"] .question > * {
+    width: min(100%, clamp(1100px, 80vw, 2800px));
+    max-width: clamp(1100px, 80vw, 2800px);
+  }
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"] .questionPrompt {
+    font-size: clamp(22px, 1.5vw, 48px);
+    line-height: 1.25;
+  }
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.65fr);
+    grid-auto-rows: minmax(64px, auto);
+    max-width: none;
+  }
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] [data-scene-choice] {
+    min-height: 64px;
+    height: auto;
+    padding: 8px 16px;
+    font-size: clamp(18px, 1.25vw, 36px);
+    line-height: 1.2;
+  }
+}
+
+/* Wide carrier selection reads as one console, scaled to the viewport. */
+@media (min-width: 1200px) and (min-height: 501px) and (min-aspect-ratio: 6/5) {
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .question {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 16px clamp(24px, 3vw, 96px);
+    gap: 12px 24px;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .question > * {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .questionTop {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .questionPrompt {
+    font-size: clamp(22px, 1.5vw, 30px);
+    line-height: 1.25;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .question .questionNavigation {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    width: auto;
+    margin: 0;
+    gap: 12px;
+    min-height: 44px;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .questionNavigation button {
+    height: 44px;
+    min-height: 44px;
+    font-size: clamp(16px, 1.05vw, 21px);
+    line-height: 1.2;
+    padding-inline: 16px;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .questionAction {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.35fr);
+    grid-auto-rows: 64px;
+    max-width: none;
+    gap: 12px;
+  }
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"] [data-scene-choice] {
+    font-size: clamp(18px, 1.3vw, 26px);
+    line-height: 1.15;
+    padding: 8px 14px;
+  }
+}
+
+/* A landscape consequence must not become a tall crop that removes its action.
+   The picture touches the panel; reading gets the remaining space, without bands. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene] .frame[data-layout="result"],
+  .app[data-scene] .frame[data-layout="result"]:has([data-delivery-leg]) {
+    grid-template-rows: minmax(0, min(66.6667vw, calc(100dvh - 338px))) minmax(290px, 1fr);
+  }
+  .app[data-scene="carrier"] .frame[data-layout="result"] .outcomeBackdrop {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="carrier"] .frame[data-layout="result"] .outcomeBackdrop {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media (min-width: 901px) and (min-height: 701px) {
+  .app[data-scene="inventory"] .frame[data-layout="result"] {
+    grid-template-rows: minmax(0, 1fr) 220px;
+  }
+}
+/* The shortest portrait viewport uses the wide crane overview. Its row must
+   keep that aspect so the first and last cranes remain inside the picture. */
+@media (max-width: 350px) and (orientation: portrait) {
+  .app[data-scene="crane"] .frame[data-interaction="inspect-confirm"][data-inspecting] {
+    grid-template-rows: var(--scene-header-height) minmax(0, 55.837vw) minmax(0, 1fr);
+  }
+}
+
+/* The loading overview keeps its full truck composition before a choice. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0, min(84.0385vw, calc(100dvh - var(--scene-header-height) - 300px))) minmax(0, 1fr);
+  }
+}
+/* Three crew facts wrap on narrow phones; reserve their full height above the
+   unchanged 48px confirmation controls instead of clipping the footer. */
+@media (max-width: 900px) and (min-height: 501px) and (orientation: portrait) {
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"][data-camera-inspection="true"] {
+    --scene-panel-height: 212px;
+  }
+}
+
+/* Petr's action spans the workers at the top and the gift on the near deck.
+   Keep both in frame; on wide screens the reader sits alongside the image. */
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) {
+    grid-template-rows: minmax(0, 1fr) 200px;
+  }
+}
+@media (min-width: 1200px) and (min-height: 501px) and (min-aspect-ratio: 8/5) {
+  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) {
+    grid-template-columns: minmax(0, min(calc(100% - 320px), calc((100dvh - 56px) * 1.65))) minmax(320px, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) .result {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 12px 16px;
+  }
+  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-result-reader] footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-result-feedback] {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-result-reader] footer button {
+    grid-row: 2;
+    font-size: 16px;
+  }
+}
+
+/* Shared navigation: readable labels, close icons and thumb-safe bottom space. */
+.app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection),
+.app[data-scene] .frame[data-layout="result"] .result {
+  padding-bottom: var(--action-bottom-inset);
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) button,
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button {
+  font-size: var(--action-font-size);
+  line-height: 1.15;
+  gap: var(--action-icon-gap);
+  padding-inline: 10px;
+}
+.app[data-scene] :is(.dialogueNext, .primary),
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:last-child {
+  background: var(--action-primary);
+}
+@media (hover: hover) and (pointer: fine) {
+.app[data-scene] :is(.dialogueNext, .primary):hover,
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:last-child:hover {
+  background: var(--action-primary-hover);
+}
+}
+.app[data-scene] :is(.dialogueActions, .questionNavigation, .inspection .actions) button > svg,
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button > svg {
+  width: 20px; height: 20px; flex: none;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+  font-size: var(--action-font-size);
+  line-height: 1.15;
+  gap: var(--action-icon-gap);
+}
+
+/* Labels scale with the control, not the width of the whole scene. Two lines
+   must fit inside the navigation row with padding above and below. */
+.app[data-scene] { --scene-action-height: 56px; }
+.app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) button,
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button {
+  height: var(--scene-action-height);
+  min-height: var(--scene-action-height);
+  padding: 8px 12px;
+  line-height: 1.2;
+}
+@media (max-width: 900px) and (min-height: 501px) and (orientation: portrait) {
+  .app[data-scene="carrier"] .frame[data-interaction="inspect-confirm"][data-camera-inspection="true"] {
+    --scene-panel-height: 220px;
+  }
+}
+@media (max-height: 500px) {
+  .app[data-scene] { --scene-action-height: 52px; }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) button,
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button { padding-block: 6px; }
+}
+.app[data-scene] :is(.dialogueActions, .inspection .actions),
+.app[data-scene] [data-result-reader] footer { container-type: inline-size; }
+@container (max-width: 480px) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) button,
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button {
+    font-size: 16px;
+  }
+}
+@container (max-width: 360px) {
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button {
+    font-size: 15px;
+  }
+}
+
+/* Compact choice rows retain room for the full scenario label. */
+@media (max-width: 360px) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+    font-size: 14px;
+    line-height: 1.15;
+    gap: 6px;
+  }
+}
+
+/* Approved narrative sheet: one reading measure and a stable action baseline. */
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard {
+  gap: 16px;
+  padding-top: 20px;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+  width: min(100%, 840px);
+  margin-inline: auto;
+  display: grid;
+  align-content: center;
+  font-weight: 400;
+  font-size: clamp(22px, 1.4vw, 24px);
+  line-height: 1.4;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy > p {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+}
+.app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions {
+  width: min(100%, 960px);
+  margin-inline: auto;
+}
+.app[data-scene] .frame[data-layout="result"] :is(.resultInner, .resultStory) {
+  width: min(100%, 960px);
+  margin-inline: auto;
+}
+.app[data-scene] .frame[data-layout="result"] [data-result-reading] {
+  max-width: 62ch;
+  line-height: 1.4;
+}
+@media (min-height: 501px) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) var(--scene-panel-height);
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard,
+  .app[data-scene] .frame[data-layout="result"] .result {
+    z-index: 4;
+    /* Cover the complete corner arc with artwork, including its lowest edge. */
+    margin-top: -20px;
+    height: calc(100% + 20px);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 18px #173a5b0a;
+  }
+}
+@media (max-width: 600px), (max-height: 500px) {
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard {
+    gap: 12px;
+    padding-top: 16px;
+  }
+  .app[data-scene] .frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+/* The full loading illustration keeps its authored proportions on portrait screens. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"]:has(.briefingCard),
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"][data-inspecting="true"] {
+    grid-template-rows: var(--scene-header-height) minmax(0, min(84.0385vw, calc(100dvh - var(--scene-header-height) - 290px))) minmax(0, 1fr);
+  }
+}
+
+/* A stable portrait prose viewport keeps the title and copy together without moving actions. */
+@media (max-width: 900px) and (orientation: portrait) and (min-height: 501px) {
+  .app[data-scene] .frame[data-layout="result"] [data-result-narrative] {
+    justify-content: center;
+    gap: 8px;
+  }
+  .app[data-scene] .frame[data-layout="result"] [data-result-narrative] > h2 {
+    margin: 0;
+  }
+  .app[data-scene] .frame[data-layout="result"] [data-result-reading] {
+    flex: 0 1 clamp(100px, 22dvh, 180px);
+    height: clamp(100px, 22dvh, 180px);
+    max-height: clamp(100px, 22dvh, 180px);
+  }
+}
+
+/* Briefing is a reading state: reveal all loading affordances together on choice. */
+.app[data-scene="compact"] .frame:has(.briefingCard) :is([data-hotspot], [data-loading-zone]) {
+  display: none;
+}
+
+/* Choice and confirmation share a playfield so inspection never changes its coordinates. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"][data-inspecting]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0, min(84.0385vw, calc(100dvh - var(--scene-header-height) - 300px))) minmax(0, 1fr);
+  }
+}
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"][data-inspecting]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) var(--scene-panel-height);
+  }
+}
+/* Barge choices retain the scenario wording without squeezing text into fixed rows. */
+.app[data-scene="crane"] .frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+  grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+}
+.app[data-scene="crane"] .frame[data-interaction="inspect-confirm"] .question {
+  height: auto;
+  overflow-y: auto;
+}
+.app[data-scene="crane"] .frame[data-interaction="inspect-confirm"] .questionAction {
+  flex: none;
+}
+.app[data-scene="crane"] .frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] {
+  grid-auto-rows: minmax(min-content, auto);
+}
+.app[data-scene="crane"] .frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+  height: auto;
+  min-height: 64px;
+  padding: 10px;
+  line-height: 1.25;
+}
+/* Short portrait screens keep the scene legible and scroll the page normally. */
+@media (orientation: portrait) and (max-height: 700px) {
+  .app[data-scene="crane"]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+  .app[data-scene="crane"]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) .main {
+    position: relative;
+    inset: auto;
+  }
+  .app[data-scene="crane"] .frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+    grid-template-rows: var(--scene-header-height) minmax(260px, auto) auto;
+  }
+  .app[data-scene="crane"] .frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .carrierMap {
+    height: 260px;
+    min-height: 260px;
+  }
+  .app[data-scene="crane"] .frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .question {
+    overflow: visible;
+    max-height: none;
+  }
+}
+
+/* Scene layout contract: one type scale, reading measure and action baseline.
+   The illustration consumes the space left by the active task, never a
+   centred miniature board surrounded by unused viewport bands. */
+.app[data-scene] {
+  --scene-body-size: var(--type-body);
+  --scene-title-size: var(--type-title);
+  --scene-panel-height: 280px;
+  --scene-panel-gutter: 24px;
+  --scene-panel-inset: 20px;
+  --scene-action-height: 56px;
+  --scene-reading-width: 1200px;
+}
+.app[data-scene] .main { display: block; padding: 0; }
+.app[data-scene="inventory"] .frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) [data-warehouse-annotations] {
+  visibility: visible; pointer-events: none;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting] {
+  width: 100%; height: 100%; max-height: none;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .carrierMap {
+  grid-column: 1; grid-row: 2;
+  height: 100%; min-height: 0; aspect-ratio: auto; align-self: stretch;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+  grid-column: 1; grid-row: 3;
+  align-self: stretch;
+  min-height: 0; max-height: none;
+  height: auto; margin: 0;
+  border-radius: 0; border: 0;
+  padding: var(--scene-panel-inset) var(--scene-panel-gutter) max(20px, env(safe-area-inset-bottom));
+  gap: 16px;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) > * {
+  width: min(100%, var(--scene-reading-width));
+  max-width: var(--scene-reading-width);
+  margin-inline: auto;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .headerCard {
+  position: relative; inset: auto;
+  grid-column: 1; grid-row: 1;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .question {
+  overflow: visible;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .questionPrompt {
+  font-size: var(--scene-title-size); line-height: 1.3;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] :is(.briefingCard .briefingCopy, .inspectionCopy) {
+  font-size: var(--scene-body-size); line-height: 1.4;
+  font-weight: 400;
+  height: auto; max-height: none;
+  padding: 0;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .briefingCard {
+  height: var(--scene-panel-height);
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+  display: block; flex: 1; align-content: start;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .inspectionHeading h3 {
+  font-size: var(--scene-title-size);
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .inspection {
+  max-height: min(48dvh, 420px);
+  overflow: auto;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+  gap: 12px;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask, .inspection .actions > button:last-child) {
+  grid-column: 2;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) button,
+.app[data-scene] .frame.frame[data-layout="result"] [data-result-reader] footer button {
+  font-size: var(--type-action); line-height: var(--type-control-leading);
+  height: var(--scene-action-height); min-height: var(--scene-action-height);
+  padding: 8px 14px; gap: 8px;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] {
+  grid-auto-rows: auto;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+  font-size: var(--type-choice);
+  height: auto; min-height: 64px;
+  padding: 12px 16px; line-height: 1.25;
+}
+.app[data-scene] .frame.frame[data-layout="result"] {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) var(--scene-panel-height);
+}
+.app[data-scene] .frame.frame[data-layout="result"] .result {
+  grid-column: 1; grid-row: 2;
+  height: 100%; margin: 0; border-radius: 0;
+  padding: var(--scene-panel-inset) var(--scene-panel-gutter) max(20px, env(safe-area-inset-bottom));
+}
+.app[data-scene] .frame.frame[data-layout="result"] :is(.resultInner, .resultStory) {
+  width: min(100%, var(--scene-reading-width));
+}
+.app[data-scene] .frame.frame[data-layout="result"] [data-result-narrative] {
+  justify-content: flex-start; gap: 12px;
+}
+.app[data-scene] .frame.frame[data-layout="result"] .result h2 {
+  font-size: var(--scene-title-size);
+}
+.app[data-scene] .frame.frame[data-layout="result"] [data-result-reading] {
+  font-size: var(--scene-body-size); line-height: 1.4;
+  flex: 1; height: 100%; max-height: none;
+}
+@media (min-width: 1001px) and (min-height: 501px) {
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting] {
+    grid-template-columns: minmax(0, 1fr) 400px;
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr);
+  }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .headerCard { grid-column: 1 / -1; }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+    grid-column: 2; grid-row: 2; height: 100%;
+  }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] { grid-template-columns: 1fr; }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] :is(.questionNavigation, .dialogueActions, .inspection .actions) { grid-template-columns: 1fr; margin-top: auto; }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask, .inspection .actions > button:last-child) { grid-column: 1; }
+  .app[data-scene="inventory"] .frame.frame[data-layout="result"] {
+    grid-template-columns: minmax(0, 1fr) 400px;
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .app[data-scene="inventory"] .frame.frame[data-layout="result"] .result { grid-column: 2; grid-row: 1; }
+  .app[data-scene="inventory"] .frame.frame[data-layout="result"] [data-result-reader] footer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .app[data-scene="inventory"] .frame.frame[data-layout="result"] [data-result-feedback] { grid-column: 1; grid-row: 1; }
+  .app[data-scene="inventory"] .frame.frame[data-layout="result"] [data-result-reader] footer button:first-child { grid-row: 2; }
+  .app[data-scene="inventory"] .frame.frame[data-layout="result"] [data-result-reader] footer button:last-child { grid-column: 1; grid-row: 3; }
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene] {
+    --scene-body-size: var(--type-body);
+    --scene-title-size: var(--type-title);
+    --scene-panel-height: clamp(340px, 46vw, 420px);
+    --scene-panel-gutter: 16px;
+    --scene-panel-inset: 18px;
+    --scene-action-height: clamp(52px, 8vw, 72px);
+  }
+  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions) button,
+  .app[data-scene] .frame.frame[data-layout="result"] [data-result-reader] footer button { font-size: var(--type-action); padding-inline: 8px; }
+  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { min-height: 64px; padding: 10px; }
+  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child { overflow-wrap: anywhere; }
+  .app[data-scene] .frame.frame[data-layout="result"] [data-result-reader] footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .app[data-scene] .frame.frame[data-layout="result"] [data-result-feedback] { grid-column: 1 / -1; grid-row: 1; }
+  .app[data-scene] .frame.frame[data-layout="result"] [data-result-reader] footer button { grid-row: 2; }
+}
+@media (max-height: 700px) and (orientation: portrait), (max-height: 500px) {
+  .app[data-scene] { --scene-panel-height: 290px; --scene-panel-inset: 12px; --scene-panel-gutter: 12px; --scene-action-height: 48px; }
+}
+@media (orientation: portrait) and (max-height: 700px) {
+  .app[data-scene]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) {
+    height: auto; min-height: 100dvh; overflow: visible;
+  }
+  .app[data-scene]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) .main {
+    position: relative; inset: auto;
+  }
+  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    height: auto; min-height: 100dvh; overflow: visible;
+    grid-template-rows: var(--scene-header-height) 240px auto;
+  }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) 210px auto;
+  }
+}
+
+.app[data-scene="carrier"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspection {
+  border-radius: 16px;
+}
+/* A stable loading viewport survives choice, inspection and confirmation. */
+@media(min-width:901px) and (min-height:501px) {
+  .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0,1fr) var(--scene-panel-height);
+  }
+  .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"] :is(.question,.inspection) { height:100%; max-height:none; }
+}
+/* Give the port illustration the full height alongside a compact decision panel. */
+@media(min-width:1001px) and (min-height:701px) {
+  .app[data-scene="crane"] { --scene-body-size: var(--type-body); --scene-title-size: var(--type-title); }
+  .app[data-scene="crane"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    grid-template-columns:minmax(0,1fr) 420px;
+    grid-template-rows:var(--scene-header-height) minmax(0,1fr);
+  }
+  .app[data-scene="crane"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .headerCard { grid-column:1/-1; }
+  .app[data-scene="crane"] .frame.frame[data-inspecting="false"]:not(:has(.briefingCard)) .question { grid-column:2; grid-row:2; height:100%; overflow-y:auto; }
+  .app[data-scene="crane"] .frame.frame .questionAction > [data-choice-variant] { grid-template-columns:1fr; }
+  .app[data-scene="crane"] .frame.frame .questionAction [data-scene-choice] { font-size:var(--type-choice); min-height:60px; padding:10px 12px; }
+  .app[data-scene="crane"] .frame.frame .questionNavigation { grid-template-columns:1fr; margin-top:auto; }
+  .app[data-scene="crane"] .frame.frame .questionTask { grid-column:1; }
+}
+@media(max-width:900px) and (orientation:portrait) {
+  .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting]:not(:has(.briefingCard)) {
+    grid-template-rows:var(--scene-header-height) minmax(0,min(84.0385vw,calc(100dvh - var(--scene-header-height) - 300px))) minmax(0,1fr);
+  }
+  .app[data-scene="compact"] .frame.frame[data-layout="result"] {
+    grid-template-rows:minmax(0,min(84.0385vw,calc(100dvh - var(--scene-header-height) - 300px))) minmax(0,1fr);
+  }
+  .app[data-scene="crane"] [data-crane-decision-context] { font-size:16px; line-height:1.35; }
+  .app[data-scene="crane"] .frame.frame .questionPrompt { font-size:var(--type-title); }
+  .app[data-scene="crane"] .frame.frame .questionAction [data-scene-choice] { font-size:var(--type-choice); padding:10px; min-height:64px; }
+}
+@media(min-width:1001px) and (min-height:501px) {
+  .app[data-scene="carrier"] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+    font-size: clamp(24px, 1.6vw, 32px);
+    line-height: 1.4;
+  }
+}
+
+/* Introductions stretch within their reading row and keep navigation at its bottom. */
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
+  grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .briefingCard {
+  height: 100%;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+  flex: 1;
+  max-height: none;
+}
+.app[data-scene] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions {
+  margin-top: auto;
+}
+
+/* A consistent, readable decision rail beside the three location scenes. */
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) {
+    --scene-body-size: var(--type-body);
+    --scene-title-size: var(--type-title);
+    --scene-panel-gutter: 24px;
+  }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"][data-inspecting] {
+    grid-template-columns: minmax(0, 1fr) clamp(340px, 25vw, 420px);
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr);
+  }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] .headerCard { grid-column: 1 / -1; }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+    grid-column: 2; grid-row: 2; height: 100%; max-height: none; overflow-y: auto;
+  }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] :is(.briefingCard, .inspection) {
+    justify-content: center;
+  }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy { max-height: 50dvh; }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .inspection .actions) { margin-top: 16px; }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions, .questionAction > [data-choice-variant]) {
+    grid-template-columns: 1fr;
+  }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask, .inspection .actions > button:last-child) { grid-column: 1; }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { font-size: var(--type-choice); min-height: 64px; }
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] .questionNavigation { margin-top: auto; }
+}
+
+.app[data-scene]:not([data-scene="compact"]) .frame.frame[data-layout="result"]:has([data-result-density="compact"]) {
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.app[data-scene]:not([data-scene="compact"]) .frame.frame[data-layout="result"]:has([data-result-density="compact"]) .result {
+  height: auto;
+}
+.app[data-scene]:not([data-scene="compact"]) .frame.frame[data-layout="result"] [data-result-density="compact"] :is([data-result-narrative], [data-result-reading]) {
+  flex: none; height: auto;
+}
+
+/* The overview fits the segmented targets; portrait preview can then zoom in. */
+@media (max-width: 1000px) and (orientation: portrait) {
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+  .app[data-scene="inventory"] .frame.frame .question { justify-content: flex-start; }
+  .app[data-scene="inventory"] .frame.frame .questionNavigation { margin-top: 16px; }
+  .app[data-scene="inventory"] .frame.frame .briefingCard { justify-content: flex-start; }
+}
+
+/* Preview controls stay with their label instead of leaving an empty white sheet. */
+@media (max-width: 1000px) and (orientation: portrait) {
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] .briefingCard {
+    height: clamp(240px, 34dvh, 300px);
+  }
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+    flex: 1; min-height: 0; max-height: none;
+  }
+}
+@media (max-width: 1000px), (max-height: 700px) {
+  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspection {
+    justify-content: flex-start;
+  }
+  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspectionCopy { flex: none; }
+  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspection .actions { margin-top: 12px; }
+}
+
+/* A wide warehouse drawing needs a wide overview, not a tall letterbox. */
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] {
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.question, .briefingCard) {
+    grid-column: 1; grid-row: 3; height: auto; justify-content: flex-start;
+  }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions,
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionNavigation { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions > button { grid-row: 1; }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions > button:last-child,
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionTask { grid-column: 2; }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 1000px) and (orientation: portrait) {
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] {
+    grid-template-rows: var(--scene-header-height) minmax(0, min(54vw, calc(100dvh - var(--scene-header-height) - 390px))) minmax(0, 1fr);
+  }
+  .app[data-scene="inventory"] .frame.frame .question { justify-content: flex-start; }
+}
+@media (max-width: 360px) {
+  .app[data-scene="lastmile"] .frame.frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] { grid-template-columns: 1fr; }
+  .app[data-scene="lastmile"] .frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child { overflow-wrap: normal; }
+}
+.app[data-scene="compact"] .frame.frame[data-layout="result"] [data-result-density="compact"] :is([data-result-narrative], [data-result-reading]) { flex: 1; height: 100%; min-height: 0; }
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation > button:first-child { grid-column: 1; grid-row: 1; }
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation > button:last-child { grid-column: 2; grid-row: 1; }
+}
+@media (min-width: 601px) and (max-width: 1000px) and (orientation: portrait) {
+  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { min-height: 80px; font-size: var(--type-choice); }
+  .app[data-scene="inventory"] .frame.frame :is(.question, .briefingCard) { justify-content: flex-start; }
+  .app[data-scene="inventory"] .frame.frame .briefingCopy { font-size: var(--type-body); max-height: none; }
+}
+@media (max-height: 700px) and (orientation: portrait) {
+  .app[data-scene="compact"]:has(.frame[data-layout="result"]) { height: auto; min-height: 100dvh; overflow: visible; }
+  .app[data-scene="compact"]:has(.frame[data-layout="result"]) .main { position: relative; inset: auto; }
+  .app[data-scene="compact"] .frame.frame[data-layout="result"] { height: auto; min-height: calc(100dvh - var(--scene-header-height)); grid-template-rows: 240px auto; overflow: visible; }
+  .app[data-scene="compact"] .frame.frame[data-layout="result"] .result { height: auto; max-height: none; }
+  .app[data-scene="compact"] .frame.frame[data-layout="result"] [data-world-scene="compact"] { height: 240px; min-height: 240px; max-height: 240px; }
+}
+
+/* Loading condition and choices share one camera viewport and action baseline. */
+.app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .briefingCard {
+  height: 100%;
+}
+
+/* Text roles follow the reading surface, not the scene number. */
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt {
+  font-size: var(--type-title); line-height: var(--type-title-leading); text-wrap: pretty;
+}
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.briefingCopy, .inspectionCopy, .questionContext, [data-crane-decision-context]) {
+  font-size: var(--type-body); line-height: var(--type-body-leading);
+}
+.app[data-scene] .frame.frame.frame[data-layout="result"] [data-result-reading] {
+  font-size: var(--type-body); line-height: var(--type-body-leading);
+}
+.app[data-scene] .frame.frame.frame[data-layout="result"] .result h2,
+.app[data-scene] .frame.frame.frame .inspectionHeading h3 {
+  font-size: var(--type-title); line-height: var(--type-title-leading);
+}
+.app[data-scene] .frame.frame.frame :is(.dialogueActions, .questionNavigation, .inspection .actions) button,
+.app[data-scene] .frame.frame.frame[data-layout="result"] [data-result-reader] footer button {
+  font-size: var(--type-action); line-height: var(--type-control-leading);
+}
+.app[data-scene] .frame.frame.frame .questionAction [data-scene-choice] {
+  font-size: var(--type-choice); line-height: var(--type-control-leading);
+}
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) {
+    --type-body: 20px; --type-title: 28px; --type-choice: 18px; --type-action: 18px;
+  }
+  .app[data-scene="inventory"]:has(.frame[data-inspecting="false"]) {
+    --type-body: clamp(22px, 1.5vw, 26px); --type-title: clamp(26px, 2vw, 34px);
+    --type-choice: clamp(18px, 1.35vw, 22px); --type-action: clamp(18px, 1.2vw, 20px);
+  }
+}
+.app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.briefingCard .dialogueActions, .question .questionNavigation) {
+  margin-top: auto;
+}
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) var(--scene-panel-height);
+  }
+  .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction [data-scene-choice] {
+    height: 80px; min-height: 80px; padding: 8px 16px; font-size: var(--type-choice);
+  }
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] {
+    grid-template-rows: var(--scene-header-height) minmax(0, min(84.0385vw, calc(100dvh - var(--scene-header-height) - 300px))) minmax(0, 1fr);
+  }
+}
+@media (max-height: 700px) and (orientation: portrait) {
+  .app[data-scene="compact"]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]) { height: auto; min-height: 100dvh; overflow: visible; }
+  .app[data-scene="compact"]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]) .main { position: relative; inset: auto; }
+  .app[data-scene="compact"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] {
+    height: auto; min-height: calc(var(--scene-header-height) + 240px + 440px); overflow: visible;
+    grid-template-rows: var(--scene-header-height) 240px minmax(440px, 1fr);
+  }
+  .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.question, .briefingCard) { height: 100%; }
+  .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.dialogueActions, .questionNavigation) button { padding-block: 4px; }
+}
+
+/* The short Inventory result lets the illustration use the space left by its copy. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) {
+    grid-template-rows: minmax(0, 1fr) minmax(320px, 40dvh) !important;
+  }
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) .result {
+    height: 100% !important;
+    max-height: none;
+    align-self: stretch;
+    overflow-y: auto;
+  }
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"] :is(.resultInner, .resultStory, [data-result-reader], [data-result-narrative]) {
+    flex: none;
+    height: auto;
+  }
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"] [data-result-reading] {
+    flex: none;
+    height: auto;
+  }
+  /* The WMS worker, terminal and trolley span more width than a tall phone crop.
+     Give the artwork a shallower row so the complete action stays in view. */
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="inventory-wms"]) {
+    grid-template-rows: minmax(0, min(76vw, calc(100dvh - var(--scene-header-height) - 320px))) minmax(320px, 1fr) !important;
+  }
+}
+
+/* Carrier choices and the map share one phone viewport; the page itself never scrolls. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene="carrier"]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) {
+    height: 100dvh;
+    overflow: hidden;
+  }
+  .app[data-scene="carrier"]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) .main {
+    position: absolute;
+    inset: 0;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .question {
+    height: auto;
+    overflow: hidden;
+    gap: 8px;
+    padding: 10px 12px max(10px, env(safe-area-inset-bottom));
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction {
+    flex: none;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction > [data-choice-variant="carriers"] {
+    grid-auto-rows: minmax(44px, auto);
+    gap: 6px;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction [data-scene-choice] {
+    min-height: 44px;
+    height: auto;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .question {
+    gap: 8px;
+    padding-block: 8px;
+  }
+}
+
+/* Short landscape phones keep the world visible beside a scrollable reading rail. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 44%);
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr);
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .headerCard { grid-column: 1 / -1; grid-row: 1; }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .carrierMap {
+    grid-column: 1; grid-row: 2; width: 100%; height: 100%; min-height: 0; max-height: none;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+    grid-column: 2; grid-row: 2; width: 100%; height: 100%; max-height: none; min-height: 0;
+    position: relative; inset: auto; transform: none;
+    overflow-y: auto; justify-content: flex-start;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.questionAction, .questionNavigation, .dialogueActions, .inspection .actions) {
+    flex-shrink: 0;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction { flex: none; min-height: auto; }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.questionNavigation, .dialogueActions) { margin-top: 16px; }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { height: auto; }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child { overflow-wrap: anywhere; hyphens: auto; }
+  .app[data-scene] .frame.frame.frame[data-layout="result"] {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 44%);
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .app[data-scene] .frame.frame.frame[data-layout="result"] :is(.carrierMap, .outcomePicture) {
+    grid-column: 1; grid-row: 1; width: 100%; height: 100%; min-height: 0; max-height: none;
+  }
+  .app[data-scene] .frame.frame.frame[data-layout="result"] .result {
+    grid-column: 2; grid-row: 1; height: 100%; max-height: none; min-height: 0; overflow-y: auto;
+    padding: 12px;
+  }
+  .app[data-scene] .frame.frame.frame[data-layout="result"] [data-result-density="compact"] :is([data-result-narrative], [data-result-reading]) { flex: 1; height: 100%; min-height: 0; }
+}
+
+/* The pipe-carrier explanation and rover rescue form one complete outcome. */
+.app[data-scene="lastmile"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence^="lastmile-pipe-carrier"]) [data-continuous="true"] :is([data-result-narrative], [data-result-reading]) {
+  flex: none; height: auto; max-height: none;
+}
+@media (max-width: 900px) and (max-height: 650px) and (orientation: portrait) {
+  .app[data-scene="lastmile"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence^="lastmile-pipe-carrier"]) {
+    grid-template-rows: min(56.28vw, max(100px, calc(100dvh - 440px))) minmax(0, 1fr) !important;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene="lastmile"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence^="lastmile-pipe-carrier"]) {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 56%);
+    --type-body: 16px; --type-body-leading: 1.35; --type-title: 22px;
+  }
+  .app[data-scene="lastmile"] .frame.frame.frame[data-layout="result"] [data-scene-consequence^="lastmile-pipe-carrier"] img {
+    object-fit: contain; background: #eaf1f5;
+  }
+}
+
+/* Keep every introduction's navigation on the same bottom baseline as results.
+   The copy uses the remaining panel space and its existing pagination when needed. */
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .briefingCard {
+  height: 100%;
+  justify-content: flex-start;
+}
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+  flex: 1;
+  min-height: 0;
+  max-height: none;
+  /* Prose receives programmatic reading focus; interactive controls keep their rings. */
+  outline: none;
+}
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+@media (max-height: 700px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:has(.briefingCard) {
+    height: 100dvh;
+    min-height: 100dvh;
+    grid-template-rows: var(--scene-header-height) minmax(0, min(65vw, 30dvh)) minmax(0, 1fr);
+  }
+}
+@media (max-width: 1000px) and (orientation: portrait) {
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) clamp(240px, 34dvh, 300px);
+  }
+}
+
+/* Choice prompts start below the artwork; navigation remains at the bottom. */
+.app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"] .question {
+  height: 100%;
+  justify-content: flex-start;
+}
+.app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"] .questionNavigation {
+  margin-top: auto;
+}
+
+@media (max-height: 650px) and (orientation: portrait) {
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    height: 100dvh;
+    min-height: 100dvh;
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .carrierMap {
+    height: 100%;
+    min-height: 0;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"] .question [data-crane-decision-context] { display: none; }
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"] .question {
+    height: auto; gap: 10px; padding-top: 12px;
+  }
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction { flex: none; }
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] { grid-template-columns: repeat(2,minmax(0,1fr)); grid-auto-rows: auto; }
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { font-size: 14px; min-height: 56px; padding: 6px; gap: 6px; }
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child { overflow-wrap: anywhere; hyphens: auto; }
+}
+
+/* Keep transport names whole; only the space before тележка may wrap. */
+/* Inspecting a crane action preserves the overview camera instead of switching art formats. */
+@media (max-width: 1000px) and (orientation: portrait) {
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] {
+    height: 100dvh;
+    min-height: 100dvh;
+    grid-template-rows: var(--scene-header-height) calc(100vw * var(--crane-overview-ratio)) minmax(0, 1fr);
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] .carrierMap {
+    height: 100%;
+    min-height: 0;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] .inspection {
+    height: 100%;
+    max-height: none;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] .inspection .actions {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] {
+    grid-template-columns: var(--crane-overview-width) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+    font-size: clamp(14px, 4vw, 16px);
+    padding-inline: 6px;
+    gap: 6px;
+  }
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child {
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+}
+
+@media (max-width: 360px) and (orientation: portrait) {
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+/* Wide, short desktops need a side rail so vehicle targets stay in view. */
+@media (min-width: 1001px) and (min-height: 501px) and (max-height: 700px) {
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] {
+    grid-template-columns: minmax(0, min(calc((100dvh - var(--scene-header-height)) * 2.5), calc(100vw - 420px))) minmax(420px, 1fr);
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr);
+  }
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) > * { max-width: 560px; }
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] .headerCard { grid-column: 1 / -1; }
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) { grid-column: 2; grid-row: 2; height: 100%; max-height: none; }
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .inspection .actions, .questionAction > [data-choice-variant]) { grid-template-columns: 1fr; }
+  .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask, .inspection .actions > button:last-child) { grid-column: 1; }
+}
+
+/* The barge decision needs a full vessel on a phone. Let the decision cards
+   scroll below a portrait overview instead of crushing the port into a strip. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene="crane"]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+  .app[data-scene="crane"]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) .main {
+    position: relative;
+    inset: auto;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+    grid-template-rows: var(--scene-header-height) min(92vw, 380px) auto;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .carrierMap {
+    height: min(92vw, 380px);
+    min-height: min(92vw, 380px);
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .question {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* Decisions remain one-screen tasks, even on short phones. The illustration
+   yields height to the controls; the document and decision sheet never scroll. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)),
+  .app[data-scene="compact"]:has(.frame[data-layout="result"]) {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .app[data-scene]:has(.frame[data-interaction="inspect-confirm"][data-inspecting="false"]):not(:has(.briefingCard)) .main,
+  .app[data-scene="compact"]:has(.frame[data-layout="result"]) .main {
+    position: absolute;
+    inset: 0;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    grid-template-rows: var(--scene-header-height) minmax(104px, 1fr) auto;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .carrierMap {
+    height: 100%;
+    min-height: 0;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .question {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+    gap: 6px;
+    padding: 8px 10px max(8px, env(safe-area-inset-bottom));
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction > [data-choice-variant="scene"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: minmax(44px, auto);
+    gap: 6px;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction [data-scene-choice] {
+    min-height: 44px;
+    height: auto;
+    padding: 5px 6px;
+    font-size: 13px;
+    line-height: 1.15;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.questionPrompt, .questionContext, [data-crane-decision-context]) {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation {
+    margin-top: 2px;
+    gap: 6px;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation button {
+    height: 44px;
+    min-height: 44px;
+  }
+  .app[data-scene="compact"] .frame.frame.frame[data-layout="result"] {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    grid-template-rows: minmax(104px, 1fr) minmax(0, 310px);
+  }
+  .app[data-scene="compact"] .frame.frame.frame[data-layout="result"] .result {
+    height: 100%;
+    max-height: none;
+    overflow: hidden;
+  }
+  .app[data-scene="compact"] .frame.frame.frame[data-layout="result"] [data-world-scene="compact"] {
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"] {
+    grid-template-rows: minmax(0, 145px) minmax(0, 1fr) !important;
+  }
+  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"] .result {
+    overflow: hidden;
+    padding: 8px;
+  }
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has(:is([data-scene-consequence="inventory-keeper"], [data-scene-consequence="inventory-wms"])) {
+    grid-template-rows: minmax(0, 160px) minmax(0, 1fr) !important;
+  }
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence^="inventory-alphabet-"]) {
+    grid-template-rows: minmax(0, 120px) minmax(0, 1fr) !important;
+  }
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="inventory-wms"]) {
+    grid-template-rows: minmax(0, min(calc(100vw * 941 / 1672), calc(100dvh - var(--scene-header-height) - 320px))) minmax(320px, 1fr) !important;
+  }
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="inventory-wms"]) :is(.resultStory, [data-result-reader], [data-result-narrative]) {
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+  }
+  .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="inventory-wms"]) [data-result-reading] {
+    flex: 1;
+    height: 0;
+    max-height: none;
+  }
+}
+
+/* A short landscape screen uses a two-column answer grid beside the artwork. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection),
+  .app[data-scene] .frame.frame.frame[data-layout="result"] .result {
+    overflow: hidden;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .question {
+    gap: 5px;
+    padding: 6px 8px;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction > [data-choice-variant="scene"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(44px, auto);
+    gap: 5px;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction [data-scene-choice] {
+    min-height: 44px;
+    height: auto;
+    padding: 4px 5px;
+    font-size: 12px;
+    line-height: 1.15;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.questionPrompt, .questionContext, [data-crane-decision-context]) {
+    font-size: 13px;
+    line-height: 1.15;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation {
+    margin-top: 2px;
+    gap: 5px;
+  }
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation button {
+    min-height: 44px;
+    height: 44px;
+  }
+}
+
+/* The compact desktop choice includes both a five-card row and the return
+   action; reserve its full height so the latter cannot slip below the frame. */
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="compact"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) 300px;
+  }
+}
+
+/* R3: a lone task action fills its row; Compact's six actions share one grid. */
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation > button {
+  box-sizing: border-box;
+  width: 100%;
+  justify-self: stretch;
+  grid-column: auto;
+  grid-row: auto;
+}
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation:has(> button:only-child) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation > button:only-child {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+.app[data-scene="compact"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .question:has(.questionNavigation > .questionTask:only-child) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: min-content;
+  align-content: start;
+  gap: 8px;
+}
+.app[data-scene="compact"] .frame.frame.frame .question:has(.questionNavigation > .questionTask:only-child) > :not(.questionAction, .questionNavigation) {
+  grid-column: 1 / -1;
+}
+.app[data-scene="compact"] .frame.frame.frame .question:has(.questionNavigation > .questionTask:only-child) :is(.questionAction, .questionAction > [data-choice-variant], .questionNavigation) {
+  display: contents;
+}
+.app[data-scene="compact"] .frame.frame.frame .question:has(.questionNavigation > .questionTask:only-child) :is([data-scene-choice], .questionTask) {
+  grid-column: auto !important;
+  width: 100%;
+  min-height: 64px;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  align-self: stretch;
+}
+@media (min-width: 1100px) and (min-height: 501px) {
+  .app[data-scene="compact"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .question:has(.questionNavigation > .questionTask:only-child) {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  .app[data-scene="compact"] .frame.frame.frame .question:has(.questionNavigation > .questionTask:only-child) :is([data-scene-choice="auto"], .questionTask) {
+    grid-column: span 2 !important;
+  }
+}
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="compact"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+  .app[data-scene="compact"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .question {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+/* Approved Figma lower-choice sample; keep the surrounding responsive grids. */
+.app[data-scene] .frame.frame.frame.frame.frame [data-scene-choice]:has(> [data-badge-shape]) {
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: min(118px, 100%);
+  max-width: 100%;
+  min-height: 56px;
+  height: 56px;
+  padding: 10px 12px;
+  gap: 6px;
+  font-family: "Quest Choice", "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.app[data-scene] .frame.frame.frame.frame.frame [data-scene-choice] > [data-badge-shape] {
+  display: grid;
+  place-items: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@media (max-width: 700px), (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene] .frame.frame.frame.frame.frame [data-scene-choice]:has(> [data-badge-shape]) {
+    min-height: 44px;
+    height: 44px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* R4: keep approved logo geometry; remove the extra inset of its scene row. */
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .headerCard {
+  padding-inline-start: env(safe-area-inset-left, 0px);
+}
+.app[data-scene] > header[data-header-result] {
+  padding-inline-start: env(safe-area-inset-left, 0px);
+}
+
+/* Short Compact controls fill their existing tracks instead of floating in
+   wide empty cells. Badge, type and internal label spacing stay unchanged. */
+.app[data-scene="compact"] .frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question [data-scene-choice],
+.app[data-scene="compact"] .frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question:has(.questionNavigation > .questionTask:only-child) .questionTask {
+  width: 100%;
+  min-width: 0;
+  justify-self: stretch;
+  align-self: stretch;
+  height: 56px;
+  min-height: 56px;
+}
+
+@media (max-width: 700px), (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question [data-scene-choice],
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question:has(.questionNavigation > .questionTask:only-child) .questionTask {
+    height: 44px;
+    min-height: 44px;
+  }
+}
+
+/* The standalone 320px row has a three-line automatic label. Keep its
+   padding and match the neighbouring task action without shrinking type. */
+@media (max-width: 360px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question:has(.questionNavigation > .questionTask:only-child) :is([data-scene-choice="auto"], .questionTask) {
+    height: 64px;
+    min-height: 64px;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "installed": [
+    "public/scene1-live/separated-routes/city-motion-desktop.mp4",
+    "public/scene1-live/separated-routes/city-motion-tablet.mp4",
+    "public/scene1-live/separated-routes/city-motion-mobile.mp4",
+    "public/scene1-live/separated-routes/city-poster.webp",
+    "src/game/carrierTracking.json"
+  ],
+  "backup": "/home/michael/.local/state/energy-plus-quest/runtime-integration-v22-2026-10-09/previous-1791554345",
+  "build_exit": 0,
+  "remote_deploy": false,
+  "source": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-v22-warehouse-hq-2026-10-09"
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-10-04T14:41:41.057642Z",
+    "display_name": "Seedance 1.5 Pro",
+    "id": "73f3e23e-74f8-40e4-8011-ce5fbebad65d",
+    "job_type": "seedance1_5",
+    "min_result_url": null,
+    "params": {
+      "aspect_ratio": "4:3",
+      "duration": 4,
+      "fixed_lens": false,
+      "generate_audio": false,
+      "height": 720,
+      "medias": [
+        {
+          "data": {
+            "id": "c4c47508-74cc-4b21-bc67-129c2c6cd723",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/c4c47508-74cc-4b21-bc67-129c2c6cd723.png"
+          },
+          "role": "start_image"
+        },
+        {
+          "data": {
+            "id": "5c8a4487-a237-4de8-8dc5-97fec99c32b7",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/5c8a4487-a237-4de8-8dc5-97fec99c32b7.png"
+          },
+          "role": "end_image"
+        }
+      ],
+      "prompt": "Interpolate ONLY the tiny straight movement between these two exact frames. ONE single green truck moves slowly35pixels DOWN. No second truck appears at any time. Entire truck never leaves frame. The camera and buildings stay fixed. Preserve all illustrated colors, rigid cab and trailer, two occupants. No turn, no zoom, no pan, no new content. Silent.",
+      "resolution": "720p",
+      "seed": 991252,
+      "width": 960
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_144141_73f3e23e-74f8-40e4-8011-ce5fbebad65d.mp4",
+    "status": "completed",
+    "thumbnail_url": "https://cdn.higgsfield.ai/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261004_144141_73f3e23e-74f8-40e4-8011-ce5fbebad65d_thumbnail.webp"
+  }
+]

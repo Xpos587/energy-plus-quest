@@ -1,0 +1,81 @@
+{
+  "source": "../fleet-v16-smoke-2026-10-08/fleet-v16-smoke.blend",
+  "affected_top_level": {
+    "1": [
+      "V02 DETAILED 1 complete tractor",
+      "V14 1 seated lower windshield gasket"
+    ],
+    "4": [
+      "V02 DETAILED 4 complete tractor",
+      "V14 4 seated lower windshield gasket"
+    ]
+  },
+  "affected_with_descendants": [
+    "V02 DETAILED 1 complete tractor",
+    "V02 DETAILED 4 complete tractor",
+    "V09 CLEAN 1 continuous cab sill",
+    "V09 CLEAN 1 mirror housing -1",
+    "V09 CLEAN 1 mirror housing 1",
+    "V09 CLEAN 1 mirror mounting stem -1",
+    "V09 CLEAN 1 mirror mounting stem 1",
+    "V09 CLEAN 1 windshield side facing -1",
+    "V09 CLEAN 1 windshield side facing 1",
+    "V09 CLEAN 4 continuous cab sill",
+    "V09 CLEAN 4 mirror housing -1",
+    "V09 CLEAN 4 mirror housing 1",
+    "V09 CLEAN 4 mirror mounting stem -1",
+    "V09 CLEAN 4 mirror mounting stem 1",
+    "V09 CLEAN 4 windshield side facing -1",
+    "V09 CLEAN 4 windshield side facing 1",
+    "V14 1 seated lower windshield gasket",
+    "V14 4 seated lower windshield gasket"
+  ],
+  "pivot_root_local": [
+    0.800000011920929,
+    0.0,
+    0.8999999761581421
+  ],
+  "initial_screen_measurement": {
+    "1": {
+      "peak_to_peak_x_px_960": 0.5110359191894531,
+      "peak_to_peak_y_px_960": 0.7622872591018677,
+      "max_offset_px_960": 0.39356400592009244
+    },
+    "4": {
+      "peak_to_peak_x_px_960": 0.5248832702636719,
+      "peak_to_peak_y_px_960": 0.5641219913959503,
+      "max_offset_px_960": 0.3445872722001501
+    }
+  },
+  "final_screen_measurement": {
+    "1": {
+      "peak_to_peak_x_px_960": 0.6617546081542969,
+      "peak_to_peak_y_px_960": 1.216821014881134,
+      "max_offset_px_960": 0.6232547607830632
+    },
+    "4": {
+      "peak_to_peak_x_px_960": 0.6852149963378906,
+      "peak_to_peak_y_px_960": 0.9813245832920074,
+      "max_offset_px_960": 0.5552516471237005
+    }
+  },
+  "measured_limits": {
+    "1": {
+      "max_heave_local": 0.0693331718444824,
+      "max_roll_degrees": 1.2962027782771663,
+      "max_pitch_degrees": 0.24998780510852278,
+      "max_roof_displacement_world": 0.08662448854094588
+    },
+    "4": {
+      "max_heave_local": 0.0699296832084656,
+      "max_roll_degrees": 1.2978585655423656,
+      "max_pitch_degrees": 0.24999207397675405,
+      "max_roof_displacement_world": 0.08671560451926061
+    }
+  },
+  "protected_object_count": 972,
+  "protected_frames_checked": 192,
+  "max_protected_world_matrix_error": 0,
+  "protected_includes": "all wheels/chassis/front arch trim/hitches/trailers, all green+blue, all stacks+smoke, camera; exact source world matrices",
+  "stack_policy": "unchanged chassis-mounted stack and unchanged final smoke emission"
+}

@@ -1,0 +1,124 @@
+import { useEffect, useRef } from "react";
+import { ArrowLeft } from "lucide-react";
+import { choiceArtwork, preparationCardArtwork } from "../game/artwork";
+import { imageAsset } from "../game/imageAssets";
+import {
+  profiles,
+  recipients,
+  parcels,
+  findProfile,
+  findRecipient,
+} from "../game/content";
+import type { GameAction, GameState } from "../game/types";
+import styles from "./GiftPreparation.module.css";
+
+type Props = { state: GameState; onAction: (action: GameAction) => void; onBackToIntro?: () => void };
+const recipientDative = { alva: "Майме", khor: "Хабту", arseniy: "Арсению" };
+
+/** One preparation table, with the chosen people staying beside the next decision. */
+export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
+  const heading = useRef<HTMLHeadingElement>(null);
+  const previousStep = useRef(state.step);
+  useEffect(() => {
+    if (previousStep.current !== state.step)
+      heading.current?.focus({ preventScroll: true });
+    previousStep.current = state.step;
+  }, [state.step]);
+  const profile = findProfile(state.profile);
+  const recipient = findRecipient(state.recipient);
+  const items =
+    state.step === "profile"
+      ? profiles
+      : state.step === "recipient"
+        ? recipients
+        : parcels;
+  const title =
+    state.step === "profile"
+      ? "Кто отправит подарок?"
+      : state.step === "recipient"
+        ? "Кому отправим подарок?"
+        : `Что отправим ${state.recipient ? recipientDative[state.recipient] : "в подарок"}?`;
+  const select = (id: string) => {
+    if (state.step === "profile")
+      onAction({
+        type: "CHOOSE_PROFILE",
+        value: id as NonNullable<GameState["profile"]>,
+      });
+    else if (state.step === "recipient")
+      onAction({
+        type: "CHOOSE_RECIPIENT",
+        value: id as NonNullable<GameState["recipient"]>,
+      });
+    else
+      onAction({
+        type: "CHOOSE_PARCEL",
+        value: id as NonNullable<GameState["parcel"]>,
+      });
+  };
+  return (
+    <section
+      className={styles.preparation}
+      data-preparation-step={state.step}
+      aria-labelledby="preparation-question"
+    >
+      <img
+        className={styles.backdrop}
+        src={imageAsset("scene1-live/separated-routes/city-poster.webp")}
+        alt=""
+        aria-hidden="true"
+      />
+      <div className={styles.table}>
+        <div className={styles.journey}>
+          {(state.step !== "profile" || onBackToIntro) && (
+            <button type="button" className={styles.back} onClick={() => state.step === "profile" ? onBackToIntro?.() : onAction({ type: "BACK" })}>
+              <ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
+              Назад
+            </button>
+          )}
+          {profile && state.step !== "profile" && (
+            <aside className={styles.summary} aria-label="Ваш подарок" data-gift-summary>
+              <div className={styles.summaryItem} data-summary="sender">
+                <img src={choiceArtwork[profile.id]} alt="" />
+                <div><small>Отправитель</small><strong>{profile.title}</strong></div>
+              </div>
+              {recipient && state.step === "parcel" && <figure className={styles.summaryItem} data-summary="recipient">
+                {recipient ? <img src={choiceArtwork[recipient.id]} alt="" /> : <span className={styles.emptyPortrait} aria-hidden="true" />}
+                <div><small>Получатель</small><figcaption>{recipient?.title ?? "Ещё не выбран"}</figcaption></div>
+              </figure>}
+            </aside>
+          )}
+        </div>
+        <div className={styles.question}>
+          <h1 id="preparation-question" ref={heading} tabIndex={-1}>
+            {title}
+          </h1>
+        </div>
+        <div className={styles.stage} data-kind={state.step} key={state.step}>
+          <div
+            className={styles.options}
+            data-count={items.length}
+            data-kind={state.step}
+          >
+            {items.map((item) => (
+              <button
+                type="button"
+                key={item.id}
+                data-choice={item.id}
+                className={styles.option}
+                onClick={() => select(item.id)}
+              >
+                <span className={styles.art}>
+                  <img src={preparationCardArtwork[item.id]} alt="" draggable={false} />
+                </span>
+                <span className={styles.caption}>
+                  {item.title}
+
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,23 @@
+{
+  "reopened_blend": "/home/michael/Github/energy-plus-quest/design/scene-01/fleet-behavior-v16-2026-10-07/fleet-v16-motion.blend",
+  "checked_samples": 193,
+  "root_matrix_max_absolute_error_vs_paired_source": 5.364418029785156e-07,
+  "relative_tractor_trailer_matrix_max_error": 6.198883056640625e-06,
+  "distance_8_seconds_scene_units": {
+    "1": 55.143243445591644,
+    "2": 7.282728785589573,
+    "3": 55.14287483984254,
+    "4": 33.085600649006814
+  },
+  "mean_scene_units_per_second": {
+    "1": 6.8929054306989554,
+    "2": 0.9103410981986966,
+    "3": 6.892859354980318,
+    "4": 4.135700081125852
+  },
+  "render_range": [
+    1,
+    192
+  ],
+  "note": "Frame193 is the endpoint needed to measure exactly8seconds; frames1..192 are the24fps proof images."
+}

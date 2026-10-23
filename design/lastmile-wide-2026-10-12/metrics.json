@@ -1,0 +1,82 @@
+[
+  {
+    "view": "wide-short",
+    "scene": "lastmile",
+    "page": 0,
+    "bottom": 680,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 700,
+    "text": "Баржа причалила к берегу в Новом Порту. Капитан довольно потирает усы. Остался последний рывок навстречу Арсению.\n\nВремя на Ямале стоит непростое.\n\nЗимник еще не работает, вокруг много болот, а на небольшой речке неподалеку только встал первый лед.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "wide-short",
+    "scene": "lastmile",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Вертолёт",
+        "overflow": 0
+      },
+      {
+        "text": "Снегоболотоход",
+        "overflow": 0
+      },
+      {
+        "text": "Роботизированная тележка",
+        "overflow": 0
+      },
+      {
+        "text": "Трубовоз",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 20,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 700
+  },
+  {
+    "view": "ultrawide",
+    "scene": "lastmile",
+    "page": 0,
+    "bottom": 1060,
+    "gap": 20,
+    "copyOverflow": 0,
+    "bodyHeight": 1080,
+    "text": "Баржа причалила к берегу в Новом Порту. Капитан довольно потирает усы. Остался последний рывок навстречу Арсению.\n\nВремя на Ямале стоит непростое.\n\nЗимник еще не работает, вокруг много болот, а на небольшой речке неподалеку только встал первый лед.",
+    "weight": "400",
+    "buttonBackground": "rgb(7, 93, 155)",
+    "buttonFilter": "none"
+  },
+  {
+    "view": "ultrawide",
+    "scene": "lastmile",
+    "choice": true,
+    "labels": [
+      {
+        "text": "Вертолёт",
+        "overflow": 0
+      },
+      {
+        "text": "Снегоболотоход",
+        "overflow": 0
+      },
+      {
+        "text": "Роботизированная тележка",
+        "overflow": 0
+      },
+      {
+        "text": "Трубовоз",
+        "overflow": 0
+      }
+    ],
+    "headingGap": 20,
+    "bottomGap": 20,
+    "overflow": 0,
+    "bodyHeight": 1080
+  }
+]

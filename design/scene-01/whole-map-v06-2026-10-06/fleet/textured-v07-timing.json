@@ -1,0 +1,17 @@
+{
+  "normal_seconds": {
+    "1": 2.929622819996439,
+    "385": 2.085748912009876,
+    "769": 2.185384738011635
+  },
+  "fast_seconds": {
+    "1": 1.1219290599983651,
+    "385": 1.1203786599944578
+  },
+  "resolution": [
+    1920,
+    1334
+  ],
+  "fast_scene": "city meshes hidden; lights and camera preserved; existing Cryptomatte output unchanged",
+  "note": "Same Blender process sequential measured wall time, no full-loop estimate"
+}

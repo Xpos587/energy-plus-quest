@@ -1,0 +1,49 @@
+{
+  "frame": 285,
+  "cab_anchor": [
+    674.8091168091169,
+    275.2037037037037
+  ],
+  "source_glass_quad": [
+    [
+      659.390380859375,
+      269.05279541015625
+    ],
+    [
+      687.0,
+      261.0
+    ],
+    [
+      691.1776123046875,
+      275.3232116699219
+    ],
+    [
+      663.5679931640625,
+      283.3760070800781
+    ]
+  ],
+  "template_quad": [
+    [
+      446.83026123046875,
+      229.0
+    ],
+    [
+      793.0230712890625,
+      238.0
+    ],
+    [
+      796.042236328125,
+      371.0
+    ],
+    [
+      434.7537841796875,
+      369.0
+    ]
+  ],
+  "output_dimensions": [
+    3840,
+    2160
+  ],
+  "change": "AI-generated windshield interior only; 0.5px feather; rest is ordinary Lanczos upsample, not new source detail",
+  "driver_count": "two on template, one steering wheel; animated placement not yet verified"
+}

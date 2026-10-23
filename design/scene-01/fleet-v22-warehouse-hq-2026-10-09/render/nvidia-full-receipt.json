@@ -1,0 +1,28 @@
+{
+  "gpu": {
+    "vendor": "NVIDIA Corporation",
+    "renderer": "NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2",
+    "version": "4.6.0 NVIDIA 615.71.09",
+    "backend": "OPENGL"
+  },
+  "resolution": [
+    3840,
+    2668
+  ],
+  "taa": 8,
+  "volume_samples": 32,
+  "timings": [
+    {
+      "frame": 1,
+      "seconds": 13.717376184009481
+    },
+    {
+      "frame": 384,
+      "seconds": 10.080664490000345
+    },
+    {
+      "frame": 768,
+      "seconds": 7.868647484006942
+    }
+  ]
+}

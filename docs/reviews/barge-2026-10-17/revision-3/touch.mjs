@@ -1,0 +1,7 @@
+import {chromium,expect} from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+const root='docs/reviews/barge-2026-10-17/revision-3',browser=await chromium.launch(),receipt=[];
+for(const viewport of [{width:320,height:568},{width:390,height:844}])for(const v of ['a','b','c']){
+const page=await browser.newPage({viewport,hasTouch:true,isMobile:true,deviceScaleFactor:2});await page.goto('file://'+process.cwd()+`/${root}/prototype.html?v=${v}&parcel=boat`);while(await page.locator('.condition').count())await page.locator('.condition button').tap();await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));await expect(page.locator('.option.preview')).toHaveCount(0);if(v==='c')await expect(page.locator('.situation .crop')).toHaveCount(3);
+for(const id of ['remote','rush','wait','petr']){await page.locator(`[data-option=${id}]`).tap();await expect(page.locator('main')).toHaveAttribute('data-state',id);await expect(page.locator('[data-revise]')).toBeInViewport({ratio:1});await page.locator('[data-revise]').tap();await expect(page.locator('main')).toHaveAttribute('data-state','choice');receipt.push({viewport,v,id,firstTap:true});}await page.close();}
+await writeFile(`${root}/touch-checks.json`,JSON.stringify(receipt,null,2));console.log(JSON.stringify({touchEmulation:true,firstTaps:receipt.length,passed:receipt.length}));await browser.close();

@@ -1,0 +1,103 @@
+{
+  "vehicle_scale_factor": 0.85,
+  "far_spec": [
+    -2.5,
+    29.8,
+    -28.5,
+    30.5,
+    10
+  ],
+  "fps": 24,
+  "frames": 1152,
+  "duration_seconds": 48,
+  "phases": [
+    156,
+    784,
+    232,
+    444
+  ],
+  "route_definition": "V2 regenerated hitch kinematics at uniform vehicle scale factor 0.85. Road segments shifted within existing asphalt; city and camera unchanged.",
+  "blue_spec": [
+    -29.8,
+    1.8,
+    -28.5,
+    30.3,
+    12
+  ],
+  "laps": [
+    2,
+    1,
+    2,
+    2
+  ],
+  "initial_articulation_degrees": [
+    2.929726145727356,
+    1.53025630804319,
+    0.0763733388711168,
+    2.9297261457273693
+  ],
+  "max_articulation_degrees": [
+    45.77756176424819,
+    39.754883026340565,
+    45.77756176424819,
+    45.777561764248205
+  ],
+  "offroad_swept_intervals": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "static_collision_intervals": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "warehouse_lot_swept_intervals": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "pair_clearance_min": 1.068960109191899,
+  "hitch_error": 5.0242958677880805e-15,
+  "warehouse_distance_min": [
+    28.22615925769261,
+    0.9840627760448298,
+    28.226160003003844,
+    28.22616120650817
+  ],
+  "warehouse_distance_max": [
+    60.64805931751863,
+    32.64820777219459,
+    60.64805757855079,
+    60.648059451325835
+  ],
+  "blue_nearest_warehouse_all_intervals": false,
+  "blue_near_fraction_under10": 0.6831597222222222,
+  "loop_position_error": 0.0,
+  "method": "Actual native evaluated mesh convex hulls, projected asphalt triangle unions and static geometry. Every key interval conservatively enclosed and buffered for angular interpolation. Scene-unit distances.",
+  "pair_clearances": {
+    "1-2": 2.3726627915294927,
+    "1-3": 7.037623343768757,
+    "1-4": 29.69611876884445,
+    "2-3": 1.068960109191899,
+    "2-4": 1.6686370817130856,
+    "3-4": 29.11940839918809
+  },
+  "far_rig_clearance_min": 7.037623343768757,
+  "passed": true
+}

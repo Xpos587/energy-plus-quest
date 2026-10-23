@@ -1,0 +1,67 @@
+{
+  "status": "candidate five-waypoint sets ready, driver gate passes crop readback",
+  "keys": [
+    {
+      "color": "red",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-67e6119a-f8d5-4dc1-99d6-20a71e63ff00.png",
+      "prompt": "Precise object edit. Image 1 is the full city map EDIT TARGET showing ONE green semi-truck partway around a corner; Image 2 is ONLY truck identity reference. Replace green tractor/trailer only with mid-age red-orange cab-over tractor: tall roof fairing, rounded cab corners, single broad black grille with horizontal slats, swept side door; cream curtain-side trailer with soft fabric folds and blue lower fastening straps. Keep exact target truck positions, cab diagonal direction down-left, trailer tilted leftward with cab/trailer articulation angle unchanged, center, size, total footprint, and camera. Keep every building/tree/road/crosswalk/background pixel and bright clean 2D illustrated style, soft colored contours and shadows. EXACTLY ONE driver on vehicle left-hand driving seat, EMPTY passenger seat. Do not reproduce target two heads. Only ONE tan face cluster; passenger windshield area is smooth blue glass with EMPTY blue seat. No officer/additional people or vehicles. Full map output same size, no crop, no grids.",
+      "aiCropSource": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-a44c555e-c6ef-42b6-a17d-4961e35b8ddf.png",
+      "aiCropPrompt": "Edit ONLY windshield occupants in this magnified red truck cab crop. Final must have EXACTLY ONE driver with tan face and blue shirt at SCREEN-RIGHT HALF of the windshield, next to visible side door (vehicle's left-hand driving seat). The SCREEN-LEFT HALF is EMPTY passenger area: remove its human tan face, hair and shirt entirely, replace with blue glass and visibly EMPTY dark-blue seat. For red, move the sole person from screen-left to screen-right. For yellow, keep screen-right person and remove screen-left person. No tan face cluster or head-shaped silhouette at screen-left. Same cab model/shape/color, roof, mirrors, grille, wheel/trailer shape, perspective and pixel-art texture. Change only windshield interior. Exactly one person, screen-right.",
+      "selected": "red-key-1p5-local-repair.png",
+      "pasteOrigin": [
+        750,
+        155
+      ],
+      "maskPolygon": [
+        [
+          18,
+          42
+        ],
+        [
+          44,
+          49
+        ],
+        [
+          42,
+          63
+        ],
+        [
+          17,
+          55
+        ]
+      ],
+      "readback": "red-mid-inspection-final.png"
+    },
+    {
+      "color": "yellow",
+      "source": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-cca48092-1b04-4b5d-8ab5-4f983d084032.png",
+      "prompt": "Precise object edit. Image 1 is the full city map EDIT TARGET showing ONE green semi-truck partway around a corner; Image 2 is ONLY truck identity reference. Replace green tractor/trailer only with older yellow boxy cab-over tractor: angular flat front, broad upper black grille and separate lower black grille, rectangular lamps, flatter roof and subtle wear; cream ribbed curtain trailer with vertical fabric seams, gray metal corners and dark lower chassis. Keep exact target truck positions, cab diagonal direction down-left, trailer tilted leftward with cab/trailer articulation angle unchanged, center, size, total footprint, and camera. Keep every building/tree/road/crosswalk/background pixel and bright clean 2D illustrated style, soft colored contours and shadows. EXACTLY ONE driver on vehicle left-hand driving seat, EMPTY passenger seat. Do not reproduce target two heads. Only ONE tan face cluster; passenger windshield area is smooth blue glass with EMPTY blue seat. No officer/additional people or vehicles. Full map output same size, no crop, no grids.",
+      "aiCropSource": "/home/michael/.config/codex/generated_images/01a10c2f-cbe5-7d30-854c-e9c22425bbcf/exec-262ffd0d-7ed5-4d41-801f-ab4a9d6bbab7.png",
+      "aiCropPrompt": "Edit ONLY windshield occupants in this magnified yellow truck cab crop. Final must have EXACTLY ONE driver with tan face and blue shirt at SCREEN-RIGHT HALF of the windshield, next to visible side door (vehicle's left-hand driving seat). The SCREEN-LEFT HALF is EMPTY passenger area: remove its human tan face, hair and shirt entirely, replace with blue glass and visibly EMPTY dark-blue seat. For red, move the sole person from screen-left to screen-right. For yellow, keep screen-right person and remove screen-left person. No tan face cluster or head-shaped silhouette at screen-left. Same cab model/shape/color, roof, mirrors, grille, wheel/trailer shape, perspective and pixel-art texture. Change only windshield interior. Exactly one person, screen-right.",
+      "selected": "yellow-key-1p5-local-repair.png",
+      "pasteOrigin": [
+        750,
+        155
+      ],
+      "maskPolygon": [
+        [
+          22,
+          42
+        ],
+        [
+          48,
+          51
+        ],
+        [
+          47,
+          64
+        ],
+        [
+          21,
+          55
+        ]
+      ],
+      "readback": "yellow-mid-inspection-final.png"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "boat",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "camera",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "parcel": "socks",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "boat",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "camera",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "parcel": "socks",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "boat",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "camera",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "parcel": "socks",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-tall-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "boat",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-wide-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "camera",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-wide-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "parcel": "socks",
+    "choice": "/scene-art/lastmile-family-v1/choice-final-wide-v6.webp",
+    "art": [
+      "http://127.0.0.1:4173/scene-art/lastmile-family-v1/pipecarrier-return-swim-v4.webp"
+    ],
+    "errors": [],
+    "overflow": false,
+    "broken": []
+  }
+]
