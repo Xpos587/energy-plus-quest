@@ -1,13 +1,14 @@
-import { type ReactNode, useId, useLayoutEffect, useRef } from "react";
 import { ArrowLeft, Check } from "lucide-react";
+import { type ReactNode, useId, useLayoutEffect, useRef } from "react";
 import { PagedDescription } from "./PagedDescription";
-import { useInspectionPlacement } from "./useInspectionPlacement";
 import styles from "./SceneInteraction.module.css";
+import { useInspectionPlacement } from "./useInspectionPlacement";
 
 /** A preview only: the caller commits the answer in onConfirm. */
 export function ChoiceInspection({
   selectionKey,
   title,
+  eyebrow,
   children,
   paragraphs,
   media = false,
@@ -20,6 +21,8 @@ export function ChoiceInspection({
 }: {
   selectionKey: string;
   title: string;
+  /** What the option is, above its name (e.g. «У ворот склада» over «Синяя фура»). */
+  eyebrow?: string;
   children?: ReactNode;
   paragraphs?: string[];
   media?: boolean;
@@ -75,6 +78,11 @@ export function ChoiceInspection({
     >
       <div className={styles.inspectionHeading}>
         <h3 id={id} ref={heading} tabIndex={-1}>
+          {eyebrow && (
+            <span className={styles.inspectionEyebrow} data-choice-eyebrow>
+              {eyebrow}
+            </span>
+          )}
           {title}
         </h3>
       </div>

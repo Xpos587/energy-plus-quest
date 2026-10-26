@@ -1,7 +1,7 @@
 import { type CSSProperties, useEffect, useRef, useState } from "react";
 import styles from "./App.module.css";
-import { CarrierTapHint } from "./components/CarrierTapHint";
 import { CarrierInspection } from "./components/CarrierInspection";
+import { CarrierTapHint } from "./components/CarrierTapHint";
 import { ChoiceInspection } from "./components/ChoiceInspection";
 import { GameIntro } from "./components/GameIntro";
 import { GiftPreparation } from "./components/GiftPreparation";
@@ -318,6 +318,12 @@ function CarrierScreen({
           returnFocus={choiceTrigger.current}
           selectionKey={pendingId}
           media={pendingId !== "express"}
+          eyebrow={
+            // Crew already lists «Два водителя» in its facts; Express has its own title.
+            pendingId === "express" || pendingId === "crew"
+              ? undefined
+              : findCarrier(pendingId)?.eyebrow
+          }
           title={
             pendingId === "express"
               ? "Express подберёт фуру"
