@@ -52,6 +52,7 @@ export function SceneBriefing({
   initiallyOpen = false,
   keepPanHint = false,
   showLeadOnChoice = true,
+  conditionLabel = "О задаче",
 }: {
   title: string;
   currentStep?: number;
@@ -72,6 +73,8 @@ export function SceneBriefing({
   keepPanHint?: boolean;
   showLeadOnChoice?: boolean;
   combineCondition?: boolean;
+  /** Names what the hidden condition holds, e.g. «Куда везём?». */
+  conditionLabel?: string;
 }) {
   // A separate first-entry condition and optional rereading share the same pages.
   const inlineCondition = false;
@@ -89,15 +92,22 @@ export function SceneBriefing({
     "map-navigation:" + title,
     false,
   );
-  const showPanHint = navigation === "pan" && canPan && (!panDone || keepPanHint);
+  const showPanHint =
+    navigation === "pan" && canPan && (!panDone || keepPanHint);
   const showChoiceHint =
-    navigation !== "fixed" && !!hint && !choiceDone && !(navigation === "zoom" && zoomDone);
+    navigation !== "fixed" &&
+    !!hint &&
+    !choiceDone &&
+    !(navigation === "zoom" && zoomDone);
   const toggle = useRef<HTMLButtonElement>(null);
   const focusAfterClose = useRef(false);
   const briefing = useRef<HTMLElement>(null);
   const id = useId();
-  const visible = open && !inlineCondition && !inspecting && paragraphs.length > 0;
-  useLayoutEffect(() => { onReadingChange?.(visible); }, [visible, onReadingChange]);
+  const visible =
+    open && !inlineCondition && !inspecting && paragraphs.length > 0;
+  useLayoutEffect(() => {
+    onReadingChange?.(visible);
+  }, [visible, onReadingChange]);
   const leadLength = 0;
   const { body, pages } = useTextPages(
     paragraphs,
@@ -283,8 +293,12 @@ export function SceneBriefing({
         <QuestBrand />
         <div className={styles.briefingHeading}>
           <div className={styles.sceneIdentity}>
-          <h2 tabIndex={-1}>{title}</h2>
-          <StageIndicator step={currentStep + 1} total={progressSteps.length} label={progressSteps[currentStep].label} />
+            <h2 tabIndex={-1}>{title}</h2>
+            <StageIndicator
+              step={currentStep + 1}
+              total={progressSteps.length}
+              label={progressSteps[currentStep].label}
+            />
           </div>
         </div>
       </div>
@@ -298,7 +312,9 @@ export function SceneBriefing({
         )}
         {inlineCondition && (
           <div className={styles.inlineCondition} data-testid="scene-intro">
-            {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         )}
         <div className={styles.questionTop} data-choice-prompt>
@@ -306,7 +322,11 @@ export function SceneBriefing({
         </div>
 
         {decisionContext}
-        {action && <div className={styles.questionAction} data-choice-actions>{action}</div>}
+        {action && (
+          <div className={styles.questionAction} data-choice-actions>
+            {action}
+          </div>
+        )}
         {context && <span className={styles.questionContext}>{context}</span>}
         {showPanHint && !showChoiceHint && !visible && !inspecting && (
           <span
@@ -315,7 +335,8 @@ export function SceneBriefing({
             data-scene-hint="pan"
             data-persistent={keepPanHint || undefined}
           >
-            <span aria-hidden="true">↔ </span>{keepPanHint ? "Ещё варианты — листайте сцену" : "Листайте сцену"}
+            <span aria-hidden="true">↔ </span>
+            {keepPanHint ? "Ещё варианты — листайте сцену" : "Листайте сцену"}
           </span>
         )}
         {(onBack || (paragraphs.length > 0 && !inlineCondition)) && (
@@ -345,7 +366,7 @@ export function SceneBriefing({
                 }}
               >
                 <Info size={18} aria-hidden="true" />
-                О задаче
+                {conditionLabel}
               </button>
             )}
           </div>
@@ -427,7 +448,10 @@ export function SceneBriefing({
             aria-live="polite"
           >
             <p>
-              <PageText text={pages[current]} leadLength={current === 0 ? leadLength : 0} />
+              <PageText
+                text={pages[current]}
+                leadLength={current === 0 ? leadLength : 0}
+              />
             </p>
           </section>
           <div className={styles.dialogueActions}>

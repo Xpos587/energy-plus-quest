@@ -13,6 +13,8 @@ export const carrierFacts: Record<
     label: string;
     imageAlt: string;
     citySpeedKmh: number;
+    /** Qualitative pace next to the dial: players compare words, not km/h. */
+    pace: string;
     buildYear: number;
   }
 > = {
@@ -21,23 +23,27 @@ export const carrierFacts: Record<
     imageAlt: "Красный тягач с полуприцепом на городской дороге",
     citySpeedKmh: 36,
     buildYear: 2011,
+    pace: "Довольно быстро",
   },
   near: {
     label: "Синяя фура",
     imageAlt: "Синий тягач с полуприцепом на городской дороге",
     citySpeedKmh: 17,
     buildYear: 2021,
+    pace: "Очень медленно",
   },
   crew: {
     label: "Зелёная фура",
     imageAlt: "Зелёный тягач с полуприцепом на городской дороге",
     citySpeedKmh: 48,
     buildYear: 2024,
+    pace: "Быстрее всех",
   },
   old4: {
     label: "Жёлтая фура",
     imageAlt: "Жёлтый тягач с полуприцепом на городской дороге",
     citySpeedKmh: 27,
     buildYear: 2013,
+    pace: "Не спеша",
   },
 };

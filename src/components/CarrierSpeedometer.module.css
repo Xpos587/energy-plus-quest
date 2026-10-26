@@ -13,9 +13,15 @@
 .needle {
   transform-origin: 52px 52px;
   transform: rotate(var(--needle-angle, -90deg));
-  transition: transform 180ms linear;
+  transition: transform 600ms cubic-bezier(.3, 1.4, .5, 1);
 }
 .progress {
   stroke-dashoffset: var(--dial-offset, 100);
-  transition: stroke-dashoffset 180ms linear;
+  transition: stroke-dashoffset 600ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .needle,
+  .progress {
+    transition: none;
+  }
 }

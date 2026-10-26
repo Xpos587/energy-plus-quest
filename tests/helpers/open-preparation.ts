@@ -28,3 +28,18 @@ export async function openCarrier(
     page.getByRole("heading", { name: "Выбор перевозчика" }),
   ).toBeVisible();
 }
+
+/** Open a carrier from the city map. Rigs keep driving, so activate the hit
+ * target the way a keyboard user does instead of waiting for it to settle;
+ * Express is the call pill under the warehouse doors. */
+export async function pickCarrier(
+  page: Page,
+  id: "old" | "near" | "crew" | "old4" | "express",
+): Promise<void> {
+  const target = page.locator(
+    id === "express" ? "[data-map-autopick]" : `[data-carrier-choice="${id}"]`,
+  );
+  await target.focus();
+  await page.keyboard.press("Enter");
+  await expect(page.locator("[data-choice-inspection]")).toBeVisible();
+}

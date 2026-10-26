@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-baseline-2026-10-23",
+  "release": "media-2026-10-26-scene1-map",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3281,38 +3281,50 @@
       ]
     },
     {
-      "name": "media-25-0ec37bc536ed.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-25-0ec37bc536ed.tar.gz",
-      "sha256": "0ec37bc536ed491c3e1b4bf48e9cd922dfab8cbf685c8e505a9467951cc63895",
-      "bytes": 54332849,
+      "name": "media-27-b2c6867a6856.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-26-scene1-map/media-27-b2c6867a6856.tar.gz",
+      "sha256": "b2c6867a6856279d02581e55e1d6429ce6b943c12c89bb26d3965bbfbce14881",
+      "bytes": 6011101,
       "files": [
         {
-          "path": "public/scene1-live/separated-routes/city-motion-desktop.mp4",
-          "sha256": "23e4d47e67599562de4c23a97ffa8d7052ddc62db889601396fae57e57f27ce5",
-          "bytes": 39039927
+          "path": "public/scene1-v4/backdrop.webp",
+          "sha256": "1eb4bf89e847e8e53ded948625dc78f943ed292ac5eae0d6fa7871ead9419678",
+          "bytes": 211082
         },
         {
-          "path": "public/scene1-live/separated-routes/city-motion-mobile.mp4",
-          "sha256": "2c0ae1514081a1e5894b48b2fd783f9e2e4b7a8accf1e09ee5c1e4265e1320f0",
-          "bytes": 15341293
-        }
-      ]
-    },
-    {
-      "name": "media-26-b62041d42edb.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-baseline-2026-10-23/media-26-b62041d42edb.tar.gz",
-      "sha256": "b62041d42edb552ab0ed013fdcc03dabfad9eac86bb3938056328faf41152c6a",
-      "bytes": 24424370,
-      "files": [
-        {
-          "path": "public/scene1-live/separated-routes/city-motion-tablet.mp4",
-          "sha256": "5e28b90851f9f7f18598c3b3c105edc173cc70aa93fe3b6b181a0b62ec7f9c74",
-          "bytes": 23361553
+          "path": "public/scene1-v4/plate-tall.webp",
+          "sha256": "b08a0229c352dd65715312d67a9f20d3396c1209d57f01c716d1ddb43b4d3f5c",
+          "bytes": 588918
         },
         {
-          "path": "public/scene1-live/separated-routes/city-poster.webp",
-          "sha256": "8e23e31ddcf87b40242ef25e87034225be9f79f25e8a2c91618367b0a6a1fb15",
-          "bytes": 1096008
+          "path": "public/scene1-v4/plate-tall@2x.webp",
+          "sha256": "2b72444da2f43d891962ae513bf733458385cfa426984477630a3a949b825540",
+          "bytes": 1343528
+        },
+        {
+          "path": "public/scene1-v4/plate-wide.webp",
+          "sha256": "891f33bd87917cd3391586c23b0df969336c92cbe716176837825c1d9fa2931a",
+          "bytes": 796778
+        },
+        {
+          "path": "public/scene1-v4/plate-wide@2x.webp",
+          "sha256": "a6f96928397d4ccd2e0b96d1e98ab9c407fc87b0ed5c6838e2b7dce460c6181f",
+          "bytes": 1291412
+        },
+        {
+          "path": "public/scene1-v4/smoke.webp",
+          "sha256": "9c86413c167e0024a50f29206556376371a503f7ecc1f7ac0d47434f9420f3e0",
+          "bytes": 59890
+        },
+        {
+          "path": "public/scene1-v4/trucks-tall.webp",
+          "sha256": "9b33c001aebde60ee1ee8d02c34a9aa448c575a711277d9d201f8caae2b61161",
+          "bytes": 720534
+        },
+        {
+          "path": "public/scene1-v4/trucks-wide.webp",
+          "sha256": "a5cb60954386a98886c284e27b430ae13521fc1d8fa9877c6d6ddf83629a1f8c",
+          "bytes": 1002452
         }
       ]
     }

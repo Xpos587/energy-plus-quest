@@ -151,7 +151,7 @@ for (const journey of journeys) {
     await inspectCarrier(page, journey.carrier, true);
     await expect(page.locator("[data-choice-inspection], [data-result-reader]")).toHaveCount(0);
     await inspectCarrier(page, journey.carrier);
-    await continueResult(page, "К следующей сцене");
+    await continueResult(page, "Дальше: погрузка");
 
     await expect(page.locator('[data-scene="compact"]')).toBeVisible();
     await readBriefing(page);
@@ -205,7 +205,7 @@ for (const journey of journeys) {
     await chooseSetup(page, journey);
     await readBriefing(page);
     await inspectCarrier(page, journey.carrier);
-    await continueResult(page, "К следующей сцене");
+    await continueResult(page, "Дальше: погрузка");
     await expect(page.locator('[data-scene="compact"] [data-result]')).toHaveCount(0);
     await expect(page.locator('[data-scene="compact"] [data-scene-briefing]')).toBeVisible();
     expect(pageErrors).toEqual([]);

@@ -31,7 +31,7 @@ test("Back retraces condition then previous result; Continue restarts the condit
     .locator("[data-score-key]")
     .allTextContents();
   await page
-    .getByRole("button", { name: "К следующей сцене", exact: true })
+    .getByRole("button", { name: "Дальше: погрузка", exact: true })
     .click();
   const compactFirst = await page.getByTestId("scene-intro").textContent();
   await read();
@@ -45,7 +45,7 @@ test("Back retraces condition then previous result; Continue restarts the condit
     carrierScores,
   );
   await page
-    .getByRole("button", { name: "К следующей сцене", exact: true })
+    .getByRole("button", { name: "Дальше: погрузка", exact: true })
     .click();
   await expect(page.getByTestId("scene-intro")).toHaveText(compactFirst!);
   await read();

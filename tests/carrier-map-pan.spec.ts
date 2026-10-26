@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 for (const touch of [false, true]) {
   test(`carrier map zooms and pans with ${touch ? "touch" : "mouse and keyboard"}`, async ({
@@ -75,7 +75,7 @@ for (const touch of [false, true]) {
 
       await page.getByRole("button", { name: "Вернуть карту", exact: true }).click();
       await expect(map).toHaveAttribute("data-map-scale", "1");
-      await page.locator('[data-scene-choice="crew"]').click();
+      await pickCarrier(page, "crew");
       await expect(page.locator("[data-choice-inspection]")).toBeVisible();
       await page.locator("[data-choice-confirm]").click();
       await expect(page.locator('[data-layout="result"][data-carrier="crew"]')).toBeVisible();

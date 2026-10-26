@@ -43,7 +43,7 @@ test("every scene fits the viewport without hiding content", async ({
     await page.getByRole("button", { name: action, exact: true }).click();
   }
   await expect(
-    page.getByRole("button", { name: "К следующей сцене", exact: true }),
+    page.getByRole("button", { name: "Дальше: погрузка", exact: true }),
   ).toBeEnabled();
   await expect(
     page.getByText("Продолжение пока недоступно", { exact: true }),

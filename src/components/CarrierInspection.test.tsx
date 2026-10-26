@@ -16,10 +16,10 @@ describe("carrier inspection before committing a choice", () => {
         `/closer-${carrierId}.png`,
       );
       expect(host.querySelector("dl")).not.toBeNull();
-      expect(host.textContent).not.toMatch(/дымят|потрепанные|передвигается рядом с офисом/i);
       expect(host.textContent).not.toMatch(
-        /на неделю|опоздал|на три дня|балл/,
+        /дымят|потрепанные|передвигается рядом с офисом/i,
       );
+      expect(host.textContent).not.toMatch(/на неделю|опоздал|на три дня|балл/);
       expect(host.querySelector("button")).toBeNull();
     },
   );
@@ -28,12 +28,13 @@ describe("carrier inspection before committing a choice", () => {
     expect(html).toContain("Два водителя");
     expect(html).not.toContain("дорогой");
   });
-  it("keeps automatic selection separate from the four numbered trucks", () => {
+  it("explains Express as a freight aggregator, without a truck photo", () => {
     const host = document.createElement("div");
     host.innerHTML = renderToStaticMarkup(
       <CarrierInspection carrierId="express" />,
     );
-    expect(host.textContent).toContain("Express");
+    expect(host.textContent).toContain("Как такси, только для грузов");
+    expect(host.querySelectorAll("li")).toHaveLength(3);
     expect(host.querySelector("img")).toBeNull();
   });
 });

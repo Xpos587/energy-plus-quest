@@ -4,6 +4,11 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { stageStatic } from "./stage-static.mjs";
 
+const cityFiles = [
+  ...["wide", "tall"].flatMap(plate => [`scene1-v4/plate-${plate}.webp`, `scene1-v4/plate-${plate}@2x.webp`, `scene1-v4/trucks-${plate}.webp`]),
+  "scene1-v4/smoke.webp",
+];
+
 test("ships dynamic runtime media and licenses without publishing reference pages or source maps", async () => {
   const root = await mkdtemp(join(tmpdir(), "quest-stage-test-"));
   const source = join(root, "build");
@@ -12,7 +17,7 @@ test("ships dynamic runtime media and licenses without publishing reference page
     "index.html": '<script type="module" src="./assets/index-abcdefgh.js"></script>',
     "README-DEPLOY.txt": "deployment instructions",
     "quest-cache.js": "/* cache worker */",
-    "assets/index-abcdefgh.js": 'const image = "assets/optimized-original-abcdefgh.webp"; const warehouse="scene-world/warehouse.webp"; const font="fonts/example.woff2"; const movies=["city-motion-mobile.mp4","city-motion-tablet.mp4","city-motion-desktop.mp4"].map(name=>"scene1-live/separated-routes/"+name);',
+    "assets/index-abcdefgh.js": 'const image = "assets/optimized-original-abcdefgh.webp"; const warehouse="scene-world/warehouse.webp"; const font="fonts/example.woff2"; const city=["scene1-v4/plate-wide.webp?v=2","scene1-v4/plate-wide@2x.webp?v=2","scene1-v4/trucks-wide.webp?v=5","scene1-v4/plate-tall.webp?v=2","scene1-v4/plate-tall@2x.webp?v=2","scene1-v4/trucks-tall.webp?v=5","scene1-v4/smoke.webp?v=1"];',
     "assets/unused-image.webp": "unused derivative",
     "scene-world/unused.webp": "unused original",
     "assets/index-abcdefgh.js.map": '{"sourcesContent":["private source"]}',
@@ -22,9 +27,13 @@ test("ships dynamic runtime media and licenses without publishing reference page
     "static-image-replacements.json": JSON.stringify({"scene-art/original.png":"assets/optimized-original-abcdefgh.webp"}),
     "scene-art/original.png": "editable original",
     "assets/optimized-original-abcdefgh.webp": "runtime image",
-    "scene1-live/separated-routes/city-motion-mobile.mp4": "video",
-    "scene1-live/separated-routes/city-motion-tablet.mp4": "tablet video",
-    "scene1-live/separated-routes/city-motion-desktop.mp4": "desktop video",
+    "scene1-v4/plate-wide.webp": "wide plate",
+    "scene1-v4/plate-wide@2x.webp": "wide retina plate",
+    "scene1-v4/trucks-wide.webp": "wide atlas",
+    "scene1-v4/plate-tall.webp": "tall plate",
+    "scene1-v4/plate-tall@2x.webp": "tall retina plate",
+    "scene1-v4/trucks-tall.webp": "tall atlas",
+    "scene1-v4/smoke.webp": "smoke",
     "review/carriers/closer-blue.png": "inspection",
     "review/carriers/index.html": "private reference page",
     "review/unrelated/photo.png": "unrelated reference",
@@ -38,7 +47,7 @@ test("ships dynamic runtime media and licenses without publishing reference page
     const config = join(root, "nginx.conf");
     await writeFile(config, "location /game/ { }");
     await stageStatic(source, stage, config);
-    for (const file of ["index.html", "README-DEPLOY.txt", "quest-cache.js", "fonts/LICENSE.txt", "fonts/example.woff2", "scene-world/warehouse.webp", ...["mobile", "tablet", "desktop"].map(variant => `scene1-live/separated-routes/city-motion-${variant}.mp4`)]) {
+    for (const file of ["index.html", "README-DEPLOY.txt", "quest-cache.js", "fonts/LICENSE.txt", "fonts/example.woff2", "scene-world/warehouse.webp", ...cityFiles]) {
       expect(await readFile(join(stage, file), "utf8")).toBe(fixture[file]);
     }
     for (const file of ["assets/unused-image.webp", "scene-world/unused.webp", "review/carriers/closer-blue.png", "scene-art/original.png", "static-image-replacements.json", "assets/index-abcdefgh.js.map", "review/carriers/index.html", "review/unrelated/photo.png"]) {
@@ -51,25 +60,24 @@ test("ships dynamic runtime media and licenses without publishing reference page
   } finally { await rm(root, { recursive: true, force: true }); }
 });
 
-test.each(["dynamic-reference", "mobile", "tablet", "desktop"])("refuses a package with omitted city video: %s", async (missing) => {
-  const root = await mkdtemp(join(tmpdir(), "quest-stage-video-"));
+test.each(["dynamic-reference", ...cityFiles])("refuses a package with an omitted city image: %s", async (missing) => {
+  const root = await mkdtemp(join(tmpdir(), "quest-stage-city-"));
   const source = join(root, "build");
   const stage = join(root, "stage");
-  const directory = "scene1-live/separated-routes/";
   try {
     await mkdir(join(source, "assets"), { recursive: true });
-    await mkdir(join(source, directory), { recursive: true });
-    await writeFile(join(source, "index.html"), '<script type="module" src="./assets/index-video.js"></script>');
+    await mkdir(join(source, "scene1-v4"), { recursive: true });
+    await writeFile(join(source, "index.html"), '<script type="module" src="./assets/index-city.js"></script>');
     const script = missing === "dynamic-reference"
-      ? 'const asset=name=>"scene1-live/separated-routes/"+name; const movie=asset(`city-motion-${variant}.mp4`);'
-      : 'const movies=["city-motion-mobile.mp4","city-motion-tablet.mp4","city-motion-desktop.mp4"].map(name=>"scene1-live/separated-routes/"+name);';
-    await writeFile(join(source, "assets/index-video.js"), script);
-    for (const variant of ["mobile", "tablet", "desktop"]) {
-      if (variant !== missing) await writeFile(join(source, directory, `city-motion-${variant}.mp4`), `${variant} video`);
+      ? 'const asset=name=>"scene1-v4/"+name; const plate=asset(`plate-${shape}.webp`);'
+      : `const city=${JSON.stringify(cityFiles)};`;
+    await writeFile(join(source, "assets/index-city.js"), script);
+    for (const file of cityFiles) {
+      if (file !== missing) await writeFile(join(source, file), "image");
     }
     const config = join(root, "nginx.conf");
     await writeFile(config, "location /game/ { }");
-    await expect(stageStatic(source, stage, config)).rejects.toThrow("Missing required city video");
+    await expect(stageStatic(source, stage, config)).rejects.toThrow("Missing required city image");
     expect(await access(stage).then(() => true, () => false)).toBe(false);
   } finally { await rm(root, { recursive: true, force: true }); }
 });
@@ -93,15 +101,14 @@ test("ships every ending image referenced by the real screen sources and rejects
   try {
     await mkdir(join(source, "assets"), { recursive: true });
     await writeFile(join(source, "index.html"), '<script type="module" src="./assets/index-endings.js"></script>');
-    let script = 'const videos=["scene1-live/separated-routes/city-motion-mobile.mp4","scene1-live/separated-routes/city-motion-tablet.mp4","scene1-live/separated-routes/city-motion-desktop.mp4"];';
+    let script = `const city=${JSON.stringify(cityFiles)};`;
     for (const file of ["../src/scenes/resolutionArtwork.ts", "../src/scenes/LogistCertificate.tsx"]) {
       const code = await readFile(new URL(file, import.meta.url), "utf8");
       script += transformSync(code, { loader: "tsx", format: "iife" }).code;
     }
     await writeFile(join(source, "assets/index-endings.js"), script);
-    await mkdir(join(source, "scene1-live/separated-routes"), { recursive: true });
-    for (const variant of ["mobile", "tablet", "desktop"])
-      await writeFile(join(source, `scene1-live/separated-routes/city-motion-${variant}.mp4`), "video");
+    await mkdir(join(source, "scene1-v4"), { recursive: true });
+    for (const file of cityFiles) await writeFile(join(source, file), "image");
     const images = Object.entries(families).flatMap(([family, names]) => names.map(name => `scene-art/${family}/${name}.webp`));
     for (const file of images) {
       await mkdir(join(source, file, ".."), { recursive: true });

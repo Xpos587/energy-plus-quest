@@ -116,7 +116,7 @@ test("carrier results fill the viewport and pan directly, including automatic se
       await expect(page.locator('[data-scene-panning="true"]')).toHaveCount(1);
     }
     await expect(
-      page.getByRole("button", { name: "К следующей сцене", exact: true }),
+      page.getByRole("button", { name: "Дальше: погрузка", exact: true }),
     ).toBeInViewport({ ratio: 1 });
     await expect(page.locator('[data-scene-panning="true"]')).toHaveCount(0);
     await expect(page.locator('[data-sheet-panel]')).toHaveCSS('opacity', '1');

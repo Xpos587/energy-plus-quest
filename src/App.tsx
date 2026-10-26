@@ -1,11 +1,11 @@
 import { type CSSProperties, useEffect, useRef, useState } from "react";
 import styles from "./App.module.css";
+import { CarrierTapHint } from "./components/CarrierTapHint";
 import { CarrierInspection } from "./components/CarrierInspection";
-import { CarrierChoices } from "./components/CarrierChoices";
 import { ChoiceInspection } from "./components/ChoiceInspection";
-import { CityMap } from "./components/CityMap";
 import { GameIntro } from "./components/GameIntro";
 import { GiftPreparation } from "./components/GiftPreparation";
+import { IllustratedCityMap } from "./components/IllustratedCityMap";
 import { ImageSources } from "./components/ImageSources";
 import { QuestHeader } from "./components/QuestShell";
 import { ResultCopy } from "./components/ResultCopy";
@@ -67,10 +67,7 @@ function Game() {
     dispatch(action);
   };
 
-  if (
-    introOpen ||
-    (state.step === "profile" && !state.profile && !introSeen)
-  ) {
+  if (introOpen || (state.step === "profile" && !state.profile && !introSeen)) {
     return (
       <GameIntro
         onStart={() => {
@@ -268,7 +265,7 @@ function CarrierScreen({
   useEffect(() => {
     if (!focusCarrier) return;
     const selected = panel.current?.querySelector<HTMLButtonElement>(
-      `[data-scene-choice="${focusCarrier}"]`,
+      `[data-scene-choice="${focusCarrier}"], [data-carrier-choice="${focusCarrier}"]`,
     );
     selected?.focus({ preventScroll: true });
     selected?.scrollIntoView({ block: "nearest", inline: "nearest" });
@@ -289,6 +286,8 @@ function CarrierScreen({
         currentStep={0}
         title="Выбор перевозчика"
         showLeadOnChoice={false}
+        // The hidden text is the destination: name it, not "the task".
+        conditionLabel="Куда везём?"
         initiallyOpen={false}
         question={taskQuestion}
         navigation="fixed"
@@ -304,11 +303,11 @@ function CarrierScreen({
         onBack={onBack}
         inspecting={!!pendingId}
         onOpen={() => setPendingId(undefined)}
-        action={<CarrierChoices selectedId={pendingId} onInspect={inspect} />}
+        // The rigs on the map are the only way to choose.
+        action={<CarrierTapHint selectedId={pendingId} />}
       />
       <div className={flow.carrierMap} data-carrier-map>
-        <CityMap
-          mode="live"
+        <IllustratedCityMap
           interactive={!mapReading}
           onSelect={inspect}
           selectedId={pendingId}
@@ -321,9 +320,10 @@ function CarrierScreen({
           media={pendingId !== "express"}
           title={
             pendingId === "express"
-              ? "Подобрать автоматически"
+              ? "Express подберёт фуру"
               : carrierFacts[pendingId].label
           }
+          cancelLabel="Другая фура"
           onCancel={() => setPendingId(undefined)}
           onConfirm={() => onSelect(pendingId)}
         >
@@ -346,7 +346,12 @@ function Outcome({
   const recipient = findRecipient(state.recipient);
   const parcel = findParcel(state.parcel);
   useEffect(
-    () => prefetchImage(detailImageAsset(sceneChoiceImage("compact")), undefined, true),
+    () =>
+      prefetchImage(
+        detailImageAsset(sceneChoiceImage("compact")),
+        undefined,
+        true,
+      ),
     [],
   );
   const resultNarrative = carrier
@@ -426,7 +431,7 @@ function Outcome({
                 onBack,
                 onNext,
                 backLabel: "Назад к машинам",
-                nextLabel: "К следующей сцене",
+                nextLabel: "Дальше: погрузка",
               }}
             />
           </div>

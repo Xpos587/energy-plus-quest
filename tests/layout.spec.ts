@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 for (const viewport of [
   { width: 320, height: 568 },
@@ -26,7 +26,7 @@ for (const viewport of [
       expect((await choice.boundingBox())?.height).toBeGreaterThanOrEqual(44);
     }
 
-    await page.locator('[data-scene-choice="crew"]').click();
+    await pickCarrier(page, "crew");
     await expect(page.locator("[data-choice-confirm]")).toBeInViewport({
       ratio: 0.95,
     });
@@ -54,7 +54,7 @@ test("parcel and recipient names stay grammatical in the next decision", async (
     ["arseniy", "boat", "лодку"],
   ] as const) {
     await openCarrier(page, "professional", recipient, parcel);
-    await page.locator('[data-scene-choice="crew"]').click();
+    await pickCarrier(page, "crew");
     await page.locator("[data-choice-confirm]").click();
     await page
       .getByRole("button", { name: "Загрузить подарок в фуру" })

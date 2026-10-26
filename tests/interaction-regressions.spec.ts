@@ -123,7 +123,7 @@ for (const [width, height] of [
       const next = page.getByRole("button", {
         name:
           scene === "carrier"
-            ? "К следующей сцене"
+            ? "Дальше: погрузка"
             : scene === "lastmile"
               ? "Завершить"
               : "Продолжить",

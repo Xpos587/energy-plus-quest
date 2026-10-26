@@ -1,10 +1,10 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 test("map pan keeps the preview until explicit cancel", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await openCarrier(page, "professional", "alva", "boat");
-  await page.locator('[data-carrier-choice="near"]').click();
+  await pickCarrier(page, "near");
   await expect(page.locator('[data-choice-inspection="near"]')).toBeVisible();
   // Dispatch a real pointer sequence on exposed map space, away from controls.
   const point = await page.locator('[data-mode="live"]').evaluate((map) => {
@@ -37,7 +37,7 @@ test("map pan keeps the preview until explicit cancel", async ({ page }) => {
   await map.focus();
   await page.keyboard.press('Home');
   await expect(map).toHaveAttribute('data-map-scale', '1');
-  await page.locator('[data-scene-choice="crew"]').click();
+  await pickCarrier(page, "crew");
   await expect(page.locator('[data-choice-inspection="crew"]')).toBeVisible();
   await page.locator('[data-choice-confirm]').click();
   await expect(page.locator('[data-layout="result"][data-carrier="crew"]')).toBeVisible();

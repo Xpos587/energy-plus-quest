@@ -1,3 +1,4 @@
+import { pickCarrier } from "./helpers/open-preparation";
 import { expect, type Page, test } from "@playwright/test";
 
 async function carrier(page: Page) {
@@ -39,7 +40,7 @@ test("inspect, cancel and confirm across all five scenes without premature outco
   await page.locator("[data-choice-confirm]").click();
   await expect(page.locator("[data-score-key]")).toHaveCount(3);
   await page
-    .getByRole("button", { name: "К следующей сцене", exact: true })
+    .getByRole("button", { name: "Дальше: погрузка", exact: true })
     .click();
   for (const [index, [scene, id]] of [
     ["compact", "place-2"],
@@ -117,7 +118,7 @@ test("briefing can be reread and a pending answer survives resizing without comm
   await expect(page.getByTestId("scene-intro")).toContainText("Доставить");
   await page.getByRole("button", { name: "Далее", exact: true }).click();
   await page.getByRole("button", { name: "К сцене", exact: true }).click();
-  await page.locator('[data-carrier-choice="express"]').click();
+  await pickCarrier(page, "express");
   await page.setViewportSize({ width: 844, height: 390 });
   await fits(page);
   await expect(page.locator('[data-step="carrier"]')).toBeVisible();

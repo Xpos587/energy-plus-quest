@@ -142,37 +142,6 @@
   height: 100%;
   min-height: 0;
 }
-.sceneStage {
-  position: relative;
-  isolation: isolate;
-  height: 100%;
-  display: grid;
-  align-items: center;
-  padding: clamp(112px, 16cqh, 160px) clamp(8px, 2cqh, 28px) 12px;
-}
-.sceneStage > .cityMap,
-.mapBackdrop {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  overflow: hidden;
-}
-.mapBackdrop .cityMap,
-.cityMap[data-mode="soft"] > div {
-  height: 100%;
-}
-.cityMap[data-mode="soft"] .mapPicture,
-.cityMap[data-mode="soft"] .mapImage {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.cityMap[data-mode="soft"] .mapImage {
-  object-fit: cover;
-  opacity: 0.72;
-  filter: blur(8px);
-  transform: scale(1.03);
-}
 .mapVeil,
 .mapShade,
 .outcomeVeil {
@@ -235,9 +204,6 @@ button:focus-visible {
   margin: 0;
   font-size: clamp(20px, 3cqh, 30px);
   line-height: 1.15;
-}
-.sceneStage:has([data-selection-panel]) {
-  padding-top: 84px;
 }
 .screenHeading h2 {
   margin: clamp(8px, 1.6cqh, 20px) 0;
@@ -370,111 +336,7 @@ button:focus-visible {
   overflow: hidden;
   isolation: isolate;
 }
-.cityMap[data-mode="live"] {
-  grid-area: 1 / 1;
-  min-height: 0;
-  min-width: 0;
-  container-type: size;
-  position: relative;
-  overflow: visible;
-}
 /* Match the authored 1280x788 video so labels share its pixel plane. */
-.liveMapSurface {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  /* Keep the full 44px moving targets inside the map's clipping ancestors. */
-  width: min(calc(100cqw - 44px), calc((100cqh - 44px) * 1280 / 788));
-  aspect-ratio: 1280 / 788;
-  transform: translate(-50%, -50%);
-  overflow: visible;
-  border-radius: 0;
-}
-.liveMapSurface .mapPicture,
-.liveMapSurface .mapImage {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.liveMapSurface .mapPicture {
-  position: relative;
-}
-.liveMapSurface .mapPicture > .mapImage {
-  position: absolute;
-  inset: 0;
-}
-.cityExtension {
-  position: absolute;
-  width: 146.875%;
-  height: auto;
-  max-width: none;
-  left: -23.4375%;
-  top: -12.690355%;
-  pointer-events: none;
-  z-index: -1;
-}
-.cityExtension[data-format="mobile"] {
-  width: 213.888889%;
-  left: -58.333333%;
-  top: 0;
-}
-.liveMapSurface .mapImage {
-  object-fit: contain;
-}
-.mapFallback {
-  background: #d8e3e7;
-}
-.truckNumber,
-.pickupLabel {
-  position: absolute;
-  display: grid;
-  min-width: 28px;
-  min-height: 28px;
-  place-items: center;
-  padding: 1px 6px;
-  color: white;
-  border: 2px solid white;
-  border-radius: 8px;
-  background: var(--orange);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.1;
-  pointer-events: none;
-}
-.truckNumber {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1;
-}
-.truckNumber[data-truck="truck-1"] {
-  left: 12%;
-  top: 63%;
-}
-.truckNumber[data-truck="truck-2"] {
-  left: 37.5%;
-  top: 43%;
-}
-.truckNumber[data-truck="truck-3"] {
-  left: 32%;
-  top: 78%;
-}
-.truckNumber[data-truck="truck-4"] {
-  left: 45%;
-  top: 71%;
-}
-.pickupLabel {
-  left: 48.9%;
-  top: 25.55%;
-  padding: 5px 10px;
-  color: var(--navy);
-  border: 1px solid #c4ced7;
-  border-radius: 4px;
-  background: #fffaf1;
-  box-shadow: 0 2px 6px #04132726;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.2;
-}
 .motionControls {
   grid-column: 1 / -1;
 }
@@ -598,35 +460,6 @@ button:focus-visible {
   .outcomeBackdrop[data-format="mobile"] {
     display: block;
     object-position: center;
-  }
-}
-
-@container (max-aspect-ratio: 1.607143) {
-  .liveMapSurface {
-    width: min(calc(100cqw - 44px), calc((100cqh - 44px) * 720 / 1088));
-    aspect-ratio: 720 / 1088;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .truckNumber[data-truck="truck-1"] {
-    left: 22.1%;
-    top: 63%;
-  }
-  .truckNumber[data-truck="truck-2"] {
-    left: 68.1%;
-    top: 45.3%;
-  }
-  .truckNumber[data-truck="truck-3"] {
-    left: 58.2%;
-    top: 80.9%;
-  }
-  .truckNumber[data-truck="truck-4"] {
-    left: 78.5%;
-    top: 65%;
-  }
-  .pickupLabel {
-    left: 48.6%;
-    top: 30.66%;
   }
 }
 
@@ -860,9 +693,6 @@ button:focus-visible {
   .app {
     --company-logo-width: clamp(96px, calc((100vw - 122px) / 2), 142px);
     --energy-logo-width: clamp(94px, calc((100vw - 126px) / 2), 138px);
-  }
-  .sceneStage {
-    padding-top: max(132px, 16cqh);
   }
   .header {
     padding: 8px 10px;
@@ -1493,10 +1323,6 @@ button:focus-visible {
 }
 
 @media (max-width: 800px) and (max-height: 500px) and (orientation: landscape) {
-  .sceneStage:has(.choiceGrid[data-count="2"]) {
-    align-items: end;
-    padding: 130px 8px 8px;
-  }
   .dialogPanel:has(.choiceGrid[data-count="2"]) {
     padding: 8px;
   }

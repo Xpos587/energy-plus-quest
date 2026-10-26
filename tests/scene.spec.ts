@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier, openPreparation } from "./helpers/open-preparation";
+import { openCarrier, openPreparation, pickCarrier } from "./helpers/open-preparation";
 
 test("preparation keeps selections and progress visible as the story advances", async ({
   page,
@@ -73,7 +73,7 @@ test("near result keeps the approved delay and cause for the selected gift", asy
   page,
 }) => {
   await openCarrier(page, "professional", "alva", "camera");
-  await page.locator('[data-scene-choice="near"]').click();
+  await pickCarrier(page, "near");
   await page.locator("[data-choice-confirm]").click();
   const result = page.locator("[data-result-reader]");
   await expect(result).toContainText("фотоаппарат с опозданием на три дня");

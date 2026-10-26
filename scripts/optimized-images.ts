@@ -21,7 +21,6 @@ const choicePath = /\/design\/scene-01\/assets\/current\/choices\/[^/]+\.webp$/;
 const publicRoots = [
   "scene-art",
   "compact-art",
-  "scene1-live",
   "review/carrier-art-2026-09-27",
   "opening",
 ];
@@ -421,18 +420,7 @@ export function optimizedImages(): Plugin {
             const groups = await Promise.all(
               publicRoots.map(async (root) => {
                 const directory = path.join(config.publicDir, root);
-                const files = await imageFiles(
-                  directory,
-                  root !== "scene1-live",
-                );
-                if (root === "scene1-live")
-                  files.push(
-                    ...(await imageFiles(
-                      path.join(directory, "separated-routes"),
-                      true,
-                    )),
-                  );
-                return files;
+                return imageFiles(directory, true);
               }),
             );
             // Filter before emitting: an entry in the fallback lookup itself

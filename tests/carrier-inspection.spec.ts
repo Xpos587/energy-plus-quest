@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 for (const [width, height] of [
   [320, 568],
@@ -41,7 +41,7 @@ for (const [width, height] of [
         page.locator(`[data-carrier-inspection="${id}"]`),
       ).toHaveCount(0);
     }
-    await page.locator('[data-scene-choice="crew"]').click();
+    await pickCarrier(page, "crew");
     await expect(page.locator('[data-carrier-inspection="crew"] img')).toHaveCount(0);
     await expect(page.locator('[data-camera-inspection="true"] [data-map-viewport]')).toBeVisible();
     await page.locator("[data-choice-confirm]").click();
@@ -59,11 +59,11 @@ for (const [width, height] of [
 test("short carrier outcome fills the available reading area at 620x768", async ({ page }) => {
   await page.setViewportSize({ width: 620, height: 768 });
   await openCarrier(page, "professional", "alva", "boat");
-  await page.locator('[data-scene-choice="near"]').click();
+  await pickCarrier(page, "near");
   await page.locator('[data-choice-confirm]').click();
   const reading = page.locator('[data-result-reading]');
   await expect(reading).toContainText('водитель оказался очень неторопливым');
-  await expect(page.getByRole('button', { name: 'К следующей сцене', exact: true })).toBeInViewport({ ratio: 1 });
+  await expect(page.getByRole('button', { name: 'Дальше: погрузка', exact: true })).toBeInViewport({ ratio: 1 });
   expect(await reading.evaluate(el => el.firstElementChild!.getBoundingClientRect().height - el.clientHeight)).toBeLessThanOrEqual(1);
 });
 
@@ -73,7 +73,7 @@ test("all truck inspections survive unavailable motion video", async ({
   await page.route("**/scene1-live/**/*.mp4", (route) => route.abort());
   await openCarrier(page, "professional", "alva", "boat");
   await expect(page.locator("[data-map-viewport]")).toBeVisible();
-  await page.locator('[data-carrier-choice="near"]').click();
+  await pickCarrier(page, "near");
   await expect(page.locator('[data-carrier-inspection="near"]')).toContainText("17 км/ч");
   await expect(page.locator('[data-carrier-inspection="near"]')).toContainText(
     "2021",

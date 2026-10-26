@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 for (const viewport of [
   { width: 320, height: 568 },
@@ -18,7 +18,7 @@ for (const viewport of [
     await expect(page.locator("[data-map-viewport]")).toBeVisible();
     await expect(task).not.toContainText("Красная фура — старая");
 
-    await page.locator('[data-scene-choice="near"]').click();
+    await pickCarrier(page, "near");
     await expect(page.locator("[data-choice-inspection]")).toBeVisible();
     await expect(page.locator("[data-score-key]")).toHaveCount(0);
     await expect(page.locator("[data-choice-confirm]")).toBeVisible();
@@ -43,7 +43,7 @@ test("automatic carrier route explains Express before confirmation", async ({
   page,
 }) => {
   await openCarrier(page);
-  await page.locator('[data-scene-choice="express"]').click();
+  await pickCarrier(page, "express");
   const inspection = page.locator("[data-choice-inspection]");
   await expect(inspection).toContainText("Express");
   await expect(inspection).toContainText(/подбира|перевоз/i);

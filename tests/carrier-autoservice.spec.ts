@@ -49,7 +49,7 @@ for (const [width, height] of [
         page.getByRole("button", { name: "Назад к машинам", exact: true }),
       ).toBeInViewport({ ratio: 1 });
       await expect(
-        page.getByRole("button", { name: "К следующей сцене", exact: true }),
+        page.getByRole("button", { name: "Дальше: погрузка", exact: true }),
       ).toBeInViewport({ ratio: 1 });
     });
   }

@@ -165,12 +165,12 @@ export function useCityMapZoom<Choice extends string = string>(
       else animateTo(next);
     }
   };
-  const inspect = (id: Choice | undefined, point?: Point) => {
+  const inspect = (id: Choice | undefined, point?: Point, zoom = 2.4) => {
     const current = inspection.current;
     if (id === current?.id) return;
     if (id && point) {
       inspection.current = { id, point, saved: current?.saved ?? { ...liveView.current }, suspended: false };
-      animateTo(centered({ ...liveView.current, scale: Math.max(2.4, liveView.current.scale) }, point));
+      animateTo(centered({ ...liveView.current, scale: Math.max(zoom, liveView.current.scale) }, point));
     } else if (current) {
       inspection.current = null;
       restoringFocus.current = true;

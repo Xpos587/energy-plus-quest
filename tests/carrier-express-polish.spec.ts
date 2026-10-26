@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 test("automatic inspection uses the manual desktop card shell without zooming the map", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await openCarrier(page, "professional", "arseniy", "boat");
-  await page.locator('[data-scene-choice="near"]').click();
+  await pickCarrier(page, "near");
   const manual = await page.locator("[data-choice-inspection]").boundingBox();
   await page.locator("[data-choice-cancel]").click();
   await expect(page.locator("[data-map-viewport]")).toHaveAttribute(
@@ -14,7 +14,7 @@ test("automatic inspection uses the manual desktop card shell without zooming th
     "1",
   );
   const scale = "1";
-  await page.locator('[data-scene-choice="express"]').click();
+  await pickCarrier(page, "express");
   const automatic = await page
     .locator("[data-choice-inspection]")
     .boundingBox();
@@ -68,10 +68,10 @@ for (const [width, height] of [
         await next.click();
       }
       await expect(
-        page.getByRole("button", { name: "К следующей сцене", exact: true }),
+        page.getByRole("button", { name: "Дальше: погрузка", exact: true }),
       ).toBeInViewport({ ratio: 1 });
       await page
-        .getByRole("button", { name: "К следующей сцене", exact: true })
+        .getByRole("button", { name: "Дальше: погрузка", exact: true })
         .click();
       await expect(page.locator('[data-scene="compact"]')).toBeVisible();
       const state = await page.evaluate(
@@ -100,7 +100,7 @@ for (const [width, height] of [
   }) => {
     await page.setViewportSize({ width, height });
     await openCarrier(page, "professional", "arseniy", "boat");
-    await page.locator('[data-scene-choice="old4"]').click();
+    await pickCarrier(page, "old4");
     await page.locator("[data-choice-confirm]").click();
     const art = page.locator('[data-outcome-art="old4"]');
     await expect

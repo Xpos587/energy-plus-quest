@@ -1,3 +1,4 @@
+import { pickCarrier } from "./helpers/open-preparation";
 import { expect, test } from "@playwright/test";
 test("tablet sheet preserves copy, supports dragging and keeps actions accessible", async ({
   page,
@@ -53,7 +54,7 @@ for (const width of [734, 749, 900, 1024, 1100, 390, 320]) {
     await page.goto("/");
     for (const id of ["professional", "alva", "socks"])
       await page.locator(`[data-choice="${id}"]`).click();
-    await page.locator('[data-carrier-choice="near"]').click();
+    await pickCarrier(page, "near");
     await expect(
       page.getByRole("heading", { name: "Счастье уже близко!" }),
     ).toBeVisible();
@@ -66,7 +67,7 @@ for (const width of [734, 749, 900, 1024, 1100, 390, 320]) {
     await page.locator("button[aria-expanded]").click();
     expect(await art.boundingBox()).toEqual(before);
     await expect(
-      page.getByRole("button", { name: "К следующей сцене" }),
+      page.getByRole("button", { name: "Дальше: погрузка" }),
     ).toBeInViewport();
   });
 }

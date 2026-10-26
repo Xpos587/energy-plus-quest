@@ -16,6 +16,7 @@ export function ChoiceInspection({
   onCancel,
   returnFocus,
   confirming = false,
+  cancelLabel = "К вариантам",
 }: {
   selectionKey: string;
   title: string;
@@ -27,6 +28,8 @@ export function ChoiceInspection({
   onCancel: () => void;
   returnFocus?: HTMLElement | null;
   confirming?: boolean;
+  /** Says where Cancel leads in the scene's own words. */
+  cancelLabel?: string;
 }) {
   const id = useId();
   const heading = useRef<HTMLHeadingElement>(null);
@@ -80,7 +83,9 @@ export function ChoiceInspection({
           className={styles.inspectionCopy}
           aria-label="Описание варианта"
         >
-          {paragraphs && continuous ? paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>) : paragraphs ? (
+          {paragraphs && continuous ? (
+            paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)
+          ) : paragraphs ? (
             <PagedDescription key={selectionKey} paragraphs={paragraphs} />
           ) : (
             children
@@ -95,7 +100,7 @@ export function ChoiceInspection({
           onClick={onCancel}
         >
           <ArrowLeft size={18} aria-hidden="true" />
-          К вариантам
+          {cancelLabel}
         </button>
         <button
           type="button"

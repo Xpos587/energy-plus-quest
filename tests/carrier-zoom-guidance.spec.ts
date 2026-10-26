@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 test("map teaches zoom once, previews a truck, and returns to the overview", async ({
   page,
@@ -55,7 +55,7 @@ test("map teaches zoom once, previews a truck, and returns to the overview", asy
   await expect(card).toHaveCount(0);
   await expect(hint).toHaveCount(0);
   await page.screenshot({ path: info.outputPath("overview-restored.png") });
-  await page.locator('[data-scene-choice="near"]').click();
+  await pickCarrier(page, "near");
   await expect(card).toBeVisible();
   await page.locator("[data-choice-confirm]").click();
   await expect(

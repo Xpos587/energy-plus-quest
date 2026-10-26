@@ -1,3 +1,4 @@
+import { pickCarrier } from "./helpers/open-preparation";
 import { expect, type Locator, test } from "@playwright/test";
 
 async function appearance(panel: Locator) {
@@ -35,7 +36,7 @@ test("all outcomes use exactly one canonical metrics panel, not cumulative total
   await page.goto("/");
   for (const id of ["professional", "alva", "boat"])
     await page.locator(`[data-choice="${id}"]`).click();
-  await page.locator('[data-carrier-choice="express"]').click();
+  await pickCarrier(page, "express");
   await page.evaluate(() => document.fonts.ready);
   const panel = page.getByRole("group", { name: "Изменение показателей" });
   const canonical = await appearance(panel);
@@ -43,7 +44,7 @@ test("all outcomes use exactly one canonical metrics panel, not cumulative total
     .locator("svg")
     .evaluateAll((nodes) => nodes.map((node) => node.outerHTML));
   await panel.screenshot({ path: info.outputPath("carrier-metrics.png") });
-  await page.getByRole("button", { name: "К следующей сцене" }).click();
+  await page.getByRole("button", { name: "Дальше: погрузка" }).click();
   for (const [scene, id, values] of [
     ["compact", "auto", ["-4", "+3", "+5"]],
     ["inventory", "wms", ["+4", "+4", "+5"]],

@@ -1,3 +1,4 @@
+import { pickCarrier } from "./helpers/open-preparation";
 import { expect, type Page, test } from "@playwright/test";
 
 async function readCondition(page: Page) {
@@ -243,7 +244,7 @@ test("five-scene journey supports rereading, cancellation, revising and reloadin
       .getByRole("button", {
         name:
           scene === "carrier"
-            ? "К следующей сцене"
+            ? "Дальше: погрузка"
             : scene === "lastmile"
               ? "Завершить"
               : "Продолжить",
@@ -353,11 +354,11 @@ test("back arrow returns to the previous scene from both reading and choosing", 
   for (const id of ["professional", "alva", "camera"])
     await page.locator(`[data-choice="${id}"]`).click();
   await readCondition(page);
-  await page.locator('[data-carrier-choice="crew"]').click();
+  await pickCarrier(page, "crew");
   await page.locator("[data-choice-confirm]").click();
   await checkResult(page);
   await page
-    .getByRole("button", { name: "К следующей сцене", exact: true })
+    .getByRole("button", { name: "Дальше: погрузка", exact: true })
     .click();
   await readCondition(page);
   await page

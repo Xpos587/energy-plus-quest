@@ -1,0 +1,42 @@
+/* One line under the task: how to choose on the map. */
+.tapHint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  color: #35506a;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.tapIcon {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  color: #ff6a13;
+}
+.tapIcon svg {
+  width: 18px;
+  height: 18px;
+  animation: tapPress 2.4s ease-in-out infinite;
+}
+@keyframes tapPress {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  12% {
+    transform: translate(1px, 1.5px) scale(0.92);
+  }
+  24% {
+    transform: translate(0, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tapIcon svg {
+    animation: none;
+  }
+}

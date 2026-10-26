@@ -484,7 +484,6 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
     "compact-art/outcomes/socks-niche.png",
     "review/carrier-art-2026-09-27/closer-old.png",
     "scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
-    "scene1-live/separated-routes/city-poster.webp",
     "scene-art/lastmile-family-v1/choice-final-tall-v10.webp",
     "scene-art/lastmile-family-v1/revision-2/flight-boat.webp",
     "scene-art/lastmile-family-v1/revision-2/flight-parcel-arseniy.webp",
@@ -505,7 +504,6 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
     "scene-art/inventory-horizontal-v1.png",
     "compact-art/outcomes/unused.png",
     "review/carrier-art-2026-09-27/closer-unused.png",
-    "scene1-live/unused-desktop.webp",
     "scene-art/outcomes/inventory-unused-v8.webp",
     "scene-art/outcomes/lastmile-unused-v3.png",
   ];

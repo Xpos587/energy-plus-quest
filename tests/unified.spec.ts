@@ -1,3 +1,4 @@
+import { pickCarrier } from "./helpers/open-preparation";
 import { expect, type Page, test } from "@playwright/test";
 
 async function fits(page: Page) {
@@ -31,11 +32,11 @@ test("remaining stages share geometry, full copy and scores", async ({
   await page.evaluate(() => document.fonts.ready);
   await fits(page);
   await page.screenshot({ path: info.outputPath("carrier.png") });
-  await page.locator('[data-carrier-choice="express"]').click();
+  await pickCarrier(page, "express");
   await expect(
-    page.getByRole("button", { name: "К следующей сцене" }),
+    page.getByRole("button", { name: "Дальше: погрузка" }),
   ).toBeInViewport({ ratio: 1 });
-  await page.getByRole("button", { name: "К следующей сцене" }).click();
+  await page.getByRole("button", { name: "Дальше: погрузка" }).click();
   const header = await page.locator("header").boundingBox();
   const logos = await page.locator("header img").evaluateAll((nodes) =>
     nodes.map((node) => {
@@ -125,19 +126,19 @@ test("back navigation and orientation keep context and choices reachable", async
   await page.goto("/");
   for (const id of ["student", "khor", "camera"])
     await page.locator(`[data-choice="${id}"]`).click();
-  await page.locator('[data-carrier-choice="near"]').click();
+  await pickCarrier(page, "near");
   await expect(
-    page.getByRole("button", { name: "К следующей сцене" }),
+    page.getByRole("button", { name: "Дальше: погрузка" }),
   ).toBeInViewport({ ratio: 1 });
-  await page.getByRole("button", { name: "К следующей сцене" }).click();
+  await page.getByRole("button", { name: "Дальше: погрузка" }).click();
   await page.getByRole("button", { name: "Назад", exact: true }).click();
   await expect(page.locator('[data-carrier-choice="near"]')).toBeVisible();
   await expect(page.locator("header [data-selection-context]")).toHaveCount(3);
-  await page.locator('[data-carrier-choice="near"]').click();
+  await pickCarrier(page, "near");
   await expect(
-    page.getByRole("button", { name: "К следующей сцене" }),
+    page.getByRole("button", { name: "Дальше: погрузка" }),
   ).toBeInViewport({ ratio: 1 });
-  await page.getByRole("button", { name: "К следующей сцене" }).click();
+  await page.getByRole("button", { name: "Дальше: погрузка" }).click();
   await page.locator('[data-choice-id="place-1"]').click();
   await page.getByRole("button", { name: "Продолжить", exact: true }).click();
   await page.getByRole("button", { name: "Назад", exact: true }).click();

@@ -1,7 +1,13 @@
-import { CalendarDays, Gauge, Users } from "lucide-react";
+import {
+  CalendarDays,
+  FileText,
+  Gauge,
+  ShieldCheck,
+  Truck,
+  Users,
+} from "lucide-react";
 import { carrierFacts, type MapCarrierId } from "../game/carrierFacts";
 import type { CarrierId } from "../game/types";
-import { PagedDescription } from "./PagedDescription";
 import styles from "./CarrierInspection.module.css";
 import { imageAsset } from "../game/imageAssets";
 import { CarrierSpeedometer } from "./CarrierSpeedometer";
@@ -18,10 +24,28 @@ export function CarrierInspection({
   showPreview?: boolean;
 }) {
   if (carrierId === "express") {
+    // Teo: "unclear what this platform is". One plain comparison, then
+    // what it does for the player; no numbers.
     return (
-      <PagedDescription
-        paragraphs={["Поручить поиск перевозчика платформе Express."]}
-      />
+      <div className={styles.express} data-carrier-inspection="express">
+        <p className={styles.automatic}>
+          Как такси, только для грузов: вы не ищете машину сами.
+        </p>
+        <ul className={styles.expressSteps}>
+          <li>
+            <ShieldCheck aria-hidden="true" />
+            Сравнит проверенных перевозчиков
+          </li>
+          <li>
+            <Truck aria-hidden="true" />
+            Учтёт технику, экипаж и цену
+          </li>
+          <li>
+            <FileText aria-hidden="true" />
+            Оформит документы
+          </li>
+        </ul>
+      </div>
     );
   }
   const facts = carrierFacts[carrierId];
@@ -48,7 +72,10 @@ export function CarrierInspection({
           <dt>{instruments ? "Темп движения" : "Максимальная скорость"}</dt>
           <dd className={instruments ? styles.speedReadout : undefined}>
             {instruments ? (
-              <CarrierSpeedometer key={carrierId} carrierId={carrierId} />
+              <>
+                <CarrierSpeedometer key={carrierId} carrierId={carrierId} />
+                <span className={styles.pace}>{facts.pace}</span>
+              </>
             ) : (
               !showPreview && <Gauge aria-hidden="true" />
             )}

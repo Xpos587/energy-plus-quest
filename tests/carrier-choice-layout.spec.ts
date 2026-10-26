@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 for (const [width, height] of [
   [1440, 900],
@@ -57,7 +57,7 @@ for (const [width, height] of [
       await page.locator("[data-choice-cancel]").click();
       await expect(button).toBeFocused();
     }
-    await page.locator('[data-scene-choice="express"]').click();
+    await pickCarrier(page, "express");
     await expect(page.locator("[data-choice-inspection]")).toContainText(
       "Express",
     );

@@ -63,11 +63,13 @@ export async function stageStatic(source, destination, nginxConfig) {
     /^fonts\/(?:OFL[^/]*\.txt|LICENSE[^/]*)$/.test(file) ||
     (media.test(file) && !replaced.has(file) && referenced(file)),
   );
-  // These streams are selected at runtime. Fail even in --stage-only packaging
-  // if a missing source or an opaque reference would omit any device variant.
-  for (const variant of ["mobile", "tablet", "desktop"]) {
-    const file = `scene1-live/separated-routes/city-motion-${variant}.mp4`;
-    assert(selected.includes(file), `Missing required city video in staging selection: ${file}`);
+  // The scene 1 city builds its plate/atlas URLs at runtime (wide/tall,
+  // @2x). Fail even in --stage-only packaging if a variant would be omitted.
+  for (const file of [
+    ...["wide", "tall"].flatMap(plate => [`scene1-v4/plate-${plate}.webp`, `scene1-v4/plate-${plate}@2x.webp`, `scene1-v4/trucks-${plate}.webp`]),
+    "scene1-v4/smoke.webp",
+  ]) {
+    assert(selected.includes(file), `Missing required city image in staging selection: ${file}`);
   }
   // Final screens use several context variants. A successful build must not
   // silently omit one when its runtime URL becomes dynamically constructed.

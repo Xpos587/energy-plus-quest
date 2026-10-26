@@ -1,30 +1,25 @@
+import { Hand, RotateCcw, ZoomIn } from "lucide-react";
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
-import { RotateCcw, ZoomIn, MousePointer2 } from "lucide-react";
 import { carrierFacts, mapCarrierIds } from "../game/carrierFacts";
-import { carrierFrame } from "../game/carrierTracking";
 import type { CarrierId } from "../game/types";
+import {
+  createSmoke,
+  createTraffic,
+  drawCity,
+  landmark,
+  loadTruckAtlas,
+  type PlateName,
+  plateAspect,
+  plateFor,
+  plateSource,
+  plateSrcSet,
+  plates,
+  stepTraffic,
+  trafficFrame,
+  trafficPoses,
+} from "./cityV4";
 import styles from "./IllustratedCityMap.module.css";
-import { imageAsset } from "../game/imageAssets";
-import { constrainedConnection, observedSlowTransfer } from "../game/network";
 import { useCityMapZoom } from "./useCityMapZoom";
-import { startCityVideoLoop } from "./cityVideoLoop";
-
-const asset = (name: string) =>
-  `${import.meta.env.BASE_URL}scene1-live/separated-routes/${name}?v=23`;
-const videoSources = {
-  mobile: asset("city-motion-mobile.mp4"),
-  tablet: asset("city-motion-tablet.mp4"),
-  desktop: asset("city-motion-desktop.mp4"),
-};
-const poster = imageAsset("scene1-live/separated-routes/city-poster.webp");
-
-// The tracking points sit on the roofs. Align each transparent hit area with
-// the vehicle's direction so its trailer remains clickable through turns.
-function truckAngle(time: number, index: number) {
-  const [x, y] = carrierFrame(time)[index];
-  const [nextX, nextY] = carrierFrame(time + 8 / 24)[index];
-  return Math.atan2(nextY - y, (nextX - x) * 1.44);
-}
 
 export function IllustratedCityMap({
   onSelect,
@@ -36,76 +31,82 @@ export function IllustratedCityMap({
   interactive?: boolean;
 }) {
   const description = useId();
-  const video = useRef<HTMLVideoElement>(null);
-  const standbyVideo = useRef<HTMLVideoElement>(null);
   const viewport = useRef<HTMLElement>(null);
-  const navigation = useCityMapZoom(viewport, onSelect, { enabled: interactive });
+  // Wide plate for landscape viewports, tall plate for portrait.
+  // Start from the window shape so a phone never fetches the wide atlas.
+  const [plate, setPlate] = useState<PlateName>(() =>
+    typeof window === "undefined"
+      ? "wide"
+      : plateFor(window.innerWidth, window.innerHeight),
+  );
+  const plateRef = useRef(plate);
+  plateRef.current = plate;
+  useLayoutEffect(() => {
+    const element = viewport.current;
+    if (!element) return;
+    const sync = () => {
+      const rect = element.getBoundingClientRect();
+      if (rect.width && rect.height)
+        setPlate(plateFor(rect.width, rect.height));
+    };
+    sync();
+    const observer =
+      typeof ResizeObserver === "function"
+        ? new ResizeObserver(sync)
+        : undefined;
+    observer?.observe(element);
+    return () => observer?.disconnect();
+  }, []);
+  const navigation = useCityMapZoom(viewport, onSelect, {
+    enabled: interactive,
+    aspectRatio: plateAspect(plate),
+  });
   const camera = useRef(navigation);
   camera.current = navigation;
   const selected = useRef(selectedId);
   selected.current = selectedId;
-  const displayedTime = useRef(0);
   const targets = useRef<(HTMLButtonElement | null)[]>([]);
+  // One traffic simulation drives the sprites, the hit targets and the camera.
+  const traffic = useRef(createTraffic());
+  const frameAt = () => trafficFrame(traffic.current, plateRef.current);
+  const expressStart = useRef<number | undefined>(undefined);
+  const clock = useRef(0);
+  const dynamicCanvas = useRef<HTMLCanvasElement>(null);
   const [playing, setPlaying] = useState(false);
   const [failed, setFailed] = useState(false);
   const [reduced, setReduced] = useState(false);
-  const [videoSource, setVideoSource] = useState<string>();
-  const [videoReady, setVideoReady] = useState(false);
-  const [hintStage, setHintStage] = useState(0);
-  const showZoomHint = hintStage === 0;
+  // The gesture hint disappears after the first zoom/pan or choice.
+  const [hinted, setHinted] = useState(false);
   const [touch, setTouch] = useState(false);
-  useEffect(() => { setTouch(matchMedia("(pointer: coarse)").matches); }, []);
+  useEffect(() => {
+    setTouch(matchMedia("(pointer: coarse)").matches);
+  }, []);
 
   useEffect(() => {
     const element = viewport.current;
-    const dismiss = () => setHintStage(stage => Math.min(2, stage + 1));
+    const dismiss = () => setHinted(true);
     element?.addEventListener("scene-map-gesture-start", dismiss);
-    return () => element?.removeEventListener("scene-map-gesture-start", dismiss);
+    return () =>
+      element?.removeEventListener("scene-map-gesture-start", dismiss);
   }, []);
 
   useLayoutEffect(() => {
-    if (selectedId) setHintStage(2);
-    const index = mapCarrierIds.findIndex(id => id === selectedId);
-    const position = index >= 0 ? carrierFrame(displayedTime.current)[index] : undefined;
-    camera.current.inspect(position ? selectedId : undefined, position ? { x: position[0], y: position[1] } : undefined);
+    if (selectedId === "express") expressStart.current ??= clock.current;
+    else expressStart.current = undefined;
+    if (selectedId) setHinted(true);
+    const index = mapCarrierIds.findIndex((id) => id === selectedId);
+    const position = index >= 0 ? frameAt()[index] : undefined;
+    if (selectedId === "express") {
+      // The new rig appears at the warehouse doors: bring them into view.
+      const [x, y] = landmark(plateRef.current, "express");
+      camera.current.inspect("express", { x, y }, 1.5);
+      return;
+    }
+    camera.current.inspect(
+      position ? selectedId : undefined,
+      position ? { x: position[0], y: position[1] } : undefined,
+    );
   }, [selectedId]);
-
-  useEffect(() => {
-    const ready = () => {
-      if ([...document.images].every((image) => image.complete)) {
-        const rect = viewport.current?.getBoundingClientRect();
-        if (!rect?.width || !rect.height) return;
-        const limited = constrainedConnection() || observedSlowTransfer();
-        const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
-        const coverWidth = Math.max(rect.width, rect.height * 1.44);
-        // Desktop gets the detailed stream before playback; smaller viewports
-        // account for the covered map width and display pixel density.
-        // Keep the selected stream: replacing src during a gesture resets the
-        // decoder and can jump the vehicles even when currentTime is restored.
-        // A slow individual request (including a cold local load) must not
-        // downgrade desktop detail. Only an explicit data-saving preference does.
-        const displayWidth = rect.width >= 1100
-          ? (saveData ? 2560 : 3600)
-          : coverWidth * (limited ? 1 : Math.max(1, window.devicePixelRatio || 1));
-        // Keep the tallest, highest-resolution decode off small touch devices.
-        const requiredWidth = rect.width < 1100 && matchMedia("(pointer: coarse)").matches
-          ? Math.min(displayWidth, 2560)
-          : displayWidth;
-        const variant = requiredWidth <= 1920 ? "mobile" : requiredWidth <= 2560 ? "tablet" : "desktop";
-        setVideoSource(current => current ?? videoSources[variant]);
-        setVideoReady(true);
-      }
-    };
-    document.addEventListener("load", ready, true);
-    document.addEventListener("error", ready, true);
-    window.addEventListener("resize", ready);
-    ready();
-    return () => {
-      document.removeEventListener("load", ready, true);
-      document.removeEventListener("error", ready, true);
-      window.removeEventListener("resize", ready);
-    };
-  }, []);
 
   useEffect(() => {
     const preference = matchMedia("(prefers-reduced-motion: reduce)");
@@ -115,34 +116,109 @@ export function IllustratedCityMap({
     return () => preference.removeEventListener("change", sync);
   }, []);
 
+  const [assets, setAssets] = useState<{
+    plate: PlateName;
+    atlas: HTMLImageElement;
+  }>();
   useEffect(() => {
-    const element = video.current;
-    const paint = (time: number) => {
-      const discontinuity = time < displayedTime.current || time - displayedTime.current > .5;
-      displayedTime.current = time;
-      carrierFrame(time).forEach(([x, y], index) => {
+    let cancelled = false;
+    loadTruckAtlas(plate).then(
+      (atlas) => !cancelled && setAssets({ plate, atlas }),
+      () => !cancelled && setFailed(true),
+    );
+    return () => {
+      cancelled = true;
+    };
+  }, [plate]);
+
+  useEffect(() => {
+    if (!assets) return;
+    let handle = 0;
+    let last = performance.now();
+    const smoke = createSmoke();
+    const name = assets.plate;
+    const [plateWidth] = plates[name].res;
+    const tick = (now: number) => {
+      handle = requestAnimationFrame(tick);
+      const canvas = dynamicCanvas.current;
+      const area = viewport.current;
+      const surface = area?.querySelector<HTMLElement>("[data-map-surface]");
+      if (!canvas || !area || !surface) return;
+      // A hidden tab pauses rAF; never fast-forward the trucks afterwards.
+      const dt = Math.min(0.1, Math.max(0, (now - last) / 1000));
+      last = now;
+      if (!reduced) stepTraffic(traffic.current, dt);
+      const time = traffic.current.time;
+      clock.current = time;
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      const view = area.getBoundingClientRect();
+      const width = Math.round(view.width * dpr);
+      const height = Math.round(view.height * dpr);
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      const box = surface.getBoundingClientRect();
+      const k = (box.width / plateWidth) * dpr;
+      const context = canvas.getContext("2d");
+      if (!context) return;
+      context.setTransform(1, 0, 0, 1, 0, 0);
+      context.clearRect(0, 0, width, height);
+      const start = expressStart.current;
+      const pinScale = view.width < 520 || view.height < 420 ? 0.78 : 1;
+      if (surface.style.getPropertyValue("--pin-scale") !== String(pinScale))
+        surface.style.setProperty("--pin-scale", String(pinScale));
+      drawCity(context, traffic.current, assets.atlas, smoke, {
+        plate: name,
+        reduced,
+        k,
+        ox: (box.left - view.left) * dpr,
+        oy: (box.top - view.top) * dpr,
+        dpr,
+        selected: selected.current,
+        expressAge:
+          start === undefined ? undefined : reduced ? 3 : time - start,
+        pins: !selected.current,
+        pinScale,
+      });
+      const poses = trafficPoses(traffic.current);
+      trafficFrame(traffic.current, name).forEach(([x, y], index) => {
         const target = targets.current[index];
         if (target) {
+          // Screen heading of the rig: project its world direction.
+          const p = poses[index];
+          const [a, b] = plates[name].proj;
+          const dx = a[0] * Math.cos(p.heading) + a[1] * Math.sin(p.heading);
+          const dy = b[0] * Math.cos(p.heading) + b[1] * Math.sin(p.heading);
           target.style.left = `${x * 100}%`;
           target.style.top = `${y * 100}%`;
-          target.style.transform = `translate(-50%, -50%) rotate(${truckAngle(time, index)}rad)`;
+          target.style.transform = `translate(-50%, -50%) rotate(${Math.atan2(dy, dx)}rad)`;
         }
-        if (mapCarrierIds[index] === selected.current) camera.current.track({ x, y }, discontinuity);
+        if (mapCarrierIds[index] === selected.current)
+          camera.current.track({ x, y }, false);
       });
     };
-    if (!element || !standbyVideo.current || failed || reduced || !videoReady) {
-      paint(0);
-      return;
-    }
-    return startCityVideoLoop(element, standbyVideo.current, paint, () => setFailed(true), () => setPlaying(true));
-  }, [failed, reduced, videoReady]);
+    handle = requestAnimationFrame(tick);
+    setPlaying(!reduced);
+    return () => cancelAnimationFrame(handle);
+  }, [reduced, assets]);
 
   return (
     <div className={styles.root}>
-      {interactive && hintStage < 2 && !selectedId && (
-        <p key={hintStage} className={styles.zoomHint} data-map-zoom-hint>
-          {showZoomHint ? <ZoomIn size={20} aria-hidden="true" /> : <MousePointer2 size={20} aria-hidden="true" />}
-          <span>{showZoomHint ? (touch ? "Раздвиньте пальцы, чтобы приблизить" : "Прокрутите колёсико, чтобы приблизить") : "Перетащите карту или нажмите на фуру"}</span>
+      {interactive && !hinted && !selectedId && (
+        <p className={styles.coach} data-map-zoom-hint>
+          <span className={styles.coachItem}>
+            <span className={styles.coachIcon} aria-hidden="true">
+              <ZoomIn size={18} />
+            </span>
+            {touch ? "Два пальца — масштаб" : "Колёсико — масштаб"}
+          </span>
+          <span className={styles.coachItem}>
+            <span className={styles.coachIcon} aria-hidden="true">
+              <Hand size={18} />
+            </span>
+            {touch ? "Палец — двигать карту" : "Тяните — двигать карту"}
+          </span>
         </p>
       )}
       {interactive && navigation.isZoomed && (
@@ -165,7 +241,6 @@ export function IllustratedCityMap({
         aria-label="Карта доступных перевозчиков"
         aria-describedby={description}
         data-mode="live"
-        data-renderer="painted-video"
         data-map-viewport
         data-map-scale={navigation.scale}
         // biome-ignore lint/a11y/noNoninteractiveTabindex: Keyboard zoom and arrow navigation expose the entire city.
@@ -175,43 +250,45 @@ export function IllustratedCityMap({
           className={styles.surface}
           style={navigation.style}
           data-map-surface
-          data-motion-reason={failed ? "playback-error" : reduced ? "reduced-motion" : !videoReady ? "images-loading" : "ready"}
-          data-motion-state={
-            playing && !failed && !reduced && videoReady
-              ? "playing"
-              : "paused"
+          data-motion-reason={
+            failed
+              ? "load-error"
+              : reduced
+                ? "reduced-motion"
+                : !assets
+                  ? "images-loading"
+                  : "ready"
           }
+          data-motion-state={playing && assets ? "playing" : "paused"}
         >
-          {failed || reduced || !videoReady ? (
+          <>
             <img
-              className={styles.video}
-              src={poster}
-              alt="Город, склад и четыре грузовика"
+              className={styles.plate}
+              src={plateSource(plate)}
+              srcSet={plateSrcSet(plate)}
+              sizes="100vw"
+              alt="Город со складом в центре и четыре грузовика"
               data-city-poster
+              data-city-plate={plate}
+              decoding="async"
             />
-          ) : (
-            <>{[video, standbyVideo].map((ref, index) => <video
-              key={index}
-              ref={ref}
-              src={videoSource}
-              className={styles.video}
-              data-city-video={index === 0 ? "" : undefined}
-              style={{ opacity: index === 0 ? 1 : 0 }}
-              aria-label="Город, склад и четыре движущихся грузовика"
-              poster={poster}
-              muted
-              playsInline
-              loop
-              preload="auto"
-              disablePictureInPicture
-              onPlaying={(event) => {
-                if (event.currentTarget.hasAttribute("data-city-video")) setPlaying(true);
+            <button
+              type="button"
+              className={styles.autopick}
+              data-map-autopick
+              data-carrier-choice="express"
+              style={{
+                // The canvas draws the pill here (cityV4 expressCall) and
+                // hides it while any option is open; so does the hit area.
+                visibility: selectedId ? "hidden" : undefined,
+                left: `${landmark(plate, "express")[0] * 100}%`,
+                top: `${landmark(plate, "express")[1] * 100}%`,
               }}
-              onPause={(event) => {
-                if (event.currentTarget.hasAttribute("data-city-video")) setPlaying(false);
-              }}
-            />)}</>
-          )}
+              aria-label="Express: подобрать фуру"
+              aria-pressed={selectedId === "express"}
+              onClick={() => onSelect?.("express")}
+            />
+          </>
           {onSelect &&
             mapCarrierIds.map((id, index) => (
               <button
@@ -223,9 +300,12 @@ export function IllustratedCityMap({
                 className={styles.target}
                 data-carrier-choice={id}
                 style={{
-                  left: `${carrierFrame(0)[index][0] * 100}%`,
-                  top: `${carrierFrame(0)[index][1] * 100}%`,
-                  transform: `translate(-50%, -50%) rotate(${truckAngle(0, index)}rad)`,
+                  left: `${frameAt()[index][0] * 100}%`,
+                  top: `${frameAt()[index][1] * 100}%`,
+                  transform: "translate(-50%, -50%)",
+                  // A rig is ~21 m long and ~4.5 m wide in plate metres.
+                  width: `max(calc(44px / var(--map-zoom, 1)), ${(22 / plates[plate].mpp / plates[plate].res[0]) * 100}cqw)`,
+                  height: `max(calc(36px / var(--map-zoom, 1)), ${(9 / plates[plate].mpp / plates[plate].res[0]) * 100}cqw)`,
                 }}
                 aria-label={`Рассмотреть: ${carrierFacts[id].label}`}
                 aria-pressed={selectedId === id}
@@ -235,12 +315,19 @@ export function IllustratedCityMap({
               />
             ))}
         </div>
+        <canvas
+          ref={dynamicCanvas}
+          className={styles.overlay}
+          aria-hidden="true"
+          data-carrier-effects
+        />
         <p id={description} className={styles.hidden}>
-          Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На компьютере
-          используйте колёсико мыши или жест масштабирования на тачпаде.
-          Перемещайте карту пальцем или перетаскивайте её, зажав кнопку мыши.
-          Нажмите на фуру, чтобы рассмотреть её. С клавиатуры: плюс и минус меняют
-          масштаб, стрелки перемещают карту, Home возвращает начальный вид.
+          Раздвигайте и сводите пальцы, чтобы менять масштаб карты. На
+          компьютере используйте колёсико мыши или жест масштабирования на
+          тачпаде. Перемещайте карту пальцем или перетаскивайте её, зажав кнопку
+          мыши. Нажмите на фуру, чтобы рассмотреть её. С клавиатуры: плюс и
+          минус меняют масштаб, стрелки перемещают карту, Home возвращает
+          начальный вид.
         </p>
       </section>
     </div>

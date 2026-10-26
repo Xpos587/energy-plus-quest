@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openCarrier } from "./helpers/open-preparation";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 for (const [width, height] of [
   [320, 568],
@@ -14,7 +14,7 @@ for (const [width, height] of [
     const map = page.locator('[data-mode="live"]');
     const before = await map.boundingBox();
     await expect(page.getByRole("button", { name: "Подробнее о задаче" })).toHaveCount(0);
-    await page.locator('[data-scene-choice="express"]').click();
+    await pickCarrier(page, "express");
     await expect(page.locator('[data-choice-inspection="express"]')).toBeVisible();
     const during = await map.boundingBox();
     expect(during?.x).toBe(before?.x);

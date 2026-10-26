@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ArrowLeft } from "lucide-react";
 import { choiceArtwork, preparationCardArtwork } from "../game/artwork";
-import { imageAsset } from "../game/imageAssets";
 import {
   profiles,
   recipients,
@@ -12,7 +11,11 @@ import {
 import type { GameAction, GameState } from "../game/types";
 import styles from "./GiftPreparation.module.css";
 
-type Props = { state: GameState; onAction: (action: GameAction) => void; onBackToIntro?: () => void };
+type Props = {
+  state: GameState;
+  onAction: (action: GameAction) => void;
+  onBackToIntro?: () => void;
+};
 const recipientDative = { alva: "Майме", khor: "Хабту", arseniy: "Арсению" };
 
 /** One preparation table, with the chosen people staying beside the next decision. */
@@ -63,28 +66,54 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
     >
       <img
         className={styles.backdrop}
-        src={imageAsset("scene1-live/separated-routes/city-poster.webp")}
+        src={`${import.meta.env.BASE_URL}scene1-v4/backdrop.webp?v=1`}
         alt=""
         aria-hidden="true"
       />
       <div className={styles.table}>
         <div className={styles.journey}>
           {(state.step !== "profile" || onBackToIntro) && (
-            <button type="button" className={styles.back} onClick={() => state.step === "profile" ? onBackToIntro?.() : onAction({ type: "BACK" })}>
+            <button
+              type="button"
+              className={styles.back}
+              onClick={() =>
+                state.step === "profile"
+                  ? onBackToIntro?.()
+                  : onAction({ type: "BACK" })
+              }
+            >
               <ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
               Назад
             </button>
           )}
           {profile && state.step !== "profile" && (
-            <aside className={styles.summary} aria-label="Ваш подарок" data-gift-summary>
+            <aside
+              className={styles.summary}
+              aria-label="Ваш подарок"
+              data-gift-summary
+            >
               <div className={styles.summaryItem} data-summary="sender">
                 <img src={choiceArtwork[profile.id]} alt="" />
-                <div><small>Отправитель</small><strong>{profile.title}</strong></div>
+                <div>
+                  <small>Отправитель</small>
+                  <strong>{profile.title}</strong>
+                </div>
               </div>
-              {recipient && state.step === "parcel" && <figure className={styles.summaryItem} data-summary="recipient">
-                {recipient ? <img src={choiceArtwork[recipient.id]} alt="" /> : <span className={styles.emptyPortrait} aria-hidden="true" />}
-                <div><small>Получатель</small><figcaption>{recipient?.title ?? "Ещё не выбран"}</figcaption></div>
-              </figure>}
+              {recipient && state.step === "parcel" && (
+                <figure className={styles.summaryItem} data-summary="recipient">
+                  {recipient ? (
+                    <img src={choiceArtwork[recipient.id]} alt="" />
+                  ) : (
+                    <span className={styles.emptyPortrait} aria-hidden="true" />
+                  )}
+                  <div>
+                    <small>Получатель</small>
+                    <figcaption>
+                      {recipient?.title ?? "Ещё не выбран"}
+                    </figcaption>
+                  </div>
+                </figure>
+              )}
             </aside>
           )}
         </div>
@@ -108,12 +137,13 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
                 onClick={() => select(item.id)}
               >
                 <span className={styles.art}>
-                  <img src={preparationCardArtwork[item.id]} alt="" draggable={false} />
+                  <img
+                    src={preparationCardArtwork[item.id]}
+                    alt=""
+                    draggable={false}
+                  />
                 </span>
-                <span className={styles.caption}>
-                  {item.title}
-
-                </span>
+                <span className={styles.caption}>{item.title}</span>
               </button>
             ))}
           </div>

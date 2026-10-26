@@ -45,6 +45,39 @@
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
+.pace {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.express {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  color: var(--navy);
+}
+.expressSteps {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-brand);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.expressSteps li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.expressSteps svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  color: #0057b8;
+}
 .automatic {
   margin: 0;
   font-family: var(--font-brand);
@@ -97,14 +130,24 @@
     grid-template-columns: minmax(200px, 24%) minmax(0, 1fr);
     gap: 24px;
   }
-  .photo { height: 100%; max-height: 140px; }
+  .photo {
+    height: 100%;
+    max-height: 140px;
+  }
   .facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px 24px;
   }
-  .facts > div { border-left: 1px solid #dbe5ec; padding-left: 16px; }
-  .facts dt { font-size: 14px; }
-  .facts dd { font-size: 22px; }
+  .facts > div {
+    border-left: 1px solid #dbe5ec;
+    padding-left: 16px;
+  }
+  .facts dt {
+    font-size: 14px;
+  }
+  .facts dd {
+    font-size: 22px;
+  }
 }
 
 /* The live truck is the preview while the camera follows it. */
@@ -160,9 +203,18 @@
   min-width: 0;
 }
 @media (max-width: 400px) {
-  .inspection[data-map-inspection] .facts > div { padding-inline: 9px; }
-  .inspection[data-map-inspection] .facts dd { gap: 5px; font-size: var(--type-choice); }
-  .inspection[data-map-inspection] .facts dd > svg { flex-basis: 16px; width: 16px; height: 16px; }
+  .inspection[data-map-inspection] .facts > div {
+    padding-inline: 9px;
+  }
+  .inspection[data-map-inspection] .facts dd {
+    gap: 5px;
+    font-size: var(--type-choice);
+  }
+  .inspection[data-map-inspection] .facts dd > svg {
+    flex-basis: 16px;
+    width: 16px;
+    height: 16px;
+  }
 }
 
 /* Opt-in live instrument panel. */
@@ -188,23 +240,44 @@
   gap: 0;
   width: 100%;
 }
-.inspection[data-map-inspection][data-carrier-instruments] .speedReadout > span:last-child {
+.inspection[data-map-inspection][data-carrier-instruments]
+  .speedReadout
+  > span:last-child {
   margin-top: -3px;
   white-space: nowrap;
 }
-.inspection[data-map-inspection][data-carrier-instruments] .facts > div:not(:first-child) dd {
+.inspection[data-map-inspection][data-carrier-instruments]
+  .facts
+  > div:not(:first-child)
+  dd {
   flex: 1;
   flex-direction: column;
   justify-content: center;
   gap: 6px;
 }
-.inspection[data-map-inspection][data-carrier-instruments] .facts > div:not(:first-child) dd > svg {
+.inspection[data-map-inspection][data-carrier-instruments]
+  .facts
+  > div:not(:first-child)
+  dd
+  > svg {
   width: 22px;
   height: 22px;
   flex: 0 0 22px;
 }
 /* Live pace alongside the original characteristics, restored at Michael's request. */
-.inspection[data-map-inspection][data-carrier-instruments] .facts {grid-template-columns:repeat(2,minmax(0,1fr));}
-.inspection[data-map-inspection][data-carrier-instruments][data-carrier-inspection="crew"] .facts {grid-template-columns:repeat(3,minmax(0,1fr));}
-.inspection[data-map-inspection][data-carrier-instruments] .facts > div {padding:4px 8px;border:0;background:transparent;gap:0;}
-.inspection[data-map-inspection][data-carrier-instruments] .facts dt {min-height:0;}
+.inspection[data-map-inspection][data-carrier-instruments] .facts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.inspection[data-map-inspection][data-carrier-instruments][data-carrier-inspection="crew"]
+  .facts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.inspection[data-map-inspection][data-carrier-instruments] .facts > div {
+  padding: 4px 8px;
+  border: 0;
+  background: transparent;
+  gap: 0;
+}
+.inspection[data-map-inspection][data-carrier-instruments] .facts dt {
+  min-height: 0;
+}

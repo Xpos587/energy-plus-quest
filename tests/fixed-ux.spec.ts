@@ -50,7 +50,7 @@ test('carrier map keeps selection and readable result', async ({page}, info) => 
   await expect(page.locator('[data-choice-confirm]')).toBeInViewport({ratio:.99});
   await page.locator('[data-choice-confirm]').click();
   for(let i=0;i<30;i++) {
-    const next=page.getByRole('button',{name:/^(Читать дальше|К следующей сцене|Продолжить)$/});
+    const next=page.getByRole('button',{name:/^(Читать дальше|Дальше: погрузка|Продолжить)$/});
     await expect(next).toBeInViewport({ratio:.99});
     const reading=page.locator('[data-result-reading]');
     await expect.poll(()=>reading.evaluate(e=>e.scrollHeight<=e.clientHeight+1)).toBe(true);

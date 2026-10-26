@@ -1,3 +1,4 @@
+import { pickCarrier } from "./helpers/open-preparation";
 import { expect, type Page, test } from "@playwright/test";
 
 async function readBriefing(page: Page) {
@@ -115,7 +116,7 @@ test("carrier: inspect every option, resize, cancel and confirm explicitly", asy
     await page.locator("[data-choice-inspection] h3").press("Escape");
     await expect(choice).toBeFocused();
   }
-  await page.locator('[data-carrier-choice="crew"]').click();
+  await pickCarrier(page, "crew");
   await page.setViewportSize({ width: 320, height: 568 });
   await expect(page.locator("[data-choice-confirm]")).toBeInViewport({
     ratio: 1,
@@ -148,7 +149,7 @@ test('result card fills available width with balanced gutters after resizing', a
   await page.goto('/');
   for(const id of ['professional','alva','boat']) await page.locator(`[data-choice="${id}"]`).click();
   await readBriefing(page);
-  await page.locator('[data-carrier-choice="near"]').click();
+  await pickCarrier(page, "near");
   await page.locator('[data-choice-confirm]').click();
   const card=page.locator('[data-sheet-panel]');
   for(const [width,height] of [[1920,1080],[2560,1440],[1280,650],[844,390],[751,709],[734,709],[390,844],[320,568]]) {
