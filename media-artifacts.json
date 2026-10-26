@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-10-26-scene1-map",
+  "release": "media-2026-10-26-intro-route",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3325,6 +3325,39 @@
           "path": "public/scene1-v4/trucks-wide.webp",
           "sha256": "a5cb60954386a98886c284e27b430ae13521fc1d8fa9877c6d6ddf83629a1f8c",
           "bytes": 1002452
+        }
+      ]
+    },
+    {
+      "name": "media-28-1add8bc130c1.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-26-intro-route/media-28-1add8bc130c1.tar.gz",
+      "sha256": "1add8bc130c1c0b1b2a8bfe05db0043df1d44163fc290388483f8efb89fc9e66",
+      "bytes": 99442,
+      "files": [
+        {
+          "path": "public/opening/route-v1/barge.webp",
+          "sha256": "80924be8b5306c3fe4b2e1480c172efbc49b9ccf1e8f15012e530e6796c66c35",
+          "bytes": 24228
+        },
+        {
+          "path": "public/opening/route-v1/carrier.webp",
+          "sha256": "fd1bb561c01b5819386566c5b7fa79da4ce136073384135f5a39938fb7960b5a",
+          "bytes": 20528
+        },
+        {
+          "path": "public/opening/route-v1/lastmile.webp",
+          "sha256": "ba2cd6d53b7307312fe029bb075f481e444e06097ba064ef54533e9505fe2982",
+          "bytes": 19890
+        },
+        {
+          "path": "public/opening/route-v1/loading.webp",
+          "sha256": "e16d46c9e01d466601c7461e36e95e8046b7da825ea1ae58eccd38817d107ca8",
+          "bytes": 12146
+        },
+        {
+          "path": "public/opening/route-v1/warehouse.webp",
+          "sha256": "9af4257d82fc19ba106ed1f26d08d24782dd775b217a64d840e28bc103023410",
+          "bytes": 22174
         }
       ]
     }
