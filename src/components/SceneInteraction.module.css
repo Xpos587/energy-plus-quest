@@ -3799,3 +3799,21 @@
   .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] em { font-size: 15px; line-height: 18px; }
   .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] svg { width: 26px; height: 26px; flex-basis: 26px; }
 }
+
+/* Barge result on phones: a short outcome text gives its spare height to the picture
+   (cropped around the people via the existing mobile focus) instead of an empty panel. */
+@media (max-width: 600px) and (orientation: portrait) and (min-height: 700px) {
+  .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) {
+    grid-template-rows: minmax(0, 1fr) auto !important;
+  }
+  .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) .result {
+    height: auto;
+  }
+  .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) [data-outcome-scene] :is(picture, img) {
+    height: 100%;
+  }
+  .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) [data-outcome-scene] img {
+    object-fit: cover;
+    object-position: var(--crane-mobile-focus, 50%) 50%;
+  }
+}
