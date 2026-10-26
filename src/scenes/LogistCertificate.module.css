@@ -488,3 +488,72 @@
     padding-top: 14px;
   }
 }
+
+/* Final invitation: one card for both profiles, the only filled orange action on the page. */
+.practice {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 8px 20px;
+  margin-top: 16px;
+  padding: 18px 22px;
+  border: 1px solid #c6dbe6;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 22px #0b3a5a12;
+}
+.practiceIcon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff1e8;
+  color: #e85a00;
+}
+.practice h2 { font-size: 22px; margin-bottom: 4px; }
+.practice p { font-size: 17px; color: #2d4f66; }
+.practiceAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 10px;
+  background: #ff6500;
+  color: #fff;
+  font: inherit;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.practiceAction svg { flex: none; }
+.practice small { grid-column: 2 / -1; }
+/* Sharing stays labelled but steps back so the invitation leads. */
+.shareTrigger { background: #fff; color: #07629c; border: 1px solid #07629c; }
+@media (hover: hover) and (pointer: fine) {
+  .practiceAction:hover { background: #df5700; }
+  .shareTrigger:hover { background: #e8f2f9; }
+}
+@media (max-width: 700px) {
+  .practice { grid-template-columns: auto minmax(0, 1fr); gap: 12px 14px; margin-top: 14px; padding: 16px; }
+  .practiceIcon { width: 44px; height: 44px; }
+  .practice h2 { font-size: 20px; }
+  .practice p { font-size: 15px; }
+  .practiceAction { grid-column: 1 / -1; width: 100%; justify-content: space-between; font-size: 17px; }
+  .practice small { grid-column: 1 / -1; }
+}
+@media (max-width: 360px) and (max-height: 650px) {
+  .practice { padding: 16px; }
+  .practice p { font-size: 15px; }
+}
+@media (min-width: 701px) and (max-height: 500px) {
+  .practice { margin-top: 8px; padding: 10px 16px; gap: 4px 16px; }
+  .practiceIcon { width: 40px; height: 40px; }
+  .practice h2 { font-size: 17px; }
+  .practice p { font-size: 14px; }
+  .practiceAction { min-height: 44px; font-size: 15px; padding: 8px 14px; }
+}

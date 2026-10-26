@@ -69,14 +69,12 @@ for (const context of [
     await page.getByRole("button", { name: "Узнать, какой вы логист" }).click();
     await expectWholePageInView(page, `${context.profile} result`);
     await page.screenshot({ path: `.tmp-work/opening-end-fit/certificate-${context.profile}-${context.recipient}-${context.parcel}-320x568.png` });
-    if (context.profile === "student") {
-      await page.getByRole("button", { name: "Подробнее о практике" }).click();
-      await expectWholePageInView(page, `${context.profile} practice`);
-      await page.screenshot({ path: `.tmp-work/opening-end-fit/certificate-practice-${context.profile}-${context.recipient}-${context.parcel}-320x568.png` });
-    } else {
-      await expect(page.locator("[data-practice-cta]")).toHaveCount(0);
-      await expect(page.getByRole("button", { name: "Подробнее о практике" })).toHaveCount(0);
-    }
+    // Both profiles end on one invitation card: internship or team vacancies.
+    const more = context.profile === "student" ? "Подробнее о практике" : "Подробнее о вакансиях";
+    await page.getByRole("button", { name: more }).click();
+    await expect(page.locator(`[data-practice-cta="${context.profile}"] h2`)).toBeFocused();
+    await expectWholePageInView(page, `${context.profile} practice`);
+    await page.screenshot({ path: `.tmp-work/opening-end-fit/certificate-practice-${context.profile}-${context.recipient}-${context.parcel}-320x568.png` });
   });
 }
 for (const viewport of viewports) {

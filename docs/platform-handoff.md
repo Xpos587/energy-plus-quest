@@ -74,3 +74,12 @@ HTTP 301 с перенаправлением на
 но не заменяет размещение самих файлов по правильному пути.
 
 Эта диагностика выполнена без публикации новой версии на сервере заказчика.
+
+## Final invitation links
+
+The last screen ends on one invitation card: students are invited to the internship, professionals to team vacancies. Set the addresses at build time:
+
+- `VITE_PRACTICE_URL` — internship sign-up page (student button «Записаться на практику»);
+- `VITE_CAREER_URL` — vacancies page, e.g. the HH employer page (professional button «Смотреть вакансии»).
+
+Without an address the button stays visible and reports «Ссылка на запись пока недоступна.» instead of opening anything.

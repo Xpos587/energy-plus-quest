@@ -1,7 +1,9 @@
 import {
   ArrowLeft,
   ArrowUpRight,
+  BriefcaseBusiness,
   Download,
+  GraduationCap,
   Home,
   RotateCcw,
   Share2,
@@ -34,6 +36,26 @@ const certificateArtwork = {
   },
 } satisfies Record<ProfileId, Record<LogistCopy["type"], string>>;
 
+/* The final invitation is one card for both profiles: students to the internship,
+   professionals to the team. Addresses come from the deployment; without one the
+   button says so instead of pretending to open something. */
+const invitation = {
+  student: {
+    title: "Практика в команде снабжения",
+    action: "Записаться на практику",
+    more: "Подробнее о практике",
+    url: import.meta.env.VITE_PRACTICE_URL as string | undefined,
+    icon: GraduationCap,
+  },
+  professional: {
+    title: "Работа в команде снабжения",
+    action: "Смотреть вакансии",
+    more: "Подробнее о вакансиях",
+    url: import.meta.env.VITE_CAREER_URL as string | undefined,
+    icon: BriefcaseBusiness,
+  },
+} satisfies Record<ProfileId, unknown>;
+
 export function LogistCertificate({
   profile,
   copy,
@@ -45,6 +67,7 @@ export function LogistCertificate({
   onRestart: () => void;
   onHome: () => void;
 }) {
+  const invite = invitation[profile];
   const artwork = imageAsset(certificateArtwork[profile][copy.type]);
   const [prepared, setPrepared] = useState<File>();
   const [busy, setBusy] = useState(false);
@@ -176,57 +199,61 @@ export function LogistCertificate({
           ))}
         </div>
       </article>
-      {profile === "student" ? (
-        <aside
-          className={styles.practice}
-          data-practice-cta
-          aria-labelledby="ending-practice-title"
-        >
-          <div>
-            <h2 id="ending-practice-title" ref={practiceHeading} tabIndex={-1}>
-              Практика в команде снабжения
-            </h2>
-            <p>{copy.callToAction}</p>
-          </div>
+      <aside
+        className={styles.practice}
+        data-practice-cta={profile}
+        aria-labelledby="ending-practice-title"
+      >
+        <span className={styles.practiceIcon} aria-hidden="true">
+          <invite.icon size={26} strokeWidth={1.8} />
+        </span>
+        <div>
+          <h2 id="ending-practice-title" ref={practiceHeading} tabIndex={-1}>
+            {invite.title}
+          </h2>
+          <p>{copy.callToAction}</p>
+        </div>
+        {invite.url ? (
+          <a
+            className={styles.practiceAction}
+            href={invite.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {invite.action}
+            <ArrowUpRight size={20} aria-hidden="true" />
+          </a>
+        ) : (
           <button
             type="button"
+            className={styles.practiceAction}
             onClick={() =>
               setPracticeStatus("Ссылка на запись пока недоступна.")
             }
           >
-            Записаться на практику
+            {invite.action}
             <ArrowUpRight size={20} aria-hidden="true" />
           </button>
-          {practiceStatus && <small role="status">{practiceStatus}</small>}
-        </aside>
-      ) : (
-        <p className={styles.cta}>{copy.callToAction}</p>
-      )}
-      {profile === "student" && (
-        <button
-          className={styles.compactPageToggle}
-          data-certificate-page-toggle
-          type="button"
-          onClick={turnCompactPage}
-          aria-label={
-            compactPage === "result"
-              ? "Подробнее о практике"
-              : "Назад к результату"
-          }
-          title={
-            compactPage === "result"
-              ? "Подробнее о практике"
-              : "Назад к результату"
-          }
-        >
-          {compactPage === "result" && "Подробнее о практике"}
-          {compactPage === "result" ? (
-            <ArrowUpRight size={20} aria-hidden="true" />
-          ) : (
-            <ArrowLeft size={20} aria-hidden="true" />
-          )}
-        </button>
-      )}
+        )}
+        {practiceStatus && <small role="status">{practiceStatus}</small>}
+      </aside>
+      <button
+        className={styles.compactPageToggle}
+        data-certificate-page-toggle
+        type="button"
+        onClick={turnCompactPage}
+        aria-label={
+          compactPage === "result" ? invite.more : "Назад к результату"
+        }
+        title={compactPage === "result" ? invite.more : "Назад к результату"}
+      >
+        {compactPage === "result" && invite.more}
+        {compactPage === "result" ? (
+          <ArrowUpRight size={20} aria-hidden="true" />
+        ) : (
+          <ArrowLeft size={20} aria-hidden="true" />
+        )}
+      </button>
       <div className={styles.resultActions}>
         <button
           className={styles.shareTrigger}
