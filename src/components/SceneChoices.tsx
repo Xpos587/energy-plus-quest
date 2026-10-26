@@ -17,7 +17,7 @@ export function SceneChoices<Id extends string>({
   variant,
   opensDialog = false,
 }: {
-  options: readonly { id: Id; label: string; accessibleLabel?: string; showBadge?: boolean }[];
+  options: readonly { id: Id; label: string; detail?: string; accessibleLabel?: string; showBadge?: boolean }[];
   selectedId?: Id;
   onInspect: (id: Id) => void;
   numbered?: boolean;
@@ -27,7 +27,7 @@ export function SceneChoices<Id extends string>({
 }) {
   return (
     <div className={styles.choices} data-choice-variant={variant} role="group" aria-label="Варианты выбора">
-      {options.map(({ id, label, accessibleLabel, showBadge = true }, index) => {
+      {options.map(({ id, label, detail, accessibleLabel, showBadge = true }, index) => {
         const Icon = variant === "carriers" ? (id === "express" ? Route : Truck)
           : variant === "scene" ? optionIcons[id as keyof typeof optionIcons] : undefined;
         return (
@@ -55,7 +55,7 @@ export function SceneChoices<Id extends string>({
               <span>{index + 1}</span>
             </span>
           )}
-          <span>{label}</span>
+          <span>{label}{detail && <small className={styles.detail} data-choice-detail>{detail}</small>}</span>
         </button>
       ); })}
     </div>

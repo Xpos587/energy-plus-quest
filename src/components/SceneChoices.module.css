@@ -145,3 +145,4 @@
   .vehicleIcon { flex-basis: 22px; height: 24px; }
   .vehicleIcon svg { width: 18px; height: 18px; }
 }
+.detail { display: none; }

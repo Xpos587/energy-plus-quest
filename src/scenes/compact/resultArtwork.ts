@@ -18,24 +18,26 @@ export const compactResultArtwork: Record<string, string> = {
   'boat:place-1': imageAsset('compact-art/boat-zone1-axle-v53.png'),
 };
 
-/** Coordinates share the artwork's normalized 1040-unit width. */
+/** Coordinates share the artwork's normalized 1040-unit width. Every frame
+ * keeps the right edge (x = 1040) in view so the cab stays visible. */
+const keepCab = (width: number, y: number) => ({ x: 1040 - width / 2, y, width, desktopWidth: width });
 export const compactResultFrames: Record<string, {
   x: number; y: number; width: number; desktopWidth: number; desktopX?: number;
   height?: number; unloaded?: boolean;
 }> = {
-  'camera:place-1': { x: 260, y: 440, width: 440, desktopWidth: 720, desktopX: 360 },
-  'socks:place-1': { x: 260, y: 440, width: 440, desktopWidth: 720, desktopX: 360 },
-  'boat:place-1': { x: 290, y: 480, width: 580, desktopWidth: 1000, desktopX: 500 },
-  'camera:place-2': { x: 330, y: 445, width: 420, desktopWidth: 680, desktopX: 350 },
-  'socks:place-2': { x: 330, y: 445, width: 420, desktopWidth: 680, desktopX: 350 },
-  'boat:place-2': { x: 345, y: 445, width: 480, desktopWidth: 760, desktopX: 380 },
-  'camera:place-3': { x: 500, y: 440, width: 420, desktopWidth: 680 },
-  'camera:auto': { x: 500, y: 440, width: 420, desktopWidth: 680 },
-  'socks:place-3': { x: 500, y: 440, width: 420, desktopWidth: 680 },
-  'socks:auto': { x: 500, y: 440, width: 420, desktopWidth: 680 },
-  'camera:place-4': { x: 740, y: 430, width: 420, desktopWidth: 680, desktopX: 700 },
-  'socks:place-4': { x: 740, y: 445, width: 420, desktopWidth: 680, desktopX: 700 },
-  'boat:place-3': { x: 500, y: 440, width: 420, desktopWidth: 680 },
-  'boat:place-4': { x: 740, y: 445, width: 420, desktopWidth: 680, desktopX: 700 },
-  'boat:auto': { x: 740, y: 445, width: 420, desktopWidth: 680, desktopX: 700 },
+  'camera:place-1': keepCab(1040, 470),
+  'socks:place-1': keepCab(1040, 470),
+  'boat:place-1': keepCab(1040, 480),
+  'camera:place-2': keepCab(840, 460),
+  'socks:place-2': keepCab(840, 460),
+  'boat:place-2': keepCab(840, 460),
+  'camera:place-3': keepCab(680, 450),
+  'camera:auto': keepCab(680, 450),
+  'socks:place-3': keepCab(680, 450),
+  'socks:auto': keepCab(680, 450),
+  'boat:place-3': keepCab(680, 450),
+  'camera:place-4': keepCab(560, 440),
+  'socks:place-4': keepCab(560, 445),
+  'boat:place-4': keepCab(560, 445),
+  'boat:auto': keepCab(560, 445),
 };

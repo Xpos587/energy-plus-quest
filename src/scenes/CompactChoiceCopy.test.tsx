@@ -18,7 +18,8 @@ it("uses the original numbered labels and lets the player revise a direct choice
     }
     for (let i = 1; i <= 4; i++) {
       const choice = host.querySelector<HTMLButtonElement>(`[data-scene-choice="place-${i}"]`)!;
-      expect(choice.querySelector(":scope > span:last-child")?.textContent).toBe("Место");
+      expect(choice.querySelector(":scope > span:last-child")?.firstChild?.textContent).toBe("Место");
+      expect(choice.querySelector("[data-choice-detail]")?.textContent).toBeTruthy();
       expect(choice.querySelector('[aria-hidden="true"]')?.textContent).toBe(String(i));
       expect(choice.getAttribute("aria-label")).toBe(`Место ${i}`);
     }

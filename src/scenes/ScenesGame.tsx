@@ -9,10 +9,12 @@ import { SceneChoices } from "../components/SceneChoices";
 import flow from "../components/SceneInteraction.module.css";
 import { clearReadingState } from "../components/useReadingState";
 import { useOptionalSaveScope } from "../game/GameContext";
-import { prefetchImage } from "../game/imageAssets";
+import { choiceArtwork } from "../game/artwork";
+import { prefetchImage, thumbnailAsset } from "../game/imageAssets";
 import { useStoredState } from "../game/persistence";
 import type { Scores } from "../game/types";
 import { sceneChoiceImage } from "./artwork";
+import { parcelNames } from "./names";
 import { choiceLabel } from "./choiceLabel";
 import { compactScene } from "./compact";
 import { craneScene } from "./crane";
@@ -51,6 +53,15 @@ export function restartSceneCondition(
     briefingParagraphs(id, scene.intro(context)),
   );
 }
+// Visible hints repeat what the cut-away shows; the result stays unspoiled.
+const compactChoiceDetails: Record<string, string> = {
+  "place-1": "Над гирями у задних дверей",
+  "place-2": "Над посудой, есть стропы",
+  "place-3": "Ниша за тремя коробками",
+  "place-4": "У передней стенки, рядом подушки",
+  auto: "Подберёт место по размеру груза",
+};
+
 const optionTitles: Record<string, string> = {
   "place-1": "Место 1",
   "place-2": "Место 2",
@@ -314,15 +325,29 @@ function ScenesSession({
                 scene.id === "crane" ? <CraneDecisionContext /> : undefined
               }
               onBack={back}
+              lead={
+                scene.id === "compact" ? (
+                  <div className={flow.briefingLead} data-briefing-lead>
+                    <img src={thumbnailAsset(choiceArtwork[context.parcel])} alt="" />
+                    <span>
+                      <small>Груз</small>
+                      <strong>{parcelNames[context.parcel].nominative}</strong>
+                    </span>
+                  </div>
+                ) : undefined
+              }
               action={
                 <SceneChoices
                   variant="scene"
                   options={options.map((option) => ({
                     id: option.id,
                     showBadge: option.id !== "auto",
+                    detail: scene.id === "compact" ? compactChoiceDetails[option.id] : undefined,
                     accessibleLabel:
-                      scene.id === "compact" && option.id !== "auto"
-                        ? optionTitles[option.id]
+                      scene.id === "compact"
+                        ? option.id === "auto"
+                          ? "Поручить размещение Compact"
+                          : optionTitles[option.id]
                         : undefined,
                     label:
                       scene.id === "compact" && option.id !== "auto"

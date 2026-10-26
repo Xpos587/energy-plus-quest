@@ -43,7 +43,8 @@ export function CompactArt({
     ? (frame.height ?? 874)
     : outcomeImage
       ? Math.max(390, Math.min(874, measuredHeight))
-      : measuredHeight;
+      : // Never crop the wide truck: a stage wider than 2:1 letterboxes instead.
+        Math.max(520, measuredHeight);
   const portrait = !!outcomeImage || canvasHeight > 570;
   useLayoutEffect(() => {
     const element = stage.current;

@@ -53,6 +53,7 @@ export function SceneBriefing({
   keepPanHint = false,
   showLeadOnChoice = true,
   conditionLabel = "О задаче",
+  lead,
 }: {
   title: string;
   currentStep?: number;
@@ -75,6 +76,8 @@ export function SceneBriefing({
   combineCondition?: boolean;
   /** Names what the hidden condition holds, e.g. «Куда везём?». */
   conditionLabel?: string;
+  /** Optional card heading shown above the condition text. */
+  lead?: ReactNode;
 }) {
   // A separate first-entry condition and optional rereading share the same pages.
   const inlineCondition = false;
@@ -439,6 +442,7 @@ export function SceneBriefing({
           className={styles.briefingCard}
           aria-label="Условие задания"
         >
+          {lead}
           <section
             ref={body}
             aria-label="Текст условия"
