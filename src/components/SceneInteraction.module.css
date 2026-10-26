@@ -3792,3 +3792,10 @@
 
 /* Eyebrow above the option name: says what the choice is, quietly. */
 .inspectionEyebrow { display: block; margin-bottom: 2px; font-size: 13px; font-weight: 600; line-height: 1.2; letter-spacing: 0.01em; color: #4a6a82; }
+
+/* Teo: result score icons read small on desktop; phones already look right. */
+@media (min-width: 1101px) and (min-height: 600px) {
+  .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] strong { font-size: 30px; line-height: 32px; }
+  .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] em { font-size: 15px; line-height: 18px; }
+  .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] svg { width: 26px; height: 26px; flex-basis: 26px; }
+}
