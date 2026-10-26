@@ -179,20 +179,47 @@ SPECS = {
 }
 LO = [8, 0, 4, -14, 4, 0, 8]
 HI = [40, 6, 30, 14, 30, 6, 40]
-MIN_R = 8.0  # the tractor's own turning circle, roughly
+MIN_R = 8.5  # the tractor's own turning circle, roughly
+KERB = 1.5  # metres of sidewalk the swept body may cover (sidewalk is 3 m)
+
+
+def counter_steer(r, step=0.5):
+    """Largest wrong-way swing (degrees) of tractor or trailer: a swing-wide
+    turn steers away from the corner first; past ~20 deg it reads as a wobble."""
+    worst = 0.0
+    for part in (0, 1):
+        hs = []
+        for i in range(int(r.L / step)):
+            p = rig_polys(r, i * step)[part]
+            hs.append(math.atan2(p[0][1] - p[3][1], p[0][0] - p[3][0]))
+        ds = [(hs[(k + 1) % len(hs)] - hs[k] + 3 * math.pi) % (2 * math.pi) - math.pi for k in range(len(hs))]
+        sign = 1 if sum(ds) > 0 else -1
+        run = 0.0
+        for d in ds:
+            run = max(0.0, run - d * sign)
+            worst = max(worst, run)
+    return math.degrees(worst)
 
 
 def score(ids, shape):
     rs = [loop(*SPECS[i], shape) for i in ids]
     clear = min(clearance(Loop(p)) for p in rs)
     rad = min(min_radius(p) for p in rs)
-    # Prefer kerb clearance up to 1.2 m, then gentle, tight-to-lane corners.
-    return min(clear, 1.2) - max(0, MIN_R - rad) - 0.03 * (shape[1] + shape[5]), clear, rad
+    wobble = max(counter_steer(Loop(p)) for p in rs)
+    # The trailer may sweep up to 1.5 m into the 3 m sidewalk (never the
+    # houses); within that, the least wrong-way swing, then gentle corners.
+    return (-0.2 * wobble - 20 * max(0, -KERB - clear) - max(0, MIN_R - rad)
+            + 0.5 * min(clear, 0.8)), clear, rad
+
+
+# Last tuned shapes (search starts here, so a rerun only refines them).
+START = {"near": [18.68, 1.78, 6.94, 0.77, 7.11, 2.74, 18.58],
+         "crew": [30.35, 0, 21.31, 3.6, 11.56, 0, 23.31]}
 
 
 def tune(ids, iters, seed=1):
     random.seed(seed)
-    cur = [16, 1, 10, 2, 10, 1, 16]
+    cur = START[ids[0]]
     cs = score(ids, cur)
     for it in range(iters):
         T = 1 - it / iters
@@ -210,14 +237,12 @@ if __name__ == "__main__":
     out = {}
     for ids in (("near", "old4"), ("crew",)):
         shape, (_, clear, rad) = tune(ids, iters)
-        print(ids, "shape", shape, "kerb clearance %.2f m, min radius %.1f m" % (clear, rad))
+        wb = [round(counter_steer(Loop(loop(*SPECS[i], shape))), 1) for i in ids]
+        print(ids, "shape", shape, "kerb clearance %.2f m, min radius %.1f m, counter-steer %s deg" % (clear, rad, wb))
         for i in ids:
             out[i] = [[round(x, 3), round(y, 3)] for x, y in resample(loop(*SPECS[i], shape), 0.75)]
     man["routes"].update(out)
     man["routeShapes"] = "routes.py"
-    # Tall blockout boxes that hide a lane from a camera: the game clips a rig
-    # out of their silhouettes while it drives behind them.
-    blk = json.loads((Path(__file__).resolve().parent / "out-v5" / "blockout.json").read_text())
-    man["occluders"] = [blk["boxes"][n] for n in ("warehouse", "warehouse_sign", "office")]
+    man.pop("occluders", None)
     MAN.write_text(json.dumps(man, separators=(",", ":")))
     print({k: (len(v), round(Loop([tuple(p) for p in v]).L, 1)) for k, v in out.items()})

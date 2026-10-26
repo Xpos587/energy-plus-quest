@@ -52,8 +52,6 @@ type Manifest = {
   routes: Record<MapCarrierId, Pt[]>;
   headings: number;
   plates: Record<PlateName, PlateSpec>;
-  /** World boxes [x0, y0, z0, x1, y1, z1] tall enough to hide a lane. */
-  occluders: number[][];
 };
 const M = manifest as unknown as Manifest;
 
@@ -505,24 +503,34 @@ function drawPart(
 ) {
   const frames = spec.sprites.trucks[key];
   const unit = o.k / spec.sprites.scale;
+  // Nearest painted angle, turned on screen by the few degrees left over:
+  // the rig rotates continuously, with no cross-fade double image.
   const [a, b, t] = headingFrames(heading);
-  const alpha = c.globalAlpha;
-  // Short cross-fade around the switch point only: most of the time a single
-  // crisp frame shows, and the swap is a quick dissolve instead of a pop.
-  const [base, top, w] = t < 0.5 ? [a, b, t] : [b, a, 1 - t];
-  blit(c, atlas, frames[base], at, unit, o);
-  const fade = Math.min(1, Math.max(0, (w - 0.42) / 0.08));
-  if (fade > 0.02) {
-    c.globalAlpha = alpha * fade;
-    blit(c, atlas, frames[top], at, unit, o);
-    c.globalAlpha = alpha;
-  }
-  const f = frames[base];
-  const g = frames[top];
-  return [
-    at[0] + f[6] + (g[6] - f[6]) * w,
-    at[1] + f[7] + (g[7] - f[7]) * w,
-  ] as Pt;
+  const k = t < 0.5 ? a : b;
+  const rot = wrapAngle(
+    screenAngle(o.plate, heading) -
+      screenAngle(o.plate, (k / M.headings) * Math.PI * 2),
+  );
+  const f = frames[k];
+  const px = o.ox + at[0] * o.k;
+  const py = o.oy + at[1] * o.k;
+  c.save();
+  c.translate(px, py);
+  c.rotate(rot);
+  c.translate(-px, -py);
+  blit(c, atlas, f, at, unit, o);
+  c.restore();
+  const cs = Math.cos(rot);
+  const sn = Math.sin(rot);
+  return [at[0] + f[6] * cs - f[7] * sn, at[1] + f[6] * sn + f[7] * cs] as Pt;
+}
+const wrapAngle = (v: number) => mod(v + Math.PI, Math.PI * 2) - Math.PI;
+/** Screen direction (canvas, y down) of a world heading on a plate. */
+function screenAngle(plate: PlateName, heading: number) {
+  const [a, b] = M.plates[plate].proj;
+  const x = Math.cos(heading);
+  const y = Math.sin(heading);
+  return Math.atan2(b[0] * x + b[1] * y, a[0] * x + a[1] * y);
 }
 
 /** The parked express rig: one rigid sprite. */
@@ -541,87 +549,6 @@ function drawRig(
   ]);
   contactShadow(c, at, heading, half, o, spec.mpp);
   return drawPart(c, atlas, spec, id, at, heading, o);
-}
-
-// ---------------------------------------------------------------- occlusion
-
-/** Unit vector from the scene towards the orthographic camera: the null
- * space of the plate projection, pointing up. */
-function towardCamera(plate: PlateName): number[] {
-  const [a, b] = M.plates[plate].proj;
-  const v = [
-    a[1] * b[2] - a[2] * b[1],
-    a[2] * b[0] - a[0] * b[2],
-    a[0] * b[1] - a[1] * b[0],
-  ];
-  const n = Math.hypot(v[0], v[1], v[2]) * Math.sign(v[2]);
-  return v.map((q) => q / n);
-}
-/** Does the ground ray from p towards the camera cross the footprint of B?
- * Rig sprites are scaled up and drawn standing, so any rig on the far side
- * of a building is behind it; the clip only bites where they overlap. */
-function hidden(p: Pt, B: number[], d: number[]) {
-  let t0 = 0;
-  let t1 = Infinity;
-  for (let i = 0; i < 2; i++) {
-    if (Math.abs(d[i]) < 1e-9) {
-      if (p[i] < B[i] || p[i] > B[i + 3]) return false;
-      continue;
-    }
-    let u = (B[i] - p[i]) / d[i];
-    let v = (B[i + 3] - p[i]) / d[i];
-    if (u > v) [u, v] = [v, u];
-    t0 = Math.max(t0, u);
-    t1 = Math.min(t1, v);
-    if (t0 > t1) return false;
-  }
-  return true;
-}
-/** Screen silhouettes (plate px) of the buildings standing between the
- * camera and this rig. The painted plate shows them; the rig is clipped. */
-export function occludersOf(plate: PlateName, g: Rig): Pt[][] {
-  const d = towardCamera(plate);
-  const parts = rigBoxes(g);
-  return M.occluders
-    .filter((B) =>
-      parts.some(([p, hl]) =>
-        [-0.8, 0, 0.8].some((u) =>
-          hidden(
-            [
-              p.x + Math.cos(p.heading) * u * hl,
-              p.y + Math.sin(p.heading) * u * hl,
-            ],
-            B,
-            d,
-          ),
-        ),
-      ),
-    )
-    .map((B) => {
-      const pts: Pt[] = [];
-      for (const x of [B[0], B[3]])
-        for (const y of [B[1], B[4]])
-          for (const z of [B[2], B[5]]) pts.push(project(plate, x, y, z));
-      return hull(pts);
-    });
-}
-function hull(points: Pt[]): Pt[] {
-  const pts = [...points].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
-  const cross = (a: Pt, b: Pt, q: Pt) =>
-    (b[0] - a[0]) * (q[1] - a[1]) - (b[1] - a[1]) * (q[0] - a[0]);
-  const half = (list: Pt[]) => {
-    const out: Pt[] = [];
-    for (const q of list) {
-      while (
-        out.length > 1 &&
-        cross(out[out.length - 2], out[out.length - 1], q) <= 0
-      )
-        out.pop();
-      out.push(q);
-    }
-    return out.slice(0, -1);
-  };
-  return half(pts).concat(half(pts.reverse()));
 }
 
 /** An articulated rig: low tractor frame, then trailer and cab in depth
@@ -909,23 +836,15 @@ export function drawCity(
         Math.sin(time * 17 + 1) * 0.6 * jolt,
       ];
     }
-    const g = rigs[mapCarrierIds.indexOf(id)];
-    const cover = occludersOf(o.plate, g);
-    c.save();
-    if (cover.length) {
-      // Everything but the buildings in front: the rig drives behind them.
-      c.beginPath();
-      c.rect(0, 0, c.canvas.width, c.canvas.height);
-      for (const poly of cover)
-        poly.forEach((q, i) => {
-          const [x, y] = P(q);
-          if (i) c.lineTo(x, y);
-          else c.moveTo(x, y);
-        });
-      c.clip("evenodd");
-    }
-    exhausts[id] = drawArticulated(c, atlas, spec, id, g, o, jitter);
-    c.restore();
+    exhausts[id] = drawArticulated(
+      c,
+      atlas,
+      spec,
+      id,
+      rigs[mapCarrierIds.indexOf(id)],
+      o,
+      jitter,
+    );
   }
   c.globalAlpha = 1;
   for (const id of ["old", "old4"] as const) {

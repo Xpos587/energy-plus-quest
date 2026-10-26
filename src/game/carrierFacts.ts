@@ -45,7 +45,7 @@ export const carrierFacts: Record<
   old4: {
     label: "Жёлтая фура",
     imageAlt: "Жёлтый тягач с полуприцепом на городской дороге",
-    citySpeedKmh: 29,
+    citySpeedKmh: 28,
     buildYear: 2013,
     pace: "Не спеша",
   },
