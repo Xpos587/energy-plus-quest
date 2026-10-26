@@ -23,6 +23,9 @@ export type SceneArtProps = {
   showResult: boolean;
   initialPan?: number;
   onPanChange?: (position: number) => void;
+  /** Lets the choice list and the artwork highlight the same option. */
+  focusedId?: string;
+  onFocusChange?: (id: string | undefined) => void;
 };
 export type SceneDefinition = {
   id: SceneId;

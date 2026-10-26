@@ -1,3 +1,4 @@
+import { ChartLine, CircleAlert, CircleCheck, CircleX, Heart, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { QuestHeader } from "../components/QuestShell";
 import { ResultCopy } from "../components/ResultCopy";
@@ -53,14 +54,36 @@ export function restartSceneCondition(
     briefingParagraphs(id, scene.intro(context)),
   );
 }
-// Visible hints repeat what the cut-away shows; the result stays unspoiled.
-const compactChoiceDetails: Record<string, string> = {
-  "place-1": "Над гирями у задних дверей",
-  "place-2": "Над посудой, есть стропы",
-  "place-3": "Ниша за тремя коробками",
-  "place-4": "У передней стенки, рядом подушки",
-  auto: "Подберёт место по размеру груза",
+// Names and hints repeat what the cut-away shows; the result stays unspoiled.
+const compactPlaces: Record<string, [name: string, detail: string]> = {
+  "place-1": ["У задних дверей", "Над гирями, без креплений"],
+  "place-2": ["Над посудой", "Есть красные стропы"],
+  "place-3": ["Ниша за коробками", "Есть короткая стропа"],
+  "place-4": ["У передней стенки", "Высоко, рядом подушки"],
+  auto: ["Доверить Compact", "Подберёт место по размеру"],
 };
+const compactGoals = [
+  { key: "energy", icon: Zap, label: "Погрузить быстро", score: "Энергия" },
+  { key: "empathy", icon: Heart, label: "Довезти целым", score: "Эмпатия" },
+  { key: "efficiency", icon: ChartLine, label: "Не занять лишнее", score: "Эффективность" },
+] as const;
+function CompactGoals() {
+  return (
+    <ul className={flow.compactGoals} aria-label="Что важно" data-compact-goals>
+      {compactGoals.map(({ key, icon: Icon, label, score }) => (
+        <li key={key} data-score-key={key}><Icon aria-hidden="true" size={16} strokeWidth={2.2} />{label}<small>{score}</small></li>
+      ))}
+    </ul>
+  );
+}
+const sum = ({ energy, empathy, efficiency }: Scores) => energy + empathy + efficiency;
+/** Ranks the choice against the best one available for this gift. */
+export function compactVerdict(score: Scores, all: Scores[]) {
+  const value = sum(score);
+  if (value >= Math.max(...all.map(sum)) - 1) return { tone: "best", text: "Отличная погрузка", Icon: CircleCheck } as const;
+  if (value > 0) return { tone: "fair", text: "Можно лучше", Icon: CircleAlert } as const;
+  return { tone: "bad", text: "Неудачная погрузка", Icon: CircleX } as const;
+}
 
 const optionTitles: Record<string, string> = {
   "place-1": "Место 1",
@@ -81,6 +104,15 @@ const optionTitles: Record<string, string> = {
   "pipe-carrier": "Трубовоз",
 };
 const zeroScores: Scores = { energy: 0, empathy: 0, efficiency: 0 };
+function CompactVerdict({ id, score, all }: { id: string; score: Scores; all: Scores[] }) {
+  const { tone, text, Icon } = compactVerdict(score, all);
+  return (
+    <span className={flow.compactVerdict} data-verdict={tone}>
+      <small>{id === "auto" ? "Место выбрал Compact" : `${optionTitles[id]} · ${compactPlaces[id][0]}`}</small>
+      <span><Icon aria-hidden="true" size={26} strokeWidth={2.2} />{text}</span>
+    </span>
+  );
+}
 export type ScenesCompletion = {
   context: SceneContext;
   answers: Record<string, string>;
@@ -202,6 +234,7 @@ function ScenesSession({
   const intro = scene.intro(context);
   const selected = options.find(({ id }) => id === state.answers[scene.id]);
   const [resultBeat, setResultBeat] = useState(0);
+  const [focusedChoice, setFocusedChoice] = useState<string>();
   const score = totalScores(state, remainingScenes, context, initialScores);
   const { Art } = scene;
   const resultVisible = state.phase === "result" && selected !== undefined;
@@ -322,7 +355,15 @@ function ScenesSession({
               question={question}
               keepParagraphs={scene.id === "crane"}
               decisionContext={
-                scene.id === "crane" ? <CraneDecisionContext /> : undefined
+                scene.id === "crane" ? <CraneDecisionContext /> : scene.id === "compact" ? (
+                  <>
+                    <div className={flow.compactCargo} data-compact-cargo>
+                      <img src={thumbnailAsset(choiceArtwork[context.parcel])} alt="" />
+                      <span><small>Груз</small><strong>{parcelNames[context.parcel].nominative}</strong></span>
+                    </div>
+                    <CompactGoals />
+                  </>
+                ) : undefined
               }
               onBack={back}
               lead={
@@ -330,9 +371,11 @@ function ScenesSession({
                   <div className={flow.briefingLead} data-briefing-lead>
                     <img src={thumbnailAsset(choiceArtwork[context.parcel])} alt="" />
                     <span>
-                      <small>Груз</small>
+                      <small>Наряд на погрузку</small>
                       <strong>{parcelNames[context.parcel].nominative}</strong>
+                      <em>Фура до склада в Лабытнанги</em>
                     </span>
+                    <CompactGoals />
                   </div>
                 ) : undefined
               }
@@ -342,22 +385,22 @@ function ScenesSession({
                   options={options.map((option) => ({
                     id: option.id,
                     showBadge: option.id !== "auto",
-                    detail: scene.id === "compact" ? compactChoiceDetails[option.id] : undefined,
+                    detail: scene.id === "compact" ? compactPlaces[option.id][1] : undefined,
                     accessibleLabel:
-                      scene.id === "compact"
-                        ? option.id === "auto"
-                          ? "Поручить размещение Compact"
-                          : optionTitles[option.id]
+                      scene.id === "compact" && option.id !== "auto"
+                        ? `${optionTitles[option.id]}: ${compactPlaces[option.id][0]}`
                         : undefined,
                     label:
-                      scene.id === "compact" && option.id !== "auto"
-                        ? "Место"
+                      scene.id === "compact"
+                        ? compactPlaces[option.id][0]
                         : option.id === "auto"
                           ? "Поручить размещение Compact"
                           : scene.id === "inventory" && option.id === "alphabet"
                             ? `Стеллаж «${inventoryAlphabet[context.parcel].letter}»`
                             : optionTitles[option.id] ?? choiceLabel(option.label),
                   }))}
+                  focusedId={scene.id === "compact" ? focusedChoice : undefined}
+                  onFocusChange={scene.id === "compact" ? setFocusedChoice : undefined}
                   onInspect={choose}
                   badgeShape={
                     scene.id === "compact" || scene.id === "crane"
@@ -391,6 +434,8 @@ function ScenesSession({
                 selectedId={resultVisible ? selected?.id : undefined}
                 showResult={resultVisible}
                 onSelect={state.phase === "choice" ? choose : undefined}
+                focusedId={scene.id === "compact" ? focusedChoice : undefined}
+                onFocusChange={scene.id === "compact" ? setFocusedChoice : undefined}
               />
             )}
           </section>
@@ -404,7 +449,7 @@ function ScenesSession({
               <div className={flow.resultStory}>
                 <ResultCopy
                   key={`${scene.id}:${selected.id}`}
-                  title={title}
+                  title={scene.id === "compact" ? <CompactVerdict id={selected.id} score={selected.score} all={options.map(o => o.score)} /> : title}
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace

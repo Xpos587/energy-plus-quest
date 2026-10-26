@@ -16,6 +16,8 @@ export function SceneChoices<Id extends string>({
   badgeShape = "circle",
   variant,
   opensDialog = false,
+  focusedId,
+  onFocusChange,
 }: {
   options: readonly { id: Id; label: string; detail?: string; accessibleLabel?: string; showBadge?: boolean }[];
   selectedId?: Id;
@@ -24,6 +26,8 @@ export function SceneChoices<Id extends string>({
   badgeShape?: "circle" | "square";
   variant?: "carriers" | "scene";
   opensDialog?: boolean;
+  focusedId?: Id;
+  onFocusChange?: (id: Id | undefined) => void;
 }) {
   return (
     <div className={styles.choices} data-choice-variant={variant} role="group" aria-label="Варианты выбора">
@@ -39,6 +43,11 @@ export function SceneChoices<Id extends string>({
           aria-label={accessibleLabel}
           aria-haspopup={opensDialog ? "dialog" : undefined}
           aria-pressed={selectedId === id}
+          data-focused={onFocusChange ? focusedId === id : undefined}
+          onPointerEnter={onFocusChange && (() => onFocusChange(id))}
+          onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
+          onFocus={onFocusChange && (() => onFocusChange(id))}
+          onBlur={onFocusChange && (() => onFocusChange(undefined))}
           onClick={() => onInspect(id)}
         >
           {Icon && (

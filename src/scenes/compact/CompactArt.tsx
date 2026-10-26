@@ -25,10 +25,14 @@ export function CompactArt({
   showResult,
   context,
   onSelect,
+  focusedId,
+  onFocusChange,
 }: SceneArtProps) {
   const stage = useRef<HTMLElement>(null);
   const layout = useCompactLayout();
-  const [focused, setFocused] = useState<string>();
+  const [ownFocus, setOwnFocus] = useState<string>();
+  const focused = onFocusChange ? focusedId : ownFocus;
+  const setFocused = onFocusChange ?? setOwnFocus;
   // Inspection uses the same artwork and coordinate plane as the overview.
   // Only the camera transform changes; replacing the canvas loses the truck context.
   const frame = showResult
