@@ -13,40 +13,6 @@
   }
 }
 
-@media (max-height: 450px) and (orientation: landscape) {
-  /* Petr's benefit and cost remain one story; the old 48px paging cap must not clip it. */
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] [data-result-reading] {
-    max-height: none;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) .result {
-    padding-block: 4px;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) {
-    grid-template-columns: minmax(0, 1fr) minmax(420px, 56%);
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-outcome-scene] img {
-    object-fit: contain;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] footer {
-    padding-top: 4px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] footer button {
-    grid-row: 2;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] footer button:first-child {
-    grid-column: 1;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-continuous="true"] footer button:last-child {
-    grid-column: 2;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-result-feedback] {
-    grid-row: 1;
-    grid-column: 1 / -1;
-  }
-}
-
 /* Express shares the manual card shell while retaining the overview camera. */
 @media (min-width: 901px) and (min-height: 501px) {
   .app[data-scene="carrier"] .frame.frame.frame[data-interaction="inspect-confirm"]:has([data-choice-inspection="express"]) {
@@ -2586,37 +2552,6 @@
   }
 }
 
-/* Petr's action spans the workers at the top and the gift on the near deck.
-   Keep both in frame; on wide screens the reader sits alongside the image. */
-@media (min-width: 901px) and (min-height: 501px) {
-  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) {
-    grid-template-rows: minmax(0, 1fr) 200px;
-  }
-}
-@media (min-width: 1200px) and (min-height: 501px) and (min-aspect-ratio: 8/5) {
-  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) {
-    grid-template-columns: minmax(0, min(calc(100% - 320px), calc((100dvh - 56px) * 1.65))) minmax(320px, 1fr);
-    grid-template-rows: minmax(0, 1fr);
-  }
-  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) .result {
-    grid-column: 2;
-    grid-row: 1;
-    padding: 12px 16px;
-  }
-  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-result-reader] footer {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-result-feedback] {
-    grid-column: 1 / -1;
-    grid-row: 1;
-  }
-  .app[data-scene="crane"] .frame[data-layout="result"]:has([data-scene-consequence="crane-petr"]) [data-result-reader] footer button {
-    grid-row: 2;
-    font-size: 16px;
-  }
-}
-
 /* Shared navigation: readable labels, close icons and thumb-safe bottom space. */
 .app[data-scene] .frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection),
 .app[data-scene] .frame[data-layout="result"] .result {
@@ -3423,32 +3358,6 @@
 }
 
 /* Keep transport names whole; only the space before тележка may wrap. */
-/* Inspecting a crane action preserves the overview camera instead of switching art formats. */
-@media (max-width: 1000px) and (orientation: portrait) {
-  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] {
-    height: 100dvh;
-    min-height: 100dvh;
-    grid-template-rows: var(--scene-header-height) calc(100vw * var(--crane-overview-ratio)) minmax(0, 1fr);
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] .carrierMap {
-    height: 100%;
-    min-height: 0;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] .inspection {
-    height: 100%;
-    max-height: none;
-  }
-  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] .inspection .actions {
-    margin-top: auto;
-  }
-}
-
-@media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"][style] {
-    grid-template-columns: var(--crane-overview-width) minmax(0, 1fr);
-  }
-}
-
 @media (max-width: 600px) and (orientation: portrait) {
   .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
     font-size: clamp(14px, 4vw, 16px);
@@ -3814,7 +3723,7 @@
   }
   .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) [data-outcome-scene] img {
     object-fit: cover;
-    object-position: var(--crane-mobile-focus, 50%) 50%;
+    object-position: 50% 50%;
   }
 }
 
@@ -3893,3 +3802,92 @@
   .app[data-scene="compact"] .briefingLead strong { font-size: 28px; }
 }
 @media (max-height: 500px) { .app[data-scene="compact"] .briefingLead { display: none; } }
+
+/* Scene 2 round 3: order card goals, named places, verdict. */
+.app[data-scene="compact"] .briefingLead { flex-wrap: wrap; }
+.app[data-scene="compact"] .briefingLead em { font-size: 14px; font-style: normal; color: #53697d; }
+.app[data-scene="compact"] .briefingLead > .compactGoals { flex-basis: 100%; }
+.compactGoals {
+  display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none;
+}
+.compactGoals li {
+  display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px 4px 7px;
+  border: 1px solid #c4d7e4; border-radius: 999px; background: #f3f8fb;
+  color: #082946; font-size: 13px; font-weight: 600; line-height: 1.2; white-space: nowrap;
+}
+.compactGoals svg { flex: none; color: #075d9b; }
+.app[data-scene="compact"] .question > .compactGoals { margin-block: -2px 2px; }
+@media (max-width: 700px) {
+  .compactGoals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .compactGoals li { justify-content: center; gap: 4px; padding: 5px 4px; font-size: 12px; white-space: normal; text-align: left; }
+  .compactGoals svg { width: 14px; height: 14px; }
+}
+@media (max-height: 500px) { .app[data-scene="compact"] .question > .compactGoals { display: none; } }
+
+/* Choices: hovering a button lights the matching place in the truck and back. */
+.app[data-scene="compact"] .question [data-scene-choice][data-focused="true"] { border-color: #075d9b; background: #edf4f9; }
+.app[data-scene="compact"] .question [data-scene-choice][data-focused="true"] [data-badge-shape] { background: var(--orange, #ff5500); }
+.app[data-scene="compact"] .question [data-scene-choice] [data-badge-shape] { transition: background-color 160ms ease; }
+
+.compactVerdict { display: grid; gap: 4px; }
+.compactVerdict > small { font-size: 15px; font-weight: 600; line-height: 1.25; color: #53697d; }
+.compactVerdict > span {
+  display: inline-flex; align-items: center; gap: 8px; color: #075d9b;
+  animation: compactVerdictPop 420ms cubic-bezier(.34, 1.56, .64, 1) both;
+}
+.compactVerdict > span svg { flex: none; }
+.compactVerdict[data-verdict="fair"] > span { color: #082946; }
+.compactVerdict[data-verdict="fair"] > span svg { color: #53697d; }
+.compactVerdict[data-verdict="bad"] > span svg { color: #ff5500; }
+.compactVerdict[data-verdict="bad"] > span { color: #082946; }
+@keyframes compactVerdictPop { from { opacity: 0; transform: scale(.92) translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .compactVerdict > span { animation: none; } }
+@media (max-width: 1000px), (max-height: 700px) {
+  .compactVerdict > small { font-size: 13px; }
+  .compactVerdict > span svg { width: 22px; height: 22px; }
+}
+/* Desktop rail keeps the cargo in view while choosing; phones need the height for the truck. */
+.compactCargo { display: none; }
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="compact"] .question > .compactCargo {
+    order: -1; display: flex; align-items: center; gap: 12px; padding-bottom: 14px; border-bottom: 2px dashed #d2e4ef;
+  }
+  .compactCargo img { width: 56px; height: 56px; border-radius: 10px; object-fit: cover; flex: none; }
+  .compactCargo span { display: grid; gap: 2px; }
+  .compactCargo small { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #53697d; }
+  .compactCargo strong { font-size: 22px; line-height: 1.1; color: #082946; }
+  .compactCargo strong::first-letter { text-transform: uppercase; }
+}
+@media (min-width: 1001px) and (min-height: 701px) and (max-height: 860px) {
+  .app[data-scene="compact"] .question > .compactCargo { display: none; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question { gap: 12px; padding-top: 20px; padding-bottom: 16px; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { min-height: 54px; padding-block: 6px; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 24px; line-height: 30px; }
+}
+/* The verdict adds a line; the truck keeps its frame, the empty sky yields. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(104px, 1fr) minmax(0, 364px); }
+}
+@media (max-width: 600px) and (orientation: portrait) and (max-height: 700px) {
+  .app[data-scene="compact"] .frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(104px, 1fr) minmax(0, 340px); }
+}
+.compactGoals li small { display: none; }
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="compact"] .question > .compactGoals {
+    flex: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 0;
+  }
+  .app[data-scene="compact"] .question > .compactGoals li {
+    justify-content: center; gap: 5px; padding: 6px 4px; font-size: 13px; white-space: normal; text-align: left;
+  }
+  .app[data-scene="compact"] .briefingLead .compactGoals { display: grid; gap: 0; border: 1px solid #c4d7e4; border-radius: 12px; overflow: hidden; }
+  .app[data-scene="compact"] .briefingLead .compactGoals li {
+    display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 10px; padding: 10px 14px;
+    border: 0; border-radius: 0; background: #fff; font-size: 16px;
+  }
+  .app[data-scene="compact"] .briefingLead .compactGoals li + li { border-top: 1px solid #e1ebf2; }
+  .app[data-scene="compact"] .briefingLead .compactGoals li small { display: block; font-size: 13px; font-weight: 500; color: #53697d; }
+  .app[data-scene="compact"] .compactGoals svg { width: 18px; height: 18px; }
+}
+@media (min-width: 1001px) and (min-height: 701px) and (max-height: 860px) {
+  .app[data-scene="compact"] .question > .compactGoals li { padding-block: 4px; }
+}

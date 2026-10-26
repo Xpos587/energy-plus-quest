@@ -5,30 +5,16 @@ for (const [width, height] of [[390, 844], [752, 875], [1440, 900]]) {
     await page.setViewportSize({ width, height });
     for (const scene of ["crane", "lastmile"]) {
       await page.goto(`/scenes.html?scene=${scene}&parcel=boat&recipient=alva`);
-      const stage = page.locator(`[data-world-scene="${scene}"]`);
-      await expect(stage).toBeVisible();
+      const stage = page.locator(scene === "crane" ? "[data-barge-art]" : `[data-world-scene="${scene}"]`);
+      if (scene !== "crane") await expect(stage).toBeVisible();
       await page.screenshot({ path: info.outputPath(`${scene}-intro.png`) });
       const next = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
       for (let i = 0; i < 20 && await next.isVisible(); i++) await next.click();
       await page.screenshot({ path: info.outputPath(`${scene}-choice.png`) });
-      if (scene === "crane" && width === 1440) {
-        await expect(stage).toHaveAttribute("data-crane-overview", "true");
-        const bounds = await stage.evaluate((el) => {
-          const stage = el.getBoundingClientRect();
-          const art = el.querySelector("[data-world-plane]")!.getBoundingClientRect();
-          return {
-            left: art.left - stage.left,
-            top: art.top - stage.top,
-            right: art.right - stage.left,
-            bottom: art.bottom - stage.top,
-            width: stage.width,
-            height: stage.height,
-          };
-        });
-        expect(bounds.left).toBeGreaterThanOrEqual(0);
-        expect(bounds.top).toBeGreaterThanOrEqual(0);
-        expect(bounds.right).toBeLessThanOrEqual(bounds.width);
-        expect(bounds.bottom).toBeLessThanOrEqual(bounds.height);
+      if (scene === "crane") {
+        await expect(stage).toBeVisible();
+        for (const id of ["remote", "rush", "wait", "petr"])
+          await expect(stage.locator(`[data-hotspot="${id}"]`)).toBeInViewport();
       }
       if (scene === "lastmile") {
         const bounds = await stage.evaluate((el) => {

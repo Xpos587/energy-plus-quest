@@ -10,10 +10,6 @@
   overflow: clip;
 }
 
-.stage[data-crane-overview="true"] {
-  background: #dceaf3;
-}
-
 .plane {
   position: absolute;
   left: 50%;
@@ -78,24 +74,6 @@
   pointer-events: none;
 }
 
-.markerPair {
-  position: absolute;
-  width: 68px;
-  height: 28px;
-  transform: translate(-50%, -50%);
-  border: 0;
-  background: none;
-  pointer-events: none;
-  z-index: 2;
-}
-.stage[data-world-scene="crane"] .marker[data-hotspot="rush"] { transform: translate(-100%, -50%); }
-.stage[data-world-scene="crane"] .marker[data-hotspot="wait"] { transform: translate(0, -50%); }
-
-/* The reviewed crane family differs from the manifest by one source pixel.
-   Cover that rounding fringe instead of exposing the stage underneath. */
-.stage[data-world-scene="crane"] .image {
-  object-fit: cover;
-}
 
 /* Inventory uses the whole reviewed drawing: the WMS desk remains in frame. */
 .stage[data-world-scene="inventory"] { background: var(--pale-blue, #dfeafb); }
@@ -109,38 +87,22 @@
   .stage[data-world-scene="inventory"][data-camera-moving="true"] .plane { transition: none; }
   .stage[data-camera-moving="true"] .warehouseSurround { transition: none; }
 }
-.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker { width: 44px; height: 44px; min-width: 44px; min-height: 44px; font-size: 12px; font-weight: 700; }
-.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker::before { inset: 12px; border: 1px solid white; border-radius: 5px; background: #075d9b; box-shadow: 0 1px 4px #04132730; }
-.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker[aria-pressed="true"]::before,
-.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker:focus-visible::before { outline: 1.5px solid #075d9b; outline-offset: 2px; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker { width: 44px; height: 44px; min-width: 44px; min-height: 44px; font-size: 12px; font-weight: 700; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker::before { inset: 12px; border: 1px solid white; border-radius: 5px; background: #075d9b; box-shadow: 0 1px 4px #04132730; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker[aria-pressed="true"]::before,
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker:focus-visible::before { outline: 1.5px solid #075d9b; outline-offset: 2px; }
 @media (min-width: 1001px) {
-  .stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker { font-size: 14px; }
-  .stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker::before { inset: 10px; }
+  .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker { font-size: 14px; }
+  .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker::before { inset: 10px; }
 }
 
-.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker:hover::before,
-.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker[aria-pressed="true"]::before {
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker:hover::before,
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker[aria-pressed="true"]::before {
   background: var(--orange, #ff5500);
 }
 /* Warehouse art uses numbered badges only; labels belong to choice controls. */
-.stage:is([data-world-scene="inventory"], [data-world-scene="crane"], [data-world-scene="lastmile"]) .marker::after { content: none; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker::after { content: none; }
 
 
 .stage[data-world-scene="lastmile"] .marker[data-hotspot="robot"] { margin-top: 0; }
 
-/* Two actions share the crane: match their walking/clock cues to the cards. */
-.stage[data-world-scene="crane"] .marker:is([data-hotspot="rush"], [data-hotspot="wait"]) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 58px;
-  gap: 6px;
-  font-size: 14px;
-}
-.stage[data-world-scene="crane"] .marker:is([data-hotspot="rush"], [data-hotspot="wait"])::before {
-  inset: 6px 2px;
-  border-radius: 7px;
-}
-.stage[data-world-scene="crane"] .marker[data-hotspot="rush"] { margin-left: -3px; }
-.stage[data-world-scene="crane"] .marker[data-hotspot="wait"] { margin-left: 3px; }
-.actionIcon { width: 18px; height: 18px; position: relative; flex-shrink: 0; }

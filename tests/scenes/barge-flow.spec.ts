@@ -20,11 +20,10 @@ for (const viewport of [
       /беспилотном тягаче[\s\S]*кран[\s\S]*Иван/,
     );
     await expect(page.getByTestId("scene-question")).toContainText(
-      "беспилотном тягаче",
-    );
-    await expect(page.getByTestId("scene-question")).toContainText(
       "Как погрузить подарок на баржу?",
     );
+    const intro = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
+    for (let n = 0; n < 20 && (await intro.isVisible()); n++) await intro.click();
     await expect(page.locator('[data-scene-choice="rush"]')).toBeVisible();
 
     for (const id of ["remote", "rush", "wait", "petr"]) {
@@ -42,7 +41,7 @@ for (const viewport of [
     );
     await expect(resultImage).toHaveAttribute(
       "src",
-      /\/scene-art\/barge-family-v1\/remote-camera-v4\.png/,
+      /\/scene-art\/barge-v2\/outcome-remote\.webp/,
     );
     await resultImage.evaluate(async (image: HTMLImageElement) =>
       image.decode(),
@@ -54,7 +53,7 @@ for (const viewport of [
       await resultImage.evaluate(
         (image: HTMLImageElement) => new URL(image.currentSrc).pathname,
       ),
-    ).toBe("/scene-art/barge-family-v1/remote-camera-v4.png");
+    ).toBe("/scene-art/barge-v2/outcome-remote.webp");
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,

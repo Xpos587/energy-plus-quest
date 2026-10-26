@@ -1,6 +1,5 @@
 import { imageAsset } from "../game/imageAssets";
-import craneFraming from "./crane/outcomeFraming.json";
-import { craneFamilyImage } from "./crane/artworkFamily";
+import { craneChoiceImage, craneOutcomeImage } from "./crane/artwork";
 import { lastmileOutcomeImage } from "./lastmile/artworkFamily";
 import type { SceneContext, SceneId } from "./types";
 import manifest from "./worldManifest.json";
@@ -14,10 +13,7 @@ export function sceneChoiceImage(
       "scene-art/lastmile-family-v1/choice-final-wide-v10.webp",
     );
   }
-  if (scene === "crane" && context) {
-    const family = craneFamilyImage("choice", context.parcel);
-    if (family) return imageAsset(family);
-  }
+  if (scene === "crane") return imageAsset(craneChoiceImage);
   return imageAsset(manifest.scenes[scene].desktop.image);
 }
 
@@ -40,12 +36,7 @@ export function sceneOutcomeImage(
       `scene-art/warehouse-restored-2026-10-11/${selectedId}${selectedId === "keeper" ? "-v2" : ""}.webp`,
     );
   }
-  if (scene === "crane") {
-    const family = craneFamilyImage(selectedId, context.parcel);
-    if (family) return imageAsset(family);
-    const frame = craneFraming[selectedId as keyof typeof craneFraming];
-    return imageAsset(`scene-art/outcomes/${frame.file}`);
-  }
+  if (scene === "crane") return imageAsset(craneOutcomeImage(selectedId));
   if (scene === "lastmile") {
     const file = lastmileOutcomeImage(selectedId, context);
     if (file) return imageAsset(file);

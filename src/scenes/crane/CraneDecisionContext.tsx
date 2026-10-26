@@ -1,15 +1,15 @@
-import { scenarioParagraph } from "../../game/scenarioDocument";
 import styles from "./CraneDecisionContext.module.css";
 
-const source = scenarioParagraph("62451EC9");
-const decisionContext = source.slice(source.indexOf(". ") + 2);
+/** Short restatement of the scenario's three constraints, shown next to the choices. */
+export const craneDecisionContext = [
+  "Баржа загружена и вот-вот уйдёт по Оби в Новый порт. Ближайший кран по графику свободен только через 3 часа.",
+  "Крановщик Иван ждёт распоряжений в офисе, а оператор Пётр сидит в дальнем кране: у него скоро своя погрузка.",
+];
 
 export function CraneDecisionContext() {
   return (
     <div className={styles.context} data-crane-decision-context>
-      <p>{decisionContext}</p>
-      <p>{scenarioParagraph("6F7BE91B")}</p>
-      <p>Пётр — {scenarioParagraph("0C6EC2FC").split(" — ")[1]}</p>
+      {craneDecisionContext.map((text) => <p key={text}>{text}</p>)}
     </div>
   );
 }

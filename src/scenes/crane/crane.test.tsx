@@ -4,6 +4,7 @@ import { parcelNames, recipientNames } from "../names";
 import { scenarioParagraph as source } from "../../game/scenarioDocument";
 import type { SceneContext } from "../types";
 import { craneScene } from "./index";
+import { craneArtwork, craneCaptions } from "./artwork";
 
 const context: SceneContext = {
   parcel: "camera",
@@ -84,70 +85,33 @@ describe("craneScene source contract", () => {
       });
     }
   }
-  it("renders four direct choices on the quay", () => {
+  it("renders four numbered object pins on the quay drawing", () => {
     const html = renderToStaticMarkup(
-      <craneScene.Art
-        context={context}
-        showResult={false}
-        selectedId="remote"
-        onSelect={() => {}}
-      />,
+      <craneScene.Art context={context} showResult={false} onSelect={() => {}} />,
     );
     expect(html.match(/data-hotspot=/g)).toHaveLength(4);
-    expect(html).toContain("/scene-art/barge-family-v1/choice-neutral-tall-v7.webp");
-    expect(html).toContain('data-selected="remote"');
-    expect(html).toContain('data-gift="camera"');
-    expect(html).toContain("<img");
-    for (const label of [
-      "Отправить Ивана на кран",
-      "Ждать 3 часа",
-      "Попросить Петра",
-      "Управлять из офиса",
-    ])
-      expect(html).toContain(label);
-    expect(html).not.toContain("<a ");
+    for (const id of ["remote", "rush", "wait", "petr"])
+      expect(html).toContain(`data-hotspot="${id}"`);
+    expect(html).toMatch(/scene-art\/barge-v2\/choice-(wide|tall)\.webp/);
+    for (const caption of Object.values(craneCaptions)) expect(html).toContain(caption);
+    expect(html).toContain("Баржа готова к отходу");
+    expect(html).not.toContain("disabled");
   });
-  for (const [id] of cases)
-    it(`renders the distinct ${id} result`, () => {
-      const html = renderToStaticMarkup(
-        <craneScene.Art context={context} selectedId={id} showResult />,
-      );
-      expect(html).toContain(`data-outcome="${id}"`);
-      expect(html).toContain(
-        `data-gift-location="${id === "wait" ? "quay" : "barge"}"`,
-      );
-      expect(html).toContain("Иллюстрация");
-      expect(html).toContain(`data-outcome="${id}"`);
-      expect(html).not.toContain("data-world-annotation");
-      expect(html).not.toContain("Результат выбора:");
-      expect(html).toContain("data-selected-marker");
-      expect(html).not.toContain("<button");
-    });
-  it("renders each gift in both quay and barge states", () => {
-    for (const parcel of Object.keys(
-      parcelNames,
-    ) as (keyof typeof parcelNames)[]) {
-      for (const showResult of [false, true]) {
-        expect(
-          renderToStaticMarkup(
-            <craneScene.Art
-              context={{ ...context, parcel }}
-              selectedId="remote"
-              showResult
-            />,
-          ),
-        ).toContain(`data-gift="${parcel}"`);
-        expect(
-          renderToStaticMarkup(
-            <craneScene.Art
-              context={{ ...context, parcel }}
-              selectedId="remote"
-              showResult={showResult}
-            />,
-          ),
-        ).toContain(`data-gift-location="${showResult ? "barge" : "quay"}"`);
+  it("locks the pins once a result is shown", () => {
+    const html = renderToStaticMarkup(
+      <craneScene.Art context={context} selectedId="petr" showResult />,
+    );
+    expect(html).toContain('data-selected="petr"');
+    expect(html.match(/disabled=""/g)).toHaveLength(4);
+  });
+  it("keeps every pin inside its drawing", () => {
+    for (const art of Object.values(craneArtwork))
+      for (const point of Object.values(art.hotspots)) {
+        expect(point.x).toBeGreaterThan(0);
+        expect(point.x).toBeLessThan(art.width);
+        expect(point.y).toBeGreaterThan(0);
+        expect(point.y).toBeLessThan(art.height);
       }
-    }
   });
 });
 

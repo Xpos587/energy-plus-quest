@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1504" viewBox="0 0 1200 1504">
+<rect width="1200" height="1504" fill="#bfe0f5"/>
+<rect y="640" width="1200" height="36" fill="#8fb27a"/>
+<rect y="676" width="1200" height="94" fill="#5aa3dc"/>
+<rect x="0" y="560" width="150" height="220" fill="#d8d0c0" stroke="#333" stroke-width="4"/>
+<polygon points="0,770 1200,770 1200,890 0,890" fill="#cfc6b4"/>
+<rect y="890" width="1200" height="60" fill="#8a8f96"/>
+<rect y="950" width="1200" height="554" fill="#3f8fd0"/>
+<!-- PRU -->
+<rect x="30" y="560" width="360" height="300" fill="#ffffff" stroke="#1d4f9c" stroke-width="6"/>
+<rect x="30" y="560" width="360" height="36" fill="#f47a20"/>
+<rect x="30" y="815" width="360" height="45" fill="#1d4f9c"/>
+<rect x="110" y="440" width="200" height="120" fill="#9fd1ef" stroke="#1d4f9c" stroke-width="6"/>
+<rect x="100" y="420" width="220" height="22" fill="#1d4f9c"/>
+<rect x="200" y="630" width="130" height="100" fill="#9fd1ef" stroke="#1d4f9c" stroke-width="5"/>
+<circle cx="265" cy="680" r="24" fill="#f0b48a"/>
+<!-- gift -->
+<rect x="410" y="780" width="120" height="70" fill="#ff00ff"/>
+<!-- near crane -->
+<polygon points="560,890 595,690 735,690 770,890 740,890 715,730 615,730 590,890" fill="#1d4f9c"/>
+<rect x="635" y="150" width="60" height="550" fill="#1d4f9c"/>
+<rect x="605" y="180" width="120" height="90" fill="#f47a20" stroke="#1d4f9c" stroke-width="6"/>
+<rect x="625" y="200" width="50" height="40" fill="#9fd1ef"/>
+<line x1="700" y1="200" x2="1100" y2="110" stroke="#1d4f9c" stroke-width="20"/>
+<line x1="1080" y1="115" x2="1080" y2="900" stroke="#333" stroke-width="5"/>
+<line x1="625" y1="270" x2="625" y2="890" stroke="#ffd34d" stroke-width="10"/>
+<!-- far crane background right with Petr -->
+<polygon points="960,780 980,660 1080,660 1100,780" fill="#1d4f9c"/>
+<rect x="1010" y="430" width="40" height="240" fill="#1d4f9c"/>
+<rect x="985" y="440" width="90" height="66" fill="#f47a20" stroke="#1d4f9c" stroke-width="5"/>
+<circle cx="1015" cy="472" r="16" fill="#f0b48a"/>
+<rect x="1100" y="720" width="90" height="60" fill="#a9733f"/>
+<!-- barge foreground -->
+<polygon points="60,1060 1140,1060 1180,980 1140,1200 100,1200" fill="#c9372c" stroke="#222" stroke-width="5"/>
+<rect x="110" y="990" width="860" height="70" fill="#5c6670"/>
+<rect x="980" y="890" width="130" height="170" fill="#ffffff" stroke="#222" stroke-width="5"/>
+</svg>

@@ -102,8 +102,13 @@ describe("current artwork for every delivery context", () => {
     });
     it(`${recipient}/${parcel}: matching warehouse family and crane choice`, () => {
       expect(sceneChoiceImage("crane", context)).toBe(
-        "/scene-art/barge-family-v1/choice-neutral-wide-v7.webp",
+        "/scene-art/barge-v2/choice-wide.webp",
       );
+      for (const option of ["rush", "wait", "petr", "remote"]) {
+        const path = `/scene-art/barge-v2/outcome-${option}.webp`;
+        expect(sceneOutcomeImage("crane", option, context)).toBe(path);
+        expect(existsSync(`public${path}`), path).toBe(true);
+      }
       for (const option of ["entrance", "keeper", "wms", "alphabet"]) {
         const path = option === "keeper" || option === "entrance"
           ? `/scene-art/warehouse-corrections-2026-10-20/outcomes/${option === "keeper" ? "keeper-v2" : "entrance"}-labels-v1.png`

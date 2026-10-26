@@ -1,6 +1,5 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { CraneConcept } from "./crane/CraneConcept";
 import { InventoryConcept } from "./inventory/InventoryConcept";
 import { LastmileConcept } from "./lastmile/LastmileConcept";
 import type { SceneContext } from "./types";
@@ -48,37 +47,6 @@ for (const format of ["desktop", "mobile"] as const) {
         variants[1].querySelector('[data-warehouse-address="recorded"]'),
       ).not.toBeNull();
     });
-    for (const selectedId of ["rush", "wait", "petr", "remote"]) {
-      it(`barge ${selectedId}: two cranes, one of each operator and the actual gift`, () => {
-        const node = fragment(
-          renderToStaticMarkup(
-            <CraneConcept
-              context={base}
-              format={format}
-              selectedId={selectedId}
-              showResult
-            />,
-          ),
-        );
-        expect(node.querySelectorAll("[data-crane]")).toHaveLength(2);
-        expect(node.querySelectorAll('[data-operator="Иван"]')).toHaveLength(1);
-        expect(node.querySelectorAll('[data-operator="Пётр"]')).toHaveLength(1);
-        const gift = node.querySelector('[data-gift-type="camera"]');
-        expect(gift?.getAttribute("data-gift-location")).toBe(
-          selectedId === "wait" ? "quay" : "barge",
-        );
-        expect(
-          gift?.querySelectorAll("path,rect,circle").length,
-        ).toBeGreaterThan(0);
-        expect(node.querySelectorAll("[data-pipes=aboard]")).toHaveLength(1);
-        expect(node.querySelectorAll("[data-delayed-cargo]")).toHaveLength(
-          selectedId === "petr" ? 1 : 0,
-        );
-        expect(node.querySelectorAll("[data-remote-console]")).toHaveLength(
-          selectedId === "remote" ? 1 : 0,
-        );
-      });
-    }
     it("the robot stops in the bog and the rover crosses at the river", () => {
       const robot = fragment(
         renderToStaticMarkup(

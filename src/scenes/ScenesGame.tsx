@@ -71,8 +71,8 @@ const optionTitles: Record<string, string> = {
   keeper: "Кладовщик",
   alphabet: "По алфавиту",
   wms: "Система WMS",
-  rush: "Отправить Ивана на кран",
-  wait: "Дождаться работы крана",
+  rush: "Отправить Ивана в кабину крана",
+  wait: "Ждать крана по графику — 3 часа",
   petr: "Попросить Петра помочь",
   remote: "Иван управляет краном из офиса",
   helicopter: "Вертолёт",
@@ -356,9 +356,7 @@ function ScenesSession({
                           ? "Поручить размещение Compact"
                           : scene.id === "inventory" && option.id === "alphabet"
                             ? `Стеллаж «${inventoryAlphabet[context.parcel].letter}»`
-                            : scene.id === "crane" && (option.id === "rush" || option.id === "wait")
-                              ? choiceLabel(option.label)
-                              : optionTitles[option.id] ?? choiceLabel(option.label),
+                            : optionTitles[option.id] ?? choiceLabel(option.label),
                   }))}
                   onInspect={choose}
                   badgeShape={

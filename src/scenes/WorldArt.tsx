@@ -1,12 +1,10 @@
 import { type ReactNode, useLayoutEffect, useRef, useState } from "react";
-import { Clock3, Footprints } from "lucide-react";
 import mapStyles from "../App.module.css";
 import { ArtworkLoading } from "../components/ArtworkLoading";
 import { useArtworkLoading } from "../components/useArtworkLoading";
 import { imageAsset } from "../game/imageAssets";
 import { ImageSources } from "../components/ImageSources";
 import { choiceLabel } from "./choiceLabel";
-import { craneFamilyImage } from "./crane/artworkFamily";
 import { inventoryAlphabet } from "./inventory/alphabet";
 import { warehouseCallouts, warehouseDrawing } from "./inventory/callouts";
 import { parcelNames } from "./names";
@@ -15,13 +13,11 @@ import { lastmileChoiceImage } from "./lastmile/artworkFamily";
 import type { SceneArtProps, SceneId, SceneOption } from "./types";
 import styles from "./WorldArt.module.css";
 import manifest from "./worldManifest.json";
-import { craneChoiceArtwork } from "./crane/choiceArtwork";
 import { LastmileZones } from "./lastmile/LastmileZones";
 import { warehouseCamera } from "./inventory/warehouseCamera";
 
 const shortMarkerLabels: Record<string, string> = {
   entrance: "У приёмки", alphabet: "По алфавиту", keeper: "Кладовщик", wms: "Система WMS",
-  rush: "Иван → кран", wait: "По графику · 3 ч", petr: "Пётр", remote: "Иван · пульт",
   helicopter: "Вертолёт", rover: "Снегоболотоход", robot: "Тележка", "pipe-carrier": "Трубовоз",
 };
 
@@ -134,10 +130,7 @@ export function WorldArt({
     ? { ...lastmileChoiceArtwork[lastmileFormat], image: lastmileChoiceImage(lastmileFormat, context.recipient) }
     : undefined;
   const expandedArt = lastmileComposition;
-  const portraitArt = scene === "crane"
-    ? craneChoiceArtwork[size.width / size.height >= 1.78 ? "wide" : "tall"]
-    : undefined;
-  const composition = expandedArt ?? portraitArt;
+  const composition = expandedArt;
   const inventoryComposition = format === "mobile" ? "tall" : "wide";
   const layers = typeof children === "function"
     ? children(scene === "inventory" ? inventoryComposition : size.width / size.height >= 1.78 ? "wide" : "tall")
@@ -146,7 +139,7 @@ export function WorldArt({
   const alphabet = inventoryAlphabet[context.parcel];
   const callouts = warehouseCallouts(context.parcel, inventoryComposition);
   const hotspots = view.hotspots.map((point) => {
-    if (scene !== "inventory" || portraitArt) return point;
+    if (scene !== "inventory") return point;
     const callout = callouts[point.id as keyof typeof callouts];
     if (callout) {
       return { ...point, x: callout.x, y: callout.y };
@@ -154,15 +147,11 @@ export function WorldArt({
     return point;
   });
   const artwork = useArtworkLoading(imageAsset(
-    composition?.image ?? (scene === "crane" ? craneFamilyImage("choice", context.parcel) : undefined) ?? view.image,
+    composition?.image ?? view.image,
   ));
   const inventoryCamera = scene === "inventory"
     ? warehouseCamera(size, context.parcel, selectedId, warehouseDrawing(inventoryComposition))
     : undefined;
-  const craneOverview = scene === "crane" && composition === craneChoiceArtwork.tall && (
-    (!selectedId && size.width >= 900 && size.height >= 700) ||
-    (size.width < 600 && size.height >= 280)
-  );
   const previousCamera = useRef<{
     width: number; height: number; scene: SceneId; artwork: string;
     selectedId?: string; moving: boolean;
@@ -179,8 +168,6 @@ export function WorldArt({
   });
   const scale = inventoryCamera
     ? inventoryCamera.scale
-    : craneOverview
-      ? Math.min(size.width / view.width, size.height / view.height)
     : composition
       ? Math.max(size.width / view.width, size.height / view.height)
       : framingScale(size, view, hotspots);
@@ -189,17 +176,6 @@ export function WorldArt({
   const planeWidth = view.width * scale;
   const planeHeight = planeWidth * view.height / view.width;
   const planeScale = planeWidth / view.width;
-  const craneCamera = !craneOverview && scene === "crane" && composition === craneChoiceArtwork.tall
-    ? selectedId === "petr"
-      ? {
-        left: Math.max(size.width - planeWidth, Math.min(0, size.width / 2 - 998 * planeScale)),
-        top: Math.max(size.height - planeHeight, Math.min(0, size.height / 2 - 290 * planeScale)),
-      }
-      : {
-        left: framingOffset(size.width, planeWidth, hotspots.map(({ x }) => x)),
-        top: Math.max(size.height - planeHeight, Math.min(0, -60 * planeScale)),
-      }
-    : undefined;
   const clampOffset = (offset: number, stageSize: number, planeSize: number) =>
     Math.max(stageSize - planeSize, Math.min(0, offset));
   const active = options.find((option) => option.id === selectedId);
@@ -236,7 +212,6 @@ export function WorldArt({
       className={styles.stage}
       aria-label={title}
       data-world-scene={scene}
-      data-crane-overview={craneOverview || undefined}
       data-navigation="fixed"
       data-camera-moving={cameraMoving ? "true" : undefined}
       data-format={format}
@@ -257,19 +232,13 @@ export function WorldArt({
         style={{
           width: planeWidth,
           height: planeHeight,
-          ...(craneCamera ? {
-            left: craneCamera.left, top: craneCamera.top, transform: "none",
-          } : inventoryCamera ? {
+          ...(inventoryCamera ? {
             left: inventoryCamera.left,
             top: inventoryCamera.top,
             transform: "none",
-          } : craneOverview ? {
-            left: (size.width - planeWidth) / 2,
-            top: (size.height - planeHeight) / 2,
-            transform: "none",
           } : composition ? {
-            left: clampOffset(size.width / 2 - (selectedTransport ? selectedTransport.x * composition.width : scene === "crane" && selectedId === "petr" ? composition.width : composition.anchor.x) * planeScale, size.width, planeWidth),
-            top: (scene === "crane" || scene === "lastmile") && !selectedId
+            left: clampOffset(size.width / 2 - (selectedTransport ? selectedTransport.x * composition.width : composition.anchor.x) * planeScale, size.width, planeWidth),
+            top: scene === "lastmile" && !selectedId
               ? scene === "lastmile" && lastmileFormat === "tall"
                 ? Math.max(framingOffset(size.height, planeHeight, hotspots.map(({ y }) => y)), -390 * planeScale)
                 : framingOffset(size.height, planeHeight, hotspots.map(({ y }) => y))
@@ -320,12 +289,6 @@ export function WorldArt({
             {layers}
           </div>
         ) : layers}
-        {scene === "crane" && interactiveMarkers && <span
-          className={styles.markerPair}
-          data-crane-marker-pair
-          aria-hidden="true"
-          style={{ left: `${hotspots[0].x * 100}%`, top: `${hotspots[0].y * 100}%` }}
-        />}
         {selectedPoint && active && (
           <span
             role="img"
@@ -372,8 +335,6 @@ export function WorldArt({
                 onClick={() => onSelect?.(point.id)}
               >
                 <span aria-hidden="true">{index + 1}</span>
-                {scene === "crane" && point.id === "rush" && <Footprints aria-hidden="true" className={styles.actionIcon} />}
-                {scene === "crane" && point.id === "wait" && <Clock3 aria-hidden="true" className={styles.actionIcon} />}
               </button>
             );
           })}

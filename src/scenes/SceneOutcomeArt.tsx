@@ -4,7 +4,6 @@ import { useArtworkLoading } from "../components/useArtworkLoading";
 import { ImageSources } from "../components/ImageSources";
 import { imageAsset } from "../game/imageAssets";
 import { sceneOutcomeImage } from "./artwork";
-import craneFraming from "./crane/outcomeFraming.json";
 import { outcomeCloseup, outcomeFocus } from "./outcomeFraming";
 import { lastmileFlightImage } from "./lastmile/artworkFamily";
 import styles from "./SceneOutcomeArt.module.css";
@@ -18,13 +17,13 @@ const outcomes: Record<string, string> = {
   "inventory-wms":
     "Система управления складом помогает сотруднику быстро забрать подарок возле отгрузки.",
   "crane-rush":
-    "Уставший, но довольный Иван стоит возле крана; баржа отправляется с подарком.",
+    "Уставший, но довольный Иван отдыхает у лестницы крана; баржа с подарком отходит от причала.",
   "crane-wait":
-    "Баржа с трубами уходит; подарок остаётся на причале до следующего рейса.",
+    "Баржа с трубами уходит без подарка; Иван смотрит на часы рядом с оставшимся на причале подарком.",
   "crane-petr":
-    "Пётр и Иван стоят у ближнего крана после погрузки подарка; ящики Петра остались у дальнего крана, а баржа с подарком отходит от причала.",
+    "Пётр из кабины ближнего крана опускает подарок на баржу, Иван радуется внизу; ящики Петра ждут у дальнего крана.",
   "crane-remote":
-    "Иван сидит в кресле за пультом удалённого управления и провожает баржу с подарком.",
+    "Иван в удобном кресле управляет краном джойстиками из офиса и смотрит, как подарок опускается на баржу.",
   "lastmile-helicopter":
     "Вертолёт доставляет подарок и трубы на посадочную площадку месторождения.",
   "lastmile-helicopter-remote":
@@ -72,10 +71,6 @@ export function SceneOutcomeArt({
   ) {
     key += "-remote";
   }
-  const craneFrame =
-    scene === "crane"
-      ? craneFraming[selectedId as keyof typeof craneFraming]
-      : undefined;
   const alt = alphabetResult
     ? "Подарок в закрытой коробке хранится по алфавиту; сотрудники идут за ним отдельно от основного груза."
     : outcomes[key];
@@ -98,7 +93,6 @@ export function SceneOutcomeArt({
         {
           "--outcome-focus": outcomeFocus[key] ?? "50%",
           "--outcome-height": outcomeCloseup[key] ?? "100%",
-          "--crane-mobile-focus": craneFrame?.mobileFocus,
         } as CSSProperties
       }
     >

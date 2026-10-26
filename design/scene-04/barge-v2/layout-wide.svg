@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1008" viewBox="0 0 2400 1008">
+<rect width="2400" height="1008" fill="#bfe0f5"/>
+<!-- far bank -->
+<rect y="470" width="2400" height="40" fill="#8fb27a"/>
+<!-- warehouse background far left -->
+<rect x="0" y="300" width="300" height="300" fill="#d8d0c0" stroke="#333" stroke-width="4"/>
+<!-- quay surface -->
+<polygon points="0,600 2400,600 2400,700 0,700" fill="#cfc6b4"/>
+<rect y="700" width="2400" height="60" fill="#8a8f96"/>
+<!-- river foreground -->
+<rect y="760" width="2400" height="248" fill="#3f8fd0"/>
+<rect y="510" width="2400" height="90" fill="#5aa3dc"/>
+<!-- PRU building -->
+<rect x="240" y="380" width="420" height="300" fill="#ffffff" stroke="#1d4f9c" stroke-width="6"/>
+<rect x="240" y="380" width="420" height="40" fill="#f47a20"/>
+<rect x="240" y="630" width="420" height="50" fill="#1d4f9c"/>
+<rect x="330" y="250" width="240" height="130" fill="#9fd1ef" stroke="#1d4f9c" stroke-width="6"/>
+<rect x="320" y="230" width="260" height="24" fill="#1d4f9c"/>
+<rect x="430" y="450" width="140" height="110" fill="#9fd1ef" stroke="#1d4f9c" stroke-width="5"/>
+<circle cx="500" cy="505" r="26" fill="#f0b48a"/>
+<!-- gift pallet -->
+<rect x="760" y="600" width="130" height="70" fill="#ff00ff"/>
+<!-- unmanned truck leaving left -->
+<rect x="20" y="610" width="200" height="80" fill="#2a6fd0"/>
+<!-- near crane: portal legs, tall tower, cabin high, boom over water -->
+<polygon points="930,700 970,500 1110,500 1150,700 1120,700 1090,540 990,540 960,700" fill="#1d4f9c"/>
+<rect x="1010" y="120" width="60" height="390" fill="#1d4f9c"/>
+<rect x="980" y="150" width="120" height="90" fill="#f47a20" stroke="#1d4f9c" stroke-width="6"/>
+<rect x="1000" y="170" width="50" height="40" fill="#9fd1ef"/>
+<line x1="1080" y1="170" x2="1620" y2="70" stroke="#1d4f9c" stroke-width="22"/>
+<line x1="1600" y1="80" x2="1600" y2="560" stroke="#333" stroke-width="5"/>
+<rect x="1580" y="555" width="40" height="20" fill="#333"/>
+<!-- ladder -->
+<line x1="1000" y1="240" x2="1000" y2="700" stroke="#ffd34d" stroke-width="10"/>
+<!-- barge with pipes broadside foreground -->
+<polygon points="1000,760 2200,760 2260,700 2200,880 1040,880" fill="#c9372c" stroke="#222" stroke-width="5"/>
+<rect x="1060" y="690" width="1000" height="70" fill="#5c6670"/>
+<rect x="2060" y="600" width="120" height="160" fill="#ffffff" stroke="#222" stroke-width="5"/>
+<!-- far crane right, Petr -->
+<polygon points="2120,660 2150,500 2260,500 2290,660" fill="#1d4f9c"/>
+<rect x="2185" y="230" width="44" height="280" fill="#1d4f9c"/>
+<rect x="2160" y="240" width="96" height="74" fill="#f47a20" stroke="#1d4f9c" stroke-width="5"/>
+<circle cx="2195" cy="275" r="18" fill="#f0b48a"/>
+<line x1="2220" y1="250" x2="1900" y2="190" stroke="#1d4f9c" stroke-width="16"/>
+<!-- Petr crates -->
+<rect x="2290" y="590" width="100" height="80" fill="#a9733f"/>
+</svg>
