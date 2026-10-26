@@ -77,9 +77,9 @@ HTTP 301 с перенаправлением на
 
 ## Final invitation links
 
-The last screen ends on one invitation card: students are invited to the internship, professionals to team vacancies. Set the addresses at build time:
+The last screen ends on one invitation card: students are invited to the internship, professionals to team vacancies. Both buttons open the career pages of «Газпромнефть‑Снабжение» in a new tab:
 
-- `VITE_PRACTICE_URL` — internship sign-up page (student button «Записаться на практику»);
-- `VITE_CAREER_URL` — vacancies page, e.g. the HH employer page (professional button «Смотреть вакансии»).
+- student «Записаться на практику» → https://supply.gazprom-neft.ru/career/studentam/ (university programmes with practice at the company);
+- professional «Смотреть вакансии» → https://supply.gazprom-neft.ru/career/vakansii-i-stazhirovki/ (vacancies in logistics, purchasing, warehouses).
 
-Without an address the button stays visible and reports «Ссылка на запись пока недоступна.» instead of opening anything.
+A deployment may replace either address at build time with `VITE_PRACTICE_URL` / `VITE_CAREER_URL` (for example a dedicated sign-up form).

@@ -187,7 +187,10 @@ test("main service actions retain visible keyboard focus and accessible names", 
     "Вернуться на главную",
   ]) {
     await page.keyboard.press("Tab");
-    const action = page.getByRole("button", { name, exact: true });
+    const action = page.getByRole(
+      name === "Записаться на практику" ? "link" : "button",
+      { name, exact: true },
+    );
     await expect(action).toBeFocused();
     expect(
       await action.evaluate((el) => getComputedStyle(el).outlineWidth),

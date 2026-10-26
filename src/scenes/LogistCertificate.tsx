@@ -37,21 +37,27 @@ const certificateArtwork = {
 } satisfies Record<ProfileId, Record<LogistCopy["type"], string>>;
 
 /* The final invitation is one card for both profiles: students to the internship,
-   professionals to the team. Addresses come from the deployment; without one the
-   button says so instead of pretending to open something. */
+   professionals to the team. Both lead to the career pages of Газпромнефть‑Снабжение,
+   the company the game is about: students to its university programmes with
+   practice at the company, professionals to its vacancies (logistics, purchasing,
+   warehouses). A deployment may override either address. */
 const invitation = {
   student: {
     title: "Практика в команде снабжения",
     action: "Записаться на практику",
     more: "Подробнее о практике",
-    url: import.meta.env.VITE_PRACTICE_URL as string | undefined,
+    url:
+      import.meta.env.VITE_PRACTICE_URL ||
+      "https://supply.gazprom-neft.ru/career/studentam/",
     icon: GraduationCap,
   },
   professional: {
     title: "Работа в команде снабжения",
     action: "Смотреть вакансии",
     more: "Подробнее о вакансиях",
-    url: import.meta.env.VITE_CAREER_URL as string | undefined,
+    url:
+      import.meta.env.VITE_CAREER_URL ||
+      "https://supply.gazprom-neft.ru/career/vakansii-i-stazhirovki/",
     icon: BriefcaseBusiness,
   },
 } satisfies Record<ProfileId, unknown>;
@@ -72,7 +78,6 @@ export function LogistCertificate({
   const [prepared, setPrepared] = useState<File>();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const [practiceStatus, setPracticeStatus] = useState("");
   const [compactPage, setCompactPage] = useState<"result" | "practice">(
     "result",
   );
@@ -213,29 +218,15 @@ export function LogistCertificate({
           </h2>
           <p>{copy.callToAction}</p>
         </div>
-        {invite.url ? (
-          <a
-            className={styles.practiceAction}
-            href={invite.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {invite.action}
-            <ArrowUpRight size={20} aria-hidden="true" />
-          </a>
-        ) : (
-          <button
-            type="button"
-            className={styles.practiceAction}
-            onClick={() =>
-              setPracticeStatus("Ссылка на запись пока недоступна.")
-            }
-          >
-            {invite.action}
-            <ArrowUpRight size={20} aria-hidden="true" />
-          </button>
-        )}
-        {practiceStatus && <small role="status">{practiceStatus}</small>}
+        <a
+          className={styles.practiceAction}
+          href={invite.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {invite.action}
+          <ArrowUpRight size={20} aria-hidden="true" />
+        </a>
       </aside>
       <button
         className={styles.compactPageToggle}

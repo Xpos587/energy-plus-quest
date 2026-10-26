@@ -79,7 +79,7 @@ test("file-share cancellation, failure and retry preserve the PNG and original c
     ),
   ).toMatchObject({ calls: 3, type: "image/png" });
 });
-test("unsupported sharing keeps download, text links and the practice placeholder usable", async ({
+test("unsupported sharing keeps download, text links and the practice link usable", async ({
   page,
 }) => {
   await page.addInitScript(() => {
@@ -99,10 +99,9 @@ test("unsupported sharing keeps download, text links and the practice placeholde
     expect((await pending).suggestedFilename()).toMatch(/\.png$/);
   }
   await page.getByRole("button", { name: "Закрыть", exact: true }).click();
-  await page.getByRole("button", { name: "Записаться на практику" }).click();
-  await expect(page.getByRole("status")).toHaveText(
-    "Ссылка на запись пока недоступна.",
-  );
+  await expect(
+    page.getByRole("link", { name: "Записаться на практику" }),
+  ).toHaveAttribute("href", "https://supply.gazprom-neft.ru/career/studentam/");
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
   for (const [name, host] of [
     ["MAX", "max.ru"],
