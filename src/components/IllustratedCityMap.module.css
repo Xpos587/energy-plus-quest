@@ -75,9 +75,12 @@
   cursor: pointer;
   touch-action: none;
 }
-.root .target:focus-visible {
-  outline: 2px solid #ff7a33;
-  outline-offset: 2px;
+
+/* No ring around a rig or the Express pill, ever: focus returns to the rig
+   after «Другая фура» and must not paint an orange frame on the map. */
+.root .target:focus,
+.root .autopick:focus {
+  outline: none;
 }
 .hidden {
   position: absolute;
@@ -115,10 +118,7 @@
   cursor: pointer;
   touch-action: none;
 }
-.root .autopick:focus-visible {
-  outline: 2px solid #ff7a33;
-  outline-offset: 2px;
-}
+
 /* One calm coach pill for zoom + pan. */
 .coach {
   display: flex;
