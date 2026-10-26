@@ -267,7 +267,7 @@ export function IllustratedCityMap({
               src={plateSource(plate)}
               srcSet={plateSrcSet(plate)}
               sizes="100vw"
-              alt="Город со складом в центре и четыре грузовика"
+              alt="Город со складом в центре и три грузовика"
               data-city-poster
               data-city-plate={plate}
               decoding="async"

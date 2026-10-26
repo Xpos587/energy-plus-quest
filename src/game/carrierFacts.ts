@@ -1,12 +1,15 @@
 import type { CarrierId } from "./types";
 
 export type MapCarrierId = Exclude<CarrierId, "express">;
-export const mapCarrierIds: MapCarrierId[] = ["old", "near", "crew", "old4"];
+// Red "old" shares its outcome with yellow "old4", so only yellow is on the
+// map; "old" stays a valid id for saved games and links.
+export const mapCarrierIds: MapCarrierId[] = ["near", "crew", "old4"];
 
 // Visual descriptions are for image alternatives, not repeated as card copy.
 // Card numbers are fictional prototype details, not sourced fleet records.
-// City speeds stay below 60 km/h and preserve the measured animation order:
-// #3 > #1 > #4 > #2. Results and scores remain in content.ts.
+// City speeds stay below 60 km/h: green > yellow > blue. On the map they are
+// the cityV4 timetable laps (green and yellow 1 lap, blue 2/3), rounded.
+// Results and scores remain in content.ts.
 export const carrierFacts: Record<
   MapCarrierId,
   {
@@ -28,7 +31,7 @@ export const carrierFacts: Record<
   near: {
     label: "Синяя фура",
     imageAlt: "Синий тягач с полуприцепом на городской дороге",
-    citySpeedKmh: 17,
+    citySpeedKmh: 14,
     buildYear: 2021,
     pace: "Очень медленно",
   },
@@ -42,7 +45,7 @@ export const carrierFacts: Record<
   old4: {
     label: "Жёлтая фура",
     imageAlt: "Жёлтый тягач с полуприцепом на городской дороге",
-    citySpeedKmh: 27,
+    citySpeedKmh: 29,
     buildYear: 2013,
     pace: "Не спеша",
   },

@@ -52,6 +52,8 @@ type Manifest = {
   routes: Record<MapCarrierId, Pt[]>;
   headings: number;
   plates: Record<PlateName, PlateSpec>;
+  /** World boxes [x0, y0, z0, x1, y1, z1] tall enough to hide a lane. */
+  occluders: number[][];
 };
 const M = manifest as unknown as Manifest;
 
@@ -200,25 +202,20 @@ export function poseAt(r: Route, distance: number): Pose {
 
 // ---------------------------------------------------------------- traffic
 
-// Every rig has its own loop and lane (right-hand traffic, opposite lanes on
-// shared streets), but a stiff 21 m sprite swings wide in a 9 m corner. Where
-// two bodies could touch, both routes share a token: a rig takes every token
-// of the stretch ahead before entering and frees it once its body has left.
-// Faster rigs have right of way, so the speed order holds on average.
+// A timetable instead of right-of-way: every rig drives its own loop at a
+// constant speed, never brakes, and the start phases keep the bodies apart
+// (cityV4.test.ts checks a 1.5 m gap over the whole cycle). Laps are whole
+// fractions of the green lap so the pattern repeats exactly; carrierFacts
+// speeds are these laps rounded to km/h.
+const LAPS: Record<MapCarrierId, number> = { crew: 1, old4: 1, near: 1.5, old: 1 };
 const startPhase: Record<MapCarrierId, number> = {
-  old: 0.22,
-  near: 0.1,
-  crew: 0.9,
-  old4: 0.35,
+  old4: 0,
+  crew: 0.5,
+  near: 0.25,
+  old: 0,
 };
 const RIG_W = M.rig.width;
-const STEP = 1;
-const MARGIN = 0.3;
-const CLAIM = 30;
-const ACCEL = 11;
-const BRAKE = 22;
 
-type Zone = { start: number; end: number; nodes: string[] };
 type Box = Pose & { hl: number };
 function corners(b: Box, grow: number): Pt[] {
   const c = Math.cos(b.heading);
@@ -273,224 +270,24 @@ export function rigsTouch(a: Rig, b: Rig, grow = 0) {
   return A.some((p) => B.some((q) => boxesTouch(p, q, grow)));
 }
 
-const zonesOf = new Map<MapCarrierId, Zone[]>();
-function buildZones(routes: Route[]) {
-  const samples = routes.map((r) =>
-    Array.from({ length: Math.ceil(r.length / STEP) }, (_, k) =>
-      rigAt(r, k * STEP),
-    ),
-  );
-  for (const r of routes) zonesOf.set(r.id, []);
-  const spansOf = (near: boolean[]) => {
-    const n = near.length;
-    const start = near.indexOf(false);
-    if (start < 0) return [{ from: 0, to: n }];
-    const out: { from: number; to: number }[] = [];
-    let open = -1;
-    for (let q = 1; q <= n; q++) {
-      const k = start + q;
-      if (near[k % n] && open < 0) open = k;
-      if (!near[k % n] && open >= 0) {
-        out.push({ from: open, to: k });
-        open = -1;
-      }
-    }
-    return out;
-  };
-  routes.forEach((ra, ai) => {
-    routes.forEach((rb, bi) => {
-      if (bi <= ai) return;
-      const A = samples[ai];
-      const B = samples[bi];
-      const pairs: [number, number][] = [];
-      A.forEach((p, k) => {
-        B.forEach((q, m) => {
-          if (rigsTouch(p, q, MARGIN)) pairs.push([k, m]);
-        });
-      });
-      if (!pairs.length) return;
-      const nearA = A.map(() => false);
-      const nearB = B.map(() => false);
-      for (const [k, m] of pairs) {
-        nearA[k] = true;
-        nearB[m] = true;
-      }
-      const sa = spansOf(nearA);
-      const sb = spansOf(nearB);
-      const pick = (
-        list: { from: number; to: number }[],
-        n: number,
-        k: number,
-      ) => list.find((sp) => mod(k - sp.from, n) < sp.to - sp.from);
-      const zone = (r: Route, n: number, sp: { from: number; to: number }) => {
-        const list = zonesOf.get(r.id) as Zone[];
-        const at = (sp.from % n) * STEP;
-        let z = list.find((q) => q.start === at);
-        if (!z) {
-          z = { start: at, end: (sp.to % n) * STEP, nodes: [] };
-          list.push(z);
-        }
-        return z;
-      };
-      const done = new Set<string>();
-      for (const [k, m] of pairs) {
-        const za = pick(sa, A.length, k);
-        const zb = pick(sb, B.length, m);
-        if (!za || !zb) continue;
-        const token = `${ra.id}.${za.from}-${rb.id}.${zb.from}`;
-        if (done.has(token)) continue;
-        done.add(token);
-        zone(ra, A.length, za).nodes.push(token);
-        zone(rb, B.length, zb).nodes.push(token);
-      }
-    });
-  });
-}
-const zones = (id: MapCarrierId) => {
-  if (!zonesOf.size) buildZones(cityRoutes());
-  return zonesOf.get(id) as Zone[];
-};
-const inZone = (z: Zone, s: number, L: number) =>
-  mod(s - z.start, L) < mod(z.end - z.start, L);
+/** Seconds per lap of the green loop; every other lap is a multiple. */
+const greenLap = () =>
+  (cityRoutes().find((r) => r.id === "crew") as Route).length /
+  truckSpeed("crew");
+/** Timetable speed in m/s (carrierFacts holds it rounded, in km/h). */
+export const lapSpeed = (r: Route) => r.length / (greenLap() * LAPS[r.id]);
 
-type Hold = { zone: Zone; entered: boolean };
-export type Traffic = {
-  time: number;
-  s: number[];
-  v: number[];
-  stopped: number[];
-  owner: Map<string, number>;
-  held: Hold[][];
-  waited: number[];
-};
-export function createTraffic(
-  phase: Partial<Record<MapCarrierId, number>> = startPhase,
-): Traffic {
-  const routes = cityRoutes();
-  const s = routes.map((r) => (phase[r.id] ?? startPhase[r.id]) * r.length);
-  const t: Traffic = {
-    time: 0,
-    s,
-    v: routes.map((r) => truckSpeed(r.id)),
-    stopped: routes.map(() => 0),
-    owner: new Map(),
-    held: routes.map(() => []),
-    waited: routes.map(() => 0),
-  };
-  routes.forEach((r, i) => {
-    for (const z of zones(r.id))
-      if (inZone(z, s[i], r.length) && z.nodes.every((n) => !t.owner.has(n))) {
-        for (const n of z.nodes) t.owner.set(n, i);
-        t.held[i].push({ zone: z, entered: true });
-      }
-  });
+export type Traffic = { time: number; s: number[] };
+export function createTraffic(): Traffic {
+  const t: Traffic = { time: 0, s: [] };
+  stepTraffic(t, 0);
   return t;
 }
-
-// Overlapping spans are taken together; a gap between spans is a safe stop.
-function chainFrom(r: Route, first: Zone) {
-  const L = r.length;
-  const chain = [first];
-  let reach = mod(first.end - first.start, L);
-  let grown = true;
-  while (grown) {
-    grown = false;
-    for (const z of zones(r.id)) {
-      if (chain.includes(z)) continue;
-      const at = mod(z.start - first.start, L);
-      if (at < reach) {
-        chain.push(z);
-        reach = Math.max(reach, at + mod(z.end - z.start, L));
-        grown = true;
-      }
-    }
-  }
-  return chain;
-}
-
-function yields(t: Traffic, i: number, chain: Zone[]) {
-  const routes = cityRoutes();
-  const me = routes[i];
-  const clearAt =
-    (Math.max(...chain.map((c) => mod(c.end - t.s[i], me.length))) + 3) /
-    truckSpeed(me.id);
-  for (const c of chain)
-    for (const token of c.nodes)
-      for (const [j, other] of routes.entries()) {
-        if (j === i || truckSpeed(other.id) <= truckSpeed(me.id)) continue;
-        const zone = zones(other.id).find((z) => z.nodes.includes(token));
-        if (!zone) continue;
-        const arrive =
-          mod(zone.start - t.s[j], other.length) / truckSpeed(other.id);
-        if (arrive < clearAt + 0.4 && !inZone(zone, t.s[j], other.length))
-          return true;
-      }
-  return false;
-}
-
-function stepOnce(t: Traffic, dt: number) {
-  cityRoutes().forEach((r, i) => {
-    const L = r.length;
-    const s = t.s[i];
-    t.held[i] = t.held[i].filter((h) => {
-      const inside = inZone(h.zone, s, L);
-      if (inside) h.entered = true;
-      if (!h.entered || inside) return true;
-      for (const n of h.zone.nodes) if (t.owner.get(n) === i) t.owner.delete(n);
-      return false;
-    });
-    let target = truckSpeed(r.id);
-    let limit = Number.POSITIVE_INFINITY;
-    for (const z of zones(r.id)) {
-      if (t.held[i].some((h) => h.zone === z)) continue;
-      const ahead = mod(z.start - s, L);
-      if (ahead > CLAIM) continue;
-      // Take every token of the chain at once: no hold-and-wait, no gridlock.
-      const chain = chainFrom(r, z).filter(
-        (c) => !t.held[i].some((h) => h.zone === c),
-      );
-      const free =
-        chain.every((c) =>
-          c.nodes.every(
-            (n) => t.owner.get(n) === undefined || t.owner.get(n) === i,
-          ),
-        ) &&
-        (t.stopped[i] > 2.5 || !yields(t, i, chain));
-      if (free) {
-        for (const c of chain) {
-          for (const n of c.nodes) t.owner.set(n, i);
-          t.held[i].push({ zone: c, entered: false });
-        }
-      } else {
-        limit = Math.min(limit, ahead - 0.3);
-        target = Math.min(
-          target,
-          Math.sqrt(2 * BRAKE * Math.max(0, ahead - 0.5)),
-        );
-      }
-    }
-    const v = t.v[i];
-    t.v[i] = Math.max(
-      0,
-      v + Math.max(-BRAKE * dt, Math.min(ACCEL * dt, target - v)),
-    );
-    const move = Math.min(t.v[i] * dt, Math.max(0, limit));
-    if (move < truckSpeed(r.id) * dt * 0.5) {
-      t.waited[i] += dt;
-      t.stopped[i] += dt;
-    } else t.stopped[i] = 0;
-    t.s[i] = mod(s + move, L);
-  });
-  t.time += dt;
-}
-
 export function stepTraffic(t: Traffic, dt: number) {
-  let left = Math.min(Math.max(0, dt), 3);
-  while (left > 1e-6) {
-    const h = Math.min(left, 1 / 30);
-    stepOnce(t, h);
-    left -= h;
-  }
+  t.time += Math.max(0, dt);
+  t.s = cityRoutes().map((r) =>
+    mod(startPhase[r.id] * r.length + lapSpeed(r) * t.time, r.length),
+  );
 }
 export const trafficRigs = (t: Traffic) =>
   cityRoutes().map((r, i) => rigAt(r, t.s[i]));
@@ -744,6 +541,87 @@ function drawRig(
   ]);
   contactShadow(c, at, heading, half, o, spec.mpp);
   return drawPart(c, atlas, spec, id, at, heading, o);
+}
+
+// ---------------------------------------------------------------- occlusion
+
+/** Unit vector from the scene towards the orthographic camera: the null
+ * space of the plate projection, pointing up. */
+function towardCamera(plate: PlateName): number[] {
+  const [a, b] = M.plates[plate].proj;
+  const v = [
+    a[1] * b[2] - a[2] * b[1],
+    a[2] * b[0] - a[0] * b[2],
+    a[0] * b[1] - a[1] * b[0],
+  ];
+  const n = Math.hypot(v[0], v[1], v[2]) * Math.sign(v[2]);
+  return v.map((q) => q / n);
+}
+/** Does the ground ray from p towards the camera cross the footprint of B?
+ * Rig sprites are scaled up and drawn standing, so any rig on the far side
+ * of a building is behind it; the clip only bites where they overlap. */
+function hidden(p: Pt, B: number[], d: number[]) {
+  let t0 = 0;
+  let t1 = Infinity;
+  for (let i = 0; i < 2; i++) {
+    if (Math.abs(d[i]) < 1e-9) {
+      if (p[i] < B[i] || p[i] > B[i + 3]) return false;
+      continue;
+    }
+    let u = (B[i] - p[i]) / d[i];
+    let v = (B[i + 3] - p[i]) / d[i];
+    if (u > v) [u, v] = [v, u];
+    t0 = Math.max(t0, u);
+    t1 = Math.min(t1, v);
+    if (t0 > t1) return false;
+  }
+  return true;
+}
+/** Screen silhouettes (plate px) of the buildings standing between the
+ * camera and this rig. The painted plate shows them; the rig is clipped. */
+export function occludersOf(plate: PlateName, g: Rig): Pt[][] {
+  const d = towardCamera(plate);
+  const parts = rigBoxes(g);
+  return M.occluders
+    .filter((B) =>
+      parts.some(([p, hl]) =>
+        [-0.8, 0, 0.8].some((u) =>
+          hidden(
+            [
+              p.x + Math.cos(p.heading) * u * hl,
+              p.y + Math.sin(p.heading) * u * hl,
+            ],
+            B,
+            d,
+          ),
+        ),
+      ),
+    )
+    .map((B) => {
+      const pts: Pt[] = [];
+      for (const x of [B[0], B[3]])
+        for (const y of [B[1], B[4]])
+          for (const z of [B[2], B[5]]) pts.push(project(plate, x, y, z));
+      return hull(pts);
+    });
+}
+function hull(points: Pt[]): Pt[] {
+  const pts = [...points].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  const cross = (a: Pt, b: Pt, q: Pt) =>
+    (b[0] - a[0]) * (q[1] - a[1]) - (b[1] - a[1]) * (q[0] - a[0]);
+  const half = (list: Pt[]) => {
+    const out: Pt[] = [];
+    for (const q of list) {
+      while (
+        out.length > 1 &&
+        cross(out[out.length - 2], out[out.length - 1], q) <= 0
+      )
+        out.pop();
+      out.push(q);
+    }
+    return out.slice(0, -1);
+  };
+  return half(pts).concat(half(pts.reverse()));
 }
 
 /** An articulated rig: low tractor frame, then trailer and cab in depth
@@ -1031,15 +909,23 @@ export function drawCity(
         Math.sin(time * 17 + 1) * 0.6 * jolt,
       ];
     }
-    exhausts[id] = drawArticulated(
-      c,
-      atlas,
-      spec,
-      id,
-      rigs[mapCarrierIds.indexOf(id)],
-      o,
-      jitter,
-    );
+    const g = rigs[mapCarrierIds.indexOf(id)];
+    const cover = occludersOf(o.plate, g);
+    c.save();
+    if (cover.length) {
+      // Everything but the buildings in front: the rig drives behind them.
+      c.beginPath();
+      c.rect(0, 0, c.canvas.width, c.canvas.height);
+      for (const poly of cover)
+        poly.forEach((q, i) => {
+          const [x, y] = P(q);
+          if (i) c.lineTo(x, y);
+          else c.moveTo(x, y);
+        });
+      c.clip("evenodd");
+    }
+    exhausts[id] = drawArticulated(c, atlas, spec, id, g, o, jitter);
+    c.restore();
   }
   c.globalAlpha = 1;
   for (const id of ["old", "old4"] as const) {

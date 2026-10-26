@@ -4,6 +4,9 @@ import {
   cityRoutes,
   createTraffic,
   landmark,
+  lapSpeed,
+  MPS_PER_KMH,
+  occludersOf,
   plateFor,
   plates,
   project,
@@ -36,15 +39,21 @@ describe("scene 1 city v4", () => {
         carrierFacts[id].citySpeedKmh * 0.55,
         5,
       );
-    expect(truckSpeed("crew")).toBeGreaterThan(truckSpeed("old"));
-    expect(truckSpeed("old")).toBeGreaterThan(truckSpeed("old4"));
+    // The map drives the timetable; carrierFacts holds it rounded to km/h.
+    for (const r of cityRoutes())
+      expect(Math.abs(lapSpeed(r) / MPS_PER_KMH - carrierFacts[r.id].citySpeedKmh)).toBeLessThan(0.5);
+    expect(truckSpeed("crew")).toBeGreaterThan(truckSpeed("old4"));
     expect(truckSpeed("old4")).toBeGreaterThan(truckSpeed("near"));
+  });
+
+  it("shows the three rigs with distinct outcomes; the red one is off the map", () => {
+    expect([...mapCarrierIds]).toEqual(["near", "crew", "old4"]);
   });
 
   it("gives the green crew the widest loop and keeps the blue rig by the warehouse", () => {
     const len = Object.fromEntries(cityRoutes().map((r) => [r.id, r.length]));
-    expect(len.crew).toBeGreaterThan(Math.max(len.old, len.old4, len.near));
-    expect(len.near).toBeLessThan(Math.min(len.old, len.old4));
+    expect(len.crew).toBeGreaterThan(Math.max(len.old4, len.near));
+    expect(len.near).toBeLessThan(len.old4);
     for (const name of ["wide", "tall"] as const) {
       const [wx, wy] = landmark(name, "warehouse");
       simulate(30, (t) => {
@@ -59,13 +68,14 @@ describe("scene 1 city v4", () => {
     }
   });
 
-  it("never lets two rigs touch, tractors and trailers included", () => {
+  it("never lets two rigs come within 1.5 m, tractors and trailers included", () => {
     let hits = 0;
-    simulate(300, (t) => {
+    // Two full timetable cycles (the blue lap is 1.5 green laps).
+    simulate(160, (t) => {
       const p = trafficRigs(t);
       for (let a = 0; a < p.length; a++)
         for (let b = a + 1; b < p.length; b++)
-          if (rigsTouch(p[a], p[b])) hits++;
+          if (rigsTouch(p[a], p[b], 1.5)) hits++;
     });
     expect(hits).toBe(0);
   });
@@ -93,22 +103,36 @@ describe("scene 1 city v4", () => {
     expect(maxBend).toBeGreaterThan(0.5);
   });
 
-  it("keeps the speed order on average, waits at corners included", () => {
+  it("drives smoothly: constant speed, no stops, no jumps in heading", () => {
     const t = createTraffic();
     const routes = cityRoutes();
-    const dist = routes.map(() => 0);
     let prev = [...t.s];
-    for (let f = 0; f < 240 * 30; f++) {
+    let heads = trafficRigs(t).map((g) => g.tractor);
+    for (let f = 0; f < 60 * 30; f++) {
       stepTraffic(t, 1 / 30);
+      const rigs = trafficRigs(t);
       t.s.forEach((s, i) => {
-        dist[i] += (s - prev[i] + routes[i].length) % routes[i].length;
+        const moved = (s - prev[i] + routes[i].length) % routes[i].length;
+        expect(moved).toBeCloseTo(lapSpeed(routes[i]) / 30, 6);
+        const turn = Math.abs(
+          ((rigs[i].tractor - heads[i] + 3 * Math.PI) % (2 * Math.PI)) - Math.PI,
+        );
+        // Never tighter than the 8.5 m minimum radius of routes.py.
+        expect(turn).toBeLessThan(lapSpeed(routes[i]) / 30 / 8.5);
       });
       prev = [...t.s];
+      heads = rigs.map((g) => g.tractor);
     }
-    const [old, near, crew, old4] = dist;
-    expect(crew).toBeGreaterThan(old * 1.15);
-    expect(old).toBeGreaterThan(old4 * 1.05);
-    expect(old4).toBeGreaterThan(near * 1.2);
+  });
+
+  it("hides the blue rig behind the warehouse and the office on their plates", () => {
+    for (const name of ["wide", "tall"] as const) {
+      let behind = 0;
+      simulate(40, (t) => {
+        if (occludersOf(name, trafficRigs(t)[mapCarrierIds.indexOf("near")]).length) behind++;
+      });
+      expect(behind).toBeGreaterThan(0);
+    }
   });
 
   it("keeps every rig inside the safe area of both plates", () => {
