@@ -1,13 +1,15 @@
+import { ArrowLeft, Pencil } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { ArrowLeft } from "lucide-react";
 import { choiceArtwork, preparationCardArtwork } from "../game/artwork";
 import {
-  profiles,
-  recipients,
-  parcels,
+  findParcel,
   findProfile,
   findRecipient,
+  parcels,
+  profiles,
+  recipients,
 } from "../game/content";
+import { scenarioParagraph } from "../game/scenarioDocument";
 import type { GameAction, GameState } from "../game/types";
 import styles from "./GiftPreparation.module.css";
 
@@ -17,6 +19,29 @@ type Props = {
   onBackToIntro?: () => void;
 };
 const recipientDative = { alva: "Майме", khor: "Хабту", arseniy: "Арсению" };
+
+/* "Девочка Майма (всплывающая подсказка: …)" → who the recipient is, shown on the card,
+   so the player never meets an unexplained name such as «Хабт». */
+function recipientKind(id: string, role: "text" | "mixed") {
+  const [line] = scenarioParagraph(id, role).split(" (");
+  return line.slice(0, line.lastIndexOf(" "));
+}
+const cardDetails: Record<string, { kind?: string; note?: string }> = {
+  alva: {
+    kind: recipientKind("6BACF81D", "mixed"),
+    note: "«Радость» по\u2011ненецки",
+  },
+  khor: {
+    kind: recipientKind("65B771C9", "mixed"),
+    note: "«Дикий олень» по\u2011ненецки",
+  },
+  arseniy: { kind: recipientKind("49951299", "text") },
+};
+const slots = [
+  { step: "profile", label: "Отправитель" },
+  { step: "recipient", label: "Получатель" },
+  { step: "parcel", label: "Груз" },
+] as const;
 
 /** One preparation table, with the chosen people staying beside the next decision. */
 export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
@@ -29,6 +54,7 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
   }, [state.step]);
   const profile = findProfile(state.profile);
   const recipient = findRecipient(state.recipient);
+  const current = slots.findIndex((slot) => slot.step === state.step);
   const items =
     state.step === "profile"
       ? profiles
@@ -86,36 +112,78 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
               Назад
             </button>
           )}
-          {profile && state.step !== "profile" && (
-            <aside
-              className={styles.summary}
-              aria-label="Ваш подарок"
-              data-gift-summary
-            >
-              <div className={styles.summaryItem} data-summary="sender">
-                <img src={choiceArtwork[profile.id]} alt="" />
-                <div>
-                  <small>Отправитель</small>
-                  <strong>{profile.title}</strong>
-                </div>
-              </div>
-              {recipient && state.step === "parcel" && (
-                <figure className={styles.summaryItem} data-summary="recipient">
-                  {recipient ? (
-                    <img src={choiceArtwork[recipient.id]} alt="" />
+          <ol
+            className={styles.waybill}
+            aria-label="Маршрутный лист"
+            data-gift-summary
+          >
+            {slots.map((slot, index) => {
+              const chosen =
+                slot.step === "profile"
+                  ? profile
+                  : slot.step === "recipient"
+                    ? recipient
+                    : findParcel(state.parcel);
+              const done = index < current && chosen;
+              const label = (
+                <>
+                  <span className={styles.slotMark} aria-hidden="true">
+                    {done ? (
+                      <img src={choiceArtwork[chosen.id]} alt="" />
+                    ) : (
+                      index + 1
+                    )}
+                  </span>
+                  <span className={styles.slotText}>
+                    <small>{slot.label}</small>
+                    <strong>
+                      {done
+                        ? chosen.title
+                        : index === current
+                          ? "Выбираем"
+                          : "—"}
+                    </strong>
+                  </span>
+                </>
+              );
+              return (
+                <li
+                  key={slot.step}
+                  data-summary={slot.step}
+                  data-state={
+                    done ? "done" : index === current ? "current" : "todo"
+                  }
+                >
+                  {done ? (
+                    <button
+                      type="button"
+                      className={styles.slot}
+                      aria-label={`${slot.label}: ${chosen.title}. Изменить`}
+                      onClick={() => {
+                        for (let n = index; n < current; n++)
+                          onAction({ type: "BACK" });
+                      }}
+                    >
+                      {label}
+                      <Pencil
+                        className={styles.slotEdit}
+                        size={14}
+                        strokeWidth={2.2}
+                        aria-hidden="true"
+                      />
+                    </button>
                   ) : (
-                    <span className={styles.emptyPortrait} aria-hidden="true" />
+                    <span
+                      className={styles.slot}
+                      aria-current={index === current ? "step" : undefined}
+                    >
+                      {label}
+                    </span>
                   )}
-                  <div>
-                    <small>Получатель</small>
-                    <figcaption>
-                      {recipient?.title ?? "Ещё не выбран"}
-                    </figcaption>
-                  </div>
-                </figure>
-              )}
-            </aside>
-          )}
+                </li>
+              );
+            })}
+          </ol>
         </div>
         <div className={styles.question}>
           <h1 id="preparation-question" ref={heading} tabIndex={-1}>
@@ -143,7 +211,19 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
                     draggable={false}
                   />
                 </span>
-                <span className={styles.caption}>{item.title}</span>
+                <span className={styles.caption}>
+                  {cardDetails[item.id]?.kind && (
+                    <small className={styles.kind}>
+                      {cardDetails[item.id].kind}
+                    </small>
+                  )}
+                  <span>{item.title}</span>
+                  {cardDetails[item.id]?.note && (
+                    <small className={styles.note}>
+                      {cardDetails[item.id].note}
+                    </small>
+                  )}
+                </span>
               </button>
             ))}
           </div>

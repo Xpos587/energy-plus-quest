@@ -37,10 +37,11 @@ it("reveals the same metric explanation progressively on desktop", async () => {
   const host = await render(<GameIntro onStart={() => {}} />);
   if (host.querySelector("[data-intro-enter]")) await act(async () => host.querySelector<HTMLButtonElement>("[data-intro-enter]")!.click());
   expect(host.textContent).toContain(scenarioParagraph("24D093EF"));
-  expect(host.querySelector("li")).toBeNull();
+  expect(host.querySelector("[aria-label=\"Показатели\"]")).toBeNull();
+  expect(host.querySelectorAll("[aria-label=\"Этапы доставки в игре\"] li")).toHaveLength(6);
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   expect(host.querySelectorAll("li")).toHaveLength(3);
-  expect(host.querySelector("h1")?.textContent).toBe("Доставляем радость");
+  expect(host.querySelector("h1")?.textContent).toBe("Маршрутный лист");
   expect(host.textContent).toContain(scenarioParagraph("38763B42"));
 });
 it("introduces a fresh game before profile and remembers dismissal after reload", async () => {
