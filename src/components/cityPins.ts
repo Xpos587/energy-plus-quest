@@ -57,6 +57,8 @@ export function rigPin(
   x: number,
   y: number,
   s: number,
+  /** Extra needle angle (radians): the old rig's gauge flutters. */
+  flutter = 0,
 ) {
   c.save();
   // Snap to whole CSS pixels: a sub-pixel pin blurs its thin ticks.
@@ -115,7 +117,7 @@ export function rigPin(
     c.lineTo(Math.cos(a) * r1, gy + Math.sin(a) * r1);
     c.stroke();
   }
-  const na = start + sweep * f;
+  const na = start + sweep * f + flutter;
   const nl = R - lw / 2 - 1.2;
   c.strokeStyle = "#e0451f";
   c.lineWidth = 1.8;

@@ -12,6 +12,7 @@ import {
   RIG,
   rigBoxes,
   rigsTouch,
+  rattle,
   sputter,
   stepTraffic,
   trafficFrame,
@@ -40,7 +41,9 @@ describe("scene 1 city v4", () => {
       );
     // The map drives the timetable; carrierFacts holds it rounded to km/h.
     for (const r of cityRoutes())
-      expect(Math.abs(lapSpeed(r) / MPS_PER_KMH - carrierFacts[r.id].citySpeedKmh)).toBeLessThan(0.5);
+      expect(
+        Math.abs(lapSpeed(r) / MPS_PER_KMH - carrierFacts[r.id].citySpeedKmh),
+      ).toBeLessThan(0.5);
     expect(truckSpeed("crew")).toBeGreaterThan(truckSpeed("old4"));
     expect(truckSpeed("old4")).toBeGreaterThan(truckSpeed("near"));
   });
@@ -114,7 +117,8 @@ describe("scene 1 city v4", () => {
         const moved = (s - prev[i] + routes[i].length) % routes[i].length;
         expect(moved).toBeCloseTo(lapSpeed(routes[i]) / 30, 6);
         const turn = Math.abs(
-          ((rigs[i].tractor - heads[i] + 3 * Math.PI) % (2 * Math.PI)) - Math.PI,
+          ((rigs[i].tractor - heads[i] + 3 * Math.PI) % (2 * Math.PI)) -
+            Math.PI,
         );
         // Never sharper than the ~8.5 m minimum radius of routes.py.
         expect(turn).toBeLessThan(lapSpeed(routes[i]) / 30 / 8);
@@ -165,5 +169,18 @@ describe("scene 1 city v4", () => {
     expect(samples.some((s) => !s.on)).toBe(true);
     expect(samples.some((s) => s.on && !s.dark)).toBe(true);
     expect(samples.some((s) => s.dark)).toBe(true);
+  });
+
+  it("rattles the yellow rig hardest right after the backfire", () => {
+    const lift = (t: number) => -rattle(t).cab[1];
+    const peak = Math.max(
+      ...Array.from({ length: 20 }, (_, k) => lift(k / 100)),
+    );
+    const calm = Math.max(
+      ...Array.from({ length: 20 }, (_, k) => lift(2 + k / 100)),
+    );
+    expect(peak).toBeGreaterThan(0.5); // metres: a visible kick
+    expect(calm).toBeLessThan(0.3); // between misfires only the idle buzz
+    expect(sputter(0.05).dark).toBe(true); // same beat as the dark puff
   });
 });

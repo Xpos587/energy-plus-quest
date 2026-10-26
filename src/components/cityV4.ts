@@ -205,7 +205,12 @@ export function poseAt(r: Route, distance: number): Pose {
 // (cityV4.test.ts checks a 1.5 m gap over the whole cycle). Laps are whole
 // fractions of the green lap so the pattern repeats exactly; carrierFacts
 // speeds are these laps rounded to km/h.
-const LAPS: Record<MapCarrierId, number> = { crew: 1, old4: 1, near: 1.5, old: 1 };
+const LAPS: Record<MapCarrierId, number> = {
+  crew: 1,
+  old4: 1,
+  near: 1.5,
+  old: 1,
+};
 const startPhase: Record<MapCarrierId, number> = {
   old4: 0,
   crew: 0.5,
@@ -360,27 +365,6 @@ export function headingFrames(heading: number): [number, number, number] {
   return [a % M.headings, (a + 1) % M.headings, f - a];
 }
 
-function blit(
-  c: CanvasRenderingContext2D,
-  atlas: CanvasImageSource,
-  f: Frame,
-  at: Pt,
-  unit: number,
-  o: DrawOptions,
-) {
-  c.drawImage(
-    atlas,
-    f[0],
-    f[1],
-    f[2],
-    f[3],
-    o.ox + (at[0] + f[4]) * o.k,
-    o.oy + (at[1] + f[5]) * o.k,
-    f[2] * unit,
-    f[3] * unit,
-  );
-}
-
 function contactShadow(
   c: CanvasRenderingContext2D,
   at: Pt,
@@ -490,8 +474,12 @@ function fillShadows(c: CanvasRenderingContext2D, hulls: Pt[][]) {
   c.restore();
 }
 
-/** One sprite part at a world heading, cross-faded between neighbour frames.
- * Returns the exhaust anchor of the blended frame. */
+let mixBuffer: HTMLCanvasElement | undefined;
+/** One sprite part at a world heading. Both neighbouring painted angles are
+ * turned to the exact heading and dissolved into each other in a buffer, so
+ * the perspective changes continuously: no pop at every 11.25 deg switch and
+ * no double image. `roll` adds a screen-space tilt (the yellow rig's rattle).
+ * Returns the exhaust anchor in plate px. */
 function drawPart(
   c: CanvasRenderingContext2D,
   atlas: CanvasImageSource,
@@ -500,29 +488,86 @@ function drawPart(
   at: Pt,
   heading: number,
   o: DrawOptions,
+  roll = 0,
 ) {
   const frames = spec.sprites.trucks[key];
   const unit = o.k / spec.sprites.scale;
-  // Nearest painted angle, turned on screen by the few degrees left over:
-  // the rig rotates continuously, with no cross-fade double image.
   const [a, b, t] = headingFrames(heading);
-  const k = t < 0.5 ? a : b;
-  const rot = wrapAngle(
-    screenAngle(o.plate, heading) -
-      screenAngle(o.plate, (k / M.headings) * Math.PI * 2),
-  );
-  const f = frames[k];
+  const main = t < 0.5 ? a : b;
+  const other = t < 0.5 ? b : a;
+  // Dissolve only across the switch (|t - 0.5| < 0.3), so most of the time
+  // one painted angle shows crisp and the change is never a pop.
+  const w = 0.5 * Math.min(1, Math.max(0, (Math.min(t, 1 - t) - 0.2) / 0.3));
+  const turn = (k: number) =>
+    wrapAngle(
+      screenAngle(o.plate, heading) -
+        screenAngle(o.plate, (k / M.headings) * Math.PI * 2),
+    ) + roll;
+  const anchor = (k: number): Pt => {
+    const f = frames[k];
+    const r = turn(k);
+    const cs = Math.cos(r);
+    const sn = Math.sin(r);
+    return [at[0] + f[6] * cs - f[7] * sn, at[1] + f[6] * sn + f[7] * cs];
+  };
   const px = o.ox + at[0] * o.k;
   const py = o.oy + at[1] * o.k;
-  c.save();
-  c.translate(px, py);
-  c.rotate(rot);
-  c.translate(-px, -py);
-  blit(c, atlas, f, at, unit, o);
-  c.restore();
-  const cs = Math.cos(rot);
-  const sn = Math.sin(rot);
-  return [at[0] + f[6] * cs - f[7] * sn, at[1] + f[6] * sn + f[7] * cs] as Pt;
+  const draw = (
+    cx: CanvasRenderingContext2D,
+    k: number,
+    x: number,
+    y: number,
+  ) => {
+    const f = frames[k];
+    const r = turn(k);
+    cx.setTransform(Math.cos(r), Math.sin(r), -Math.sin(r), Math.cos(r), x, y);
+    cx.drawImage(
+      atlas,
+      f[0],
+      f[1],
+      f[2],
+      f[3],
+      f[4] * o.k,
+      f[5] * o.k,
+      f[2] * unit,
+      f[3] * unit,
+    );
+  };
+  if (w < 0.03 || typeof document === "undefined") {
+    c.save();
+    draw(c, main, px, py);
+    c.restore();
+    return anchor(main);
+  }
+  // Exact cross-dissolve: (1 - w) * main + w * other, alpha included.
+  let R = 0;
+  for (const k of [main, other]) {
+    const f = frames[k];
+    for (const u of [f[4] * o.k, f[4] * o.k + f[2] * unit])
+      for (const v of [f[5] * o.k, f[5] * o.k + f[3] * unit])
+        R = Math.max(R, Math.hypot(u, v));
+  }
+  const ix = Math.floor(px - R) - 1;
+  const iy = Math.floor(py - R) - 1;
+  const size = Math.ceil(2 * R) + 3;
+  mixBuffer ??= document.createElement("canvas");
+  if (mixBuffer.width < size || mixBuffer.height < size) {
+    mixBuffer.width = Math.max(mixBuffer.width, size);
+    mixBuffer.height = Math.max(mixBuffer.height, size);
+  }
+  const m = mixBuffer.getContext("2d");
+  if (!m) return anchor(main);
+  m.setTransform(1, 0, 0, 1, 0, 0);
+  m.clearRect(0, 0, size, size);
+  m.globalCompositeOperation = "source-over";
+  m.globalAlpha = 1 - w;
+  draw(m, main, px - ix, py - iy);
+  m.globalCompositeOperation = "lighter";
+  m.globalAlpha = w;
+  draw(m, other, px - ix, py - iy);
+  c.drawImage(mixBuffer, 0, 0, size, size, ix, iy, size, size);
+  const [p, q] = [anchor(main), anchor(other)];
+  return [p[0] + (q[0] - p[0]) * w, p[1] + (q[1] - p[1]) * w] as Pt;
 }
 const wrapAngle = (v: number) => mod(v + Math.PI, Math.PI * 2) - Math.PI;
 /** Screen direction (canvas, y down) of a world heading on a plate. */
@@ -551,6 +596,37 @@ function drawRig(
   return drawPart(c, atlas, spec, id, at, heading, o);
 }
 
+/** Screen offset (metres, plate axes) and tilt (radians) of cab and trailer. */
+type Part = [number, number, number];
+export type Shake = { cab: Part; trailer: Part };
+const NO_SHAKE: Shake = { cab: [0, 0, 0], trailer: [0, 0, 0] };
+/** Yellow rig, 2013: worn springs and a misfiring engine. The cab buzzes all
+ * the time; every 3.4 s the engine misfires (the dark backfire in sputter):
+ * the cab kicks up and rocks, the loose trailer clanks a beat later, then
+ * both settle. Visual only: the timetable (and the 1.5 m gaps) stay exact. */
+export function rattle(time: number): Shake {
+  const beat = time % 3.4;
+  // Damped knock after a misfire; the trailer answers 0.12 s later.
+  const kick = (b: number) => (b > 0 ? Math.exp(-b * 6) * Math.sin(b * 34) : 0);
+  const k = kick(beat);
+  const kt = kick(beat - 0.12);
+  // Rough idle: two close frequencies beat, so the buzz swells and fades.
+  const buzz = Math.sin(time * 43) * 0.6 + Math.sin(time * 29 + 1.3) * 0.4;
+  const sway = Math.sin(time * 4.7);
+  return {
+    cab: [
+      0.16 * buzz + 0.14 * sway,
+      0.12 * Math.sin(time * 51 + 0.4) - 1.0 * Math.abs(k),
+      0.012 * buzz + 0.09 * k,
+    ],
+    trailer: [
+      0.1 * Math.sin(time * 37 + 2) + 0.1 * sway,
+      0.08 * Math.sin(time * 41) - 0.6 * Math.abs(kt),
+      0.008 * Math.sin(time * 27) + 0.05 * kt,
+    ],
+  };
+}
+
 /** An articulated rig: low tractor frame, then trailer and cab in depth
  * order, each turning on its own heading about the kingpin. */
 function drawArticulated(
@@ -560,10 +636,14 @@ function drawArticulated(
   id: MapCarrierId,
   g: Rig,
   o: DrawOptions,
-  jitter: Pt,
+  shake: Shake = NO_SHAKE,
 ) {
   const at = project(o.plate, g.kingpin[0], g.kingpin[1]);
-  const kp: Pt = [at[0] + jitter[0], at[1] + jitter[1]];
+  // Plate px per shake metre, never under 4 CSS px so the rattle still reads
+  // at overview zoom.
+  const m = Math.max(1 / spec.mpp, (4 * o.dpr) / o.k);
+  const kp: Pt = [at[0] + shake.cab[0] * m, at[1] + shake.cab[1] * m];
+  const kt: Pt = [at[0] + shake.trailer[0] * m, at[1] + shake.trailer[1] * m];
   const [[tb, th], [lb, lh]] = rigBoxes(g);
   const cabAt = project(o.plate, tb.x, tb.y);
   const trlAt = project(o.plate, lb.x, lb.y);
@@ -576,12 +656,33 @@ function drawArticulated(
   drawPart(c, atlas, spec, `${id}-chassis`, kp, g.tractor, o);
   let exhaust: Pt = kp;
   const cab = () => {
-    exhaust = drawPart(c, atlas, spec, `${id}-cab`, kp, g.tractor, o);
+    exhaust = drawPart(
+      c,
+      atlas,
+      spec,
+      `${id}-cab`,
+      kp,
+      g.tractor,
+      o,
+      shake.cab[2],
+    );
   };
   const trailer = () =>
-    drawPart(c, atlas, spec, `${id}-trailer`, kp, g.trailer, o);
-  // The part nearer the viewer (lower on screen) is drawn last.
-  if (cabAt[1] >= trlAt[1]) {
+    drawPart(
+      c,
+      atlas,
+      spec,
+      `${id}-trailer`,
+      kt,
+      g.trailer,
+      o,
+      shake.trailer[2],
+    );
+  // Cab and trailer meet at the kingpin, so the one whose far end is lower
+  // on screen (nearer the viewer) covers the hitch. Switching only on the
+  // tractor's own direction keeps the swap out of mid-turn.
+  const [, pb] = M.plates[o.plate].proj;
+  if (pb[0] * Math.cos(g.tractor) + pb[1] * Math.sin(g.tractor) >= 0) {
     trailer();
     cab();
   } else {
@@ -825,17 +926,7 @@ export function drawCity(
   for (const { id } of order) {
     const dim = !!focus && focus !== id;
     c.globalAlpha = dim ? 0.5 : 1;
-    let jitter: Pt = [0, 0];
-    if (id === "old4" && !o.reduced) {
-      // Worn suspension: the yellow rig shudders a little.
-      // Mostly a soft wobble, with a short jolt when the engine misfires.
-      const beat = time % 3.4;
-      const jolt = 0.35 + 1.2 * Math.max(0, 1 - beat / 0.45);
-      jitter = [
-        Math.sin(time * 11) * 0.35 * jolt,
-        Math.sin(time * 17 + 1) * 0.6 * jolt,
-      ];
-    }
+    const shake = id === "old4" && !o.reduced ? rattle(time) : NO_SHAKE;
     exhausts[id] = drawArticulated(
       c,
       atlas,
@@ -843,7 +934,7 @@ export function drawCity(
       id,
       rigs[mapCarrierIds.indexOf(id)],
       o,
-      jitter,
+      shake,
     );
   }
   c.globalAlpha = 1;
@@ -942,7 +1033,17 @@ export function drawCity(
       // never floats over the swinging trailer.
       const [[cab]] = rigBoxes(g);
       const [sx, sy] = css(project(o.plate, cab.x, cab.y, 6.5));
-      rigPin(c, mapCarrierIds[index], sx, sy - 2 * o.pinScale, o.pinScale);
+      const id = mapCarrierIds[index];
+      // The yellow pin rides the rattle and its needle flutters.
+      const r = id === "old4" && !o.reduced ? rattle(time).cab : undefined;
+      rigPin(
+        c,
+        id,
+        sx + (r ? r[0] * 4 : 0),
+        sy - 2 * o.pinScale + (r ? r[1] * 4 : 0),
+        o.pinScale,
+        r ? r[2] * 4 + Math.sin(time * 23) * 0.06 : 0,
+      );
     });
   // The warehouse is the centre of the map: one pill (cargo + "СКЛАД")
   // over the sign board, drawn above every rig pin. While the cargo waits
