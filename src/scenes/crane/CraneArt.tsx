@@ -10,7 +10,7 @@ import { craneScene } from "./index";
 import styles from "./CraneArt.module.css";
 
 /** Pick the drawing that shows the quay largest, then keep its key strip in frame. */
-function camera(stage: { width: number; height: number }) {
+function camera(stage: { width: number; height: number }, zoomId?: string) {
   const fit = (format: CraneFormat) => {
     const { width, height, focus } = craneArtwork[format];
     const contain = Math.min(stage.width / width, stage.height / height);
@@ -20,8 +20,11 @@ function camera(stage: { width: number; height: number }) {
   };
   const wide = fit("wide");
   const tall = fit("tall");
-  const { format, scale } = wide.area >= tall.area ? wide : tall;
-  const { width, height, focus } = craneArtwork[format];
+  const { format, scale: overview } = wide.area >= tall.area ? wide : tall;
+  const { width, height, zoom } = craneArtwork[format];
+  // An open card frames the chosen way, as the city map follows a truck.
+  const focus = zoomId && zoomId in zoom ? zoom[zoomId as keyof typeof zoom] : craneArtwork[format].focus;
+  const scale = Math.max(overview, Math.min(stage.width / focus.width, stage.height / focus.height));
   const place = (stageSize: number, size: number, start: number, span: number) => {
     const offset = stageSize / 2 - (start + span / 2) * scale;
     return size * scale <= stageSize
@@ -38,6 +41,9 @@ function camera(stage: { width: number; height: number }) {
 }
 
 export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArtProps) {
+  const [hovered, setHovered] = useState<string>();
+  // Animate camera moves only after the first measured frame, not from size 0.
+  const [ready, setReady] = useState(false);
   const stage = useRef<HTMLElement>(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
   useLayoutEffect(() => {
@@ -48,16 +54,21 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
       setSize((old) => (old.width === width && old.height === height ? old : { width, height }));
     };
     measure();
+    const frame = requestAnimationFrame(() => setReady(true));
     if (typeof ResizeObserver === "undefined") return;
     const observer = new ResizeObserver(measure);
     observer.observe(element);
-    return () => observer.disconnect();
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, []);
-  const view = camera(size);
+  const interactive = !showResult && !!onSelect;
+  const view = camera(size, interactive ? selectedId : undefined);
   const art = craneArtwork[view.format];
   const artwork = useArtworkLoading(imageAsset(art.image));
   const options = craneScene.options(context);
-  const interactive = !showResult && !!onSelect;
+  const route = interactive ? art.routes[(hovered ?? selectedId) as keyof typeof art.routes] : undefined;
   const at = (x: number, y: number) => ({ left: `${(x / art.width) * 100}%`, top: `${(y / art.height) * 100}%` });
 
   return (
@@ -66,6 +77,8 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
       className={styles.stage}
       data-barge-art={view.format}
       data-selected={selectedId}
+      data-zoomed={(interactive && !!selectedId) || undefined}
+      data-ready={ready || undefined}
       aria-label={craneScene.title}
     >
       <div className={styles.plane} style={{ width: view.width, height: view.height, left: view.left, top: view.top }}>
@@ -84,6 +97,12 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
             alt="Причал на Оби: Иван в офисе ПРУ, подарок на поддоне, высокий кран с лестницей до кабины, баржа с трубами у причала и дальний кран, где сидит Пётр рядом со своими ящиками."
           />
         </picture>
+        {interactive && (
+          <svg className={styles.paths} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
+            <path className={styles.lift} d={art.lift} data-barge-lift />
+            {route && <path key={hovered ?? selectedId} className={styles.route} d={route} data-barge-route={hovered ?? selectedId} />}
+          </svg>
+        )}
         <span className={styles.chip} data-barge-chip="barge" style={at(art.chips.barge.x, art.chips.barge.y)}>
           Баржа готова к отходу
         </span>
@@ -105,6 +124,10 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
               aria-pressed={selectedId === option.id}
               disabled={!interactive}
               onClick={() => onSelect?.(option.id)}
+              onPointerEnter={() => setHovered(option.id)}
+              onPointerLeave={() => setHovered(undefined)}
+              onFocus={() => setHovered(option.id)}
+              onBlur={() => setHovered(undefined)}
             >
               <span className={styles.badge} aria-hidden="true">{index + 1}</span>
               <span className={styles.caption} aria-hidden="true">{caption}</span>

@@ -21,8 +21,8 @@ import { parcelNames, recipientNames } from "./names";
 import { choiceLabel } from "./choiceLabel";
 import { compactScene } from "./compact";
 import { craneScene } from "./crane";
-import { craneCaptions } from "./crane/artwork";
-import { CraneDecisionContext } from "./crane/CraneDecisionContext";
+import { craneCaptions, craneFacts } from "./crane/artwork";
+import { CraneDecisionContext, CraneFacts } from "./crane/CraneDecisionContext";
 import { inventoryScene } from "./inventory";
 import { inventoryAlphabet } from "./inventory/alphabet";
 import { JourneyEnding } from "./JourneyEnding";
@@ -98,6 +98,16 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
       wms: ["Система WMS", "Место подскажет Inventory"],
     }),
     verdicts: { best: "Отличное место", fair: "Можно лучше", bad: "Неудачное место" },
+    picked: (_id, name) => `Ваш выбор · ${name}`,
+  },
+  crane: {
+    eyebrow: "Погрузка на баржу",
+    route: () => "С причала на баржу до Нового Порта",
+    goals: ["Беречь силы", "Позаботиться о людях", "Успеть к барже"],
+    places: () => Object.fromEntries(
+      Object.entries(craneFacts).map(([id, fact]) => [id, [optionTitles[id], fact.where]]),
+    ),
+    verdicts: { best: "Отличная погрузка", fair: "Можно лучше", bad: "Неудачная погрузка" },
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
   lastmile: {
@@ -411,7 +421,12 @@ function ScenesSession({
               question={question}
               keepParagraphs={scene.id === "crane"}
               decisionContext={
-                scene.id === "crane" ? <CraneDecisionContext /> : brief ? (
+                scene.id === "crane" ? (
+                  <>
+                    <CraneDecisionContext />
+                    <SceneGoals goals={brief!.goals} />
+                  </>
+                ) : brief ? (
                   <>
                     <div className={flow.compactCargo} data-compact-cargo>
                       <img src={thumbnailAsset(choiceArtwork[context.parcel])} alt="" />
@@ -503,12 +518,12 @@ function ScenesSession({
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
               eyebrow={craneCaptions[pending.id as keyof typeof craneCaptions]}
               title={optionTitles[pending.id]}
-              paragraphs={[choiceLabel(pending.label)]}
-              continuous
               cancelLabel="К причалу"
               onCancel={() => setPendingCrane(undefined)}
               onConfirm={() => choose(pending.id)}
-            />
+            >
+              <CraneFacts id={pending.id as keyof typeof craneFacts} />
+            </ChoiceInspection>
           )}
           {resultVisible ? (
             <section
