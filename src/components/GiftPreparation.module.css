@@ -723,13 +723,13 @@ button.slot:focus-visible {
   line-height: 1.15;
 }
 .kind {
-  font-size: 12px;
+  font-size: var(--type-support);
   font-weight: 500;
   color: #6b879a;
   text-transform: none;
 }
 .note {
-  font-size: 12px;
+  font-size: var(--type-support);
   font-weight: 400;
   font-style: italic;
   color: #4a6a82;

@@ -124,7 +124,7 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
 };
-function SceneGoals({ goals }: { goals: SceneBrief["goals"] }) {
+export function SceneGoals({ goals }: { goals: SceneBrief["goals"] }) {
   return (
     <ul className={flow.compactGoals} aria-label="Что важно" data-compact-goals>
       {scorePoints.map(({ key, icon: Icon, score }, index) => (
@@ -161,13 +161,13 @@ const optionTitles: Record<string, string> = {
   "pipe-carrier": "Трубовоз",
 };
 const zeroScores: Scores = { energy: 0, empathy: 0, efficiency: 0 };
-function ChoiceVerdict({ brief, id, name, score, all }: { brief: SceneBrief; id: string; name: string; score: Scores; all: Scores[] }) {
+export function ChoiceVerdict({ picked, verdicts, score, all }: { picked: string; verdicts: Record<Tone, string>; score: Scores; all: Scores[] }) {
   const tone = rankChoice(score, all);
   const Icon = verdictIcons[tone];
   return (
     <span className={flow.compactVerdict} data-verdict={tone}>
-      <small>{brief.picked(id, name)}</small>
-      <span><Icon aria-hidden="true" size={26} strokeWidth={2.2} />{brief.verdicts[tone]}</span>
+      <small>{picked}</small>
+      <span><Icon aria-hidden="true" size={26} strokeWidth={2.2} />{verdicts[tone]}</span>
     </span>
   );
 }
@@ -535,7 +535,7 @@ function ScenesSession({
               <div className={flow.resultStory}>
                 <ResultCopy
                   key={`${scene.id}:${selected.id}`}
-                  title={brief && places ? <ChoiceVerdict brief={brief} id={selected.id} name={places[selected.id][0]} score={selected.score} all={options.map(o => o.score)} /> : title}
+                  title={brief && places ? <ChoiceVerdict picked={brief.picked(selected.id, places[selected.id][0])} verdicts={brief.verdicts} score={selected.score} all={options.map(o => o.score)} /> : title}
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace

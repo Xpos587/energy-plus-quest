@@ -17,6 +17,7 @@ import { carrierFacts } from "./game/carrierFacts";
 import {
   carrierBriefing,
   carrierQuestion,
+  carriers,
   findCarrier,
   findParcel,
   findRecipient,
@@ -32,7 +33,7 @@ import { useStoredState } from "./game/persistence";
 import type { CarrierId, GameAction } from "./game/types";
 import { sceneChoiceImage } from "./scenes/artwork";
 import { outcomeFocus } from "./scenes/outcomeFraming";
-import { restartSceneCondition, ScenesGame } from "./scenes/ScenesGame";
+import { ChoiceVerdict, restartSceneCondition, SceneGoals, ScenesGame } from "./scenes/ScenesGame";
 
 export function App() {
   return (
@@ -305,6 +306,7 @@ function CarrierScreen({
         onOpen={() => setPendingId(undefined)}
         // The rigs on the map are the only way to choose.
         action={<CarrierTapHint selectedId={pendingId} />}
+        decisionContext={<SceneGoals goals={carrierGoals} />}
       />
       <div className={flow.carrierMap} data-carrier-map>
         <IllustratedCityMap
@@ -340,6 +342,9 @@ function CarrierScreen({
   );
 }
 
+const carrierGoals: [string, string, string] = ["Без лишних трат", "Порадовать раньше", "Надёжная фура"];
+const carrierVerdicts = { best: "Отличный перевозчик", fair: "Можно лучше", bad: "Неудачный выбор" };
+
 function Outcome({
   onBack,
   onNext,
@@ -360,9 +365,11 @@ function Outcome({
       ),
     [],
   );
+  // The scenario heading («Близко — не значит быстро!») stays as the opening
+  // line; the verdict above it reads the same in every scene.
   const resultNarrative = carrier
     ? interpolateOutcome(
-        carrier.resultBody,
+        [carrier.resultTitle, carrier.resultBody].filter(Boolean).join(" "),
         recipient?.title,
         parcel?.accusativeTitle,
       )
@@ -430,7 +437,15 @@ function Outcome({
             <ResultCopy
               fillSpace
               key={carrier.id}
-              title={carrier.resultTitle}
+              titleTabIndex={-1}
+              title={
+                <ChoiceVerdict
+                  picked={`Ваш выбор · ${carrier.id === "express" ? "Express" : carrierFacts[carrier.id].label}`}
+                  verdicts={carrierVerdicts}
+                  score={carrier.score}
+                  all={carriers.map((item) => item.score)}
+                />
+              }
               paragraphs={[resultNarrative]}
               navigation={{
                 scores: carrier.score,
