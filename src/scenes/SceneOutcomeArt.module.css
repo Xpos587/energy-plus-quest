@@ -131,3 +131,10 @@
     grid-template-rows: calc(100vw * 786 / 2001) minmax(0, 1fr) !important;
   }
 }
+
+/* Barge: the consequence plays in the picture first (settling push-in), then the story reads. */
+.figure[data-outcome-scene="crane"] .image { animation: outcomeSettle 900ms cubic-bezier(.2,.8,.2,1) both; transform-origin: var(--outcome-focus, 50%) 60%; }
+@keyframes outcomeSettle { from { opacity: .2; transform: scale(1.06); } }
+@media (prefers-reduced-motion: reduce) {
+  .figure[data-outcome-scene="crane"] .image { animation: none; }
+}

@@ -3940,3 +3940,17 @@
     flex: 0 0 32px; width: 32px; height: 32px; border-radius: 8px;
   }
 }
+/* Barge rail: the question block sits together mid-rail instead of a void above a stranded «О задаче». */
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="crane"] .frame.frame[data-inspecting="false"]:not(:has(.briefingCard)) .question { align-content: center; justify-content: center; }
+  .app[data-scene="crane"] .frame.frame[data-inspecting="false"]:not(:has(.briefingCard)) .questionNavigation { margin-top: 12px; }
+}
+/* Barge result: picture settles first, then verdict, story and score deltas follow in turn. */
+.app[data-scene="crane"] .frame[data-layout="result"] :is([data-result-narrative] > *, [data-result-feedback]) { animation: craneReveal 320ms cubic-bezier(.2,.8,.2,1) both; }
+.app[data-scene="crane"] .frame[data-layout="result"] [data-result-narrative] > :nth-child(1) { animation-delay: 450ms; }
+.app[data-scene="crane"] .frame[data-layout="result"] [data-result-narrative] > :nth-child(n+2) { animation-delay: 570ms; }
+.app[data-scene="crane"] .frame[data-layout="result"] [data-result-feedback] { animation-delay: 720ms; }
+@keyframes craneReveal { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) {
+  .app[data-scene="crane"] .frame[data-layout="result"] :is([data-result-narrative] > *, [data-result-feedback]) { animation: none; }
+}

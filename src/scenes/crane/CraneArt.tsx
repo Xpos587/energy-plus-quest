@@ -105,7 +105,14 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
               <marker id="crane-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
                 <path d="M1 1 L9 5 L1 9 Z" fill="#ff5500" stroke="#fff" strokeWidth="1.2" />
               </marker>
+              <mask id="crane-spot">
+                <rect width={art.width} height={art.height} fill="#fff" />
+                {mark.frames.map((frame) => (
+                  <rect key={`${frame.x},${frame.y}`} x={frame.x - 12} y={frame.y - 12} width={frame.width + 24} height={frame.height + 24} rx={30} fill="#000" />
+                ))}
+              </mask>
             </defs>
+            {markId === selectedId && <rect className={styles.spot} width={art.width} height={art.height} mask="url(#crane-spot)" />}
             {mark.frames.map((frame) => (
               <rect key={`${frame.x},${frame.y}`} className={styles.frame} x={frame.x} y={frame.y} width={frame.width} height={frame.height} rx={18} />
             ))}

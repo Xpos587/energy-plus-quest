@@ -14,10 +14,13 @@
 
 /* What the chosen way uses: rounded frames and one orange path ending at the near crane's cabin. */
 .marks { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; overflow: visible; pointer-events: none; animation: markIn 220ms ease-out both; }
-.marks path, .marks rect { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.marks path, .marks .frame { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .frame { stroke: #ff5500; stroke-width: 3; fill: #ff55000f !important; filter: drop-shadow(0 0 2px #fff) drop-shadow(0 1px 3px #04132755); }
 .halo { stroke: #fffffff0; stroke-width: 9; }
 .route { stroke: #ff5500; stroke-width: 4; stroke-dasharray: 10 9; animation: routeMarch 900ms linear infinite; }
+/* Spotlight: the rest of the quay steps back so the chosen way reads first. */
+.marks .spot { fill: #0a2540 !important; stroke: none; opacity: .38; animation: spotIn 220ms ease-out both; }
+@keyframes spotIn { from { opacity: 0; } }
 @keyframes markIn { from { opacity: 0; } }
 @keyframes routeMarch { to { stroke-dashoffset: -19; } }
 .plane > picture, .image { display: block; width: 100%; height: 100%; }
@@ -72,7 +75,7 @@
   font-size: 14px;
   font-weight: 750;
   box-shadow: 0 2px 6px #04132759;
-  transition: background-color 160ms ease-out;
+  transition: background-color 160ms ease-out, transform 160ms ease-out;
 }
 .hotspot:is(:hover, :focus-visible, [aria-pressed="true"]) .badge { background: #ff5500; }
 .hotspot:focus-visible .badge { outline: 2px solid #075d9b; outline-offset: 2px; }
@@ -89,8 +92,17 @@
   white-space: nowrap;
   box-shadow: 0 1px 4px #04132733;
 }
-.stage[data-selected] .hotspot:not([aria-pressed="true"]) { opacity: .6; }
+/* Other ways stay tappable: smaller, neutral, never greyed out. */
+.stage[data-selected] .hotspot:not([aria-pressed="true"]) .badge { transform: scale(.82); background: #173c55; }
+.stage[data-selected] .hotspot:not([aria-pressed="true"]):is(:hover, :focus-visible) .badge { transform: none; background: #ff5500; }
 .stage[data-selected] .hotspot:not([aria-pressed="true"]) .caption { visibility: hidden; }
+.hotspot[aria-pressed="true"] .badge { transform: scale(1.12); }
+/* Before the first tap, the pins breathe once in turn to invite a choice. */
+.stage:not([data-selected]) .hotspot:not(:disabled) .badge { animation: pinCall 2.4s ease-in-out 600ms 2 both; }
+.stage .hotspot:nth-of-type(2) .badge { animation-delay: 750ms; }
+.stage .hotspot:nth-of-type(3) .badge { animation-delay: 900ms; }
+.stage .hotspot:nth-of-type(4) .badge { animation-delay: 1050ms; }
+@keyframes pinCall { 0%, 30%, 100% { box-shadow: 0 2px 6px #04132759, 0 0 0 0 #ff550099; } 15% { box-shadow: 0 2px 6px #04132759, 0 0 0 9px #ff550000; } }
 
 @media (max-width: 360px) {
   .caption { max-width: 7.5em; white-space: normal; }
@@ -100,5 +112,5 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .badge, .plane { transition: none !important; }
-  .route, .marks { animation: none; }
+  .route, .marks, .marks .spot, .badge { animation: none !important; }
 }
