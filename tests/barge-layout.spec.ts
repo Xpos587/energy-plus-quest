@@ -12,8 +12,10 @@ for (const parcel of ['camera', 'socks', 'boat']) {
         await Promise.all(images.map(image => (image as HTMLImageElement).decode().catch(() => {})));
       });
       if (id === 'rush') await page.screenshot({ path: `${captures}/${info.project.name}-${parcel}-choice.png` });
-      const choice = page.locator(`[data-scene-choice="${id}"]`);
+      const choice = page.locator(`[data-hotspot="${id}"]`);
+      const confirm = page.locator('[data-choice-confirm]');
       await choice.click();
+      await confirm.click();
       await expect(page.locator('[data-result-reader]')).toBeVisible();
       await page.locator('[data-outcome-scene="crane"] img').evaluate(async (image: HTMLImageElement) => image.decode());
       const art = page.locator('[data-outcome-scene="crane"] img');
@@ -24,6 +26,7 @@ for (const parcel of ['camera', 'socks', 'boat']) {
       await page.getByRole('button', { name: 'Изменить выбор', exact: true }).click();
       await expect(page.locator('[data-result-reader]')).toHaveCount(0);
       await choice.click();
+      await confirm.click();
       for (let n = 0; n < 30; n++) {
         const more = page.getByRole('button', { name: 'Читать дальше', exact: true });
         if (!await more.isVisible()) break;

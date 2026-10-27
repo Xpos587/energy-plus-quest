@@ -6,6 +6,8 @@ import {
   resetBriefingReadingState,
   SceneBriefing,
 } from "../components/SceneBriefing";
+import { CarrierTapHint } from "../components/CarrierTapHint";
+import { ChoiceInspection } from "../components/ChoiceInspection";
 import { SceneChoices } from "../components/SceneChoices";
 import flow from "../components/SceneInteraction.module.css";
 import { clearReadingState } from "../components/useReadingState";
@@ -19,6 +21,7 @@ import { parcelNames, recipientNames } from "./names";
 import { choiceLabel } from "./choiceLabel";
 import { compactScene } from "./compact";
 import { craneScene } from "./crane";
+import { craneCaptions } from "./crane/artwork";
 import { CraneDecisionContext } from "./crane/CraneDecisionContext";
 import { inventoryScene } from "./inventory";
 import { inventoryAlphabet } from "./inventory/alphabet";
@@ -280,6 +283,10 @@ function ScenesSession({
   const selected = options.find(({ id }) => id === state.answers[scene.id]);
   const [resultBeat, setResultBeat] = useState(0);
   const [focusedChoice, setFocusedChoice] = useState<string>();
+  // Barge: the quay pins are the only choice; a pin opens a card, the card confirms.
+  const [pendingCrane, setPendingCrane] = useState<string>();
+  const inspectsOnArt = scene.id === "crane" && state.phase === "choice";
+  const pending = inspectsOnArt ? options.find(({ id }) => id === pendingCrane) : undefined;
   const score = totalScores(state, remainingScenes, context, initialScores);
   const { Art } = scene;
   const resultVisible = state.phase === "result" && selected !== undefined;
@@ -298,6 +305,7 @@ function ScenesSession({
       options.some((option) => option.id === id)
     ) {
       lastChoice.current[scene.id] = id;
+      setPendingCrane(undefined);
       dispatch({ type: "CHOOSE", id });
     }
   };
@@ -309,8 +317,8 @@ function ScenesSession({
     const destination = stage.current?.querySelector<HTMLElement>(
       '[data-reading="true"] [data-testid="scene-intro"]',
     ) ?? (state.phase === "choice"
-      ? stage.current?.querySelector<HTMLButtonElement>(`[data-scene-choice="${lastChoice.current[remainingScenes[state.sceneIndex].id] ?? ""}"]`)
-        ?? stage.current?.querySelector<HTMLButtonElement>("[data-scene-choice]")
+      ? stage.current?.querySelector<HTMLButtonElement>(`:is([data-scene-choice], [data-hotspot])[data-${remainingScenes[state.sceneIndex].id === "crane" ? "hotspot" : "scene-choice"}="${lastChoice.current[remainingScenes[state.sceneIndex].id] ?? ""}"]`)
+        ?? stage.current?.querySelector<HTMLButtonElement>("[data-scene-choice], [data-hotspot]")
       : stage.current?.querySelector<HTMLHeadingElement>("h2"));
     destination?.focus({ preventScroll: true });
   }, [state.sceneIndex, state.phase]);
@@ -378,7 +386,7 @@ function ScenesSession({
           className={flow.frame}
           ref={stage}
           data-interaction={!resultVisible ? "inspect-confirm" : undefined}
-          data-inspecting={false}
+          data-inspecting={!!pending}
           data-compact-hall={scene.id === "compact" || undefined}
           data-score-result={resultVisible || undefined}
           data-compact-result={
@@ -427,7 +435,11 @@ function ScenesSession({
                   </div>
                 ) : undefined
               }
-              action={
+              inspecting={!!pending}
+              onOpen={() => setPendingCrane(undefined)}
+              action={inspectsOnArt ? (
+                <CarrierTapHint selectedId={pending?.id} text="Нажмите на номер на причале" />
+              ) : (
                 <SceneChoices
                   variant="scene"
                   options={options.map((option) => ({
@@ -455,7 +467,7 @@ function ScenesSession({
                       : "circle"
                   }
                 />
-              }
+              )}
             />
           )}
           <section
@@ -478,13 +490,26 @@ function ScenesSession({
                 onPanChange={(position) => {
                   choicePan.current[scene.id] = position;
                 }}
-                selectedId={resultVisible ? selected?.id : undefined}
+                selectedId={resultVisible ? selected?.id : pending?.id}
                 showResult={resultVisible}
-                onSelect={state.phase === "choice" ? choose : undefined}
+                onSelect={state.phase === "choice" ? (inspectsOnArt ? setPendingCrane : choose) : undefined}
                 {...syncFocus}
               />
             )}
           </section>
+          {pending && (
+            <ChoiceInspection
+              selectionKey={pending.id}
+              returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
+              eyebrow={craneCaptions[pending.id as keyof typeof craneCaptions]}
+              title={optionTitles[pending.id]}
+              paragraphs={[choiceLabel(pending.label)]}
+              continuous
+              cancelLabel="К причалу"
+              onCancel={() => setPendingCrane(undefined)}
+              onConfirm={() => choose(pending.id)}
+            />
+          )}
           {resultVisible ? (
             <section
               className={flow.result}

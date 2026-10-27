@@ -5,7 +5,7 @@ for (const scene of ['compact','inventory','crane','lastmile']) {
   await page.goto(`/scenes.html?scene=${scene}&parcel=boat&recipient=alva`);
   const next=page.getByRole('button',{name:/^(Далее|К выбору|К сцене)$/});
   for(let i=0;i<20&&await next.isVisible();i++) await next.click();
-  const choices=page.locator('[data-scene-choice]');
+  const choices=page.locator(scene==='crane'?'[data-hotspot]':'[data-scene-choice]');
   for(const button of await choices.all()) await expect(button).toBeInViewport({ratio:0.99});
   await page.locator('img').evaluateAll(async imgs=>Promise.all(imgs.map(img=>(img as HTMLImageElement).decode().catch(()=>{}))));
   await page.screenshot({path:`.tmp-work/fixed-ux/${info.project.name}-${scene}-choices.png`});

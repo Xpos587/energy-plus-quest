@@ -45,7 +45,7 @@ test('all five stages stay contiguous through the complete delivery path',async(
     }
     for(let n=0;n<30&&await condition.isVisible();n++) await condition.getByRole('button',{name:/^(Далее|К выбору|К сцене)$/}).click();
     await checkLayout(page,'choice',`${scene}-${info.project.name}`);
-    await page.locator(`[data-scene-choice="${choice}"]`).click();
+    await page.locator(`[${scene==='crane'?'data-hotspot':'data-scene-choice'}="${choice}"]`).click();
     await expect(page.locator('[data-choice-confirm]')).toBeInViewport({ratio:1});
     await checkLayout(page,'inspection',`${scene}-${info.project.name}`);
     await page.locator('[data-choice-confirm]').click();

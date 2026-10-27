@@ -33,7 +33,7 @@ for (const [width, height] of [[320,568],[390,844],[620,768],[624,794],[835,974]
    await page.screenshot({path:info.outputPath(`${choice}-choices.png`)});
    const choices = page.locator('[data-scene-choice]');
    for(const button of await choices.all()) await expect(button).toBeInViewport({ratio:1});
-   await page.locator(scene === 'compact' ? `[data-scene-choice="${choice}"]` : scene === 'inventory' ? `[data-hotspot="${choice}"]` : `[data-choice-id="${choice}"]`).click();
+   await page.locator(scene === 'compact' ? `[data-scene-choice="${choice}"]` : scene === 'inventory' || scene === 'crane' ? `[data-hotspot="${choice}"]` : `[data-choice-id="${choice}"]`).click();
    const inspection = page.locator('[data-choice-inspection]');
    if(height>500) tops.push((await inspection.boundingBox())!.y);
    await sampleActions(page.locator('[data-choice-confirm], [data-choice-cancel]'));

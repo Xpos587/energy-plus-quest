@@ -171,16 +171,18 @@ for (const scene of Object.keys(scenes) as SceneId[]) {
           ...(await visibleControlDefects(page, page.locator('[data-scene-briefing]'), "choices")),
           ...desktopChoices.defects,
         );
-        const available = await page.locator("[data-scene-choice]").evaluateAll((buttons) =>
-          buttons.map((button) => button.getAttribute("data-scene-choice")),
+        const attr = scene === "crane" ? "data-hotspot" : "data-scene-choice";
+        const available = await page.locator(`[${attr}]`).evaluateAll((buttons, attr) =>
+          buttons.map((button) => button.getAttribute(attr)), attr,
         );
         expect(available).toEqual(scenes[scene]);
 
         const rows: unknown[] = [];
         for (const [optionIndex, option] of scenes[scene].entries()) {
           const defects = [...introDefects];
-          const choice = page.locator(`[data-scene-choice="${option}"]`);
+          const choice = page.locator(`[${attr}="${option}"]`);
           await choice.click();
+          if (scene === "crane") await page.locator("[data-choice-confirm]").click();
           await expect(page.locator("[data-result-reader]")).toBeVisible();
           const result = await resultStates(page, scene, defects);
 
@@ -207,7 +209,7 @@ for (const scene of Object.keys(scenes) as SceneId[]) {
             observations: desktopChoices.observations,
           });
           await page.getByRole("button", { name: "Изменить выбор", exact: true }).click();
-          await expect(page.locator(`[data-scene-choice="${option}"]`)).toBeVisible();
+          await expect(page.locator(`[${attr}="${option}"]`)).toBeVisible();
         }
 
         testInfo.annotations.push({

@@ -24,7 +24,7 @@ for (const viewport of [
     );
     const intro = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
     for (let n = 0; n < 20 && (await intro.isVisible()); n++) await intro.click();
-    await expect(page.locator('[data-scene-choice="rush"]')).toBeVisible();
+    await expect(page.locator('[data-scene-choice]')).toHaveCount(0);
 
     for (const id of ["remote", "rush", "wait", "petr"]) {
       const marker = page.locator(`[data-hotspot="${id}"]`);
@@ -35,6 +35,8 @@ for (const viewport of [
       await expect(page.locator("[data-score-key]")).toHaveCount(0);
     }
     await page.locator('[data-hotspot="remote"]').click();
+    await expect(page.locator("[data-score-key]")).toHaveCount(0);
+    await page.locator("[data-choice-confirm]").click();
     await expect(page.locator("[data-score-key]")).toHaveCount(3);
     const resultImage = page.locator(
       '[data-scene-consequence="crane-remote"] img',

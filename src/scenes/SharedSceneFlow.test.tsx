@@ -83,8 +83,9 @@ it("focuses the selected button and resets the result when the starting scene ch
   expect(container.querySelector('[data-scene="crane"]')).not.toBeNull();
   expect(container.querySelector("[data-result]")).toBeNull();
   expect(
-    container.querySelector('[data-scene-choice="remote"]'),
+    container.querySelector('[data-hotspot="remote"]'),
   ).not.toBeNull();
+  expect(container.querySelector("[data-scene-choice]")).toBeNull();
 });
 
 it("shows a single-paragraph task alongside directly available choices", async () => {

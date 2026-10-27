@@ -14,7 +14,7 @@ for (const [width, height] of [[624, 794], [390, 844], [320, 568]]) {
       const briefing = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
       await expect(briefing.or(page.locator('[data-briefing-inline="true"]'))).toBeVisible();
       for (let index = 0; index < 30 && await briefing.isVisible(); index++) await briefing.click();
-      await page.locator(`[data-scene-choice="${choice}"]`).click();
+      await page.locator(`[${scene === "crane" ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();
       await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-result-reading]")).toBeVisible();
       await page.evaluate(() => document.fonts.ready);

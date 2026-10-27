@@ -141,11 +141,17 @@ it.each([
             ),
           );
         }
-        await click(
-          container.querySelector<HTMLButtonElement>(
-            `[data-scene-choice="${id}"]`,
-          ),
-        );
+        if (id === "remote") {
+          // Barge: the pin opens a card; only the card commits the choice.
+          await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
+          expect(container.querySelector("[data-result]")).toBeNull();
+          await click(container.querySelector<HTMLButtonElement>("[data-choice-confirm]"));
+        } else
+          await click(
+            container.querySelector<HTMLButtonElement>(
+              `[data-scene-choice="${id}"]`,
+            ),
+          );
         expect(container.querySelector("dl")).toBeNull();
         expect(container.querySelector("[data-choice-inspection]")).toBeNull();
         expect(

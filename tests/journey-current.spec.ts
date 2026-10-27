@@ -116,8 +116,11 @@ async function inspectCarrier(page: Page, id: Journey["carrier"], cancel = false
 
 async function inspectSceneChoice(page: Page, id: string, viaArtwork = false) {
   const choice = page.locator(`[data-scene-choice="${id}"]`);
-  const expectedTitle = (await choice.innerText()).replace(/^\s*\d+\s*/, "").trim();
-  if (viaArtwork) {
+  const crane = await page.locator(`[data-hotspot="${id}"]`).count() > 0 && !(await choice.count());
+  const expectedTitle = crane ? undefined : (await choice.innerText()).replace(/^\s*\d+\s*/, "").trim();
+  if (crane) {
+    await page.locator(`[data-hotspot="${id}"]`).click();
+  } else if (viaArtwork) {
     const marker = page.locator(`[data-hotspot="${id}"][data-choice-id="${id}"]`);
     await expect(marker).toBeVisible();
     await marker.click();
@@ -125,7 +128,7 @@ async function inspectSceneChoice(page: Page, id: string, viaArtwork = false) {
     await choice.click();
   }
   await expect(page.locator("[data-choice-inspection]")).toBeVisible();
-  await expect(page.locator("[data-choice-inspection] h3")).toHaveText(expectedTitle);
+  if (expectedTitle) await expect(page.locator("[data-choice-inspection] h3")).toHaveText(expectedTitle);
   await expectCurrentViewFits(page);
   await page.locator("[data-choice-confirm]").click();
   await expect(page.locator("[data-result]")).toBeVisible();

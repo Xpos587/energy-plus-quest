@@ -5,11 +5,12 @@ for(const viewport of sizes) for(const parcel of ['boat','camera','socks']) test
  await page.setViewportSize(viewport);
  const receipt:unknown[]=[];
  for(const id of ['remote','rush','wait','petr']){
- await page.goto(`http://127.0.0.1:4320/scenes.html?scene=crane&parcel=${parcel}&recipient=alva`);
+ await page.goto(`/scenes.html?scene=crane&parcel=${parcel}&recipient=alva`);
  const intro=page.getByRole('button',{name:/^(Далее|К выбору|К сцене)$/});
  for(let n=0;n<15 && await intro.isVisible();n++) await intro.click();
- await expect(page.locator(`[data-scene-choice="${id}"]`)).toBeInViewport({ratio:1});
- await page.locator(`[data-scene-choice="${id}"]`).click();
+ await expect(page.locator(`[data-hotspot="${id}"]`)).toBeInViewport({ratio:1});
+ await page.locator(`[data-hotspot="${id}"]`).click();
+ await page.locator('[data-choice-confirm]').click();
  await expect(page.locator('[data-scene-consequence]')).toBeVisible();
  await page.waitForTimeout(700);
  const images=await page.locator('img:visible').evaluateAll(async imgs=>Promise.all(imgs.map(async i=>{const x=i as HTMLImageElement;await x.decode();return {src:x.currentSrc,source:[x.naturalWidth,x.naturalHeight],display:[x.clientWidth,x.clientHeight]};})));

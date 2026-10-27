@@ -25,7 +25,7 @@ for (const [scene, id] of [
       await intro
         .getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ })
         .click();
-    await page.locator(`[data-scene-choice="${id}"]`).click();
+    await page.locator(`[${scene === "crane" ? "data-hotspot" : "data-scene-choice"}="${id}"]`).click();
     await page.locator("[data-choice-confirm]").click();
     const footer = page.locator("[data-result-reader] footer");
     await expect(footer).toBeVisible();

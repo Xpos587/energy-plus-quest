@@ -121,11 +121,11 @@ for (const [width, height] of [
       await expect(about).toBeFocused();
       await about.click();
       expect(await read(page)).toBe(expected);
-      await page
-        .locator(
-          `[data-scene-choice="${answers[scene as keyof typeof answers]}"]`,
-        )
-        .click();
+      const answer = page.locator(
+        `[${scene === "crane" ? "data-hotspot" : "data-scene-choice"}="${answers[scene as keyof typeof answers]}"]`,
+      );
+      await answer.click();
+      if (scene === "crane") await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-result]")).toBeVisible();
       await page
         .getByRole("button", { name: "Изменить выбор", exact: true })
@@ -135,11 +135,7 @@ for (const [width, height] of [
         "false",
       );
       await fits(page);
-      await expect(
-        page.locator(
-          `[data-scene-choice="${answers[scene as keyof typeof answers]}"]`,
-        ),
-      ).toBeFocused();
+      await expect(answer).toBeFocused();
       await page.reload();
       await expect(page.locator("[data-scene-briefing]")).toHaveAttribute(
         "data-reading",

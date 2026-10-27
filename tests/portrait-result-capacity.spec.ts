@@ -34,7 +34,7 @@ for (const [width, height] of [
         await page
           .getByRole("button", { name: "Поручить выбор Express", exact: true })
           .click();
-      else await page.locator(`[data-scene-choice="${choice}"]`).click();
+      else await page.locator(`[${scene === "crane" ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();
       await page.locator("[data-choice-confirm]").click();
       const reading = page.locator("[data-result-reading]");
       await expect(reading).toBeVisible();

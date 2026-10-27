@@ -19,7 +19,8 @@ for (const [width, height] of [
         if (!(await f.isVisible())) break;
         await f.click();
       }
-      await page.locator('[data-scene-choice="petr"]').click();
+      await page.locator('[data-hotspot="petr"]').click();
+      await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-result]")).toBeVisible();
       await expect(
         page.getByRole("button", { name: "Читать дальше", exact: true }),

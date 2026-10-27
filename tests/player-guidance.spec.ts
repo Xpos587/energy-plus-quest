@@ -12,21 +12,21 @@ test('barge result shows indicators directly and allows revising the choice', as
   await page.goto('/scenes.html?scene=crane&parcel=boat&recipient=alva');
   const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });
   for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
-  await page.locator('[data-scene-choice="petr"]').click();
+  await page.locator('[data-hotspot="petr"]').click();
   await page.locator('[data-choice-confirm]').click();
   await expect(page.getByText('Что означают показатели?')).toHaveCount(0);
   await expect(page.locator('[data-score-key="efficiency"]')).toContainText('-3');
   const back = page.getByRole('button', { name: 'Изменить выбор', exact: true });
   await expect(back).toBeInViewport({ ratio: 1 });
   await back.click();
-  await expect(page.locator('[data-scene-choice]')).toHaveCount(4);
+  await expect(page.locator('[data-hotspot]')).toHaveCount(4);
 });
 
 test('barge story pages fit and continue to lastmile only after the final page', async ({ page }) => {
   await page.goto('/scenes.html?scene=crane&parcel=boat&recipient=alva');
   const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });
   for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
-  await page.locator('[data-scene-choice="remote"]').click();
+  await page.locator('[data-hotspot="remote"]').click();
   await page.locator('[data-choice-confirm]').click();
   let pages = 0;
   for (; pages < 30; pages++) {
@@ -50,7 +50,7 @@ test('desktop result stays fixed when the wheel is over the illustration', async
   await page.goto('/scenes.html?scene=crane&parcel=boat&recipient=alva');
   const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });
   for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
-  await page.locator('[data-scene-choice="petr"]').click();
+  await page.locator('[data-hotspot="petr"]').click();
   await page.locator('[data-choice-confirm]').click();
   await page.locator('[data-outcome-scene="crane"] img').evaluate((image: HTMLImageElement) => image.decode());
   await page.mouse.move(600, 350);

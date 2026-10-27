@@ -9,11 +9,16 @@ for (const width of [320, 620, 835, 1440]) {
       for (let i = 0; i < 30 && await condition.isVisible(); i++) {
         await condition.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ }).click();
       }
-      const answers = page.locator('[data-scene-choice]');
+      const answers = page.locator(scene === 'crane' ? '[data-hotspot]' : '[data-scene-choice]');
       for (const answer of await answers.all()) {
         await expect(answer).toBeInViewport({ ratio: 1 });
         expect((await answer.boundingBox())!.height).toBeGreaterThanOrEqual(44);
         if (width === 1440) expect((await answer.boundingBox())!.height).toBeLessThanOrEqual(64);
+      }
+      if (scene === 'crane') {
+        // The barge choice lives on the quay pins; the panel keeps no answer list.
+        await expect(page.locator('[data-scene-choice]')).toHaveCount(0);
+        return;
       }
       const last = await answers.last().boundingBox();
       const navigation = await page.getByRole('button', { name: 'О задаче', exact: true }).boundingBox();

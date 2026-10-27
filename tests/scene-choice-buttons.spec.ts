@@ -22,12 +22,13 @@ for (const [scene, ids] of Object.entries(choices)) {
     for (let i = 0; i < 30 && await condition.isVisible(); i++) {
       await condition.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ }).click();
     }
-    const answers = page.locator('[data-scene-choice]');
+    const attr = scene === 'crane' ? 'data-hotspot' : 'data-scene-choice';
+    const answers = page.locator(`[${attr}]`);
     await expect(answers).toHaveCount(ids.length);
     await page.mouse.move(0, 0);
     await page.screenshot({ path: `.tmp-work/choice-buttons/${scene}-${info.project.name}-initial.png` });
     for (const id of ids) {
-      const answer = page.locator(`[data-scene-choice="${id}"]`);
+      const answer = page.locator(`[${attr}="${id}"]`);
       await expect(answer).toBeVisible();
       await expect(answer).toBeInViewport({ ratio: 1 });
       const bounds = await answer.boundingBox();
@@ -39,7 +40,7 @@ for (const [scene, ids] of Object.entries(choices)) {
       await expect(answer).toBeFocused();
     }
     await page.screenshot({ path: `.tmp-work/choice-buttons/${scene}-${info.project.name}.png` });
-    await page.locator(`[data-scene-choice="${ids.at(-1)}"]`).click();
+    await page.locator(`[${attr}="${ids.at(-1)}"]`).click();
     await page.locator('[data-choice-confirm]').click();
     await expect(page.locator('[data-result-reader]')).toBeVisible();
     await page.getByRole('button', { name: /Изменить выбор|К машинам|Назад к машинам/ }).click();

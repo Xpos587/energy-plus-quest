@@ -1,10 +1,15 @@
 import { Pointer } from "lucide-react";
-import type { CarrierId } from "../game/types";
 import layout from "./CarrierChoiceLayout.module.css";
 import styles from "./CarrierTapHint.module.css";
 
 /** The map itself is the only choice; one line says how. */
-export function CarrierTapHint({ selectedId }: { selectedId?: CarrierId }) {
+export function CarrierTapHint({
+  selectedId,
+  text = "Нажмите на фуру — или вызовите Express у склада",
+}: {
+  selectedId?: string;
+  text?: string;
+}) {
   return (
     <p
       className={`${styles.tapHint} ${layout.layout}`}
@@ -14,7 +19,7 @@ export function CarrierTapHint({ selectedId }: { selectedId?: CarrierId }) {
       <span className={styles.tapIcon} aria-hidden="true">
         <Pointer />
       </span>
-      <span>Нажмите на фуру — или вызовите Express у склада</span>
+      <span>{text}</span>
     </p>
   );
 }

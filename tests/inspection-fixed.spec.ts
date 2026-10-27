@@ -5,7 +5,7 @@ for (const scene of ['compact', 'inventory', 'crane', 'lastmile']) {
     await page.goto(`/scenes.html?scene=${scene}&parcel=boat&recipient=alva`);
     const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });
     for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
-    const choices = page.locator('[data-scene-choice]');
+    const choices = page.locator(scene === 'crane' ? '[data-hotspot]' : '[data-scene-choice]');
     const count = await choices.count();
     expect(count).toBeGreaterThan(0);
     for (let index = 0; index < count; index++) {

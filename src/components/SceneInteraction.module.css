@@ -2959,7 +2959,7 @@
 /* Give the port illustration the full height alongside a compact decision panel. */
 @media(min-width:1001px) and (min-height:701px) {
   .app[data-scene="crane"] { --scene-body-size: var(--type-body); --scene-title-size: var(--type-title); }
-  .app[data-scene="crane"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
+  .app[data-scene="crane"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting]:not(:has(.briefingCard)) {
     grid-template-columns:minmax(0,1fr) 420px;
     grid-template-rows:var(--scene-header-height) minmax(0,1fr);
   }
