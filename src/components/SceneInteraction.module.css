@@ -3068,22 +3068,6 @@
   .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspection .actions { margin-top: 12px; }
 }
 
-/* A wide warehouse drawing needs a wide overview, not a tall letterbox. */
-@media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] {
-    grid-template-columns: 1fr;
-    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
-  }
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.question, .briefingCard) {
-    grid-column: 1; grid-row: 3; height: auto; justify-content: flex-start;
-  }
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions,
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionNavigation { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions > button { grid-row: 1; }
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .briefingCard .dialogueActions > button:last-child,
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionTask { grid-column: 2; }
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionAction > [data-choice-variant] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
 @media (max-width: 1000px) and (orientation: portrait) {
   .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] {
     grid-template-rows: var(--scene-header-height) minmax(0, min(54vw, calc(100dvh - var(--scene-header-height) - 390px))) minmax(0, 1fr);
@@ -3095,10 +3079,6 @@
   .app[data-scene="lastmile"] .frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child { overflow-wrap: normal; }
 }
 .app[data-scene="compact"] .frame.frame[data-layout="result"] [data-result-density="compact"] :is([data-result-narrative], [data-result-reading]) { flex: 1; height: 100%; min-height: 0; }
-@media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation > button:first-child { grid-column: 1; grid-row: 1; }
-  .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation > button:last-child { grid-column: 2; grid-row: 1; }
-}
 @media (min-width: 601px) and (max-width: 1000px) and (orientation: portrait) {
   .app[data-scene="inventory"] .frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { min-height: 80px; font-size: var(--type-choice); }
   .app[data-scene="inventory"] .frame.frame :is(.question, .briefingCard) { justify-content: flex-start; }
@@ -3141,10 +3121,6 @@
 @media (min-width: 1001px) and (min-height: 701px) {
   .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) {
     --type-body: 20px; --type-title: 28px; --type-choice: 18px; --type-action: 18px;
-  }
-  .app[data-scene="inventory"]:has(.frame[data-inspecting="false"]) {
-    --type-body: clamp(22px, 1.5vw, 26px); --type-title: clamp(26px, 2vw, 34px);
-    --type-choice: clamp(18px, 1.35vw, 22px); --type-action: clamp(18px, 1.2vw, 20px);
   }
 }
 .app[data-scene="compact"] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.briefingCard .dialogueActions, .question .questionNavigation) {
@@ -3923,12 +3899,6 @@
   .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li {
     padding: 5px 10px 5px 8px; font-size: 14px; white-space: nowrap; border-radius: 999px;
   }
-  .app[data-scene="inventory"] .question > .compactGoals { justify-content: center; }
-  /* A wide brief spreads the goals across, instead of three full-width rows. */
-  .app[data-scene="inventory"] .briefingLead .compactGoals { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .app[data-scene="inventory"] .briefingLead .compactGoals li + li { border-top: 0; border-left: 1px solid #e1ebf2; }
-  .app[data-scene="inventory"] .briefingLead .compactGoals li { grid-template-columns: 20px minmax(0, 1fr); grid-template-rows: auto auto; row-gap: 2px; }
-  .app[data-scene="inventory"] .briefingLead .compactGoals li small { grid-column: 2; }
   /* Score digits sit just under the verdict heading, not above it. */
   .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] strong { font-size: 26px; line-height: 28px; }
   .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] em { font-size: 14px; line-height: 17px; }
@@ -3942,4 +3912,31 @@
 }
 @media (max-height: 500px) and (orientation: landscape) {
   .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionPrompt { font-size: 15px; line-height: 1.25; }
+}
+
+/* Score cells: the metric hue owns the cell (tint, icon, digit, name); the sign
+   reads from the digit. Cells carry the control height themselves: a fieldset
+   grid does not stretch its items. An unchanged metric recedes to grey, so the eye lands
+   on what changed. */
+.app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] {
+  gap: 6px; padding: 0; background: transparent; align-items: stretch;
+}
+.app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key] {
+  height: var(--result-control-height); border-radius: 8px; background: var(--metric-tint);
+}
+.app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key] + [data-score-key] { border-left: 0; }
+.app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key] :is(strong, em) { color: var(--metric); }
+.app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key] em { font-weight: 600; }
+.app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key]:has(strong[data-neutral="true"]) { background: #f3f6f8; }
+.app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key]:has(strong[data-neutral="true"]) :is(strong, em, svg) { color: #7b91a3; }
+
+/* Rail answers: number badges and the Compact icon share one marker column,
+   so every title and hint starts at the same edge. */
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+    gap: 12px; padding-inline: 14px;
+  }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span[aria-hidden="true"] {
+    flex: 0 0 32px; width: 32px; height: 32px; border-radius: 8px;
+  }
 }
