@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-10-26-intro-route",
+  "release": "media-2026-10-27-barge-v3",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3358,6 +3358,54 @@
           "path": "public/opening/route-v1/warehouse.webp",
           "sha256": "9af4257d82fc19ba106ed1f26d08d24782dd775b217a64d840e28bc103023410",
           "bytes": 22174
+        }
+      ]
+    },
+    {
+      "name": "media-29-cc033d2b4297.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-27-barge-v3/media-29-cc033d2b4297.tar.gz",
+      "sha256": "cc033d2b4297a3190f65273c0fc83c1ca1d664f298301725d25b24dce76f7416",
+      "bytes": 2746531,
+      "files": [
+        {
+          "path": "public/scene-art/barge-v3/choice-desk.webp",
+          "sha256": "6422136bebe53701d2e964c920fb8f96b82f64e0a0622e73be078a7c90125c60",
+          "bytes": 351672
+        },
+        {
+          "path": "public/scene-art/barge-v3/choice-mid.webp",
+          "sha256": "7c12c7304863697ae25e4bcb38fc03d78031c9ac1a7a06c3cd095b6892a0b2bc",
+          "bytes": 400952
+        },
+        {
+          "path": "public/scene-art/barge-v3/choice-tall.webp",
+          "sha256": "74f7ee03f90a4ea609ebc93bb1422d61d373167723ad6303cf4611f893681162",
+          "bytes": 372588
+        },
+        {
+          "path": "public/scene-art/barge-v3/choice-wide.webp",
+          "sha256": "f98ff74899a12c07b96485cc805dbc61d5646717f59875aafc46e4468469cac2",
+          "bytes": 321348
+        },
+        {
+          "path": "public/scene-art/barge-v3/outcome-petr.webp",
+          "sha256": "b186f7df37681c6a5bc3b903d1dd1fdcd5d8f6c2a3c7130e03cd7b6b2c0af6a8",
+          "bytes": 318720
+        },
+        {
+          "path": "public/scene-art/barge-v3/outcome-remote.webp",
+          "sha256": "6159896b249c8bbe6b88594651fd54a7cf80284d38b9b896f9f7e7e1b7ca58f6",
+          "bytes": 319224
+        },
+        {
+          "path": "public/scene-art/barge-v3/outcome-rush.webp",
+          "sha256": "640f68f3420202554b894a1c898da889881698f8e35996bf07841a95fd9e5135",
+          "bytes": 339522
+        },
+        {
+          "path": "public/scene-art/barge-v3/outcome-wait.webp",
+          "sha256": "8042357290a803bd76c1bc805520528ede3e3555a46a3936b6f1709876d2cc5d",
+          "bytes": 321210
         }
       ]
     }

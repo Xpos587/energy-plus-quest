@@ -144,6 +144,10 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
         for (const format of ["wide", "tall"])
           images.add(family.lastmileChoiceImage(format, recipient));
     }
+    // Scene 4 picks one of several choice crops at runtime by screen ratio.
+    if (craneArtwork)
+      for (const format of Object.values(resolver(craneArtwork).craneArtwork ?? {}) as { image: string }[])
+        images.add(format.image);
     if (!scene.sceneOutcomeImage) throw new Error("Missing sceneOutcomeImage resolver");
     for (const [sceneId, views] of Object.entries(manifest.scenes ?? {}) as [string, any][]) {
       if (sceneId === "compact") continue;

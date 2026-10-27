@@ -43,7 +43,7 @@ for (const viewport of [
     );
     await expect(resultImage).toHaveAttribute(
       "src",
-      /\/scene-art\/barge-v2\/outcome-remote\.webp/,
+      /\/scene-art\/barge-v3\/outcome-remote\.webp/,
     );
     await resultImage.evaluate(async (image: HTMLImageElement) =>
       image.decode(),
@@ -55,7 +55,7 @@ for (const viewport of [
       await resultImage.evaluate(
         (image: HTMLImageElement) => new URL(image.currentSrc).pathname,
       ),
-    ).toBe("/scene-art/barge-v2/outcome-remote.webp");
+    ).toBe("/scene-art/barge-v3/outcome-remote.webp");
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,

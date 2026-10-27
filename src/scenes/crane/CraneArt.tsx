@@ -1,4 +1,4 @@
-import { type CSSProperties, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { ImageSources } from "../../components/ImageSources";
 import { useArtworkLoading } from "../../components/useArtworkLoading";
@@ -18,12 +18,12 @@ function camera(stage: { width: number; height: number }, zoomId?: string) {
     const scale = Math.max(contain, Math.min(cover, stage.width / focus.width, stage.height / focus.height));
     return { format, scale, area: focus.width * focus.height * scale * scale };
   };
-  const wide = fit("wide");
-  const tall = fit("tall");
-  const { format, scale: overview } = wide.area >= tall.area ? wide : tall;
+  const { format, scale: overview } = (Object.keys(craneArtwork) as CraneFormat[])
+    .map(fit)
+    .reduce((best, next) => (next.area > best.area ? next : best));
   const { width, height, zoom } = craneArtwork[format];
   // An open card frames the chosen way, as the city map follows a truck.
-  const focus = zoomId && zoomId in zoom ? zoom[zoomId as keyof typeof zoom] : craneArtwork[format].focus;
+  const focus = (zoomId && (zoom as Record<string, typeof craneArtwork[CraneFormat]["focus"] | undefined>)[zoomId]) || craneArtwork[format].focus;
   const scale = Math.max(overview, Math.min(stage.width / focus.width, stage.height / focus.height));
   const place = (stageSize: number, size: number, start: number, span: number) => {
     const offset = stageSize / 2 - (start + span / 2) * scale;
@@ -68,7 +68,9 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
   const art = craneArtwork[view.format];
   const artwork = useArtworkLoading(imageAsset(art.image));
   const options = craneScene.options(context);
-  const route = interactive ? art.routes[(hovered ?? selectedId) as keyof typeof art.routes] : undefined;
+  const markId = interactive ? (hovered ?? selectedId) : undefined;
+  const mark: { frames: readonly { x: number; y: number; width: number; height: number }[]; path?: string } | undefined =
+    markId ? art.marks[markId as keyof typeof art.marks] : undefined;
   const at = (x: number, y: number) => ({ left: `${(x / art.width) * 100}%`, top: `${(y / art.height) * 100}%` });
 
   return (
@@ -94,13 +96,25 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
             height={art.height}
             decoding="async"
             draggable={false}
-            alt="Причал на Оби: Иван в офисе ПРУ, подарок на поддоне, высокий кран с лестницей до кабины, баржа с трубами у причала и дальний кран, где сидит Пётр рядом со своими ящиками."
+            alt="Причал на Оби: Иван за пультом в офисе ПРУ, подарок на поддоне, высокий кран с пустой кабиной и лестницей до неё, баржа с трубами у причала и дальний кран, где сидит Пётр рядом со своими ящиками."
           />
         </picture>
-        {interactive && (
-          <svg className={styles.paths} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
-            <path className={styles.lift} d={art.lift} data-barge-lift />
-            {route && <path key={hovered ?? selectedId} className={styles.route} d={route} data-barge-route={hovered ?? selectedId} />}
+        {mark && (
+          <svg key={markId} className={styles.marks} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true" data-barge-mark={markId}>
+            <defs>
+              <marker id="crane-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                <path d="M1 1 L9 5 L1 9 Z" fill="#ff5500" stroke="#fff" strokeWidth="1.2" />
+              </marker>
+            </defs>
+            {mark.frames.map((frame) => (
+              <rect key={`${frame.x},${frame.y}`} className={styles.frame} x={frame.x} y={frame.y} width={frame.width} height={frame.height} rx={18} />
+            ))}
+            {mark.path && (
+              <>
+                <path className={styles.halo} d={mark.path} />
+                <path className={styles.route} d={mark.path} markerEnd="url(#crane-arrow)" />
+              </>
+            )}
           </svg>
         )}
         <span className={styles.chip} data-barge-chip="barge" style={at(art.chips.barge.x, art.chips.barge.y)}>
@@ -119,7 +133,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
               className={styles.hotspot}
               data-hotspot={option.id}
               data-side={point.side}
-              style={{ ...at(point.x, point.y), "--ring": `${(point.r / art.width) * view.width}px` } as CSSProperties}
+              style={at(point.x, point.y)}
               aria-label={`Вариант ${index + 1}. ${choiceLabel(option.label)}`}
               aria-pressed={selectedId === option.id}
               disabled={!interactive}

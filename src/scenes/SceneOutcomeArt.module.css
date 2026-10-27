@@ -92,7 +92,6 @@
 .figure[data-outcome-scene], .figure[data-outcome-scene] .picture, .figure[data-outcome-scene] .image { height: 100%; min-height: 0; }
 .figure[data-outcome-scene] .image { object-fit: cover; object-position: var(--outcome-focus, 50%) center; }
 .figure[data-outcome-scene="inventory"] .image { object-position: var(--outcome-focus, 50%) center; }
-.figure[data-outcome-scene="crane"] .image { object-position: 30% center; }
 .figure[data-delivery-leg="flight"] .image { object-position: left top; }
 .figure[data-delivery-leg="ground"] .image { object-position: 50% center; }
 /* Keep the aircraft, rotor and load together in a portrait overview.

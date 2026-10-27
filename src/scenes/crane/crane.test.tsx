@@ -92,7 +92,7 @@ describe("craneScene source contract", () => {
     expect(html.match(/data-hotspot=/g)).toHaveLength(4);
     for (const id of ["remote", "rush", "wait", "petr"])
       expect(html).toContain(`data-hotspot="${id}"`);
-    expect(html).toMatch(/scene-art\/barge-v2\/choice-(wide|tall)\.webp/);
+    expect(html).toMatch(/scene-art\/barge-v3\/choice-(mid|desk|wide|tall)\.webp/);
     for (const caption of Object.values(craneCaptions)) expect(html).toContain(caption);
     expect(html).toContain("Баржа готова к отходу");
     expect(html).not.toContain("disabled");

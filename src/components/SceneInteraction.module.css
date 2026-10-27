@@ -3723,7 +3723,7 @@
   }
   .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) [data-outcome-scene] img {
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: var(--outcome-focus, 50%) 50%;
   }
 }
 
