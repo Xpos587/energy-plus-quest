@@ -126,3 +126,9 @@ a:focus-visible {
 @media (max-height: 500px) and (orientation: landscape) {
   :root { --type-body: 18px; --type-title: 24px; --type-feature-title: 30px; --type-choice: 16px; --type-action: 16px; --type-support: 13px; }
 }
+
+/* Metric identity: the same hue marks a metric in the intro, goals, results and certificate.
+   Sign colours of score deltas stay separate (gain blue, loss orange). */
+[data-metric="energy"] { --metric: #c94a00; --metric-tint: #fff0e5; }
+[data-metric="empathy"] { --metric: #8d3fa6; --metric-tint: #f5ecf8; }
+[data-metric="efficiency"] { --metric: #0a69a6; --metric-tint: #e5f1f9; }

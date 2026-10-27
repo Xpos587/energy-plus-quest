@@ -218,3 +218,9 @@
   .goal{padding:0 4px}
   .goal svg{width:18px;height:18px}
 }
+
+/* Metrics read as a legend: tinted icon, action, then the metric name in its colour. */
+.metrics li{gap:12px}
+.metrics .metricIcon{color:var(--metric);background:var(--metric-tint);box-shadow:none}
+.metrics strong{font-weight:700;color:var(--metric)}
+.metrics strong i{display:none}

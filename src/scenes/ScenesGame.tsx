@@ -118,7 +118,7 @@ function SceneGoals({ goals }: { goals: SceneBrief["goals"] }) {
   return (
     <ul className={flow.compactGoals} aria-label="Что важно" data-compact-goals>
       {scorePoints.map(({ key, icon: Icon, score }, index) => (
-        <li key={key} data-goal-key={key}><Icon aria-hidden="true" size={16} strokeWidth={2.2} />{goals[index]}<small>{score}</small></li>
+        <li key={key} data-goal-key={key} data-metric={key}><Icon aria-hidden="true" size={16} strokeWidth={2.2} /><span>{goals[index]}</span><small>{score}</small></li>
       ))}
     </ul>
   );

@@ -3905,3 +3905,41 @@
   .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] [data-outcome-scene] :is(picture, img) { height: 100%; }
   .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] [data-outcome-scene] img { object-fit: cover; }
 }
+
+/* Metrics: the icon carries the metric hue, the sign keeps its colour. */
+.app[data-scene] [data-score-delta] [data-score-key] svg { color: var(--metric); }
+.compactGoals svg { color: var(--metric, #075d9b); }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals li small {
+  color: var(--metric); letter-spacing: 0; text-transform: none; font-weight: 600;
+}
+
+/* Desktop type scale for scenes 2, 3 and 5: the question leads but no longer
+   outweighs the cargo card and answers; goals stay single-line tags. */
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app:is([data-scene="compact"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 24px; line-height: 1.25; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li {
+    padding: 5px 10px 5px 8px; font-size: 14px; white-space: nowrap; border-radius: 999px;
+  }
+  .app[data-scene="inventory"] .question > .compactGoals { justify-content: center; }
+  /* A wide brief spreads the goals across, instead of three full-width rows. */
+  .app[data-scene="inventory"] .briefingLead .compactGoals { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .app[data-scene="inventory"] .briefingLead .compactGoals li + li { border-top: 0; border-left: 1px solid #e1ebf2; }
+  .app[data-scene="inventory"] .briefingLead .compactGoals li { grid-template-columns: 20px minmax(0, 1fr); grid-template-rows: auto auto; row-gap: 2px; }
+  .app[data-scene="inventory"] .briefingLead .compactGoals li small { grid-column: 2; }
+  /* Score digits sit just under the verdict heading, not above it. */
+  .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] strong { font-size: 26px; line-height: 28px; }
+  .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] em { font-size: 14px; line-height: 17px; }
+  .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] svg { width: 22px; height: 22px; flex-basis: 22px; }
+}
+
+/* Phones: the question and answers were smaller than the brief that precedes them. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionPrompt { font-size: 16px; line-height: 1.25; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction [data-scene-choice] { font-size: 14px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionPrompt { font-size: 15px; line-height: 1.25; }
+}

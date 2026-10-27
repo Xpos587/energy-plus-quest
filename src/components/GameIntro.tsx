@@ -167,7 +167,7 @@ export function GameIntro({ onStart }: { onStart: () => void }) {
                         <p className={styles.metricLead}>{metricLead}</p>
                         <ul className={styles.metrics} aria-label="Показатели">
                           {metrics.map(({ key, title, text, Icon }) => (
-                            <li key={key}>
+                            <li key={key} data-metric={key}>
                               <Icon
                                 className={styles.metricIcon}
                                 aria-hidden="true"
@@ -175,7 +175,7 @@ export function GameIntro({ onStart }: { onStart: () => void }) {
                                 strokeWidth={2}
                               />
                               <div>
-                                <span>{text}</span> <strong>({title})</strong>
+                                <span>{text}</span> <strong><i aria-hidden="true">(</i>{title}<i aria-hidden="true">)</i></strong>
                               </div>
                             </li>
                           ))}

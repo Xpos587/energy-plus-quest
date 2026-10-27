@@ -11,8 +11,9 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { ImageSources } from "../components/ImageSources";
+import { scoreItems } from "../components/ScoreBoard";
 import { imageAsset } from "../game/imageAssets";
-import type { ProfileId } from "../game/types";
+import type { ProfileId, Scores } from "../game/types";
 import {
   certificateCopy,
   exportCertificate,
@@ -65,11 +66,13 @@ const invitation = {
 export function LogistCertificate({
   profile,
   copy,
+  scores,
   onRestart,
   onHome,
 }: {
   profile: ProfileId;
   copy: LogistCopy;
+  scores?: Scores;
   onRestart: () => void;
   onHome: () => void;
 }) {
@@ -202,6 +205,18 @@ export function LogistCertificate({
           {copy.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          {scores && (
+            /* The verdict above is derived from these totals; showing them makes it earned. */
+            <ul className={styles.totals} aria-label="Ваши баллы" data-certificate-totals>
+              {scoreItems.map((item) => (
+                <li key={item.key} data-metric={item.key} data-leading={copy.type === item.key}>
+                  <item.icon aria-hidden="true" size={18} strokeWidth={2.2} />
+                  <span>{item.label}</span>
+                  <strong>{scores[item.key]}</strong>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </article>
       <aside
