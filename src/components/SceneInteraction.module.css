@@ -3788,25 +3788,25 @@
 
 /* Scene 2 briefing card: the cargo you are loading, like a shipping label. */
 .briefingLead { display: none; }
-.app[data-scene="compact"] .briefingLead {
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead {
   display: flex; align-items: center; gap: 12px; flex: none; padding-bottom: 12px; margin-bottom: 4px; border-bottom: 2px dashed #d2e4ef;
 }
-.app[data-scene="compact"] .briefingLead img { width: 52px; height: 52px; border-radius: 10px; object-fit: cover; flex: none; }
-.app[data-scene="compact"] .briefingLead span { display: grid; gap: 2px; }
-.app[data-scene="compact"] .briefingLead small { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #53697d; }
-.app[data-scene="compact"] .briefingLead strong { font-size: 22px; line-height: 1.1; color: #082946; }
-.app[data-scene="compact"] .briefingLead strong::first-letter { text-transform: uppercase; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead img { width: 52px; height: 52px; border-radius: 10px; object-fit: cover; flex: none; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead span { display: grid; gap: 2px; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead small { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #53697d; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead strong { font-size: 22px; line-height: 1.1; color: #082946; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead strong::first-letter { text-transform: uppercase; }
 @media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="compact"] .briefingLead { gap: 14px; padding-bottom: 16px; }
-  .app[data-scene="compact"] .briefingLead img { width: 72px; height: 72px; border-radius: 12px; }
-  .app[data-scene="compact"] .briefingLead strong { font-size: 28px; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead { gap: 14px; padding-bottom: 16px; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead img { width: 72px; height: 72px; border-radius: 12px; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead strong { font-size: 28px; }
 }
-@media (max-height: 500px) { .app[data-scene="compact"] .briefingLead { display: none; } }
+@media (max-height: 500px) { .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead { display: none; } }
 
 /* Scene 2 round 3: order card goals, named places, verdict. */
-.app[data-scene="compact"] .briefingLead { flex-wrap: wrap; }
-.app[data-scene="compact"] .briefingLead em { font-size: 14px; font-style: normal; color: #53697d; }
-.app[data-scene="compact"] .briefingLead > .compactGoals { flex-basis: 100%; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead { flex-wrap: wrap; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead em { font-size: 14px; font-style: normal; color: #53697d; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead > .compactGoals { flex-basis: 100%; }
 .compactGoals {
   display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none;
 }
@@ -3816,18 +3816,18 @@
   color: #082946; font-size: 13px; font-weight: 600; line-height: 1.2; white-space: nowrap;
 }
 .compactGoals svg { flex: none; color: #075d9b; }
-.app[data-scene="compact"] .question > .compactGoals { margin-block: -2px 2px; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals { margin-block: -2px 2px; }
 @media (max-width: 700px) {
   .compactGoals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
   .compactGoals li { justify-content: center; gap: 4px; padding: 5px 4px; font-size: 12px; white-space: normal; text-align: left; }
   .compactGoals svg { width: 14px; height: 14px; }
 }
-@media (max-height: 500px) { .app[data-scene="compact"] .question > .compactGoals { display: none; } }
+@media (max-height: 500px) { .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals { display: none; } }
 
 /* Choices: hovering a button lights the matching place in the truck and back. */
-.app[data-scene="compact"] .question [data-scene-choice][data-focused="true"] { border-color: #075d9b; background: #edf4f9; }
-.app[data-scene="compact"] .question [data-scene-choice][data-focused="true"] [data-badge-shape] { background: var(--orange, #ff5500); }
-.app[data-scene="compact"] .question [data-scene-choice] [data-badge-shape] { transition: background-color 160ms ease; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question [data-scene-choice][data-focused="true"] { border-color: #075d9b; background: #edf4f9; }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question [data-scene-choice][data-focused="true"] [data-badge-shape] { background: var(--orange, #ff5500); }
+.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question [data-scene-choice] [data-badge-shape] { transition: background-color 160ms ease; }
 
 .compactVerdict { display: grid; gap: 4px; }
 .compactVerdict > small { font-size: 15px; font-weight: 600; line-height: 1.25; color: #53697d; }
@@ -3849,7 +3849,7 @@
 /* Desktop rail keeps the cargo in view while choosing; phones need the height for the truck. */
 .compactCargo { display: none; }
 @media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="compact"] .question > .compactCargo {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactCargo {
     order: -1; display: flex; align-items: center; gap: 12px; padding-bottom: 14px; border-bottom: 2px dashed #d2e4ef;
   }
   .compactCargo img { width: 56px; height: 56px; border-radius: 10px; object-fit: cover; flex: none; }
@@ -3859,7 +3859,7 @@
   .compactCargo strong::first-letter { text-transform: uppercase; }
 }
 @media (min-width: 1001px) and (min-height: 701px) and (max-height: 860px) {
-  .app[data-scene="compact"] .question > .compactCargo { display: none; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactCargo { display: none; }
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question { gap: 12px; padding-top: 20px; padding-bottom: 16px; }
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { min-height: 54px; padding-block: 6px; }
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 24px; line-height: 30px; }
@@ -3873,21 +3873,35 @@
 }
 .compactGoals li small { display: none; }
 @media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="compact"] .question > .compactGoals {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals {
     flex: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 0;
   }
-  .app[data-scene="compact"] .question > .compactGoals li {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li {
     justify-content: center; gap: 5px; padding: 6px 4px; font-size: 13px; white-space: normal; text-align: left;
   }
-  .app[data-scene="compact"] .briefingLead .compactGoals { display: grid; gap: 0; border: 1px solid #c4d7e4; border-radius: 12px; overflow: hidden; }
-  .app[data-scene="compact"] .briefingLead .compactGoals li {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals { display: grid; gap: 0; border: 1px solid #c4d7e4; border-radius: 12px; overflow: hidden; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals li {
     display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 10px; padding: 10px 14px;
     border: 0; border-radius: 0; background: #fff; font-size: 16px;
   }
-  .app[data-scene="compact"] .briefingLead .compactGoals li + li { border-top: 1px solid #e1ebf2; }
-  .app[data-scene="compact"] .briefingLead .compactGoals li small { display: block; font-size: 13px; font-weight: 500; color: #53697d; }
-  .app[data-scene="compact"] .compactGoals svg { width: 18px; height: 18px; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals li + li { border-top: 1px solid #e1ebf2; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals li small { display: block; font-size: 13px; font-weight: 500; color: #53697d; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .compactGoals svg { width: 18px; height: 18px; }
 }
 @media (min-width: 1001px) and (min-height: 701px) and (max-height: 860px) {
-  .app[data-scene="compact"] .question > .compactGoals li { padding-block: 4px; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li { padding-block: 4px; }
+}
+
+/* Scenes 3 and 5 reuse the order card; the hint under each option shows where the list has room. */
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app:is([data-scene="inventory"], [data-scene="lastmile"]) [data-scene-choice] > span:last-child { display: grid; gap: 2px; text-align: left; }
+  .app:is([data-scene="inventory"], [data-scene="lastmile"]) [data-choice-detail] { display: block; font-size: 15px; line-height: 1.3; font-weight: 400; color: #53697d; }
+}
+/* Two-line goals in a narrow rail read as tags, not pills. */
+.app:is([data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li { border-radius: 10px; }
+/* Scene 3 phone results: the panel keeps what the text needs, the spare height goes to the picture. */
+@media (max-width: 600px) and (orientation: portrait) and (min-height: 700px) {
+  .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(0, 1fr) minmax(0, 440px) !important; }
+  .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] [data-outcome-scene] :is(picture, img) { height: 100%; }
+  .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] [data-outcome-scene] img { object-fit: cover; }
 }

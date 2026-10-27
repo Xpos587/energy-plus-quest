@@ -106,3 +106,7 @@
 
 .stage[data-world-scene="lastmile"] .marker[data-hotspot="robot"] { margin-top: 0; }
 
+
+/* Hovering the matching list row lights the pin. */
+.stage .marker[data-focused="true"]::before { background: var(--orange); }
+.stage .marker::before { transition: background-color 160ms ease; }

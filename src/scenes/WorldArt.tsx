@@ -87,6 +87,8 @@ export function WorldArt({
   selectedId,
   onSelect,
   showResult,
+  focusedId,
+  onFocusChange,
   placement,
   outcome,
   giftLocation,
@@ -276,7 +278,7 @@ export function WorldArt({
             />
           </picture>
         )}
-        {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones composition={lastmileFormat} selectedId={selectedId} onSelect={onSelect} />}
+        {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones composition={lastmileFormat} selectedId={selectedId} onSelect={onSelect} focusedId={focusedId} onFocusChange={onFocusChange} />}
         {expandedArt ? (
           <div style={{
             position: "absolute",
@@ -331,6 +333,9 @@ export function WorldArt({
                   .filter(Boolean)
                   .join(". ")}
                 aria-pressed={markerId === point.id}
+                data-focused={onFocusChange ? focusedId === point.id : undefined}
+                onPointerEnter={onFocusChange && (() => onFocusChange(point.id))}
+                onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
                 disabled={showResult || !onSelect || (!!selectedId && selectedId !== point.id)}
                 onClick={() => onSelect?.(point.id)}
               >

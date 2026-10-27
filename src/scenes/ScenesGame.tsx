@@ -15,7 +15,7 @@ import { prefetchImage, thumbnailAsset } from "../game/imageAssets";
 import { useStoredState } from "../game/persistence";
 import type { Scores } from "../game/types";
 import { sceneChoiceImage } from "./artwork";
-import { parcelNames } from "./names";
+import { parcelNames, recipientNames } from "./names";
 import { choiceLabel } from "./choiceLabel";
 import { compactScene } from "./compact";
 import { craneScene } from "./crane";
@@ -54,36 +54,80 @@ export function restartSceneCondition(
     briefingParagraphs(id, scene.intro(context)),
   );
 }
-// Names and hints repeat what the cut-away shows; the result stays unspoiled.
-const compactPlaces: Record<string, [name: string, detail: string]> = {
-  "place-1": ["У задних дверей", "Над гирями, без креплений"],
-  "place-2": ["Над посудой", "Есть красные стропы"],
-  "place-3": ["Ниша за коробками", "Есть короткая стропа"],
-  "place-4": ["У передней стенки", "Высоко, рядом подушки"],
-  auto: ["Доверить Compact", "Подберёт место по размеру"],
-};
-const compactGoals = [
-  { key: "energy", icon: Zap, label: "Погрузить быстро", score: "Энергия" },
-  { key: "empathy", icon: Heart, label: "Довезти целым", score: "Эмпатия" },
-  { key: "efficiency", icon: ChartLine, label: "Не занять лишнее", score: "Эффективность" },
+// Names and hints repeat what the artwork shows; the result stays unspoiled.
+const scorePoints = [
+  { key: "energy", icon: Zap, score: "Энергия" },
+  { key: "empathy", icon: Heart, score: "Эмпатия" },
+  { key: "efficiency", icon: ChartLine, score: "Эффективность" },
 ] as const;
-function CompactGoals() {
+type Tone = "best" | "fair" | "bad";
+type SceneBrief = {
+  eyebrow: string;
+  route: (context: SceneContext) => string;
+  goals: [energy: string, empathy: string, efficiency: string];
+  places: (context: SceneContext) => Record<string, [name: string, detail: string]>;
+  verdicts: Record<Tone, string>;
+  picked: (id: string, name: string) => string;
+};
+const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
+  compact: {
+    eyebrow: "Наряд на погрузку",
+    route: () => "Фура до склада в Лабытнанги",
+    goals: ["Погрузить быстро", "Довезти целым", "Не занять лишнее"],
+    places: () => ({
+      "place-1": ["У задних дверей", "Над гирями, без креплений"],
+      "place-2": ["Над посудой", "Есть красные стропы"],
+      "place-3": ["Ниша за коробками", "Есть короткая стропа"],
+      "place-4": ["У передней стенки", "Высоко, рядом подушки"],
+      auto: ["Доверить Compact", "Подберёт место по размеру"],
+    }),
+    verdicts: { best: "Отличная погрузка", fair: "Можно лучше", bad: "Неудачная погрузка" },
+    picked: (id, name) => id === "auto" ? "Место выбрал Compact" : `${optionTitles[id]} · ${name}`,
+  },
+  inventory: {
+    eyebrow: "Карточка хранения",
+    route: () => "Склад в Лабытнанги, пару дней до баржи",
+    goals: ["Без лишнего крюка", "Не потерять подарок", "Ближе к отгрузке"],
+    places: ({ parcel }) => ({
+      entrance: ["У приёмки", "Свободные ячейки у входа"],
+      alphabet: [`Стеллаж «${inventoryAlphabet[parcel].letter}»`, "По первой букве названия"],
+      keeper: ["Кладовщик", "Спросить опытного коллегу"],
+      wms: ["Система WMS", "Место подскажет Inventory"],
+    }),
+    verdicts: { best: "Отличное место", fair: "Можно лучше", bad: "Неудачное место" },
+    picked: (_id, name) => `Ваш выбор · ${name}`,
+  },
+  lastmile: {
+    eyebrow: "Последняя миля",
+    route: ({ recipient }) => `От причала в Новом Порту до ${recipientNames[recipient].genitive}`,
+    goals: ["Без лишних трат", "Довезти лично", "Пройти болота"],
+    places: () => ({
+      helicopter: ["Вертолёт", "Перелетит любые преграды"],
+      rover: ["Снегоболотоход", "Создан для таких мест"],
+      robot: ["Роботизированная тележка", "Возит багаж в аэропортах"],
+      "pipe-carrier": ["Трубовоз", "Возьмёт груз вместе с трубами"],
+    }),
+    verdicts: { best: "Лучший транспорт", fair: "Можно лучше", bad: "Неудачный выбор" },
+    picked: (_id, name) => `Ваш выбор · ${name}`,
+  },
+};
+function SceneGoals({ goals }: { goals: SceneBrief["goals"] }) {
   return (
     <ul className={flow.compactGoals} aria-label="Что важно" data-compact-goals>
-      {compactGoals.map(({ key, icon: Icon, label, score }) => (
-        <li key={key} data-score-key={key}><Icon aria-hidden="true" size={16} strokeWidth={2.2} />{label}<small>{score}</small></li>
+      {scorePoints.map(({ key, icon: Icon, score }, index) => (
+        <li key={key} data-goal-key={key}><Icon aria-hidden="true" size={16} strokeWidth={2.2} />{goals[index]}<small>{score}</small></li>
       ))}
     </ul>
   );
 }
 const sum = ({ energy, empathy, efficiency }: Scores) => energy + empathy + efficiency;
-/** Ranks the choice against the best one available for this gift. */
-export function compactVerdict(score: Scores, all: Scores[]) {
+/** Ranks the choice against the best one available in this context. */
+export function rankChoice(score: Scores, all: Scores[]): Tone {
   const value = sum(score);
-  if (value >= Math.max(...all.map(sum)) - 1) return { tone: "best", text: "Отличная погрузка", Icon: CircleCheck } as const;
-  if (value > 0) return { tone: "fair", text: "Можно лучше", Icon: CircleAlert } as const;
-  return { tone: "bad", text: "Неудачная погрузка", Icon: CircleX } as const;
+  if (value >= Math.max(...all.map(sum)) - 1) return "best";
+  return value > 0 ? "fair" : "bad";
 }
+const verdictIcons = { best: CircleCheck, fair: CircleAlert, bad: CircleX } as const;
 
 const optionTitles: Record<string, string> = {
   "place-1": "Место 1",
@@ -104,12 +148,13 @@ const optionTitles: Record<string, string> = {
   "pipe-carrier": "Трубовоз",
 };
 const zeroScores: Scores = { energy: 0, empathy: 0, efficiency: 0 };
-function CompactVerdict({ id, score, all }: { id: string; score: Scores; all: Scores[] }) {
-  const { tone, text, Icon } = compactVerdict(score, all);
+function ChoiceVerdict({ brief, id, name, score, all }: { brief: SceneBrief; id: string; name: string; score: Scores; all: Scores[] }) {
+  const tone = rankChoice(score, all);
+  const Icon = verdictIcons[tone];
   return (
     <span className={flow.compactVerdict} data-verdict={tone}>
-      <small>{id === "auto" ? "Место выбрал Compact" : `${optionTitles[id]} · ${compactPlaces[id][0]}`}</small>
-      <span><Icon aria-hidden="true" size={26} strokeWidth={2.2} />{text}</span>
+      <small>{brief.picked(id, name)}</small>
+      <span><Icon aria-hidden="true" size={26} strokeWidth={2.2} />{brief.verdicts[tone]}</span>
     </span>
   );
 }
@@ -279,6 +324,9 @@ function ScenesSession({
   }, [state.finished, state.answers, context, score, onComplete]);
 
   const title = scene.title.replace(/^Сцена \d+\.\s*/, "");
+  const brief = sceneBriefs[scene.id];
+  const places = brief?.places(context);
+  const syncFocus = brief ? { focusedId: focusedChoice, onFocusChange: setFocusedChoice } : {};
   const back =
     state.phase === "result" ||
     (state.sceneIndex > 0 && Object.keys(state.answers).length > 0)
@@ -355,27 +403,27 @@ function ScenesSession({
               question={question}
               keepParagraphs={scene.id === "crane"}
               decisionContext={
-                scene.id === "crane" ? <CraneDecisionContext /> : scene.id === "compact" ? (
+                scene.id === "crane" ? <CraneDecisionContext /> : brief ? (
                   <>
                     <div className={flow.compactCargo} data-compact-cargo>
                       <img src={thumbnailAsset(choiceArtwork[context.parcel])} alt="" />
                       <span><small>Груз</small><strong>{parcelNames[context.parcel].nominative}</strong></span>
                     </div>
-                    <CompactGoals />
+                    <SceneGoals goals={brief.goals} />
                   </>
                 ) : undefined
               }
               onBack={back}
               lead={
-                scene.id === "compact" ? (
+                brief ? (
                   <div className={flow.briefingLead} data-briefing-lead>
                     <img src={thumbnailAsset(choiceArtwork[context.parcel])} alt="" />
                     <span>
-                      <small>Наряд на погрузку</small>
+                      <small>{brief.eyebrow}</small>
                       <strong>{parcelNames[context.parcel].nominative}</strong>
-                      <em>Фура до склада в Лабытнанги</em>
+                      <em>{brief.route(context)}</em>
                     </span>
-                    <CompactGoals />
+                    <SceneGoals goals={brief.goals} />
                   </div>
                 ) : undefined
               }
@@ -385,22 +433,21 @@ function ScenesSession({
                   options={options.map((option) => ({
                     id: option.id,
                     showBadge: option.id !== "auto",
-                    detail: scene.id === "compact" ? compactPlaces[option.id][1] : undefined,
+                    detail: places?.[option.id][1],
                     accessibleLabel:
                       scene.id === "compact" && option.id !== "auto"
-                        ? `${optionTitles[option.id]}: ${compactPlaces[option.id][0]}`
+                        ? `${optionTitles[option.id]}: ${places![option.id][0]}`
                         : undefined,
                     label:
-                      scene.id === "compact"
-                        ? compactPlaces[option.id][0]
+                      places
+                        ? places[option.id][0]
                         : option.id === "auto"
                           ? "Поручить размещение Compact"
                           : scene.id === "inventory" && option.id === "alphabet"
                             ? `Стеллаж «${inventoryAlphabet[context.parcel].letter}»`
                             : optionTitles[option.id] ?? choiceLabel(option.label),
                   }))}
-                  focusedId={scene.id === "compact" ? focusedChoice : undefined}
-                  onFocusChange={scene.id === "compact" ? setFocusedChoice : undefined}
+                  {...syncFocus}
                   onInspect={choose}
                   badgeShape={
                     scene.id === "compact" || scene.id === "crane"
@@ -434,8 +481,7 @@ function ScenesSession({
                 selectedId={resultVisible ? selected?.id : undefined}
                 showResult={resultVisible}
                 onSelect={state.phase === "choice" ? choose : undefined}
-                focusedId={scene.id === "compact" ? focusedChoice : undefined}
-                onFocusChange={scene.id === "compact" ? setFocusedChoice : undefined}
+                {...syncFocus}
               />
             )}
           </section>
@@ -449,7 +495,7 @@ function ScenesSession({
               <div className={flow.resultStory}>
                 <ResultCopy
                   key={`${scene.id}:${selected.id}`}
-                  title={scene.id === "compact" ? <CompactVerdict id={selected.id} score={selected.score} all={options.map(o => o.score)} /> : title}
+                  title={brief && places ? <ChoiceVerdict brief={brief} id={selected.id} name={places[selected.id][0]} score={selected.score} all={options.map(o => o.score)} /> : title}
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace

@@ -14,7 +14,7 @@ export function InventoryArt(props: SceneArtProps) {
       outcome={props.showResult ? props.selectedId : undefined}
     >
       {composition => !props.showResult && props.onSelect ? (
-        <WarehouseZones context={props.context} selectedId={props.selectedId} onSelect={props.onSelect} composition={composition} />
+        <WarehouseZones context={props.context} selectedId={props.selectedId} onSelect={props.onSelect} focusedId={props.focusedId} onFocusChange={props.onFocusChange} composition={composition} />
       ) : null}
     </WorldArt>
   );
