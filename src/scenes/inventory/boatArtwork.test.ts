@@ -6,16 +6,12 @@ import { SceneOutcomeArt } from "../SceneOutcomeArt";
 
 describe("warehouse cargo artwork", () => {
   for (const branch of ["entrance", "alphabet", "keeper", "wms"]) {
-    it(`${branch}: shares neutral closed-box artwork for every gift and viewport`, () => {
+    it(`${branch}: closed-box artwork for every gift and viewport`, () => {
       const context = { recipient: "alva", profile: "student" } as const;
       for (const parcel of ["boat", "socks", "camera"] as const) {
-        const path = branch === "keeper"
-          ? "/scene-art/warehouse-corrections-2026-10-20/outcomes/keeper-v2-labels-v1.png"
-          : branch === "wms"
-            ? "/scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png"
-            : branch === 'entrance'
-              ? '/scene-art/warehouse-corrections-2026-10-20/outcomes/entrance-labels-v1.png'
-              : '/scene-art/warehouse-polish-2026-10-17/alphabet.webp';
+        const path = branch === "wms"
+          ? "/scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png"
+          : `/scene-art/warehouse-logic-2026-10-28/outcome-${branch === "alphabet" ? `alphabet-${parcel}` : branch}.webp`;
         expect(
           sceneOutcomeImage("inventory", branch, { ...context, parcel }),
         ).toBe(path);

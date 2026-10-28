@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-10-27-barge-v3",
+  "release": "media-2026-10-28-warehouse-logic",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3406,6 +3406,49 @@
           "path": "public/scene-art/barge-v3/outcome-wait.webp",
           "sha256": "8042357290a803bd76c1bc805520528ede3e3555a46a3936b6f1709876d2cc5d",
           "bytes": 321210
+        }
+      ]
+    },
+    {
+      "name": "media-30-ba1718be3ff1.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-28-warehouse-logic/media-30-ba1718be3ff1.tar.gz",
+      "sha256": "ba1718be3ff1528a96f4398dd9bf31f19dcc8f7a9584ff35d4785158256a3ba1",
+      "bytes": 1803023,
+      "files": [
+        {
+          "path": "public/scene-art/warehouse-logic-2026-10-28/outcome-alphabet-boat.webp",
+          "sha256": "fc8fe955c84888c463e681a32d00a813e25d9738028d7d467ee766936855108b",
+          "bytes": 245362
+        },
+        {
+          "path": "public/scene-art/warehouse-logic-2026-10-28/outcome-alphabet-camera.webp",
+          "sha256": "cb038238b4b1dbb651fc3ab4f7ea4321d132c21234a064cbd75ccdcb26ab5fb9",
+          "bytes": 245630
+        },
+        {
+          "path": "public/scene-art/warehouse-logic-2026-10-28/outcome-alphabet-socks.webp",
+          "sha256": "40916fd8b0ceb1661d48cbcd941e131e126803c4222c5157688ad71a2b8fa837",
+          "bytes": 245210
+        },
+        {
+          "path": "public/scene-art/warehouse-logic-2026-10-28/outcome-entrance.webp",
+          "sha256": "12d682a80563c9440e35f21c506904d1d36d3f151c33e7bdc25f56259394ff1d",
+          "bytes": 225300
+        },
+        {
+          "path": "public/scene-art/warehouse-logic-2026-10-28/outcome-keeper.webp",
+          "sha256": "2c87c1187174d3b4b305fe9bf8beb0d80278baed94705643b8a5f82b46f75be4",
+          "bytes": 236354
+        },
+        {
+          "path": "public/scene-art/warehouse-logic-2026-10-28/overview-mobile.webp",
+          "sha256": "20de6fb3abbb97fb36eb470326f9e444e453eb42e419b302f195a2175ee0d7ce",
+          "bytes": 313500
+        },
+        {
+          "path": "public/scene-art/warehouse-logic-2026-10-28/overview.webp",
+          "sha256": "04c3ed06724ec9bda8ea49ebb1aa6f579847d977b75f49d4c4258350a6af938f",
+          "bytes": 290096
         }
       ]
     }

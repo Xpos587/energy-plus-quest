@@ -1,46 +1,34 @@
 {
   "width": 1024,
   "height": 1536,
-  "source": "scene-art/warehouse-corrections-2026-10-20/mobile/overview-mobile-native-v3.png",
-  "method": "Manual native portrait composition regions with six plaques on one left-to-right horizontal line",
+  "source": "scene-art/warehouse-logic-2026-10-28/overview-mobile.webp",
+  "method": "Manual native portrait composition regions with six plaques on one left-to-right horizontal line; 28 October 2026: plaques re-lettered so the alphabet starts at dispatch (А–Б) and ends at receiving (Ю–Я)",
   "regions": {
     "entrance": {
       "path": "M 49 1047 L 52 934 L 95 896 L 126 887 L 177 904 L 225 923 L 229 960 L 239 947 L 240 920 L 256 900 L 268 903 L 274 922 L 260 943 L 260 1024 L 281 1031 L 278 1062 L 251 1081 L 228 1083 L 187 1094 L 144 1082 L 74 1069 Z",
       "anchorPixel": [
-        156,
-        1100
+        140,
+        960
       ],
       "anchor": {
-        "x": 0.15234375,
-        "y": 0.7161458333333334
+        "x": 0.13671875,
+        "y": 0.625
       },
       "contourCount": 1
     },
     "alphabet-camera": {
-      "path": "M 691 817 L 691 536 L 702 493 L 699 450 L 755 439 L 780 454 L 784 511 L 784 820 Z",
+      "path": "M 297 817 L 297 536 L 308 493 L 305 450 L 361 439 L 386 454 L 390 511 L 390 820 Z",
       "anchorPixel": [
-        735,
+        341,
         535
       ],
       "anchor": {
-        "x": 0.7177734375,
+        "x": 0.3330078125,
         "y": 0.3483072916666667
       },
       "contourCount": 1
     },
     "alphabet-socks": {
-      "path": "M 534 821 L 532 539 L 544 491 L 550 451 L 608 443 L 665 455 L 681 513 L 681 823 Z",
-      "anchorPixel": [
-        607,
-        535
-      ],
-      "anchor": {
-        "x": 0.5927734375,
-        "y": 0.3483072916666667
-      },
-      "contourCount": 1
-    },
-    "alphabet-boat": {
       "path": "M 383 818 L 382 537 L 397 493 L 404 445 L 451 442 L 501 453 L 530 511 L 530 821 Z",
       "anchorPixel": [
         453,
@@ -48,6 +36,18 @@
       ],
       "anchor": {
         "x": 0.4423828125,
+        "y": 0.3483072916666667
+      },
+      "contourCount": 1
+    },
+    "alphabet-boat": {
+      "path": "M 534 821 L 532 539 L 544 491 L 550 451 L 608 443 L 665 455 L 681 513 L 681 823 Z",
+      "anchorPixel": [
+        607,
+        535
+      ],
+      "anchor": {
+        "x": 0.5927734375,
         "y": 0.3483072916666667
       },
       "contourCount": 1

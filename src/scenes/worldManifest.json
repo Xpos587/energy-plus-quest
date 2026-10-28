@@ -58,7 +58,7 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/warehouse-corrections-2026-10-20/overview-receiving-parallel-labels-v1.png",
+        "image": "scene-art/warehouse-logic-2026-10-28/overview.webp",
         "width": 1546,
         "height": 1017,
         "hotspots": [
@@ -86,7 +86,7 @@
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/warehouse-corrections-2026-10-20/mobile/overview-mobile-native-v3.png",
+        "image": "scene-art/warehouse-logic-2026-10-28/overview-mobile.webp",
         "width": 1024,
         "height": 1536,
         "hotspots": [

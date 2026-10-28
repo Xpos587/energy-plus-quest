@@ -1,8 +1,8 @@
 {
   "width": 1546,
   "height": 1017,
-  "source": "scene-art/warehouse-corrections-2026-10-20/overview-receiving-parallel-labels-v1.png",
-  "method": "Manually traced native receiving-to-dispatch alphabet bays, 20 October 2026; source geometry corrected separately",
+  "source": "scene-art/warehouse-logic-2026-10-28/overview.webp",
+  "method": "Manually traced native receiving-to-dispatch alphabet bays, 20 October 2026; source geometry corrected separately; 28 October 2026: plaques re-lettered so the alphabet starts at dispatch (А–Б) and ends at receiving (Ю–Я)",
   "regions": {
     "entrance": {
       "path": "M 140 492 L 143 449 L 170 427 L 186 422 L 229 435 L 237 453 L 254 447 L 270 452 L 272 439 L 278 436 L 280 418 L 295 414 L 300 424 L 292 434 L 291 496 L 304 505 L 296 527 L 261 533 L 243 548 L 146 518 Z",
@@ -17,30 +17,18 @@
       "contourCount": 1
     },
     "alphabet-camera": {
-      "path": "M 923 667 L 925 451 L 943 434 L 947 401 L 976 379 L 995 345 L 1030 328 L 1059 286 L 1086 265 L 1090 242 L 1110 231 L 1144 243 L 1165 255 L 1178 256 L 1178 477 L 989 691 Z",
+      "path": "M 379 520 L 381 304 L 399 287 L 403 254 L 432 232 L 451 198 L 486 181 L 515 139 L 542 118 L 546 95 L 566 84 L 600 96 L 621 108 L 634 109 L 634 330 L 445 544 Z",
       "anchor": {
-        "x": 0.6241914618369987,
-        "y": 0.4306784660766962
+        "x": 0.2723156532988357,
+        "y": 0.2861356932153392
       },
       "anchorPixel": [
-        965,
-        438
+        421,
+        291
       ],
       "contourCount": 1
     },
     "alphabet-socks": {
-      "path": "M 684 604 L 684 386 L 711 371 L 721 339 L 757 318 L 765 290 L 800 272 L 815 244 L 839 232 L 845 207 L 875 184 L 889 166 L 913 159 L 932 171 L 933 398 L 746 625 Z",
-      "anchor": {
-        "x": 0.49547218628719275,
-        "y": 0.3529990167158309
-      },
-      "anchorPixel": [
-        766,
-        359
-      ],
-      "contourCount": 1
-    },
-    "alphabet-boat": {
       "path": "M 623 584 L 626 365 L 652 351 L 663 320 L 701 298 L 702 269 L 738 251 L 751 222 L 777 210 L 782 186 L 818 159 L 837 144 L 870 151 L 874 375 L 684 604 Z",
       "anchor": {
         "x": 0.4592496765847348,
@@ -49,6 +37,18 @@
       "anchorPixel": [
         710,
         341
+      ],
+      "contourCount": 1
+    },
+    "alphabet-boat": {
+      "path": "M 684 604 L 684 386 L 711 371 L 721 339 L 757 318 L 765 290 L 800 272 L 815 244 L 839 232 L 845 207 L 875 184 L 889 166 L 913 159 L 932 171 L 933 398 L 746 625 Z",
+      "anchor": {
+        "x": 0.49547218628719275,
+        "y": 0.3529990167158309
+      },
+      "anchorPixel": [
+        766,
+        359
       ],
       "contourCount": 1
     },

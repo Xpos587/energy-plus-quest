@@ -23,18 +23,12 @@ export function sceneOutcomeImage(
   context: SceneContext,
 ): string {
   if (scene === "inventory") {
-    if (selectedId === "entrance" || selectedId === "keeper") {
-      return imageAsset(`scene-art/warehouse-corrections-2026-10-20/outcomes/${selectedId === "keeper" ? "keeper-v2" : "entrance"}-labels-v1.png`);
-    }
     if (selectedId === "wms") {
       return imageAsset("scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png");
     }
-    if (["entrance", "alphabet", "wms"].includes(selectedId)) {
-      return imageAsset(`scene-art/warehouse-polish-2026-10-17/${selectedId}.webp`);
-    }
-    return imageAsset(
-      `scene-art/warehouse-restored-2026-10-11/${selectedId}${selectedId === "keeper" ? "-v2" : ""}.webp`,
-    );
+    // Plaques read from dispatch (А–Б) back to receiving (Ю–Я), as the scenario says.
+    const variant = selectedId === "alphabet" ? `alphabet-${context.parcel}` : selectedId;
+    return imageAsset(`scene-art/warehouse-logic-2026-10-28/outcome-${variant}.webp`);
   }
   if (scene === "crane") return imageAsset(craneOutcomeImage(selectedId));
   if (scene === "lastmile") {

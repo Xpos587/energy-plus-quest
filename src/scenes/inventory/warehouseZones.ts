@@ -26,7 +26,7 @@ export function warehouseZone(id: WarehouseChoice, context: SceneContext) {
     },
     alphabet: {
       label: `Стеллаж ${range.label}`,
-      description: `Стеллаж ${range.label}, буква ${gift.letter}. Алфавит начинается слева, у приёмки.`,
+      description: `Стеллаж ${range.label}, буква ${gift.letter}. Алфавит начинается справа, у отгрузки.`,
       points:
         context.parcel === "camera"
           ? "272,199 294,204 294,331 272,324"

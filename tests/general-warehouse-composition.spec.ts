@@ -22,7 +22,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       const format = await stage.getAttribute('data-format');
       const image = stage.locator('picture img');
       await image.evaluate(i => i.decode());
-      expect(await image.evaluate(i => i.currentSrc)).toContain(format === 'mobile' ? 'overview-mobile-native-v3' : 'overview-receiving-parallel-labels-v1');
+      expect(await image.evaluate(i => i.currentSrc)).toContain(format === 'mobile' ? 'warehouse-logic-2026-10-28/overview-mobile' : 'warehouse-logic-2026-10-28/overview');
       await expect(stage.locator('[data-warehouse-annotations] svg')).toHaveAttribute('viewBox', format === 'mobile' ? '0 0 1024 1536' : '0 0 1546 1017');
       await expect(stage.locator('[data-hotspot]')).toHaveCount(4);
       for (const id of ['entrance', 'alphabet', 'keeper', 'wms']) {

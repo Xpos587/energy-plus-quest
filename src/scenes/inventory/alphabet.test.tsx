@@ -55,7 +55,7 @@ describe("warehouse alphabet follows gift names and starts at dispatch", () => {
         />,
       );
       expect(host.querySelector("img")?.getAttribute("src")).toBe(
-        "/scene-art/warehouse-polish-2026-10-17/alphabet.webp",
+        `/scene-art/warehouse-logic-2026-10-28/outcome-alphabet-${context.parcel}.webp`,
       );
       expect(host.querySelector("img")?.alt).toContain("закрытой коробке");
       expect(host.querySelector("img")?.alt).not.toContain(`буквой ${letter}`);
