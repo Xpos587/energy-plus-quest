@@ -6,34 +6,36 @@
 }
 
 .card { display: grid; gap: 12px; min-width: 0; color: #082946; }
-/* Same readouts as the truck card: value with icon over its label, a hairline between. */
+/* Readouts: label, then value with icon; a hairline between. */
 .facts {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0;
   font-family: var(--font-brand);
 }
+/* Label over value: labels share one row, a wrapped value only grows downward. */
 .facts > div {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-end;
-  gap: 4px;
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: 4px;
   min-width: 0;
   padding: 0 14px;
   border-left: 1px solid #dbe5ec;
 }
 .facts > div:first-child { padding-left: 0; border-left: 0; }
-.facts dt { margin: 0; color: #52677e; font-size: var(--type-support, 14px); line-height: 1.3; }
+.facts dt { grid-row: 1; margin: 0; color: #52677e; font-size: var(--type-support, 14px); line-height: 1.3; }
 .facts dd {
+  grid-row: 2;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 7px;
   margin: 0;
   font-size: var(--type-choice, 18px);
   font-weight: 700;
   line-height: 1.15;
 }
-.facts dd svg { flex: 0 0 18px; width: 18px; height: 18px; color: #52677e; stroke-width: 1.8; }
+.facts dd svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: calc(0.575em - 9px); color: #52677e; stroke-width: 1.8; } /* centred on the first line, not on a wrapped value */
 .note {
   margin: 0;
   padding-left: 10px;
@@ -44,6 +46,6 @@
 
 @media (max-width: 400px), (max-height: 500px) {
   .facts > div { padding-inline: 9px; }
-  .facts dd svg { flex-basis: 16px; width: 16px; height: 16px; }
+  .facts dd svg { flex-basis: 16px; width: 16px; height: 16px; margin-top: calc(0.575em - 8px); }
   .note { font-size: 14px; }
 }
