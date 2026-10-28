@@ -295,6 +295,8 @@ function ScenesSession({
   const [focusedChoice, setFocusedChoice] = useState<string>();
   // Barge: the quay pins are the only choice; a pin opens a card, the card confirms.
   const [pendingCrane, setPendingCrane] = useState<string>();
+  // After the card confirms, the quay plays the way out before the result.
+  const [playingCrane, setPlayingCrane] = useState<string>();
   const inspectsOnArt = scene.id === "crane" && state.phase === "choice";
   const pending = inspectsOnArt ? options.find(({ id }) => id === pendingCrane) : undefined;
   const score = totalScores(state, remainingScenes, context, initialScores);
@@ -316,9 +318,12 @@ function ScenesSession({
     ) {
       lastChoice.current[scene.id] = id;
       setPendingCrane(undefined);
+      setPlayingCrane(undefined);
       dispatch({ type: "CHOOSE", id });
     }
   };
+  const playing = inspectsOnArt ? playingCrane : undefined;
+  useEffect(() => setPlayingCrane(undefined), [state.sceneIndex, state.phase]);
 
   useEffect(() => {
     const screen = `${state.sceneIndex}:${state.phase}`;
@@ -507,7 +512,9 @@ function ScenesSession({
                 }}
                 selectedId={resultVisible ? selected?.id : pending?.id}
                 showResult={resultVisible}
-                onSelect={state.phase === "choice" ? (inspectsOnArt ? setPendingCrane : choose) : undefined}
+                onSelect={state.phase === "choice" && !playing ? (inspectsOnArt ? setPendingCrane : choose) : undefined}
+                playing={playing}
+                onPlayed={playing ? () => choose(playing) : undefined}
                 {...syncFocus}
               />
             )}
@@ -520,7 +527,10 @@ function ScenesSession({
               title={optionTitles[pending.id]}
               cancelLabel="К причалу"
               onCancel={() => setPendingCrane(undefined)}
-              onConfirm={() => choose(pending.id)}
+              onConfirm={() => {
+                setPendingCrane(undefined);
+                setPlayingCrane(pending.id);
+              }}
             >
               <CraneFacts id={pending.id as keyof typeof craneFacts} />
             </ChoiceInspection>

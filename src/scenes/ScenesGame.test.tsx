@@ -146,6 +146,9 @@ it.each([
           await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
           expect(container.querySelector("[data-result]")).toBeNull();
           await click(container.querySelector<HTMLButtonElement>("[data-choice-confirm]"));
+          // The quay plays the way out first; a tap skips straight to the result.
+          expect(container.querySelector("[data-result]")).toBeNull();
+          await click(container.querySelector<HTMLButtonElement>('[data-playing="remote"]'));
         } else
           await click(
             container.querySelector<HTMLButtonElement>(

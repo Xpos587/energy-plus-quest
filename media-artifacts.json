@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-10-27-barge-v3",
+  "release": "media-2026-10-28-barge-v4",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3406,6 +3406,234 @@
           "path": "public/scene-art/barge-v3/outcome-wait.webp",
           "sha256": "8042357290a803bd76c1bc805520528ede3e3555a46a3936b6f1709876d2cc5d",
           "bytes": 321210
+        }
+      ]
+    },
+    {
+      "name": "media-30-d5275167d1e4.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-28-barge-v4/media-30-d5275167d1e4.tar.gz",
+      "sha256": "d5275167d1e46cb01e126ee1ca770bb2868ff6c943cd5a15ba6b488c9918779f",
+      "bytes": 5377918,
+      "files": [
+        {
+          "path": "public/scene-art/barge-v4/desk/barge.webp",
+          "sha256": "27b7755cc11545785ec24b90fa9b1d115cb5daca0cc428a5995345e9c1800e1d",
+          "bytes": 72186
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/box.webp",
+          "sha256": "d32c4e69f4dfb790dc103de832728168f2e41b5798cf154aa48783fcc8f52330",
+          "bytes": 8390
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/far.webp",
+          "sha256": "82f23b6186df5b2cf882a1dcf2ce066b7b3ed83bf60e01fb0e0b30de5a4edee3",
+          "bytes": 37940
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/gift.webp",
+          "sha256": "ae248ea5174ff1602a784e3713a94d6415c62a8518df14ea5be55be09c45ad92",
+          "bytes": 5100
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/hook.webp",
+          "sha256": "86e6264838299f63a984e5345cbbbcd2cc9f010d8d6a38a75430b0f60d6a0cf1",
+          "bytes": 2046
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/ivan.webp",
+          "sha256": "ed5ed4747eded34401644015dcd274e8ab744aa83e322547042628b3f78f3efa",
+          "bytes": 5440
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/ladder.webp",
+          "sha256": "1e7f9b558d2aba6bb78999b3ef77e051bd4219afb3fe0f10651d4a2d4294a905",
+          "bytes": 14740
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/plate.webp",
+          "sha256": "5a4bfb173dfec77385152453d4cd2d4c8066389c8252563286f802613a668116",
+          "bytes": 299954
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/smoke.webp",
+          "sha256": "b370f8ca32f76ab38f98dd90a5b3d8a2002a1b8398510760507db080c50abbab",
+          "bytes": 2966
+        },
+        {
+          "path": "public/scene-art/barge-v4/desk/top.webp",
+          "sha256": "45cdea979263ec3a55d3a091ab977e56322c2c60cb8d8ac116c53ff132f694e0",
+          "bytes": 670010
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/barge.webp",
+          "sha256": "7b26b99d688e13dc5ee281a9a6d2c26eb60f7c8397d3b7a455fe5a5441bb0d36",
+          "bytes": 66260
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/box.webp",
+          "sha256": "83bb5384458e628652dbf5b550f13a922e2d210cc2ac06462f391693b6971174",
+          "bytes": 7828
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/far.webp",
+          "sha256": "6961914f7f7f6c2f3917855dad139a931bc32b2c062868ddf305b5a7ea6988be",
+          "bytes": 35460
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/gift.webp",
+          "sha256": "86f4265a6bfcc77cdfc6c752d90cc119c9a3b5fcc8768e730987bc87b6453201",
+          "bytes": 4738
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/hook.webp",
+          "sha256": "e38aba96031e2d703d7f57f7023d71e26abe9b614ceba256138557b5861ae4c1",
+          "bytes": 1872
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/ivan.webp",
+          "sha256": "76a76824902817b007d5e9f1c36432978c27ebeca68614fa4a5e2c1bc5001978",
+          "bytes": 5064
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/ladder.webp",
+          "sha256": "7173937255849f8054eb9789df1054fd3619a595692f8309a8e4e65faaec1523",
+          "bytes": 13512
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/plate.webp",
+          "sha256": "94b2d37c9981cd4b1460c0cf719aacc65a26f95477d82083ae2517ff99c7bba8",
+          "bytes": 310926
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/smoke.webp",
+          "sha256": "5d78dfb2cb0367b90b0f2c2ae7cd863990ca7c1946ce095d5d1cbda5aeaf1429",
+          "bytes": 3030
+        },
+        {
+          "path": "public/scene-art/barge-v4/mid/top.webp",
+          "sha256": "27e080e885d6c57405a2bd6f1e45b76acc68da3faffd715e26ffa70e7a7dc811",
+          "bytes": 604372
+        },
+        {
+          "path": "public/scene-art/barge-v4/outcome-petr.webp",
+          "sha256": "6165650ef771263516cf349d35fd8b36db7c6dc599b3137f2fe35923dc913b1d",
+          "bytes": 334258
+        },
+        {
+          "path": "public/scene-art/barge-v4/outcome-remote.webp",
+          "sha256": "1f9fd2eb0ca44985917fe3741596e5906fe9fa92c057ccf5f816073392e07a1a",
+          "bytes": 309794
+        },
+        {
+          "path": "public/scene-art/barge-v4/outcome-rush.webp",
+          "sha256": "cdb36c27e5f468346f95d28485cce369b2daa1da943e663d4b31acb28947cd3d",
+          "bytes": 323326
+        },
+        {
+          "path": "public/scene-art/barge-v4/outcome-wait.webp",
+          "sha256": "b24f5312c2019b90a73ab6fa9879fa397eb4479b8dac18a2e69bb9140987065f",
+          "bytes": 332780
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/barge.webp",
+          "sha256": "25829944c01070169067c8e75172c347c94db15fa7add46199715263f11efa7e",
+          "bytes": 55084
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/box.webp",
+          "sha256": "08a3712cd1cf5609858b7a449874a795ffe97f08212b301882b39a341fd2943d",
+          "bytes": 6142
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/far.webp",
+          "sha256": "f633202d6940068f801c809f1fafdcd52c66ff9bdd28ff7e9dc4cb11e37101bf",
+          "bytes": 32976
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/gift.webp",
+          "sha256": "609c7ca1e264175aa22076fe967d23343f37a18e7c07a638d5f7c0704ab1e57d",
+          "bytes": 4368
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/hook.webp",
+          "sha256": "b7a8798ce811d1edd6888ee65cc40a7a1f4d81328e5ee1ed966487afa2684cdc",
+          "bytes": 1472
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/ivan.webp",
+          "sha256": "5da9c29fe91d3ea5e9df5aff0827214f9274f6386d913b4c59286a30c26cd95a",
+          "bytes": 5054
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/ladder.webp",
+          "sha256": "ea2e87fae120c65b7b3808bda48d64feb1cb109cd83b73e36dab434793af64f8",
+          "bytes": 11066
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/plate.webp",
+          "sha256": "8c3ba112a7b57e46b22895335f2748f9b848d845d377c6df541c65faddc30eef",
+          "bytes": 288006
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/smoke.webp",
+          "sha256": "2d7450a6be9a58fdda690a06b8e0d3a52f61fe8ccd9a8c8af2a600f3675c64bc",
+          "bytes": 2522
+        },
+        {
+          "path": "public/scene-art/barge-v4/tall/top.webp",
+          "sha256": "b2266c37f1dbd3c67d3404146b1bfc8f2be8fb41fed12b1619415d0aa707173f",
+          "bytes": 394122
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/barge.webp",
+          "sha256": "bf4bc3cec8d27967247d9d22986c5944d4ad7a4bf7683d72d3698fc17e8f24ab",
+          "bytes": 74238
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/box.webp",
+          "sha256": "edb9220e2ba9023fce078bef377a834100f643ec2ab63da8ba2f83b9ec235512",
+          "bytes": 8694
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/far.webp",
+          "sha256": "040f3f07a6ae9c0fb74b7dd54d6e5024517de0c071b16e1e121643e400985bc2",
+          "bytes": 38924
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/gift.webp",
+          "sha256": "2b52cedefb2386a9903e18b42f5ee850f1aca8003910da4e91a7844f68bf24d7",
+          "bytes": 5216
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/hook.webp",
+          "sha256": "80df0f5dffd1026e4c7f5054d510bed5b9d2c238d0e5e03680a021585832002f",
+          "bytes": 2078
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/ivan.webp",
+          "sha256": "35f4aad373331b67ceac29d033ee13ee31db171748488488c6f2e56f172ef420",
+          "bytes": 5294
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/ladder.webp",
+          "sha256": "c460a7377434aecea9900f89ef9e50960e0d4bb3b342c388cdadf24fd67cdbaf",
+          "bytes": 15066
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/plate.webp",
+          "sha256": "3dc8b167f37cd68a9fdf7c3ba4f9e401cf11e3e0be0b021283baf2b9adcb8e20",
+          "bytes": 308500
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/smoke.webp",
+          "sha256": "e1b29b586684923de8c7989de779413ab968c31a24cec83fd08aa73407548a57",
+          "bytes": 3154
+        },
+        {
+          "path": "public/scene-art/barge-v4/wide/top.webp",
+          "sha256": "56229baf4e783ad5551b520acfe51f79facf2ebb026b2b8337738fd7eb4960ad",
+          "bytes": 673958
         }
       ]
     }
