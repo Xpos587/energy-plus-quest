@@ -22,7 +22,7 @@ describe("Compact flat cargo bay", () => {
       expect(host.querySelector(carrier === "old4"
         ? 'filter > feColorMatrix[type="matrix"]'
         : 'feColorMatrix[type="hueRotate"]')).not.toBeNull();
-      expect(host.querySelectorAll("button[data-hotspot]")).toHaveLength(4);
+      expect(host.querySelectorAll('button[data-hotspot^="place-"]')).toHaveLength(4);
     },
   );
 
@@ -40,13 +40,18 @@ describe("Compact flat cargo bay", () => {
       <CompactArt context={context} showResult={false} onSelect={() => {}} />,
     );
     expect(host.querySelector('[data-cargo-view="side-2d"]')).not.toBeNull();
-    expect(host.querySelectorAll("button[data-hotspot]")).toHaveLength(4);
-    expect(host.querySelectorAll("[data-loading-zone]")).toHaveLength(4);
+    expect(host.querySelectorAll('button[data-hotspot^="place-"]')).toHaveLength(4);
+    // Compact is a fifth object on the floor, marked like the places.
+    expect(host.querySelector('button[data-hotspot="auto"] [data-layout-badge]')?.textContent).toBe("5");
+    expect(host.querySelector('button[data-hotspot="auto"]')?.textContent).toContain("Compact сам подберёт место");
+    expect(host.querySelector("[data-compact-terminal]")).not.toBeNull();
+    expect(host.querySelectorAll('[data-loading-zone^="place-"]')).toHaveLength(4);
+    expect(host.querySelectorAll("[data-loading-zone]")).toHaveLength(5);
     expect(host.querySelector("image")?.getAttribute("href")).toContain(
       "compact-art/compact-environment-v54-wide.png",
     );
     const spaces = [
-      ...host.querySelectorAll<SVGRectElement>("rect[data-loading-zone]"),
+      ...host.querySelectorAll<SVGRectElement>('rect[data-loading-zone^="place-"]'),
     ].map((node) => ({
       x: Number(node.getAttribute("x")),
       y: Number(node.getAttribute("y")),

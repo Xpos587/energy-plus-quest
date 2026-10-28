@@ -1,10 +1,11 @@
-import { imageAsset } from "../../game/imageAssets";
-import { type CSSProperties, useLayoutEffect, useRef, useState } from "react";
+import { detailImageAsset, imageAsset } from "../../game/imageAssets";
+import { type CSSProperties, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { parcelNames } from "../names";
 import type { SceneArtProps } from "../types";
 import {
   CargoBay,
   cargoSpaces,
+  compactTerminal,
 } from "./CargoBay";
 import styles from "./CompactSectors.module.css";
 import { compactScene } from "./index";
@@ -35,13 +36,25 @@ export function CompactArt({
   const setFocused = onFocusChange ?? setOwnFocus;
   // Inspection uses the same artwork and coordinate plane as the overview.
   // Only the camera transform changes; replacing the canvas loses the truck context.
-  const frame = showResult
-    ? compactResultFrames[`${context.parcel}:${selectedId}`]
-    : undefined;
+  // The result artwork is fetched while the card is read. Confirming keeps the
+  // current truck on screen until that image decodes, so no loader flashes.
+  const key = `${context.parcel}:${selectedId}`;
+  const wantedOutcome = selectedId ? compactResultArtwork[key] : undefined;
+  const [decodedOutcome, setDecodedOutcome] = useState(showResult ? wantedOutcome : undefined);
+  useEffect(() => {
+    if (!wantedOutcome) return;
+    let live = true;
+    const image = new Image();
+    image.src = detailImageAsset(wantedOutcome);
+    const done = () => live && setDecodedOutcome(wantedOutcome);
+    // A failed decode still hands over to CargoBay, which owns fallback and retry.
+    (image.decode?.() ?? Promise.resolve()).then(done, done);
+    return () => { live = false; };
+  }, [wantedOutcome]);
+  const resultReady = !wantedOutcome || decodedOutcome === wantedOutcome;
+  const frame = showResult && resultReady ? compactResultFrames[key] : undefined;
   const cameraDetail = !!frame;
-  const outcomeImage = showResult
-    ? compactResultArtwork[`${context.parcel}:${selectedId}`]
-    : undefined;
+  const outcomeImage = showResult && resultReady ? wantedOutcome : undefined;
   const [measuredHeight, setCanvasHeight] = useState(520);
   const canvasHeight = frame
     ? (frame.height ?? 874)
@@ -77,28 +90,23 @@ export function CompactArt({
   const layoutProfile = frame?.unloaded ? "unloaded" : portrait ? "portrait" : "wide";
   const regions = layoutRegions(layout, layoutProfile);
   const markersVisible = showResult || !!onSelect || !!selectedId;
-  const activeSpaces = markersVisible
-    ? regions.map((space) => ({ ...space, y: space.y + offsetY }))
-    : [];
-  const inspectedId =
-    selectedId === "auto"
-      ? context.parcel === "boat"
-        ? "place-4"
-        : "place-3"
-      : selectedId;
-  const inspectedSpace = !showResult
-    ? regions.find((space) => space.id === inspectedId)
+  // Compact is a fifth object in the same world, marked like the four places.
+  const terminal = markersVisible && !showResult
+    ? compactTerminal[portrait ? "portrait" : "wide"]
     : undefined;
-  // Include the selected space and the cabin's right edge, with a little breathing room.
-  const inspectionScale = inspectedSpace
-    ? Math.min(1.35, Math.max(1, 1040 / (1040 - inspectedSpace.x + 64)))
-    : 1;
-  const inspectionCenter = inspectedSpace
-    ? Math.min((inspectedSpace.x + 1040) / 2, 1040 - 520 / inspectionScale)
-    : 520;
+  const choiceRegions = terminal
+    ? [...regions, { ...terminal, id: "auto", number: 5 }]
+    : regions;
+  const activeSpaces = markersVisible
+    ? choiceRegions.map((space) => ({ ...space, y: space.y + offsetY }))
+    : [];
+  const inspectedSpace = !showResult
+    ? choiceRegions.find((space) => space.id === selectedId)
+    : undefined;
   const manual = /^place-([1-4])$/.exec(selectedId ?? "");
+  // Compact's pick stays hidden until the choice is confirmed.
   const placement =
-    selectedId === "auto"
+    selectedId === "auto" && showResult
       ? context.parcel === "boat"
         ? 4
         : 3
@@ -145,9 +153,6 @@ export function CompactArt({
       data-detail-zone={cameraDetail ? selectedId : undefined}
       style={
         {
-          "--inspection-scale": inspectionScale,
-          "--inspection-center": inspectionCenter,
-          "--inspection-shift": `${((520 - inspectionCenter) / 1040) * 100}%`,
           "--canvas-height": canvasHeight,
           "--canvas-aspect": `1040 / ${canvasHeight}`,
           "--detail-x": frame?.x,
@@ -181,9 +186,14 @@ export function CompactArt({
           imageHeight={frame?.height}
           carrier={context.carrier}
           regions={markersVisible ? regions : []}
+          terminal={terminal}
+          autoActive={selectedId === "auto"}
           offsetY={offsetY}
         />
-        {activeSpaces.map((space, index) => (
+        {activeSpaces.map((space, index) => {
+          const badge = layout.profiles[layoutProfile][index]?.badge ??
+            { x: space.x, y: space.y - offsetY, size: 24 };
+          return (
           <button
             key={space.id}
             type="button"
@@ -192,7 +202,7 @@ export function CompactArt({
             data-focused={focused === space.id}
             data-choice-id={space.id}
             aria-label={`${options[index].label}. ${options[index].accessibleDescription}`}
-            aria-pressed={placement === space.number}
+            aria-pressed={space.id === "auto" ? selectedId === "auto" : placement === space.number}
             aria-disabled={locked}
             disabled={locked}
             style={
@@ -210,14 +220,22 @@ export function CompactArt({
             onClick={() => onSelect?.(space.id)}
           >
             <span className={styles.number} data-layout-badge={space.id} style={{
-              left: `calc(${layout.profiles[layoutProfile][index].badge.x - space.x} / 1040 * 100cqw)`,
-              top: `calc(${layout.profiles[layoutProfile][index].badge.y - (space.y - offsetY)} / 1040 * 100cqw)`,
-              width: layout.profiles[layoutProfile][index].badge.size,
-              height: layout.profiles[layoutProfile][index].badge.size,
-              fontSize: layout.profiles[layoutProfile][index].badge.size * 15 / 24,
+              left: `calc(${badge.x - space.x} / 1040 * 100cqw)`,
+              // The stand's badge sits by its base so phones still show the screen.
+              top: space.id === "auto" ? `calc(100% - ${badge.size}px)` : `calc(${badge.y - (space.y - offsetY)} / 1040 * 100cqw)`,
+              width: badge.size,
+              height: badge.size,
+              fontSize: badge.size * 15 / 24,
             }}>{space.number}</span>
+            {space.id === "auto" && (
+              // Names the stand on every screen size; the tablet wordmark is too small on phones.
+              <span className={styles.terminalCaption}>
+                <b>Compact</b> сам подберёт место
+              </span>
+            )}
           </button>
-        ))}
+          );
+        })}
       </div>
     </figure>
   );

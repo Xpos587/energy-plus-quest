@@ -10,7 +10,8 @@ test('Compact result camera respects reduced motion',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
  await page.goto('/scenes.html?scene=compact&parcel=boat&recipient=alva&carrier=old');
  await readCondition(page);
- await page.locator('[data-scene-choice="place-2"]').click();
+ await page.locator('[data-hotspot="place-2"]').click();
+ await page.locator('[data-choice-confirm]').click();
  await expect(page.locator('[data-world-plane]')).toHaveCSS('transition-duration','0s');
 });
 for(const [width,height] of [[320,568],[390,844],[844,390],[1440,900]]) {
@@ -19,7 +20,7 @@ for(const [width,height] of [[320,568],[390,844],[844,390],[1440,900]]) {
   await page.goto('/scenes.html?scene=compact&parcel=boat&recipient=alva&carrier=old');
  await readCondition(page);
   const zones=page.locator('[data-loading-zone]');
-  await expect(zones).toHaveCount(4);
+  await expect(zones).toHaveCount(5);
   for(const zone of await zones.all()) {
    await expect(zone).toBeInViewport({ratio:1});
    expect(await zone.evaluate(e=>Number(getComputedStyle(e).strokeOpacity))).toBe(1);
@@ -27,6 +28,7 @@ for(const [width,height] of [[320,568],[390,844],[844,390],[1440,900]]) {
   }
   for(const id of ['place-1','place-2','place-3','place-4']) {
    await page.locator(`[data-hotspot="${id}"]`).click();
+   await page.locator('[data-choice-confirm]').click();
    await expect(page.locator('[data-result-reader]')).toBeVisible();
    const art=page.locator('[data-world-scene=compact]');
    if(id==='place-3')await expect(art).toHaveAttribute('data-failure-art','boat-place-3');

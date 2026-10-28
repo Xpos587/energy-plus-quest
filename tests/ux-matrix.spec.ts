@@ -171,7 +171,7 @@ for (const scene of Object.keys(scenes) as SceneId[]) {
           ...(await visibleControlDefects(page, page.locator('[data-scene-briefing]'), "choices")),
           ...desktopChoices.defects,
         );
-        const attr = scene === "crane" ? "data-hotspot" : "data-scene-choice";
+        const attr = ["crane", "compact"].includes(scene) ? "data-hotspot" : "data-scene-choice";
         const available = await page.locator(`[${attr}]`).evaluateAll((buttons, attr) =>
           buttons.map((button) => button.getAttribute(attr)), attr,
         );
@@ -182,7 +182,7 @@ for (const scene of Object.keys(scenes) as SceneId[]) {
           const defects = [...introDefects];
           const choice = page.locator(`[${attr}="${option}"]`);
           await choice.click();
-          if (scene === "crane") await page.locator("[data-choice-confirm]").click();
+          if (["crane", "compact"].includes(scene)) await page.locator("[data-choice-confirm]").click();
           await expect(page.locator("[data-result-reader]")).toBeVisible();
           const result = await resultStates(page, scene, defects);
 

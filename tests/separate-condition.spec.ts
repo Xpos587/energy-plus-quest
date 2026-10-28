@@ -122,10 +122,10 @@ for (const [width, height] of [
       await about.click();
       expect(await read(page)).toBe(expected);
       const answer = page.locator(
-        `[${scene === "crane" ? "data-hotspot" : "data-scene-choice"}="${answers[scene as keyof typeof answers]}"]`,
+        `[${["crane", "compact"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${answers[scene as keyof typeof answers]}"]`,
       );
       await answer.click();
-      if (scene === "crane") await page.locator("[data-choice-confirm]").click();
+      if (["crane", "compact"].includes(scene)) await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-result]")).toBeVisible();
       await page
         .getByRole("button", { name: "Изменить выбор", exact: true })

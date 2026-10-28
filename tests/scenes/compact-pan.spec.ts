@@ -38,6 +38,6 @@ for (const viewport of [
       })).toBe(true);
     }
     await stage.locator('[data-hotspot="place-4"]').press("Enter");
-    await expect(page.locator('[data-choice-inspection="compact:place-4"]')).toBeVisible();
+    await expect(page.locator('[data-choice-inspection="place-4"]')).toBeVisible();
   });
 }

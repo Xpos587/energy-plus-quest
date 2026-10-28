@@ -54,11 +54,13 @@ it("separates complete condition from choice and remembers reading across result
     await click(find("О задаче"));
     expect(condition()).not.toBeNull();
     await read();
-    await click(host.querySelector('[data-scene-choice="place-1"]'));
+    await click(host.querySelector('[data-hotspot="place-1"]'));
+    await click(host.querySelector("[data-choice-confirm]"));
     expect(host.querySelector("[data-result]")).not.toBeNull();
     await click(find("Изменить выбор"));
     expect(condition()).toBeNull();
-    await click(host.querySelector('[data-scene-choice="place-1"]'));
+    await click(host.querySelector('[data-hotspot="place-1"]'));
+    await click(host.querySelector("[data-choice-confirm]"));
     for (let i = 0; i < 40 && find("Читать дальше"); i++)
       await click(find("Читать дальше"));
     await click(find("Продолжить"));

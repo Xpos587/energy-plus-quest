@@ -109,7 +109,7 @@ describe("Compact flat sector artwork", () => {
       />,
     );
     expect(host.querySelector('[data-cargo-view="side-2d"]')).not.toBeNull();
-    expect(host.querySelectorAll("[data-loading-zone]")).toHaveLength(4);
+    expect(host.querySelectorAll('[data-loading-zone^="place-"]')).toHaveLength(4);
     expect(host.querySelector("[data-placed-parcel]")).toBeNull();
     expect(host.querySelector('[aria-pressed="true"]')).toBeNull();
   });
@@ -188,7 +188,8 @@ it("shows full Compact result text without decorative consequence thumbnails", a
         expect(host.querySelector("[data-compact-consequence]")).toBeNull();
         const proceed = [...host.querySelectorAll("button")].find((b) => b.textContent === "К выбору");
         if (proceed) await act(async () => proceed.click());
-        await click(`[data-scene-choice="${id}"]`);
+        await click(`[data-hotspot="${id}"]`);
+        await click("[data-choice-confirm]");
         expect(host.querySelector("[data-compact-consequence]")).toBeNull();
         expect(host.querySelector("[data-choice-inspection]")).toBeNull();
         const option = compactScene.options(context(parcel))[index];

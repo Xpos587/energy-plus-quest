@@ -54,7 +54,7 @@ for (const parcel of ["socks", "camera", "boat"] as const) {
         await marker.press("Space");
       } else await marker.click();
       await expect(
-        page.locator(`[data-choice-inspection="compact:place-${place}"]`),
+        page.locator(`[data-choice-inspection="place-${place}"]`),
       ).toBeVisible();
       await expect(page.locator("[data-compact-consequence]")).toHaveCount(0);
       await expect(marker).toBeEnabled();
@@ -101,7 +101,7 @@ for (const parcel of ["socks", "camera", "boat"] as const) {
     await page.getByRole("button", { name: "К выбору", exact: true }).click();
     await page.locator('[data-choice-id="auto"]').click();
     await expect(
-      page.locator('[data-loading-zone][data-active="true"]'),
+      page.locator('[data-loading-zone^="place-"][data-active="true"]'),
     ).toHaveCount(0);
     await page.locator("[data-choice-confirm]").click();
     await expect(page.locator('[data-world-scene="compact"]')).toHaveAttribute(

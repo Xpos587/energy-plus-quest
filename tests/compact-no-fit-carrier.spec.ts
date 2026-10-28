@@ -8,7 +8,8 @@ for (const carrier of ["old", "old4", "crew"] as const) {
       await page.goto(`/scenes.html?scene=compact&parcel=boat&recipient=alva&carrier=${carrier}`);
       const next = page.getByRole("button", { name: /^(Далее|К выбору)$/ });
       for (let i = 0; i < 20 && await next.isVisible(); i++) await next.click();
-      await page.locator('[data-scene-choice="place-3"]').click();
+      await page.locator('[data-hotspot="place-3"]').click();
+      await page.locator("[data-choice-confirm]").click();
       const result = page.locator('[data-failure-art="boat-place-3"]');
       await expect(result).toBeVisible();
       const image = result.locator("img");

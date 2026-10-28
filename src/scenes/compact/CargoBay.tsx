@@ -10,6 +10,39 @@ import { defaultLayout, layoutRegions } from "./layout";
 export const cargoSpaces = layoutRegions(defaultLayout, "wide");
 export const portraitCargoSpaces = layoutRegions(defaultLayout, "portrait");
 export const unloadedCargoSpaces = layoutRegions(defaultLayout, "unloaded");
+/** Compact loader's tablet stand on the floor between the trailer axles and the tractor. */
+export const compactTerminal = {
+  wide: { x: 420, y: 372, width: 92, height: 132 },
+  portrait: { x: 420, y: 606, width: 92, height: 132 },
+};
+
+function TerminalStand({ x, y }: { x: number; y: number }) {
+  return (
+    <g transform={`translate(${x + 2} ${y + 2}) scale(1.2)`} data-compact-terminal
+      stroke="#1d2b45" strokeWidth="2.2" strokeLinejoin="round">
+      <ellipse cx="36" cy="102" rx="30" ry="5" fill="#1d2b45" opacity="0.16" stroke="none" />
+      <rect x="13" y="94" width="46" height="8" rx="3" fill="#8e9cb1" />
+      <rect x="32" y="44" width="8" height="51" fill="#c3cdd9" />
+      <g transform="rotate(-6 36 26)">
+        <rect x="3" y="6" width="66" height="44" rx="7" fill="#26395c" />
+        <rect x="8" y="11" width="56" height="34" rx="3" fill="#4ba3ef" strokeWidth="1.4" />
+        <text x="36" y="22" textAnchor="middle" fill="#fff" stroke="none"
+          style={{ font: "700 10px var(--font-brand)", letterSpacing: "0.2px" }}>Compact</text>
+        {/* Mini truck with the slot Compact picks. */}
+        <g transform="translate(23 26.5) scale(0.6) translate(-13 -19)">
+          <g stroke="#fff" strokeWidth="2.6" fill="none">
+            <rect x="13" y="19" width="31" height="15" rx="1.5" />
+            <path d="M44 23 H52 L57 28 V34 H44" />
+          </g>
+          <rect x="30" y="21" width="11" height="11" fill="#ffb02e" stroke="none" />
+          <circle cx="19" cy="37" r="3" fill="#fff" stroke="none" />
+          <circle cx="39" cy="37" r="3" fill="#fff" stroke="none" />
+          <circle cx="52" cy="37" r="3" fill="#fff" stroke="none" />
+        </g>
+      </g>
+    </g>
+  );
+}
 
 export function CargoBay({
   placement,
@@ -20,6 +53,8 @@ export function CargoBay({
   imageHeight,
   carrier,
   regions,
+  terminal,
+  autoActive,
   offsetY = (canvasHeight - (portrait ? 874 : 520)) / 2,
 }: {
   placement?: number;
@@ -30,6 +65,9 @@ export function CargoBay({
   imageHeight?: number;
   carrier?: CarrierId;
   regions?: typeof cargoSpaces;
+  /** Draws the Compact stand and its choice outline when the choice is open. */
+  terminal?: (typeof compactTerminal)["wide"];
+  autoActive?: boolean;
   offsetY?: number;
 }) {
   const edgeMask = useId();
@@ -154,6 +192,20 @@ export function CargoBay({
           rx="6"
         />
       ))}
+      {terminal && <>
+        <TerminalStand x={terminal.x} y={terminal.y + offsetY} />
+        <rect
+          data-loading-zone="auto"
+          data-active={autoActive}
+          data-focused={focused === "auto"}
+          className={styles.space}
+          x={terminal.x}
+          y={terminal.y + offsetY}
+          width={terminal.width}
+          height={terminal.height}
+          rx="6"
+        />
+      </>}
     </svg>
   );
 }

@@ -120,6 +120,25 @@
   background: var(--orange);
   color: #fff;
 }
+.terminalCaption {
+  position: absolute;
+  left: calc(100% + 6px);
+  bottom: 0;
+  display: grid;
+  width: max-content;
+  max-width: 132px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #fffffff2;
+  box-shadow: 0 1px 3px #08294633;
+  color: #36506b;
+  font: 500 12px / 1.2 var(--font-brand);
+  text-align: left;
+  pointer-events: none;
+}
+.terminalCaption b { color: #075d9b; font-size: 14px; font-weight: 700; }
+.marker[aria-pressed="true"] .terminalCaption b,
+.marker:hover:not(:disabled) .terminalCaption b { color: var(--orange); }
 .marker:focus-visible {
   outline: 3px solid #164f93;
   outline-offset: 3px;
@@ -216,13 +235,8 @@
   position: absolute; inset: 0 auto auto 50%;
   width: min(100cqw, calc(100cqh * 1040 / var(--canvas-height, 520)));
   height: auto;
-  transform: translate(-50%, 0) scale(var(--inspection-scale, 1)) translateX(var(--inspection-shift, 0%));
-  transform-origin: center top;
-  transition: transform 360ms cubic-bezier(.22, 1, .36, 1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .stage[data-fixed-choice] .plane { transition: none; }
+  /* No inspection zoom: each viewport has its own composed overview; the selected place is highlighted, cab stays in view. */
+  transform: translate(-50%, 0);
 }
 .stage[data-fixed-result][data-camera-detail] .plane {
   transition: width 360ms cubic-bezier(.22,1,.36,1), left 360ms cubic-bezier(.22,1,.36,1), top 360ms cubic-bezier(.22,1,.36,1), transform 360ms cubic-bezier(.22,1,.36,1);
@@ -230,3 +244,4 @@
 @media (prefers-reduced-motion: reduce) {
   .stage[data-fixed-result][data-camera-detail] .plane { transition: none; }
 }
+

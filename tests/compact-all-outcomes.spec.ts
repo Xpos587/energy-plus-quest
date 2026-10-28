@@ -5,8 +5,8 @@ for (const parcel of ['socks', 'camera', 'boat'] as const) {
    await page.goto(`/scenes.html?scene=compact&parcel=${parcel}&recipient=alva`);
    const intro = page.getByRole('button',{name:/^(Далее|К выбору)$/});
    for(let n=0;n<20&&await intro.isVisible();n++) await intro.click();
-   const choice=page.locator(`[data-scene-choice="${id}"]`);
-   await choice.click();
+   const choice=page.locator(`[data-hotspot="${id}"]`);
+   await choice.click();await page.locator('[data-choice-confirm]').click();
    await expect(page.locator('[data-result-reader]')).toBeVisible();
    for (const overlay of await page.locator('[data-loading-zone], [data-hotspot]').all())
     await expect(overlay).toBeHidden();
@@ -15,7 +15,7 @@ for (const parcel of ['socks', 'camera', 'boat'] as const) {
    await expect(page.locator('[data-result-reader]')).toHaveCount(0);
    for (const overlay of await page.locator('[data-loading-zone], [data-hotspot]').all())
     await expect(overlay).toBeVisible();
-   await choice.click();
+   await choice.click();await page.locator('[data-choice-confirm]').click();
    await expect(page.locator('[data-result-reader]')).toBeVisible();
    const pages:string[]=[];
    for(let n=0;n<30;n++) {

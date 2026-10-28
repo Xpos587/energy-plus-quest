@@ -40,11 +40,8 @@ it("preserves the compact plane while switching between choice and result artwor
     }
     const overviewPlane = plane();
     expect(overviewPlane).not.toBeNull();
-    await click(
-      container.querySelector<HTMLButtonElement>(
-        '[data-scene-choice="place-4"]',
-      ),
-    );
+    await click(container.querySelector<HTMLButtonElement>('[data-hotspot="place-4"]'));
+    await click(container.querySelector<HTMLButtonElement>("[data-choice-confirm]"));
     const resultPlane = plane();
     expect(resultPlane).not.toBeNull();
     expect(resultPlane).toBe(overviewPlane);
@@ -141,8 +138,8 @@ it.each([
             ),
           );
         }
-        if (id === "remote") {
-          // Barge: the pin opens a card; only the card commits the choice.
+        if (id === "remote" || id === "auto" || id.startsWith("place-")) {
+          // Truck and barge: the place opens a card; only the card commits the choice.
           await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
           expect(container.querySelector("[data-result]")).toBeNull();
           await click(container.querySelector<HTMLButtonElement>("[data-choice-confirm]"));
@@ -261,7 +258,7 @@ it("compact separates its condition and keeps the selected gift visible in the h
       })[1],
     );
     expect(
-      container.querySelector('[data-scene-choice="place-1"]'),
+      container.querySelector('[data-hotspot="place-1"]'),
     ).not.toBeNull();
     await act(async () =>
       root.render(

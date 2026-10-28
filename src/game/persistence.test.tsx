@@ -170,9 +170,8 @@ it("restores a direct scene result, then forgets the answer after revision", asy
     if (!next) throw new Error("Missing condition navigation");
     fireEvent.click(next);
   }
-  fireEvent.click(
-    container.querySelector<HTMLButtonElement>('[data-scene-choice="auto"]')!,
-  );
+  fireEvent.click(container.querySelector<HTMLButtonElement>('[data-hotspot="auto"]')!);
+  fireEvent.click(container.querySelector<HTMLButtonElement>("[data-choice-confirm]")!);
   expect(container.querySelector("[data-choice-inspection]")).toBeNull();
   expect(container.querySelector("[data-result]")).not.toBeNull();
   mounted.unmount();

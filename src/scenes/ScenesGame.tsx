@@ -20,6 +20,7 @@ import { sceneChoiceImage } from "./artwork";
 import { parcelNames, recipientNames } from "./names";
 import { choiceLabel } from "./choiceLabel";
 import { compactScene } from "./compact";
+import { CompactCard } from "./compact/CompactCard";
 import { craneScene } from "./crane";
 import { craneCaptions, craneFacts } from "./crane/artwork";
 import { CraneDecisionContext, CraneFacts } from "./crane/CraneDecisionContext";
@@ -293,10 +294,10 @@ function ScenesSession({
   const selected = options.find(({ id }) => id === state.answers[scene.id]);
   const [resultBeat, setResultBeat] = useState(0);
   const [focusedChoice, setFocusedChoice] = useState<string>();
-  // Barge: the quay pins are the only choice; a pin opens a card, the card confirms.
-  const [pendingCrane, setPendingCrane] = useState<string>();
-  const inspectsOnArt = scene.id === "crane" && state.phase === "choice";
-  const pending = inspectsOnArt ? options.find(({ id }) => id === pendingCrane) : undefined;
+  // Truck and barge: the places on the art are the only choice; a place opens a card, the card confirms.
+  const [pendingId, setPendingId] = useState<string>();
+  const inspectsOnArt = (scene.id === "crane" || scene.id === "compact") && state.phase === "choice";
+  const pending = inspectsOnArt ? options.find(({ id }) => id === pendingId) : undefined;
   const score = totalScores(state, remainingScenes, context, initialScores);
   const { Art } = scene;
   const resultVisible = state.phase === "result" && selected !== undefined;
@@ -315,7 +316,7 @@ function ScenesSession({
       options.some((option) => option.id === id)
     ) {
       lastChoice.current[scene.id] = id;
-      setPendingCrane(undefined);
+      setPendingId(undefined);
       dispatch({ type: "CHOOSE", id });
     }
   };
@@ -327,7 +328,7 @@ function ScenesSession({
     const destination = stage.current?.querySelector<HTMLElement>(
       '[data-reading="true"] [data-testid="scene-intro"]',
     ) ?? (state.phase === "choice"
-      ? stage.current?.querySelector<HTMLButtonElement>(`:is([data-scene-choice], [data-hotspot])[data-${remainingScenes[state.sceneIndex].id === "crane" ? "hotspot" : "scene-choice"}="${lastChoice.current[remainingScenes[state.sceneIndex].id] ?? ""}"]`)
+      ? stage.current?.querySelector<HTMLButtonElement>(`:is([data-scene-choice], [data-hotspot])[data-${["crane", "compact"].includes(remainingScenes[state.sceneIndex].id) ? "hotspot" : "scene-choice"}="${lastChoice.current[remainingScenes[state.sceneIndex].id] ?? ""}"]`)
         ?? stage.current?.querySelector<HTMLButtonElement>("[data-scene-choice], [data-hotspot]")
       : stage.current?.querySelector<HTMLHeadingElement>("h2"));
     destination?.focus({ preventScroll: true });
@@ -451,34 +452,22 @@ function ScenesSession({
                 ) : undefined
               }
               inspecting={!!pending}
-              onOpen={() => setPendingCrane(undefined)}
+              onOpen={() => setPendingId(undefined)}
               action={inspectsOnArt ? undefined : (
                 <SceneChoices
                   variant="scene"
                   options={options.map((option) => ({
                     id: option.id,
-                    showBadge: option.id !== "auto",
                     detail: places?.[option.id][1],
-                    accessibleLabel:
-                      scene.id === "compact" && option.id !== "auto"
-                        ? `${optionTitles[option.id]}: ${places![option.id][0]}`
-                        : undefined,
                     label:
                       places
                         ? places[option.id][0]
-                        : option.id === "auto"
-                          ? "Поручить размещение Compact"
-                          : scene.id === "inventory" && option.id === "alphabet"
-                            ? `Стеллаж «${inventoryAlphabet[context.parcel].letter}»`
-                            : optionTitles[option.id] ?? choiceLabel(option.label),
+                        : scene.id === "inventory" && option.id === "alphabet"
+                          ? `Стеллаж «${inventoryAlphabet[context.parcel].letter}»`
+                          : optionTitles[option.id] ?? choiceLabel(option.label),
                   }))}
                   {...syncFocus}
                   onInspect={choose}
-                  badgeShape={
-                    scene.id === "compact" || scene.id === "crane"
-                      ? "square"
-                      : "circle"
-                  }
                 />
               )}
             />
@@ -505,25 +494,32 @@ function ScenesSession({
                 }}
                 selectedId={resultVisible ? selected?.id : pending?.id}
                 showResult={resultVisible}
-                onSelect={state.phase === "choice" ? (inspectsOnArt ? setPendingCrane : choose) : undefined}
+                onSelect={state.phase === "choice" ? (inspectsOnArt ? setPendingId : choose) : undefined}
                 {...syncFocus}
               />
             )}
             {inspectsOnArt && !resultVisible && (
-              <CarrierTapHint selectedId={pending?.id} text="Нажмите на номер на причале" />
+              <CarrierTapHint
+                selectedId={pending?.id}
+                text={scene.id === "compact" ? "Выберите, куда поставить груз" : "Нажмите на номер на причале"}
+              />
             )}
           </section>
           {pending && (
             <ChoiceInspection
               selectionKey={pending.id}
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
-              eyebrow={craneCaptions[pending.id as keyof typeof craneCaptions]}
-              title={optionTitles[pending.id]}
-              cancelLabel="К причалу"
-              onCancel={() => setPendingCrane(undefined)}
+              eyebrow={scene.id === "compact"
+                ? pending.id === "auto" ? "Система размещения груза" : optionTitles[pending.id]
+                : craneCaptions[pending.id as keyof typeof craneCaptions]}
+              title={scene.id === "compact" ? pending.id === "auto" ? "Compact подберёт место" : places![pending.id][0] : optionTitles[pending.id]}
+              cancelLabel={scene.id === "compact" ? "К кузову" : "К причалу"}
+              onCancel={() => setPendingId(undefined)}
               onConfirm={() => choose(pending.id)}
             >
-              <CraneFacts id={pending.id as keyof typeof craneFacts} />
+              {scene.id === "compact"
+                ? <CompactCard id={pending.id} />
+                : <CraneFacts id={pending.id as keyof typeof craneFacts} />}
             </ChoiceInspection>
           )}
           {resultVisible ? (
