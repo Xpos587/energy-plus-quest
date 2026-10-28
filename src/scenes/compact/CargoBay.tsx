@@ -79,7 +79,7 @@ export function CargoBay({
   // identity on the same truck here without recoloring cargo or surroundings.
   const hue = carrier === "old" ? 150 : carrier === "old4" ? 200 :
     carrier === "crew" || carrier === "express" ? -80 : undefined;
-  const expandedBackground = !image && portrait && canvasHeight > 874;
+  const expandedBackground = portrait && canvasHeight > (imageHeight ?? 874);
   const source = image ?? imageAsset(portrait
     ? 'compact-art/compact-environment-v53-portrait.png'
     : 'compact-art/compact-environment-v54-wide.png');

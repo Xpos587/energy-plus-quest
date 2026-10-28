@@ -56,8 +56,9 @@ export function CompactArt({
   const cameraDetail = !!frame;
   const outcomeImage = showResult && resultReady ? wantedOutcome : undefined;
   const [measuredHeight, setCanvasHeight] = useState(520);
+  // A result never zooms: a taller stage extends the background around the whole truck.
   const canvasHeight = frame
-    ? (frame.height ?? 874)
+    ? Math.max(frame.height ?? 874, measuredHeight)
     : outcomeImage
       ? Math.max(390, Math.min(874, measuredHeight))
       : // Never crop the wide truck: a stage wider than 2:1 letterboxes instead.
@@ -83,7 +84,7 @@ export function CompactArt({
     };
   }, []);
   const offsetY = cameraDetail
-    ? 0
+    ? (canvasHeight - (frame?.height ?? 874)) / 2
     : outcomeImage
       ? -Math.max(0, Math.min(274, 874 - canvasHeight - 36))
       : (canvasHeight - (portrait ? 874 : 520)) / 2;

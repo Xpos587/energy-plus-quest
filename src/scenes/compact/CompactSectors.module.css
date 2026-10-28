@@ -210,8 +210,9 @@
   aspect-ratio: var(--canvas-aspect);
   transform: none;
 }
-.stage[data-fixed-result] .marker,
-.stage[data-fixed-result] .space { display: none; }
+/* The result keeps only the chosen place marked, so the gift is found at a glance. */
+.stage[data-fixed-result] .marker:not([aria-pressed="true"]),
+.stage[data-fixed-result] .space:not([data-active="true"]) { display: none; }
 @media (min-width: 901px), (orientation: landscape) {
   .stage[data-camera-detail] .plane {
     --detail-width: var(--detail-desktop-width);
