@@ -391,7 +391,7 @@ export function LogistCertificate({
             <Download size={21} aria-hidden="true" />
             {busy ? "Сохраняем сертификат…" : "Скачать сертификат"}
           </button>
-          <small>PNG-файл с вашим результатом</small>
+          <small>PDF-файл, текст от первого лица</small>
         </div>
         {error && (
           <p role="alert" className={styles.error}>
