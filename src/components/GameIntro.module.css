@@ -6,7 +6,7 @@
 .main{flex:1;display:flex;flex-direction:column;min-height:0}
 
 .primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;border:0;border-radius:12px;min-height:60px;font-family:inherit;font-size:var(--type-action);line-height:var(--type-control-leading);font-weight:700;transition:background-color .15s ease,transform .15s ease}
-.primary{background:var(--blue);color:#fff;min-width:210px;box-shadow:0 8px 20px #075d9b18}
+.primary{background:var(--blue);color:#fff;min-width:210px}
 .primary:hover{background:#004b80}
 .secondary{background:var(--action-secondary);color:var(--action-secondary-text);box-shadow:inset 0 0 0 1.5px var(--action-secondary-border)}
 .secondary:hover{background:var(--action-secondary-hover)}
@@ -62,8 +62,9 @@
 /* Page 0 — story + the journey the player is about to make. */
 .story{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,48px);font-size:var(--type-body);line-height:var(--type-body-leading);color:var(--text)}
 .lead{font-weight:700;color:var(--ink)}
-.route{position:relative;margin:0;display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-top:auto;padding-top:clamp(20px,4vh,48px);list-style:none}
-.route::before{content:"";position:absolute;left:5%;right:5%;top:calc(clamp(20px,4vh,48px) + var(--stop) / 2);border-top:3px dashed #8fbad6;z-index:0}
+.route{position:relative;margin:0;display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-top:auto;padding-top:var(--route-pad);list-style:none;--route-pad:clamp(20px,4vh,48px)}
+/* The dashed line runs through the centres of the stops and the pin. */
+.route::before{content:"";position:absolute;left:5%;right:5%;top:calc(var(--route-pad) + var(--stop) / 2 - 1.5px);border-top:3px dashed #8fbad6;z-index:0}
 .route{--stop:clamp(96px,10vw,148px)}
 .stop{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
 .stopArt{position:relative;display:block;width:var(--stop);aspect-ratio:1;border-radius:50%;padding:5px;background:#fff;box-shadow:0 1px 0 var(--line),0 10px 24px #075d9b1f}
@@ -129,7 +130,7 @@
   .lesson{padding:8px 20px}
   .lesson h1{font-size:26px;margin-bottom:6px}
   .story{font-size:14px;line-height:1.25;gap:16px}
-  .route{--stop:64px;padding-top:8px}
+  .route{--stop:64px;--route-pad:8px}
   .stopArt b{width:22px;height:22px;font-size:12px}
   .stopLabel,.goal{font-size:14px}
   .lessonActions{margin-top:6px}
@@ -139,7 +140,7 @@
 /* Round 2: no empty bands — the route takes the room it needs, centred in the space. */
 .goal{background:none}
 @media (min-width:701px) and (min-height:501px){
-  .route{--stop:clamp(110px,min(12vw,20vh),190px);margin-block:auto;padding-top:clamp(16px,3vh,32px)}
+  .route{--stop:clamp(110px,min(12vw,20vh),190px);margin-block:auto;--route-pad:clamp(16px,3vh,32px)}
 }
 /* The dashed path stops at the destination pin instead of crossing its label. */
 @media (min-width:701px){.route::before{right:calc(9em + 24px)}.goal{padding-left:8px}}
@@ -196,13 +197,14 @@
 .metrics li{display:flex;align-items:center;gap:12px;min-width:0}
 .metricIcon{flex:none;box-sizing:content-box;width:22px;height:22px;padding:9px;border-radius:10px;color:var(--metric);background:var(--metric-tint)}
 .metrics li>div{display:flex;flex-direction:column;gap:1px;min-width:0}
-.metrics span{font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:700;color:var(--ink)}
-.metrics strong{font-size:var(--type-support);line-height:1.3;font-weight:700;color:var(--metric)}
+.metrics span{font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:400;color:var(--text)}
+.metrics strong{font-size:var(--type-support);line-height:1.3;font-weight:500;color:var(--metric)}
 .metrics strong i{display:none}
 .fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 28px;padding-top:clamp(12px,2.2vh,22px);border-top:1px dashed #c9dce8}
 .field{display:flex;align-items:baseline;gap:10px;min-width:0}
 .blank{flex:1;min-width:24px;border-bottom:1.5px dashed #b9d3e4}
-.preparation{grid-column:1/-1;font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:700;color:var(--blue)}
+/* One bold phrase per sheet — the mission; the rest stays regular. */
+.preparation{grid-column:1/-1;font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:500;color:var(--blue)}
 @media (max-width:1000px){.metrics{grid-template-columns:1fr}}
 @media (max-width:700px){
   .letter{gap:14px;padding:20px 18px 16px}

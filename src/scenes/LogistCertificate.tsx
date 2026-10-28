@@ -209,7 +209,7 @@ export function LogistCertificate({
             /* The verdict above is derived from these totals; showing them makes it earned. */
             <ul className={styles.totals} aria-label="Ваши баллы" data-certificate-totals>
               {scoreItems.map((item) => (
-                <li key={item.key} data-metric={item.key} data-leading={copy.type === item.key}>
+                <li key={item.key} data-metric={item.key}>
                   <item.icon aria-hidden="true" size={18} strokeWidth={2.2} />
                   <span>{item.label}</span>
                   <strong>{scores[item.key]}</strong>
@@ -391,7 +391,7 @@ export function LogistCertificate({
             <Download size={21} aria-hidden="true" />
             {busy ? "Сохраняем сертификат…" : "Скачать сертификат"}
           </button>
-          <small>PDF-файл, текст от первого лица</small>
+          <small>PDF-файл с вашим результатом</small>
         </div>
         {error && (
           <p role="alert" className={styles.error}>

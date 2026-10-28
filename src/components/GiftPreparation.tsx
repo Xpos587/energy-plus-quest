@@ -1,14 +1,7 @@
-import { ArrowLeft, Pencil } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { choiceArtwork, preparationCardArtwork } from "../game/artwork";
-import {
-  findParcel,
-  findProfile,
-  findRecipient,
-  parcels,
-  profiles,
-  recipients,
-} from "../game/content";
+import { preparationCardArtwork } from "../game/artwork";
+import { parcels, profiles, recipients } from "../game/content";
 import { scenarioParagraph } from "../game/scenarioDocument";
 import type { GameAction, GameState } from "../game/types";
 import styles from "./GiftPreparation.module.css";
@@ -37,11 +30,6 @@ const cardDetails: Record<string, { kind?: string; note?: string }> = {
   },
   arseniy: { kind: recipientKind("49951299", "text") },
 };
-const slots = [
-  { step: "profile", label: "Отправитель" },
-  { step: "recipient", label: "Получатель" },
-  { step: "parcel", label: "Груз" },
-] as const;
 
 /** One preparation table, with the chosen people staying beside the next decision. */
 export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
@@ -52,9 +40,6 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
       heading.current?.focus({ preventScroll: true });
     previousStep.current = state.step;
   }, [state.step]);
-  const profile = findProfile(state.profile);
-  const recipient = findRecipient(state.recipient);
-  const current = slots.findIndex((slot) => slot.step === state.step);
   const items =
     state.step === "profile"
       ? profiles
@@ -112,78 +97,6 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
               Назад
             </button>
           )}
-          <ol
-            className={styles.waybill}
-            aria-label="Маршрутный лист"
-            data-gift-summary
-          >
-            {slots.map((slot, index) => {
-              const chosen =
-                slot.step === "profile"
-                  ? profile
-                  : slot.step === "recipient"
-                    ? recipient
-                    : findParcel(state.parcel);
-              const done = index < current && chosen;
-              const label = (
-                <>
-                  <span className={styles.slotMark} aria-hidden="true">
-                    {done ? (
-                      <img src={choiceArtwork[chosen.id]} alt="" />
-                    ) : (
-                      index + 1
-                    )}
-                  </span>
-                  <span className={styles.slotText}>
-                    <small>{slot.label}</small>
-                    <strong>
-                      {done
-                        ? chosen.title
-                        : index === current
-                          ? "Выбираем"
-                          : "—"}
-                    </strong>
-                  </span>
-                </>
-              );
-              return (
-                <li
-                  key={slot.step}
-                  data-summary={slot.step}
-                  data-state={
-                    done ? "done" : index === current ? "current" : "todo"
-                  }
-                >
-                  {done ? (
-                    <button
-                      type="button"
-                      className={styles.slot}
-                      aria-label={`${slot.label}: ${chosen.title}. Изменить`}
-                      onClick={() => {
-                        for (let n = index; n < current; n++)
-                          onAction({ type: "BACK" });
-                      }}
-                    >
-                      {label}
-                      <Pencil
-                        className={styles.slotEdit}
-                        size={14}
-                        strokeWidth={2.2}
-                        aria-hidden="true"
-                      />
-                    </button>
-                  ) : (
-                    <span
-                      className={styles.slot}
-                      aria-current={index === current ? "step" : undefined}
-                    >
-                      {label}
-                    </span>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
         </div>
         <div className={styles.question}>
           <h1 id="preparation-question" ref={heading} tabIndex={-1}>

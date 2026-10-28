@@ -112,6 +112,7 @@ export function useTextPages(
   fillSpace = false,
   mergeBlocks = false,
   leadLength = 0,
+  capPages = false,
 ) {
   const text = JSON.stringify(paragraphs);
   const body = useRef<HTMLDivElement>(null);
@@ -122,6 +123,8 @@ export function useTextPages(
     const container = body.current;
     if (!container) return;
     const paginate = () => {
+      const resultFrame = capPages ? container.closest<HTMLElement>('[data-layout="result"]') : null;
+      resultFrame?.style.removeProperty("--scene-panel-height");
       // Portrait results have variable titles, links and footer rows. Reserve
       // their actual height instead of estimating it from the viewport width.
       if (getComputedStyle(container).getPropertyValue("--result-fit-viewport").trim() === "1") {
@@ -143,7 +146,11 @@ export function useTextPages(
             }, 0) + (parseFloat(readerStyle.rowGap) || 0) * following.length
               + parseFloat(readerStyle.paddingBottom) + parseFloat(getComputedStyle(panel).paddingBottom);
           }
-          const available = Math.max(1, Math.min(frame.getBoundingClientRect().bottom, panelBox.bottom) - reading.top - reserved);
+          const panelLimit = parseFloat(getComputedStyle(panel).maxHeight);
+          const available = Math.max(1, Number.isFinite(panelLimit)
+            // A content-sized sheet would otherwise shrink to its current page.
+            ? panelBox.top + panelLimit - reading.top - reserved
+            : Math.min(frame.getBoundingClientRect().bottom, panelBox.bottom) - reading.top - reserved);
           container.style.setProperty("--result-reading-height", `${available}px`);
         }
       }
@@ -153,8 +160,9 @@ export function useTextPages(
         parseFloat(computed.paddingLeft) -
         parseFloat(computed.paddingRight);
       const maxHeight = parseFloat(computed.maxHeight);
+      const fitViewport = computed.getPropertyValue("--result-fit-viewport").trim() === "1";
       const height =
-        (fitMaxHeight && Number.isFinite(maxHeight)
+        ((fitMaxHeight || fitViewport) && Number.isFinite(maxHeight)
           ? maxHeight
           // clientHeight rounds away fractional line heights. Comparing that
           // integer with the probe's fractional height can reject text that
@@ -199,10 +207,48 @@ export function useTextPages(
         } else probe.textContent = candidate;
         return probe.getBoundingClientRect().height <= height;
       };
-      const fitted = keepBlocks
+      const fitted = capPages
+        ? (() => {
+          // Results read as at most two sentence-bounded pages (three for long
+          // copy). Authored beats keep their own page. Before splitting a
+          // sentence, the sheet grows by up to two lines.
+          const source = sources.join("\n\n");
+          const tall = (value: string) => (fits(value, 1), probe.getBoundingClientRect().height);
+          const lineHeight = parseFloat(computed.lineHeight) || 0;
+          // The last line may overflow into its own empty half-leading.
+          const limit = height + Math.max(0.5, (lineHeight - parseFloat(computed.fontSize)) / 2 || 0);
+          const panel = container.closest<HTMLElement>("[data-sheet-panel]");
+          const grow = (need: number) => {
+            if (fitViewport || !resultFrame || !panel || need - height > lineHeight * 2) return false;
+            resultFrame.style.setProperty("--scene-panel-height", `${Math.ceil(panel.getBoundingClientRect().height + need - height)}px`);
+            if (container.getBoundingClientRect().height >= need - 1) return true;
+            resultFrame.style.removeProperty("--scene-panel-height");
+            return false;
+          };
+          if (keepBlocks) {
+            const worst = Math.max(...sources.map(tall));
+            return worst <= limit || grow(worst) ? sources : paginateTextBlocks(sources, fits, mergeBlocks);
+          }
+          const sentences = Array.from(new Intl.Segmenter("ru", { granularity: "sentence" }).segment(source), (part) => part.segment);
+          const join = (from: number, to: number) => sentences.slice(from, to).join("");
+          let best = [source];
+          let worst = tall(source);
+          for (let count = 2; count <= Math.min(3, sentences.length) && worst > limit; count++) {
+            let score = Infinity;
+            for (let i = 1; i < sentences.length; i++)
+              for (let j = count > 2 ? i + 1 : sentences.length; j <= sentences.length - (count > 2 ? 1 : 0); j++) {
+                const parts = count > 2 ? [join(0, i), join(i, j), join(j, sentences.length)] : [join(0, i), join(i, sentences.length)];
+                const heights = parts.map(tall);
+                const candidate = Math.max(...heights) * 1000 + Math.max(...heights) - Math.min(...heights);
+                if (candidate < score) [score, best, worst] = [candidate, parts, Math.max(...heights)];
+              }
+            if (worst > limit && (count === 3 || source.length <= 600) && grow(worst)) return best;
+          }
+          return worst > limit ? splitTextPages(source, 260, fits) : best;
+        })()
+        : keepBlocks
         ? paginateTextBlocks(sources, fits, mergeBlocks)
-        : splitTextPages(sources.join("\n\n"), 260, fits, fillSpace,
-          computed.getPropertyValue("--result-fit-viewport").trim() === "1");
+        : splitTextPages(sources.join("\n\n"), 260, fits, fillSpace, fitViewport);
       probe.remove();
       setPages((previous) =>
         previous.length === fitted.length &&
@@ -231,6 +277,6 @@ export function useTextPages(
       observer?.disconnect();
       window.removeEventListener("resize", paginate);
     };
-  }, [text, enabled, fitMaxHeight, keepBlocks, preserveWhitespace, fillSpace, mergeBlocks, leadLength]);
+  }, [text, enabled, fitMaxHeight, keepBlocks, preserveWhitespace, fillSpace, mergeBlocks, leadLength, capPages]);
   return { body, pages };
 }

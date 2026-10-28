@@ -2659,7 +2659,7 @@
   margin-inline: auto;
 }
 .app[data-scene] .frame[data-layout="result"] [data-result-reading] {
-  max-width: 62ch;
+  max-width: 75ch;
   line-height: 1.4;
 }
 @media (min-height: 501px) {
@@ -3165,8 +3165,10 @@
     align-self: stretch;
     overflow-y: auto;
   }
+  /* Grow to the panel (actions pinned to the bottom, as in other scenes) but
+     never shrink below the text, so a long result still scrolls. */
   .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"] :is(.resultInner, .resultStory, [data-result-reader], [data-result-narrative]) {
-    flex: none;
+    flex: 1 0 auto;
     height: auto;
   }
   .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"] [data-result-reading] {
@@ -3481,7 +3483,6 @@
   }
   .app[data-scene="crane"] .frame.frame.frame[data-layout="result"] .result {
     overflow: hidden;
-    padding: 8px;
   }
   .app[data-scene="inventory"] .frame.frame.frame[data-layout="result"]:has(:is([data-scene-consequence="inventory-keeper"], [data-scene-consequence="inventory-wms"])) {
     grid-template-rows: minmax(0, 160px) minmax(0, 1fr) !important;
@@ -4084,22 +4085,6 @@
     width: 16px;
     height: 16px;
   }
-  /* The goals legend sits in three even columns, not two plus a stray one;
-     a long goal wraps inside its own column. */
-  .app .frame .question .compactGoals.compactGoals:not(.briefingLead *) {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: start;
-    gap: 4px 10px;
-  }
-  .app .frame .question .compactGoals.compactGoals li:not(.briefingLead li) {
-    align-items: flex-start;
-    min-width: 0;
-    white-space: normal;
-  }
-  .app .frame .question .compactGoals.compactGoals li:not(.briefingLead li) svg {
-    margin-top: 1px;
-  }
 }
 /* 320px Last mile stacks icon over name; that column stays centred. */
 @media (max-width: 360px) and (orientation: portrait) {
@@ -4107,4 +4092,74 @@
     justify-content: center;
     text-align: center;
   }
+}
+
+/* Goals legend everywhere: three even columns, icon above its words, centred —
+   the shape of the score cells, so no row ends with a stray goal and a long
+   goal wraps symmetrically. The desktop order card keeps its explained rows. */
+.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals:not(.briefingLead *) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 6px 8px;
+}
+.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals:not(.briefingLead *) li {
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+  white-space: normal;
+  text-align: center;
+}
+.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals:not(.briefingLead *) li svg {
+  margin: 0;
+}
+@media (max-width: 1000px), (max-height: 700px) {
+  .briefingLead .compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 6px 8px;
+  }
+  .briefingLead .compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals li {
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* Phone results: the sheet hugs its copy and actions; the illustration takes
+   whatever height is left instead of an empty band under the text.
+   WMS keeps its own aspect-locked framing. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) {
+    grid-template-rows: minmax(min(160px, 22dvh), 1fr) auto !important;
+  }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) .result {
+    height: auto !important;
+    max-height: calc(100dvh - var(--scene-header-height) - min(160px, 22dvh));
+    overflow-y: auto;
+  }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) [data-result-reading] {
+    --result-fit-viewport: 1;
+    flex: none;
+    height: auto;
+    max-height: var(--result-reading-height, 80px);
+  }
+}
+
+/* Scene 2 choice lives on the truck: the art keeps its row while a place card opens below
+   (phones) or in the rail (desktop), with the barge card's stacked actions. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+}
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection { justify-content: center; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { grid-template-columns: 1fr; margin-top: 16px; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions > button:last-child { grid-column: 1; }
 }

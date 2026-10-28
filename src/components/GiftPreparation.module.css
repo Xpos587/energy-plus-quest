@@ -84,44 +84,11 @@
 .stage[data-kind="profile"] {
   grid-template-columns: 1fr;
 }
-.summary {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  padding: 8px 16px;
-  background: #edf2f4;
-  border-left: 3px solid #8ba9bb;
-  border-radius: 0 10px 10px 0;
-}
-.summaryItem {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-  margin: 0;
-  padding: 14px 0;
-}
-.summaryItem + .summaryItem {
-  border-top: 1px solid #d3dfe6;
-}
-.summaryItem img,
-.summaryItem > svg,
 .emptyPortrait {
   width: 42px;
   height: 48px;
   flex: none;
   object-fit: contain;
-}
-.summaryItem > div {
-  min-width: 0;
-  flex: 1;
-}
-.summaryItem img {
-  border-radius: 6px;
-}
-.summaryItem > svg {
-  padding: 8px;
-  color: #6b879a;
 }
 .emptyPortrait {
   background: #dce6eb;
@@ -129,18 +96,6 @@
   width: 28px;
   height: 32px;
   margin: 8px 7px;
-}
-.summaryItem small {
-  display: block;
-  font-size: var(--type-support);
-  color: #526f85;
-  margin-bottom: 3px;
-}
-.summaryItem strong,
-.summaryItem figcaption {
-  font-size: var(--type-support);
-  font-weight: 600;
-  line-height: var(--type-control-leading);
 }
 .options {
   display: grid;
@@ -231,26 +186,6 @@
     grid-template-columns: 118px minmax(0, 1fr);
     gap: 12px;
   }
-  .summary {
-    padding: 4px 8px;
-  }
-  .summaryItem {
-    gap: 6px;
-    padding: 12px 0;
-    flex-wrap: wrap;
-  }
-  .summaryItem img,
-  .summaryItem > svg {
-    width: 30px;
-    height: 36px;
-  }
-  .summaryItem strong,
-  .summaryItem figcaption {
-    font-size: var(--type-support);
-  }
-  .summaryItem small {
-    font-size: var(--type-support);
-  }
   .options {
     gap: 8px;
   }
@@ -318,14 +253,6 @@
     grid-template-columns: 180px minmax(0, 1fr);
     gap: 16px;
   }
-  .summaryItem {
-    padding: 6px 0;
-  }
-  .summaryItem img,
-  .summaryItem > svg {
-    height: 30px;
-    width: 30px;
-  }
   .art,
   .options[data-kind="parcel"] .art {
     height: 100px;
@@ -372,37 +299,6 @@
 .preparation:not([data-preparation-step="profile"]) .back {
   align-self: center;
 }
-.preparation:not([data-preparation-step="profile"]) .summary {
-  width: auto;
-  max-width: 190px;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-}
-.journey .summaryItem {
-  border: 0;
-  padding: 3px 0;
-  gap: 10px;
-  flex-wrap: nowrap;
-}
-.journey .summaryItem img {
-  width: 32px;
-  height: 38px;
-}
-.journey .summaryItem small {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-}
-.journey .summaryItem strong,
-.journey .summaryItem figcaption {
-  font-size: var(--type-support);
-  font-weight: 500;
-  color: #526f85;
-}
 .preparation:not([data-preparation-step="profile"]) .question {
   grid-column: 1;
   grid-row: 2;
@@ -432,19 +328,8 @@
   .preparation:not([data-preparation-step="profile"]) .table {
     gap: 12px;
   }
-  .preparation:not([data-preparation-step="profile"]) .summary {
-    max-width: 165px;
-  }
   .preparation:not([data-preparation-step="profile"]) h1 {
     font-size: var(--type-title);
-  }
-  .journey .summaryItem img {
-    width: 26px;
-    height: 30px;
-  }
-  .journey .summaryItem strong,
-  .journey .summaryItem figcaption {
-    font-size: var(--type-support);
   }
   .stage[data-kind="recipient"] .options {
     grid-template-columns: 1fr;
@@ -473,13 +358,6 @@
 @media (max-height: 500px) and (min-width: 641px) {
   .preparation:not([data-preparation-step="profile"]) .table {
     gap: 8px;
-  }
-  .journey .summaryItem {
-    padding: 1px 0;
-  }
-  .journey .summaryItem img {
-    width: 20px;
-    height: 22px;
   }
   .preparation:not([data-preparation-step="profile"]) h1 {
     font-size: var(--type-title);
@@ -563,155 +441,18 @@
   flex-direction: column;
   align-items: stretch;
 }
-
-.preparation .journey .summary {
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  width: auto;
-  max-width: none;
-}
-.journey .summaryItem {
-  flex: none;
-}
 @media (max-width: 640px) {
   .preparation .journey {
     gap: 8px;
   }
-  .preparation .journey .summary {
-    gap: 10px;
-  }
-  .journey .summaryItem {
-    gap: 5px;
-  }
-  .journey .summaryItem img {
-    width: 22px;
-    height: 28px;
-  }
-  .journey .summaryItem strong,
-  .journey .summaryItem figcaption {
-    font-size: var(--type-support);
-  }
-}
-@media (max-width: 360px) {
-  .journey .summaryItem strong,
-  .journey .summaryItem figcaption {
-    font-size: var(--type-support);
-  }
 }
 
-/* Waybill: the three preparation answers fill in as the player chooses; a filled line can be reopened. */
 .preparation .journey {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   min-height: 44px;
-}
-.waybill {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0 0 0 auto;
-  padding: 0;
-  list-style: none;
-}
-.waybill li {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
-}
-.waybill li + li::before {
-  content: "";
-  width: 22px;
-  flex: none;
-  border-top: 2px dashed #b9d8ea;
-}
-.slot {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  min-height: 44px;
-  padding: 4px 12px 4px 4px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--navy);
-  font: inherit;
-  text-align: left;
-}
-button.slot {
-  cursor: pointer;
-  background: #f1f7fa;
-  border-color: #d5e5ee;
-  transition:
-    border-color 160ms ease,
-    background 160ms ease;
-}
-.slotMark {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  flex: none;
-  overflow: hidden;
-  border-radius: 50%;
-  background: #eef4f7;
-  color: #6b879a;
-  font-size: var(--type-support);
-  font-weight: 700;
-}
-.slotMark img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 18%;
-  background: white;
-}
-.waybill [data-state="current"] .slotMark {
-  background: white;
-  color: #075d9b;
-  box-shadow: inset 0 0 0 2px #075d9b;
-}
-.slotText {
-  display: grid;
-  min-width: 0;
-  line-height: 1.15;
-}
-.slotText small {
-  font-size: 12px;
-  color: #6b879a;
-}
-.slotText strong {
-  font-size: var(--type-support);
-  font-weight: 600;
-  white-space: nowrap;
-}
-.waybill [data-state="todo"] .slotText strong {
-  color: #9bb1bf;
-  font-weight: 500;
-}
-.waybill [data-state="current"] .slotText strong {
-  color: #075d9b;
-}
-.slotEdit {
-  flex: none;
-  color: #6b879a;
-}
-button.slot:focus-visible {
-  outline: 3px solid #075a90;
-  outline-offset: 2px;
-}
-@media (hover: hover) {
-  button.slot:hover {
-    border-color: #075d9b;
-    background: white;
-  }
-  button.slot:hover .slotEdit {
-    color: #075d9b;
-  }
 }
 
 /* Card captions: who the recipient is, and what the Nenets name means (scenario tooltips). */
@@ -739,68 +480,13 @@ button.slot:focus-visible {
     row-gap: 4px;
     gap: 4px;
   }
-  .waybill {
-    width: 100%;
-    margin: 0;
-    justify-content: space-between;
-    gap: 2px;
-  }
-  .waybill li {
-    flex: 1 1 0;
-    gap: 2px;
-  }
-  .waybill li + li::before {
-    width: 6px;
-  }
-  .slot {
-    flex: 1;
-    gap: 5px;
-    padding: 3px 6px 3px 3px;
-    min-height: 40px;
-  }
-  .slotMark {
-    width: 28px;
-    height: 28px;
-  }
-  .slotText small {
-    font-size: 11px;
-  }
-  .slotText strong {
-    font-size: 13px;
-  }
-  .slotEdit {
-    display: none;
-  }
   .back {
     min-height: 36px;
   }
 }
-@media (max-width: 360px) {
-  .slotText small {
-    display: none;
-  }
-  .waybill li + li::before {
-    display: none;
-  }
-}
 @media (max-height: 500px) and (min-width: 641px) {
-  .slot {
-    min-height: 38px;
-  }
-  .slotMark {
-    width: 28px;
-    height: 28px;
-  }
   .kind,
   .note {
-    display: none;
-  }
-}
-@media (max-width: 640px) {
-  .waybill [data-state="todo"] {
-    flex: none;
-  }
-  .waybill [data-state="todo"] .slotText strong {
     display: none;
   }
 }
@@ -810,20 +496,8 @@ button.slot:focus-visible {
   }
 }
 /* Touch targets stay at least 44px on every viewport. */
-.preparation .back,
-.preparation .slot {
+.preparation .back {
   min-height: 44px;
-}
-@media (max-width: 360px) {
-  .waybill [data-state="current"] .slotText small {
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    color: #075d9b;
-  }
-  .waybill [data-state="current"] .slotText strong {
-    display: none;
-  }
 }
 
 /* Back is a real secondary button, not a faint link on the card. */
@@ -883,61 +557,4 @@ button.slot:focus-visible {
 .stage .option .caption:not(:has(.kind)) > span {
   grid-row: 1 / span 3;
   align-self: center;
-}
-
-/* Compact stepper (phones and narrow tablets): every step is one line, and the dashes between them are equal. */
-@media (max-width: 900px) {
-  .waybill {
-    gap: 6px;
-    justify-content: flex-start;
-  }
-  .waybill li {
-    display: contents;
-  }
-  .waybill li + li::before {
-    display: block;
-    flex: 1 1 22px;
-    min-width: 8px;
-    width: auto;
-  }
-  .waybill .slot {
-    flex: none;
-    min-width: 0;
-    padding-right: 10px;
-  }
-  .waybill .slotText small,
-  .waybill [data-state="current"] .slotText strong,
-  .waybill [data-state="todo"] .slotText strong {
-    display: none;
-  }
-  .waybill [data-state="done"] .slotText strong {
-    display: block;
-  }
-  .waybill :is([data-state="current"], [data-state="todo"]) .slotText small {
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    color: #6b879a;
-  }
-  .waybill [data-state="current"] .slotText small {
-    color: #075d9b;
-  }
-}
-/* Phones never truncate a step name: upcoming steps are just their number,
-   and on narrow phones a finished step is just its picture. */
-@media (max-width: 900px) {
-  .waybill [data-state="todo"] .slotText {
-    display: none;
-  }
-  .waybill [data-state="todo"] .slot {
-    padding-right: 3px;
-  }
-}
-@media (max-width: 400px) {
-  .waybill [data-state="done"] .slotText {
-    display: none;
-  }
-  .waybill [data-state="done"] .slot {
-    padding-right: 3px;
-  }
 }

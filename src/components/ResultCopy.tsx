@@ -44,6 +44,9 @@ export function ResultCopy({ paragraphs, title, titleTabIndex, children, navigat
     Boolean(onDisplayedBeatChange),
     false,
     false,
+    false,
+    0,
+    true,
   );
   const [page, setPage] = useState(0);
   const activePage = Math.min(page, Math.max(0, pages.length - 1));
