@@ -3304,6 +3304,9 @@
 @media (max-width: 1000px) and (orientation: portrait) {
   .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
     grid-template-rows: var(--scene-header-height) minmax(0, 1fr) clamp(240px, 34dvh, 300px);
+  }  /* With the cargo card above the prose the panel needs room for both. */
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"]:has(.briefingCard [data-briefing-lead]) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) clamp(340px, 52dvh, 440px);
   }
 }
 

@@ -148,18 +148,26 @@
   .page{justify-content:flex-start}
   .route{margin-top:auto;margin-bottom:auto}
 }
-/* Short phones: the route collapses into a wrapped row of chips. */
+/* Short phones: the route is one horizontal strip — five stops on one
+   dashed line, each named underneath; the destination closes the line. */
 @media (max-width:700px) and (max-height:700px){
-  .route{--stop:28px;flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 8px;padding-top:10px}
-  .route::before{display:none}
-  .stop{flex:none;gap:6px;padding:3px 10px 3px 3px;border-radius:999px;background:#fff;box-shadow:0 1px 0 var(--line)}
-  .stopArt{padding:0;box-shadow:none}
-  .stopArt b{display:none}
-  .stopLabel,.goal{font-size:14px}
-  .goal{padding:0 4px}
+  .route{--stop:46px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:start;gap:4px 0;padding:14px 0 0}
+  .route::before{left:10%;right:0;top:calc(14px + var(--stop) / 2);bottom:auto;border-left:0;border-top:2px dashed #8fbad6}
+  .stop{flex-direction:column;align-items:center;gap:6px;min-width:0}
+  .stopArt{padding:2px}
+  .stopArt b{right:-4px;bottom:-3px;width:18px;height:18px;font-size:10px}
+  .stopLabel{font-size:12px;line-height:1.15;text-align:center}
+  .goal{grid-column:1 / -1;justify-self:end;height:auto;padding:0;gap:4px;font-size:13px}
   .goal svg{width:18px;height:18px}
 }
-
+@media (max-width:360px) and (max-height:700px){
+  .route{--stop:40px}
+  .stopLabel{font-size:11px}
+}
+@media (max-width:700px) and (max-height:700px) and (prefers-reduced-motion:no-preference){
+  .goal svg{animation:pinBob 2.4s ease-in-out infinite}
+}
+@keyframes pinBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 
 /* ===== Page 1 — the waybill arrives as a letter =====
    One sheet carries the whole page: title and address, the letter itself,
@@ -249,4 +257,14 @@
   .metricLead,.metrics span{font-size:17px}
   .field{display:none}
   .fields{padding-top:10px}
+}
+
+/* Phones: the way forward is the wide button; back is a compact one. */
+@media (max-width:700px){
+  .lessonActions>.secondary{flex:none;padding-inline:14px}
+  .lessonActions>.primary{flex:1}
+}
+@media (max-width:360px){
+  .lessonActions>.secondary{width:48px;padding:0;justify-content:center}
+  .lessonActions>.secondary span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 }

@@ -192,7 +192,7 @@ export function GameIntro({ onStart }: { onStart: () => void }) {
                   onClick={() => turnPage(page - 1)}
                 >
                   <ArrowLeft size={24} aria-hidden="true" />
-                  Назад
+                  <span>Назад</span>
                 </button>
                 <span
                   className={styles.steps}
@@ -210,7 +210,7 @@ export function GameIntro({ onStart }: { onStart: () => void }) {
                     type="button"
                     onClick={() => turnPage(1)}
                   >
-                    Далее <ArrowRight size={24} aria-hidden="true" />
+                    К маршрутному листу <ArrowRight size={24} aria-hidden="true" />
                   </button>
                 ) : (
                   <button
@@ -219,7 +219,7 @@ export function GameIntro({ onStart }: { onStart: () => void }) {
                     type="button"
                     onClick={onStart}
                   >
-                    Начать <ArrowRight size={24} aria-hidden="true" />
+                    Собрать посылку <ArrowRight size={24} aria-hidden="true" />
                   </button>
                 )}
               </nav>
