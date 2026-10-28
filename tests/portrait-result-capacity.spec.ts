@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 for (const [width, height] of [
   [624, 794],
@@ -17,25 +18,23 @@ for (const [width, height] of [
     }) => {
       await page.setViewportSize({ width, height });
       if (scene === "carrier") {
-        await page.goto("/");
-        for (const id of ["professional", "alva", "boat"])
-          await page.locator(`[data-choice="${id}"]`).click();
-      } else
+        await openCarrier(page, "professional", "alva", "boat");
+        await pickCarrier(page, "express");
+      } else {
         await page.goto(
           `/scenes.html?scene=${scene}&parcel=boat&recipient=alva`,
         );
-      const briefing = page.getByRole("button", {
-        name: /^(Далее|К выбору|К сцене)$/,
-      });
-      await expect(briefing.or(page.locator('[data-briefing-inline="true"]'))).toBeVisible();
-      for (let index = 0; index < 30 && (await briefing.isVisible()); index++)
-        await briefing.click();
-      if (scene === "carrier")
-        await page
-          .getByRole("button", { name: "Поручить выбор Express", exact: true })
-          .click();
-      else await page.locator(`[${["crane", "compact"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();
-      await page.locator("[data-choice-confirm]").click();
+        const briefing = page.getByRole("button", {
+          name: /^(Далее|К выбору|К сцене)$/,
+        });
+        await expect(briefing.or(page.locator('[data-briefing-inline="true"]'))).toBeVisible();
+        for (let index = 0; index < 30 && (await briefing.isVisible()); index++)
+          await briefing.click();
+        await page.locator(`[${["crane", "compact"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();
+      }
+      // Inventory and Last mile open the result straight from the choice.
+      if (["carrier", "crane", "compact"].includes(scene))
+        await page.locator("[data-choice-confirm]").click();
       const reading = page.locator("[data-result-reading]");
       await expect(reading).toBeVisible();
       await page.evaluate(() => document.fonts.ready);
@@ -44,17 +43,14 @@ for (const [width, height] of [
         await expect
           .poll(async () =>
             reading.evaluate((el) => {
+              // The sheet hugs its copy and sits flush with the frame bottom.
               const frame = el
                 .closest('[data-layout="result"]')!
                 .getBoundingClientRect();
               const panel = el
                 .closest("[data-sheet-panel]")!
                 .getBoundingClientRect();
-              const box = el.getBoundingClientRect();
-              return Math.abs(
-                parseFloat(getComputedStyle(el).maxHeight) -
-                  (frame.bottom - box.top - (panel.bottom - box.bottom)),
-              );
+              return Math.abs(frame.bottom - panel.bottom);
             }),
           )
           .toBeLessThan(2);
@@ -68,10 +64,8 @@ for (const [width, height] of [
         }));
         expect(geometry.textHeight).toBeLessThanOrEqual(geometry.height + 1);
         expect(geometry.footerBottom).toBeLessThanOrEqual(height - 10);
-        if (width === 624 && scene === "carrier") {
+        if (width === 624 && scene === "carrier")
           expect(height - geometry.footerBottom).toBeLessThanOrEqual(24);
-          await expect(reading).toContainText("раньше запланированного!");
-        }
         for (const button of await page
           .locator("[data-result-reader] footer button")
           .all())

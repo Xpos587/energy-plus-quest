@@ -4131,10 +4131,10 @@
   }
 }
 
-/* Phone results: the sheet hugs its copy and actions; the illustration takes
+/* Portrait results (phones and tablets): the sheet hugs its copy and actions; the illustration takes
    whatever height is left instead of an empty band under the text.
    WMS keeps its own aspect-locked framing. */
-@media (max-width: 600px) and (orientation: portrait) {
+@media (max-width: 1000px) and (orientation: portrait) {
   .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) {
     grid-template-rows: minmax(min(160px, 22dvh), 1fr) auto !important;
   }
