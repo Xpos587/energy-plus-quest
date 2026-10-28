@@ -4159,7 +4159,13 @@
   }
 }
 @media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection { justify-content: center; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { grid-template-columns: 1fr; margin-top: 16px; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { grid-template-columns: 1fr; }
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions > button:last-child { grid-column: 1; }
+}
+
+/* Desktop rail: the place card keeps the question's skeleton — copy from the top,
+   actions where «О задаче» was — instead of floating mid-height. */
+@media (min-width: 901px) and (min-height: 501px) {
+  .app:is([data-scene="compact"], [data-scene="crane"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection { justify-content: flex-start; }
+  .app:is([data-scene="compact"], [data-scene="crane"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { margin-top: auto; }
 }
