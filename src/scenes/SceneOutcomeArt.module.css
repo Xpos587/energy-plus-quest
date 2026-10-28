@@ -6,7 +6,8 @@
   overflow: hidden;
   overscroll-behavior: contain;
   scrollbar-width: none;
-  touch-action: auto;
+  /* The figure clips (overflow), so its own touch-action would re-enable page pinch-zoom. */
+  touch-action: pan-x pan-y;
   cursor: default;
 }
 .figure::-webkit-scrollbar {
@@ -74,7 +75,7 @@
   .figure[data-outcome-scene] {
     overflow: hidden;
     cursor: default;
-    touch-action: auto;
+    touch-action: pan-x pan-y;
   }
   .figure[data-outcome-scene] .picture {
     width: 100%;
@@ -92,10 +93,14 @@
 .figure[data-outcome-scene], .figure[data-outcome-scene] .picture, .figure[data-outcome-scene] .image { height: 100%; min-height: 0; }
 .figure[data-outcome-scene] .image { object-fit: cover; object-position: var(--outcome-focus, 50%) center; }
 .figure[data-outcome-scene="inventory"] .image { object-position: var(--outcome-focus, 50%) center; }
-.figure[data-delivery-leg="flight"] .image { object-position: left top; }
+/* 16:9 flight art keeps the aircraft and its load inside the centre 60% x 54% (top 8%). */
+.figure[data-delivery-leg="flight"] .image { object-position: 50% 20%; }
+/* Desktop gets the 4:1 cut (aircraft at x 30–64%, y 12–80%). */
+@media (min-width: 901px) and (min-height: 501px) {
+  .figure[data-delivery-leg="flight"] .image { object-position: 68% 40%; }
+}
 .figure[data-delivery-leg="ground"] .image { object-position: 50% center; }
-/* Keep the aircraft, rotor and load together in a portrait overview.
-   Crop only the unused right-hand landscape, never the aircraft. */
+/* Keep the aircraft, rotor and load together in a portrait overview. */
 @media (max-width: 900px) and (orientation: portrait) {
   :global([data-scene="lastmile"] [data-layout="result"]:has([data-delivery-leg="flight"])) {
     grid-template-rows: calc(100vw * 941 / 1200) minmax(0, 1fr) !important;
@@ -110,7 +115,7 @@
   }
   .figure[data-delivery-leg="flight"] .image {
     object-fit: cover;
-    object-position: left center;
+    object-position: 50% center;
   }
 }
 @media (min-width: 901px) and (min-height: 701px) {

@@ -110,3 +110,25 @@
 /* Hovering the matching list row lights the pin. */
 .stage .marker[data-focused="true"]::before { background: var(--orange); }
 .stage .marker::before { transition: background-color 160ms ease; }
+
+/* Transport names beside the pins, like the quay captions in scene 4. */
+.markerCaption {
+  position: absolute;
+  left: calc(100% - 6px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #fffffff2;
+  color: #173c55;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px #04132733;
+  pointer-events: none;
+}
+.stage[data-selected] .marker:not([aria-pressed="true"]) .markerCaption { visibility: hidden; }
+@media (min-width: 1001px) {
+  .markerCaption { font-size: 14px; padding: 4px 10px; }
+}

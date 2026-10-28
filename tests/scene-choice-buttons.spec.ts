@@ -22,7 +22,7 @@ for (const [scene, ids] of Object.entries(choices)) {
     for (let i = 0; i < 30 && await condition.isVisible(); i++) {
       await condition.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ }).click();
     }
-    const attr = ['crane','compact'].includes(scene) ? 'data-hotspot' : 'data-scene-choice';
+    const attr = ['crane','compact','lastmile'].includes(scene) ? 'data-hotspot' : 'data-scene-choice';
     const answers = page.locator(`[${attr}]`);
     await expect(answers).toHaveCount(ids.length);
     await page.mouse.move(0, 0);

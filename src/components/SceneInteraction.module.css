@@ -2981,7 +2981,7 @@
   .app[data-scene="compact"] .frame.frame[data-layout="result"] {
     grid-template-rows:minmax(0,min(84.0385vw,calc(100dvh - var(--scene-header-height) - 300px))) minmax(0,1fr);
   }
-  .app[data-scene="crane"] [data-crane-decision-context] { font-size:16px; line-height:1.35; }
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) :is([data-crane-decision-context], [data-lastmile-decision-context]) { font-size:16px; line-height:1.35; }
   .app[data-scene="crane"] .frame.frame .questionPrompt { font-size:var(--type-title); }
   .app[data-scene="crane"] .frame.frame .questionAction [data-scene-choice] { font-size:var(--type-choice); padding:10px; min-height:64px; }
 }
@@ -3105,7 +3105,7 @@
 .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt {
   font-size: var(--type-title); line-height: var(--type-title-leading); text-wrap: pretty;
 }
-.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.briefingCopy, .inspectionCopy, .questionContext, [data-crane-decision-context]) {
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.briefingCopy, .inspectionCopy, .questionContext, [data-crane-decision-context], [data-lastmile-decision-context]) {
   font-size: var(--type-body); line-height: var(--type-body-leading);
 }
 .app[data-scene] .frame.frame.frame[data-layout="result"] [data-result-reading] {
@@ -3332,7 +3332,7 @@
     height: 100%;
     min-height: 0;
   }
-  .app[data-scene="crane"] .frame.frame.frame[data-interaction="inspect-confirm"] .question [data-crane-decision-context] { display: none; }
+  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"] .question :is([data-crane-decision-context], [data-lastmile-decision-context]) { display: none; }
   .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame[data-interaction="inspect-confirm"] .question {
     height: auto; gap: 10px; padding-top: 12px;
   }
@@ -3450,7 +3450,7 @@
     font-size: 13px;
     line-height: 1.15;
   }
-  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.questionPrompt, .questionContext, [data-crane-decision-context]) {
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.questionPrompt, .questionContext, [data-crane-decision-context], [data-lastmile-decision-context]) {
     font-size: 14px;
     line-height: 1.2;
   }
@@ -3527,7 +3527,7 @@
     font-size: 12px;
     line-height: 1.15;
   }
-  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.questionPrompt, .questionContext, [data-crane-decision-context]) {
+  .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] :is(.questionPrompt, .questionContext, [data-crane-decision-context], [data-lastmile-decision-context]) {
     font-size: 13px;
     line-height: 1.15;
   }
@@ -4166,8 +4166,8 @@
 /* Desktop rail: the place card keeps the question's skeleton — copy from the top,
    actions where «О задаче» was — instead of floating mid-height. */
 @media (min-width: 901px) and (min-height: 501px) {
-  .app:is([data-scene="compact"], [data-scene="crane"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection { justify-content: flex-start; }
-  .app:is([data-scene="compact"], [data-scene="crane"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { margin-top: auto; }
+  .app:is([data-scene="compact"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection { justify-content: flex-start; }
+  .app:is([data-scene="compact"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { margin-top: auto; }
 }
 
 /* Compact desktop rail: the task stays readable above a content-sized place card,

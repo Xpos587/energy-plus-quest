@@ -138,8 +138,8 @@ it.each([
             ),
           );
         }
-        if (id === "remote" || id === "auto" || id.startsWith("place-")) {
-          // Truck and barge: the place opens a card; only the card commits the choice.
+        if (id === "remote" || id === "auto" || id === "pipe-carrier" || id.startsWith("place-")) {
+          // Truck, barge and last mile: the place opens a card; only the card commits the choice.
           await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
           expect(container.querySelector("[data-result]")).toBeNull();
           await click(container.querySelector<HTMLButtonElement>("[data-choice-confirm]"));

@@ -30,7 +30,7 @@ for (const [width, height] of [
         await expect(briefing.or(page.locator('[data-briefing-inline="true"]'))).toBeVisible();
         for (let index = 0; index < 30 && (await briefing.isVisible()); index++)
           await briefing.click();
-        await page.locator(`[${["crane", "compact"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();
+        await page.locator(`[${["crane", "compact", "lastmile"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();
       }
       // Inventory and Last mile open the result straight from the choice.
       if (["carrier", "crane", "compact"].includes(scene))

@@ -25,7 +25,7 @@ const deliveries = [
     "revision-2/rover-boat-arseniy.webp",
     "robot-boat-result-v3.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-2/flight-boat-arseniy.webp",
+    "revision-5/flight-boat-arseniy.webp",
   ],
   [
     "camera",
@@ -49,7 +49,7 @@ const deliveries = [
     "revision-2/rover-parcel-arseniy.webp",
     "robot-parcel-result-v1.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-2/flight-parcel-arseniy.webp",
+    "revision-5/flight-parcel-arseniy.webp",
   ],
   [
     "socks",
@@ -73,7 +73,7 @@ const deliveries = [
     "revision-2/rover-parcel-arseniy.webp",
     "robot-parcel-result-v1.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-2/flight-parcel-arseniy.webp",
+    "revision-5/flight-parcel-arseniy.webp",
   ],
 ] as const;
 
@@ -81,7 +81,7 @@ describe("current artwork for every delivery context", () => {
   for (const [parcel, recipient, ...results] of deliveries) {
     const context = { parcel, recipient, profile: "student" } as const;
     it(`${recipient}/${parcel}: matching lastmile choice and all consequences`, () => {
-      const choice = "choice-final-wide-v10.webp";
+      const choice = "revision-5/intro-wide.webp";
       expect(sceneChoiceImage("lastmile", context)).toBe(
         `/scene-art/lastmile-family-v1/${choice}`,
       );

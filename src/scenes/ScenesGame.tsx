@@ -28,6 +28,7 @@ import { inventoryScene } from "./inventory";
 import { inventoryAlphabet } from "./inventory/alphabet";
 import { JourneyEnding } from "./JourneyEnding";
 import { lastmileScene } from "./lastmile";
+import { LastmileDecisionContext, LastmileFacts, lastmileFacts } from "./lastmile/LastmileFacts";
 import { initialProgress, progressReducer, totalScores } from "./progress";
 import { SceneOutcomeArt } from "./SceneOutcomeArt";
 import type { SceneContext, SceneId } from "./types";
@@ -296,7 +297,7 @@ function ScenesSession({
   const [focusedChoice, setFocusedChoice] = useState<string>();
   // Truck and barge: the places on the art are the only choice; a place opens a card, the card confirms.
   const [pendingId, setPendingId] = useState<string>();
-  const inspectsOnArt = (scene.id === "crane" || scene.id === "compact") && state.phase === "choice";
+  const inspectsOnArt = (scene.id === "crane" || scene.id === "compact" || scene.id === "lastmile") && state.phase === "choice";
   const pending = inspectsOnArt ? options.find(({ id }) => id === pendingId) : undefined;
   const score = totalScores(state, remainingScenes, context, initialScores);
   const { Art } = scene;
@@ -328,7 +329,7 @@ function ScenesSession({
     const destination = stage.current?.querySelector<HTMLElement>(
       '[data-reading="true"] [data-testid="scene-intro"]',
     ) ?? (state.phase === "choice"
-      ? stage.current?.querySelector<HTMLButtonElement>(`:is([data-scene-choice], [data-hotspot])[data-${["crane", "compact"].includes(remainingScenes[state.sceneIndex].id) ? "hotspot" : "scene-choice"}="${lastChoice.current[remainingScenes[state.sceneIndex].id] ?? ""}"]`)
+      ? stage.current?.querySelector<HTMLButtonElement>(`:is([data-scene-choice], [data-hotspot])[data-${["crane", "compact", "lastmile"].includes(remainingScenes[state.sceneIndex].id) ? "hotspot" : "scene-choice"}="${lastChoice.current[remainingScenes[state.sceneIndex].id] ?? ""}"]`)
         ?? stage.current?.querySelector<HTMLButtonElement>("[data-scene-choice], [data-hotspot]")
       : stage.current?.querySelector<HTMLHeadingElement>("h2"));
     destination?.focus({ preventScroll: true });
@@ -422,9 +423,9 @@ function ScenesSession({
               question={question}
               keepParagraphs={scene.id === "crane"}
               decisionContext={
-                scene.id === "crane" ? (
+                scene.id === "crane" || scene.id === "lastmile" ? (
                   <>
-                    <CraneDecisionContext />
+                    {scene.id === "crane" ? <CraneDecisionContext /> : <LastmileDecisionContext />}
                     <SceneGoals goals={brief!.goals} />
                   </>
                 ) : brief ? (
@@ -501,7 +502,7 @@ function ScenesSession({
             {inspectsOnArt && !resultVisible && (
               <CarrierTapHint
                 selectedId={pending?.id}
-                text={scene.id === "compact" ? "Выберите, куда поставить груз" : "Нажмите на номер на причале"}
+                text={scene.id === "compact" ? "Выберите, куда поставить груз" : scene.id === "lastmile" ? "Выберите транспорт на карте" : "Нажмите на номер на причале"}
               />
             )}
           </section>
@@ -511,14 +512,16 @@ function ScenesSession({
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
               eyebrow={scene.id === "compact"
                 ? pending.id === "auto" ? "Система размещения груза" : optionTitles[pending.id]
+                : scene.id === "lastmile" ? places![pending.id][1]
                 : craneCaptions[pending.id as keyof typeof craneCaptions]}
-              title={scene.id === "compact" ? pending.id === "auto" ? "Compact подберёт место" : places![pending.id][0] : optionTitles[pending.id]}
-              cancelLabel={scene.id === "compact" ? "К кузову" : "К причалу"}
+              title={scene.id === "compact" ? pending.id === "auto" ? "Compact подберёт место" : places![pending.id][0] : scene.id === "lastmile" ? places![pending.id][0] : optionTitles[pending.id]}
+              cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "lastmile" ? "К карте" : "К причалу"}
               onCancel={() => setPendingId(undefined)}
               onConfirm={() => choose(pending.id)}
             >
               {scene.id === "compact"
                 ? <CompactCard id={pending.id} />
+                : scene.id === "lastmile" ? <LastmileFacts id={pending.id as keyof typeof lastmileFacts} />
                 : <CraneFacts id={pending.id as keyof typeof craneFacts} />}
             </ChoiceInspection>
           )}

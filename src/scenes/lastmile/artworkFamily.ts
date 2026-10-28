@@ -1,16 +1,17 @@
 import type { SceneContext } from '../types';
 
 export const lastmileRevision = 'scene-art/lastmile-family-v1/revision-2';
-const lastmileChoiceRevision = 'scene-art/lastmile-family-v1/revision-4';
+// revision-5: Mi-8 livery (orange body, black engine housing, five-blade rotor) per the technical reference.
+const lastmileHelicopterRevision = 'scene-art/lastmile-family-v1/revision-5';
 
 export function lastmileChoiceImage(format: 'wide' | 'tall', recipient: SceneContext['recipient']) {
-  return `${lastmileChoiceRevision}/choice-${format}-${recipient}.webp`;
+  return `${lastmileHelicopterRevision}/choice-${format}-${recipient}.webp`;
 }
 
 export function lastmileFlightImage(context: SceneContext) {
   const gift = context.parcel === 'boat' ? 'boat' : 'parcel';
   const destination = context.recipient === 'arseniy' ? '-arseniy' : '';
-  return `${lastmileRevision}/flight-${gift}${destination}.webp`;
+  return `${lastmileHelicopterRevision}/flight-${gift}${destination}.webp`;
 }
 
 export function lastmileOutcomeImage(option: string, context: SceneContext) {

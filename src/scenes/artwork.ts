@@ -10,7 +10,7 @@ export function sceneChoiceImage(
 ): string {
   if (scene === "lastmile") {
     return imageAsset(
-      "scene-art/lastmile-family-v1/choice-final-wide-v10.webp",
+      "scene-art/lastmile-family-v1/revision-5/intro-wide.webp",
     );
   }
   if (scene === "crane") return imageAsset(craneChoiceImage);

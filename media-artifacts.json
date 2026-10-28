@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-10-28-warehouse-logic",
+  "release": "media-2026-10-28-lastmile-helicopter",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3449,6 +3449,89 @@
           "path": "public/scene-art/warehouse-logic-2026-10-28/overview.webp",
           "sha256": "04c3ed06724ec9bda8ea49ebb1aa6f579847d977b75f49d4c4258350a6af938f",
           "bytes": 290096
+        }
+      ]
+    },
+    {
+      "name": "media-31-4550f3bf986f.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-28-lastmile-helicopter/media-31-4550f3bf986f.tar.gz",
+      "sha256": "4550f3bf986f43f43cc7ad0ecf85c3ff673348e95948e52e10a6c6c47a82a565",
+      "bytes": 10317361,
+      "files": [
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/choice-tall-alva.webp",
+          "sha256": "41cc85cb1bbafc35b26222557d02955910c8d7ccceb9e2bdf157c2621426f623",
+          "bytes": 1069010
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/choice-tall-arseniy.webp",
+          "sha256": "51204e75899d6ba7baab97798432c619becadbe5b12afad67891eafa41057155",
+          "bytes": 1132096
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/choice-tall-khor.webp",
+          "sha256": "cafcadb0c40e6e3a0fcaf37a276f55076000d5ddccbb3a4e0049b47319bcdc26",
+          "bytes": 1139406
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/choice-wide-alva.webp",
+          "sha256": "9b2ecd3e49d077e7fc5d4d82d061c0de30085917796478ba2c1f3b00153a94d0",
+          "bytes": 928058
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/choice-wide-arseniy.webp",
+          "sha256": "543d36eff15274f92de59f511044184e9a2d166021251609ef5813cc4310ce15",
+          "bytes": 917632
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/choice-wide-khor.webp",
+          "sha256": "c180aec29d16bfd4b2564103577ce66e32393cf494d49a7d0992a627153dd268",
+          "bytes": 962790
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/flight-boat-arseniy-wide.webp",
+          "sha256": "ebee95388cc298d728c1f33a9458b58431dc4661ae041f1df0b5b37f91ceadf7",
+          "bytes": 290984
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/flight-boat-arseniy.webp",
+          "sha256": "36a409833d7c647c19fbee606ee133905f2bd5b26d07ccefc9716a09f65bb59d",
+          "bytes": 662938
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/flight-boat-wide.webp",
+          "sha256": "9f8946afeb654d7ef199860c720edeca9c943b404fb44a22b9b6a0f40d265bc1",
+          "bytes": 274720
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/flight-boat.webp",
+          "sha256": "528b7a08c6cf4496cbc45c93e6de9716104765ed1b57507e4622278e2a49a12e",
+          "bytes": 641486
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/flight-parcel-arseniy-wide.webp",
+          "sha256": "3bb1697b4785244a495d224ac6fcce567bc66d895ceaf32b6fcd02ff72b139f2",
+          "bytes": 290422
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/flight-parcel-arseniy.webp",
+          "sha256": "7e1946f1c8a67c7a0e54605312c2a9d3201b8a2d54d9a3d9260d4388ccf1af28",
+          "bytes": 662996
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/flight-parcel-wide.webp",
+          "sha256": "7e10ce6d356c5efbc78c37a27034a7500de0ccdd8595948364d84739b02143fe",
+          "bytes": 274482
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/flight-parcel.webp",
+          "sha256": "dbadd67eefcc60aeb2e30d801c2f2dad447e57fdcfd430fe0b40bc9730f428eb",
+          "bytes": 641478
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-5/intro-wide.webp",
+          "sha256": "fc8b2b81a4b9d231c60ee1a775ea9a1f2befe3ce4b48cd1d556c3d7c07e80f48",
+          "bytes": 424794
         }
       ]
     }

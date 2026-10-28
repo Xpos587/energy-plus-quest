@@ -340,6 +340,7 @@ export function WorldArt({
                 onClick={() => onSelect?.(point.id)}
               >
                 <span aria-hidden="true">{index + 1}</span>
+                {scene === "lastmile" && <span className={styles.markerCaption} aria-hidden="true">{caption}</span>}
               </button>
             );
           })}
