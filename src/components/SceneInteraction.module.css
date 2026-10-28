@@ -91,6 +91,7 @@
 /* Reading comes before choosing: show the artwork without option overlays. */
 .frame:has([data-scene-briefing][data-reading="true"]) :is(
   [data-choice-id],
+  [data-carrier-tap-hint],
   [data-carrier-choice],
   [data-scene-choice],
   [data-callout],
@@ -4040,5 +4041,70 @@
   .app .frame .briefingLead .compactGoals.compactGoals li svg {
     width: 15px;
     height: 15px;
+  }
+}
+
+/* A narrow back action keeps one line — "← Перевозчик"; the stretched
+   choice-card buttons measure themselves, other places use the viewport. */
+.app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation > button {
+  container-type: inline-size;
+}
+@container (max-width: 200px) {
+  .backPrefix {
+    /* Inline and zero-sized: no layout, but the accessible name stays whole. */
+    font-size: 0;
+  }
+}
+@media (max-width: 420px) {
+  .backPrefix {
+    /* Inline and zero-sized: no layout, but the accessible name stays whole. */
+    font-size: 0;
+  }
+}
+
+/* Phones: every choice reads from the left — badge or icon in one column,
+   names aligned beneath each other instead of floating in the middle. */
+@media (max-width: 700px), (max-height: 500px) and (orientation: landscape) {
+  .app[data-scene] .frame.frame.frame.frame.frame.frame .question [data-scene-choice] {
+    justify-content: flex-start;
+    justify-self: stretch;
+    width: 100%;
+    gap: 10px;
+    padding-inline: 10px;
+    text-align: left;
+  }
+  /* Compact's "auto" icon matches the size of the number badges next to it. */
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame .question [data-scene-choice="auto"] > span:first-child {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+  }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame .question [data-scene-choice="auto"] > span:first-child svg {
+    width: 16px;
+    height: 16px;
+  }
+  /* The goals legend sits in three even columns, not two plus a stray one;
+     a long goal wraps inside its own column. */
+  .app .frame .question .compactGoals.compactGoals:not(.briefingLead *) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 4px 10px;
+  }
+  .app .frame .question .compactGoals.compactGoals li:not(.briefingLead li) {
+    align-items: flex-start;
+    min-width: 0;
+    white-space: normal;
+  }
+  .app .frame .question .compactGoals.compactGoals li:not(.briefingLead li) svg {
+    margin-top: 1px;
+  }
+}
+/* 320px Last mile stacks icon over name; that column stays centred. */
+@media (max-width: 360px) and (orientation: portrait) {
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame .question [data-scene-choice] {
+    justify-content: center;
+    text-align: center;
   }
 }

@@ -304,8 +304,6 @@ function CarrierScreen({
         onBack={onBack}
         inspecting={!!pendingId}
         onOpen={() => setPendingId(undefined)}
-        // The rigs on the map are the only way to choose.
-        action={<CarrierTapHint selectedId={pendingId} />}
         decisionContext={<SceneGoals goals={carrierGoals} />}
       />
       <div className={flow.carrierMap} data-carrier-map>
@@ -314,6 +312,8 @@ function CarrierScreen({
           onSelect={inspect}
           selectedId={pendingId}
         />
+        {/* The rigs on the map are the only way to choose: the hint lives on the map. */}
+        {!mapReading && <CarrierTapHint selectedId={pendingId} />}
       </div>
       {pendingId && (
         <ChoiceInspection

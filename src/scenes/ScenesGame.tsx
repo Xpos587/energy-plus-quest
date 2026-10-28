@@ -452,9 +452,7 @@ function ScenesSession({
               }
               inspecting={!!pending}
               onOpen={() => setPendingCrane(undefined)}
-              action={inspectsOnArt ? (
-                <CarrierTapHint selectedId={pending?.id} text="Нажмите на номер на причале" />
-              ) : (
+              action={inspectsOnArt ? undefined : (
                 <SceneChoices
                   variant="scene"
                   options={options.map((option) => ({
@@ -510,6 +508,9 @@ function ScenesSession({
                 onSelect={state.phase === "choice" ? (inspectsOnArt ? setPendingCrane : choose) : undefined}
                 {...syncFocus}
               />
+            )}
+            {inspectsOnArt && !resultVisible && (
+              <CarrierTapHint selectedId={pending?.id} text="Нажмите на номер на причале" />
             )}
           </section>
           {pending && (

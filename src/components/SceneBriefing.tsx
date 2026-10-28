@@ -129,7 +129,14 @@ export function SceneBriefing({
   const backLabel =
     currentStep === 0
       ? "К выбору подарка"
-      : `К этапу «${progressSteps[currentStep - 1].label}»`;
+      : (
+          // Narrow phones show "← Перевозчик"; the full name stays for screen readers.
+          <span>
+            <span className={styles.backPrefix}>К этапу «</span>
+            {progressSteps[currentStep - 1].label}
+            <span className={styles.backPrefix}>»</span>
+          </span>
+        );
   useLayoutEffect(() => {
     if (!visible && focusAfterClose.current) {
       focusAfterClose.current = false;
