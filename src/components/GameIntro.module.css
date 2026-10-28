@@ -8,8 +8,8 @@
 .primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;border:0;border-radius:12px;min-height:60px;font-family:inherit;font-size:var(--type-action);line-height:var(--type-control-leading);font-weight:700;transition:background-color .15s ease,transform .15s ease}
 .primary{background:var(--blue);color:#fff;min-width:210px;box-shadow:0 8px 20px #075d9b18}
 .primary:hover{background:#004b80}
-.secondary{background:#edf3f8;color:#31556f}
-.secondary:hover{background:#e2ecf4}
+.secondary{background:var(--action-secondary);color:var(--action-secondary-text);box-shadow:inset 0 0 0 1.5px var(--action-secondary-border)}
+.secondary:hover{background:var(--action-secondary-hover)}
 .primary:active,.secondary:active{transform:scale(.98)}
 .primary svg,.secondary svg{flex:none;width:24px;height:24px}
 
@@ -73,27 +73,6 @@
 .goal{position:relative;z-index:1;flex:none;align-self:flex-start;display:flex;align-items:center;gap:6px;height:var(--stop);padding:0 4px 0 2px;color:var(--blue);font-size:var(--type-choice);font-weight:700;white-space:nowrap;background:linear-gradient(90deg,transparent,#e3f0f8 18%)}
 .goal svg{flex:none;color:#ff5500}
 
-/* Page 1 — a waybill the player is about to fill in. */
-.invitation{max-width:62ch;font-size:var(--type-body);line-height:var(--type-body-leading);color:var(--text)}
-.waybill{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-areas:"trip scoring" "fields scoring";grid-template-rows:auto 1fr;margin-top:clamp(16px,3vh,32px);border-radius:18px;background:#fff;box-shadow:0 1px 0 var(--line),0 14px 36px #075d9b17;overflow:hidden}
-.trip{grid-area:trip;display:flex;align-items:center;gap:clamp(16px,2vw,24px);padding:clamp(16px,2.6vh,28px) clamp(18px,2vw,28px)}
-.tripArt{flex:none;width:clamp(84px,8vw,120px);aspect-ratio:1;border-radius:14px;object-fit:cover}
-.fieldName{display:block;font-size:var(--type-support);line-height:1.2;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.destination{display:block;margin:2px 0 4px;font-size:clamp(26px,2.4vw,38px);line-height:1.05;color:var(--ink)}
-.mission{font-size:var(--type-choice);line-height:var(--type-control-leading);color:var(--text)}
-.fields{grid-area:fields;display:flex;flex-direction:column;gap:12px;padding:clamp(14px,2.4vh,24px) clamp(18px,2vw,28px);border-top:2px dashed #d2e4ef}
-.field{display:flex;align-items:baseline;gap:14px}
-.field .fieldName{flex:none;width:9.5em}
-.blank{flex:1;height:2px;background:repeating-linear-gradient(90deg,#c3d9e7 0 6px,transparent 6px 12px)}
-.preparation{margin-top:auto !important;padding-top:6px;font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:700;color:var(--blue)}
-.scoring{grid-area:scoring;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:clamp(16px,2.6vh,28px) clamp(18px,2vw,32px);background:#f2f8fc;border-left:2px dashed #d2e4ef}
-.metricLead{font-size:var(--type-choice);line-height:var(--type-control-leading);color:var(--muted)}
-.metrics{display:flex;flex-direction:column;gap:clamp(10px,1.8vh,18px);margin:0;padding:0;list-style:none}
-.metrics li{display:flex;align-items:center;gap:14px}
-.metricIcon{flex:none;box-sizing:content-box;width:26px;height:26px;padding:11px;border-radius:12px;background:#fff;color:var(--blue);box-shadow:0 1px 0 var(--line)}
-.metrics li>div{display:flex;flex-direction:column;gap:1px;min-width:0}
-.metrics span{font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:700;color:var(--ink)}
-.metrics strong{font-size:var(--type-support);line-height:1.3;font-weight:400;color:var(--muted)}
 
 /* Navigation */
 .lessonActions{flex:none;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(16px,3vh,32px);padding-bottom:env(safe-area-inset-bottom)}
@@ -108,12 +87,6 @@
   .goal{animation:arrive .4s .3s ease-out both}
 }
 
-/* Tablet portrait and narrower desktops: the waybill stacks. */
-@media (max-width:1000px){
-  .waybill{grid-template-columns:1fr;grid-template-areas:"trip" "scoring" "fields";grid-template-rows:auto auto 1fr}
-  .scoring{border-left:0;border-top:2px dashed #d2e4ef}
-}
-
 /* Phones: the route becomes a vertical timeline. */
 @media (max-width:700px){
   .lesson{padding:16px 20px 12px}
@@ -126,19 +99,10 @@
   .stopLabel{text-align:left}
   .goal{height:auto;padding:0 0 0 10px;background:none;gap:12px}
   .goal svg{width:24px;height:24px}
-  .waybill{margin-top:14px;border-radius:14px}
-  .trip{padding:12px 14px;gap:12px}
-  .tripArt{width:64px;border-radius:10px}
-  .destination{font-size:24px}
-  .scoring{padding:12px 14px;gap:8px}
-  .metrics{gap:8px}
-  .metricIcon{width:20px;height:20px;padding:8px;border-radius:10px}
-  .fields{display:none}
   .lessonActions{margin-top:12px;gap:12px}
   .lessonActions>button{flex:1;min-width:0;min-height:54px;padding:12px 16px}
   .steps{display:none}
 }
-@media (max-width:700px) and (min-height:800px){.lesson .fields{display:flex;padding:12px 14px;gap:8px}.lesson .field .fieldName{width:8.5em}.lesson .fields .field{display:none}}
 
 /* Short screens: keep everything in one viewport, drop decoration first. */
 @media (max-width:360px) and (max-height:650px){
@@ -153,12 +117,6 @@
   .route{--stop:34px;padding-top:10px;gap:4px}
   .route::before{top:22px;bottom:22px}
   .stopLabel,.goal{font-size:15px}
-  .invitation{font-size:15px;line-height:1.25}
-  .waybill{margin-top:8px}
-  .trip{padding:8px 10px}.tripArt{width:44px}.destination{font-size:20px;margin:0}.mission{display:none}
-  .scoring{padding:8px 10px;gap:6px}.metricLead{font-size:14px}
-  .metrics{gap:5px}.metrics span{font-size:14px}.metrics strong{font-size:12px}
-  .metricIcon{width:16px;height:16px;padding:6px;border-radius:8px}
   .lessonActions{margin-top:8px}
   .lessonActions>button{min-height:44px;padding:6px 8px;font-size:15px}
   .lessonActions svg{width:18px;height:18px}
@@ -174,36 +132,19 @@
   .route{--stop:64px;padding-top:8px}
   .stopArt b{width:22px;height:22px;font-size:12px}
   .stopLabel,.goal{font-size:14px}
-  .invitation{font-size:14px;line-height:1.25}
-  .waybill{margin-top:8px;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);grid-template-areas:"trip scoring";grid-template-rows:1fr}
-  .scoring{border-top:0;border-left:2px dashed #d2e4ef;padding:8px 14px;gap:4px}
-  .fields{display:none}
-  .trip{padding:8px 14px}.tripArt{width:56px}.destination{font-size:20px}.mission{font-size:13px}
-  .metricLead{font-size:13px}.metrics{gap:4px}.metrics span{font-size:14px}.metrics strong{font-size:12px}
-  .metrics li>div{flex-direction:row;align-items:baseline;gap:6px}
-  .metricIcon{width:16px;height:16px;padding:5px;border-radius:7px}
   .lessonActions{margin-top:6px}
   .lessonActions>button{min-height:44px;padding:6px 14px;font-size:15px}
 }
 
-/* Round 2: no empty bands — the route and the waybill take the room they need, centred in the space. */
+/* Round 2: no empty bands — the route takes the room it needs, centred in the space. */
 .goal{background:none}
-.invitation strong{font-weight:700;color:var(--ink)}
 @media (min-width:701px) and (min-height:501px){
   .route{--stop:clamp(110px,min(12vw,20vh),190px);margin-block:auto;padding-top:clamp(16px,3vh,32px)}
-  .waybill{flex:none;margin-block:auto}
-  .scoring{justify-content:center}
-  .fields{gap:16px}
-  .tripArt{width:clamp(96px,9vw,132px)}
 }
 /* The dashed path stops at the destination pin instead of crossing its label. */
 @media (min-width:701px){.route::before{right:calc(9em + 24px)}.goal{padding-left:8px}}
-/* Phones: the waybill hugs its content; no empty band above the closing line. */
+/* Phones: content starts at the top; the route centres in what is left. */
 @media (max-width:700px){
-  .waybill{flex:none;grid-template-rows:auto auto auto}
-  .lesson .fields{display:flex;padding:12px 14px;border-top:2px dashed #d2e4ef}
-  .lesson .fields .field{display:none}
-  .preparation{margin-top:0 !important;padding-top:0}
   .page{justify-content:flex-start}
   .route{margin-top:auto;margin-bottom:auto}
 }
@@ -219,8 +160,93 @@
   .goal svg{width:18px;height:18px}
 }
 
-/* Metrics read as a legend: tinted icon, action, then the metric name in its colour. */
-.metrics li{gap:12px}
-.metrics .metricIcon{color:var(--metric);background:var(--metric-tint);box-shadow:none}
-.metrics strong{font-weight:700;color:var(--metric)}
+
+/* ===== Page 1 — the waybill arrives as a letter =====
+   One sheet carries the whole page: title and address, the letter itself,
+   the scoring legend and the blank waybill lines. The letter text leads;
+   the legend and the form stay quiet beneath it. */
+.letter{position:relative;flex:none;width:100%;max-width:1080px;margin:auto;display:flex;flex-direction:column;gap:clamp(14px,2.6vh,28px);padding:clamp(26px,4.4vh,52px) clamp(24px,4.4vw,64px) clamp(20px,3.4vh,40px);border-radius:6px;background:#fff;box-shadow:0 1px 0 var(--line),0 28px 60px -22px #075d9b40;color:var(--text)}
+/* Air-mail edge in the brand orange and blue: the one cue that this is post. */
+.letter::before{content:"";position:absolute;inset:0 0 auto;height:6px;border-radius:6px 6px 0 0;background:repeating-linear-gradient(-45deg,#ff5500 0 10px,#fff 10px 15px,#003ca6 15px 25px,#fff 25px 30px)}
+.letterHead{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-bottom:clamp(14px,2.4vh,24px);border-bottom:1px solid #e1ecf3}
+.lesson .letter h1{margin:0 0 8px}
+.address{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.fieldName{font-size:var(--type-support);line-height:1.2;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.destination{font-size:clamp(20px,1.7vw,28px);line-height:1.1;color:var(--ink)}
+/* A postage stamp: perforated edge, a slight tilt and a postmark ring. */
+.stamp{position:relative;flex:none;width:clamp(84px,7.6vw,116px);margin:2px 8px 0 0;rotate:3deg;filter:drop-shadow(0 3px 6px #075d9b30)}
+.stamp img{--r:4px;display:block;box-sizing:border-box;width:100%;aspect-ratio:4/5;padding:8px;object-fit:cover;background:#fff;-webkit-mask:linear-gradient(#000 0 0) center/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat,radial-gradient(circle var(--r),#0000 96%,#000) calc(-1*var(--r)) calc(-1*var(--r))/calc(2*var(--r)) calc(2*var(--r)) round;mask:linear-gradient(#000 0 0) center/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat,radial-gradient(circle var(--r),#0000 96%,#000) calc(-1*var(--r)) calc(-1*var(--r))/calc(2*var(--r)) calc(2*var(--r)) round}
+.stamp::before,.stamp::after{content:"";position:absolute;pointer-events:none}
+.stamp::after{left:-30%;bottom:-12%;width:60%;aspect-ratio:1;border-radius:50%;border:1.5px solid #075d9b66;box-shadow:inset 0 0 0 3px #fff0,inset 0 0 0 4.5px #075d9b4d}
+/* Cancellation waves run from the postmark across the paper. */
+.stamp::before{right:62%;bottom:2%;width:120%;height:24px;rotate:-3deg;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23075d9b' stroke-opacity='.35' stroke-width='1.5'%3E%3Cpath d='M0 4q6-4 12 0t12 0M0 12q6-4 12 0t12 0M0 20q6-4 12 0t12 0'/%3E%3C/svg%3E") repeat-x;-webkit-mask:linear-gradient(90deg,#0000,#000 40%);mask:linear-gradient(90deg,#0000,#000 40%)}
+.invitation{max-width:64ch;font-size:var(--type-body);line-height:var(--type-body-leading);color:var(--text)}
+.invitation strong{font-weight:700;color:var(--ink)}
+.scoring{display:flex;flex-direction:column;gap:12px}
+.metricLead{font-size:var(--type-choice);line-height:var(--type-control-leading);color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px;margin:0;padding:0;list-style:none}
+.metrics li{display:flex;align-items:center;gap:12px;min-width:0}
+.metricIcon{flex:none;box-sizing:content-box;width:22px;height:22px;padding:9px;border-radius:10px;color:var(--metric);background:var(--metric-tint)}
+.metrics li>div{display:flex;flex-direction:column;gap:1px;min-width:0}
+.metrics span{font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:700;color:var(--ink)}
+.metrics strong{font-size:var(--type-support);line-height:1.3;font-weight:700;color:var(--metric)}
 .metrics strong i{display:none}
+.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 28px;padding-top:clamp(12px,2.2vh,22px);border-top:1px dashed #c9dce8}
+.field{display:flex;align-items:baseline;gap:10px;min-width:0}
+.blank{flex:1;min-width:24px;border-bottom:1.5px dashed #b9d3e4}
+.preparation{grid-column:1/-1;font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:700;color:var(--blue)}
+@media (max-width:1000px){.metrics{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .letter{gap:14px;padding:20px 18px 16px}
+  .letterHead{gap:12px;padding-bottom:12px}
+  .lesson .letter h1{font-size:30px;margin-bottom:4px}
+  .address{flex-direction:column;gap:2px}
+  .destination{font-size:20px}
+  .stamp{width:62px;margin-right:4px}
+  .stamp img{--r:3px;padding:5px}
+  .metrics{gap:8px}
+  .metricIcon{width:20px;height:20px;padding:7px;border-radius:9px}
+  .fields{grid-template-columns:1fr;padding-top:12px}
+  .field{display:none}
+}
+@media (max-width:700px) and (max-height:700px){
+  .letter{gap:10px;padding:14px 14px 12px}
+  .letterHead{padding-bottom:8px}
+  .lesson .letter h1{font-size:24px}
+  .fieldName{font-size:12px}.destination{font-size:17px}
+  .stamp{width:46px}
+  .invitation{font-size:15px;line-height:1.3}
+  .scoring{gap:6px}.metricLead{font-size:14px}
+  .metrics{gap:5px}.metrics span{font-size:14px}.metrics strong{font-size:12px}
+  .metricIcon{width:16px;height:16px;padding:6px;border-radius:8px}
+  .fields{padding-top:8px}.preparation{font-size:15px}
+}
+@media (min-width:701px) and (max-height:500px){
+  .letter{gap:8px;padding:12px 20px 10px}
+  .letterHead{padding-bottom:6px}
+  .lesson .letter h1{font-size:24px;margin-bottom:2px}
+  .destination{font-size:17px}
+  .stamp{width:44px}
+  .stamp img{--r:3px;padding:4px}
+  .invitation{font-size:14px;line-height:1.3}
+  .scoring{gap:4px}.metricLead{font-size:13px}
+  .metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 14px}.metrics span{font-size:14px}.metrics strong{font-size:12px}
+  .metricIcon{width:16px;height:16px;padding:5px;border-radius:7px}
+  .fields{display:none}
+}
+@media (min-width:701px) and (min-height:501px) and (max-height:820px){
+  .lesson{padding-top:12px;padding-bottom:12px}
+  .letter{gap:12px;padding:24px clamp(24px,4vw,56px) 18px}
+  .letterHead{padding-bottom:12px}
+  .lesson .letter h1{font-size:36px;margin-bottom:4px}
+  .stamp{width:76px}
+  .lessonActions{margin-top:12px}
+}
+@media (min-width:701px) and (min-height:501px) and (max-height:660px){
+  .brand{padding-block:12px}
+  .letter{gap:10px;padding-top:18px}
+  .invitation{font-size:19px}
+  .metricLead,.metrics span{font-size:17px}
+  .field{display:none}
+  .fields{padding-top:10px}
+}

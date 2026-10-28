@@ -40,8 +40,12 @@
   --header-height: 72px;
   --action-primary: #075d9b;
   --action-primary-hover: #004b80;
-  --action-secondary: #edf3f8;
-  --action-secondary-text: #31556f;
+  /* Secondary actions are outlined: a pale fill alone vanishes on the pale
+     sky and mist surfaces they sit on. */
+  --action-secondary: #ffffff;
+  --action-secondary-hover: #eef5fa;
+  --action-secondary-border: #86a9bf;
+  --action-secondary-text: #075d9b;
   --action-icon-gap: 8px;
   --type-body: clamp(22px, 1.5vw, 26px);
   --type-title: clamp(26px, 2vw, 34px);

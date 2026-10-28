@@ -3954,3 +3954,18 @@
 @media (prefers-reduced-motion: reduce) {
   .app[data-scene="crane"] .frame[data-layout="result"] :is([data-result-narrative] > *, [data-result-feedback]) { animation: none; }
 }
+
+/* Secondary actions (task card, change choice) are outlined so they read on
+   the white rail as well as on the mist panels. */
+.app[data-scene] .question .condition,
+.app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:first-child {
+  background: var(--action-secondary);
+  border: 1.5px solid var(--action-secondary-border);
+  color: var(--action-secondary-text);
+}
+@media (hover: hover) and (pointer: fine) {
+  .app[data-scene] .question .condition:hover,
+  .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:first-child:hover {
+    background: var(--action-secondary-hover);
+  }
+}

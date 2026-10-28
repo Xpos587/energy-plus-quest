@@ -27,7 +27,7 @@
 .footer button > span { position: absolute; bottom: calc(100% + 6px); color: #075d9b; font-size: 15px; font-weight: 600; white-space: nowrap; }
 .back > span { left: 0; }
 .next > span { right: 0; }
-.back { background: #e8f2f9; color: #075d9b; }
+.back { background: var(--action-secondary); color: var(--action-secondary-text); box-shadow: inset 0 0 0 1.5px var(--action-secondary-border); }
 .next { background: #075d9b; color: white; }
 .footer svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .footer [data-score-delta] { width: min(100%, 360px); justify-self: center; margin: 0; padding: 0; border: 0; background: transparent; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }

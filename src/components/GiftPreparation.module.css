@@ -827,3 +827,16 @@ button.slot:focus-visible {
     display: none;
   }
 }
+
+/* Back is a real secondary button, not a faint link on the card. */
+.back {
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: var(--action-secondary);
+  box-shadow: inset 0 0 0 1.5px var(--action-secondary-border);
+  color: var(--action-secondary-text);
+  font-weight: 600;
+}
+@media (hover: hover) and (pointer: fine) {
+  .back:hover { background: var(--action-secondary-hover); text-decoration: none; }
+}

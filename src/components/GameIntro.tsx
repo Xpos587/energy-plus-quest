@@ -131,38 +131,29 @@ export function GameIntro({ onStart }: { onStart: () => void }) {
                   </>
                 ) : (
                   <>
-                    <h1 id="intro-title">Маршрутный лист</h1>
-                    <p className={styles.invitation}>
-                      {invitation} <strong>{mission}</strong>
-                    </p>
                     <article
-                      className={styles.waybill}
+                      className={styles.letter}
                       aria-label="Маршрутный лист"
                     >
-                      <div className={styles.trip}>
-                        <img
-                          className={styles.tripArt}
-                          src={routeArt["last-mile"]}
-                          alt=""
-                        />
+                      <header className={styles.letterHead}>
                         <div>
-                          <span className={styles.fieldName}>
-                            Пункт назначения
-                          </span>
-                          <strong className={styles.destination}>
-                            Крайний Север
-                          </strong>
+                          <h1 id="intro-title">Маршрутный лист</h1>
+                          <p className={styles.address}>
+                            <span className={styles.fieldName}>
+                              Пункт назначения
+                            </span>{" "}
+                            <strong className={styles.destination}>
+                              Крайний Север
+                            </strong>
+                          </p>
                         </div>
-                      </div>
-                      <div className={styles.fields}>
-                        {waybillFields.map((name) => (
-                          <span className={styles.field} key={name}>
-                            <span className={styles.fieldName}>{name}</span>
-                            <span className={styles.blank} aria-hidden="true" />
-                          </span>
-                        ))}
-                        <p className={styles.preparation}>{preparation}</p>
-                      </div>
+                        <span className={styles.stamp} aria-hidden="true">
+                          <img src={routeArt["last-mile"]} alt="" />
+                        </span>
+                      </header>
+                      <p className={styles.invitation}>
+                        {invitation} <strong>{mission}</strong>
+                      </p>
                       <div className={styles.scoring}>
                         <p className={styles.metricLead}>{metricLead}</p>
                         <ul className={styles.metrics} aria-label="Показатели">
@@ -181,6 +172,15 @@ export function GameIntro({ onStart }: { onStart: () => void }) {
                           ))}
                         </ul>
                       </div>
+                      <footer className={styles.fields}>
+                        {waybillFields.map((name) => (
+                          <span className={styles.field} key={name}>
+                            <span className={styles.fieldName}>{name}</span>
+                            <span className={styles.blank} aria-hidden="true" />
+                          </span>
+                        ))}
+                        <p className={styles.preparation}>{preparation}</p>
+                      </footer>
                     </article>
                   </>
                 )}
