@@ -4169,3 +4169,18 @@
   .app:is([data-scene="compact"], [data-scene="crane"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection { justify-content: flex-start; }
   .app:is([data-scene="compact"], [data-scene="crane"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { margin-top: auto; }
 }
+
+/* Compact desktop rail: the task stays readable above a content-sized place card,
+   so the player weighs the place against the goals without going back. */
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .question { visibility: visible; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .questionNavigation { visibility: hidden; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection {
+    align-self: end;
+    height: auto;
+    border-top: 1px solid var(--line, #dfe7ef);
+  }
+}
+@media (min-width: 1001px) and (min-height: 701px) and (max-height: 759px) {
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .question > :not([data-choice-prompt]) { visibility: hidden; }
+}
