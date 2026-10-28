@@ -65,6 +65,8 @@ export function IllustratedCityMap({
   camera.current = navigation;
   const selected = useRef(selectedId);
   selected.current = selectedId;
+  const live = useRef(interactive);
+  live.current = interactive;
   const targets = useRef<(HTMLButtonElement | null)[]>([]);
   // One traffic simulation drives the sprites, the hit targets and the camera.
   const traffic = useRef(createTraffic());
@@ -178,7 +180,7 @@ export function IllustratedCityMap({
         selected: selected.current,
         expressAge:
           start === undefined ? undefined : reduced ? 3 : time - start,
-        pins: !selected.current,
+        pins: live.current && !selected.current,
         pinScale,
       });
       const poses = trafficPoses(traffic.current);
@@ -280,7 +282,7 @@ export function IllustratedCityMap({
               style={{
                 // The canvas draws the pill here (cityV4 expressCall) and
                 // hides it while any option is open; so does the hit area.
-                visibility: selectedId ? "hidden" : undefined,
+                visibility: selectedId || !interactive ? "hidden" : undefined,
                 left: `${landmark(plate, "express")[0] * 100}%`,
                 top: `${landmark(plate, "express")[1] * 100}%`,
               }}

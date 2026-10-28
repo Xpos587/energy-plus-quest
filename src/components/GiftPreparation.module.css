@@ -840,3 +840,111 @@ button.slot:focus-visible {
 @media (hover: hover) and (pointer: fine) {
   .back:hover { background: var(--action-secondary-hover); text-decoration: none; }
 }
+
+/* Card captions line up across cards: the kind, the name and the note share
+   rows (subgrid), so a two-line kind never pushes one name below the others. */
+.stage .options {
+  grid-template-rows: auto auto auto auto;
+}
+.stage .option {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+}
+.stage .option .caption {
+  grid-row: 2 / span 3;
+  display: grid;
+  grid-template-rows: subgrid;
+  row-gap: 2px;
+  align-content: start;
+}
+@media (max-width: 420px) {
+  /* Room for «Фотоаппарат» in one piece; hyphenation stays as the last resort. */
+  .stage .option .caption {
+    padding-inline: 3px;
+    font-size: 15px;
+  }
+}
+.stage .option .caption > * {
+  min-width: 0;
+}
+.stage .option .caption .kind {
+  grid-row: 1;
+  align-self: end;
+}
+.stage .option .caption > span {
+  grid-row: 2;
+  align-self: start;
+}
+.stage .option .caption .note {
+  grid-row: 3;
+  align-self: start;
+}
+/* Captions without a kind or note (profile, parcels) sit centred in their row. */
+.stage .option .caption:not(:has(.kind)) > span {
+  grid-row: 1 / span 3;
+  align-self: center;
+}
+
+/* Phone stepper: every step is one line, and the dashes between them are equal. */
+@media (max-width: 640px) {
+  .waybill {
+    gap: 6px;
+    justify-content: flex-start;
+  }
+  .waybill li {
+    display: contents;
+  }
+  .waybill li + li::before {
+    display: block;
+    flex: 1 1 8px;
+    min-width: 8px;
+    width: auto;
+  }
+  .waybill .slot {
+    flex: none;
+    min-width: 0;
+    max-width: 44%;
+    padding-right: 10px;
+  }
+  .waybill .slotText small,
+  .waybill [data-state="current"] .slotText strong,
+  .waybill [data-state="todo"] .slotText strong {
+    display: none;
+  }
+  .waybill [data-state="done"] .slotText strong {
+    display: block;
+  }
+  .waybill :is([data-state="current"], [data-state="todo"]) .slotText small {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b879a;
+  }
+  .waybill [data-state="current"] .slotText small {
+    color: #075d9b;
+  }
+}
+@media (max-width: 640px) {
+  .waybill .slot {
+    flex: 0 1 auto;
+  }
+  .waybill .slotText {
+    overflow: hidden;
+  }
+  .waybill .slotText small {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+/* Narrowest phones: only the current step is named; the others are their mark. */
+@media (max-width: 360px) {
+  .waybill :is([data-state="done"], [data-state="todo"]) .slotText {
+    display: none;
+  }
+  .waybill li + li::before {
+    display: block;
+  }
+}

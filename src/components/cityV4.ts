@@ -1048,7 +1048,8 @@ export function drawCity(
   // The warehouse is the centre of the map: one pill (cargo + "СКЛАД")
   // over the sign board, drawn above every rig pin. While the cargo waits
   // it bobs gently; after the choice it stays put.
-  if (!o.selected || o.selected !== "express") {
+  // No pins (briefing) means no pill either: nothing on the map looks tappable.
+  if ((o.pins || o.selected) && o.selected !== "express") {
     const [tl, tr, , bl] = spec.sign;
     const [x0, y0] = css(tl);
     const [x1, y1] = css(tr);

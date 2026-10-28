@@ -95,7 +95,10 @@
   [data-scene-choice],
   [data-callout],
   [data-loading-zone],
-  [data-warehouse-annotations]
+  [data-warehouse-annotations],
+  [data-hotspot],
+  [data-barge-chip],
+  [data-barge-mark]
 ) {
   visibility: hidden;
   pointer-events: none;
@@ -3958,6 +3961,8 @@
 /* Secondary actions (task card, change choice) are outlined so they read on
    the white rail as well as on the mist panels. */
 .app[data-scene] .question .condition,
+.app[data-scene] .frame.frame [data-choice-navigation] :is(.condition, .secondary),
+.app[data-scene] .frame.frame .dialogueActions .dialoguePrevious,
 .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:first-child {
   background: var(--action-secondary);
   border: 1.5px solid var(--action-secondary-border);
@@ -3965,7 +3970,72 @@
 }
 @media (hover: hover) and (pointer: fine) {
   .app[data-scene] .question .condition:hover,
+  .app[data-scene] .frame.frame [data-choice-navigation] :is(.condition, .secondary):hover,
+  .app[data-scene] .frame.frame .dialogueActions .dialoguePrevious:hover,
   .app[data-scene] .frame[data-layout="result"] [data-result-reader] footer button:first-child:hover {
     background: var(--action-secondary-hover);
+  }
+}
+
+/* Goals are a legend, not controls: icon and words, no pill that invites a tap. */
+.app .frame .compactGoals.compactGoals:not(.briefingLead *) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px 14px;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+.app .frame .compactGoals.compactGoals li:not(.briefingLead li) {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #34536b;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+  text-align: left;
+}
+.app .frame .compactGoals.compactGoals li:not(.briefingLead li) svg {
+  width: 15px;
+  height: 15px;
+}
+/* The phone order card uses the same legend; the desktop card keeps its rows. */
+@media (max-width: 1000px), (max-height: 700px) {
+  .app .frame .briefingLead .compactGoals.compactGoals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 4px 14px;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .app .frame .briefingLead .compactGoals.compactGoals li {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    color: #34536b;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.25;
+    white-space: nowrap;
+    text-align: left;
+  }
+  .app .frame .briefingLead .compactGoals.compactGoals li svg {
+    width: 15px;
+    height: 15px;
   }
 }
