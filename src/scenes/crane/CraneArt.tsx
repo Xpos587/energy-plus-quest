@@ -6,6 +6,7 @@ import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
 import { craneArtwork, craneCaptions, craneWorld, type CraneFormat, type Rect } from "./artwork";
+import { castSrc, craneCast } from "./cast";
 import { craneBeat, craneDeckDelta, craneDuration, craneRest, craneSail } from "./consequence";
 import { craneScene } from "./index";
 import styles from "./CraneArt.module.css";
@@ -121,6 +122,16 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const [tipX, tipY] = art.project(craneWorld.tips[beat.frame]);
   const [hookX, hookY] = beat.hook ? art.project(beat.hook) : [0, 0];
   const s = art.sprites;
+  const cast = craneCast[view.format];
+  const anchor = art.anchors;
+  const emoteAt = { office: [anchor.ivan[0] + 46, anchor.ivan[1] - 52], near: [anchor.nearCabin[0] + 38, anchor.nearCabin[1] - 46], far: [anchor.farCabin[0] - 40, anchor.farCabin[1] - 30] } as const;
+  const walker = cast && beat.walker && (() => {
+    const [x, y] = art.project(beat.walker.at);
+    // ponytail: cartoon figures drawn ~1.8x true scale so they read at quay zoom.
+    const h = 1.8 * 2.3 * Math.abs(art.affine[1][2]);
+    const w = h * (cast.figs[beat.walker.pose] ?? 0.5);
+    return { x: x - w / 2, y: y - h, w, h };
+  })();
   const sprite = (name: keyof typeof s, extra?: { style?: CSSProperties; lit?: boolean; className?: string; data?: string }) => (
     <img
       className={[styles.layer, extra?.className].filter(Boolean).join(" ")}
@@ -142,6 +153,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       data-barge-art={view.format}
       data-selected={playing ?? selectedId}
       data-playing={playing}
+      data-cast={(cast && playing) ? "" : undefined}
       data-zoomed={(interactive && !!selectedId) || undefined}
       data-ready={ready || undefined}
       aria-label={craneScene.title}
@@ -164,9 +176,15 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
           />
         </picture>
         {!beat.lifted && !beat.onDeck && sprite("gift")}
-        {sprite("ivan", { lit: lit.has("ivan") })}
+        {!(cast && beat.office) && sprite("ivan", { lit: lit.has("ivan") })}
+        {cast && beat.office && (
+          <img className={styles.layer} src={imageAsset(castSrc(view.format, `ivan-${beat.office}`))} alt="" draggable={false} data-layer="office" data-lit={lit.has("ivan") || undefined} style={box(cast.window)} />
+        )}
         {sprite("ladder", { lit: lit.has("ladder") })}
         {sprite("far", { lit: lit.has("far") })}
+        {cast && beat.cab && (
+          <img className={styles.layer} src={imageAsset(castSrc(view.format, `far-${beat.cab}`))} alt="" draggable={false} data-layer="cab" style={box(cast.cab)} />
+        )}
         <div className={styles.sail} style={move({ w: art.width, h: art.height }, sail)} data-sailing={beat.sail > 0 || undefined}>
           <div className={styles.bob}>
             {sprite("barge")}
@@ -174,10 +192,20 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
           </div>
           {sprite("smoke", { className: styles.smoke })}
         </div>
+        {walker && beat.walker && (
+          <img
+            className={styles.layer}
+            src={imageAsset(castSrc(view.format, beat.walker.pose))}
+            alt=""
+            draggable={false}
+            data-layer="walker"
+            style={{ ...box(walker), transform: beat.walker.flip ? "scaleX(-1)" : undefined }}
+          />
+        )}
         <div className={styles.layer} style={box(art.top)} data-layer="top" data-lit={lit.has("near") || undefined}>
           <img
             className={styles.sheet}
-            src={imageAsset(art.top.src)}
+            src={imageAsset(cast && beat.operator ? art.top.src.replace(/top\.webp$/, `top-${beat.operator}.webp`) : art.top.src)}
             alt=""
             draggable={false}
             decoding="async"
@@ -191,6 +219,50 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {beat.hook && (
           <svg className={styles.cable} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             <line x1={tipX} y1={tipY} x2={hookX} y2={hookY} />
+          </svg>
+        )}
+        {cast && (beat.signal || beat.clock !== undefined || beat.emote || beat.later) && (
+          <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
+            {beat.signal && (
+              <path className={styles.signal} d={`M${anchor.pru[0]} ${anchor.pru[1] - 20} Q${(anchor.pru[0] + anchor.nearCabin[0]) / 2} ${Math.min(anchor.pru[1], anchor.nearCabin[1]) - 170} ${anchor.nearCabin[0]} ${anchor.nearCabin[1] - 24}`} />
+            )}
+            {beat.clock !== undefined && (
+              <g transform={`translate(${anchor.nearCabin[0] + 80} ${anchor.nearCabin[1] - 70})`}>
+                <circle className={styles.dial} r="26" />
+                <line className={styles.hand} y2="-12" transform={`rotate(${beat.clock * 90})`} />
+                <line className={styles.hand} y2="-19" transform={`rotate(${beat.clock * 1080})`} />
+                <text className={styles.badgeText} y="48">+{Math.floor(beat.clock * 3 + 0.001)} ч</text>
+              </g>
+            )}
+            {beat.later && (
+              <g transform={`translate(${anchor.crates[0]} ${anchor.crates[1] - 48})`}>
+                <rect className={styles.tag} x="-36" y="-14" width="72" height="28" rx="14" />
+                <text className={styles.tagText} y="5">позже</text>
+              </g>
+            )}
+            {beat.emote && (
+              <g className={styles.emote} transform={`translate(${emoteAt[beat.emote.at][0]} ${emoteAt[beat.emote.at][1]})`}>
+                {beat.emote.kind === "sweat" ? (
+                  <>
+                    <path className={styles.drop} d="M0 -14 C6 -4 8 2 0 6 C-8 2 -6 -4 0 -14Z" />
+                    <path className={styles.drop} d="M14 -2 C18 5 19 9 14 12 C9 9 10 5 14 -2Z" />
+                  </>
+                ) : (
+                  <>
+                    <path className={styles.bubble} d="M-22 -40 h44 a10 10 0 0 1 10 10 v24 a10 10 0 0 1 -10 10 h-16 l-10 12 l-2 -12 h-16 a10 10 0 0 1 -10 -10 v-24 a10 10 0 0 1 10 -10z" />
+                    {beat.emote.kind === "question" ? (
+                      <text className={styles.mark} y="-10">?</text>
+                    ) : (
+                      <>
+                        <circle className={styles.ink} cx="-8" cy="-24" r="2.6" />
+                        <circle className={styles.ink} cx="8" cy="-24" r="2.6" />
+                        <path className={styles.mouth} d="M-9 -9 Q0 -17 9 -9" />
+                      </>
+                    )}
+                  </>
+                )}
+              </g>
+            )}
           </svg>
         )}
         {hookAt && !beat.lifted && sprite("hook", { style: move(s.hook, hookAt) })}
