@@ -24,7 +24,7 @@ const outcomeCrewDesktop = imageAsset("scene-art/carrier-results-2026-10-02/crew
 const outcomeCrewMobile = outcomeCrewDesktop;
 const outcomeExpressDesktop = outcomeCrewDesktop;
 const outcomeExpressMobile = outcomeCrewMobile;
-const outcomeNearDesktop = imageAsset("scene-art/carrier-results-2026-10-02/near-v6.webp");
+const outcomeNearDesktop = imageAsset("scene-art/carrier-results-2026-10-02/near-v7.webp");
 const outcomeNearMobile = outcomeNearDesktop;
 const outcomeOldDesktop = imageAsset("scene-art/carrier-results-2026-10-02/old-v5.webp");
 const outcomeOldMobile = outcomeOldDesktop;
@@ -62,7 +62,7 @@ export const outcomeArtwork: Record<
 > = {
   old: { desktop: outcomeOldDesktop, mobile: outcomeOldMobile, portrait: imageAsset("scene-art/carrier-results-2026-10-02/old-portrait-v2.webp"), wide: imageAsset("scene-art/carrier-results-2026-10-02/old-wide-v8.webp") },
   old4: { desktop: outcomeOld4Desktop, mobile: outcomeOld4Mobile, portrait: imageAsset("scene-art/carrier-results-2026-10-02/old4-portrait-v1.webp"), wide: imageAsset("scene-art/carrier-results-2026-10-02/old4-wide-v8.webp") },
-  near: { desktop: outcomeNearDesktop, mobile: outcomeNearMobile, portrait: imageAsset("scene-art/carrier-results-2026-10-02/near-portrait-v1.webp"), wide: imageAsset("scene-art/carrier-results-2026-10-02/near-wide-v7.webp") },
+  near: { desktop: outcomeNearDesktop, mobile: outcomeNearMobile, portrait: imageAsset("scene-art/carrier-results-2026-10-02/near-portrait-v2.webp"), wide: imageAsset("scene-art/carrier-results-2026-10-02/near-wide-v8.webp") },
   crew: { desktop: outcomeCrewDesktop, mobile: outcomeCrewMobile, wide: imageAsset("scene-art/carrier-results-2026-10-02/crew-wide-v6.webp") },
   express: { desktop: outcomeExpressDesktop, mobile: outcomeExpressMobile, wide: imageAsset("scene-art/carrier-results-2026-10-02/crew-wide-v6.webp") },
 };

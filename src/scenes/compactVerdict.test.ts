@@ -1,20 +1,25 @@
 import { expect, it } from "vitest";
+import { carriers } from "../game/content";
 import { compactScene } from "./compact";
+import { craneScene } from "./crane";
 import { inventoryScene } from "./inventory";
 import { lastmileScene } from "./lastmile";
-import { rankChoice } from "./ScenesGame";
+import { compareChoice } from "./ScenesGame";
 import type { SceneDefinition } from "./types";
 
-const tones = (scene: SceneDefinition, parcel: "camera" | "socks" | "boat" = "camera", recipient: "alva" | "khor" | "arseniy" = "alva") => {
-  const options = scene.options({ parcel, recipient, profile: "student" });
-  return options.map((o) => rankChoice(o.score, options.map((x) => x.score))).join(",");
+const goals: [string, string, string] = ["A", "B", "C"];
+const summaries = (scene: SceneDefinition, parcel: "camera" | "socks" | "boat" = "camera") => {
+  const scores = scene.options({ parcel, recipient: "alva", profile: "student" }).map((o) => o.score);
+  return scores.map((score) => compareChoice(score, scores, goals).text);
 };
 
-it("ranks every outcome against the best choice in its context", () => {
-  expect(tones(compactScene, "camera")).toBe("bad,fair,best,bad,best");
-  expect(tones(compactScene, "socks")).toBe("bad,fair,best,bad,best");
-  expect(tones(compactScene, "boat")).toBe("bad,bad,bad,best,best");
-  expect(tones(inventoryScene)).toBe("bad,bad,fair,best");
-  expect(tones(lastmileScene)).toBe("bad,best,bad,bad");
-  expect(tones(lastmileScene, "camera", "arseniy")).toBe("bad,best,bad,bad");
+it("compares a choice with the others instead of grading it", () => {
+  const all = [...summaries(compactScene), ...summaries(compactScene, "boat"), ...summaries(inventoryScene), ...summaries(craneScene), ...summaries(lastmileScene), ...carriers.map((c) => compareChoice(c.score, carriers.map((x) => x.score), goals).text)];
+  for (const text of all) expect(text).not.toMatch(/Отлич|Неудач|Можно лучше/);
+  expect(summaries(inventoryScene)).toEqual([
+    "Обходит два варианта: «C»",
+    "Обходит один вариант: «B»",
+    "Наравне с лучшими: «B»",
+    "Лучше всех: «A» и «C»",
+  ]);
 });

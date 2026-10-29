@@ -1,4 +1,4 @@
-import { ChartLine, CircleAlert, CircleCheck, CircleX, Heart, Zap } from "lucide-react";
+import { ChartLine, Heart, Scale, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { QuestHeader } from "../components/QuestShell";
 import { ResultCopy } from "../components/ResultCopy";
@@ -65,13 +65,11 @@ const scorePoints = [
   { key: "empathy", icon: Heart, score: "Эмпатия" },
   { key: "efficiency", icon: ChartLine, score: "Эффективность" },
 ] as const;
-type Tone = "best" | "fair" | "bad";
 type SceneBrief = {
   eyebrow: string;
   route: (context: SceneContext) => string;
   goals: [energy: string, empathy: string, efficiency: string];
   places: (context: SceneContext) => Record<string, [name: string, detail: string]>;
-  verdicts: Record<Tone, string>;
   picked: (id: string, name: string) => string;
 };
 const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
@@ -79,15 +77,15 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     eyebrow: "Наряд на погрузку",
     route: () => "Фура до склада в Лабытнанги",
     goals: ["Погрузить быстро", "Довезти целым", "Не занять лишнее"],
+    // The highlighted square names the place; no captions that hint at the outcome.
     places: () => ({
-      "place-1": ["У задних дверей", "Над гирями, без креплений"],
-      "place-2": ["Над посудой", "Есть красные стропы"],
-      "place-3": ["Ниша за коробками", "Есть короткая стропа"],
-      "place-4": ["У передней стенки", "Высоко, рядом подушки"],
-      auto: ["Доверить Compact", "Подберёт место по размеру"],
+      "place-1": ["Место 1", ""],
+      "place-2": ["Место 2", ""],
+      "place-3": ["Место 3", ""],
+      "place-4": ["Место 4", ""],
+      auto: ["Подобрать автоматически", ""],
     }),
-    verdicts: { best: "Отличная погрузка", fair: "Можно лучше", bad: "Неудачная погрузка" },
-    picked: (id, name) => id === "auto" ? "Место выбрал Compact" : `${optionTitles[id]} · ${name}`,
+    picked: (id, name) => id === "auto" ? "Место подобрано автоматически" : name,
   },
   inventory: {
     eyebrow: "Карточка хранения",
@@ -99,7 +97,6 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
       keeper: ["Кладовщик", "Спросить опытного коллегу"],
       wms: ["Система WMS", "Место подскажет Inventory"],
     }),
-    verdicts: { best: "Отличное место", fair: "Можно лучше", bad: "Неудачное место" },
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
   crane: {
@@ -109,7 +106,6 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     places: () => Object.fromEntries(
       Object.entries(craneFacts).map(([id, fact]) => [id, [optionTitles[id], fact.where]]),
     ),
-    verdicts: { best: "Отличная погрузка", fair: "Можно лучше", bad: "Неудачная погрузка" },
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
   lastmile: {
@@ -122,7 +118,6 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
       robot: ["Роботизированная тележка", "Возит багаж в аэропортах"],
       "pipe-carrier": ["Трубовоз", "Возьмёт груз вместе с трубами"],
     }),
-    verdicts: { best: "Лучший транспорт", fair: "Можно лучше", bad: "Неудачный выбор" },
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
 };
@@ -135,15 +130,29 @@ export function SceneGoals({ goals }: { goals: SceneBrief["goals"] }) {
     </ul>
   );
 }
-const sum = ({ energy, empathy, efficiency }: Scores) => energy + empathy + efficiency;
-/** Ranks the choice against the best one available in this context. */
-export function rankChoice(score: Scores, all: Scores[]): Tone {
-  const value = sum(score);
-  if (value >= Math.max(...all.map(sum)) - 1) return "best";
-  return value > 0 ? "fair" : "bad";
+const overtakes = ["", "один вариант", "два варианта", "три варианта", "четыре варианта"];
+/** How the choice stands against the other options on its own scales: no
+ * good/bad verdict (the client rejected it), the strongest relative side named
+ * by the scene goal. */
+export function compareChoice(score: Scores, all: Scores[], goals: SceneBrief["goals"]) {
+  const others = [...all];
+  others.splice(all.indexOf(score), 1);
+  const sides = scorePoints.map(({ key }, index) => ({
+    key,
+    goal: `«${goals[index]}»`,
+    beats: others.filter((o) => score[key] > o[key]).length,
+    beaten: others.some((o) => o[key] > score[key]),
+    tied: others.some((o) => o[key] === score[key]),
+  }));
+  const best = sides.filter((side) => !side.beaten && !side.tied && side.beats > 0);
+  if (best.length === 3) return { key: "all", text: "Лучше всех вариантов по всем трём шкалам" };
+  if (best.length) return { key: best[0].key, text: `Лучше всех: ${best.map((side) => side.goal).join(" и ")}` };
+  const shared = sides.find((side) => !side.beaten && side.beats > 0);
+  if (shared) return { key: shared.key, text: `Наравне с лучшими: ${shared.goal}` };
+  const top = [...sides].sort((x, y) => y.beats - x.beats)[0];
+  if (top.beats) return { key: top.key, text: `Обходит ${overtakes[top.beats]}: ${top.goal}` };
+  return { key: "none", text: "Другие варианты сильнее по всем шкалам" };
 }
-const verdictIcons = { best: CircleCheck, fair: CircleAlert, bad: CircleX } as const;
-
 const optionTitles: Record<string, string> = {
   "place-1": "Место 1",
   "place-2": "Место 2",
@@ -163,13 +172,14 @@ const optionTitles: Record<string, string> = {
   "pipe-carrier": "Трубовоз",
 };
 const zeroScores: Scores = { energy: 0, empathy: 0, efficiency: 0 };
-export function ChoiceVerdict({ picked, verdicts, score, all }: { picked: string; verdicts: Record<Tone, string>; score: Scores; all: Scores[] }) {
-  const tone = rankChoice(score, all);
-  const Icon = verdictIcons[tone];
+
+export function ChoiceVerdict({ picked, goals, score, all }: { picked: string; goals: SceneBrief["goals"]; score: Scores; all: Scores[] }) {
+  const { key, text } = compareChoice(score, all, goals);
+  const Icon = scorePoints.find((point) => point.key === key)?.icon ?? Scale;
   return (
-    <span className={flow.compactVerdict} data-verdict={tone}>
+    <span className={flow.compactVerdict} data-verdict={key}>
       <small>{picked}</small>
-      <span><Icon aria-hidden="true" size={26} strokeWidth={2.2} />{verdicts[tone]}</span>
+      <span><Icon aria-hidden="true" size={26} strokeWidth={2.2} />{text}</span>
     </span>
   );
 }
@@ -517,11 +527,10 @@ function ScenesSession({
             <ChoiceInspection
               selectionKey={pending.id}
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
-              eyebrow={scene.id === "compact"
-                ? pending.id === "auto" ? "Система размещения груза" : optionTitles[pending.id]
+              eyebrow={scene.id === "compact" ? undefined
                 : scene.id === "lastmile" ? places![pending.id][1]
                 : craneCaptions[pending.id as keyof typeof craneCaptions]}
-              title={scene.id === "compact" ? pending.id === "auto" ? "Compact подберёт место" : places![pending.id][0] : scene.id === "lastmile" ? places![pending.id][0] : optionTitles[pending.id]}
+              title={scene.id === "compact" || scene.id === "lastmile" ? places![pending.id][0] : optionTitles[pending.id]}
               cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "lastmile" ? "К карте" : "К причалу"}
               onCancel={() => setPendingId(undefined)}
               onConfirm={() => {
@@ -531,7 +540,7 @@ function ScenesSession({
               }}
             >
               {scene.id === "compact"
-                ? <CompactCard id={pending.id} />
+                ? pending.id === "auto" ? <CompactCard /> : undefined
                 : scene.id === "lastmile" ? <LastmileFacts id={pending.id as keyof typeof lastmileFacts} />
                 : <CraneFacts id={pending.id as keyof typeof craneFacts} />}
             </ChoiceInspection>
@@ -546,7 +555,7 @@ function ScenesSession({
               <div className={flow.resultStory}>
                 <ResultCopy
                   key={`${scene.id}:${selected.id}`}
-                  title={brief && places ? <ChoiceVerdict picked={brief.picked(selected.id, places[selected.id][0])} verdicts={brief.verdicts} score={selected.score} all={options.map(o => o.score)} /> : title}
+                  title={brief && places ? <ChoiceVerdict picked={brief.picked(selected.id, places[selected.id][0])} goals={brief.goals} score={selected.score} all={options.map(o => o.score)} /> : title}
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace

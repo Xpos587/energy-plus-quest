@@ -345,7 +345,6 @@ function CarrierScreen({
 }
 
 const carrierGoals: [string, string, string] = ["Без лишних трат", "Порадовать раньше", "Надёжная фура"];
-const carrierVerdicts = { best: "Отличный перевозчик", fair: "Можно лучше", bad: "Неудачный выбор" };
 
 function Outcome({
   onBack,
@@ -443,7 +442,7 @@ function Outcome({
               title={
                 <ChoiceVerdict
                   picked={`Ваш выбор · ${carrier.id === "express" ? "Express" : carrierFacts[carrier.id].label}`}
-                  verdicts={carrierVerdicts}
+                  goals={carrierGoals}
                   score={carrier.score}
                   all={carriers.map((item) => item.score)}
                 />

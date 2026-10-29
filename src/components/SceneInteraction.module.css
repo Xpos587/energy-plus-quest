@@ -3820,10 +3820,7 @@
   animation: compactVerdictPop 420ms cubic-bezier(.34, 1.56, .64, 1) both;
 }
 .compactVerdict > span svg { flex: none; }
-.compactVerdict[data-verdict="fair"] > span { color: #082946; }
-.compactVerdict[data-verdict="fair"] > span svg { color: #53697d; }
-.compactVerdict[data-verdict="bad"] > span svg { color: #ff5500; }
-.compactVerdict[data-verdict="bad"] > span { color: #082946; }
+.compactVerdict[data-verdict="none"] > span { color: #082946; }
 @keyframes compactVerdictPop { from { opacity: 0; transform: scale(.92) translateY(4px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .compactVerdict > span { animation: none; } }
 @media (max-width: 1000px), (max-height: 700px) {
