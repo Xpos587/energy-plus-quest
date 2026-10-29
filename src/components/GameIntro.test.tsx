@@ -63,24 +63,23 @@ it("returns from sender selection to the introduction and resumes preparation", 
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-enter]')!.click());
   if (host.querySelector('[data-intro-next]')) await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-start]')!.click());
-  expect(host.querySelector("h1")?.textContent).toBe("Кто отправит подарок?");
+  expect(host.querySelector("h1")?.textContent).toBe("Кто вы?");
   const back = Array.from(host.querySelectorAll("button")).find(button => button.textContent?.trim() === "Назад")!;
   await act(async () => back.click());
-  expect(host.querySelector("h1")?.textContent).toBe("Доставляем радость");
-  await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-enter]')!.click());
-  await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
+  // Back returns to the route sheet the player just left, not the cover.
+  expect(host.querySelector("[data-intro-start]")).not.toBeNull();
   expect(host.querySelectorAll("li")).toHaveLength(3);
   expect(host.textContent).toContain("экономите ресурсы");
   expect(host.textContent).toContain("проявляете заботу");
   expect(host.textContent).toContain("принимаете наиболее эффективные решения");
   if (host.querySelector('[data-intro-next]')) await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-start]')!.click());
-  expect(host.querySelector("h1")?.textContent).toBe("Кто отправит подарок?");
+  expect(host.querySelector("h1")?.textContent).toBe("Кто вы?");
   await act(async () => host.querySelector<HTMLButtonElement>('[data-choice="student"]')!.click());
   expect(host.querySelector("h1")?.textContent).toBe("Кому отправим подарок?");
   await act(async () => Array.from(host.querySelectorAll("button")).find(button => button.textContent?.trim() === "Назад")!.click());
   await act(async () => Array.from(host.querySelectorAll("button")).find(button => button.textContent?.trim() === "Назад")!.click());
-  expect(host.querySelector("h1")?.textContent).toBe("Доставляем радость");
+  expect(host.querySelector("[data-intro-start]")).not.toBeNull();
 });
 
 it("shows all metric meanings without extra controls before starting", async () => {

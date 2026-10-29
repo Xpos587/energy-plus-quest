@@ -56,7 +56,8 @@ function Game() {
     false,
     (v): v is boolean => typeof v === "boolean",
   );
-  const [introOpen, setIntroOpen] = useState(false);
+  // false = closed; otherwise the intro page to open (-1 cover, 1 route sheet).
+  const [introOpen, setIntroOpen] = useState<false | number>(false);
   const [carrierToFocus, setCarrierToFocus] = useState<CarrierId>();
   const navigate = (action: GameAction) => {
     setCarrierToFocus(
@@ -68,9 +69,10 @@ function Game() {
     dispatch(action);
   };
 
-  if (introOpen || (state.step === "profile" && !state.profile && !introSeen)) {
+  if (introOpen !== false || (state.step === "profile" && !state.profile && !introSeen)) {
     return (
       <GameIntro
+        initialPage={introOpen === false ? -1 : introOpen}
         onStart={() => {
           setIntroSeen(true);
           setIntroOpen(false);
@@ -93,13 +95,13 @@ function Game() {
         onRestart={() => {
           setRemaining(false);
           setIntroSeen(false);
-          setIntroOpen(true);
+          setIntroOpen(-1);
           navigate({ type: "RESET" });
         }}
         onHome={() => {
           setRemaining(false);
           setIntroSeen(false);
-          setIntroOpen(true);
+          setIntroOpen(-1);
           navigate({ type: "RESET" });
         }}
         onBackToCarrier={() => {
@@ -161,7 +163,7 @@ function Game() {
             <GiftPreparation
               state={state}
               onAction={navigate}
-              onBackToIntro={() => setIntroOpen(true)}
+              onBackToIntro={() => setIntroOpen(1)}
             />
           )}
           {state.step === "carrier" && (

@@ -8,7 +8,7 @@ test("every scene fits the viewport without hiding content", async ({
   for (const action of [
     "Профессионал",
     "Хор",
-    "Лодка",
+    "Лодку",
     "№1",
     "Назад к машинам",
     "№2",
@@ -64,7 +64,7 @@ test("selection cards stay rounded and portrait results are edge-to-edge", async
   for (const action of [
     "Профессионал",
     "Хор",
-    "Лодка",
+    "Лодку",
     "№1",
     "Назад к машинам",
   ]) {
@@ -120,7 +120,7 @@ test("media fills its surface once and progress numerals stay light", async ({
     });
     expect(Math.max(...centered)).toBeLessThanOrEqual(1);
   }
-  for (const action of ["Профессионал", "Хор", "Лодка"]) {
+  for (const action of ["Профессионал", "Хор", "Лодку"]) {
     await page.getByRole("button", { name: action, exact: true }).click();
   }
   const map = await page.locator('[data-mode="live"]').boundingBox();

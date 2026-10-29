@@ -51,9 +51,15 @@ const routeArt: Record<(typeof progressSteps)[number]["id"], string> = {
 const waybillFields = ["Отправитель", "Получатель", "Груз"];
 const introWorld = sceneChoiceImage("lastmile");
 
-export function GameIntro({ onStart }: { onStart: () => void }) {
+export function GameIntro({
+  onStart,
+  initialPage = -1,
+}: {
+  onStart: () => void;
+  initialPage?: number;
+}) {
   const introWorldUrl = new URL(introWorld, document.baseURI).href;
-  const [page, setPage] = useState(-1);
+  const [page, setPage] = useState(initialPage);
   const copy = useRef<HTMLDivElement>(null);
   function turnPage(next: number) {
     setPage(next);

@@ -2,7 +2,6 @@ import { ArrowLeft } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { preparationCardArtwork } from "../game/artwork";
 import { parcels, profiles, recipients } from "../game/content";
-import { scenarioParagraph } from "../game/scenarioDocument";
 import type { GameAction, GameState } from "../game/types";
 import styles from "./GiftPreparation.module.css";
 
@@ -12,23 +11,12 @@ type Props = {
   onBackToIntro?: () => void;
 };
 const recipientDative = { alva: "Майме", khor: "Хабту", arseniy: "Арсению" };
-
-/* "Девочка Майма (всплывающая подсказка: …)" → who the recipient is, shown on the card,
-   so the player never meets an unexplained name such as «Хабт». */
-function recipientKind(id: string, role: "text" | "mixed") {
-  const [line] = scenarioParagraph(id, role).split(" (");
-  return line.slice(0, line.lastIndexOf(" "));
-}
-const cardDetails: Record<string, { kind?: string; note?: string }> = {
-  alva: {
-    kind: recipientKind("6BACF81D", "mixed"),
-    note: "«Радость» по\u2011ненецки",
-  },
-  khor: {
-    kind: recipientKind("65B771C9", "mixed"),
-    note: "«Дикий олень» по\u2011ненецки",
-  },
-  arseniy: { kind: recipientKind("49951299", "text") },
+/* Cards answer their question: «Кому отправим?» → «Майме», «Что отправим?» → «Лодку». */
+const cardName: Record<string, string> = {
+  ...recipientDative,
+  ...Object.fromEntries(
+    parcels.map((p) => [p.id, p.accusativeTitle[0].toUpperCase() + p.accusativeTitle.slice(1)]),
+  ),
 };
 
 /** One preparation table, with the chosen people staying beside the next decision. */
@@ -48,7 +36,7 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
         : parcels;
   const title =
     state.step === "profile"
-      ? "Кто отправит подарок?"
+      ? "Кто вы?"
       : state.step === "recipient"
         ? "Кому отправим подарок?"
         : `Что отправим ${state.recipient ? recipientDative[state.recipient] : "в подарок"}?`;
@@ -102,6 +90,12 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
           <h1 id="preparation-question" ref={heading} tabIndex={-1}>
             {title}
           </h1>
+          {/* The role only shapes the final offer; say so, or the choice reads as arbitrary. */}
+          {state.step === "profile" && (
+            <p className={styles.hint}>
+              Подарок отправляете вы. От роли зависит финал: студенту предложим практику, профессионалу — работу в снабжении.
+            </p>
+          )}
         </div>
         <div className={styles.stage} data-kind={state.step} key={state.step}>
           <div
@@ -125,17 +119,7 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
                   />
                 </span>
                 <span className={styles.caption}>
-                  {cardDetails[item.id]?.kind && (
-                    <small className={styles.kind}>
-                      {cardDetails[item.id].kind}
-                    </small>
-                  )}
-                  <span>{item.title}</span>
-                  {cardDetails[item.id]?.note && (
-                    <small className={styles.note}>
-                      {cardDetails[item.id].note}
-                    </small>
-                  )}
+                  <span>{cardName[item.id] ?? item.title}</span>
                 </span>
               </button>
             ))}

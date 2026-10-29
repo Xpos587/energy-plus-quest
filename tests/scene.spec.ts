@@ -23,7 +23,7 @@ test("preparation keeps selections and progress visible as the story advances", 
     page.getByRole("heading", { name: "Что отправим Майме?" }),
   ).toBeVisible();
   await expect(page.locator('[data-preparation-step="parcel"]')).toBeVisible();
-  await expect(page.getByRole("button", { name: "Лодка" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Лодку" })).toBeVisible();
 });
 
 test("city map plays behind five distinct carrier choices", async ({

@@ -66,6 +66,14 @@
   padding: 0 0 12px;
   border-bottom: 1px solid #d5e2e9;
 }
+.hint {
+  margin: 6px auto 0;
+  max-width: 46ch;
+  color: #4a6a82;
+  font-size: var(--type-support);
+  line-height: 1.35;
+  text-align: center;
+}
 .table h1 {
   font-size: var(--type-title);
   line-height: var(--type-title-leading);
@@ -455,24 +463,6 @@
   min-height: 44px;
 }
 
-/* Card captions: who the recipient is, and what the Nenets name means (scenario tooltips). */
-.stage .option .caption {
-  flex-direction: column;
-  gap: 2px;
-  line-height: 1.15;
-}
-.kind {
-  font-size: var(--type-support);
-  font-weight: 500;
-  color: #6b879a;
-  text-transform: none;
-}
-.note {
-  font-size: var(--type-support);
-  font-weight: 400;
-  font-style: italic;
-  color: #4a6a82;
-}
 
 @media (max-width: 640px) {
   .preparation .journey {
@@ -482,17 +472,6 @@
   }
   .back {
     min-height: 36px;
-  }
-}
-@media (max-height: 500px) and (min-width: 641px) {
-  .kind,
-  .note {
-    display: none;
-  }
-}
-@media (max-width: 360px) {
-  .stage .option .caption .note {
-    display: none;
   }
 }
 /* Touch targets stay at least 44px on every viewport. */
@@ -513,48 +492,10 @@
   .back:hover { background: var(--action-secondary-hover); text-decoration: none; }
 }
 
-/* Card captions line up across cards: the kind, the name and the note share
-   rows (subgrid), so a two-line kind never pushes one name below the others. */
-.stage .options {
-  grid-template-rows: auto auto auto auto;
-}
-.stage .option {
-  display: grid;
-  grid-row: span 4;
-  grid-template-rows: subgrid;
-  row-gap: 0;
-}
-.stage .option .caption {
-  grid-row: 2 / span 3;
-  display: grid;
-  grid-template-rows: subgrid;
-  row-gap: 2px;
-  align-content: start;
-}
 @media (max-width: 420px) {
   /* Room for «Фотоаппарат» in one piece; hyphenation stays as the last resort. */
   .stage .option .caption {
     padding-inline: 3px;
     font-size: 15px;
   }
-}
-.stage .option .caption > * {
-  min-width: 0;
-}
-.stage .option .caption .kind {
-  grid-row: 1;
-  align-self: end;
-}
-.stage .option .caption > span {
-  grid-row: 2;
-  align-self: start;
-}
-.stage .option .caption .note {
-  grid-row: 3;
-  align-self: start;
-}
-/* Captions without a kind or note (profile, parcels) sit centred in their row. */
-.stage .option .caption:not(:has(.kind)) > span {
-  grid-row: 1 / span 3;
-  align-self: center;
 }

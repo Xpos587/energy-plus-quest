@@ -79,19 +79,17 @@ it("restores preparation at the selected recipient after a page reload", async (
   expect(next.querySelector('[data-choice="socks"]')).not.toBeNull();
   expect(next.querySelector("[data-intro-start]")).toBeNull();
 });
-it("explains recipients and steps back to the sender", async () => {
+it("names cards as answers and steps back to the sender", async () => {
   const host = await render(<Setup />);
   await click(host, '[data-choice="student"]');
-  const khor = host.querySelector('[data-choice="khor"]')?.textContent;
-  expect(khor).toContain("Северный олень");
-  expect(khor).toContain("«Дикий олень»");
-  expect(host.querySelector('[data-choice="arseniy"]')?.textContent).toContain(
-    "Вахтовик",
+  expect(host.querySelector('[data-choice="khor"]')?.textContent).toBe("Хабту");
+  expect(host.querySelector('[data-choice="arseniy"]')?.textContent).toBe(
+    "Арсению",
   );
   await click(host, '[data-choice="khor"]');
   await click(host, "button:not([data-choice])");
   await click(host, "button:not([data-choice])");
-  expect(host.querySelector("h1")?.textContent).toBe("Кто отправит подарок?");
+  expect(host.querySelector("h1")?.textContent).toBe("Кто вы?");
   expect(JSON.parse(host.querySelector("output")!.textContent!).step).toBe(
     "profile",
   );
