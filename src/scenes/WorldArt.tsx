@@ -127,7 +127,7 @@ export function WorldArt({
       : containedArea(views.mobile) > containedArea(views.desktop)
         ? "mobile"
         : "desktop";
-  const lastmileFormat = size.width / size.height >= 1.78 ? "wide" : "tall";
+  const lastmileFormat = size.width / size.height >= 1.35 ? "wide" : "tall";
   const lastmileComposition = scene === "lastmile"
     ? { ...lastmileChoiceArtwork[lastmileFormat], image: lastmileChoiceImage(lastmileFormat, context.recipient) }
     : undefined;
@@ -135,7 +135,7 @@ export function WorldArt({
   const composition = expandedArt;
   const inventoryComposition = format === "mobile" ? "tall" : "wide";
   const layers = typeof children === "function"
-    ? children(scene === "inventory" ? inventoryComposition : size.width / size.height >= 1.78 ? "wide" : "tall")
+    ? children(scene === "inventory" ? inventoryComposition : lastmileFormat)
     : children;
   const view = composition ?? manifest.scenes[scene][format];
   const alphabet = inventoryAlphabet[context.parcel];
@@ -242,7 +242,7 @@ export function WorldArt({
             left: clampOffset(size.width / 2 - (selectedTransport ? selectedTransport.x * composition.width : composition.anchor.x) * planeScale, size.width, planeWidth),
             top: scene === "lastmile" && !selectedId
               ? scene === "lastmile" && lastmileFormat === "tall"
-                ? Math.max(framingOffset(size.height, planeHeight, hotspots.map(({ y }) => y)), -390 * planeScale)
+                ? Math.max(framingOffset(size.height, planeHeight, hotspots.map(({ y }) => y)), -lastmileChoiceArtwork.tall.maxTop * planeScale)
                 : framingOffset(size.height, planeHeight, hotspots.map(({ y }) => y))
               : clampOffset(size.height / 2 - (selectedTransport ? selectedTransport.y * composition.height : composition.anchor.y) * planeScale, size.height, planeHeight),
             transform: "none",

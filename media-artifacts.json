@@ -3762,6 +3762,44 @@
           "bytes": 424794
         }
       ]
+    },
+    {
+      "name": "media-33-8180c8c10867.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-29-lastmile-v7/media-33-8180c8c10867.tar.gz",
+      "sha256": "8180c8c108672f977725a311803b7fd7f038e6db9cf9a443b3acb53e063b6075",
+      "bytes": 5794795,
+      "files": [
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-7/choice-tall-alva.webp",
+          "sha256": "0d46e6365d94cb60e8fced2df74f128ecc33f5fb1928e529cb4640c98af6e862",
+          "bytes": 917600
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-7/choice-tall-arseniy.webp",
+          "sha256": "db4db1d556109436e781aae03ecf7de5a4923e28874c435535a8a6d01c0ba439",
+          "bytes": 914104
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-7/choice-tall-khor.webp",
+          "sha256": "894d5b242468723e6fd000a671d859e0a659e0aef7281bbb07347bda6e8a5996",
+          "bytes": 919404
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-7/choice-wide-alva.webp",
+          "sha256": "4f928130553bb91800ba7046266054cd80bfb85bf48c39d444160f701f3580da",
+          "bytes": 1014032
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-7/choice-wide-arseniy.webp",
+          "sha256": "bde8944e213965fa6ab68eeba116b6c5cabd3a739ae68bdcbbdaca56d5976c22",
+          "bytes": 1012528
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-7/choice-wide-khor.webp",
+          "sha256": "a17162274e5f836b6cb57f68cdd40ebe94f1ce4bf0d35ecff6eea00f3a0d9acd",
+          "bytes": 1015056
+        }
+      ]
     }
   ]
 }

@@ -8,7 +8,7 @@ for (const recipient of ['alva', 'khor', 'arseniy'] as const) {
     const context = { profile: 'student', recipient, parcel } as const;
     it(`${recipient}/${parcel}: selected recipient belongs to the destination art`, () => {
       const markup = renderToStaticMarkup(<LastmileArt context={context} showResult={false} />);
-      expect(markup).toContain(`revision-5/choice-tall-${recipient}.webp`);
+      expect(markup).toContain(`revision-7/choice-tall-${recipient}.webp`);
       expect(sceneOutcomeImage('lastmile', 'rover', context))
         .toBe(`/scene-art/lastmile-family-v1/revision-2/rover-${parcel === 'boat' ? 'boat' : 'parcel'}-${recipient}.webp`);
       expect(sceneOutcomeImage('lastmile', 'pipe-carrier', context))

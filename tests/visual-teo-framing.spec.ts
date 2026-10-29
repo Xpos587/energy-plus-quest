@@ -32,9 +32,14 @@ for (const [width, height] of [[390, 844], [752, 875], [1440, 900]]) {
 for (const [width, height] of [[390, 844], [1440, 900]]) {
   test(`lastmile art zones remain selectable at ${width}x${height}`, async ({ page }) => {
     await page.setViewportSize({ width, height });
-    await page.goto("/scenes.html?scene=lastmile&parcel=boat&recipient=alva");
+    const open = async () => {
+      await page.goto("/scenes.html?scene=lastmile&parcel=boat&recipient=alva");
+      const reading = page.getByRole("button", { name: /^(Далее|К выбору)$/ });
+      for (let step = 0; step < 10 && (await reading.isVisible()); step++) await reading.click();
+    };
+    await open();
     const stage = page.locator('[data-world-scene="lastmile"]');
-    await expect(stage.locator('img[src*="choice-final-"]')).toHaveAttribute("src", /choice-final-(wide|tall)-v10\.webp/);
+    await expect(stage.locator("img")).toHaveAttribute("src", /revision-7\/choice-(wide|tall)-alva\.webp/);
     for (const id of ["helicopter", "rover", "robot", "pipe-carrier"]) {
       const zone = stage.locator(`[data-lastmile-zone="${id}"]`);
       await expect(zone).toBeAttached();
@@ -42,8 +47,9 @@ for (const [width, height] of [[390, 844], [1440, 900]]) {
       const marker = stage.locator(`[data-hotspot="${id}"]`);
       await expect(marker).toBeInViewport({ ratio: 1 });
       await marker.click();
+      await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-result-reader]")).toBeVisible();
-      if (id !== "pipe-carrier") await page.goto("/scenes.html?scene=lastmile&parcel=boat&recipient=alva");
+      if (id !== "pipe-carrier") await open();
     }
   });
 }
