@@ -18,10 +18,10 @@ test("loading conditions and exact question remain available with choices", asyn
     ).toBeVisible();
     await expect(question).toContainText("Перевозчик найден");
     for (const [index, condition] of [
-      /тяжёлыми ящиками.*без креплений/,
-      /хрупкой посудой.*красные стропы/,
-      /ниша.*за тремя коробками/,
-      /передней стенки.*подушки/,
+      /ящиками с гирями.*Креплений нет/,
+      /посудой.*стропы/,
+      /ниша над коробками/,
+      /передней стенки.*подушками/,
     ].entries()) {
       const control = page.locator(`[data-hotspot="place-${index + 1}"]`);
       await expect(control).toHaveAccessibleName(condition);

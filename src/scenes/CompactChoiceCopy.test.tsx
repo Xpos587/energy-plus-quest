@@ -16,30 +16,34 @@ it("names each numbered place and lets the player revise a direct choice", async
       expect(button).toBeDefined();
       await act(async () => button!.click());
     }
-    const names = ["У задних дверей", "Над посудой", "Ниша за коробками", "У передней стенки"];
     const open = async (id: string) => act(async () => host.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`)!.click());
     const card = () => host.querySelector<HTMLElement>("[data-choice-inspection]");
     expect(host.querySelector("[data-scene-choice]")).toBeNull();
     for (let i = 1; i <= 4; i++) {
       await open(`place-${i}`);
-      expect(card()?.querySelector("[data-choice-eyebrow]")?.textContent).toBe(`Место ${i}`);
-      expect(card()?.querySelector("h3")?.lastChild?.textContent).toBe(names[i - 1]);
-      expect(card()?.querySelectorAll("dd")).toHaveLength(2);
+      // The highlighted square explains the place; the card only confirms it.
+      expect(card()?.querySelector("[data-choice-eyebrow]")).toBeNull();
+      expect(card()?.querySelector("h3")?.textContent).toBe(`Место ${i}`);
+      expect(card()?.querySelector('[aria-label="Описание варианта"]')).toBeNull();
       await act(async () => card()!.querySelector<HTMLButtonElement>("[data-choice-cancel]")!.click());
       expect(card()).toBeNull();
     }
-    expect(host.querySelector('[data-hotspot="place-3"]')?.getAttribute("aria-label")).toContain("за тремя коробками");
+    expect(host.querySelector('[data-hotspot="place-3"]')?.getAttribute("aria-label")).toContain("ниша над коробками");
     await open("place-3");
     expect(host.querySelector("[data-result]")).toBeNull();
     await act(async () => host.querySelector<HTMLButtonElement>("[data-choice-confirm]")!.click());
     expect(card()).toBeNull();
-    expect(host.querySelector('[data-verdict]')?.textContent).toContain("Ниша за коробками");
+    expect(host.querySelector('[data-verdict] small')?.textContent).toBe("Место 3");
     await act(async () => host.querySelector<HTMLButtonElement>('[data-result-reader] button[aria-label="Изменить выбор"]')!.click());
     expect(card()).toBeNull();
     await open("auto");
-    expect(card()?.querySelector("h3")?.lastChild?.textContent).toBe("Compact подберёт место");
+    expect(host.querySelector('[data-hotspot="auto"]')?.textContent).not.toContain("Compact");
+    expect(card()?.querySelector("h3")?.textContent).toBe("Подобрать автоматически");
+    expect(card()?.textContent).toContain("Compact Logotech");
+    expect(card()?.textContent).toContain("компактно");
     await act(async () => host.querySelector<HTMLButtonElement>("[data-choice-confirm]")!.click());
     expect(host.querySelector('[data-result]')).not.toBeNull();
+    expect(host.querySelector('[data-verdict] small')?.textContent).toBe("Место подобрано автоматически");
   } finally {
     await act(async () => root.unmount());
     host.remove();

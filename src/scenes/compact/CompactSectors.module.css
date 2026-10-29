@@ -136,7 +136,7 @@
   text-align: left;
   pointer-events: none;
 }
-.terminalCaption b { color: #075d9b; font-size: 14px; font-weight: 700; }
+.terminalCaption b { color: #075d9b; font-size: 13px; font-weight: 700; }
 .marker[aria-pressed="true"] .terminalCaption b,
 .marker:hover:not(:disabled) .terminalCaption b { color: var(--orange); }
 .marker:focus-visible {

@@ -30,14 +30,16 @@ export const defaultLayout: CompactLayout = {
   version: 1,
   profiles: {
     wide: places([
-      [68, 94, 372, 94],
-      [269, 194, 166, 36],
+      // As in docs/scenario-assets/image3.png: 1 above the kettlebells only,
+      // 2 above the dishes up to the roof.
+      [68, 94, 195, 94],
+      [269, 94, 166, 136],
       [450, 94, 99, 35],
       [686, 94, 110, 221],
     ]),
     portrait: places([
-      [68, 328, 372, 94],
-      [269, 428, 166, 36],
+      [68, 328, 195, 94],
+      [269, 328, 166, 136],
       [448, 328, 106, 34],
       [686, 328, 115, 220],
     ]),

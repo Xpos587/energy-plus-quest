@@ -43,7 +43,7 @@ describe("Compact flat cargo bay", () => {
     expect(host.querySelectorAll('button[data-hotspot^="place-"]')).toHaveLength(4);
     // Compact is a fifth object on the floor, marked like the places.
     expect(host.querySelector('button[data-hotspot="auto"] [data-layout-badge]')?.textContent).toBe("5");
-    expect(host.querySelector('button[data-hotspot="auto"]')?.textContent).toContain("Compact сам подберёт место");
+    expect(host.querySelector('button[data-hotspot="auto"]')?.textContent).toContain("Подобрать автоматически");
     expect(host.querySelector("[data-compact-terminal]")).not.toBeNull();
     expect(host.querySelectorAll('[data-loading-zone^="place-"]')).toHaveLength(4);
     expect(host.querySelectorAll("[data-loading-zone]")).toHaveLength(5);

@@ -23,22 +23,23 @@ function TerminalStand({ x, y }: { x: number; y: number }) {
       <ellipse cx="36" cy="102" rx="30" ry="5" fill="#1d2b45" opacity="0.16" stroke="none" />
       <rect x="13" y="94" width="46" height="8" rx="3" fill="#8e9cb1" />
       <rect x="32" y="44" width="8" height="51" fill="#c3cdd9" />
+      {/* A tablet in a holder: a digital tool, not a signboard. The screen shows
+          the loading plan with the slot it picked (the Compact sign idea). */}
+      <rect x="27" y="40" width="18" height="8" rx="2" fill="#8e9cb1" />
       <g transform="rotate(-6 36 26)">
-        <rect x="3" y="6" width="66" height="44" rx="7" fill="#26395c" />
-        <rect x="8" y="11" width="56" height="34" rx="3" fill="#4ba3ef" strokeWidth="1.4" />
-        <text x="36" y="22" textAnchor="middle" fill="#fff" stroke="none"
-          style={{ font: "700 10px var(--font-brand)", letterSpacing: "0.2px" }}>Compact</text>
-        {/* Mini truck with the slot Compact picks. */}
-        <g transform="translate(23 26.5) scale(0.6) translate(-13 -19)">
-          <g stroke="#fff" strokeWidth="2.6" fill="none">
-            <rect x="13" y="19" width="31" height="15" rx="1.5" />
-            <path d="M44 23 H52 L57 28 V34 H44" />
-          </g>
-          <rect x="30" y="21" width="11" height="11" fill="#ffb02e" stroke="none" />
-          <circle cx="19" cy="37" r="3" fill="#fff" stroke="none" />
-          <circle cx="39" cy="37" r="3" fill="#fff" stroke="none" />
-          <circle cx="52" cy="37" r="3" fill="#fff" stroke="none" />
+        <rect x="1" y="2" width="70" height="48" rx="8" fill="#1d2b45" />
+        <circle cx="36" cy="6.5" r="1.3" fill="#5b6b85" stroke="none" />
+        <rect x="6" y="10" width="60" height="35" rx="2" fill="#eef6ff" strokeWidth="1.2" />
+        <rect x="6" y="10" width="60" height="6" fill="#4ba3ef" stroke="none" />
+        <g stroke="#26395c" strokeWidth="1.6" fill="none">
+          <rect x="12" y="20" width="33" height="16" rx="1" />
+          <path d="M45 24 H52 L58 29 V36 H45" />
+          <path d="M23 20 V36 M34 20 V36 M12 28 H45" strokeWidth="1" opacity="0.5" />
         </g>
+        <rect x="34.5" y="20.5" width="10" height="7.5" fill="#ffb02e" stroke="none" />
+        <circle cx="18" cy="39" r="2.4" fill="#26395c" stroke="none" />
+        <circle cx="40" cy="39" r="2.4" fill="#26395c" stroke="none" />
+        <circle cx="53" cy="39" r="2.4" fill="#26395c" stroke="none" />
       </g>
     </g>
   );

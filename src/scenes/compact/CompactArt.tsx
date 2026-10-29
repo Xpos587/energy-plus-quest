@@ -229,9 +229,9 @@ export function CompactArt({
               fontSize: badge.size * 15 / 24,
             }}>{space.number}</span>
             {space.id === "auto" && (
-              // Names the stand on every screen size; the tablet wordmark is too small on phones.
+              // Plain words: the player meets the Compact brand only in the card and result.
               <span className={styles.terminalCaption}>
-                <b>Compact</b> сам подберёт место
+                <b>Подобрать автоматически</b>
               </span>
             )}
           </button>

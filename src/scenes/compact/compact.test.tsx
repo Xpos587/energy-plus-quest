@@ -6,7 +6,9 @@ import type { ParcelId } from "../../game/types";
 import { parcelNames, recipientNames } from "../names";
 import { scenarioParagraph } from "../../game/scenarioDocument";
 import type { SceneContext } from "../types";
-import { compactScene } from "./index";
+import { compactRewrites, compactScene } from "./index";
+
+const copy = (id: string, role?: "structure") => compactRewrites[id] ?? scenarioParagraph(id, role);
 
 const labels = ["31D20510", "046AB51D", "50E6D7F5", "490391EF", "381A07B3"];
 const ids = ["place-1", "place-2", "place-3", "place-4", "auto"];
@@ -48,6 +50,12 @@ describe("compactScene source contract", () => {
       scenarioParagraph("4D1B5677", "structure").replace("Целевой продукт: ", ""),
     );
   });
+  it("rewrites only existing canonical blocks and drops the strap colour", () => {
+    for (const [id, text] of Object.entries(compactRewrites)) {
+      expect(() => scenarioParagraph(id, id === "381A07B3" ? "structure" : "text")).not.toThrow();
+      expect(text).not.toMatch(/красн|нагрузку оси|ё/i);
+    }
+  });
   for (const parcel of Object.keys(cases) as ParcelId[]) {
     it(`${parcel}: preserves full intro and inflects only explicit placeholders`, () => {
       const name = parcelNames[parcel];
@@ -63,9 +71,9 @@ describe("compactScene source contract", () => {
       it(`${parcel} / ${ids[index]}: exact paragraphs, score and provenance`, () => {
         const option = compactScene.options(context(parcel))[index];
         expect(option.id).toBe(ids[index]);
-        expect(option.label).toBe(scenarioParagraph(labels[index], "structure"));
+        expect(option.label).toBe(copy(labels[index], "structure"));
         expect(option.result).toEqual(
-          paragraphs.map((p) => scenarioParagraph(p).replace("(персонаж)", "Майма")),
+          paragraphs.map((p) => copy(p).replace("(персонаж)", "Майма")),
         );
         expect(option.score).toEqual({
           energy: values[0],
@@ -85,7 +93,7 @@ describe("compactScene source contract", () => {
     for (const recipient of ["alva", "khor", "arseniy"] as const) {
       const ctx = { ...context("socks"), recipient };
       expect(compactScene.options(ctx)[2].result).toEqual([
-        scenarioParagraph("5763185A").replace(
+        copy("5763185A").replace(
           "(персонаж)",
           recipientNames[recipient].nominative,
         ),
