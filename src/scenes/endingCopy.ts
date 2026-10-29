@@ -26,7 +26,6 @@ export function endingGiftCopy(parcel: ParcelId, recipient: RecipientId) {
     .replace("Он/она", recipient === "alva" ? "Она" : "Он");
 }
 export const endingRestartLabel = scenarioParagraph("15010E9F");
-export const endingHomeLabel = scenarioParagraph("5D77C15C");
 type LogistType = "future" | "energy" | "empathy" | "efficiency";
 export function logistType(profile: ProfileId, scores: Scores): LogistType {
   if (
@@ -69,10 +68,18 @@ export function logistProfileCopy(
         .replace("(название персонажа)", recipientDative[recipient])
         .replace(" (ссылка сайт/страницу HH)", ""),
   );
+  const body = paragraphs.slice(0, -1);
+  let callToAction = paragraphs.at(-1)!;
+  /* Client order (R15): «энергия — в людях» right under «сердце логистики». */
+  if (profile === "professional" && type === "empathy") {
+    const [lead, rest] = callToAction.split(/(?<=\.)\s+/u);
+    body.unshift(lead);
+    callToAction = rest;
+  }
   return {
     type,
     title: scenarioParagraph(titles[type]),
-    paragraphs: paragraphs.slice(0, -1),
-    callToAction: paragraphs.at(-1)!,
+    paragraphs: body,
+    callToAction,
   };
 }

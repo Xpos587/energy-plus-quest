@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("all certificate profiles fit and expose download and text channels", async ({
+test("all certificate profiles fit and expose picture download and VK", async ({
   page,
 }) => {
   await page.goto("/");
@@ -54,7 +54,6 @@ test("all certificate profiles fit and expose download and text channels", async
                 context: { profile, recipient: "arseniy", parcel: "boat" },
                 scores,
                 onRestart: () => {},
-                onHome: () => {},
               }),
             );
           },
@@ -67,20 +66,11 @@ test("all certificate profiles fit and expose download and text channels", async
           .getByRole("button", { name: "Поделиться", exact: true })
           .click();
         await expect(
-          page.getByRole("button", { name: "Скачать сертификат", exact:true }),
+          page.getByRole("button", { name: "Скачать картинку", exact: true }),
         ).toBeVisible();
         await page
           .getByRole("button", { name: "Закрыть", exact: true })
           .click();
-        for (const screen of ["result", "practice"]) {
-          if (screen === "practice") {
-            const turn = page.getByRole("button", {
-              name: "Подробнее о практике",
-            });
-            if (!(await turn.isVisible())) break;
-            await turn.click();
-            await expect(page.locator("[data-practice-cta] h2")).toBeFocused();
-          }
           const outside = await page.locator("button,a").evaluateAll(
             (els, viewport) =>
               els
@@ -99,14 +89,13 @@ test("all certificate profiles fit and expose download and text channels", async
           );
           expect(
             outside,
-            `${profile}/${type}/${screen} ${viewport.width}`,
+            `${profile}/${type} ${viewport.width}`,
           ).toEqual([]);
-        }
         await page
           .getByRole("button", { name: "Поделиться", exact: true })
           .click();
         await expect(
-          page.getByRole("link", { name: "MAX", exact: true }),
+          page.getByRole("link", { name: "ВКонтакте", exact: true }),
         ).toBeVisible();
       }
   }

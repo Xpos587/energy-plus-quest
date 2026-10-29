@@ -35,13 +35,12 @@ it.each(["alva", "khor", "arseniy"] as const)(
   },
 );
 
-it("continues the delivered gift to a certificate before restart or home", async () => {
+it("continues the delivered gift to a certificate before restart or the Energy+ site", async () => {
   vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
   const host = document.createElement("div");
   document.body.append(host);
   const root = createRoot(host);
   const restart = vi.fn();
-  const home = vi.fn();
   try {
     await act(async () =>
       root.render(
@@ -49,7 +48,6 @@ it("continues the delivered gift to a certificate before restart or home", async
           context={{ profile: "student", recipient: "alva", parcel: "boat" }}
           scores={{ energy: 1, empathy: 5, efficiency: 2 }}
           onRestart={restart}
-          onHome={home}
         />,
       ),
     );
@@ -70,16 +68,16 @@ it("continues the delivered gift to a certificate before restart or home", async
     const restartButton = [...host.querySelectorAll("button")].find(
       (button) => button.getAttribute("aria-label") === "Пройти заново",
     )!;
-    const homeButton = [...host.querySelectorAll("button")].find(
-      (button) => button.getAttribute("aria-label") === "Вернуться на главную",
-    )!;
-    await act(async () => homeButton.click());
-    expect(home).toHaveBeenCalledOnce();
+    expect(
+      host.querySelector('a[aria-label="Сайт «Энергии+»"]')?.getAttribute("href"),
+    ).toBe("https://e-plus.media/");
     await act(async () => restartButton.click());
     expect(restart).toHaveBeenCalledOnce();
+    /* Text-only share links are gone; VK is the only one that carries a picture. */
+    expect(host.querySelector('a[href*="max.ru"], a[href*="t.me"]')).toBeNull();
     expect(
-      host.querySelectorAll('a[href^="https://max.ru/:share"]'),
-    ).toHaveLength(1);
+      host.querySelector('a[href^="https://vk.com/share.php"]')?.getAttribute("href"),
+    ).toContain("image=");
   } finally {
     await act(async () => root.unmount());
     host.remove();

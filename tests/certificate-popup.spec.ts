@@ -42,25 +42,29 @@ test.beforeEach(async ({ page }) => {
   await page.reload();
 });
 
-test("downloads the PNG directly and offers MAX text sharing", async ({
+test("downloads the story JPEG and shares to VK with the picture", async ({
   page,
 }) => {
-  await expect(
-    page.getByRole("button", { name: "Скачать сертификат" }),
-  ).toBeVisible();
-  await expect(page.locator("[data-practice-cta]")).toBeVisible();
+  await page.getByRole("button", { name: "Поделиться", exact: true }).click();
   const pending = page.waitForEvent("download");
-  await page.getByRole("button", { name: "Скачать сертификат" }).click();
-  expect((await pending).suggestedFilename()).toMatch(/\.png$/);
-  const max = page.getByRole("link", { name: "MAX", exact: true });
-  const url = new URL((await max.getAttribute("href")) ?? "");
-  expect(url.hostname).toBe("max.ru");
-  expect(url.pathname).toBe("/:share");
-  expect(url.searchParams.get("text")).toContain("Я — логистический гик!");
-  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await page.getByRole("button", { name: "Скачать картинку" }).click();
+  const download = await pending;
+  expect(download.suggestedFilename()).toMatch(/\.jpg$/);
+  const size = await page.evaluate(async (path) => {
+    const image = new Image();
+    image.src = path;
+    await image.decode();
+    return [image.naturalWidth, image.naturalHeight];
+  }, `data:image/jpeg;base64,${(await import("node:fs")).readFileSync((await download.path())!).toString("base64")}`);
+  expect(size).toEqual([1080, 1920]);
+  const vk = new URL(
+    (await page.getByRole("link", { name: "ВКонтакте", exact: true }).getAttribute("href"))!,
+  );
+  expect(vk.searchParams.get("title")).toBe("Я — логистический гик!");
+  expect(vk.searchParams.get("image")).toBeTruthy();
 });
 
-test("native sharing sends the PNG with short first-person copy", async ({
+test("native sharing sends the JPEG with short first-person copy", async ({
   page,
 }) => {
   await page.addInitScript(() => {
@@ -80,17 +84,15 @@ test("native sharing sends the PNG with short first-person copy", async ({
     });
   });
   await page.reload();
-  await expect(
-    page.getByRole("button", { name: "Отправить сертификат" }),
-  ).toBeVisible();
-  await page.getByRole("button", { name: "Отправить сертификат" }).click();
+  await page.getByRole("button", { name: "Поделиться", exact: true }).click();
+  await page.getByRole("button", { name: "Отправить картинку" }).click();
   const shared = await page.evaluate(
     () =>
       (window as unknown as { shared: { type: string; text: string } }).shared,
   );
-  expect(shared.type).toBe("image/png");
+  expect(shared.type).toBe("image/jpeg");
   expect(shared.text).toContain("Я — логистический гик!");
-  expect(shared.text).not.toContain("Запишитесь на практику");
+  expect(shared.text).not.toContain("Узнайте больше");
   await expect(page.getByRole("alert")).toHaveCount(0);
 });
 
@@ -109,32 +111,7 @@ test("final card and actions fit narrow and landscape screens", async ({
     );
     expect(overflow).toBeLessThanOrEqual(1);
     await expect(
-      page.getByRole("button", { name: "Скачать сертификат" }),
-    ).toBeVisible();
-    if (viewport.width === 320) {
-      await page.getByRole("button", { name: "Подробнее о практике" }).click();
-    }
-    await expect(
-      page.getByRole("link", { name: "MAX", exact: true }),
-    ).toBeVisible();
+      page.getByRole("button", { name: "Поделиться", exact: true }),
+    ).toBeInViewport();
   }
-});
-
-test("certificate actions have clear names and work with a keyboard", async ({
-  page,
-}) => {
-  await expect(page.locator("[data-logist-certificate] h1")).toBeFocused();
-  await page.keyboard.press("Tab");
-  await expect(
-    page.getByRole("button", { name: "Скачать сертификат" }),
-  ).toBeFocused();
-  await expect(
-    page.getByRole("navigation", { name: "Поделиться текстом результата" }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("link", { name: "MAX", exact: true }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: "Пройти заново" }),
-  ).toBeVisible();
 });

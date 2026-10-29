@@ -98,12 +98,6 @@ function Game() {
           setIntroOpen(-1);
           navigate({ type: "RESET" });
         }}
-        onHome={() => {
-          setRemaining(false);
-          setIntroSeen(false);
-          setIntroOpen(-1);
-          navigate({ type: "RESET" });
-        }}
         onBackToCarrier={() => {
           setRemaining(false);
         }}

@@ -1,7 +1,7 @@
 import { act } from "react";
 import { createRoot } from "react-dom/client";
 import { expect, it, vi } from "vitest";
-import { certificateCopy, jpegPdf } from "./certificateExport";
+import { certificateCopy } from "./certificateExport";
 import { logistProfileCopy } from "./endingCopy";
 import { LogistCertificate } from "./LogistCertificate";
 
@@ -14,7 +14,7 @@ it.each([
   ["professional", [1, 5, 2], "empathy"],
   ["professional", [1, 2, 5], "efficiency"],
 ] as const)(
-  "renders %s %j as %s with the original result copy and CTA",
+  "renders %s %j as %s with the original result copy and company link",
   async (profile, numbers, type) => {
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
     const host = document.createElement("div");
@@ -31,18 +31,19 @@ it.each([
             profile={profile}
             copy={copy}
             onRestart={() => {}}
-            onHome={() => {}}
           />,
         ),
       );
       const certificate = host.querySelector("[data-logist-certificate]");
       expect(certificate?.textContent).toContain(copy.title);
-      expect(certificate?.textContent).not.toContain(copy.callToAction);
-      if (profile === "student") {
-        expect(
-          host.querySelector("[data-practice-cta]")?.textContent,
-        ).toContain(copy.callToAction);
-      }
+      expect(certificate?.textContent).toContain(copy.callToAction);
+      /* One target path: the company site, linked inside the closing sentence. */
+      const links = host.querySelectorAll("[data-company-cta] a");
+      expect(links).toHaveLength(1);
+      expect(links[0].getAttribute("href")).toBe("https://supply.gazprom-neft.ru/");
+      expect(links[0].textContent).toMatch(/^Узнайте больше о /u);
+      expect(host.textContent).not.toMatch(/ваканси/iu);
+      expect(host.querySelector("[data-certificate-totals]")).toBeNull();
       expect(
         host.querySelector("[data-certificate-art]")?.getAttribute("src"),
       ).toContain(`${profile}-${type}`);
@@ -81,13 +82,4 @@ it("speaks in the first person in every shared certificate", () => {
       ).join(" ");
       expect(text).not.toMatch(/(^|[^а-яё])(вы|ваш[а-яё]*|вам|вас|мы)(?![а-яё])/iu);
     }
-});
-
-it("wraps the JPEG in a one-page PDF with a valid cross-reference table", async () => {
-  const pdf = await jpegPdf(new Uint8Array([0xff, 0xd8, 0xff, 0xd9]), [2, 3], 20, 30).text();
-  expect(pdf.startsWith("%PDF-1.4")).toBe(true);
-  const offsets = [...pdf.matchAll(/^(\d{10}) 00000 n $/gmu)].map((m) => Number(m[1]));
-  expect(offsets).toHaveLength(5);
-  offsets.forEach((offset, i) => expect(pdf.slice(offset).startsWith(`${i + 1} 0 obj`)).toBe(true));
-  expect(pdf.slice(Number(pdf.match(/startxref\n(\d+)/u)![1])).startsWith("xref")).toBe(true);
 });

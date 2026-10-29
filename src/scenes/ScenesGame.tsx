@@ -196,7 +196,6 @@ export type ScenesGameProps = {
   onComplete?: (result: ScenesCompletion) => void;
   onBackToCarrier?: () => void;
   onRestart?: () => void;
-  onHome?: () => void;
 };
 
 type SceneSession = { progress: typeof initialProgress; briefed?: SceneId[] };
@@ -218,7 +217,6 @@ function ScenesSession({
   onComplete,
   onBackToCarrier,
   onRestart,
-  onHome,
   persistenceKey,
 }: ScenesGameProps) {
   const saveScope = useOptionalSaveScope();
@@ -396,7 +394,6 @@ function ScenesSession({
           if (onRestart) onRestart();
           else dispatch({ type: "RESET" });
         }}
-        onHome={onHome}
       />
     );
   }

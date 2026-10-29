@@ -39,7 +39,7 @@ test.beforeEach(async ({ page }) => {
     );
   });
 });
-test("file-share cancellation, failure and retry preserve the PNG and original copy", async ({
+test("file-share cancellation, failure and retry preserve the JPEG and original copy", async ({
   page,
 }) => {
   await page.addInitScript(() => {
@@ -64,12 +64,12 @@ test("file-share cancellation, failure and retry preserve the PNG and original c
   });
   await page.reload();
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
-  const share = page.getByRole("button", { name: "Отправить сертификат" });
+  const share = page.getByRole("button", { name: "Отправить картинку" });
   await share.click();
   await expect(page.getByRole("alert")).toHaveCount(0);
   await share.click();
   await expect(page.getByRole("alert")).toContainText(
-    "Не удалось отправить файл",
+    "Не удалось отправить картинку",
   );
   await share.click();
   await expect(page.getByRole("alert")).toHaveCount(0);
@@ -77,9 +77,9 @@ test("file-share cancellation, failure and retry preserve the PNG and original c
     await page.evaluate(
       () => (window as unknown as { shared: unknown }).shared,
     ),
-  ).toMatchObject({ calls: 3, type: "image/png" });
+  ).toMatchObject({ calls: 3, type: "image/jpeg" });
 });
-test("unsupported sharing keeps download, text links and the practice link usable", async ({
+test("unsupported sharing keeps download, the VK link and the company link usable", async ({
   page,
 }) => {
   await page.addInitScript(() => {
@@ -91,27 +91,22 @@ test("unsupported sharing keeps download, text links and the practice link usabl
   await page.reload();
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
   await expect(
-    page.getByRole("button", { name: "Отправить сертификат" }),
+    page.getByRole("button", { name: "Отправить картинку" }),
   ).toHaveCount(0);
   for (let i = 0; i < 2; i++) {
     const pending = page.waitForEvent("download");
-    await page.getByRole("button", { name: "Скачать сертификат" }).click();
-    expect((await pending).suggestedFilename()).toMatch(/\.png$/);
+    await page.getByRole("button", { name: "Скачать картинку" }).click();
+    expect((await pending).suggestedFilename()).toMatch(/\.jpg$/);
   }
+  const vk = new URL(
+    (await page.getByRole("link", { name: "ВКонтакте", exact: true }).getAttribute("href"))!,
+  );
+  expect(vk.hostname).toBe("vk.com");
+  expect(vk.searchParams.get("image")).toMatch(/^http.+\.webp$/u);
   await page.getByRole("button", { name: "Закрыть", exact: true }).click();
   await expect(
-    page.getByRole("link", { name: "Записаться на практику" }),
-  ).toHaveAttribute("href", "https://supply.gazprom-neft.ru/career/studentam/");
-  await page.getByRole("button", { name: "Поделиться", exact: true }).click();
-  for (const [name, host] of [
-    ["MAX", "max.ru"],
-    ["Telegram", "t.me"],
-    ["ВКонтакте", "vk.com"],
-  ]) {
-    const link = page.getByRole("link", { name, exact: true });
-    const url = new URL((await link.getAttribute("href"))!);
-    expect(url.hostname).toBe(host);
-  }
+    page.locator("[data-company-cta] a"),
+  ).toHaveAttribute("href", "https://supply.gazprom-neft.ru/");
 });
 test("download failure reports an error and retries after the image becomes available", async ({
   page,
@@ -119,13 +114,13 @@ test("download failure reports an error and retries after the image becomes avai
   await page.route("**/brand/quest-brand-lockup.svg", (route) => route.abort());
   await page.reload();
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
-  await page.getByRole("button", { name: "Скачать сертификат" }).click();
+  await page.getByRole("button", { name: "Скачать картинку" }).click();
   await expect(page.getByRole("alert")).toHaveText(
-    "Не удалось скачать сертификат. Попробуйте ещё раз.",
+    "Не удалось скачать картинку. Попробуйте ещё раз.",
   );
   await page.unroute("**/brand/quest-brand-lockup.svg");
   const pending = page.waitForEvent("download");
-  await page.getByRole("button", { name: "Скачать сертификат" }).click();
-  expect((await pending).suggestedFilename()).toMatch(/\.png$/);
+  await page.getByRole("button", { name: "Скачать картинку" }).click();
+  expect((await pending).suggestedFilename()).toMatch(/\.jpg$/);
   await expect(page.getByRole("alert")).toHaveCount(0);
 });

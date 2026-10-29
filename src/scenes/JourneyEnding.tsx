@@ -14,13 +14,11 @@ type EndingProps = {
   context: SceneContext;
   scores: Scores;
   onRestart: () => void;
-  onHome?: () => void;
 };
 export function JourneyEnding({
   context,
   scores,
   onRestart,
-  onHome = onRestart,
 }: EndingProps) {
   const scope = useOptionalSaveScope();
   const [showProfile, setShowProfile] = useStoredState(
@@ -45,9 +43,7 @@ export function JourneyEnding({
         <LogistCertificate
           profile={context.profile}
           copy={profile}
-          scores={scores}
           onRestart={onRestart}
-          onHome={onHome}
         />
       ) : (
         <section className={styles.composition}>

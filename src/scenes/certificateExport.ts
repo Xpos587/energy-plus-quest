@@ -27,52 +27,6 @@ export function certificateCopy(copy: LogistCopy) {
   );
 }
 
-/** One-page PDF around a JPEG; a page of `width`×`height` points. */
-export function jpegPdf(
-  jpeg: Uint8Array,
-  pixels: [number, number],
-  width: number,
-  height: number,
-) {
-  const encoder = new TextEncoder();
-  const parts: Uint8Array[] = [];
-  let size = 0;
-  const push = (part: string | Uint8Array) => {
-    const bytes = typeof part === "string" ? encoder.encode(part) : part;
-    parts.push(bytes);
-    size += bytes.length;
-  };
-  const content = `q ${width} 0 0 ${height} 0 0 cm /Im0 Do Q`;
-  const objects: (string | Uint8Array)[][] = [
-    ["<< /Type /Catalog /Pages 2 0 R >>"],
-    ["<< /Type /Pages /Kids [3 0 R] /Count 1 >>"],
-    [
-      `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>`,
-    ],
-    [
-      `<< /Type /XObject /Subtype /Image /Width ${pixels[0]} /Height ${pixels[1]} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`,
-      jpeg,
-      "\nendstream",
-    ],
-    [`<< /Length ${content.length} >>\nstream\n${content}\nendstream`],
-  ];
-  const offsets: number[] = [];
-  push("%PDF-1.4\n");
-  objects.forEach((object, index) => {
-    offsets.push(size);
-    push(`${index + 1} 0 obj\n`);
-    for (const part of object) push(part);
-    push("\nendobj\n");
-  });
-  const xref = size;
-  push(
-    `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n${offsets
-      .map((offset) => `${String(offset).padStart(10, "0")} 00000 n \n`)
-      .join("")}trailer\n<< /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`,
-  );
-  return new Blob(parts as BlobPart[], { type: "application/pdf" });
-}
-
 function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const image = new Image();
@@ -90,24 +44,27 @@ export async function exportCertificate(copy: LogistCopy, artwork: string) {
     loadImage(artwork),
     loadImage(`${import.meta.env.BASE_URL}brand/quest-brand-lockup.svg`),
   ]);
+  /* Story format (R15): Telegram, VK and MAX stories take a 9:16 picture. */
+  const W = 1080;
+  const H = 1920;
   const canvas = document.createElement("canvas");
-  canvas.width = 1200;
-  canvas.height = 1400;
+  canvas.width = W;
+  canvas.height = H;
   const ctx = canvas.getContext("2d");
-  if (!ctx) throw new Error("Не удалось подготовить сертификат.");
+  if (!ctx) throw new Error("Не удалось подготовить картинку.");
   ctx.fillStyle = "#fffdf7";
-  ctx.fillRect(0, 0, 1200, 1400);
+  ctx.fillRect(0, 0, W, H);
   ctx.strokeStyle = "#07629c";
   ctx.lineWidth = 4;
-  ctx.strokeRect(28, 28, 1144, 1344);
+  ctx.strokeRect(28, 28, W - 56, H - 56);
   ctx.lineWidth = 1;
-  ctx.strokeRect(40, 40, 1120, 1320);
+  ctx.strokeRect(40, 40, W - 80, H - 80);
   ctx.fillStyle = "#ff6500";
   for (const [x, y] of [
     [28, 28],
-    [1172, 28],
-    [28, 1372],
-    [1172, 1372],
+    [W - 28, 28],
+    [28, H - 28],
+    [W - 28, H - 28],
   ]) {
     ctx.save();
     ctx.translate(x, y);
@@ -115,12 +72,14 @@ export async function exportCertificate(copy: LogistCopy, artwork: string) {
     ctx.fillRect(-12, -12, 24, 24);
     ctx.restore();
   }
-  const brandWidth = 740;
+  const brandWidth = 700;
   const brandHeight = brandWidth * (brand.naturalHeight / brand.naturalWidth);
-  ctx.drawImage(brand, (1200 - brandWidth) / 2, 60, brandWidth, brandHeight);
-  ctx.drawImage(image, 350, 190, 500, 500);
+  ctx.drawImage(brand, (W - brandWidth) / 2, 100, brandWidth, brandHeight);
+  const artSize = 640;
+  const artTop = 100 + brandHeight + 60;
+  ctx.drawImage(image, (W - artSize) / 2, artTop, artSize, artSize);
   const family = getComputedStyle(document.body).fontFamily;
-  let y = 775;
+  let y = artTop + artSize + 70;
   ctx.textAlign = "center";
   ctx.textBaseline = "top";
   ctx.fillStyle = "#123750";
@@ -130,23 +89,29 @@ export async function exportCertificate(copy: LogistCopy, artwork: string) {
     let line = "";
     for (const word of text.split(/\s+/u)) {
       const candidate = line ? `${line} ${word}` : word;
-      if (line && ctx.measureText(candidate).width > 980) {
+      if (line && ctx.measureText(candidate).width > 900) {
         lines.push(line);
         line = word;
       } else line = candidate;
     }
     if (line) lines.push(line);
     for (const row of lines) {
-      ctx.fillText(row, 600, y);
+      ctx.fillText(row, W / 2, y);
       y += size * 1.32;
     }
-    y += 24;
+    y += 28;
   };
   const [title, ...paragraphs] = certificateCopy(copy);
-  wrap(title, 54, 700);
-  for (const paragraph of paragraphs) wrap(paragraph, 32, 400);
-  if (y > 1340)
-    throw new Error("Текст сертификата не помещается в изображение.");
+  ctx.fillStyle = "#07629c";
+  wrap(title, 64, 700);
+  ctx.fillStyle = "#123750";
+  for (const paragraph of paragraphs) wrap(paragraph, 38, 400);
+  ctx.font = `400 30px ${family}`;
+  ctx.fillStyle = "#44667d";
+  const footer = location.host + location.pathname.replace(/\/$/u, "");
+  ctx.fillText(footer, W / 2, H - 120);
+  if (y > H - 150)
+    throw new Error("Текст не помещается в картинку.");
   const jpeg = await new Promise<Blob>((resolve, reject) =>
     canvas.toBlob(
       (value) =>
@@ -157,14 +122,7 @@ export async function exportCertificate(copy: LogistCopy, artwork: string) {
       0.92,
     ),
   );
-  /* 1200×1400 px on a 600×700 pt page: about 144 dpi, sharp in print. */
-  const pdf = jpegPdf(
-    new Uint8Array(await jpeg.arrayBuffer()),
-    [1200, 1400],
-    600,
-    700,
-  );
-  return new File([pdf], `dostavlyaem-radost-${copy.type}.pdf`, {
-    type: "application/pdf",
+  return new File([jpeg], `dostavlyaem-radost-${copy.type}.jpg`, {
+    type: "image/jpeg",
   });
 }

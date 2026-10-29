@@ -45,23 +45,24 @@ test("share popup contains labelled download and social links, traps focus and c
 }) => {
   await page.reload();
   await expect(
-    page.getByRole("link", { name: "MAX", exact: true }),
+    page.getByRole("link", { name: "ВКонтакте", exact: true }),
   ).not.toBeVisible();
   const trigger = page.getByRole("button", { name: "Поделиться", exact: true });
   await trigger.click();
   const dialog = page.getByRole("dialog", { name: "Поделиться результатом" });
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Закрыть" })).toBeFocused();
-  for (const name of ["MAX", "Telegram", "ВКонтакте"])
-    await expect(dialog.getByRole("link", { name, exact: true })).toBeVisible();
+  await expect(dialog.getByRole("link", { name: "ВКонтакте", exact: true })).toBeVisible();
+  for (const name of ["MAX", "Telegram"])
+    await expect(dialog.getByRole("link", { name, exact: true })).toHaveCount(0);
   const download = dialog.getByRole("button", {
-    name: "Скачать сертификат",
+    name: "Скачать картинку",
     exact: true,
   });
-  await expect(download).toHaveText("Скачать сертификат");
+  await expect(download).toHaveText("Скачать картинку");
   const pending = page.waitForEvent("download");
   await download.click();
-  expect((await pending).suggestedFilename()).toMatch(/\.png$/);
+  expect((await pending).suggestedFilename()).toMatch(/\.jpg$/);
   await dialog.getByRole("button", { name: "Закрыть" }).focus();
   await page.keyboard.press("Shift+Tab");
   await expect(download).toBeFocused();

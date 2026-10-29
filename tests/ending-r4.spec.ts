@@ -48,28 +48,23 @@ test("result keeps a labelled share action and hides social/download until opene
     page.getByRole("button", { name: "Поделиться", exact: true }),
   ).toBeVisible();
   await expect(
-    page.getByRole("button", { name: "Скачать сертификат", exact: true }),
+    page.getByRole("button", { name: "Скачать картинку", exact: true }),
   ).not.toBeVisible();
-  for (const name of ["Пройти заново", "Вернуться на главную"]) {
-    const action = page.getByRole("button", { name, exact: true });
+  for (const [role, name] of [
+    ["button", "Пройти заново"],
+    ["link", "Сайт «Энергии+»"],
+  ] as const) {
+    const action = page.getByRole(role, { name, exact: true });
     await expect(action).toHaveText("");
     await expect(action).toHaveAttribute("title", name);
   }
   await expect(
-    page.locator("[data-logist-certificate] [data-practice-cta]"),
-  ).toHaveCount(0);
-  await expect(page.locator("[data-practice-cta]")).toContainText(
-    "Узнайте больше",
-  );
+    page.locator("[data-logist-certificate] [data-company-cta] a"),
+  ).toHaveAttribute("href", "https://supply.gazprom-neft.ru/");
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
-  for (const name of ["MAX", "Telegram", "ВКонтакте"]) {
-    const action = page.getByRole("link", { name, exact: true });
-    await expect(action).toHaveText(name);
-    await expect(action).toHaveAttribute("title", name);
-  }
-  await expect(
-    page.getByRole("link", { name: "MAX", exact: true }).locator("img"),
-  ).toHaveAttribute("src", "/brand/max-official.svg");
+  await expect(page.getByRole("link", { name: "ВКонтакте", exact: true })).toBeVisible();
+  for (const name of ["MAX", "Telegram"])
+    await expect(page.getByRole("link", { name, exact: true })).toHaveCount(0);
 });
 
 test("gift handover keeps every recipient and present readable without offscreen actions", async ({
@@ -134,16 +129,11 @@ test("gift handover keeps every recipient and present readable without offscreen
   }
 });
 
-test("home icon returns to the opening screen", async ({ page }) => {
+test("home icon links to the Energy+ site", async ({ page }) => {
   await page.reload();
-  await page
-    .getByRole("button", { name: "Вернуться на главную", exact: true })
-    .click();
-  await expect(page.locator("[data-journey-ending]")).toHaveCount(0);
   await expect(
-    page.getByRole("button", { name: "Скачать сертификат", exact: true }),
-  ).toHaveCount(0);
-  await expect(page.locator("main")).toBeVisible();
+    page.getByRole("link", { name: "Сайт «Энергии+»", exact: true }),
+  ).toHaveAttribute("href", "https://e-plus.media/");
 });
 
 test("restart icon starts a fresh journey", async ({ page }) => {
@@ -153,7 +143,7 @@ test("restart icon starts a fresh journey", async ({ page }) => {
     .click();
   await expect(page.locator("[data-journey-ending]")).toHaveCount(0);
   await expect(
-    page.getByRole("button", { name: "Скачать сертификат", exact: true }),
+    page.getByRole("button", { name: "Поделиться", exact: true }),
   ).toHaveCount(0);
   const state = await page.evaluate(() =>
     JSON.parse(localStorage.getItem("energy-quest-save-v1")!),
@@ -162,35 +152,19 @@ test("restart icon starts a fresh journey", async ({ page }) => {
   expect(state.state.profile).toBeUndefined();
 });
 
-test("compact practice uses an icon-only return action and restores heading focus", async ({
-  page,
-}) => {
-  await page.setViewportSize({ width: 320, height: 568 });
-  await page.reload();
-  await page.getByRole("button", { name: "Подробнее о практике" }).click();
-  const back = page.getByRole("button", { name: "Назад к результату" });
-  await expect(back).toHaveText("");
-  await expect(back).toHaveAttribute("title", "Назад к результату");
-  await back.click();
-  await expect(page.locator("[data-logist-certificate] h1")).toBeFocused();
-});
-
 test("main service actions retain visible keyboard focus and accessible names", async ({
   page,
 }) => {
   await page.reload();
   await page.locator("[data-logist-certificate] h1").focus();
-  for (const name of [
-    "Записаться на практику",
-    "Поделиться",
-    "Пройти заново",
-    "Вернуться на главную",
-  ]) {
+  for (const [role, name] of [
+    ["link", /^Узнайте больше о /u],
+    ["button", "Поделиться"],
+    ["button", "Пройти заново"],
+    ["link", "Сайт «Энергии+»"],
+  ] as const) {
     await page.keyboard.press("Tab");
-    const action = page.getByRole(
-      name === "Записаться на практику" ? "link" : "button",
-      { name, exact: true },
-    );
+    const action = page.getByRole(role, { name, exact: typeof name === "string" });
     await expect(action).toBeFocused();
     expect(
       await action.evaluate((el) => getComputedStyle(el).outlineWidth),

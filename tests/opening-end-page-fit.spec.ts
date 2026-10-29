@@ -13,6 +13,8 @@ async function expectWholePageInView(page: Page, label: string) {
     const view = { width: innerWidth, height: innerHeight };
     const controls = [...document.querySelectorAll<HTMLButtonElement | HTMLAnchorElement>("main button, main a")]
       .filter((element) => element.getClientRects().length > 0)
+      // Inline text links are exempt from the target-size rule (WCAG 2.5.8).
+      .filter((element) => getComputedStyle(element).display !== "inline")
       .map((element) => {
         const rect = element.getBoundingClientRect();
         return { name: element.textContent?.trim(), top: rect.top, bottom: rect.bottom, height: rect.height };
@@ -69,12 +71,6 @@ for (const context of [
     await page.getByRole("button", { name: "Узнать, какой вы логист" }).click();
     await expectWholePageInView(page, `${context.profile} result`);
     await page.screenshot({ path: `.tmp-work/opening-end-fit/certificate-${context.profile}-${context.recipient}-${context.parcel}-320x568.png` });
-    // Both profiles end on one invitation card: internship or team vacancies.
-    const more = context.profile === "student" ? "Подробнее о практике" : "Подробнее о вакансиях";
-    await page.getByRole("button", { name: more }).click();
-    await expect(page.locator(`[data-practice-cta="${context.profile}"] h2`)).toBeFocused();
-    await expectWholePageInView(page, `${context.profile} practice`);
-    await page.screenshot({ path: `.tmp-work/opening-end-fit/certificate-practice-${context.profile}-${context.recipient}-${context.parcel}-320x568.png` });
   });
 }
 for (const viewport of viewports) {
@@ -96,14 +92,6 @@ for (const viewport of viewports) {
     await page.getByRole("button", { name: "Узнать, какой вы логист" }).click();
     await expectWholePageInView(page, "certificate");
     await page.screenshot({ path: `.tmp-work/opening-end-fit/certificate-${viewport.width}x${viewport.height}.png` });
-    if (viewport.width === 320) {
-      await page.getByRole("button", { name: "Подробнее о практике" }).click();
-      await expect(page.locator("[data-practice-cta] h2")).toBeFocused();
-      await expectWholePageInView(page, "certificate practice");
-      await page.screenshot({ path: `.tmp-work/opening-end-fit/certificate-practice-${viewport.width}x${viewport.height}.png` });
-      await page.getByRole("button", { name: "Назад к результату" }).click();
-      await expect(page.locator("[data-logist-certificate] h1")).toBeFocused();
-    }
   });
 }
 

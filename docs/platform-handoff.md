@@ -77,9 +77,6 @@ HTTP 301 с перенаправлением на
 
 ## Final invitation links
 
-The last screen ends on one invitation card: students are invited to the internship, professionals to team vacancies. Both buttons open the career pages of «Газпромнефть‑Снабжение» in a new tab:
+The last screen has one target path: the words «Узнайте больше о компании» in the certificate text open https://supply.gazprom-neft.ru/ in a new tab. The home icon links to https://e-plus.media/.
 
-- student «Записаться на практику» → https://supply.gazprom-neft.ru/career/studentam/ (university programmes with practice at the company);
-- professional «Смотреть вакансии» → https://supply.gazprom-neft.ru/career/vakansii-i-stazhirovki/ (vacancies in logistics, purchasing, warehouses).
-
-A deployment may replace either address at build time with `VITE_PRACTICE_URL` / `VITE_CAREER_URL` (for example a dedicated sign-up form).
+The VK share link passes the certificate artwork URL as `image`; VK fetches it from the published site, so check the preview on the deployed address.
