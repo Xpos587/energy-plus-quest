@@ -1,109 +1,85 @@
-/** Barge scene v3: one isometric quay drawing in two crops, four result stills. */
-const base = "scene-art/barge-v3";
+/** Barge scene v4: one Blender quay rendered as layers per screen format (see design/scene-04/blender-v4). */
+import { craneLayers, craneWorld } from "./layers";
 
-type Rect = { x: number; y: number; width: number; height: number };
-/** What a choice highlights: frames around who and what it uses, one path to the near crane's cabin. */
-type Mark = { frames: readonly Rect[]; path?: string };
+const base = "scene-art/barge-v4";
+
+export type Rect = { x: number; y: number; width: number; height: number };
+export type CraneFormat = keyof typeof craneLayers;
+type Point = readonly [number, number];
+export type CraneActor = "ivan" | "ladder" | "far" | "near";
+
+/** Bounding box around points, padded and kept inside the drawing. */
+function around(points: readonly Point[], pad: number, width: number, height: number): Rect {
+  const xs = points.map((p) => p[0]);
+  const ys = points.map((p) => p[1]);
+  const x = Math.max(0, Math.min(...xs) - pad);
+  const y = Math.max(0, Math.min(...ys) - pad);
+  return {
+    x, y,
+    width: Math.min(width, Math.max(...xs) + pad) - x,
+    height: Math.min(height, Math.max(...ys) + pad) - y,
+  };
+}
+
+function format(name: CraneFormat) {
+  const layer = craneLayers[name];
+  const a = layer.anchors;
+  const { width, height } = layer;
+  const project = ([x, y, z]: readonly number[]): Point => {
+    const [[ax, ay, az, u], [bx, by, bz, v]] = layer.affine;
+    return [ax * x + ay * y + az * z + u, bx * x + by * y + bz * z + v];
+  };
+  const ladderMid: Point = [a.ladderFoot[0], (a.ladderFoot[1] + a.ladderTop[1]) / 2];
+  const near: readonly Point[] = [a.nearCabin, a.nearTip, a.quayFootNear, a.ladderTop];
+  const corners = (r: { x: number; y: number; w: number; h: number }): Point[] => [[r.x, r.y], [r.x + r.w, r.y + r.h]];
+  const sp = layer.sprites;
+  // Whole figures, not just their centres: office, both cranes, the barge from bow to stern.
+  // The round ПРУ office is about 11 m across.
+  const [pu, pv] = project([-10 - 6, 20 - 6, 0]);
+  const story: readonly Point[] = [a.pru, [pu, pv], ...corners(sp.ivan), ...corners(sp.gift), ...near, ...corners(sp.ladder),
+    ...corners(sp.far), ...corners(sp.barge)];
+  const tall = name === "tall";
+  return {
+    ...layer,
+    project,
+    // The strip that must stay in frame: office, gift, near crane, barge, far crane.
+    focus: around(story, tall ? 40 : 24, width, height),
+    hotspots: {
+      remote: { x: a.ivan[0], y: a.ivan[1], side: "right" },
+      rush: { x: ladderMid[0], y: ladderMid[1], side: "left" },
+      wait: { x: a.nearCabin[0], y: a.nearCabin[1], side: "right" },
+      petr: { x: a.petr[0], y: a.petr[1], side: "left" },
+    } as Record<string, { x: number; y: number; side: "left" | "right" }>,
+    chips: {
+      gift: { x: a.gift[0], y: a.gift[1] + (tall ? 46 : 52) },
+      barge: { x: a.bargeMid[0], y: a.bargeMid[1] + (tall ? 70 : 64) },
+    },
+    // What each way uses: these layers light up when the way is picked.
+    actors: {
+      remote: ["ivan", "near"],
+      rush: ["ladder", "near"],
+      wait: ["near"],
+      petr: ["far", "near"],
+    } as Record<string, readonly CraneActor[]>,
+    // Card open on a phone: the camera closes in on the chosen way.
+    zoom: tall
+      ? ({
+          remote: around([a.ivan, a.gift, a.nearCabin, a.deckSpot], 120, width, height),
+          rush: around([a.ladderFoot, a.ladderTop, a.nearCabin, a.gift], 140, width, height),
+          wait: around([a.nearCabin, a.gift, a.deckSpot, a.ladderFoot], 120, width, height),
+          petr: around([a.petr, a.farCabin, a.nearCabin, a.deckSpot], 110, width, height),
+        } as Partial<Record<string, Rect>>)
+      : ({} as Partial<Record<string, Rect>>),
+  };
+}
 
 export const craneArtwork = {
-  // Desktop beside the choice rail (about 5:4): the whole quay, no crop.
-  mid: {
-    image: `${base}/choice-mid.webp`,
-    width: 1402,
-    height: 1122,
-    focus: { x: 25, y: 150, width: 1350, height: 900 },
-    hotspots: {
-      remote: { x: 398, y: 362, side: "right" },
-      rush: { x: 470, y: 640, side: "left" },
-      wait: { x: 762, y: 470, side: "right" },
-      petr: { x: 1122, y: 245, side: "left" },
-    },
-    chips: { barge: { x: 912, y: 985 }, gift: { x: 203, y: 838 } },
-    marks: {
-      remote: { frames: [{ x: 115, y: 360, width: 275, height: 140 }, { x: 590, y: 435, width: 140, height: 120 }], path: "M392 410 Q500 330 588 462" },
-      rush: { frames: [{ x: 590, y: 435, width: 140, height: 120 }], path: "M290 600 Q380 720 500 700 L552 560" },
-      wait: { frames: [{ x: 590, y: 435, width: 140, height: 120 }] },
-      petr: { frames: [{ x: 1108, y: 262, width: 105, height: 115 }, { x: 590, y: 435, width: 140, height: 120 }], path: "M1105 320 Q900 330 734 470" },
-    },
-    zoom: {},
-  },
-  // Desktop: the whole quay at 3:2, so the picture beside the choice rail needs no crop.
-  desk: {
-    image: `${base}/choice-desk.webp`,
-    width: 1536,
-    height: 1024,
-    focus: { x: 0, y: 60, width: 1536, height: 940 },
-    hotspots: {
-      remote: { x: 372, y: 262, side: "right" },
-      rush: { x: 586, y: 500, side: "left" },
-      wait: { x: 812, y: 400, side: "right" },
-      petr: { x: 1300, y: 140, side: "left" },
-    },
-    chips: { barge: { x: 1000, y: 900 }, gift: { x: 240, y: 765 } },
-    marks: {
-      remote: { frames: [{ x: 108, y: 255, width: 265, height: 162 }, { x: 655, y: 325, width: 152, height: 145 }], path: "M376 300 Q520 215 650 350" },
-      rush: { frames: [{ x: 655, y: 325, width: 152, height: 145 }], path: "M205 400 Q300 610 540 650 L606 350" },
-      wait: { frames: [{ x: 655, y: 325, width: 152, height: 145 }] },
-      petr: { frames: [{ x: 1245, y: 160, width: 112, height: 115 }, { x: 655, y: 325, width: 152, height: 145 }], path: "M1242 225 Q1000 235 812 365" },
-    },
-    zoom: {},
-  },
-  wide: {
-    image: `${base}/choice-wide.webp`,
-    width: 1942,
-    height: 809,
-    // The strip that must stay in frame: office, gift, near crane, barge, far crane.
-    focus: { x: 0, y: 40, width: 1942, height: 760 },
-    hotspots: {
-      remote: { x: 372, y: 262, side: "right" },
-      rush: { x: 760, y: 430, side: "left" },
-      wait: { x: 1000, y: 236, side: "right" },
-      petr: { x: 1612, y: 96, side: "left" },
-    },
-    chips: { barge: { x: 1300, y: 718 }, gift: { x: 402, y: 646 } },
-    marks: {
-      remote: { frames: [{ x: 128, y: 225, width: 300, height: 160 }, { x: 840, y: 208, width: 145, height: 140 }], path: "M428 270 Q640 110 838 250" },
-      rush: { frames: [{ x: 840, y: 208, width: 145, height: 140 }], path: "M312 470 Q520 575 735 525 L790 300" },
-      wait: { frames: [{ x: 840, y: 208, width: 145, height: 140 }] },
-      petr: { frames: [{ x: 1630, y: 55, width: 118, height: 118 }, { x: 840, y: 208, width: 145, height: 140 }], path: "M1628 118 Q1300 60 988 244" },
-    },
-    zoom: {},
-  },
-  tall: {
-    image: `${base}/choice-tall.webp`,
-    width: 1024,
-    height: 1536,
-    focus: { x: 0, y: 100, width: 1024, height: 1340 },
-    hotspots: {
-      remote: { x: 385, y: 410, side: "right" },
-      rush: { x: 290, y: 870, side: "right" },
-      wait: { x: 615, y: 640, side: "right" },
-      petr: { x: 760, y: 290, side: "left" },
-    },
-    chips: { barge: { x: 480, y: 1372 }, gift: { x: 88, y: 762 } },
-    marks: {
-      remote: { frames: [{ x: 95, y: 255, width: 270, height: 175 }, { x: 445, y: 575, width: 150, height: 160 }], path: "M365 345 Q470 390 500 568" },
-      rush: { frames: [{ x: 445, y: 575, width: 150, height: 160 }], path: "M250 500 Q170 760 290 890 L385 612" },
-      wait: { frames: [{ x: 445, y: 575, width: 150, height: 160 }] },
-      petr: { frames: [{ x: 780, y: 250, width: 115, height: 115 }, { x: 445, y: 575, width: 150, height: 160 }], path: "M778 330 Q650 400 600 572" },
-    },
-    // Card open on a phone: the camera closes in on the chosen way.
-    zoom: {
-      remote: { x: 40, y: 200, width: 700, height: 700 },
-      rush: { x: 100, y: 380, width: 700, height: 640 },
-      wait: { x: 200, y: 360, width: 700, height: 640 },
-      petr: { x: 324, y: 180, width: 700, height: 700 },
-    },
-  },
-} satisfies Record<string, {
-  image: string; width: number; height: number; focus: Rect;
-  hotspots: Record<string, { x: number; y: number; side: "left" | "right" }>;
-  chips: Record<"barge" | "gift", { x: number; y: number }>;
-  marks: Record<string, Mark>;
-  zoom: Partial<Record<string, Rect>>;
-}>;
-
-export type CraneFormat = keyof typeof craneArtwork;
+  wide: format("wide"),
+  desk: format("desk"),
+  mid: format("mid"),
+  tall: format("tall"),
+};
+export { craneWorld };
 
 /** What each pin points at in the drawing. */
 export const craneCaptions = {
@@ -122,4 +98,4 @@ export const craneFacts = {
 } as const;
 
 export const craneOutcomeImage = (id: string) => `${base}/outcome-${id}.webp`;
-export const craneChoiceImage = craneArtwork.wide.image;
+export const craneChoiceImage = craneArtwork.wide.plate;

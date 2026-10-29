@@ -26,6 +26,9 @@ export type SceneArtProps = {
   /** Lets the choice list and the artwork highlight the same option. */
   focusedId?: string;
   onFocusChange?: (id: string | undefined) => void;
+  /** A confirmed choice whose consequence plays in the drawing before the result. */
+  playing?: string;
+  onPlayed?: () => void;
 };
 export type SceneDefinition = {
   id: SceneId;

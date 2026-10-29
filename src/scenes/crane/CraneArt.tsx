@@ -1,11 +1,12 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { ImageSources } from "../../components/ImageSources";
 import { useArtworkLoading } from "../../components/useArtworkLoading";
 import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
-import { craneArtwork, craneCaptions, type CraneFormat } from "./artwork";
+import { craneArtwork, craneCaptions, craneWorld, type CraneFormat, type Rect } from "./artwork";
+import { craneBeat, craneDeckDelta, craneDuration, craneRest, craneSail } from "./consequence";
 import { craneScene } from "./index";
 import styles from "./CraneArt.module.css";
 
@@ -16,14 +17,16 @@ function camera(stage: { width: number; height: number }, zoomId?: string) {
     const contain = Math.min(stage.width / width, stage.height / height);
     const cover = Math.max(stage.width / width, stage.height / height);
     const scale = Math.max(contain, Math.min(cover, stage.width / focus.width, stage.height / focus.height));
-    return { format, scale, area: focus.width * focus.height * scale * scale };
+    // The drawing composed for the closest screen shape needs the least crop.
+    const mismatch = Math.abs(Math.log(width / height / (stage.width / Math.max(1, stage.height))));
+    return { format, scale, mismatch };
   };
   const { format, scale: overview } = (Object.keys(craneArtwork) as CraneFormat[])
     .map(fit)
-    .reduce((best, next) => (next.area > best.area ? next : best));
+    .reduce((best, next) => (next.mismatch < best.mismatch ? next : best));
   const { width, height, zoom } = craneArtwork[format];
   // An open card frames the chosen way, as the city map follows a truck.
-  const focus = (zoomId && (zoom as Record<string, typeof craneArtwork[CraneFormat]["focus"] | undefined>)[zoomId]) || craneArtwork[format].focus;
+  const focus: Rect = (zoomId && zoom[zoomId]) || craneArtwork[format].focus;
   const scale = Math.max(overview, Math.min(stage.width / focus.width, stage.height / focus.height));
   const place = (stageSize: number, size: number, start: number, span: number) => {
     const offset = stageSize / 2 - (start + span / 2) * scale;
@@ -40,7 +43,38 @@ function camera(stage: { width: number; height: number }, zoomId?: string) {
   };
 }
 
-export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArtProps) {
+/** Runs the quay consequence of a confirmed way, then reports back; reduced motion skips it. */
+function useConsequence(playing: string | undefined, onPlayed: (() => void) | undefined) {
+  const [ms, setMs] = useState(0);
+  const done = useRef(onPlayed);
+  done.current = onPlayed;
+  useEffect(() => {
+    setMs(0);
+    if (!playing) return;
+    const still = typeof window.matchMedia !== "function" || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const total = craneDuration(playing);
+    if (still || !total) {
+      done.current?.();
+      return;
+    }
+    let frame = 0;
+    const start = performance.now();
+    const tick = (now: number) => {
+      const elapsed = now - start;
+      setMs(elapsed);
+      if (elapsed >= total + 250) done.current?.();
+      else frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [playing]);
+  return playing ? craneBeat(playing, ms) : craneRest;
+}
+
+const sub = (a: readonly number[], b: readonly number[]) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]] as const;
+const scaleBy = (a: readonly number[], k: number) => [a[0] * k, a[1] * k, a[2] * k] as const;
+
+export function CraneArt({ context, selectedId, onSelect, showResult, playing, onPlayed }: SceneArtProps) {
   const [hovered, setHovered] = useState<string>();
   // Animate camera moves only after the first measured frame, not from size 0.
   const [ready, setReady] = useState(false);
@@ -63,75 +97,116 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
       observer.disconnect();
     };
   }, []);
-  const interactive = !showResult && !!onSelect;
-  const view = camera(size, interactive ? selectedId : undefined);
+  const beat = useConsequence(playing, onPlayed);
+  const interactive = !showResult && !!onSelect && !playing;
+  const view = camera(size, playing ? "play" : interactive ? selectedId : undefined);
   const art = craneArtwork[view.format];
-  const artwork = useArtworkLoading(imageAsset(art.image));
+  const plate = useArtworkLoading(imageAsset(art.plate));
   const options = craneScene.options(context);
-  const markId = interactive ? (hovered ?? selectedId) : undefined;
-  const mark: { frames: readonly { x: number; y: number; width: number; height: number }[]; path?: string } | undefined =
-    markId ? art.marks[markId as keyof typeof art.marks] : undefined;
-  const at = (x: number, y: number) => ({ left: `${(x / art.width) * 100}%`, top: `${(y / art.height) * 100}%` });
+  const litId = playing ?? (interactive ? (hovered ?? selectedId) : undefined);
+  const lit = new Set<string>(litId ? art.actors[litId] ?? [] : []);
+  const pct = (x: number, y: number) => ({ left: `${(x / art.width) * 100}%`, top: `${(y / art.height) * 100}%` });
+  const box = (r: { x: number; y: number; w: number; h: number }) => ({
+    ...pct(r.x, r.y), width: `${(r.w / art.width) * 100}%`, height: `${(r.h / art.height) * 100}%`,
+  });
+  // A world move is a pure screen shift for the orthographic quay camera.
+  const move = (r: { w: number; h: number }, delta: readonly number[]): CSSProperties => {
+    const [[ax, ay, az], [bx, by, bz]] = art.affine;
+    const dx = ax * delta[0] + ay * delta[1] + az * delta[2];
+    const dy = bx * delta[0] + by * delta[1] + bz * delta[2];
+    return { transform: `translate(${(dx / r.w) * 100}%, ${(dy / r.h) * 100}%)` };
+  };
+  const sail = scaleBy(craneSail, beat.sail);
+  const hookAt = beat.hook ? sub(beat.hook, [craneWorld.gift[0], craneWorld.gift[1], craneWorld.hookAttach]) : undefined;
+  const [tipX, tipY] = art.project(craneWorld.tips[beat.frame]);
+  const [hookX, hookY] = beat.hook ? art.project(beat.hook) : [0, 0];
+  const s = art.sprites;
+  const sprite = (name: keyof typeof s, extra?: { style?: CSSProperties; lit?: boolean; className?: string; data?: string }) => (
+    <img
+      className={[styles.layer, extra?.className].filter(Boolean).join(" ")}
+      src={imageAsset(s[name].src)}
+      alt=""
+      draggable={false}
+      decoding="async"
+      data-layer={name}
+      data-lit={extra?.lit || undefined}
+      data-busy={(playing && beat.busy === name) || undefined}
+      style={{ ...box(s[name]), ...extra?.style }}
+    />
+  );
 
   return (
     <figure
       ref={stage}
       className={styles.stage}
       data-barge-art={view.format}
-      data-selected={selectedId}
+      data-selected={playing ?? selectedId}
+      data-playing={playing}
       data-zoomed={(interactive && !!selectedId) || undefined}
       data-ready={ready || undefined}
       aria-label={craneScene.title}
+      onClick={playing ? () => onPlayed?.() : undefined}
     >
       <div className={styles.plane} style={{ width: view.width, height: view.height, left: view.left, top: view.top }}>
         <picture>
-          <ImageSources src={artwork.src} />
+          <ImageSources src={plate.src} />
           <img
-            ref={artwork.ref}
+            ref={plate.ref}
             className={styles.image}
-            src={artwork.src}
-            onLoad={artwork.onLoad}
-            onError={artwork.onError}
+            src={plate.src}
+            onLoad={plate.onLoad}
+            onError={plate.onError}
             width={art.width}
             height={art.height}
             decoding="async"
             draggable={false}
-            alt="Причал на Оби: Иван за пультом в офисе ПРУ, подарок на поддоне, высокий кран с пустой кабиной и лестницей до неё, баржа с трубами у причала и дальний кран, где сидит Пётр рядом со своими ящиками."
+            alt="Причал на Оби: Иван за пультом в офисе ПРУ, подарок на поддоне, высокий портальный кран с пустой кабиной и лестницей до неё, баржа с трубами у причала и дальний кран, где сидит Пётр рядом со своими ящиками."
           />
         </picture>
-        {mark && (
-          <svg key={markId} className={styles.marks} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true" data-barge-mark={markId}>
-            <defs>
-              <marker id="crane-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                <path d="M1 1 L9 5 L1 9 Z" fill="#ff5500" stroke="#fff" strokeWidth="1.2" />
-              </marker>
-              <mask id="crane-spot">
-                <rect width={art.width} height={art.height} fill="#fff" />
-                {mark.frames.map((frame) => (
-                  <rect key={`${frame.x},${frame.y}`} x={frame.x - 12} y={frame.y - 12} width={frame.width + 24} height={frame.height + 24} rx={30} fill="#000" />
-                ))}
-              </mask>
-            </defs>
-            {markId === selectedId && <rect className={styles.spot} width={art.width} height={art.height} mask="url(#crane-spot)" />}
-            {mark.frames.map((frame) => (
-              <rect key={`${frame.x},${frame.y}`} className={styles.frame} x={frame.x} y={frame.y} width={frame.width} height={frame.height} rx={18} />
-            ))}
-            {mark.path && (
-              <>
-                <path className={styles.halo} d={mark.path} />
-                <path className={styles.route} d={mark.path} markerEnd="url(#crane-arrow)" />
-              </>
-            )}
+        {!beat.lifted && !beat.onDeck && sprite("gift")}
+        {sprite("ivan", { lit: lit.has("ivan") })}
+        {sprite("ladder", { lit: lit.has("ladder") })}
+        {sprite("far", { lit: lit.has("far") })}
+        <div className={styles.sail} style={move({ w: art.width, h: art.height }, sail)} data-sailing={beat.sail > 0 || undefined}>
+          <div className={styles.bob}>
+            {sprite("barge")}
+            {beat.onDeck && sprite("gift", { style: move(s.gift, craneDeckDelta) })}
+          </div>
+          {sprite("smoke", { className: styles.smoke })}
+        </div>
+        <div className={styles.layer} style={box(art.top)} data-layer="top" data-lit={lit.has("near") || undefined}>
+          <img
+            className={styles.sheet}
+            src={imageAsset(art.top.src)}
+            alt=""
+            draggable={false}
+            decoding="async"
+            style={{
+              width: `${art.top.cols * 100}%`,
+              height: `${art.top.rows * 100}%`,
+              transform: `translate(${(-(beat.frame % art.top.cols) / art.top.cols) * 100}%, ${(-Math.floor(beat.frame / art.top.cols) / art.top.rows) * 100}%)`,
+            }}
+          />
+        </div>
+        {beat.hook && (
+          <svg className={styles.cable} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
+            <line x1={tipX} y1={tipY} x2={hookX} y2={hookY} />
           </svg>
         )}
-        <span className={styles.chip} data-barge-chip="barge" style={at(art.chips.barge.x, art.chips.barge.y)}>
-          Баржа готова к отходу
-        </span>
-        <span className={styles.chip} data-barge-chip="gift" data-tone="gift" style={at(art.chips.gift.x, art.chips.gift.y)}>
-          Подарок
-        </span>
+        {hookAt && !beat.lifted && sprite("hook", { style: move(s.hook, hookAt) })}
+        {hookAt && beat.lifted && sprite("box", { style: move(s.box, hookAt) })}
+        {!playing && (
+          <>
+            <span className={styles.chip} data-barge-chip="barge" style={pct(art.chips.barge.x, art.chips.barge.y)}>
+              Баржа готова к отходу
+            </span>
+            <span className={styles.chip} data-barge-chip="gift" data-tone="gift" style={pct(art.chips.gift.x, art.chips.gift.y)}>
+              Подарок
+            </span>
+          </>
+        )}
         {options.map((option, index) => {
-          const point = art.hotspots[option.id as keyof typeof art.hotspots];
+          const point = art.hotspots[option.id];
           const caption = craneCaptions[option.id as keyof typeof craneCaptions];
           return (
             <button
@@ -140,9 +215,9 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
               className={styles.hotspot}
               data-hotspot={option.id}
               data-side={point.side}
-              style={at(point.x, point.y)}
+              style={pct(point.x, point.y)}
               aria-label={`Вариант ${index + 1}. ${choiceLabel(option.label)}`}
-              aria-pressed={selectedId === option.id}
+              aria-pressed={(playing ?? selectedId) === option.id}
               disabled={!interactive}
               onClick={() => onSelect?.(option.id)}
               onPointerEnter={() => setHovered(option.id)}
@@ -156,7 +231,8 @@ export function CraneArt({ context, selectedId, onSelect, showResult }: SceneArt
           );
         })}
       </div>
-      <ArtworkLoading viewport status={artwork.status} onRetry={artwork.retry} />
+      {playing && <span className={styles.skip} aria-hidden="true">Нажмите, чтобы пропустить</span>}
+      <ArtworkLoading viewport status={plate.status} onRetry={plate.retry} />
     </figure>
   );
 }

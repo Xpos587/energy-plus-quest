@@ -101,6 +101,7 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
   // Their real conditionals remain the source of truth for every context variant.
   const craneFamily = await source("src/scenes/crane/artworkFamily.ts");
   const craneArtwork = await source("src/scenes/crane/artwork.ts");
+  const craneLayers = await source("src/scenes/crane/layers.ts");
   const lastmileFamily = await source("src/scenes/lastmile/artworkFamily.ts");
   function resolver(text: string) {
     const exports = {};
@@ -113,6 +114,7 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
         if (id === "./crane/outcomeFraming.json") return framing;
         if (id === "./crane/artworkFamily" && craneFamily) return resolver(craneFamily);
         if (id === "./crane/artwork" && craneArtwork) return resolver(craneArtwork);
+        if (id === "./layers" && craneLayers) return resolver(craneLayers);
         if (id === "./lastmile/artworkFamily" && lastmileFamily) return resolver(lastmileFamily);
         throw new Error("Unexpected dependency in pure artwork resolver: " + id);
       },
@@ -144,10 +146,13 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
         for (const format of ["wide", "tall"])
           images.add(family.lastmileChoiceImage(format, recipient));
     }
-    // Scene 4 picks one of several choice crops at runtime by screen ratio.
+    // Scene 4 picks one of several layered quay drawings at runtime by screen ratio:
+    // admit its plate and every sprite the generated layer table names.
     if (craneArtwork)
-      for (const format of Object.values(resolver(craneArtwork).craneArtwork ?? {}) as { image: string }[])
-        images.add(format.image);
+      visitNodes(resolver(craneArtwork).craneArtwork ?? {}, (node) => {
+        for (const value of Object.values(node))
+          if (typeof value === "string" && /^scene-art\/.*\.webp$/.test(value)) images.add(value);
+      });
     if (!scene.sceneOutcomeImage) throw new Error("Missing sceneOutcomeImage resolver");
     for (const [sceneId, views] of Object.entries(manifest.scenes ?? {}) as [string, any][]) {
       if (sceneId === "compact") continue;

@@ -295,8 +295,10 @@ function ScenesSession({
   const selected = options.find(({ id }) => id === state.answers[scene.id]);
   const [resultBeat, setResultBeat] = useState(0);
   const [focusedChoice, setFocusedChoice] = useState<string>();
-  // Truck and barge: the places on the art are the only choice; a place opens a card, the card confirms.
+  // Truck, barge and last mile: the places on the art are the only choice; a place opens a card, the card confirms.
   const [pendingId, setPendingId] = useState<string>();
+  // Barge: after the card confirms, the quay plays the way out before the result.
+  const [playingCrane, setPlayingCrane] = useState<string>();
   const inspectsOnArt = (scene.id === "crane" || scene.id === "compact" || scene.id === "lastmile") && state.phase === "choice";
   const pending = inspectsOnArt ? options.find(({ id }) => id === pendingId) : undefined;
   const score = totalScores(state, remainingScenes, context, initialScores);
@@ -318,9 +320,12 @@ function ScenesSession({
     ) {
       lastChoice.current[scene.id] = id;
       setPendingId(undefined);
+      setPlayingCrane(undefined);
       dispatch({ type: "CHOOSE", id });
     }
   };
+  const playing = inspectsOnArt && scene.id === "crane" ? playingCrane : undefined;
+  useEffect(() => setPlayingCrane(undefined), [state.sceneIndex, state.phase]);
 
   useEffect(() => {
     const screen = `${state.sceneIndex}:${state.phase}`;
@@ -495,7 +500,9 @@ function ScenesSession({
                 }}
                 selectedId={resultVisible ? selected?.id : pending?.id}
                 showResult={resultVisible}
-                onSelect={state.phase === "choice" ? (inspectsOnArt ? setPendingId : choose) : undefined}
+                onSelect={state.phase === "choice" && !playing ? (inspectsOnArt ? setPendingId : choose) : undefined}
+                playing={playing}
+                onPlayed={playing ? () => choose(playing) : undefined}
                 {...syncFocus}
               />
             )}
@@ -517,7 +524,11 @@ function ScenesSession({
               title={scene.id === "compact" ? pending.id === "auto" ? "Compact подберёт место" : places![pending.id][0] : scene.id === "lastmile" ? places![pending.id][0] : optionTitles[pending.id]}
               cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "lastmile" ? "К карте" : "К причалу"}
               onCancel={() => setPendingId(undefined)}
-              onConfirm={() => choose(pending.id)}
+              onConfirm={() => {
+                setPendingId(undefined);
+                if (scene.id === "crane") setPlayingCrane(pending.id);
+                else choose(pending.id);
+              }}
             >
               {scene.id === "compact"
                 ? <CompactCard id={pending.id} />
