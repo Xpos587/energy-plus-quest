@@ -20,8 +20,10 @@ Keep authored generator scripts, prompts, manifests and review evidence in Git.
 Raw generator `*.request.json` / `*.response.json` transport dumps, error logs and
 `backup-*`, `old-*`, `prev-*` experiment copies under `design/` stay local, as
 specified in `.gitignore`. They are not application changes or canonical review
-receipts. Ignoring them does not delete them; preserve an external archive before
-cleaning up an existing backlog. Do not ignore entire design or review trees.
+receipts. Ignoring them does not delete them. Do not create external backup
+archives just to keep obsolete experiments: check current references, then send
+unused historical visual materials to the system Trash. Do not ignore entire
+design or review trees.
 
 ## Local disk cleanup
 
@@ -37,29 +39,35 @@ media directory; do not keep it as an additional archive. Failed browser tests
 can retain large traces across different output directories; keep any trace you
 still need outside `.tmp-work` before cleaning.
 
-### External working state
+### One location and 72-hour retention
 
-`~/.local/state/energy-plus-quest` is separate from the checkout and its generated
-output budget. It contains durable production/research inputs, Blender scenes,
-render scripts and historical evidence: it is **not** a disposable cache.
-`clean:generated` does not touch it. Include it when measuring project disk use:
+The checkout is the only working home for this project. Keep current source and
+reusable generators in Git, current media in its documented locations and the
+checksummed release manifest, and only the latest deliverables in `release`.
+Age is not a deletion rule for required sources, specifications or current media.
+Git does **not** contain every binary asset; verify current references before
+retiring an asset.
 
-```sh
-du -sh . "$HOME/.local/state/energy-plus-quest"
-```
+Put all new temporary renders, logs, browser checks and scratch scripts in
+`.tmp-work/<purpose>/`. Run `bun run clean:stale` to remove regular files older
+than 72 hours there and empty subdirectories. It does not follow symlinks or touch
+source/media/delivery directories. Builds and the standard E2E command run this
+cleanup first; run it before finishing other work too. Temporary output is not
+an archive: move any necessary reusable source out before the retention expires.
+Stop long-running jobs before manually cleaning their outputs.
 
-Do not retain full PNG animation sequences for every historical render. After
-checking the saved scene and its external dependencies, preserve the scene,
-render script, first/middle/last preview frames and any delivered videos; the
-remaining intermediate frames can be regenerated when needed. Keep authored
-textures, references, unique backups and review evidence. Never recursively
-remove the state directory or infer disposability from a dated folder name.
-Stop active renders before any cleanup. Reuse a bounded scratch output directory
-for new render runs instead of accumulating full sequences in each iteration.
+The old `~/.local/state/energy-plus-quest` and `~/.cache/s1v3` hold retired scene
+iterations, not current map-v4 or build inputs. After checking current source and
+build references, they were retired to the system Trash on 30 October 2026. Do
+not recreate them. Historical `scripts/scene1-live` notes still describe that
+retired pipeline, not a dependency of the current game. Trash is reversible but
+still consumes disk space until explicitly emptied; do not report a move there
+as physically freed bytes, and never empty unrelated Trash items.
 
-The audited 30 October cleanup receipt lives at
-`~/.local/state/energy-plus-quest/cleanup-receipt-2026-10-30.json`; it records the
-specific removed frames and checksums of preserved scenes/render scripts.
+Recent local preview/deployment checks are kept under `.tmp-work`, not separate
+`epq-*` directories in the user cache. Podman's isolated build store is
+container-managed cache, not project source; clean it using Podman rather than
+manually deleting overlay internals.
 
 ## Enforced Git limits
 
