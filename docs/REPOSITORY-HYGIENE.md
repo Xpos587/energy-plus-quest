@@ -37,6 +37,30 @@ media directory; do not keep it as an additional archive. Failed browser tests
 can retain large traces across different output directories; keep any trace you
 still need outside `.tmp-work` before cleaning.
 
+### External working state
+
+`~/.local/state/energy-plus-quest` is separate from the checkout and its generated
+output budget. It contains durable production/research inputs, Blender scenes,
+render scripts and historical evidence: it is **not** a disposable cache.
+`clean:generated` does not touch it. Include it when measuring project disk use:
+
+```sh
+du -sh . "$HOME/.local/state/energy-plus-quest"
+```
+
+Do not retain full PNG animation sequences for every historical render. After
+checking the saved scene and its external dependencies, preserve the scene,
+render script, first/middle/last preview frames and any delivered videos; the
+remaining intermediate frames can be regenerated when needed. Keep authored
+textures, references, unique backups and review evidence. Never recursively
+remove the state directory or infer disposability from a dated folder name.
+Stop active renders before any cleanup. Reuse a bounded scratch output directory
+for new render runs instead of accumulating full sequences in each iteration.
+
+The audited 30 October cleanup receipt lives at
+`~/.local/state/energy-plus-quest/cleanup-receipt-2026-10-30.json`; it records the
+specific removed frames and checksums of preserved scenes/render scripts.
+
 ## Enforced Git limits
 
 `repository-budget.json` is authoritative:
