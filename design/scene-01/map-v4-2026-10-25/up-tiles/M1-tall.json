@@ -1,0 +1,117 @@
+{
+ "master": [
+  2400,
+  3600
+ ],
+ "coverage": 1.0,
+ "tiles": [
+  {
+   "tile": "t00",
+   "native": [
+    1022,
+    1538
+   ],
+   "accepted": true,
+   "inliers": 544,
+   "inlierFraction": 0.7976539589442815,
+   "p95ResidualSourcePx": 1.473475694656372,
+   "reason": null
+  },
+  {
+   "tile": "t01",
+   "native": [
+    1031,
+    1525
+   ],
+   "accepted": true,
+   "inliers": 558,
+   "inlierFraction": 0.8017241379310345,
+   "p95ResidualSourcePx": 1.676986813545227,
+   "reason": null
+  },
+  {
+   "tile": "t02",
+   "native": [
+    1023,
+    1537
+   ],
+   "accepted": true,
+   "inliers": 458,
+   "inlierFraction": 0.662807525325615,
+   "p95ResidualSourcePx": 1.5946179628372192,
+   "reason": null
+  },
+  {
+   "tile": "t10",
+   "native": [
+    1016,
+    1548
+   ],
+   "accepted": true,
+   "inliers": 596,
+   "inlierFraction": 0.7852437417654808,
+   "p95ResidualSourcePx": 1.194810390472412,
+   "reason": null
+  },
+  {
+   "tile": "t11",
+   "native": [
+    1024,
+    1535
+   ],
+   "accepted": true,
+   "inliers": 483,
+   "inlierFraction": 0.755868544600939,
+   "p95ResidualSourcePx": 1.5930103063583374,
+   "reason": null
+  },
+  {
+   "tile": "t12",
+   "native": [
+    1016,
+    1547
+   ],
+   "accepted": true,
+   "inliers": 509,
+   "inlierFraction": 0.7158931082981715,
+   "p95ResidualSourcePx": 1.391538381576538,
+   "reason": null
+  },
+  {
+   "tile": "t20",
+   "native": [
+    1023,
+    1537
+   ],
+   "accepted": true,
+   "inliers": 417,
+   "inlierFraction": 0.6903973509933775,
+   "p95ResidualSourcePx": 1.4366101026535034,
+   "reason": null
+  },
+  {
+   "tile": "t21",
+   "native": [
+    1031,
+    1525
+   ],
+   "accepted": true,
+   "inliers": 462,
+   "inlierFraction": 0.6571834992887624,
+   "p95ResidualSourcePx": 1.701456069946289,
+   "reason": null
+  },
+  {
+   "tile": "t22",
+   "native": [
+    1022,
+    1539
+   ],
+   "accepted": true,
+   "inliers": 516,
+   "inlierFraction": 0.8087774294670846,
+   "p95ResidualSourcePx": 1.2891854047775269,
+   "reason": null
+  }
+ ]
+}

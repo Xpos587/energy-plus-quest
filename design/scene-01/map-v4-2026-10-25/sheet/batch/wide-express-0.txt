@@ -1,0 +1,6 @@
+Image 1 = a painted cartoon city map: the authority for the art style (clean dark-grey ink outlines of varying weight, soft painterly gradients, warm light from the upper left, slightly desaturated friendly colours).
+Image 2 = a sprite sheet of ONE truck rendered in 3D: the same vehicle parts at 8 headings, in rows, on a flat grey background.
+Task: use your built-in image generation tool to EDIT image 2 so every sprite looks hand-painted by the same artist as image 1, exactly like the vehicles would be painted in that map: same ink line weight and colour, same painterly shading, same light direction, consistent across all sprites (they are the same truck).
+Keep EXACTLY: the sheet layout, the grey background, every sprite's position, size, silhouette, heading and proportions, every part's original colours, windows, wheels and trailer ribs. Do not add shadows on the background. One sprite per cell; nothing new.
+Avoid: changing positions or sizes, extra objects, text, logos, numbers, photorealism, blur, texture noise.
+Request the largest output the tool can give in the same aspect ratio. Save the result into the current directory as batch/g-wide-express-0.png (copy it from where the tool stores it). Do not edit other files. Reply with the path and the output pixel size.

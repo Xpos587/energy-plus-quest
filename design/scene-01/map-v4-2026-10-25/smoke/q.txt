@@ -1,0 +1,8 @@
+Image 1 = a painted cartoon city map: the authority for the art style (clean dark-grey ink outlines of varying weight, soft painterly gradients, warm light from the upper left).
+Task: use your built-in image generation tool to paint a SPRITE SHEET of exhaust smoke puffs for the trucks of this map, in exactly that art style, seen from the same high three-quarter camera.
+Layout: a 4 x 2 grid of equal square cells on a perfectly flat pure magenta background (#FF00FF), one isolated puff per cell, centred, nothing touching the cell borders.
+Row 1 (light smoke, warm off-white #EEEAE2 with soft cool grey-blue shading underneath): a growing puff in 4 stages - a tiny round wisp, a small two-lobe cloud, a medium three-lobe cumulus cloud, a large soft four-lobe cloud.
+Row 2 (dark backfire smoke, charcoal grey #4A4C54 with lighter top highlights): the same 4 growing stages.
+Each puff: chunky cartoon cumulus shape, a soft painterly gradient (lit top-left, shaded bottom-right), a thin slightly darker ink edge like the map's trees, no hard black outline, no drop shadow, no motion lines.
+Avoid: text, numbers, frames, grid lines, background texture, gradients in the background, realism.
+Request a square output, the largest the tool can give. Save the result into the current directory as smoke-a.png (copy it from where the tool stores it). Do not edit other files. Reply with the path and the output pixel size.

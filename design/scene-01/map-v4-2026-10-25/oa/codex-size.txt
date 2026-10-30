@@ -1,0 +1,11 @@
+Use your built-in image generation tool to EDIT the first attached image (the layout); the second and third attached images are STYLE references.
+IMPORTANT: request the LARGEST output size the tool supports, with a wide landscape aspect ratio close to 7:3 (for example 3840x1648 or 3584x1536; if the tool only accepts fixed sizes, use its largest landscape size). Tell me in your reply which size parameter you used and what sizes the tool supports.
+
+Image prompt (verbatim):
+Repaint IMAGE 1 in exactly the art style of IMAGES 2 and 3.
+IMAGE 1 is the layout and must be kept EXACTLY: same camera, same perspective, same composition, every street, kerb, lane marking, zebra crossing, building footprint, warehouse, loading doors, yard and park in exactly the same position and size. Do not move, add or remove any street or building. Do not crop or zoom.
+Change only the rendering style to match IMAGES 2 and 3: hand-painted digital illustration, confident dark-grey ink outlines of varying weight, soft painterly gradients and gentle ambient occlusion instead of flat 3D shading, rich saturated daylight colours, fluffy painterly early-autumn tree crowns with leaf clusters (golden yellow, orange, fresh green) like the birches in the references, light blue-grey asphalt like in IMAGE 2, warm cream paving tiles with visible joints, detailed building facades with window frames, reflections and small details, lush green bushes along kerbs.
+Streets stay completely empty: no vehicles, no people. No text, no letters, no logos.
+ The blank white sign board above the warehouse loading doors stays blank white. Keep the warehouse colours: cream walls, dark blue frames and gates, orange stripe.
+
+Save the generated image into the current directory as gen-size.png. Do not edit other files.

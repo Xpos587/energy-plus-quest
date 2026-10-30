@@ -1,0 +1,40 @@
+{
+  "image": {
+    "x": -15.640625,
+    "y": 92,
+    "width": 1021.5,
+    "height": 671.96875,
+    "top": 92,
+    "right": 1005.859375,
+    "bottom": 763.96875,
+    "left": -15.640625
+  },
+  "stage": {
+    "x": 0,
+    "y": 56,
+    "width": 940,
+    "height": 744,
+    "top": 56,
+    "right": 940,
+    "bottom": 800,
+    "left": 0
+  },
+  "header": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 56,
+    "top": 0,
+    "right": 1280,
+    "bottom": 56,
+    "left": 0
+  },
+  "label": {
+    "left": 24.003618208279434,
+    "right": 169.365843305304,
+    "top": 92,
+    "bottom": 240.66565265486724
+  },
+  "scrollHeight": 800,
+  "height": 800
+}

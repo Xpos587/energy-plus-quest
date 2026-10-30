@@ -1,0 +1,242 @@
+[
+  {
+    "id": "remote",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/brand/quest-brand-lockup.svg",
+        "source": [
+          484,
+          66
+        ],
+        "display": [
+          260,
+          35
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-v3/outcome-remote.webp",
+        "source": [
+          1942,
+          809
+        ],
+        "display": [
+          320,
+          157
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rush",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/brand/quest-brand-lockup.svg",
+        "source": [
+          484,
+          66
+        ],
+        "display": [
+          260,
+          35
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-v3/outcome-rush.webp",
+        "source": [
+          1944,
+          809
+        ],
+        "display": [
+          320,
+          188
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wait",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/brand/quest-brand-lockup.svg",
+        "source": [
+          484,
+          66
+        ],
+        "display": [
+          260,
+          35
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-v3/outcome-wait.webp",
+        "source": [
+          1942,
+          809
+        ],
+        "display": [
+          320,
+          165
+        ]
+      }
+    ]
+  },
+  {
+    "id": "petr",
+    "images": [
+      {
+        "src": "http://127.0.0.1:4173/brand/quest-brand-lockup.svg",
+        "source": [
+          484,
+          66
+        ],
+        "display": [
+          260,
+          35
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/student.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/alva.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/design/scene-01/assets/current/choices/camera.webp",
+        "source": [
+          768,
+          960
+        ],
+        "display": [
+          768,
+          960
+        ]
+      },
+      {
+        "src": "http://127.0.0.1:4173/scene-art/barge-v3/outcome-petr.webp",
+        "source": [
+          1944,
+          809
+        ],
+        "display": [
+          320,
+          133
+        ]
+      }
+    ]
+  }
+]

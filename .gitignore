@@ -38,6 +38,19 @@ playwright-report/
 *.gltf
 *.zip
 
+# Raw generator transport dumps, logs and backup copies stay local.
+# Authored scripts, prompts, manifests and review receipts remain versioned.
+/design/**/*.request.json
+/design/**/*.response.json
+/design/**/*.err
+/design/**/backup-*/
+/design/**/old-*/
+/design/**/prev-*/
+/design/**/log*.txt
+/design/**/err-*.txt
+/design/**/gen/
+/design/**/hf/job-*.json
+
 # Local agent/skill configuration (not part of the project)
 .agents/
 .claude/

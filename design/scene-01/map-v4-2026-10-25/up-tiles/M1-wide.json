@@ -1,0 +1,117 @@
+{
+ "master": [
+  4200,
+  1801
+ ],
+ "coverage": 1.0,
+ "tiles": [
+  {
+   "tile": "w00",
+   "native": [
+    1916,
+    821
+   ],
+   "accepted": true,
+   "inliers": 424,
+   "inlierFraction": 0.8265107212475633,
+   "p95ResidualSourcePx": 1.1858067512512207,
+   "reason": null
+  },
+  {
+   "tile": "w01",
+   "native": [
+    1930,
+    815
+   ],
+   "accepted": true,
+   "inliers": 433,
+   "inlierFraction": 0.730185497470489,
+   "p95ResidualSourcePx": 1.3785686492919922,
+   "reason": null
+  },
+  {
+   "tile": "w02",
+   "native": [
+    1915,
+    821
+   ],
+   "accepted": true,
+   "inliers": 392,
+   "inlierFraction": 0.7552986512524085,
+   "p95ResidualSourcePx": 1.3453917503356934,
+   "reason": null
+  },
+  {
+   "tile": "w10",
+   "native": [
+    1902,
+    827
+   ],
+   "accepted": true,
+   "inliers": 476,
+   "inlierFraction": 0.780327868852459,
+   "p95ResidualSourcePx": 1.5376689434051514,
+   "reason": null
+  },
+  {
+   "tile": "w11",
+   "native": [
+    1916,
+    821
+   ],
+   "accepted": true,
+   "inliers": 402,
+   "inlierFraction": 0.7040280210157618,
+   "p95ResidualSourcePx": 1.491466760635376,
+   "reason": null
+  },
+  {
+   "tile": "w12",
+   "native": [
+    1902,
+    827
+   ],
+   "accepted": true,
+   "inliers": 367,
+   "inlierFraction": 0.650709219858156,
+   "p95ResidualSourcePx": 1.4649208784103394,
+   "reason": null
+  },
+  {
+   "tile": "w20",
+   "native": [
+    1916,
+    821
+   ],
+   "accepted": true,
+   "inliers": 315,
+   "inlierFraction": 0.7208237986270023,
+   "p95ResidualSourcePx": 1.7172389030456543,
+   "reason": null
+  },
+  {
+   "tile": "w21",
+   "native": [
+    1930,
+    815
+   ],
+   "accepted": true,
+   "inliers": 369,
+   "inlierFraction": 0.5659509202453987,
+   "p95ResidualSourcePx": 1.6391373872756958,
+   "reason": null
+  },
+  {
+   "tile": "w22",
+   "native": [
+    1915,
+    821
+   ],
+   "accepted": true,
+   "inliers": 294,
+   "inlierFraction": 0.6363636363636364,
+   "p95ResidualSourcePx": 1.542301893234253,
+   "reason": null
+  }
+ ]
+}

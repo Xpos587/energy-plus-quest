@@ -1,0 +1,89 @@
+{
+ "master": [
+  5600,
+  2401
+ ],
+ "coverage": 0.6770759951210805,
+ "tiles": [
+  {
+   "tile": "c00",
+   "native": [
+    1915,
+    821
+   ],
+   "accepted": true,
+   "inliers": 324,
+   "inlierFraction": 0.7043478260869566,
+   "p95ResidualSourcePx": 1.520464301109314,
+   "reason": null
+  },
+  {
+   "tile": "c01",
+   "accepted": false,
+   "reason": "missing"
+  },
+  {
+   "tile": "c02",
+   "native": [
+    1915,
+    821
+   ],
+   "accepted": true,
+   "inliers": 386,
+   "inlierFraction": 0.7958762886597938,
+   "p95ResidualSourcePx": 1.5462229251861572,
+   "reason": null
+  },
+  {
+   "tile": "c10",
+   "accepted": false,
+   "reason": "missing"
+  },
+  {
+   "tile": "c11",
+   "native": [
+    1916,
+    821
+   ],
+   "accepted": true,
+   "inliers": 450,
+   "inlierFraction": 0.7401315789473685,
+   "p95ResidualSourcePx": 1.3863903284072876,
+   "reason": null
+  },
+  {
+   "tile": "c12",
+   "native": [
+    1774,
+    887
+   ],
+   "accepted": true,
+   "inliers": 458,
+   "inlierFraction": 0.7483660130718954,
+   "p95ResidualSourcePx": 1.4371709823608398,
+   "reason": null
+  },
+  {
+   "tile": "c20",
+   "accepted": false,
+   "reason": "missing"
+  },
+  {
+   "tile": "c21",
+   "native": [
+    2068,
+    760
+   ],
+   "accepted": true,
+   "inliers": 370,
+   "inlierFraction": 0.6915887850467289,
+   "p95ResidualSourcePx": 1.4654114246368408,
+   "reason": null
+  },
+  {
+   "tile": "c22",
+   "accepted": false,
+   "reason": "missing"
+  }
+ ]
+}

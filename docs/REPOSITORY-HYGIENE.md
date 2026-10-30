@@ -14,6 +14,15 @@ The local game and latest PDF remain available at their existing paths. A Git ch
 
 To update media: prepare regular-file-only tar.gz archives of changed/current root-relative paths, publish them under a new current release name, and update each file/archive size and SHA-256 in the manifest. Run `bun run media:verify`, build/stage, and verify the runtime before publishing the source change. Once no current manifest references an old media release, remove that obsolete release rather than accumulating historical copies. Raster quality changes require visual review; relocating media does not authorize recompression.
 
+## Local generation intermediates
+
+Keep authored generator scripts, prompts, manifests and review evidence in Git.
+Raw generator `*.request.json` / `*.response.json` transport dumps, error logs and
+`backup-*`, `old-*`, `prev-*` experiment copies under `design/` stay local, as
+specified in `.gitignore`. They are not application changes or canonical review
+receipts. Ignoring them does not delete them; preserve an external archive before
+cleaning up an existing backlog. Do not ignore entire design or review trees.
+
 ## Enforced Git limits
 
 `repository-budget.json` is authoritative:
