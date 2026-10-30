@@ -61,7 +61,8 @@ export async function stageStatic(source, destination, nginxConfig) {
     ["index.html", "README-DEPLOY.txt", "quest-cache.js"].includes(file) ||
     codePaths.includes(file) ||
     /^fonts\/(?:OFL[^/]*\.txt|LICENSE[^/]*)$/.test(file) ||
-    (media.test(file) && !replaced.has(file) && referenced(file)),
+    // Lastmile adds format suffixes at runtime; retain its original fallback family.
+    (media.test(file) && (file.startsWith("scene-art/lastmile-family-v1/") || (!replaced.has(file) && referenced(file)))),
   );
   // The scene 1 city builds its plate/atlas URLs at runtime (wide/tall,
   // @2x). Fail even in --stage-only packaging if a variant would be omitted.

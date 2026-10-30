@@ -20,6 +20,7 @@ test("ships dynamic runtime media and licenses without publishing reference page
     "assets/index-abcdefgh.js": 'const image = "assets/optimized-original-abcdefgh.webp"; const warehouse="scene-world/warehouse.webp"; const font="fonts/example.woff2"; const city=["scene1-v4/plate-wide.webp?v=2","scene1-v4/plate-wide@2x.webp?v=2","scene1-v4/trucks-wide.webp?v=5","scene1-v4/plate-tall.webp?v=2","scene1-v4/plate-tall@2x.webp?v=2","scene1-v4/trucks-tall.webp?v=5","scene1-v4/smoke.webp?v=1"];',
     "assets/unused-image.webp": "unused derivative",
     "scene-world/unused.webp": "unused original",
+    "scene-art/lastmile-family-v1/revision-5/flight-boat-arseniy-wide.webp": "dynamic flight fallback",
     "assets/index-abcdefgh.js.map": '{"sourcesContent":["private source"]}',
     "fonts/LICENSE.txt": "font license",
     "fonts/example.woff2": "font",
@@ -47,7 +48,7 @@ test("ships dynamic runtime media and licenses without publishing reference page
     const config = join(root, "nginx.conf");
     await writeFile(config, "location /game/ { }");
     await stageStatic(source, stage, config);
-    for (const file of ["index.html", "README-DEPLOY.txt", "quest-cache.js", "fonts/LICENSE.txt", "fonts/example.woff2", "scene-world/warehouse.webp", ...cityFiles]) {
+    for (const file of ["index.html", "README-DEPLOY.txt", "quest-cache.js", "fonts/LICENSE.txt", "fonts/example.woff2", "scene-world/warehouse.webp", "scene-art/lastmile-family-v1/revision-5/flight-boat-arseniy-wide.webp", ...cityFiles]) {
       expect(await readFile(join(stage, file), "utf8")).toBe(fixture[file]);
     }
     for (const file of ["assets/unused-image.webp", "scene-world/unused.webp", "review/carriers/closer-blue.png", "scene-art/original.png", "static-image-replacements.json", "assets/index-abcdefgh.js.map", "review/carriers/index.html", "review/unrelated/photo.png"]) {
