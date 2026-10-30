@@ -19,14 +19,14 @@ export function warehouseZone(id: WarehouseChoice, context: SceneContext) {
   const zones = {
     entrance: {
       label: "У приёмки",
-      description: "Свободные ячейки у приёмки, слева на плане склада.",
+      description: "Свободные ячейки у ворот приёмки, слева.",
       points: "91,339 169,326 238,364 221,428 125,415 91,387",
       labelX: 0.17,
       labelY: 0.745,
     },
     alphabet: {
       label: `Стеллаж ${range.label}`,
-      description: `Стеллаж ${range.label}, буква ${gift.letter}. Алфавит начинается справа, у отгрузки.`,
+      description: `Стеллаж ${range.label}, буква ${gift.letter}. Алфавит начинается слева, у приёмки.`,
       points:
         context.parcel === "camera"
           ? "272,199 294,204 294,331 272,324"
@@ -38,7 +38,7 @@ export function warehouseZone(id: WarehouseChoice, context: SceneContext) {
     },
     keeper: {
       label: "Кладовщик",
-      description: "Опытный кладовщик, справа от стеллажей.",
+      description: "Опытный кладовщик, справа у отгрузки.",
       points: "797,293 826,291 846,322 846,396 816,408 794,388 787,329",
       labelX: 0.82,
       labelY: 0.717,
@@ -46,7 +46,7 @@ export function warehouseZone(id: WarehouseChoice, context: SceneContext) {
     wms: {
       label: "Система WMS",
       description:
-        "Компьютерный терминал системы управления складом, внизу у отгрузки.",
+        "Терминал системы управления складом на дорожке между приёмкой и отгрузкой.",
       points: "654,464 688,426 741,448 746,494 723,531 661,511",
       labelX: 0.7,
       labelY: 0.948,

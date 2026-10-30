@@ -12,7 +12,7 @@ export function warehouseCamera(stage: { width: number; height: number }, parcel
   const overview = bounds(regions);
   // Reserve room for the 44px badge targets, including the keeper badge beside
   // his head rather than moving it onto a different object to avoid clipping.
-  const badgeMargin = 100;
+  const badgeMargin = 60;
   for (const region of regions) {
     overview.left = Math.min(overview.left, region.anchor.x * drawing.width - badgeMargin);
     overview.right = Math.max(overview.right, region.anchor.x * drawing.width + badgeMargin);
@@ -27,10 +27,13 @@ export function warehouseCamera(stage: { width: number; height: number }, parcel
   overview.top = Math.min(overview.top, required.top);
   overview.bottom = Math.max(overview.bottom, required.bottom);
   const padding = Math.min(24, stage.width * 0.04);
-  const fit = (box: typeof overview) => Math.min((stage.width - padding * 2) / (box.right - box.left), (stage.height - padding * 2) / (box.bottom - box.top));
+  const fit = (box: typeof overview, pad = padding) => Math.min((stage.width - pad * 2) / (box.right - box.left), (stage.height - pad * 2) / (box.bottom - box.top));
   const contain = Math.min(stage.width / drawing.width, stage.height / drawing.height);
   const cover = Math.max(stage.width / drawing.width, stage.height / drawing.height);
-  const overviewScale = Math.max(contain, Math.min(cover, fit(overview)));
+  // Edge-to-edge art beats a letterbox: give up the padding, and up to 5% of the
+  // outermost scenery, when that alone allows cover.
+  const edgeToEdge = fit(overview, 0) >= cover * 0.95 && fit(bounds(regions), 0) >= cover;
+  const overviewScale = edgeToEdge ? cover : Math.max(contain, Math.min(cover, fit(overview)));
   const selectedKey = selected === "alphabet" ? `alphabet-${parcel}` : selected;
   const selectedRegion = regions[keys.findIndex(key => key === selectedKey)];
   const box = selectedRegion ? bounds([selectedRegion]) : overview;
@@ -40,5 +43,13 @@ export function warehouseCamera(stage: { width: number; height: number }, parcel
     if (planeSize <= stageSize) return (stageSize - planeSize) / 2;
     return Math.max(stageSize - planeSize, Math.min(0, stageSize / 2 - center * scale));
   };
-  return { scale, left: offset(stage.width, drawing.width, (box.left + box.right) / 2), top: offset(stage.height, drawing.height, (box.top + box.bottom) / 2) };
+  let left = offset(stage.width, drawing.width, (box.left + box.right) / 2);
+  let top = offset(stage.height, drawing.height, (box.top + box.bottom) / 2);
+  if (edgeToEdge && !selectedRegion) {
+    // Cropped scenery is split evenly, but never at the expense of a choice.
+    const choices = bounds(regions);
+    left = Math.max(-choices.left * scale, Math.min(stage.width - choices.right * scale, left));
+    top = Math.max(-choices.top * scale, Math.min(stage.height - choices.bottom * scale, top));
+  }
+  return { scale, left, top };
 }

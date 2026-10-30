@@ -20,7 +20,7 @@ afterEach(async () => {
   vi.unstubAllGlobals();
 });
 
-it("lets the player choose from the visible warehouse scene and shows the consequence in one action", async () => {
+it("lets the player pick a place on the warehouse art, check its card and confirm", async () => {
   await act(async () => root.render(<ScenesGame
     context={{ profile: "professional", recipient: "alva", parcel: "camera" }}
     startAt="inventory"
@@ -35,11 +35,16 @@ it("lets the player choose from the visible warehouse scene and shows the conseq
   }
   expect(host.querySelector('[aria-label="Условие задания"]')).toBeNull();
   expect(host.querySelector("[data-scene-briefing]")?.getAttribute("data-reading")).toBe("false");
-  const choice = host.querySelector<HTMLButtonElement>('[data-scene-choice="wms"]');
-  expect(choice).not.toBeNull();
-  expect(choice?.textContent).toContain("Система WMS");
+  expect(host.querySelector("[data-scene-choice]")).toBeNull();
+  const place = host.querySelector<HTMLButtonElement>('[data-hotspot="wms"]');
+  expect(place?.textContent).toContain("WMS");
 
-  await act(async () => choice?.click());
+  await act(async () => place?.click());
+  const card = host.querySelector("[data-choice-inspection]");
+  expect(card?.textContent).toContain("Система WMS");
+  expect(card?.textContent).toContain("К складу");
+  expect(host.querySelector('[data-testid="result-copy"]')).toBeNull();
+  await act(async () => host.querySelector<HTMLButtonElement>("[data-choice-confirm]")?.click());
 
   expect(host.querySelector("[data-choice-inspection]")).toBeNull();
   expect(host.querySelector('[data-testid="result-copy"]')).not.toBeNull();

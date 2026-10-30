@@ -11,12 +11,12 @@ const context = {
 } as const;
 
 describe("warehouse storage geography", () => {
-  it("covers the Russian alphabet exactly once, from dispatch right to receiving left", () => {
+  it("covers the Russian alphabet exactly once, from receiving left to dispatch right", () => {
     expect(warehouseShelfRanges.map((range) => range.letters).join("")).toBe(
       "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
     );
     warehouseShelfRanges.slice(1).forEach((range, index) => {
-      expect(range.x).toBeLessThan(warehouseShelfRanges[index].x);
+      expect(range.x).toBeGreaterThan(warehouseShelfRanges[index].x);
     });
   });
 
@@ -74,7 +74,7 @@ describe("warehouse storage geography", () => {
     expect(warehouseZone("keeper", context).description).toContain(
       "Опытный кладовщик",
     );
-    expect(warehouseZone("wms", context).description).toContain("терминал");
+    expect(warehouseZone("wms", context).description).toContain("Терминал");
     const host = document.createElement("div");
     host.innerHTML = renderToStaticMarkup(
       <inventoryScene.Art

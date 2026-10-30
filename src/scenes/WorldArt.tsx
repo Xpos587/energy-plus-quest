@@ -193,7 +193,7 @@ export function WorldArt({
       ? "Загрузка через задние двери слева. Ближняя стенка кузова показана в разрезе."
       : "",
     scene === "inventory"
-      ? `Алфавит начинается у отгрузки справа. Место подарка по алфавиту: буква ${alphabet.letter}, ${alphabet.resultPosition} склада.`
+      ? `Алфавит идёт слева направо: от приёмки к отгрузке. Место подарка по алфавиту: буква ${alphabet.letter}, ${alphabet.resultPosition} склада.`
       : "",
     active ? `Выбор: ${active.label}.` : "",
     placement ? `Размещение: №${placement}.` : "",
@@ -334,13 +334,14 @@ export function WorldArt({
                   .join(". ")}
                 aria-pressed={markerId === point.id}
                 data-focused={onFocusChange ? focusedId === point.id : undefined}
+                data-caption-side={inventoryCamera && inventoryCamera.left + point.x * planeWidth > size.width / 2 ? "left" : undefined}
                 onPointerEnter={onFocusChange && (() => onFocusChange(point.id))}
                 onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
                 disabled={showResult || !onSelect || (!!selectedId && selectedId !== point.id)}
                 onClick={() => onSelect?.(point.id)}
               >
                 <span aria-hidden="true">{index + 1}</span>
-                {scene === "lastmile" && <span className={styles.markerCaption} aria-hidden="true">{caption}</span>}
+                {(scene === "lastmile" || scene === "inventory") && <span className={styles.markerCaption} aria-hidden="true">{caption}</span>}
               </button>
             );
           })}

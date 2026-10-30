@@ -129,6 +129,7 @@
   pointer-events: none;
 }
 .stage[data-selected] .marker:not([aria-pressed="true"]) .markerCaption { visibility: hidden; }
+.marker[data-caption-side="left"] .markerCaption { left: auto; right: calc(100% - 6px); }
 @media (min-width: 1001px) {
   .markerCaption { font-size: 14px; padding: 4px 10px; }
 }

@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { openInventory } from './inventory-fixture';
-import contours from '../src/scenes/inventory/segmentedContours.json' with { type: 'json' };
+import wide from '../src/scenes/inventory/segmentedContours.json' with { type: 'json' };
+import tall from '../src/scenes/inventory/segmentedContours.mobile.json' with { type: 'json' };
 
 for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]]) {
   test(`R4 local master and all gift targets at ${width}×${height}`, async ({ page }) => {
@@ -8,7 +9,8 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
     for (const [parcel, letter] of [['boat', 'Л'], ['camera', 'Ф'], ['socks', 'Н']]) {
       await openInventory(page, parcel);
       const image = page.locator('[data-world-plane] picture img');
-      await expect(image).toHaveAttribute('src', /warehouse-revision-4-2026-10-18\/overview-r4-v11-local\.png$/);
+      await expect(image).toHaveAttribute('src', /warehouse-v7\/overview(-mobile)?\.webp$/);
+      const contours = await page.locator('[data-world-scene="inventory"]').getAttribute('data-format') === 'mobile' ? tall : wide;
       const plane = (await image.boundingBox())!, stage = (await page.locator('[data-world-scene="inventory"]').boundingBox())!, header = (await page.getByRole('banner').boundingBox())!;
       const sign = contours.overviewRequiredBounds;
       expect(plane.x + plane.width * sign.left / contours.width).toBeGreaterThanOrEqual(Math.max(0, stage.x) - 1);
@@ -20,8 +22,8 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       for (const id of ['entrance', 'alphabet', 'keeper', 'wms']) {
         const marker = page.locator(`[data-hotspot="${id}"]`);
         await expect(marker).toBeInViewport({ ratio: 1 });
-        await expect(page.locator(`[data-scene-choice="${id}"]`)).toBeInViewport({ ratio: 1 });
         await marker.click();
+        await page.locator('[data-choice-confirm]').click();
         await expect(page.locator('[data-scene-consequence]')).toHaveAttribute('data-scene-consequence', `inventory-${id}${id === 'alphabet' ? `-${parcel}` : ''}`);
         await page.locator('[data-outcome-scene] img').evaluate((img: HTMLImageElement) => img.decode());
         await page.getByRole('button', { name: 'Изменить выбор', exact: true }).click();

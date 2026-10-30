@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-10-28-lastmile-helicopter",
+  "release": "media-2026-10-30-warehouse-v7",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3798,6 +3798,54 @@
           "path": "public/scene-art/lastmile-family-v1/revision-7/choice-wide-khor.webp",
           "sha256": "a17162274e5f836b6cb57f68cdd40ebe94f1ce4bf0d35ecff6eea00f3a0d9acd",
           "bytes": 1015056
+        }
+      ]
+    },
+    {
+      "name": "media-34-d798b25cd59b.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-30-warehouse-v7/media-34-d798b25cd59b.tar.gz",
+      "sha256": "d798b25cd59bc8b7eff57a9fe7a5ededf4ddc297ec2df22dba4887ee89f5ea02",
+      "bytes": 1494057,
+      "files": [
+        {
+          "path": "public/scene-art/warehouse-v7/outcome-alphabet-boat.webp",
+          "sha256": "812a8af59397c169724a1bba8e65bb1a5a0c6394e22253bf6edd5d1d1b1f0319",
+          "bytes": 210270
+        },
+        {
+          "path": "public/scene-art/warehouse-v7/outcome-alphabet-camera.webp",
+          "sha256": "d4c790e005bd173711d56cd571213d2f98bbdd0d0d2dd6315864d54557b28c60",
+          "bytes": 208984
+        },
+        {
+          "path": "public/scene-art/warehouse-v7/outcome-alphabet-socks.webp",
+          "sha256": "4ea4b9a27b4a26a69d8750023793e1a02ec525132641591b7db18a8b11badeee",
+          "bytes": 182836
+        },
+        {
+          "path": "public/scene-art/warehouse-v7/outcome-entrance.webp",
+          "sha256": "589cf7609f6a3721fdafa458d355475a82346a06343ad9313f7058f7f6bce5a8",
+          "bytes": 155364
+        },
+        {
+          "path": "public/scene-art/warehouse-v7/outcome-keeper.webp",
+          "sha256": "b1c2ea8d2d07b4bfecbe404666947c02df2a237e25aaceb8eb80041f5adbd15d",
+          "bytes": 162258
+        },
+        {
+          "path": "public/scene-art/warehouse-v7/outcome-wms.webp",
+          "sha256": "eec08d5bfe3f2c898daf82e6bd82db7bc3c774a252dc48298c55c1e8eec639a6",
+          "bytes": 168570
+        },
+        {
+          "path": "public/scene-art/warehouse-v7/overview-mobile.webp",
+          "sha256": "dea7a290b6fdd49e4e764297bb8cdb290af25aa6b80933bb91e8d87cbee8866a",
+          "bytes": 200348
+        },
+        {
+          "path": "public/scene-art/warehouse-v7/overview.webp",
+          "sha256": "385cb77aece1bd119328535d79539154f168f70f28f79136d2e6042c820faf16",
+          "bytes": 203786
         }
       ]
     }

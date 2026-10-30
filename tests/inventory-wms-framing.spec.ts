@@ -6,26 +6,27 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
     await page.setViewportSize({ width, height });
     for (const parcel of ['boat', 'camera', 'socks']) {
       await openInventory(page, parcel);
-      await page.locator('[data-scene-choice="wms"]').click();
+      await page.locator('[data-hotspot="wms"]').click();
+      await page.locator('[data-choice-confirm]').click();
       const img = page.locator('[data-scene-consequence="inventory-wms"] img');
       await img.evaluate((image: HTMLImageElement) => image.decode());
-      await expect(img).toHaveAttribute('src', /warehouse-revision-3-2026-10-18\/wms-stylized-v3\.png$/);
+      await expect(img).toHaveAttribute('src', /warehouse-v7\/outcome-wms\.webp$/);
       const action = await img.evaluate((image: HTMLImageElement) => {
         const scale = Math.max(image.clientWidth / image.naturalWidth, image.clientHeight / image.naturalHeight);
         const focus = getComputedStyle(image).objectPosition.split(' ').map(parseFloat);
         const left = (image.clientWidth - image.naturalWidth * scale) * focus[0] / 100;
         const top = (image.clientHeight - image.naturalHeight * scale) * focus[1] / 100;
-        // Worker, scanner and all trolley wheels in the reviewed 1672×941 source.
-        return { left: left + 405 * scale, right: left + 1295 * scale, top: top + 150 * scale, bottom: top + 870 * scale, width: image.clientWidth, height: image.clientHeight };
+        // Terminal, worker and the forklift taking the gift out at dispatch in the 1960×840 source.
+        return { left: left + 440 * scale, right: left + 1340 * scale, top: top + 330 * scale, bottom: top + 800 * scale, width: image.clientWidth, height: image.clientHeight };
       });
       expect(action.left).toBeGreaterThanOrEqual(0);
       expect(action.right).toBeLessThanOrEqual(action.width);
       expect(action.top).toBeGreaterThanOrEqual(0);
       expect(action.bottom).toBeLessThanOrEqual(action.height);
       if (height > width) {
-        const geometry = await img.evaluate((image: HTMLImageElement) => ({ width: image.clientWidth, height: image.clientHeight, ratio: image.naturalHeight / image.naturalWidth }));
-        // The whole composition is visible: no top/bottom crop of head or wheels.
-        expect(Math.abs(geometry.height - geometry.width * geometry.ratio)).toBeLessThan(2);
+        const overflow = await img.evaluate((image: HTMLImageElement) => image.naturalHeight * Math.max(image.clientWidth / image.naturalWidth, image.clientHeight / image.naturalHeight) - image.clientHeight);
+        // No top/bottom crop of heads or wheels; the wide source may lose its sides.
+        expect(overflow).toBeLessThan(2);
       }
       const more = page.getByRole('button', { name: 'Читать дальше', exact: true });
       for (let i = 0; i < 32 && await more.isVisible(); i++) {

@@ -1,0 +1,40 @@
+[
+  {
+    "created_at": "2026-10-29T10:08:38.018779Z",
+    "display_name": "GPT Image 2",
+    "id": "e1efc855-e3b1-42f7-bea0-4c8fc5c0d873",
+    "job_type": "gpt_image_2",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261029_100838_e1efc855-e3b1-42f7-bea0-4c8fc5c0d873_min.webp",
+    "params": {
+      "aspect_ratio": "21:9",
+      "height": 1152,
+      "medias": [
+        {
+          "data": {
+            "id": "090fe210-e9fc-4e6d-890d-1b3111e59224",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/090fe210-e9fc-4e6d-890d-1b3111e59224.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "5e5a53d7-484f-4b10-a2e4-f9b2ecc97638",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/5e5a53d7-484f-4b10-a2e4-f9b2ecc97638_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "videotape-alpha",
+      "prompt": "Image 1 is a 3D blockout render of an isometric warehouse cutaway. Repaint it as a polished, hand-painted isometric game illustration (soft painterly shading, warm daylight, subtle ambient occlusion, gentle textures on floor, wood pallets, cardboard boxes, metal racks; clean dark outlines like a premium mobile game). Image 2 is the style reference for palette and rendering quality only — do not copy its layout.\n\nSTRICT: keep the composition, camera, perspective and every object EXACTLY where it is in image 1 — same walls, windows, racks, boxes, people, trucks, gantries, kiosk, forklift, drone, pallets, road markings, trees. Do not add, remove, move or resize anything. Same outlines, same silhouettes, same proportions. People keep orange helmets and navy uniforms with orange vests; the grey-haired man with a clipboard stays grey-haired. Keep blue (#1F4FA0) and orange (#F26B1D) brand colours.\n\nAll signs, plaques and banners must stay completely blank (no letters, no numbers, no logos) — text will be added later. No new text anywhere.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "2k",
+      "width": 2688
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33LVYbSgsGpqu4tG3s6BfvqvexU/hf_20261029_100838_e1efc855-e3b1-42f7-bea0-4c8fc5c0d873.png",
+    "status": "completed"
+  }
+]

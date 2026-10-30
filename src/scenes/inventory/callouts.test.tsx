@@ -10,7 +10,7 @@ it("keeps map numbering tied to the corresponding warehouse buttons", () => {
   const host = document.createElement("div");
   host.innerHTML = renderToStaticMarkup(<WorldArt scene="inventory" title="Склад" options={inventoryScene.options(context)} context={context} markers onSelect={() => {}} showResult={false} />);
   inventoryScene.options(context).forEach((option, index) => {
-    expect(host.querySelector(`[data-hotspot="${option.id}"]`)?.textContent).toBe(String(index + 1));
+    expect(host.querySelector(`[data-hotspot="${option.id}"]`)?.querySelector("span")?.textContent).toBe(String(index + 1));
   });
 });
 it("shows small anchor-based buttons without leader wires only while choice is actionable", () => {

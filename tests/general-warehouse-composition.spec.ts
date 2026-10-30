@@ -22,17 +22,18 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       const format = await stage.getAttribute('data-format');
       const image = stage.locator('picture img');
       await image.evaluate(i => i.decode());
-      expect(await image.evaluate(i => i.currentSrc)).toContain(format === 'mobile' ? 'warehouse-logic-2026-10-28/overview-mobile' : 'warehouse-logic-2026-10-28/overview');
-      await expect(stage.locator('[data-warehouse-annotations] svg')).toHaveAttribute('viewBox', format === 'mobile' ? '0 0 1024 1536' : '0 0 1546 1017');
+      expect(await image.evaluate(i => i.currentSrc)).toContain(format === 'mobile' ? 'warehouse-v7/overview-mobile' : 'warehouse-v7/overview');
+      await expect(stage.locator('[data-warehouse-annotations] svg')).toHaveAttribute('viewBox', format === 'mobile' ? '0 0 1024 1536' : '0 0 1536 1024');
       await expect(stage.locator('[data-hotspot]')).toHaveCount(4);
       for (const id of ['entrance', 'alphabet', 'keeper', 'wms']) {
-        const choice = page.locator(`[data-scene-choice=${id}]`);
+        const choice = page.locator(`[data-hotspot=${id}]`);
         await expect(choice).toBeVisible();
         await expect(choice).toBeInViewport();
         await expect(choice).toBeEnabled();
       }
       const initial = await image.boundingBox();
-      await page.locator('[data-scene-choice=alphabet]').click();
+      await page.locator('[data-hotspot=alphabet]').click();
+      await page.locator('[data-choice-confirm]').click();
       await page.getByRole('button', { name: 'Изменить выбор', exact: true }).click();
       const returned = await image.boundingBox();
       expect(Math.abs(returned!.y - initial!.y)).toBeLessThanOrEqual(1);

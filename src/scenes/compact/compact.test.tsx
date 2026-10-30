@@ -227,7 +227,8 @@ it("shows full Compact result text without decorative consequence thumbnails", a
     );
     const proceed = [...host.querySelectorAll("button")].find((b) => b.textContent === "К выбору");
     if (proceed) await act(async () => proceed.click());
-    await click('[data-scene-choice="wms"]');
+    await click('[data-hotspot="wms"]');
+    await click("[data-choice-confirm]");
     expect(host.querySelector("[data-choice-inspection]")).toBeNull();
     expect(host.querySelector("[data-compact-consequence]")).toBeNull();
   } finally {

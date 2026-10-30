@@ -10,8 +10,8 @@ describe("warehouse cargo artwork", () => {
       const context = { recipient: "alva", profile: "student" } as const;
       for (const parcel of ["boat", "socks", "camera"] as const) {
         const path = branch === "wms"
-          ? "/scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png"
-          : `/scene-art/warehouse-logic-2026-10-28/outcome-${branch === "alphabet" ? `alphabet-${parcel}` : branch}.webp`;
+          ? `/scene-art/warehouse-v7/outcome-wms.webp`
+          : `/scene-art/warehouse-v7/outcome-${branch === "alphabet" ? `alphabet-${parcel}` : branch}.webp`;
         expect(
           sceneOutcomeImage("inventory", branch, { ...context, parcel }),
         ).toBe(path);

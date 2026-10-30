@@ -35,12 +35,24 @@ async function click(selector: string) {
   await act(async () => button.click());
 }
 
-it("records a direct choice, then lets the player revise it without stale scores", async () => {
+/** Warehouse places sit on the art: the place opens a card, the card confirms. */
+async function pick(id: string) {
+  for (let page = 0; page < 30; page++) {
+    const next = [...container.querySelectorAll<HTMLButtonElement>('[aria-label="Условие задания"] button')]
+      .find(button => /^(Далее|К выбору)$/.test(button.textContent ?? ""));
+    if (!next) break;
+    await act(async () => next.click());
+  }
+  await click(`[data-hotspot="${id}"]`);
+  await click("[data-choice-confirm]");
+}
+
+it("records a choice, then lets the player revise it without stale scores", async () => {
   await act(async () =>
     root.render(<ScenesGame context={context} startAt="inventory" />),
   );
   expect(container.querySelector("[data-score-key]")).toBeNull();
-  await click('[data-scene-choice="entrance"]');
+  await pick("entrance");
   expect(container.querySelector("[data-choice-inspection]")).toBeNull();
   expect(container.querySelector('[data-testid="result-copy"]')).not.toBeNull();
   expect(
@@ -56,9 +68,9 @@ it("records a direct choice, then lets the player revise it without stale scores
   await click('[data-result-reader] button[aria-label="Изменить выбор"]');
   expect(container.querySelector("[data-score-key]")).toBeNull();
   expect(
-    container.querySelector('[data-scene-choice="entrance"]'),
+    container.querySelector('[data-hotspot="entrance"]'),
   ).not.toBeNull();
-  await click('[data-scene-choice="wms"]');
+  await pick("wms");
   expect(
     container
       .querySelector("[data-scene-consequence]")
@@ -75,7 +87,7 @@ it("focuses the selected button and resets the result when the starting scene ch
   await act(async () =>
     root.render(<ScenesGame context={context} startAt="inventory" />),
   );
-  await click('[data-scene-choice="wms"]');
+  await pick("wms");
   expect(container.querySelector("[data-result]")).not.toBeNull();
   await act(async () =>
     root.render(<ScenesGame context={context} startAt="crane" />),
@@ -88,12 +100,12 @@ it("focuses the selected button and resets the result when the starting scene ch
   expect(container.querySelector("[data-scene-choice]")).toBeNull();
 });
 
-it("shows a single-paragraph task alongside directly available choices", async () => {
+it("shows a single-paragraph task alongside the places on the art", async () => {
   await act(async () =>
     root.render(<ScenesGame context={context} startAt="inventory" />),
   );
   expect(container.querySelector('[data-testid="scene-question"]')?.textContent).toContain("Давайте решим, где его разместить.");
-  await click('[data-scene-choice="wms"]');
+  await pick("wms");
   expect(container.querySelector("[data-choice-inspection]")).toBeNull();
   expect(container.querySelector("[data-result]")).not.toBeNull();
 });

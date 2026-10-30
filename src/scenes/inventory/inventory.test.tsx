@@ -153,7 +153,7 @@ it("keeps numbered object markers tied to choice IDs, not projection order", asy
     expect(host.querySelector('[data-warehouse-leader], polyline')).toBeNull();
     branches.forEach(([id], index) => {
       const marker = host.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`)!;
-      expect(marker.textContent).toBe(String(index + 1));
+      expect(marker.querySelector("span")?.textContent).toBe(String(index + 1));
       expect(marker.getAttribute("data-choice-id")).toBe(id);
       expect(marker.getAttribute("aria-label")).toContain(`Вариант ${index + 1}`);
       const point = warehouseCallouts("camera")[id];

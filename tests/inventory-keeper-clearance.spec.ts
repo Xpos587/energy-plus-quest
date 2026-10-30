@@ -1,11 +1,13 @@
 import { expect, test } from '@playwright/test';
-import contours from '../src/scenes/inventory/segmentedContours.json' with { type: 'json' };
+import wide from '../src/scenes/inventory/segmentedContours.json' with { type: 'json' };
+import tall from '../src/scenes/inventory/segmentedContours.mobile.json' with { type: 'json' };
 import { openInventory } from './inventory-fixture';
 
 for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]]) {
   test(`keeper remains unobscured at ${width}×${height}`, async ({ page }) => {
     await page.setViewportSize({ width, height });
     await openInventory(page);
+    const contours = await page.locator('[data-world-scene="inventory"]').getAttribute('data-format') === 'mobile' ? tall : wide;
     const plane = (await page.locator('[data-world-plane]').boundingBox())!;
     const button = page.locator('[data-hotspot="keeper"]');
     const marker = await button.evaluate(el => {
@@ -39,6 +41,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
     expect(Math.hypot(gapX, gapY)).toBeLessThan(44);
     await expect(page.locator('[data-hotspot="keeper"]')).toBeInViewport({ ratio: 1 });
     await page.locator('[data-hotspot="keeper"]').click();
+    await page.locator('[data-choice-confirm]').click();
     await expect(page.locator('[data-scene-consequence="inventory-keeper"]')).toBeVisible();
     await page.getByRole('button', { name: 'Изменить выбор', exact: true }).click();
     await expect(page.locator('[data-hotspot="keeper"]')).toBeVisible();
