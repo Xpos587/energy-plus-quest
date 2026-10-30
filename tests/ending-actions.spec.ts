@@ -102,7 +102,8 @@ test("unsupported sharing keeps download, the VK link and the company link usabl
     (await page.getByRole("link", { name: "ВКонтакте", exact: true }).getAttribute("href"))!,
   );
   expect(vk.hostname).toBe("vk.com");
-  expect(vk.searchParams.get("image")).toMatch(/^http.+\.webp$/u);
+  expect(vk.searchParams.get("url")).toMatch(/\/r\/[a-z]+-[a-z]+\/$/u);
+  expect(vk.searchParams.get("image")).toBe(`${vk.searchParams.get("url")}card.jpg`);
   await page.getByRole("button", { name: "Закрыть", exact: true }).click();
   await expect(
     page.locator("[data-company-cta] a"),

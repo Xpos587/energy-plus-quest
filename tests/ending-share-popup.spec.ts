@@ -49,17 +49,16 @@ test("share popup contains labelled download and social links, traps focus and c
   ).not.toBeVisible();
   const trigger = page.getByRole("button", { name: "Поделиться", exact: true });
   await trigger.click();
-  const dialog = page.getByRole("dialog", { name: "Поделиться результатом" });
+  const dialog = page.getByRole("dialog", { name: "Поделиться званием" });
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Закрыть" })).toBeFocused();
-  await expect(dialog.getByRole("link", { name: "ВКонтакте", exact: true })).toBeVisible();
-  for (const name of ["MAX", "Telegram"])
-    await expect(dialog.getByRole("link", { name, exact: true })).toHaveCount(0);
+  for (const name of ["Telegram", "ВКонтакте", "MAX"])
+    await expect(dialog.getByRole("link", { name, exact: true })).toBeVisible();
   const download = dialog.getByRole("button", {
-    name: "Скачать картинку",
+    name: "Скачать картинку для сторис",
     exact: true,
   });
-  await expect(download).toHaveText("Скачать картинку");
+  await expect(download).toHaveText("Скачать картинку для сторис");
   const pending = page.waitForEvent("download");
   await download.click();
   expect((await pending).suggestedFilename()).toMatch(/\.jpg$/);

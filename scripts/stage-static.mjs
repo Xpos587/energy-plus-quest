@@ -60,6 +60,7 @@ export async function stageStatic(source, destination, nginxConfig) {
   const selected = paths.filter(file =>
     ["index.html", "README-DEPLOY.txt", "quest-cache.js"].includes(file) ||
     codePaths.includes(file) ||
+    /^r\/[a-z]+-[a-z]+\/(?:index\.html|card\.jpg)$/.test(file) || // share previews, scripts/share-pages.ts
     /^fonts\/(?:OFL[^/]*\.txt|LICENSE[^/]*)$/.test(file) ||
     // Lastmile adds format suffixes at runtime; retain its original fallback family.
     (media.test(file) && (file.startsWith("scene-art/lastmile-family-v1/") || (!replaced.has(file) && referenced(file)))),

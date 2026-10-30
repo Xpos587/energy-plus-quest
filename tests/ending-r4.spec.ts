@@ -48,7 +48,7 @@ test("result keeps a labelled share action and hides social/download until opene
     page.getByRole("button", { name: "Поделиться", exact: true }),
   ).toBeVisible();
   await expect(
-    page.getByRole("button", { name: "Скачать картинку", exact: true }),
+    page.getByRole("button", { name: "Скачать картинку для сторис", exact: true }),
   ).not.toBeVisible();
   for (const [role, name] of [
     ["button", "Пройти заново"],
@@ -62,9 +62,8 @@ test("result keeps a labelled share action and hides social/download until opene
     page.locator("[data-logist-certificate] [data-company-cta] a"),
   ).toHaveAttribute("href", "https://supply.gazprom-neft.ru/");
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
-  await expect(page.getByRole("link", { name: "ВКонтакте", exact: true })).toBeVisible();
-  for (const name of ["MAX", "Telegram"])
-    await expect(page.getByRole("link", { name, exact: true })).toHaveCount(0);
+  for (const name of ["Telegram", "ВКонтакте", "MAX"])
+    await expect(page.getByRole("link", { name, exact: true })).toBeVisible();
 });
 
 test("gift handover keeps every recipient and present readable without offscreen actions", async ({

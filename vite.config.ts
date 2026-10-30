@@ -6,6 +6,7 @@ import { optimizedImages } from "./scripts/optimized-images";
 import { optimizedFonts } from "./scripts/optimized-fonts";
 import { gameCache } from "./scripts/game-cache";
 import { frozenUiSources } from "./scripts/frozen-ui";
+import { sharePages } from "./scripts/share-pages";
 
 // BUILD_SINGLEFILE=true — вся игра в одном index.html (js/css встроены инлайн).
 // Обход для площадки заказчика: их заливка спецпроектов теряет отдельные
@@ -20,10 +21,11 @@ export default defineConfig({
         optimizedImages(),
         optimizedFonts(),
         gameCache(),
+        sharePages(),
         react(),
         viteSingleFile({ useRecommendedBuildConfig: false }),
       ]
-    : [frozenUiSources({source:process.env.FROZEN_UI_SOURCE_DIR,capture:process.env.FROZEN_UI_CAPTURE_DIR}), optimizedImages(), optimizedFonts(), gameCache(), react()],
+    : [frozenUiSources({source:process.env.FROZEN_UI_SOURCE_DIR,capture:process.env.FROZEN_UI_CAPTURE_DIR}), optimizedImages(), optimizedFonts(), gameCache(), sharePages(), react()],
   build: {
     // BUILD_MINIFY=false — читаемый бандл для передачи заказчику (их серверная
     // поддержка пропускает минифицированный js как «подозрительный»).

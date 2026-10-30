@@ -93,7 +93,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
-  if (request.method !== "GET" || url.origin !== SCOPE.origin || !url.pathname.startsWith(SCOPE.pathname) || request.headers.has("range") || url.pathname.includes("/review/")) return;
+  if (request.method !== "GET" || url.origin !== SCOPE.origin || !url.pathname.startsWith(SCOPE.pathname) || request.headers.has("range") || url.pathname.includes("/review/") || url.pathname.startsWith(SCOPE.pathname + "r/")) return;
   const navigation = request.mode === "navigate";
   const type = navigation ? /^text\\/html/i : expectedType(url);
   if (!type) return;

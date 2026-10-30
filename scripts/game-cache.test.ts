@@ -93,6 +93,7 @@ describe("visited game resource cache", () => {
     expect(await app.request("/project/map.mp4")).toBeUndefined();
     expect(await app.request("/project/assets/scene.webp", { Range: "bytes=0-100" })).toBeUndefined();
     expect(await app.request("/project/review/scene.webp")).toBeUndefined();
+    expect(await app.request("/project/r/student-energy/", undefined, true)).toBeUndefined();
     expect(await app.request("/outside/scene.webp")).toBeUndefined();
   });
   test("does not take control of already open game sessions or bulk-precache branches", () => {

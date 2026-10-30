@@ -66,7 +66,7 @@ test("all certificate profiles fit and expose picture download and VK", async ({
           .getByRole("button", { name: "Поделиться", exact: true })
           .click();
         await expect(
-          page.getByRole("button", { name: "Скачать картинку", exact: true }),
+          page.getByRole("button", { name: "Скачать картинку для сторис", exact: true }),
         ).toBeVisible();
         await page
           .getByRole("button", { name: "Закрыть", exact: true })

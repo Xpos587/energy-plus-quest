@@ -20,6 +20,8 @@ COPY src/ ./src/
 COPY scripts/ ./scripts/
 COPY deploy/ ./deploy/
 COPY docs/ ./docs/
+# Absolute address for share-page previews (scripts/share-pages.ts).
+ENV PUBLIC_URL=https://energy-plus-quest.hypcat.net/
 RUN bun run build:app --outDir build
 RUN bun scripts/stage-static.mjs build dist deploy/nginx-joydelivery.conf
 

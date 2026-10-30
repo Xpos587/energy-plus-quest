@@ -330,3 +330,27 @@
   }
 }
 
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 20px;
+}
+.social a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 4px;
+  border: 1px solid #c6dbe6;
+  border-radius: 10px;
+  color: #07629c;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .social a:hover {
+    background: #dcecf5;
+  }
+}

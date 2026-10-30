@@ -73,11 +73,11 @@ it("continues the delivered gift to a certificate before restart or the Energy+ 
     ).toBe("https://e-plus.media/");
     await act(async () => restartButton.click());
     expect(restart).toHaveBeenCalledOnce();
-    /* Text-only share links are gone; VK is the only one that carries a picture. */
-    expect(host.querySelector('a[href*="max.ru"], a[href*="t.me"]')).toBeNull();
-    expect(
-      host.querySelector('a[href^="https://vk.com/share.php"]')?.getAttribute("href"),
-    ).toContain("image=");
+    /* Every network gets the public result page, whose preview card carries the picture. */
+    for (const prefix of ["https://t.me/share/url", "https://vk.com/share.php", "https://max.ru/:share"])
+      expect(
+        decodeURIComponent(host.querySelector(`a[href^="${prefix}"]`)!.getAttribute("href")!),
+      ).toMatch(/\/r\/[a-z]+-[a-z]+\//);
   } finally {
     await act(async () => root.unmount());
     host.remove();

@@ -42,7 +42,7 @@ test.beforeEach(async ({ page }) => {
   await page.reload();
 });
 
-test("downloads the story JPEG and shares to VK with the picture", async ({
+test("downloads the story JPEG and shares the public result page", async ({
   page,
 }) => {
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
@@ -61,7 +61,15 @@ test("downloads the story JPEG and shares to VK with the picture", async ({
     (await page.getByRole("link", { name: "ВКонтакте", exact: true }).getAttribute("href"))!,
   );
   expect(vk.searchParams.get("title")).toBe("Я — логистический гик!");
-  expect(vk.searchParams.get("image")).toBeTruthy();
+  expect(vk.searchParams.get("url")).toMatch(/\/r\/(?:student|professional)-efficiency\/$/u);
+  const telegram = new URL(
+    (await page.getByRole("link", { name: "Telegram", exact: true }).getAttribute("href"))!,
+  );
+  expect(telegram.searchParams.get("url")).toBe(vk.searchParams.get("url"));
+  const max = new URL(
+    (await page.getByRole("link", { name: "MAX", exact: true }).getAttribute("href"))!,
+  );
+  expect(max.searchParams.get("text")).toBe(`Я — логистический гик! ${vk.searchParams.get("url")}`);
 });
 
 test("native sharing sends the JPEG with short first-person copy", async ({

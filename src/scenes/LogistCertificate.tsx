@@ -111,7 +111,7 @@ export function LogistCertificate({
     try {
       await navigator.share({
         files: [prepared],
-        title: certificateCopy(copy)[0],
+        title,
         text: message,
       });
     } catch (e) {
@@ -127,10 +127,13 @@ export function LogistCertificate({
       typeof navigator.canShare === "function" &&
       navigator.canShare({ files: [prepared] }),
   );
-  const pageUrl = new URL(location.href);
-  pageUrl.search = "";
-  pageUrl.hash = "";
-  const message = `${certificateCopy(copy)[0]} ${pageUrl.href}`;
+  /* Public per-result page (scripts/share-pages.ts): its preview card carries the picture. */
+  const shareUrl = new URL(
+    `r/${profile}-${copy.type}/`,
+    new URL(import.meta.env.BASE_URL, location.href),
+  ).href;
+  const title = certificateCopy(copy)[0];
+  const message = `${title} ${shareUrl}`;
   const cta = copy.callToAction.match(companyLink);
 
   return (
@@ -256,11 +259,37 @@ export function LogistCertificate({
         >
           <X size={23} aria-hidden="true" />
         </button>
-        <h2 id="ending-share-title">Поделиться результатом</h2>
+        <h2 id="ending-share-title">Поделиться званием</h2>
         <p id="ending-share-description">
-          Картинка со званием в формате сторис: отправьте её в Telegram,
-          ВКонтакте или MAX или сохраните и выложите в историю.
+          В чате ссылка раскроется в яркую карточку с вашим званием. Для сторис
+          скачайте картинку.
         </p>
+        <nav className={styles.social} aria-label="Поделиться ссылкой">
+          <a
+            href={`https://t.me/share/url?${new URLSearchParams({ url: shareUrl, text: title })}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon channel="telegram" />
+            Telegram
+          </a>
+          <a
+            href={`https://vk.com/share.php?${new URLSearchParams({ url: shareUrl, title, image: `${shareUrl}card.jpg` })}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon channel="vk" />
+            ВКонтакте
+          </a>
+          <a
+            href={`https://max.ru/:share?${new URLSearchParams({ text: message })}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon channel="max" />
+            MAX
+          </a>
+        </nav>
         <div className={styles.fileActions}>
           {canShareFile && (
             <button type="button" onClick={share}>
@@ -268,20 +297,10 @@ export function LogistCertificate({
               Отправить картинку
             </button>
           )}
-          {/* VK is the only web share link that carries a picture; Telegram and MAX links share text only. */}
-          <a
-            href={`https://vk.com/share.php?${new URLSearchParams({ url: pageUrl.href, title: certificateCopy(copy)[0], image: new URL(artwork, location.href).href, noparse: "true" })}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <VkIcon />
-            ВКонтакте
-          </a>
           <button type="button" onClick={download} disabled={busy}>
             <Download size={21} aria-hidden="true" />
-            {busy ? "Сохраняем картинку…" : "Скачать картинку"}
+            {busy ? "Сохраняем картинку…" : "Скачать картинку для сторис"}
           </button>
-          <small>JPEG 1080×1920 — подходит для сторис</small>
         </div>
         {error && (
           <p role="alert" className={styles.error}>
@@ -293,7 +312,16 @@ export function LogistCertificate({
   );
 }
 
-function VkIcon() {
+function SocialIcon({ channel }: { channel: "max" | "telegram" | "vk" }) {
+  if (channel === "max")
+    return (
+      <img
+        src={`${import.meta.env.BASE_URL}brand/max-official.svg`}
+        width="24"
+        height="24"
+        alt=""
+      />
+    );
   return (
     <svg
       viewBox="0 0 24 24"
@@ -304,7 +332,11 @@ function VkIcon() {
     >
       <path
         fill="currentColor"
-        d="M2 5.5h3.8c.3 5.7 2.7 8.1 4.6 8.6V5.5H14v4.9c1.9-.2 4-2.5 4.7-4.9h3.6c-.6 3-2.8 5.2-4.3 6.1 1.5.8 4.1 2.8 5 6.4h-4c-.8-2.4-2.6-4.2-5-4.4V18h-.4C6.9 18 2.4 13.5 2 5.5Z"
+        d={
+          channel === "telegram"
+            ? "M21.8 3.4 18.5 20c-.2 1-1 1.2-1.8.7l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.4-8.5c.4-.4-.1-.6-.6-.3L5.9 13.2 1 11.7c-1-.3-1-1 .2-1.5L20.4 2.8c.9-.3 1.6.2 1.4.6Z"
+            : "M2 5.5h3.8c.3 5.7 2.7 8.1 4.6 8.6V5.5H14v4.9c1.9-.2 4-2.5 4.7-4.9h3.6c-.6 3-2.8 5.2-4.3 6.1 1.5.8 4.1 2.8 5 6.4h-4c-.8-2.4-2.6-4.2-5-4.4V18h-.4C6.9 18 2.4 13.5 2 5.5Z"
+        }
       />
     </svg>
   );

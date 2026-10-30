@@ -79,4 +79,4 @@ HTTP 301 с перенаправлением на
 
 The last screen has one target path: the words «Узнайте больше о компании» in the certificate text open https://supply.gazprom-neft.ru/ in a new tab. The home icon links to https://e-plus.media/.
 
-The VK share link passes the certificate artwork URL as `image`; VK fetches it from the published site, so check the preview on the deployed address.
+Share links (Telegram, VK, MAX, phone share sheet) point to a public result page `r/<profile>-<type>/` (7 pages, no player data). The build (`scripts/share-pages.ts`) writes each page with Open Graph tags and a 1200×630 `card.jpg`; chats show the card as the link preview, and the page button leads into the game. `og:url`/`og:image` must be absolute: the build uses `PUBLIC_URL` (default `https://e-plus.media/specprojects/joydelivery/`; the Dokploy image sets `https://energy-plus-quest.hypcat.net/`). Building on another address requires `PUBLIC_URL=<address ending in />`. Messengers cache previews: after a change, refresh Telegram via @WebpageBot and VK via the `pages.clearCache` API method.
