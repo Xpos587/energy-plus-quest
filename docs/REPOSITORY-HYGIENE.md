@@ -23,6 +23,20 @@ specified in `.gitignore`. They are not application changes or canonical review
 receipts. Ignoring them does not delete them; preserve an external archive before
 cleaning up an existing backlog. Do not ignore entire design or review trees.
 
+## Local disk cleanup
+
+Run `bun run clean:generated` between builds/test runs (not while either is
+running). It removes the reproducible `dist` build, image encoder cache and
+Playwright `trace.zip` archives under `.tmp-work`. It preserves scratch scripts,
+screenshots, review documents, authored media and delivered ZIPs in `release`.
+
+The source dev server (`bun run dev`) does not need `dist`. Recreate a static
+preview with `bun run build`: its packaging step retains runtime files only.
+`bun run build:app` is the intermediate Vite build and copies the full public
+media directory; do not keep it as an additional archive. Failed browser tests
+can retain large traces across different output directories; keep any trace you
+still need outside `.tmp-work` before cleaning.
+
 ## Enforced Git limits
 
 `repository-budget.json` is authoritative:
@@ -31,7 +45,7 @@ cleaning up an existing backlog. Do not ignore entire design or review trees.
 - Git directory: at most **64 MiB**.
 - Individual tracked file: at most **1 MiB**.
 - Binary image/video/PDF/font/native masters and `dist` are forbidden in the index.
-- Generated local output across `.tmp-work`, `build`, `release`: at most **2 GiB**.
+- Generated local output across `.tmp-work`, `dist`, `build`, `release`: at most **2 GiB**.
 - Image codec cache: at most **256 MiB**, encoded results only; no duplicated source buffers.
 
 The pre-commit hook checks staged objects, not unstaged files. Enable it after cloning with `bun run setup:hooks`. CI checks the committed tree. New exceptions require a concrete reason and must still satisfy the total repository limit.

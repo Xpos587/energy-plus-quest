@@ -6,6 +6,7 @@
   "maxLocalGeneratedBytes": 2147483648,
   "localGeneratedPaths": [
     ".tmp-work",
+    "dist",
     "build",
     "release"
   ],

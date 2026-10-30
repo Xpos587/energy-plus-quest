@@ -7,6 +7,7 @@
     "media:hydrate": "bun scripts/media-artifacts.ts",
     "media:verify": "bun scripts/media-artifacts.ts --verify",
     "check:storage": "bun scripts/repository-budget.ts --head",
+    "clean:generated": "rm -rf dist .tmp-work/image-build-cache && { [ ! -d .tmp-work ] || find .tmp-work -type f -name trace.zip -delete; }",
     "setup:hooks": "git config core.hooksPath .githooks",
     "preview:current": "bun scripts/preview-current.ts",
     "dev": "bun run media:hydrate && vite",
