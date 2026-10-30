@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
 
-// Source-pixel extents, checked against the revision-7 illustration, not just hotspot centres.
+// Source-pixel extents checked against revision 8, including the whole barge and destination aerial.
 const bounds = {
-  wide: { width: 1942, height: 809, objects: [[474, 215, 771, 399], [622, 406, 853, 554], [759, 540, 908, 651], [878, 631, 1004, 732], [1114, 85, 1410, 314], [1280, 350, 1480, 510]] },
-  tall: { width: 948, height: 1659, objects: [[40, 800, 317, 963], [324, 952, 482, 1074], [511, 1006, 633, 1111], [664, 1037, 773, 1137], [417, 445, 663, 700], [733, 625, 899, 818]] },
+  wide: { width: 1942, height: 809, objects: [[535, 150, 842, 314], [669, 376, 893, 495], [810, 486, 1012, 615], [946, 618, 1080, 710], [1150, 27, 1425, 310], [1310, 300, 1670, 525], [405, 448, 765, 798]] },
+  tall: { width: 948, height: 1659, objects: [[17, 748, 330, 919], [307, 885, 489, 1027], [498, 939, 651, 1076], [667, 1020, 781, 1119], [385, 300, 605, 585], [645, 535, 920, 775], [205, 1070, 685, 1390]] },
 };
 
-for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1180, 820], [1440, 900], [1920, 1080], [2560, 1080]]) {
+for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1180, 820], [1366, 768], [1440, 900], [1920, 1080], [2560, 1080]]) {
   test(`lastmile vehicles and destinations fit ${width}x${height}`, async ({ page }) => {
     await page.setViewportSize({ width, height });
     await page.goto('/scenes.html?scene=lastmile&parcel=boat&recipient=khor');
@@ -23,7 +23,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1180, 820], 
     const scale = view.planeWidth / drawing.width;
     for (const [x0, y0, x1, y1] of drawing.objects) {
       expect(view.left + x0*scale).toBeGreaterThanOrEqual(-1);
-      expect(view.top + y0*scale).toBeGreaterThanOrEqual(-1);
+      expect(view.top + y0*scale).toBeGreaterThanOrEqual(63); // Clear the instruction overlay.
       expect(view.left + x1*scale).toBeLessThanOrEqual(view.width+1);
       expect(view.top + y1*scale).toBeLessThanOrEqual(view.height+1);
     }

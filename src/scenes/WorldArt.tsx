@@ -22,6 +22,7 @@ const shortMarkerLabels: Record<string, string> = {
 };
 
 const markerInset = 24;
+const lastmileTopInset = 64; // Keep destinations clear of the “choose transport” overlay.
 
 function framingScale(
   stage: { width: number; height: number },
@@ -60,7 +61,7 @@ function framingOffset(
     0,
     stageSize - markerInset - Math.max(...values) * planeSize,
   );
-  return lower <= upper ? Math.max(lower, Math.min(upper, centered)) : centered;
+  return lower <= upper + 0.5 ? Math.max(lower, Math.min(upper, centered)) : centered;
 }
 
 type WorldArtProps = SceneArtProps & {
@@ -127,7 +128,7 @@ export function WorldArt({
       : containedArea(views.mobile) > containedArea(views.desktop)
         ? "mobile"
         : "desktop";
-  const lastmileFormat = size.width / size.height >= 1.35 ? "wide" : "tall";
+  const lastmileFormat = size.width / size.height >= 1.15 ? "wide" : "tall";
   const lastmileComposition = scene === "lastmile"
     ? { ...lastmileChoiceArtwork[lastmileFormat], image: lastmileChoiceImage(lastmileFormat, context.recipient) }
     : undefined;
@@ -171,7 +172,7 @@ export function WorldArt({
   const scale = inventoryCamera
     ? inventoryCamera.scale
     : composition
-      ? Math.max(size.width / view.width, size.height / view.height)
+      ? framingScale({ ...size, height: Math.max(0, size.height - lastmileTopInset) }, view, composition.framing)
       : framingScale(size, view, hotspots);
   const interactiveMarkers = markers &&
     (scene !== "inventory" || (!showResult && !!onSelect));
@@ -179,7 +180,7 @@ export function WorldArt({
   const planeHeight = planeWidth * view.height / view.width;
   const planeScale = planeWidth / view.width;
   const clampOffset = (offset: number, stageSize: number, planeSize: number) =>
-    Math.max(stageSize - planeSize, Math.min(0, offset));
+    planeSize <= stageSize ? (stageSize - planeSize) / 2 : Math.max(stageSize - planeSize, Math.min(0, offset));
   const active = options.find((option) => option.id === selectedId);
   const markerId =
     scene === "compact"
@@ -239,12 +240,12 @@ export function WorldArt({
             top: inventoryCamera.top,
             transform: "none",
           } : composition ? {
-            left: clampOffset(size.width / 2 - (selectedTransport ? selectedTransport.x * composition.width : composition.anchor.x) * planeScale, size.width, planeWidth),
-            top: scene === "lastmile" && !selectedId
-              ? scene === "lastmile" && lastmileFormat === "tall"
-                ? Math.max(framingOffset(size.height, planeHeight, hotspots.map(({ y }) => y)), -lastmileChoiceArtwork.tall.maxTop * planeScale)
-                : framingOffset(size.height, planeHeight, hotspots.map(({ y }) => y))
-              : clampOffset(size.height / 2 - (selectedTransport ? selectedTransport.y * composition.height : composition.anchor.y) * planeScale, size.height, planeHeight),
+            left: selectedTransport
+              ? clampOffset(size.width / 2 - selectedTransport.x * composition.width * planeScale, size.width, planeWidth)
+              : framingOffset(size.width, planeWidth, composition.framing.map(({ x }) => x)),
+            top: selectedTransport
+              ? clampOffset(size.height / 2 - selectedTransport.y * composition.height * planeScale, size.height, planeHeight)
+              : lastmileTopInset + framingOffset(size.height - lastmileTopInset, planeHeight, composition.framing.map(({ y }) => y)),
             transform: "none",
           } : {
             left: framingOffset(size.width, planeWidth, hotspots.map(({ x }) => x)),

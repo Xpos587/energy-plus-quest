@@ -4,9 +4,9 @@ export const lastmileRevision = 'scene-art/lastmile-family-v1/revision-2';
 // revision-5: Mi-8 livery (orange body, black engine housing, five-blade rotor) per the technical reference.
 const lastmileHelicopterRevision = 'scene-art/lastmile-family-v1/revision-5';
 
-// revision-7: Blender layout, reference-guided illustration, and readable destination recipients.
+// revision-8: rebuilt port geometry and cohesive, reference-guided destination illustrations.
 export function lastmileChoiceImage(format: 'wide' | 'tall', recipient: SceneContext['recipient']) {
-  return `scene-art/lastmile-family-v1/revision-7/choice-${format}-${recipient}.webp`;
+  return `scene-art/lastmile-family-v1/revision-8/choice-${format}-${recipient}.webp`;
 }
 
 export function lastmileFlightImage(context: SceneContext) {
