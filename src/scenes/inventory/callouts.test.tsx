@@ -25,7 +25,7 @@ it("shows small anchor-based buttons without leader wires only while choice is a
   expect(markup(() => {}, true)).not.toContain('data-hotspot=');
 });
 
-it("uses model silhouette paths as four choice targets with number-only badges", () => {
+it("uses model silhouette paths as four choice targets without badges or captions", () => {
   const host = document.createElement("div");
   host.innerHTML = renderToStaticMarkup(<InventoryArt context={context} onSelect={() => {}} showResult={false} />);
   ["entrance", "alphabet", "keeper", "wms"].forEach(id => {

@@ -10,15 +10,6 @@ export function warehouseCamera(stage: { width: number; height: number }, parcel
     return { left: Math.min(...points.map(p => p.x)), right: Math.max(...points.map(p => p.x)), top: Math.min(...points.map(p => p.y)), bottom: Math.max(...points.map(p => p.y)) };
   };
   const overview = bounds(regions);
-  // Reserve room for the 44px badge targets, including the keeper badge beside
-  // his head rather than moving it onto a different object to avoid clipping.
-  const badgeMargin = 60;
-  for (const region of regions) {
-    overview.left = Math.min(overview.left, region.anchor.x * drawing.width - badgeMargin);
-    overview.right = Math.max(overview.right, region.anchor.x * drawing.width + badgeMargin);
-    overview.top = Math.min(overview.top, region.anchor.y * drawing.height - badgeMargin);
-    overview.bottom = Math.max(overview.bottom, region.anchor.y * drawing.height + badgeMargin);
-  }
   // Non-interactive scene information is still needed to understand the task.
   // Keep the intake sign below the header rather than cropping to objects only.
   const required = drawing.overviewRequiredBounds;

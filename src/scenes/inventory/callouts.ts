@@ -3,7 +3,7 @@ import contours from "./segmentedContours.json";
 import mobileContours from "./segmentedContours.mobile.json";
 import type { WarehouseChoice } from "./warehouseZones";
 
-/** Object boundaries and badge positions use the current illustration's native pixels. */
+/** Object boundaries and keyboard-button positions use the current illustration's native pixels. */
 export type WarehouseComposition = "wide" | "tall";
 export function warehouseDrawing(composition: WarehouseComposition = "wide") {
   return composition === "tall" ? mobileContours : contours;

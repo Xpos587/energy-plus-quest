@@ -33,7 +33,7 @@ describe("warehouse alphabet follows gift names and starts at dispatch", () => {
       expect(parseFloat(marker.style.left)).toBeCloseTo(warehouseCallouts(parcel).alphabet.x * 100);
       expect(parseFloat(marker.style.top)).toBeCloseTo(warehouseCallouts(parcel).alphabet.y * 100);
       expect(marker.querySelector("span")?.textContent).toBe("2");
-      expect(marker.textContent).toContain(`Стеллаж «${letter}»`);
+      expect(marker.title).toBe(`Стеллаж «${letter}»`);
       expect(marker.getAttribute("aria-label")).toContain("по алфавиту");
       expect(marker.getAttribute("aria-label")).toContain("по алфавиту");
       for (const [id, point] of Object.entries(warehouseCallouts(parcel)).filter(([id]) => id !== "alphabet")) {
@@ -56,7 +56,7 @@ describe("warehouse alphabet follows gift names and starts at dispatch", () => {
         />,
       );
       expect(host.querySelector("img")?.getAttribute("src")).toBe(
-        `/scene-art/warehouse-v14/outcome-alphabet-${context.parcel}.webp`,
+        `/scene-art/warehouse-v15/outcome-alphabet-${context.parcel}.webp`,
       );
       expect(host.querySelector("img")?.alt).toContain("закрытой коробке");
       expect(host.querySelector("img")?.alt).not.toContain(`буквой ${letter}`);

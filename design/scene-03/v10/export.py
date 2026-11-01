@@ -6,9 +6,9 @@ from pathlib import Path
 from PIL import Image
 
 here = Path(__file__).parent
-w = here.parents[2] / ".tmp-work/v16"  # restyles + compose.py output (local only)
+w = here.parents[2] / ".tmp-work/v17"  # restyles + compose.py output (local only)
 root = here.parents[2]
-base = "scene-art/warehouse-v14"
+base = "scene-art/warehouse-v15"
 pub = root / "public" / base
 pub.mkdir(parents=True, exist_ok=True)
 
@@ -34,7 +34,7 @@ def contours(frame, source, method):
             "regions": regions}
 
 
-METHOD = ("Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v14 big aisle banners and site around the hall, game-map restyle, 1 November 2026; "
+METHOD = ("Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v15 compact hall, rack-end letter banners, company workwear, game-map restyle, 1 November 2026; "
           "GPT restyle aligned back onto the render; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)")
 out = {}
 for layout, fmt, name in (("wide", "desk", "overview"), ("tall", "tall", "overview-mobile")):
@@ -56,4 +56,25 @@ for name, frame in outcomes.items():
 wms = outcomes["wms"]
 focus["inventory-wms"] = f"{round((min(x for x, _ in wms['regions']['wms']['hull']) + wms['story']['gift'][0] + 40) / 2 / wms['width'] * 100, 1)}%"
 out["focus"] = focus
+
+# Feed the game: overview hotspots, shelf plaque positions and outcome focus.
+import re
+wm_path = root / "src/scenes/worldManifest.json"
+wm = json.loads(wm_path.read_text())
+for layout, key in (("wide", "desktop"), ("tall", "mobile")):
+    a = out[layout]["anchors"]
+    wm["scenes"]["inventory"][key]["image"] = f"{base}/{'overview' if layout == 'wide' else 'overview-mobile'}.webp"
+    wm["scenes"]["inventory"][key]["hotspots"] = [{"id": k, "x": a[r][0], "y": a[r][1]} for k, r in
+                                                   (("entrance", "entrance"), ("alphabet", "alphabet-camera"), ("keeper", "keeper"), ("wms", "wms"))]
+wm_path.write_text(json.dumps(wm, indent=2, ensure_ascii=False) + "\n")
+alpha = root / "src/scenes/inventory/alphabet.ts"
+t = alpha.read_text()
+for label, (x, y) in out["wide"]["labels"].items():
+    t = re.sub(rf'(label: "{label}", letters: "[^"]+", )x: [\d.]+, y: [\d.]+', rf"\g<1>x: {x}, y: {y}", t)
+alpha.write_text(t)
+framing = root / "src/scenes/outcomeFraming.ts"
+t = framing.read_text()
+for k, v in focus.items():
+    t = re.sub(rf'"{k}": "[\d.]+%"', f'"{k}": "{v}"', t)
+framing.write_text(t)
 print(json.dumps(out, ensure_ascii=False, indent=1))

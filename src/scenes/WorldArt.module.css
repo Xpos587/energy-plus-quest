@@ -111,32 +111,9 @@
 .stage .marker[data-focused="true"]::before { background: var(--orange); }
 .stage .marker::before { transition: background-color 160ms ease; }
 
-/* Transport names beside the pins, like the quay captions in scene 4. */
-.markerCaption {
-  position: absolute;
-  left: calc(100% - 6px);
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 3px 8px;
-  border-radius: 6px;
-  background: #fffffff2;
-  color: #173c55;
-  font-size: 12px;
-  font-weight: 650;
-  line-height: 1.2;
-  white-space: nowrap;
-  box-shadow: 0 1px 4px #04132733;
-  pointer-events: none;
-}
-.stage[data-selected] .marker:not([aria-pressed="true"]) .markerCaption { visibility: hidden; }
-.marker[data-caption-side="left"] .markerCaption { left: auto; right: calc(100% - 6px); }
-@media (min-width: 1001px) {
-  .markerCaption { font-size: 14px; padding: 4px 10px; }
-}
-
-/* Lastmile: the vehicles themselves are the tap targets (LastmileZones); no labels or pins on the art.
-   The invisible button keeps keyboard access and shows a ring only on keyboard focus. */
-.stage[data-world-scene="lastmile"] .marker { margin-top: 0; color: transparent; }
-.stage[data-world-scene="lastmile"] .marker > span { display: none; }
-.stage[data-world-scene="lastmile"] .marker::before { content: none; }
-.stage[data-world-scene="lastmile"] .marker:focus-visible { outline: 3px solid #fff; outline-offset: -3px; border-radius: 50%; box-shadow: 0 0 0 3px #075d9b; }
+/* Lastmile and inventory: the objects themselves are the tap targets (LastmileZones, WarehouseZones);
+   no labels or pins on the art. The invisible button keeps keyboard access and shows a ring only on keyboard focus. */
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker { margin-top: 0; color: transparent; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker > span { display: none; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker::before { content: none; }
+.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker:focus-visible { outline: 3px solid #fff; outline-offset: -3px; border-radius: 50%; box-shadow: 0 0 0 3px #075d9b; }

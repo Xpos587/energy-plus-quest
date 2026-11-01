@@ -263,12 +263,13 @@ LAYOUTS = {
     # DOCKS: two receiving doors (left) and two dispatch doors (right). The gift arrives
     # through the inner receiving door and leaves through the outer dispatch door, the
     # one nearest the Ю–Я row; the barge consignment waits by the inner dispatch door.
-    "wide": dict(X1=52.0, Y1=34.0, DOCKS=((11.0, 18.0), (34.0, 41.0)), RY=(2.6, 19.0), RW=2.6, RX=(4.5, 7.4), PW=5.6, PT=2.2,
-                 ENTR=(0.6, 7.0), DESK=(23.6, 27.0), GIFT=(17.2, 28.4), JACK_DX=1.6, SCAN_IN=(13.2, 26.6),
-                 BARGE=[(32.4, 29.4), (34.0, 29.4), (35.6, 29.4), (32.4, 31.0), (34.0, 31.0), (37.2, 29.4)],
-                 SCAN_OUT=(38.0, 27.0), KEEPER=(47.6, 4.6), LANE=23.4,
-                 RUN_E=((30.0, 23.4), (6.0, 28.6)), PUZZLED=((31.7, 1.4), (39.1, 3.2))),
-    "tall": dict(X1=36.0, Y1=44.0, DOCKS=((9.0, 14.6), (24.2, 29.8)), RY=(2.6, 26.0), RW=2.4, RX=(3.0, 5.4), PW=4.4, PT=1.8,
+    # v15: a tighter hall (4 bays deep, narrower aisles) so racks and people read bigger.
+    "wide": dict(X1=47.0, Y1=30.0, DOCKS=((11.0, 18.0), (31.0, 38.0)), RY=(2.6, 15.0), RW=3.0, RX=(4.5, 6.8), PT=2.6,
+                 ENTR=(0.6, 7.0), DESK=(22.6, 26.0), GIFT=(17.2, 24.4), JACK_DX=1.8, SCAN_IN=(13.0, 22.4),
+                 BARGE=[(29.4, 25.4), (31.0, 25.4), (32.6, 25.4), (29.4, 27.0), (31.0, 27.0), (34.2, 25.4)],
+                 SCAN_OUT=(35.2, 23.0), KEEPER=(44.2, 4.6), LANE=19.4,
+                 RUN_E=((27.0, 19.4), (6.0, 24.6)), PUZZLED=((28.7, 1.0), (36.1, 2.6))),
+    "tall": dict(X1=36.0, Y1=44.0, DOCKS=((9.0, 14.6), (24.2, 29.8)), RY=(2.6, 26.0), RW=3.0, RX=(3.0, 5.4), PT=2.8,
                  ENTR=(0.6, 6.2), DESK=(17.6, 20.8), GIFT=(13.4, 38.4), JACK_DX=1.5, SCAN_IN=(9.6, 36.8),
                  BARGE=[(22.6, 39.4), (24.2, 39.4), (25.8, 39.4), (22.6, 41.0)],
                  SCAN_OUT=(27.2, 37.4), KEEPER=(34.0, 1.3), LANE=31.0,
@@ -278,7 +279,7 @@ P = LAYOUTS[LAYOUT]
 X0, Y0 = 0.0, 0.0
 X1, Y1 = P["X1"], P["Y1"]
 WALL = FZ + 10.6
-PEOPLE = 1.6
+PEOPLE = 2.0  # v15: bigger people, they carry the story
 (DX_IN0, DX_IN), (DX_OUT0, DX_OUT) = P["DOCKS"]
 DOCK_X = [DX_IN0, DX_IN, DX_OUT0, DX_OUT]
 DOOR = 2.6  # half width of the dock doors
@@ -539,18 +540,22 @@ RANGES = [(label, letters, P["RX"][0] + i * P["RX"][1]) for i, (label, letters) 
 ALPHA_ROW = {"camera": 4, "socks": 3, "boat": 2}
 HOT_ROW = 5
 GIFT_CELL = (len(LEVELS) - 1, max(1, round((RY1 - RY0) / 3.1)) - 1)  # top level, back bay (nearest the docks): the gift reads from above
-PLAQUE_Z0, PLAQUE_Z1 = RACK_TOP + 0.5, RACK_TOP + 3.3
-PW = P["PW"] / 2  # half width of the aisle banner, wider than the rack: it must read on a phone
+# Letter banner: a vertical navy banner as wide as the rack end, hung on the row's front
+# end like the customer reference (image7.jpg); the letters stack: first, dash, last.
+PLAQUE_Z1 = RACK_TOP + 0.4
+PLAQUE_Z0 = PLAQUE_Z1 - (0.72 * P["PT"] * 2 + 1.5)
+PW = RW / 2 + 0.05
 CELLS = {}
 for i, (label, letters, x0) in enumerate(RANGES):
     free = {GIFT_CELL} if i in ALPHA_ROW.values() or i == HOT_ROW else set()
     CELLS[i] = rack_row(f"rack_{i}", x0, x0 + RW, RY0, RY1, free=free, seed=10 + i)
     cx = x0 + RW / 2
-    for x in (x0 + 0.25, x0 + RW - 0.25):
-        aabb(f"rack_{i}", NAVY, x - 0.07, RY0 - 0.07, RACK_TOP, x + 0.07, RY0 + 0.07, PLAQUE_Z0)
-    aabb(f"rack_{i}", NAVY, cx - PW, RY0 - 0.1, PLAQUE_Z0, cx + PW, RY0 + 0.1, PLAQUE_Z1)
-    aabb(f"rack_{i}", "#FFFFFF", cx - PW + 0.18, RY0 - 0.14, PLAQUE_Z0 + 0.18, cx + PW - 0.18, RY0 - 0.1, PLAQUE_Z1 - 0.18, nolines=True)
-    text("plaques", label, (cx, RY0 - 0.17, (PLAQUE_Z0 + PLAQUE_Z1) / 2), P["PT"], NAVY)
+    aabb(f"rack_{i}", NAVY, cx - PW, RY0 - 0.32, PLAQUE_Z0, cx + PW, RY0 - 0.14, PLAQUE_Z1)
+    aabb(f"rack_{i}", "#FFFFFF", cx - PW + 0.14, RY0 - 0.36, PLAQUE_Z0 + 0.14, cx + PW - 0.14, RY0 - 0.32, PLAQUE_Z1 - 0.14, nolines=True)
+    zm, step = (PLAQUE_Z0 + PLAQUE_Z1) / 2, 0.72 * P["PT"] / 2 + 0.45
+    text("plaques", letters[0], (cx, RY0 - 0.38, zm + step), P["PT"], NAVY)
+    aabb("plaques", NAVY, cx - 0.35, RY0 - 0.39, zm - 0.09, cx + 0.35, RY0 - 0.37, zm + 0.09, nolines=True)
+    text("plaques", letters[-1], (cx, RY0 - 0.38, zm - step), P["PT"], NAVY)
 
 
 def cell_spot(i, cell=GIFT_CELL, inset=0.9):
@@ -652,16 +657,21 @@ def gift(group, x, y, z, k=GIFT_SIZE, on_pallet=True):
 
 GIFT_IN = Vector((*P["GIFT"], FZ))
 GIFT_TOP = gift("gift", *GIFT_IN)
-def person(group, c, facing, hat=ORANGE, vest=ORANGE, suit=NAVY, hair=None, mustache=None, s=PEOPLE, pose=None, tsd=False, walk=0.0):
-    """Game figure: overalls with a hi-vis vest, hard hat or bare grey head."""
+STRIPE = "#DCE3EA"  # reflective tape on the Gazpromneft workwear
+
+
+def person(group, c, facing, cap=BLUE, suit=NAVY, hair=None, mustache=None, s=PEOPLE, pose=None, tsd=False, walk=0.0, tablet=False):
+    """Game figure in the company workwear (docs/scenario-assets/image20.png): a navy jacket
+    and trousers with reflective stripes, a blue cap or a bare head."""
     M = Matrix.Translation(c) @ Matrix.Rotation(facing, 4, "Z") @ Matrix.Diagonal((s, s, s, 1))
     for dy, sw in ((-0.13, walk), (0.13, -walk)):
         box(group, suit, (sw * 0.3, dy, 0.42), (0.2, 0.18, 0.84), M=M)
+        box(group, STRIPE, (sw * 0.3, dy, 0.28), (0.21, 0.19, 0.05), M=M)
         box(group, "#2B2F36", (sw * 0.3 + 0.05, dy, 0.05), (0.3, 0.2, 0.1), M=M)
     base = 0.84
     box(group, suit, (0, 0, base + 0.33), (0.3, 0.46, 0.66), M=M)
-    box(group, vest, (0.01, 0, base + 0.36), (0.32, 0.48, 0.5), M=M)
-    box(group, "#F4F6F8", (0.02, 0, base + 0.3), (0.33, 0.49, 0.05), M=M)
+    for z in (base + 0.22, base + 0.42):
+        box(group, STRIPE, (0, 0, z), (0.31, 0.47, 0.05), M=M)
     arms = pose if pose and isinstance(pose[0], tuple) else (pose or (0, 0),) * 2
     for dy, arm in zip((-0.29, 0.29), arms):
         beam(group, suit, (0, dy, base + 0.62), (0.18 + arm[0], dy * 1.1, base + 0.2 + arm[1]), 0.14, M=M)
@@ -670,6 +680,9 @@ def person(group, c, facing, hat=ORANGE, vest=ORANGE, suit=NAVY, hair=None, must
         a = arms[1]
         box(group, "#2B2F36", (0.26 + a[0], 0.32, base + 0.26 + a[1]), (0.16, 0.09, 0.05), M=M)
         box(group, "#7FD0F5", (0.26 + a[0], 0.32, base + 0.29 + a[1]), (0.1, 0.06, 0.01), mat="flat", M=M)
+    if tablet:  # held in both hands in front of the chest
+        box(group, "#2B2F36", (0.3, 0, base + 0.42), (0.04, 0.4, 0.3), M=M)
+        box(group, "#7FD0F5", (0.33, 0, base + 0.42), (0.01, 0.34, 0.24), mat="flat", M=M)
     ball(group, "#F2C29B", (0, 0, base + 0.88), 0.21, M=M)
     ball(group, "#2B2F36", (0.2, -0.07, base + 0.92), 0.03, M=M, sub=1)
     ball(group, "#2B2F36", (0.2, 0.07, base + 0.92), 0.03, M=M, sub=1)
@@ -677,9 +690,9 @@ def person(group, c, facing, hat=ORANGE, vest=ORANGE, suit=NAVY, hair=None, must
         ball(group, mustache, (0.19, 0, base + 0.83), 0.06, sx=0.7, sy=2.0, sz=0.6, M=M, sub=1)
     if hair:
         ball(group, hair, (-0.03, 0, base + 0.95), 0.21, sx=0.95, sz=0.6, M=M)
-    if hat:
-        ball(group, hat, (0, 0, base + 1.0), 0.23, sz=0.7, M=M)
-        cyl(group, hat, (0.04, 0, base + 0.99), 0.26, 0.03, M=M, seg=16)
+    if cap:  # a blue baseball cap, peak forward
+        ball(group, cap, (0, 0, base + 0.99), 0.22, sz=0.55, M=M)
+        box(group, cap, (0.24, 0, base + 0.97), (0.2, 0.3, 0.03), M=M)
     return Vector(M @ Vector((0, 0, base + 1.1)))
 
 
@@ -718,10 +731,9 @@ for x, y in P["BARGE"]:
     aabb("staging_out", "#E9F2F9", x - 0.66, y - 0.2, FZ + 0.3, x + 0.66, y + 0.2, FZ + 1.45, nolines=True)
 person("workers", (*P["SCAN_OUT"], FZ), facing_to(P["SCAN_OUT"], P["BARGE"][2]), tsd=True, pose=((0, 0), (0.25, 0.35)))
 
-# keeper Pavel: grey hair and moustache, no hard hat, clipboard, in the aisle by Ю–Я
+# keeper Pavel: grey hair and moustache, bare head, tablet, at the front right by Ю–Я
 KEEPER = Vector((*P["KEEPER"], FZ))
-KEEPER_HEAD = person("keeper", tuple(KEEPER), math.radians(-115), hat=None, vest="#F7B731", suit="#3D5A80", hair="#C9CDD2", mustache="#C9CDD2", pose=((0.15, 0.3), (0.05, 0.0)))
-aabb("keeper", "#7A5230", KEEPER.x - 0.4, KEEPER.y - 0.75, FZ + 1.6, KEEPER.x - 0.1, KEEPER.y - 0.35, FZ + 2.05)
+KEEPER_HEAD = person("keeper", tuple(KEEPER), math.radians(-115), cap=None, hair="#C9CDD2", mustache="#C9CDD2", pose=((0.12, 0.1), (0.12, 0.1)), tablet=True)
 LX, LY = KEEPER.x - 1.3, KEEPER.y - 0.3
 aabb("keeper", "#8A5A33", LX - 0.5, LY - 0.4, FZ, LX + 0.5, LY + 0.4, FZ + 1.5)
 aabb("keeper", "#F4EBD6", LX - 0.45, LY - 0.36, FZ + 1.5, LX + 0.45, LY + 0.36, FZ + 1.58)
@@ -746,7 +758,7 @@ for i in range(6):
     aabb("wms", "#5FD38D" if i == 5 else "#7FD0F5", x, SCREEN[1] - 0.05, SCREEN[2] + 0.3, x + SW_ * 0.55, SCREEN[1] - 0.03, SCREEN[5] - 0.25, mat="flat", nolines=True)
 aabb("wms", "#2B2F36", MX - 0.6, DY0 + 0.2, DTOP, MX + 0.6, DY0 + 0.6, DTOP + 0.05)  # keyboard
 OPERATOR = (DX1 + 0.7, DY0 - 0.2)
-person("wms", (*OPERATOR, FZ), facing_to(OPERATOR, (MX, DY1)), vest="#3D9BE9", pose=((0.3, 0.45), (0.1, 0.0)))
+person("wms", (*OPERATOR, FZ), facing_to(OPERATOR, (MX, DY1)), pose=((0.3, 0.45), (0.1, 0.0)))
 
 
 # ---- outcome-only actors (group names start with o_) -------------------------------
@@ -792,10 +804,10 @@ for p, i in ALPHA_ROW.items():
     s_ = cell_spot(i)
     person(f"o_runners_{p}", (aisle(i), s_.y - 0.4, FZ), 0.0, tsd=True, pose=((0, 0), (0.25, 0.35)))
     carrier(f"o_runners_{p}", (aisle(i) + DX_OUT) / 2, LANE, 0.0)
-# keeper: Pavel is gone; two new-shift workers (green hats) search with scanners
+# keeper: Pavel is gone; two new-shift workers (white caps) search with scanners
 O_HEADS = []
 for k, (x, y) in enumerate(P["PUZZLED"]):
-    head = person("o_newshift", (x, y, FZ), math.radians(60 + 50 * k), hat="#5FD38D", tsd=True, pose=((0.05, 0.75), (0.25, 0.35)))
+    head = person("o_newshift", (x, y, FZ), math.radians(60 + 50 * k), cap="#FFFFFF", tsd=True, pose=((0.05, 0.75), (0.25, 0.35)))
     O_HEADS.append(head)  # the "?" over each head is lettered by compose.py
 # wms: the system pointed to the hot cell, so the gift already rolls into the truck
 JX, JY = DX_OUT - 0.4, Y1 - 4.2
@@ -851,7 +863,7 @@ ls.linestyle.alpha = 0.9
 FORMATS_SPEC = {
     # name: (res, azimuth, elevation, keep box u0,v0,u1,v1 in y-down screen space)
     "desk": ((1536, 1024), float(os.environ.get("DESK_AZ", -26)), float(os.environ.get("DESK_EL", 48)), (0.0, 0.02, 1.0, 0.99)),
-    "tall": ((1024, 1536), float(os.environ.get("TALL_AZ", -24)), float(os.environ.get("TALL_EL", 52)), (0.0, 0.08, 1.0, 0.99)),
+    "tall": ((1024, 1536), float(os.environ.get("TALL_AZ", -14)), float(os.environ.get("TALL_EL", 52)), (0.0, 0.08, 1.0, 0.99)),
 }
 OUTCOME_RES = (1960, 840)
 
@@ -866,9 +878,11 @@ def cube(x0, y0, z0, x1, y1, z1):
     return [Vector((x, y, z)) for x in (x0, x1) for y in (y0, y1) for z in (z0, z1)]
 
 
-# Frame the whole hall, the dock wall with its signs and the rear of both trucks.
+# Frame the whole hall, the dock wall with its signs and the rear of both trucks
+# (phone: only the trailer ends, so the hall gets the height).
 def play_box():
-    return cube(X0 - 0.5, Y0 - 0.5, 0, X1 + 0.5, Y1 + 0.4, SIGN_Z1 + 0.4) + cube(DX_IN0 - 3, Y1, 0, DX_OUT + 3, Y1 + 3, 4.4 * TRUCK)
+    top = cube(DX_IN0 - 3, Y1, 0, DX_OUT + 3, Y1 + 1, 2.0) if LAYOUT == "tall" else cube(DX_IN0 - 3, Y1, 0, DX_OUT + 3, Y1 + 3, 4.4 * TRUCK)
+    return cube(X0 - 0.5, Y0 - 0.5, 0, X1 + 0.5, Y1 + 0.4, SIGN_Z1 + 0.4) + top
 
 
 def camera(name, spec, keep=None, right=False):
@@ -922,15 +936,17 @@ def hull(pts):
     return lo[:-1] + up[:-1]
 
 
-# Interactive regions (3D boxes -> projected hull) and their badge anchors.
+# Interactive regions (3D boxes -> projected hull) and the object point their invisible
+# keyboard button sits on (no badges: the player taps the object itself).
+PH = PEOPLE * 1.95  # person height
 REGIONS = {
-    "entrance": (cube(EX0, EY0 - 0.2, FZ, EX1, EY1, FZ + 4.6), Vector(((EX0 + EX1) / 2, EY0, FZ + 5.6))),
-    "keeper": (cube(KEEPER.x - 2.0, KEEPER.y - 0.9, FZ, KEEPER.x + 0.5, KEEPER.y + 0.5, FZ + 2.3), Vector((KEEPER.x - 2.2, KEEPER.y - 1.4, FZ))),  # badge on the floor in front of him: its caption stays below the Ю–Я banner
-    "wms": (cube(DX0, DY0 - 0.6, FZ, DX1 + 1.2, DY1, SCREEN[5] + 0.12), Vector((MX, SCREEN[1], SCREEN[5] + 1.1))),
+    "entrance": (cube(EX0, EY0 - 0.2, FZ, EX1, EY1, FZ + 4.6), Vector(((EX0 + EX1) / 2, EY0, FZ + 2.3))),
+    "keeper": (cube(KEEPER.x - 1.9, KEEPER.y - 0.9, FZ, KEEPER.x + 0.6, KEEPER.y + 0.6, FZ + PH), Vector((KEEPER.x, KEEPER.y, FZ + PH * 0.6))),
+    "wms": (cube(DX0, DY0 - 0.6, FZ, DX1 + 1.4, DY1, SCREEN[5] + 0.12), Vector((MX, SCREEN[1], (SCREEN[2] + SCREEN[5]) / 2))),
 }
 for parcel, i in ALPHA_ROW.items():
     x0 = RANGES[i][2]
-    REGIONS[f"alphabet-{parcel}"] = (cube(x0, RY0 - 0.2, FZ, x0 + RW, RY0 + 1.2, PLAQUE_Z1), Vector((x0 + RW / 2, RY0, PLAQUE_Z1 + 1.1)))
+    REGIONS[f"alphabet-{parcel}"] = (cube(x0, RY0 - 0.4, FZ, x0 + RW, RY0 + 1.2, PLAQUE_Z1), Vector((x0 + RW / 2, RY0 - 0.4, (PLAQUE_Z0 + PLAQUE_Z1) / 2)))
 LABELS = {  # text plaques, for required framing and the shelf ranges in the game
     **{label: Vector((x0 + RW / 2, RY0 - 0.16, (PLAQUE_Z0 + PLAQUE_Z1) / 2)) for label, _, x0 in RANGES},
     **{label: Vector((cx, SIGN_Y, (SIGN_Z0 + SIGN_Z1) / 2)) for label, (cx, _) in SIGNS.items()},

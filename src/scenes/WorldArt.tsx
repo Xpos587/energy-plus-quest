@@ -354,14 +354,12 @@ export function WorldArt({
                   .join(". ")}
                 aria-pressed={markerId === point.id}
                 data-focused={onFocusChange ? focusedId === point.id : undefined}
-                data-caption-side={inventoryCamera && inventoryCamera.left + point.x * planeWidth > size.width / 2 ? "left" : undefined}
                 onPointerEnter={onFocusChange && (() => onFocusChange(point.id))}
                 onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
                 disabled={showResult || !onSelect || (!!selectedId && selectedId !== point.id)}
                 onClick={() => onSelect?.(point.id)}
               >
                 <span aria-hidden="true">{index + 1}</span>
-                {scene === "inventory" && <span className={styles.markerCaption} data-marker-caption aria-hidden="true">{caption}</span>}
               </button>
             );
           })}
