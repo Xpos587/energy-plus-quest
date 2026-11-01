@@ -1,6 +1,6 @@
 #!/bin/bash
 # All tall/outcome restyles, one at a time (the gateway drops parallel requests); skips finished ones.
-cd "$(dirname "$0")"; L=../../../.tmp-work/v15/gen
+cd "$(dirname "$0")"; L=../../../.tmp-work/v16/gen
 # the gateway drops some TLS handshakes (SSL EOF before the request is sent): retry those under a new name
 run() { ls $L/$1*.png >/dev/null 2>&1 && return; for i in 1 2 3 4 5 6 7 8; do
   SUF=-r$i ./gen.sh "$@" > $L/$1-r$i.log 2>&1; [ -f $L/$1-r$i.png ] && return

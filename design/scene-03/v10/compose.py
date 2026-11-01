@@ -1,6 +1,6 @@
 # Align a v10 restyle onto its Blender render and put the crisp Blender text back.
 #   uv run --with opencv-python-headless --with numpy python compose.py NAME W H
-#   .tmp-work/v15/bl/NAME{,-notext}.png + gen/NAME.png -> gen/NAME-final.png
+#   .tmp-work/v16/bl/NAME{,-notext}.png + gen/NAME.png -> gen/NAME-final.png
 import subprocess
 import sys
 from pathlib import Path
@@ -13,7 +13,7 @@ import numpy as np
 n, W, H = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
 here = Path(__file__).parent
 HEADS = json.loads((here / "manifest-wide-outcomes.json").read_text())["outcomes"]["keeper"]["story"]["heads"]  # 1960x840 px
-w = here.parents[2] / ".tmp-work/v15"
+w = here.parents[2] / ".tmp-work/v16"
 g = lambda s: str(w / f"gen/{n}{s}")
 rd = lambda p: cv2.resize(cv2.imread(str(p)), (W, H), interpolation=cv2.INTER_AREA)
 txt, bare = rd(w / f"bl/{n}.png"), rd(w / f"bl/{n}-notext.png")
@@ -34,20 +34,15 @@ if k > 1:
         hull = np.zeros(scr.shape, np.uint8)
         cv2.fillConvexPoly(hull, cv2.convexHull(cv2.findNonZero((lab == big).astype(np.uint8))), 1)
         a = np.maximum(a, cv2.GaussianBlur(hull.astype(np.float32), (3, 3), 0))
-if n == "outcome-keeper":
-    # The rendered "?" sit on the blocky hats; drop them (orange text) and letter
-    # bigger ones over the restyled heads instead.
-    for x, y in HEADS:
-        a[int(y) - 110:int(y) - 20, int(x) - 45:int(x) + 45] = 0
 out = gen * (1 - a[..., None]) + txt * a[..., None]
 out = out.clip(0, 255).astype(np.uint8)
 if n == "outcome-keeper":
     from PIL import Image, ImageDraw, ImageFont
     im = Image.fromarray(out[..., ::-1])
     d = ImageDraw.Draw(im)
-    f = ImageFont.truetype("/usr/share/fonts/TTF/RobotoCondensed-Bold.ttf", 64)
-    for x, y in HEADS:  # projected Blender heads; the restyle keeps them in place
-        d.text((x, y - 50), "?", font=f, fill="#F26B2B", stroke_width=5, stroke_fill="white", anchor="mb")
+    f = ImageFont.truetype("/usr/share/fonts/TTF/RobotoCondensed-Bold.ttf", 56)
+    for (x, y), (dx, dy) in zip(HEADS, ((45, -5), (6, -55))):  # projected heads; offsets keep clear of the banners
+        d.text((x + dx, y + dy), "?", font=f, fill="#F26B2B", stroke_width=5, stroke_fill="white", anchor="mb")
     out = np.asarray(im)[..., ::-1]
 cv2.imwrite(g("-final.png"), out)
 print(n, "text px", int((a > 0.5).sum()))

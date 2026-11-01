@@ -1,8 +1,8 @@
 #!/bin/bash
 # GPT restyle of a Blender notext render in the approved style.
-#   [STYLE=ref/style-map.jpg] gen.sh NAME SIZE PROMPTFILE [STORY]   (render .tmp-work/v15/bl/NAME-notext.png -> .tmp-work/v15/gen/NAME.png)
+#   [STYLE=ref/style-map.jpg] gen.sh NAME SIZE PROMPTFILE [STORY]   (render .tmp-work/v16/bl/NAME-notext.png -> .tmp-work/v16/gen/NAME.png)
 set -e
-here=$(cd "$(dirname "$0")" && pwd); w=$here/../../../.tmp-work/v15
+here=$(cd "$(dirname "$0")" && pwd); w=$here/../../../.tmp-work/v16
 n=$1; size=$2; p=$3; story=$4; o=$n${SUF:-}  # SUF: new name after a completion-unknown receipt
 # inputs downsized: the gateway drops uploads much over ~1 MB total (SSL EOF)
 python3 -c "

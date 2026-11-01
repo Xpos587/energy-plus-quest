@@ -6,9 +6,9 @@ from pathlib import Path
 from PIL import Image
 
 here = Path(__file__).parent
-w = here.parents[2] / ".tmp-work/v15"  # restyles + compose.py output (local only)
+w = here.parents[2] / ".tmp-work/v16"  # restyles + compose.py output (local only)
 root = here.parents[2]
-base = "scene-art/warehouse-v13"
+base = "scene-art/warehouse-v14"
 pub = root / "public" / base
 pub.mkdir(parents=True, exist_ok=True)
 
@@ -34,7 +34,7 @@ def contours(frame, source, method):
             "regions": regions}
 
 
-METHOD = ("Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v13 back-wall docks, game-map restyle, 1 November 2026; "
+METHOD = ("Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v14 big aisle banners and site around the hall, game-map restyle, 1 November 2026; "
           "GPT restyle aligned back onto the render; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)")
 out = {}
 for layout, fmt, name in (("wide", "desk", "overview"), ("tall", "tall", "overview-mobile")):

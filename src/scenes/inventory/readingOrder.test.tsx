@@ -13,9 +13,9 @@ it('starts the alphabet at receiving (left) and places each gift in its bay',()=
  expect(warehouseZone('alphabet',{parcel:'camera',recipient:'alva',profile:'student'}).description).toContain('приёмки');
 });
 it('uses the portrait source coordinates for tall composition without changing wide default',()=>{
- expect(warehouseContour('alphabet','camera','tall').anchorPixel).toEqual([807,968]);
- expect(warehouseContour('alphabet','socks','tall').anchorPixel).toEqual([710,1002]);
- expect(warehouseContour('alphabet','boat','tall').anchorPixel).toEqual([613,1036]);
+ expect(warehouseContour('alphabet','camera','tall').anchorPixel).toEqual([807,970]);
+ expect(warehouseContour('alphabet','socks','tall').anchorPixel).toEqual([710,1004]);
+ expect(warehouseContour('alphabet','boat','tall').anchorPixel).toEqual([613,1038]);
  expect(warehouseCallouts('camera','tall').alphabet.x).toBeCloseTo(807/1024);
  const html=renderToStaticMarkup(<WarehouseZones context={{parcel:'camera',recipient:'alva',profile:'student'}} composition="tall" onSelect={()=>{}}/>);
  expect(html).toContain('viewBox="0 0 1024 1536"');

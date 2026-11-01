@@ -58,7 +58,7 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/warehouse-v13/overview.webp",
+        "image": "scene-art/warehouse-v14/overview.webp",
         "width": 1536,
         "height": 1024,
         "hotspots": [
@@ -70,12 +70,12 @@
           {
             "id": "alphabet",
             "x": 0.7002,
-            "y": 0.5493
+            "y": 0.5514
           },
           {
             "id": "keeper",
-            "x": 0.7886,
-            "y": 0.393
+            "x": 0.8187,
+            "y": 0.6186
           },
           {
             "id": "wms",
@@ -86,7 +86,7 @@
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/warehouse-v13/overview-mobile.webp",
+        "image": "scene-art/warehouse-v14/overview-mobile.webp",
         "width": 1024,
         "height": 1536,
         "hotspots": [
@@ -98,12 +98,12 @@
           {
             "id": "alphabet",
             "x": 0.788,
-            "y": 0.6301
+            "y": 0.6313
           },
           {
             "id": "keeper",
-            "x": 0.8081,
-            "y": 0.5038
+            "x": 0.9145,
+            "y": 0.7135
           },
           {
             "id": "wms",

@@ -38,7 +38,7 @@ export function warehouseZone(id: WarehouseChoice, context: SceneContext) {
     },
     keeper: {
       label: "Кладовщик",
-      description: "Опытный кладовщик, справа у отгрузки.",
+      description: "Опытный кладовщик, справа у стеллажа Ю–Я.",
       points: "797,293 826,291 846,322 846,396 816,408 794,388 787,329",
       labelX: 0.82,
       labelY: 0.717,

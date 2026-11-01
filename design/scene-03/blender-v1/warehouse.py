@@ -263,22 +263,22 @@ LAYOUTS = {
     # DOCKS: two receiving doors (left) and two dispatch doors (right). The gift arrives
     # through the inner receiving door and leaves through the outer dispatch door, the
     # one nearest the Ю–Я row; the barge consignment waits by the inner dispatch door.
-    "wide": dict(X1=52.0, Y1=34.0, DOCKS=((11.0, 18.0), (34.0, 41.0)), RY=(2.6, 19.0), RW=2.6, RX=(4.5, 7.4),
+    "wide": dict(X1=52.0, Y1=34.0, DOCKS=((11.0, 18.0), (34.0, 41.0)), RY=(2.6, 19.0), RW=2.6, RX=(4.5, 7.4), PW=5.6, PT=2.2,
                  ENTR=(0.6, 7.0), DESK=(23.6, 27.0), GIFT=(17.2, 28.4), JACK_DX=1.6, SCAN_IN=(13.2, 26.6),
                  BARGE=[(32.4, 29.4), (34.0, 29.4), (35.6, 29.4), (32.4, 31.0), (34.0, 31.0), (37.2, 29.4)],
-                 SCAN_OUT=(38.0, 27.0), KEEPER=(48.6, 14.0), LANE=23.4,
+                 SCAN_OUT=(38.0, 27.0), KEEPER=(47.6, 4.6), LANE=23.4,
                  RUN_E=((30.0, 23.4), (6.0, 28.6)), PUZZLED=((31.7, 1.4), (39.1, 3.2))),
-    "tall": dict(X1=36.0, Y1=44.0, DOCKS=((9.0, 14.6), (24.2, 29.8)), RY=(2.6, 26.0), RW=2.4, RX=(3.0, 5.4),
+    "tall": dict(X1=36.0, Y1=44.0, DOCKS=((9.0, 14.6), (24.2, 29.8)), RY=(2.6, 26.0), RW=2.4, RX=(3.0, 5.4), PW=4.4, PT=1.8,
                  ENTR=(0.6, 6.2), DESK=(17.6, 20.8), GIFT=(13.4, 38.4), JACK_DX=1.5, SCAN_IN=(9.6, 36.8),
                  BARGE=[(22.6, 39.4), (24.2, 39.4), (25.8, 39.4), (22.6, 41.0)],
-                 SCAN_OUT=(27.2, 37.4), KEEPER=(34.2, 18.0), LANE=31.0,
+                 SCAN_OUT=(27.2, 37.4), KEEPER=(34.0, 1.3), LANE=31.0,
                  RUN_E=((21.0, 31.0), (5.0, 38.4)), PUZZLED=((23.1, 1.4), (28.5, 3.2))),
 }
 P = LAYOUTS[LAYOUT]
 X0, Y0 = 0.0, 0.0
 X1, Y1 = P["X1"], P["Y1"]
 WALL = FZ + 10.6
-PEOPLE = 1.4
+PEOPLE = 1.6
 (DX_IN0, DX_IN), (DX_OUT0, DX_OUT) = P["DOCKS"]
 DOCK_X = [DX_IN0, DX_IN, DX_OUT0, DX_OUT]
 DOOR = 2.6  # half width of the dock doors
@@ -289,15 +289,6 @@ BLUE, NAVY, ORANGE, YELLOW = "#2A5FA8", "#1E3E6E", "#FF6A13", "#FFC20E"
 KRAFT, WHITE = "#D9A866", "#EEF1F4"
 LANE = P["LANE"]  # the open cross aisle in front of the docks (not painted)
 
-# ground: grass, the truck yard behind the dock wall, a path along the front
-aabb("ground", "#A9CC6E", -120, -120, -0.3, 200, 180, -0.05, mat="flat", nolines=True)
-aabb("ground", "#9AA4B1", -14, Y1, -0.1, X1 + 14, Y1 + 34, 0.0, mat="asphalt", nolines=True)
-aabb("ground", "#9AA4B1", -6, -6, -0.1, X1 + 6, Y1, 0.0, mat="asphalt", nolines=True)
-for dx in DOCK_X:
-    for x in (dx - 3.4, dx + 3.4):
-        aabb("ground", "#F4F5F7", x - 0.08, Y1 + 1.0, 0.0, x + 0.08, Y1 + 26, 0.02, nolines=True)
-
-
 def tree(x, y, h):
     cyl("trees", "#F3EFE6", (x, y, h * 0.3), 0.3, h * 0.6, seg=8)
     col = random.choice(["#F2C230", "#F0A32A", "#E8892B", "#9BC255", "#F5D046", "#7FB04A"])
@@ -305,9 +296,136 @@ def tree(x, y, h):
         ball("trees", col, (x + dx * h, y + dy * h, h * dz), h * r, sz=1.15)
 
 
-for k in range(500):
-    x, y = random.uniform(-110, 190), random.uniform(-110, 170)
-    if -18 < x < X1 + 18 and -10 < y < Y1 + 38:
+# ---- site: the warehouse stands on a real logistics lot, not an island of asphalt.
+# A road with a guarded gate, a fenced truck yard with a parked trailer row and
+# containers, staff car park, a neighbour warehouse, lamp posts and tree lines.
+# Everything outside the hall is muted so the hall stays the subject.
+GRASS, ASPH, ASPH_D, KERB, LINE = "#B4D27E", "#A3ACB8", "#939DAA", "#E4E7EB", "#F4F5F7"
+aabb("ground", GRASS, -160, -160, -0.3, 240, 220, -0.05, mat="flat", nolines=True)
+SX0, SX1, SY0, SY1 = -14.0, X1 + 24.0, -10.0, Y1 + 28.0  # the fenced lot
+aabb("ground", ASPH, SX0, SY0, -0.1, SX1, SY1, 0.0, mat="asphalt", nolines=True)
+# public road along the front, centre dashes, kerbs, pavement and a tree line
+RY_0, RY_1 = SY0 - 13.0, SY0 - 4.0
+aabb("ground", ASPH_D, -160, RY_0, -0.1, 240, RY_1, 0.0, mat="asphalt", nolines=True)
+for x in range(-160, 240, 6):
+    aabb("ground", LINE, x, (RY_0 + RY_1) / 2 - 0.1, 0.0, x + 3, (RY_0 + RY_1) / 2 + 0.1, 0.02, nolines=True)
+for y0, y1 in ((RY_1, RY_1 + 0.4), (RY_0 - 0.4, RY_0)):
+    aabb("ground", KERB, -160, y0, 0.0, 240, y1, 0.12, nolines=True)
+aabb("ground", "#D9D4CA", -160, RY_1 + 0.4, 0.0, 240, SY0 - 0.3, 0.05, nolines=True)
+aabb("ground", "#D9D4CA", -160, RY_0 - 3.0, 0.0, 240, RY_0 - 0.4, 0.05, nolines=True)
+# perimeter fence with a gate opening on the left, guard booth and a barrier arm
+GX0, GX1 = SX0 + 3.0, SX0 + 13.0
+aabb("ground", ASPH, GX0, RY_1, -0.1, GX1, SY0, 0.01, mat="asphalt", nolines=True)
+
+
+def fence(x0, y0, x1, y1):
+    n = max(1, round(math.hypot(x1 - x0, y1 - y0) / 3.0))
+    for k in range(n + 1):
+        x, y = x0 + (x1 - x0) * k / n, y0 + (y1 - y0) * k / n
+        aabb("site", "#7D8894", x - 0.06, y - 0.06, 0, x + 0.06, y + 0.06, 2.0)
+    for z in (0.15, 1.9):
+        beam("site", "#9BA5B0", (x0, y0, z), (x1, y1, z), 0.05)
+    beam("site", "#C3CAD2", (x0, y0, 1.05), (x1, y1, 1.05), 0.02, 1.7, nolines=True)
+
+
+fence(SX0, SY0, GX0, SY0)
+fence(GX1, SY0, SX1, SY0)
+fence(SX0, SY0, SX0, SY1)
+fence(SX1, SY0, SX1, SY1)
+fence(SX0, SY1, SX1, SY1)
+BX, BY = GX1 + 0.6, SY0 + 0.6
+aabb("site", "#F1E9D8", BX, BY, 0, BX + 2.6, BY + 2.6, 2.6)
+aabb("site", "#7FB3E0", BX - 0.02, BY + 0.5, 1.2, BX + 2.62, BY + 2.1, 2.2, mat="glass")
+aabb("site", BLUE, BX - 0.2, BY - 0.2, 2.6, BX + 2.8, BY + 2.8, 2.9)
+aabb("site", "#E5E8EC", GX1 - 0.3, SY0 - 0.3, 0, GX1 + 0.3, SY0 + 0.3, 1.1)
+for k in range(8):
+    aabb("site", "#E23B32" if k % 2 == 0 else "#FFFFFF", GX1 - 0.3 - (k + 1) * 1.1, SY0 - 0.08, 0.95, GX1 - 0.3 - k * 1.1, SY0 + 0.08, 1.12, nolines=True)
+# staff car park right of the hall: painted bays, a few parked cars
+PX0, PX1 = X1 + 6.0, SX1 - 1.0
+for k in range(int((Y1 - 4.0) / 3.0) + 1):
+    y = 1.0 + k * 3.0
+    aabb("ground", LINE, PX0, y - 0.07, 0.0, PX0 + 5.2, y + 0.07, 0.02, nolines=True)
+    aabb("ground", LINE, PX1 - 5.2, y - 0.07, 0.0, PX1, y + 0.07, 0.02, nolines=True)
+CAR_COLS = ["#E9EDF1", "#C9D0D8", "#5A8CC4", "#E9EDF1", "#3A414B", "#D9534F", "#E9EDF1"]
+
+
+def car(x, y, rot, col):
+    M = Matrix.Translation((x, y, 0)) @ Matrix.Rotation(rot, 4, "Z")
+    aabb("site", col, -2.1, -0.9, 0.35, 2.1, 0.9, 1.05, M=M)
+    aabb("site", col, -1.1, -0.82, 1.05, 1.2, 0.82, 1.6, M=M)
+    aabb("site", "#5A8CC4", -1.0, -0.84, 1.1, 1.1, 0.84, 1.5, mat="glass", M=M)
+    for dx in (-1.35, 1.35):
+        cyl("site", "#2B2F36", (dx, 0, 0.35), 0.35, 1.84, axis="Y", seg=12, M=M)
+
+
+rc = random.Random(5)
+for k in range(int((Y1 - 4.0) / 3.0)):
+    y = 2.5 + k * 3.0
+    if rc.random() < 0.6:
+        car(PX0 + 2.6, y, 0.0, rc.choice(CAR_COLS))
+    if rc.random() < 0.5:
+        car(PX1 - 2.6, y, math.pi, rc.choice(CAR_COLS))
+# containers and a spare trailer row at the far side of the truck yard
+for k, col in enumerate(("#3D7DC8", "#E8892B", "#5E9E5A", "#3D7DC8")):
+    x = SX1 - 4.5
+    aabb("site", col, x - 1.25, Y1 + 6 + k * 3.0, 0, x + 1.25, Y1 + 8.6 + k * 3.0, 2.6)
+    if k < 2:
+        aabb("site", ("#E8892B", "#3D7DC8")[k], x - 1.25, Y1 + 6 + k * 3.0, 2.6, x + 1.25, Y1 + 8.6 + k * 3.0, 5.2)
+for k in range(3):
+    x = SX0 + 6 + k * 4.5
+    aabb("site", "#F4F6F8", x - 1.3, Y1 + 14, 1.1, x + 1.3, Y1 + 26, 4.6)
+    aabb("site", "#3A414B", x - 0.8, Y1 + 13.6, 0.7, x + 0.8, Y1 + 26, 1.1)
+# neighbour warehouse beyond the fence (left), plain and muted
+NX1 = SX0 - 8.0
+aabb("site", "#E6DFCF", NX1 - 40, -6, 0, NX1, Y1 + 10, 9.0)
+aabb("site", "#C9D2DC", NX1 - 40.4, -6.4, 9.0, NX1 + 0.4, Y1 + 10.4, 9.6)
+for y in range(-2, int(Y1) + 8, 8):
+    aabb("site", "#B8C2CD", NX1 - 0.02, y, 0, NX1 + 0.05, y + 4.5, 5.0)
+aabb("ground", ASPH_D, NX1, -6, -0.1, SX0 - 0.5, Y1 + 10, 0.0, mat="asphalt", nolines=True)
+# lamp posts along the yard and the road
+for x in range(int(SX0) + 8, int(SX1), 16):
+    for y in (SY0 + 1.0, SY1 - 1.0):
+        cyl("site", "#7D8894", (x, y, 3.5), 0.1, 7.0, seg=8)
+        aabb("site", "#7D8894", x - 0.1, y - 0.8, 6.9, x + 0.1, y + 0.1, 7.1)
+        aabb("site", "#F4F6F8", x - 0.25, y - 1.0, 6.75, x + 0.25, y - 0.5, 6.95)
+# green verges with kerbs and trees break the asphalt: in front of the hall (the
+# walk from the gate booth), between the hall and the car park, along the left lane
+
+
+def verge(x0, y0, x1, y1, trees=True):
+    aabb("ground", KERB, x0 - 0.25, y0 - 0.25, 0.0, x1 + 0.25, y1 + 0.25, 0.14, nolines=True)
+    aabb("ground", GRASS, x0, y0, 0.0, x1, y1, 0.16, mat="flat", nolines=True)
+    if not trees:
+        return
+    n = max(1, int(max(x1 - x0, y1 - y0) / 6.5))
+    for k in range(n):
+        t = (k + 0.5) / n
+        x, y = x0 + (x1 - x0) * t if x1 - x0 > y1 - y0 else (x0 + x1) / 2, y0 + (y1 - y0) * t if y1 - y0 >= x1 - x0 else (y0 + y1) / 2
+        tree(x, y, random.uniform(4.5, 5.5)) if k % 2 == 0 else shrub(x, y)
+
+
+def shrub(x, y):
+    for dx, dy, r in ((0, 0, 0.9), (0.8, 0.3, 0.7), (-0.7, -0.2, 0.65)):
+        ball("trees", "#7FB04A", (x + dx, y + dy, 0.5), r, sz=0.8)
+
+
+verge(GX1 + 4.0, SY0 + 0.8, X1 + 2.0, -2.6)
+verge(X1 + 1.6, 1.0, PX0 - 1.4, Y1 - 1.0)
+verge(SX0 + 0.8, 2.0, -3.2, Y1 - 2.0)
+aabb("ground", "#D9D4CA", GX1 + 2.6, -2.4, 0.0, X1 + 1.0, -0.6, 0.06, nolines=True)  # pavement along the hall front
+# dock yard markings: bay lines behind each door
+for dx in DOCK_X:
+    for x in (dx - 3.4, dx + 3.4):
+        aabb("ground", LINE, x - 0.08, Y1 + 1.0, 0.0, x + 0.08, Y1 + 12, 0.02, nolines=True)
+
+
+for x in range(-150, 240, 9):  # avenue along the far side of the road
+    tree(x + random.uniform(-1, 1), RY_0 - 6.5, random.uniform(7, 9))
+for y in range(int(SY0) + 4, int(SY1), 10):  # hedge of trees along the right fence
+    tree(SX1 + 4 + random.uniform(-1, 1), y, random.uniform(7, 9))
+for k in range(400):
+    x, y = random.uniform(-150, 230), random.uniform(-150, 210)
+    if NX1 - 46 < x < SX1 + 9 and RY_0 - 10 < y < SY1 + 6:
         continue
     tree(x, y, random.uniform(8, 12))
 
@@ -369,8 +487,8 @@ for label, (cx, col) in SIGNS.items():
 
 
 # ---- racks ------------------------------------------------------------------------
-LEVELS = [FZ + 0.15 + 1.45 * k for k in range(5)]
-RACK_TOP = FZ + 7.35
+LEVELS = [FZ + 0.15 + 1.5 * k for k in range(4)]
+RACK_TOP = FZ + 6.0
 
 
 def carton(group, x0, y0, z0, x1, y1, z1, col=KRAFT, tape=True):
@@ -385,20 +503,11 @@ def pallet(group, x, y, z, w=1.2, d=1.2):
 
 
 def load(group, xc, yc, w, d, z, rng):
-    """One pallet of goods: four cartons, one white crate or blue drums."""
+    """One pallet of goods: a single calm block of cartons (no drums, no crate mix:
+    the hall must read at a glance)."""
     pallet(group, xc, yc, z, w=w, d=d)
-    kind, h = rng.random(), rng.choice((0.85, 0.95, 1.05))
-    if kind < 0.62:
-        for i in (0, 1):
-            for j in (0, 1):
-                carton(group, xc - w / 2 + 0.05 + i * (w - 0.1) / 2, yc - d / 2 + 0.05 + j * (d - 0.1) / 2, z + 0.15,
-                       xc - w / 2 + (i + 1) * (w - 0.1) / 2, yc - d / 2 + (j + 1) * (d - 0.1) / 2, z + 0.15 + h)
-    elif kind < 0.85:
-        carton(group, xc - w / 2 + 0.05, yc - d / 2 + 0.05, z + 0.15, xc + w / 2 - 0.05, yc + d / 2 - 0.05, z + 0.15 + h, col=WHITE)
-    else:
-        for i in (0, 1):
-            for j in (0, 1):
-                cyl(group, BLUE, (xc + (i - 0.5) * w / 2, yc + (j - 0.5) * d / 2, z + 0.15 + h / 2), min(w, d) / 4 - 0.04, h, seg=14)
+    h = rng.choice((0.9, 1.0, 1.1))
+    carton(group, xc - w / 2 + 0.06, yc - d / 2 + 0.06, z + 0.15, xc + w / 2 - 0.06, yc + d / 2 - 0.06, z + 0.15 + h)
 
 
 def rack_row(group, x0, x1, y0, y1, free=(), seed=0):
@@ -410,8 +519,6 @@ def rack_row(group, x0, x1, y0, y1, free=(), seed=0):
     for y in ys:
         for x in (x0, x1):
             aabb(group, BLUE, x - 0.1, y - 0.1, FZ, x + 0.1, y + 0.1, RACK_TOP)
-        for z in (FZ + 1.0, FZ + 3.0, FZ + 5.0, FZ + 7.0):  # frame bracing
-            aabb(group, BLUE, x0, y - 0.04, z, x1, y + 0.04, z + 0.08, nolines=True)
     for z in LEVELS[1:]:
         for x in (x0, x1):
             aabb(group, ORANGE, x - 0.08, y0, z - 0.2, x + 0.08, y1, z)
@@ -421,9 +528,7 @@ def rack_row(group, x0, x1, y0, y1, free=(), seed=0):
             cells[(li, bi)] = (a, b, z)
             if (li, bi) in free:
                 continue
-            d = (b - a - 0.5) / 2
-            for k in (0, 1):
-                load(group, (x0 + x1) / 2, a + 0.2 + d / 2 + k * (d + 0.1), x1 - x0 - 0.25, d, z, rng)
+            load(group, (x0 + x1) / 2, (a + b) / 2, x1 - x0 - 0.25, b - a - 0.5, z, rng)
     return cells
 
 
@@ -433,18 +538,19 @@ RANGES = [("А–Б", "АБ"), ("В–К", "ВГДЕЁЖЗИЙК"), ("Л–М", 
 RANGES = [(label, letters, P["RX"][0] + i * P["RX"][1]) for i, (label, letters) in enumerate(RANGES)]
 ALPHA_ROW = {"camera": 4, "socks": 3, "boat": 2}
 HOT_ROW = 5
-GIFT_CELL = (4, max(1, round((RY1 - RY0) / 3.1)) - 1)  # top level, back bay (nearest the docks): the gift reads from above
-PLAQUE_Z0, PLAQUE_Z1 = RACK_TOP + 0.3, RACK_TOP + 2.1
+GIFT_CELL = (len(LEVELS) - 1, max(1, round((RY1 - RY0) / 3.1)) - 1)  # top level, back bay (nearest the docks): the gift reads from above
+PLAQUE_Z0, PLAQUE_Z1 = RACK_TOP + 0.5, RACK_TOP + 3.3
+PW = P["PW"] / 2  # half width of the aisle banner, wider than the rack: it must read on a phone
 CELLS = {}
 for i, (label, letters, x0) in enumerate(RANGES):
     free = {GIFT_CELL} if i in ALPHA_ROW.values() or i == HOT_ROW else set()
     CELLS[i] = rack_row(f"rack_{i}", x0, x0 + RW, RY0, RY1, free=free, seed=10 + i)
     cx = x0 + RW / 2
     for x in (x0 + 0.25, x0 + RW - 0.25):
-        aabb(f"rack_{i}", NAVY, x - 0.06, RY0 - 0.06, RACK_TOP, x + 0.06, RY0 + 0.06, PLAQUE_Z0)
-    aabb(f"rack_{i}", "#FFFFFF", x0 - 0.05, RY0 - 0.14, PLAQUE_Z0, x0 + RW + 0.05, RY0 - 0.02, PLAQUE_Z1)
-    aabb(f"rack_{i}", BLUE, x0 - 0.05, RY0 - 0.16, PLAQUE_Z0, x0 + RW + 0.05, RY0 - 0.12, PLAQUE_Z0 + 0.16, nolines=True)
-    text("plaques", label, (cx, RY0 - 0.18, (PLAQUE_Z0 + PLAQUE_Z1) / 2 + 0.08), 0.95 if RW < 2.5 else 1.05, NAVY)
+        aabb(f"rack_{i}", NAVY, x - 0.07, RY0 - 0.07, RACK_TOP, x + 0.07, RY0 + 0.07, PLAQUE_Z0)
+    aabb(f"rack_{i}", NAVY, cx - PW, RY0 - 0.1, PLAQUE_Z0, cx + PW, RY0 + 0.1, PLAQUE_Z1)
+    aabb(f"rack_{i}", "#FFFFFF", cx - PW + 0.18, RY0 - 0.14, PLAQUE_Z0 + 0.18, cx + PW - 0.18, RY0 - 0.1, PLAQUE_Z1 - 0.18, nolines=True)
+    text("plaques", label, (cx, RY0 - 0.17, (PLAQUE_Z0 + PLAQUE_Z1) / 2), P["PT"], NAVY)
 
 
 def cell_spot(i, cell=GIFT_CELL, inset=0.9):
@@ -690,8 +796,7 @@ for p, i in ALPHA_ROW.items():
 O_HEADS = []
 for k, (x, y) in enumerate(P["PUZZLED"]):
     head = person("o_newshift", (x, y, FZ), math.radians(60 + 50 * k), hat="#5FD38D", tsd=True, pose=((0.05, 0.75), (0.25, 0.35)))
-    O_HEADS.append(head)
-    text("o_newshift_text", "?", (head.x, head.y - 0.1, head.z + 0.75), 1.1, ORANGE, rot=(math.pi / 2, 0, -math.radians(30)))
+    O_HEADS.append(head)  # the "?" over each head is lettered by compose.py
 # wms: the system pointed to the hot cell, so the gift already rolls into the truck
 JX, JY = DX_OUT - 0.4, Y1 - 4.2
 pallet_jack("o_jack_out", JX, JY, math.pi / 2)
@@ -820,7 +925,7 @@ def hull(pts):
 # Interactive regions (3D boxes -> projected hull) and their badge anchors.
 REGIONS = {
     "entrance": (cube(EX0, EY0 - 0.2, FZ, EX1, EY1, FZ + 4.6), Vector(((EX0 + EX1) / 2, EY0, FZ + 5.6))),
-    "keeper": (cube(KEEPER.x - 2.0, KEEPER.y - 0.9, FZ, KEEPER.x + 0.5, KEEPER.y + 0.5, FZ + 2.3), Vector((KEEPER.x - 0.4, KEEPER.y, FZ + 4.4))),
+    "keeper": (cube(KEEPER.x - 2.0, KEEPER.y - 0.9, FZ, KEEPER.x + 0.5, KEEPER.y + 0.5, FZ + 2.3), Vector((KEEPER.x - 2.2, KEEPER.y - 1.4, FZ))),  # badge on the floor in front of him: its caption stays below the Ю–Я banner
     "wms": (cube(DX0, DY0 - 0.6, FZ, DX1 + 1.2, DY1, SCREEN[5] + 0.12), Vector((MX, SCREEN[1], SCREEN[5] + 1.1))),
 }
 for parcel, i in ALPHA_ROW.items():
@@ -908,7 +1013,7 @@ OUTCOMES = {
                  cube(EX0, LANE - 1.0, FZ, EX1, EY1, FZ + 4.6) + cube(*P["RUN_E"][0], FZ, *P["RUN_E"][0], FZ + 3.5) + DISPATCH),
     **{f"alphabet-{p}": ({f"o_gift_{p}", f"o_runners_{p}"}, {"gift", "jack"}, row_box(i) + cube(RANGES[i][2], LANE, FZ, DX_OUT, LANE, FZ + 3.5) + DISPATCH)
        for p, i in ALPHA_ROW.items()},
-    "keeper": ({"o_gift_hot", "o_newshift", "o_newshift_text"}, {"gift", "jack", "keeper"},
+    "keeper": ({"o_gift_hot", "o_newshift"}, {"gift", "jack", "keeper"},
                cube(P["PUZZLED"][0][0] - 1, P["PUZZLED"][0][1] - 1, FZ, P["PUZZLED"][1][0] + 1, P["PUZZLED"][1][1], FZ + 4) + HOT + DISPATCH),
     "wms": ({"o_jack_out"}, {"gift", "jack"}, cube(DX0, DY0, FZ, DX1, DY1, SCREEN[5]) + HOT + DISPATCH),
 }
