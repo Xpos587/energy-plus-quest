@@ -1,0 +1,15 @@
+.table { width: 100%; border-collapse: collapse; color: #082946; font-size: 15px; line-height: 1.25; }
+.table caption { text-align: left; padding-bottom: 4px; color: #52677e; font-size: 14px; }
+.table th, .table td { padding: 3px 8px; text-align: left; font-weight: 400; white-space: nowrap; }
+.table thead th { color: #52677e; font-size: 13px; }
+.table tbody th { font-weight: 600; }
+.table td:nth-child(2) { font-variant-numeric: tabular-nums; font-weight: 700; }
+.table tbody tr { border-top: 1px solid #e3ebf1; }
+.table tr[data-best] td:nth-child(2) { color: #1c8a4c; }
+.table tr[data-chosen] { background: #fff1e8; box-shadow: inset 3px 0 0 var(--orange); }
+@media (max-width: 600px) {
+  .table { font-size: 13px; line-height: 1.2; }
+  .table caption, .table thead th { font-size: 12px; }
+  .table caption { padding-bottom: 2px; }
+  .table th, .table td { padding: 2px 5px; }
+}

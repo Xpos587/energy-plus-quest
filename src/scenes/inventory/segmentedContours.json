@@ -1,84 +1,84 @@
 {
   "width": 1536,
   "height": 1024,
-  "source": "scene-art/warehouse-v11/overview.webp",
+  "source": "scene-art/warehouse-v12/overview.webp",
   "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v10 restyle in the game-map style, 1 November 2026; GPT restyle aligned back onto the render; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)",
   "overviewRequiredBounds": {
-    "left": 221,
-    "top": 385,
-    "right": 1434,
-    "bottom": 676
+    "left": 510,
+    "top": 318,
+    "right": 974,
+    "bottom": 420
   },
   "regions": {
     "entrance": {
-      "path": "M 298 760 L 554 706 L 567 732 L 567 827 L 311 881 L 298 854 Z",
+      "path": "M 606 469 L 721 450 L 729 478 L 729 548 L 614 567 L 606 539 Z",
       "anchor": {
-        "x": 0.2849609375,
-        "y": 0.7099609375
+        "x": 0.4365234375,
+        "y": 0.451953125
       },
       "anchorPixel": [
-        438,
-        727
+        670,
+        463
       ],
       "contourCount": 1
     },
     "keeper": {
-      "path": "M 1313 542 L 1377 529 L 1389 552 L 1389 599 L 1325 613 L 1313 590 Z",
+      "path": "M 974 420 L 1032 410 L 1039 435 L 1039 470 L 981 479 L 974 455 Z",
       "anchor": {
-        "x": 0.9259114583333333,
-        "y": 0.52021484375
+        "x": 0.6975260416666668,
+        "y": 0.40634765625
       },
       "anchorPixel": [
-        1422,
-        533
+        1071,
+        416
       ],
       "contourCount": 1
     },
     "wms": {
-      "path": "M 919 555 L 978 543 L 986 558 L 986 639 L 927 651 L 919 636 Z",
+      "path": "M 711 401 L 764 393 L 769 409 L 769 469 L 716 477 L 711 461 Z",
       "anchor": {
-        "x": 0.6201822916666667,
-        "y": 0.52158203125
+        "x": 0.4817708333333333,
+        "y": 0.3794921875
       },
       "anchorPixel": [
-        953,
-        534
+        740,
+        389
       ],
       "contourCount": 1
     },
     "alphabet-camera": {
-      "path": "M 1048 276 L 1115 262 L 1126 285 L 1126 467 L 1060 481 L 1048 458 Z",
+      "path": "M 898 156 L 958 146 L 965 171 L 965 282 L 905 292 L 898 267 Z",
       "anchor": {
-        "x": 0.7106770833333332,
-        "y": 0.262109375
+        "x": 0.6079427083333333,
+        "y": 0.153515625
       },
       "anchorPixel": [
-        1092,
-        268
+        934,
+        157
       ],
       "contourCount": 1
     },
     "alphabet-socks": {
-      "path": "M 833 321 L 900 307 L 912 330 L 912 512 L 845 526 L 833 502 Z",
+      "path": "M 717 185 L 778 176 L 784 200 L 784 311 L 724 321 L 717 296 Z",
       "anchor": {
-        "x": 0.570703125,
-        "y": 0.30595703125
+        "x": 0.49049479166666665,
+        "y": 0.1822265625
       },
       "anchorPixel": [
-        877,
-        313
+        753,
+        187
       ],
       "contourCount": 1
     },
     "alphabet-boat": {
-      "path": "M 767 335 L 833 321 L 845 344 L 845 526 L 778 540 L 767 516 Z",
+      "path": "M 657 195 L 717 185 L 724 210 L 724 321 L 664 331 L 657 306 Z",
       "anchor": {
-        "x": 0.52734375,
-        "y": 0.31953125
+        "x": 0.4513671875,
+        "y": 0.191796875
       },
       "anchorPixel": [
-        810,
-        327
+        693,
+        196
       ],
       "contourCount": 1
     }

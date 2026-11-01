@@ -26,6 +26,7 @@ import { craneCaptions, craneFacts } from "./crane/artwork";
 import { CraneDecisionContext, CraneFacts } from "./crane/CraneDecisionContext";
 import { inventoryScene } from "./inventory";
 import { inventoryAlphabet } from "./inventory/alphabet";
+import { RouteCompare } from "./inventory/RouteCompare";
 import { JourneyEnding } from "./JourneyEnding";
 import { lastmileScene } from "./lastmile";
 import { LastmileDecisionContext, LastmileFacts, lastmileFacts } from "./lastmile/LastmileFacts";
@@ -95,7 +96,7 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
       entrance: ["У приёмки", "Свободные ячейки у входа"],
       alphabet: [`Стеллаж «${inventoryAlphabet[parcel].letter}»`, "По первой букве названия"],
       keeper: ["Кладовщик", "Спросить опытного коллегу"],
-      wms: ["Система WMS", "Место подскажет Inventory"],
+      wms: ["Автоподбор места", "Система Inventory сама подберёт ячейку"],
     }),
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
@@ -161,7 +162,7 @@ const optionTitles: Record<string, string> = {
   entrance: "У приёмки",
   keeper: "Кладовщик",
   alphabet: "По алфавиту",
-  wms: "Система WMS",
+  wms: "Автоподбор места",
   rush: "Отправить Ивана в кабину крана",
   wait: "Ждать крана по графику — 3 часа",
   petr: "Попросить Петра помочь",
@@ -558,6 +559,7 @@ function ScenesSession({
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace
+                  children={scene.id === "inventory" ? <RouteCompare parcel={context.parcel} chosen={selected.id} /> : undefined}
                   continuous={
                     (scene.id === "lastmile" && selected.id === "pipe-carrier") ||
                     (scene.id === "crane" && selected.id === "petr")

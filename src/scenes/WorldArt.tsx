@@ -17,7 +17,7 @@ import { LastmileZones } from "./lastmile/LastmileZones";
 import { warehouseCamera } from "./inventory/warehouseCamera";
 
 const shortMarkerLabels: Record<string, string> = {
-  entrance: "У приёмки", alphabet: "По алфавиту", keeper: "Кладовщик", wms: "Система WMS",
+  entrance: "У приёмки", alphabet: "По алфавиту", keeper: "Кладовщик", wms: "Автоподбор",
   helicopter: "Вертолёт", rover: "Снегоболотоход", robot: "Тележка", "pipe-carrier": "Трубовоз",
 };
 
@@ -360,7 +360,7 @@ export function WorldArt({
             if (!option) return null;
             const caption = markerLabels?.[point.id] ?? (scene === "inventory"
               ? point.id === "alphabet" ? `Стеллаж «${alphabet.letter}»`
-                : point.id === "wms" ? "WMS" : shortMarkerLabels[point.id]
+                : shortMarkerLabels[point.id]
               : shortMarkerLabels[point.id]);
             return (
               <button

@@ -37,11 +37,11 @@ it("lets the player pick a place on the warehouse art, check its card and confir
   expect(host.querySelector("[data-scene-briefing]")?.getAttribute("data-reading")).toBe("false");
   expect(host.querySelector("[data-scene-choice]")).toBeNull();
   const place = host.querySelector<HTMLButtonElement>('[data-hotspot="wms"]');
-  expect(place?.textContent).toContain("WMS");
+  expect(place?.textContent).toContain("Автоподбор");
 
   await act(async () => place?.click());
   const card = host.querySelector("[data-choice-inspection]");
-  expect(card?.textContent).toContain("Система WMS");
+  expect(card?.textContent).toContain("Автоподбор места");
   expect(card?.textContent).toContain("К складу");
   expect(host.querySelector('[data-testid="result-copy"]')).toBeNull();
   await act(async () => host.querySelector<HTMLButtonElement>("[data-choice-confirm]")?.click());

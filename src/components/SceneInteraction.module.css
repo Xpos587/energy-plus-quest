@@ -3961,9 +3961,9 @@
 }
 /* Two-line goals in a narrow rail read as tags, not pills. */
 .app:is([data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li { border-radius: 10px; }
-/* Scene 3 phone results: the panel keeps what the text needs, the spare height goes to the picture. */
+/* Scene 3 phone results: the panel keeps what the text and the route table need, the spare height goes to the picture. */
 @media (max-width: 600px) and (orientation: portrait) and (min-height: 700px) {
-  .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(0, 1fr) minmax(0, 440px) !important; }
+  .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(0, 1fr) minmax(0, 530px) !important; }
   .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] [data-outcome-scene] :is(picture, img) { height: 100%; }
   .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] [data-outcome-scene] img { object-fit: cover; }
 }
@@ -4262,3 +4262,6 @@
 @media (min-width: 1001px) and (min-height: 701px) and (max-height: 759px) {
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .question > :not([data-choice-prompt]) { visibility: hidden; }
 }
+
+/* Scene 3: the route comparison sits between the verdict and the story at full width. */
+.app[data-scene="inventory"] .frame[data-layout="result"] [data-result-narrative] > div:has([data-route-compare]) { width: 100%; flex: none; margin-bottom: 6px; }

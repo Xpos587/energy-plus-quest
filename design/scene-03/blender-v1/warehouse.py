@@ -254,24 +254,27 @@ def text(group, s, c, size, color, rot=(math.pi / 2, 0, 0), align="CENTER"):
 # ---- layout (metres): x left->right along the docks, y into the building, z up --
 FZ = 1.2  # dock-height floor
 # Two plans of the same warehouse: the wide one for landscape screens, a
-# narrower, deeper one for portrait so letters stay readable on a phone.
+# narrower one for portrait so letters stay readable on a phone. Both docks are
+# in the FRONT wall: the trucks stand nose-to-camera in the foreground (cab seen
+# from above-front, like scenes 1-2), the goods run a U from the left door, along
+# the lane past the alphabet racks, down to the right door.
 LAYOUTS = {
-    "wide": dict(X1=48.0, Y1=28.0, LANE=(8.4, 12.4),
-                 ZONES=((1.0, 1.2, 16.5, 8.0), (31.5, 1.2, 47.0, 8.0)), SIGNS=(3.9, 44.8), SIGN_W=3.0,
-                 RY=(15.0, 26.0), RX=(38.2, 35.6, 27.2, 24.6, 16.2, 13.6), ENTR=(2.0, 12.0, 1.6, 3.0),
-                 STAGE_IN=((13.2, 4.6), (15.0, 5.4)), SCAN_IN=(8.0, 7.2),
-                 BARGE=[(33.0, 3.4), (34.8, 3.4), (36.6, 3.4), (33.0, 5.6), (34.8, 5.6), (40.6, 3.4), (40.6, 5.6)],
-                 SCAN_OUT=(37.6, 7.2), KEEPER=(44.6, 5.4), KIOSK=(29.0, 7.4), AGV=(21.0, 10.4, 0), DRONE=(32.6, 19.0),
-                 HOT=(40.9, 13.6), ROUTE0=(33.5, 7.4), HOT_ROUTE=[(40.9, 12.6), (42.4, 10.4), (47.8, 10.4)],
-                 RUN_E=((17.0, 10.0), (25.0, 10.8)), PUZZLED=((34.4, 13.6), (37.4, 13.2))),
-    "tall": dict(X1=22.0, Y1=36.0, LANE=(9.0, 12.6),
-                 ZONES=((1.0, 1.2, 9.6, 8.2), (12.4, 1.2, 21.0, 8.2)), SIGNS=(3.7, 18.3), SIGN_W=3.2,
-                 RY=(16.0, 28.0), RX=(18.9, 16.3, 12.4, 9.8, 5.9, 3.3), ENTR=(1.2, 8.4, 1.6, 3.0),
-                 STAGE_IN=((8.0, 4.8), (8.6, 6.6)), SCAN_IN=(5.2, 7.4),
-                 BARGE=[(13.6, 3.4), (15.4, 3.4), (13.6, 5.6), (19.8, 3.4), (19.8, 5.6)],
-                 SCAN_OUT=(15.8, 7.4), KEEPER=(19.6, 7.4), KIOSK=(11.0, 7.6), AGV=(13.4, 10.8, 0), DRONE=(14.2, 23.0),
-                 HOT=(20.2, 14.8), ROUTE0=(14.0, 7.4), HOT_ROUTE=[(20.2, 13.4), (21.0, 10.8), (21.9, 10.8)],
-                 RUN_E=((8.6, 10.4), (11.6, 11.2)), PUZZLED=((15.6, 14.6), (18.8, 14.2))),
+    "wide": dict(X1=40.0, Y1=22.0, DX=(4.2, 35.8), LANE=(8.0, 11.4),
+                 ZONES=((6.2, 0.6, 19.0, 7.2), (21.0, 0.6, 33.8, 7.2)), SIGNS=(13.6, 27.6), SIGN_W=2.8,
+                 RY=(13.5, 20.5), RX=(31.4, 28.8, 21.0, 18.4, 10.6, 8.0), ENTR=(13.6, 18.6, 1.2, 2.6),
+                 GIFT=(9.8, 4.0), STAGE_IN=((17.6, 5.2),), SCAN_IN=(8.8, 6.2),
+                 BARGE=[(23.4, 2.6), (25.2, 2.6), (27.0, 2.6), (23.4, 4.4), (25.2, 4.4)],
+                 SCAN_OUT=(28.6, 4.6), KEEPER=(31.8, 3.4), KIOSK=(20.0, 5.4),
+                 HOT=(37.0, 13.4), HOT_VIA=[(37.0, 12.4)],
+                 RUN_E=((21.0, 10.3), (24.0, 10.8)), PUZZLED=((26.6, 12.4), (29.8, 12.2))),
+    "tall": dict(X1=24.0, Y1=27.8, DX=(3.0, 21.0), LANE=(12.0, 15.2),
+                 ZONES=((4.8, 0.6, 11.8, 11.0), (12.2, 0.6, 19.2, 11.0)), SIGNS=(8.3, 15.7), SIGN_W=2.6,
+                 RY=(18.0, 25.8), RX=(20.0, 17.4, 13.0, 10.4, 6.0, 3.4), ENTR=(7.0, 11.4, 1.2, 2.6),
+                 GIFT=(7.6, 6.0), STAGE_IN=(), SCAN_IN=(7.0, 9.2),
+                 BARGE=[(14.0, 3.0), (15.8, 3.0), (14.0, 4.8), (15.8, 4.8)],
+                 SCAN_OUT=(17.0, 6.4), KEEPER=(16.8, 8.8), KIOSK=(12.0, 9.4),
+                 HOT=(21.6, 16.8), HOT_VIA=[(21.6, 16.0)],
+                 RUN_E=((12.0, 14.2), (15.6, 14.7)), PUZZLED=((16.0, 16.6), (19.0, 16.4))),
 }
 P = LAYOUTS[LAYOUT]
 X0, Y0 = 0.0, 0.0
@@ -280,20 +283,22 @@ WALL = FZ + 8.0
 PEOPLE = 2.2
 LANE0, LANE1 = P["LANE"]
 LANE_C = (LANE0 + LANE1) / 2
-DOOR = 1.8  # half width of the side doors; the lane runs straight from one to the other
+DX_IN, DX_OUT = P["DX"]
+DOOR = 2.6  # half width of the front dock doors (fits the full-size trailers)
+TRUCK = 1.8  # trucks to the scale of the people (PEOPLE figures are ~4.3 m tall)
+TRAILER = 7.0  # trailer length before scaling; the whole truck stays in frame
+TRUCK_FRONT = -0.6 - (TRAILER + 3.6) * TRUCK
 BLUE, NAVY, ORANGE, YELLOW = "#2A5FA8", "#1E3E6E", "#FF6A13", "#FFC20E"
 KRAFT, WHITE = "#D9A866", "#EEF1F4"
 
-# ground: grass, yard asphalt with parking lines
+# ground: grass, yard asphalt with truck bays in front of the docks
 aabb("ground", "#A9CC6E", -120, -120, -0.3, 200, 160, -0.05, mat="flat", nolines=True)
 aabb("ground", "#9AA4B1", -40, -34, -0.1, 104, 0, 0.0, mat="asphalt", nolines=True)
 aabb("ground", "#9AA4B1", X1, 0, -0.1, 104, 40, 0.0, mat="asphalt", nolines=True)
 aabb("ground", "#9AA4B1", -40, 0, -0.1, 0, 40, 0.0, mat="asphalt", nolines=True)
-for y in (LANE_C - 3.4, LANE_C + 3.4):  # truck bays by both side doors
-    aabb("ground", "#F4F5F7", -15, y - 0.08, 0.0, -0.3, y + 0.08, 0.02, nolines=True)
-    aabb("ground", "#F4F5F7", X1 + 0.3, y - 0.08, 0.0, X1 + 15, y + 0.08, 0.02, nolines=True)
-for x in range(-36, 104, 8):
-    aabb("ground", "#F4F5F7", x, -27.15, 0.0, x + 4, -26.85, 0.02, nolines=True)
+for dx in (DX_IN, DX_OUT):
+    for x in (dx - 3.2, dx + 3.2):
+        aabb("ground", "#F4F5F7", x - 0.08, TRUCK_FRONT - 2, 0.0, x + 0.08, -0.6, 0.02, nolines=True)
 aabb("ground", "#E7E1D2", -40, -34.6, 0.0, 104, -34.0, 0.15)
 
 
@@ -315,56 +320,63 @@ aabb("shell", "#C9D2DC", X0 - 0.4, Y0 - 0.4, 0, X1 + 0.4, Y1 + 0.4, FZ - 0.02)
 aabb("floor", "#D6DEE7", X0, Y0, FZ - 0.05, X1, Y1, FZ, mat="floor", nolines=True)
 # back wall (y = Y1) and right wall (x = X1): cream panels, blue columns, windows
 aabb("shell", "#F1E9D8", X0 - 0.4, Y1, FZ, X1 + 0.4, Y1 + 0.4, WALL)
-DOOR_Z = FZ + 4.6
-aabb("shell", "#F1E9D8", X1, Y0 - 0.4, FZ, X1 + 0.4, LANE_C - DOOR, WALL)
-aabb("shell", "#F1E9D8", X1, LANE_C + DOOR, FZ, X1 + 0.4, Y1 + 0.4, WALL)
-aabb("shell", "#F1E9D8", X1, LANE_C - DOOR, DOOR_Z, X1 + 0.4, LANE_C + DOOR, WALL)
+DOOR_Z = FZ + 6.4
+aabb("shell", "#F1E9D8", X1, Y0 - 0.4, FZ, X1 + 0.4, Y1 + 0.4, WALL)
 aabb("shell", BLUE, X0 - 0.4, Y1 - 0.05, FZ, X1, Y1, FZ + 1.0)
-aabb("shell", BLUE, X1 - 0.05, Y0, FZ, X1, LANE_C - DOOR, FZ + 1.0)
-aabb("shell", BLUE, X1 - 0.05, LANE_C + DOOR, FZ, X1, Y1, FZ + 1.0)
+aabb("shell", BLUE, X1 - 0.05, Y0, FZ, X1, Y1, FZ + 1.0)
 aabb("shell", BLUE, X0 - 0.5, Y1 - 0.1, WALL - 0.5, X1 + 0.5, Y1 + 0.5, WALL)
 aabb("shell", BLUE, X1 - 0.1, Y0 - 0.5, WALL - 0.5, X1 + 0.5, Y1 + 0.5, WALL)
 for x in range(0, int(X1) + 1, 8):
     aabb("shell", BLUE, x - 0.3, Y1 - 0.35, FZ, x + 0.3, Y1, WALL - 0.5)
 for y in range(0, int(Y1) + 1, 8):
-    if abs(y - LANE_C) < DOOR + 0.4:
-        continue
     aabb("shell", BLUE, X1 - 0.35, y - 0.3, FZ, X1, y + 0.3, WALL - 0.5)
 for x in range(0, int(X1) - 4, 8):
     aabb("shell", "#FFFFFF", x + 1.2, Y1 - 0.12, FZ + 3.6, x + 6.8, Y1 - 0.02, FZ + 7.0)
     aabb("shell", "#7FB3E0", x + 1.4, Y1 - 0.16, FZ + 3.8, x + 6.6, Y1 - 0.1, FZ + 6.8, mat="glass")
     aabb("shell", "#FFFFFF", x + 3.95, Y1 - 0.2, FZ + 3.8, x + 4.05, Y1 - 0.12, FZ + 6.8)
-for y in range(16, int(Y1) - 6, 8):
+for y in range(8, int(Y1) - 6, 8):
     aabb("shell", "#FFFFFF", X1 - 0.12, y + 1.2, FZ + 3.6, X1 - 0.02, y + 6.8, FZ + 7.0)
     aabb("shell", "#7FB3E0", X1 - 0.16, y + 1.4, FZ + 3.8, X1 - 0.1, y + 6.6, FZ + 6.8, mat="glass")
-# left wall and front wall cut low (section cap); doors in both side walls
+# left wall and front wall cut low (section cap); two dock doors in the front wall
 CUT = FZ + 1.3
-for a, b in ((Y0 - 0.4, LANE_C - DOOR), (LANE_C + DOOR, Y1 + 0.4)):
-    aabb("shell", "#F1E9D8", X0 - 0.4, a, FZ, X0, b, CUT)
-    aabb("shell", "#DCE2E8", X0 - 0.45, a - 0.05, CUT, X0 + 0.05, b + 0.05, CUT + 0.08)
-aabb("shell", "#F1E9D8", X0 - 0.4, Y0 - 0.4, FZ, X1 + 0.4, Y0, CUT)
-aabb("shell", "#DCE2E8", X0 - 0.45, Y0 - 0.45, CUT, X1 + 0.45, Y0 + 0.05, CUT + 0.08)
-for xw, s_ in ((X0, -1), (X1, 1)):
-    # dock leveller plate, hazard edge, rubber bumpers, dark door frame
-    xo = xw + s_ * 0.4
-    aabb("shell", "#5E6875", min(xw - s_ * 0.9, xo + s_ * 0.1), LANE_C - 1.6, FZ - 0.04, max(xw - s_ * 0.9, xo + s_ * 0.1), LANE_C + 1.6, FZ + 0.02)
-    for k in range(8):
-        aabb("shell", YELLOW if k % 2 else "#2B2F36", min(xo, xo + s_ * 0.2), LANE_C - 1.6 + k * 0.4, FZ - 0.05, max(xo, xo + s_ * 0.2), LANE_C - 1.2 + k * 0.4, FZ + 0.03, nolines=True)
-    for dy in (-1.5, 1.5):
-        aabb("shell", "#2B2F36", min(xo, xo + s_ * 0.35), LANE_C + dy - 0.25, 0.5, max(xo, xo + s_ * 0.35), LANE_C + dy + 0.25, 1.1)
-    top = DOOR_Z if s_ > 0 else CUT + 0.02
-    for dy in (-DOOR, DOOR - 0.3):
-        aabb("shell", "#2E3742", xw - 0.05, LANE_C + dy, FZ, xw + 0.45, LANE_C + dy + 0.3, top)
-    if s_ > 0:
-        aabb("shell", "#2E3742", xw - 0.05, LANE_C - DOOR, DOOR_Z - 0.3, xw + 0.45, LANE_C + DOOR, DOOR_Z)
-# the lane: one straight painted path from receiving to dispatch, chevrons show the flow
-aabb("floor", "#C3CEDA", X0, LANE0, FZ, X1, LANE1, FZ + 0.006, mat="flat", nolines=True)
-for y in (LANE0, LANE1 - 0.22):
-    aabb("floor", YELLOW, X0, y, FZ, X1, y + 0.22, FZ + 0.012, mat="flat", nolines=True)
-for k in range(int((X1 - 3) // 4)):
-    x = 2.0 + k * 4.0
+aabb("shell", "#F1E9D8", X0 - 0.4, Y0 - 0.4, FZ, X0, Y1 + 0.4, CUT)
+aabb("shell", "#DCE2E8", X0 - 0.45, Y0 - 0.45, CUT, X0 + 0.05, Y1 + 0.45, CUT + 0.08)
+for a, b in ((X0 - 0.4, DX_IN - DOOR), (DX_IN + DOOR, DX_OUT - DOOR), (DX_OUT + DOOR, X1 + 0.4)):
+    aabb("shell", "#F1E9D8", a, Y0 - 0.4, FZ, b, Y0, CUT)
+    aabb("shell", "#DCE2E8", a - 0.05, Y0 - 0.45, CUT, b + 0.05, Y0 + 0.05, CUT + 0.08)
+for dx in (DX_IN, DX_OUT):
+    # dock leveller plate, hazard edge, rubber bumpers, dark door posts
+    aabb("shell", "#5E6875", dx - DOOR + 0.2, Y0 - 0.4, FZ - 0.04, dx + DOOR - 0.2, Y0 + 0.9, FZ + 0.02)
+    for k in range(round((DOOR - 0.2) * 5)):
+        aabb("shell", YELLOW if k % 2 else "#2B2F36", dx - DOOR + 0.2 + k * 0.4, Y0 - 0.45, FZ - 0.05, dx - DOOR + 0.6 + k * 0.4, Y0 - 0.25, FZ + 0.03, nolines=True)
+    for ddx in (0.3 - DOOR, DOOR - 0.3):
+        aabb("shell", "#2B2F36", dx + ddx - 0.25, Y0 - 0.75, 0.5, dx + ddx + 0.25, Y0 - 0.4, 1.1)
+    for ddx in (-DOOR, DOOR - 0.3):
+        aabb("shell", "#2E3742", dx + ddx, Y0 - 0.4, FZ, dx + ddx + 0.3, Y0 + 0.05, CUT + 0.3)
+
+
+def chevron(p, u, col=ORANGE):
+    u = Vector(u).normalized()
+    n_ = Vector((-u.y, u.x))
     for a in (-1, 1):
-        beam("floor", ORANGE, (x, LANE_C + a * 1.0, FZ + 0.01), (x + 0.9, LANE_C, FZ + 0.01), 0.32, 0.02, nolines=True)
+        q = Vector(p) + n_ * a * 1.0
+        beam("floor", col, (q.x, q.y, FZ + 0.01), (p[0] + u.x * 0.9, p[1] + u.y * 0.9, FZ + 0.01), 0.32, 0.02, nolines=True)
+
+
+# the lane: a painted U from the receiving door, along the racks, to the dispatch door
+LX0, LX1 = DX_IN - 1.8, DX_OUT + 1.8
+aabb("floor", "#C3CEDA", LX0, LANE0, FZ, LX1, LANE1, FZ + 0.006, mat="flat", nolines=True)
+for dx in (DX_IN, DX_OUT):
+    aabb("floor", "#C3CEDA", dx - 1.8, Y0, FZ, dx + 1.8, LANE0, FZ + 0.006, mat="flat", nolines=True)
+    for x in (dx - 1.8, dx + 1.58):
+        aabb("floor", YELLOW, x, Y0, FZ, x + 0.22, LANE1 if (x < dx) == (dx == DX_IN) else LANE0, FZ + 0.012, mat="flat", nolines=True)
+aabb("floor", YELLOW, LX0, LANE1 - 0.22, FZ, LX1, LANE1, FZ + 0.012, mat="flat", nolines=True)
+aabb("floor", YELLOW, DX_IN + 1.58, LANE0, FZ, DX_OUT - 1.58, LANE0 + 0.22, FZ + 0.012, mat="flat", nolines=True)
+for y in (2.0, 5.0):
+    chevron((DX_IN, y), (0, 1))
+    chevron((DX_OUT, LANE0 + 0.8 - y), (0, -1))
+for k in range(int((DX_OUT - DX_IN - 4) // 4)):
+    chevron((DX_IN + 3.0 + k * 4.0, LANE_C), (1, 0))
 # zone floor markings
 for (x0, y0, x1, y1) in P["ZONES"]:
     for (a, b, c_, d) in ((x0, y0, x1, y0 + 0.18), (x0, y1 - 0.18, x1, y1), (x0, y0, x0 + 0.18, y1), (x1 - 0.18, y0, x1, y1)):
@@ -373,18 +385,18 @@ for (x0, y0, x1, y1) in P["ZONES"]:
 # ---- zone sign gantries (text added below as geometry) ---------------------------
 SIGNS = {"ПРИЁМКА": (P["SIGNS"][0], BLUE), "ОТГРУЗКА": (P["SIGNS"][1], ORANGE)}
 SW = P["SIGN_W"]
-SIGN_Y, SIGN_Z0, SIGN_Z1 = LANE0 - 0.25, FZ + 5.0, FZ + 6.6  # boards stand at the lane ends, by the doors
+SIGN_Y, SIGN_Z0, SIGN_Z1 = LANE0 - 0.25, FZ + 2.7, FZ + 4.1  # low boards at the back of each zone: they never hide the rack fronts
 for label, (cx, col) in SIGNS.items():
     for dx in (-SW - 0.1, SW + 0.1):
         aabb("signs", NAVY, cx + dx - 0.12, SIGN_Y - 0.12, FZ, cx + dx + 0.12, SIGN_Y + 0.12, SIGN_Z1)
     aabb("signs", col, cx - SW, SIGN_Y - 0.1, SIGN_Z0, cx + SW, SIGN_Y + 0.1, SIGN_Z1)
     aabb("signs", "#FFFFFF", cx - SW + 0.2, SIGN_Y - 0.13, SIGN_Z0 + 0.12, cx + SW - 0.2, SIGN_Y - 0.1, SIGN_Z0 + 0.16, nolines=True)
-    text("signs_text", label, (cx, SIGN_Y - 0.14, (SIGN_Z0 + SIGN_Z1) / 2 + 0.06), 1.0, "#FFFFFF")
+    text("signs_text", label, (cx, SIGN_Y - 0.14, (SIGN_Z0 + SIGN_Z1) / 2 + 0.06), min(1.0, SW * 0.34), "#FFFFFF")
 
 
 # ---- racks ------------------------------------------------------------------------
-LEVELS = [FZ + 0.15, FZ + 1.75, FZ + 3.35, FZ + 4.95]
-RACK_TOP = FZ + 6.4
+LEVELS = [FZ + 0.15, FZ + 1.75, FZ + 3.35]
+RACK_TOP = FZ + 4.9
 
 
 def carton(group, x0, y0, z0, x1, y1, z1, col=KRAFT, tape=True):
@@ -462,7 +474,7 @@ for i, (label, letters, x0) in enumerate(RANGES):
 EX0, EX1, EY0, EY1 = P["ENTR"]
 ELEV = LEVELS[:3]
 rng = random.Random(7)
-nb = 4
+nb = max(3, round((EX1 - EX0) / 1.25))
 eys = [EX0 + (EX1 - EX0) * k / nb for k in range(nb + 1)]
 for x in eys:
     for y in (EY0, EY1):
@@ -485,33 +497,58 @@ for li, z in enumerate(ELEV):
 
 
 # ---- trucks ----------------------------------------------------------------------
-def truck(group, side, body="#F4F6F8", band=BLUE, stripe=ORANGE, doors_open=True, logo=None):
-    """Truck backed into a side door; built along -y, then turned to face the wall."""
-    xw = X0 - 0.6 if side < 0 else X1 + 0.6
-    M = Matrix.Translation((xw, LANE_C, 0)) @ Matrix.Rotation(math.radians(-90 if side < 0 else 90), 4, "Z")
-    L = 12.5
-    x, y0, y1 = 0.0, -L, 0.0
-    aabb(group, "#3A414B", x - 0.9, y0 - 3.4, 0.8, x + 0.9, y1, 1.05, M=M)  # chassis
-    aabb(group, body, x - 1.3, y0, 1.1, x + 1.3, y1, 4.4, M=M)
-    aabb(group, band, x - 1.32, y0 + 0.4, 1.4, x + 1.32, y1 - 0.4, 2.1, M=M)
-    aabb(group, stripe, x - 1.33, y0 + 0.4, 2.1, x + 1.33, y1 - 0.4, 2.35, M=M)
-    aabb(group, "#DCE2E8", x - 1.32, y1 - 0.06, 1.1, x + 1.32, y1, 4.4, M=M)
-    if doors_open:
-        aabb(group, "#2B2F36", x - 1.15, y1 - 0.08, 1.2, x + 1.15, y1 + 0.01, 4.25, nolines=True, M=M)
-        for s in (-1, 1):  # doors swung flat against the sides
-            aabb(group, "#E9EDF1", x + s * 1.3, y1 - 1.25, 1.15, x + s * 1.42, y1, 4.35, M=M)
-    aabb(group, band, x - 1.25, y0 - 3.4, 0.9, x + 1.25, y0 - 0.3, 3.6, M=M)  # cab
-    aabb(group, "#5A8CC4", x - 1.1, y0 - 3.45, 2.3, x + 1.1, y0 - 3.38, 3.3, mat="glass", M=M)
-    for s in (-1, 1):
-        aabb(group, "#5A8CC4", x + s * 1.26 - 0.03, y0 - 3.0, 2.3, x + s * 1.26 + 0.03, y0 - 1.8, 3.3, mat="glass", M=M)
-    aabb(group, "#F4F6F8", x - 1.25, y0 - 3.45, 0.9, x + 1.25, y0 - 3.35, 1.6, M=M)
-    aabb(group, body, x - 1.2, y0 - 2.6, 3.6, x + 1.2, y0 - 0.4, 4.2, M=M)
-    for yy in (y0 - 2.4, y0 + 1.6, y0 + 3.0, y1 - 2.2, y1 - 1.0):
-        for s in (-1, 1):
-            cyl(group, "#2B2F36", (x + s * 1.15, yy, 0.55), 0.55, 0.45, axis="X", seg=16, M=M)
-    if logo:  # on the side that faces the camera
-        p = M @ Vector((1.36 * -side, (y0 + y1) / 2, 3.3))
-        text(group + "_text", logo, tuple(p), 0.75, BLUE)
+TRUCK_BLUE = "#1E63D0"
+
+
+def truck(group, dx, logo=None):
+    """The scene-2 truck: blue cab-over tractor (flat front, black grille, roof
+    deflector, mirrors, silver tanks) and a white ribbed trailer with a blue base
+    rail and corner posts on three axles. Rear against the front-wall dock at
+    x = dx, nose towards the camera (-y)."""
+    M = Matrix.Translation((dx, Y0 - 0.6, 0)) @ Matrix.Diagonal((TRUCK, TRUCK, TRUCK, 1))
+    L = TRAILER
+    aabb(group, "#3A414B", -0.8, -L - 3.4, 0.75, 0.8, -0.2, 1.05, M=M)  # chassis
+    # trailer
+    aabb(group, "#F4F6F8", -1.3, -L, 1.1, 1.3, 0.0, 4.4, M=M)
+    for s_ in (-1, 1):
+        aabb(group, TRUCK_BLUE, s_ * 1.3 - 0.04, -L, 1.05, s_ * 1.3 + 0.04, 0.0, 1.38, M=M)  # base rail
+        for y in (-L, -0.15):
+            aabb(group, TRUCK_BLUE, s_ * 1.3 - 0.05, y, 1.05, s_ * 1.3 + 0.05, y + 0.15, 4.4, M=M)  # corner posts
+        k = 1
+        while -L + k * 0.85 < -0.3:  # ribs
+            aabb(group, "#DDE3EA", s_ * 1.31 - 0.02, -L + k * 0.85 - 0.04, 1.4, s_ * 1.31 + 0.02, -L + k * 0.85 + 0.04, 4.3, nolines=True, M=M)
+            k += 1
+    aabb(group, "#DDE3EA", -1.25, -L - 0.03, 1.4, 1.25, -L, 4.35, nolines=True, M=M)
+    for s_ in (-1, 1):
+        aabb(group, "#3A414B", s_ * 0.7 - 0.06, -L + 1.6, 0.25, s_ * 0.7 + 0.06, -L + 1.75, 1.1, M=M)  # landing legs
+    for yy in (-3.6, -2.45, -1.3):
+        for s_ in (-1, 1):
+            cyl(group, "#2B2F36", (s_ * 1.0, yy, 0.5), 0.5, 0.5, axis="X", seg=16, M=M)
+            cyl(group, "#C9D0D8", (s_ * 1.26, yy, 0.5), 0.22, 0.03, axis="X", seg=12, M=M)
+    # tractor
+    cy0, cy1 = -L - 3.45, -L - 1.25  # cab front / back
+    aabb(group, TRUCK_BLUE, -1.25, cy0, 1.0, 1.25, cy1, 3.75, M=M)
+    beam(group, TRUCK_BLUE, (0, cy0 + 0.5, 3.7), (0, cy1 + 0.25, 4.3), 2.3, 0.3, M=M)  # roof deflector
+    aabb(group, TRUCK_BLUE, -1.1, cy1, 3.45, 1.1, cy1 + 0.4, 4.3, M=M)
+    aabb(group, "#5A8CC4", -1.12, cy0 - 0.04, 2.45, 1.12, cy0 + 0.02, 3.45, mat="glass", M=M)  # windscreen
+    aabb(group, "#22272E", -0.85, cy0 - 0.05, 1.35, 0.85, cy0 + 0.02, 2.25, M=M)  # grille
+    for z in (1.6, 1.95):
+        aabb(group, "#4A525C", -0.8, cy0 - 0.07, z, 0.8, cy0 - 0.04, z + 0.06, nolines=True, M=M)
+    aabb(group, "#D7DDE4", -1.28, cy0 - 0.12, 0.7, 1.28, cy0 + 0.3, 1.15, M=M)  # bumper
+    for s_ in (-1, 1):
+        aabb(group, "#FFFFFF", s_ * 1.0 - 0.2, cy0 - 0.08, 1.2, s_ * 1.0 + 0.2, cy0 - 0.02, 1.45, mat="flat", M=M)  # headlights
+        aabb(group, "#5A8CC4", s_ * 1.25 - 0.03, cy0 + 0.25, 2.45, s_ * 1.25 + 0.03, cy0 + 1.2, 3.4, mat="glass", M=M)  # side windows
+        aabb(group, "#22272E", s_ * 1.45 - 0.06, cy0 + 0.15, 2.5, s_ * 1.45 + 0.06, cy0 + 0.35, 3.3, M=M)  # mirrors
+        beam(group, "#22272E", (s_ * 1.25, cy0 + 0.3, 3.3), (s_ * 1.45, cy0 + 0.25, 3.25), 0.05, M=M)
+        cyl(group, "#C9D0D8", (s_ * 1.0, cy1 + 0.75, 0.75), 0.32, 1.1, axis="Y", seg=16, M=M)  # fuel tanks
+        aabb(group, "#22272E", s_ * 1.25 - 0.03, cy0 + 1.4, 1.0, s_ * 1.25 + 0.03, cy0 + 1.5, 2.6, nolines=True, M=M)  # door line
+        for yy in (cy0 + 0.9, -L + 0.5):
+            cyl(group, "#2B2F36", (s_ * 1.05, yy, 0.55), 0.55, 0.45, axis="X", seg=16, M=M)
+            cyl(group, "#C9D0D8", (s_ * 1.29, yy, 0.55), 0.25, 0.03, axis="X", seg=12, M=M)
+    if logo:  # on the roof deflector, which faces the camera
+        t = math.atan2(0.6, cy1 - cy0 - 0.25)  # deflector slope
+        p = M @ Vector((0, (cy0 + 0.5 + cy1 + 0.25) / 2 - 0.17 * math.sin(t), 4.0 + 0.17 * math.cos(t)))
+        text(group + "_text", logo, tuple(p), 0.36 * TRUCK, "#FFFFFF", rot=(t, 0, 0))
 
 
 GIFT_SIZE = 1.8
@@ -532,9 +569,9 @@ def gift(group, x, y, z, k=GIFT_SIZE, on_pallet=True):
 
 
 # our truck backed into receiving dock 1, the gift just rolled off it
-truck("our_truck", -1, logo="ЭНЕРГИЯ+")
-truck("trucks", 1, body="#F4F6F8", band=NAVY, stripe=YELLOW)
-GIFT_IN = Vector((3.4, LANE_C, FZ))
+truck("our_truck", DX_IN, logo="ЭНЕРГИЯ+")
+truck("trucks", DX_OUT, logo="ЭНЕРГИЯ+")
+GIFT_IN = Vector((*P["GIFT"], FZ))
 GIFT_TOP = gift("gift", *GIFT_IN)
 
 
@@ -618,10 +655,9 @@ for i in range(6):  # rack rows on the map, right-most (by dispatch) glowing gre
     x = SCREEN[0] + SW_ * (0.75 + i * 1.0)
     aabb("wms", "#5FD38D" if i == 5 else "#7FD0F5", x, SCREEN[1] - 0.05, SCREEN[2] + 0.35, x + SW_ * 0.55, SCREEN[1] - 0.03, SCREEN[5] - 0.45, mat="flat", nolines=True)
 aabb("wms", "#FF6A13", SCREEN[0] + 0.3, SCREEN[1] - 0.05, SCREEN[2] + 0.1, SCREEN[3] - 0.3, SCREEN[1] - 0.03, SCREEN[2] + 0.22, mat="flat", nolines=True)
-text("wms_text", "WMS", (KX, SCREEN[1] - 0.06, SCREEN[5] - 0.2), 0.3, "#FFFFFF")
 
 
-# driverless forklift in the aisle, inventory drone over the racks
+# driverless forklift in the lane
 def forklift(group, x, y, facing, load=True):
     M = Matrix.Translation((x, y, FZ)) @ Matrix.Rotation(facing, 4, "Z")
     aabb(group, ORANGE, -1.2, -0.7, 0.3, 0.6, 0.7, 1.5, M=M)
@@ -639,14 +675,6 @@ def forklift(group, x, y, facing, load=True):
         aabb(group, KRAFT, 0.95, -0.55, 0.35, 2.05, 0.55, 1.35, M=M)
 
 
-forklift("agv", P["AGV"][0], P["AGV"][1], math.radians(P["AGV"][2]))
-DRONE = Vector((*P["DRONE"], FZ + 9.0))
-aabb("drone", "#F4F6F8", DRONE.x - 0.35, DRONE.y - 0.35, DRONE.z - 0.12, DRONE.x + 0.35, DRONE.y + 0.35, DRONE.z + 0.12)
-for sx in (-1, 1):
-    for sy in (-1, 1):
-        beam("drone", "#3A414B", tuple(DRONE), (DRONE.x + sx * 0.7, DRONE.y + sy * 0.7, DRONE.z), 0.08)
-        cyl("drone", "#7FD0F5", (DRONE.x + sx * 0.7, DRONE.y + sy * 0.7, DRONE.z + 0.1), 0.42, 0.03, seg=18, mat="flat")
-cyl("drone", BLUE, (DRONE.x, DRONE.y, DRONE.z - 0.22), 0.12, 0.15, seg=10)
 
 # ---- outcome-only figures (group names start with o_) ------------------------------
 # entrance: the gift sits in the free cell by receiving
@@ -662,7 +690,10 @@ O_GIFT_HOT = gift("o_gift_hot", *P["HOT"], FZ, k=1.25)
 # dashed walking routes on the floor (orange), from the barge pallets to the gift
 
 
-def dashes(group, pts, col=ORANGE, w=0.35, dash=1.0, gap=0.7):
+RED, GREEN = "#E8402A", "#2FB86A"
+
+
+def dashes(group, pts, col=RED, w=0.7, dash=1.2, gap=0.8):
     for a, b in zip(pts, pts[1:]):
         a, b = Vector(a), Vector(b)
         d = (b - a)
@@ -673,28 +704,63 @@ def dashes(group, pts, col=ORANGE, w=0.35, dash=1.0, gap=0.7):
             if (p1 - p0).length < 0.05:
                 continue
             beam(group, col, (p0.x, p0.y, FZ + 0.02), (p1.x, p1.y, FZ + 0.02), w, 0.03, nolines=True)
+    # arrowhead at the end, painted like the lane chevrons
+    a, b = Vector(pts[-2]), Vector(pts[-1])
+    u = (b - a).normalized()
+    n_ = Vector((-u.y, u.x))
+    for sgn in (-1, 1):
+        q = b - u * 1.3 + n_ * sgn * 1.1
+        beam(group, col, (q.x, q.y, FZ + 0.025), (b.x + u.x * 0.25, b.y + u.y * 0.25, FZ + 0.025), w, 0.03, nolines=True)
 
 
-dashes("o_route_entrance", [P["ROUTE0"], (P["ROUTE0"][0] - 3, LANE_C), (FREE_CELL[0], LANE_C), (FREE_CELL[0], EY1 + 0.3)])
+DOCK_OUT = [(DX_OUT, LANE_C), (DX_OUT, Y0 + 0.8)]  # every route ends in the dispatch truck
+ROUTES = {"entrance": [(FREE_CELL[0], EY1 + 0.5), (FREE_CELL[0], LANE_C)] + DOCK_OUT,
+          **{p: [(RANGES[i][2] + RW / 2, RY0 - 0.6), (RANGES[i][2] + RW / 2, LANE_C)] + DOCK_OUT for p, i in ALPHA_ROW.items()},
+          "hot": P["HOT_VIA"] + DOCK_OUT}
+ROUTE_M = {k: round(sum((Vector(b) - Vector(a)).length for a, b in zip(v, v[1:]))) for k, v in ROUTES.items()}
+print("ROUTE_M", ROUTE_M)
+
+
+def route_label(group, pts, col):
+    """Distance painted on the floor beside the longest run of the route."""
+    segs = list(zip(pts, pts[1:]))[:-1]  # the last leg runs behind the dispatch truck
+    a, b = max(segs, key=lambda s_: (Vector(s_[1]) - Vector(s_[0])).length)
+    m = ROUTE_M[group.removeprefix("o_route_")]
+    x = (a[0] + b[0]) / 2
+    for sx in P["SIGNS"]:  # keep the number clear of the zone signs (the raised board hides floor to its right)
+        lo, hi = sx - P["SIGN_W"] / 2 - 1.8, sx + P["SIGN_W"] / 2 + 3.0
+        if lo < x < hi:
+            x = lo if x - lo < hi - x else hi
+    # front half of the lane; runners walk the back half so they never cover the number
+    # the hot route hugs the dispatch wall: its number goes on the wall side, clear of the forklift
+    at = (x, LANE0 + 0.6) if abs(a[1] - b[1]) < 0.1 else (x + 2.2, (a[1] + b[1]) / 2)
+    text(group + "_text", f"{m} м", (*at, FZ + 0.04), 1.5, col, rot=(0, 0, 0))
+
+
+dashes("o_route_entrance", ROUTES["entrance"])
+route_label("o_route_entrance", ROUTES["entrance"], RED)
 for parcel, i in ALPHA_ROW.items():
-    x = RANGES[i][2] + RW / 2
-    dashes(f"o_route_{parcel}", [P["ROUTE0"], (P["ROUTE0"][0] - 2, LANE_C), (x, LANE_C), (x, RY0 - 0.4)])
-dashes("o_route_hot", P["HOT_ROUTE"], col="#5FD38D")
+    dashes(f"o_route_{parcel}", ROUTES[parcel])
+    route_label(f"o_route_{parcel}", ROUTES[parcel], RED)
+dashes("o_route_hot", ROUTES["hot"], col=GREEN)
+route_label("o_route_hot", ROUTES["hot"], GREEN)
 # runners carrying boxes on the long routes
 person("o_runners_entrance", (*P["RUN_E"][0], FZ), math.radians(180), walk=0.35, pose=((0.35, 0.35), (0.35, 0.35)))
 carton("o_runners_entrance", P["RUN_E"][0][0] - 1.0, P["RUN_E"][0][1] - 0.3, FZ + 1.6, P["RUN_E"][0][0] - 0.3, P["RUN_E"][0][1] + 0.3, FZ + 2.2)
 person("o_runners_entrance", (*P["RUN_E"][1], FZ), math.radians(0), walk=-0.35)
 for parcel, i in ALPHA_ROW.items():
     x = RANGES[i][2] + RW / 2
-    person(f"o_runners_{parcel}", (x + 2.6, LANE_C - 0.5, FZ), math.radians(170), walk=0.35, pose=((0.35, 0.35), (0.35, 0.35)))
-    person(f"o_runners_{parcel}", (x + 5.4, LANE_C + 0.5, FZ), math.radians(-10), walk=-0.35, tsd=True, pose=((0, 0), (0.25, 0.35)))
+    person(f"o_runners_{parcel}", (x + 2.6, LANE_C + 0.6, FZ), math.radians(170), walk=0.35, pose=((0.35, 0.35), (0.35, 0.35)))
+    person(f"o_runners_{parcel}", (x + 5.4, LANE_C + 1.1, FZ), math.radians(-10), walk=-0.35, tsd=True, pose=((0, 0), (0.25, 0.35)))
 # keeper outcome: Pavel has left; two new-shift workers puzzled by the racks
 O_PUZZLED = [Vector((x, y, FZ)) for x, y in P["PUZZLED"]]
+O_HEADS = []
 for k, p in enumerate(O_PUZZLED):
     head = person("o_newshift", tuple(p), math.radians(-60 - 70 * k), hat="#5FD38D", tsd=True, pose=((0.05, 0.75), (0.25, 0.35)))
+    O_HEADS.append(head)
     text("o_newshift_text", "?", (head.x, head.y - 0.1, head.z + 0.75), 1.1, ORANGE, rot=(math.pi / 2, 0, -math.radians(30)))
 # wms outcome: forklift takes the gift straight onto the first truck
-FX = X1 - 4.4
+FX = DX_OUT - 3.6  # right of the dispatch sign, so the board never covers it
 forklift("o_agv_hot", FX, LANE_C, 0, load=False)
 aabb("o_agv_hot", "#C79A5B", FX + 0.9, LANE_C - 0.6, FZ + 0.2, FX + 2.1, LANE_C + 0.6, FZ + 0.35)
 O_GIFT_FORK = gift("o_gift_fork", FX + 1.5, LANE_C, FZ + 0.35, k=1.0, on_pallet=False)
@@ -703,11 +769,10 @@ O_GIFT_FORK = gift("o_gift_fork", FX + 1.5, LANE_C, FZ + 0.35, k=1.0, on_pallet=
 f3 = lambda pts: [Vector((x, y, FZ + 0.05)) for x, y in pts]
 PX = O_PUZZLED[0]
 STORY = {
-    "entrance": (O_GIFT_ENTRANCE, f3([(FREE_CELL[0], EY1 + 0.3), (FREE_CELL[0], LANE_C), (P["ROUTE0"][0], LANE_C), P["ROUTE0"]])),
-    **{f"alphabet-{p}": (O_GIFT_ALPHA[p], f3([(RANGES[i][2] + RW / 2, RY0 - 0.4), (RANGES[i][2] + RW / 2, LANE_C), (P["ROUTE0"][0], LANE_C), P["ROUTE0"]]))
-       for p, i in ALPHA_ROW.items()},
+    "entrance": (O_GIFT_ENTRANCE, f3(ROUTES["entrance"])),
+    **{f"alphabet-{p}": (O_GIFT_ALPHA[p], f3(ROUTES[p])) for p in ALPHA_ROW},
     "keeper": (O_GIFT_HOT, f3([(PX.x, PX.y), (PX.x - 3, RY0 - 1.6), (PX.x - 9, RY0 - 1.2), (PX.x - 11, LANE1), (PX.x - 4, LANE_C), (PX.x + 1, LANE1 + 0.6), (P["HOT"][0] - 1.0, P["HOT"][1] - 0.8)])),
-    "wms": (O_GIFT_FORK, f3(P["HOT_ROUTE"])),
+    "wms": (O_GIFT_FORK, f3(ROUTES["hot"])),
 }
 
 flush()
@@ -750,8 +815,8 @@ ls.linestyle.alpha = 0.9
 # ---- cameras -------------------------------------------------------------------------
 FORMATS_SPEC = {
     # name: (res, azimuth, elevation, keep box u0,v0,u1,v1 in y-down screen space)
-    "desk": ((1536, 1024), float(os.environ.get("DESK_AZ", -18)), float(os.environ.get("DESK_EL", 40)), (0.0, 0.02, 1.0, 1.0)),
-    "tall": ((1024, 1536), float(os.environ.get("TALL_AZ", -14)), float(os.environ.get("TALL_EL", 50)), (0.0, 0.1, 1.0, 1.0)),
+    "desk": ((1536, 1024), float(os.environ.get("DESK_AZ", -12)), float(os.environ.get("DESK_EL", 50)), (0.0, 0.02, 1.0, 0.99)),
+    "tall": ((1024, 1536), float(os.environ.get("TALL_AZ", -10)), float(os.environ.get("TALL_EL", 54)), (0.0, 0.08, 1.0, 0.99)),
 }
 OUTCOME_RES = (1960, 840)
 
@@ -770,17 +835,17 @@ BUILDING = [Vector(p) for p in (
     (X0 - 0.4, Y0 - 0.4, 0), (X1 + 0.4, Y0 - 0.4, 0), (X0 - 0.4, Y1 + 0.4, WALL), (X1 + 0.4, Y1 + 0.4, WALL),
     (X1 + 0.4, Y0 - 0.4, WALL), (X0 - 0.4, Y1 + 0.4, 0),
 )]
-# Frame the playable floor (choices, signs, docks), not the whole shell: the
-# back wall tops, side walls and trucks may run out of frame.
+# Frame the playable floor (choices, signs, docks) and both whole trucks; the
+# back wall tops may run out of frame.
 PLAY = None  # filled after RACK_TOP is known below
 KEEP_BY = {}
 
 
 def play_box():
-    return cube(X0 - 2.5, Y0 - 1.2, FZ, X1 + 1.0, RY1 - 1.0, RACK_TOP + 0.6)
+    return cube(X0 - 1.0, TRUCK_FRONT - 0.4, 0, X1 + 1.0, RY1 - 1.0, PLAQUE_Z1 + 0.3)
 
 
-def camera(name, spec, keep=None):
+def camera(name, spec, keep=None, right=False):
     (W, H), az, el, (u0, v0, u1, v1) = spec
     rot, R, U, F = axes(az, el)
     KEEP = keep or play_box()
@@ -790,6 +855,8 @@ def camera(name, spec, keep=None):
     S = max((max(xs) - min(xs)) / (u1 - u0), (max(ys) - min(ys)) / (v1 - v0) * aspect)
     Hh = S / aspect
     cx = (min(xs) + max(xs)) / 2 + (0.5 - (u0 + u1) / 2) * S
+    if right:  # pin the dispatch side to the right edge; spare width goes to the hall, not the empty yard
+        cx = max(xs) - (u1 - 0.5) * S
     cy = (min(ys) + max(ys)) / 2 - (0.5 - (v0 + v1) / 2) * Hh
     cam = bpy.data.objects.new(name, bpy.data.cameras.new(name))
     scene.collection.objects.link(cam)
@@ -865,7 +932,8 @@ scene.render.resolution_percentage = 100
 scene.eevee.taa_render_samples = int(os.environ.get("SAMPLES", 16))
 OUTCOME_ONLY = {g for g in GROUPS if g.startswith("o_")}
 ALL = set(GROUPS) - OUTCOME_ONLY
-TEXT_GROUPS = {g for g in GROUPS if g.endswith("_text") or g == "plaques"}
+# Lettering and painted routes are composited back crisp after the style pass.
+TEXT_GROUPS = {g for g in GROUPS if g.endswith("_text") or g == "plaques" or g.startswith("o_route")}
 
 
 def show_only(groups):
@@ -884,7 +952,7 @@ def render(path, W, H, transparent=False):
     bpy.ops.render.render(write_still=True)
 
 
-manifest = {"formats": {}, "outcomes": {}}
+manifest = {"formats": {}, "outcomes": {}, "route_m": ROUTE_M}
 if MODE in ("test", "plate"):
     for name in FORMATS:
         spec = FORMATS_SPEC[name]
@@ -900,18 +968,19 @@ if MODE in ("test", "plate"):
             render(OUT / f"{name}-notext.png", W, H)
 
 # Outcome stills: the same building, other actors, a closer camera.
-ZO = P["ZONES"][1]
+GX = P["GIFT"][0]
+DISPATCH = cube(DX_OUT - DOOR, -3.5 * TRUCK, 0, DX_OUT + DOOR, 0, 4.4 * TRUCK)  # rear of the dispatch truck: where every route ends
 OUTCOMES = {
     # name: (extra outcome groups, hidden base groups, keep points)
-    "entrance": ({"o_gift_entrance", "o_route_entrance", "o_runners_entrance"}, {"gift", "jack"},
-                 cube(EX0, EY0, FZ, EX1, EY1, FZ + 4.6) + cube(ZO[0], 1, FZ, ZO[2] - 3, 9, FZ + 2) + cube(EX0, 0, FZ, ZO[2] - 1, EY1, FZ + 1) + cube(EX0, LANE0, FZ, ZO[2] - 3, LANE1, FZ + 1)),
-    **{f"alphabet-{p}": ({f"o_gift_{p}", f"o_route_{p}", f"o_runners_{p}"}, {"gift", "jack"},
-                         cube(RANGES[i][2] - 5, RY0 - 4, FZ, ZO[2] - 3, RY0 + 3, PLAQUE_Z1) + cube(ZO[0], 1, FZ, ZO[2] - 3, 9, FZ + 2))
+    "entrance": ({"o_gift_entrance", "o_route_entrance", "o_route_entrance_text", "o_runners_entrance"}, {"gift", "jack"},
+                 cube(EX0 - 3, Y0, FZ, EX1, EY1, FZ + 4.6) + cube(EX0, LANE0, FZ, DX_OUT, LANE1, FZ + 1) + DISPATCH),
+    **{f"alphabet-{p}": ({f"o_gift_{p}", f"o_route_{p}", f"o_route_{p}_text", f"o_runners_{p}"}, {"gift", "jack"},
+                         cube(RANGES[i][2] - 3, RY0 - 1, FZ, RANGES[i][2] + RW + 3, RY0 + 2, PLAQUE_Z1) + cube(RANGES[i][2], LANE0, FZ, DX_OUT, LANE1, FZ + 1) + DISPATCH)
        for p, i in ALPHA_ROW.items()},
-    "keeper": ({"o_gift_hot", "o_newshift", "o_newshift_text"}, {"gift", "jack", "keeper"},
-               cube(ZO[0], 1, FZ, X1 - 1, RY0, FZ + 3) + cube(P["RX"][1], RY0, FZ, P["RX"][0] + RW, RY0, PLAQUE_Z1) + cube(X1 - 1.0, LANE0, 0, X1 + 3.0, LANE1, DOOR_Z)),
-    "wms": ({"o_agv_hot", "o_gift_fork", "o_route_hot"}, {"gift", "jack"},
-            cube(KX - 1.2, KY - 0.5, FZ, X1 - 1, RY0, SCREEN[5]) + cube(X1 - 1.0, LANE0, 0, X1 + 3.0, LANE1, DOOR_Z) + cube(P["RX"][1], RY0, FZ, P["RX"][0] + RW, RY0, PLAQUE_Z1)),
+    "keeper": ({"o_gift_hot", "o_newshift", "o_newshift_text", "o_route_hot", "o_route_hot_text"}, {"gift", "jack", "keeper"},
+               cube(P["PUZZLED"][0][0] - 6, LANE0, FZ, X1 - 0.5, RY0, FZ + 3) + cube(P["RX"][1], RY0, FZ, P["RX"][0] + RW, RY0, PLAQUE_Z1) + DISPATCH),
+    "wms": ({"o_agv_hot", "o_gift_fork", "o_route_hot", "o_route_hot_text"}, {"gift", "jack"},
+            cube(KX - 1.2, KY - 0.5, FZ, X1 - 0.5, RY0, SCREEN[5]) + cube(P["RX"][1], RY0, FZ, P["RX"][0] + RW, RY0, PLAQUE_Z1) + DISPATCH),
 }
 if MODE == "outcomes":
     W, H = OUTCOME_RES
@@ -919,13 +988,14 @@ if MODE == "outcomes":
     for name, (extra, hidden, keep) in OUTCOMES.items():
         if only and name not in only.split(","):
             continue
-        cam = camera("o_" + name, ((W, H), -18, 40, (0.04, 0.05, 0.96, 0.95)), keep)
+        cam = camera("o_" + name, ((W, H), FORMATS_SPEC["desk"][1], FORMATS_SPEC["desk"][2], (0.04, 0.05, 0.96, 0.95)), keep, right=True)
         scene.camera = cam
         bpy.context.view_layer.update()
         manifest["outcomes"][name] = frame_data(cam, W, H)
         g, route = STORY[name]
         manifest["outcomes"][name]["story"] = {"gift": project(cam, g, W, H), "route": [project(cam, q, W, H) for q in route],
-                                               "hot": [project(cam, q, W, H) for q in f3(P["HOT_ROUTE"])]}
+                                               "hot": [project(cam, q, W, H) for q in f3(ROUTES["hot"])],
+                                               "heads": [project(cam, h, W, H) for h in O_HEADS]}
         show_only((ALL - hidden) | extra)
         render(OUT / f"outcome-{name}.png", W, H)
         show_only(((ALL - hidden) | extra) - TEXT_GROUPS)

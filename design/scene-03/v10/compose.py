@@ -1,17 +1,19 @@
 # Align a v10 restyle onto its Blender render and put the crisp Blender text back.
 #   uv run --with opencv-python-headless --with numpy python compose.py NAME W H
-#   .tmp-work/v10/bl/NAME{,-notext}.png + gen/NAME.png -> gen/NAME-final.png
+#   .tmp-work/v13/bl/NAME{,-notext}.png + gen/NAME.png -> gen/NAME-final.png
 import subprocess
 import sys
 from pathlib import Path
+
+import json
 
 import cv2
 import numpy as np
 
 n, W, H = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
-QUESTION_AT = [(652, 250), (800, 240)]  # outcome-keeper only, px in the 1960x840 frame
 here = Path(__file__).parent
-w = here.parents[2] / ".tmp-work/v10"
+HEADS = json.loads((here / "manifest-wide-outcomes.json").read_text())["outcomes"]["keeper"]["story"]["heads"]  # 1960x840 px
+w = here.parents[2] / ".tmp-work/v13"
 g = lambda s: str(w / f"gen/{n}{s}")
 rd = lambda p: cv2.resize(cv2.imread(str(p)), (W, H), interpolation=cv2.INTER_AREA)
 txt, bare = rd(w / f"bl/{n}.png"), rd(w / f"bl/{n}-notext.png")
@@ -35,7 +37,8 @@ if k > 1:
 if n == "outcome-keeper":
     # The rendered "?" sit on the blocky hats; drop them (orange text) and letter
     # bigger ones over the restyled heads instead.
-    a[200:310, 600:860] = 0
+    for x, y in HEADS:
+        a[int(y) - 110:int(y) - 20, int(x) - 45:int(x) + 45] = 0
 out = gen * (1 - a[..., None]) + txt * a[..., None]
 out = out.clip(0, 255).astype(np.uint8)
 if n == "outcome-keeper":
@@ -43,9 +46,8 @@ if n == "outcome-keeper":
     im = Image.fromarray(out[..., ::-1])
     d = ImageDraw.Draw(im)
     f = ImageFont.truetype("/usr/share/fonts/TTF/RobotoCondensed-Bold.ttf", 64)
-    # ponytail: head positions measured on this restyle; re-measure after a regeneration.
-    for x, y in QUESTION_AT:
-        d.text((x, y), "?", font=f, fill="#F26B2B", stroke_width=5, stroke_fill="white", anchor="mb")
+    for x, y in HEADS:  # projected Blender heads; the restyle keeps them in place
+        d.text((x, y - 50), "?", font=f, fill="#F26B2B", stroke_width=5, stroke_fill="white", anchor="mb")
     out = np.asarray(im)[..., ::-1]
 cv2.imwrite(g("-final.png"), out)
 print(n, "text px", int((a > 0.5).sum()))
