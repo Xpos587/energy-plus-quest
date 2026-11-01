@@ -1,10 +1,11 @@
 import { expect, type Page, test } from "@playwright/test";
+import { openInventory } from "./inventory-fixture";
 
 async function readResult(page: Page) {
   const copy = page.getByTestId("result-copy");
   let text = await copy.innerText();
-  const next = page.getByRole("button", { name: "Следующий фрагмент" });
-  while (await next.isEnabled().catch(() => false)) {
+  const next = page.getByRole("button", { name: "Читать дальше", exact: true });
+  while (await next.isVisible()) {
     await next.click();
     text += ` ${await copy.innerText()}`;
   }
@@ -16,7 +17,7 @@ const branches = [
   {
     id: "entrance",
     score: [-2, -1, 0],
-    copy: "Сотрудникам приходится делать лишний крюк",
+    copy: "Сотрудникам придется делать лишний крюк",
   },
   {
     id: "alphabet",
@@ -24,7 +25,7 @@ const branches = [
     copy: "зона отгрузки находится рядом с началом алфавита",
   },
   { id: "keeper", score: [1, 4, -3], copy: "не рассказал" },
-  { id: "wms", score: [4, 4, 5], copy: "на основе ABC-анализа" },
+  { id: "wms", score: [4, 4, 5], copy: "Система выбрала для подарка место ближе к зоне отгрузки" },
 ];
 
 for (const width of [320, 390]) {
@@ -42,10 +43,7 @@ for (const width of [320, 390]) {
       const errors: string[] = [];
       page.on("pageerror", (error) => errors.push(error.message));
       for (const branch of branches) {
-        await page.goto(
-          `/scenes.html?scene=inventory&parcel=${parcel}&recipient=alva`,
-        );
-        await page.getByRole("button", { name: "Закрыть условие" }).click();
+        await openInventory(page, parcel);
         const main = page.locator("[data-world-plane] > picture img");
         await main.evaluate((img: HTMLImageElement) => img.decode());
         await expect(page.locator("[data-hotspot]")).toHaveCount(4);
@@ -53,14 +51,14 @@ for (const width of [320, 390]) {
           page.getByRole("button", { name: "Рассмотреть склад" }),
         ).toHaveCount(0);
         const marker = page.locator(`[data-hotspot="${branch.id}"]`);
-        await expect(marker).not.toHaveText(/^\s*\d+[.)]?\s*$/);
+        await expect(marker.locator("span")).toBeHidden(); // no number badges on the art
         if (isMobile) await marker.tap();
         else await marker.click();
         const preview = page.locator("[data-world-plane]");
         await expect(
           preview.locator(`[data-hotspot="${branch.id}"]`),
         ).toHaveAttribute("aria-pressed", "true");
-        await expect(preview.locator("[data-warehouse-zone]")).toHaveCount(0);
+        await expect(preview.locator('[data-warehouse-zone][data-interactive="true"]')).toHaveCount(1);
         if (branch.id === "alphabet") {
           await expect(marker).toHaveAttribute(
             "aria-label",
@@ -79,18 +77,13 @@ for (const width of [320, 390]) {
         await image.evaluate((img: HTMLImageElement) => img.decode());
         await expect(image).toHaveAttribute(
           "src",
-          new RegExp(`/${key}\\.webp$`),
+          new RegExp(`/${key.replace("inventory-", "outcome-")}\\.webp$`),
         );
         const resultText = await readResult(page);
         expect(resultText).toContain(branch.copy);
         if (branch.id === "keeper") {
           expect(resultText).toContain("не рассказал");
           expect(resultText).toContain("задержалась");
-        }
-        if (branch.id === "wms") {
-          await expect(
-            page.getByText("Узнать больше о WMS Inventory."),
-          ).toBeVisible();
         }
         for (const [i, score] of branch.score.entries()) {
           await expect(

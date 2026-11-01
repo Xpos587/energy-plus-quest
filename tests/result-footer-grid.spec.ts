@@ -25,7 +25,7 @@ for (const [scene, id] of [
       await intro
         .getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ })
         .click();
-    await page.locator(`[${["crane", "compact", "lastmile"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${id}"]`).click();
+    await page.locator(`[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${id}"]`).click();
     await page.locator("[data-choice-confirm]").click();
     const footer = page.locator("[data-result-reader] footer");
     await expect(footer).toBeVisible();
@@ -38,7 +38,8 @@ for (const [scene, id] of [
       const score = (await footer.locator("[data-score-delta]").boundingBox())!;
       expect(Math.abs(a.width - b.width)).toBeLessThan(1);
       expect(Math.abs(a.height - b.height)).toBeLessThan(1);
-      expect(Math.abs(a.y - b.y)).toBeLessThan(1);
+      // One row, or one column in a narrow rail.
+      expect(Math.min(Math.abs(a.y - b.y), Math.abs(a.x - b.x))).toBeLessThan(1);
       expect(Math.abs(a.height - score.height)).toBeLessThan(1);
       for (const button of await buttons.all()) {
         await expect(button).toBeInViewport({ ratio: 1 });

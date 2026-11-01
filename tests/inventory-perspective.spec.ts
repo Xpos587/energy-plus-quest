@@ -21,7 +21,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       await expect(page.locator('[data-hotspot="alphabet"]')).toHaveAttribute('aria-label', new RegExp(`буква ${letter}`));
       for (const id of ['entrance', 'alphabet', 'keeper', 'wms']) {
         const marker = page.locator(`[data-hotspot="${id}"]`);
-        await expect(marker).toBeInViewport({ ratio: 1 });
+        await expect(page.locator(`[data-warehouse-zone="${id}"]`)).toBeInViewport({ ratio: 1 });
         await marker.click();
         await page.locator('[data-choice-confirm]').click();
         await expect(page.locator('[data-scene-consequence]')).toHaveAttribute('data-scene-consequence', `inventory-${id}${id === 'alphabet' ? `-${parcel}` : ''}`);

@@ -4222,3 +4222,13 @@
 
 /* Scene 3: the route comparison sits between the verdict and the story at full width. */
 .app[data-scene="inventory"] .frame[data-layout="result"] [data-result-narrative] > div:has([data-route-compare]) { width: 100%; flex: none; margin-bottom: 6px; }
+
+/* Scene 3 landscape results: page the text into the rail's real height so the actions never fall below the fold. */
+@media (min-width: 901px) and (orientation: landscape) {
+  .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] [data-result-reading] {
+    --result-fit-viewport: 1;
+    flex: none;
+    height: auto;
+    max-height: var(--result-reading-height, 80px);
+  }
+}

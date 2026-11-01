@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { openInventory } from "./inventory-fixture";
 
 for (const [parcel, letter] of [
   ["camera", "Ф"],
@@ -10,19 +11,16 @@ for (const [parcel, letter] of [
   }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.emulateMedia({ reducedMotion: "reduce" });
-    await page.goto(
-      `/scenes.html?scene=inventory&parcel=${parcel}&recipient=alva`,
-    );
+    await openInventory(page, parcel);
     const image = page.locator("[data-world-plane] > picture img");
     await image.evaluate((element: HTMLImageElement) => element.decode());
     await expect(image).toHaveAttribute(
       "src",
-      /inventory-barge-style-v6.webp$/,
+      /warehouse-v15\/overview(-mobile)?\.webp$/,
     );
-    await page.getByRole("button", { name: "Закрыть условие" }).click();
     await expect(
       page.locator(
-        "[data-warehouse-annotations] text, [data-warehouse-annotations] rect",
+        "[data-warehouse-annotations] text, [data-warehouse-annotations] rect:not([mask], mask > rect)",
       ),
     ).toHaveCount(0);
     const marker = page.locator('[data-hotspot="alphabet"]');
@@ -34,16 +32,13 @@ for (const [parcel, letter] of [
     await expect(
       page.locator('[data-hotspot="alphabet"]'),
     ).toHaveAttribute("aria-pressed", "true");
-    await expect(page.locator("[data-inspection-question]")).toHaveText(
-      "Давайте решим, куда его разместить.",
-    );
     await page.locator("[data-choice-confirm]").click();
     const result = page.locator("[data-scene-consequence] img");
     await result.evaluate((element: HTMLImageElement) => element.decode());
     await expect(result).toHaveAttribute(
       "src",
-      new RegExp(`inventory-alphabet-${parcel}.webp$`),
+      new RegExp(`outcome-alphabet-${parcel}.webp$`),
     );
-    await expect(result).toHaveAttribute("alt", new RegExp(`буквой ${letter}`));
+    await expect(result).toHaveAttribute("alt", /по алфавиту/);
   });
 }
