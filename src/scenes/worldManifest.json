@@ -58,57 +58,57 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/warehouse-v12/overview.webp",
+        "image": "scene-art/warehouse-v13/overview.webp",
         "width": 1536,
         "height": 1024,
         "hotspots": [
           {
             "id": "entrance",
-            "x": 0.4365,
-            "y": 0.452
+            "x": 0.1375,
+            "y": 0.4223
           },
           {
             "id": "alphabet",
-            "x": 0.6079,
-            "y": 0.1535
+            "x": 0.7002,
+            "y": 0.5493
           },
           {
             "id": "keeper",
-            "x": 0.6975,
-            "y": 0.4063
+            "x": 0.7886,
+            "y": 0.393
           },
           {
             "id": "wms",
-            "x": 0.4818,
-            "y": 0.3795
+            "x": 0.3956,
+            "y": 0.2851
           }
         ],
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/warehouse-v12/overview-mobile.webp",
+        "image": "scene-art/warehouse-v13/overview-mobile.webp",
         "width": 1024,
         "height": 1536,
         "hotspots": [
           {
             "id": "entrance",
-            "x": 0.4234,
-            "y": 0.5285
+            "x": 0.0849,
+            "y": 0.3951
           },
           {
             "id": "alphabet",
-            "x": 0.6162,
-            "y": 0.2076
+            "x": 0.788,
+            "y": 0.6301
           },
           {
             "id": "keeper",
-            "x": 0.67,
-            "y": 0.4587
+            "x": 0.8081,
+            "y": 0.5038
           },
           {
             "id": "wms",
-            "x": 0.4634,
-            "y": 0.4016
+            "x": 0.3563,
+            "y": 0.3324
           }
         ],
         "rendering": "raster"

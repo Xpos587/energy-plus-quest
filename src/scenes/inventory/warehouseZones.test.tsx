@@ -74,7 +74,7 @@ describe("warehouse storage geography", () => {
     expect(warehouseZone("keeper", context).description).toContain(
       "Опытный кладовщик",
     );
-    expect(warehouseZone("wms", context).description).toContain("Терминал");
+    expect(warehouseZone("wms", context).description).toContain("Стол с монитором");
     const host = document.createElement("div");
     host.innerHTML = renderToStaticMarkup(
       <inventoryScene.Art

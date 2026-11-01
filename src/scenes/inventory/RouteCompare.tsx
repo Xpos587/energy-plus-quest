@@ -3,7 +3,7 @@ import styles from "./RouteCompare.module.css";
 
 /** Metres from each spot to the dispatch door, measured along the floor routes in
  *  design/scene-03/blender-v1/warehouse.py (ROUTE_M; checked by RouteCompare.test). */
-export const routeMetres = { entrance: 36, camera: 18, socks: 26, boat: 28, hot: 12 } as const;
+export const routeMetres = { entrance: 56, camera: 29, socks: 36, boat: 44, hot: 21 } as const;
 
 type Spot = "entrance" | "alphabet" | "keeper" | "wms";
 export const routeRows = (parcel: ParcelId): { id: Spot; name: string; metres: number; who: string; ok: boolean }[] => [

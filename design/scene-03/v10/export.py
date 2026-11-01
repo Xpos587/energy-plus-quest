@@ -3,43 +3,19 @@
 import json
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image
 
 here = Path(__file__).parent
-w = here.parents[2] / ".tmp-work/v13"  # restyles + compose.py output (local only)
+w = here.parents[2] / ".tmp-work/v15"  # restyles + compose.py output (local only)
 root = here.parents[2]
-base = "scene-art/warehouse-v12"
+base = "scene-art/warehouse-v13"
 pub = root / "public" / base
 pub.mkdir(parents=True, exist_ok=True)
 
 
 
-# Story layer: only a spotlight on the gift. The walk to dispatch is painted on
-# the warehouse floor itself (Blender route + metres), so nothing floats over people.
-def story(im, gift, ring=1.0):
-    k = 2  # supersample
-    W, H = im.size
-    gx, gy = gift[0] * k, gift[1] * k
-    rx, ry = 96 * ring, 76 * ring
-    glow = Image.new("RGBA", (W * k, H * k))
-    ImageDraw.Draw(glow).ellipse([gx - rx - 28, gy - ry - 28, gx + rx + 28, gy + ry + 28], fill=(255, 214, 80, 170))
-    glow = glow.filter(ImageFilter.GaussianBlur(22))
-    d = ImageDraw.Draw(glow)
-    d.ellipse([gx - rx, gy - ry, gx + rx, gy + ry], fill=(0, 0, 0, 0))  # keep the gift itself clear
-    for w, c in ((14, "white"), (8, "#FFC20E")):
-        d.ellipse([gx - rx, gy - ry, gx + rx, gy + ry], outline=c, width=w)
-    return Image.alpha_composite(im.convert("RGBA"), glow.resize((W, H), Image.LANCZOS)).convert("RGB")
-
-
-def webp(src, dst, size, frame=None, name=None):
-    im = Image.open(src).convert("RGB").resize(size, Image.LANCZOS)
-    if frame and name:
-        im = story(im, frame["story"]["gift"], ring=0.85)
-    elif frame:
-        # Tight ring a little below the gift top, clear of the receiving sign above.
-        dy, ring = (25, 0.78) if size[0] > size[1] else (30, 0.95)  # px below the gift top; the tall frame shows it bigger
-        im = story(im, (frame["gift"][0], frame["gift"][1] + dy), ring=ring)
-    im.save(pub / dst, quality=84, method=6)
+def webp(src, dst, size):
+    Image.open(src).convert("RGB").resize(size, Image.LANCZOS).save(pub / dst, quality=84, method=6)
 
 
 def contours(frame, source, method):
@@ -58,14 +34,12 @@ def contours(frame, source, method):
             "regions": regions}
 
 
-METHOD = ("Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v10 restyle in the game-map style, 1 November 2026; "
+METHOD = ("Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v13 back-wall docks, game-map restyle, 1 November 2026; "
           "GPT restyle aligned back onto the render; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)")
 out = {}
 for layout, fmt, name in (("wide", "desk", "overview"), ("tall", "tall", "overview-mobile")):
     frame = json.loads((here / f"manifest-{layout}-plate.json").read_text())["formats"][fmt]
-    if layout == "tall":  # portrait: keeper's number sits level with the terminal's, so drop it to his chest
-        frame["regions"]["keeper"]["anchor"][1] += 50
-    webp(w / f"gen/{fmt}-final.png", f"{name}.webp", (frame["width"], frame["height"]), frame)
+    webp(w / f"gen/{fmt}-final.png", f"{name}.webp", (frame["width"], frame["height"]))
     data = contours(frame, f"{base}/{name}.webp", METHOD)
     suffix = "" if layout == "wide" else ".mobile"
     (root / f"src/scenes/inventory/segmentedContours{suffix}.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
@@ -75,12 +49,11 @@ for layout, fmt, name in (("wide", "desk", "overview"), ("tall", "tall", "overvi
 outcomes = json.loads((here / "manifest-wide-outcomes.json").read_text())["outcomes"]
 focus = {}
 for name, frame in outcomes.items():
-    webp(w / f"gen/outcome-{name}-final.png", f"outcome-{name}.webp", (frame["width"], frame["height"]), frame, name)
+    webp(w / f"gen/outcome-{name}-final.png", f"outcome-{name}.webp", (frame["width"], frame["height"]))
     xs = [x for x, _ in frame["regions"][name]["hull"]]
     focus[f"inventory-{name}"] = f"{round((min(xs) + max(xs)) / 2 / frame['width'] * 100, 1)}%"
-# The WMS story ends at dispatch: the forklift taking the gift out.
+# The WMS story runs from the desk monitor to the gift on the pallet jack at the dispatch door: keep both.
 wms = outcomes["wms"]
-# gift sits near the right edge; bias right so the "12 m" route to dispatch stays in frame
-focus["inventory-wms"] = f"{round(min(95, wms['story']['gift'][0] / wms['width'] * 100 + 6), 1)}%"
+focus["inventory-wms"] = f"{round((min(x for x, _ in wms['regions']['wms']['hull']) + wms['story']['gift'][0] + 40) / 2 / wms['width'] * 100, 1)}%"
 out["focus"] = focus
 print(json.dumps(out, ensure_ascii=False, indent=1))
