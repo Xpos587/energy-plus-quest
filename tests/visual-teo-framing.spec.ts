@@ -10,6 +10,7 @@ for (const [width, height] of [[390, 844], [752, 875], [1440, 900]]) {
       await page.screenshot({ path: info.outputPath(`${scene}-intro.png`) });
       const next = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
       for (let i = 0; i < 20 && await next.isVisible(); i++) await next.click();
+      if (scene === "lastmile") await stage.locator("img").evaluate((image: HTMLImageElement) => image.decode());
       await page.screenshot({ path: info.outputPath(`${scene}-choice.png`) });
       if (scene === "crane") {
         await expect(stage).toBeVisible();
@@ -39,7 +40,7 @@ for (const [width, height] of [[390, 844], [1440, 900]]) {
     };
     await open();
     const stage = page.locator('[data-world-scene="lastmile"]');
-    await expect(stage.locator("img")).toHaveAttribute("src", /revision-9\/choice-(wide|tall)-alva\.webp/);
+    await expect(stage.locator("img")).toHaveAttribute("src", /revision-10\/choice-(wide|tall)-alva\.webp/);
     for (const id of ["helicopter", "rover", "robot", "pipe-carrier"]) {
       const zone = stage.locator(`[data-lastmile-zone="${id}"]`);
       await expect(zone).toBeAttached();

@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 here = Path(__file__).parent / "gen"
-CROPS = {"wide": ("wide-base.png", (1042, 0, 630, 420)), "tall": ("tall-2.png", (424, 20, 600, 400))}
+CROPS = {"wide": ("wide-base-v91.png", (1042, 0, 630, 420)), "tall": ("tall-2-v91.png", (424, 20, 600, 400))}
 
 for fmt, (src, (x, y, w, h)) in CROPS.items():
     base = Image.open(here / src).convert("RGB")

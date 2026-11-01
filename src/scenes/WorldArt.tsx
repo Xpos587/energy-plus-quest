@@ -23,18 +23,21 @@ const shortMarkerLabels: Record<string, string> = {
 
 const markerInset = 24;
 const lastmileTopInset = 64; // Keep destinations clear of the “choose transport” overlay.
+const framingInset = 8; // Lastmile framing bounds objects, not markers; the outpainted canvas fills the rest.
 
 function framingScale(
   stage: { width: number; height: number },
   view: { width: number; height: number },
   hotspots: readonly { x: number; y: number }[],
+  inset = markerInset,
+  fill = stage, // Area the plane should cover; lastmile fills under the instruction overlay too.
 ) {
   if (!stage.width || !stage.height) return 0;
   const contain = Math.min(stage.width / view.width, stage.height / view.height);
-  const cover = Math.max(stage.width / view.width, stage.height / view.height);
+  const cover = Math.max(fill.width / view.width, fill.height / view.height);
   const limit = (stageSize: number, viewSize: number, values: number[]) => {
     const span = Math.max(...values) - Math.min(...values);
-    return span > 0 ? (stageSize - markerInset * 2) / (viewSize * span) : cover;
+    return span > 0 ? (stageSize - inset * 2) / (viewSize * span) : cover;
   };
   return Math.max(
     contain,
@@ -50,16 +53,17 @@ function framingOffset(
   stageSize: number,
   planeSize: number,
   values: number[],
+  inset = markerInset,
 ) {
   const centered = (stageSize - planeSize) / 2;
   if (planeSize <= stageSize || values.length === 0) return centered;
   const lower = Math.max(
     stageSize - planeSize,
-    markerInset - Math.min(...values) * planeSize,
+    inset - Math.min(...values) * planeSize,
   );
   const upper = Math.min(
     0,
-    stageSize - markerInset - Math.max(...values) * planeSize,
+    stageSize - inset - Math.max(...values) * planeSize,
   );
   return lower <= upper + 0.5 ? Math.max(lower, Math.min(upper, centered)) : centered;
 }
@@ -172,7 +176,7 @@ export function WorldArt({
   const scale = inventoryCamera
     ? inventoryCamera.scale
     : composition
-      ? framingScale({ ...size, height: Math.max(0, size.height - lastmileTopInset) }, view, composition.framing)
+      ? framingScale({ ...size, height: Math.max(0, size.height - lastmileTopInset) }, view, composition.framing, framingInset, size)
       : framingScale(size, view, hotspots);
   const interactiveMarkers = markers &&
     (scene !== "inventory" || (!showResult && !!onSelect));
@@ -242,10 +246,10 @@ export function WorldArt({
           } : composition ? {
             left: selectedTransport
               ? clampOffset(size.width / 2 - selectedTransport.x * composition.width * planeScale, size.width, planeWidth)
-              : framingOffset(size.width, planeWidth, composition.framing.map(({ x }) => x)),
+              : framingOffset(size.width, planeWidth, composition.framing.map(({ x }) => x), framingInset),
             top: selectedTransport
               ? clampOffset(size.height / 2 - selectedTransport.y * composition.height * planeScale, size.height, planeHeight)
-              : lastmileTopInset + framingOffset(size.height - lastmileTopInset, planeHeight, composition.framing.map(({ y }) => y)),
+              : lastmileTopInset + framingOffset(size.height - lastmileTopInset, planeHeight, composition.framing.map(({ y }) => y), framingInset),
             transform: "none",
           } : {
             left: framingOffset(size.width, planeWidth, hotspots.map(({ x }) => x)),

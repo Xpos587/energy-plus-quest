@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-01-warehouse-v11",
+  "release": "media-2026-11-01-lastmile-v9-1",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3840,44 +3840,6 @@
       ]
     },
     {
-      "name": "media-39-6b2160ebde64.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-lastmile-v9/media-39-6b2160ebde64.tar.gz",
-      "sha256": "6b2160ebde64b081f8d3e0308014eb5ee17e28b77815e43fcd368ebf2b33b6c8",
-      "bytes": 3512137,
-      "files": [
-        {
-          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-tall-alva.webp",
-          "sha256": "40e4adb84cca540c5a51a4c6603245ff1d8519f4eee2d057f63416edffc73d8c",
-          "bytes": 609030
-        },
-        {
-          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-tall-arseniy.webp",
-          "sha256": "4ca287573077e7c75a3e7eba6debaea29755d65662dfe2779c3c8f558261f70f",
-          "bytes": 609192
-        },
-        {
-          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-tall-khor.webp",
-          "sha256": "7c3d3eaec7e5b4367008cb04725bc41563f692d75c61439b5c63d2fe957cccbb",
-          "bytes": 601126
-        },
-        {
-          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-wide-alva.webp",
-          "sha256": "41b64679f50f18c401727e7ed8ad9ad07b4f823e6006b88534706e69b42765f3",
-          "bytes": 563048
-        },
-        {
-          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-wide-arseniy.webp",
-          "sha256": "9d70ed525bd5845cb0e92ec3e00ba869cd0e0c23ae89bab93cbed26bb3386a39",
-          "bytes": 564120
-        },
-        {
-          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-wide-khor.webp",
-          "sha256": "2897282bea2ab6049fd9a98d8fd431267822cbd861c2de04dbdd77e95660bc4d",
-          "bytes": 563944
-        }
-      ]
-    },
-    {
       "name": "media-41-64c1c6951a5d.tar.gz",
       "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-warehouse-v11/media-41-64c1c6951a5d.tar.gz",
       "sha256": "64c1c6951a5d50b1b141c016e3993134ddbb92837b1556bcbb56e54fbd4e18cb",
@@ -3922,6 +3884,44 @@
           "path": "public/scene-art/warehouse-v11/overview.webp",
           "sha256": "b09693dfd8b0503f05964895bb152b6b5967528925cb6a73a4a5cbb456fb0651",
           "bytes": 266178
+        }
+      ]
+    },
+    {
+      "name": "media-42-59e366c55fc6.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-lastmile-v9-1/media-42-59e366c55fc6.tar.gz",
+      "sha256": "59e366c55fc6a308d7f7d4fa68ef25d8bca7ee6079f398078d2b8d2292001bea",
+      "bytes": 11165169,
+      "files": [
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-10/choice-tall-alva.webp",
+          "sha256": "76a7769ddb1d673f12065b1aa9d33651bb7225bb1c853150a00a227fdadbd066",
+          "bytes": 1797564
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-10/choice-tall-arseniy.webp",
+          "sha256": "b969477b488430ce6a446dd1119078c466002d15a7cea48374e8c56d0b930775",
+          "bytes": 1798342
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-10/choice-tall-khor.webp",
+          "sha256": "de79188a8bafbc502df6eb88340555965b52a719b46cd7b960c3a9374e3b9113",
+          "bytes": 1796398
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-10/choice-wide-alva.webp",
+          "sha256": "875bf4e2c0587aa6284f0dffaadd255ed89af59ac7250a75eb3f1f0351736739",
+          "bytes": 1922528
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-10/choice-wide-arseniy.webp",
+          "sha256": "62761fcad2b75dc00e13782a93360b6987995a67a04f46c63f5a83ecabd65c2e",
+          "bytes": 1926960
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-10/choice-wide-khor.webp",
+          "sha256": "e0dac3501cd906f401cb83a44b1dc171343dde4979e52d5514c986988e9035fa",
+          "bytes": 1920612
         }
       ]
     }
