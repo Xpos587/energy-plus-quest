@@ -1,84 +1,84 @@
 {
   "width": 1536,
   "height": 1024,
-  "source": "scene-art/warehouse-v9/overview.webp",
-  "method": "Generated with GPT Image 2 from the opening route thumbnail style (design/scene-03/v9), 1 November 2026; plaques and zone signs lettered by letter.py; regions drawn by hand in regions.json; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)",
+  "source": "scene-art/warehouse-v10/overview.webp",
+  "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v10 restyle in the game-map style, 1 November 2026; GPT restyle aligned back onto the render; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)",
   "overviewRequiredBounds": {
-    "left": 53,
-    "top": 95,
-    "right": 1498,
-    "bottom": 243
+    "left": 221,
+    "top": 385,
+    "right": 1434,
+    "bottom": 676
   },
   "regions": {
     "entrance": {
-      "path": "M 168 488 L 438 488 L 438 692 L 168 692 Z",
+      "path": "M 298 760 L 554 706 L 567 732 L 567 827 L 311 881 L 298 854 Z",
       "anchor": {
-        "x": 0.2246,
-        "y": 0.5078
+        "x": 0.2849609375,
+        "y": 0.7099609375
       },
       "anchorPixel": [
-        345,
-        520
-      ],
-      "contourCount": 1
-    },
-    "wms": {
-      "path": "M 630 612 L 772 612 L 772 834 L 630 834 Z",
-      "anchor": {
-        "x": 0.4557,
-        "y": 0.5859
-      },
-      "anchorPixel": [
-        700,
-        600
+        438,
+        727
       ],
       "contourCount": 1
     },
     "keeper": {
-      "path": "M 1208 690 L 1308 690 L 1308 940 L 1208 940 Z",
+      "path": "M 1313 542 L 1377 529 L 1389 552 L 1389 599 L 1325 613 L 1313 590 Z",
       "anchor": {
-        "x": 0.8216,
-        "y": 0.5977
+        "x": 0.9259114583333333,
+        "y": 0.52021484375
       },
       "anchorPixel": [
-        1262,
-        612
+        1422,
+        533
       ],
       "contourCount": 1
     },
-    "alphabet-boat": {
-      "path": "M 644 186 L 754 186 L 754 500 L 644 500 Z",
+    "wms": {
+      "path": "M 919 555 L 978 543 L 986 558 L 986 639 L 927 651 L 919 636 Z",
       "anchor": {
-        "x": 0.4544,
-        "y": 0.332
+        "x": 0.6201822916666667,
+        "y": 0.52158203125
       },
       "anchorPixel": [
-        698,
-        340
-      ],
-      "contourCount": 1
-    },
-    "alphabet-socks": {
-      "path": "M 769 199 L 881 199 L 881 516 L 769 516 Z",
-      "anchor": {
-        "x": 0.5365,
-        "y": 0.3467
-      },
-      "anchorPixel": [
-        824,
-        355
+        953,
+        534
       ],
       "contourCount": 1
     },
     "alphabet-camera": {
-      "path": "M 897 214 L 1014 214 L 1014 540 L 897 540 Z",
+      "path": "M 1048 276 L 1115 262 L 1126 285 L 1126 467 L 1060 481 L 1048 458 Z",
       "anchor": {
-        "x": 0.6211,
-        "y": 0.3633
+        "x": 0.7106770833333332,
+        "y": 0.262109375
       },
       "anchorPixel": [
-        954,
-        372
+        1092,
+        268
+      ],
+      "contourCount": 1
+    },
+    "alphabet-socks": {
+      "path": "M 833 321 L 900 307 L 912 330 L 912 512 L 845 526 L 833 502 Z",
+      "anchor": {
+        "x": 0.570703125,
+        "y": 0.30595703125
+      },
+      "anchorPixel": [
+        877,
+        313
+      ],
+      "contourCount": 1
+    },
+    "alphabet-boat": {
+      "path": "M 767 335 L 833 321 L 845 344 L 845 526 L 778 540 L 767 516 Z",
+      "anchor": {
+        "x": 0.52734375,
+        "y": 0.31953125
+      },
+      "anchorPixel": [
+        810,
+        327
       ],
       "contourCount": 1
     }

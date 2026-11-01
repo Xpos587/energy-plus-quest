@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-01-lastmile-v9",
+  "release": "media-2026-11-01-warehouse-v10",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3840,54 +3840,6 @@
       ]
     },
     {
-      "name": "media-37-9de43a6f93f9.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-warehouse-v9/media-37-9de43a6f93f9.tar.gz",
-      "sha256": "9de43a6f93f908c3896e5df387515d100759403674aa6c1592939cd990583e0f",
-      "bytes": 1448135,
-      "files": [
-        {
-          "path": "public/scene-art/warehouse-v9/outcome-alphabet-boat.webp",
-          "sha256": "e9ff10492efedc673a19940c81439212ce68f01f059aa3c52ddbe34dd7042d98",
-          "bytes": 180308
-        },
-        {
-          "path": "public/scene-art/warehouse-v9/outcome-alphabet-camera.webp",
-          "sha256": "114e2fdcb7de2369c3e7e866892d28cf7e1ecd4b187965081ec84bbc3a4b60ed",
-          "bytes": 180116
-        },
-        {
-          "path": "public/scene-art/warehouse-v9/outcome-alphabet-socks.webp",
-          "sha256": "c421b349f61b8a29b74aa876669d42c6476311b2b0e6dcce066879d748e50e81",
-          "bytes": 188112
-        },
-        {
-          "path": "public/scene-art/warehouse-v9/outcome-entrance.webp",
-          "sha256": "c29a9ba2616be6584198ef8f7e87a1164f5e691d3322e334489e95840bf89d99",
-          "bytes": 184598
-        },
-        {
-          "path": "public/scene-art/warehouse-v9/outcome-keeper.webp",
-          "sha256": "e0fafbda6905c38691b059631c7393e67b188c27086474dbe76b01ad809e5adc",
-          "bytes": 147012
-        },
-        {
-          "path": "public/scene-art/warehouse-v9/outcome-wms.webp",
-          "sha256": "10869fd4ae5fede231ba4b241523fb32be5d677a06da29be2687e6b381eb92fc",
-          "bytes": 165082
-        },
-        {
-          "path": "public/scene-art/warehouse-v9/overview-mobile.webp",
-          "sha256": "ae3e017579fd0ff2dc10d1b1b665d00f9d02be6f1eb238ef8c056ae7e4d02d59",
-          "bytes": 195444
-        },
-        {
-          "path": "public/scene-art/warehouse-v9/overview.webp",
-          "sha256": "da89dd4cfe5fcaa43b26e6e4c9054eaca39cda21088ed530760558b0a17795e8",
-          "bytes": 205826
-        }
-      ]
-    },
-    {
       "name": "media-39-6b2160ebde64.tar.gz",
       "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-lastmile-v9/media-39-6b2160ebde64.tar.gz",
       "sha256": "6b2160ebde64b081f8d3e0308014eb5ee17e28b77815e43fcd368ebf2b33b6c8",
@@ -3922,6 +3874,54 @@
           "path": "public/scene-art/lastmile-family-v1/revision-9/choice-wide-khor.webp",
           "sha256": "2897282bea2ab6049fd9a98d8fd431267822cbd861c2de04dbdd77e95660bc4d",
           "bytes": 563944
+        }
+      ]
+    },
+    {
+      "name": "media-41-3fcda73dd1e5.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-warehouse-v10/media-41-3fcda73dd1e5.tar.gz",
+      "sha256": "3fcda73dd1e51c92bf2eb03201a295385d62ad6fcdb05a764fe96be96007ac2e",
+      "bytes": 1897077,
+      "files": [
+        {
+          "path": "public/scene-art/warehouse-v10/outcome-alphabet-boat.webp",
+          "sha256": "ca5147b2c7bb1576c15e6709db477b2e16bdb9bf556d51a4e1a837349bf6b3d0",
+          "bytes": 250884
+        },
+        {
+          "path": "public/scene-art/warehouse-v10/outcome-alphabet-camera.webp",
+          "sha256": "801df4ffe1ca3dd0a002e498f77c4ba4cd30754f15c87f348e69822b5b78efce",
+          "bytes": 238264
+        },
+        {
+          "path": "public/scene-art/warehouse-v10/outcome-alphabet-socks.webp",
+          "sha256": "1902d14cf8b8823687b0d60e1706dc136ac5dabe7d76af04fd8929fc0a66a4cd",
+          "bytes": 237834
+        },
+        {
+          "path": "public/scene-art/warehouse-v10/outcome-entrance.webp",
+          "sha256": "116584c16b768f88d1bd4108164248eb31c668a2b84c36b275eb751bb84b46bd",
+          "bytes": 203278
+        },
+        {
+          "path": "public/scene-art/warehouse-v10/outcome-keeper.webp",
+          "sha256": "386fe8f06246623af1a8a7c879ba970a61d017337136a11abafba1536c09742e",
+          "bytes": 202918
+        },
+        {
+          "path": "public/scene-art/warehouse-v10/outcome-wms.webp",
+          "sha256": "9eeb90a9b8ec035d9e1fd0e8d1d7a9f327aff49b528fc74e19a6ea1fa65c6660",
+          "bytes": 204624
+        },
+        {
+          "path": "public/scene-art/warehouse-v10/overview-mobile.webp",
+          "sha256": "ea68600ac94066f6ed1ac9638d9ee322f4983221089538f3fe3cd4bdf44edc48",
+          "bytes": 291130
+        },
+        {
+          "path": "public/scene-art/warehouse-v10/overview.webp",
+          "sha256": "86733aa26e349c0763e6cfefc6bc7b96037e36426ba74fb6a662576377bc01b1",
+          "bytes": 266192
         }
       ]
     }
