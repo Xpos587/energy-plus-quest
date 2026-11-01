@@ -7,7 +7,7 @@ from PIL import Image
 
 here = Path(__file__).parent
 root = here.parents[2]
-base = "scene-art/warehouse-v7"
+base = "scene-art/warehouse-v8"
 pub = root / "public" / base
 pub.mkdir(parents=True, exist_ok=True)
 SS = 1.5  # plate supersampling

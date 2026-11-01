@@ -1,8 +1,8 @@
 {
   "width": 1536,
   "height": 1024,
-  "source": "scene-art/warehouse-v7/overview.webp",
-  "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera, 29 October 2026; GPT restyle aligned back onto the render; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)",
+  "source": "scene-art/warehouse-v8/overview.webp",
+  "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera, 1 November 2026; GPT restyle (v8 game style, refs: barge plate, compact truck, Petr) aligned back onto the render; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)",
   "overviewRequiredBounds": {
     "left": 221,
     "top": 385,

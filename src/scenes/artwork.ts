@@ -25,7 +25,7 @@ export function sceneOutcomeImage(
   if (scene === "inventory") {
     // Plaques read left to right: receiving (А–Б) to dispatch (Ю–Я).
     const variant = selectedId === "alphabet" ? `alphabet-${context.parcel}` : selectedId;
-    return imageAsset(`scene-art/warehouse-v7/outcome-${variant}.webp`);
+    return imageAsset(`scene-art/warehouse-v8/outcome-${variant}.webp`);
   }
   if (scene === "crane") return imageAsset(craneOutcomeImage(selectedId));
   if (scene === "lastmile") {

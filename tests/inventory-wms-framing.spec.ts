@@ -10,7 +10,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       await page.locator('[data-choice-confirm]').click();
       const img = page.locator('[data-scene-consequence="inventory-wms"] img');
       await img.evaluate((image: HTMLImageElement) => image.decode());
-      await expect(img).toHaveAttribute('src', /warehouse-v7\/outcome-wms\.webp$/);
+      await expect(img).toHaveAttribute('src', /warehouse-v8\/outcome-wms\.webp$/);
       const action = await img.evaluate((image: HTMLImageElement) => {
         const scale = Math.max(image.clientWidth / image.naturalWidth, image.clientHeight / image.naturalHeight);
         const focus = getComputedStyle(image).objectPosition.split(' ').map(parseFloat);
