@@ -58,7 +58,7 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/warehouse-v10/overview.webp",
+        "image": "scene-art/warehouse-v11/overview.webp",
         "width": 1536,
         "height": 1024,
         "hotspots": [
@@ -86,7 +86,7 @@
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/warehouse-v10/overview-mobile.webp",
+        "image": "scene-art/warehouse-v11/overview-mobile.webp",
         "width": 1024,
         "height": 1536,
         "hotspots": [

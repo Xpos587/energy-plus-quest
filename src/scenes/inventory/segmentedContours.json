@@ -1,7 +1,7 @@
 {
   "width": 1536,
   "height": 1024,
-  "source": "scene-art/warehouse-v10/overview.webp",
+  "source": "scene-art/warehouse-v11/overview.webp",
   "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py) camera; v10 restyle in the game-map style, 1 November 2026; GPT restyle aligned back onto the render; alphabet runs left to right, from receiving (А–Б) to dispatch (Ю–Я)",
   "overviewRequiredBounds": {
     "left": 221,

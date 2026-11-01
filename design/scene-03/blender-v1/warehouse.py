@@ -698,6 +698,17 @@ FX = X1 - 4.4
 forklift("o_agv_hot", FX, LANE_C, 0, load=False)
 aabb("o_agv_hot", "#C79A5B", FX + 0.9, LANE_C - 0.6, FZ + 0.2, FX + 2.1, LANE_C + 0.6, FZ + 0.35)
 O_GIFT_FORK = gift("o_gift_fork", FX + 1.5, LANE_C, FZ + 0.35, k=1.0, on_pallet=False)
+# Story overlay for the outcome stills (drawn by v10/compose.py): the gift to
+# spotlight and the floor path it travels (or is searched along).
+f3 = lambda pts: [Vector((x, y, FZ + 0.05)) for x, y in pts]
+PX = O_PUZZLED[0]
+STORY = {
+    "entrance": (O_GIFT_ENTRANCE, f3([(FREE_CELL[0], EY1 + 0.3), (FREE_CELL[0], LANE_C), (P["ROUTE0"][0], LANE_C), P["ROUTE0"]])),
+    **{f"alphabet-{p}": (O_GIFT_ALPHA[p], f3([(RANGES[i][2] + RW / 2, RY0 - 0.4), (RANGES[i][2] + RW / 2, LANE_C), (P["ROUTE0"][0], LANE_C), P["ROUTE0"]]))
+       for p, i in ALPHA_ROW.items()},
+    "keeper": (O_GIFT_HOT, f3([(PX.x, PX.y), (PX.x - 3, RY0 - 1.6), (PX.x - 9, RY0 - 1.2), (PX.x - 11, LANE1), (PX.x - 4, LANE_C), (PX.x + 1, LANE1 + 0.6), (P["HOT"][0] - 1.0, P["HOT"][1] - 0.8)])),
+    "wms": (O_GIFT_FORK, f3(P["HOT_ROUTE"])),
+}
 
 flush()
 # ---- light, world, ink --------------------------------------------------------
@@ -912,6 +923,9 @@ if MODE == "outcomes":
         scene.camera = cam
         bpy.context.view_layer.update()
         manifest["outcomes"][name] = frame_data(cam, W, H)
+        g, route = STORY[name]
+        manifest["outcomes"][name]["story"] = {"gift": project(cam, g, W, H), "route": [project(cam, q, W, H) for q in route],
+                                               "hot": [project(cam, q, W, H) for q in f3(P["HOT_ROUTE"])]}
         show_only((ALL - hidden) | extra)
         render(OUT / f"outcome-{name}.png", W, H)
         show_only(((ALL - hidden) | extra) - TEXT_GROUPS)

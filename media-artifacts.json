@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-01-warehouse-v10",
+  "release": "media-2026-11-01-warehouse-v11",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3878,50 +3878,50 @@
       ]
     },
     {
-      "name": "media-41-3fcda73dd1e5.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-warehouse-v10/media-41-3fcda73dd1e5.tar.gz",
-      "sha256": "3fcda73dd1e51c92bf2eb03201a295385d62ad6fcdb05a764fe96be96007ac2e",
-      "bytes": 1897077,
+      "name": "media-41-64c1c6951a5d.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-warehouse-v11/media-41-64c1c6951a5d.tar.gz",
+      "sha256": "64c1c6951a5d50b1b141c016e3993134ddbb92837b1556bcbb56e54fbd4e18cb",
+      "bytes": 1929588,
       "files": [
         {
-          "path": "public/scene-art/warehouse-v10/outcome-alphabet-boat.webp",
-          "sha256": "ca5147b2c7bb1576c15e6709db477b2e16bdb9bf556d51a4e1a837349bf6b3d0",
-          "bytes": 250884
+          "path": "public/scene-art/warehouse-v11/outcome-alphabet-boat.webp",
+          "sha256": "b196cc9510a44669336587bb1aef102b9066e3aee6abd765b6e777fcea243259",
+          "bytes": 254294
         },
         {
-          "path": "public/scene-art/warehouse-v10/outcome-alphabet-camera.webp",
-          "sha256": "801df4ffe1ca3dd0a002e498f77c4ba4cd30754f15c87f348e69822b5b78efce",
-          "bytes": 238264
+          "path": "public/scene-art/warehouse-v11/outcome-alphabet-camera.webp",
+          "sha256": "a3b9ff22adbc45c3c3beb20e857adb84ba04aa8f7b412a9967da61d8ea9ea59a",
+          "bytes": 244662
         },
         {
-          "path": "public/scene-art/warehouse-v10/outcome-alphabet-socks.webp",
-          "sha256": "1902d14cf8b8823687b0d60e1706dc136ac5dabe7d76af04fd8929fc0a66a4cd",
-          "bytes": 237834
+          "path": "public/scene-art/warehouse-v11/outcome-alphabet-socks.webp",
+          "sha256": "3892e190584a021738521813a40b7f4969aafb4dc98637e30a9aae449a1a3ed3",
+          "bytes": 241100
         },
         {
-          "path": "public/scene-art/warehouse-v10/outcome-entrance.webp",
-          "sha256": "116584c16b768f88d1bd4108164248eb31c668a2b84c36b275eb751bb84b46bd",
-          "bytes": 203278
+          "path": "public/scene-art/warehouse-v11/outcome-entrance.webp",
+          "sha256": "c5a1f165c76fc2e969e1db278a711d61df164b2290f2eb3aea1fd2c2f509d59b",
+          "bytes": 211690
         },
         {
-          "path": "public/scene-art/warehouse-v10/outcome-keeper.webp",
-          "sha256": "386fe8f06246623af1a8a7c879ba970a61d017337136a11abafba1536c09742e",
-          "bytes": 202918
+          "path": "public/scene-art/warehouse-v11/outcome-keeper.webp",
+          "sha256": "10bd8110b8424e2e8c074f4a91274b87dacaf520e78869b0a639a7bb8fc767a4",
+          "bytes": 213186
         },
         {
-          "path": "public/scene-art/warehouse-v10/outcome-wms.webp",
-          "sha256": "9eeb90a9b8ec035d9e1fd0e8d1d7a9f327aff49b528fc74e19a6ea1fa65c6660",
-          "bytes": 204624
+          "path": "public/scene-art/warehouse-v11/outcome-wms.webp",
+          "sha256": "2cb13a74ee752d1cf884656d53ccfe9fab3d588870fc29fcf5b4173877a0cdf6",
+          "bytes": 207934
         },
         {
-          "path": "public/scene-art/warehouse-v10/overview-mobile.webp",
-          "sha256": "ea68600ac94066f6ed1ac9638d9ee322f4983221089538f3fe3cd4bdf44edc48",
-          "bytes": 291130
+          "path": "public/scene-art/warehouse-v11/overview-mobile.webp",
+          "sha256": "cd6d1ec6755aa52120ca43f4e2233bc1b78c95d45270c5eae2b710563184aaad",
+          "bytes": 288650
         },
         {
-          "path": "public/scene-art/warehouse-v10/overview.webp",
-          "sha256": "86733aa26e349c0763e6cfefc6bc7b96037e36426ba74fb6a662576377bc01b1",
-          "bytes": 266192
+          "path": "public/scene-art/warehouse-v11/overview.webp",
+          "sha256": "b09693dfd8b0503f05964895bb152b6b5967528925cb6a73a4a5cbb456fb0651",
+          "bytes": 266178
         }
       ]
     }
