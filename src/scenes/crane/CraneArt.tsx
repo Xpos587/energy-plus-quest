@@ -227,7 +227,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
               <path className={styles.signal} d={`M${anchor.pru[0]} ${anchor.pru[1] - 20} Q${(anchor.pru[0] + anchor.nearCabin[0]) / 2} ${Math.min(anchor.pru[1], anchor.nearCabin[1]) - 170} ${anchor.nearCabin[0]} ${anchor.nearCabin[1] - 24}`} />
             )}
             {beat.clock !== undefined && (
-              <g transform={`translate(${anchor.nearCabin[0] + 80} ${anchor.nearCabin[1] - 70})`}>
+              <g transform={`translate(${(anchor.nearCabin[0] + anchor.farCabin[0]) / 2} ${anchor.nearCabin[1] - 40})`}>
                 <circle className={styles.dial} r="26" />
                 <line className={styles.hand} y2="-12" transform={`rotate(${beat.clock * 90})`} />
                 <line className={styles.hand} y2="-19" transform={`rotate(${beat.clock * 1080})`} />
