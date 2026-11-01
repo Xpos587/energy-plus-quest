@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-01-warehouse-v8",
+  "release": "media-2026-11-01-warehouse-v9",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3840,50 +3840,50 @@
       ]
     },
     {
-      "name": "media-36-fcbba96b9e22.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-warehouse-v8/media-36-fcbba96b9e22.tar.gz",
-      "sha256": "fcbba96b9e22f35795cdeff6f2b4ec33d193400d9cb0b2265cb44c4de8da796c",
-      "bytes": 1412696,
+      "name": "media-37-9de43a6f93f9.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-warehouse-v9/media-37-9de43a6f93f9.tar.gz",
+      "sha256": "9de43a6f93f908c3896e5df387515d100759403674aa6c1592939cd990583e0f",
+      "bytes": 1448135,
       "files": [
         {
-          "path": "public/scene-art/warehouse-v8/outcome-alphabet-boat.webp",
-          "sha256": "9dd403ee4c179b8441a8a66721de05fbee8848b59ea489746afeb69024f8ac59",
-          "bytes": 198600
+          "path": "public/scene-art/warehouse-v9/outcome-alphabet-boat.webp",
+          "sha256": "e9ff10492efedc673a19940c81439212ce68f01f059aa3c52ddbe34dd7042d98",
+          "bytes": 180308
         },
         {
-          "path": "public/scene-art/warehouse-v8/outcome-alphabet-camera.webp",
-          "sha256": "3dfc2235ef602573e0104d491b78ca68190ddc0d38e493a6b5538989f00fbe3e",
-          "bytes": 180358
+          "path": "public/scene-art/warehouse-v9/outcome-alphabet-camera.webp",
+          "sha256": "114e2fdcb7de2369c3e7e866892d28cf7e1ecd4b187965081ec84bbc3a4b60ed",
+          "bytes": 180116
         },
         {
-          "path": "public/scene-art/warehouse-v8/outcome-alphabet-socks.webp",
-          "sha256": "5283010c46eb929fa3af775e5229d557a192a17dc61e6a63379b3c3968fff57d",
-          "bytes": 200718
+          "path": "public/scene-art/warehouse-v9/outcome-alphabet-socks.webp",
+          "sha256": "c421b349f61b8a29b74aa876669d42c6476311b2b0e6dcce066879d748e50e81",
+          "bytes": 188112
         },
         {
-          "path": "public/scene-art/warehouse-v8/outcome-entrance.webp",
-          "sha256": "8dc29f06bc6b1c523e91cfcbcb1eba0eed54d9fe4484f2b54a7c1e29c824ea89",
-          "bytes": 156586
+          "path": "public/scene-art/warehouse-v9/outcome-entrance.webp",
+          "sha256": "c29a9ba2616be6584198ef8f7e87a1164f5e691d3322e334489e95840bf89d99",
+          "bytes": 184598
         },
         {
-          "path": "public/scene-art/warehouse-v8/outcome-keeper.webp",
-          "sha256": "1895c2a09765e4b879fb1e87db3210ef7bdec2efaeeedbf64c5459b1aeac4632",
-          "bytes": 145450
+          "path": "public/scene-art/warehouse-v9/outcome-keeper.webp",
+          "sha256": "e0fafbda6905c38691b059631c7393e67b188c27086474dbe76b01ad809e5adc",
+          "bytes": 147012
         },
         {
-          "path": "public/scene-art/warehouse-v8/outcome-wms.webp",
-          "sha256": "a0f9cad766150dc2050e7fa42d4be84bc586c6be2f2c7270299353b838026faa",
-          "bytes": 164932
+          "path": "public/scene-art/warehouse-v9/outcome-wms.webp",
+          "sha256": "10869fd4ae5fede231ba4b241523fb32be5d677a06da29be2687e6b381eb92fc",
+          "bytes": 165082
         },
         {
-          "path": "public/scene-art/warehouse-v8/overview-mobile.webp",
-          "sha256": "72de1d7feeb841ff4d0fed361ee2bb1fe8b4f0aca2d10d30291759c764dcf329",
-          "bytes": 192572
+          "path": "public/scene-art/warehouse-v9/overview-mobile.webp",
+          "sha256": "ae3e017579fd0ff2dc10d1b1b665d00f9d02be6f1eb238ef8c056ae7e4d02d59",
+          "bytes": 195444
         },
         {
-          "path": "public/scene-art/warehouse-v8/overview.webp",
-          "sha256": "f93c45f52fa28024a651a8144bcb60020114e57c7894c54c0607a3e1275bcfa0",
-          "bytes": 171878
+          "path": "public/scene-art/warehouse-v9/overview.webp",
+          "sha256": "da89dd4cfe5fcaa43b26e6e4c9054eaca39cda21088ed530760558b0a17795e8",
+          "bytes": 205826
         }
       ]
     }

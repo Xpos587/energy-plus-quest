@@ -10,14 +10,14 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       await page.locator('[data-choice-confirm]').click();
       const img = page.locator('[data-scene-consequence="inventory-wms"] img');
       await img.evaluate((image: HTMLImageElement) => image.decode());
-      await expect(img).toHaveAttribute('src', /warehouse-v8\/outcome-wms\.webp$/);
+      await expect(img).toHaveAttribute('src', /warehouse-v9\/outcome-wms\.webp$/);
       const action = await img.evaluate((image: HTMLImageElement) => {
         const scale = Math.max(image.clientWidth / image.naturalWidth, image.clientHeight / image.naturalHeight);
         const focus = getComputedStyle(image).objectPosition.split(' ').map(parseFloat);
         const left = (image.clientWidth - image.naturalWidth * scale) * focus[0] / 100;
         const top = (image.clientHeight - image.naturalHeight * scale) * focus[1] / 100;
-        // Terminal, worker and the forklift taking the gift out at dispatch in the 1960×840 source.
-        return { left: left + 440 * scale, right: left + 1340 * scale, top: top + 330 * scale, bottom: top + 800 * scale, width: image.clientWidth, height: image.clientHeight };
+        // Kiosk screen, the forklift and the gift entering the truck in the 1960×840 source.
+        return { left: left + 600 * scale, right: left + 1500 * scale, top: top + 380 * scale, bottom: top + 760 * scale, width: image.clientWidth, height: image.clientHeight };
       });
       expect(action.left).toBeGreaterThanOrEqual(0);
       expect(action.right).toBeLessThanOrEqual(action.width);
