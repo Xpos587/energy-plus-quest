@@ -161,13 +161,8 @@
 .stage[data-world-scene="lastmile"] .marker:is(:hover, :focus-visible, [aria-pressed="true"]) { z-index: 7; }
 @media (max-width: 420px) {
   .stage[data-world-scene="lastmile"] .markerCaption { height: 32px; padding-left: 36px; font-size: 13px; }
-  .stage[data-world-scene="lastmile"] .marker[data-caption-side="left"] .markerCaption { padding: 0 36px 0 12px; }
+  .stage[data-world-scene="lastmile"] .marker[data-caption-side="left"] .markerCaption { padding: 0 36px 0 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .stage[data-world-scene="lastmile"] :is(.marker::before, .markerCaption) { transition: none; }
-}
-/* Where the framed art cannot cover the stage, a blurred copy of it fills the bands. */
-.stage[data-world-scene="lastmile"]::before {
-  content: ""; position: absolute; inset: -24px; z-index: -1;
-  background: var(--world-art) center / cover; filter: blur(18px) saturate(.9); opacity: .9;
 }

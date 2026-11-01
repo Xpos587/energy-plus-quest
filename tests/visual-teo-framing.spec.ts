@@ -40,7 +40,7 @@ for (const [width, height] of [[390, 844], [1440, 900]]) {
     };
     await open();
     const stage = page.locator('[data-world-scene="lastmile"]');
-    await expect(stage.locator("img")).toHaveAttribute("src", /revision-10\/choice-(wide|tall)-alva\.webp/);
+    await expect(stage.locator("img")).toHaveAttribute("src", /revision-11\/choice-(wide|tall)-alva\.webp/);
     for (const id of ["helicopter", "rover", "robot", "pipe-carrier"]) {
       const zone = stage.locator(`[data-lastmile-zone="${id}"]`);
       await expect(zone).toBeAttached();

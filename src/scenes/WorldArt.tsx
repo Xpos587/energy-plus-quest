@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactNode, useLayoutEffect, useRef, useState } from "react";
+import { type ReactNode, useLayoutEffect, useRef, useState } from "react";
 import mapStyles from "../App.module.css";
 import { ArtworkLoading } from "../components/ArtworkLoading";
 import { useArtworkLoading } from "../components/useArtworkLoading";
@@ -31,11 +31,10 @@ function framingScale(
   view: { width: number; height: number },
   hotspots: readonly { x: number; y: number }[],
   inset = markerInset,
-  fill = stage, // Area the plane should cover; lastmile fills under the instruction overlay too.
 ) {
   if (!stage.width || !stage.height) return 0;
   const contain = Math.min(stage.width / view.width, stage.height / view.height);
-  const cover = Math.max(fill.width / view.width, fill.height / view.height);
+  const cover = Math.max(stage.width / view.width, stage.height / view.height);
   const limit = (stageSize: number, viewSize: number, values: number[]) => {
     const span = Math.max(...values) - Math.min(...values);
     return span > 0 ? (stageSize - inset * 2) / (viewSize * span) : cover;
@@ -48,6 +47,21 @@ function framingScale(
       limit(stage.height, view.height, hotspots.map(({ y }) => y)),
     ),
   );
+}
+
+// Lastmile always covers the stage; the outpainted canvas leaves room to fit the framed objects below the hint.
+function coverScale(
+  stage: { width: number; height: number },
+  top: number,
+  view: { width: number; height: number },
+  framing: readonly { x: number; y: number }[],
+) {
+  if (!stage.width || !stage.height) return 0;
+  const span = (values: number[]) => Math.max(...values) - Math.min(...values);
+  return Math.max(stage.width / view.width, stage.height / view.height, Math.min(
+    (stage.width - framingInset * 2) / (view.width * span(framing.map(({ x }) => x))),
+    (stage.height - top - framingInset * 2) / (view.height * span(framing.map(({ y }) => y))),
+  ));
 }
 
 function framingOffset(
@@ -170,7 +184,7 @@ export function WorldArt({
       : containedArea(views.mobile) > containedArea(views.desktop)
         ? "mobile"
         : "desktop";
-  const lastmileFormat = size.width / size.height >= 1.15 ? "wide" : "tall";
+  const lastmileFormat = size.width / Math.max(1, size.height - lastmileTopInset(size.width)) >= 1.1 ? "wide" : "tall";
   const lastmileComposition = scene === "lastmile"
     ? { ...lastmileChoiceArtwork[lastmileFormat], image: lastmileChoiceImage(lastmileFormat, context.recipient) }
     : undefined;
@@ -214,7 +228,7 @@ export function WorldArt({
   const scale = inventoryCamera
     ? inventoryCamera.scale
     : composition
-      ? framingScale({ ...size, height: Math.max(0, size.height - lastmileTopInset(size.width)) }, view, composition.framing, framingInset, size)
+      ? coverScale(size, lastmileTopInset(size.width), view, composition.framing)
       : framingScale(size, view, hotspots);
   const interactiveMarkers = markers &&
     (scene !== "inventory" || (!showResult && !!onSelect));
@@ -270,7 +284,6 @@ export function WorldArt({
       data-event={scene === "lastmile" ? outcome : undefined}
       data-gift-location={giftLocation}
       data-rescue={rescue}
-      style={scene === "lastmile" ? { "--world-art": `url("${artwork.src}")` } as CSSProperties : undefined}
     >
       <div
         className={styles.plane}
@@ -288,9 +301,8 @@ export function WorldArt({
               : framingOffset(size.width, planeWidth, composition.framing.map(({ x }) => x), framingInset),
             top: selectedTransport
               ? clampOffset(size.height / 2 - selectedTransport.y * composition.height * planeScale, size.height, planeHeight)
-              // Art taller than the stage never opens a band above it; shorter art keeps clear of the hint.
-              : (planeHeight >= size.height ? (top: number) => Math.max(size.height - planeHeight, Math.min(0, top)) : (top: number) => top)(
-                lastmileTopInset(size.width) + framingOffset(size.height - lastmileTopInset(size.width), planeHeight, composition.framing.map(({ y }) => y), framingInset)),
+              : Math.max(size.height - planeHeight, Math.min(0,
+                lastmileTopInset(size.width) + framingOffset(size.height - lastmileTopInset(size.width), planeHeight, composition.framing.map(({ y }) => y), framingInset))),
             transform: "none",
           } : {
             left: framingOffset(size.width, planeWidth, hotspots.map(({ x }) => x)),
