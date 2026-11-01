@@ -1,28 +1,28 @@
-// Coordinates in revision-8 choice-map pixels (the shipped WebP is 2x).
+// Coordinates in revision-9 choice-map pixels (native generated size).
 export const lastmileChoiceArtwork = {
   wide: {
-    width: 1942,
-    height: 809,
-    // Entire barge, vehicle silhouettes, aerial and destination clearing.
-    framing: [{ x: 405 / 1942, y: 27 / 809 }, { x: 1670 / 1942, y: 798 / 809 }],
-    original: { x: 0, y: 0, width: 1942, height: 809 },
+    width: 1672,
+    height: 941,
+    // Entire barge, vehicles, АБК and the chum camp.
+    framing: [{ x: 5 / 1672, y: 22 / 941 }, { x: 1628 / 1672, y: 908 / 941 }],
+    original: { x: 0, y: 0, width: 1672, height: 941 },
     hotspots: [
-      { id: "helicopter", x: 650 / 1942, y: 270 / 809 },
-      { id: "rover", x: 910 / 1942, y: 550 / 809 },
-      { id: "robot", x: 1010 / 1942, y: 663 / 809 },
-      { id: "pipe-carrier", x: 780 / 1942, y: 433 / 809 },
+      { id: "helicopter", x: 240 / 1672, y: 268 / 941 },
+      { id: "rover", x: 455 / 1672, y: 462 / 941 },
+      { id: "robot", x: 628 / 1672, y: 497 / 941 },
+      { id: "pipe-carrier", x: 230 / 1672, y: 442 / 941 },
     ],
   },
   tall: {
-    width: 948,
-    height: 1659,
-    original: { x: 0, y: 0, width: 948, height: 1659 },
-    framing: [{ x: 17 / 948, y: 300 / 1659 }, { x: 920 / 948, y: 1390 / 1659 }],
+    width: 1024,
+    height: 1536,
+    original: { x: 0, y: 0, width: 1024, height: 1536 },
+    framing: [{ x: 55 / 1024, y: 70 / 1536 }, { x: 1005 / 1024, y: 1432 / 1536 }],
     hotspots: [
-      { id: "helicopter", x: 145 / 948, y: 866 / 1659 },
-      { id: "rover", x: 565 / 948, y: 1000 / 1659 },
-      { id: "robot", x: 723 / 948, y: 1064 / 1659 },
-      { id: "pipe-carrier", x: 395 / 948, y: 950 / 1659 },
+      { id: "helicopter", x: 270 / 1024, y: 762 / 1536 },
+      { id: "rover", x: 610 / 1024, y: 915 / 1536 },
+      { id: "robot", x: 823 / 1024, y: 1025 / 1536 },
+      { id: "pipe-carrier", x: 355 / 1024, y: 945 / 1536 },
     ],
   },
 };

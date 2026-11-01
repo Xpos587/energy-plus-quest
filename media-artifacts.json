@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-01-warehouse-v9",
+  "release": "media-2026-11-01-lastmile-v9",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3884,6 +3884,44 @@
           "path": "public/scene-art/warehouse-v9/overview.webp",
           "sha256": "da89dd4cfe5fcaa43b26e6e4c9054eaca39cda21088ed530760558b0a17795e8",
           "bytes": 205826
+        }
+      ]
+    },
+    {
+      "name": "media-39-6b2160ebde64.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-lastmile-v9/media-39-6b2160ebde64.tar.gz",
+      "sha256": "6b2160ebde64b081f8d3e0308014eb5ee17e28b77815e43fcd368ebf2b33b6c8",
+      "bytes": 3512137,
+      "files": [
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-tall-alva.webp",
+          "sha256": "40e4adb84cca540c5a51a4c6603245ff1d8519f4eee2d057f63416edffc73d8c",
+          "bytes": 609030
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-tall-arseniy.webp",
+          "sha256": "4ca287573077e7c75a3e7eba6debaea29755d65662dfe2779c3c8f558261f70f",
+          "bytes": 609192
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-tall-khor.webp",
+          "sha256": "7c3d3eaec7e5b4367008cb04725bc41563f692d75c61439b5c63d2fe957cccbb",
+          "bytes": 601126
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-wide-alva.webp",
+          "sha256": "41b64679f50f18c401727e7ed8ad9ad07b4f823e6006b88534706e69b42765f3",
+          "bytes": 563048
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-wide-arseniy.webp",
+          "sha256": "9d70ed525bd5845cb0e92ec3e00ba869cd0e0c23ae89bab93cbed26bb3386a39",
+          "bytes": 564120
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-9/choice-wide-khor.webp",
+          "sha256": "2897282bea2ab6049fd9a98d8fd431267822cbd861c2de04dbdd77e95660bc4d",
+          "bytes": 563944
         }
       ]
     }
