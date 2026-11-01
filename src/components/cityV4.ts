@@ -1027,14 +1027,7 @@ export function drawCity(
     (o.ox + q[0] * o.k) / o.dpr,
     (o.oy + q[1] * o.k) / o.dpr,
   ];
-  // Auto-select is the fourth option, pinned like a rig on the roof of the
-  // glass office beside the yard. The DOM button over it takes the tap; the
-  // canvas draws it under the rig pins, so a passing rig stays tappable.
   const glowAt = o.reduced ? 0.6 : time;
-  if (o.pins && !o.selected) {
-    const [sx, sy] = css(spec.autopick);
-    autoPin(c, sx, sy, o.pinScale, glowAt, o.autoFlip);
-  }
   if (o.pins && !o.selected)
     rigs.forEach((g, index) => {
       // Anchored on the cab roof, so the pin rides with the tractor and
@@ -1054,6 +1047,14 @@ export function drawCity(
         glowAt,
       );
     });
+  // Auto-select is the fourth option, pinned like a rig on the roof of the
+  // glass office beside the yard. Its label is a fixed caption, so it lies
+  // over passing rig pins (like a map label over traffic); the DOM button
+  // follows the rig buttons to match that order.
+  if (o.pins && !o.selected) {
+    const [sx, sy] = css(spec.autopick);
+    autoPin(c, sx, sy, o.pinScale, glowAt, o.autoFlip);
+  }
   // The warehouse is the centre of the map: one pill (cargo + "СКЛАД")
   // over the sign board, drawn above every rig pin. While the cargo waits
   // it bobs gently; after the choice it stays put.

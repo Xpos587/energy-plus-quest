@@ -269,34 +269,16 @@ export function IllustratedCityMap({
           }
           data-motion-state={playing && assets ? "playing" : "paused"}
         >
-          <>
-            <img
-              className={styles.plate}
-              src={plateSource(plate)}
-              srcSet={plateSrcSet(plate)}
-              sizes="100vw"
-              alt="Город со складом в центре и три грузовика"
-              data-city-poster
-              data-city-plate={plate}
-              decoding="async"
-            />
-            <button
-              type="button"
-              className={styles.autopick}
-              data-map-autopick
-              data-carrier-choice="express"
-              style={{
-                // The canvas draws the pin here (cityPins autoPin) and
-                // hides it while any option is open; so does the hit area.
-                visibility: selectedId || !interactive ? "hidden" : undefined,
-                left: `${landmark(plate, "autopick")[0] * 100}%`,
-                top: `${landmark(plate, "autopick")[1] * 100}%`,
-              }}
-              aria-label="Подобрать фуру автоматически"
-              aria-pressed={selectedId === "express"}
-              onClick={() => onSelect?.("express")}
-            />
-          </>
+          <img
+            className={styles.plate}
+            src={plateSource(plate)}
+            srcSet={plateSrcSet(plate)}
+            sizes="100vw"
+            alt="Город со складом в центре и три грузовика"
+            data-city-poster
+            data-city-plate={plate}
+            decoding="async"
+          />
           {onSelect &&
             mapCarrierIds.map((id, index) => (
               <button
@@ -322,6 +304,22 @@ export function IllustratedCityMap({
                 }}
               />
             ))}
+          <button
+            type="button"
+            className={styles.autopick}
+            data-map-autopick
+            data-carrier-choice="express"
+            style={{
+              // The canvas draws the pin here (cityPins autoPin) and
+              // hides it while any option is open; so does the hit area.
+              visibility: selectedId || !interactive ? "hidden" : undefined,
+              left: `${landmark(plate, "autopick")[0] * 100}%`,
+              top: `${landmark(plate, "autopick")[1] * 100}%`,
+            }}
+            aria-label="Подобрать фуру автоматически"
+            aria-pressed={selectedId === "express"}
+            onClick={() => onSelect?.("express")}
+          />
         </div>
         <canvas
           ref={dynamicCanvas}
