@@ -17,13 +17,14 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1180, 820], 
     const view = await stage.evaluate(el => {
       const s = el.getBoundingClientRect();
       const p = el.querySelector('[data-world-plane]')!.getBoundingClientRect();
-      return { width: s.width, height: s.height, left: p.left-s.left, top: p.top-s.top, planeWidth: p.width, format: el.querySelector('img')!.src.includes('choice-wide') ? 'wide' as const : 'tall' as const };
+      const hint = document.querySelector('[data-carrier-tap-hint]')!.getBoundingClientRect();
+      return { width: s.width, height: s.height, left: p.left-s.left, top: p.top-s.top, planeWidth: p.width, hintBottom: hint.bottom-s.top, format: el.querySelector('img')!.src.includes('choice-wide') ? 'wide' as const : 'tall' as const };
     });
     const drawing = bounds[view.format];
     const scale = view.planeWidth / drawing.width;
     for (const [x0, y0, x1, y1] of drawing.objects) {
       expect(view.left + x0*scale).toBeGreaterThanOrEqual(-1);
-      expect(view.top + y0*scale).toBeGreaterThanOrEqual(63); // Clear the instruction overlay.
+      expect(view.top + y0*scale).toBeGreaterThanOrEqual(view.hintBottom); // Clear the instruction overlay.
       expect(view.left + x1*scale).toBeLessThanOrEqual(view.width+1);
       expect(view.top + y1*scale).toBeLessThanOrEqual(view.height+1);
     }

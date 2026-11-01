@@ -1,4 +1,4 @@
-import { type ReactNode, useLayoutEffect, useRef, useState } from "react";
+import { type CSSProperties, type ReactNode, useLayoutEffect, useRef, useState } from "react";
 import mapStyles from "../App.module.css";
 import { ArtworkLoading } from "../components/ArtworkLoading";
 import { useArtworkLoading } from "../components/useArtworkLoading";
@@ -22,7 +22,8 @@ const shortMarkerLabels: Record<string, string> = {
 };
 
 const markerInset = 24;
-const lastmileTopInset = 64; // Keep destinations clear of the “choose transport” overlay.
+// Keep destinations clear of the “choose transport” chip (smaller below 420px).
+const lastmileTopInset = (width: number) => (width <= 420 ? 56 : 64);
 const framingInset = 8; // Lastmile framing bounds objects, not markers; the outpainted canvas fills the rest.
 
 function framingScale(
@@ -120,6 +121,43 @@ export function WorldArt({
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
+  // Lastmile name chips: each name goes right or left of its number; a name with no free side
+  // waits for hover/focus. ponytail: brute force over 3^n placements, fine for a handful of vehicles.
+  const [chips, setChips] = useState({ left: "", hidden: "" });
+  useLayoutEffect(() => {
+    const element = stage.current;
+    if (scene !== "lastmile" || !element) return;
+    const bounds = element.getBoundingClientRect();
+    const markers = [...element.querySelectorAll<HTMLElement>("[data-hotspot]")].map((marker) => {
+      const r = marker.getBoundingClientRect();
+      return {
+        id: marker.dataset.hotspot ?? "",
+        width: marker.querySelector<HTMLElement>("[data-marker-caption]")?.offsetWidth ?? 0,
+        x: r.left + r.width / 2 - bounds.left,
+        y: r.top + r.height / 2 - bounds.top,
+      };
+    });
+    const box = (m: (typeof markers)[number], side: number) =>
+      side === 0 ? [m.x - 18, m.x - 18 + m.width] : [m.x + 18 - m.width, m.x + 18];
+    const hits = (a: number[], ay: number, b: number[], by: number) =>
+      Math.abs(ay - by) < 38 && a[0] < b[1] + 4 && b[0] < a[1] + 4;
+    let best = { cost: Infinity, sides: [] as number[] };
+    for (let code = 0; code < 3 ** markers.length; code++) {
+      const sides = markers.map((_, i) => Math.floor(code / 3 ** i) % 3); // 0 right, 1 left, 2 hidden
+      const ok = markers.every((m, i) => {
+        if (sides[i] === 2) return true;
+        const a = box(m, sides[i]);
+        if (a[0] < 4 || a[1] > bounds.width - 4) return false;
+        return markers.every((n, j) => j === i || (!hits(a, m.y, [n.x - 18, n.x + 18], n.y)
+          && (j < i || sides[j] === 2 || !hits(a, m.y, box(n, sides[j]), n.y))));
+      });
+      const cost = sides.reduce((sum, side) => sum + (side === 2 ? 10 : side), 0);
+      if (ok && cost < best.cost) best = { cost, sides };
+    }
+    const pick = (side: number) => markers.filter((_, i) => best.sides[i] === side).map((m) => m.id).join(" ");
+    const next = { left: pick(1), hidden: pick(2) };
+    setChips((previous) => previous.left === next.left && previous.hidden === next.hidden ? previous : next);
+  });
 
   const views = manifest.scenes[scene];
   const containedArea = (view: typeof views.desktop) => {
@@ -176,7 +214,7 @@ export function WorldArt({
   const scale = inventoryCamera
     ? inventoryCamera.scale
     : composition
-      ? framingScale({ ...size, height: Math.max(0, size.height - lastmileTopInset) }, view, composition.framing, framingInset, size)
+      ? framingScale({ ...size, height: Math.max(0, size.height - lastmileTopInset(size.width)) }, view, composition.framing, framingInset, size)
       : framingScale(size, view, hotspots);
   const interactiveMarkers = markers &&
     (scene !== "inventory" || (!showResult && !!onSelect));
@@ -232,6 +270,7 @@ export function WorldArt({
       data-event={scene === "lastmile" ? outcome : undefined}
       data-gift-location={giftLocation}
       data-rescue={rescue}
+      style={scene === "lastmile" ? { "--world-art": `url("${artwork.src}")` } as CSSProperties : undefined}
     >
       <div
         className={styles.plane}
@@ -249,7 +288,9 @@ export function WorldArt({
               : framingOffset(size.width, planeWidth, composition.framing.map(({ x }) => x), framingInset),
             top: selectedTransport
               ? clampOffset(size.height / 2 - selectedTransport.y * composition.height * planeScale, size.height, planeHeight)
-              : lastmileTopInset + framingOffset(size.height - lastmileTopInset, planeHeight, composition.framing.map(({ y }) => y), framingInset),
+              // Art taller than the stage never opens a band above it; shorter art keeps clear of the hint.
+              : (planeHeight >= size.height ? (top: number) => Math.max(size.height - planeHeight, Math.min(0, top)) : (top: number) => top)(
+                lastmileTopInset(size.width) + framingOffset(size.height - lastmileTopInset(size.width), planeHeight, composition.framing.map(({ y }) => y), framingInset)),
             transform: "none",
           } : {
             left: framingOffset(size.width, planeWidth, hotspots.map(({ x }) => x)),
@@ -339,14 +380,15 @@ export function WorldArt({
                   .join(". ")}
                 aria-pressed={markerId === point.id}
                 data-focused={onFocusChange ? focusedId === point.id : undefined}
-                data-caption-side={inventoryCamera && inventoryCamera.left + point.x * planeWidth > size.width / 2 ? "left" : undefined}
+                data-caption-side={(inventoryCamera ? inventoryCamera.left + point.x * planeWidth > size.width / 2 : chips.left.split(" ").includes(point.id)) ? "left" : undefined}
+                data-caption-hidden={scene === "lastmile" && chips.hidden.split(" ").includes(point.id) ? "" : undefined}
                 onPointerEnter={onFocusChange && (() => onFocusChange(point.id))}
                 onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
                 disabled={showResult || !onSelect || (!!selectedId && selectedId !== point.id)}
                 onClick={() => onSelect?.(point.id)}
               >
                 <span aria-hidden="true">{index + 1}</span>
-                {(scene === "lastmile" || scene === "inventory") && <span className={styles.markerCaption} aria-hidden="true">{caption}</span>}
+                {(scene === "lastmile" || scene === "inventory") && <span className={styles.markerCaption} data-marker-caption aria-hidden="true">{caption}</span>}
               </button>
             );
           })}

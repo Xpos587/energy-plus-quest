@@ -3377,6 +3377,87 @@
   .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask, .inspection .actions > button:last-child) { grid-column: 1; }
 }
 
+/* Last mile choice panel: goals read as a calm legend — tinted icon discs over
+   their words — and the question block sits together instead of spreading
+   across an empty rail. */
+.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals {
+  gap: 8px;
+  margin: 2px 0 0;
+  padding: 12px 8px;
+  border-radius: 14px;
+  background: #f2f7fa;
+}
+.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li {
+  gap: 6px;
+  color: #173a5b;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li svg {
+  box-sizing: content-box;
+  width: 16px;
+  height: 16px;
+  padding: 7px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--metric, #075d9b) 13%, #fff);
+}
+.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] [data-lastmile-decision-context] { color: #34536b; }
+
+/* Desktop rail: cargo, question, goals and the brief in one centred group. */
+@media (min-width: 1001px) and (min-height: 701px) and (min-aspect-ratio: 3/2) {
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .inspection) {
+    justify-content: center;
+    gap: 16px;
+    padding: 32px 28px;
+  }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 26px; line-height: 1.2; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] [data-lastmile-decision-context] { font-size: 17px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals { padding: 14px 8px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li { font-size: 14px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li svg { width: 18px; height: 18px; padding: 9px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionNavigation { margin-top: 4px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { margin-top: 8px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspectionHeading h3 { font-size: 30px; line-height: 1.15; }
+}
+
+/* Landscape tablets: the map takes the whole screen (wide art, no bands) and
+   the panel floats as a card over the river in the bottom-right corner. */
+@media (min-width: 1001px) and (min-height: 701px) and (max-aspect-ratio: 3/2) and (orientation: landscape) {
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .carrierMap { grid-column: 1; grid-row: 2; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+    position: relative;
+    z-index: 6;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+    justify-self: end;
+    justify-content: flex-start;
+    width: min(380px, 38vw);
+    height: auto;
+    max-height: calc(100% - 40px);
+    margin: 20px;
+    padding: 22px;
+    overflow-y: auto;
+    border: 1px solid #20365315;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 18px 44px #04132740;
+    transform: none;
+    inset: auto;
+  }
+}
+
+/* Portrait tablets: a wide stage so the wide art covers it; the panel gets the rest. */
+@media (min-width: 601px) and (max-width: 1000px) and (orientation: portrait) {
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"]:not(:has(.briefingCard)) {
+    grid-template-rows: var(--scene-header-height) minmax(0, min(83vw, calc(100dvh - var(--scene-header-height) - 260px))) minmax(0, 1fr);
+  }
+}
+
 /* The barge decision needs a full vessel on a phone. Let the decision cards
    scroll below a portrait overview instead of crushing the port into a strip. */
 @media (max-width: 600px) and (orientation: portrait) {

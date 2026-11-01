@@ -130,10 +130,44 @@
 }
 .stage[data-selected] .marker:not([aria-pressed="true"]) .markerCaption { visibility: hidden; }
 .marker[data-caption-side="left"] .markerCaption { left: auto; right: calc(100% - 6px); }
-/* At 320px the four labels cover neighbouring vehicles; keep accessible names and 44px targets. */
-@media (max-width: 359px) {
-  .stage[data-world-scene="lastmile"] .marker:not(:focus-visible):not([aria-pressed="true"]) .markerCaption { visibility: hidden; }
-}
 @media (min-width: 1001px) {
   .markerCaption { font-size: 14px; padding: 4px 10px; }
+}
+
+/* Lastmile: one chip per vehicle — number disc and name in the same white pill. */
+.stage[data-world-scene="lastmile"] .marker { font-size: 13px; font-weight: 800; color: #fff; }
+.stage[data-world-scene="lastmile"] .marker::before {
+  inset: 10px; border: 0; border-radius: 50%; background: #075d9b; box-shadow: none; outline: 0;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+.stage[data-world-scene="lastmile"] .markerCaption {
+  left: 4px; right: auto; z-index: -2; display: flex; align-items: center; height: 36px; padding: 0 14px 0 38px;
+  border-radius: 18px; background: #fff; color: #0f2f4a; font-size: 14px; font-weight: 700; letter-spacing: .01em;
+  box-shadow: 0 1px 0 #075d9b1f, 0 6px 16px #04132738; pointer-events: auto;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+.stage[data-world-scene="lastmile"] .marker[data-caption-side="left"] .markerCaption { left: auto; right: 4px; padding: 0 38px 0 14px; }
+.stage[data-world-scene="lastmile"] .marker:is(:hover, [data-focused="true"]) .markerCaption { box-shadow: 0 1px 0 #075d9b1f, 0 10px 22px #0413274d; transform: translateY(-50%) scale(1.04); }
+.stage[data-world-scene="lastmile"] .marker:is(:hover, [data-focused="true"])::before { background: #ff5500; }
+.stage[data-world-scene="lastmile"] .marker[aria-pressed="true"] { color: #ff5500; }
+.stage[data-world-scene="lastmile"] .marker[aria-pressed="true"]::before { background: #fff; outline: 0; }
+.stage[data-world-scene="lastmile"] .marker[aria-pressed="true"] .markerCaption { background: #ff5500; color: #fff; }
+.stage[data-world-scene="lastmile"] .marker:focus-visible { outline: 0; }
+.stage[data-world-scene="lastmile"] .marker:focus-visible .markerCaption { outline: 3px solid #075d9b; outline-offset: 2px; }
+/* A name with no free side keeps a numbered pin; the name returns on hover, focus and selection. */
+.stage[data-world-scene="lastmile"] .marker::after { content: ""; position: absolute; inset: 7px; z-index: -2; border-radius: 50%; background: #fff; box-shadow: 0 4px 12px #04132740; opacity: 0; }
+.stage[data-world-scene="lastmile"] .marker[data-caption-hidden]:not(:hover, :focus-visible, [aria-pressed="true"])::after { opacity: 1; }
+.stage[data-world-scene="lastmile"] .marker[data-caption-hidden]:not(:hover, :focus-visible, [aria-pressed="true"]) .markerCaption { visibility: hidden; }
+.stage[data-world-scene="lastmile"] .marker:is(:hover, :focus-visible, [aria-pressed="true"]) { z-index: 7; }
+@media (max-width: 420px) {
+  .stage[data-world-scene="lastmile"] .markerCaption { height: 32px; padding-left: 36px; font-size: 13px; }
+  .stage[data-world-scene="lastmile"] .marker[data-caption-side="left"] .markerCaption { padding: 0 36px 0 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stage[data-world-scene="lastmile"] :is(.marker::before, .markerCaption) { transition: none; }
+}
+/* Where the framed art cannot cover the stage, a blurred copy of it fills the bands. */
+.stage[data-world-scene="lastmile"]::before {
+  content: ""; position: absolute; inset: -24px; z-index: -1;
+  background: var(--world-art) center / cover; filter: blur(18px) saturate(.9); opacity: .9;
 }
