@@ -7,11 +7,12 @@ export const lastmileChoiceArtwork = {
     // Entire barge, vehicles, АБК and the chum camp.
     framing: [{ x: 197 / 2056, y: 600 / 1841 }, { x: 1820 / 2056, y: 1486 / 1841 }],
     original: { x: 192, y: 578, width: 1672, height: 941 },
+    // Hotspots sit just inside each vehicle's top edge: name tags stand above them.
     hotspots: [
-      { id: "helicopter", x: 432 / 2056, y: 846 / 1841 },
-      { id: "rover", x: 647 / 2056, y: 1040 / 1841 },
-      { id: "robot", x: 822 / 2056, y: 1090 / 1841 },
-      { id: "pipe-carrier", x: 422 / 2056, y: 1020 / 1841 },
+      { id: "helicopter", x: 432 / 2056, y: 801 / 1841 },
+      { id: "rover", x: 647 / 2056, y: 986 / 1841 },
+      { id: "robot", x: 822 / 2056, y: 1094 / 1841 },
+      { id: "pipe-carrier", x: 422 / 2056, y: 972 / 1841 },
     ],
   },
   tall: {
@@ -20,10 +21,10 @@ export const lastmileChoiceArtwork = {
     original: { x: 320, y: 288, width: 1024, height: 1536 },
     framing: [{ x: 375 / 1664, y: 358 / 1952 }, { x: 1325 / 1664, y: 1720 / 1952 }],
     hotspots: [
-      { id: "helicopter", x: 590 / 1664, y: 1050 / 1952 },
-      { id: "rover", x: 930 / 1664, y: 1203 / 1952 },
-      { id: "robot", x: 1143 / 1664, y: 1313 / 1952 },
-      { id: "pipe-carrier", x: 675 / 1664, y: 1233 / 1952 },
+      { id: "helicopter", x: 590 / 1664, y: 1003 / 1952 },
+      { id: "rover", x: 930 / 1664, y: 1200 / 1952 },
+      { id: "robot", x: 1143 / 1664, y: 1314 / 1952 },
+      { id: "pipe-carrier", x: 675 / 1664, y: 1143 / 1952 },
     ],
   },
 };

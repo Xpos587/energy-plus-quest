@@ -24,6 +24,7 @@ const shortMarkerLabels: Record<string, string> = {
 const markerInset = 24;
 // Keep destinations clear of the “choose transport” chip (smaller below 420px).
 const lastmileTopInset = (width: number) => (width <= 420 ? 56 : 64);
+const tagGap = 12; // Lastmile tag bottom above its vehicle point; matches WorldArt.module.css.
 const framingInset = 8; // Lastmile framing bounds objects, not markers; the outpainted canvas fills the rest.
 
 function framingScale(
@@ -135,42 +136,43 @@ export function WorldArt({
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
-  // Lastmile name chips: each name goes right or left of its number; a name with no free side
-  // waits for hover/focus. ponytail: brute force over 3^n placements, fine for a handful of vehicles.
-  const [chips, setChips] = useState({ left: "", hidden: "" });
+  // Lastmile name tags stand above their vehicles, slid sideways or raised on a longer tail to clear
+  // each other; a tag with no free spot shrinks to a pin until hover, focus or selection.
+  // ponytail: brute force over 11^n placements with pruning, fine for four vehicles.
+  const [tags, setTags] = useState<Record<string, { dx: number; lift: number } | null>>({});
   useLayoutEffect(() => {
     const element = stage.current;
     if (scene !== "lastmile" || !element) return;
     const bounds = element.getBoundingClientRect();
-    const markers = [...element.querySelectorAll<HTMLElement>("[data-hotspot]")].map((marker) => {
+    const markers = [...element.querySelectorAll<HTMLElement>("[data-hotspot]")];
+    const targets = markers.map((marker) => marker.getBoundingClientRect());
+    const clear = (a: DOMRect, b: DOMRect) => a.left >= b.right + 4 || b.left >= a.right + 4 || a.top >= b.bottom + 4 || b.top >= a.bottom + 4;
+    const items = markers.flatMap((marker, index) => {
+      const caption = marker.querySelector<HTMLElement>("[data-marker-caption]");
+      if (!caption) return [];
+      // Layout sizes, not painted ones: hover lift and collapse must not change the answer.
       const r = marker.getBoundingClientRect();
-      return {
-        id: marker.dataset.hotspot ?? "",
-        width: marker.querySelector<HTMLElement>("[data-marker-caption]")?.offsetWidth ?? 0,
-        x: r.left + r.width / 2 - bounds.left,
-        y: r.top + r.height / 2 - bounds.top,
-      };
+      const { offsetWidth: w, offsetHeight: h } = caption;
+      const x = r.left + r.width / 2, bottom = r.top + r.height / 2 - tagGap;
+      const reach = Math.max(0, w / 2 - 16); // The tail must stay under the tag.
+      const spots = [0, h + 6].flatMap((lift) => [0, -reach / 2, reach / 2, -reach, reach]
+        .map((dx) => ({ dx, lift, box: new DOMRect(x + dx - w / 2, bottom - lift - h, w, h) })))
+        .filter(({ box }) => box.left >= bounds.left + 4 && box.right <= bounds.right - 4 && box.top >= bounds.top + 4
+          && targets.every((target, other) => other === index || clear(box, target))); // Never cover another vehicle's tap target.
+      return [{ id: marker.dataset.hotspot ?? "", spots: [...spots, null] }];
     });
-    const box = (m: (typeof markers)[number], side: number) =>
-      side === 0 ? [m.x - 18, m.x - 18 + m.width] : [m.x + 18 - m.width, m.x + 18];
-    const hits = (a: number[], ay: number, b: number[], by: number) =>
-      Math.abs(ay - by) < 38 && a[0] < b[1] + 4 && b[0] < a[1] + 4;
-    let best = { cost: Infinity, sides: [] as number[] };
-    for (let code = 0; code < 3 ** markers.length; code++) {
-      const sides = markers.map((_, i) => Math.floor(code / 3 ** i) % 3); // 0 right, 1 left, 2 hidden
-      const ok = markers.every((m, i) => {
-        if (sides[i] === 2) return true;
-        const a = box(m, sides[i]);
-        if (a[0] < 4 || a[1] > bounds.width - 4) return false;
-        return markers.every((n, j) => j === i || (!hits(a, m.y, [n.x - 18, n.x + 18], n.y)
-          && (j < i || sides[j] === 2 || !hits(a, m.y, box(n, sides[j]), n.y))));
-      });
-      const cost = sides.reduce((sum, side) => sum + (side === 2 ? 10 : side), 0);
-      if (ok && cost < best.cost) best = { cost, sides };
-    }
-    const pick = (side: number) => markers.filter((_, i) => best.sides[i] === side).map((m) => m.id).join(" ");
-    const next = { left: pick(1), hidden: pick(2) };
-    setChips((previous) => previous.left === next.left && previous.hidden === next.hidden ? previous : next);
+    let best = { cost: Infinity, pick: [] as ({ dx: number; lift: number; box: DOMRect } | null)[] };
+    const walk = (i: number, pick: typeof best.pick, cost: number) => {
+      if (cost >= best.cost) return;
+      if (i === items.length) { best = { cost, pick: [...pick] }; return; }
+      for (const spot of items[i].spots) {
+        if (spot && pick.some((other) => other && !clear(spot.box, other.box))) continue;
+        walk(i + 1, [...pick, spot], cost + (spot ? Math.abs(spot.dx) + spot.lift * 2 : 1000));
+      }
+    };
+    walk(0, [], 0);
+    const next = Object.fromEntries(items.map(({ id }, i) => { const spot = best.pick[i]; return [id, spot ? { dx: spot.dx, lift: spot.lift } : null]; }));
+    setTags((previous) => JSON.stringify(previous) === JSON.stringify(next) ? previous : next);
   });
 
   const views = manifest.scenes[scene];
@@ -382,7 +384,7 @@ export function WorldArt({
                 data-choice-id={point.id}
                 className={`${mapStyles.mapNumber} ${styles.marker}`}
                 title={caption ?? choiceLabel(option.label)}
-                style={{ left: `${point.x * 100}%`, top: `${point.y * 100}%` }}
+                style={{ left: `${point.x * 100}%`, top: `${point.y * 100}%`, ...(scene === "lastmile" && { "--tag-shift": `${tags[point.id]?.dx ?? 0}px`, "--tag-lift": `${tags[point.id]?.lift ?? 0}px` }) }}
                 aria-label={[
                   `Вариант ${index + 1}`,
                   choiceLabel(option.label),
@@ -392,8 +394,8 @@ export function WorldArt({
                   .join(". ")}
                 aria-pressed={markerId === point.id}
                 data-focused={onFocusChange ? focusedId === point.id : undefined}
-                data-caption-side={(inventoryCamera ? inventoryCamera.left + point.x * planeWidth > size.width / 2 : chips.left.split(" ").includes(point.id)) ? "left" : undefined}
-                data-caption-hidden={scene === "lastmile" && chips.hidden.split(" ").includes(point.id) ? "" : undefined}
+                data-caption-side={inventoryCamera && inventoryCamera.left + point.x * planeWidth > size.width / 2 ? "left" : undefined}
+                data-caption-hidden={scene === "lastmile" && tags[point.id] === null ? "" : undefined}
                 onPointerEnter={onFocusChange && (() => onFocusChange(point.id))}
                 onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
                 disabled={showResult || !onSelect || (!!selectedId && selectedId !== point.id)}

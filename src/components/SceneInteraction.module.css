@@ -3383,9 +3383,8 @@
 .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals {
   gap: 8px;
   margin: 2px 0 0;
-  padding: 12px 8px;
-  border-radius: 14px;
-  background: #f2f7fa;
+  padding: 12px 0 0;
+  border-top: 1px solid #e3ecf2;
 }
 .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li {
   gap: 6px;
@@ -3404,6 +3403,16 @@
 }
 .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] [data-lastmile-decision-context] { color: #34536b; }
 
+/* The brief is secondary to the map: a quiet text button, not a second outlined slab. */
+.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question .questionNavigation { display: flex; justify-content: flex-start; }
+.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question .questionTask {
+  display: inline-flex; flex: none; align-items: center; width: max-content; white-space: nowrap; container-type: normal;
+  margin: 0; padding: 8px 12px 8px 8px;
+  border: 0; border-radius: 10px; background: transparent; box-shadow: none;
+  color: #075d9b; font-size: 15px;
+}
+.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question .questionTask:hover { background: #eef5fa; }
+
 /* Desktop rail: cargo, question, goals and the brief in one centred group. */
 @media (min-width: 1001px) and (min-height: 701px) and (min-aspect-ratio: 3/2) {
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .inspection) {
@@ -3413,7 +3422,7 @@
   }
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 26px; line-height: 1.2; }
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] [data-lastmile-decision-context] { font-size: 17px; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals { padding: 14px 8px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals { padding: 16px 0 0; }
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li { font-size: 14px; }
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li svg { width: 18px; height: 18px; padding: 9px; }
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionNavigation { margin-top: 4px; }
