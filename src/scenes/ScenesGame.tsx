@@ -116,8 +116,8 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     places: () => ({
       helicopter: ["Вертолёт", "По воздуху"],
       rover: ["Снегоболотоход", "Вездеход-амфибия"],
-      robot: ["Роботизированная тележка", "Без водителя"],
-      "pipe-carrier": ["Трубовоз", "Грузовик-вездеход"],
+      robot: ["Роботизированная тележка", "Складской робот"],
+      "pipe-carrier": ["Трубовоз", "Грузовик для труб"],
     }),
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
@@ -517,7 +517,7 @@ function ScenesSession({
             {inspectsOnArt && !resultVisible && (
               <CarrierTapHint
                 selectedId={pending?.id}
-                text={scene.id === "compact" ? "Выберите, куда поставить груз" : scene.id === "lastmile" ? "Нажмите на транспорт, чтобы узнать о нём" : scene.id === "inventory" ? "Выберите место на складе" : "Нажмите на номер на причале"}
+                text={scene.id === "compact" ? "Выберите, куда поставить груз" : scene.id === "lastmile" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать о нём` : "Нажмите на транспорт, чтобы узнать о нём") : scene.id === "inventory" ? "Нажмите на ворота, стеллаж, компьютер или кладовщика" : "Нажмите на номер на причале"}
               />
             )}
           </section>

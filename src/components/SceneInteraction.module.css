@@ -3377,59 +3377,6 @@
   .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask, .inspection .actions > button:last-child) { grid-column: 1; }
 }
 
-/* Last mile choice panel: goals read as a calm legend — tinted icon discs over
-   their words — and the question block sits together instead of spreading
-   across an empty rail. */
-.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals {
-  gap: 8px;
-  margin: 2px 0 0;
-  padding: 12px 0 0;
-  border-top: 1px solid #e3ecf2;
-}
-.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li {
-  gap: 6px;
-  color: #173a5b;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li svg {
-  box-sizing: content-box;
-  width: 16px;
-  height: 16px;
-  padding: 7px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--metric, #075d9b) 13%, #fff);
-}
-.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] [data-lastmile-decision-context] { color: #34536b; }
-
-/* The brief is secondary to the map: a quiet text button, not a second outlined slab. */
-.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question .questionNavigation { display: flex; justify-content: flex-start; }
-.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question .questionTask {
-  display: inline-flex; flex: none; align-items: center; width: max-content; white-space: nowrap; container-type: normal;
-  margin: 0; padding: 8px 12px 8px 8px;
-  border: 0; border-radius: 10px; background: transparent; box-shadow: none;
-  color: #075d9b; font-size: 15px;
-}
-.app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question .questionTask:hover { background: #eef5fa; }
-
-/* Desktop rail: cargo, question, goals and the brief in one centred group. */
-@media (min-width: 1001px) and (min-height: 701px) and (min-aspect-ratio: 3/2) {
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .inspection) {
-    justify-content: center;
-    gap: 16px;
-    padding: 32px 28px;
-  }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 26px; line-height: 1.2; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] [data-lastmile-decision-context] { font-size: 17px; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals { padding: 16px 0 0; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li { font-size: 14px; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals.compactGoals li svg { width: 18px; height: 18px; padding: 9px; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionNavigation { margin-top: 4px; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { margin-top: 8px; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspectionHeading h3 { font-size: 30px; line-height: 1.15; }
-}
-
 /* Landscape tablets: the map takes the whole screen (wide art, no bands) and
    the panel floats as a card over the river in the bottom-right corner. */
 @media (min-width: 1001px) and (min-height: 701px) and (max-aspect-ratio: 3/2) and (orientation: landscape) {
