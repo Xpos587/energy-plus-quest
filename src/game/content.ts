@@ -94,7 +94,7 @@ export const carriers: CarrierChoice[] = [
   {
     id: "express",
     eyebrow: "Автоподбор",
-    title: "Автоподбор Express",
+    title: "Автоматический подбор",
     description:
       "Подберёт перевозчика по состоянию техники, экипажу и стоимости.",
     score: { energy: -1, empathy: 5, efficiency: 5 },

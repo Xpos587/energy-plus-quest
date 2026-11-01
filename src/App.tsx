@@ -16,7 +16,6 @@ import { outcomeArtwork } from "./game/artwork";
 import { carrierFacts } from "./game/carrierFacts";
 import {
   carrierBriefing,
-  carrierQuestion,
   carriers,
   findCarrier,
   findParcel,
@@ -33,7 +32,7 @@ import { useStoredState } from "./game/persistence";
 import type { CarrierId, GameAction } from "./game/types";
 import { sceneChoiceImage } from "./scenes/artwork";
 import { outcomeFocus } from "./scenes/outcomeFraming";
-import { ChoiceVerdict, restartSceneCondition, SceneGoals, ScenesGame } from "./scenes/ScenesGame";
+import { ChoiceVerdict, restartSceneCondition, ScenesGame } from "./scenes/ScenesGame";
 
 export function App() {
   return (
@@ -211,11 +210,9 @@ function CarrierScreen({
       ["old", "old4", "near", "crew", "express"].includes(v),
   );
   const [mapReading, setMapReading] = useState(false);
-  const taskSentences = carrierQuestion.split(/(?<=\.)\s+/);
-  const taskQuestion = (taskSentences.at(-1) ?? carrierQuestion).replace(
-    /:\s*$/,
-    "",
-  );
+  // The client's wording: the criteria live in the question itself, plain
+  // text, no goal chips (the map shows reliability: smoke and shake).
+  const taskQuestion = "Выберите лучшую фуру, чтобы доставить быстрее и проще";
   const panel = useRef<HTMLElement>(null);
   const choiceTrigger = useRef<HTMLElement | null>(null);
   useEffect(() => {
@@ -295,12 +292,10 @@ function CarrierScreen({
             undefined,
             findParcel(state.parcel)?.accusativeTitle,
           ),
-          ...taskSentences.slice(0, -1),
         ]}
         onBack={onBack}
         inspecting={!!pendingId}
         onOpen={() => setPendingId(undefined)}
-        decisionContext={<SceneGoals goals={carrierGoals} />}
       />
       <div className={flow.carrierMap} data-carrier-map>
         <IllustratedCityMap
@@ -317,14 +312,14 @@ function CarrierScreen({
           selectionKey={pendingId}
           media={pendingId !== "express"}
           eyebrow={
-            // Crew already lists «Два водителя» in its facts; Express has its own title.
+            // Crew already lists «Два водителя» in its facts; auto-select has its own title.
             pendingId === "express" || pendingId === "crew"
               ? undefined
               : findCarrier(pendingId)?.eyebrow
           }
           title={
             pendingId === "express"
-              ? "Express подберёт фуру"
+              ? "Подобрать фуру автоматически"
               : carrierFacts[pendingId].label
           }
           cancelLabel="Другая фура"
@@ -435,7 +430,7 @@ function Outcome({
               titleTabIndex={-1}
               title={
                 <ChoiceVerdict
-                  picked={`Ваш выбор · ${carrier.id === "express" ? "Express" : carrierFacts[carrier.id].label}`}
+                  picked={`Ваш выбор · ${carrier.id === "express" ? "Автоматический подбор" : carrierFacts[carrier.id].label}`}
                   goals={carrierGoals}
                   score={carrier.score}
                   all={carriers.map((item) => item.score)}

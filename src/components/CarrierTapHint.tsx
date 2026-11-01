@@ -5,7 +5,7 @@ import styles from "./CarrierTapHint.module.css";
 /** The map itself is the only choice; one line says how. */
 export function CarrierTapHint({
   selectedId,
-  text = "Нажмите на фуру — или вызовите Express у склада",
+  text = "Нажмите на фуру — или подберите её автоматически",
 }: {
   selectedId?: string;
   text?: string;

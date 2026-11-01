@@ -40,6 +40,29 @@ export function sparkle(
   c.fill();
 }
 
+/** Tappable cue shared by the four choices: a soft halo breathing behind
+ * the pin disc and one small sparkle twinkling on its shoulder. `t` is the
+ * clock in seconds (fixed for reduced motion); `phase` desynchronises pins. */
+function glow(
+  c: CanvasRenderingContext2D,
+  cy: number,
+  r: number,
+  color: string,
+  t: number,
+  phase: number,
+) {
+  const breath = 0.5 + 0.5 * Math.sin(t * 2.4 + phase);
+  const R = r * (1.55 + 0.25 * breath);
+  const g = c.createRadialGradient(0, cy, r * 0.8, 0, cy, R);
+  g.addColorStop(0, `${color}${Math.round(90 + 60 * breath).toString(16)}`);
+  g.addColorStop(1, `${color}00`);
+  c.fillStyle = g;
+  c.beginPath();
+  c.arc(0, cy, R, 0, Math.PI * 2);
+  c.fill();
+  return 0.35 + 0.65 * Math.max(0, Math.sin(t * 1.7 + phase * 1.3));
+}
+
 /** Relative city pace 0..1: the fastest rig sits near the right stop. */
 export const paceFraction = (id: MapCarrierId) => {
   const max = Math.max(
@@ -59,6 +82,8 @@ export function rigPin(
   s: number,
   /** Extra needle angle (radians): the old rig's gauge flutters. */
   flutter = 0,
+  /** Clock (s) for the tappable glow; omitted means no glow. */
+  t?: number,
 ) {
   c.save();
   // Snap to whole CSS pixels: a sub-pixel pin blurs its thin ticks.
@@ -67,6 +92,8 @@ export function rigPin(
   const color = carrierColors[id];
   const r = 15;
   const cy = -r - 6;
+  const twinkle =
+    t === undefined ? 0 : glow(c, cy, r, color, t, (r + id.length) * 1.9);
   // shadow, tail, white disc with a coloured rim
   c.fillStyle = "rgba(10,30,50,0.18)";
   c.beginPath();
@@ -129,6 +156,7 @@ export function rigPin(
   c.beginPath();
   c.arc(0, gy, 1.9, 0, Math.PI * 2);
   c.fill();
+  if (twinkle) sparkle(c, -r * 0.78, cy - r * 0.86, 4.6 * twinkle);
   if (id === "crew") {
     // two drivers: a small badge on the pin's shoulder
     const bx = r + 3;
@@ -150,6 +178,73 @@ export function rigPin(
       c.fill();
     }
   }
+  c.restore();
+}
+
+/** Auto-select marker: the same pin as a rig (navy rim, a check instead of
+ * the pace dial) with a plain label to its right. Tail touches (x, y). */
+export function autoPin(
+  c: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  s: number,
+  t?: number,
+  /** Label on the left of the pin (no room on the right). */
+  flip = false,
+) {
+  c.save();
+  c.translate(Math.round(x), Math.round(y));
+  c.scale(s, s);
+  const color = "#0057b8";
+  const r = 15;
+  const cy = -r - 6;
+  const twinkle = t === undefined ? 0 : glow(c, cy, r, color, t, 4.2);
+  c.font = '600 13px "Roboto Condensed", Arial, sans-serif';
+  const label = "Подобрать фуру автоматически";
+  const tw = c.measureText(label).width;
+  const h = 24;
+  const w = 6 + 8 + tw + 12;
+  const left = flip ? -(r - 6) - w : r - 6;
+  c.fillStyle = "rgba(10,30,50,0.18)";
+  rr(c, left + 1, cy - h / 2 + 2, w, h, h / 2);
+  c.fill();
+  c.fillStyle = "#fff";
+  c.strokeStyle = color;
+  c.lineWidth = 2;
+  rr(c, left, cy - h / 2, w, h, h / 2);
+  c.fill();
+  c.stroke();
+  c.fillStyle = color;
+  c.textAlign = "left";
+  c.textBaseline = "middle";
+  c.fillText(label, flip ? left + 12 : left + 6 + 8, cy + 1);
+  c.fillStyle = "rgba(10,30,50,0.18)";
+  c.beginPath();
+  c.arc(0.8, cy + 1.6, r, 0, Math.PI * 2);
+  c.fill();
+  c.fillStyle = color;
+  c.beginPath();
+  c.moveTo(-5, cy + r - 2);
+  c.lineTo(0, 0);
+  c.lineTo(5, cy + r - 2);
+  c.closePath();
+  c.fill();
+  c.beginPath();
+  c.arc(0, cy, r, 0, Math.PI * 2);
+  c.fillStyle = "#fff";
+  c.fill();
+  c.lineWidth = 2.5;
+  c.strokeStyle = color;
+  c.stroke();
+  c.lineWidth = 3;
+  c.lineCap = "round";
+  c.lineJoin = "round";
+  c.beginPath();
+  c.moveTo(-6, cy + 0.5);
+  c.lineTo(-1.8, cy + 4.6);
+  c.lineTo(6.4, cy - 4.4);
+  c.stroke();
+  if (twinkle) sparkle(c, -r * 0.78, cy - r * 0.86, 4.6 * twinkle);
   c.restore();
 }
 

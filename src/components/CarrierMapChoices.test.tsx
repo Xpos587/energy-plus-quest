@@ -4,7 +4,7 @@ import { carrierFacts, mapCarrierIds } from "../game/carrierFacts";
 import { IllustratedCityMap } from "./IllustratedCityMap";
 
 describe("the city map is the only way to choose", () => {
-  it("offers four rigs and the Express call with accessible names", () => {
+  it("offers four rigs and auto-select with accessible names", () => {
     const host = document.createElement("div");
     host.innerHTML = renderToStaticMarkup(
       <IllustratedCityMap onSelect={() => {}} selectedId="crew" />,
@@ -29,7 +29,7 @@ describe("the city map is the only way to choose", () => {
       "[data-map-autopick]",
     );
     expect(express?.dataset.carrierChoice).toBe("express");
-    expect(express?.getAttribute("aria-label")).toBe("Express: подобрать фуру");
+    expect(express?.getAttribute("aria-label")).toBe("Подобрать фуру автоматически");
     expect(host.querySelector("video")).toBeNull();
     expect(host.querySelector("[data-city-plate]")).not.toBeNull();
   });

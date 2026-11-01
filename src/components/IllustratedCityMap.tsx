@@ -170,6 +170,11 @@ export function IllustratedCityMap({
       const pinScale = view.width < 520 || view.height < 420 ? 0.78 : 1;
       if (surface.style.getPropertyValue("--pin-scale") !== String(pinScale))
         surface.style.setProperty("--pin-scale", String(pinScale));
+      // The auto-select label flips left when it would leave the view.
+      const tail = landmark(name, "autopick")[0] * box.width + box.left;
+      const autoFlip = tail + 232 * pinScale > view.right - 4;
+      const pick = surface.querySelector<HTMLElement>("[data-map-autopick]");
+      if (pick) pick.toggleAttribute("data-flip", autoFlip);
       drawCity(context, traffic.current, assets.atlas, smoke, {
         plate: name,
         reduced,
@@ -182,6 +187,7 @@ export function IllustratedCityMap({
           start === undefined ? undefined : reduced ? 3 : time - start,
         pins: live.current && !selected.current,
         pinScale,
+        autoFlip,
       });
       const poses = trafficPoses(traffic.current);
       trafficFrame(traffic.current, name).forEach(([x, y], index) => {
@@ -280,13 +286,13 @@ export function IllustratedCityMap({
               data-map-autopick
               data-carrier-choice="express"
               style={{
-                // The canvas draws the pill here (cityV4 expressCall) and
+                // The canvas draws the pin here (cityPins autoPin) and
                 // hides it while any option is open; so does the hit area.
                 visibility: selectedId || !interactive ? "hidden" : undefined,
-                left: `${landmark(plate, "express")[0] * 100}%`,
-                top: `${landmark(plate, "express")[1] * 100}%`,
+                left: `${landmark(plate, "autopick")[0] * 100}%`,
+                top: `${landmark(plate, "autopick")[1] * 100}%`,
               }}
-              aria-label="Express: подобрать фуру"
+              aria-label="Подобрать фуру автоматически"
               aria-pressed={selectedId === "express"}
               onClick={() => onSelect?.("express")}
             />

@@ -3,7 +3,7 @@ import { carrierFacts, mapCarrierIds } from "../src/game/carrierFacts";
 import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 // The painted city is the only way to choose: four driving rigs and the
-// Express call pill under the warehouse doors. No video, numbers or buttons.
+// auto-select pin on the glass office by the yard. No video, numbers or buttons.
 for (const [width, height] of [
   [390, 844],
   [844, 390],
@@ -63,9 +63,9 @@ for (const [width, height] of [
     await expect(card).toHaveCount(0);
     await expect(page.locator('[data-carrier-choice="near"]')).toBeFocused();
 
-    // Express explains itself before confirmation, then leads to loading.
+    // Auto-select explains itself before confirmation, then leads to loading.
     await pickCarrier(page, "express");
-    await expect(card.locator("h3")).toHaveText("Express подберёт фуру");
+    await expect(card.locator("h3")).toHaveText("Подобрать фуру автоматически");
     await expect(card).toContainText("Как такси, только для грузов");
     await expect(page.locator("[data-speedometer]")).toHaveCount(0);
     await page.locator("[data-choice-confirm]").click();

@@ -13,7 +13,7 @@ for (const viewport of [
     await openCarrier(page, "professional", "alva", "boat");
 
     const task = page.getByRole("region", { name: "Задание сцены" });
-    await expect(task).toContainText("Выберите грузовик, который лучше всего справится с такой задачей.");
+    await expect(task).toContainText("Выберите лучшую фуру, чтобы доставить быстрее и проще");
     await expect(task.locator("[data-scene-choice]")).toHaveCount(5);
     await expect(page.locator("[data-map-viewport]")).toBeVisible();
     await expect(task).not.toContainText("Красная фура — старая");
@@ -39,13 +39,13 @@ for (const viewport of [
   });
 }
 
-test("automatic carrier route explains Express before confirmation", async ({
+test("automatic carrier route explains itself before confirmation", async ({
   page,
 }) => {
   await openCarrier(page);
   await pickCarrier(page, "express");
   const inspection = page.locator("[data-choice-inspection]");
-  await expect(inspection).toContainText("Express");
+  await expect(inspection).toContainText("Подобрать фуру автоматически");
   await expect(inspection).toContainText(/подбира|перевоз/i);
   await page.locator("[data-choice-cancel]").click();
   await expect(inspection).toHaveCount(0);

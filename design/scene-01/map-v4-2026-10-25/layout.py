@@ -375,7 +375,8 @@ ex.rotation_euler = (0, 0, math.pi / 2)
 ex.color = C["express"]
 ex.name = "placeholder_express"
 truck_objs.append(ex)
-AUTOPICK = Vector((DOOR_X(2) + DOOR_W + 6, HB - ROAD / 2 - WALK - 3 - WH_DEPTH / 2 + 3, WH_H + 0.4))
+# Auto-select marker: on the roof of the glass office beside the yard (v15).
+AUTOPICK = Vector((67, 24, 12))
 bpy.ops.mesh.primitive_uv_sphere_add(radius=1.6, location=AUTOPICK)
 bpy.context.object.color = C["orange"]
 bpy.context.object.name = "marker_autopick"

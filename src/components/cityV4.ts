@@ -4,7 +4,13 @@ import {
   mapCarrierIds,
 } from "../game/carrierFacts";
 import manifest from "./cityV4Manifest.json";
-import { carrierColors, depotPill, rigPin, rr, sparkle } from "./cityPins";
+import {
+  autoPin,
+  carrierColors,
+  depotPill,
+  rigPin,
+  sparkle,
+} from "./cityPins";
 
 // Scene 1 city v4. One Blender scene is the source of truth: the plates
 // (wide for landscape, tall for portrait) are its truck-free renders, the rigs
@@ -354,6 +360,8 @@ export type DrawOptions = {
   expressAge?: number;
   pins: boolean;
   pinScale: number;
+  /** Auto-select label sits left of its pin (decided by the map view). */
+  autoFlip?: boolean;
   reduced: boolean;
 };
 
@@ -1019,13 +1027,13 @@ export function drawCity(
     (o.ox + q[0] * o.k) / o.dpr,
     (o.oy + q[1] * o.k) / o.dpr,
   ];
-  // Express is a call, not a rig: a branded pill under the dock doors whose
-  // tail points at the doors where the new rig will appear. The DOM button
-  // over it takes the tap; the canvas draws it under the rig pins, so a
-  // passing rig stays tappable.
+  // Auto-select is the fourth option, pinned like a rig on the roof of the
+  // glass office beside the yard. The DOM button over it takes the tap; the
+  // canvas draws it under the rig pins, so a passing rig stays tappable.
+  const glowAt = o.reduced ? 0.6 : time;
   if (o.pins && !o.selected) {
-    const [sx, sy] = css(spec.express);
-    expressCall(c, sx, sy, o.pinScale);
+    const [sx, sy] = css(spec.autopick);
+    autoPin(c, sx, sy, o.pinScale, glowAt, o.autoFlip);
   }
   if (o.pins && !o.selected)
     rigs.forEach((g, index) => {
@@ -1043,6 +1051,7 @@ export function drawCity(
         sy - 2 * o.pinScale + (r ? r[1] * 4 : 0),
         o.pinScale,
         r ? r[2] * 4 + Math.sin(time * 23) * 0.06 : 0,
+        glowAt,
       );
     });
   // The warehouse is the centre of the map: one pill (cargo + "СКЛАД")
@@ -1064,64 +1073,5 @@ export function drawCity(
       bob,
     );
   }
-  c.restore();
-}
-
-/** The Express call pill: tail tip at (x, y), body below it. */
-export function expressCall(
-  c: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  s: number,
-) {
-  c.save();
-  c.translate(Math.round(x), Math.round(y));
-  c.scale(s, s);
-  const h = 30;
-  const top = 6;
-  const brand = "Express";
-  const action = "подобрать фуру";
-  c.font = '800 13px "Roboto Condensed", Arial, sans-serif';
-  const bw = c.measureText(brand).width;
-  c.font = '500 13px "Roboto Condensed", Arial, sans-serif';
-  const aw = c.measureText(action).width;
-  const w = 4 + 22 + 6 + bw + 6 + aw + 12;
-  const left = -w / 2;
-  c.fillStyle = "rgba(10,30,50,0.25)";
-  rr(c, left + 1, top + 3, w, h, h / 2);
-  c.fill();
-  c.fillStyle = "#0057b8";
-  c.beginPath();
-  c.moveTo(-6, top + 1);
-  c.lineTo(0, 0);
-  c.lineTo(6, top + 1);
-  c.closePath();
-  c.fill();
-  rr(c, left, top, w, h, h / 2);
-  c.fill();
-  // orange disc with a white lightning bolt
-  const ix = left + 4 + 11;
-  const iy = top + h / 2;
-  c.fillStyle = "#ff6a13";
-  c.beginPath();
-  c.arc(ix, iy, 11, 0, Math.PI * 2);
-  c.fill();
-  c.fillStyle = "#fff";
-  c.beginPath();
-  c.moveTo(ix + 1.6, iy - 7);
-  c.lineTo(ix - 4.2, iy + 1);
-  c.lineTo(ix - 0.4, iy + 1);
-  c.lineTo(ix - 1.6, iy + 7);
-  c.lineTo(ix + 4.2, iy - 1.2);
-  c.lineTo(ix + 0.4, iy - 1.2);
-  c.closePath();
-  c.fill();
-  c.textBaseline = "middle";
-  c.textAlign = "left";
-  c.font = '800 13px "Roboto Condensed", Arial, sans-serif';
-  c.fillText(brand, ix + 11 + 6, iy + 0.5);
-  c.globalAlpha = 0.92;
-  c.font = '500 13px "Roboto Condensed", Arial, sans-serif';
-  c.fillText(action, ix + 11 + 6 + bw + 6, iy + 0.5);
   c.restore();
 }
