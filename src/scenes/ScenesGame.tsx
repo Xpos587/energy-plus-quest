@@ -114,10 +114,10 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     route: ({ recipient }) => `От причала в Новом Порту до ${recipientNames[recipient].genitive}`,
     goals: ["Без лишних трат", "Довезти лично", "Пройти болота"],
     places: () => ({
-      helicopter: ["Вертолёт", "Перелетит любые преграды"],
-      rover: ["Снегоболотоход", "Создан для таких мест"],
-      robot: ["Роботизированная тележка", "Возит багаж в аэропортах"],
-      "pipe-carrier": ["Трубовоз", "Возьмёт груз вместе с трубами"],
+      helicopter: ["Вертолёт", "По воздуху"],
+      rover: ["Снегоболотоход", "Вездеход-амфибия"],
+      robot: ["Роботизированная тележка", "Без водителя"],
+      "pipe-carrier": ["Трубовоз", "Грузовик-вездеход"],
     }),
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
@@ -517,7 +517,7 @@ function ScenesSession({
             {inspectsOnArt && !resultVisible && (
               <CarrierTapHint
                 selectedId={pending?.id}
-                text={scene.id === "compact" ? "Выберите, куда поставить груз" : scene.id === "lastmile" ? "Выберите транспорт на карте" : scene.id === "inventory" ? "Выберите место на складе" : "Нажмите на номер на причале"}
+                text={scene.id === "compact" ? "Выберите, куда поставить груз" : scene.id === "lastmile" ? "Нажмите на транспорт, чтобы узнать о нём" : scene.id === "inventory" ? "Выберите место на складе" : "Нажмите на номер на причале"}
               />
             )}
           </section>

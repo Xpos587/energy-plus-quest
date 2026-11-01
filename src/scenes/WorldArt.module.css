@@ -134,44 +134,9 @@
   .markerCaption { font-size: 14px; padding: 4px 10px; }
 }
 
-/* Lastmile: a light name tag stands over each vehicle and points at it; no numbers or outlines
-   on the art. A tag with no room shrinks to a small pin and returns on hover, focus or selection. */
+/* Lastmile: the vehicles themselves are the tap targets (LastmileZones); no labels or pins on the art.
+   The invisible button keeps keyboard access and shows a ring only on keyboard focus. */
 .stage[data-world-scene="lastmile"] .marker { margin-top: 0; color: transparent; }
-.stage[data-world-scene="lastmile"] .marker > span:first-child { display: none; }
+.stage[data-world-scene="lastmile"] .marker > span { display: none; }
 .stage[data-world-scene="lastmile"] .marker::before { content: none; }
-.stage[data-world-scene="lastmile"] .markerCaption {
-  left: 50%; top: auto; bottom: calc(50% + 12px + var(--tag-lift, 0px)); z-index: 0; /* 12px = tagGap in WorldArt.tsx */
-  display: flex; align-items: center; height: 30px; padding: 0 12px;
-  border-radius: 15px; background: #fff; color: #0f2f4a; font-size: 14px; font-weight: 650; letter-spacing: .01em;
-  box-shadow: 0 4px 14px #0413272e, 0 1px 2px #04132729; pointer-events: auto;
-  transform: translateX(calc(-50% + var(--tag-shift, 0px)));
-  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms cubic-bezier(.23, 1, .32, 1);
-}
-/* The tail stays over the vehicle even when the tag slides aside. */
-.stage[data-world-scene="lastmile"] .markerCaption::after {
-  content: ""; position: absolute; left: calc(50% - var(--tag-shift, 0px)); top: 100%;
-  width: 10px; height: calc(6px + var(--tag-lift, 0px)); margin-left: -5px; background: inherit;
-  clip-path: polygon(0 0, 100% 0, 60% 6px, 60% 100%, 40% 100%, 40% 6px); /* wedge, then a 2px stem when raised */
-}
-.stage[data-world-scene="lastmile"] .marker:is(:hover, [data-focused="true"]) .markerCaption {
-  box-shadow: 0 8px 20px #04132740, 0 1px 2px #04132729;
-  transform: translateX(calc(-50% + var(--tag-shift, 0px))) translateY(-2px);
-}
-.stage[data-world-scene="lastmile"] .marker:active .markerCaption { transform: translateX(calc(-50% + var(--tag-shift, 0px))) scale(.97); }
-.stage[data-world-scene="lastmile"] .marker[aria-pressed="true"] .markerCaption { background: #ff5500; color: #fff; }
-.stage[data-world-scene="lastmile"] .marker:focus-visible { outline: 0; }
-.stage[data-world-scene="lastmile"] .marker:focus-visible .markerCaption { outline: 3px solid #075d9b; outline-offset: 2px; }
-.stage[data-world-scene="lastmile"] .marker:is(:hover, :focus-visible, [aria-pressed="true"]) { z-index: 7; }
-/* Collapsed tag: a white pin with an orange core sits on the vehicle. */
-.stage[data-world-scene="lastmile"] .marker::after {
-  content: ""; position: absolute; inset: 13px; z-index: -1; border: 3px solid #fff; border-radius: 50%;
-  background: #ff5500; box-shadow: 0 2px 8px #04132759; opacity: 0;
-}
-.stage[data-world-scene="lastmile"] .marker[data-caption-hidden]:not(:hover, :focus-visible, [aria-pressed="true"])::after { opacity: 1; }
-.stage[data-world-scene="lastmile"] .marker[data-caption-hidden]:not(:hover, :focus-visible, [aria-pressed="true"]) .markerCaption { visibility: hidden; }
-@media (max-width: 420px) {
-  .stage[data-world-scene="lastmile"] .markerCaption { height: 28px; padding: 0 10px; font-size: 13px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .stage[data-world-scene="lastmile"] .markerCaption { transition: none; }
-}
+.stage[data-world-scene="lastmile"] .marker:focus-visible { outline: 3px solid #fff; outline-offset: -3px; border-radius: 50%; box-shadow: 0 0 0 3px #075d9b; }
