@@ -54,22 +54,19 @@
 .indicator b[data-leg="ahead"] { border-top: 2px dotted var(--pale); }
 .goal { flex: none; color: #ff5500; }
 
-/* Phones: the logos leave little room, so the route folds into stacked
- * stop groups (passed | current | ahead) instead of a line with legs. */
+/* Phones: the same route, smaller — separate stops, thin legs, no ticks
+ * (the blue ring already marks a passed stop). */
 @media (max-width: 600px) {
-  .indicator { --stop: 24px; --now: 34px; }
-  .indicator b { display: none; }
-  .indicator i { box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--pale); }
-  .indicator b + i:not([data-leg="current"]) { margin-left: -7px; }
-  .indicator i[data-leg="done"] { box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--blue); }
+  .indicator { --stop: 22px; --now: 30px; --leg: 5px; }
+  .indicator i { padding: 0; overflow: hidden; box-shadow: none; border: 1.5px solid var(--pale); }
+  .indicator i[data-leg="done"] { box-shadow: none; border-color: var(--blue); }
   .indicator i[data-leg="done"]::after { display: none; }
-  .indicator i[data-leg="current"] { margin-inline: 5px; box-shadow: 0 0 0 2px var(--blue), 0 3px 10px #075d9b33; }
-  .indicator i[data-leg="current"] + b + i { margin-left: 0; }
-  .goal { margin-left: 5px; }
+  .indicator i[data-leg="current"] { box-shadow: 0 2px 6px #075d9b33; border: 2px solid var(--blue); }
+  .indicator b { margin-inline: 1px; border-top-width: 1.5px; }
+  .goal { width: 16px; margin-left: 2px; }
 }
 @media (max-width: 360px) {
-  .indicator { --stop: 20px; --now: 30px; }
-  .indicator b + i:not([data-leg="current"]) { margin-left: -8px; }
+  .indicator { --stop: 20px; --now: 28px; --leg: 4px; }
 }
 /* The phone result header has room only for the two logos; the scene
  * screens around it carry the route. */
