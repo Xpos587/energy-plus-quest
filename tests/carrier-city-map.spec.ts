@@ -34,7 +34,7 @@ for (const [width, height] of [
     );
 
     const rigs = page.locator("[data-carrier-choice]:not([data-map-autopick])");
-    await expect(rigs).toHaveCount(4);
+    await expect(rigs).toHaveCount(mapCarrierIds.length);
     for (const id of mapCarrierIds) {
       const rig = page.locator(`[data-carrier-choice="${id}"]`);
       await expect(rig).toHaveAccessibleName(
@@ -54,7 +54,7 @@ for (const [width, height] of [
     // A rig: qualitative pace on the dial, no km/h, focus returns on cancel.
     await pickCarrier(page, "near");
     const card = page.locator("[data-choice-inspection]");
-    await expect(card.locator("h3")).toHaveText(carrierFacts.near.label);
+    await expect(card.locator("h3")).toContainText(carrierFacts.near.label);
     await expect(page.locator("[data-speedometer]")).toBeVisible();
     await expect(card).toContainText(carrierFacts.near.pace);
     await expect(card).not.toContainText("км/ч");

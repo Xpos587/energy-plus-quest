@@ -3,14 +3,15 @@ import {
   type MapCarrierId,
   mapCarrierIds,
 } from "../game/carrierFacts";
-import manifest from "./cityV4Manifest.json";
 import {
   autoPin,
   carrierColors,
   depotPill,
+  paceFraction,
   rigPin,
   sparkle,
 } from "./cityPins";
+import manifest from "./cityV4Manifest.json";
 
 // Scene 1 city v4. One Blender scene is the source of truth: the plates
 // (wide for landscape, tall for portrait) are its truck-free renders, the rigs
@@ -115,6 +116,14 @@ export type Route = {
   pts: Pt[];
   cum: number[];
   length: number;
+  /** Smoothed signed curvature (1/m, + = left) at each point. */
+  kappa: number[];
+  /** Speed profile (m/s) at each point and lap time to reach it. */
+  v: number[];
+  tau: number[];
+  /** Mean (timetable) speed and lap time. */
+  base: number;
+  period: number;
 };
 function buildRoute(id: MapCarrierId): Route {
   const pts = M.routes[id];
@@ -124,13 +133,93 @@ function buildRoute(id: MapCarrierId): Route {
     const b = pts[k % pts.length];
     cum.push(cum[k - 1] + Math.hypot(b[0] - a[0], b[1] - a[1]));
   }
-  return { id, pts, cum, length: cum[pts.length] };
+  return {
+    id,
+    pts,
+    cum,
+    length: cum[pts.length],
+    kappa: [],
+    v: [],
+    tau: [],
+    base: 0,
+    period: 0,
+  };
 }
+
+// Drivers brake into corners and pull away after them. The speed follows
+// the curvature under the front axle (1 / (1 + 6|k|): 0.6 of cruise on the
+// tightest 8.5 m turns), limited by gentle acceleration and firmer braking,
+// then scaled so the lap time is exactly the timetable's.
+const CORNER = 6;
+const ACCEL = 0.012; // x base^2 per metre: cruise from corner speed in ~25 m
+const BRAKE = 0.02; // ~15 m
+function shapeSpeed(r: Route, base: number) {
+  const n = r.pts.length;
+  const ds = (i: number) => r.cum[i + 1] - r.cum[i];
+  const head = (i: number) => {
+    const a = r.pts[mod(i, n)];
+    const b = r.pts[mod(i + 1, n)];
+    return Math.atan2(b[1] - a[1], b[0] - a[0]);
+  };
+  const raw = r.pts.map(
+    (_, i) =>
+      wrapAngle(head(i) - head(i - 1)) /
+      Math.max(1e-3, (ds(mod(i - 1, n)) + ds(i)) / 2),
+  );
+  const w = Math.max(1, Math.round(3 / (r.length / n)));
+  r.kappa = raw.map((_, i) => {
+    let sum = 0;
+    for (let d = -w; d <= w; d++) sum += raw[mod(i + d, n)];
+    return sum / (2 * w + 1);
+  });
+  const v = r.cum
+    .slice(0, n)
+    .map(
+      (s) =>
+        base /
+        (1 + CORNER * Math.abs(r.kappa[indexAt(r, s + RIG.frontAxle * 0.8)])),
+    );
+  for (let lap = 0; lap < 2; lap++) {
+    for (let i = 0; i < n; i++) {
+      const j = (i + 1) % n;
+      v[j] = Math.min(
+        v[j],
+        Math.sqrt(v[i] ** 2 + 2 * ACCEL * base ** 2 * ds(i)),
+      );
+    }
+    for (let i = n - 1; i >= 0; i--) {
+      const j = (i + 1) % n;
+      v[i] = Math.min(
+        v[i],
+        Math.sqrt(v[j] ** 2 + 2 * BRAKE * base ** 2 * ds(i)),
+      );
+    }
+  }
+  const lapTime = (sp: number[]) => {
+    const tau = [0];
+    for (let i = 0; i < n; i++)
+      tau.push(tau[i] + ds(i) / ((sp[i] + sp[(i + 1) % n]) / 2));
+    return tau;
+  };
+  const scale = lapTime(v)[n] / (r.length / base);
+  r.v = v.map((x) => x * scale);
+  r.tau = lapTime(r.v);
+  r.base = base;
+  r.period = r.tau[n];
+}
+
 let cached: Route[] | undefined;
-export const cityRoutes = () => (cached ??= mapCarrierIds.map(buildRoute));
+export const cityRoutes = () => {
+  if (!cached) {
+    cached = mapCarrierIds.map(buildRoute);
+    for (const r of cached) shapeSpeed(r, lapSpeed(r));
+  }
+  return cached;
+};
 
 const mod = (v: number, m: number) => ((v % m) + m) % m;
-function pointAt(r: Route, distance: number): Pt {
+/** Segment index and fraction at a route distance. */
+function seg(r: Route, distance: number): [number, number] {
   const s = mod(distance, r.length);
   let lo = 0;
   let hi = r.pts.length - 1;
@@ -139,11 +228,60 @@ function pointAt(r: Route, distance: number): Pt {
     if (r.cum[mid] <= s) lo = mid;
     else hi = mid - 1;
   }
+  const span = r.cum[lo + 1] - r.cum[lo];
+  return [lo, span > 0 ? (s - r.cum[lo]) / span : 0];
+}
+const indexAt = (r: Route, s: number) => {
+  const [i, f] = seg(r, s);
+  return (i + (f > 0.5 ? 1 : 0)) % r.pts.length;
+};
+function pointAt(r: Route, distance: number): Pt {
+  const [lo, t] = seg(r, distance);
   const a = r.pts[lo];
   const b = r.pts[(lo + 1) % r.pts.length];
-  const span = r.cum[lo + 1] - r.cum[lo];
-  const t = span > 0 ? (s - r.cum[lo]) / span : 0;
   return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+}
+/** Route distance reached after `time` s of the lap (and back). */
+export function distanceAt(r: Route, time: number) {
+  const tt = mod(time, r.period);
+  let lo = 0;
+  let hi = r.pts.length - 1;
+  while (lo < hi) {
+    const mid = (lo + hi + 1) >> 1;
+    if (r.tau[mid] <= tt) lo = mid;
+    else hi = mid - 1;
+  }
+  const f = (tt - r.tau[lo]) / (r.tau[lo + 1] - r.tau[lo]);
+  return r.cum[lo] + f * (r.cum[lo + 1] - r.cum[lo]);
+}
+const timeAt = (r: Route, s: number) => {
+  const [i, f] = seg(r, s);
+  return r.tau[i] + f * (r.tau[i + 1] - r.tau[i]);
+};
+export function speedAt(r: Route, s: number) {
+  const [i, f] = seg(r, s);
+  return r.v[i] + f * (r.v[(i + 1) % r.v.length] - r.v[i]);
+}
+
+/** What the driver is doing: brake lights (0..1), indicator (+1 left,
+ * -1 right, 0 off) and body lean (metres, + = to the left of travel). */
+export type Motion = { brake: number; blink: number; lean: number };
+export function motionAt(r: Route, s: number): Motion {
+  const v = speedAt(r, s);
+  const dv = speedAt(r, s + 1.5) - speedAt(r, s - 1.5);
+  const accel = (v * dv) / 3;
+  const brake = Math.min(1, Math.max(0, -accel / (BRAKE * r.base ** 2) - 0.2));
+  // Indicate from ~18 m before the front axle reaches a turn until it is out.
+  let peak = 0;
+  for (let d = -2; d <= 18; d += 1.5) {
+    const k = r.kappa[indexAt(r, s + RIG.frontAxle + d)];
+    if (Math.abs(k) > Math.abs(peak)) peak = k;
+  }
+  const blink = Math.abs(peak) > 0.035 ? Math.sign(peak) : 0;
+  // The body leans out of the turn with the lateral acceleration v^2 k.
+  const lat = v * v * r.kappa[indexAt(r, s + RIG.kingpin)];
+  const lean = -0.35 * Math.max(-1, Math.min(1, lat / (0.06 * r.base ** 2)));
+  return { brake, blink, lean };
 }
 
 /** Rig centre and heading (radians, world frame, counter-clockwise from +x). */
@@ -295,7 +433,7 @@ export function createTraffic(): Traffic {
 export function stepTraffic(t: Traffic, dt: number) {
   t.time += Math.max(0, dt);
   t.s = cityRoutes().map((r) =>
-    mod(startPhase[r.id] * r.length + lapSpeed(r) * t.time, r.length),
+    distanceAt(r, timeAt(r, startPhase[r.id] * r.length) + t.time),
   );
 }
 export const trafficRigs = (t: Traffic) =>
@@ -363,6 +501,8 @@ export type DrawOptions = {
   /** Auto-select label sits left of its pin (decided by the map view). */
   autoFlip?: boolean;
   reduced: boolean;
+  /** Traffic clock (s), for lamps; drawCity fills it in. */
+  time?: number;
 };
 
 /** Two neighbouring heading frames and the blend between them, so a turning
@@ -477,7 +617,10 @@ function fillShadows(c: CanvasRenderingContext2D, hulls: Pt[][]) {
   c.fillStyle = "rgba(79,121,162,0.5)";
   c.beginPath();
   for (const hull of hulls)
-    hull.forEach((q, i) => (i ? c.lineTo(q[0], q[1]) : c.moveTo(q[0], q[1])));
+    hull.forEach((q, i) => {
+      if (i) c.lineTo(q[0], q[1]);
+      else c.moveTo(q[0], q[1]);
+    });
   c.fill("nonzero");
   c.restore();
 }
@@ -645,13 +788,31 @@ function drawArticulated(
   g: Rig,
   o: DrawOptions,
   shake: Shake = NO_SHAKE,
+  motion?: Motion,
 ) {
   const at = project(o.plate, g.kingpin[0], g.kingpin[1]);
   // Plate px per shake metre, never under 4 CSS px so the rattle still reads
   // at overview zoom.
   const m = Math.max(1 / spec.mpp, (4 * o.dpr) / o.k);
-  const kp: Pt = [at[0] + shake.cab[0] * m, at[1] + shake.cab[1] * m];
-  const kt: Pt = [at[0] + shake.trailer[0] * m, at[1] + shake.trailer[1] * m];
+  // Body lean out of the turn: cab and trailer slide a little sideways over
+  // their wheels (world metres -> plate px through the projection).
+  const [pa, pb] = M.plates[o.plate].proj;
+  const lean = (h: number, k: number): Pt => {
+    const d = (motion?.lean ?? 0) * k;
+    const x = -Math.sin(h) * d;
+    const y = Math.cos(h) * d;
+    return [pa[0] * x + pa[1] * y, pb[0] * x + pb[1] * y];
+  };
+  const lc = lean(g.tractor, 1);
+  const lt = lean(g.trailer, 0.7);
+  const kp: Pt = [
+    at[0] + shake.cab[0] * m + lc[0],
+    at[1] + shake.cab[1] * m + lc[1],
+  ];
+  const kt: Pt = [
+    at[0] + shake.trailer[0] * m + lt[0],
+    at[1] + shake.trailer[1] * m + lt[1],
+  ];
   const [[tb, th], [lb, lh]] = rigBoxes(g);
   const cabAt = project(o.plate, tb.x, tb.y);
   const trlAt = project(o.plate, lb.x, lb.y);
@@ -689,7 +850,6 @@ function drawArticulated(
   // Cab and trailer meet at the kingpin, so the one whose far end is lower
   // on screen (nearer the viewer) covers the hitch. Switching only on the
   // tractor's own direction keeps the swap out of mid-turn.
-  const [, pb] = M.plates[o.plate].proj;
   if (pb[0] * Math.cos(g.tractor) + pb[1] * Math.sin(g.tractor) >= 0) {
     trailer();
     cab();
@@ -697,7 +857,86 @@ function drawArticulated(
     cab();
     trailer();
   }
+  if (motion) {
+    const time = o.time ?? 0;
+    const on = motion.blink !== 0 && mod(time * 1.5, 1) < 0.55;
+    const tail = along(g.kingpin, g.trailer, RIG.trailerRear - RIG.kingpin);
+    const nose = along(g.kingpin, g.tractor, RIG.front - RIG.kingpin);
+    const w = RIG_W * 0.42;
+    for (const side of [1, -1]) {
+      const amber = on && side === motion.blink;
+      // Rear: red brake lamps (a dim tail light when cruising), the amber
+      // indicator on the turning side; front: indicators only.
+      lamp(c, o, tail, g.trailer, -1, side, w, 1.4, lt, [
+        amber ? "#ffb21f" : "#ff3b30",
+        amber ? 1 : 0.18 + 0.82 * motion.brake,
+      ]);
+      if (amber)
+        lamp(c, o, nose, g.tractor, 1, side, w, 1.1, lc, ["#ffb21f", 1]);
+    }
+  }
   return exhaust;
+}
+
+/** A lamp on a rig corner (`end` +1 front, -1 rear; `side` +1 left), drawn
+ * only while one of its two faces turns to the camera. */
+function lamp(
+  c: CanvasRenderingContext2D,
+  o: DrawOptions,
+  end: Pt,
+  heading: number,
+  face: number,
+  side: number,
+  w: number,
+  z: number,
+  shift: Pt,
+  [color, level]: [string, number],
+) {
+  if (level < 0.05) return;
+  const [, pb] = M.plates[o.plate].proj;
+  // Camera look direction on the ground: screen-up (pb < 0) is away.
+  const n = Math.hypot(pb[0], pb[1]);
+  const look: Pt = [-pb[0] / n, -pb[1] / n];
+  const ch = Math.cos(heading);
+  const sh = Math.sin(heading);
+  const faces = [
+    [ch * face, sh * face],
+    [-sh * side, ch * side],
+  ];
+  const seen = Math.max(
+    ...faces.map(([x, y]) =>
+      Math.min(1, Math.max(0, -(x * look[0] + y * look[1]) * 3)),
+    ),
+  );
+  if (seen < 0.05) return;
+  const [x, y] = project(
+    o.plate,
+    end[0] - sh * side * w,
+    end[1] + ch * side * w,
+    z,
+  );
+  const px = o.ox + (x + shift[0]) * o.k;
+  const py = o.oy + (y + shift[1]) * o.k;
+  const m = o.k / M.plates[o.plate].mpp;
+  // Amber indicators read smaller than red at the same size: a touch bigger.
+  const r =
+    Math.max(0.55 * m, 1.3 * o.dpr * o.pinScale) *
+    (color === "#ffb21f" ? 1.35 : 1);
+  c.save();
+  c.globalAlpha *= seen * level;
+  const g = c.createRadialGradient(px, py, 0, px, py, r * 3.2);
+  g.addColorStop(0, color);
+  g.addColorStop(0.3, `${color}99`);
+  g.addColorStop(1, `${color}00`);
+  c.fillStyle = g;
+  c.beginPath();
+  c.arc(px, py, r * 3.2, 0, Math.PI * 2);
+  c.fill();
+  c.fillStyle = "#fff6e0";
+  c.beginPath();
+  c.arc(px, py, r * 0.55, 0, Math.PI * 2);
+  c.fill();
+  c.restore();
 }
 
 // Smoke: puffs live in world-anchored plate px and rise in screen space.
@@ -881,7 +1120,12 @@ export function drawCity(
 ) {
   const spec = M.plates[o.plate];
   const time = t.time;
+  o = { ...o, time };
+  const routes = cityRoutes();
   const rigs = trafficRigs(t);
+  const motions = routes.map((r, i) =>
+    o.reduced ? undefined : motionAt(r, t.s[i]),
+  );
   const poses = rigs.map(rigPose);
   const focus =
     o.selected && o.selected !== "express"
@@ -943,6 +1187,7 @@ export function drawCity(
       rigs[mapCarrierIds.indexOf(id)],
       o,
       shake,
+      motions[mapCarrierIds.indexOf(id)],
     );
   }
   c.globalAlpha = 1;
@@ -1037,13 +1282,20 @@ export function drawCity(
       const id = mapCarrierIds[index];
       // The yellow pin rides the rattle and its needle flutters.
       const r = id === "old4" && !o.reduced ? rattle(time).cab : undefined;
+      // The needle follows the live speed: it dips into corners.
+      const route = routes[index];
+      const live = o.reduced
+        ? 0
+        : (speedAt(route, t.s[index]) / route.base - 1) *
+          paceFraction(id) *
+          4.2;
       rigPin(
         c,
         id,
         sx + (r ? r[0] * 4 : 0),
         sy - 2 * o.pinScale + (r ? r[1] * 4 : 0),
         o.pinScale,
-        r ? r[2] * 4 + Math.sin(time * 23) * 0.06 : 0,
+        live + (r ? r[2] * 4 + Math.sin(time * 23) * 0.06 : 0),
         glowAt,
       );
     });

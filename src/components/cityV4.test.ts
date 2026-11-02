@@ -6,19 +6,22 @@ import {
   landmark,
   lapSpeed,
   MPS_PER_KMH,
+  motionAt,
   plateFor,
   plates,
   project,
   RIG,
+  rattle,
   rigBoxes,
   rigsTouch,
-  rattle,
   sputter,
   stepTraffic,
   trafficFrame,
   trafficRigs,
   truckSpeed,
 } from "./cityV4";
+
+const routes0 = () => cityRoutes();
 
 function simulate(
   seconds: number,
@@ -105,17 +108,25 @@ describe("scene 1 city v4", () => {
     expect(maxBend).toBeGreaterThan(0.5);
   });
 
-  it("drives smoothly: constant speed, no stops, no jumps in heading", () => {
+  it("drives smoothly: slows into corners, never stops, keeps the lap time", () => {
     const t = createTraffic();
     const routes = cityRoutes();
     let prev = [...t.s];
+    let prevMoved: number[] | undefined;
     let heads = trafficRigs(t).map((g) => g.tractor);
+    const slowest = routes.map(() => Infinity);
     for (let f = 0; f < 60 * 30; f++) {
       stepTraffic(t, 1 / 30);
       const rigs = trafficRigs(t);
       t.s.forEach((s, i) => {
+        const base = lapSpeed(routes[i]) / 30;
         const moved = (s - prev[i] + routes[i].length) % routes[i].length;
-        expect(moved).toBeCloseTo(lapSpeed(routes[i]) / 30, 6);
+        // Never stops or races; speed changes gently frame to frame.
+        expect(moved).toBeGreaterThan(base * 0.5);
+        expect(moved).toBeLessThan(base * 1.3);
+        if (prevMoved)
+          expect(Math.abs(moved - prevMoved[i])).toBeLessThan(base * 0.03);
+        slowest[i] = Math.min(slowest[i], moved / base);
         const turn = Math.abs(
           ((rigs[i].tractor - heads[i] + 3 * Math.PI) % (2 * Math.PI)) -
             Math.PI,
@@ -123,8 +134,27 @@ describe("scene 1 city v4", () => {
         // Never sharper than the ~8.5 m minimum radius of routes.py.
         expect(turn).toBeLessThan(lapSpeed(routes[i]) / 30 / 8);
       });
+      prevMoved = t.s.map(
+        (s, i) => (s - prev[i] + routes[i].length) % routes[i].length,
+      );
       prev = [...t.s];
       heads = rigs.map((g) => g.tractor);
+    }
+    // Every rig visibly brakes for its corners.
+    for (const v of slowest) expect(v).toBeLessThan(0.85);
+    // Same lap time as the constant-speed timetable.
+    for (const r of routes)
+      expect(r.period).toBeCloseTo(r.length / lapSpeed(r), 3);
+  });
+
+  it("lights brakes before corners and indicates the turn side", () => {
+    for (const r of routes0()) {
+      const samples = Array.from({ length: 400 }, (_, k) =>
+        motionAt(r, (k / 400) * r.length),
+      );
+      expect(samples.some((m) => m.brake > 0.3)).toBe(true);
+      expect(samples.some((m) => m.blink !== 0)).toBe(true);
+      expect(samples.some((m) => m.blink === 0 && m.brake < 0.05)).toBe(true);
     }
   });
 
