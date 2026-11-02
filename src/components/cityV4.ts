@@ -195,6 +195,18 @@ function shapeSpeed(r: Route, base: number) {
       );
     }
   }
+  // The braking/acceleration limits leave kinks where one ramp meets the
+  // next (acceleration jumps from -A to +A in a frame). Three box passes
+  // over ~10 m make it a soft bell: no kinks, no sudden lurch.
+  const h = Math.max(1, Math.round(5 / (r.length / n)));
+  for (let pass = 0; pass < 3; pass++) {
+    const src = v.slice();
+    for (let i = 0; i < n; i++) {
+      let sum = 0;
+      for (let d = -h; d <= h; d++) sum += src[mod(i + d, n)];
+      v[i] = sum / (2 * h + 1);
+    }
+  }
   const lapTime = (sp: number[]) => {
     const tau = [0];
     for (let i = 0; i < n; i++)
@@ -251,8 +263,13 @@ export function distanceAt(r: Route, time: number) {
     if (r.tau[mid] <= tt) lo = mid;
     else hi = mid - 1;
   }
-  const f = (tt - r.tau[lo]) / (r.tau[lo + 1] - r.tau[lo]);
-  return r.cum[lo] + f * (r.cum[lo + 1] - r.cum[lo]);
+  // Constant acceleration across the segment (its timing in lapTime is the
+  // trapezoid), so the speed is continuous, not a staircase per segment.
+  const v0 = r.v[lo];
+  const v1 = r.v[(lo + 1) % r.v.length];
+  const dt = tt - r.tau[lo];
+  const a = (v1 - v0) / (r.tau[lo + 1] - r.tau[lo]);
+  return Math.min(r.cum[lo + 1], r.cum[lo] + v0 * dt + 0.5 * a * dt * dt);
 }
 const timeAt = (r: Route, s: number) => {
   const [i, f] = seg(r, s);

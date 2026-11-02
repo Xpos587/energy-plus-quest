@@ -113,6 +113,8 @@ describe("scene 1 city v4", () => {
     const routes = cityRoutes();
     let prev = [...t.s];
     let prevMoved: number[] | undefined;
+    let prevAccel: number[] | undefined;
+    const accels = routes.map(() => 0);
     let heads = trafficRigs(t).map((g) => g.tractor);
     const slowest = routes.map(() => Infinity);
     for (let f = 0; f < 60 * 30; f++) {
@@ -124,8 +126,15 @@ describe("scene 1 city v4", () => {
         // Never stops or races; speed changes gently frame to frame.
         expect(moved).toBeGreaterThan(base * 0.5);
         expect(moved).toBeLessThan(base * 1.3);
-        if (prevMoved)
-          expect(Math.abs(moved - prevMoved[i])).toBeLessThan(base * 0.03);
+        if (prevMoved) {
+          const accel = moved - prevMoved[i];
+          expect(Math.abs(accel)).toBeLessThan(base * 0.03);
+          // No lurch: acceleration itself changes gradually (the old
+          // per-segment speed made it jump frame to frame).
+          if (prevAccel)
+            expect(Math.abs(accel - prevAccel[i])).toBeLessThan(base * 0.002);
+          accels[i] = accel;
+        }
         slowest[i] = Math.min(slowest[i], moved / base);
         const turn = Math.abs(
           ((rigs[i].tractor - heads[i] + 3 * Math.PI) % (2 * Math.PI)) -
@@ -134,6 +143,7 @@ describe("scene 1 city v4", () => {
         // Never sharper than the ~8.5 m minimum radius of routes.py.
         expect(turn).toBeLessThan(lapSpeed(routes[i]) / 30 / 8);
       });
+      prevAccel = prevMoved ? [...accels] : undefined;
       prevMoved = t.s.map(
         (s, i) => (s - prev[i] + routes[i].length) % routes[i].length,
       );
@@ -161,14 +171,12 @@ describe("scene 1 city v4", () => {
   it("keeps every rig inside the safe area of both plates", () => {
     for (const name of ["wide", "tall"] as const) {
       const [u0, v0, u1, v1] = plates[name].keep;
+      let worst = Number.POSITIVE_INFINITY;
       simulate(120, (t) => {
-        for (const [x, y] of trafficFrame(t, name)) {
-          expect(x).toBeGreaterThan(u0 - 0.02);
-          expect(x).toBeLessThan(u1 + 0.02);
-          expect(y).toBeGreaterThan(v0 - 0.02);
-          expect(y).toBeLessThan(v1 + 0.02);
-        }
+        for (const [x, y] of trafficFrame(t, name))
+          worst = Math.min(worst, x - u0, u1 - x, y - v0, v1 - y);
       });
+      expect(worst).toBeGreaterThan(-0.02);
     }
   });
 
