@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-01-scene1-v15",
+  "release": "media-2026-11-02-scene1-v16",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3281,10 +3281,10 @@
       ]
     },
     {
-      "name": "media-27-d66ce8df310d.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-01-scene1-v15/media-27-d66ce8df310d.tar.gz",
-      "sha256": "d66ce8df310dcfc9a7c9be3964ce5dcfd501a4682c4665d0bfe6d7c588f18622",
-      "bytes": 5058908,
+      "name": "media-27-b1540443d576.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-02-scene1-v16/media-27-b1540443d576.tar.gz",
+      "sha256": "b1540443d57681d09901807e514fb05acab6d39d321fb90a6331605ce21efde5",
+      "bytes": 5134297,
       "files": [
         {
           "path": "public/scene1-v4/backdrop.webp",
@@ -3293,23 +3293,23 @@
         },
         {
           "path": "public/scene1-v4/plate-tall.webp",
-          "sha256": "306afeea5a8855654178e6cb94a941746810f768b7c36ef2c8f051d17381988b",
-          "bytes": 439412
+          "sha256": "3c552027c02a3429bee191306026cfefaae3ee1b7b4c035d85b99ea0b2b891c2",
+          "bytes": 446698
         },
         {
           "path": "public/scene1-v4/plate-tall@2x.webp",
-          "sha256": "62917c82255a3d40afc90842cb49ec9ecc0e6fe370b451e279ea8f2adbfea99e",
-          "bytes": 1046096
+          "sha256": "6ff0b9a68b2989149d794abefd75691a376caef232d63235f6a978c7a84434da",
+          "bytes": 1079256
         },
         {
           "path": "public/scene1-v4/plate-wide.webp",
-          "sha256": "de3a1a0c70e160dbe70af6998f15a0688efc67279b504022be9a190569a9e3d3",
-          "bytes": 572142
+          "sha256": "e212883ad385832b4c0b071e2dfa8ec6f84f5e7ac2ef10d5a117b046015565fe",
+          "bytes": 578548
         },
         {
           "path": "public/scene1-v4/plate-wide@2x.webp",
-          "sha256": "95401d29f8a1f2fc4302eade9edb23dbd317e71851885ff08fecb01c05521e8c",
-          "bytes": 1010922
+          "sha256": "f4b6a966718298e11b9dd3a64461f239ff529021b0eafb1e9179189d74792e81",
+          "bytes": 1039536
         },
         {
           "path": "public/scene1-v4/smoke.webp",
