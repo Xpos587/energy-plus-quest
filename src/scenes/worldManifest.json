@@ -58,57 +58,57 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/warehouse-v15/overview.webp",
-        "width": 1536,
-        "height": 1024,
+        "image": "scene-art/inventory-master-v4.webp",
+        "width": 1672,
+        "height": 941,
         "hotspots": [
           {
             "id": "entrance",
-            "x": 0.1482,
-            "y": 0.4753
+            "x": 0.1471291866028708,
+            "y": 0.6503719447396387
           },
           {
             "id": "alphabet",
-            "x": 0.7137,
-            "y": 0.6291
+            "x": 0.2876794258373206,
+            "y": 0.4070138150903294
           },
           {
             "id": "keeper",
-            "x": 0.8456,
-            "y": 0.5345
+            "x": 0.8145933014354066,
+            "y": 0.6014877789585548
           },
           {
             "id": "wms",
-            "x": 0.4184,
-            "y": 0.3104
+            "x": 0.6985645933014354,
+            "y": 0.8873538788522848
           }
         ],
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/warehouse-v15/overview-mobile.webp",
-        "width": 1024,
-        "height": 1536,
+        "image": "scene-art/inventory-master-v4.webp",
+        "width": 1672,
+        "height": 941,
         "hotspots": [
           {
             "id": "entrance",
-            "x": 0.0918,
-            "y": 0.3682
+            "x": 0.1471291866028708,
+            "y": 0.6503719447396387
           },
           {
             "id": "alphabet",
-            "x": 0.7702,
-            "y": 0.7319
+            "x": 0.2876794258373206,
+            "y": 0.4070138150903294
           },
           {
             "id": "keeper",
-            "x": 0.9388,
-            "y": 0.7316
+            "x": 0.8145933014354066,
+            "y": 0.6014877789585548
           },
           {
             "id": "wms",
-            "x": 0.4157,
-            "y": 0.3147
+            "x": 0.6985645933014354,
+            "y": 0.8873538788522848
           }
         ],
         "rendering": "raster"

@@ -10,14 +10,14 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       await page.locator('[data-choice-confirm]').click();
       const img = page.locator('[data-scene-consequence="inventory-wms"] img');
       await img.evaluate((image: HTMLImageElement) => image.decode());
-      await expect(img).toHaveAttribute('src', /warehouse-v15\/outcome-wms\.webp$/);
+      await expect(img).toHaveAttribute('src', /wms-stylized-v3\.png$/);
       const action = await img.evaluate((image: HTMLImageElement) => {
         const scale = Math.max(image.clientWidth / image.naturalWidth, image.clientHeight / image.naturalHeight);
         const focus = getComputedStyle(image).objectPosition.split(' ').map(parseFloat);
         const left = (image.clientWidth - image.naturalWidth * scale) * focus[0] / 100;
         const top = (image.clientHeight - image.naturalHeight * scale) * focus[1] / 100;
-        // Desk monitor and the pallet jack taking the gift through the dispatch door in the 1960×840 source (manifest-wide-outcomes.json).
-        return { left: left + 390 * scale, right: left + 1040 * scale, top: top + 220 * scale, bottom: top + 550 * scale, width: image.clientWidth, height: image.clientHeight };
+        // Complete scanner operator and loaded trolley in wms-stylized-v3.png (1671×941).
+        return { left: left + 409 * scale, right: left + 1290 * scale, top: top + 158 * scale, bottom: top + 870 * scale, width: image.clientWidth, height: image.clientHeight };
       });
       expect(action.left).toBeGreaterThanOrEqual(0);
       expect(action.right).toBeLessThanOrEqual(action.width);

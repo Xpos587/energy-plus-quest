@@ -26,7 +26,6 @@ import { craneCaptions, craneFacts } from "./crane/artwork";
 import { CraneDecisionContext, CraneFacts } from "./crane/CraneDecisionContext";
 import { inventoryScene } from "./inventory";
 import { inventoryAlphabet } from "./inventory/alphabet";
-import { RouteCompare } from "./inventory/RouteCompare";
 import { JourneyEnding } from "./JourneyEnding";
 import { lastmileScene } from "./lastmile";
 import { LastmileDecisionContext, LastmileFacts, lastmileFacts } from "./lastmile/LastmileFacts";
@@ -467,7 +466,19 @@ function ScenesSession({
               }
               inspecting={!!pending}
               onOpen={() => setPendingId(undefined)}
-              action={inspectsOnArt ? undefined : (
+              action={scene.id === "inventory" ? (
+                <div className={flow.inventoryMobileChoices}>
+                  <SceneChoices
+                    numbered={false}
+                    options={options.map(option => ({
+                      id: option.id,
+                      label: option.id === "alphabet" ? "По алфавиту" : places![option.id][0],
+                    }))}
+                    {...syncFocus}
+                    onInspect={setPendingId}
+                  />
+                </div>
+              ) : inspectsOnArt ? undefined : (
                 <SceneChoices
                   variant="scene"
                   options={options.map((option) => ({
@@ -559,7 +570,6 @@ function ScenesSession({
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace
-                  children={scene.id === "inventory" ? <RouteCompare parcel={context.parcel} chosen={selected.id} /> : undefined}
                   continuous={
                     (scene.id === "lastmile" && selected.id === "pipe-carrier") ||
                     (scene.id === "crane" && selected.id === "petr")

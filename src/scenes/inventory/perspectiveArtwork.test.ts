@@ -2,10 +2,9 @@ import sharp from 'sharp';
 import { expect, it } from 'vitest';
 import manifest from '../worldManifest.json';
 import contours from './segmentedContours.json';
-import mobileContours from './segmentedContours.mobile.json';
 
 it('registers the final perspective raster, native hit regions and both camera views together', async () => {
-  for (const [format, drawing] of [['desktop', contours], ['mobile', mobileContours]] as const) {
+  for (const [format, drawing] of [['desktop', contours], ['mobile', contours]] as const) {
     const image = drawing.source;
     const raster = await sharp(`public/${image}`).metadata();
     const view = manifest.scenes.inventory[format];

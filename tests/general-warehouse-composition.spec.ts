@@ -1,8 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-// Technical routing evidence for the shown21Oct artwork, which is artistically rejected.
-// A physically correct scene may use camera zoom/pan; simultaneous visibility of
-// every badge and forced edge-to-edge filling are deliberately not requirements.
+// The same illustrated hall and native coordinate plane must work at every viewport.
 for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]]) {
   for (const parcel of ['boat', 'camera', 'socks']) {
     test(`warehouse coordinate plane and accessible choices ${width}x${height} ${parcel}`, async ({ page }) => {
@@ -19,11 +17,10 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       await page.reload();
       await page.evaluate(() => document.fonts.ready);
       const stage = page.locator('[data-world-scene=inventory]');
-      const format = await stage.getAttribute('data-format');
       const image = stage.locator('picture img');
       await image.evaluate(i => i.decode());
-      expect(await image.evaluate(i => i.currentSrc)).toContain(format === 'mobile' ? 'warehouse-v15/overview-mobile' : 'warehouse-v15/overview');
-      await expect(stage.locator('[data-warehouse-annotations] svg')).toHaveAttribute('viewBox', format === 'mobile' ? '0 0 1024 1536' : '0 0 1536 1024');
+      expect(await image.evaluate(i => i.currentSrc)).toContain('inventory-master-v4');
+      await expect(stage.locator('[data-warehouse-annotations] svg')).toHaveAttribute('viewBox', '0 0 1672 941');
       await expect(stage.locator('[data-hotspot]')).toHaveCount(4);
       for (const id of ['entrance', 'alphabet', 'keeper', 'wms']) {
         const choice = page.locator(`[data-hotspot=${id}]`);

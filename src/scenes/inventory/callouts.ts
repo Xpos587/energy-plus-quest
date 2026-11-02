@@ -1,12 +1,11 @@
 import type { SceneContext } from "../types";
 import contours from "./segmentedContours.json";
-import mobileContours from "./segmentedContours.mobile.json";
 import type { WarehouseChoice } from "./warehouseZones";
 
 /** Object boundaries and keyboard-button positions use the current illustration's native pixels. */
 export type WarehouseComposition = "wide" | "tall";
-export function warehouseDrawing(composition: WarehouseComposition = "wide") {
-  return composition === "tall" ? mobileContours : contours;
+export function warehouseDrawing(_composition: WarehouseComposition = "wide") {
+  return contours; // One illustration and coordinate plane, including phones.
 }
 export function warehouseContour(id: WarehouseChoice, parcel: SceneContext["parcel"], composition: WarehouseComposition = "wide") {
   const key = id === "alphabet" ? `alphabet-${parcel}` as const : id;

@@ -35,9 +35,10 @@ it("lets the player pick a place on the warehouse art, check its card and confir
   }
   expect(host.querySelector('[aria-label="Условие задания"]')).toBeNull();
   expect(host.querySelector("[data-scene-briefing]")?.getAttribute("data-reading")).toBe("false");
-  expect(host.querySelector("[data-scene-choice]")).toBeNull();
+  // The phone shortcuts share this flow; CSS hides them on wider viewports.
+  expect(host.querySelectorAll("[data-scene-choice]")).toHaveLength(4);
   const place = host.querySelector<HTMLButtonElement>('[data-hotspot="wms"]');
-  expect(place?.getAttribute("aria-label")).toContain("Стол с монитором");
+  expect(place?.getAttribute("aria-label")).toContain("Стол с компьютером");
 
   await act(async () => place?.click());
   const card = host.querySelector("[data-choice-inspection]");

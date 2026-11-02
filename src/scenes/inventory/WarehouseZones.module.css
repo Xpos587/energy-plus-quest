@@ -5,8 +5,8 @@
 .zone[data-interactive="true"] { pointer-events: auto; cursor: pointer; }
 
 /* The rest of the hall recedes so the four choices read first; pointing at one deepens it. */
-.scrim { fill: #071a2e; opacity: .3; pointer-events: none; transition: opacity 220ms ease-out; }
-.scrim[data-lit="true"] { opacity: .45; }
+.scrim { fill: #071a2e; opacity: .08; pointer-events: none; transition: opacity 220ms ease-out; }
+.scrim[data-lit="true"] { opacity: .2; }
 
 /* Untried choices breathe: a soft white ring that widens and fades, staggered per object. */
 .ripple {

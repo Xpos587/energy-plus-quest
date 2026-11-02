@@ -111,8 +111,8 @@ describe("current artwork for every delivery context", () => {
       }
       for (const option of ["entrance", "keeper", "wms", "alphabet"]) {
         const path = option === "wms"
-          ? `/scene-art/warehouse-v15/outcome-wms.webp`
-          : `/scene-art/warehouse-v15/outcome-${option === "alphabet" ? `alphabet-${context.parcel}` : option}.webp`;
+          ? "/scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png"
+          : `/scene-art/warehouse-logic-2026-10-28/outcome-${option === "alphabet" ? `alphabet-${context.parcel}` : option}.webp`;
         expect(sceneOutcomeImage("inventory", option, context)).toBe(path);
         expect(existsSync(`public${path}`), path).toBe(true);
       }

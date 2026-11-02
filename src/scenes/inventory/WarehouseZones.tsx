@@ -57,7 +57,7 @@ export function WarehouseZones({ context, selectedId, onSelect, focusedId, onFoc
           return (
             <g key={id}>
               {spotlight && !lit && !seen.includes(id) && (
-                <circle className={styles.ripple} data-warehouse-ripple={id} cx={b.cx} cy={b.cy} r={Math.max(b.r * 0.9, 64)} style={{ animationDelay: `${i * 0.6}s` }} />
+                <circle className={styles.ripple} data-warehouse-ripple={id} cx={b.cx} cy={b.cy} r={Math.max(64, Math.min(b.r * 0.9, 110))} style={{ animationDelay: `${i * 0.6}s` }} />
               )}
               <path
                 className={styles.zone}
