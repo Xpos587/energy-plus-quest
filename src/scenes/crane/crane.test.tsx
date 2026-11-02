@@ -85,7 +85,7 @@ describe("craneScene source contract", () => {
       });
     }
   }
-  it("renders four numbered object pins on the quay drawing", () => {
+  it("makes the four actors the tap targets, with no numbers, captions or chips", () => {
     const html = renderToStaticMarkup(
       <craneScene.Art context={context} showResult={false} onSelect={() => {}} />,
     );
@@ -93,8 +93,10 @@ describe("craneScene source contract", () => {
     for (const id of ["remote", "rush", "wait", "petr"])
       expect(html).toContain(`data-hotspot="${id}"`);
     expect(html).toMatch(/scene-art\/barge-v4\/(mid|desk|wide|tall)\/plate\.webp/);
-    for (const caption of Object.values(craneCaptions)) expect(html).toContain(caption);
-    expect(html).toContain("Баржа готова к отходу");
+    for (const caption of Object.values(craneCaptions)) expect(html).toContain(`aria-label="${caption}:`);
+    expect(html).not.toContain("Баржа готова к отходу");
+    expect(html).not.toContain(">Подарок<");
+    expect(html.match(/data-barge-ripple=/g)).toHaveLength(4);
     expect(html).not.toContain("disabled");
   });
   it("locks the pins once a result is shown", () => {
@@ -104,13 +106,13 @@ describe("craneScene source contract", () => {
     expect(html).toContain('data-selected="petr"');
     expect(html.match(/disabled=""/g)).toHaveLength(4);
   });
-  it("keeps every pin inside its drawing", () => {
+  it("keeps every tap target inside its drawing", () => {
     for (const art of Object.values(craneArtwork))
-      for (const point of Object.values(art.hotspots)) {
-        expect(point.x).toBeGreaterThan(0);
-        expect(point.x).toBeLessThan(art.width);
-        expect(point.y).toBeGreaterThan(0);
-        expect(point.y).toBeLessThan(art.height);
+      for (const t of Object.values(art.targets)) {
+        expect(t.x).toBeGreaterThanOrEqual(0);
+        expect(t.x + t.w).toBeLessThanOrEqual(art.width);
+        expect(t.y).toBeGreaterThanOrEqual(-1);
+        expect(t.y + t.h).toBeLessThanOrEqual(art.height);
       }
   });
 });

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { ImageSources } from "../../components/ImageSources";
 import { useArtworkLoading } from "../../components/useArtworkLoading";
@@ -108,6 +108,12 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const plate = useArtworkLoading(imageAsset(art.plate));
   const options = craneScene.options(context);
   const litId = playing ?? (interactive ? (hovered ?? selectedId) : undefined);
+  // Pointing at an actor dims the quay around it (scene 5 pattern); untried actors breathe.
+  const pointed = interactive ? (hovered ?? selectedId) : undefined;
+  const hole = `barge-hole-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
+  const [seen, setSeen] = useState<string[]>([]);
+  useEffect(() => { if (selectedId) setSeen((s) => (s.includes(selectedId) ? s : [...s, selectedId])); }, [selectedId]);
+  const svgBox = (r: { x: number; y: number; w: number; h: number }, d: number) => ({ x: r.x - d, y: r.y - d, width: r.w + 2 * d, height: r.h + 2 * d });
   const lit = new Set<string>(litId ? art.actors[litId] ?? [] : []);
   const pct = (x: number, y: number) => ({ left: `${(x / art.width) * 100}%`, top: `${(y / art.height) * 100}%` });
   const box = (r: { x: number; y: number; w: number; h: number }) => ({
@@ -270,41 +276,42 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         )}
         {hookAt && !beat.lifted && sprite("hook", { style: move(s.hook, hookAt) })}
         {hookAt && beat.lifted && sprite("box", { style: move(s.box, hookAt) })}
-        {!playing && (
-          <>
-            <span className={styles.chip} data-barge-chip="barge" style={pct(art.chips.barge.x, art.chips.barge.y)}>
-              Баржа готова к отходу
-            </span>
-            <span className={styles.chip} data-barge-chip="gift" data-tone="gift" style={pct(art.chips.gift.x, art.chips.gift.y)}>
-              Подарок
-            </span>
-          </>
+        {interactive && (
+          <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
+            <defs>
+              <filter id={`${hole}f`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" /></filter>
+              <mask id={hole} maskUnits="userSpaceOnUse" x="0" y="0" width={art.width} height={art.height}>
+                <rect width={art.width} height={art.height} fill="white" />
+                {pointed && <rect {...svgBox(art.targets[pointed], 18)} rx="24" fill="black" filter={`url(#${hole}f)`} />}
+              </mask>
+            </defs>
+            <rect className={styles.scrim} data-on={!!pointed} width={art.width} height={art.height} mask={`url(#${hole})`} />
+            {!pointed && !selectedId && options.filter(({ id }) => !seen.includes(id)).map(({ id }, i) => {
+              const t = art.targets[id];
+              return (
+                <circle key={id} className={styles.ripple} data-barge-ripple={id} cx={t.x + t.w / 2} cy={t.y + t.h / 2}
+                  r={Math.max(t.w, t.h) * .42} style={{ animationDelay: `${i * .7}s` }} />
+              );
+            })}
+          </svg>
         )}
-        {options.map((option, index) => {
-          const point = art.hotspots[option.id];
-          const caption = craneCaptions[option.id as keyof typeof craneCaptions];
-          return (
-            <button
-              key={option.id}
-              type="button"
-              className={styles.hotspot}
-              data-hotspot={option.id}
-              data-side={point.side}
-              style={pct(point.x, point.y)}
-              aria-label={`Вариант ${index + 1}. ${choiceLabel(option.label)}`}
-              aria-pressed={(playing ?? selectedId) === option.id}
-              disabled={!interactive}
-              onClick={() => onSelect?.(option.id)}
-              onPointerEnter={() => setHovered(option.id)}
-              onPointerLeave={() => setHovered(undefined)}
-              onFocus={() => setHovered(option.id)}
-              onBlur={() => setHovered(undefined)}
-            >
-              <span className={styles.badge} aria-hidden="true">{index + 1}</span>
-              <span className={styles.caption} aria-hidden="true">{caption}</span>
-            </button>
-          );
-        })}
+        {options.map((option) => (
+          <button
+            key={option.id}
+            type="button"
+            className={styles.hotspot}
+            data-hotspot={option.id}
+            style={box(art.targets[option.id])}
+            aria-label={`${craneCaptions[option.id as keyof typeof craneCaptions]}: ${choiceLabel(option.label)}`}
+            aria-pressed={(playing ?? selectedId) === option.id}
+            disabled={!interactive}
+            onClick={() => onSelect?.(option.id)}
+            onPointerEnter={() => setHovered(option.id)}
+            onPointerLeave={() => setHovered(undefined)}
+            onFocus={() => setHovered(option.id)}
+            onBlur={() => setHovered(undefined)}
+          />
+        ))}
       </div>
       {playing && <span className={styles.skip} aria-hidden="true">Нажмите, чтобы пропустить</span>}
       <ArtworkLoading viewport status={plate.status} onRetry={plate.retry} />

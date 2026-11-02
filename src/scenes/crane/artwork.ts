@@ -40,23 +40,22 @@ function format(name: CraneFormat) {
   const story: readonly Point[] = [a.pru, [pu, pv], office, ...corners(sp.ivan), ...corners(sp.gift), ...near, ...corners(sp.ladder),
     ...corners(sp.far), ...corners(sp.barge)];
   const tall = name === "tall";
+  const pad = (r: { x: number; y: number; w: number; h: number }, d: number) => ({ x: r.x - d, y: r.y - d, w: r.w + 2 * d, h: r.h + 2 * d });
+  // A crane cab is about 7 m across; z px per metre is the vertical affine term.
+  const m = Math.abs(layer.affine[1][2]);
+  const cab = ([x, y]: Point) => ({ x: x - 3.5 * m, y: y - 3.5 * m, w: 7 * m, h: 7 * m });
   return {
     ...layer,
     project,
     // The strip that must stay in frame: office, gift, near crane, barge, far crane.
     focus: around(story, tall ? 40 : 24, width, height),
-    hotspots: {
-      // On the office wall under the window, so the pin does not hide Ivan.
-      remote: { x: a.ivan[0], y: sp.ivan.y + sp.ivan.h + (tall ? 40 : 22), side: "right" },
-      // Tall: a left label would cover the gift.
-      rush: { x: ladderMid[0], y: ladderMid[1], side: tall ? "right" : "left" },
-      wait: { x: a.nearCabin[0], y: a.nearCabin[1], side: "right" },
-      petr: { x: a.petr[0], y: a.petr[1], side: "left" },
-    } as Record<string, { x: number; y: number; side: "left" | "right" }>,
-    chips: {
-      gift: { x: a.gift[0], y: a.gift[1] + (tall ? 46 : 52) },
-      barge: { x: a.bargeMid[0], y: a.bargeMid[1] + (tall ? 130 : 64) },
-    },
+    // Tap targets are the actors themselves: Ivan's window, the ladder, the empty near cab, Petr's cab.
+    targets: {
+      remote: pad(sp.ivan, 14),
+      rush: pad(sp.ladder, 10),
+      wait: cab(a.nearCabin),
+      petr: cab(a.farCabin),
+    } as Record<string, { x: number; y: number; w: number; h: number }>,
     // What each way uses: these layers light up when the way is picked.
     actors: {
       remote: ["ivan", "near"],
@@ -84,7 +83,7 @@ export const craneArtwork = {
 };
 export { craneWorld };
 
-/** What each pin points at in the drawing. */
+/** What each way is about: the card eyebrow. */
 export const craneCaptions = {
   remote: "Иван в офисе",
   rush: "Подъём в кабину",
