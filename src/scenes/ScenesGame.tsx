@@ -104,7 +104,7 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     route: () => "С причала на баржу до Нового Порта",
     goals: ["Беречь силы", "Позаботиться о людях", "Успеть к барже"],
     places: () => Object.fromEntries(
-      Object.entries(craneFacts).map(([id, fact]) => [id, [optionTitles[id], fact.where]]),
+      Object.entries(craneFacts).map(([id, fact]) => [id, [optionTitles[id], fact.note]]),
     ),
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },

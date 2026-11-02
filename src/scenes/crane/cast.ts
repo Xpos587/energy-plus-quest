@@ -6,15 +6,15 @@ type Cast = { window: Box; cab: Box; figs: Record<string, number> };
 
 /** Figures are format-independent (same files in every folder); width/height, feet at the bottom. */
 const figs = {
-  "ivan-run1": 0.69, "ivan-run2": 0.6, "ivan-climb1": 0.48, "ivan-climb2": 0.45,
-  "petr-walk1": 0.51, "petr-walk2": 0.525, "petr-sad": 0.4, "petr-climb": 0.45,
+  "ivan-run1": 0.567, "ivan-run2": 0.583, "ivan-climb1": 0.483, "ivan-climb2": 0.483,
+  "petr-walk1": 0.525, "petr-walk2": 0.567, "petr-sad": 0.375, "petr-climb": 0.458,
 };
 
 /** Office and far-cab variants share their boxes. */
 export const craneCast: Partial<Record<CraneFormat, Cast>> = {
   wide: {
-    window: { x: 440, y: 394.67, w: 200, h: 130.67 },
-    cab: { x: 1426.67, y: 0, w: 360, h: 306.67 },
+    window: { x: 444, y: 398, w: 186.67, h: 140.67 },
+    cab: { x: 1426, y: 0, w: 361.33, h: 306.67 },
     figs,
   },
   desk: { window: { x: 230.67, y: 533.33, w: 182.67, h: 140.67 }, cab: { x: 1162.67, y: 84.67, w: 373.33, h: 316 }, figs },

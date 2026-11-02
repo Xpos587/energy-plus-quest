@@ -75,8 +75,11 @@ function useConsequence(playing: string | undefined, onPlayed: (() => void) | un
 const sub = (a: readonly number[], b: readonly number[]) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]] as const;
 const scaleBy = (a: readonly number[], k: number) => [a[0] * k, a[1] * k, a[2] * k] as const;
 
-export function CraneArt({ context, selectedId, onSelect, showResult, playing, onPlayed }: SceneArtProps) {
-  const [hovered, setHovered] = useState<string>();
+export function CraneArt({ context, selectedId, onSelect, showResult, playing, onPlayed, focusedId, onFocusChange }: SceneArtProps) {
+  // The rail cards and the quay pins light the same actors.
+  const [ownHover, setOwnHover] = useState<string>();
+  const hovered = ownHover ?? focusedId;
+  const setHovered = (id: string | undefined) => { setOwnHover(id); onFocusChange?.(id); };
   // Animate camera moves only after the first measured frame, not from size 0.
   const [ready, setReady] = useState(false);
   const stage = useRef<HTMLElement>(null);
