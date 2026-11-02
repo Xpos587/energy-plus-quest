@@ -12,10 +12,11 @@ it('starts the alphabet at receiving (left) and places each gift in its bay',()=
  expect(p('boat')[0]).toBeLessThan(p('socks')[0]);
  expect(warehouseZone('alphabet',{parcel:'camera',recipient:'alva',profile:'student'}).description).toContain('приёмки');
 });
-it('uses one illustrated coordinate plane for wide and tall layouts',()=>{
- for(const gift of ['camera','socks','boat'] as const)expect(warehouseContour('alphabet',gift,'tall')).toEqual(warehouseContour('alphabet',gift,'wide'));
- expect(warehouseCallouts('camera','tall').alphabet.x).toBeCloseTo(1065/1672,2);
+it('gives the tall phone plate its own coordinate plane with the same reading order',()=>{
+ const t=(gift:'camera'|'socks'|'boat')=>warehouseContour('alphabet',gift,'tall').anchorPixel[0];
+ expect(t('boat')).toBeLessThan(t('socks'));expect(t('socks')).toBeLessThan(t('camera'));
+ expect(warehouseCallouts('camera','tall').alphabet.x).toBeCloseTo(745/1200,2);
  const html=renderToStaticMarkup(<WarehouseZones context={{parcel:'camera',recipient:'alva',profile:'student'}} composition="tall" onSelect={()=>{}}/>);
- expect(html).toContain('viewBox="0 0 1672 941"');
+ expect(html).toContain('viewBox="0 0 1200 1500"');
  expect(html).toContain(warehouseContour('alphabet','camera','tall').path);
 });

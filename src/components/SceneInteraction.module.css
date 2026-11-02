@@ -4217,7 +4217,7 @@
     min-height: 52px; padding: 10px 12px; font-size: 16px; line-height: 1.2;
   }
   .app[data-scene="inventory"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
-    grid-template-rows: var(--scene-header-height) min(calc(100vw * 941 / 1672), max(104px, calc(100dvh - var(--scene-header-height) - 320px))) minmax(0, 1fr);
+    grid-template-rows: var(--scene-header-height) min(calc(100vw * 1500 / 1200), max(104px, calc(100dvh - var(--scene-header-height) - 340px))) minmax(0, 1fr); /* tall plate aspect; short phones fall back to the wide plate */
   }
   .app[data-scene="inventory"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .question {
     justify-content: flex-start; gap: 12px; padding: 16px 12px;
