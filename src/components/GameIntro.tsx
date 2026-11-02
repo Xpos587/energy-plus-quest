@@ -7,12 +7,12 @@ import {
   Zap,
 } from "lucide-react";
 import { type CSSProperties, useRef, useState } from "react";
-import { imageAsset } from "../game/imageAssets";
 import { scenarioParagraph } from "../game/scenarioDocument";
 import { sceneChoiceImage } from "../scenes/artwork";
 import { BrandLockup } from "./BrandLockup";
 import styles from "./GameIntro.module.css";
 import { progressSteps } from "./QuestShell";
+import { routeArt } from "./StageIndicator";
 
 const [parcelStory, logisticsStory] = [
   scenarioParagraph("24D093EF"),
@@ -56,14 +56,6 @@ const metrics = [
   },
 ];
 
-/* Real artwork of every stage: the briefing previews the actual journey. */
-const routeArt: Record<(typeof progressSteps)[number]["id"], string> = {
-  carrier: imageAsset("opening/route-v1/carrier.webp"),
-  loading: imageAsset("opening/route-v1/loading.webp"),
-  warehouse: imageAsset("opening/route-v1/warehouse.webp"),
-  barge: imageAsset("opening/route-v1/barge.webp"),
-  "last-mile": imageAsset("opening/route-v1/lastmile.webp"),
-};
 const introWorld = sceneChoiceImage("lastmile");
 
 export function GameIntro({
