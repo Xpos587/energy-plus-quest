@@ -4232,3 +4232,21 @@
     max-height: var(--result-reading-height, 80px);
   }
 }
+
+/* Scene 5 rail: question and vehicle card sit together mid-rail at reading size,
+   goals read as a legend; no void above stranded buttons. */
+@media (min-width: 1001px) and (min-height: 701px) {
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .inspection) { justify-content: center; gap: 20px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.questionNavigation, .inspection .actions) { margin-top: 8px; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals { display: grid; grid-template-columns: 1fr; gap: 12px; padding-top: 16px; border-top: 1px solid #e1ebf2; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals li { flex-direction: row; justify-content: flex-start; gap: 12px; font-size: 18px; color: #082946; }
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals li svg { width: 22px; height: 22px; }
+  .app[data-scene="lastmile"] [data-lastmile-facts] { gap: 20px; }
+  .app[data-scene="lastmile"] [data-lastmile-facts] dt { font-size: 16px; }
+  .app[data-scene="lastmile"] [data-lastmile-facts] dd { font-size: 20px; }
+}
+.app[data-scene="lastmile"] [data-lastmile-facts] > p { font-size: var(--type-body); line-height: var(--type-body-leading, 1.4); }
+@media (max-width: 1000px) {
+  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame [data-lastmile-decision-context] { font-size: 16px; line-height: 1.35; }
+  .app[data-scene="lastmile"] [data-lastmile-facts] > p { font-size: 16px; line-height: 1.4; }
+}
