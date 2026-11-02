@@ -15,11 +15,11 @@ const summaries = (scene: SceneDefinition, parcel: "camera" | "socks" | "boat" =
 
 it("compares a choice with the others instead of grading it", () => {
   const all = [...summaries(compactScene), ...summaries(compactScene, "boat"), ...summaries(inventoryScene), ...summaries(craneScene), ...summaries(lastmileScene), ...carriers.map((c) => compareChoice(c.score, carriers.map((x) => x.score), goals).text)];
-  for (const text of all) expect(text).not.toMatch(/Отлич|Неудач|Можно лучше/);
+  for (const text of all) expect(text).not.toMatch(/Отлич|Неудач|Можно лучше|^Лучше всех:/);
   expect(summaries(inventoryScene)).toEqual([
     "Обходит два варианта: «C»",
     "Обходит один вариант: «B»",
     "Наравне с лучшими: «B»",
-    "Лучше всех: «A» и «C»",
+    "Сильные стороны: «A» и «C»",
   ]);
 });

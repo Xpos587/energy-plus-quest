@@ -10,4 +10,8 @@
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
-.indicator svg { flex: none; width: 1.25em; height: 1.25em; }
+/* Route progress: done legs filled, current leg longer, the rest still ahead. */
+.bar { display: inline-flex; gap: 4px; }
+.bar i { width: 1em; height: .4em; border-radius: 99px; background: #d2e4ef; }
+.bar i[data-leg="done"] { background: #6f9fc0; }
+.bar i[data-leg="current"] { width: 1.8em; background: #075d9b; }

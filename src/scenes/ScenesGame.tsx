@@ -146,7 +146,8 @@ export function compareChoice(score: Scores, all: Scores[], goals: SceneBrief["g
   }));
   const best = sides.filter((side) => !side.beaten && !side.tied && side.beats > 0);
   if (best.length === 3) return { key: "all", text: "Лучше всех вариантов по всем трём шкалам" };
-  if (best.length) return { key: best[0].key, text: `Лучше всех: ${best.map((side) => side.goal).join(" и ")}` };
+  // «Лучше всех» on every second option read as flattery (call 02.11): name the strength, not a winner.
+  if (best.length) return { key: best[0].key, text: `${best.length > 1 ? "Сильные стороны" : "Сильная сторона"}: ${best.map((side) => side.goal).join(" и ")}` };
   const shared = sides.find((side) => !side.beaten && side.beats > 0);
   if (shared) return { key: shared.key, text: `Наравне с лучшими: ${shared.goal}` };
   const top = [...sides].sort((x, y) => y.beats - x.beats)[0];
