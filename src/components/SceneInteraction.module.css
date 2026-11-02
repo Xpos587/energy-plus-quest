@@ -3865,20 +3865,7 @@
   .compactVerdict > small { font-size: 13px; }
   .compactVerdict > span svg { width: 22px; height: 22px; }
 }
-/* Desktop rail keeps the cargo in view while choosing; phones need the height for the truck. */
-.compactCargo { display: none; }
-@media (min-width: 1001px) and (min-height: 701px) {
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactCargo {
-    order: -1; display: flex; align-items: center; gap: 12px; padding-bottom: 14px; border-bottom: 2px dashed #d2e4ef;
-  }
-  .compactCargo img { width: 56px; height: 56px; border-radius: 10px; object-fit: cover; flex: none; }
-  .compactCargo span { display: grid; gap: 2px; }
-  .compactCargo small { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #53697d; }
-  .compactCargo strong { font-size: 22px; line-height: 1.1; color: #082946; }
-  .compactCargo strong::first-letter { text-transform: uppercase; }
-}
 @media (min-width: 1001px) and (min-height: 701px) and (max-height: 860px) {
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactCargo { display: none; }
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question { gap: 12px; padding-top: 20px; padding-bottom: 16px; }
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { min-height: 54px; padding-block: 6px; }
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 24px; line-height: 30px; }
@@ -3983,7 +3970,7 @@
     flex: 0 0 32px; width: 32px; height: 32px; border-radius: 8px;
   }
 }
-/* Barge rail: the question block sits together mid-rail instead of a void above a stranded «О задаче». */
+/* Barge rail: the question block sits together mid-rail instead of a void above a stranded «Задание». */
 @media (min-width: 1001px) and (min-height: 701px) {
   .app[data-scene="crane"] .frame.frame[data-inspecting="false"]:not(:has(.briefingCard)) .question { align-content: center; justify-content: center; }
   .app[data-scene="crane"] .frame.frame[data-inspecting="false"]:not(:has(.briefingCard)) .questionNavigation { margin-top: 12px; }
@@ -4199,7 +4186,7 @@
 }
 
 /* Desktop rail: the place card keeps the question's skeleton — copy from the top,
-   actions where «О задаче» was — instead of floating mid-height. */
+   actions where «Задание» was — instead of floating mid-height. */
 @media (min-width: 901px) and (min-height: 501px) {
   .app:is([data-scene="compact"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection { justify-content: flex-start; }
   .app:is([data-scene="compact"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .inspection .actions { margin-top: auto; }
@@ -4264,4 +4251,14 @@
 @media (max-width: 1000px) {
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame [data-lastmile-decision-context] { font-size: 16px; line-height: 1.35; }
   .app[data-scene="lastmile"] [data-lastmile-facts] > p { font-size: 16px; line-height: 1.4; }
+}
+
+/* Task reminder (R17): what, to whom, which leg and how many stages remain —
+   one quiet text line above the question instead of a separate «Куда везём?». */
+.taskReminder { order: -1; margin: 0; display: grid; gap: 2px; padding-bottom: 10px; border-bottom: 2px dashed #d2e4ef; color: #31556f; font-size: 15px; font-weight: 500; line-height: 1.3; }
+.taskReminder strong { color: #082946; font-size: 17px; font-weight: 700; }
+@media (max-width: 700px) {
+  .taskReminder { display: block; padding-bottom: 6px; font-size: 13px; }
+  .taskReminder strong { font-size: 13px; }
+  .taskReminder strong::after { content: " ·"; font-weight: 500; }
 }

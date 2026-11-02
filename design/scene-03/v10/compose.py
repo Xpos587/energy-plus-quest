@@ -13,7 +13,7 @@ import numpy as np
 n, W, H = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
 here = Path(__file__).parent
 HEADS = json.loads((here / "manifest-wide-outcomes.json").read_text())["outcomes"]["keeper"]["story"]["heads"]  # 1960x840 px
-w = here.parents[2] / ".tmp-work/v17"
+w = here.parents[2] / ".tmp-work/wh3d"
 g = lambda s: str(w / f"gen/{n}{s}")
 rd = lambda p: cv2.resize(cv2.imread(str(p)), (W, H), interpolation=cv2.INTER_AREA)
 txt, bare = rd(w / f"bl/{n}.png"), rd(w / f"bl/{n}-notext.png")

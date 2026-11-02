@@ -26,7 +26,7 @@ export function warehouseZone(id: WarehouseChoice, context: SceneContext) {
     },
     alphabet: {
       label: `Стеллаж ${range.label}`,
-      description: `Стеллаж ${range.label}, буква ${gift.letter}. Алфавит начинается справа, у отгрузки.`,
+      description: `Стеллаж ${range.label}, буква ${gift.letter}. Алфавит начинается слева, у приёмки.`,
       points:
         context.parcel === "camera"
           ? "272,199 294,204 294,331 272,324"
@@ -46,7 +46,7 @@ export function warehouseZone(id: WarehouseChoice, context: SceneContext) {
     wms: {
       label: "Автоподбор места",
       description:
-        "Стол с компьютером внизу, у отгрузки: система сама подбирает ячейку.",
+        "Стол с компьютером внизу справа, у отгрузки: система сама подбирает ячейку.",
       points: "654,464 688,426 741,448 746,494 723,531 661,511",
       labelX: 0.7,
       labelY: 0.948,

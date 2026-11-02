@@ -117,7 +117,7 @@ for (const [width, height] of [
       expect(
         await page.getByTestId("scene-question").innerText(),
       ).not.toContain(expected);
-      const about = page.getByRole("button", { name: "О задаче", exact: true });
+      const about = page.getByRole("button", { name: "Задание", exact: true });
       await expect(about).toBeFocused();
       await about.click();
       expect(await read(page)).toBe(expected);

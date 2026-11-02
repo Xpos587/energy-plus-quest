@@ -212,7 +212,7 @@ export function WorldArt({
       ? "Загрузка через задние двери слева. Ближняя стенка кузова показана в разрезе."
       : "",
     scene === "inventory"
-      ? `Алфавит идёт справа налево: от отгрузки к приёмке. Место подарка по алфавиту: буква ${alphabet.letter}, ${alphabet.resultPosition} склада.`
+      ? `Алфавит идёт слева направо: от приёмки к отгрузке. Место подарка по алфавиту: буква ${alphabet.letter}, ${alphabet.resultPosition} склада.`
       : "",
     active ? `Выбор: ${active.label}.` : "",
     placement ? `Размещение: №${placement}.` : "",

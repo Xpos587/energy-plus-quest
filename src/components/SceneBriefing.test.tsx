@@ -97,13 +97,41 @@ it("pages every paragraph, keeps the question visible and allows rereading", asy
     expect(
       element.querySelector('[data-testid="scene-question"]')?.textContent,
     ).toContain("Как отправить груз?");
-    await click("О задаче");
+    await click("Задание");
     expect(
       element.querySelector('[data-testid="scene-intro"]')?.textContent,
     ).toContain("Груз прибыл.");
   } finally {
     await act(async () => root.unmount());
     element.remove();
+    vi.unstubAllGlobals();
+  }
+});
+
+it("reminds what goes to whom, the current leg and the stages left", async () => {
+  vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+  const element = document.createElement("div");
+  const root = createRoot(element);
+  const text = async (currentStep: number) => {
+    await act(async () =>
+      root.render(
+        <SceneBriefing
+          title="Сцена"
+          currentStep={currentStep}
+          paragraphs={["Груз прибыл."]}
+          question="Что дальше?"
+          reminder={["Лодка для Хабта", "Плыть"]}
+        />,
+      ),
+    );
+    return element.querySelector("[data-task-reminder]")?.textContent;
+  };
+  try {
+    expect(await text(0)).toBe("Лодка для Хабта Плыть · впереди ещё 4\u00a0этапа");
+    expect(await text(3)).toBe("Лодка для Хабта Плыть · впереди ещё один этап");
+    expect(await text(4)).toBe("Лодка для Хабта Плыть · последний этап");
+  } finally {
+    await act(async () => root.unmount());
     vi.unstubAllGlobals();
   }
 });

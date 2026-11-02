@@ -1,13 +1,13 @@
 import type { SceneContext } from "../types";
 
-// Alphabet order. Plaques run from dispatch (right) back to receiving (left).
+// Alphabet order. Plaques run left to right, from receiving (А–Б) to dispatch (Ю–Я).
 export const warehouseShelfRanges = [
-  { label: "А–Б", letters: "АБ", x: 1124 / 1672, y: 534 / 941 },
-  { label: "В–К", letters: "ВГДЕЁЖЗИЙК", x: 1055 / 1672, y: 514 / 941 },
-  { label: "Л–М", letters: "ЛМ", x: 798 / 1672, y: 462 / 941 },
-  { label: "Н–У", letters: "НОПРСТУ", x: 730 / 1672, y: 441 / 941 },
-  { label: "Ф–Э", letters: "ФХЦЧШЩЪЫЬЭ", x: 481 / 1672, y: 383 / 941 },
-  { label: "Ю–Я", letters: "ЮЯ", x: 418 / 1672, y: 365 / 941 },
+  { label: "А–Б", letters: "АБ", x: 514 / 1672, y: 618 / 941 },
+  { label: "В–К", letters: "ВГДЕЁЖЗИЙК", x: 608 / 1672, y: 618 / 941 },
+  { label: "Л–М", letters: "ЛМ", x: 789 / 1672, y: 618 / 941 },
+  { label: "Н–У", letters: "НОПРСТУ", x: 883 / 1672, y: 618 / 941 },
+  { label: "Ф–Э", letters: "ФХЦЧШЩЪЫЬЭ", x: 1064 / 1672, y: 618 / 941 },
+  { label: "Ю–Я", letters: "ЮЯ", x: 1158 / 1672, y: 618 / 941 },
 ] as const;
 
 export const inventoryAlphabet = {

@@ -21,7 +21,7 @@ for (const width of [320, 620, 835, 1440]) {
         return;
       }
       const last = await answers.last().boundingBox();
-      const navigation = await page.getByRole('button', { name: 'О задаче', exact: true }).boundingBox();
+      const navigation = await page.getByRole('button', { name: 'Задание', exact: true }).boundingBox();
       expect(navigation!.y - last!.y - last!.height).toBeGreaterThanOrEqual(8);
       expect(navigation!.y - last!.y - last!.height).toBeLessThanOrEqual(16);
       if (scene === 'compact' && width > 600 && width <= 900) {

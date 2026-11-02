@@ -8,7 +8,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
     for (const [parcel, letter] of [['boat', 'Л'], ['camera', 'Ф'], ['socks', 'Н']]) {
       await openInventory(page, parcel);
       const image = page.locator('[data-world-plane] picture img');
-      await expect(image).toHaveAttribute('src', /inventory-master-v4\.webp$/);
+      await expect(image).toHaveAttribute('src', /inventory-master-v7\.webp$/);
       const plane = (await image.boundingBox())!, stage = (await page.locator('[data-world-scene="inventory"]').boundingBox())!, header = (await page.getByRole('banner').boundingBox())!;
       const sign = contours.overviewRequiredBounds;
       expect(plane.x + plane.width * sign.left / contours.width).toBeGreaterThanOrEqual(Math.max(0, stage.x) - 1);

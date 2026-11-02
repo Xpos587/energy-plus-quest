@@ -52,8 +52,9 @@ export function SceneBriefing({
   initiallyOpen = false,
   keepPanHint = false,
   showLeadOnChoice = true,
-  conditionLabel = "О задаче",
+  conditionLabel = "Задание",
   lead,
+  reminder,
 }: {
   title: string;
   currentStep?: number;
@@ -78,7 +79,10 @@ export function SceneBriefing({
   conditionLabel?: string;
   /** Optional card heading shown above the condition text. */
   lead?: ReactNode;
+  /** What, to whom and where this stage goes, e.g. ["Вязаные носки для Маймы", "Фура до склада в Лабытнанги"]. */
+  reminder?: [delivery: string, leg: string];
 }) {
+  const stagesLeft = progressSteps.length - currentStep - 1;
   // A separate first-entry condition and optional rereading share the same pages.
   const inlineCondition = false;
   const [openKey, pageKey] = briefingReadingKeys(title, paragraphs);
@@ -326,6 +330,17 @@ export function SceneBriefing({
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+        )}
+        {reminder && (
+          <p className={styles.taskReminder} data-task-reminder>
+            <strong>{reminder[0]}</strong>{" "}
+            <span>
+              {reminder[1]} ·{" "}
+              {stagesLeft === 0
+                ? "последний этап"
+                : `впереди ещё ${stagesLeft === 1 ? "один этап" : `${stagesLeft}\u00a0этапа`}`}
+            </span>
+          </p>
         )}
         <div className={styles.questionTop} data-choice-prompt>
           <p className={styles.questionPrompt}>{question}</p>

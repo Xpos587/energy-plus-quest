@@ -11,7 +11,7 @@ const expectations = [
   ["boat", "Л", "в середине"],
 ] as const;
 
-describe("warehouse alphabet follows gift names and starts at dispatch", () => {
+describe("warehouse alphabet follows gift names and starts at receiving", () => {
   for (const [parcel, letter, position] of expectations) {
     it(`${parcel}: matching location, result text and consequence illustration`, () => {
       const context = {

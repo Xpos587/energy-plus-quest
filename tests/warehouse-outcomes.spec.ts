@@ -51,7 +51,7 @@ for (const width of [320, 390]) {
           page.getByRole("button", { name: "Рассмотреть склад" }),
         ).toHaveCount(0);
         const marker = page.locator(`[data-hotspot="${branch.id}"]`);
-        await expect(marker.locator("span")).toBeHidden(); // no number badges on the art
+        await expect(marker.locator("span")).toBeVisible(); // scene-1 style numbered pins
         if (isMobile) await marker.tap();
         else await marker.click();
         const preview = page.locator("[data-world-plane]");

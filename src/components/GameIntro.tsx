@@ -25,17 +25,33 @@ const metricParts = explanation.match(
 );
 if (!metricParts)
   throw new Error("Canonical introduction metrics structure changed");
-const [, mission, metricLead, energy, empathy, efficiency, preparation] =
+const [, mission, , energy, empathy, efficiency, preparation] =
   metricParts;
+const metricLead = "В пути вы будете получать баллы:";
 
-/* Same icons as the in-game score delta, so the player recognises them later. */
+/* Same icons as the in-game score delta, so the player recognises them later.
+   `hint` is our plain-language gloss of the scenario phrase, drawn from the
+   scene goals the metric rewards. */
 const metrics = [
-  { key: "energy", title: "Энергия", text: energy, Icon: Zap },
-  { key: "empathy", title: "Эмпатия", text: empathy, Icon: Heart },
+  {
+    key: "energy",
+    title: "Энергия",
+    text: energy,
+    hint: "Время, силы, топливо и деньги.",
+    Icon: Zap,
+  },
+  {
+    key: "empathy",
+    title: "Эмпатия",
+    text: empathy,
+    hint: "О подарке, получателе и людях рядом.",
+    Icon: Heart,
+  },
   {
     key: "efficiency",
     title: "Эффективность",
     text: efficiency,
+    hint: "Вовремя и самым подходящим способом.",
     Icon: ChartLine,
   },
 ];
@@ -48,7 +64,6 @@ const routeArt: Record<(typeof progressSteps)[number]["id"], string> = {
   barge: imageAsset("opening/route-v1/barge.webp"),
   "last-mile": imageAsset("opening/route-v1/lastmile.webp"),
 };
-const waybillFields = ["Отправитель", "Получатель", "Груз"];
 const introWorld = sceneChoiceImage("lastmile");
 
 export function GameIntro({
@@ -163,30 +178,24 @@ export function GameIntro({
                       <div className={styles.scoring}>
                         <p className={styles.metricLead}>{metricLead}</p>
                         <ul className={styles.metrics} aria-label="Показатели">
-                          {metrics.map(({ key, title, text, Icon }) => (
+                          {metrics.map(({ key, title, text, hint, Icon }) => (
                             <li key={key} data-metric={key}>
-                              <Icon
-                                className={styles.metricIcon}
-                                aria-hidden="true"
-                                size={26}
-                                strokeWidth={2}
-                              />
-                              <div>
-                                <span>{text}</span> <strong><i aria-hidden="true">(</i>{title}<i aria-hidden="true">)</i></strong>
-                              </div>
+                              <strong>
+                                <Icon
+                                  className={styles.metricIcon}
+                                  aria-hidden="true"
+                                  size={26}
+                                  strokeWidth={2.2}
+                                />
+                                {title}
+                              </strong>{" "}
+                              <span>За то, что {text}.</span>{" "}
+                              <small>{hint}</small>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      <footer className={styles.fields}>
-                        {waybillFields.map((name) => (
-                          <span className={styles.field} key={name}>
-                            <span className={styles.fieldName}>{name}</span>
-                            <span className={styles.blank} aria-hidden="true" />
-                          </span>
-                        ))}
-                        <p className={styles.preparation}>{preparation}</p>
-                      </footer>
+                      <p className={styles.preparation}>{preparation}</p>
                     </article>
                   </>
                 )}

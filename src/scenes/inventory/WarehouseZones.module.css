@@ -8,23 +8,6 @@
 .scrim { fill: #071a2e; opacity: .08; pointer-events: none; transition: opacity 220ms ease-out; }
 .scrim[data-lit="true"] { opacity: .2; }
 
-/* Untried choices breathe: a soft white ring that widens and fades, staggered per object. */
-.ripple {
-  fill: #ffffff2e;
-  stroke: #fff;
-  stroke-width: 3;
-  vector-effect: non-scaling-stroke;
-  pointer-events: none;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: breathe 2.4s ease-out infinite both;
-}
-@keyframes breathe {
-  0% { transform: scale(.5); opacity: 0; }
-  25% { opacity: 1; }
-  100% { transform: scale(1.15); opacity: 0; }
-}
 @media (prefers-reduced-motion: reduce) {
-  .ripple { animation: none; transform: none; opacity: .7; fill: none; }
   .scrim { transition: none; }
 }

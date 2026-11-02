@@ -29,7 +29,7 @@ for (const [width, height] of [[320,568],[390,844],[620,768],[624,794],[835,974]
    }
    const question = page.getByTestId('scene-question');
    if(height>500) tops.push((await question.boundingBox())!.y);
-   await sampleActions(question.getByRole('button', {name:/К этапу|К выбору подарка|О задаче/}));
+   await sampleActions(question.getByRole('button', {name:/К этапу|К выбору подарка|Задание/}));
    await page.screenshot({path:info.outputPath(`${choice}-choices.png`)});
    const choices = page.locator('[data-scene-choice]');
    for(const button of await choices.all()) await expect(button).toBeInViewport({ratio:1});

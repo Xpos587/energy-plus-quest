@@ -64,7 +64,7 @@ it("can return directly to choices and still reopen the full condition", async (
     );
     expect(host.querySelector('[aria-label="Условие задания"]')).toBeNull();
     const condition = [...host.querySelectorAll("button")].find(
-      (button) => button.textContent === "О задаче",
+      (button) => button.textContent === "Задание",
     );
     await act(async () => condition?.click());
     expect(

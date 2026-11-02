@@ -58,57 +58,57 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/inventory-master-v4.webp",
+        "image": "scene-art/inventory-master-v7.webp",
         "width": 1672,
         "height": 941,
         "hotspots": [
           {
             "id": "entrance",
-            "x": 0.1471291866028708,
-            "y": 0.6503719447396387
+            "x": 0.1262,
+            "y": 0.6881
           },
           {
             "id": "alphabet",
-            "x": 0.2876794258373206,
-            "y": 0.4070138150903294
+            "x": 0.6372,
+            "y": 0.6362
           },
           {
             "id": "keeper",
-            "x": 0.8145933014354066,
-            "y": 0.6014877789585548
+            "x": 0.8034,
+            "y": 0.5923
           },
           {
             "id": "wms",
-            "x": 0.6985645933014354,
-            "y": 0.8873538788522848
+            "x": 0.8464,
+            "y": 0.701
           }
         ],
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/inventory-master-v4.webp",
+        "image": "scene-art/inventory-master-v7.webp",
         "width": 1672,
         "height": 941,
         "hotspots": [
           {
             "id": "entrance",
-            "x": 0.1471291866028708,
-            "y": 0.6503719447396387
+            "x": 0.1262,
+            "y": 0.6881
           },
           {
             "id": "alphabet",
-            "x": 0.2876794258373206,
-            "y": 0.4070138150903294
+            "x": 0.6372,
+            "y": 0.6362
           },
           {
             "id": "keeper",
-            "x": 0.8145933014354066,
-            "y": 0.6014877789585548
+            "x": 0.8034,
+            "y": 0.5923
           },
           {
             "id": "wms",
-            "x": 0.6985645933014354,
-            "y": 0.8873538788522848
+            "x": 0.8464,
+            "y": 0.701
           }
         ],
         "rendering": "raster"

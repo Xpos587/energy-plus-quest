@@ -31,6 +31,7 @@ import { interpolateOutcome } from "./game/outcomeText";
 import { useStoredState } from "./game/persistence";
 import type { CarrierId, GameAction } from "./game/types";
 import { sceneChoiceImage } from "./scenes/artwork";
+import { deliveryLine } from "./scenes/names";
 import { outcomeFocus } from "./scenes/outcomeFraming";
 import { ChoiceVerdict, restartSceneCondition, ScenesGame } from "./scenes/ScenesGame";
 
@@ -280,8 +281,11 @@ function CarrierScreen({
         currentStep={0}
         title="Выбор перевозчика"
         showLeadOnChoice={false}
-        // The hidden text is the destination: name it, not "the task".
-        conditionLabel="Куда везём?"
+        reminder={
+          state.parcel && state.recipient
+            ? [deliveryLine(state.parcel, state.recipient), "Фура до склада в Лабытнанги"]
+            : undefined
+        }
         initiallyOpen={false}
         question={taskQuestion}
         navigation="fixed"

@@ -24,7 +24,7 @@ args = sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else []
 OUT = Path(args[0] if args else "out")
 MODE = args[1] if len(args) > 1 else "test"
 LAYOUT = os.environ.get("LAYOUT", "wide")
-FORMATS = args[2:] or (["tall"] if LAYOUT == "tall" else ["desk"])
+FORMATS = args[2:] or ["desk"]
 OUT.mkdir(parents=True, exist_ok=True)
 random.seed(3)
 
@@ -253,35 +253,27 @@ def text(group, s, c, size, color, rot=(math.pi / 2, 0, 0), align="CENTER"):
 
 # ---- layout (metres): x left->right, y from the cut front edge to the dock wall, z up --
 FZ = 1.2  # dock-height floor
-# One plan, read like the customer reference (docs/scenario-assets/image7.jpg):
-# both dock doors sit in the BACK wall with their signs mounted on the wall above
-# them, the trucks stand outside backed into the doors, the rack rows run from the
-# front of the hall towards the docks with aisles between them and their letter
-# plaques on the front ends. Alphabet reads left to right: А–Б at receiving (left
-# door) … Ю–Я at dispatch (right door). The floor stays clean: no painted routes.
+# v16 = the pre-3D illustration's plan (public/scene-art/inventory-master-labels-v6.webp)
+# built as real geometry: receiving doors in the LEFT wall, dispatch doors in the RIGHT
+# wall (mirror images), windows in the back wall, open front. Three back-to-back rack
+# pairs run from the front towards the back wall; their front-end plaques read left to
+# right А–Б … Ю–Я. Forklift in front of the racks, pallets front-left, the «Автоподбор»
+# desk front-right, keeper Pavel by dispatch. The camera is centred (azimuth 0), so the
+# two side walls are true mirror images.
 LAYOUTS = {
-    # DOCKS: two receiving doors (left) and two dispatch doors (right). The gift arrives
-    # through the inner receiving door and leaves through the outer dispatch door, the
-    # one nearest the Ю–Я row; the barge consignment waits by the inner dispatch door.
-    # v15: a tighter hall (4 bays deep, narrower aisles) so racks and people read bigger.
-    "wide": dict(X1=47.0, Y1=30.0, DOCKS=((11.0, 18.0), (31.0, 38.0)), RY=(2.6, 15.0), RW=3.0, RX=(4.5, 6.8), PT=2.6,
-                 ENTR=(0.6, 7.0), DESK=(22.6, 26.0), GIFT=(17.2, 24.4), JACK_DX=1.8, SCAN_IN=(13.0, 22.4),
-                 BARGE=[(29.4, 25.4), (31.0, 25.4), (32.6, 25.4), (29.4, 27.0), (31.0, 27.0), (34.2, 25.4)],
-                 SCAN_OUT=(35.2, 23.0), KEEPER=(44.2, 4.6), LANE=19.4,
-                 RUN_E=((27.0, 19.4), (6.0, 24.6)), PUZZLED=((28.7, 1.0), (36.1, 2.6))),
-    "tall": dict(X1=36.0, Y1=44.0, DOCKS=((9.0, 14.6), (24.2, 29.8)), RY=(2.6, 26.0), RW=3.0, RX=(3.0, 5.4), PT=2.8,
-                 ENTR=(0.6, 6.2), DESK=(17.6, 20.8), GIFT=(13.4, 38.4), JACK_DX=1.5, SCAN_IN=(9.6, 36.8),
-                 BARGE=[(22.6, 39.4), (24.2, 39.4), (25.8, 39.4), (22.6, 41.0)],
-                 SCAN_OUT=(27.2, 37.4), KEEPER=(34.0, 1.3), LANE=31.0,
-                 RUN_E=((21.0, 31.0), (5.0, 38.4)), PUZZLED=((23.1, 1.4), (28.5, 3.2))),
+    "wide": dict(X1=42.0, Y1=28.0, DOORS_Y=(12.5, 19.5), RY=(4.5, 21.5), RW=2.6, PAIRS=(12.5, 21.0, 29.5), PT=0.95,
+                 ENTR=(0.6, 7.0), DESK=(34.2, 37.6), DESK_Y=(1.0, 2.25), GIFT=(4.2, 12.5), JACK_DX=1.8, SCAN_IN=(3.0, 16.4),
+                 BARGE=[(37.4, 11.0), (37.4, 12.8), (39.2, 11.0), (39.2, 12.8)],
+                 SCAN_OUT=(35.6, 12.4), KEEPER=(37.4, 6.4), LANE=3.5, FORK=(16.75, 2.6),
+                 RUN_E=((24.0, 2.8), (6.0, 24.6)), PUZZLED=((34.5, 4.0), (37.0, 5.5))),
 }
 P = LAYOUTS[LAYOUT]
 X0, Y0 = 0.0, 0.0
 X1, Y1 = P["X1"], P["Y1"]
 WALL = FZ + 10.6
-PEOPLE = 2.0  # v15: bigger people, they carry the story
-(DX_IN0, DX_IN), (DX_OUT0, DX_OUT) = P["DOCKS"]
-DOCK_X = [DX_IN0, DX_IN, DX_OUT0, DX_OUT]
+PEOPLE = 1.6  # v16: a person reads ~0.45 of a rack, as in the v6 illustration
+DOORS_Y = P["DOORS_Y"]  # door centres along y, same on both side walls
+DX_OUT = X1 - 1.4  # walking line along the dispatch wall
 DOOR = 2.6  # half width of the dock doors
 DOOR_Z = FZ + 6.4
 TRUCK = 1.45  # trailer as tall as the dock door; people ~2.6 m (readable, racks still tower over them)
@@ -303,7 +295,7 @@ def tree(x, y, h):
 # Everything outside the hall is muted so the hall stays the subject.
 GRASS, ASPH, ASPH_D, KERB, LINE = "#B4D27E", "#A3ACB8", "#939DAA", "#E4E7EB", "#F4F5F7"
 aabb("ground", GRASS, -160, -160, -0.3, 240, 220, -0.05, mat="flat", nolines=True)
-SX0, SX1, SY0, SY1 = -14.0, X1 + 24.0, -10.0, Y1 + 28.0  # the fenced lot
+SX0, SX1, SY0, SY1 = -26.0, X1 + 34.0, -10.0, Y1 + 28.0  # the fenced lot
 aabb("ground", ASPH, SX0, SY0, -0.1, SX1, SY1, 0.0, mat="asphalt", nolines=True)
 # public road along the front, centre dashes, kerbs, pavement and a tree line
 RY_0, RY_1 = SY0 - 13.0, SY0 - 4.0
@@ -342,7 +334,7 @@ aabb("site", "#E5E8EC", GX1 - 0.3, SY0 - 0.3, 0, GX1 + 0.3, SY0 + 0.3, 1.1)
 for k in range(8):
     aabb("site", "#E23B32" if k % 2 == 0 else "#FFFFFF", GX1 - 0.3 - (k + 1) * 1.1, SY0 - 0.08, 0.95, GX1 - 0.3 - k * 1.1, SY0 + 0.08, 1.12, nolines=True)
 # staff car park right of the hall: painted bays, a few parked cars
-PX0, PX1 = X1 + 6.0, SX1 - 1.0
+PX0, PX1 = X1 + 20.0, SX1 - 1.0
 for k in range(int((Y1 - 4.0) / 3.0) + 1):
     y = 1.0 + k * 3.0
     aabb("ground", LINE, PX0, y - 0.07, 0.0, PX0 + 5.2, y + 0.07, 0.02, nolines=True)
@@ -411,13 +403,14 @@ def shrub(x, y):
 
 
 verge(GX1 + 4.0, SY0 + 0.8, X1 + 2.0, -2.6)
-verge(X1 + 1.6, 1.0, PX0 - 1.4, Y1 - 1.0)
-verge(SX0 + 0.8, 2.0, -3.2, Y1 - 2.0)
+verge(X1 + 17.0, 1.0, PX0 - 1.4, Y1 - 1.0)
+verge(SX0 + 0.8, 2.0, SX0 + 5.0, Y1 - 2.0)
 aabb("ground", "#D9D4CA", GX1 + 2.6, -2.4, 0.0, X1 + 1.0, -0.6, 0.06, nolines=True)  # pavement along the hall front
-# dock yard markings: bay lines behind each door
-for dx in DOCK_X:
-    for x in (dx - 3.4, dx + 3.4):
-        aabb("ground", LINE, x - 0.08, Y1 + 1.0, 0.0, x + 0.08, Y1 + 12, 0.02, nolines=True)
+# dock yard markings: bay lines beside each door, both sides
+for dy in DOORS_Y:
+    for y in (dy - 3.4, dy + 3.4):
+        for x0, x1 in ((X0 - 16, X0 - 1), (X1 + 1, X1 + 16)):
+            aabb("ground", LINE, x0, y - 0.08, 0.0, x1, y + 0.08, 0.02, nolines=True)
 
 
 for x in range(-150, 240, 9):  # avenue along the far side of the road
@@ -430,61 +423,59 @@ for k in range(400):
         continue
     tree(x, y, random.uniform(8, 12))
 
-# ---- building shell: slab; back (dock) and right walls full height, front/left cut low
+# ---- building shell: slab; back and both side walls full height, front open ---------
 aabb("shell", "#C9D2DC", X0 - 0.4, Y0 - 0.4, 0, X1 + 0.4, Y1 + 0.4, FZ - 0.02)
 aabb("floor", "#D6DEE7", X0, Y0, FZ - 0.05, X1, Y1, FZ, mat="floor", nolines=True)
-DOORS = [(d - DOOR, d + DOOR) for d in DOCK_X]
-# back wall, cut around the two dock doors
-xs = [X0 - 0.4] + [e for d in DOORS for e in d] + [X1 + 0.4]
-for a, b in zip(xs[::2], xs[1::2]):
-    aabb("shell", "#F1E9D8", a, Y1, FZ, b, Y1 + 0.4, WALL)
-    aabb("shell", BLUE, a, Y1 - 0.05, FZ, b, Y1, FZ + 0.9)
-for a, b in DOORS:
-    aabb("shell", "#F1E9D8", a, Y1, DOOR_Z, b, Y1 + 0.4, WALL)  # header above the door
-    aabb("shell", "#B8C2CD", a - 0.1, Y1 - 0.5, DOOR_Z, b + 0.1, Y1, DOOR_Z + 0.6)  # rolled-up door
-    for x in (a - 0.35, b):
-        aabb("shell", "#2E3742", x, Y1 - 0.3, FZ, x + 0.35, Y1, DOOR_Z + 0.6)  # door posts
-    aabb("shell", "#7E8894", a + 0.1, Y1 - 1.4, FZ - 0.04, b - 0.1, Y1 + 0.4, FZ + 0.03)  # dock leveller
-    for x in (a + 0.3, b - 0.7):
-        aabb("shell", "#2B2F36", x, Y1 + 0.4, FZ - 0.9, x + 0.4, Y1 + 0.75, FZ - 0.2)  # bumpers outside
-aabb("shell", "#F1E9D8", X1, Y0 - 0.4, FZ, X1 + 0.4, Y1 + 0.4, WALL)
-aabb("shell", BLUE, X1 - 0.05, Y0, FZ, X1, Y1, FZ + 0.9)
-aabb("shell", BLUE, X0 - 0.5, Y1 - 0.1, WALL - 0.5, X1 + 0.5, Y1 + 0.5, WALL)
-aabb("shell", BLUE, X1 - 0.1, Y0 - 0.5, WALL - 0.5, X1 + 0.5, Y1 + 0.5, WALL)
-XP = sorted([X0 + 0.3, X1 - 0.3] + [x for x in range(4, int(X1), 6) if all(x < a - 1.2 or x > b + 1.2 for a, b in DOORS + [P["DESK"]])])
+CREAM = "#F1E9D8"
+DOORS = [(d - DOOR, d + DOOR) for d in DOORS_Y]
+# back wall with blue columns every 6 m and a high window in each bay
+aabb("shell", CREAM, X0 - 0.4, Y1, FZ, X1 + 0.4, Y1 + 0.4, WALL)
+aabb("shell", BLUE, X0, Y1 - 0.05, FZ, X1, Y1, FZ + 0.9)
+XP = [X0 + 0.3] + [X0 + k * (X1 - X0) / 7 for k in range(1, 7)] + [X1 - 0.3]
 for x in XP:
     aabb("shell", BLUE, x - 0.3, Y1 - 0.35, FZ, x + 0.3, Y1, WALL - 0.5)
-for y in range(0, int(Y1) + 1, 7):
-    aabb("shell", BLUE, X1 - 0.35, y - 0.3, FZ, X1, y + 0.3, WALL - 0.5)
-# high windows, one centred in each bay between the blue columns: on the dock wall
-# between the doors (clear of the signs) and on the right wall
-WIN = []
-for p, q in zip(XP, XP[1:]):
-    lo, hi = max(p + 1.0, DOORS[1][1] + 1.0), min(q - 1.0, DOORS[2][0] - 1.0)
-    if hi - lo >= 3.0:
-        c, w = (lo + hi) / 2, min(hi - lo, 4.6) / 2
-        WIN.append((c - w, c + w))
+WIN = [((p + q) / 2 - 1.7, (p + q) / 2 + 1.7) for p, q in zip(XP, XP[1:])]
 for a, b in WIN:
     aabb("shell", "#FFFFFF", a - 0.2, Y1 - 0.12, FZ + 5.0, b + 0.2, Y1 - 0.02, FZ + 8.4)
     aabb("shell", "#7FB3E0", a, Y1 - 0.16, FZ + 5.2, b, Y1 - 0.1, FZ + 8.2, mat="glass")
-for y in range(0, int(Y1) - 6, 7):
-    aabb("shell", "#FFFFFF", X1 - 0.12, y + 1.1, FZ + 4.6, X1 - 0.02, y + 5.9, FZ + 8.0)
-    aabb("shell", "#7FB3E0", X1 - 0.16, y + 1.3, FZ + 4.8, X1 - 0.1, y + 5.7, FZ + 7.8, mat="glass")
-# left and front walls cut low (section cap)
-CUT = FZ + 1.3
-aabb("shell", "#F1E9D8", X0 - 0.4, Y0 - 0.4, FZ, X0, Y1 + 0.4, CUT)
-aabb("shell", "#DCE2E8", X0 - 0.45, Y0 - 0.45, CUT, X0 + 0.05, Y1 + 0.45, CUT + 0.08)
-aabb("shell", "#F1E9D8", X0 - 0.4, Y0 - 0.4, FZ, X1 + 0.4, Y0, CUT)
-aabb("shell", "#DCE2E8", X0 - 0.45, Y0 - 0.45, CUT, X1 + 0.45, Y0 + 0.05, CUT + 0.08)
+# the two side walls are mirror images: two dock doors each, the zone sign above them
+for s in (-1, 1):  # -1 = left (receiving), +1 = right (dispatch)
+    xw = X0 if s < 0 else X1  # inner face
+    xo = xw + s * 0.4  # outer face
+    lo_, hi_ = min(xw, xo), max(xw, xo)
+    ys = [Y0] + [e for d in DOORS for e in d] + [Y1 + 0.4]
+    for a, b in zip(ys[::2], ys[1::2]):
+        aabb("shell", CREAM, lo_, a, FZ, hi_, b, WALL)
+        aabb("shell", BLUE, xw - s * 0.05, a, FZ, xw, b, FZ + 0.9)
+    for a, b in DOORS:
+        aabb("shell", CREAM, lo_, a, DOOR_Z, hi_, b, WALL)  # header above the door
+        aabb("shell", "#B8C2CD", xw - s * 0.5, a - 0.1, DOOR_Z, xw, b + 0.1, DOOR_Z + 0.6)  # rolled-up door
+        for y in (a - 0.35, b):
+            aabb("shell", "#2E3742", xw - s * 0.3, y, FZ, xw, y + 0.35, DOOR_Z + 0.6)  # door posts
+        aabb("shell", "#7E8894", xw - s * 1.4, a + 0.1, FZ - 0.04, xo, b - 0.1, FZ + 0.03)  # dock leveller
+        for y in (a + 0.3, b - 0.7):
+            aabb("shell", "#2B2F36", xo, y, FZ - 0.9, xo + s * 0.35, y + 0.4, FZ - 0.2)  # bumpers outside
+    for y in (Y0 + 0.3, 7.0, DOORS[0][0] - 0.7, (DOORS[0][1] + DOORS[1][0]) / 2, DOORS[1][1] + 0.7, Y1 - 0.3):
+        aabb("shell", BLUE, xw - s * 0.35, y - 0.3, FZ, xw, y + 0.3, WALL - 0.5)
+    aabb("shell", BLUE, lo_ - 0.1, Y0, WALL - 0.5, hi_ + 0.1, Y1 + 0.4, WALL)  # top beam
+    aabb("shell", BLUE, lo_ - 0.1, Y0 - 0.1, FZ, hi_ + 0.1, Y0 + 0.3, WALL)  # front edge frame
+aabb("shell", BLUE, X0 - 0.5, Y1 - 0.1, WALL - 0.5, X1 + 0.5, Y1 + 0.5, WALL)
+# open front: a low cut kerb only
+CUT = FZ + 0.25
+aabb("shell", "#DCE2E8", X0, Y0 - 0.4, FZ, X1, Y0, CUT)
 aabb("shell", "#C9D2DC", X0 - 0.4, Y0 - 0.4, 0, X1 + 0.4, Y0, FZ)
 
-# ---- zone signs: boards mounted on the dock wall above each door ------------------
-SW = 3.3
-SIGN_Y, SIGN_Z0, SIGN_Z1 = Y1 - 0.12, DOOR_Z + 0.9, DOOR_Z + 2.5
-SIGNS = {"ПРИЁМКА": ((DX_IN0 + DX_IN) / 2, BLUE), "ОТГРУЗКА": ((DX_OUT0 + DX_OUT) / 2, ORANGE)}
-for label, (cx, col) in SIGNS.items():
-    aabb("signs", col, cx - SW, SIGN_Y - 0.1, SIGN_Z0, cx + SW, SIGN_Y + 0.1, SIGN_Z1)
-    text("signs_text", label, (cx, SIGN_Y - 0.13, (SIGN_Z0 + SIGN_Z1) / 2 - 0.02), 1.12, "#FFFFFF")
+# ---- zone signs: boards on each side wall above its two doors --------------------
+SW = 3.6
+SIGN_Y = (DOORS_Y[0] + DOORS_Y[1]) / 2
+SIGN_Z0, SIGN_Z1 = DOOR_Z + 1.0, DOOR_Z + 2.8
+SIGNS = {"ПРИЁМКА": (-1, BLUE), "ОТГРУЗКА": (1, ORANGE)}
+SIGN_X = {}
+for label, (s, col) in SIGNS.items():
+    x = (X0 if s < 0 else X1) - s * 0.5  # in front of the wall columns
+    SIGN_X[label] = x
+    aabb("signs", col, x - 0.1, SIGN_Y - SW, SIGN_Z0, x + 0.1, SIGN_Y + SW, SIGN_Z1)
+    text("signs_text", label, (x - s * 0.13, SIGN_Y, (SIGN_Z0 + SIGN_Z1) / 2 - 0.02), 1.25, "#FFFFFF", rot=(math.pi / 2, 0, -s * math.pi / 2))
 
 
 # ---- racks ------------------------------------------------------------------------
@@ -504,18 +495,18 @@ def pallet(group, x, y, z, w=1.2, d=1.2):
 
 
 def load(group, xc, yc, w, d, z, rng):
-    """One pallet of goods: a single calm block of cartons (no drums, no crate mix:
-    the hall must read at a glance)."""
+    """One pallet of goods: a single calm block of cartons (the hall must read at a glance)."""
     pallet(group, xc, yc, z, w=w, d=d)
     h = rng.choice((0.9, 1.0, 1.1))
-    carton(group, xc - w / 2 + 0.06, yc - d / 2 + 0.06, z + 0.15, xc + w / 2 - 0.06, yc + d / 2 - 0.06, z + 0.15 + h)
+    col = WHITE if rng.random() < 0.12 else KRAFT
+    carton(group, xc - w / 2 + 0.06, yc - d / 2 + 0.06, z + 0.15, xc + w / 2 - 0.06, yc + d / 2 - 0.06, z + 0.15 + h, col=col)
 
 
 def rack_row(group, x0, x1, y0, y1, free=(), seed=0):
-    """A pallet rack row along y: blue uprights, orange beams on both faces, two
-    pallets per bay and level. `free` lists (level, bay) cells left empty."""
+    """A pallet rack row along y: blue uprights, orange beams on both faces, one
+    pallet per bay and level. `free` lists (level, bay) cells left empty."""
     rng = random.Random(seed)
-    nb = max(1, round((y1 - y0) / 3.1))
+    nb = max(1, round((y1 - y0) / 2.9))
     ys = [y0 + (y1 - y0) * k / nb for k in range(nb + 1)]
     for y in ys:
         for x in (x0, x1):
@@ -523,6 +514,8 @@ def rack_row(group, x0, x1, y0, y1, free=(), seed=0):
     for z in LEVELS[1:]:
         for x in (x0, x1):
             aabb(group, ORANGE, x - 0.08, y0, z - 0.2, x + 0.08, y1, z)
+    for x in (x0, x1):  # orange foot rail, as in the illustration
+        aabb(group, ORANGE, x - 0.12, y0 - 0.25, FZ, x + 0.12, y1 + 0.25, FZ + 0.18)
     cells = {}
     for li, z in enumerate(LEVELS):
         for bi, (a, b) in enumerate(zip(ys, ys[1:])):
@@ -536,67 +529,66 @@ def rack_row(group, x0, x1, y0, y1, free=(), seed=0):
 RY0, RY1 = P["RY"]
 RW = P["RW"]
 RANGES = [("А–Б", "АБ"), ("В–К", "ВГДЕЁЖЗИЙК"), ("Л–М", "ЛМ"), ("Н–У", "НОПРСТУ"), ("Ф–Э", "ФХЦЧШЩЪЫЬЭ"), ("Ю–Я", "ЮЯ")]
-RANGES = [(label, letters, P["RX"][0] + i * P["RX"][1]) for i, (label, letters) in enumerate(RANGES)]
+# three back-to-back pairs; row x0 left to right, so the alphabet reads left to right
+RANGES = [(label, letters, P["PAIRS"][i // 2] + (-RW - 0.15 if i % 2 == 0 else 0.15)) for i, (label, letters) in enumerate(RANGES)]
 ALPHA_ROW = {"camera": 4, "socks": 3, "boat": 2}
 HOT_ROW = 5
-GIFT_CELL = (len(LEVELS) - 1, max(1, round((RY1 - RY0) / 3.1)) - 1)  # top level, back bay (nearest the docks): the gift reads from above
-# Letter banner: a vertical navy banner as wide as the rack end, hung on the row's front
-# end like the customer reference (image7.jpg); the letters stack: first, dash, last.
-PLAQUE_Z1 = RACK_TOP + 0.4
-PLAQUE_Z0 = PLAQUE_Z1 - (0.72 * P["PT"] * 2 + 1.5)
-PW = RW / 2 + 0.05
+GIFT_CELL = (len(LEVELS) - 1, max(1, round((RY1 - RY0) / 2.9)) - 1)
+# Letter plaque: a white board in a navy frame on the row's front end, at eye-catching
+# height between the second and third levels; one range per board, e.g. «А–Б».
+PLAQUE_Z0, PLAQUE_Z1 = LEVELS[1] + 0.55, LEVELS[2] + 0.75
+PW = RW / 2 - 0.2
 CELLS = {}
 for i, (label, letters, x0) in enumerate(RANGES):
     free = {GIFT_CELL} if i in ALPHA_ROW.values() or i == HOT_ROW else set()
     CELLS[i] = rack_row(f"rack_{i}", x0, x0 + RW, RY0, RY1, free=free, seed=10 + i)
     cx = x0 + RW / 2
-    aabb(f"rack_{i}", NAVY, cx - PW, RY0 - 0.32, PLAQUE_Z0, cx + PW, RY0 - 0.14, PLAQUE_Z1)
-    aabb(f"rack_{i}", "#FFFFFF", cx - PW + 0.14, RY0 - 0.36, PLAQUE_Z0 + 0.14, cx + PW - 0.14, RY0 - 0.32, PLAQUE_Z1 - 0.14, nolines=True)
-    zm, step = (PLAQUE_Z0 + PLAQUE_Z1) / 2, 0.72 * P["PT"] / 2 + 0.45
-    text("plaques", letters[0], (cx, RY0 - 0.38, zm + step), P["PT"], NAVY)
-    aabb("plaques", NAVY, cx - 0.35, RY0 - 0.39, zm - 0.09, cx + 0.35, RY0 - 0.37, zm + 0.09, nolines=True)
-    text("plaques", letters[-1], (cx, RY0 - 0.38, zm - step), P["PT"], NAVY)
+    aabb(f"rack_{i}", NAVY, cx - PW, RY0 - 0.36, PLAQUE_Z0, cx + PW, RY0 - 0.2, PLAQUE_Z1)
+    aabb(f"rack_{i}", "#FFFFFF", cx - PW + 0.1, RY0 - 0.4, PLAQUE_Z0 + 0.1, cx + PW - 0.1, RY0 - 0.36, PLAQUE_Z1 - 0.1, nolines=True)
+    text("plaques", label, (cx, RY0 - 0.42, (PLAQUE_Z0 + PLAQUE_Z1) / 2), P["PT"], NAVY)
 
 
 def cell_spot(i, cell=GIFT_CELL, inset=0.9):
-    """Floor point of a rack cell, near the aisle face the camera sees (left face)."""
+    """Floor point of a rack cell, near the row's outer (aisle) face."""
     a, b, z = CELLS[i][cell]
-    return Vector((RANGES[i][2] + inset, (a + b) / 2, z + 0.15))
+    x0 = RANGES[i][2]
+    return Vector((x0 + (inset if i % 2 == 0 else RW - inset), (a + b) / 2, z + 0.15))
 
 
-# Free cells right by receiving: a short rack against the dock wall, left of the door.
-EX0, EX1 = P["ENTR"]
-EY0, EY1 = Y1 - 1.7, Y1 - 0.4
+# Free cells right by receiving: a short rack along the left wall, in front of the doors.
+EX0, EX1 = P["ENTR"]  # along y
+EY0, EY1 = X0 + 0.4, X0 + 1.7  # depth along x
 ELEV = LEVELS[:3]
 rng = random.Random(7)
 nb = max(3, round((EX1 - EX0) / 1.6))
 eys = [EX0 + (EX1 - EX0) * k / nb for k in range(nb + 1)]
-for x in eys:
-    for y in (EY0, EY1):
+for y in eys:
+    for x in (EY0, EY1):
         aabb("entrance_rack", BLUE, x - 0.1, y - 0.1, FZ, x + 0.1, y + 0.1, FZ + 4.4)
 for z in ELEV[1:]:
-    for y in (EY0, EY1):
-        aabb("entrance_rack", ORANGE, EX0, y - 0.08, z - 0.2, EX1, y + 0.08, z)
+    for x in (EY0, EY1):
+        aabb("entrance_rack", ORANGE, x - 0.08, EX0, z - 0.2, x + 0.08, EX1, z)
 FREE = {(0, 1), (1, nb - 1), (2, 0)}
 FREE_CELL = None
 for li, z in enumerate(ELEV):
     for k, (a, b) in enumerate(zip(eys, eys[1:])):
         if (li, k) in FREE:
             if (li, k) == (0, 1):
-                FREE_CELL = ((a + b) / 2, (EY0 + EY1) / 2 - 0.2, z + 0.15)
+                FREE_CELL = ((EY0 + EY1) / 2 + 0.2, (a + b) / 2, z + 0.15)
             continue
-        load("entrance_rack", (a + b) / 2, (EY0 + EY1) / 2, b - a - 0.3, EY1 - EY0 - 0.2, z, rng)
+        load("entrance_rack", (EY0 + EY1) / 2, (a + b) / 2, EY1 - EY0 - 0.2, b - a - 0.3, z, rng)
 
 
-# ---- trucks: outside, backed into the dock doors --------------------------------
+# ---- trucks: outside, backed into the rear door of each side wall -------------------
 TRUCK_BLUE = "#1E63D0"
 
 
-def truck(group, dx, cargo=KRAFT):
+def truck(group, s, y, cargo=KRAFT):
     """The scene-2 truck: blue cab-over tractor and a white ribbed trailer with a
     blue base rail and corner posts. Model space: rear at y = 0, cab towards -y;
-    placed behind the dock wall with its open rear in the door."""
-    M = Matrix.Translation((dx, Y1 + 0.75, 0)) @ Matrix.Rotation(math.pi, 4, "Z") @ Matrix.Diagonal((TRUCK, TRUCK, TRUCK, 1))
+    placed outside side wall s with its open rear in the door."""
+    xw = (X0 - 0.75) if s < 0 else (X1 + 0.75)
+    M = Matrix.Translation((xw, y, 0)) @ Matrix.Rotation(s * math.pi / 2, 4, "Z") @ Matrix.Diagonal((TRUCK, TRUCK, TRUCK, 1))
     L = TRAILER
     aabb(group, "#3A414B", -0.8, -L - 3.4, 0.75, 0.8, -0.2, 1.05, M=M)  # chassis
     aabb(group, "#F4F6F8", -1.3, -L, 1.1, 1.3, 0.0, 4.4, M=M)
@@ -630,10 +622,8 @@ def truck(group, dx, cargo=KRAFT):
             cyl(group, "#2B2F36", (s_ * 1.05, yy, 0.55), 0.55, 0.45, axis="X", seg=16, M=M)
 
 
-for d in (DX_IN0, DX_IN):
-    truck("trucks", d)
-for d in (DX_OUT0, DX_OUT):
-    truck("trucks", d, cargo="#CFE3F2")
+truck("trucks", -1, DOORS_Y[1])
+truck("trucks", 1, DOORS_Y[1], cargo="#CFE3F2")
 
 
 GIFT_SIZE = 1.5
@@ -718,7 +708,7 @@ pallet_jack("jack", GIFT_IN.x, GIFT_IN.y, 0.0)
 JACK_AT = Vector((GIFT_IN.x + P["JACK_DX"] + 0.4, GIFT_IN.y, FZ))
 person("jack", tuple(JACK_AT), math.pi, pose=(0.35, 0.3))
 person("workers", (*P["SCAN_IN"], FZ), facing_to(P["SCAN_IN"], P["GIFT"]), tsd=True, pose=((0, 0), (0.25, 0.35)))
-for k, (x, y) in enumerate(((3.2, Y1 - 6.0), (5.0, Y1 - 6.0), (3.2, Y1 - 4.2))):  # unloaded pallets waiting for a cell
+for k, (x, y) in enumerate(((3.6, 2.2), (5.2, 2.2), (3.6, 3.8))):  # front-left: unloaded pallets waiting for a cell
     pallet("staging_in", x, y, FZ)
     carton("staging_in", x - 0.5, y - 0.5, FZ + 0.15, x + 0.5, y + 0.5, FZ + 1.1)
     if k != 1:
@@ -741,7 +731,7 @@ aabb("keeper", "#F4EBD6", LX - 0.45, LY - 0.36, FZ + 1.5, LX + 0.45, LY + 0.36, 
 # «Автоподбор»: the warehouse system's desk against the dock wall, monitor facing
 # the hall; the six rack rows on the screen, the one by dispatch lit green.
 DX0, DX1 = P["DESK"]
-DY0, DY1 = Y1 - 1.6, Y1 - 0.35
+DY0, DY1 = P["DESK_Y"]
 DTOP = FZ + 1.35
 aabb("wms", "#E9EDF1", DX0, DY0, DTOP - 0.12, DX1, DY1, DTOP)
 for x in (DX0 + 0.1, DX1 - 0.25):
@@ -757,8 +747,28 @@ for i in range(6):
     x = SCREEN[0] + SW_ * (0.75 + i * 1.0)
     aabb("wms", "#5FD38D" if i == 5 else "#7FD0F5", x, SCREEN[1] - 0.05, SCREEN[2] + 0.3, x + SW_ * 0.55, SCREEN[1] - 0.03, SCREEN[5] - 0.25, mat="flat", nolines=True)
 aabb("wms", "#2B2F36", MX - 0.6, DY0 + 0.2, DTOP, MX + 0.6, DY0 + 0.6, DTOP + 0.05)  # keyboard
-OPERATOR = (DX1 + 0.7, DY0 - 0.2)
+OPERATOR = (DX1 + 0.8, (DY0 + DY1) / 2)
 person("wms", (*OPERATOR, FZ), facing_to(OPERATOR, (MX, DY1)), pose=((0.3, 0.45), (0.1, 0.0)))
+
+
+def forklift(group, x, y, facing, load=True):
+    """Driverless forklift (AGV): forks along +x in model space."""
+    M = Matrix.Translation((x, y, FZ)) @ Matrix.Rotation(facing, 4, "Z") @ Matrix.Diagonal((1.3, 1.3, 1.3, 1))
+    aabb(group, ORANGE, -1.2, -0.7, 0.3, 0.6, 0.7, 1.5, M=M)
+    aabb(group, "#3A414B", -1.3, -0.72, 0.3, -0.8, 0.72, 1.6, M=M)
+    aabb(group, "#2B2F36", 0.6, -0.55, 0.1, 0.8, 0.55, 3.2, M=M)
+    for dy in (-0.35, 0.35):
+        aabb(group, "#2B2F36", 0.8, dy - 0.07, 0.1, 2.0, dy + 0.07, 0.2, M=M)
+    for dx, dy in ((-0.8, -0.72), (-0.8, 0.72), (0.3, -0.72), (0.3, 0.72)):
+        cyl(group, "#2B2F36", (dx, dy, 0.32), 0.32, 0.28, axis="Y", seg=14, M=M)
+    cyl(group, "#2B2F36", (-0.3, 0, 1.65), 0.2, 0.3, seg=12, M=M)  # lidar
+    cyl(group, YELLOW, (-1.0, 0, 1.75), 0.1, 0.5, seg=10, M=M)
+    if load:
+        aabb(group, "#C79A5B", 0.9, -0.6, 0.2, 2.1, 0.6, 0.35, M=M)
+        aabb(group, KRAFT, 0.95, -0.55, 0.35, 2.05, 0.55, 1.35, M=M)
+
+
+forklift("agv", *P["FORK"], math.pi / 2)
 
 
 # ---- outcome-only actors (group names start with o_) -------------------------------
@@ -769,15 +779,15 @@ O_GIFT_HOT = gift("o_gift_hot", *cell_spot(HOT_ROW), k=GK, on_pallet=False)
 
 
 def aisle(i):
-    return RANGES[i][2] - (P["RX"][1] - RW) / 2  # the aisle left of rack row i
+    return RANGES[i][2] - 0.9 if i % 2 == 0 else RANGES[i][2] + RW + 0.9  # the aisle outside rack row i
 
 
 def to_dispatch(x, y):
     """Walk: down to the cross aisle, along it, into the dispatch door."""
-    return [(x, y), (x, LANE), (DX_OUT, LANE), (DX_OUT, Y1 - 0.5)]
+    return [(x, y), (x, LANE), (DX_OUT, LANE), (DX_OUT, DOORS_Y[0]), (X1 - 0.3, DOORS_Y[0])]
 
 
-ROUTES = {"entrance": to_dispatch(FREE_CELL[0], EY0 - 0.6),
+ROUTES = {"entrance": to_dispatch(EY1 + 0.6, FREE_CELL[1]),
           **{p: [(cell_spot(i).x, cell_spot(i).y)] + to_dispatch(aisle(i), cell_spot(i).y) for p, i in ALPHA_ROW.items()},
           "hot": [(cell_spot(HOT_ROW).x, cell_spot(HOT_ROW).y)] + to_dispatch(aisle(HOT_ROW), cell_spot(HOT_ROW).y)}
 ROUTE_M = {k: round(sum((Vector(b) - Vector(a)).length for a, b in zip(v, v[1:]))) for k, v in ROUTES.items()}
@@ -810,17 +820,17 @@ for k, (x, y) in enumerate(P["PUZZLED"]):
     head = person("o_newshift", (x, y, FZ), math.radians(60 + 50 * k), cap="#FFFFFF", tsd=True, pose=((0.05, 0.75), (0.25, 0.35)))
     O_HEADS.append(head)  # the "?" over each head is lettered by compose.py
 # wms: the system pointed to the hot cell, so the gift already rolls into the truck
-JX, JY = DX_OUT - 0.4, Y1 - 4.2
-pallet_jack("o_jack_out", JX, JY, math.pi / 2)
+JX, JY = X1 - 4.0, DOORS_Y[0] - 4.0
+pallet_jack("o_jack_out", JX, JY, 0.0)
 O_GIFT_OUT = gift("o_jack_out", JX, JY, FZ + 0.13, k=1.0)
-person("o_jack_out", (JX, JY + 2.6, FZ), math.pi / 2, walk=0.3, pose=((-0.35, -0.2), (-0.35, -0.2)))
+person("o_jack_out", (JX + 2.6, JY, FZ), 0.0, walk=0.3, pose=((-0.35, -0.2), (-0.35, -0.2)))
 
 f3 = lambda pts: [Vector((x, y, FZ + 0.05)) for x, y in pts]
 STORY = {
     "entrance": (O_GIFT_ENTRANCE, f3(ROUTES["entrance"])),
     **{f"alphabet-{p}": (O_GIFT_ALPHA[p], f3(ROUTES[p])) for p in ALPHA_ROW},
     "keeper": (O_GIFT_HOT, f3(ROUTES["hot"])),
-    "wms": (O_GIFT_OUT, f3([(JX, JY), (DX_OUT, Y1 - 0.5)])),
+    "wms": (O_GIFT_OUT, f3([(JX, JY), (DX_OUT, JY), (DX_OUT, DOORS_Y[0]), (X1 - 0.3, DOORS_Y[0])])),
 }
 flush()
 # ---- light, world, ink --------------------------------------------------------
@@ -862,9 +872,10 @@ ls.linestyle.alpha = 0.9
 # ---- cameras -------------------------------------------------------------------------
 FORMATS_SPEC = {
     # name: (res, azimuth, elevation, keep box u0,v0,u1,v1 in y-down screen space)
-    "desk": ((1536, 1024), float(os.environ.get("DESK_AZ", -26)), float(os.environ.get("DESK_EL", 48)), (0.0, 0.02, 1.0, 0.99)),
-    "tall": ((1024, 1536), float(os.environ.get("TALL_AZ", -14)), float(os.environ.get("TALL_EL", 52)), (0.0, 0.08, 1.0, 0.99)),
+    # v16: centred perspective (as in the v6 illustration) so both side walls show their inner face
+    "desk": ((1536, 1024), float(os.environ.get("DESK_AZ", 0)), float(os.environ.get("DESK_EL", 38)), (0.0, 0.0, 1.0, 1.0)),
 }
+PERSP_D = float(os.environ.get("PERSP_D", 62))  # camera distance from the hall centre
 OUTCOME_RES = (1960, 840)
 
 
@@ -878,15 +889,15 @@ def cube(x0, y0, z0, x1, y1, z1):
     return [Vector((x, y, z)) for x in (x0, x1) for y in (y0, y1) for z in (z0, z1)]
 
 
-# Frame the whole hall, the dock wall with its signs and the rear of both trucks
-# (phone: only the trailer ends, so the hall gets the height).
+# Frame the whole hall with both side walls and the back wall, a little yard around.
 def play_box():
-    top = cube(DX_IN0 - 3, Y1, 0, DX_OUT + 3, Y1 + 1, 2.0) if LAYOUT == "tall" else cube(DX_IN0 - 3, Y1, 0, DX_OUT + 3, Y1 + 3, 4.4 * TRUCK)
-    return cube(X0 - 0.5, Y0 - 0.5, 0, X1 + 0.5, Y1 + 0.4, SIGN_Z1 + 0.4) + top
+    return cube(X0 - 0.6, Y0 - 0.6, 0, X1 + 0.6, Y1 + 0.4, WALL)
 
 
-def camera(name, spec, keep=None, right=False):
+def camera(name, spec, keep=None, right=False, dist=None):
     (W, H), az, el, (u0, v0, u1, v1) = spec
+    if dist:
+        return persp_camera(name, spec, keep or play_box(), dist)
     rot, R, U, F = axes(az, el)
     KEEP = keep or play_box()
     xs = [p.dot(R) for p in KEEP]
@@ -906,6 +917,32 @@ def camera(name, spec, keep=None, right=False):
     cam.data.clip_end = 3000
     cam.rotation_euler = rot
     cam.location = R * cx + U * cy - F * 900
+    return cam
+
+
+def persp_camera(name, spec, keep, dist):
+    """Perspective camera looking at the hall centre from `dist`; lens and shift fit `keep`."""
+    (W, H), az, el, (u0, v0, u1, v1) = spec
+    rot, R, U, F = axes(az, el)
+    loc = Vector(((X0 + X1) / 2, (Y0 + Y1) / 2, FZ)) - F * dist
+    xs, ys = [], []
+    for p in keep:
+        v = p - loc
+        xs.append(v.dot(R) / v.dot(F))
+        ys.append(v.dot(U) / v.dot(F))
+    aspect = W / H
+    S = max((max(xs) - min(xs)) / (u1 - u0), (max(ys) - min(ys)) / (v1 - v0) * aspect)
+    cx = (min(xs) + max(xs)) / 2 + (0.5 - (u0 + u1) / 2) * S
+    cy = (min(ys) + max(ys)) / 2 - (0.5 - (v0 + v1) / 2) * S / aspect
+    cam = bpy.data.objects.new(name, bpy.data.cameras.new(name))
+    scene.collection.objects.link(cam)
+    cam.data.sensor_fit = "HORIZONTAL"
+    cam.data.sensor_width = 36
+    cam.data.lens = 36 / S
+    cam.data.shift_x, cam.data.shift_y = cx / S, cy / S
+    cam.data.clip_end = 3000
+    cam.rotation_euler = rot
+    cam.location = loc
     return cam
 
 
@@ -940,7 +977,7 @@ def hull(pts):
 # keyboard button sits on (no badges: the player taps the object itself).
 PH = PEOPLE * 1.95  # person height
 REGIONS = {
-    "entrance": (cube(EX0, EY0 - 0.2, FZ, EX1, EY1, FZ + 4.6), Vector(((EX0 + EX1) / 2, EY0, FZ + 2.3))),
+    "entrance": (cube(EY0, EX0, FZ, EY1 + 0.2, EX1, FZ + 4.6), Vector((EY1, (EX0 + EX1) / 2, FZ + 2.3))),
     "keeper": (cube(KEEPER.x - 1.9, KEEPER.y - 0.9, FZ, KEEPER.x + 0.6, KEEPER.y + 0.6, FZ + PH), Vector((KEEPER.x, KEEPER.y, FZ + PH * 0.6))),
     "wms": (cube(DX0, DY0 - 0.6, FZ, DX1 + 1.4, DY1, SCREEN[5] + 0.12), Vector((MX, SCREEN[1], (SCREEN[2] + SCREEN[5]) / 2))),
 }
@@ -949,9 +986,9 @@ for parcel, i in ALPHA_ROW.items():
     REGIONS[f"alphabet-{parcel}"] = (cube(x0, RY0 - 0.4, FZ, x0 + RW, RY0 + 1.2, PLAQUE_Z1), Vector((x0 + RW / 2, RY0 - 0.4, (PLAQUE_Z0 + PLAQUE_Z1) / 2)))
 LABELS = {  # text plaques, for required framing and the shelf ranges in the game
     **{label: Vector((x0 + RW / 2, RY0 - 0.16, (PLAQUE_Z0 + PLAQUE_Z1) / 2)) for label, _, x0 in RANGES},
-    **{label: Vector((cx, SIGN_Y, (SIGN_Z0 + SIGN_Z1) / 2)) for label, (cx, _) in SIGNS.items()},
+    **{label: Vector((x, SIGN_Y, (SIGN_Z0 + SIGN_Z1) / 2)) for label, x in SIGN_X.items()},
 }
-SIGN_BOXES = {label: cube(cx - SW - 0.2, SIGN_Y - 0.15, SIGN_Z0, cx + SW + 0.2, SIGN_Y + 0.15, SIGN_Z1) for label, (cx, _) in SIGNS.items()}
+SIGN_BOXES = {label: cube(x - 0.15, SIGN_Y - SW - 0.2, SIGN_Z0, x + 0.15, SIGN_Y + SW + 0.2, SIGN_Z1) for label, x in SIGN_X.items()}
 
 
 def frame_data(cam, W, H):
@@ -999,7 +1036,7 @@ if MODE in ("test", "plate"):
     for name in FORMATS:
         spec = FORMATS_SPEC[name]
         W, H = spec[0]
-        cam = camera(name, spec)
+        cam = camera(name, spec, dist=PERSP_D)
         scene.camera = cam
         bpy.context.view_layer.update()
         manifest["formats"][name] = frame_data(cam, W, H)
@@ -1010,7 +1047,7 @@ if MODE in ("test", "plate"):
             render(OUT / f"{name}-notext.png", W, H)
 
 # Outcome stills: the same building, other actors, a closer camera.
-DISPATCH = cube(DX_OUT - DOOR - 0.5, Y1, FZ, DX_OUT + DOOR + 0.5, Y1, SIGN_Z1)  # every walk ends in the dispatch door
+DISPATCH = cube(X1, DOORS[0][0] - 0.5, FZ, X1, DOORS[1][1] + 0.5, SIGN_Z1)  # every walk ends in the dispatch door
 
 
 def row_box(i):
@@ -1026,7 +1063,7 @@ HOT = row_box(HOT_ROW)
 OUTCOMES = {
     # name: (extra outcome groups, hidden base groups, keep points)
     "entrance": ({"o_gift_entrance", "o_runners_entrance"}, {"gift", "jack"},
-                 cube(EX0, LANE - 1.0, FZ, EX1, EY1, FZ + 4.6) + cube(*P["RUN_E"][0], FZ, *P["RUN_E"][0], FZ + 3.5) + DISPATCH),
+                 cube(EY0, EX0, FZ, EY1, EX1, FZ + 4.6) + cube(*P["RUN_E"][0], FZ, *P["RUN_E"][0], FZ + 3.5) + DISPATCH),
     **{f"alphabet-{p}": ({f"o_gift_{p}", f"o_runners_{p}"}, {"gift", "jack"}, row_box(i) + cube(RANGES[i][2], LANE, FZ, DX_OUT, LANE, FZ + 3.5) + DISPATCH)
        for p, i in ALPHA_ROW.items()},
     "keeper": ({"o_gift_hot", "o_newshift"}, {"gift", "jack", "keeper"},
