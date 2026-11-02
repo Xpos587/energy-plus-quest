@@ -1,11 +1,11 @@
-import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { ImageSources } from "../../components/ImageSources";
 import { useArtworkLoading } from "../../components/useArtworkLoading";
 import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
-import { craneArtwork, craneCaptions, craneWorld, type CraneFormat, type Rect } from "./artwork";
+import { craneArtwork, craneCaptions, craneWorld, type CraneActor, type CraneFormat, type Rect } from "./artwork";
 import { craneBeat, craneDeckDelta, craneDuration, craneRest, craneSail } from "./consequence";
 import { craneScene } from "./index";
 import styles from "./CraneArt.module.css";
@@ -74,8 +74,14 @@ function useConsequence(playing: string | undefined, onPlayed: (() => void) | un
 const sub = (a: readonly number[], b: readonly number[]) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]] as const;
 const scaleBy = (a: readonly number[], k: number) => [a[0] * k, a[1] * k, a[2] * k] as const;
 
-export function CraneArt({ context, selectedId, onSelect, showResult, playing, onPlayed }: SceneArtProps) {
-  const [hovered, setHovered] = useState<string>();
+export function CraneArt({ context, selectedId, onSelect, showResult, playing, onPlayed, focusedId, onFocusChange }: SceneArtProps) {
+  const [ownHover, setOwnHover] = useState<string>();
+  const hovered = onFocusChange ? focusedId : ownHover;
+  const setHovered = onFocusChange ?? setOwnHover;
+  const hole = `crane-hole-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
+  // Figures not yet looked at breathe, so the player knows they are tappable.
+  const [seen, setSeen] = useState<string[]>([]);
+  useEffect(() => { if (selectedId) setSeen((s) => (s.includes(selectedId) ? s : [...s, selectedId])); }, [selectedId]);
   // Animate camera moves only after the first measured frame, not from size 0.
   const [ready, setReady] = useState(false);
   const stage = useRef<HTMLElement>(null);
@@ -105,9 +111,9 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const options = craneScene.options(context);
   const litId = playing ?? (interactive ? (hovered ?? selectedId) : undefined);
   const lit = new Set<string>(litId ? art.actors[litId] ?? [] : []);
-  const pct = (x: number, y: number) => ({ left: `${(x / art.width) * 100}%`, top: `${(y / art.height) * 100}%` });
+  const spotlight = interactive && !!litId;
   const box = (r: { x: number; y: number; w: number; h: number }) => ({
-    ...pct(r.x, r.y), width: `${(r.w / art.width) * 100}%`, height: `${(r.h / art.height) * 100}%`,
+    left: `${(r.x / art.width) * 100}%`, top: `${(r.y / art.height) * 100}%`, width: `${(r.w / art.width) * 100}%`, height: `${(r.h / art.height) * 100}%`,
   });
   // A world move is a pure screen shift for the orthographic quay camera.
   const move = (r: { w: number; h: number }, delta: readonly number[]): CSSProperties => {
@@ -195,18 +201,28 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         )}
         {hookAt && !beat.lifted && sprite("hook", { style: move(s.hook, hookAt) })}
         {hookAt && beat.lifted && sprite("box", { style: move(s.box, hookAt) })}
-        {!playing && (
-          <>
-            <span className={styles.chip} data-barge-chip="barge" style={pct(art.chips.barge.x, art.chips.barge.y)}>
-              Баржа готова к отходу
-            </span>
-            <span className={styles.chip} data-barge-chip="gift" data-tone="gift" style={pct(art.chips.gift.x, art.chips.gift.y)}>
-              Подарок
-            </span>
-          </>
-        )}
-        {options.map((option, index) => {
-          const point = art.hotspots[option.id];
+        {/* Pointing at a figure dims the quay around the people and cranes that way uses. */}
+        <svg className={styles.cable} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true" data-barge-mark>
+          <defs>
+            <filter id={`${hole}f`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation={art.width / 70} /></filter>
+            <mask id={hole} maskUnits="userSpaceOnUse" x="0" y="0" width={art.width} height={art.height}>
+              <rect width={art.width} height={art.height} fill="white" />
+              {[...lit].map((actor) => {
+                const r = art.boxes[actor as CraneActor];
+                return <rect key={actor} x={r.x} y={r.y} width={r.width} height={r.height} rx={art.width / 30} fill="black" filter={`url(#${hole}f)`} />;
+              })}
+            </mask>
+          </defs>
+          <rect className={styles.scrim} data-on={spotlight} width={art.width} height={art.height} mask={`url(#${hole})`} />
+          {interactive && !litId && options.map((option, index) => {
+            if (seen.includes(option.id)) return null;
+            const point = art.hotspots[option.id];
+            return <circle key={option.id} className={styles.ripple} cx={point.x} cy={point.y} r={art.width / 22} style={{ animationDelay: `${index * 0.7}s` }} />;
+          })}
+        </svg>
+        {/* The figures are the buttons: Ivan, the ladder, the near crane, Petr. No numbers, no captions. */}
+        {options.map((option) => {
+          const r = art.boxes[art.actors[option.id][0]];
           const caption = craneCaptions[option.id as keyof typeof craneCaptions];
           return (
             <button
@@ -214,9 +230,8 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
               type="button"
               className={styles.hotspot}
               data-hotspot={option.id}
-              data-side={point.side}
-              style={pct(point.x, point.y)}
-              aria-label={`Вариант ${index + 1}. ${choiceLabel(option.label)}`}
+              style={box({ x: r.x, y: r.y, w: r.width, h: r.height })}
+              aria-label={`${caption}. ${choiceLabel(option.label)}`}
               aria-pressed={(playing ?? selectedId) === option.id}
               disabled={!interactive}
               onClick={() => onSelect?.(option.id)}
@@ -224,10 +239,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
               onPointerLeave={() => setHovered(undefined)}
               onFocus={() => setHovered(option.id)}
               onBlur={() => setHovered(undefined)}
-            >
-              <span className={styles.badge} aria-hidden="true">{index + 1}</span>
-              <span className={styles.caption} aria-hidden="true">{caption}</span>
-            </button>
+            />
           );
         })}
       </div>

@@ -33,28 +33,44 @@ function format(name: CraneFormat) {
   const near: readonly Point[] = [a.nearCabin, a.nearTip, a.quayFootNear, a.ladderTop];
   const corners = (r: { x: number; y: number; w: number; h: number }): Point[] => [[r.x, r.y], [r.x + r.w, r.y + r.h]];
   const sp = layer.sprites;
+  const art = layer;
+  const tall = name === "tall";
+  const rect = (r: { x: number; y: number; w: number; h: number }): Rect => ({ x: r.x, y: r.y, width: r.w, height: r.h });
+  // Small figures get a finger-sized margin.
+  const pad = (r: Rect, m = tall ? 28 : 20): Rect => ({ x: r.x - m, y: r.y - m, width: r.width + 2 * m, height: r.height + 2 * m });
   // Whole figures, not just their centres: office, both cranes, the barge from bow to stern.
   // The round ПРУ office is about 11 m across.
   const [pu, pv] = project([-10 - 6, 20 - 6, 0]);
   const story: readonly Point[] = [a.pru, [pu, pv], ...corners(sp.ivan), ...corners(sp.gift), ...near, ...corners(sp.ladder),
     ...corners(sp.far), ...corners(sp.barge)];
-  const tall = name === "tall";
+  const focus = around(story, tall ? 40 : 24, width, height);
+  // Tap targets stay inside the strip the camera always shows.
+  const clip = (r: Rect): Rect => {
+    const x = Math.max(r.x, focus.x), y = Math.max(r.y, focus.y);
+    return { x, y, width: Math.min(r.x + r.width, focus.x + focus.width) - x, height: Math.min(r.y + r.height, focus.y + focus.height) - y };
+  };
   return {
     ...layer,
     project,
     // The strip that must stay in frame: office, gift, near crane, barge, far crane.
-    focus: around(story, tall ? 40 : 24, width, height),
+    focus,
+    // The figures themselves are the choices; each box is a tap target and a spotlight hole.
+    // Sprites hold only the tops of the cranes, so the boxes reach down to their legs.
+    // The near crane starts right of the gift so the gift is never a target.
+    boxes: {
+      ivan: clip(pad(rect(sp.ivan))),
+      ladder: clip(pad(rect(sp.ladder))),
+      near: clip({ x: sp.ladder.x - sp.ladder.w, y: art.top.y, width: art.top.x + art.top.w - sp.ladder.x + sp.ladder.w, height: a.ladderFoot[1] - art.top.y }),
+      far: clip({ ...rect(sp.far), height: sp.far.h * 1.6 }),
+    } as Record<CraneActor, Rect>,
+    // Where an untried figure breathes.
     hotspots: {
-      remote: { x: a.ivan[0], y: a.ivan[1], side: "right" },
-      rush: { x: ladderMid[0], y: ladderMid[1], side: "left" },
-      wait: { x: a.nearCabin[0], y: a.nearCabin[1], side: "right" },
-      petr: { x: a.petr[0], y: a.petr[1], side: "left" },
-    } as Record<string, { x: number; y: number; side: "left" | "right" }>,
-    chips: {
-      gift: { x: a.gift[0], y: a.gift[1] + (tall ? 46 : 52) },
-      barge: { x: a.bargeMid[0], y: a.bargeMid[1] + (tall ? 70 : 64) },
-    },
-    // What each way uses: these layers light up when the way is picked.
+      remote: { x: a.ivan[0], y: a.ivan[1] },
+      rush: { x: ladderMid[0], y: ladderMid[1] },
+      wait: { x: a.nearCabin[0], y: a.nearCabin[1] },
+      petr: { x: a.petr[0], y: a.petr[1] },
+    } as Record<string, { x: number; y: number }>,
+    // What each way uses: these layers light up when the way is picked; the first one is tapped.
     actors: {
       remote: ["ivan", "near"],
       rush: ["ladder", "near"],
@@ -81,11 +97,11 @@ export const craneArtwork = {
 };
 export { craneWorld };
 
-/** What each pin points at in the drawing. */
+/** The figure each way is picked by: hover hint, card eyebrow and screen-reader name. */
 export const craneCaptions = {
   remote: "Иван в офисе",
-  rush: "Подъём в кабину",
-  wait: "Кран свободен через 3 ч",
+  rush: "Лестница в кабину",
+  wait: "Ближний кран",
   petr: "Пётр на дальнем кране",
 } as const;
 

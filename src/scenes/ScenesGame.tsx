@@ -524,7 +524,7 @@ function ScenesSession({
             {inspectsOnArt && !resultVisible && (
               <CarrierTapHint
                 selectedId={pending?.id}
-                text={scene.id === "compact" ? "Выберите место для груза" : scene.id === "lastmile" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать о нём` : "Нажмите на транспорт, чтобы узнать о нём") : scene.id === "inventory" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать подробнее` : "Где хранить подарок? Нажмите на одно из подсвеченных мест") : "Нажмите на номер на причале"}
+                text={scene.id === "compact" ? "Выберите место для груза" : scene.id === "lastmile" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать о нём` : "Нажмите на транспорт, чтобы узнать о нём") : scene.id === "inventory" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать подробнее` : "Где хранить подарок? Нажмите на одно из подсвеченных мест") : focusedChoice && focusedChoice in craneCaptions ? `${craneCaptions[focusedChoice as keyof typeof craneCaptions]} · нажмите, чтобы узнать подробнее` : "Нажмите на людей и краны на причале"}
               />
             )}
           </section>

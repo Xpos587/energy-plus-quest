@@ -85,7 +85,7 @@ describe("craneScene source contract", () => {
       });
     }
   }
-  it("renders four numbered object pins on the quay drawing", () => {
+  it("makes the four figures on the quay the choices, without numbers or captions", () => {
     const html = renderToStaticMarkup(
       <craneScene.Art context={context} showResult={false} onSelect={() => {}} />,
     );
@@ -93,8 +93,9 @@ describe("craneScene source contract", () => {
     for (const id of ["remote", "rush", "wait", "petr"])
       expect(html).toContain(`data-hotspot="${id}"`);
     expect(html).toMatch(/scene-art\/barge-v4\/(mid|desk|wide|tall)\/plate\.webp/);
-    for (const caption of Object.values(craneCaptions)) expect(html).toContain(caption);
-    expect(html).toContain("Баржа готова к отходу");
+    for (const caption of Object.values(craneCaptions)) expect(html).toContain(`aria-label="${caption}.`);
+    expect(html).not.toMatch(/>[1-4]</);
+    expect(html).not.toContain("Баржа готова к отходу");
     expect(html).not.toContain("disabled");
   });
   it("locks the pins once a result is shown", () => {
@@ -104,14 +105,20 @@ describe("craneScene source contract", () => {
     expect(html).toContain('data-selected="petr"');
     expect(html.match(/disabled=""/g)).toHaveLength(4);
   });
-  it("keeps every pin inside its drawing", () => {
-    for (const art of Object.values(craneArtwork))
-      for (const point of Object.values(art.hotspots)) {
-        expect(point.x).toBeGreaterThan(0);
-        expect(point.x).toBeLessThan(art.width);
-        expect(point.y).toBeGreaterThan(0);
-        expect(point.y).toBeLessThan(art.height);
+  it("keeps every tap target inside the framed quay and the ladder apart from Ivan and Petr", () => {
+    for (const art of Object.values(craneArtwork)) {
+      for (const r of Object.values(art.boxes)) {
+        expect(r.width).toBeGreaterThan(40);
+        expect(r.height).toBeGreaterThan(40);
+        expect(r.x).toBeGreaterThanOrEqual(art.focus.x);
+        expect(r.y).toBeGreaterThanOrEqual(art.focus.y);
+        expect(r.x + r.width).toBeLessThanOrEqual(art.focus.x + art.focus.width + 0.01);
+        expect(r.y + r.height).toBeLessThanOrEqual(art.focus.y + art.focus.height + 0.01);
       }
+      const { ivan, ladder, far } = art.boxes;
+      expect(ivan.x + ivan.width).toBeLessThan(ladder.x);
+      expect(ladder.x + ladder.width).toBeLessThan(far.x);
+    }
   });
 });
 
