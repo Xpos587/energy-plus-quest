@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-02-scene1-v16",
+  "release": "media-2026-11-02-frozen-scenes",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3922,6 +3922,59 @@
           "path": "public/scene-art/warehouse-v15/overview.webp",
           "sha256": "a601d07e475dbb74a20f08087482cae209b67406a80af45002e33b2ec53f19af",
           "bytes": 275342
+        }
+      ]
+    },
+    {
+      "name": "scenes-current.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-02-frozen-scenes/scenes-current.tar.gz",
+      "sha256": "1d983cfce153dd7a047a18ba63b2231865dd5680356f320d88a467fd08bcf1c8",
+      "bytes": 1933088,
+      "files": [
+        {
+          "path": "public/scene-art/inventory-master-v7.webp",
+          "sha256": "a64d1bd6ab0fccb230cfa37796e8ab2c9d3f08c7341395a837d79901a29b821a",
+          "bytes": 293662
+        },
+        {
+          "path": "public/scene-art/warehouse-v12/outcome-alphabet-boat.webp",
+          "sha256": "002b42ee586ba6127077daddfd1696f3a8f6be0147d65862f8b6f2f20e97f79a",
+          "bytes": 212216
+        },
+        {
+          "path": "public/scene-art/warehouse-v12/outcome-alphabet-camera.webp",
+          "sha256": "9bbc9b065e47078e687e458f86fc1fe8aa3b22bd2575acc8b4216b1db058151f",
+          "bytes": 217026
+        },
+        {
+          "path": "public/scene-art/warehouse-v12/outcome-alphabet-socks.webp",
+          "sha256": "0f0598cd7f844ddbab0a26c4673bf4e51334caaf77aaa2454210cfa5de2eea3f",
+          "bytes": 205692
+        },
+        {
+          "path": "public/scene-art/warehouse-v12/outcome-entrance.webp",
+          "sha256": "4823323d8b7fae0bf3adfe1882b121d527065e9aa0db939b63716fdc7cd7c1be",
+          "bytes": 201828
+        },
+        {
+          "path": "public/scene-art/warehouse-v12/outcome-keeper.webp",
+          "sha256": "7fa44239c84e39585fd21ab785edeaf0c32aa80d7f5ee35a155c9712729d88cb",
+          "bytes": 210776
+        },
+        {
+          "path": "public/scene-art/warehouse-v12/outcome-wms.webp",
+          "sha256": "1440d97f16f6e9323e82915c8ddbf1c9e81e385ec291a5a11b6ed41d2d7ecf31",
+          "bytes": 188112
+        },
+        {
+          "path": "public/scene-art/warehouse-v12/overview-mobile.webp",
+          "sha256": "8a2270f116ae114b53761b76bebd148d6d23bd81d3cc9b4ba2ba08c89a292388",
+          "bytes": 225026
+        },
+        {
+          "path": "public/scene-art/warehouse-v12/overview.webp",
+          "sha256": "e90df15e43d7f1cfc65680022f9f7d87463aa02212101d85c26051c72114f655",
+          "bytes": 176744
         }
       ]
     }
