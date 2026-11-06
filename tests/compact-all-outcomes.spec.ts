@@ -8,7 +8,12 @@ for (const parcel of ['socks', 'camera', 'boat'] as const) {
    const choice=page.locator(`[data-hotspot="${id}"]`);
    await choice.click();await page.locator('[data-choice-confirm]').click();
    await expect(page.locator('[data-result-reader]')).toBeVisible();
-   for (const overlay of await page.locator('[data-loading-zone], [data-hotspot]').all())
+   // Result keeps only the chosen place marked, and it no longer accepts input.
+   const placed=id==='auto'?(parcel==='boat'?'place-4':'place-3'):id;
+   // Boat in place 3 does not fit: its result is a separate picture without a marker.
+   const marker=page.locator(`[data-hotspot="${placed}"]`);
+   if(await marker.count()) await expect(marker).toBeDisabled();
+   for (const overlay of await page.locator(`[data-hotspot]:not([data-hotspot="${placed}"])`).all())
     await expect(overlay).toBeHidden();
    await page.screenshot({path:`.tmp-work/compact-complete/${info.project.name}-${parcel}-${id}.png`});
    await page.getByRole('button',{name:'Изменить выбор',exact:true}).click();
@@ -27,7 +32,7 @@ for (const parcel of ['socks', 'camera', 'boat'] as const) {
    }
    const normalize=(text:string)=>text.replace(/\s+/g,' ').trim();
    expect(normalize(pages.join(' ')).length).toBeGreaterThan(40);
-   const proceed=page.getByRole('button',{name:'Найти место на складе',exact:true});
+   const proceed=page.getByRole('button',{name:'Продолжить',exact:true});
    await expect(proceed).toBeInViewport({ratio:1});
    await proceed.click();
    await expect(page.locator('[data-scene="inventory"]')).toBeVisible();
