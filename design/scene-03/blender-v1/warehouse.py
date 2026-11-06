@@ -468,23 +468,20 @@ CUT = FZ + 0.25
 aabb("shell", "#DCE2E8", X0, Y0 - 0.4, FZ, X1, Y0, CUT)
 aabb("shell", "#C9D2DC", X0 - 0.4, Y0 - 0.4, 0, X1 + 0.4, Y0, FZ)
 
-# ---- zone signs: boards hinged on each side wall in front of its doors, turned
-# towards the camera so the lettering reads (flat on the wall it was a sliver)
-SW = 5.2 if LAYOUT == "wide" else 4.6
-SIGN_A = math.radians(55)  # 0 = flat on the wall, 90 = square to the camera
-SIGN_Z0, SIGN_Z1 = DOOR_Z + 1.2, DOOR_Z + 3.0
+# ---- zone signs: one long board hung flat on each side wall above both of its doors
+# (v18: the v17 boards stood out from the wall like flags)
+SIGN_Z0, SIGN_Z1 = DOOR_Z + 1.0, WALL - 0.8
+SW = DOORS[1][1] - DOORS[0][0]  # spans both doors of the zone
 SIGNS = {"ПРИЁМКА": (-1, BLUE), "ОТГРУЗКА": (1, ORANGE)}
 SIGN_C, SIGN_BOXES = {}, {}
 for label, (s, col) in SIGNS.items():
-    hinge = Vector(((X0 if s < 0 else X1) - s * 0.4, DOORS[0][0] - 0.8, 0))
-    t = Vector((-s * math.sin(SIGN_A), math.cos(SIGN_A), 0))  # along the board, away from the wall
-    n = Vector((-s * math.cos(SIGN_A), -math.sin(SIGN_A), 0))  # board face, towards the camera
-    c = hinge + t * SW / 2
+    t = Vector((0, 1, 0))  # along the wall
+    n = Vector((-s, 0, 0))  # board face, into the hall
+    c = Vector(((X0 if s < 0 else X1) - s * 0.5, (DOORS[0][0] + DOORS[1][1]) / 2, 0))  # back on the column faces
     phi = math.atan2(n.y, n.x)
     box("signs", col, (c.x, c.y, (SIGN_Z0 + SIGN_Z1) / 2), (0.2, SW, SIGN_Z1 - SIGN_Z0), rot=phi)
-    beam("signs", "#3A414B", (hinge.x, hinge.y, SIGN_Z1 - 0.2), (hinge.x + s * 0.4, hinge.y, SIGN_Z1 - 0.2), 0.12)
     tc = c + n * 0.13
-    text("signs_text", label, (tc.x, tc.y, (SIGN_Z0 + SIGN_Z1) / 2 - 0.02), 1.0, "#FFFFFF", rot=(math.pi / 2, 0, phi + math.pi / 2))
+    text("signs_text", label, (tc.x, tc.y, (SIGN_Z0 + SIGN_Z1) / 2 - 0.02), float(os.environ.get("SIGN_TS", 1.9)), "#FFFFFF", rot=(math.pi / 2, 0, phi + math.pi / 2))
     SIGN_C[label] = Vector((c.x, c.y, (SIGN_Z0 + SIGN_Z1) / 2))
     e = t * (SW / 2 + 0.1)
     SIGN_BOXES[label] = [c + d + Vector((0, 0, z)) for d in (e, -e) for z in (SIGN_Z0, SIGN_Z1)]
