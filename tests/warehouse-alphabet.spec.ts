@@ -16,7 +16,7 @@ for (const [parcel, letter] of [
     await image.evaluate((element: HTMLImageElement) => element.decode());
     await expect(image).toHaveAttribute(
       "src",
-      /inventory-master-v9-tall\.webp$/,
+      /inventory-master-v10-tall\.webp$/,
     );
     await expect(
       page.locator(

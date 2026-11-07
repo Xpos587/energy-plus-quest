@@ -1,8 +1,8 @@
 {
   "width": 1200,
   "height": 1500,
-  "source": "scene-art/inventory-master-v9-tall.webp",
-  "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py, v18: closed shutter doors, zone boards flat on the side walls above both doors); GPT restyle in the scene 1-2 style aligned back onto the render with the rendered lettering; v9 pastes the colour-matched render of the boards into v8",
+  "source": "scene-art/inventory-master-v10-tall.webp",
+  "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py, v18: closed shutter doors, zone boards flat on the side walls above both doors); GPT restyle in the scene 1-2 painterly style aligned back onto the render with the rendered lettering",
   "regions": {
     "entrance": {
       "path": "M 109 1028 L 154 860 L 197 860 L 221 941 L 185 1106 L 141 1106 Z",
