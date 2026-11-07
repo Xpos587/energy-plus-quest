@@ -1,4 +1,4 @@
-// Coordinates in revision-11 choice-map pixels at 1x (runtime WebP is 2x). The v9 map sits at
+// Coordinates in revision-11/12 choice-map pixels at 1x (runtime WebP is 2x). The v9 map sits at
 // `original` inside an outpainted canvas large enough for the camera to cover any stage.
 export const lastmileChoiceArtwork = {
   wide: {
