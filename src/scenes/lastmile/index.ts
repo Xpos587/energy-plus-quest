@@ -3,6 +3,8 @@ import { parcelNames, recipientNames } from "../names";
 import type { SceneContext, SceneDefinition, SceneOption } from "../types";
 import { LastmileArt } from "./LastmileArt";
 
+export const pipeCarrierResult = "Мощный вездеход провёз и подарок, и трубы с баржи — но только до берега реки. Для посылки пришлось вызывать вездеход-амфибию, а трубы везти обратно на причал. А это потерянное время и деньги.";
+
 export function lastmileOptions({ recipient }: SceneContext): SceneOption[] {
  const remote = recipient !== "arseniy";
  return [
@@ -14,8 +16,9 @@ export function lastmileOptions({ recipient }: SceneContext): SceneOption[] {
     score:{energy:4,empathy:3,efficiency:5}, sourceIds:["42123CE2","06D090A1-text","333D692C"] },
   { id:"robot", label:source("3B981493"), result:[source("5629AB4A"),source("2289FF3B")],
     score:{energy:-4,empathy:3,efficiency:-5}, sourceIds:["3B981493","5629AB4A","2289FF3B","67543BB5"] },
-  { id:"pipe-carrier", label:source("4172314D"), result:[source("4E705130"),source("7F6FF7ED")],
-    score:{energy:-5,empathy:0,efficiency:-3}, sourceIds:["4172314D","4E705130","7F6FF7ED","3052219F"] },
+  // Teo, call 05.11: say at once "to the river bank — yes, across the river — no". Replaces 4E705130 + 7F6FF7ED.
+  { id:"pipe-carrier", label:source("4172314D"), result:[pipeCarrierResult],
+    score:{energy:-5,empathy:0,efficiency:-3}, sourceIds:["4172314D","3052219F"] },
  ];
 }
 export const lastmileScene: SceneDefinition = {

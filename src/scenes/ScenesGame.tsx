@@ -28,7 +28,7 @@ import { inventoryScene } from "./inventory";
 import { inventoryAlphabet } from "./inventory/alphabet";
 import { JourneyEnding } from "./JourneyEnding";
 import { lastmileScene } from "./lastmile";
-import { LastmileDecisionContext, LastmileFacts, lastmileFacts } from "./lastmile/LastmileFacts";
+import { LastmileDecisionContext, lastmileHeadings } from "./lastmile/LastmileFacts";
 import { initialProgress, progressReducer, totalScores } from "./progress";
 import { SceneOutcomeArt } from "./SceneOutcomeArt";
 import type { SceneContext, SceneId } from "./types";
@@ -439,7 +439,8 @@ function ScenesSession({
                 scene.id === "crane" || scene.id === "lastmile" ? (
                   <>
                     {scene.id === "crane" ? <CraneDecisionContext /> : <LastmileDecisionContext />}
-                    <SceneGoals goals={brief!.goals} />
+                    {/* Last scene, tired players (05.11): the task is plain text, no goal icons. */}
+                    {scene.id === "crane" && <SceneGoals goals={brief!.goals} />}
                   </>
                 ) : brief ? (
                   <SceneGoals goals={brief.goals} />
@@ -456,7 +457,7 @@ function ScenesSession({
                       <strong>{parcelNames[context.parcel].nominative}</strong>
                       <em>{brief.route(context)}</em>
                     </span>
-                    <SceneGoals goals={brief.goals} />
+                    {scene.id !== "lastmile" && <SceneGoals goals={brief.goals} />}
                   </div>
                 ) : undefined
               }
@@ -515,7 +516,7 @@ function ScenesSession({
                 }}
                 selectedId={resultVisible ? selected?.id : pending?.id}
                 showResult={resultVisible}
-                onSelect={state.phase === "choice" && !playing ? (inspectsOnArt ? setPendingId : choose) : undefined}
+                onSelect={state.phase === "choice" && !playing ? (inspectsOnArt && scene.id !== "lastmile" ? setPendingId : choose) : undefined}
                 playing={playing}
                 onPlayed={playing ? () => choose(playing) : undefined}
                 {...syncFocus}
@@ -524,7 +525,7 @@ function ScenesSession({
             {inspectsOnArt && !resultVisible && (
               <CarrierTapHint
                 selectedId={pending?.id}
-                text={scene.id === "compact" ? "Выберите место для груза" : scene.id === "lastmile" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать о нём` : "Нажмите на транспорт, чтобы узнать о нём") : scene.id === "inventory" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать подробнее` : "Где хранить подарок? Нажмите на одно из подсвеченных мест") : focusedChoice && focusedChoice in craneCaptions ? `${craneCaptions[focusedChoice as keyof typeof craneCaptions]} · нажмите, чтобы узнать подробнее` : "Нажмите на людей и краны на причале"}
+                text={scene.id === "compact" ? "Выберите место для груза" : scene.id === "lastmile" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы выбрать` : "Нажмите на транспорт, чтобы выбрать") : scene.id === "inventory" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать подробнее` : "Где хранить подарок? Нажмите на одно из подсвеченных мест") : focusedChoice && focusedChoice in craneCaptions ? `${craneCaptions[focusedChoice as keyof typeof craneCaptions]} · нажмите, чтобы узнать подробнее` : "Нажмите на людей и краны на причале"}
               />
             )}
           </section>
@@ -533,10 +534,10 @@ function ScenesSession({
               selectionKey={pending.id}
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
               eyebrow={scene.id === "compact" ? undefined
-                : scene.id === "lastmile" || scene.id === "inventory" ? places![pending.id][1]
+                : scene.id === "inventory" ? places![pending.id][1]
                 : craneCaptions[pending.id as keyof typeof craneCaptions]}
-              title={scene.id === "compact" || scene.id === "lastmile" || scene.id === "inventory" ? places![pending.id][0] : optionTitles[pending.id]}
-              cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "lastmile" ? "К карте" : scene.id === "inventory" ? "К складу" : "К причалу"}
+              title={scene.id === "compact" || scene.id === "inventory" ? places![pending.id][0] : optionTitles[pending.id]}
+              cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "inventory" ? "К складу" : "К причалу"}
               paragraphs={scene.id === "inventory" ? [choiceLabel(pending.label)] : undefined}
               onCancel={() => setPendingId(undefined)}
               onConfirm={() => {
@@ -548,7 +549,6 @@ function ScenesSession({
               {scene.id === "compact"
                 ? pending.id === "auto" ? <CompactCard /> : undefined
                 : scene.id === "inventory" ? undefined
-                : scene.id === "lastmile" ? <LastmileFacts id={pending.id as keyof typeof lastmileFacts} />
                 : <CraneFacts id={pending.id as keyof typeof craneFacts} />}
             </ChoiceInspection>
           )}
@@ -562,7 +562,13 @@ function ScenesSession({
               <div className={flow.resultStory}>
                 <ResultCopy
                   key={`${scene.id}:${selected.id}`}
-                  title={brief && places ? <ChoiceVerdict picked={brief.picked(selected.id, places[selected.id][0])} goals={brief.goals} score={selected.score} all={options.map(o => o.score)} /> : title}
+                  title={scene.id === "lastmile" && places ? (
+                    // Teo 05.11: a plain line about what happened, no score verdict.
+                    <span className={flow.compactVerdict} data-verdict="none" data-lastmile-heading={selected.id}>
+                      <small>{brief!.picked(selected.id, places[selected.id][0])}</small>
+                      <span>{lastmileHeadings[selected.id as keyof typeof lastmileHeadings]}</span>
+                    </span>
+                  ) : brief && places ? <ChoiceVerdict picked={brief.picked(selected.id, places[selected.id][0])} goals={brief.goals} score={selected.score} all={options.map(o => o.score)} /> : title}
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace

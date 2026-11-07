@@ -138,8 +138,11 @@ it.each([
             ),
           );
         }
-        if (id.startsWith("place-") || ["remote", "auto", "pipe-carrier", "wms"].includes(id)) {
-          // Truck, warehouse, barge and last mile: the place opens a card; only the card commits the choice.
+        if (id === "pipe-carrier") {
+          // Last mile (call 05.11): the vehicle itself commits, no card in between.
+          await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
+        } else if (id.startsWith("place-") || ["remote", "auto", "wms"].includes(id)) {
+          // Truck, warehouse and barge: the place opens a card; only the card commits the choice.
           await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
           expect(container.querySelector("[data-result]")).toBeNull();
           await click(container.querySelector<HTMLButtonElement>("[data-choice-confirm]"));

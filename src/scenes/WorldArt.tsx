@@ -298,7 +298,7 @@ export function WorldArt({
             />
           </picture>
         )}
-        {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones composition={lastmileFormat} selectedId={selectedId} onSelect={onSelect} focusedId={focusedId} onFocusChange={onFocusChange} />}
+        {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones labels={shortMarkerLabels} composition={lastmileFormat} selectedId={selectedId} onSelect={onSelect} focusedId={focusedId} onFocusChange={onFocusChange} />}
         {expandedArt ? (
           <div style={{
             position: "absolute",
