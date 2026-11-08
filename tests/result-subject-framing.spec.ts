@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 const subjects: Record<string,number[]> = {
  entrance:[600,245,1265,710], keeper:[75,155,735,860],
- wms:[80,165,1200,875], helicopter:[70,12,1120,635],
+ wms:[80,165,1200,875], helicopter:[330,570,1340,1090],
 };
 for(const [width,height] of [[393,852],[820,1180],[1440,900]])
 for (const [scene,choice] of [['inventory','entrance'],['inventory','keeper'],['inventory','wms'],['lastmile','helicopter']]) {

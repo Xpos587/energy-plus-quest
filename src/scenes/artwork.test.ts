@@ -25,7 +25,7 @@ const deliveries = [
     "revision-2/rover-boat-arseniy.webp",
     "robot-boat-result-v3.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-5/flight-boat-arseniy.webp",
+    "revision-13/flight-boat-arseniy-tall.webp",
   ],
   [
     "camera",
@@ -49,7 +49,7 @@ const deliveries = [
     "revision-2/rover-parcel-arseniy.webp",
     "robot-parcel-result-v1.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-5/flight-parcel-arseniy.webp",
+    "revision-13/flight-parcel-arseniy-tall.webp",
   ],
   [
     "socks",
@@ -73,7 +73,7 @@ const deliveries = [
     "revision-2/rover-parcel-arseniy.webp",
     "robot-parcel-result-v1.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-5/flight-parcel-arseniy.webp",
+    "revision-13/flight-parcel-arseniy-tall.webp",
   ],
 ] as const;
 
@@ -91,7 +91,7 @@ describe("current artwork for every delivery context", () => {
         "pipe-carrier",
         "helicopter",
       ].entries()) {
-        const file = option === "pipe-carrier" ? `revision-2/pipe-carrier-${recipient}.webp` : results[index];
+        const file = option === "pipe-carrier" ? `revision-13/pipe-carrier-${recipient}-tall.webp` : results[index];
         const path = `/scene-art/lastmile-family-v1/${file}`;
         expect(sceneOutcomeImage("lastmile", option, context)).toBe(path);
         expect(existsSync(`public${path}`), path).toBe(true);

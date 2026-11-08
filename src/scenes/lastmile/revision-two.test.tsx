@@ -12,7 +12,7 @@ for (const recipient of ['alva', 'khor', 'arseniy'] as const) {
       expect(sceneOutcomeImage('lastmile', 'rover', context))
         .toBe(`/scene-art/lastmile-family-v1/revision-2/rover-${parcel === 'boat' ? 'boat' : 'parcel'}-${recipient}.webp`);
       expect(sceneOutcomeImage('lastmile', 'pipe-carrier', context))
-        .toBe(`/scene-art/lastmile-family-v1/revision-2/pipe-carrier-${recipient}.webp`);
+        .toBe(`/scene-art/lastmile-family-v1/revision-13/pipe-carrier-${recipient}-tall.webp`);
     });
   }
 }
