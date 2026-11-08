@@ -44,7 +44,7 @@ test('compact header and introduction form a useful choice screen',async({page},
  await page.getByRole('button',{name:'Изменить выбор',exact:true}).click();
  await page.locator('[data-hotspot="place-4"]').click();await page.locator('[data-choice-confirm]').click();
  await expect(page.locator('[data-result-reader]')).toBeVisible();
- await expect(page.getByRole('button',{name:/^(Найти место на складе|Читать дальше)$/})).toBeInViewport({ratio:1});
+ await expect(page.getByRole('button',{name:/^(Продолжить|Читать дальше)$/})).toBeInViewport({ratio:1});
  await page.screenshot({path:`.tmp-work/compact-header/${info.project.name}-result.png`});
  await page.getByRole('button',{name:'Изменить выбор',exact:true}).click();
  for(const choice of await choices.all()) await expect(choice).toBeInViewport({ratio:1});
@@ -55,9 +55,9 @@ for (const parcel of ['camera', 'socks']) test(`${parcel} place two uses boxed g
  const next=page.getByRole('button',{name:/^(Далее|К выбору)$/});
  for(let n=0;n<20&&await next.isVisible();n++) await next.click();
  await page.locator('[data-hotspot="place-2"]').click();await page.locator('[data-choice-confirm]').click();
- await expect(page.locator('[data-cargo-view] > image:not([filter])')).toHaveAttribute('href',new RegExp(`${parcel}-zone2-v`));
+ await expect(page.locator(`[data-cargo-view] > image:not([filter])[href*="${parcel}-zone2-v"]`)).toHaveCount(1);
  await expect(page.locator('[data-loading-zone="place-2"]')).toHaveAttribute('data-active','true');
- await expect(page.getByRole('button',{name:/^(Найти место на складе|Читать дальше)$/})).toBeInViewport({ratio:1});
+ await expect(page.getByRole('button',{name:/^(Продолжить|Читать дальше)$/})).toBeInViewport({ratio:1});
  const framing = await page.locator('[data-world-plane]').evaluate(el => {
    const r=el.getBoundingClientRect();
    return {boxedCameraWidth:r.width*132/1368,boxedCameraHeight:r.height*75/1149};
@@ -66,7 +66,7 @@ for (const parcel of ['camera', 'socks']) test(`${parcel} place two uses boxed g
  await page.screenshot({path:`.tmp-work/compact-header/${info.project.name}-${parcel}2.png`});
  await page.getByRole('button',{name:'Изменить выбор',exact:true}).click();
  await expect(page.locator('[data-camera-detail]')).toHaveCount(0);
- await expect(page.locator('[data-cargo-view] > image:not([filter])')).not.toHaveAttribute('href',new RegExp(`${parcel}-zone2-v`));
+ await expect(page.locator(`[data-cargo-view] > image[href*="${parcel}-zone2-v"]`)).toHaveCount(0);
  for (const id of ['place-1','place-2','place-3','place-4'])
    await expect(page.locator(`[data-hotspot="${id}"]`)).toBeInViewport({ratio:1});
 
