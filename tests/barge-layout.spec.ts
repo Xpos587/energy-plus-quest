@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+// The quay outcome animation is covered by barge-flow; here the result comes at once.
+test.use({ contextOptions: { reducedMotion: 'reduce' } });
 
 const captures = process.env.BARGE_CAPTURE_DIR ?? '.tmp-work/barge-style-after';
 

@@ -37,7 +37,9 @@ for (const viewport of [
     await page.locator('[data-hotspot="remote"]').click();
     await expect(page.locator("[data-score-key]")).toHaveCount(0);
     await page.locator("[data-choice-confirm]").click();
-    await expect(page.locator("[data-score-key]")).toHaveCount(3);
+    // The quay plays the consequence first, then the result reads.
+    await expect(page.locator("[data-playing]")).toHaveCount(1);
+    await expect(page.locator("[data-score-key]")).toHaveCount(3, { timeout: 15_000 });
     const resultImage = page.locator(
       '[data-scene-consequence="crane-remote"] img',
     );

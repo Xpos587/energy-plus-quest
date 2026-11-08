@@ -1,4 +1,6 @@
 import { expect, test } from "@playwright/test";
+// The quay outcome animation is covered by barge-flow; here the result comes at once.
+test.use({ contextOptions: { reducedMotion: "reduce" } });
 
 for (const [width, height] of [
   [320, 568],

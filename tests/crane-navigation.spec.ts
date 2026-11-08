@@ -1,4 +1,6 @@
 import { expect, test } from '@playwright/test';
+// The quay outcome animation is covered by barge-flow; here the result comes at once.
+test.use({ contextOptions: { reducedMotion: 'reduce' } });
 import { mkdir, writeFile } from 'node:fs/promises';
 const sizes=[{width:320,height:568},{width:390,height:844},{width:844,height:390},{width:1440,height:900}];
 for(const viewport of sizes) for(const parcel of ['boat','camera','socks']) test(`${viewport.width} ${parcel}: controls, images, lastmile`,async({page})=>{
