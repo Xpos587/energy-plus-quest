@@ -8,10 +8,8 @@ test("helicopter artwork follows the authored flight and ground narrative beats"
   for (let step = 0; step < 10 && (await briefing.isVisible()); step += 1)
     await briefing.click();
 
-  await page
-    .locator('[data-choice-id="helicopter"]:not([data-callout-target])')
-    .click();
-  await page.locator("[data-choice-confirm]").click();
+  // Last mile opens the result straight from the vehicle, no confirm card.
+  await page.locator('[data-hotspot="helicopter"]').click();
 
   const art = page.locator('[data-scene-consequence="lastmile-helicopter-remote"]');
   const image = art.locator("img");
