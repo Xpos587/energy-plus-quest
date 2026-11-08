@@ -11,20 +11,22 @@ import { craneBeat, craneDeckDelta, craneDuration, craneRest, craneSail } from "
 import { craneScene } from "./index";
 import styles from "./CraneArt.module.css";
 
-/** Pick the drawing that shows the quay largest, then keep its key strip in frame. */
+/** Pick the drawing that fills the stage and crops least of the quay story, then keep that strip in frame. */
 function camera(stage: { width: number; height: number }, zoomId?: string) {
   const fit = (format: CraneFormat) => {
-    const { width, height, focus } = craneArtwork[format];
-    const contain = Math.min(stage.width / width, stage.height / height);
-    const cover = Math.max(stage.width / width, stage.height / height);
-    const scale = Math.max(contain, Math.min(cover, stage.width / focus.width, stage.height / focus.height));
-    // The drawing composed for the closest screen shape needs the least crop.
+    const { width, height, focus, focusPad } = craneArtwork[format];
+    // Always cover: an empty band of sky colour reads as a broken picture.
+    const scale = Math.max(stage.width / width, stage.height / height);
+    // How much of the story itself (focus minus its air) falls outside the screen.
+    const lost = Math.max(0, (focus.width - 2 * focusPad) * scale - stage.width) / stage.width
+      + Math.max(0, (focus.height - 2 * focusPad) * scale - stage.height) / stage.height;
+    // Among drawings that keep the story, the one composed for the closest screen shape.
     const mismatch = Math.abs(Math.log(width / height / (stage.width / Math.max(1, stage.height))));
-    return { format, scale, mismatch };
+    return { format, scale, lost, mismatch };
   };
   const { format, scale: overview } = (Object.keys(craneArtwork) as CraneFormat[])
     .map(fit)
-    .reduce((best, next) => (next.mismatch < best.mismatch ? next : best));
+    .reduce((best, next) => (next.lost < best.lost - 1e-3 || (Math.abs(next.lost - best.lost) <= 1e-3 && next.mismatch < best.mismatch) ? next : best));
   const { width, height, zoom } = craneArtwork[format];
   // An open card frames the chosen way, as the city map follows a truck.
   const focus: Rect = (zoomId && zoom[zoomId]) || craneArtwork[format].focus;

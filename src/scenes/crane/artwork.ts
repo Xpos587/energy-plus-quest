@@ -49,6 +49,8 @@ function format(name: CraneFormat) {
     project,
     // The strip that must stay in frame: office, gift, near crane, barge, far crane.
     focus: around(story, tall ? 40 : 24, width, height),
+    // Air around the story inside focus; the camera may crop into it to fill the screen.
+    focusPad: tall ? 40 : 24,
     // Tap targets are the actors themselves: Ivan's window, the ladder, the empty near cab, Petr's cab.
     targets: {
       remote: pad(sp.ivan, 14),
