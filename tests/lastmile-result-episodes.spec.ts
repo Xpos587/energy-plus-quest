@@ -11,7 +11,6 @@ test("helicopter artwork follows the authored flight and ground narrative beats"
   await page
     .locator('[data-choice-id="helicopter"]:not([data-callout-target])')
     .click();
-  await page.locator("[data-choice-confirm]").click();
 
   const art = page.locator('[data-scene-consequence="lastmile-helicopter-remote"]');
   const image = art.locator("img");

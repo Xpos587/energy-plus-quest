@@ -10,7 +10,7 @@ for (const [scene,choice] of [['inventory','entrance'],['inventory','keeper'],['
   await page.goto(`/scenes.html?scene=${scene}&parcel=boat&recipient=alva`);
   const next=page.getByRole('button',{name:/^(Далее|К выбору)$/});
   for(let i=0;i<20&&await next.isVisible();i++)await next.click();
-  await page.locator(`[data-scene-choice="${choice}"]`).click();
+  await page.locator(`[data-hotspot="${choice}"]`).click();if(scene!=='lastmile')await page.locator('[data-choice-confirm]').click();
   await expect(page.locator('[data-scene-consequence]')).toBeVisible();
   const image=page.locator('[data-outcome-scene] img');
   await image.evaluate(async (el:HTMLImageElement)=>el.decode());

@@ -9,7 +9,7 @@ for (const recipient of ['alva', 'khor', 'arseniy']) {
       for (let n = 0; n < 10 && await briefing.isVisible(); n++) await briefing.click();
       for (const id of ['helicopter', 'rover', 'robot', 'pipe-carrier']) {
         await expect(page.locator('[data-hotspot]')).toHaveCount(4);
-        await page.locator(`[data-choice-id="${id}"]:not([data-callout-target])`).click(); await page.locator('[data-choice-confirm]').click();
+        await page.locator(`[data-choice-id="${id}"]:not([data-callout-target])`).click(); 
         const art = page.locator('[data-scene-consequence]');
         await expect(art).toBeVisible();
         await expect(art.locator('img')).toHaveJSProperty('complete', true);
@@ -25,7 +25,7 @@ for (const recipient of ['alva', 'khor', 'arseniy']) {
         expect(overflow).toBe(false);
         await page.getByRole('button', { name: 'Изменить выбор', exact: true }).click();
       }
-      await page.locator('[data-choice-id="rover"]:not([data-callout-target])').click(); await page.locator('[data-choice-confirm]').click();
+      await page.locator('[data-choice-id="rover"]:not([data-callout-target])').click(); 
       const read = page.getByRole('button', { name: 'Читать дальше', exact: true });
       for (let n = 0; n < 12 && await read.isVisible(); n++) await read.click();
       await page.getByRole('button', { name: 'К вручению подарка', exact: true }).click();
