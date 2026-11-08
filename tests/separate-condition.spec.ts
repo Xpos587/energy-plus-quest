@@ -125,7 +125,7 @@ for (const [width, height] of [
         `[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${answers[scene as keyof typeof answers]}"]`,
       );
       await answer.click();
-      if (["crane", "compact", "lastmile", "inventory"].includes(scene)) await page.locator("[data-choice-confirm]").click();
+      if (["crane", "compact", "inventory"].includes(scene)) await page.locator("[data-choice-confirm]").click(); // last mile opens the result straight from the vehicle
       await expect(page.locator("[data-result]")).toBeVisible();
       await page
         .getByRole("button", { name: "Изменить выбор", exact: true })

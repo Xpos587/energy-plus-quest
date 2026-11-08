@@ -77,6 +77,8 @@ for (const [width, height] of [
       ).toBeVisible();
     }
     await page.getByRole("button", { name: "Назад", exact: true }).click();
-    await expect(page.locator("[data-intro-enter]")).toBeVisible();
+    // Back from the role step returns to the waybill, not the cover.
+    await expect(page.locator("[data-intro-start]")).toBeVisible();
+    await fits(page);
   });
 }
