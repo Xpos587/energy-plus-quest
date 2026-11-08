@@ -85,6 +85,8 @@ export function SceneBriefing({
   const stagesLeft = progressSteps.length - currentStep - 1;
   // A separate first-entry condition and optional rereading share the same pages.
   const inlineCondition = false;
+  // The whole condition is already on the choice screen: no separate «Задание» to reopen.
+  const conditionShown = showLeadOnChoice && paragraphs.length === 1;
   const [openKey, pageKey] = briefingReadingKeys(title, paragraphs);
   const [open, setOpen] = useReadingState<boolean>(openKey, initiallyOpen);
   // biome-ignore lint/correctness/useExhaustiveDependencies: persist the entry mode once for this exact condition; later reopening stays user-controlled.
@@ -321,9 +323,6 @@ export function SceneBriefing({
         data-testid="scene-question"
         inert={visible}
       >
-        {!visible && showLeadOnChoice && paragraphs[0] && (
-          <p className={styles.questionLead}>{paragraphs[0]}</p>
-        )}
         {inlineCondition && (
           <div className={styles.inlineCondition} data-testid="scene-intro">
             {paragraphs.map((paragraph) => (
@@ -341,6 +340,9 @@ export function SceneBriefing({
                 : `впереди ещё ${stagesLeft === 1 ? "один этап" : `${stagesLeft}\u00a0этапа`}`}
             </span>
           </p>
+        )}
+        {!visible && showLeadOnChoice && paragraphs[0] && (
+          <p className={styles.questionLead}>{paragraphs[0]}</p>
         )}
         <div className={styles.questionTop} data-choice-prompt>
           <p className={styles.questionPrompt}>{question}</p>
@@ -364,7 +366,7 @@ export function SceneBriefing({
             {keepPanHint ? "Ещё варианты — листайте сцену" : "Листайте сцену"}
           </span>
         )}
-        {(onBack || (paragraphs.length > 0 && !inlineCondition)) && (
+        {(onBack || (paragraphs.length > 0 && !inlineCondition && !conditionShown)) && (
           <div className={styles.questionNavigation} data-choice-navigation>
             {onBack && (
               <button
@@ -376,7 +378,7 @@ export function SceneBriefing({
                 {backLabel}
               </button>
             )}
-            {paragraphs.length > 0 && !inlineCondition && (
+            {paragraphs.length > 0 && !inlineCondition && !conditionShown && (
               <button
                 ref={toggle}
                 className={`${styles.condition} ${styles.questionTask}`}

@@ -219,7 +219,7 @@ it.each([
   },
 );
 
-it("compact separates its condition and keeps the selected gift visible in the header", async () => {
+it("compact shows its condition and choice on one screen and keeps the selected gift visible in the header", async () => {
   vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
   const container = document.createElement("div");
   document.body.append(container);
@@ -240,15 +240,16 @@ it("compact separates its condition and keeps the selected gift visible in the h
     expect(container.querySelectorAll("[data-selection-context]")).toHaveLength(
       3,
     );
+    // Teo 05.11: no separate condition step and no «Задание» toggle repeating it.
     expect(
       container.querySelector("[data-scene-briefing] [aria-expanded]"),
-    ).not.toBeNull();
+    ).toBeNull();
     expect(
       container.querySelector('[data-choice-id="place-1"]')?.textContent,
     ).toBe("1");
     expect(
       container.querySelector('[data-testid="scene-question"]')?.textContent,
-    ).not.toContain(
+    ).toContain(
       compactScene.intro({
         parcel: "camera",
         recipient: "alva",

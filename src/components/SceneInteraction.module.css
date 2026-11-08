@@ -3378,36 +3378,6 @@
   .app[data-scene="lastmile"] .frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask, .inspection .actions > button:last-child) { grid-column: 1; }
 }
 
-/* Landscape tablets: the map takes the whole screen (wide art, no bands) and
-   the panel floats as a card over the river in the bottom-right corner. */
-@media (min-width: 1001px) and (min-height: 701px) and (max-aspect-ratio: 3/2) and (orientation: landscape) {
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .carrierMap { grid-column: 1; grid-row: 2; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
-    position: relative;
-    z-index: 6;
-    grid-column: 1;
-    grid-row: 2;
-    align-self: end;
-    justify-self: end;
-    justify-content: flex-start;
-    width: min(380px, 38vw);
-    height: auto;
-    max-height: calc(100% - 40px);
-    margin: 20px;
-    padding: 22px;
-    overflow-y: auto;
-    border: 1px solid #20365315;
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 0 18px 44px #04132740;
-    transform: none;
-    inset: auto;
-  }
-}
-
 /* Portrait tablets: a wide stage so the wide art covers it; the panel gets the rest. */
 @media (min-width: 601px) and (max-width: 1000px) and (orientation: portrait) {
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"]:not(:has(.briefingCard)) {
@@ -3749,63 +3719,63 @@
   }
 }
 
-/* Scene 2 desktop: the whole truck stays on the left, decisions and results live in the rail. */
+/* Scenes 2–5 desktop (R18): one rail. The picture stays on the left; condition, choice card and result live in the same right rail. */
 @media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="compact"] {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) {
     --type-body: 20px; --type-title: 28px; --type-choice: 18px; --type-action: 18px;
     --scene-panel-gutter: 24px;
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting] {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting] {
     grid-template-columns: minmax(0, 1fr) clamp(340px, 25vw, 420px);
     grid-template-rows: var(--scene-header-height) minmax(0, 1fr);
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .headerCard { grid-column: 1 / -1; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .carrierMap { grid-column: 1; grid-row: 2; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .headerCard { grid-column: 1 / -1; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .carrierMap { grid-column: 1; grid-row: 2; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .briefingCard, .inspection) {
     grid-column: 2; grid-row: 2; height: 100%; max-height: none; overflow-y: auto;
-    display: flex; flex-direction: column; gap: 16px; padding: 28px var(--scene-panel-gutter) 24px;
+    display: flex; flex-direction: column; justify-content: flex-start; gap: 16px; padding: 28px var(--scene-panel-gutter) 24px;
     border-left: 1px solid #c4d7e4;
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy { max-height: none; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.questionTop, .questionAction, .questionNavigation, .dialogueActions) {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy { max-height: none; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.questionTop, .questionAction, .questionNavigation, .dialogueActions) {
     width: 100%; margin-inline: 0;
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction { display: block; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .questionAction > [data-choice-variant]) {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction { display: block; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation, .questionAction > [data-choice-variant]) {
     display: grid; grid-template-columns: 1fr; grid-auto-rows: auto; gap: 10px;
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask) { grid-column: 1; width: 100%; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation) { margin-top: auto; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueNext, .questionTask) { grid-column: 1; width: 100%; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.dialogueActions, .questionNavigation) { margin-top: auto; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
     grid-column: 1 !important; justify-self: stretch; align-self: stretch; width: 100%; max-width: none;
     height: auto; min-height: 64px; padding: 10px 14px; justify-content: flex-start; text-align: left;
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child { display: grid; gap: 2px; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] [data-choice-detail] {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:last-child { display: grid; gap: 2px; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] [data-choice-detail] {
     display: block; font-size: 15px; line-height: 1.3; font-weight: 400; color: #53697d;
   }
 
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] {
     height: 100%; min-height: 0; overflow: hidden;
     grid-template-columns: minmax(0, 1fr) clamp(340px, 25vw, 420px);
     grid-template-rows: minmax(0, 1fr);
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] .carrierMap { grid-column: 1; grid-row: 1; height: 100%; min-height: 0; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-world-scene="compact"] { height: 100%; min-height: 0; max-height: none; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] .result {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] .carrierMap { grid-column: 1; grid-row: 1; height: 100%; min-height: 0; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-world-scene] { height: 100%; min-height: 0; max-height: none; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] .result {
     grid-column: 2; grid-row: 1; height: 100%; max-height: none; overflow-y: auto;
     padding: 28px var(--scene-panel-gutter) 24px; border-left: 1px solid #c4d7e4;
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] :is(.resultStory, [data-result-reader]) { width: 100%; height: 100%; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-narrative] { flex-direction: column; flex: 1; height: auto; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reading] { flex: 1; height: 100%; min-height: 0; max-height: none; max-width: none; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] :is(.resultStory, [data-result-reader]) { width: 100%; height: 100%; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-narrative] { flex-direction: column; flex: 1; height: auto; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reading] { flex: 1; height: 100%; min-height: 0; max-height: none; max-width: none; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer {
     grid-template-columns: 1fr; gap: 12px; padding-top: 16px; border-top: 0;
   }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-feedback] { grid-column: 1; grid-row: 1; margin-bottom: 4px; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer button { width: 100%; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer button:first-child { grid-column: 1; grid-row: 2; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer button:last-child { grid-column: 1; grid-row: 3; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-feedback] { grid-column: 1; grid-row: 1; margin-bottom: 4px; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer button { width: 100%; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer button:first-child { grid-column: 1; grid-row: 2; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer button:last-child { grid-column: 1; grid-row: 3; }
 }
 
 /* Scene 2 briefing card: the cargo you are loading, like a shipping label. */
@@ -4217,11 +4187,8 @@
   }
 }
 
-/* Scene 5 rail: question and vehicle card sit together mid-rail at reading size,
-   goals read as a legend; no void above stranded buttons. */
+/* Scene 5 rail: goals read as a legend at reading size (R18: top-aligned like scenes 2–4). */
 @media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.question, .inspection) { justify-content: center; gap: 20px; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is(.questionNavigation, .inspection .actions) { margin-top: 8px; }
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals { display: grid; grid-template-columns: 1fr; gap: 12px; padding-top: 16px; border-top: 1px solid #e1ebf2; }
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals li { flex-direction: row; justify-content: flex-start; gap: 12px; font-size: 18px; color: #082946; }
   .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals li svg { width: 22px; height: 22px; }
@@ -4329,12 +4296,18 @@
   .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame .inspection[data-choice-inspection] > .actions { margin-top: auto !important; }
 }
 
-/* Grisha call 05.11 (34:30): on phones the question must lead; goals stay as a quiet footnote row. */
+/* Grisha call 05.11 (34:30): on phones the question must lead; goals stay as a quiet footnote row.
+   R18: one question style for scenes 2–5 (phones and short landscape). */
 @media (max-width: 600px) and (orientation: portrait) {
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 21px; line-height: 1.25; color: #082946; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals li { padding-block: 2px; color: #53697d; font-size: 12px; font-weight: 500; }
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals svg { width: 12px; height: 12px; color: #7d93a6; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 21px; line-height: 1.25; color: #082946; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is([data-crane-decision-context], [data-lastmile-decision-context]) { font-size: 16px; line-height: 1.35; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals li { padding-block: 2px; color: #53697d; font-size: 12px; font-weight: 500; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals svg { width: 12px; height: 12px; color: #7d93a6; }
 }
 @media (max-width: 360px) and (orientation: portrait) {
-  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 18px; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 18px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 15px; line-height: 1.25; }
+  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is([data-crane-decision-context], [data-lastmile-decision-context]) { font-size: 14px; line-height: 1.3; }
 }

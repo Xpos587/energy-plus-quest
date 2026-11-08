@@ -33,7 +33,8 @@ it("names each numbered place and lets the player revise a direct choice", async
     expect(host.querySelector("[data-result]")).toBeNull();
     await act(async () => host.querySelector<HTMLButtonElement>("[data-choice-confirm]")!.click());
     expect(card()).toBeNull();
-    expect(host.querySelector('[data-verdict] small')?.textContent).toBe("Место 3");
+    expect(host.querySelector('[data-verdict] small')?.textContent).toBe("Ваш выбор · Место 3");
+    expect(host.querySelector("[data-result-heading] > span")?.textContent).toBe("Лодка не поместилась в нишу");
     await act(async () => host.querySelector<HTMLButtonElement>('[data-result-reader] button[aria-label="Изменить выбор"]')!.click());
     expect(card()).toBeNull();
     await open("auto");
@@ -43,7 +44,7 @@ it("names each numbered place and lets the player revise a direct choice", async
     expect(card()?.textContent).toContain("компактно");
     await act(async () => host.querySelector<HTMLButtonElement>("[data-choice-confirm]")!.click());
     expect(host.querySelector('[data-result]')).not.toBeNull();
-    expect(host.querySelector('[data-verdict] small')?.textContent).toBe("Место подобрано автоматически");
+    expect(host.querySelector('[data-verdict] small')?.textContent).toBe("Ваш выбор · Подобрать автоматически");
   } finally {
     await act(async () => root.unmount());
     host.remove();

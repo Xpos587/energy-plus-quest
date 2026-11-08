@@ -426,8 +426,9 @@ function ScenesSession({
               key={scene.id}
               title={title}
               paragraphs={briefingParagraphs(scene.id, intro)}
-              initiallyOpen={!session.briefed?.includes(scene.id)}
-              showLeadOnChoice={false}
+              // Scene 2 (Teo 05.11): condition and choice on one screen, no separate intro step.
+              initiallyOpen={scene.id !== "compact" && !session.briefed?.includes(scene.id)}
+              showLeadOnChoice={scene.id === "compact"}
               onConditionComplete={() => setSession(current => ({
                 ...current,
                 briefed: [...new Set([...(current.briefed ?? []), scene.id])],
