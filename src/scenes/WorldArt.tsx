@@ -18,7 +18,7 @@ import { warehouseCamera } from "./inventory/warehouseCamera";
 
 const shortMarkerLabels: Record<string, string> = {
   entrance: "У приёмки", alphabet: "По алфавиту", keeper: "Кладовщик", wms: "Автоподбор",
-  helicopter: "Вертолёт", rover: "Снегоболотоход", robot: "Роботизированная тележка", "pipe-carrier": "Трубовоз",
+  helicopter: "Вертолёт", rover: "Снегоболотоход", robot: "Тележка", "pipe-carrier": "Трубовоз",
 };
 
 const markerInset = 24;
