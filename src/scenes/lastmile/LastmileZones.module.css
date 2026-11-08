@@ -2,7 +2,8 @@
 .drawing { display: block; width: 100%; height: 100%; overflow: visible; }
 /* Invisible tap targets; the vehicle art itself is the button. */
 .zone { fill: transparent; stroke: none; }
-.zone[data-interactive="true"] { pointer-events: auto; cursor: pointer; }
+/* Contours hug the vehicles; a transparent stroke keeps a finger-sized tap margin around them. */
+.zone[data-interactive="true"] { pointer-events: auto; cursor: pointer; stroke: transparent; stroke-width: 20px; }
 
 /* Pointing at a vehicle lights a soft glow around its shape; nothing else changes. */
 .glow { fill: none; stroke: #fff; pointer-events: none; animation: glowIn 220ms ease-out both; }
