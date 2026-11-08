@@ -2,7 +2,7 @@
 import type { CraneFormat } from "./artwork";
 
 type Box = { x: number; y: number; w: number; h: number };
-type Cast = { window: Box; cab: Box; figs: Record<string, number> };
+type Cast = { window: Box; cab: Box; office: Box; figs: Record<string, number> };
 
 /** Figures are format-independent (same files in every folder); width/height, feet at the bottom. */
 const figs = {
@@ -10,16 +10,17 @@ const figs = {
   "petr-walk1": 0.525, "petr-walk2": 0.567, "petr-sad": 0.375, "petr-climb": 0.458,
 };
 
-/** Office and far-cab variants share their boxes. */
+/** Office and far-cab variants share their boxes; `office` is the whole ПРУ building cut from the plate, so it can glow. */
 export const craneCast: Partial<Record<CraneFormat, Cast>> = {
   wide: {
     window: { x: 444, y: 398, w: 186.67, h: 140.67 },
     cab: { x: 1426, y: 0, w: 361.33, h: 306.67 },
+    office: { x: 422.67, y: 321.33, w: 226.67, h: 258.67 },
     figs,
   },
-  desk: { window: { x: 230.67, y: 533.33, w: 182.67, h: 140.67 }, cab: { x: 1162.67, y: 84.67, w: 373.33, h: 316 }, figs },
-  mid: { window: { x: 180, y: 596, w: 172.67, h: 134 }, cab: { x: 1042, y: 152.67, w: 360, h: 298 }, figs },
-  tall: { window: { x: 124.67, y: 998.67, w: 131.33, h: 128 }, cab: { x: 624, y: 347.33, w: 385.33, h: 266.67 }, figs },
+  desk: { window: { x: 230.67, y: 533.33, w: 182.67, h: 140.67 }, cab: { x: 1162.67, y: 84.67, w: 373.33, h: 316 }, office: { x: 142.67, y: 456.67, w: 280.67, h: 256 }, figs },
+  mid: { window: { x: 180, y: 596, w: 172.67, h: 134 }, cab: { x: 1042, y: 152.67, w: 360, h: 298 }, office: { x: 98.67, y: 524, w: 260.67, h: 243.33 }, figs },
+  tall: { window: { x: 124.67, y: 998.67, w: 131.33, h: 128 }, cab: { x: 624, y: 347.33, w: 385.33, h: 266.67 }, office: { x: 74, y: 930, w: 170.67, h: 211.33 }, figs },
 };
 
 export const castSrc = (format: CraneFormat, name: string) => `scene-art/barge-v4/${format}/${name}.webp`;

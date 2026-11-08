@@ -182,10 +182,12 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             alt="Причал на Оби: Иван за пультом в офисе ПРУ, подарок на поддоне, высокий портальный кран с пустой кабиной и лестницей до неё, баржа с трубами у причала и дальний кран, где сидит Пётр рядом со своими ящиками."
           />
         </picture>
+        {/* Remote way: the whole ПРУ building glows, not Ivan inside its glass. */}
+        {cast && <img className={styles.layer} src={imageAsset(castSrc(view.format, "office"))} alt="" draggable={false} decoding="async" data-layer="pru" data-lit={lit.has("ivan") || undefined} style={box(cast.office)} />}
         {!beat.lifted && !beat.onDeck && sprite("gift")}
-        {!(cast && beat.office) && sprite("ivan", { lit: lit.has("ivan") })}
+        {!(cast && beat.office) && sprite("ivan", { lit: !cast && lit.has("ivan") })}
         {cast && beat.office && (
-          <img className={styles.layer} src={imageAsset(castSrc(view.format, `ivan-${beat.office}`))} alt="" draggable={false} data-layer="office" data-lit={lit.has("ivan") || undefined} style={box(cast.window)} />
+          <img className={styles.layer} src={imageAsset(castSrc(view.format, `ivan-${beat.office}`))} alt="" draggable={false} data-layer="office" style={box(cast.window)} />
         )}
         {sprite("ladder", { lit: lit.has("ladder") })}
         {sprite("far", { lit: lit.has("far") })}
