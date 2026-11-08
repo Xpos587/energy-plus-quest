@@ -145,11 +145,11 @@ export function compareChoice(score: Scores, all: Scores[], goals: SceneBrief["g
     tied: others.some((o) => o[key] === score[key]),
   }));
   const best = sides.filter((side) => !side.beaten && !side.tied && side.beats > 0);
-  if (best.length === 3) return { key: "all", text: "Лучше всех вариантов по всем трём шкалам" };
-  // «Лучше всех» on every second option read as flattery (call 02.11): name the strength, not a winner.
-  if (best.length) return { key: best[0].key, text: `${best.length > 1 ? "Сильные стороны" : "Сильная сторона"}: ${best.map((side) => side.goal).join(" и ")}` };
+  // «Лучше всех» on every second option read as flattery (call 02.11), and «Наравне с лучшими»
+  // still grades (03.11, 05.11): name the strength, not a rank. A shared top scale is a strength too.
+  if (best.length) return { key: best.length === 3 ? "all" : best[0].key, text: `${best.length > 1 ? "Сильные стороны" : "Сильная сторона"}: ${new Intl.ListFormat("ru").format(best.map((side) => side.goal))}` };
   const shared = sides.find((side) => !side.beaten && side.beats > 0);
-  if (shared) return { key: shared.key, text: `Наравне с лучшими: ${shared.goal}` };
+  if (shared) return { key: shared.key, text: `Сильная сторона: ${shared.goal}` };
   const top = [...sides].sort((x, y) => y.beats - x.beats)[0];
   if (top.beats) return { key: top.key, text: `Обходит ${overtakes[top.beats]}: ${top.goal}` };
   return { key: "none", text: "Другие варианты сильнее по всем шкалам" };
