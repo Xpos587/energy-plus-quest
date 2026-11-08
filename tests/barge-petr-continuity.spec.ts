@@ -33,9 +33,18 @@ for (const [width, height] of [
         await copy.evaluate((e) => e.scrollHeight <= e.clientHeight + 1),
       ).toBe(true);
       const r = page.locator("[data-result-reading]");
-      expect(
-        await r.evaluate((e) => e.scrollHeight <= e.clientHeight + 1),
-      ).toBe(true);
+      if (width <= 360 || height <= 600) {
+        // Small screens: the whole outcome stays in one block that scrolls to its last line.
+        await expect(r).toHaveCSS("overflow-y", "auto");
+        await r.evaluate((e) => (e.scrollTop = e.scrollHeight));
+        expect(
+          await r.evaluate((e) => e.scrollTop + e.clientHeight >= e.scrollHeight - 1),
+        ).toBe(true);
+        await expect(copy.locator("span:not([hidden])").last()).toBeInViewport();
+      } else
+        expect(
+          await r.evaluate((e) => e.scrollHeight <= e.clientHeight + 1),
+        ).toBe(true);
       for (const label of ["Изменить выбор", "Продолжить"])
         await expect(
           page.getByRole("button", { name: label, exact: true }),

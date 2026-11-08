@@ -4338,3 +4338,17 @@
 @media (max-width: 360px) and (orientation: portrait) {
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 18px; }
 }
+
+/* Petr's result is one continuous outcome (no pages). On small screens it is taller than the
+   reading box, so the box scrolls, with a visible thumb and a fade over the cut line. The fade-sized
+   bottom padding lets the last line clear the fade at the scroll end. */
+@media (max-height: 600px), (max-width: 360px) {
+  .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"] [data-continuous="true"] [data-result-reading] {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #7a9bb5 transparent;
+    padding-bottom: 20px;
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
+  }
+}
