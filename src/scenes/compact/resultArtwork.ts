@@ -11,7 +11,7 @@ export const compactResultArtwork: Record<string, string> = {
   'camera:place-1': imageAsset('compact-art/camera-zone1-fallen-v53.png'),
   'camera:place-3': imageAsset('compact-art/camera-zone3-packed-v53.png'),
   'camera:auto': imageAsset('compact-art/camera-zone3-packed-v53.png'),
-  'socks:place-1': imageAsset('compact-art/socks-zone1-unsecured-v53.png'),
+  'socks:place-1': imageAsset('compact-art/socks-zone1-unsecured-v54.png'),
   'socks:place-3': imageAsset('compact-art/socks-zone3-secured-v53.png'),
   'socks:auto': imageAsset('compact-art/socks-zone3-secured-v53.png'),
   'boat:place-2': imageAsset('compact-art/boat-zone2-v53.png'),

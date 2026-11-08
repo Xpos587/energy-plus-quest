@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import type { SceneContext } from "../types";
 import styles from "./WarehouseZones.module.css";
 import { warehouseChoices } from "./warehouseZones";
@@ -14,30 +14,43 @@ type WarehouseZonesProps = {
 };
 
 /**
- * The busy hall is softly dimmed except the four choices; pointing at one leaves only
- * that one lit. Contours are the hit regions; the numbered pins are WorldArt's markers.
+ * Pointing at a choice (mouse, finger or keyboard) lights a soft glow around its shape; the rest
+ * of the hall is never darkened (Teo 03.11: highlight the choice, don't hide the others).
+ * Contours are the hit regions; the numbered pins are WorldArt's markers.
  */
 export function WarehouseZones({ context, selectedId, onSelect, focusedId, onFocusChange, composition = "wide" }: WarehouseZonesProps) {
   const contours = warehouseDrawing(composition);
   const hole = `warehouse-hole-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
-  const lit = selectedId ?? focusedId;
-  const spotlight = !!onSelect;
-  const holes = lit ? [lit] : warehouseChoices;
+  const root = useRef<HTMLDivElement>(null);
+  const [keyboardId, setKeyboardId] = useState<string>();
+  // Keyboard focus on a pin lights the same glow as pointing at the object.
+  useEffect(() => {
+    const stage = root.current?.closest("figure");
+    if (!stage) return;
+    const on = (e: FocusEvent) => {
+      const el = e.target as HTMLElement;
+      setKeyboardId(el.matches?.("[data-hotspot]:focus-visible") ? el.dataset.hotspot : undefined);
+    };
+    const off = () => setKeyboardId(undefined);
+    stage.addEventListener("focusin", on);
+    stage.addEventListener("focusout", off);
+    return () => { stage.removeEventListener("focusin", on); stage.removeEventListener("focusout", off); };
+  }, []);
+  const lit = onSelect ? (selectedId ?? keyboardId ?? focusedId) as typeof warehouseChoices[number] | undefined : undefined;
+  const litPath = lit && warehouseChoices.includes(lit) ? warehouseContour(lit, context.parcel, composition).path : undefined;
   return (
-    <div className={styles.overlay} data-warehouse-annotations data-warehouse-lit={spotlight ? lit ?? "all" : undefined} aria-hidden="true">
+    <div ref={root} className={styles.overlay} data-warehouse-annotations data-warehouse-lit={onSelect ? lit ?? "all" : undefined} aria-hidden="true">
       <svg className={styles.drawing} viewBox={`0 0 ${contours.width} ${contours.height}`} focusable="false" aria-hidden="true">
-        {spotlight && (
+        {litPath && (
           <>
             <defs>
-              <filter id={`${hole}f`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" /></filter>
+              <filter id={`${hole}f`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9" /></filter>
               <mask id={hole} maskUnits="userSpaceOnUse" x="0" y="0" width={contours.width} height={contours.height}>
                 <rect width={contours.width} height={contours.height} fill="white" />
-                {holes.map(id => (
-                  <path key={id} d={warehouseContour(id as typeof warehouseChoices[number], context.parcel, composition).path} fill="black" stroke="black" strokeWidth="40" strokeLinejoin="round" filter={`url(#${hole}f)`} />
-                ))}
+                <path d={litPath} fill="black" />
               </mask>
             </defs>
-            <rect className={styles.scrim} data-lit={!!lit} width={contours.width} height={contours.height} mask={`url(#${hole})`} />
+            <path className={styles.glow} data-warehouse-glow={lit} d={litPath} strokeWidth="28" strokeLinejoin="round" filter={`url(#${hole}f)`} mask={`url(#${hole})`} />
           </>
         )}
         {warehouseChoices.map(id => {

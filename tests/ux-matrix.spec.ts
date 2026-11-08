@@ -182,7 +182,7 @@ for (const scene of Object.keys(scenes) as SceneId[]) {
           const defects = [...introDefects];
           const choice = page.locator(`[${attr}="${option}"]`);
           await choice.click();
-          if (["crane", "compact", "lastmile", "inventory"].includes(scene)) await page.locator("[data-choice-confirm]").click();
+          if (["crane", "compact", "inventory"].includes(scene)) await page.locator("[data-choice-confirm]").click(); // last mile opens the result straight from the vehicle
           await expect(page.locator("[data-result-reader]")).toBeVisible();
           const result = await resultStates(page, scene, defects);
 

@@ -274,3 +274,15 @@
   .lessonActions>.secondary{width:48px;padding:0;justify-content:center}
   .lessonActions>.secondary span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 }
+/* 320×568: the waybill must end above the start button (it overlapped by ~65px). */
+@media (max-width:360px) and (max-height:600px){
+  .letter{gap:6px;padding:12px 12px 10px}
+  .letterHead{padding-bottom:6px}
+  .lesson .letter h1{font-size:22px;margin-bottom:2px}
+  .stamp{width:40px}
+  .invitation{font-size:14px;line-height:1.25}
+  .scoring{gap:4px}
+  .metrics{gap:4px}.metrics li{padding:4px 10px 5px;gap:0}.metrics strong{font-size:14px}.metrics span{font-size:13px;line-height:1.25}
+  .metricIcon{width:12px;height:12px;padding:3px}
+  .preparation{padding-top:6px;font-size:14px;line-height:1.25}
+}

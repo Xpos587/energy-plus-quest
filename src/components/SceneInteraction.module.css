@@ -4328,3 +4328,13 @@
   }
   .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame .inspection[data-choice-inspection] > .actions { margin-top: auto !important; }
 }
+
+/* Grisha call 05.11 (34:30): on phones the question must lead; goals stay as a quiet footnote row. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 21px; line-height: 1.25; color: #082946; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals li { padding-block: 2px; color: #53697d; font-size: 12px; font-weight: 500; }
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals svg { width: 12px; height: 12px; color: #7d93a6; }
+}
+@media (max-width: 360px) and (orientation: portrait) {
+  .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 18px; }
+}

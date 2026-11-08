@@ -21,9 +21,9 @@ export function warehouseCamera(stage: { width: number; height: number }, parcel
   const fit = (box: typeof overview, pad = padding) => Math.min((stage.width - pad * 2) / (box.right - box.left), (stage.height - pad * 2) / (box.bottom - box.top));
   const contain = Math.min(stage.width / drawing.width, stage.height / drawing.height);
   const cover = Math.max(stage.width / drawing.width, stage.height / drawing.height);
-  // Edge-to-edge art beats a letterbox: give up the padding, and up to 5% of the
-  // outermost scenery, when that alone allows cover.
-  const edgeToEdge = fit(overview, 0) >= cover * 0.95 && fit(bounds(regions), 0) >= cover;
+  // Edge-to-edge art beats a letterbox: give up the padding when that alone allows cover.
+  // The overview already holds the intake sign, so it must fit whole; only scenery outside it is cropped.
+  const edgeToEdge = fit(overview, 0) >= cover;
   const overviewScale = edgeToEdge ? cover : Math.max(contain, Math.min(cover, fit(overview)));
   const selectedKey = selected === "alphabet" ? `alphabet-${parcel}` : selected;
   const selectedRegion = regions[keys.findIndex(key => key === selectedKey)];
