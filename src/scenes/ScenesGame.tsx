@@ -463,30 +463,13 @@ function ScenesSession({
               }
               inspecting={!!pending}
               onOpen={() => setPendingId(undefined)}
-              action={scene.id === "inventory" ? (
-                <div className={flow.inventoryMobileChoices}>
-                  <SceneChoices
-                    numbered={false}
-                    options={options.map(option => ({
-                      id: option.id,
-                      label: option.id === "alphabet" ? "По алфавиту" : places![option.id][0],
-                    }))}
-                    {...syncFocus}
-                    onInspect={setPendingId}
-                  />
-                </div>
-              ) : inspectsOnArt ? undefined : (
+              action={inspectsOnArt ? undefined : (
                 <SceneChoices
                   variant="scene"
                   options={options.map((option) => ({
                     id: option.id,
                     detail: places?.[option.id][1],
-                    label:
-                      places
-                        ? places[option.id][0]
-                        : scene.id === "inventory" && option.id === "alphabet"
-                          ? `Стеллаж «${inventoryAlphabet[context.parcel].letter}»`
-                          : optionTitles[option.id] ?? choiceLabel(option.label),
+                    label: places ? places[option.id][0] : optionTitles[option.id] ?? choiceLabel(option.label),
                   }))}
                   {...syncFocus}
                   onInspect={choose}

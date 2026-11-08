@@ -4207,24 +4207,6 @@
   .app[data-scene="compact"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .question > :not([data-choice-prompt]) { visibility: hidden; }
 }
 
-/* On phones, named choices avoid precision tapping on a reduced wide hall.
-   They open the same inspection card as the objects; no second decision flow. */
-.inventoryMobileChoices { display: none; }
-@media (max-width: 600px) and (orientation: portrait) {
-  .inventoryMobileChoices { display: block; width: 100%; }
-  .inventoryMobileChoices > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  .app[data-scene="inventory"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionAction [data-scene-choice] {
-    min-height: 52px; padding: 10px 12px; font-size: 16px; line-height: 1.2;
-  }
-  .app[data-scene="inventory"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) {
-    grid-template-rows: var(--scene-header-height) min(calc(100vw * 1500 / 1200), max(104px, calc(100dvh - var(--scene-header-height) - 340px))) minmax(0, 1fr); /* tall plate aspect; short phones fall back to the wide plate */
-  }
-  .app[data-scene="inventory"] .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"]:not(:has(.briefingCard)) .question {
-    justify-content: flex-start; gap: 12px; padding: 16px 12px;
-  }
-  .app[data-scene="inventory"] [data-carrier-tap-hint] { display: none; }
-}
-
 /* Scene 3 landscape results: page the text into the rail's real height so the actions never fall below the fold. */
 @media (min-width: 901px) and (orientation: landscape) {
   .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] [data-result-reading] {
