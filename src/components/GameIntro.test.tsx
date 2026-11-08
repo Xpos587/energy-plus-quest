@@ -90,7 +90,7 @@ it("shows all metric meanings without extra controls before starting", async () 
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   const meanings = Array.from(host.querySelectorAll<HTMLElement>('li span'));
   expect(meanings.map(node => node.textContent)).toEqual([
-    "экономите ресурсы", "проявляете заботу", "принимаете наиболее эффективные решения",
+    "За то, что экономите ресурсы.", "За то, что проявляете заботу.", "За то, что принимаете наиболее эффективные решения.",
   ]);
   for (const meaning of meanings) expect(meaning.closest('[hidden]')).toBeNull();
   expect(host.querySelector('button[aria-controls^="intro-metric-"]')).toBeNull();

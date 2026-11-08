@@ -12,7 +12,7 @@
 .composition {
   flex: 1;
   width: 100%;
-  max-width: 1120px;
+  max-width: min(1520px, 100%);
   display: grid;
   grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
   align-items: center;
@@ -20,17 +20,18 @@
   margin: auto;
   padding-block: 28px;
 }
-.art { width: 100%; max-width: 480px; justify-self: center; overflow: hidden; border-radius: 18px; }
+.art { width: 100%; max-width: min(680px, 64dvh); justify-self: center; overflow: hidden; border-radius: 18px; }
 .art picture, .art img { display: block; width: 100%; }
 .art img { height: auto; aspect-ratio: 1; object-fit: contain; }
-.copy h1 { margin: 0 0 22px; color: #07629c; font-size: clamp(32px, 3.2vw, 46px); line-height: 1.08; }
+.copy h1 { margin: 0 0 22px; color: #07629c; font-size: clamp(32px, 3.2vw, 62px); line-height: 1.08; }
 .copy h1:focus { outline: none; }
-.copy p { margin: 0 0 28px; max-width: 34ch; font-size: 21px; line-height: 1.4; }
+.copy p { margin: 0 0 28px; max-width: 34ch; font-size: clamp(21px, 1.45vw, 28px); line-height: 1.4; }
 .copy button {
   display: inline-flex; align-items: center; justify-content: center; gap: 12px;
   min-height: 52px; padding: 14px 22px; border: 0; border-radius: 10px;
   background: var(--action-primary); color: white; font: inherit; font-size: 18px;
   line-height: 1.2; font-weight: 700; cursor: pointer;
+  font-size: clamp(18px, 1.25vw, 24px);
 }
 .copy button svg { flex: none; }
 .copy button:hover { background: var(--action-primary-hover); }

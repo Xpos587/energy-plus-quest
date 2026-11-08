@@ -1,0 +1,86 @@
+{
+  "width": 1200,
+  "height": 1500,
+  "source": "scene-art/inventory-master-v10-tall.webp",
+  "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py, v18: closed shutter doors, zone boards flat on the side walls above both doors); GPT restyle in the scene 1-2 painterly style aligned back onto the render with the rendered lettering",
+  "regions": {
+    "entrance": {
+      "path": "M 109 1028 L 154 860 L 197 860 L 221 941 L 185 1106 L 141 1106 Z",
+      "anchorPixel": [
+        185,
+        981
+      ],
+      "anchor": {
+        "x": 0.1544,
+        "y": 0.654
+      },
+      "contourCount": 1
+    },
+    "keeper": {
+      "path": "M 864 962 L 875 909 L 946 909 L 953 943 L 938 996 L 869 996 Z",
+      "anchorPixel": [
+        926,
+        913
+      ],
+      "anchor": {
+        "x": 0.7718,
+        "y": 0.6088
+      },
+      "contourCount": 1
+    },
+    "wms": {
+      "path": "M 846 1099 L 859 1042 L 1007 1042 L 1018 1091 L 997 1148 L 853 1148 Z",
+      "anchorPixel": [
+        990,
+        1046
+      ],
+      "anchor": {
+        "x": 0.8251,
+        "y": 0.6972
+      },
+      "contourCount": 1
+    },
+    "alphabet-camera": {
+      "path": "M 708 884 L 713 816 L 774 816 L 777 850 L 768 917 L 710 917 Z",
+      "anchorPixel": [
+        745,
+        849
+      ],
+      "anchor": {
+        "x": 0.6207,
+        "y": 0.566
+      },
+      "contourCount": 1
+    },
+    "alphabet-socks": {
+      "path": "M 604 884 L 604 816 L 664 816 L 666 850 L 662 917 L 604 917 Z",
+      "anchorPixel": [
+        634,
+        849
+      ],
+      "anchor": {
+        "x": 0.5288,
+        "y": 0.566
+      },
+      "contourCount": 1
+    },
+    "alphabet-boat": {
+      "path": "M 534 850 L 536 816 L 596 816 L 596 884 L 596 917 L 538 917 Z",
+      "anchorPixel": [
+        566,
+        849
+      ],
+      "anchor": {
+        "x": 0.4713,
+        "y": 0.566
+      },
+      "contourCount": 1
+    }
+  },
+  "overviewRequiredBounds": {
+    "left": 141,
+    "top": 482,
+    "right": 1059,
+    "bottom": 747
+  }
+}

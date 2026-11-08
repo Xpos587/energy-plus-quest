@@ -1,86 +1,86 @@
 {
   "width": 1672,
   "height": 941,
-  "source": "scene-art/inventory-master-v4.webp",
-  "method": "Manual object contours in the existing illustrated warehouse; one native coordinate plane at every viewport.",
+  "source": "scene-art/inventory-master-v10.webp",
+  "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py, v18: closed shutter doors, zone boards flat on the side walls above both doors); GPT restyle in the scene 1-2 painterly style aligned back onto the render with the rendered lettering",
   "regions": {
     "entrance": {
-      "path": "M 159 640 L 171 586 L 220 540 L 307 558 L 308 601 L 328 609 L 329 577 L 347 568 L 355 576 L 344 594 L 341 644 L 350 654 L 333 667 L 311 662 L 278 683 L 161 653 Z",
+      "path": "M 115 686 L 183 546 L 230 546 L 261 654 L 204 797 L 154 797 Z",
       "anchorPixel": [
-        246,
-        612
+        211,
+        669
       ],
       "anchor": {
-        "x": 0.1471291866028708,
-        "y": 0.6503719447396387
-      },
-      "contourCount": 1
-    },
-    "alphabet-camera": {
-      "path": "M 380 510 L 387 288 L 406 260 L 405 238 L 449 214 L 450 199 L 491 173 L 501 155 L 534 136 L 541 112 L 581 87 L 611 103 L 649 99 L 679 114 L 695 139 L 697 367 L 476 555 L 385 529 Z",
-      "anchorPixel": [
-        481,
-        383
-      ],
-      "anchor": {
-        "x": 0.2876794258373206,
-        "y": 0.4070138150903294
-      },
-      "contourCount": 1
-    },
-    "alphabet-socks": {
-      "path": "M 699 574 L 704 352 L 726 326 L 729 310 L 771 286 L 775 262 L 810 242 L 821 216 L 860 194 L 862 181 L 901 165 L 936 177 L 962 177 L 999 192 L 1007 218 L 1009 448 L 811 635 L 699 601 Z",
-      "anchorPixel": [
-        730,
-        441
-      ],
-      "anchor": {
-        "x": 0.4366028708133971,
-        "y": 0.46865037194473963
-      },
-      "contourCount": 1
-    },
-    "alphabet-boat": {
-      "path": "M 699 574 L 704 352 L 726 326 L 729 310 L 771 286 L 775 262 L 810 242 L 821 216 L 860 194 L 862 181 L 901 165 L 936 177 L 962 177 L 999 192 L 1007 218 L 1009 448 L 811 635 L 699 601 Z",
-      "anchorPixel": [
-        798,
-        462
-      ],
-      "anchor": {
-        "x": 0.4772727272727273,
-        "y": 0.4909670563230606
+        "x": 0.1262,
+        "y": 0.7112
       },
       "contourCount": 1
     },
     "keeper": {
-      "path": "M 1313 543 L 1335 537 L 1337 508 L 1346 490 L 1372 490 L 1382 510 L 1380 525 L 1395 540 L 1405 575 L 1397 604 L 1384 634 L 1366 653 L 1334 649 L 1338 632 L 1345 620 L 1341 579 L 1321 571 Z",
+      "path": "M 1273 654 L 1288 582 L 1366 582 L 1378 613 L 1359 686 L 1282 686 Z",
       "anchorPixel": [
-        1362,
-        566
+        1345,
+        558
       ],
       "anchor": {
-        "x": 0.8145933014354066,
-        "y": 0.6014877789585548
+        "x": 0.8043,
+        "y": 0.5933
       },
       "contourCount": 1
     },
     "wms": {
-      "path": "M 1086 834 L 1112 817 L 1133 813 L 1132 786 L 1173 749 L 1181 756 L 1181 802 L 1220 794 L 1256 804 L 1253 851 L 1240 867 L 1245 900 L 1231 911 L 1207 899 L 1192 918 L 1141 908 L 1087 890 Z",
+      "path": "M 1262 758 L 1280 676 L 1441 676 L 1459 720 L 1433 802 L 1274 802 Z",
       "anchorPixel": [
-        1168,
-        835
+        1420,
+        791
       ],
       "anchor": {
-        "x": 0.6985645933014354,
-        "y": 0.8873538788522848
+        "x": 0.8493,
+        "y": 0.8411
+      },
+      "contourCount": 1
+    },
+    "alphabet-camera": {
+      "path": "M 1012 681 L 1020 590 L 1104 590 L 1110 624 L 1098 716 L 1017 716 Z",
+      "anchorPixel": [
+        1065,
+        624
+      ],
+      "anchor": {
+        "x": 0.6372,
+        "y": 0.6633
+      },
+      "contourCount": 1
+    },
+    "alphabet-socks": {
+      "path": "M 841 681 L 841 590 L 924 590 L 926 624 L 922 716 L 841 716 Z",
+      "anchorPixel": [
+        883,
+        624
+      ],
+      "anchor": {
+        "x": 0.5282,
+        "y": 0.6633
+      },
+      "contourCount": 1
+    },
+    "alphabet-boat": {
+      "path": "M 746 624 L 748 590 L 831 590 L 831 681 L 831 716 L 750 716 Z",
+      "anchorPixel": [
+        789,
+        624
+      ],
+      "anchor": {
+        "x": 0.4718,
+        "y": 0.6633
       },
       "contourCount": 1
     }
   },
   "overviewRequiredBounds": {
-    "left": 115,
-    "top": 115,
-    "right": 1555,
-    "bottom": 918
+    "left": 174,
+    "top": 176,
+    "right": 1498,
+    "bottom": 422
   }
 }

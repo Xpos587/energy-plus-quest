@@ -61,7 +61,7 @@ for (const size of sizes) {
       });
       await page.screenshot({ path: `/tmp/quest-fit-${scene}-${size.width}x${size.height}.png` });
       await page.locator("[data-scene-choice], [data-hotspot]").first().click();
-      if (["crane", "compact", "lastmile"].includes(scene)) await page.locator("[data-choice-confirm]").click();
+      if (["crane", "compact", "lastmile", "inventory"].includes(scene)) await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-layout='result']")).toBeVisible();
       await page.screenshot({ path: `/tmp/quest-fit-result-${scene}-${size.width}x${size.height}.png` });
       await assertFixedPage(page, `${scene} result ${size.width}×${size.height}`);
@@ -80,8 +80,8 @@ for (const size of [{ width: 320, height: 568 }, { width: 844, height: 390 }]) {
         await enterChoice(page);
         await assertFixedPage(page, `${scene}/${parcel} choice ${size.width}×${size.height}`);
         for (const option of choices[scene]) {
-          await page.locator(`[${["crane", "compact", "lastmile"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${option}"]`).click();
-          if (["crane", "compact", "lastmile"].includes(scene)) await page.locator("[data-choice-confirm]").click();
+          await page.locator(`[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${option}"]`).click();
+          if (["crane", "compact", "lastmile", "inventory"].includes(scene)) await page.locator("[data-choice-confirm]").click();
           await expect(page.locator("[data-layout='result']")).toBeVisible();
           if (scene === "inventory" && (option === "keeper" || option === "wms" || option === "alphabet") && parcel === "boat" && size.width === 320) {
             await page.locator("[data-scene-consequence] img").evaluateAll(async (images) => {
@@ -91,7 +91,7 @@ for (const size of [{ width: 320, height: 568 }, { width: 844, height: 390 }]) {
           }
           await assertFixedPage(page, `${scene}/${parcel}/${option} result ${size.width}×${size.height}`);
           await page.getByRole("button", { name: "Изменить выбор", exact: true }).click();
-          await expect(page.locator(`[${["crane", "compact", "lastmile"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${option}"]`)).toBeVisible();
+          await expect(page.locator(`[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${option}"]`)).toBeVisible();
           await assertFixedPage(page, `${scene}/${parcel}/${option} return ${size.width}×${size.height}`);
         }
       });

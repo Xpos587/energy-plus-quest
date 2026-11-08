@@ -62,7 +62,7 @@ for (const [width, height] of [
       "Express",
     );
     await page.locator("[data-choice-cancel]").click();
-    await page.getByRole("button", { name: "О задаче", exact: true }).click();
+    await page.getByRole("button", { name: "Задание", exact: true }).click();
     await expect(page.locator("[data-scene-briefing]")).toHaveAttribute(
       "data-reading",
       "true",

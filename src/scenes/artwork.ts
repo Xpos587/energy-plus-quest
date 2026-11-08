@@ -26,7 +26,7 @@ export function sceneOutcomeImage(
     if (selectedId === "wms") {
       return imageAsset("scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png");
     }
-    // Plaques read from dispatch (А–Б) back to receiving (Ю–Я), as the scenario says.
+    // Plaques read left to right: receiving (А–Б) to dispatch (Ю–Я).
     const variant = selectedId === "alphabet" ? `alphabet-${context.parcel}` : selectedId;
     return imageAsset(`scene-art/warehouse-logic-2026-10-28/outcome-${variant}.webp`);
   }

@@ -30,3 +30,9 @@ export const recipientNames = {
   khor: { nominative: "Хабт", genitive: "Хабта", dative: "Хабту" },
   arseniy: { nominative: "Арсений", genitive: "Арсения", dative: "Арсению" },
 } as const;
+
+/** «Вязаные носки для Маймы»: what is carried and to whom, for the task reminder. */
+export function deliveryLine(parcel: keyof typeof parcelNames, recipient: keyof typeof recipientNames) {
+  const what = parcelNames[parcel].nominative;
+  return `${what[0].toUpperCase()}${what.slice(1)} для ${recipientNames[recipient].genitive}`;
+}

@@ -58,57 +58,57 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/inventory-master-v4.webp",
+        "image": "scene-art/inventory-master-v10.webp",
         "width": 1672,
         "height": 941,
         "hotspots": [
           {
             "id": "entrance",
-            "x": 0.1471291866028708,
-            "y": 0.6503719447396387
+            "x": 0.1262,
+            "y": 0.7112
           },
           {
             "id": "alphabet",
-            "x": 0.2876794258373206,
-            "y": 0.4070138150903294
+            "x": 0.6372,
+            "y": 0.6633
           },
           {
             "id": "keeper",
-            "x": 0.8145933014354066,
-            "y": 0.6014877789585548
+            "x": 0.8043,
+            "y": 0.5933
           },
           {
             "id": "wms",
-            "x": 0.6985645933014354,
-            "y": 0.8873538788522848
+            "x": 0.8493,
+            "y": 0.8411
           }
         ],
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/inventory-master-v4.webp",
-        "width": 1672,
-        "height": 941,
+        "image": "scene-art/inventory-master-v10-tall.webp",
+        "width": 1200,
+        "height": 1500,
         "hotspots": [
           {
             "id": "entrance",
-            "x": 0.1471291866028708,
-            "y": 0.6503719447396387
+            "x": 0.1544,
+            "y": 0.654
           },
           {
             "id": "alphabet",
-            "x": 0.2876794258373206,
-            "y": 0.4070138150903294
+            "x": 0.6207,
+            "y": 0.566
           },
           {
             "id": "keeper",
-            "x": 0.8145933014354066,
-            "y": 0.6014877789585548
+            "x": 0.7718,
+            "y": 0.6088
           },
           {
             "id": "wms",
-            "x": 0.6985645933014354,
-            "y": 0.8873538788522848
+            "x": 0.8251,
+            "y": 0.6972
           }
         ],
         "rendering": "raster"

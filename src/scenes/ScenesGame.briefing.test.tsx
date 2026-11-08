@@ -51,7 +51,7 @@ it("separates complete condition from choice and remembers reading across result
     expect(
       host.querySelector('[data-testid="scene-question"]')?.textContent,
     ).not.toContain(remainingScenes[0].intro(context)[0]);
-    await click(find("О задаче"));
+    await click(find("Задание"));
     expect(condition()).not.toBeNull();
     await read();
     await click(host.querySelector('[data-hotspot="place-1"]'));
@@ -76,11 +76,11 @@ it("separates complete condition from choice and remembers reading across result
     expect(host.querySelector("[data-result]")).not.toBeNull();
     await click(find("Продолжить"));
     expect(condition()).toBeNull();
-    expect(find("О задаче")).toBeDefined();
-    await click(find("О задаче"));
+    expect(find("Задание")).toBeDefined();
+    await click(find("Задание"));
     expect(condition()).not.toBeNull();
     await read();
-    expect(document.activeElement?.textContent).toBe("О задаче");
+    expect(document.activeElement?.textContent).toBe("Задание");
   } finally {
     await act(async () => root.unmount());
     host.remove();

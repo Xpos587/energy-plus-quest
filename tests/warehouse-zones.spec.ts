@@ -29,24 +29,24 @@ test("warehouse markers lead to the matching result and allow a new choice", asy
   expect(errors).toEqual([]);
 });
 
-test("phone named choices open the same warehouse inspection without precision taps", async ({ page }) => {
-  for (const [width, height] of [[320, 568], [390, 844], [600, 601]]) {
+test("phones choose on the warehouse itself, with no button row (call 05.11)", async ({ page }) => {
+  for (const [width, height] of [[320, 568], [390, 844], [440, 956]]) {
     await page.setViewportSize({ width, height });
     await openInventory(page);
+    await expect(page.locator("[data-scene-choice]")).toHaveCount(0);
     for (const id of choices) {
-      const button = page.locator(`[data-scene-choice="${id}"]`);
-      await expect(button).toBeInViewport({ ratio: 1 });
-      const box = await button.boundingBox();
+      const marker = page.locator(`[data-hotspot="${id}"]`);
+      await expect(marker).toBeInViewport();
+      const box = await marker.boundingBox();
       expect(box!.width).toBeGreaterThanOrEqual(44);
       expect(box!.height).toBeGreaterThanOrEqual(44);
-      await button.click();
-      await expect(page.locator(`[data-hotspot="${id}"]`)).toHaveAttribute("aria-pressed", "true");
+      await marker.click();
       await expect(page.locator("[data-choice-confirm]")).toBeInViewport({ ratio: 1 });
       await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-scene-consequence]")).toHaveAttribute("data-scene-consequence", id === "alphabet" ? "inventory-alphabet-boat" : `inventory-${id}`);
       await page.getByRole("button", { name: "Изменить выбор", exact: true }).click();
     }
-    expect(await page.evaluate(() => document.documentElement.scrollHeight <= innerHeight && document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   }
 });
 

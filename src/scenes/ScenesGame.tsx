@@ -17,7 +17,7 @@ import { prefetchImage, thumbnailAsset } from "../game/imageAssets";
 import { useStoredState } from "../game/persistence";
 import type { Scores } from "../game/types";
 import { sceneChoiceImage } from "./artwork";
-import { parcelNames, recipientNames } from "./names";
+import { deliveryLine, parcelNames, recipientNames } from "./names";
 import { choiceLabel } from "./choiceLabel";
 import { compactScene } from "./compact";
 import { CompactCard } from "./compact/CompactCard";
@@ -28,7 +28,7 @@ import { inventoryScene } from "./inventory";
 import { inventoryAlphabet } from "./inventory/alphabet";
 import { JourneyEnding } from "./JourneyEnding";
 import { lastmileScene } from "./lastmile";
-import { LastmileDecisionContext, LastmileFacts, lastmileFacts } from "./lastmile/LastmileFacts";
+import { LastmileDecisionContext, lastmileHeadings } from "./lastmile/LastmileFacts";
 import { initialProgress, progressReducer, totalScores } from "./progress";
 import { SceneOutcomeArt } from "./SceneOutcomeArt";
 import type { SceneContext, SceneId } from "./types";
@@ -439,19 +439,15 @@ function ScenesSession({
                 scene.id === "crane" || scene.id === "lastmile" ? (
                   <>
                     {scene.id === "crane" ? <CraneDecisionContext /> : <LastmileDecisionContext />}
-                    <SceneGoals goals={brief!.goals} />
+                    {/* Last scene, tired players (05.11): the task is plain text, no goal icons. */}
+                    {scene.id === "crane" && <SceneGoals goals={brief!.goals} />}
                   </>
                 ) : brief ? (
-                  <>
-                    <div className={flow.compactCargo} data-compact-cargo>
-                      <img src={thumbnailAsset(choiceArtwork[context.parcel])} alt="" />
-                      <span><small>Груз</small><strong>{parcelNames[context.parcel].nominative}</strong></span>
-                    </div>
-                    <SceneGoals goals={brief.goals} />
-                  </>
+                  <SceneGoals goals={brief.goals} />
                 ) : undefined
               }
               onBack={back}
+              reminder={brief ? [deliveryLine(context.parcel, context.recipient), brief.route(context)] : undefined}
               lead={
                 brief ? (
                   <div className={flow.briefingLead} data-briefing-lead>
@@ -461,36 +457,19 @@ function ScenesSession({
                       <strong>{parcelNames[context.parcel].nominative}</strong>
                       <em>{brief.route(context)}</em>
                     </span>
-                    <SceneGoals goals={brief.goals} />
+                    {scene.id !== "lastmile" && <SceneGoals goals={brief.goals} />}
                   </div>
                 ) : undefined
               }
               inspecting={!!pending}
               onOpen={() => setPendingId(undefined)}
-              action={scene.id === "inventory" ? (
-                <div className={flow.inventoryMobileChoices}>
-                  <SceneChoices
-                    numbered={false}
-                    options={options.map(option => ({
-                      id: option.id,
-                      label: option.id === "alphabet" ? "По алфавиту" : places![option.id][0],
-                    }))}
-                    {...syncFocus}
-                    onInspect={setPendingId}
-                  />
-                </div>
-              ) : inspectsOnArt ? undefined : (
+              action={inspectsOnArt ? undefined : (
                 <SceneChoices
                   variant="scene"
                   options={options.map((option) => ({
                     id: option.id,
                     detail: places?.[option.id][1],
-                    label:
-                      places
-                        ? places[option.id][0]
-                        : scene.id === "inventory" && option.id === "alphabet"
-                          ? `Стеллаж «${inventoryAlphabet[context.parcel].letter}»`
-                          : optionTitles[option.id] ?? choiceLabel(option.label),
+                    label: places ? places[option.id][0] : optionTitles[option.id] ?? choiceLabel(option.label),
                   }))}
                   {...syncFocus}
                   onInspect={choose}
@@ -520,7 +499,7 @@ function ScenesSession({
                 }}
                 selectedId={resultVisible ? selected?.id : pending?.id}
                 showResult={resultVisible}
-                onSelect={state.phase === "choice" && !playing ? (inspectsOnArt ? setPendingId : choose) : undefined}
+                onSelect={state.phase === "choice" && !playing ? (inspectsOnArt && scene.id !== "lastmile" ? setPendingId : choose) : undefined}
                 playing={playing}
                 onPlayed={playing ? () => choose(playing) : undefined}
                 {...syncFocus}
@@ -529,7 +508,7 @@ function ScenesSession({
             {inspectsOnArt && !resultVisible && (
               <CarrierTapHint
                 selectedId={pending?.id}
-                text={scene.id === "compact" ? "Выберите, куда поставить груз" : scene.id === "lastmile" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать о нём` : "Нажмите на транспорт, чтобы узнать о нём") : scene.id === "inventory" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать подробнее` : "Где хранить подарок? Нажмите на одно из подсвеченных мест") : (focusedChoice && focusedChoice in craneCaptions ? `${craneCaptions[focusedChoice as keyof typeof craneCaptions]} · нажмите, чтобы узнать подробнее` : "Кто погрузит подарок? Нажмите на человека или кран")}
+                text={scene.id === "compact" ? "Выберите место для груза" : scene.id === "lastmile" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы выбрать` : "Нажмите на транспорт, чтобы выбрать") : scene.id === "inventory" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать подробнее` : "Где хранить подарок? Нажмите на одно из подсвеченных мест") : focusedChoice && focusedChoice in craneCaptions ? `${craneCaptions[focusedChoice as keyof typeof craneCaptions]} · нажмите, чтобы узнать подробнее` : "Кто погрузит подарок? Нажмите на человека или кран"}
               />
             )}
           </section>
@@ -538,10 +517,10 @@ function ScenesSession({
               selectionKey={pending.id}
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
               eyebrow={scene.id === "compact" ? undefined
-                : scene.id === "lastmile" || scene.id === "inventory" ? places![pending.id][1]
+                : scene.id === "inventory" ? places![pending.id][1]
                 : craneCaptions[pending.id as keyof typeof craneCaptions]}
-              title={scene.id === "compact" || scene.id === "lastmile" || scene.id === "inventory" ? places![pending.id][0] : optionTitles[pending.id]}
-              cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "lastmile" ? "К карте" : scene.id === "inventory" ? "К складу" : "К причалу"}
+              title={scene.id === "compact" || scene.id === "inventory" ? places![pending.id][0] : optionTitles[pending.id]}
+              cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "inventory" ? "К складу" : "К причалу"}
               paragraphs={scene.id === "inventory" ? [choiceLabel(pending.label)] : undefined}
               onCancel={() => setPendingId(undefined)}
               onConfirm={() => {
@@ -553,7 +532,6 @@ function ScenesSession({
               {scene.id === "compact"
                 ? pending.id === "auto" ? <CompactCard /> : undefined
                 : scene.id === "inventory" ? undefined
-                : scene.id === "lastmile" ? <LastmileFacts id={pending.id as keyof typeof lastmileFacts} />
                 : <CraneFacts id={pending.id as keyof typeof craneFacts} />}
             </ChoiceInspection>
           )}
@@ -567,7 +545,13 @@ function ScenesSession({
               <div className={flow.resultStory}>
                 <ResultCopy
                   key={`${scene.id}:${selected.id}`}
-                  title={brief && places ? <ChoiceVerdict picked={brief.picked(selected.id, places[selected.id][0])} goals={brief.goals} score={selected.score} all={options.map(o => o.score)} /> : title}
+                  title={scene.id === "lastmile" && places ? (
+                    // Teo 05.11: a plain line about what happened, no score verdict.
+                    <span className={flow.compactVerdict} data-verdict="none" data-lastmile-heading={selected.id}>
+                      <small>{brief!.picked(selected.id, places[selected.id][0])}</small>
+                      <span>{lastmileHeadings[selected.id as keyof typeof lastmileHeadings]}</span>
+                    </span>
+                  ) : brief && places ? <ChoiceVerdict picked={brief.picked(selected.id, places[selected.id][0])} goals={brief.goals} score={selected.score} all={options.map(o => o.score)} /> : title}
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace

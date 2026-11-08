@@ -1,6 +1,6 @@
 .profile {
   width: 100%;
-  max-width: 1120px;
+  max-width: min(1520px, 100%);
   margin: auto;
   padding-block: 20px;
   color: #123750;
@@ -17,7 +17,7 @@
 }
 .art {
   width: 100%;
-  max-width: 350px;
+  max-width: min(560px, 54dvh);
   justify-self: center;
   overflow: hidden;
   border-radius: 14px;
@@ -38,12 +38,12 @@
 .copy h1 {
   color: #07629c;
   margin: 0 0 22px;
-  font-size: clamp(32px, 3.2vw, 44px);
+  font-size: clamp(32px, 3.2vw, 60px);
   line-height: 1.08;
 }
 .copy p {
   margin: 0 0 16px;
-  font-size: 21px;
+  font-size: clamp(21px, 1.4vw, 27px);
   line-height: 1.4;
 }
 .copy p:last-child {

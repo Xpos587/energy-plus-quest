@@ -117,15 +117,15 @@ for (const [width, height] of [
       expect(
         await page.getByTestId("scene-question").innerText(),
       ).not.toContain(expected);
-      const about = page.getByRole("button", { name: "О задаче", exact: true });
+      const about = page.getByRole("button", { name: "Задание", exact: true });
       await expect(about).toBeFocused();
       await about.click();
       expect(await read(page)).toBe(expected);
       const answer = page.locator(
-        `[${["crane", "compact", "lastmile"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${answers[scene as keyof typeof answers]}"]`,
+        `[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${answers[scene as keyof typeof answers]}"]`,
       );
       await answer.click();
-      if (["crane", "compact", "lastmile"].includes(scene)) await page.locator("[data-choice-confirm]").click();
+      if (["crane", "compact", "lastmile", "inventory"].includes(scene)) await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-result]")).toBeVisible();
       await page
         .getByRole("button", { name: "Изменить выбор", exact: true })

@@ -11,12 +11,12 @@ const context = {
 } as const;
 
 describe("warehouse storage geography", () => {
-  it("covers the Russian alphabet exactly once, from dispatch right to receiving left", () => {
+  it("covers the Russian alphabet exactly once, from receiving left to dispatch right", () => {
     expect(warehouseShelfRanges.map((range) => range.letters).join("")).toBe(
       "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
     );
     warehouseShelfRanges.slice(1).forEach((range, index) => {
-      expect(range.x).toBeLessThan(warehouseShelfRanges[index].x);
+      expect(range.x).toBeGreaterThan(warehouseShelfRanges[index].x);
     });
   });
 

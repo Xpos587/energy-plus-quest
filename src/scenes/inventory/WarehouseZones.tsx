@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from "react";
+import { useId } from "react";
 import type { SceneContext } from "../types";
 import styles from "./WarehouseZones.module.css";
 import { warehouseChoices } from "./warehouseZones";
@@ -13,23 +13,13 @@ type WarehouseZonesProps = {
   composition?: WarehouseComposition;
 };
 
-/** Centre and radius of a contour (absolute M/L/Z polygons). */
-function bounds(path: string) {
-  const n = path.match(/-?\d+(\.\d+)?/g)!.map(Number);
-  const xs = n.filter((_, i) => i % 2 === 0), ys = n.filter((_, i) => i % 2 === 1);
-  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
-  return { cx: (x0 + x1) / 2, cy: (y0 + y1) / 2, r: Math.max(x1 - x0, y1 - y0) / 2 };
-}
-
 /**
- * The busy hall is softly dimmed except the four choices, which breathe until tried;
- * pointing at one leaves only that one lit. Contours are the hit regions.
+ * The busy hall is softly dimmed except the four choices; pointing at one leaves only
+ * that one lit. Contours are the hit regions; the numbered pins are WorldArt's markers.
  */
 export function WarehouseZones({ context, selectedId, onSelect, focusedId, onFocusChange, composition = "wide" }: WarehouseZonesProps) {
   const contours = warehouseDrawing(composition);
   const hole = `warehouse-hole-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
-  const [seen, setSeen] = useState<string[]>([]);
-  useEffect(() => { if (selectedId) setSeen(s => s.includes(selectedId) ? s : [...s, selectedId]); }, [selectedId]);
   const lit = selectedId ?? focusedId;
   const spotlight = !!onSelect;
   const holes = lit ? [lit] : warehouseChoices;
@@ -50,16 +40,12 @@ export function WarehouseZones({ context, selectedId, onSelect, focusedId, onFoc
             <rect className={styles.scrim} data-lit={!!lit} width={contours.width} height={contours.height} mask={`url(#${hole})`} />
           </>
         )}
-        {warehouseChoices.map((id, i) => {
+        {warehouseChoices.map(id => {
           const contour = warehouseContour(id, context.parcel, composition);
           const interactive = !!onSelect && (!selectedId || selectedId === id);
-          const b = bounds(contour.path);
           return (
-            <g key={id}>
-              {spotlight && !lit && !seen.includes(id) && (
-                <circle className={styles.ripple} data-warehouse-ripple={id} cx={b.cx} cy={b.cy} r={Math.max(64, Math.min(b.r * 0.9, 110))} style={{ animationDelay: `${i * 0.6}s` }} />
-              )}
-              <path
+            <path
+                key={id}
                 className={styles.zone}
                 data-warehouse-zone={id}
                 data-warehouse-contour={contour.key}
@@ -74,7 +60,6 @@ export function WarehouseZones({ context, selectedId, onSelect, focusedId, onFoc
                 strokeLinejoin="round"
                 vectorEffect="non-scaling-stroke"
               />
-            </g>
           );
         })}
       </svg>

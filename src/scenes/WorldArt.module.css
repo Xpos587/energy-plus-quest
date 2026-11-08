@@ -117,3 +117,12 @@
 .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker > span { display: none; }
 .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker::before { content: none; }
 .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker:focus-visible { outline: 3px solid #fff; outline-offset: -3px; border-radius: 50%; box-shadow: 0 0 0 3px #075d9b; }
+
+/* Inventory: scene-1 style map pins (white disc, coloured rim, tail to the object) carry
+   the choice number; the 44 px button is the disc, the tail tip touches the object's anchor. */
+.stage[data-world-scene="inventory"] .marker { margin-top: -21px; color: #075d9b; font-size: 15px; font-weight: 800; }
+.stage[data-world-scene="inventory"] .marker > span { display: block; }
+.stage[data-world-scene="inventory"] .marker::before { content: ""; inset: 7px; border: 2.5px solid currentColor; border-radius: 50%; background: #fff; box-shadow: 0 2px 5px rgb(10 30 50 / 28%); }
+.stage[data-world-scene="inventory"] .marker::after { content: ""; position: absolute; left: 50%; top: calc(50% + 13px); z-index: -2; border: 5px solid transparent; border-top: 9px solid currentColor; border-bottom: 0; transform: translateX(-50%); }
+.stage[data-world-scene="inventory"] .marker:is(:hover, [aria-pressed="true"], [data-focused="true"]) { color: var(--orange, #ff5500); }
+.stage[data-world-scene="inventory"] .marker:is(:hover, [aria-pressed="true"], [data-focused="true"])::before { background: #fff; }

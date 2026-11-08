@@ -29,7 +29,7 @@ for (const viewport of [
     for (const id of ["remote", "rush", "wait", "petr"]) {
       const marker = page.locator(`[data-hotspot="${id}"]`);
       await marker.scrollIntoViewIfNeeded();
-      await expect(marker.locator("span").last()).toBeInViewport();
+      await expect(marker).toBeInViewport();
       await expect(marker).toBeVisible();
       await expect(marker).toBeEnabled();
       await expect(page.locator("[data-score-key]")).toHaveCount(0);

@@ -29,13 +29,14 @@ export function warehouseCamera(stage: { width: number; height: number }, parcel
   const selectedRegion = regions[keys.findIndex(key => key === selectedKey)];
   const box = selectedRegion ? bounds([selectedRegion]) : overview;
   const scale = selectedRegion ? Math.max(overviewScale, Math.min(overviewScale * 2, fit(box))) : overviewScale;
-  const offset = (stageSize: number, sourceSize: number, center: number) => {
+  // A plane shorter than the stage sits on its top edge like the other scenes' art; a narrower one is centred.
+  const offset = (stageSize: number, sourceSize: number, center: number, align = 0.5) => {
     const planeSize = sourceSize * scale;
-    if (planeSize <= stageSize) return (stageSize - planeSize) / 2;
+    if (planeSize <= stageSize) return (stageSize - planeSize) * align;
     return Math.max(stageSize - planeSize, Math.min(0, stageSize / 2 - center * scale));
   };
   let left = offset(stage.width, drawing.width, (box.left + box.right) / 2);
-  let top = offset(stage.height, drawing.height, (box.top + box.bottom) / 2);
+  let top = offset(stage.height, drawing.height, (box.top + box.bottom) / 2, 0);
   if (edgeToEdge && !selectedRegion) {
     // Cropped scenery is split evenly, but never at the expense of a choice.
     const choices = bounds(regions);

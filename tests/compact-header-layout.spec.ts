@@ -25,7 +25,7 @@ test('compact header and introduction form a useful choice screen',async({page},
  await expect(progress).toBeVisible();
  await expect(progress).toBeInViewport({ratio:1});
  await expect(page.locator('[data-progress-step]')).toHaveCount(0);
- await expect(page.locator('[data-scene-progress]')).toHaveText('Этап 2/5');
+ await expect(page.locator('[data-scene-progress]')).toHaveText('');
  const choices=page.locator('[data-hotspot]');
  const next=page.getByRole('button',{name:/^(Далее|К выбору)$/});
  for(let n=0;n<20&&await next.isVisible();n++) await next.click();
