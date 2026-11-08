@@ -29,6 +29,7 @@ for (const parcel of ['camera', 'socks', 'boat']) {
       await expect(page.locator('[data-result-reader]')).toHaveCount(0);
       await choice.click();
       await confirm.click();
+      await expect(page.locator('[data-result-reader]')).toBeVisible(); // page through only once the result is there
       for (let n = 0; n < 30; n++) {
         const more = page.getByRole('button', { name: 'Читать дальше', exact: true });
         if (!await more.isVisible()) break;

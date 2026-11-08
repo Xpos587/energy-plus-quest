@@ -157,6 +157,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
     <figure
       ref={stage}
       className={styles.stage}
+      data-world-scene="crane"
       data-barge-art={view.format}
       data-selected={playing ?? selectedId}
       data-playing={playing}
