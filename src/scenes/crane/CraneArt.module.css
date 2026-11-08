@@ -25,7 +25,7 @@ div.layer { overflow: hidden; }
 .cable { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .cable line { stroke: #2b2f36; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
 /* Who and what the chosen way uses: a soft glow, no outline (client: outlines look childish). */
-.layer[data-lit] { filter: brightness(1.08) drop-shadow(0 0 10px #fffc); }
+.layer[data-lit] { filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 9px #fff) drop-shadow(0 0 16px #ffffffb3); }
 .layer[data-busy] { animation: busy 900ms ease-in-out infinite; }
 @keyframes busy { 50% { filter: drop-shadow(0 0 2px #ff5500) drop-shadow(0 0 12px #ffb37a); } }
 .skip {
@@ -60,9 +60,6 @@ div.layer { overflow: hidden; }
 }
 .hotspot:disabled { cursor: default; }
 .hotspot:focus-visible { outline: none; }
-/* Pointing at an actor dims the quay around it. */
-.scrim { fill: #071a2e; opacity: 0; transition: opacity 220ms ease-out; }
-.scrim[data-on="true"] { opacity: .42; }
 /* Untried actors breathe: a soft white ring that widens and fades, staggered. */
 .ripple {
   fill: #ffffff26;
@@ -79,7 +76,7 @@ div.layer { overflow: hidden; }
   100% { transform: scale(1.15); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .plane, .scrim { transition: none !important; }
+  .plane { transition: none !important; }
   .bob, .smoke, .layer, .skip { animation: none !important; }
   .ripple { animation: none; transform: none; opacity: .55; fill: none; }
 }
@@ -101,3 +98,8 @@ div.layer { overflow: hidden; }
 .ink { fill: #173c55; }
 .mouth { fill: none; stroke: #173c55; stroke-width: 3; stroke-linecap: round; }
 .stage[data-cast] .hotspot { opacity: 0; transition: opacity 200ms; }
+/* "Wait" hover: a ticking clock over the empty cab. */
+.wait { animation: pop 260ms ease-out both; }
+.spin { animation: spin 2.4s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .wait, .spin { animation: none; } }

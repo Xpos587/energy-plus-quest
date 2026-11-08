@@ -1,4 +1,4 @@
-import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { ImageSources } from "../../components/ImageSources";
 import { useArtworkLoading } from "../../components/useArtworkLoading";
@@ -108,12 +108,10 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const plate = useArtworkLoading(imageAsset(art.plate));
   const options = craneScene.options(context);
   const litId = playing ?? (interactive ? (hovered ?? selectedId) : undefined);
-  // Pointing at an actor dims the quay around it (scene 5 pattern); untried actors breathe.
+  // Pointing at an actor lights its outline (scene 5 pattern, nothing is dimmed); untried actors breathe.
   const pointed = interactive ? (hovered ?? selectedId) : undefined;
-  const hole = `barge-hole-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
   const [seen, setSeen] = useState<string[]>([]);
   useEffect(() => { if (selectedId) setSeen((s) => (s.includes(selectedId) ? s : [...s, selectedId])); }, [selectedId]);
-  const svgBox = (r: { x: number; y: number; w: number; h: number }, d: number) => ({ x: r.x - d, y: r.y - d, width: r.w + 2 * d, height: r.h + 2 * d });
   const lit = new Set<string>(litId ? art.actors[litId] ?? [] : []);
   const pct = (x: number, y: number) => ({ left: `${(x / art.width) * 100}%`, top: `${(y / art.height) * 100}%` });
   const box = (r: { x: number; y: number; w: number; h: number }) => ({
@@ -278,14 +276,6 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {hookAt && beat.lifted && sprite("box", { style: move(s.box, hookAt) })}
         {interactive && (
           <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
-            <defs>
-              <filter id={`${hole}f`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" /></filter>
-              <mask id={hole} maskUnits="userSpaceOnUse" x="0" y="0" width={art.width} height={art.height}>
-                <rect width={art.width} height={art.height} fill="white" />
-                {pointed && <rect {...svgBox(art.targets[pointed], 18)} rx="24" fill="black" filter={`url(#${hole}f)`} />}
-              </mask>
-            </defs>
-            <rect className={styles.scrim} data-on={!!pointed} width={art.width} height={art.height} mask={`url(#${hole})`} />
             {!pointed && !selectedId && options.filter(({ id }) => !seen.includes(id)).map(({ id }, i) => {
               const t = art.targets[id];
               return (
@@ -293,6 +283,15 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
                   r={Math.max(t.w, t.h) * .42} style={{ animationDelay: `${i * .7}s` }} />
               );
             })}
+            {/* Waiting is nobody moving: a clock on the empty cab, not a person on the ladder. */}
+            {pointed === "wait" && (
+              <g className={styles.wait} data-barge-wait transform={`translate(${anchor.nearCabin[0] - 110} ${anchor.nearCabin[1] - 50})`}>
+                <circle className={styles.dial} r="30" />
+                <line className={styles.hand} y2="-14" transform="rotate(90)" />
+                <line className={`${styles.hand} ${styles.spin}`} y2="-22" />
+                <text className={styles.badgeText} y="58">через 3 ч</text>
+              </g>
+            )}
           </svg>
         )}
         {options.map((option) => (

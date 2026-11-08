@@ -85,18 +85,18 @@ export { craneWorld };
 
 /** What each way is about: the card eyebrow. */
 export const craneCaptions = {
-  remote: "Иван в офисе",
-  rush: "Подъём в кабину",
-  wait: "Кран свободен через 3 ч",
+  remote: "Иван в офисе ПРУ, за пультом",
+  rush: "Иван поднимается на кран",
+  wait: "Кран по графику через 3 ч",
   petr: "Пётр на дальнем кране",
 } as const;
 
 /** Card facts, as the truck card lists speed and year: who, from where, when. */
 export const craneFacts = {
-  remote: { who: "Иван", where: "Из офиса, с пульта", when: "Сразу", note: "Кран управляется дистанционно" },
-  rush: { who: "Иван", where: "Из кабины", when: "После подъёма", note: "Подъём по лестнице на высоту крана" },
-  wait: { who: "По графику", where: "Из кабины", when: "Через 3 ч", note: "Баржа готова к отходу уже сейчас" },
-  petr: { who: "Пётр", where: "Из ближнего крана", when: "Сразу", note: "У Петра скоро своя погрузка" },
+  remote: { who: "Иван", where: "Из офиса ПРУ, с пульта", when: "Сразу", note: "Краном управляют на расстоянии, на кран подниматься не нужно" },
+  rush: { who: "Иван", where: "Из кабины крана", when: "После подъёма", note: "Иван дойдёт до крана и поднимется по лестнице в кабину" },
+  wait: { who: "Крановщик по графику", where: "Из кабины", when: "Через 3 ч", note: "Никого не отвлекаем, но баржа готова к отходу уже сейчас" },
+  petr: { who: "Пётр", where: "Из кабины ближнего крана", when: "Сразу", note: "У Петра скоро своя погрузка" },
 } as const;
 
 export const craneOutcomeImage = (id: string) => `${base}/outcome-${id}.webp`;
