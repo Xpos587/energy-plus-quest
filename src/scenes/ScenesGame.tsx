@@ -15,7 +15,7 @@ import { useOptionalSaveScope } from "../game/GameContext";
 import { choiceArtwork } from "../game/artwork";
 import { prefetchImage, thumbnailAsset } from "../game/imageAssets";
 import { useStoredState } from "../game/persistence";
-import type { Scores } from "../game/types";
+import type { ParcelId, Scores } from "../game/types";
 import { sceneChoiceImage } from "./artwork";
 import { deliveryLine, parcelNames, recipientNames } from "./names";
 import { choiceLabel } from "./choiceLabel";
@@ -85,7 +85,7 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
       "place-4": ["Место 4", ""],
       auto: ["Подобрать автоматически", ""],
     }),
-    picked: (id, name) => id === "auto" ? "Место подобрано автоматически" : name,
+    picked: (id, name) => `Ваш выбор · ${id === "auto" ? "Подобрать автоматически" : name}`,
   },
   inventory: {
     eyebrow: "Карточка хранения",
@@ -121,6 +121,57 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     picked: (_id, name) => `Ваш выбор · ${name}`,
   },
 };
+// One hint for scenes 2–5: what to tap, then the hovered name and what the tap does.
+const tapHintIdle: Partial<Record<SceneId, string>> = {
+  compact: "Нажмите на место в кузове",
+  inventory: "Нажмите на подсвеченное место на складе",
+  crane: "Нажмите на человека или кран",
+  lastmile: "Нажмите на транспорт",
+};
+const tapHintText = (id: SceneId, focused?: string) =>
+  focused ? `${focused} · нажмите, чтобы ${id === "lastmile" ? "выбрать" : "узнать подробнее"}` : tapHintIdle[id];
+/** Result headings (R18 draft for Teo): what happened, taken from the result text; no score verdict. */
+const resultHeadings: Partial<Record<SceneId, Record<string, string>>> = {
+  inventory: {
+    entrance: "Лишний крюк до отгрузки",
+    alphabet: "Подарок далеко от отгрузки",
+    keeper: "Место знал только кладовщик",
+    wms: "Система выбрала место у отгрузки",
+  },
+  crane: {
+    remote: "Иван грузит из офиса",
+    rush: "Иван поспешил на кран",
+    wait: "Баржа ушла по расписанию",
+    petr: "Пётр выручил, но свой груз отложил",
+  },
+  lastmile: lastmileHeadings,
+};
+// The truck outcome depends on the parcel.
+const compactHeadings: Record<ParcelId, Record<string, string>> = {
+  socks: {
+    "place-1": "Носки разлетелись по кузову",
+    "place-2": "Носки заняли место до самой крыши",
+    "place-3": "Носки закрепили, место осталось",
+    "place-4": "Носки заняли место трёх ящиков",
+    auto: "Compact выбрал место 3",
+  },
+  camera: {
+    "place-1": "Фотоаппарат разбил посуду",
+    "place-2": "Место до крыши пустует",
+    "place-3": "Фотоаппарат закрепили в нише",
+    "place-4": "До фотоаппарата долго пробирались",
+    auto: "Compact выбрал место 3",
+  },
+  boat: {
+    "place-1": "Перегруз сломал фуру",
+    "place-2": "Лодка разбила посуду",
+    "place-3": "Лодка не поместилась в нишу",
+    "place-4": "Лодку закрепили стоя",
+    auto: "Compact выбрал место 4",
+  },
+};
+export const resultHeading = (scene: SceneId, id: string, parcel: ParcelId = "socks") =>
+  (scene === "compact" ? compactHeadings[parcel] : resultHeadings[scene])?.[id];
 export function SceneGoals({ goals }: { goals: SceneBrief["goals"] }) {
   return (
     <ul className={flow.compactGoals} aria-label="Что важно" data-compact-goals>
@@ -145,11 +196,11 @@ export function compareChoice(score: Scores, all: Scores[], goals: SceneBrief["g
     tied: others.some((o) => o[key] === score[key]),
   }));
   const best = sides.filter((side) => !side.beaten && !side.tied && side.beats > 0);
-  // «Лучше всех» on every second option read as flattery (call 02.11), and «Наравне с лучшими»
-  // still grades (03.11, 05.11): name the strength, not a rank. A shared top scale is a strength too.
-  if (best.length) return { key: best.length === 3 ? "all" : best[0].key, text: `${best.length > 1 ? "Сильные стороны" : "Сильная сторона"}: ${new Intl.ListFormat("ru").format(best.map((side) => side.goal))}` };
+  if (best.length === 3) return { key: "all", text: "Лучше всех вариантов по всем трём шкалам" };
+  // «Лучше всех» on every second option read as flattery (call 02.11): name the strength, not a winner.
+  if (best.length) return { key: best[0].key, text: `${best.length > 1 ? "Сильные стороны" : "Сильная сторона"}: ${best.map((side) => side.goal).join(" и ")}` };
   const shared = sides.find((side) => !side.beaten && side.beats > 0);
-  if (shared) return { key: shared.key, text: `Сильная сторона: ${shared.goal}` };
+  if (shared) return { key: shared.key, text: `Наравне с лучшими: ${shared.goal}` };
   const top = [...sides].sort((x, y) => y.beats - x.beats)[0];
   if (top.beats) return { key: top.key, text: `Обходит ${overtakes[top.beats]}: ${top.goal}` };
   return { key: "none", text: "Другие варианты сильнее по всем шкалам" };
@@ -426,8 +477,9 @@ function ScenesSession({
               key={scene.id}
               title={title}
               paragraphs={briefingParagraphs(scene.id, intro)}
-              initiallyOpen={!session.briefed?.includes(scene.id)}
-              showLeadOnChoice={false}
+              // Scene 2 (Teo 05.11): condition and choice on one screen, no separate intro step.
+              initiallyOpen={scene.id !== "compact" && !session.briefed?.includes(scene.id)}
+              showLeadOnChoice={scene.id === "compact"}
               onConditionComplete={() => setSession(current => ({
                 ...current,
                 briefed: [...new Set([...(current.briefed ?? []), scene.id])],
@@ -508,7 +560,7 @@ function ScenesSession({
             {inspectsOnArt && !resultVisible && (
               <CarrierTapHint
                 selectedId={pending?.id}
-                text={scene.id === "compact" ? "Выберите место для груза" : scene.id === "lastmile" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы выбрать` : "Нажмите на транспорт, чтобы выбрать") : scene.id === "inventory" ? (focusedChoice && places?.[focusedChoice] ? `${places[focusedChoice][0]} · нажмите, чтобы узнать подробнее` : "Где хранить подарок? Нажмите на одно из подсвеченных мест") : focusedChoice && focusedChoice in craneCaptions ? `${craneCaptions[focusedChoice as keyof typeof craneCaptions]} · нажмите, чтобы узнать подробнее` : "Кто погрузит подарок? Нажмите на человека или кран"}
+                text={tapHintText(scene.id, focusedChoice && (scene.id === "crane" ? craneCaptions[focusedChoice as keyof typeof craneCaptions] : places?.[focusedChoice]?.[0]))}
               />
             )}
           </section>
@@ -545,13 +597,13 @@ function ScenesSession({
               <div className={flow.resultStory}>
                 <ResultCopy
                   key={`${scene.id}:${selected.id}`}
-                  title={scene.id === "lastmile" && places ? (
+                  title={brief && places ? (
                     // Teo 05.11: a plain line about what happened, no score verdict.
-                    <span className={flow.compactVerdict} data-verdict="none" data-lastmile-heading={selected.id}>
-                      <small>{brief!.picked(selected.id, places[selected.id][0])}</small>
-                      <span>{lastmileHeadings[selected.id as keyof typeof lastmileHeadings]}</span>
+                    <span className={flow.compactVerdict} data-verdict="none" data-result-heading={selected.id}>
+                      <small>{brief.picked(selected.id, places[selected.id][0])}</small>
+                      <span>{resultHeading(scene.id, selected.id, context.parcel)}</span>
                     </span>
-                  ) : brief && places ? <ChoiceVerdict picked={brief.picked(selected.id, places[selected.id][0])} goals={brief.goals} score={selected.score} all={options.map(o => o.score)} /> : title}
+                  ) : title}
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
                   fillSpace

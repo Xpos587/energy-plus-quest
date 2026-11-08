@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { expect, it, vi } from "vitest";
 import { remainingScenes, ScenesGame } from "./ScenesGame";
 
-it("separates complete condition from choice and remembers reading across result/scene returns", async () => {
+it("shows scene 2 condition with its choice, separates later conditions and remembers reading across result/scene returns", async () => {
   vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
   const host = document.createElement("div");
   document.body.append(host);
@@ -39,21 +39,12 @@ it("separates complete condition from choice and remembers reading across result
         </StrictMode>,
       ),
     );
-    expect(condition()).not.toBeNull();
-    const readText = await read();
-    const intro = remainingScenes[0]
-      .intro(context)
-      .slice(0, -1)
-      .join(" ")
-      .replace(/\s+/g, " ")
-      .trim();
-    expect(readText).toBe(intro);
+    // Scene 2 (Teo 05.11): condition and choice share one screen, nothing to page through.
+    expect(condition()).toBeNull();
+    expect(find("Задание")).toBeUndefined();
     expect(
       host.querySelector('[data-testid="scene-question"]')?.textContent,
-    ).not.toContain(remainingScenes[0].intro(context)[0]);
-    await click(find("Задание"));
-    expect(condition()).not.toBeNull();
-    await read();
+    ).toContain(remainingScenes[0].intro(context)[0]);
     await click(host.querySelector('[data-hotspot="place-1"]'));
     await click(host.querySelector("[data-choice-confirm]"));
     expect(host.querySelector("[data-result]")).not.toBeNull();
@@ -96,10 +87,11 @@ it("opens the new separate condition even when an older immediate-choice save st
     recipient: "khor",
     parcel: "boat",
   } as const;
-  const intro = remainingScenes[0].intro(context).slice(0, -1);
+  // Scene 2 has no separate condition (one screen); the warehouse still does.
+  const intro = remainingScenes[1].intro(context);
   const key =
     "briefing:open:" +
-    remainingScenes[0].title.replace(/^Сцена \d+\.\s*/, "") +
+    remainingScenes[1].title.replace(/^Сцена \d+\.\s*/, "") +
     intro.join("\n\n");
   localStorage.setItem(
     "energy-quest-save-v1",
@@ -120,7 +112,7 @@ it("opens the new separate condition even when an older immediate-choice save st
     await act(async () =>
       root.render(
         <GameProvider persist>
-          <ScenesGame context={context} />
+          <ScenesGame context={context} startAt="inventory" />
         </GameProvider>,
       ),
     );
