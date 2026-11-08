@@ -1,7 +1,9 @@
 import {test,expect} from '@playwright/test';
 const subjects: Record<string,number[]> = {
- entrance:[600,245,1265,710], keeper:[75,155,735,860],
- wms:[80,165,1200,875], helicopter:[330,570,1340,1090],
+ // Current inventory outcomes (10-28 art): entrance 2004x785 worker + the box he pushes (phones keep
+ // «Приёмка», b0353e2), keeper 1672x941 the whole storekeeper, wms 1671x941 as inventory-wms-framing.spec.ts.
+ entrance:[600,245,1090,710], keeper:[215,100,700,886],
+ wms:[409,158,1290,870], helicopter:[330,570,1340,1090],
 };
 for(const [width,height] of [[393,852],[820,1180],[1440,900]])
 for (const [scene,choice] of [['inventory','entrance'],['inventory','keeper'],['inventory','wms'],['lastmile','helicopter']]) {
