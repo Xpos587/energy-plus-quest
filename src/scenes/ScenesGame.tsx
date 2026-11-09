@@ -1,4 +1,4 @@
-import { ChartLine, Heart, Scale, Zap } from "lucide-react";
+import { ChartLine, Heart, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { QuestHeader } from "../components/QuestShell";
 import { ResultCopy } from "../components/ResultCopy";
@@ -129,32 +129,40 @@ const tapHintText = (id: SceneId, focused?: string) =>
 const resultHeadings: Partial<Record<SceneId, Record<string, string>>> = {
   inventory: {
     entrance: "Лишний крюк до отгрузки",
-    alphabet: "Подарок далеко от отгрузки",
-    keeper: "Место знал только кладовщик",
+    alphabet: "Подарок в середине алфавита, груз — в начале",
+    keeper: "Место знал один кладовщик",
     wms: "Система выбрала место у отгрузки",
   },
   crane: {
-    remote: "Иван грузит из офиса",
-    rush: "Иван поспешил на кран",
-    wait: "Баржа ушла по расписанию",
-    petr: "Пётр выручил, но свой груз отложил",
+    remote: "Кран из офиса, без подъёма",
+    rush: "Подъём в кабину — много сил",
+    wait: "Баржа ушла без подарка",
+    petr: "Пётр выручил, свой груз отложил",
   },
   lastmile: lastmileHeadings,
+};
+/** Scene 1 result headings (R19, call 05.11): what happened to the parcel, no verdict. */
+export const carrierHeadings: Record<string, string> = {
+  old: "Сервис — подарок на неделю позже",
+  old4: "Сервис — подарок на неделю позже",
+  near: "Рядом, но на три дня позже",
+  crew: "За рулём двое — на три дня раньше",
+  express: "Платформа выбрала — на неделю раньше",
 };
 // The truck outcome depends on the parcel.
 const compactHeadings: Record<ParcelId, Record<string, string>> = {
   socks: {
-    "place-1": "Носки разлетелись по кузову",
-    "place-2": "Носки заняли место до самой крыши",
-    "place-3": "Носки закрепили, место осталось",
+    "place-1": "Один носок здесь, другой там",
+    "place-2": "Носки под крышей — больше ничего не влезет",
+    "place-3": "Носки в нише, место осталось",
     "place-4": "Носки заняли место трёх ящиков",
     auto: "Compact выбрал место 3",
   },
   camera: {
     "place-1": "Фотоаппарат разбил посуду",
-    "place-2": "Место до крыши пустует",
-    "place-3": "Фотоаппарат закрепили в нише",
-    "place-4": "До фотоаппарата долго пробирались",
+    "place-2": "Место над фотоаппаратом пустует",
+    "place-3": "Фотоаппарат в нише — до него тянуться",
+    "place-4": "К фотоаппарату долго пробирались",
     auto: "Compact выбрал место 3",
   },
   boat: {
@@ -176,30 +184,6 @@ export function SceneGoals({ goals }: { goals: SceneBrief["goals"] }) {
     </ul>
   );
 }
-const overtakes = ["", "один вариант", "два варианта", "три варианта", "четыре варианта"];
-/** How the choice stands against the other options on its own scales: no
- * good/bad verdict (the client rejected it), the strongest relative side named
- * by the scene goal. */
-export function compareChoice(score: Scores, all: Scores[], goals: SceneBrief["goals"]) {
-  const others = [...all];
-  others.splice(all.indexOf(score), 1);
-  const sides = scorePoints.map(({ key }, index) => ({
-    key,
-    goal: `«${goals[index]}»`,
-    beats: others.filter((o) => score[key] > o[key]).length,
-    beaten: others.some((o) => o[key] > score[key]),
-    tied: others.some((o) => o[key] === score[key]),
-  }));
-  const best = sides.filter((side) => !side.beaten && !side.tied && side.beats > 0);
-  if (best.length === 3) return { key: "all", text: "Лучше всех вариантов по всем трём шкалам" };
-  // «Лучше всех» on every second option read as flattery (call 02.11): name the strength, not a winner.
-  if (best.length) return { key: best[0].key, text: `${best.length > 1 ? "Сильные стороны" : "Сильная сторона"}: ${best.map((side) => side.goal).join(" и ")}` };
-  const shared = sides.find((side) => !side.beaten && side.beats > 0);
-  if (shared) return { key: shared.key, text: `Наравне с лучшими: ${shared.goal}` };
-  const top = [...sides].sort((x, y) => y.beats - x.beats)[0];
-  if (top.beats) return { key: top.key, text: `Обходит ${overtakes[top.beats]}: ${top.goal}` };
-  return { key: "none", text: "Другие варианты сильнее по всем шкалам" };
-}
 const optionTitles: Record<string, string> = {
   "place-1": "Место 1",
   "place-2": "Место 2",
@@ -220,13 +204,11 @@ const optionTitles: Record<string, string> = {
 };
 const zeroScores: Scores = { energy: 0, empathy: 0, efficiency: 0 };
 
-export function ChoiceVerdict({ picked, goals, score, all }: { picked: string; goals: SceneBrief["goals"]; score: Scores; all: Scores[] }) {
-  const { key, text } = compareChoice(score, all, goals);
-  const Icon = scorePoints.find((point) => point.key === key)?.icon ?? Scale;
+export function ChoiceVerdict({ picked, heading }: { picked: string; heading: string }) {
   return (
-    <span className={flow.compactVerdict} data-verdict={key}>
+    <span className={flow.compactVerdict} data-verdict="none">
       <small>{picked}</small>
-      <span><Icon aria-hidden="true" size={26} strokeWidth={2.2} />{text}</span>
+      <span>{heading}</span>
     </span>
   );
 }
@@ -380,7 +362,8 @@ function ScenesSession({
     }
   };
   const playing = inspectsOnArt && scene.id === "crane" ? playingCrane : undefined;
-  useEffect(() => setPlayingCrane(undefined), [state.sceneIndex, state.phase]);
+  // A new screen starts clean: no stale hover/focus highlight carried over from the last pick (R19).
+  useEffect(() => { setPlayingCrane(undefined); setFocusedChoice(undefined); }, [state.sceneIndex, state.phase]);
 
   useEffect(() => {
     const screen = `${state.sceneIndex}:${state.phase}`;

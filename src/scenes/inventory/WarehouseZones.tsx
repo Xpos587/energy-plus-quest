@@ -1,4 +1,5 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { SoftGlow } from "../SoftGlow";
 import type { SceneContext } from "../types";
 import styles from "./WarehouseZones.module.css";
 import { warehouseChoices } from "./warehouseZones";
@@ -20,7 +21,6 @@ type WarehouseZonesProps = {
  */
 export function WarehouseZones({ context, selectedId, onSelect, focusedId, onFocusChange, composition = "wide" }: WarehouseZonesProps) {
   const contours = warehouseDrawing(composition);
-  const hole = `warehouse-hole-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
   const root = useRef<HTMLDivElement>(null);
   const [keyboardId, setKeyboardId] = useState<string>();
   // Keyboard focus on a pin lights the same glow as pointing at the object.
@@ -41,18 +41,7 @@ export function WarehouseZones({ context, selectedId, onSelect, focusedId, onFoc
   return (
     <div ref={root} className={styles.overlay} data-warehouse-annotations data-warehouse-lit={onSelect ? lit ?? "all" : undefined} aria-hidden="true">
       <svg className={styles.drawing} viewBox={`0 0 ${contours.width} ${contours.height}`} focusable="false" aria-hidden="true">
-        {litPath && (
-          <>
-            <defs>
-              <filter id={`${hole}f`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9" /></filter>
-              <mask id={hole} maskUnits="userSpaceOnUse" x="0" y="0" width={contours.width} height={contours.height}>
-                <rect width={contours.width} height={contours.height} fill="white" />
-                <path d={litPath} fill="black" />
-              </mask>
-            </defs>
-            <path className={styles.glow} data-warehouse-glow={lit} d={litPath} strokeWidth="28" strokeLinejoin="round" filter={`url(#${hole}f)`} mask={`url(#${hole})`} />
-          </>
-        )}
+        {litPath && <SoftGlow className={styles.glow} data-warehouse-glow={lit} d={litPath} />}
         {warehouseChoices.map(id => {
           const contour = warehouseContour(id, context.parcel, composition);
           const interactive = !!onSelect && (!selectedId || selectedId === id);

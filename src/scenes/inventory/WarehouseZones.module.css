@@ -6,7 +6,7 @@
 .zone[data-interactive="true"] { pointer-events: auto; cursor: pointer; }
 
 /* Pointing at a choice lights a soft glow around its shape; nothing else changes. */
-.glow { fill: none; stroke: #fff; pointer-events: none; animation: glowIn 220ms ease-out both; }
+.glow { pointer-events: none; animation: glowIn 220ms ease-out both; }
 @keyframes glowIn { from { opacity: 0; } }
 
 @media (prefers-reduced-motion: reduce) {

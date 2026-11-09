@@ -1,4 +1,5 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { SoftGlow } from "../SoftGlow";
 import contours from "./segmentedContours.json";
 import styles from "./LastmileZones.module.css";
 
@@ -31,7 +32,6 @@ const below = new Set(["pipe-carrier", "robot"]);
  */
 export function LastmileZones({ labels, composition, selectedId, onSelect, focusedId, onFocusChange }: Props) {
   const drawing = contours[composition];
-  const hole = `lastmile-hole-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
   const root = useRef<HTMLDivElement>(null);
   const [seen, setSeen] = useState<string[]>([]);
   const [keyboardId, setKeyboardId] = useState<string>();
@@ -53,14 +53,7 @@ export function LastmileZones({ labels, composition, selectedId, onSelect, focus
   return (
     <div ref={root} className={styles.overlay} data-lastmile-annotations data-lastmile-selection={selectedId} data-lastmile-lit={lit} aria-hidden="true">
       <svg className={styles.drawing} viewBox={`0 0 ${drawing.width} ${drawing.height}`} focusable="false">
-        <defs>
-          <filter id={`${hole}f`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9" /></filter>
-          <mask id={hole} maskUnits="userSpaceOnUse" x="0" y="0" width={drawing.width} height={drawing.height}>
-            <rect width={drawing.width} height={drawing.height} fill="white" />
-            {lit && <path d={drawing.regions[lit as typeof ids[number]].path} fill="black" />}
-          </mask>
-        </defs>
-        {lit && <path className={styles.glow} data-lastmile-glow={lit} d={drawing.regions[lit as typeof ids[number]].path} strokeWidth="28" strokeLinejoin="round" filter={`url(#${hole}f)`} mask={`url(#${hole})`} />}
+        {lit && <SoftGlow className={styles.glow} data-lastmile-glow={lit} d={drawing.regions[lit as typeof ids[number]].path} />}
         {ids.map((id, i) => {
           const b = bounds(drawing.regions[id].path);
           const idle = !lit && !selectedId && !seen.includes(id);

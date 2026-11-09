@@ -25,7 +25,8 @@ div.layer { overflow: hidden; }
 .cable { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .cable line { stroke: #2b2f36; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
 /* Who and what the chosen way uses: a soft glow, no outline (client: outlines look childish). */
-.layer[data-lit] { filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 9px #fff) drop-shadow(0 0 16px #ffffffb3); }
+/* R19: feathered halo; no tight white rim that reads as a sticker cut-out. */
+.layer[data-lit] { filter: drop-shadow(0 0 8px #ffffffb3) drop-shadow(0 0 20px #ffffff8c); }
 .layer[data-busy] { animation: busy 900ms ease-in-out infinite; }
 @keyframes busy { 50% { filter: drop-shadow(0 0 2px #ff5500) drop-shadow(0 0 12px #ffb37a); } }
 .stage[data-playing] .hotspot:not([aria-pressed="true"]) { opacity: 0; transition: opacity 200ms; }

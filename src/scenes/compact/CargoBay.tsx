@@ -75,6 +75,7 @@ export function CargoBay({
   const cabClip = useId();
   const cabHue = useId();
   const cabBlue = useId();
+  const glow = useId();
   const cabMask = useId();
   // The carrier choice is identified by color on the city map. Keep that
   // identity on the same truck here without recoloring cargo or surroundings.
@@ -94,6 +95,8 @@ export function CargoBay({
     >
       <title>Грузовой отсек</title>
       <defs>
+        {/* R19: a lit place feathers out instead of showing a hard box. */}
+        <filter id={glow} x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8" /></filter>
         {hue !== undefined && <>
           <clipPath id={cabClip}>
             <path transform={`translate(0 ${offsetY})`} d={portrait
@@ -179,6 +182,10 @@ export function CargoBay({
           />
         </foreignObject>
       )}
+      {(regions ?? (portrait ? portraitCargoSpaces : cargoSpaces)).map((space) => (placement === space.number || focused === space.id) && (
+        <rect key={`glow-${space.id}`} className={styles.glow} filter={`url(#${glow})`} x={space.x} y={space.y + offsetY} width={space.width} height={space.height} rx="10" />
+      ))}
+      {terminal && (autoActive || focused === "auto") && <rect className={styles.glow} filter={`url(#${glow})`} x={terminal.x} y={terminal.y + offsetY} width={terminal.width} height={terminal.height} rx="10" />}
       {(regions ?? (portrait ? portraitCargoSpaces : cargoSpaces)).map((space) => (
         <rect
           key={space.id}

@@ -318,7 +318,8 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             onClick={() => onSelect?.(option.id)}
             onPointerEnter={() => setHovered(option.id)}
             onPointerLeave={() => setHovered(undefined)}
-            onFocus={() => setHovered(option.id)}
+            // Only keyboard focus lights the actor; the programmatic focus restored after «Изменить выбор» must not (R19).
+            onFocus={(event) => { if (event.currentTarget.matches(":focus-visible")) setHovered(option.id); }}
             onBlur={() => setHovered(undefined)}
           />
         ))}

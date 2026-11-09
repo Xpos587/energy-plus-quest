@@ -46,7 +46,8 @@ export function SceneChoices<Id extends string>({
           data-focused={onFocusChange ? focusedId === id : undefined}
           onPointerEnter={onFocusChange && (() => onFocusChange(id))}
           onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
-          onFocus={onFocusChange && (() => onFocusChange(id))}
+          // Keyboard focus only: focus restored to the last pick after «Изменить выбор» must not light it (R19).
+          onFocus={onFocusChange && ((event) => { if (event.currentTarget.matches(":focus-visible")) onFocusChange(id); })}
           onBlur={onFocusChange && (() => onFocusChange(undefined))}
           onClick={() => onInspect(id)}
         >

@@ -214,7 +214,7 @@ export function CompactArt({
                 "--marker-height": space.height,
               } as CSSProperties
             }
-            onFocus={() => setFocused(space.id)}
+            onFocus={(event) => { if (event.currentTarget.matches(":focus-visible")) setFocused(space.id); }}
             onBlur={() => setFocused(undefined)}
             onPointerEnter={() => setFocused(space.id)}
             onPointerLeave={() => setFocused(undefined)}

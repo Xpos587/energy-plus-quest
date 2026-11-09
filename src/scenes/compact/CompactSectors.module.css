@@ -52,12 +52,18 @@
     fill-opacity 160ms ease,
     stroke 160ms ease;
 }
+/* R19: the lit place is a soft orange glow (.glow, blurred), not a hard tinted box. */
 .space[data-focused="true"] {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+.glow {
   fill: var(--orange);
-  fill-opacity: 0.18;
+  fill-opacity: 0.28;
   stroke: var(--orange);
-  stroke-opacity: 1;
-  stroke-width: 2;
+  stroke-opacity: 0.55;
+  stroke-width: 14;
+  pointer-events: none;
 }
 /* Continuous, seamless motion marks available placements only while choosing. */
 @keyframes placementOutline {
