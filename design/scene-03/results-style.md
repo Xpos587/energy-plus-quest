@@ -17,7 +17,7 @@ Cast (same people in every scene 3 result, matches the scene 3 overview):
 
 Workwear (PPE) is the company suit of the original 10-28 results and scene 4 (Ivan, Pyotr): cobalt-blue jacket with an
 orange yoke, light-grey reflective stripes on chest, waist and arms, orange trousers with blue lower legs and reflective
-bands, dark boots. Same cut on everyone. Plain navy overalls without orange read as prison wear — do not use them.
+bands, dark boots. Same cut on everyone, no patches or flags. Plain navy overalls without orange read as prison wear — do not use them.
 Reference: `results-v2/ppe-ref.jpg`.
 
 Emotion must match the result text (`src/scenes/implementationText.ts`):
