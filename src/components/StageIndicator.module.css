@@ -5,19 +5,20 @@
   flex: none;
   --blue: #075d9b;
   --pale: #c3d8e8;
-  --stop: 24px;
-  --now: 36px;
-  --leg: 10px;
+  --stop: 40px;
+  --now: 52px;
+  --leg: 8px;
 }
+/* Calm next to the logos (Michael, 06.11): thin rings, no shadows; the
+ * current stop is only a little larger, with a 2 px blue ring. */
 .indicator i {
   position: relative;
   flex: none;
   width: var(--stop);
   height: var(--stop);
-  padding: 2px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 0 0 1.5px var(--pale);
+  border: 1px solid var(--pale);
 }
 .indicator img {
   display: block;
@@ -26,16 +27,16 @@
   border-radius: 50%;
   object-fit: cover;
 }
-.indicator i[data-leg="ahead"] img { filter: grayscale(1) brightness(1.08); opacity: .55; }
-.indicator i[data-leg="done"] { box-shadow: 0 0 0 1.5px var(--blue); }
-/* Passed stop: small tick badge, picture stays in colour. */
+.indicator i[data-leg="ahead"] img { filter: grayscale(1) brightness(1.08); opacity: .45; }
+.indicator i[data-leg="done"] { border-color: var(--blue); }
+/* Passed stop: small tick badge, so it differs from the current one by more than its ring. */
 .indicator i[data-leg="done"]::after {
   content: "";
   position: absolute;
   right: -3px;
   bottom: -3px;
-  width: 10px;
-  height: 10px;
+  width: var(--tick, 12px);
+  height: var(--tick, 12px);
   border-radius: 50%;
   background: var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6.2l2 2 4-4.4' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
   box-shadow: 0 0 0 1.5px #fff;
@@ -43,30 +44,23 @@
 .indicator i[data-leg="current"] {
   width: var(--now);
   height: var(--now);
-  box-shadow: 0 0 0 2px var(--blue), 0 3px 10px #075d9b33;
+  border: 2px solid var(--blue);
 }
 .indicator b {
   flex: none;
   width: var(--leg);
-  margin-inline: 3px;
-  border-top: 2px solid var(--blue);
+  margin-inline: 2px;
+  border-top: 1px solid var(--blue);
 }
-.indicator b[data-leg="ahead"] { border-top: 2px dotted var(--pale); }
-.goal { flex: none; color: #ff5500; }
+.indicator b[data-leg="ahead"] { border-top: 1px dotted var(--pale); }
 
-/* Phones: the same route, smaller — separate stops, thin legs, no ticks
- * (the blue ring already marks a passed stop). */
+/* Phones: 26/34 squeezed the logos at 320 px (166 → 136 px), 24/30 keeps them. */
 @media (max-width: 600px) {
-  .indicator { --stop: 22px; --now: 30px; --leg: 5px; }
-  .indicator i { padding: 0; overflow: hidden; box-shadow: none; border: 1.5px solid var(--pale); }
-  .indicator i[data-leg="done"] { box-shadow: none; border-color: var(--blue); }
-  .indicator i[data-leg="done"]::after { display: none; }
-  .indicator i[data-leg="current"] { box-shadow: 0 2px 6px #075d9b33; border: 2px solid var(--blue); }
-  .indicator b { margin-inline: 1px; border-top-width: 1.5px; }
-  .goal { width: 16px; margin-left: 2px; }
+  .indicator { --stop: 24px; --now: 30px; --leg: 4px; --tick: 9px; }
+  .indicator i[data-leg="done"]::after { right: -2px; bottom: -2px; }
 }
 @media (max-width: 360px) {
-  .indicator { --stop: 20px; --now: 28px; --leg: 4px; }
+  .indicator { --stop: 22px; --now: 26px; --leg: 3px; --tick: 8px; }
 }
 /* The phone result header has room only for the two logos; the scene
  * screens around it carry the route. */

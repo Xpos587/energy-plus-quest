@@ -1,4 +1,3 @@
-import { MapPin } from "lucide-react";
 import { Fragment } from "react";
 import { imageAsset } from "../game/imageAssets";
 import styles from "./StageIndicator.module.css";
@@ -12,11 +11,15 @@ export const routeArt = {
   barge: imageAsset("opening/route-v1/barge.webp"),
   "last-mile": imageAsset("opening/route-v1/lastmile.webp"),
 } as const;
-const stops = Object.values(routeArt);
+/* Header-only icons (Teo, 03.11): one big object per stage, so it still
+ * reads at 26 px on a phone where the route pictures turn into noise. */
+const stops = ["carrier", "loading", "warehouse", "barge", "lastmile"].map((key) =>
+  imageAsset(`opening/stage-icons-v1/${key}.webp`),
+);
 
 /** Header progress (meeting 29.10, call 02.11): the intro route in miniature.
- * Every stop shows its stage picture: passed ones ticked, the current one
- * large, the ones ahead pale; the pin is the destination. No caption: the
+ * Every stop shows its stage object: passed ones ticked, the current one
+ * large, the ones ahead pale. No caption: the
  * route itself says how far is left; the stage is named for screen readers. */
 export function StageIndicator({ step, total, label }: { step: number; total: number; label: string }) {
   return (
@@ -30,8 +33,6 @@ export function StageIndicator({ step, total, label }: { step: number; total: nu
           </Fragment>
         );
       })}
-      <b data-leg="ahead" />
-      <MapPin className={styles.goal} size={18} strokeWidth={2.4} aria-hidden="true" />
     </span>
   );
 }
