@@ -16,7 +16,7 @@ for (const [width, height] of [[624, 794], [390, 844], [320, 568]]) {
       for (let index = 0; index < 30 && await briefing.isVisible(); index++) await briefing.click();
       await page.locator(`[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();
       await page.locator("[data-choice-confirm]").click();
-      await expect(page.locator("[data-result-reading]")).toBeVisible();
+      await expect(page.locator("[data-result-reading]")).toBeVisible({ timeout: 15_000 }); // the quay plays the crane consequence first
       await page.evaluate(() => document.fonts.ready);
       const samples = await page.evaluate(async () => {
         const reader = document.querySelector<HTMLElement>("[data-result-reader]")!;

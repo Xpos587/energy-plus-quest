@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+// The quay outcome animation is covered by barge-flow; here the result comes at once.
+test.use({ contextOptions: { reducedMotion: 'reduce' } });
 
 const captures = process.env.BARGE_CAPTURE_DIR ?? '.tmp-work/barge-style-after';
 
@@ -27,6 +29,7 @@ for (const parcel of ['camera', 'socks', 'boat']) {
       await expect(page.locator('[data-result-reader]')).toHaveCount(0);
       await choice.click();
       await confirm.click();
+      await expect(page.locator('[data-result-reader]')).toBeVisible(); // page through only once the result is there
       for (let n = 0; n < 30; n++) {
         const more = page.getByRole('button', { name: 'Читать дальше', exact: true });
         if (!await more.isVisible()) break;

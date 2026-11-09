@@ -14,6 +14,22 @@ export type CraneBeat = {
   sail: number;
   /** A story actor working right now (pulses). */
   busy?: "ladder" | "ivan" | "far";
+  /** Ivan behind the ПРУ window; undefined = at the console as drawn. */
+  office?: "joy" | "wave" | "cheer" | "watch" | "empty";
+  /** Petr's far crane cab; undefined = Petr at his controls. */
+  cab?: "sad" | "empty";
+  /** Who sits in the near crane cab. */
+  operator?: "ivan" | "petr";
+  /** A figure on the quay: sprite name and feet position in world metres. */
+  walker?: { pose: string; at: readonly [number, number, number]; flip?: boolean };
+  /** A small reaction drawn over a character. */
+  emote?: { kind: "tired" | "question" | "sad"; at: "office" | "near" | "far" };
+  /** Remote-control signal from the office to the near crane. */
+  signal?: boolean;
+  /** The 3-hour wait, 0..1; undefined hides the clock. */
+  clock?: number;
+  /** Petr's own crates wait for later. */
+  later?: boolean;
 };
 
 const last = craneWorld.slews.length - 1;
@@ -32,9 +48,22 @@ type Step = { ms: number; at: (t: number) => Partial<CraneBeat> };
 const tipAt = (frame: number) => craneWorld.tips[frame];
 const hookUnder = (frame: number, z: number) => [tipAt(frame)[0], tipAt(frame)[1], z] as const;
 
-function load(prelude: Step[], busy: CraneBeat["busy"]): Step[] {
-  return [
-    ...prelude,
+// Quay spots in world metres (feet on the quay, z up).
+const door = [-9.8, 14.6, 0] as const; // ПРУ entrance
+const ladderFoot = [7.34, 3.87, 0] as const;
+const ladderTop = [7.34, 3.87, 10.9] as const;
+const farFoot = [41.3, 3.05, 0] as const; // front leg of Petr's crane
+const along = (a: readonly number[], b: readonly number[], t: number) => [lerp(a[0], b[0], t), lerp(a[1], b[1], t), lerp(a[2], b[2], t)] as const;
+/** Two-frame gait: the frame flips every `beat` ms of a step lasting `ms`. */
+const gait = (names: readonly [string, string], t: number, ms: number, beat = 140) => names[Math.floor((t * ms) / beat) % 2];
+
+function walk(ms: number, pose: readonly [string, string], from: readonly number[], to: readonly number[], keep: Partial<CraneBeat> = {}, flip = false): Step {
+  return { ms, at: (t) => ({ ...keep, walker: { pose: gait(pose, t, ms), at: along(from, to, t), flip } }) };
+}
+
+/** The common loading run; `keep` holds for the whole run, `end` joins it once the gift is released. */
+function load(prelude: Step[], busy: CraneBeat["busy"], keep: Partial<CraneBeat> = {}, end: Partial<CraneBeat> = {}): Step[] {
+  const steps: Step[] = [
     // the boom swings from the barge to the gift
     { ms: 700, at: (t) => { const f = Math.round(lerp(last, 0, ease(t))); return { frame: f, hook: hookUnder(f, high), busy }; } },
     // hook down to the slings, then up with the gift
@@ -45,20 +74,49 @@ function load(prelude: Step[], busy: CraneBeat["busy"]): Step[] {
     { ms: 360, at: (t) => ({ frame: last, hook: hookUnder(last, lerp(high, deckAttach, ease(t))), lifted: true, busy }) },
     // release: the hook rises, the gift stays aboard
     { ms: 260, at: (t) => ({ frame: last, hook: hookUnder(last, lerp(deckAttach, high, ease(t))), onDeck: true }) },
-    { ms: 1150, at: (t) => ({ frame: last, hook: hookUnder(last, high), onDeck: true, sail: t * t }) },
+    { ms: 1600, at: (t) => ({ frame: last, hook: hookUnder(last, high), onDeck: true, sail: t * t }) },
   ];
+  const n = steps.length;
+  return [...prelude, ...steps.map((step, i) => ({ ms: step.ms, at: (t: number) => ({ ...keep, ...(i >= n - 2 ? end : {}), ...step.at(t) }) }))];
 }
 
+const rest = () => ({ frame: last, hook: hookUnder(last, high) });
+
 const timelines: Record<string, Step[]> = {
-  remote: load([], "ivan"),
-  petr: load([], "far"),
-  // Ivan first climbs the tall ladder to the cabin.
-  rush: load([{ ms: 650, at: () => ({ frame: last, hook: hookUnder(last, high), busy: "ladder" }) }], "ladder"),
-  // Nobody is at the crane: the barge leaves on time, the gift stays on the quay.
+  // Ivan takes the joystick; the signal runs to the empty cab; he waves the barge off.
+  remote: load(
+    [{ ms: 600, at: () => ({ ...rest(), office: "joy", signal: true }) }],
+    "ivan", { office: "joy", signal: true }, { office: "wave", signal: false },
+  ),
+  // Ivan runs out of the office, climbs the tall ladder, loads, and is out of breath.
+  rush: load(
+    [
+      { ms: 250, at: () => ({ ...rest(), office: "empty", walker: { pose: "ivan-run1", at: door } }) },
+      walk(1300, ["ivan-run1", "ivan-run2"], door, ladderFoot, { ...rest(), office: "empty" }),
+      walk(1100, ["ivan-climb1", "ivan-climb2"], ladderFoot, ladderTop, { ...rest(), office: "empty", busy: "ladder" }),
+    ],
+    "ladder", { office: "empty", operator: "ivan" }, { emote: { kind: "tired", at: "near" } },
+  ),
+  // Nobody is at the crane: the barge leaves on time, the clock runs three hours,
+  // the crane swings to the gift with nowhere to put it, Ivan checks his watch.
   wait: [
-    { ms: 350, at: () => ({ frame: last, hook: hookUnder(last, high) }) },
-    { ms: 1500, at: (t) => ({ frame: last, hook: hookUnder(last, high), sail: t * t }) },
+    { ms: 500, at: () => ({ ...rest(), clock: 0 }) },
+    { ms: 1600, at: (t) => ({ ...rest(), clock: 0, sail: t * t }) },
+    { ms: 1300, at: (t) => ({ ...rest(), clock: ease(t), sail: 1 }) },
+    { ms: 800, at: (t) => { const f = Math.round(lerp(last, 0, ease(t))); return { frame: f, hook: hookUnder(f, high), clock: 1, sail: 1 }; } },
+    { ms: 400, at: (t) => ({ frame: 0, hook: [gx, gy, lerp(high, craneWorld.hookAttach, ease(t))], clock: 1, sail: 1 }) },
+    { ms: 1400, at: () => ({ frame: 0, hook: [gx, gy, craneWorld.hookAttach], clock: 1, sail: 1, office: "watch", emote: { kind: "question", at: "office" } }) },
   ],
+  // Petr leaves his own crates, walks over, climbs, loads; he is sad, Ivan cheers.
+  petr: load(
+    [
+      { ms: 500, at: () => ({ ...rest(), busy: "far" }) },
+      { ms: 250, at: () => ({ ...rest(), cab: "empty", later: true, walker: { pose: "petr-walk1", at: farFoot, flip: true } }) },
+      walk(1700, ["petr-walk1", "petr-walk2"], farFoot, ladderFoot, { ...rest(), cab: "empty", later: true }, true),
+      walk(1000, ["petr-climb", "petr-climb"], ladderFoot, ladderTop, { ...rest(), cab: "empty", later: true }),
+    ],
+    "far", { cab: "empty", operator: "petr", later: true }, { office: "cheer", emote: { kind: "sad", at: "near" } },
+  ),
 };
 
 export const craneRest: CraneBeat = { frame: last, hook: hookUnder(last, high), lifted: false, onDeck: false, sail: 0 };

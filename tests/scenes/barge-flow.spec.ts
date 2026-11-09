@@ -37,7 +37,9 @@ for (const viewport of [
     await page.locator('[data-hotspot="remote"]').click();
     await expect(page.locator("[data-score-key]")).toHaveCount(0);
     await page.locator("[data-choice-confirm]").click();
-    await expect(page.locator("[data-score-key]")).toHaveCount(3);
+    // The quay plays the consequence first, then the result reads.
+    await expect(page.locator("[data-playing]")).toHaveCount(1);
+    await expect(page.locator("[data-score-key]")).toHaveCount(3, { timeout: 15_000 });
     const resultImage = page.locator(
       '[data-scene-consequence="crane-remote"] img',
     );
@@ -55,7 +57,12 @@ for (const viewport of [
       await resultImage.evaluate(
         (image: HTMLImageElement) => new URL(image.currentSrc).pathname,
       ),
-    ).toBe("/scene-art/barge-v4/outcome-remote.webp");
+    ).toBe(
+      // The desktop rail (≥1001×701) takes the near-square cut of the same still.
+      viewport.width > 1000 && viewport.height > 700
+        ? "/scene-art/barge-v4/outcome-remote-rail.webp"
+        : "/scene-art/barge-v4/outcome-remote.webp",
+    );
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,

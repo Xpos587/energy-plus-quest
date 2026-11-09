@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 for (const [scene, id] of [
   ["carrier", "express"],
   ["compact", "place-1"],
@@ -9,26 +10,25 @@ for (const [scene, id] of [
   test(`${scene} result controls share a symmetric grid`, async ({
     page,
   }, info) => {
-    await page.goto(
-      scene === "carrier"
-        ? "/"
-        : `/scenes.html?scene=${scene}&parcel=boat&recipient=khor`,
-    );
-    if (scene === "carrier")
-      for (const id of ["professional", "arseniy", "socks"])
-        await page.locator(`[data-choice="${id}"]`).click();
-    const intro = page.getByRole("region", {
-      name: "Условие задания",
-      exact: true,
-    });
-    for (let n = 0; n < 30 && (await intro.isVisible()); n++)
-      await intro
-        .getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ })
-        .click();
-    await page.locator(`[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${id}"]`).click();
-    await page.locator("[data-choice-confirm]").click();
+    if (scene === "carrier") {
+      await openCarrier(page, "professional", "arseniy", "socks");
+      await pickCarrier(page, id as "express");
+    } else {
+      await page.goto(`/scenes.html?scene=${scene}&parcel=boat&recipient=khor`);
+      const intro = page.getByRole("region", {
+        name: "Условие задания",
+        exact: true,
+      });
+      for (let n = 0; n < 30 && (await intro.isVisible()); n++)
+        await intro
+          .getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ })
+          .click();
+      await page.locator(`[data-hotspot="${id}"]`).click();
+    }
+    // Last mile opens the result straight from the vehicle; the others confirm on a card.
+    if (scene !== "lastmile") await page.locator("[data-choice-confirm]").click();
     const footer = page.locator("[data-result-reader] footer");
-    await expect(footer).toBeVisible();
+    await expect(footer).toBeVisible({ timeout: 15_000 }); // the quay plays the crane consequence first
     await page.evaluate(() => document.fonts.ready);
     for (let p = 0; p < 20; p++) {
       const buttons = footer.locator("button");

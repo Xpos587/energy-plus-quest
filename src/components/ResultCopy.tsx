@@ -77,7 +77,7 @@ export function ResultCopy({ paragraphs, title, titleTabIndex, children, navigat
       <div className={styles.narrativeRow} data-result-narrative>
         {title != null && <h2 tabIndex={titleTabIndex}>{title}</h2>}
         {children && <div className={styles.consequence}>{children}</div>}
-        <div ref={body} className={styles.reading} data-result-reading aria-label="Текст результата" tabIndex={navigation ? undefined : 0} aria-live="polite">
+        <div ref={body} className={styles.reading} data-result-reading aria-label="Текст результата" tabIndex={navigation && !continuous ? undefined : 0} aria-live="polite">
           <p data-testid="result-copy">
             {splitReadingParagraphs(continuous || !navigation ? narrative.text : pages[activePage]?.trim() ?? "").map((part, index) =>
               index % 2

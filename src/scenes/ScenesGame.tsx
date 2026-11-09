@@ -101,7 +101,7 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     route: () => "С причала на баржу до Нового Порта",
     goals: ["Беречь силы", "Позаботиться о людях", "Успеть к барже"],
     places: () => Object.fromEntries(
-      Object.entries(craneFacts).map(([id, fact]) => [id, [optionTitles[id], fact.where]]),
+      Object.entries(craneFacts).map(([id, fact]) => [id, [optionTitles[id], fact.note]]),
     ),
   },
   lastmile: {
@@ -209,10 +209,10 @@ const optionTitles: Record<string, string> = {
   keeper: "Кладовщик",
   alphabet: "По алфавиту",
   wms: "Автоподбор места",
-  rush: "Отправить Ивана в кабину крана",
-  wait: "Ждать крана по графику — 3 часа",
+  rush: "Иван идёт на кран и поднимается в кабину",
+  wait: "Ждать кран по графику — 3 часа",
   petr: "Попросить Петра помочь",
-  remote: "Иван управляет краном из офиса",
+  remote: "Иван управляет краном удалённо из офиса ПРУ",
   helicopter: "Вертолёт",
   rover: "Снегоболотоход",
   robot: "Роботизированная тележка",
@@ -552,7 +552,9 @@ function ScenesSession({
                 {...syncFocus}
               />
             )}
-            {inspectsOnArt && !resultVisible && (
+            {/* Fetch the result picture while the quay plays, so the hand-off is not a loading flash. */}
+            {playing && <div hidden><SceneOutcomeArt scene={scene.id} selectedId={playing} context={context} /></div>}
+            {inspectsOnArt && !resultVisible && !playing && (
               <CarrierTapHint
                 selectedId={pending?.id}
                 text={tapHintText(scene.id, focusedChoice && (scene.id === "crane" ? craneCaptions[focusedChoice as keyof typeof craneCaptions] : places?.[focusedChoice]?.[0]))}

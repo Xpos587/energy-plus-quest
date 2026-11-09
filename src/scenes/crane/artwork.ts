@@ -33,44 +33,32 @@ function format(name: CraneFormat) {
   const near: readonly Point[] = [a.nearCabin, a.nearTip, a.quayFootNear, a.ladderTop];
   const corners = (r: { x: number; y: number; w: number; h: number }): Point[] => [[r.x, r.y], [r.x + r.w, r.y + r.h]];
   const sp = layer.sprites;
-  const art = layer;
-  const tall = name === "tall";
-  const rect = (r: { x: number; y: number; w: number; h: number }): Rect => ({ x: r.x, y: r.y, width: r.w, height: r.h });
-  // Small figures get a finger-sized margin.
-  const pad = (r: Rect, m = tall ? 28 : 20): Rect => ({ x: r.x - m, y: r.y - m, width: r.width + 2 * m, height: r.height + 2 * m });
   // Whole figures, not just their centres: office, both cranes, the barge from bow to stern.
-  // The round ПРУ office is about 11 m across.
+  // The round ПРУ office is about 11 m across; the drawn one bulges half a window left of Ivan.
   const [pu, pv] = project([-10 - 6, 20 - 6, 0]);
-  const story: readonly Point[] = [a.pru, [pu, pv], ...corners(sp.ivan), ...corners(sp.gift), ...near, ...corners(sp.ladder),
+  const office: Point = [sp.ivan.x - sp.ivan.w * 0.7, a.pru[1]];
+  const story: readonly Point[] = [a.pru, [pu, pv], office, ...corners(sp.ivan), ...corners(sp.gift), ...near, ...corners(sp.ladder),
     ...corners(sp.far), ...corners(sp.barge)];
-  const focus = around(story, tall ? 40 : 24, width, height);
-  // Tap targets stay inside the strip the camera always shows.
-  const clip = (r: Rect): Rect => {
-    const x = Math.max(r.x, focus.x), y = Math.max(r.y, focus.y);
-    return { x, y, width: Math.min(r.x + r.width, focus.x + focus.width) - x, height: Math.min(r.y + r.height, focus.y + focus.height) - y };
-  };
+  const tall = name === "tall";
+  const pad = (r: { x: number; y: number; w: number; h: number }, d: number) => ({ x: r.x - d, y: r.y - d, w: r.w + 2 * d, h: r.h + 2 * d });
+  // A crane cab is about 7 m across; z px per metre is the vertical affine term.
+  const m = Math.abs(layer.affine[1][2]);
+  const cab = ([x, y]: Point) => ({ x: x - 3.5 * m, y: y - 3.5 * m, w: 7 * m, h: 7 * m });
   return {
     ...layer,
     project,
     // The strip that must stay in frame: office, gift, near crane, barge, far crane.
-    focus,
-    // The figures themselves are the choices; each box is a tap target and a spotlight hole.
-    // Sprites hold only the tops of the cranes, so the boxes reach down to their legs.
-    // The near crane starts right of the gift so the gift is never a target.
-    boxes: {
-      ivan: clip(pad(rect(sp.ivan))),
-      ladder: clip(pad(rect(sp.ladder))),
-      near: clip({ x: sp.ladder.x - sp.ladder.w, y: art.top.y, width: art.top.x + art.top.w - sp.ladder.x + sp.ladder.w, height: a.ladderFoot[1] - art.top.y }),
-      far: clip({ ...rect(sp.far), height: sp.far.h * 1.6 }),
-    } as Record<CraneActor, Rect>,
-    // Where an untried figure breathes.
-    hotspots: {
-      remote: { x: a.ivan[0], y: a.ivan[1] },
-      rush: { x: ladderMid[0], y: ladderMid[1] },
-      wait: { x: a.nearCabin[0], y: a.nearCabin[1] },
-      petr: { x: a.petr[0], y: a.petr[1] },
-    } as Record<string, { x: number; y: number }>,
-    // What each way uses: these layers light up when the way is picked; the first one is tapped.
+    focus: around(story, tall ? 40 : 24, width, height),
+    // Air around the story inside focus; the camera may crop into it to fill the screen.
+    focusPad: tall ? 40 : 24,
+    // Tap targets are the actors themselves: Ivan's window, the ladder, the empty near cab, Petr's cab.
+    targets: {
+      remote: pad(sp.ivan, 14),
+      rush: pad(sp.ladder, 10),
+      wait: cab(a.nearCabin),
+      petr: cab(a.farCabin),
+    } as Record<string, { x: number; y: number; w: number; h: number }>,
+    // What each way uses: these layers light up when the way is picked.
     actors: {
       remote: ["ivan", "near"],
       rush: ["ladder", "near"],
@@ -97,20 +85,20 @@ export const craneArtwork = {
 };
 export { craneWorld };
 
-/** The figure each way is picked by: hover hint, card eyebrow and screen-reader name. */
+/** What each way is about: the card eyebrow. */
 export const craneCaptions = {
-  remote: "Иван в офисе",
-  rush: "Лестница в кабину",
-  wait: "Ближний кран",
+  remote: "Иван в офисе ПРУ, за пультом",
+  rush: "Иван поднимается на кран",
+  wait: "Кран по графику через 3 ч",
   petr: "Пётр на дальнем кране",
 } as const;
 
 /** Card facts, as the truck card lists speed and year: who, from where, when. */
 export const craneFacts = {
-  remote: { who: "Иван", where: "Из офиса, с пульта", when: "Сразу", note: "Кран управляется дистанционно" },
-  rush: { who: "Иван", where: "Из кабины", when: "После подъёма", note: "Подъём по лестнице на высоту крана" },
-  wait: { who: "По графику", where: "Из кабины", when: "Через 3 ч", note: "Баржа готова к отходу уже сейчас" },
-  petr: { who: "Пётр", where: "Из ближнего крана", when: "Сразу", note: "У Петра скоро своя погрузка" },
+  remote: { who: "Иван", where: "Из офиса ПРУ, с пульта", when: "Сразу", note: "Краном управляют на расстоянии, на кран подниматься не нужно" },
+  rush: { who: "Иван", where: "Из кабины крана", when: "После подъёма", note: "Иван дойдёт до крана и поднимется по лестнице в кабину" },
+  wait: { who: "Крановщик по графику", where: "Из кабины", when: "Через 3 ч", note: "Никого не отвлекаем, но баржа готова к отходу уже сейчас" },
+  petr: { who: "Пётр", where: "Из кабины ближнего крана", when: "Сразу", note: "У Петра скоро своя погрузка" },
 } as const;
 
 export const craneOutcomeImage = (id: string) => `${base}/outcome-${id}.webp`;

@@ -36,7 +36,7 @@ for (const [width, height] of [
       if (["carrier", "crane", "compact", "inventory"].includes(scene))
         await page.locator("[data-choice-confirm]").click();
       const reading = page.locator("[data-result-reading]");
-      await expect(reading).toBeVisible();
+      await expect(reading).toBeVisible({ timeout: 15_000 }); // the quay plays the crane consequence first
       await page.evaluate(() => document.fonts.ready);
       let count = 0;
       for (;;) {
