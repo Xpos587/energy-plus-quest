@@ -6,6 +6,7 @@ import { imageAsset } from "../game/imageAssets";
 import { sceneOutcomeImage } from "./artwork";
 import { outcomeCloseup, outcomeFocus } from "./outcomeFraming";
 import { lastmileFlightImage } from "./lastmile/artworkFamily";
+import { craneOutcomeImage } from "./crane/artwork";
 import styles from "./SceneOutcomeArt.module.css";
 import type { SceneContext, SceneId } from "./types";
 
@@ -102,6 +103,13 @@ export function SceneOutcomeArt({
           <ImageSources
             src={imageAsset(lastmileFlightImage(context).replace(/\.webp$/, "-wide.webp"))}
             media="(min-width: 901px) and (min-height: 501px)"
+          />
+        )}
+        {scene === "crane" && (
+          // The right-rail result is 0.96–1.28:1; a near-square cut keeps barge, crane and office whole.
+          <ImageSources
+            src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-rail.webp"))}
+            media="(min-width: 1001px) and (min-height: 701px)"
           />
         )}
         <ImageSources src={artwork.src} />
