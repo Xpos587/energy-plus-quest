@@ -4335,9 +4335,11 @@
     height: auto;
     max-height: none;
   }
-  /* The copy must fit: its scroll area no longer sets the card's height, so the
-     card reports its full text and the artwork takes only what is left. */
+  /* A content-sized card must still paginate against a stable height: the copy
+     keeps a finite max-height, which useTextPages measures instead of the live
+     (content-sized) box, so pages stay full instead of shrinking page by page. */
   .app[data-scene] .frame.frame.frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
+    max-height: clamp(120px, 30dvh, 290px);
   }
 }
