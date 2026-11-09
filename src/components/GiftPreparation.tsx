@@ -36,7 +36,7 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
         : parcels;
   const title =
     state.step === "profile"
-      ? "Кто вы?"
+      ? "Выберите свою роль"
       : state.step === "recipient"
         ? "Кому отправим подарок?"
         : `Что отправим ${state.recipient ? recipientDative[state.recipient] : "в подарок"}?`;
@@ -93,7 +93,7 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
           {/* The role only shapes the final offer; say so, or the choice reads as arbitrary. */}
           {state.step === "profile" && (
             <p className={styles.hint}>
-              Подарок отправляете вы. От роли зависит финал: студенту предложим практику, профессионалу — работу в снабжении.
+              От роли зависит, что мы предложим вам в финале.
             </p>
           )}
         </div>

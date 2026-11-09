@@ -63,7 +63,7 @@ it("returns from sender selection to the introduction and resumes preparation", 
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-enter]')!.click());
   if (host.querySelector('[data-intro-next]')) await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-start]')!.click());
-  expect(host.querySelector("h1")?.textContent).toBe("Кто вы?");
+  expect(host.querySelector("h1")?.textContent).toBe("Выберите свою роль");
   const back = Array.from(host.querySelectorAll("button")).find(button => button.textContent?.trim() === "Назад")!;
   await act(async () => back.click());
   // Back returns to the route sheet the player just left, not the cover.
@@ -74,7 +74,7 @@ it("returns from sender selection to the introduction and resumes preparation", 
   expect(host.textContent).toContain("принимаете наиболее эффективные решения");
   if (host.querySelector('[data-intro-next]')) await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-start]')!.click());
-  expect(host.querySelector("h1")?.textContent).toBe("Кто вы?");
+  expect(host.querySelector("h1")?.textContent).toBe("Выберите свою роль");
   await act(async () => host.querySelector<HTMLButtonElement>('[data-choice="student"]')!.click());
   expect(host.querySelector("h1")?.textContent).toBe("Кому отправим подарок?");
   await act(async () => Array.from(host.querySelectorAll("button")).find(button => button.textContent?.trim() === "Назад")!.click());

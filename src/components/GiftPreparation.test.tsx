@@ -89,7 +89,7 @@ it("names cards as answers and steps back to the sender", async () => {
   await click(host, '[data-choice="khor"]');
   await click(host, "button:not([data-choice])");
   await click(host, "button:not([data-choice])");
-  expect(host.querySelector("h1")?.textContent).toBe("Кто вы?");
+  expect(host.querySelector("h1")?.textContent).toBe("Выберите свою роль");
   expect(JSON.parse(host.querySelector("output")!.textContent!).step).toBe(
     "profile",
   );
