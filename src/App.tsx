@@ -33,7 +33,7 @@ import type { CarrierId, GameAction } from "./game/types";
 import { sceneChoiceImage } from "./scenes/artwork";
 import { deliveryLine } from "./scenes/names";
 import { outcomeFocus } from "./scenes/outcomeFraming";
-import { ChoiceVerdict, restartSceneCondition, ScenesGame } from "./scenes/ScenesGame";
+import { carrierHeadings, ChoiceVerdict, restartSceneCondition, ScenesGame } from "./scenes/ScenesGame";
 
 export function App() {
   return (
@@ -435,9 +435,7 @@ function Outcome({
               title={
                 <ChoiceVerdict
                   picked={`Ваш выбор · ${carrier.id === "express" ? "Автоматический подбор" : carrierFacts[carrier.id].label}`}
-                  goals={carrierGoals}
-                  score={carrier.score}
-                  all={carriers.map((item) => item.score)}
+                  heading={carrierHeadings[carrier.id]}
                 />
               }
               paragraphs={[resultNarrative]}

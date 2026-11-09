@@ -6,10 +6,10 @@ export const lastmileSituation = scenarioParagraph("5214BC84");
 
 /** Result headings: what happened, in plain words, no score verdict (Teo, 05.11). */
 export const lastmileHeadings = {
-  helicopter: "Дорогой рейс над болотами",
+  helicopter: "Быстро, дорого, трубы с собой",
   rover: "И по болоту, и по реке",
   robot: "Тележка увязла в грунте",
-  "pipe-carrier": "Эту реку не переплыть",
+  "pipe-carrier": "До берега — да, через речку — нет",
 } as const;
 
 export function LastmileDecisionContext() {
