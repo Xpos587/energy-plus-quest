@@ -39,9 +39,9 @@ describe("warehouse camera preserves segmented targets", () => {
       });
     }
   }
-  it("a plane shorter than the stage sits on its top edge like the other scenes", () => {
+  it("the plate fills a desktop stage with no empty strip below it", () => {
     const camera = warehouseCamera({ width: 1100, height: 900 }, "boat");
-    expect(contours.height * camera.scale).toBeLessThan(900);
-    expect(camera.top).toBe(0);
+    expect(camera.top).toBeLessThanOrEqual(0);
+    expect(camera.top + contours.height * camera.scale).toBeGreaterThanOrEqual(900);
   });
 });

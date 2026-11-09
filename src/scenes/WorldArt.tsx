@@ -18,7 +18,7 @@ import { warehouseCamera } from "./inventory/warehouseCamera";
 
 const shortMarkerLabels: Record<string, string> = {
   entrance: "У приёмки", alphabet: "По алфавиту", keeper: "Кладовщик", wms: "Автоподбор",
-  helicopter: "Вертолёт", rover: "Снегоболотоход", robot: "Роботизированная тележка", "pipe-carrier": "Трубовоз",
+  helicopter: "Вертолёт", rover: "Снегоболотоход", robot: "Тележка", "pipe-carrier": "Трубовоз",
 };
 
 const markerInset = 24;
@@ -143,7 +143,11 @@ export function WorldArt({
   const format =
     scene === "lastmile" && size.width < 600
       ? "mobile"
-      : containedArea(views.mobile) > containedArea(views.desktop)
+      : scene === "inventory"
+        // the plates are extended downward with lawn, so contained area no longer tells them apart:
+        // keep the 1672x941 / 1200x1500 content switch (stage aspect 1.19), where both fill the stage
+        ? size.width < size.height * 1.2 ? "mobile" : "desktop"
+        : containedArea(views.mobile) > containedArea(views.desktop)
         ? "mobile"
         : "desktop";
   const lastmileFormat = size.width / Math.max(1, size.height - lastmileTopInset(size.width)) >= 1.1 ? "wide" : "tall";

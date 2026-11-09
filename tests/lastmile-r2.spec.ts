@@ -10,7 +10,7 @@ for (const [width, height] of [[320,568],[390,844],[844,390],[1440,900]]) {
       for(let n=0;n<12&&await briefing.isVisible();n++){await briefing.click();await page.waitForTimeout(100);}
       for (const option of ['helicopter','rover','robot','pipe-carrier']) {
         await expect(page.locator('[data-hotspot]')).toHaveCount(4);
-        await page.locator(`[data-choice-id="${option}"]:not([data-callout-target])`).click();await page.locator('[data-choice-confirm]').click();
+        await page.locator(`[data-choice-id="${option}"]:not([data-callout-target])`).click();
         for(let n=0;n<12;n++) {
           const image=page.locator('[data-scene-consequence] img');
           await image.evaluate(async(i:HTMLImageElement)=>{await i.decode();await document.fonts.ready;});

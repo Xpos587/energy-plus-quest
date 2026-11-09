@@ -8,15 +8,16 @@ test("helicopter artwork follows the authored flight and ground narrative beats"
   for (let step = 0; step < 10 && (await briefing.isVisible()); step += 1)
     await briefing.click();
 
-  // Last mile opens the result straight from the vehicle, no confirm card.
-  await page.locator('[data-hotspot="helicopter"]').click();
+  await page
+    .locator('[data-choice-id="helicopter"]:not([data-callout-target])')
+    .click();
 
   const art = page.locator('[data-scene-consequence="lastmile-helicopter-remote"]');
   const image = art.locator("img");
   const copy = page.getByTestId("result-copy");
   await expect(page.getByRole("navigation", { name: "Эпизоды доставки" })).toHaveCount(0);
   await expect(art).toHaveAttribute("data-outcome-beat", "0");
-  await expect(image).toHaveAttribute("src", /revision-5\/flight-boat\.webp/);
+  await expect(image).toHaveAttribute("src", /revision-13\/flight-boat-tall\.webp/);
   await expect(copy).toContainText("Вертолет быстро преодолел леса и болота");
 
   const readFurther = page.getByRole("button", {
@@ -25,7 +26,7 @@ test("helicopter artwork follows the authored flight and ground narrative beats"
   });
   let flightPages = 0;
   while ((await art.getAttribute("data-outcome-beat")) === "0") {
-    await expect(image).toHaveAttribute("src", /revision-5\/flight-boat\.webp/);
+    await expect(image).toHaveAttribute("src", /revision-13\/flight-boat-tall\.webp/);
     await expect(copy).not.toContainText(/от посадочной площадки/i);
     await expect(readFurther).toBeVisible();
     await readFurther.click();

@@ -1,7 +1,7 @@
 {
   "width": 1672,
-  "height": 941,
-  "source": "scene-art/inventory-master-v10.webp",
+  "height": 1170,
+  "source": "scene-art/inventory-master-v11.webp",
   "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py, v18: closed shutter doors, zone boards flat on the side walls above both doors); GPT restyle in the scene 1-2 painterly style aligned back onto the render with the rendered lettering",
   "regions": {
     "entrance": {
@@ -12,7 +12,7 @@
       ],
       "anchor": {
         "x": 0.1262,
-        "y": 0.7112
+        "y": 0.572
       },
       "contourCount": 1
     },
@@ -24,7 +24,7 @@
       ],
       "anchor": {
         "x": 0.8043,
-        "y": 0.5933
+        "y": 0.4772
       },
       "contourCount": 1
     },
@@ -36,7 +36,7 @@
       ],
       "anchor": {
         "x": 0.8493,
-        "y": 0.8411
+        "y": 0.6765
       },
       "contourCount": 1
     },
@@ -48,7 +48,7 @@
       ],
       "anchor": {
         "x": 0.6372,
-        "y": 0.6633
+        "y": 0.5335
       },
       "contourCount": 1
     },
@@ -60,7 +60,7 @@
       ],
       "anchor": {
         "x": 0.5282,
-        "y": 0.6633
+        "y": 0.5335
       },
       "contourCount": 1
     },
@@ -72,7 +72,7 @@
       ],
       "anchor": {
         "x": 0.4718,
-        "y": 0.6633
+        "y": 0.5335
       },
       "contourCount": 1
     }

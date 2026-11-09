@@ -17,6 +17,6 @@ it('gives the tall phone plate its own coordinate plane with the same reading or
  expect(t('boat')).toBeLessThan(t('socks'));expect(t('socks')).toBeLessThan(t('camera'));
  expect(warehouseCallouts('camera','tall').alphabet.x).toBeCloseTo(745/1200,2);
  const html=renderToStaticMarkup(<WarehouseZones context={{parcel:'camera',recipient:'alva',profile:'student'}} composition="tall" onSelect={()=>{}}/>);
- expect(html).toContain('viewBox="0 0 1200 1500"');
+ expect(html).toContain('viewBox="0 0 1200 1750"');
  expect(html).toContain(warehouseContour('alphabet','camera','tall').path);
 });

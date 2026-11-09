@@ -70,7 +70,6 @@ type SceneBrief = {
   route: (context: SceneContext) => string;
   goals: [energy: string, empathy: string, efficiency: string];
   places: (context: SceneContext) => Record<string, [name: string, detail: string]>;
-  picked: (id: string, name: string) => string;
 };
 const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
   compact: {
@@ -85,7 +84,6 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
       "place-4": ["Место 4", ""],
       auto: ["Подобрать автоматически", ""],
     }),
-    picked: (id, name) => `Ваш выбор · ${id === "auto" ? "Подобрать автоматически" : name}`,
   },
   inventory: {
     eyebrow: "Карточка хранения",
@@ -97,7 +95,6 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
       keeper: ["Кладовщик", "Спросить опытного коллегу"],
       wms: ["Автоподбор места", "Система Inventory сама подберёт ячейку"],
     }),
-    picked: (_id, name) => `Ваш выбор · ${name}`,
   },
   crane: {
     eyebrow: "Погрузка на баржу",
@@ -106,7 +103,6 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     places: () => Object.fromEntries(
       Object.entries(craneFacts).map(([id, fact]) => [id, [optionTitles[id], fact.note]]),
     ),
-    picked: (_id, name) => `Ваш выбор · ${name}`,
   },
   lastmile: {
     eyebrow: "Последняя миля",
@@ -118,7 +114,6 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
       robot: ["Роботизированная тележка", "Складской робот"],
       "pipe-carrier": ["Трубовоз", "Грузовик для труб"],
     }),
-    picked: (_id, name) => `Ваш выбор · ${name}`,
   },
 };
 // One hint for scenes 2–5: what to tap, then the hovered name and what the tap does.
@@ -568,9 +563,6 @@ function ScenesSession({
             <ChoiceInspection
               selectionKey={pending.id}
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
-              eyebrow={scene.id === "compact" ? undefined
-                : scene.id === "inventory" ? places![pending.id][1]
-                : craneCaptions[pending.id as keyof typeof craneCaptions]}
               title={scene.id === "compact" || scene.id === "inventory" ? places![pending.id][0] : optionTitles[pending.id]}
               cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "inventory" ? "К складу" : "К причалу"}
               paragraphs={scene.id === "inventory" ? [choiceLabel(pending.label)] : undefined}
@@ -600,7 +592,6 @@ function ScenesSession({
                   title={brief && places ? (
                     // Teo 05.11: a plain line about what happened, no score verdict.
                     <span className={flow.compactVerdict} data-verdict="none" data-result-heading={selected.id}>
-                      <small>{brief.picked(selected.id, places[selected.id][0])}</small>
                       <span>{resultHeading(scene.id, selected.id, context.parcel)}</span>
                     </span>
                   ) : title}

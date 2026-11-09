@@ -98,13 +98,6 @@ export function SceneOutcomeArt({
       }
     >
       <picture className={styles.picture}>
-        {scene === "lastmile" && selectedId === "helicopter" && !groundLeg && (
-          // Desktop results are 2.5:1 and wider; a 4:1 cut keeps the aircraft and load whole.
-          <ImageSources
-            src={imageAsset(lastmileFlightImage(context).replace(/\.webp$/, "-wide.webp"))}
-            media="(min-width: 901px) and (min-height: 501px)"
-          />
-        )}
         {scene === "crane" && (
           // The right-rail result is 0.96–1.28:1; a near-square cut keeps barge, crane and office whole.
           <ImageSources

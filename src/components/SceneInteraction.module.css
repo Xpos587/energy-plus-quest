@@ -3276,9 +3276,6 @@
     grid-template-columns: minmax(0, 1fr) minmax(360px, 56%);
     --type-body: 16px; --type-body-leading: 1.35; --type-title: 22px;
   }
-  .app[data-scene="lastmile"] .frame.frame.frame[data-layout="result"] [data-scene-consequence^="lastmile-pipe-carrier"] img {
-    object-fit: contain; background: #eaf1f5;
-  }
 }
 
 /* Keep every introduction's navigation on the same bottom baseline as results.
