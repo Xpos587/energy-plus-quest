@@ -114,13 +114,13 @@
   }
 }
 
-/* Barge: the consequence plays in the picture first (settling push-in), then the story reads. */
+/* Barge: the live quay hands over to the still with a short settle, no fade through a blank frame. */
 .figure[data-outcome-scene="crane"] .image { animation: outcomeSettle 900ms cubic-bezier(.2,.8,.2,1) both; transform-origin: var(--outcome-focus, 50%) 60%; }
 /* The rail stills are framed around the story already. */
 @media (min-width: 1001px) and (min-height: 701px) {
   .figure[data-outcome-scene="crane"] .image { object-position: 50% 50%; transform-origin: 50% 50%; }
 }
-@keyframes outcomeSettle { from { opacity: .2; transform: scale(1.06); } }
+@keyframes outcomeSettle { from { transform: scale(1.04); } }
 @media (prefers-reduced-motion: reduce) {
   .figure[data-outcome-scene="crane"] .image { animation: none; }
 }

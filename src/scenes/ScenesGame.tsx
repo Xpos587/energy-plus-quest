@@ -552,7 +552,9 @@ function ScenesSession({
                 {...syncFocus}
               />
             )}
-            {inspectsOnArt && !resultVisible && (
+            {/* Fetch the result picture while the quay plays, so the hand-off is not a loading flash. */}
+            {playing && <div hidden><SceneOutcomeArt scene={scene.id} selectedId={playing} context={context} /></div>}
+            {inspectsOnArt && !resultVisible && !playing && (
               <CarrierTapHint
                 selectedId={pending?.id}
                 text={tapHintText(scene.id, focusedChoice && (scene.id === "crane" ? craneCaptions[focusedChoice as keyof typeof craneCaptions] : places?.[focusedChoice]?.[0]))}

@@ -23,7 +23,7 @@ export type CraneBeat = {
   /** A figure on the quay: sprite name and feet position in world metres. */
   walker?: { pose: string; at: readonly [number, number, number]; flip?: boolean };
   /** A small reaction drawn over a character. */
-  emote?: { kind: "sweat" | "question" | "sad"; at: "office" | "near" | "far" };
+  emote?: { kind: "tired" | "question" | "sad"; at: "office" | "near" | "far" };
   /** Remote-control signal from the office to the near crane. */
   signal?: boolean;
   /** The 3-hour wait, 0..1; undefined hides the clock. */
@@ -95,7 +95,7 @@ const timelines: Record<string, Step[]> = {
       walk(1300, ["ivan-run1", "ivan-run2"], door, ladderFoot, { ...rest(), office: "empty" }),
       walk(1100, ["ivan-climb1", "ivan-climb2"], ladderFoot, ladderTop, { ...rest(), office: "empty", busy: "ladder" }),
     ],
-    "ladder", { office: "empty", operator: "ivan" }, { emote: { kind: "sweat", at: "near" } },
+    "ladder", { office: "empty", operator: "ivan" }, { emote: { kind: "tired", at: "near" } },
   ),
   // Nobody is at the crane: the barge leaves on time, the clock runs three hours,
   // the crane swings to the gift with nowhere to put it, Ivan checks his watch.

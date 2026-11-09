@@ -28,21 +28,6 @@ div.layer { overflow: hidden; }
 .layer[data-lit] { filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 9px #fff) drop-shadow(0 0 16px #ffffffb3); }
 .layer[data-busy] { animation: busy 900ms ease-in-out infinite; }
 @keyframes busy { 50% { filter: drop-shadow(0 0 2px #ff5500) drop-shadow(0 0 12px #ffb37a); } }
-.skip {
-  position: absolute;
-  z-index: 4;
-  right: 12px;
-  bottom: 12px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: #0a2540b3;
-  color: #fff;
-  font-size: 12px;
-  pointer-events: none;
-  animation: skipIn 300ms 600ms ease-out both;
-}
-@keyframes skipIn { from { opacity: 0; } }
-.stage[data-playing] { cursor: pointer; }
 .stage[data-playing] .hotspot:not([aria-pressed="true"]) { opacity: 0; transition: opacity 200ms; }
 .plane > picture, .image { display: block; width: 100%; height: 100%; }
 .image { user-select: none; -webkit-user-drag: none; }
@@ -77,7 +62,7 @@ div.layer { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   .plane { transition: none !important; }
-  .bob, .smoke, .layer, .skip { animation: none !important; }
+  .bob, .smoke, .layer { animation: none !important; }
   .ripple { animation: none; transform: none; opacity: .55; fill: none; }
 }
 

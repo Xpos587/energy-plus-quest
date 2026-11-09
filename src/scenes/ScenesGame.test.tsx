@@ -89,8 +89,9 @@ it.each([
   "hands off original context, all answers and seeded totals exactly once (%j)",
   async (initialScores, expectedScores) => {
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
-    vi.stubGlobal("matchMedia", () => ({
-      matches: false,
+    // Reduced motion: the quay consequence cannot be skipped, so it hands over at once.
+    vi.stubGlobal("matchMedia", (query: string) => ({
+      matches: query.includes("reduce"),
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
     }));
@@ -146,11 +147,6 @@ it.each([
           await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
           expect(container.querySelector("[data-result]")).toBeNull();
           await click(container.querySelector<HTMLButtonElement>("[data-choice-confirm]"));
-          if (id === "remote") {
-            // The quay plays the way out first; a tap skips straight to the result.
-            expect(container.querySelector("[data-result]")).toBeNull();
-            await click(container.querySelector<HTMLButtonElement>('[data-playing="remote"]'));
-          }
         } else
           await click(
             container.querySelector<HTMLButtonElement>(
