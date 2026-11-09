@@ -16,12 +16,12 @@ import { routeArt, stageIcons } from "./StageIndicator";
 
 /* One line instead of the two canonical paragraphs (R19, 09.11): the five
    stages below are the screen's subject, the story only sets them up. */
-const parcelStory =
-  "Подарок едет в другой город — пять этапов, и он на месте. На каждом решаете вы.";
+const parcelStory = [scenarioParagraph("24D093EF"), scenarioParagraph("42DF6085")].join(
+  " ",
+);
 /* The letter's own words (R19): one rule, no «Тогда вперёд!» and no second
    restatement of the destination already printed above it. */
-const invitation =
-  "Главное правило логиста — все грузы важны: и турбина, и коробка.";
+const invitation = scenarioParagraph("38763B42");
 const explanation = scenarioParagraph("4C9AA992");
 const metricParts = explanation.match(
   /^(.*?) (В пути вы будете получать баллы за то, что) (.*?) \(Энергия\), (.*?) \(Эмпатия\) и (.*?) \(Эффективность\)\. (.*)$/,

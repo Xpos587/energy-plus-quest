@@ -108,7 +108,7 @@ it("pages every paragraph, keeps the question visible and allows rereading", asy
   }
 });
 
-it("reminds what goes to whom, the current leg and the stages left", async () => {
+it("reminds what goes to whom and the current leg", async () => {
   vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
   const element = document.createElement("div");
   const root = createRoot(element);
@@ -127,9 +127,10 @@ it("reminds what goes to whom, the current leg and the stages left", async () =>
     return element.querySelector("[data-task-reminder]")?.textContent;
   };
   try {
-    expect(await text(0)).toBe("Лодка для Хабта Плыть · впереди ещё 4\u00a0этапа");
-    expect(await text(3)).toBe("Лодка для Хабта Плыть · впереди ещё один этап");
-    expect(await text(4)).toBe("Лодка для Хабта Плыть · последний этап");
+    // R19: the stage count moved to the progress strip; the reminder is one line.
+    expect(await text(0)).toBe("Лодка для Хабта Плыть");
+    expect(await text(3)).toBe("Лодка для Хабта Плыть");
+    expect(await text(4)).toBe("Лодка для Хабта Плыть");
   } finally {
     await act(async () => root.unmount());
     vi.unstubAllGlobals();

@@ -4322,3 +4322,22 @@
     mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
   }
 }
+
+/* R19 (Michael, 09.11): on a phone the briefing card filled a fixed panel
+   height, so its text left a large empty band above the actions. The card now
+   hugs its text and the artwork takes the rest of the screen — the same way
+   the choice screen already works. */
+@media (max-width: 900px) and (orientation: portrait) and (min-height: 620px) {
+  .app[data-scene] .frame.frame.frame.frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
+    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
+  }
+  .app[data-scene] .frame.frame.frame.frame[data-interaction="inspect-confirm"] .briefingCard {
+    height: auto;
+    max-height: none;
+  }
+  /* The copy must fit: its scroll area no longer sets the card's height, so the
+     card reports its full text and the artwork takes only what is left. */
+  .app[data-scene] .frame.frame.frame.frame[data-interaction="inspect-confirm"] .briefingCard .briefingCopy {
+    flex: 0 1 auto;
+  }
+}

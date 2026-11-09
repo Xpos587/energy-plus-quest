@@ -82,7 +82,8 @@ export function SceneBriefing({
   /** What, to whom and where this stage goes, e.g. ["Вязаные носки для Маймы", "Фура до склада в Лабытнанги"]. */
   reminder?: [delivery: string, leg: string];
 }) {
-  const stagesLeft = progressSteps.length - currentStep - 1;
+  // The stage count lives in the progress strip, so the reminder carries only
+  // what goes where and the current leg (R19).
   // A separate first-entry condition and optional rereading share the same pages.
   const inlineCondition = false;
   // The whole condition is already on the choice screen: no separate «Задание» to reopen.
@@ -332,13 +333,7 @@ export function SceneBriefing({
         )}
         {reminder && (
           <p className={styles.taskReminder} data-task-reminder>
-            <strong>{reminder[0]}</strong>{" "}
-            <span>
-              {reminder[1]} ·{" "}
-              {stagesLeft === 0
-                ? "последний этап"
-                : `впереди ещё ${stagesLeft === 1 ? "один этап" : `${stagesLeft}\u00a0этапа`}`}
-            </span>
+            <strong>{reminder[0]}</strong> <span>{reminder[1]}</span>
           </p>
         )}
         {!visible && showLeadOnChoice && paragraphs[0] && (
