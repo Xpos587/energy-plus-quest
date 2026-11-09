@@ -90,11 +90,9 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
           <h1 id="preparation-question" ref={heading} tabIndex={-1}>
             {title}
           </h1>
-          {/* The role only shapes the final offer; say so, or the choice reads as arbitrary. */}
+          {/* The role only shapes the final offer; one short line says so. */}
           {state.step === "profile" && (
-            <p className={styles.hint}>
-              От роли зависит, что мы предложим вам в финале.
-            </p>
+            <p className={styles.hint}>Роль влияет на финальный итог.</p>
           )}
         </div>
         <div className={styles.stage} data-kind={state.step} key={state.step}>

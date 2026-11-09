@@ -60,8 +60,7 @@
 .lesson p{margin:0}
 
 /* Page 0 — story + the journey the player is about to make. */
-.story{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,48px);font-size:var(--type-body);line-height:var(--type-body-leading);color:var(--text)}
-.lead{font-weight:700;color:var(--ink)}
+.lead{max-width:58ch;margin:0;font-size:var(--type-body);line-height:var(--type-body-leading);font-weight:600;color:var(--ink)}
 .route{position:relative;margin:0;display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-top:auto;padding-top:var(--route-pad);list-style:none;--route-pad:clamp(20px,4vh,48px)}
 /* The dashed line runs through the centres of the stops and the pin. */
 .route::before{content:"";position:absolute;left:5%;right:5%;top:calc(var(--route-pad) + var(--stop) / 2 - 1.5px);border-top:3px dashed #8fbad6;z-index:0}
@@ -91,15 +90,16 @@
 /* Phones: the route becomes a vertical timeline. */
 @media (max-width:700px){
   .lesson{padding:16px 20px 12px}
-  .story{grid-template-columns:1fr;gap:12px}
-  .route{--stop:44px;flex-direction:column;align-items:stretch;gap:6px;padding-top:16px}
-  .route::before{left:calc(var(--stop) / 2);right:auto;top:30px;bottom:30px;border-top:0;border-left:3px dashed #8fbad6}
-  .stop{flex-direction:row;gap:12px}
-  .stopArt{padding:3px}
-  .stopArt b{left:auto;right:-6px;top:auto;bottom:-4px;width:20px;height:20px;font-size:11px;box-shadow:0 0 0 2px #fff}
-  .stopLabel{text-align:left}
-  .goal{height:auto;padding:0 0 0 10px;background:none;gap:12px}
-  .goal svg{width:24px;height:24px}
+  .lead{font-size:17px;line-height:1.35}
+  /* The five stages are the screen: a vertical line of big stage objects. */
+  .route{--stop:clamp(52px,15vw,70px);flex-direction:column;align-items:stretch;gap:2px;padding-top:0;margin-block:auto;padding-block:10px}
+  .route::before{left:calc(var(--stop) / 2 - 1px);right:auto;top:calc(var(--stop) / 2 + 10px);bottom:calc(var(--stop) / 2 + 10px);border-top:0;border-left:2px dashed #8fbad6}
+  .stop{flex-direction:row;align-items:center;gap:16px;padding-block:5px}
+  .stopArt{padding:2px;box-shadow:0 1px 0 var(--line),0 6px 14px #075d9b1f}
+  .stopArt b{left:auto;right:-5px;top:auto;bottom:-4px;width:23px;height:23px;font-size:13px;box-shadow:0 0 0 2.5px #fff}
+  .stopLabel{text-align:left;font-size:20px;line-height:1.15}
+  .goal{height:auto;align-items:center;padding:4px 0 0 10px;background:none;gap:10px;font-size:20px}
+  .goal svg{width:26px;height:26px}
   .lessonActions{margin-top:12px;gap:12px}
   .lessonActions>button{flex:1;min-width:0;min-height:54px;padding:12px 16px}
   .steps{display:none}
@@ -114,7 +114,7 @@
   .coverArt{min-height:0;height:auto;margin-top:0}
   .lesson{padding:8px 12px}
   .lesson h1{font-size:26px;margin-bottom:8px}
-  .story{font-size:15px;line-height:1.25;gap:8px}
+  .lead{font-size:15px;line-height:1.3}
   .route{--stop:34px;padding-top:10px;gap:4px}
   .route::before{top:22px;bottom:22px}
   .stopLabel,.goal{font-size:15px}
@@ -129,7 +129,7 @@
   .cover .primary{min-height:48px;padding:12px 24px}
   .lesson{padding:8px 20px}
   .lesson h1{font-size:26px;margin-bottom:6px}
-  .story{font-size:14px;line-height:1.25;gap:16px}
+  .lead{font-size:14px;line-height:1.25}
   .route{--stop:64px;--route-pad:8px}
   .stopArt b{width:22px;height:22px;font-size:12px}
   .stopLabel,.goal{font-size:14px}
@@ -140,7 +140,7 @@
 /* Round 2: no empty bands — the route takes the room it needs, centred in the space. */
 .goal{background:none}
 @media (min-width:701px) and (min-height:501px){
-  .route{--stop:clamp(110px,min(12vw,20vh),190px);margin-block:auto;--route-pad:clamp(16px,3vh,32px)}
+  .route{--stop:clamp(120px,min(14vw,24vh),230px);margin-block:auto;--route-pad:clamp(16px,3vh,32px)}
 }
 /* The dashed path stops at the destination pin instead of crossing its label. */
 @media (min-width:701px){.route::before{right:calc(9em + 24px)}.goal{padding-left:8px}}
@@ -149,26 +149,13 @@
   .page{justify-content:flex-start}
   .route{margin-top:auto;margin-bottom:auto}
 }
-/* Short phones: the route is one horizontal strip — five stops on one
-   dashed line, each named underneath; the destination closes the line. */
+/* 320×568: the timeline stays vertical, only the icon and the label shrink. */
 @media (max-width:700px) and (max-height:700px){
-  .route{--stop:46px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:start;gap:4px 0;padding:14px 0 0}
-  .route::before{left:10%;right:0;top:calc(14px + var(--stop) / 2);bottom:auto;border-left:0;border-top:2px dashed #8fbad6}
-  .stop{flex-direction:column;align-items:center;gap:6px;min-width:0}
-  .stopArt{padding:2px}
-  .stopArt b{right:-4px;bottom:-3px;width:18px;height:18px;font-size:10px}
-  .stopLabel{font-size:12px;line-height:1.15;text-align:center}
-  .goal{grid-column:1 / -1;justify-self:end;height:auto;padding:0;gap:4px;font-size:13px}
-  .goal svg{width:18px;height:18px}
+  .route{--stop:42px;padding-block:4px}
+  .stop{gap:14px;padding-block:4px}
+  .stopLabel,.goal{font-size:18px}
+  .lead{font-size:16px;line-height:1.3}
 }
-@media (max-width:360px) and (max-height:700px){
-  .route{--stop:40px}
-  .stopLabel{font-size:11px}
-}
-@media (max-width:700px) and (max-height:700px) and (prefers-reduced-motion:no-preference){
-  .goal svg{animation:pinBob 2.4s ease-in-out infinite}
-}
-@keyframes pinBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 
 /* ===== Page 1 — the waybill arrives as a letter =====
    One sheet carries the whole page: title and address, the letter itself,

@@ -121,14 +121,16 @@ a:focus-visible {
 @media (min-width: 601px) and (max-width: 1000px) and (orientation: portrait) {
   :root { --type-body: 22px; --type-title: 30px; --type-feature-title: 38px; --type-choice: 20px; --type-action: 18px; }
 }
+/* R19 (Michael, 09.11): phone text was too small to read comfortably —
+   support 13 px, choices 16 px. Raised a step; the smallest level is 15 px. */
 @media (max-width: 600px) {
-  :root { --type-body: 18px; --type-title: 24px; --type-feature-title: 30px; --type-choice: 18px; --type-action: 16px; --type-support: 14px; }
+  :root { --type-body: 19px; --type-title: 26px; --type-feature-title: 32px; --type-choice: 20px; --type-action: 17px; --type-support: 15px; }
 }
 @media (max-width: 360px) {
-  :root { --type-body: 17px; --type-title: 22px; --type-feature-title: 28px; --type-choice: 16px; --type-action: 15px; --type-support: 13px; }
+  :root { --type-body: 18px; --type-title: 24px; --type-feature-title: 29px; --type-choice: 18px; --type-action: 16px; --type-support: 15px; }
 }
 @media (max-height: 500px) and (orientation: landscape) {
-  :root { --type-body: 18px; --type-title: 24px; --type-feature-title: 30px; --type-choice: 16px; --type-action: 16px; --type-support: 13px; }
+  :root { --type-body: 19px; --type-title: 25px; --type-feature-title: 30px; --type-choice: 18px; --type-action: 17px; --type-support: 15px; }
 }
 
 /* Metric identity: the same hue marks a metric in the intro, goals, results and certificate.

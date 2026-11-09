@@ -11,11 +11,17 @@ export const routeArt = {
   barge: imageAsset("opening/route-v1/barge.webp"),
   "last-mile": imageAsset("opening/route-v1/lastmile.webp"),
 } as const;
-/* Header-only icons (Teo, 03.11): one big object per stage, so it still
- * reads at 26 px on a phone where the route pictures turn into noise. */
-const stops = ["carrier", "loading", "warehouse", "barge", "lastmile"].map((key) =>
-  imageAsset(`opening/stage-icons-v1/${key}.webp`),
-);
+/* One big object per stage (Teo, 03.11), so it still reads at 26 px on a phone
+ * where the route pictures turn into noise. Shared by the header progress and
+ * the intro route, so both show the same stops. */
+export const stageIcons = {
+  carrier: imageAsset("opening/stage-icons-v1/carrier.webp"),
+  loading: imageAsset("opening/stage-icons-v1/loading.webp"),
+  warehouse: imageAsset("opening/stage-icons-v1/warehouse.webp"),
+  barge: imageAsset("opening/stage-icons-v1/barge.webp"),
+  "last-mile": imageAsset("opening/stage-icons-v1/lastmile.webp"),
+} as const;
+const stops = Object.values(stageIcons);
 
 /** Header progress (meeting 29.10, call 02.11): the intro route in miniature.
  * Every stop shows its stage object: passed ones ticked, the current one

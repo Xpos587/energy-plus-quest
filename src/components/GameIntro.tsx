@@ -12,13 +12,16 @@ import { sceneChoiceImage } from "../scenes/artwork";
 import { BrandLockup } from "./BrandLockup";
 import styles from "./GameIntro.module.css";
 import { progressSteps } from "./QuestShell";
-import { routeArt } from "./StageIndicator";
+import { routeArt, stageIcons } from "./StageIndicator";
 
-const [parcelStory, logisticsStory] = [
-  scenarioParagraph("24D093EF"),
-  scenarioParagraph("42DF6085"),
-];
-const invitation = scenarioParagraph("38763B42");
+/* One line instead of the two canonical paragraphs (R19, 09.11): the five
+   stages below are the screen's subject, the story only sets them up. */
+const parcelStory =
+  "Подарок едет в другой город — пять этапов, и он на месте. На каждом решаете вы.";
+/* The letter's own words (R19): one rule, no «Тогда вперёд!» and no second
+   restatement of the destination already printed above it. */
+const invitation =
+  "Главное правило логиста — все грузы важны: и турбина, и коробка.";
 const explanation = scenarioParagraph("4C9AA992");
 const metricParts = explanation.match(
   /^(.*?) (В пути вы будете получать баллы за то, что) (.*?) \(Энергия\), (.*?) \(Эмпатия\) и (.*?) \(Эффективность\)\. (.*)$/,
@@ -115,10 +118,7 @@ export function GameIntro({
                 {page === 0 ? (
                   <>
                     <h1 id="intro-title">Путь одной посылки</h1>
-                    <div className={styles.story}>
-                      <p className={styles.lead}>{parcelStory}</p>
-                      <p>{logisticsStory}</p>
-                    </div>
+                    <p className={styles.lead}>{parcelStory}</p>
                     <ol
                       className={styles.route}
                       aria-label="Этапы доставки в игре"
@@ -126,7 +126,7 @@ export function GameIntro({
                       {progressSteps.map((step, index) => (
                         <li className={styles.stop} key={step.id}>
                           <span className={styles.stopArt}>
-                            <img src={routeArt[step.id]} alt="" />
+                            <img src={stageIcons[step.id]} alt="" />
                             <b aria-hidden="true">{index + 1}</b>
                           </span>
                           <span className={styles.stopLabel}>{step.label}</span>
@@ -164,9 +164,7 @@ export function GameIntro({
                           <img src={routeArt["last-mile"]} alt="" />
                         </span>
                       </header>
-                      <p className={styles.invitation}>
-                        {invitation} <strong>{mission}</strong>
-                      </p>
+                      <p className={styles.invitation}>{invitation}</p>
                       <div className={styles.scoring}>
                         <p className={styles.metricLead}>{metricLead}</p>
                         <ul className={styles.metrics} aria-label="Показатели">
