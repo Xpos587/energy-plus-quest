@@ -77,7 +77,7 @@ for (const width of [320, 390]) {
         await image.evaluate((img: HTMLImageElement) => img.decode());
         await expect(image).toHaveAttribute(
           "src",
-          branch.id === "wms" ? /\/wms-stylized-v3\.png$/ : new RegExp(`/${key.replace("inventory-", "outcome-")}\\.webp$`),
+          new RegExp(`/${key.replace("inventory-", "outcome-")}\\.webp$`),
         );
         const resultText = await readResult(page);
         expect(resultText).toContain(branch.copy);

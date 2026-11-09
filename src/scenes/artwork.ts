@@ -23,12 +23,10 @@ export function sceneOutcomeImage(
   context: SceneContext,
 ): string {
   if (scene === "inventory") {
-    if (selectedId === "wms") {
-      return imageAsset("scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png");
-    }
+    // Results restyled into the common game style (design/scene-03/results-style.md).
     // Plaques read left to right: receiving (А–Б) to dispatch (Ю–Я).
     const variant = selectedId === "alphabet" ? `alphabet-${context.parcel}` : selectedId;
-    return imageAsset(`scene-art/warehouse-logic-2026-10-28/outcome-${variant}.webp`);
+    return imageAsset(`scene-art/warehouse-results-v2/outcome-${variant}.webp`);
   }
   if (scene === "crane") return imageAsset(craneOutcomeImage(selectedId));
   if (scene === "lastmile") {
