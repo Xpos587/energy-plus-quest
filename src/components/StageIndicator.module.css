@@ -8,6 +8,9 @@
   --stop: 40px;
   --now: 52px;
   --leg: 8px;
+  /* Centre on the «ЭНЕРГИЯ+» pill, not on the header box (measured on opaque
+   * logo pixels, .tmp-work/navbar/center.mjs: circles sat 1.3–1.8 px high). */
+  translate: 0 1.6px;
 }
 /* Calm next to the logos (Michael, 06.11): thin rings, no shadows; the
  * current stop is only a little larger, with a 2 px blue ring. */
@@ -56,7 +59,7 @@
 
 /* Phones: 26/34 squeezed the logos at 320 px (166 → 136 px), 24/30 keeps them. */
 @media (max-width: 600px) {
-  .indicator { --stop: 24px; --now: 30px; --leg: 4px; --tick: 9px; }
+  .indicator { --stop: 24px; --now: 30px; --leg: 4px; --tick: 9px; translate: 0 3px; }
   .indicator i[data-leg="done"]::after { right: -2px; bottom: -2px; }
 }
 @media (max-width: 360px) {
