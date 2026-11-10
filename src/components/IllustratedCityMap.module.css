@@ -63,9 +63,9 @@
   height: 100%;
   pointer-events: none;
   user-select: none;
-  /* The baked plate is muted; a light lift (not +20%, which lost the warehouse
-     and trucks). Rigs and pins sit on a separate canvas and are unaffected. */
-  filter: brightness(1.06) saturate(1.03);
+  /* The baked plate is muted; +20% lift (Michael's call, 10.11; +6% was invisible).
+     Rigs and pins sit on a separate canvas and are unaffected. */
+  filter: brightness(1.2) saturate(1.06);
 }
 .target {
   position: absolute;
