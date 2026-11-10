@@ -31,3 +31,31 @@ test('only the current way is lit across every change of choice', async ({ page 
     await expect(page.locator('[data-result-reader]')).toBeVisible();
   }
 });
+
+// R19 round 2: on a phone the four ways must stay four separate fingertips.
+for (const [width, height] of [[320, 568], [390, 844], [1440, 900]]) {
+  test(`quay tap targets stay 44px with an 8px gap at ${width}x${height}`, async ({ page }) => {
+    await page.setViewportSize({ width, height });
+    await page.goto('/scenes.html?scene=crane&parcel=camera&recipient=alva&carrier=near');
+    const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });
+    for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
+    const rects = await page.locator('[data-world-scene=crane] [data-hotspot]').evaluateAll(
+      nodes => nodes.map(node => {
+        const rect = node.getBoundingClientRect();
+        return { id: (node as HTMLElement).dataset.hotspot!, x: rect.x, y: rect.y, w: rect.width, h: rect.height };
+      }));
+    expect(rects).toHaveLength(4);
+    for (const rect of rects) {
+      expect(rect.w, `${rect.id} width`).toBeGreaterThanOrEqual(44);
+      expect(rect.h, `${rect.id} height`).toBeGreaterThanOrEqual(44);
+    }
+    for (let i = 0; i < rects.length; i++) {
+      for (let j = i + 1; j < rects.length; j++) {
+        const a = rects[i];
+        const b = rects[j];
+        const gap = Math.max(a.x - (b.x + b.w), b.x - (a.x + a.w), a.y - (b.y + b.h), b.y - (a.y + a.h));
+        expect(gap, `${a.id} vs ${b.id}`).toBeGreaterThanOrEqual(8);
+      }
+    }
+  });
+}

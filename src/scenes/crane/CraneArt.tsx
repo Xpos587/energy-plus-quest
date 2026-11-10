@@ -9,6 +9,7 @@ import { craneArtwork, craneCaptions, craneWorld, type CraneFormat, type Rect } 
 import { castSrc, craneCast } from "./cast";
 import { craneBeat, craneDeckDelta, craneDuration, craneRest, craneSail } from "./consequence";
 import { craneScene } from "./index";
+import { fitTapTargets } from "./tapTargets";
 import styles from "./CraneArt.module.css";
 
 /** Pick the drawing that fills the stage and crops least of the quay story, then keep that strip in frame. */
@@ -119,6 +120,23 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const box = (r: { x: number; y: number; w: number; h: number }) => ({
     ...pct(r.x, r.y), width: `${(r.w / art.width) * 100}%`, height: `${(r.h / art.height) * 100}%`,
   });
+  // R19 round 2: on a 320px phone the ladder and the empty cab were 22px boxes that touched.
+  // Same places on the picture, but each target is at least 44px and keeps 8px clear of its neighbour.
+  const hotspot = new Map(options.map((option) => {
+    const rect = art.targets[option.id];
+    // Plane coordinates: the hotspot box sits inside the plane, which is drawn 1:1 to the picture.
+    const x = (rect.x / art.width) * view.width;
+    const y = (rect.y / art.height) * view.height;
+    return [option.id, { x, y, w: (rect.w / art.width) * view.width, h: (rect.h / art.height) * view.height }];
+  }));
+  const ids = options.map((option) => option.id);
+  // Only the part of the plane the stage shows is usable for a finger.
+  const frame = { x: -view.left, y: -view.top, w: size.width, h: size.height };
+  const fitted = new Map(fitTapTargets(ids.map((id) => hotspot.get(id)!), size, { frame }).map((rect, i) => [ids[i], rect]));
+  const hotspotStyle = (id: string): CSSProperties => {
+    const rect = fitted.get(id);
+    return rect ? { left: rect.x, top: rect.y, width: rect.w, height: rect.h } : {};
+  };
   // A world move is a pure screen shift for the orthographic quay camera.
   const move = (r: { w: number; h: number }, delta: readonly number[]): CSSProperties => {
     const [[ax, ay, az], [bx, by, bz]] = art.affine;
@@ -311,7 +329,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             type="button"
             className={styles.hotspot}
             data-hotspot={option.id}
-            style={box(art.targets[option.id])}
+            style={hotspotStyle(option.id)}
             aria-label={`${craneCaptions[option.id as keyof typeof craneCaptions]}: ${choiceLabel(option.label)}`}
             aria-pressed={(playing ?? selectedId) === option.id}
             disabled={!interactive}
