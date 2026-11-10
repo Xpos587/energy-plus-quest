@@ -198,7 +198,6 @@ test("selected landmarks and concise outcomes are visible above result panels", 
   page,
 }, testInfo) => {
   for (const [scene, choice, parcel, expected] of [
-    ["crane", "wait", "camera", "Подарок остался на причале"],
     ["crane", "remote", "camera", "Подарок на барже"],
     ["crane", "rush", "camera", "Подарок на барже"],
     ["crane", "petr", "camera", "Подарок на барже"],
@@ -312,9 +311,9 @@ test("panel works from keyboard without changing the source text", async ({
     .getByRole("button", { name: "Подробнее о задании", exact: true })
     .press("Enter");
   await expect(page.getByTestId("scene-intro")).toHaveText(original ?? "");
-  await page.locator('[data-choice-id="wait"]').focus();
+  await page.locator('[data-choice-id="rush"]').focus();
   await page.keyboard.press("Enter");
-  await expect(page.getByTestId("result-copy")).toContainText("целые сутки");
+  await expect(page.getByTestId("result-copy")).toContainText("много сил");
   await page
     .getByRole("button", { name: "Изменить выбор", exact: true })
     .click();

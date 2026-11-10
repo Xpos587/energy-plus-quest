@@ -54,14 +54,12 @@ function format(name: CraneFormat) {
     targets: {
       remote: pad(sp.ivan, 14),
       rush: pad(sp.ladder, 10),
-      wait: cab(a.nearCabin),
       petr: cab(a.farCabin),
     } as Record<string, { x: number; y: number; w: number; h: number }>,
     // What each way uses: these layers light up when the way is picked.
     actors: {
       remote: ["ivan", "near"],
       rush: ["ladder", "near"],
-      wait: ["near"],
       petr: ["far", "near"],
     } as Record<string, readonly CraneActor[]>,
     // Card open on a phone: the camera closes in on the chosen way.
@@ -69,7 +67,6 @@ function format(name: CraneFormat) {
       ? ({
           remote: around([a.ivan, a.gift, a.nearCabin, a.deckSpot], 120, width, height),
           rush: around([a.ladderFoot, a.ladderTop, a.nearCabin, a.gift], 140, width, height),
-          wait: around([a.nearCabin, a.gift, a.deckSpot, a.ladderFoot], 120, width, height),
           petr: around([a.petr, a.farCabin, a.nearCabin, a.deckSpot], 110, width, height),
         } as Partial<Record<string, Rect>>)
       : ({} as Partial<Record<string, Rect>>),
@@ -88,7 +85,6 @@ export { craneWorld };
 export const craneCaptions = {
   remote: "Иван в офисе ПРУ, за пультом",
   rush: "Иван поднимается на кран",
-  wait: "Кран по графику через 3 ч",
   petr: "Пётр на дальнем кране",
 } as const;
 
@@ -96,7 +92,6 @@ export const craneCaptions = {
 export const craneFacts = {
   remote: { who: "Иван", where: "Из офиса ПРУ, с пульта", when: "Сразу", note: "Краном управляют на расстоянии, на кран подниматься не нужно" },
   rush: { who: "Иван", where: "Из кабины крана", when: "После подъёма", note: "Иван дойдёт до крана и поднимется по лестнице в кабину" },
-  wait: { who: "Крановщик по графику", where: "Из кабины", when: "Через 3 ч", note: "Никого не дёргаем: так и надо, когда подарок не срочный. Но у баржи своё окно — уйдёт без него, следующее судно завтра" },
   petr: { who: "Пётр", where: "Из кабины ближнего крана", when: "Сразу", note: "У Петра скоро своя погрузка" },
 } as const;
 

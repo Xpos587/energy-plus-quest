@@ -8,7 +8,7 @@ for (const scene of ["inventory", "crane", "lastmile"]) {
       scene === "inventory"
         ? ["entrance", "alphabet", "keeper", "wms"]
         : scene === "crane"
-          ? ["rush", "wait", "petr", "remote"]
+          ? ["rush", "petr", "remote"]
           : ["helicopter", "rover", "robot", "pipe-carrier"];
     for (const id of ids) {
       await page.goto(`/scenes.html?scene=${scene}&parcel=boat&recipient=alva`);

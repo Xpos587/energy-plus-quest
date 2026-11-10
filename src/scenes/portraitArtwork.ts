@@ -19,7 +19,6 @@ export const portraitChoiceArtwork = {
     anchor: { x: 474, y: 725 },
     hotspots: [
       { id: "rush", x: 351 / 948, y: 774 / 1659 },
-      { id: "wait", x: 552 / 948, y: 728 / 1659 },
       { id: "petr", x: 781 / 948, y: 548 / 1659 },
       { id: "remote", x: 123 / 948, y: 770 / 1659 },
     ],

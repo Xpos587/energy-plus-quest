@@ -20,13 +20,6 @@ const choices = [
     score: { energy: -4, empathy: -3, efficiency: 3 },
   },
   {
-    id: "wait",
-    label: "553650B7",
-    result: ["14753450"],
-    scoreId: "6F64992E",
-    score: { energy: 0, empathy: 3, efficiency: -4 },
-  },
-  {
     id: "petr",
     label: "0C6EC2FC",
     result: ["42344E38", "64BD7433"],

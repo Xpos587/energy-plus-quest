@@ -84,8 +84,3 @@ div.layer { overflow: hidden; }
 .ink { fill: #173c55; }
 .mouth { fill: none; stroke: #173c55; stroke-width: 3; stroke-linecap: round; }
 .stage[data-cast] .hotspot { opacity: 0; transition: opacity 200ms; }
-/* "Wait" hover: a ticking clock over the empty cab. */
-.wait { animation: pop 260ms ease-out both; }
-.spin { animation: spin 2.4s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .wait, .spin { animation: none; } }

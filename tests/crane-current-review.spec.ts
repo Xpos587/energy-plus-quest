@@ -12,7 +12,7 @@ for (const viewport of [{width:320,height:568},{width:390,height:844},{width:844
  for(let n=0;n<15 && await intro.isVisible();n++) await intro.click();
  await settle();
  await page.screenshot({path:`${root}/${viewport.width}-${parcel}-choice.png`});
- for(const id of ['remote','rush','wait','petr']) {
+ for(const id of ['remote','rush','petr']) {
  await page.locator(`[data-scene-choice="${id}"]`).click();
  await settle();
  await expect(page.locator('[data-scene-consequence]')).toBeVisible();

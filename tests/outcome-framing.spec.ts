@@ -15,7 +15,7 @@ const cases = [
   })),
   ...Object.entries({
     inventory: ["entrance", "keeper", "wms", "alphabet"],
-    crane: ["rush", "wait", "petr", "remote"],
+    crane: ["rush", "petr", "remote"],
     lastmile: ["helicopter", "rover", "robot", "pipe-carrier"],
   }).flatMap(([scene, choices]) =>
     choices.map((choice) => ({

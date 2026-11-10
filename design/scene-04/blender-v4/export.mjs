@@ -95,7 +95,7 @@ for (const name of FORMATS) {
 }
 
 if (OUTCOMES)
-  for (const id of ["remote", "rush", "wait", "petr"])
+  for (const id of ["remote", "rush", "petr"])
     await sharp(path.join(OUTCOMES, `outcome-${id}.png`)).webp({ quality: 90, effort: 5 }).toFile(path.join(pub, `outcome-${id}.webp`));
 
 const world = {

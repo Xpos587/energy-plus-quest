@@ -31,6 +31,8 @@ for (const [width, height] of [[1440, 900], [1280, 800], [1024, 768], [844, 390]
     fills(await figure.evaluate(covered, "img"));
     // The right rail (0.96–1.28:1) gets the near-square still, so the barge isn't cropped.
     const rail = width > 1000 && height > 700;
-    await expect.poll(() => figure.locator("img").evaluate((i: HTMLImageElement) => i.currentSrc)).toMatch(rail ? /outcome-remote-rail\.webp/ : /outcome-remote\.webp/);
+    const portrait = width <= 1000 && height >= 701 && height > width;
+    if (portrait) await expect(figure.locator("img")).toHaveCSS("object-position", "50% 80%");
+    await expect.poll(() => figure.locator("img").evaluate((i: HTMLImageElement) => i.currentSrc)).toMatch(rail ? /outcome-remote-rail\.webp/ : portrait ? /outcome-remote-portrait\.webp/ : /outcome-remote\.webp/);
   });
 }

@@ -20,7 +20,6 @@ const cases = [
     [4, 4, 5],
   ],
   ["rush", "0023E31A", ["27629778"], "639F545D", [-4, -3, 3]],
-  ["wait", "553650B7", ["14753450"], "6F64992E", [0, 3, -4]],
   ["petr", "0C6EC2FC", ["42344E38", "64BD7433"], "2B2A52A6", [-2, 4, -3]],
 
 ] as const;
@@ -85,23 +84,23 @@ describe("craneScene source contract", () => {
       });
     }
   }
-  it("makes the four actors the tap targets, with no numbers, captions or chips", () => {
+  it("makes the three actors the tap targets, with no numbers, captions or chips", () => {
     const html = renderToStaticMarkup(
       <craneScene.Art context={context} showResult={false} onSelect={() => {}} />,
     );
-    expect(html.match(/data-hotspot=/g)).toHaveLength(4);
-    for (const id of ["remote", "rush", "wait", "petr"])
+    expect(html.match(/data-hotspot=/g)).toHaveLength(3);
+    for (const id of ["remote", "rush", "petr"])
       expect(html).toContain(`data-hotspot="${id}"`);
     expect(html).toMatch(/scene-art\/barge-v5\/(mid|desk|wide|tall)\/plate\.webp/);
     for (const caption of Object.values(craneCaptions)) expect(html).toContain(`aria-label="${caption}:`);
     expect(html).not.toContain("Баржа готова к отходу");
     expect(html).not.toContain(">Подарок<");
-    expect(html.match(/data-barge-ripple=/g)).toHaveLength(4);
+    expect(html.match(/data-barge-ripple=/g)).toHaveLength(3);
     // Grisha 09.11: the pulse is one ring size, drawn on the actor the finger actually hits.
     const format = html.match(/barge-v5\/(mid|desk|wide|tall)\/plate/)![1] as keyof typeof craneArtwork;
     const art = craneArtwork[format];
     const radii = new Set<number>();
-    for (const id of ["remote", "rush", "wait", "petr"]) {
+    for (const id of ["remote", "rush", "petr"]) {
       const ring = html.match(new RegExp(`data-barge-ripple="${id}" cx="([\\d.]+)" cy="([\\d.]+)" r="([\\d.]+)"`))!;
       expect(ring, id).not.toBeNull();
       const target = art.targets[id];
@@ -117,7 +116,7 @@ describe("craneScene source contract", () => {
       <craneScene.Art context={context} selectedId="petr" showResult />,
     );
     expect(html).toContain('data-selected="petr"');
-    expect(html.match(/disabled=""/g)).toHaveLength(4);
+    expect(html.match(/disabled=""/g)).toHaveLength(3);
   });
   it("keeps every tap target inside its drawing", () => {
     for (const art of Object.values(craneArtwork))

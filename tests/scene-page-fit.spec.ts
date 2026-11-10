@@ -10,7 +10,7 @@ const sizes = [
 const choices = {
   compact: ["place-1", "place-2", "place-3", "place-4", "auto"],
   inventory: ["entrance", "alphabet", "keeper", "wms"],
-  crane: ["remote", "rush", "wait", "petr"],
+  crane: ["remote", "rush", "petr"],
   lastmile: ["helicopter", "rover", "robot", "pipe-carrier"],
 } as const;
 const parcels = ["boat", "camera", "socks"] as const;

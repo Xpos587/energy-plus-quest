@@ -19,8 +19,6 @@ const outcomes: Record<string, string> = {
     "Система управления складом помогает сотруднику быстро забрать подарок возле отгрузки.",
   "crane-rush":
     "Уставший, но довольный Иван отдыхает у лестницы крана; баржа с подарком отходит от причала.",
-  "crane-wait":
-    "Баржа с трубами уходит без подарка; Иван смотрит на часы рядом с оставшимся на причале подарком.",
   "crane-petr":
     "Пётр из кабины ближнего крана опускает подарок на баржу, Иван радуется внизу; ящики Петра ждут у дальнего крана.",
   "crane-remote":
@@ -103,6 +101,12 @@ export function SceneOutcomeArt({
           <ImageSources
             src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-rail.webp"))}
             media="(min-width: 1001px) and (min-height: 701px)"
+          />
+        )}
+        {scene === "crane" && (
+          <ImageSources
+            src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-portrait.webp"))}
+            media="(max-width: 1000px) and (min-height: 701px) and (orientation: portrait)"
           />
         )}
         <ImageSources src={artwork.src} />

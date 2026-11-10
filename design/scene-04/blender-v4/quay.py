@@ -513,9 +513,8 @@ for k, (dx, dy, dz) in enumerate(((0, 0, 0), (2.6, 0, 0), (0, 2.6, 0), (2.6, 2.6
         aabb("crates", "#A8773F", x0 - 0.02, y0 - 0.02, dz + t, x0 + 2.42, y0 + 2.42, dz + t + 0.22)
 
 # ---- two cranes, two bays: a buffer stop on both rails between them ------------
-# Grisha 09.11: the barge read as "either crane can serve it". The stop is the
-# border: the near crane can never drive into the far crane's stretch, and back.
-STOP_X, STOP_GAP = 30.0, 2.6
+# Client 10.11: put the boundary just before Petr's bogies, not midway between cranes.
+STOP_X, STOP_GAP = 35.5, 2.6
 
 
 def buffer_stop(x, face):
@@ -534,9 +533,9 @@ buffer_stop(STOP_X - STOP_GAP / 2, -1)
 buffer_stop(STOP_X + STOP_GAP / 2, 1)
 
 # ---- the barge (moored broadside, stern wheelhouse to the right, pipes on deck)
-# Grisha 09.11: pull the barge into the empty crane's bay, so it is clearly the
-# near crane's job; its cargo and the free spot sit under NEAR_X.
-BX0, BX1, BY0, BY1 = 0.0, 48.0, -13.5, -2.6
+# Client 10.11: shift the entire vessel toward the loading crane, away from Petr.
+# Keep the loading spot under the same boom; pipes move toward the bow to clear it.
+BX0, BX1, BY0, BY1 = -16.0, 32.0, -13.5, -2.6
 BZ = -0.9  # deck height: a laden barge sits low against the quay
 hull_bm = None
 def hull(group, x0, x1, y0, y1, zb, zd, color, bow=6.0):
@@ -560,8 +559,9 @@ aabb("barge", "#F4F6F8", BX0 + 4, BY0 - 0.02, BZ + 0.3, BX1 - 1, BY0 + 0.0, BZ +
 # coaming around the cargo well
 aabb("barge", "#A72A24", BX0 + 5, BY0 + 0.5, BZ + 0.9, BX1 - 11.5, BY0 + 0.9, BZ + 1.6)
 aabb("barge", "#A72A24", BX0 + 5, BY1 - 0.9, BZ + 0.9, BX1 - 11.5, BY1 - 0.5, BZ + 1.6)
-# pipe stacks, strapped; a free spot left of them, under the near crane
-for sx0, sx1 in ((BX0 + 17, BX0 + 26.5), (BX0 + 28, BX0 + 35.5)):
+# Pipe stacks stay strapped at the bow; the clear loading spot is before the wheelhouse.
+PIPE_STACKS = ((BX0 + 6, BX0 + 15.5), (BX0 + 17, BX0 + 24.5))
+for sx0, sx1 in PIPE_STACKS:
     for row in range(3):
         nrow = 7 - row
         for i in range(nrow):
@@ -616,13 +616,17 @@ OUT_REST = Matrix.Translation(near["pivot"]) @ Matrix.Rotation(A_DECK, 4, "Z") @
 # rush: Ivan sits on the quay by the ladder foot, a hand to his brow, tired but pleased
 person("o_ivan_ground", (NEAR_X - 9.2, RAIL_SEA - 0.9, 0.0), math.radians(-95), ORANGE, sitting="ground",
        pose=((0.15, 0.72), (0.25, -0.05)))
-# wait: the crane operator stands by the gift and looks at his watch
-person("o_operator", (GX + 3.2, GY - 2.6, 0.0), math.radians(-110), ORANGE, pose=((0.32, 0.5), (0.0, 0.0)))
 # petr: Petr in the near cabin; Ivan on the quay below with both arms up
 person("o_petr_near", tuple(OUT_REST @ near["M"] @ Vector((3.0, -2.6, 1.25))), A_DECK, "#F4F6F8", beard=True, sitting=True, pose=(0.1, 0.1))
 person("o_ivan_wave", (NEAR_X - 9.0, RAIL_SEA - 0.9, 0.0), math.radians(-100), ORANGE, pose=((0.05, 1.05), (0.05, 1.05)))
 OUT_DECK = Vector((NEAR_X + R_HOOK * math.cos(A_DECK), PORTAL_Y + R_HOOK * math.sin(A_DECK), BZ + 0.92))
 OUT_GIFT_DELTA = OUT_DECK - Vector((GX, GY, 0.3))
+# Geometry checks: clear deck under the loading boom, hull outside Petr's bay,
+# and a visible gap between the last stop brace and Petr's nearest bogie.
+assert max(x1 for _, x1 in PIPE_STACKS) + 1.6 < OUT_DECK.x < BX1 - 11 - 1.6
+assert BY0 + 1.6 < OUT_DECK.y < BY1 - 1.6
+assert BX1 < FAR_X - 6.35
+assert STOP_X + STOP_GAP / 2 + 2.4 + 0.3 < FAR_X - 6.35
 beam("o_cable", "#2B2F36", OUT_REST @ near["tip"], Vector((GX, GY, GIFT_TOP + SLING + 1.5)) + OUT_GIFT_DELTA, 0.09)
 
 # quay lamps
@@ -867,9 +871,6 @@ if MODE == "outcomes":
                  NEAR_BOX + DECK + [Vector((NEAR_X - 12, 0, 0)), Vector((FAR_X + 14, 20, 4)), Vector((FAR_X, PORTAL_Y, 16))]),
         "rush": ({"o_ivan_ground"}, {"ivan"}, {"gift": OUT_GIFT_DELTA + SAIL, "barge": SAIL, "smoke": SAIL},
                  NEAR_BOX + [p + SAIL for p in DECK] + [Vector((NEAR_X - 14, -2, 0)), Vector((BX1 - 6 + SAIL.x, BY0 + SAIL.y, 6))]),
-        "wait": ({"o_operator"}, {"ivan"}, {"barge": SAIL * 1.6, "smoke": SAIL * 1.6},
-                 [Vector((GX + dx, GY + dy, z)) for dx in (-3, 6) for dy in (-5, 3) for z in (0, 6)] + NEAR_BOX
-                 + [Vector((BX0 + 10 + SAIL.x * 1.6, BY0 + SAIL.y * 1.6, 0)), Vector((BX1 - 4 + SAIL.x * 1.6, BY0 + SAIL.y * 1.6, 8))]),
     }
     spec = FORMATS_SPEC["wide"]
     W, H = spec[0]

@@ -6,7 +6,7 @@ const sizes=[{width:320,height:568},{width:390,height:844},{width:844,height:390
 for(const viewport of sizes) for(const parcel of ['boat','camera','socks']) test(`${viewport.width} ${parcel}: controls, images, lastmile`,async({page})=>{
  await page.setViewportSize(viewport);
  const receipt:unknown[]=[];
- for(const id of ['remote','rush','wait','petr']){
+ for(const id of ['remote','rush','petr']){
  await page.goto(`/scenes.html?scene=crane&parcel=${parcel}&recipient=alva`);
  const intro=page.getByRole('button',{name:/^(Далее|К выбору|К сцене)$/});
  for(let n=0;n<15 && await intro.isVisible();n++) await intro.click();

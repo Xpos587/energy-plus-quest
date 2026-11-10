@@ -104,7 +104,7 @@ describe("current artwork for every delivery context", () => {
       expect(sceneChoiceImage("crane", context)).toBe(
         "/scene-art/barge-v5/wide/plate.webp",
       );
-      for (const option of ["rush", "wait", "petr", "remote"]) {
+      for (const option of ["rush", "petr", "remote"]) {
         const path = `/scene-art/barge-v5/outcome-${option}.webp`;
         expect(sceneOutcomeImage("crane", option, context)).toBe(path);
         expect(existsSync(`public${path}`), path).toBe(true);

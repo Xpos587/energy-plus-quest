@@ -2,7 +2,6 @@ import { expect, test } from "@playwright/test";
 
 const scores: Record<string, number[]> = {
   rush: [-4, -3, 3],
-  wait: [0, 3, -4],
   petr: [-2, 4, -3],
   remote: [4, 4, 5],
   rover: [4, 3, 5],
@@ -22,7 +21,7 @@ for (const scene of ["crane", "lastmile"])
         );
         const choices =
           scene === "crane"
-            ? ["rush", "wait", "petr", "remote"]
+            ? ["rush", "petr", "remote"]
             : ["helicopter", "rover", "robot", "pipe-carrier"];
         for (const choice of choices) {
           await page

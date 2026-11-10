@@ -7,7 +7,7 @@ type ArtState = { page: number; rect: Rect; sources: string[] };
 const scenes: Record<SceneId, string[]> = {
   compact: ["place-1", "place-2", "place-3", "place-4", "auto"],
   inventory: ["entrance", "alphabet", "keeper", "wms"],
-  crane: ["remote", "rush", "wait", "petr"],
+  crane: ["remote", "rush", "petr"],
   lastmile: ["helicopter", "rover", "robot", "pipe-carrier"],
 };
 const parcels = ["camera", "socks", "boat"] as const;

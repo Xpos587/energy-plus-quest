@@ -14,7 +14,7 @@ for (const [width, height] of [[390, 844], [752, 875], [1440, 900]]) {
       await page.screenshot({ path: info.outputPath(`${scene}-choice.png`) });
       if (scene === "crane") {
         await expect(stage).toBeVisible();
-        for (const id of ["remote", "rush", "wait", "petr"])
+        for (const id of ["remote", "rush", "petr"])
           await expect(stage.locator(`[data-hotspot="${id}"]`)).toBeInViewport();
       }
       if (scene === "lastmile") {

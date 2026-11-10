@@ -26,7 +26,7 @@ for (const viewport of [
     for (let n = 0; n < 20 && (await intro.isVisible()); n++) await intro.click();
     await expect(page.locator('[data-scene-choice]')).toHaveCount(0);
 
-    for (const id of ["remote", "rush", "wait", "petr"]) {
+    for (const id of ["remote", "rush", "petr"]) {
       const marker = page.locator(`[data-hotspot="${id}"]`);
       await marker.scrollIntoViewIfNeeded();
       await expect(marker).toBeInViewport();
@@ -61,7 +61,9 @@ for (const viewport of [
       // The desktop rail (≥1001×701) takes the near-square cut of the same still.
       viewport.width > 1000 && viewport.height > 700
         ? "/scene-art/barge-v5/outcome-remote-rail.webp"
-        : "/scene-art/barge-v5/outcome-remote.webp",
+        : viewport.width <= 1000 && viewport.height >= 701 && viewport.height > viewport.width
+          ? "/scene-art/barge-v5/outcome-remote-portrait.webp"
+          : "/scene-art/barge-v5/outcome-remote.webp",
     );
     expect(
       await page.evaluate(

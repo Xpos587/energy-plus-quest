@@ -3,9 +3,9 @@ import { test, expect, type Page } from '@playwright/test';
 test.use({ contextOptions: { reducedMotion: 'reduce' } });
 
 // Lit layers per way (artwork.ts actors; "near" renders as top, "ivan" as pru).
-const lit: Record<string, string> = { remote: 'pru+top', rush: 'ladder+top', wait: 'top', petr: 'far+top' };
-// Every ordered pair of the four ways exactly once.
-const order = ['rush', 'petr', 'remote', 'wait', 'rush', 'remote', 'petr', 'wait', 'remote', 'rush', 'wait', 'petr', 'rush'];
+const lit: Record<string, string> = { remote: 'pru+top', rush: 'ladder+top', petr: 'far+top' };
+// Every ordered pair of the three ways exactly once.
+const order = ['rush', 'petr', 'remote', 'rush', 'remote', 'petr', 'rush'];
 
 const litLayers = (page: Page) => page.locator('[data-world-scene=crane] [data-lit]').evaluateAll(
   layers => layers.map(layer => (layer as HTMLElement).dataset.layer).sort().join('+'));
@@ -44,7 +44,7 @@ for (const [width, height] of [[320, 568], [390, 844], [1440, 900]]) {
         const rect = node.getBoundingClientRect();
         return { id: (node as HTMLElement).dataset.hotspot!, x: rect.x, y: rect.y, w: rect.width, h: rect.height };
       }));
-    expect(rects).toHaveLength(4);
+    expect(rects).toHaveLength(3);
     for (const rect of rects) {
       expect(rect.w, `${rect.id} width`).toBeGreaterThanOrEqual(44);
       expect(rect.h, `${rect.id} height`).toBeGreaterThanOrEqual(44);

@@ -3,7 +3,7 @@ import { craneFacts } from "./artwork";
 import styles from "./CraneDecisionContext.module.css";
 
 /** The situation in one line; the quay picture shows who is where. */
-export const craneSituation = "Баржа вот-вот уйдёт, а ближний кран свободен только через 3 часа";
+export const craneSituation = "Баржа вот-вот уйдёт, а кран без машиниста: Иван в офисе ПРУ.";
 
 export function CraneDecisionContext() {
   return <p className={styles.context} data-crane-decision-context>{craneSituation}</p>;

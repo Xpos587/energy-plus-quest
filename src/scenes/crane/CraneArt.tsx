@@ -264,18 +264,10 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             <line x1={tipX} y1={tipY} x2={hookX} y2={hookY} />
           </svg>
         )}
-        {cast && (beat.signal || beat.clock !== undefined || beat.emote || beat.later || beat.gone) && (
+        {cast && (beat.signal || beat.emote || beat.later) && (
           <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             {beat.signal && (
               <path className={styles.signal} d={`M${anchor.pru[0]} ${anchor.pru[1] - 20} Q${(anchor.pru[0] + anchor.nearCabin[0]) / 2} ${Math.min(anchor.pru[1], anchor.nearCabin[1]) - 170} ${anchor.nearCabin[0]} ${anchor.nearCabin[1] - 24}`} />
-            )}
-            {beat.clock !== undefined && (
-              <g transform={`translate(${(anchor.nearCabin[0] + anchor.farCabin[0]) / 2} ${anchor.nearCabin[1] - 40}) scale(${k})`}>
-                <circle className={styles.dial} r="26" />
-                <line className={styles.hand} y2="-12" transform={`rotate(${beat.clock * 90})`} />
-                <line className={styles.hand} y2="-19" transform={`rotate(${beat.clock * 1080})`} />
-                <text className={styles.badgeText} y="48">+{Math.floor(beat.clock * 3 + 0.001)} ч</text>
-              </g>
             )}
             {beat.later && (
               // Petr left his own crates: they wait for the next run, as the result says.
@@ -284,13 +276,6 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
                 <circle className={styles.dial} cx="-76" r="10" style={{ strokeWidth: 2.5 }} />
                 <path className={styles.hand} d="M-76 -6 V0 H-71" style={{ strokeWidth: 2.5, fill: "none" }} />
                 <text className={styles.tagText} x="10" y="6">Груз Петра ждёт</text>
-              </g>
-            )}
-            {beat.gone && (
-              // The berth is empty: what waiting three hours actually cost.
-              <g className={styles.emote} data-barge-gone transform={`translate(${anchor.bargeMid[0]} ${anchor.bargeMid[1] - 10 * k}) scale(${k})`}>
-                <rect className={styles.tag} x="-128" y="-16" width="256" height="32" rx="16" />
-                <text className={styles.tagText} y="6">Следующее судно — завтра</text>
               </g>
             )}
             {beat.emote && (
@@ -333,15 +318,6 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
                   style={{ animationDelay: `${i * .7}s` }} />
               );
             })}
-            {/* Waiting is nobody moving: a clock on the empty cab, not a person on the ladder. */}
-            {pointed === "wait" && (
-              <g className={styles.wait} data-barge-wait transform={`translate(${anchor.nearCabin[0] - 110} ${anchor.nearCabin[1] - 50}) scale(${k})`}>
-                <circle className={styles.dial} r="30" />
-                <line className={styles.hand} y2="-14" transform="rotate(90)" />
-                <line className={`${styles.hand} ${styles.spin}`} y2="-22" />
-                <text className={styles.badgeText} y="58">через 3 ч</text>
-              </g>
-            )}
           </svg>
         )}
         {options.map((option) => (

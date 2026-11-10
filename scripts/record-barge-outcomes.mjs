@@ -6,7 +6,7 @@ import { mkdirSync, renameSync, rmSync } from "node:fs";
 const [base = "http://127.0.0.1:4174", out = ".tmp-work/barge-anim", tag = ""] = process.argv.slice(2);
 mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
-for (const [w, h] of [[1440, 900], [390, 844]]) for (const id of ["remote", "rush", "wait", "petr"]) {
+for (const [w, h] of [[1440, 900], [390, 844]]) for (const id of ["remote", "rush", "petr"]) {
   const tmp = `${out}/raw-${id}-${w}`;
   const ctx = await browser.newContext({ viewport: { width: w, height: h }, serviceWorkers: "block", recordVideo: { dir: tmp, size: { width: w, height: h } } });
   const page = await ctx.newPage();

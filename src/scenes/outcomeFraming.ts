@@ -7,7 +7,6 @@ export const outcomeFocus: Record<string, string> = {
   "carrier-express": "39%",
   "crane-remote": "49%",
   "crane-rush": "36%",
-  "crane-wait": "40%",
   "crane-petr": "34%",
   "inventory-entrance": "30.2%",
   "inventory-keeper": "31%",

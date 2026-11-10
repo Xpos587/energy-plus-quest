@@ -21,7 +21,7 @@ const journeys: Journey[] = [
     carrier: "crew",
     compact: ["place-1", "place-4"],
     inventory: "alphabet",
-    crane: "wait",
+    crane: "petr",
     lastmile: "helicopter",
   },
   {

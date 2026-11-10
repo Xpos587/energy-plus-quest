@@ -5,7 +5,7 @@ test.use({ contextOptions: { reducedMotion: 'reduce' } });
 const captures = process.env.BARGE_CAPTURE_DIR ?? '.tmp-work/barge-style-after';
 
 for (const parcel of ['camera', 'socks', 'boat']) {
-  for (const id of ['rush', 'wait', 'petr', 'remote']) {
+  for (const id of ['rush', 'petr', 'remote']) {
     test(`${parcel} ${id}: choice, consequence, revise, continue`, async ({ page }, info) => {
       await page.goto(`/scenes.html?scene=crane&parcel=${parcel}&recipient=alva`);
       const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });

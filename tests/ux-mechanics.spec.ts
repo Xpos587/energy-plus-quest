@@ -513,8 +513,8 @@ test("barge revision returns to the same visible choices", async ({ page }, info
   await page.evaluate(() => document.fonts.ready);
   await map.locator('img').evaluate((el: HTMLImageElement) => el.decode());
   await expect.poll(() => map.evaluate(el => el.scrollWidth - el.clientWidth)).toBeGreaterThan(50);
-  await page.locator('[data-choice-id="wait"]').scrollIntoViewIfNeeded();
-  await page.locator('[data-choice-id="wait"]').click();
+  await page.locator('[data-choice-id="petr"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-choice-id="petr"]').click();
   // Compare with the view at the decision, after native focus/scroll has settled.
   const position = await map.evaluate(el => el.scrollLeft);
   expect(position).toBeGreaterThan(50);
@@ -523,6 +523,6 @@ test("barge revision returns to the same visible choices", async ({ page }, info
   await reviseResult(page);
   await expect(page.getByRole('region', {name:'Условие задания', exact:true})).toBeHidden();
   await expect.poll(() => map.evaluate(el => el.scrollLeft)).toBeCloseTo(position, 0);
-  await expect(page.locator('[data-choice-id="wait"]')).toBeInViewport({ratio:1});
+  await expect(page.locator('[data-choice-id="petr"]')).toBeInViewport({ratio:1});
   await page.screenshot({path:info.outputPath('barge-revised-choice.png')});
 });

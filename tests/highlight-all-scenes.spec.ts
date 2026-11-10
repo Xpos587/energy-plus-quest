@@ -13,7 +13,7 @@ const scenes = [
   { name: 'carrier', pairs: [['near', 'crew']] },
   { name: 'compact', pairs: [['place-1', 'place-3'], ['auto', 'place-2']] },
   { name: 'inventory', pairs: [['entrance', 'keeper'], ['wms', 'alphabet']] },
-  { name: 'crane', pairs: [['rush', 'petr'], ['remote', 'wait']] },
+  { name: 'crane', pairs: [['rush', 'petr'], ['remote', 'rush']] },
   { name: 'lastmile', pairs: [['helicopter', 'robot'], ['rover', 'pipe-carrier']] },
 ] as const;
 

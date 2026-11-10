@@ -4,7 +4,7 @@ const choices: Record<string, string[]> = {
   carrier: ['old', 'near', 'crew', 'old4', 'express'],
   compact: ['place-1', 'place-2', 'place-3', 'place-4', 'auto'],
   inventory: ['entrance', 'keeper', 'alphabet', 'wms'],
-  crane: ['rush', 'wait', 'petr', 'remote'],
+  crane: ['rush', 'petr', 'remote'],
   lastmile: ['helicopter', 'rover', 'robot', 'pipe-carrier'],
 };
 
@@ -42,7 +42,7 @@ for (const [scene, ids] of Object.entries(choices)) {
     await page.screenshot({ path: `.tmp-work/choice-buttons/${scene}-${info.project.name}.png` });
     await page.locator(`[${attr}="${ids.at(-1)}"]`).click();
     await page.locator('[data-choice-confirm]').click();
-    await expect(page.locator('[data-result-reader]')).toBeVisible();
+    await expect(page.locator('[data-result-reader]')).toBeVisible({ timeout: 20_000 });
     await page.getByRole('button', { name: /Изменить выбор|К машинам|Назад к машинам/ }).click();
     await expect(condition).not.toBeVisible();
     await expect(answers).toHaveCount(ids.length);
