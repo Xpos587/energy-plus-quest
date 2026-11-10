@@ -13,14 +13,20 @@ const figs = {
 /** Office and far-cab variants share their boxes; `office` is the whole ПРУ building cut from the plate, so it can glow. */
 export const craneCast: Partial<Record<CraneFormat, Cast>> = {
   wide: {
-    window: { x: 444, y: 398, w: 186.67, h: 140.67 },
-    cab: { x: 1426, y: 0, w: 361.33, h: 306.67 },
-    office: { x: 422.67, y: 321.33, w: 226.67, h: 258.67 },
+    window: { x: 463.6, y: 393.8, w: 184.5, h: 139.1 },
+    cab: { x: 1434.2, y: 0.3, w: 357.1, h: 303.2 },
+    office: { x: 442.5, y: 318.0, w: 224.0, h: 255.8 },
     figs,
   },
-  desk: { window: { x: 230.67, y: 533.33, w: 182.67, h: 140.67 }, cab: { x: 1162.67, y: 84.67, w: 373.33, h: 316 }, office: { x: 142.67, y: 456.67, w: 280.67, h: 256 }, figs },
-  mid: { window: { x: 180, y: 596, w: 172.67, h: 134 }, cab: { x: 1042, y: 152.67, w: 360, h: 298 }, office: { x: 98.67, y: 524, w: 260.67, h: 243.33 }, figs },
-  tall: { window: { x: 124.67, y: 998.67, w: 131.33, h: 128 }, cab: { x: 624, y: 347.33, w: 385.33, h: 266.67 }, office: { x: 74, y: 930, w: 170.67, h: 211.33 }, figs },
+  desk: { window: { x: 230.7, y: 528.0, w: 182.7, h: 140.7 },
+    cab: { x: 1162.7, y: 79.4, w: 373.3, h: 316.0 },
+    office: { x: 142.7, y: 451.4, w: 280.7, h: 256.0 }, figs },
+  mid: { window: { x: 180.0, y: 590.7, w: 172.7, h: 134.0 },
+    cab: { x: 1042.0, y: 147.2, w: 360.0, h: 298.1 },
+    office: { x: 98.7, y: 518.7, w: 260.7, h: 243.4 }, figs },
+  tall: { window: { x: 125.0, y: 992.5, w: 131.8, h: 128.4 },
+    cab: { x: 626.0, y: 339.0, w: 386.6, h: 267.6 },
+    office: { x: 74.1, y: 923.6, w: 171.2, h: 212.0 }, figs },
 };
 
-export const castSrc = (format: CraneFormat, name: string) => `scene-art/barge-v4/${format}/${name}.webp`;
+export const castSrc = (format: CraneFormat, name: string) => `scene-art/barge-v5/${format}/${name}.webp`;

@@ -363,6 +363,8 @@ for dy, rot in ((-2.5, -0.5), (2.5, 0.5)):  # screens to the sides, angled in
 
 # ---- driverless tractor and the gift on its pallet ---------------------------
 R_HOOK = 16.8  # horizontal reach of the near boom head (luff 60)
+# The near boom rests over the barge's free spot, which now sits in the near crane's
+# bay (Grisha 09.11): the gift on the quay and that spot are both on the same circle.
 A_GIFT, A_DECK = math.radians(-234.0), math.radians(-97.5)
 GX, GY = 14.0 + R_HOOK * math.cos(A_GIFT), 7.25 + R_HOOK * math.sin(A_GIFT)
 aabb("tractor", "#2A5FA8", GX - 13, GY - 1.2, 0.6, GX - 9.5, GY + 1.2, 2.0)
@@ -510,8 +512,31 @@ for k, (dx, dy, dz) in enumerate(((0, 0, 0), (2.6, 0, 0), (0, 2.6, 0), (2.6, 2.6
     for t in (0.2, 2.0):
         aabb("crates", "#A8773F", x0 - 0.02, y0 - 0.02, dz + t, x0 + 2.42, y0 + 2.42, dz + t + 0.22)
 
+# ---- two cranes, two bays: a buffer stop on both rails between them ------------
+# Grisha 09.11: the barge read as "either crane can serve it". The stop is the
+# border: the near crane can never drive into the far crane's stretch, and back.
+STOP_X, STOP_GAP = 30.0, 2.6
+
+
+def buffer_stop(x, face):
+    """Buffer stop on both rails; `face` is -1/+1, the way its bumper looks."""
+    for ry in (RAIL_SEA, RAIL_LAND):
+        aabb("stops", "#3A414B", x - 1.1, ry - 0.85, 0.0, x + 1.1, ry + 0.85, 0.24)  # sleeper pad
+        aabb("stops", "#2B2F36", x - 0.5, ry - 0.6, 0.24, x + 0.5, ry + 0.6, 2.9)  # post
+        for i in range(6):  # red and white bumper the bogie meets
+            z0 = 0.4 + i * 0.42
+            aabb("stops", "#D62B2B" if i % 2 == 0 else "#F4F6F8", x - 0.62, ry - 1.0, z0, x + 0.62, ry + 1.0, z0 + 0.42)
+        beam("stops", "#2B2F36", (x - face * 0.35, ry, 2.9), (x + face * 2.4, ry, 0.15), 0.26)  # brace
+        ball("stops", "#FFC20E", (x, ry, 3.15), 0.26)  # warning lamp on top
+
+
+buffer_stop(STOP_X - STOP_GAP / 2, -1)
+buffer_stop(STOP_X + STOP_GAP / 2, 1)
+
 # ---- the barge (moored broadside, stern wheelhouse to the right, pipes on deck)
-BX0, BX1, BY0, BY1 = 2.0, 50.0, -13.5, -2.6
+# Grisha 09.11: pull the barge into the empty crane's bay, so it is clearly the
+# near crane's job; its cargo and the free spot sit under NEAR_X.
+BX0, BX1, BY0, BY1 = 0.0, 48.0, -13.5, -2.6
 BZ = -0.9  # deck height: a laden barge sits low against the quay
 hull_bm = None
 def hull(group, x0, x1, y0, y1, zb, zd, color, bow=6.0):
@@ -536,7 +561,7 @@ aabb("barge", "#F4F6F8", BX0 + 4, BY0 - 0.02, BZ + 0.3, BX1 - 1, BY0 + 0.0, BZ +
 aabb("barge", "#A72A24", BX0 + 5, BY0 + 0.5, BZ + 0.9, BX1 - 11.5, BY0 + 0.9, BZ + 1.6)
 aabb("barge", "#A72A24", BX0 + 5, BY1 - 0.9, BZ + 0.9, BX1 - 11.5, BY1 - 0.5, BZ + 1.6)
 # pipe stacks, strapped; a free spot left of them, under the near crane
-for sx0, sx1 in ((19, 28.5), (30, 37.5)):
+for sx0, sx1 in ((BX0 + 17, BX0 + 26.5), (BX0 + 28, BX0 + 35.5)):
     for row in range(3):
         nrow = 7 - row
         for i in range(nrow):
@@ -554,8 +579,13 @@ aabb("barge", "#5A8CC4", BX1 - 11.05, BY0 + 1.6, BZ + 2.4, BX1 - 10.95, BY1 - 1.
 aabb("barge", "#2A5FA8", BX1 - 9.3, BY0 + 1.9, BZ + 6.8, BX1 - 2.9, BY1 - 1.9, BZ + 7.2)
 cyl("barge", "#2B2F36", (BX1 - 4.5, (BY0 + BY1) / 2, BZ + 8.2), 0.6, 2.4, seg=16)
 cyl("barge", ORANGE, (BX1 - 4.5, (BY0 + BY1) / 2, BZ + 8.6), 0.62, 0.4, seg=16)
-for k in range(4):
-    ball("smoke", "#F4F6F8", (BX1 - 4.5 + k * 1.6, (BY0 + BY1) / 2 + k * 0.6, BZ + 10 + k * 1.4), 0.9 + k * 0.35, nolines=True)
+# funnel smoke: one continuous plume of overlapping puffs (Grisha 09.11: it used to be
+# four separate low-poly balls cut out by the alpha pass)
+for k in range(7):
+    f = k / 6  # 0 at the funnel mouth, 1 at the top of the plume
+    ball("smoke", "#F4F6F8",
+         (BX1 - 4.5 + f * 5.2 + 0.22 * math.sin(k * 1.7), (BY0 + BY1) / 2 + f * 2.1, BZ + 9.9 + f * 6.2),
+         0.78 + f * 1.45 + 0.16 * math.sin(k * 2.1), sx=1.05, sz=0.94, nolines=True, sub=3)
 # bow fittings and mooring ropes to quay bollards
 cyl("barge", "#3A414B", (BX0 + 3.5, (BY0 + BY1) / 2, BZ + 1.3), 0.35, 0.8, seg=10)
 for x in range(int(BX0 + 8), int(BX1 - 2), 7):  # tyre fenders on the hull side
@@ -711,7 +741,7 @@ ANCHORS = {
     "ladderTop": Vector((NEAR_X - 6.6, RAIL_SEA + 1.9, 11)),
     "farCabin": far["cabin"],
     "petr": Vector(far["M"] @ Vector((3.0, -2.6, 1.25 + 0.85 * PEOPLE))),
-    "deckSpot": Vector((12, (BY0 + BY1) / 2, BZ + 1)),
+    "deckSpot": Vector((NEAR_X + R_HOOK * math.cos(A_DECK), PORTAL_Y + R_HOOK * math.sin(A_DECK), BZ + 1)),
     "bargeMid": Vector(((BX0 + BX1) / 2, (BY0 + BY1) / 2, BZ)),
     "crates": Vector((FAR_X + 12, 18, 3)),
     "quayFootNear": Vector((NEAR_X, PORTAL_Y, 0)),

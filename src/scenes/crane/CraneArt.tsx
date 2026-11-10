@@ -137,6 +137,18 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
     const rect = fitted.get(id);
     return rect ? { left: rect.x, top: rect.y, width: rect.w, height: rect.h } : {};
   };
+  // Pulsing hint rings (Grisha 09.11): one ring size for every actor, and the ring sits on the box the
+  // finger actually hits — the fitted tap target, not a separate guess at where the actor is.
+  const toArt = view.width ? art.width / view.width : 0;
+  const artBox = (id: string) => {
+    const rect = fitted.get(id);
+    return (rect && toArt ? { x: rect.x * toArt, y: rect.y * toArt, w: rect.w * toArt, h: rect.h * toArt } : art.targets[id]);
+  };
+  const ringSize = Math.max(0, ...ids.map((id) => Math.max(artBox(id).w, artBox(id).h))) * 0.36;
+  const ringAt = (id: string) => {
+    const rect = artBox(id);
+    return ringSize ? { x: rect.x + rect.w / 2, y: rect.y + rect.h / 2, r: ringSize } : undefined;
+  };
   // A world move is a pure screen shift for the orthographic quay camera.
   const move = (r: { w: number; h: number }, delta: readonly number[]): CSSProperties => {
     const [[ax, ay, az], [bx, by, bz]] = art.affine;
@@ -252,7 +264,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             <line x1={tipX} y1={tipY} x2={hookX} y2={hookY} />
           </svg>
         )}
-        {cast && (beat.signal || beat.clock !== undefined || beat.emote || beat.later) && (
+        {cast && (beat.signal || beat.clock !== undefined || beat.emote || beat.later || beat.gone) && (
           <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             {beat.signal && (
               <path className={styles.signal} d={`M${anchor.pru[0]} ${anchor.pru[1] - 20} Q${(anchor.pru[0] + anchor.nearCabin[0]) / 2} ${Math.min(anchor.pru[1], anchor.nearCabin[1]) - 170} ${anchor.nearCabin[0]} ${anchor.nearCabin[1] - 24}`} />
@@ -272,6 +284,13 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
                 <circle className={styles.dial} cx="-76" r="10" style={{ strokeWidth: 2.5 }} />
                 <path className={styles.hand} d="M-76 -6 V0 H-71" style={{ strokeWidth: 2.5, fill: "none" }} />
                 <text className={styles.tagText} x="10" y="6">Груз Петра ждёт</text>
+              </g>
+            )}
+            {beat.gone && (
+              // The berth is empty: what waiting three hours actually cost.
+              <g className={styles.emote} data-barge-gone transform={`translate(${anchor.bargeMid[0]} ${anchor.bargeMid[1] - 10 * k}) scale(${k})`}>
+                <rect className={styles.tag} x="-128" y="-16" width="256" height="32" rx="16" />
+                <text className={styles.tagText} y="6">Следующее судно — завтра</text>
               </g>
             )}
             {beat.emote && (
@@ -306,10 +325,12 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {interactive && (
           <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             {!pointed && !selectedId && options.filter(({ id }) => !seen.includes(id)).map(({ id }, i) => {
-              const t = art.targets[id];
+              // One ring size on every actor, centred on the actor, not on its tap box.
+              const hint = ringAt(id);
+              if (!hint) return null;
               return (
-                <circle key={id} className={styles.ripple} data-barge-ripple={id} cx={t.x + t.w / 2} cy={t.y + t.h / 2}
-                  r={Math.max(t.w, t.h) * .42} style={{ animationDelay: `${i * .7}s` }} />
+                <circle key={id} className={styles.ripple} data-barge-ripple={id} cx={hint.x} cy={hint.y} r={hint.r}
+                  style={{ animationDelay: `${i * .7}s` }} />
               );
             })}
             {/* Waiting is nobody moving: a clock on the empty cab, not a person on the ladder. */}

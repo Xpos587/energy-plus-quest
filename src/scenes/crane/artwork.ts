@@ -1,7 +1,7 @@
 /** Barge scene v4: one Blender quay rendered as layers per screen format (see design/scene-04/blender-v4). */
 import { craneLayers, craneWorld } from "./layers";
 
-const base = "scene-art/barge-v4";
+const base = "scene-art/barge-v5";
 
 export type Rect = { x: number; y: number; width: number; height: number };
 export type CraneFormat = keyof typeof craneLayers;
@@ -29,7 +29,6 @@ function format(name: CraneFormat) {
     const [[ax, ay, az, u], [bx, by, bz, v]] = layer.affine;
     return [ax * x + ay * y + az * z + u, bx * x + by * y + bz * z + v];
   };
-  const ladderMid: Point = [a.ladderFoot[0], (a.ladderFoot[1] + a.ladderTop[1]) / 2];
   const near: readonly Point[] = [a.nearCabin, a.nearTip, a.quayFootNear, a.ladderTop];
   const corners = (r: { x: number; y: number; w: number; h: number }): Point[] => [[r.x, r.y], [r.x + r.w, r.y + r.h]];
   const sp = layer.sprites;
@@ -97,7 +96,7 @@ export const craneCaptions = {
 export const craneFacts = {
   remote: { who: "Иван", where: "Из офиса ПРУ, с пульта", when: "Сразу", note: "Краном управляют на расстоянии, на кран подниматься не нужно" },
   rush: { who: "Иван", where: "Из кабины крана", when: "После подъёма", note: "Иван дойдёт до крана и поднимется по лестнице в кабину" },
-  wait: { who: "Крановщик по графику", where: "Из кабины", when: "Через 3 ч", note: "Никого не отвлекаем, но баржа готова к отходу уже сейчас" },
+  wait: { who: "Крановщик по графику", where: "Из кабины", when: "Через 3 ч", note: "Никого не дёргаем: так и надо, когда подарок не срочный. Но у баржи своё окно — уйдёт без него, следующее судно завтра" },
   petr: { who: "Пётр", where: "Из кабины ближнего крана", when: "Сразу", note: "У Петра скоро своя погрузка" },
 } as const;
 

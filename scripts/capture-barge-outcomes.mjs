@@ -70,7 +70,7 @@ for (const [format, { width, height, suffix }] of Object.entries(shots).filter((
     if (drawn !== format) throw new Error(`${id}: drew ${drawn}, not ${format}`);
     const clip = format === "tall" ? await railCrop(page) : { x: 0, y: 0, width, height };
     const png = await page.screenshot({ clip });
-    await sharp(png).webp({ quality: 86, effort: 6 }).toFile(`public/scene-art/barge-v4/outcome-${id}${suffix}.webp`);
+    await sharp(png).webp({ quality: 86, effort: 6 }).toFile(`public/scene-art/barge-v5/outcome-${id}${suffix}.webp`);
     console.log(id + suffix, "ok", JSON.stringify(clip, (_, v) => (typeof v === "number" ? Math.round(v) : v)));
     await context.close();
   }

@@ -1,7 +1,7 @@
 // Blender layers -> runtime sprites for scene 4 (barge v4).
 //   bun design/scene-04/blender-v4/export.mjs [OUT] [OUTCOMES]
 // Reads OUT/{format}/*.png (rendered at SS x format px) and OUT/manifest.json,
-// writes public/scene-art/barge-v4/{format}/*.webp, outcome-*.webp, and the
+// writes public/scene-art/barge-v5/{format}/*.webp, outcome-*.webp, and the
 // generated geometry table src/scenes/crane/layers.ts (format px units).
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -11,7 +11,7 @@ const here = path.dirname(new URL(import.meta.url).pathname);
 const root = path.resolve(here, "../../..");
 const OUT = path.resolve(process.argv[2] ?? path.join(here, "out"));
 const OUTCOMES = process.argv[3] ? path.resolve(process.argv[3]) : undefined;
-const base = "scene-art/barge-v4";
+const base = "scene-art/barge-v5";
 const pub = path.join(root, "public", base);
 const manifest = JSON.parse(await readFile(path.join(OUT, "manifest.json"), "utf8"));
 const S = 1.5; // render supersampling: png px per format px

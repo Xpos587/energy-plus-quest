@@ -30,6 +30,8 @@ export type CraneBeat = {
   clock?: number;
   /** Petr's own crates wait for later. */
   later?: boolean;
+  /** The barge has left: her berth stands empty until tomorrow's ship. */
+  gone?: boolean;
 };
 
 const last = craneWorld.slews.length - 1;
@@ -97,15 +99,17 @@ const timelines: Record<string, Step[]> = {
     ],
     "ladder", { office: "empty", operator: "ivan" }, { emote: { kind: "tired", at: "near" } },
   ),
-  // Nobody is at the crane: the barge leaves on time, the clock runs three hours,
-  // the crane swings to the gift with nowhere to put it, Ivan checks his watch.
+  // Nobody is at the crane. The cost is shown first: the barge casts off and goes,
+  // then three hours pass, and only then does the crane come — with nowhere to put
+  // the gift (Grisha 09.11: waiting used to read as "nothing happens").
   wait: [
-    { ms: 500, at: () => ({ ...rest(), clock: 0 }) },
-    { ms: 1600, at: (t) => ({ ...rest(), clock: 0, sail: t * t }) },
-    { ms: 1300, at: (t) => ({ ...rest(), clock: ease(t), sail: 1 }) },
-    { ms: 800, at: (t) => { const f = Math.round(lerp(last, 0, ease(t))); return { frame: f, hook: hookUnder(f, high), clock: 1, sail: 1 }; } },
-    { ms: 400, at: (t) => ({ frame: 0, hook: [gx, gy, lerp(high, craneWorld.hookAttach, ease(t))], clock: 1, sail: 1 }) },
-    { ms: 1400, at: () => ({ frame: 0, hook: [gx, gy, craneWorld.hookAttach], clock: 1, sail: 1, office: "watch", emote: { kind: "question", at: "office" } }) },
+    { ms: 400, at: () => ({ ...rest(), clock: 0 }) },
+    { ms: 1500, at: (t) => ({ ...rest(), clock: 0.1 * ease(t), sail: ease(t) }) },
+    { ms: 1100, at: (t) => ({ ...rest(), clock: 0.1 + 0.9 * ease(t), sail: 1 }) },
+    { ms: 500, at: () => ({ ...rest(), clock: 1, sail: 1, gone: true }) },
+    { ms: 800, at: (t) => { const f = Math.round(lerp(last, 0, ease(t))); return { frame: f, hook: hookUnder(f, high), clock: 1, sail: 1, gone: true }; } },
+    { ms: 400, at: (t) => ({ frame: 0, hook: [gx, gy, lerp(high, craneWorld.hookAttach, ease(t))], clock: 1, sail: 1, gone: true }) },
+    { ms: 1500, at: () => ({ frame: 0, hook: [gx, gy, craneWorld.hookAttach], clock: 1, sail: 1, gone: true, office: "watch", emote: { kind: "question", at: "office" } }) },
   ],
   // Petr leaves his own crates, walks over, climbs, loads; he is sad, Ivan cheers.
   petr: load(
