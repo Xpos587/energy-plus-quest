@@ -71,6 +71,31 @@ export const paceFraction = (id: MapCarrierId) => {
   return carrierFacts[id].citySpeedKmh / (max * 1.08);
 };
 
+/** Two-driver badge on the pin's shoulder: one faceless person + «×2»
+ * (client, 10.11: two smiling heads read as a smiley). */
+function crewBadge(c: CanvasRenderingContext2D, bx: number, by: number, color: string) {
+  const w = 26, h = 16;
+  c.lineWidth = 1.5;
+  c.strokeStyle = "#fff";
+  c.fillStyle = color;
+  rr(c, bx - 9, by - h / 2, w, h, h / 2);
+  c.fill();
+  c.stroke();
+  // faceless bust: head + shoulders
+  c.fillStyle = "#fff";
+  c.beginPath();
+  c.arc(bx, by - 2.4, 2.6, 0, Math.PI * 2);
+  c.fill();
+  c.beginPath();
+  c.arc(bx, by + 6, 5, Math.PI * 1.15, Math.PI * 1.85);
+  c.closePath();
+  c.fill();
+  c.font = '700 11px "Roboto Condensed", Arial, sans-serif';
+  c.textAlign = "left";
+  c.textBaseline = "middle";
+  c.fillText("×2", bx + 6.5, by + 0.5);
+}
+
 /** Rig marker: the same small speedometer over every cab. The needle shows
  * how fast the rig moves through the city; no numbers. The green rig adds a
  * two-driver badge. Tail touches (x, y). */
@@ -157,31 +182,11 @@ export function rigPin(
   c.arc(0, gy, 1.9, 0, Math.PI * 2);
   c.fill();
   if (twinkle) sparkle(c, -r * 0.78, cy - r * 0.86, 4.6 * twinkle);
-  if (id === "crew") {
-    // two drivers: a small badge on the pin's shoulder
-    const bx = r + 3;
-    const by = cy - r + 4;
-    c.fillStyle = color;
-    c.beginPath();
-    c.arc(bx, by, 7.5, 0, Math.PI * 2);
-    c.fill();
-    c.lineWidth = 1.5;
-    c.strokeStyle = "#fff";
-    c.stroke();
-    c.fillStyle = "#fff";
-    for (const dx of [-2.4, 2.4]) {
-      c.beginPath();
-      c.arc(bx + dx, by - 1.8, 1.6, 0, Math.PI * 2);
-      c.fill();
-      c.beginPath();
-      c.arc(bx + dx, by + 3.6, 2.7, Math.PI, 0);
-      c.fill();
-    }
-  }
+  if (id === "crew") crewBadge(c, r + 3, cy - r + 4, color);
   c.restore();
 }
 
-/** Auto-select marker: the same pin as a rig (navy rim, a check instead of
+/** Auto-select marker: the same pin as a rig (navy rim, a spark instead of
  * the pace dial) with a plain label to its right. Tail touches (x, y). */
 export function autoPin(
   c: CanvasRenderingContext2D,
