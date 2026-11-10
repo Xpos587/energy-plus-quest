@@ -6,11 +6,11 @@ export const lastmileRevision = 'scene-art/lastmile-family-v1/revision-2';
 // so near-square desktop rails and portrait/landscape phones are covered without bands or cut subjects.
 const lastmileTallRevision = 'scene-art/lastmile-family-v1/revision-13';
 
-// revision-16: revision-12 map with a smaller river, big swamp, brighter АБК and the reference Mi-8 livery (design/scene-05/swamp-2026-11-10).
+// revision-17: revision-12 map with a smaller river, big swamp, brighter АБК and the Mi-8 livery copied from the client reference (black upper half, orange lower) (design/scene-05/swamp-2026-11-10).
 // revision-12: revision-11 map (v9 opening route style, reference vehicles, 2x) colour-graded per call 05.11:
 // red/yellow foliage muted outside the vehicles, АБК roof and trim back to blue. Geometry is pixel-identical.
 export function lastmileChoiceImage(format: 'wide' | 'tall', recipient: SceneContext['recipient']) {
-  return `scene-art/lastmile-family-v1/revision-16/choice-${format}-${recipient}.webp`;
+  return `scene-art/lastmile-family-v1/revision-17/choice-${format}-${recipient}.webp`;
 }
 
 export function lastmileFlightImage(context: SceneContext) {
