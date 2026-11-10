@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = Path(__file__).parents[2]
 RENDER = ROOT / ".tmp-work/wh3d/gen/desk-ref.png"  # 1536x1024 Blender plate, straight geometry
@@ -42,6 +42,13 @@ def render_on_plane(shape, render):
     bot = r[y0 + 1, x0] * (1 - fx) + r[y0 + 1, x0 + 1] * fx
     out[ok] = top * (1 - fy) + bot * fy
     return out, ok
+
+
+def edge_map(rgb):
+    """Style-invariant structure: gradient magnitude, so paint stroke texture does not decide a match."""
+    g = np.asarray(Image.fromarray(np.clip(rgb, 0, 255).astype(np.uint8)).convert("L"), np.float32)
+    e = np.minimum(np.abs(np.diff(g, axis=1, prepend=g[:, :1])) + np.abs(np.diff(g, axis=0, prepend=g[:1])), 120.0)
+    return np.asarray(Image.fromarray(e.astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.2)), np.float32)
 
 
 def flow(painted_gray, render_gray, ok):
@@ -108,9 +115,7 @@ def main(argv):
     out_dir.mkdir(parents=True, exist_ok=True)
     plate = np.asarray(Image.open(src).convert("RGB"), np.uint8)
     render, ok = render_on_plane(plate.shape[:2], Image.open(RENDER))
-    gray = np.asarray(Image.fromarray(plate).convert("L"), np.float32)
-    rgray = np.asarray(Image.fromarray(np.clip(render, 0, 255).astype(np.uint8)).convert("L"), np.float32)
-    pts, vec = flow(gray, rgray, ok)
+    pts, vec = flow(edge_map(plate), edge_map(render), ok)
     rows = {
         "hall": stats(pts, vec, HALL),
         "rackRowLeft": stats(pts, vec, (380, 200, 620, 900)),

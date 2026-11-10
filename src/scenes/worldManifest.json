@@ -58,7 +58,7 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/inventory-master-v11.webp",
+        "image": "scene-art/inventory-master-v12.webp",
         "width": 1672,
         "height": 1170,
         "hotspots": [
@@ -86,7 +86,7 @@
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/inventory-master-v11-tall.webp",
+        "image": "scene-art/inventory-master-v12-tall.webp",
         "width": 1200,
         "height": 1750,
         "hotspots": [

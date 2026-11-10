@@ -15,9 +15,9 @@ Image.MAX_IMAGE_PIXELS = None
 scene = sys.argv[1]
 # Per composition: contour file, its JSON key (None = whole file) and the art the contours were drawn on.
 targets = {
-    "lastmile": [("src/scenes/lastmile/segmentedContours.json", c, f"public/scene-art/lastmile-family-v1/revision-12/choice-{c}-alva.webp") for c in ["wide", "tall"]],
-    "inventory": [("src/scenes/inventory/segmentedContours.json", None, "public/scene-art/inventory-master-v11.webp"),
-                  ("src/scenes/inventory/segmentedContours.mobile.json", None, "public/scene-art/inventory-master-v11-tall.webp")],
+    "lastmile": [("src/scenes/lastmile/segmentedContours.json", c, f"public/scene-art/lastmile-family-v1/revision-16/choice-{c}-alva.webp") for c in ["wide", "tall"]],
+    "inventory": [("src/scenes/inventory/segmentedContours.json", None, "public/scene-art/inventory-master-v12.webp"),
+                  ("src/scenes/inventory/segmentedContours.mobile.json", None, "public/scene-art/inventory-master-v12-tall.webp")],
 }[scene]
 dev = "cuda" if torch.cuda.is_available() else "cpu"
 model = SamModel.from_pretrained("facebook/sam-vit-huge").to(dev).eval()
