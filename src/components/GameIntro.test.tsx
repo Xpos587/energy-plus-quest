@@ -104,7 +104,7 @@ it("opens the approved illustrated cover before both authored briefings and retu
   const start = vi.fn();
   const host = await render(<GameIntro onStart={start} />);
   expect(host.querySelector('[data-intro-enter]')).not.toBeNull();
-  expect(host.querySelector('img[src*="revision-5/intro-wide"]')).not.toBeNull();
+  expect(host.querySelector('img[src*="revision-14/intro-wide"]')).not.toBeNull();
   expect(host.textContent).not.toContain(scenarioParagraph("24D093EF"));
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-enter]')!.click());
   expect(host.textContent).toContain(scenarioParagraph("24D093EF"));
