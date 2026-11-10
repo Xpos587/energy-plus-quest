@@ -1306,12 +1306,13 @@ export function drawCity(
         : (speedAt(route, t.s[index]) / route.base - 1) *
           paceFraction(id) *
           4.2;
+      // Rig gauges run a little larger than the other pins (Grisha, 09.11).
       rigPin(
         c,
         id,
         sx + (r ? r[0] * 4 : 0),
         sy - 2 * o.pinScale + (r ? r[1] * 4 : 0),
-        o.pinScale,
+        o.pinScale * 1.18,
         live + (r ? r[2] * 4 + Math.sin(time * 23) * 0.06 : 0),
         glowAt,
       );
