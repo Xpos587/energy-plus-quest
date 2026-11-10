@@ -83,3 +83,9 @@ it("speaks in the first person in every shared certificate", () => {
       expect(text).not.toMatch(/(^|[^а-яё])(вы|ваш[а-яё]*|вам|вас|мы)(?![а-яё])/iu);
     }
 });
+
+it("shows final totals as the per-stage average shifted to 0…10", async () => {
+  const { finalScore } = await import("./endingCopy");
+  expect([-25, -5, 0, 5, 12, 25, 40].map(finalScore)).toEqual([0, 4, 5, 6, 7, 10, 10]);
+  expect(finalScore(-40)).toBe(0);
+});

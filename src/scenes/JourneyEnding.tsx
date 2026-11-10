@@ -43,6 +43,7 @@ export function JourneyEnding({
         <LogistCertificate
           profile={context.profile}
           copy={profile}
+          scores={scores}
           onRestart={onRestart}
         />
       ) : (

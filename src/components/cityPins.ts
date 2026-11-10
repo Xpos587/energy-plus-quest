@@ -236,14 +236,16 @@ export function autoPin(
   c.lineWidth = 2.5;
   c.strokeStyle = color;
   c.stroke();
-  c.lineWidth = 3;
-  c.lineCap = "round";
-  c.lineJoin = "round";
+  // A neutral spark, not a check: a check reads as a vote already cast (client, 10.11).
+  c.fillStyle = color;
   c.beginPath();
-  c.moveTo(-6, cy + 0.5);
-  c.lineTo(-1.8, cy + 4.6);
-  c.lineTo(6.4, cy - 4.4);
-  c.stroke();
+  for (let i = 0; i < 8; i++) {
+    const a = (i * Math.PI) / 4 - Math.PI / 2;
+    const k = i % 2 ? 2.6 : 8.5;
+    c.lineTo(Math.cos(a) * k, cy + Math.sin(a) * k);
+  }
+  c.closePath();
+  c.fill();
   if (twinkle) sparkle(c, -r * 0.78, cy - r * 0.86, 4.6 * twinkle);
   c.restore();
 }

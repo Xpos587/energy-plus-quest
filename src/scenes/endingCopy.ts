@@ -26,6 +26,12 @@ export function endingGiftCopy(parcel: ParcelId, recipient: RecipientId) {
     .replace("Он/она", recipient === "alva" ? "Она" : "Он");
 }
 export const endingRestartLabel = scenarioParagraph("15010E9F");
+/** Final totals (client, 10.11): every stage scores -5…5, so «+5» maps a stage to 0…10 with no negatives.
+ * Raw totals are sums over the five stages (measured -19…25), where a plain «+5» would sit at 0 or 10;
+ * the average per stage keeps the client's 0…10 scale meaningful. */
+const STAGES = 5;
+export const finalScore = (total: number) =>
+  Math.min(10, Math.max(0, Math.round(total / STAGES) + 5));
 type LogistType = "future" | "energy" | "empathy" | "efficiency";
 export function logistType(profile: ProfileId, scores: Scores): LogistType {
   if (

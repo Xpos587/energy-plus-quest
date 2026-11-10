@@ -7,14 +7,15 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { ImageSources } from "../components/ImageSources";
+import { scoreItems } from "../components/ScoreBoard";
 import { imageAsset } from "../game/imageAssets";
-import type { ProfileId } from "../game/types";
+import type { ProfileId, Scores } from "../game/types";
 import {
   certificateCopy,
   exportCertificate,
   type LogistCopy,
 } from "./certificateExport";
-import { endingRestartLabel } from "./endingCopy";
+import { endingRestartLabel, finalScore } from "./endingCopy";
 import styles from "./LogistCertificate.module.css";
 
 const certificateArtwork = {
@@ -40,10 +41,12 @@ const energyPlusUrl = "https://e-plus.media/";
 export function LogistCertificate({
   profile,
   copy,
+  scores,
   onRestart,
 }: {
   profile: ProfileId;
   copy: LogistCopy;
+  scores?: Scores;
   onRestart: () => void;
 }) {
   const artwork = imageAsset(certificateArtwork[profile][copy.type]);
@@ -177,6 +180,24 @@ export function LogistCertificate({
               copy.callToAction
             )}
           </p>
+          {scores && (
+            <div
+              className={styles.totals}
+              data-certificate-totals
+              role="group"
+              aria-label="Итоговые баллы"
+            >
+              {scoreItems.map((item) => (
+                <div data-metric={item.key} key={item.key}>
+                  <span>
+                    <item.icon aria-hidden="true" size={26} strokeWidth={2.2} />
+                    <strong>{finalScore(scores[item.key])}</strong>
+                  </span>
+                  <em>{item.label}</em>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </article>
       <div className={styles.resultActions}>
