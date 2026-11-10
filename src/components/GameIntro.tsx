@@ -1,24 +1,21 @@
-import {
-  ArrowLeft,
-  ArrowRight,
-  ChartLine,
-  Heart,
-  MapPin,
-  Zap,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, ChartLine, Heart, Zap } from "lucide-react";
 import { type CSSProperties, useRef, useState } from "react";
+import { imageAsset } from "../game/imageAssets";
 import { scenarioParagraph } from "../game/scenarioDocument";
+import { lastmileChoiceImage } from "../scenes/lastmile/artworkFamily";
 import { sceneChoiceImage } from "../scenes/artwork";
 import { BrandLockup } from "./BrandLockup";
 import styles from "./GameIntro.module.css";
+import { plateSource } from "./cityV4";
 import { progressSteps } from "./QuestShell";
 import { routeArt, stageIcons } from "./StageIndicator";
 
 /* One line instead of the two canonical paragraphs (R19, 09.11): the five
    stages below are the screen's subject, the story only sets them up. */
-const parcelStory = [scenarioParagraph("24D093EF"), scenarioParagraph("42DF6085")].join(
-  " ",
-);
+const parcelStory = [
+  scenarioParagraph("24D093EF"),
+  scenarioParagraph("42DF6085"),
+].join(" ");
 /* The letter's own words (R19): one rule, no «Тогда вперёд!» and no second
    restatement of the destination already printed above it. */
 const invitation = scenarioParagraph("38763B42");
@@ -28,38 +25,43 @@ const metricParts = explanation.match(
 );
 if (!metricParts)
   throw new Error("Canonical introduction metrics structure changed");
-const [, mission, , energy, empathy, efficiency, preparation] =
-  metricParts;
-const metricLead = "В пути вы будете получать баллы:";
+const [, mission, , , , , preparation] = metricParts;
+const metricLead = "Что приносит баллы в пути:";
 
 /* Same icons as the in-game score delta, so the player recognises them later.
-   `hint` is our plain-language gloss of the scenario phrase, drawn from the
-   scene goals the metric rewards. */
+   One noun phrase per metric reads straight after the lead above it. */
 const metrics = [
   {
     key: "energy",
     title: "Энергия",
-    text: energy,
-    hint: "Время, силы, топливо и деньги.",
+    text: "Экономия времени, сил, топлива и денег.",
     Icon: Zap,
   },
   {
     key: "empathy",
     title: "Эмпатия",
-    text: empathy,
-    hint: "О подарке, получателе и людях рядом.",
+    text: "Забота о подарке, получателе и людях рядом.",
     Icon: Heart,
   },
   {
     key: "efficiency",
     title: "Эффективность",
-    text: efficiency,
-    hint: "Вовремя и самым подходящим способом.",
+    text: "Решения вовремя и самым подходящим способом.",
     Icon: ChartLine,
   },
 ];
 
 const introWorld = sceneChoiceImage("lastmile");
+
+/* One big picture per stage: the live scene art itself (never baked copies),
+   so a redrawn scene reaches the intro without touching it. */
+const journeyArt = {
+  carrier: plateSource("wide"),
+  loading: sceneChoiceImage("compact"),
+  warehouse: sceneChoiceImage("inventory"),
+  barge: sceneChoiceImage("crane"),
+  "last-mile": imageAsset(lastmileChoiceImage("wide", "alva")),
+} as const;
 
 export function GameIntro({
   onStart,
@@ -129,17 +131,15 @@ export function GameIntro({
                             <img src={stageIcons[step.id]} alt="" />
                             <b aria-hidden="true">{index + 1}</b>
                           </span>
+                          <img
+                            className={styles.stopScene}
+                            data-stage={step.id}
+                            src={journeyArt[step.id]}
+                            alt=""
+                          />
                           <span className={styles.stopLabel}>{step.label}</span>
                         </li>
                       ))}
-                      <li className={styles.goal}>
-                        <MapPin
-                          aria-hidden="true"
-                          size={22}
-                          strokeWidth={2.2}
-                        />
-                        <span>Крайний Север</span>
-                      </li>
                     </ol>
                   </>
                 ) : (
@@ -168,7 +168,7 @@ export function GameIntro({
                       <div className={styles.scoring}>
                         <p className={styles.metricLead}>{metricLead}</p>
                         <ul className={styles.metrics} aria-label="Показатели">
-                          {metrics.map(({ key, title, text, hint, Icon }) => (
+                          {metrics.map(({ key, title, text, Icon }) => (
                             <li key={key} data-metric={key}>
                               <strong>
                                 <Icon
@@ -179,8 +179,7 @@ export function GameIntro({
                                 />
                                 {title}
                               </strong>{" "}
-                              <span>За то, что {text}.</span>{" "}
-                              <small>{hint}</small>
+                              <span>{text}</span>
                             </li>
                           ))}
                         </ul>
@@ -215,7 +214,8 @@ export function GameIntro({
                     type="button"
                     onClick={() => turnPage(1)}
                   >
-                    К маршрутному листу <ArrowRight size={24} aria-hidden="true" />
+                    К маршрутному листу{" "}
+                    <ArrowRight size={24} aria-hidden="true" />
                   </button>
                 ) : (
                   <button

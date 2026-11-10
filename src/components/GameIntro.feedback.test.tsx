@@ -24,7 +24,7 @@ async function mount() {
   await act(async () => root.render(<GameIntro onStart={() => {}} />));
   return host;
 }
-it("names each metric, then its scenario action and a plain gloss", async () => {
+it("names each metric with one plain phrase", async () => {
   const host = await mount();
   for (const selector of ["[data-intro-enter]", "[data-intro-next]"])
     await act(async () =>
@@ -35,9 +35,9 @@ it("names each metric, then its scenario action and a plain gloss", async () => 
       e.textContent?.replace(/\s+/g, " ").trim(),
     ),
   ).toEqual([
-    "Энергия За то, что экономите ресурсы. Время, силы, топливо и деньги.",
-    "Эмпатия За то, что проявляете заботу. О подарке, получателе и людях рядом.",
-    "Эффективность За то, что принимаете наиболее эффективные решения. Вовремя и самым подходящим способом.",
+    "Энергия Экономия времени, сил, топлива и денег.",
+    "Эмпатия Забота о подарке, получателе и людях рядом.",
+    "Эффективность Решения вовремя и самым подходящим способом.",
   ]);
 });
 it("makes the CSS background URL independent of the production stylesheet directory", async () => {
