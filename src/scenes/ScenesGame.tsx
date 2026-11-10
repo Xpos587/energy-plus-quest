@@ -40,9 +40,10 @@ export const remainingScenes = [
   lastmileScene,
 ];
 function briefingParagraphs(scene: SceneId, intro: string[]) {
-  return scene === "compact" || scene === "lastmile"
-    ? intro.slice(0, -1)
-    : intro;
+  // Scene 2 (R19, phone): the cargo line already says where the truck goes, so
+  // the choice screen keeps only the question, the goals and the picture.
+  if (scene === "compact") return [];
+  return scene === "lastmile" ? intro.slice(0, -1) : intro;
 }
 
 /** Explicit forward navigation starts the target condition; reloads retain their reading state. */
@@ -156,21 +157,21 @@ const compactHeadings: Record<ParcelId, Record<string, string>> = {
     "place-2": "Носки под крышей — больше ничего не влезет",
     "place-3": "Носки в нише, место осталось",
     "place-4": "Носки заняли место трёх ящиков",
-    auto: "Compact выбрал место 3",
+    auto: "Система Compact выбрала место 3",
   },
   camera: {
     "place-1": "Фотоаппарат разбил посуду",
     "place-2": "Место над фотоаппаратом пустует",
     "place-3": "Фотоаппарат в нише — до него тянуться",
     "place-4": "К фотоаппарату долго пробирались",
-    auto: "Compact выбрал место 3",
+    auto: "Система Compact выбрала место 3",
   },
   boat: {
     "place-1": "Перегруз сломал фуру",
     "place-2": "Лодка разбила посуду",
     "place-3": "Лодка не поместилась в нишу",
     "place-4": "Лодку закрепили стоя",
-    auto: "Compact выбрал место 4",
+    auto: "Система Compact выбрала место 4",
   },
 };
 export const resultHeading = (scene: SceneId, id: string, parcel: ParcelId = "socks") =>

@@ -7,7 +7,8 @@
   min-height: 0;
   margin: 0;
   color: #365774;
-  background: linear-gradient(#cbd2dc, #e1e2e5);
+  /* R19: the strip below the artwork matches the pavement, not a grey band. */
+  background: linear-gradient(#cbd2dc 50%, #d0dcf0);
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior: contain;

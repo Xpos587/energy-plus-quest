@@ -57,14 +57,15 @@ describe("compactScene source contract", () => {
     }
   });
   for (const parcel of Object.keys(cases) as ParcelId[]) {
-    it(`${parcel}: preserves full intro and inflects only explicit placeholders`, () => {
+    it(`${parcel}: inflects the placeholders and keeps one ask in the question`, () => {
       const name = parcelNames[parcel];
       expect(compactScene.intro(context(parcel))).toEqual([
         scenarioParagraph("543B4FB4"),
         scenarioParagraph("4027C712")
           .replace("(название подарка)", name.accusative)
           .replace("он(а)", name.pronoun)
-          .replace("доехал(а)", name.arrived),
+          .replace("доехал(а)", name.arrived)
+          .replace(" в целости и сохранности, а погрузка прошла быстро и легко", " в целости"),
       ]);
     });
     cases[parcel].forEach(([paragraphs, scores, values], index) => {

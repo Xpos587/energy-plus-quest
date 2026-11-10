@@ -44,7 +44,7 @@ it("shows scene 2 condition with its choice, separates later conditions and reme
     expect(find("Задание")).toBeUndefined();
     expect(
       host.querySelector('[data-testid="scene-question"]')?.textContent,
-    ).toContain(remainingScenes[0].intro(context)[0]);
+    ).toContain(remainingScenes[0].intro(context).at(-1)!);
     await click(host.querySelector('[data-hotspot="place-1"]'));
     await click(host.querySelector("[data-choice-confirm]"));
     expect(host.querySelector("[data-result]")).not.toBeNull();

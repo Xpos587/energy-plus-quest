@@ -250,17 +250,17 @@ it("compact shows its condition and choice on one screen and keeps the selected 
         parcel: "camera",
         recipient: "alva",
         profile: "professional",
-      })[0],
+      }).at(-1)!,
     );
     expect(container.querySelector("[data-choice-description]")).toBeNull();
     expect(
       container.querySelector('[data-testid="scene-question"]')?.textContent,
-    ).toContain(
+    ).not.toContain(
       compactScene.intro({
         parcel: "camera",
         recipient: "alva",
         profile: "professional",
-      })[1],
+      })[0],
     );
     expect(
       container.querySelector('[data-hotspot="place-1"]'),

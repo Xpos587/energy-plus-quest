@@ -44,7 +44,7 @@ it("names each numbered place and lets the player revise a direct choice", async
     expect(card()?.textContent).toContain("компактно");
     await act(async () => host.querySelector<HTMLButtonElement>("[data-choice-confirm]")!.click());
     expect(host.querySelector('[data-result]')).not.toBeNull();
-    expect(host.querySelector("[data-result-heading] > span")?.textContent).toBe("Compact выбрал место 4");
+    expect(host.querySelector("[data-result-heading] > span")?.textContent).toBe("Система Compact выбрала место 4");
   } finally {
     await act(async () => root.unmount());
     host.remove();
