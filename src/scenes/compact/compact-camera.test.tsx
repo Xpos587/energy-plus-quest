@@ -17,6 +17,22 @@ describe("loading camera context", () => {
     expect(auto.dataset.placement).toBe("waiting");
     expect(element.querySelector('[aria-pressed="true"]')?.getAttribute("data-hotspot")).toBe("auto");
   });
+  it.each(["place-3", "auto"])("keeps the socks result badge clear of the box for %s without moving its hit zone", selectedId => {
+    const draw = (parcel: "socks" | "camera", showResult: boolean) => {
+      const host = document.createElement("div");
+      host.innerHTML = renderToStaticMarkup(<CompactArt context={{ ...context, parcel }} selectedId={selectedId} showResult={showResult} onSelect={() => {}} />);
+      return host;
+    };
+    const result = draw("socks", true);
+    const camera = draw("camera", true);
+    const badge = (host: HTMLElement) => host.querySelector<HTMLElement>('[data-layout-badge="place-3"]')!;
+    expect(badge(result).style.transform).toBe("translateX(calc(-100% - 8px))");
+    expect(badge(draw("socks", false)).style.transform).toBe("");
+    expect(badge(camera).style.transform).toBe("");
+    expect(result.querySelector('[data-hotspot="place-3"]')?.getAttribute("style"))
+      .toBe(camera.querySelector('[data-hotspot="place-3"]')?.getAttribute("style"));
+    expect(result.querySelectorAll("[data-loading-zone]")).toHaveLength(0);
+  });
   it("does not expose numbered choices before choosing is available", () => {
     expect(render().querySelectorAll("button[data-hotspot]")).toHaveLength(0);
     expect(render(undefined, true).querySelectorAll('button[data-hotspot^="place-"]')).toHaveLength(4);

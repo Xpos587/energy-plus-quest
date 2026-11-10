@@ -107,11 +107,9 @@ describe("Compact flat cargo bay", () => {
       expect(host.querySelectorAll("button:disabled")).toHaveLength(4);
       await act(async () => button.click());
       expect(chosen).toEqual(["place-3"]);
-      expect(
-        host
-          .querySelector('[data-loading-zone="place-3"]')
-          ?.getAttribute("data-active"),
-      ).toBe("true");
+      expect(host.querySelectorAll("[data-loading-zone]")).toHaveLength(0);
+      expect(host.querySelector('[data-hotspot="place-3"]')?.getAttribute("aria-pressed")).toBe("true");
+      expect(host.querySelector('[data-layout-badge="place-3"]')?.textContent).toBe("3");
     } finally {
       await act(async () => root.unmount());
     }

@@ -186,7 +186,7 @@ export function CompactArt({
           image={outcomeImage}
           imageHeight={frame?.height}
           carrier={context.carrier}
-          regions={markersVisible ? regions : []}
+          regions={markersVisible && !showResult ? regions : []}
           terminal={terminal}
           autoActive={selectedId === "auto"}
           offsetY={offsetY}
@@ -224,6 +224,9 @@ export function CompactArt({
               left: `calc(${badge.x - space.x} / 1040 * 100cqw)`,
               // The stand's badge sits by its base so phones still show the screen.
               top: space.id === "auto" ? `calc(100% - ${badge.size}px)` : `calc(${badge.y - (space.y - offsetY)} / 1040 * 100cqw)`,
+              // Move only the result badge, not the choice hit target or other gifts.
+              transform: showResult && context.parcel === "socks" && space.id === "place-3"
+                ? "translateX(calc(-100% - 8px))" : undefined,
               width: badge.size,
               height: badge.size,
               fontSize: badge.size * 15 / 24,
