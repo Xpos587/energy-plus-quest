@@ -153,7 +153,7 @@ export const carrierHeadings: Record<string, string> = {
 // The truck outcome depends on the parcel.
 const compactHeadings: Record<ParcelId, Record<string, string>> = {
   socks: {
-    "place-1": "Один носок здесь, другой там",
+    "place-1": "Коробка развалилась, носки разлетелись",
     "place-2": "Носки под крышей — больше ничего не влезет",
     "place-3": "Носки в нише, место осталось",
     "place-4": "Носки заняли место трёх ящиков",
