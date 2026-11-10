@@ -25,7 +25,7 @@ const deliveries = [
     "revision-2/rover-boat-arseniy.webp",
     "robot-boat-result-v3.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-13/flight-boat-arseniy-tall.webp",
+    "revision-18/flight-boat-arseniy-tall.webp",
   ],
   [
     "camera",
@@ -49,7 +49,7 @@ const deliveries = [
     "revision-2/rover-parcel-arseniy.webp",
     "robot-parcel-result-v1.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-13/flight-parcel-arseniy-tall.webp",
+    "revision-18/flight-parcel-arseniy-tall.webp",
   ],
   [
     "socks",
@@ -73,7 +73,7 @@ const deliveries = [
     "revision-2/rover-parcel-arseniy.webp",
     "robot-parcel-result-v1.webp",
     "pipecarrier-return-swim-v5.webp",
-    "revision-13/flight-parcel-arseniy-tall.webp",
+    "revision-18/flight-parcel-arseniy-tall.webp",
   ],
 ] as const;
 

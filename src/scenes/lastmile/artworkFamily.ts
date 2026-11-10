@@ -5,18 +5,22 @@ export const lastmileRevision = 'scene-art/lastmile-family-v1/revision-2';
 // revision-13: revision-5 flight and revision-2 pipe-carrier outpainted to 1672x2200 (design/scene-05/fill)
 // so near-square desktop rails and portrait/landscape phones are covered without bands or cut subjects.
 const lastmileTallRevision = 'scene-art/lastmile-family-v1/revision-13';
+// revision-18: flight screens with the Mi-8 repainted to the client reference livery (black upper half, orange lower,
+// small white nose patch); cargo door, sling and load unchanged (design/scene-05/swamp-2026-11-10/finish_flight.py).
+const lastmileFlightRevision = 'scene-art/lastmile-family-v1/revision-18';
 
+// revision-18: revision-17 map plus a bog that interrupts the muddy trail (finish_trail.py).
 // revision-17: revision-12 map with a smaller river, big swamp, brighter АБК and the Mi-8 livery copied from the client reference (black upper half, orange lower) (design/scene-05/swamp-2026-11-10).
 // revision-12: revision-11 map (v9 opening route style, reference vehicles, 2x) colour-graded per call 05.11:
 // red/yellow foliage muted outside the vehicles, АБК roof and trim back to blue. Geometry is pixel-identical.
 export function lastmileChoiceImage(format: 'wide' | 'tall', recipient: SceneContext['recipient']) {
-  return `scene-art/lastmile-family-v1/revision-17/choice-${format}-${recipient}.webp`;
+  return `scene-art/lastmile-family-v1/revision-18/choice-${format}-${recipient}.webp`;
 }
 
 export function lastmileFlightImage(context: SceneContext) {
   const gift = context.parcel === 'boat' ? 'boat' : 'parcel';
   const destination = context.recipient === 'arseniy' ? '-arseniy' : '';
-  return `${lastmileTallRevision}/flight-${gift}${destination}-tall.webp`;
+  return `${lastmileFlightRevision}/flight-${gift}${destination}-tall.webp`;
 }
 
 export function lastmileOutcomeImage(option: string, context: SceneContext) {

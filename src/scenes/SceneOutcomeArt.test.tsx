@@ -20,7 +20,7 @@ it("uses the flight image for the flight beat without separate episode controls"
   );
 
   expect(host.querySelector("img")?.getAttribute("src")).toContain(
-    "revision-13/flight-boat-tall.webp",
+    "revision-18/flight-boat-tall.webp",
   );
   expect(host.querySelector("nav")).toBeNull();
 });
