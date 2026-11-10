@@ -81,7 +81,7 @@ describe("current artwork for every delivery context", () => {
   for (const [parcel, recipient, ...results] of deliveries) {
     const context = { parcel, recipient, profile: "student" } as const;
     it(`${recipient}/${parcel}: matching lastmile choice and all consequences`, () => {
-      const choice = "revision-14/intro-wide.webp";
+      const choice = "revision-15/intro-wide.webp";
       expect(sceneChoiceImage("lastmile", context)).toBe(
         `/scene-art/lastmile-family-v1/${choice}`,
       );
