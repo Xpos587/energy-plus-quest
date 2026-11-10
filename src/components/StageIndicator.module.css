@@ -19,6 +19,9 @@
   flex: none;
   width: var(--stop);
   height: var(--stop);
+  min-width: var(--stop);
+  min-height: var(--stop);
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: #fff;
   border: 1px solid var(--pale);
@@ -47,6 +50,8 @@
 .indicator i[data-leg="current"] {
   width: var(--now);
   height: var(--now);
+  min-width: var(--now);
+  min-height: var(--now);
   border: 2px solid var(--blue);
 }
 .indicator b {

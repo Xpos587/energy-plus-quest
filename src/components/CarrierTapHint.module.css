@@ -30,6 +30,7 @@
   position: relative;
   display: inline-grid;
   flex: none;
+  aspect-ratio: 1 / 1;
   place-items: center;
   width: 32px;
   height: 32px;

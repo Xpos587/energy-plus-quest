@@ -167,9 +167,11 @@
 }
 .coachIcon {
   display: grid;
+  flex: none;
   place-items: center;
   width: 32px;
   height: 32px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: #fff1e6;
   color: #ff6a13;

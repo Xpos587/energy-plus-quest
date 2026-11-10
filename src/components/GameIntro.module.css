@@ -66,9 +66,9 @@
 .route::before{content:"";position:absolute;left:5%;right:5%;top:calc(var(--route-pad) + var(--stop) / 2 - 1.5px);border-top:3px dashed #8fbad6;z-index:0}
 .route{--stop:clamp(96px,10vw,148px)}
 .stop{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
-.stopArt{position:relative;display:block;width:var(--stop);aspect-ratio:1;border-radius:50%;padding:5px;background:#fff;box-shadow:0 1px 0 var(--line),0 10px 24px #075d9b1f}
+.stopArt{position:relative;display:block;flex:none;width:var(--stop);height:var(--stop);min-width:var(--stop);min-height:var(--stop);aspect-ratio:1/1;border-radius:50%;padding:5px;background:#fff;box-shadow:0 1px 0 var(--line),0 10px 24px #075d9b1f}
 .stopArt img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover}
-.stopArt b{position:absolute;left:2px;top:2px;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;font-size:16px;line-height:1;box-shadow:0 0 0 3px #fff}
+.stopArt b{position:absolute;left:2px;top:2px;display:grid;flex:none;place-items:center;width:32px;height:32px;aspect-ratio:1/1;border-radius:50%;background:var(--blue);color:#fff;font-size:16px;line-height:1;box-shadow:0 0 0 3px #fff}
 .stopLabel{font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:700;color:var(--ink);text-align:center}
 .goal{position:relative;z-index:1;flex:none;align-self:flex-start;display:flex;align-items:center;gap:6px;height:var(--stop);padding:0 4px 0 2px;color:var(--blue);font-size:var(--type-choice);font-weight:700;white-space:nowrap;background:linear-gradient(90deg,transparent,#e3f0f8 18%)}
 .goal svg{flex:none;color:#ff5500}

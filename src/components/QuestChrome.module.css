@@ -350,9 +350,11 @@
 
 .routeNumber {
   display: grid;
+  flex: none;
   place-items: center;
   width: 26px;
   height: 26px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: #e5edf3;
   color: #315a78;
