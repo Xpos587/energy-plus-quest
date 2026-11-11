@@ -71,29 +71,35 @@ export const paceFraction = (id: MapCarrierId) => {
   return carrierFacts[id].citySpeedKmh / (max * 1.08);
 };
 
-/** Two-driver badge on the pin's shoulder: one faceless person + «×2»
- * (client, 10.11: two smiling heads read as a smiley). */
-function crewBadge(c: CanvasRenderingContext2D, bx: number, by: number, color: string) {
-  const w = 26, h = 16;
+/** Two-driver badge: a chip beside the pin ring (never over it), centred on
+ * the pin's axis: one faceless person + «×2» (client, 10.11: two smiling
+ * heads read as a smiley). (left, cy) = chip's left edge and centre line. */
+function crewBadge(c: CanvasRenderingContext2D, left: number, cy: number, color: string) {
+  const h = 18, pad = 6, gap = 3, iw = 10;
+  c.font = '700 12px "Roboto Condensed", Arial, sans-serif';
+  const tw = c.measureText("×2").width;
+  const w = pad + iw + gap + tw + pad;
   c.lineWidth = 1.5;
   c.strokeStyle = "#fff";
   c.fillStyle = color;
-  rr(c, bx - 9, by - h / 2, w, h, h / 2);
+  rr(c, left, cy - h / 2, w, h, h / 2);
   c.fill();
   c.stroke();
-  // faceless bust: head + shoulders
+  // faceless bust (head + shoulders), centred in its 10 x 11 box
+  const ix = left + pad + iw / 2, top = cy - 5.5;
   c.fillStyle = "#fff";
   c.beginPath();
-  c.arc(bx, by - 2.4, 2.6, 0, Math.PI * 2);
+  c.arc(ix, top + 2.6, 2.6, 0, Math.PI * 2);
   c.fill();
   c.beginPath();
-  c.arc(bx, by + 6, 5, Math.PI * 1.15, Math.PI * 1.85);
+  c.moveTo(ix - 5, top + 11);
+  c.quadraticCurveTo(ix - 5, top + 6.2, ix, top + 6.2);
+  c.quadraticCurveTo(ix + 5, top + 6.2, ix + 5, top + 11);
   c.closePath();
   c.fill();
-  c.font = '700 11px "Roboto Condensed", Arial, sans-serif';
   c.textAlign = "left";
   c.textBaseline = "middle";
-  c.fillText("×2", bx + 6.5, by + 0.5);
+  c.fillText("×2", left + pad + iw + gap, cy + 0.5);
 }
 
 /** Rig marker: the same small speedometer over every cab. The needle shows
@@ -182,7 +188,7 @@ export function rigPin(
   c.arc(0, gy, 1.9, 0, Math.PI * 2);
   c.fill();
   if (twinkle) sparkle(c, -r * 0.78, cy - r * 0.86, 4.6 * twinkle);
-  if (id === "crew") crewBadge(c, r + 3, cy - r + 4, color);
+  if (id === "crew") crewBadge(c, r + 4.5, cy, color);
   c.restore();
 }
 

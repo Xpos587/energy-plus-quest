@@ -75,13 +75,13 @@ export const plateFor = (width: number, height: number): PlateName =>
 // only media whose path appears in the bundle.
 const files = {
   wide: {
-    plate: "scene1-v4/plate-wide-v17.webp?v=1",
-    retina: "scene1-v4/plate-wide-v17@2x.webp?v=1",
+    plate: "scene1-v4/plate-wide-v18.webp?v=1",
+    retina: "scene1-v4/plate-wide-v18@2x.webp?v=1",
     trucks: "scene1-v4/trucks-wide.webp?v=5",
   },
   tall: {
-    plate: "scene1-v4/plate-tall-v17.webp?v=1",
-    retina: "scene1-v4/plate-tall-v17@2x.webp?v=1",
+    plate: "scene1-v4/plate-tall-v18.webp?v=1",
+    retina: "scene1-v4/plate-tall-v18@2x.webp?v=1",
     trucks: "scene1-v4/trucks-tall.webp?v=5",
   },
 } as const;
