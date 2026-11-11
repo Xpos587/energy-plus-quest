@@ -1,0 +1,206 @@
+[
+  {
+    "path": "public/opening/route-v1/lastmile.webp",
+    "before_sha256": "ba2cd6d53b7307312fe029bb075f481e444e06097ba064ef54533e9505fe2982",
+    "size": [
+      256,
+      256
+    ],
+    "after_sha256": "e9c3873aa602d91b6ae919c1cbe1004c9ae9553b8ea598e529964dda09dc576e",
+    "after_bytes": 93786,
+    "status": "local curved livery",
+    "changed": true
+  },
+  {
+    "path": "public/opening/stage-icons-v1/lastmile.webp",
+    "before_sha256": "ed0dfd33883f1ff6ed96c9bd6e50e9189b7998fd5512acab01f2d88703a5385d",
+    "size": [
+      128,
+      128
+    ],
+    "after_sha256": "ed0dfd33883f1ff6ed96c9bd6e50e9189b7998fd5512acab01f2d88703a5385d",
+    "after_bytes": 5028,
+    "status": "progress icon → unchanged by Michael",
+    "changed": false
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/helicopter-ground-alva-parcel-v6.webp",
+    "before_sha256": "aa2ca4f0d12d0a0ca96dab5dc58d35f6228907258928e18fb0e095ec6f353247",
+    "size": [
+      1672,
+      941
+    ],
+    "after_sha256": "aa2ca4f0d12d0a0ca96dab5dc58d35f6228907258928e18fb0e095ec6f353247",
+    "after_bytes": 336374,
+    "status": "no helicopter → unchanged",
+    "changed": false
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/helicopter-ground-boat-final-v5.webp",
+    "before_sha256": "3df6bbf9e4d40d8aff1a2fda77c70c8f32633e06f63d89fdc7fcf4b545f30bce",
+    "size": [
+      1672,
+      941
+    ],
+    "after_sha256": "3df6bbf9e4d40d8aff1a2fda77c70c8f32633e06f63d89fdc7fcf4b545f30bce",
+    "after_bytes": 470602,
+    "status": "no helicopter → unchanged",
+    "changed": false
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/helicopter-ground-khor-boat-v6.webp",
+    "before_sha256": "36d0625824777294b2813f2991cab86e91ffcda31237af178512df4d1185ad77",
+    "size": [
+      1672,
+      941
+    ],
+    "after_sha256": "36d0625824777294b2813f2991cab86e91ffcda31237af178512df4d1185ad77",
+    "after_bytes": 424762,
+    "status": "no helicopter → unchanged",
+    "changed": false
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/helicopter-ground-khor-parcel-v6.webp",
+    "before_sha256": "b5a508b1a617947bcd6166b0a3bb8a47629a3e06c6fdda25189aea99054be4ef",
+    "size": [
+      1672,
+      941
+    ],
+    "after_sha256": "b5a508b1a617947bcd6166b0a3bb8a47629a3e06c6fdda25189aea99054be4ef",
+    "after_bytes": 411762,
+    "status": "no helicopter → unchanged",
+    "changed": false
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-15/intro-wide.webp",
+    "before_sha256": "5015c856d34b3115325651a8c954d0556ca19ff8f71ae042105e79373e300ade",
+    "size": [
+      3166,
+      1266
+    ],
+    "after_sha256": "8ed4214e5d1efb664de37729f392ed47f1597b05f59d0db5378e2078281b12b1",
+    "after_bytes": 2362548,
+    "status": "local curved livery",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-alva.webp",
+    "before_sha256": "9e0f6ead7699b7e98d54666ef39f5855bb83abcf63fff814d407980b7584ccc8",
+    "size": [
+      3328,
+      3904
+    ],
+    "after_sha256": "582cf840408e3230d919adc94757a191985417f1f99584aedc49dc84d5184fca",
+    "after_bytes": 14524366,
+    "status": "approved local map patches; original recipient/foreground retained",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-arseniy.webp",
+    "before_sha256": "840ad149b1e55e1aad67466e9d2a92fea7a8697e97106d3759813c36368037a9",
+    "size": [
+      3328,
+      3904
+    ],
+    "after_sha256": "dcb033bda59ac55467c84f4231351fad6ad0c8a6734c3323f13434d2da67fcea",
+    "after_bytes": 14502106,
+    "status": "approved local map patches; original recipient/foreground retained",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-khor.webp",
+    "before_sha256": "891ee08e478792e454c20eafa6b03ee97419c204ab8a3cfc397ff9d07eaa75be",
+    "size": [
+      3328,
+      3904
+    ],
+    "after_sha256": "e8ebde979a04ea10c28327279aea6d345a95617c31aefa9fad91d8564e0508ce",
+    "after_bytes": 14559536,
+    "status": "approved local map patches; original recipient/foreground retained",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-alva.webp",
+    "before_sha256": "bb1fde37927c4f5da4ca0609c3bd325236c8d07521da4c47c7d3dc82e63354eb",
+    "size": [
+      4112,
+      3682
+    ],
+    "after_sha256": "614b9dc9ac5a7536b658c17ede6462fa8dec3e8f51034bf57a9eb0225d981c7a",
+    "after_bytes": 15942858,
+    "status": "approved local map patches; original recipient/foreground retained",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-arseniy.webp",
+    "before_sha256": "aff591d09ace6dfe2c02eff4f8d8493716ad5c650ff6ed9698888b3e0b0d31e2",
+    "size": [
+      4112,
+      3682
+    ],
+    "after_sha256": "caf88bfd13e408e646ca5d2ba117432dda8b6bddc88719496ee13db851622ec4",
+    "after_bytes": 15917130,
+    "status": "approved local map patches; original recipient/foreground retained",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-khor.webp",
+    "before_sha256": "26f838d80b56da643e7dae72f221b1e422d8b9ecd3ecafa45d8e4534147e18a3",
+    "size": [
+      4112,
+      3682
+    ],
+    "after_sha256": "67894c1379eaa2d6395e32e84188edb1b4f0079247c924d3aa03956438742877",
+    "after_bytes": 15941776,
+    "status": "approved local map patches; original recipient/foreground retained",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/flight-boat-arseniy-tall.webp",
+    "before_sha256": "d3cddba4191be791cccd65e4fa52b57fae6749990822ab252dc3b454950c4eec",
+    "size": [
+      1672,
+      2200
+    ],
+    "after_sha256": "fede79a580863431112061eb7a7e87ab16b9066b108f96fef69258713fb4bbcf",
+    "after_bytes": 2505006,
+    "status": "local fuselage + seven rotor caps; matching-neighbour porthole glass; door/cargo/sling/load outside masks",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/flight-boat-tall.webp",
+    "before_sha256": "4593c890e341dd405ec272f5ff57d7a7b34c9da348fec52160815608961d88f2",
+    "size": [
+      1672,
+      2200
+    ],
+    "after_sha256": "d551e5a3603f277036df0903a8964b1cb84e4312bf59342b617980dd05ef9037",
+    "after_bytes": 2481140,
+    "status": "local fuselage + seven rotor caps; matching-neighbour porthole glass; door/cargo/sling/load outside masks",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/flight-parcel-arseniy-tall.webp",
+    "before_sha256": "4393ab42f605d8b0334cd60b0d2b3f18edc470df3fc524a7e5e9dc98dde21735",
+    "size": [
+      1672,
+      2200
+    ],
+    "after_sha256": "dc8742f0170b2b4732e8a06170c8176ea9f6d24d34617befe2db37bd88ddca49",
+    "after_bytes": 2503104,
+    "status": "local fuselage + seven rotor caps; matching-neighbour porthole glass; door/cargo/sling/load outside masks",
+    "changed": true
+  },
+  {
+    "path": "public/scene-art/lastmile-family-v1/revision-18/flight-parcel-tall.webp",
+    "before_sha256": "e35396e21b0e4e43895f4ee1fe2adf104495315ef51e5d738b91d729208439f4",
+    "size": [
+      1672,
+      2200
+    ],
+    "after_sha256": "c344656970ba0e9bbb261ef7b6aea8cc57da5497577f93d3a48a17e9677282a7",
+    "after_bytes": 2458288,
+    "status": "local fuselage + seven rotor caps; matching-neighbour porthole glass; door/cargo/sling/load outside masks",
+    "changed": true
+  }
+]
