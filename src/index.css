@@ -109,6 +109,20 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
+/* Map pins and scene hotspots never draw a ring (Michael, 11.11): selected and
+   focused states are the pin's own fill/glow. Headings focused by code after a
+   step change (tabindex="-1") never draw a frame either. */
+[data-hotspot]:focus,
+[data-hotspot]:focus-visible,
+[data-carrier-choice]:focus,
+[data-carrier-choice]:focus-visible,
+[data-map-autopick]:focus,
+[data-map-autopick]:focus-visible,
+[tabindex="-1"]:focus,
+[tabindex="-1"]:focus-visible {
+  outline: none !important;
+}
+
 ::selection {
   color: #ffffff;
   background: #003ca6;

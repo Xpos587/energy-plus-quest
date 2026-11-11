@@ -54,12 +54,6 @@
   z-index: 7;
 }
 
-.stage .marker[aria-pressed="true"]::before,
-.stage .marker:focus-visible::before {
-  outline: 2px solid var(--blue, #003ca6);
-  outline-offset: 2px;
-}
-
 .marker:disabled {
   cursor: default;
   opacity: 1;
@@ -89,8 +83,6 @@
 }
 .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker { width: 44px; height: 44px; min-width: 44px; min-height: 44px; font-size: 12px; font-weight: 700; }
 .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker::before { inset: 12px; border: 1px solid white; border-radius: 5px; background: #075d9b; box-shadow: 0 1px 4px #04132730; }
-.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker[aria-pressed="true"]::before,
-.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker:focus-visible::before { outline: 1.5px solid #075d9b; outline-offset: 2px; }
 @media (min-width: 1001px) {
   .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker { font-size: 14px; }
   .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker::before { inset: 10px; }
@@ -116,7 +108,6 @@
 .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker { margin-top: 0; color: transparent; }
 .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker > span { display: none; }
 .stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker::before { content: none; }
-.stage:is([data-world-scene="inventory"], [data-world-scene="lastmile"]) .marker:focus-visible { outline: 3px solid #fff; outline-offset: -3px; border-radius: 50%; box-shadow: 0 0 0 3px #075d9b; }
 
 /* Inventory: scene-1 style map pins (white disc, coloured rim, tail to the object) carry
    the choice number; the 44 px button is the disc, the tail tip touches the object's anchor. */
