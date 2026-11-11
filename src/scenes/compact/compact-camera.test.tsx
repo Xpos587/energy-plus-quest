@@ -17,20 +17,26 @@ describe("loading camera context", () => {
     expect(auto.dataset.placement).toBe("waiting");
     expect(element.querySelector('[aria-pressed="true"]')?.getAttribute("data-hotspot")).toBe("auto");
   });
-  it.each(["place-3", "auto"])("keeps the socks result badge clear of the box for %s without moving its hit zone", selectedId => {
-    const draw = (parcel: "socks" | "camera", showResult: boolean) => {
+  it.each([
+    ["socks", "place-3", "place-3"], ["socks", "auto", "place-3"],
+    ["camera", "place-3", "place-3"], ["camera", "auto", "place-3"],
+    ["boat", "place-4", "place-4"], ["boat", "auto", "place-4"],
+  ] as const)("keeps the %s/%s result badge clear without moving its hit zone", (parcel, selectedId, badgeId) => {
+    const draw = (showResult: boolean, gift: typeof context.parcel | "camera" | "socks" = parcel) => {
       const host = document.createElement("div");
-      host.innerHTML = renderToStaticMarkup(<CompactArt context={{ ...context, parcel }} selectedId={selectedId} showResult={showResult} onSelect={() => {}} />);
+      host.innerHTML = renderToStaticMarkup(<CompactArt context={{ ...context, parcel: gift }} selectedId={selectedId} showResult={showResult} onSelect={() => {}} />);
       return host;
     };
-    const result = draw("socks", true);
-    const camera = draw("camera", true);
-    const badge = (host: HTMLElement) => host.querySelector<HTMLElement>('[data-layout-badge="place-3"]')!;
+    const result = draw(true);
+    const choice = draw(false);
+    const badge = (host: HTMLElement) => host.querySelector<HTMLElement>(`[data-layout-badge="${badgeId}"]`)!;
     expect(badge(result).style.transform).toBe("translateX(calc(-100% - 8px))");
-    expect(badge(draw("socks", false)).style.transform).toBe("");
-    expect(badge(camera).style.transform).toBe("");
-    expect(result.querySelector('[data-hotspot="place-3"]')?.getAttribute("style"))
-      .toBe(camera.querySelector('[data-hotspot="place-3"]')?.getAttribute("style"));
+    expect(badge(choice).style.transform).toBe("");
+    expect(result.querySelector('[data-layout-badge="place-2"]')?.getAttribute("style"))
+      .toBe(choice.querySelector('[data-layout-badge="place-2"]')?.getAttribute("style"));
+    const unchangedResult = draw(true, badgeId === "place-4" ? "camera" : "socks");
+    expect(result.querySelector(`[data-hotspot="${badgeId}"]`)?.getAttribute("style"))
+      .toBe(unchangedResult.querySelector(`[data-hotspot="${badgeId}"]`)?.getAttribute("style"));
     expect(result.querySelectorAll("[data-loading-zone]")).toHaveLength(0);
   });
   it("does not expose numbered choices before choosing is available", () => {

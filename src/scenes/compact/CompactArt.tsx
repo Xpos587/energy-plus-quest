@@ -224,8 +224,8 @@ export function CompactArt({
               left: `calc(${badge.x - space.x} / 1040 * 100cqw)`,
               // The stand's badge sits by its base so phones still show the screen.
               top: space.id === "auto" ? `calc(100% - ${badge.size}px)` : `calc(${badge.y - (space.y - offsetY)} / 1040 * 100cqw)`,
-              // Move only the result badge, not the choice hit target or other gifts.
-              transform: showResult && context.parcel === "socks" && space.id === "place-3"
+              // Keep the result number off the gift; choice hit targets stay fixed.
+              transform: showResult && space.id === (context.parcel === "boat" ? "place-4" : "place-3")
                 ? "translateX(calc(-100% - 8px))" : undefined,
               width: badge.size,
               height: badge.size,
