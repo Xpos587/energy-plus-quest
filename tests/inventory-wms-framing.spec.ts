@@ -10,13 +10,13 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       await page.locator('[data-choice-confirm]').click();
       const img = page.locator('[data-scene-consequence="inventory-wms"] img');
       await img.evaluate((image: HTMLImageElement) => image.decode());
-      await expect(img).toHaveAttribute('src', /warehouse-results-v2\/outcome-wms\.webp$/);
+      await expect(img).toHaveAttribute('src', /warehouse-results-v3\/outcome-wms\.webp$/);
       const action = await img.evaluate((image: HTMLImageElement) => {
         const scale = Math.max(image.clientWidth / image.naturalWidth, image.clientHeight / image.naturalHeight);
         const focus = getComputedStyle(image).objectPosition.split(' ').map(parseFloat);
         const left = (image.clientWidth - image.naturalWidth * scale) * focus[0] / 100;
         const top = (image.clientHeight - image.naturalHeight * scale) * focus[1] / 100;
-        // Complete scanner operator and loaded trolley in warehouse-results-v2/outcome-wms.webp (1671×941).
+        // Complete scanner operator and loaded trolley in warehouse-results-v3/outcome-wms.webp (1671×941).
         return { left: left + 409 * scale, right: left + 1290 * scale, top: top + 158 * scale, bottom: top + 870 * scale, width: image.clientWidth, height: image.clientHeight };
       });
       expect(action.left).toBeGreaterThanOrEqual(0);

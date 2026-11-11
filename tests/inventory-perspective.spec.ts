@@ -9,7 +9,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
     for (const [parcel, letter] of [['boat', 'Л'], ['camera', 'Ф'], ['socks', 'Н']]) {
       await openInventory(page, parcel);
       const image = page.locator('[data-world-plane] picture img');
-      await expect(image).toHaveAttribute('src', /inventory-master-v12(-tall)?\.webp$/);
+      await expect(image).toHaveAttribute('src', /inventory-master-v16(-tall)?\.webp$/);
       const contours = (await image.getAttribute('src'))!.includes('-tall') ? tall : wide;
       const plane = (await image.boundingBox())!, stage = (await page.locator('[data-world-scene="inventory"]').boundingBox())!, header = (await page.getByRole('banner').boundingBox())!;
       const sign = contours.overviewRequiredBounds;
@@ -25,7 +25,11 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
         await marker.click();
         await page.locator('[data-choice-confirm]').click();
         await expect(page.locator('[data-scene-consequence]')).toHaveAttribute('data-scene-consequence', `inventory-${id}${id === 'alphabet' ? `-${parcel}` : ''}`);
-        await page.locator('[data-outcome-scene] img').evaluate((img: HTMLImageElement) => img.decode());
+        const outcome = page.locator('[data-outcome-scene] img');
+        await outcome.evaluate((img: HTMLImageElement) => img.decode());
+        expect(await outcome.evaluate((img: HTMLImageElement) => img.currentSrc)).toContain(
+          `/warehouse-results-v3/outcome-${id === 'alphabet' ? `alphabet-${parcel}` : id}.webp`,
+        );
         await page.getByRole('button', { name: 'Изменить выбор', exact: true }).click();
         await expect(marker).toBeVisible();
       }

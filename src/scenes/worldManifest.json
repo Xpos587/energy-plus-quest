@@ -58,7 +58,7 @@
     },
     "inventory": {
       "desktop": {
-        "image": "scene-art/inventory-master-v12.webp",
+        "image": "scene-art/inventory-master-v16.webp",
         "width": 1672,
         "height": 1170,
         "hotspots": [
@@ -74,19 +74,19 @@
           },
           {
             "id": "keeper",
-            "x": 0.8043,
-            "y": 0.4772
+            "x": 0.833732057416268,
+            "y": 0.5299145299145299
           },
           {
             "id": "wms",
-            "x": 0.8493,
-            "y": 0.6765
+            "x": 0.7446172248803827,
+            "y": 0.6111111111111112
           }
         ],
         "rendering": "raster"
       },
       "mobile": {
-        "image": "scene-art/inventory-master-v12-tall.webp",
+        "image": "scene-art/inventory-master-v16-tall.webp",
         "width": 1200,
         "height": 1750,
         "hotspots": [
@@ -102,13 +102,13 @@
           },
           {
             "id": "keeper",
-            "x": 0.7718,
-            "y": 0.5218
+            "x": 0.8291666666666667,
+            "y": 0.5388571428571428
           },
           {
             "id": "wms",
-            "x": 0.8251,
-            "y": 0.5976
+            "x": 0.6791666666666667,
+            "y": 0.6171428571428571
           }
         ],
         "rendering": "raster"

@@ -19,7 +19,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       const stage = page.locator('[data-world-scene=inventory]');
       const image = stage.locator('picture img');
       await image.evaluate(i => i.decode());
-      expect(await image.evaluate(i => i.currentSrc)).toMatch(/inventory-master-v12(-tall)?\.webp/);
+      expect(await image.evaluate(i => i.currentSrc)).toMatch(/inventory-master-v16(-tall)?\.webp/);
       await expect(stage.locator('[data-warehouse-annotations] svg')).toHaveAttribute('viewBox', /^0 0 (1672 1170|1200 1750)$/);
       await expect(stage.locator('[data-hotspot]')).toHaveCount(4);
       for (const id of ['entrance', 'alphabet', 'keeper', 'wms']) {

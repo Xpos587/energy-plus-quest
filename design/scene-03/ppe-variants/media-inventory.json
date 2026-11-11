@@ -1,0 +1,42 @@
+[
+  {
+    "path": "public/scene-art/inventory-master-v16.webp",
+    "bytes": 1679928,
+    "sha256": "4995a23b6c3071b3869614c73f2672df2d10bf888e92e87db22ae7209c633f5a"
+  },
+  {
+    "path": "public/scene-art/inventory-master-v16-tall.webp",
+    "bytes": 1510362,
+    "sha256": "f40710e67d5072cea91d28d529c93cd65d387305c57402d9561e4dad549f1714"
+  },
+  {
+    "path": "public/scene-art/warehouse-results-v3/outcome-alphabet-boat.webp",
+    "bytes": 282040,
+    "sha256": "ba68532e32b7495079f2f67729ab862b27e7f8f0592d835e7c81500bf220e526"
+  },
+  {
+    "path": "public/scene-art/warehouse-results-v3/outcome-alphabet-camera.webp",
+    "bytes": 282212,
+    "sha256": "316744aa138b2418af102ab5a509b9d8640a67b4d5a11f1b8744439abb8658c3"
+  },
+  {
+    "path": "public/scene-art/warehouse-results-v3/outcome-alphabet-socks.webp",
+    "bytes": 282254,
+    "sha256": "bbdef6b7f38c988eda9de8edefe76f7f6ac0e4e5c695937c5a8dddca94ef0b6a"
+  },
+  {
+    "path": "public/scene-art/warehouse-results-v3/outcome-entrance.webp",
+    "bytes": 271014,
+    "sha256": "0420419dd128334048364db28e5a6242cfc0284933697f0e099363708d6c56a9"
+  },
+  {
+    "path": "public/scene-art/warehouse-results-v3/outcome-keeper.webp",
+    "bytes": 292906,
+    "sha256": "701aa36056a39464a7553868a376ba4749bbe5319f1a59ad01746505e243307f"
+  },
+  {
+    "path": "public/scene-art/warehouse-results-v3/outcome-wms.webp",
+    "bytes": 279546,
+    "sha256": "466faa14d3eb9ccc7fafcaa5d66529b113e5a0f7d1b5b8ef4ba5ce78aad36b89"
+  }
+]

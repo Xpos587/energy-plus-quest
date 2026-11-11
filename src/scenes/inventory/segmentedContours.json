@@ -1,7 +1,7 @@
 {
   "width": 1672,
   "height": 1170,
-  "source": "scene-art/inventory-master-v12.webp",
+  "source": "scene-art/inventory-master-v16.webp",
   "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py, v18: closed shutter doors, zone boards flat on the side walls above both doors); GPT restyle in the scene 1-2 painterly style aligned back onto the render with the rendered lettering",
   "regions": {
     "entrance": {
@@ -19,24 +19,24 @@
     "keeper": {
       "path": "M 1341 582 L 1335 586 L 1334 601 L 1328 606 L 1323 617 L 1333 622 L 1335 626 L 1334 631 L 1330 633 L 1324 632 L 1319 625 L 1316 625 L 1316 628 L 1326 635 L 1325 674 L 1320 679 L 1320 682 L 1336 681 L 1341 685 L 1350 684 L 1350 665 L 1354 641 L 1362 635 L 1362 621 L 1359 611 L 1351 604 L 1354 596 L 1353 588 L 1347 583 Z",
       "anchorPixel": [
-        1345,
-        558
+        1394,
+        620
       ],
       "anchor": {
-        "x": 0.8043,
-        "y": 0.4772
+        "x": 0.833732057416268,
+        "y": 0.5299145299145299
       },
       "contourCount": 1
     },
     "wms": {
-      "path": "M 1290 687 L 1286 722 L 1267 725 L 1268 740 L 1264 771 L 1274 800 L 1279 797 L 1284 764 L 1289 760 L 1330 761 L 1340 784 L 1374 785 L 1377 799 L 1382 799 L 1388 793 L 1398 797 L 1410 791 L 1418 797 L 1422 796 L 1424 774 L 1417 773 L 1414 761 L 1416 758 L 1423 758 L 1425 766 L 1432 732 L 1432 721 L 1426 714 L 1426 710 L 1432 702 L 1429 693 L 1423 690 L 1417 690 L 1409 695 L 1404 693 L 1403 698 L 1407 703 L 1408 713 L 1402 717 L 1389 712 L 1383 706 L 1384 688 L 1382 686 L 1292 685 Z",
+      "path": "M 1290 687 L 1382 686 L 1384 688 L 1383 724 L 1395 732 L 1394 744 L 1388 746 L 1382 799 L 1377 799 L 1374 761 L 1289 760 L 1284 764 L 1279 797 L 1274 800 L 1264 771 L 1268 740 L 1267 725 L 1286 722 Z",
       "anchorPixel": [
-        1420,
-        791
+        1245,
+        715
       ],
       "anchor": {
-        "x": 0.8493,
-        "y": 0.6765
+        "x": 0.7446172248803827,
+        "y": 0.6111111111111112
       },
       "contourCount": 1
     },

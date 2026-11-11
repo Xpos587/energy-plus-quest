@@ -26,7 +26,7 @@ export function sceneOutcomeImage(
     // Results restyled into the common game style (design/scene-03/results-style.md).
     // Plaques read left to right: receiving (А–Б) to dispatch (Ю–Я).
     const variant = selectedId === "alphabet" ? `alphabet-${context.parcel}` : selectedId;
-    return imageAsset(`scene-art/warehouse-results-v2/outcome-${variant}.webp`);
+    return imageAsset(`scene-art/warehouse-results-v3/outcome-${variant}.webp`);
   }
   if (scene === "crane") return imageAsset(craneOutcomeImage(selectedId));
   if (scene === "lastmile") {

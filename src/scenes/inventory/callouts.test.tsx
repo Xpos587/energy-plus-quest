@@ -3,9 +3,29 @@ import { expect, it } from "vitest";
 import { WorldArt } from "../WorldArt";
 import { InventoryArt } from "./InventoryArt";
 import { inventoryScene } from "./index";
-import { warehouseCallouts, warehouseContour } from "./callouts";
+import { warehouseCallouts, warehouseContour, warehouseDrawing } from "./callouts";
 
 const context = { parcel: "boat", recipient: "alva", profile: "student" } as const;
+it("places 3 beside the keeper and 4 left of the computer, excluding the operator", () => {
+  for (const [composition, person, monitorLeft, operatorLeft] of [
+    ["wide", { right: 1362, top: 582, bottom: 685 }, 1286, 1400],
+    ["tall", { right: 945, top: 910, bottom: 999 }, 865, 965],
+  ] as const) {
+    const drawing = warehouseDrawing(composition);
+    const { keeper, wms } = drawing.regions;
+    expect(keeper.anchorPixel[0]).toBeGreaterThan(person.right);
+    expect(keeper.anchorPixel[0] - person.right).toBeLessThan(80);
+    expect(keeper.anchorPixel[1]).toBeGreaterThanOrEqual(person.top);
+    expect(keeper.anchorPixel[1]).toBeLessThanOrEqual(person.bottom);
+    expect(wms.anchorPixel[0]).toBeLessThan(monitorLeft);
+    const x = wms.path.match(/-?\d+(?:\.\d+)?/g)!.map(Number).filter((_, index) => index % 2 === 0);
+    expect(Math.max(...x)).toBeLessThan(operatorLeft);
+    for (const region of [keeper, wms]) {
+      expect(region.anchor.x * drawing.width).toBeCloseTo(region.anchorPixel[0], 2);
+      expect(region.anchor.y * drawing.height).toBeCloseTo(region.anchorPixel[1], 2);
+    }
+  }
+});
 it("keeps map numbering tied to the corresponding warehouse buttons", () => {
   const host = document.createElement("div");
   host.innerHTML = renderToStaticMarkup(<WorldArt scene="inventory" title="Склад" options={inventoryScene.options(context)} context={context} markers onSelect={() => {}} showResult={false} />);

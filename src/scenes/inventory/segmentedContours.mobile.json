@@ -1,7 +1,7 @@
 {
   "width": 1200,
   "height": 1750,
-  "source": "scene-art/inventory-master-v12-tall.webp",
+  "source": "scene-art/inventory-master-v16-tall.webp",
   "method": "Projected from the Blender warehouse (design/scene-03/blender-v1/warehouse.py, v18: closed shutter doors, zone boards flat on the side walls above both doors); GPT restyle in the scene 1-2 painterly style aligned back onto the render with the rendered lettering",
   "regions": {
     "entrance": {
@@ -19,24 +19,24 @@
     "keeper": {
       "path": "M 933 910 L 924 910 L 921 913 L 919 925 L 906 935 L 894 938 L 887 944 L 874 944 L 872 946 L 869 969 L 872 995 L 896 996 L 902 991 L 899 988 L 901 972 L 906 968 L 911 972 L 908 990 L 917 992 L 922 998 L 926 999 L 929 995 L 933 969 L 937 962 L 945 958 L 945 942 L 936 930 L 938 915 Z",
       "anchorPixel": [
-        926,
-        913
+        995,
+        943
       ],
       "anchor": {
-        "x": 0.7718,
-        "y": 0.5218
+        "x": 0.8291666666666667,
+        "y": 0.5388571428571428
       },
       "contourCount": 1
     },
     "wms": {
-      "path": "M 849 1077 L 849 1108 L 852 1119 L 852 1136 L 856 1136 L 859 1117 L 865 1112 L 941 1112 L 946 1116 L 943 1135 L 948 1136 L 952 1117 L 955 1112 L 961 1110 L 966 1114 L 966 1133 L 963 1139 L 957 1140 L 957 1144 L 973 1148 L 975 1143 L 983 1141 L 985 1110 L 996 1084 L 994 1073 L 987 1067 L 988 1057 L 983 1052 L 976 1052 L 965 1056 L 974 1073 L 974 1077 L 967 1091 L 961 1095 L 955 1089 L 952 1076 L 955 1060 L 954 1051 L 870 1050 L 868 1051 L 865 1074 Z",
+      "path": "M 849 1077 L 865 1074 L 868 1051 L 870 1050 L 954 1051 L 955 1060 L 952 1076 L 955 1089 L 955 1112 L 952 1117 L 948 1136 L 943 1135 L 946 1116 L 941 1112 L 865 1112 L 859 1117 L 856 1136 L 852 1136 L 852 1119 L 849 1108 Z",
       "anchorPixel": [
-        990,
-        1046
+        815,
+        1080
       ],
       "anchor": {
-        "x": 0.8251,
-        "y": 0.5976
+        "x": 0.6791666666666667,
+        "y": 0.6171428571428571
       },
       "contourCount": 1
     },

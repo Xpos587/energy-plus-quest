@@ -110,7 +110,7 @@ describe("current artwork for every delivery context", () => {
         expect(existsSync(`public${path}`), path).toBe(true);
       }
       for (const option of ["entrance", "keeper", "wms", "alphabet"]) {
-        const path = `/scene-art/warehouse-results-v2/outcome-${option === "alphabet" ? `alphabet-${context.parcel}` : option}.webp`;
+        const path = `/scene-art/warehouse-results-v3/outcome-${option === "alphabet" ? `alphabet-${context.parcel}` : option}.webp`;
         expect(sceneOutcomeImage("inventory", option, context)).toBe(path);
         expect(existsSync(`public${path}`), path).toBe(true);
       }
