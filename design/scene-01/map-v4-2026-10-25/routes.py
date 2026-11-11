@@ -170,12 +170,16 @@ def min_radius(pts):
 
 
 # Right-hand traffic (see layout.py): blue and yellow circle their blocks
-# clockwise in the inner lane (right turns), green runs the 3x3 ring
+# clockwise in the inner lane (right turns), green runs the 4x3 ring
 # counter-clockwise in the outer lane (left turns).
 SPECS = {
     "near": (XL[0], YL[0], XL[1], YL[1], LANE, True),
     "old4": (XL[1], YL[-1], XL[2], YL[2], LANE, True),
-    "crew": (XL[-1], YL[-1], XL[2], YL[2], -LANE, False),
+    # client 10.11: the fastest rig takes a clearly wider loop, one street further east
+    # (the manifest's plate `keep` was widened to match: wide u1 0.71, tall v1 0.81;
+    # layout.py would reset it. carrierFacts crew speed 57 km/h keeps its lap
+    # equal to the others' laps)
+    "crew": (XL[-1], YL[-1], XL[3], YL[2], -LANE, False),
 }
 LO = [8, 0, 4, -14, 4, 0, 8]
 HI = [40, 6, 30, 14, 30, 6, 40]

@@ -38,7 +38,7 @@ export const carrierFacts: Record<
   crew: {
     label: "Зелёная фура",
     imageAlt: "Зелёный тягач с полуприцепом на городской дороге",
-    citySpeedKmh: 48,
+    citySpeedKmh: 57,
     buildYear: 2024,
     pace: "Быстрее всех",
   },
