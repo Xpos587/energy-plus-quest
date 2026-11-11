@@ -22,7 +22,7 @@ describe("warehouse cargo artwork", () => {
     it(`${branch}: closed-box artwork for every gift and viewport`, () => {
       const context = { recipient: "alva", profile: "student" } as const;
       for (const parcel of ["boat", "socks", "camera"] as const) {
-        const path = `/scene-art/warehouse-results-v3/outcome-${branch === "alphabet" ? `alphabet-${parcel}` : branch}.webp`;
+        const path = `/scene-art/warehouse-results-v4/outcome-${branch === "alphabet" ? `alphabet-${parcel}` : branch}.webp`;
         expect(
           sceneOutcomeImage("inventory", branch, { ...context, parcel }),
         ).toBe(path);

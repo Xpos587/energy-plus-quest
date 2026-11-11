@@ -1,0 +1,123 @@
+{
+  "registration": "homography only; no dense optical flow",
+  "alphabetVariantAudit": [
+    {
+      "variant": "boat",
+      "plaqueBounds": [
+        1025,
+        205,
+        1138,
+        285
+      ],
+      "outsidePlaqueMeanMaxChannelDelta": 0.7718248437195697,
+      "outsidePlaquePixelsAbove30": 19,
+      "largestOutsidePlaqueComponentAbove30": 3
+    },
+    {
+      "variant": "socks",
+      "plaqueBounds": [
+        1025,
+        205,
+        1138,
+        285
+      ],
+      "outsidePlaqueMeanMaxChannelDelta": 0.5813880222554025,
+      "outsidePlaquePixelsAbove30": 2,
+      "largestOutsidePlaqueComponentAbove30": 1
+    }
+  ],
+  "keeperFootprintInsideDeck": true,
+  "wmsNeighbourChangedPixels": 0,
+  "results": [
+    {
+      "result": "alphabet-boat",
+      "source": "design/scene-03/results-v4/hf-alphabet-camera.png",
+      "sourceSha256": "70a6cbbf14375b46593de8a19a45297604aad592c806e007baac491c9e795e7b",
+      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-alphabet-boat.webp",
+      "acceptedPeopleSourceSha256": "ba68532e32b7495079f2f67729ab862b27e7f8f0592d835e7c81500bf220e526",
+      "sha256": "6207520c746634d5fbdcaea85a7feac47e0ae3159d301ed9d1c72342e4e32453",
+      "size": [
+        1999,
+        786
+      ],
+      "protectedPersonPixels": 74778,
+      "protectedPersonChangedPixels": 0,
+      "lossless": true
+    },
+    {
+      "result": "alphabet-camera",
+      "source": "design/scene-03/results-v4/hf-alphabet-camera.png",
+      "sourceSha256": "70a6cbbf14375b46593de8a19a45297604aad592c806e007baac491c9e795e7b",
+      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-alphabet-camera.webp",
+      "acceptedPeopleSourceSha256": "316744aa138b2418af102ab5a509b9d8640a67b4d5a11f1b8744439abb8658c3",
+      "sha256": "25e17ce100c924bc9d7b788ab18d00fb35cb109359bc44ee623c8b3718f0bd8b",
+      "size": [
+        1999,
+        786
+      ],
+      "protectedPersonPixels": 74778,
+      "protectedPersonChangedPixels": 0,
+      "lossless": true
+    },
+    {
+      "result": "alphabet-socks",
+      "source": "design/scene-03/results-v4/hf-alphabet-camera.png",
+      "sourceSha256": "70a6cbbf14375b46593de8a19a45297604aad592c806e007baac491c9e795e7b",
+      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-alphabet-socks.webp",
+      "acceptedPeopleSourceSha256": "bbdef6b7f38c988eda9de8edefe76f7f6ac0e4e5c695937c5a8dddca94ef0b6a",
+      "sha256": "4658aeddd804bcafd9ea3e97bc87315856b3e6e44509ccb19843132f43c8353e",
+      "size": [
+        1999,
+        786
+      ],
+      "protectedPersonPixels": 74778,
+      "protectedPersonChangedPixels": 0,
+      "lossless": true
+    },
+    {
+      "result": "entrance",
+      "source": "design/scene-03/results-v4/hf-entrance.png",
+      "sourceSha256": "a7b0e026ad6809d86c8a97be7a2d284ada9d88e3ff2ebdecc0dbfd640c98c5e7",
+      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-entrance.webp",
+      "acceptedPeopleSourceSha256": "0420419dd128334048364db28e5a6242cfc0284933697f0e099363708d6c56a9",
+      "sha256": "227ab3b00a43f19a852ccf5abd7f13790a766d55aaa2c8c4f2fa5e43e02e82bc",
+      "size": [
+        2004,
+        785
+      ],
+      "protectedPersonPixels": 76801,
+      "protectedPersonChangedPixels": 0,
+      "lossless": true
+    },
+    {
+      "result": "keeper",
+      "source": "design/scene-03/results-v4/hf-keeper.png",
+      "sourceSha256": "fc692acea670dd452c38c59330a413d91fc20c25921fdf4558330524126b1fda",
+      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-keeper.webp",
+      "acceptedPeopleSourceSha256": "701aa36056a39464a7553868a376ba4749bbe5319f1a59ad01746505e243307f",
+      "sha256": "a18b398b8b304d6e82f59eefc8505e335f0eb8da859f58aff67ec9d600442207",
+      "size": [
+        1672,
+        941
+      ],
+      "protectedPersonPixels": 176958,
+      "protectedPersonChangedPixels": 0,
+      "lossless": true
+    },
+    {
+      "result": "wms",
+      "source": "design/scene-03/results-v4/hf-wms.png",
+      "sourceSha256": "ec454264f7e80e8ed69feab6987600dd4644a7b27e3d3305628fa476d924f5dc",
+      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-wms.webp",
+      "acceptedPeopleSourceSha256": "466faa14d3eb9ccc7fafcaa5d66529b113e5a0f7d1b5b8ef4ba5ce78aad36b89",
+      "sha256": "a2fd99fb4acfe0fd425d9ab580abf56f02929aea33740503d28900e9f1eb8b0d",
+      "size": [
+        1671,
+        941
+      ],
+      "protectedPersonPixels": 127604,
+      "protectedPersonChangedPixels": 0,
+      "lossless": true
+    }
+  ]
+}
