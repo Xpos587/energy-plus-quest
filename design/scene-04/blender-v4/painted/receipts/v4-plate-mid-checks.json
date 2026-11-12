@@ -1,0 +1,189 @@
+{
+  "canvas": [
+    2804,
+    2244
+  ],
+  "tiles": [
+    {
+      "name": "v4-plate-mid-left-top",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 241,
+      "inliers": 10,
+      "rawMedianPx": 2.095210313796997,
+      "rawMaxPx": 6.485046863555908,
+      "registeredMedianPx": 2.095210313796997,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": "Mostly foliage/road; 7 translation-consensus points below the 8-point automatic threshold. Keep unchanged canvas, no fitted transform. v4-plate-mid-left-top-edge-check.jpg reviewed (native y500:1024): road curbs/dashes, both lamp heads/poles, partial office roof and crane platform edges visually align. Foliage surface is deliberately repainted. Visual registration evidence, not quantitative full-pixel geometry proof."
+    },
+    {
+      "name": "v4-plate-mid-right-top",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 291,
+      "inliers": 60,
+      "rawMedianPx": 1.8609635829925537,
+      "rawMaxPx": 3.4761197566986084,
+      "registeredMedianPx": 1.6366376876831055,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.62017822265625
+        ],
+        [
+          0.0,
+          1.0,
+          0.716583251953125
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-mid-left-middle",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 170,
+      "inliers": 44,
+      "rawMedianPx": 1.535148024559021,
+      "rawMaxPx": 3.1762044429779053,
+      "registeredMedianPx": 1.7102659940719604,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.3695058822631836
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0501251220703125
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-mid-right-middle",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 198,
+      "inliers": 49,
+      "rawMedianPx": 1.7153165340423584,
+      "rawMaxPx": 3.1647891998291016,
+      "registeredMedianPx": 1.50946044921875,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.6279678344726562
+        ],
+        [
+          0.0,
+          1.0,
+          -0.78558349609375
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-mid-left-bottom",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 97,
+      "inliers": 10,
+      "rawMedianPx": 1.4463365077972412,
+      "rawMaxPx": 2.5357587337493896,
+      "registeredMedianPx": 1.191741943359375,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.23291015625
+        ],
+        [
+          0.0,
+          1.0,
+          0.1159820556640625
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-mid-right-bottom",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 39,
+      "inliers": 18,
+      "rawMedianPx": 3.724763870239258,
+      "rawMaxPx": 7.156655788421631,
+      "registeredMedianPx": 3.724763870239258,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": "Mostly water; 7 translation-consensus points below the 8-point automatic threshold. Keep unchanged canvas, no fitted transform. v4-plate-mid-right-bottom-edge-check.jpg reviewed (native y0:550): quay edge, bollards, rail and crane feet visually align. Water highlights are intentionally repainted. Visual registration evidence only, not full-pixel geometry proof."
+    }
+  ],
+  "limitation": "Sparse feature registration and visual review, not full per-pixel structural equivalence."
+}

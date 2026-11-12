@@ -1,0 +1,50 @@
+{
+  "width": 2048,
+  "height": 3072,
+  "tiles": [
+    {
+      "name": "v4-plate-tall-left-top",
+      "left": 0,
+      "top": 0,
+      "width": 1152,
+      "height": 1360,
+      "identityReview": "Foliage-only/road crop: insufficient SIFT support, so no fitted warp. v4-plate-tall-left-top-edge-check.jpg reviewed: curb, road markings and both lamp edges align; foliage surface is repainted. This is visual registration evidence, not a quantitative structural-equivalence claim."
+    },
+    {
+      "name": "v4-plate-tall-right-top",
+      "left": 896,
+      "top": 0,
+      "width": 1152,
+      "height": 1360
+    },
+    {
+      "name": "v4-plate-tall-left-middle",
+      "left": 0,
+      "top": 856,
+      "width": 1152,
+      "height": 1360
+    },
+    {
+      "name": "v4-plate-tall-right-middle",
+      "left": 896,
+      "top": 856,
+      "width": 1152,
+      "height": 1360
+    },
+    {
+      "name": "v4-plate-tall-left-bottom",
+      "left": 0,
+      "top": 1712,
+      "width": 1152,
+      "height": 1360
+    },
+    {
+      "name": "v4-plate-tall-right-bottom",
+      "left": 896,
+      "top": 1712,
+      "width": 1152,
+      "height": 1360,
+      "identityReview": "Predominantly water; only 7 SIFT consensus points (below 8-point auto-fit threshold). Unwarped v4-plate-tall-right-bottom-edge-check.jpg reviewed: quay, bollards, near crane foot align. Water surface deliberately repainted, not a geometry feature. Keep identity rather than overfit sparse points."
+    }
+  ]
+}

@@ -12,6 +12,7 @@ for (const [w, h] of [[1440, 900], [390, 844]]) for (const id of ["remote", "rus
   const page = await ctx.newPage();
   const t0 = Date.now();
   await page.goto(`${base}/scenes.html?scene=crane&parcel=camera&recipient=alva`);
+  await page.locator("[data-hotspot]").first().waitFor({ state: "attached" });
   const next = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
   for (let n = 0; n < 20 && (await next.isVisible()); n++) await next.click();
   await page.locator(`[data-hotspot="${id}"]`).click();

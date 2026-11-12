@@ -1,0 +1,189 @@
+{
+  "canvas": [
+    2048,
+    3072
+  ],
+  "tiles": [
+    {
+      "name": "v4-plate-tall-left-top",
+      "rawSize": [
+        1154,
+        1363
+      ],
+      "nativeSize": [
+        1152,
+        1360
+      ],
+      "matches": 343,
+      "inliers": 1,
+      "rawMedianPx": 1.9651784896850586,
+      "rawMaxPx": 1.9651784896850586,
+      "registeredMedianPx": 1.9651784896850586,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": "Foliage-only/road crop: insufficient SIFT support, so no fitted warp. v4-plate-tall-left-top-edge-check.jpg reviewed: curb, road markings and both lamp edges align; foliage surface is repainted. This is visual registration evidence, not a quantitative structural-equivalence claim."
+    },
+    {
+      "name": "v4-plate-tall-right-top",
+      "rawSize": [
+        1154,
+        1363
+      ],
+      "nativeSize": [
+        1152,
+        1360
+      ],
+      "matches": 162,
+      "inliers": 49,
+      "rawMedianPx": 1.3541618585586548,
+      "rawMaxPx": 2.799804449081421,
+      "registeredMedianPx": 1.1386111974716187,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.4056396484375
+        ],
+        [
+          0.0,
+          1.0,
+          -0.32470703125
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-tall-left-middle",
+      "rawSize": [
+        1154,
+        1363
+      ],
+      "nativeSize": [
+        1152,
+        1360
+      ],
+      "matches": 213,
+      "inliers": 43,
+      "rawMedianPx": 1.9922479391098022,
+      "rawMaxPx": 4.281452178955078,
+      "registeredMedianPx": 1.7024085521697998,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.159423828125
+        ],
+        [
+          0.0,
+          1.0,
+          -1.66845703125
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-tall-right-middle",
+      "rawSize": [
+        1154,
+        1363
+      ],
+      "nativeSize": [
+        1152,
+        1360
+      ],
+      "matches": 87,
+      "inliers": 16,
+      "rawMedianPx": 1.6009581089019775,
+      "rawMaxPx": 3.4869179725646973,
+      "registeredMedianPx": 1.2723517417907715,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.9235687255859375
+        ],
+        [
+          0.0,
+          1.0,
+          -1.115509033203125
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-tall-left-bottom",
+      "rawSize": [
+        1154,
+        1363
+      ],
+      "nativeSize": [
+        1152,
+        1360
+      ],
+      "matches": 67,
+      "inliers": 13,
+      "rawMedianPx": 1.86513090133667,
+      "rawMaxPx": 3.18906831741333,
+      "registeredMedianPx": 1.5359318256378174,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.20458984375
+        ],
+        [
+          0.0,
+          1.0,
+          -0.29339599609375
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-tall-right-bottom",
+      "rawSize": [
+        1154,
+        1363
+      ],
+      "nativeSize": [
+        1152,
+        1360
+      ],
+      "matches": 16,
+      "inliers": 13,
+      "rawMedianPx": 2.534970760345459,
+      "rawMaxPx": 7.336938858032227,
+      "registeredMedianPx": 2.534970760345459,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": "Predominantly water; only 7 SIFT consensus points (below 8-point auto-fit threshold). Unwarped v4-plate-tall-right-bottom-edge-check.jpg reviewed: quay, bollards, near crane foot align. Water surface deliberately repainted, not a geometry feature. Keep identity rather than overfit sparse points."
+    }
+  ],
+  "limitation": "Sparse feature registration and visual review, not full per-pixel structural equivalence."
+}

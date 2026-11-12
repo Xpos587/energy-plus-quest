@@ -1,0 +1,183 @@
+{
+  "canvas": [
+    3884,
+    1618
+  ],
+  "tiles": [
+    {
+      "name": "v4-plate-wide-left-top",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 269,
+      "inliers": 16,
+      "rawMedianPx": 4.700927257537842,
+      "rawMaxPx": 6.413548469543457,
+      "registeredMedianPx": 1.4501163959503174,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          4.00653076171875
+        ],
+        [
+          0.0,
+          1.0,
+          1.95050048828125
+        ]
+      ],
+      "translationReview": "Replacement only: 4.456 native px pre-correction translation; source-edge overlay wide-left-top-aligned-edge-check.jpg reviewed (roof, lamp, road, trolley). Translation corrects offset; no scale/rotation. Sparse registration is not per-pixel geometry proof."
+    },
+    {
+      "name": "v4-plate-wide-middle-top",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 268,
+      "inliers": 70,
+      "rawMedianPx": 1.4587090015411377,
+      "rawMaxPx": 3.1596453189849854,
+      "registeredMedianPx": 1.5311918258666992,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.31634521484375
+        ],
+        [
+          0.0,
+          1.0,
+          0.09307861328125
+        ]
+      ],
+      "translationReview": null
+    },
+    {
+      "name": "v4-plate-wide-right-top",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 191,
+      "inliers": 47,
+      "rawMedianPx": 1.4838056564331055,
+      "rawMaxPx": 2.8804519176483154,
+      "registeredMedianPx": 1.351137399673462,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.4588623046875
+        ],
+        [
+          0.0,
+          1.0,
+          -0.35186767578125
+        ]
+      ],
+      "translationReview": null
+    },
+    {
+      "name": "v4-plate-wide-left-bottom",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 140,
+      "inliers": 22,
+      "rawMedianPx": 1.7488186359405518,
+      "rawMaxPx": 3.5460610389709473,
+      "registeredMedianPx": 1.806215763092041,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          0.040069580078125
+        ],
+        [
+          0.0,
+          1.0,
+          0.8762130737304688
+        ]
+      ],
+      "translationReview": null
+    },
+    {
+      "name": "v4-plate-wide-middle-bottom",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 220,
+      "inliers": 76,
+      "rawMedianPx": 1.8538209199905396,
+      "rawMaxPx": 3.994652032852173,
+      "registeredMedianPx": 1.471987009048462,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.99835205078125
+        ],
+        [
+          0.0,
+          1.0,
+          0.57769775390625
+        ]
+      ],
+      "translationReview": null
+    },
+    {
+      "name": "v4-plate-wide-right-bottom",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 114,
+      "inliers": 24,
+      "rawMedianPx": 0.950564980506897,
+      "rawMaxPx": 3.054973840713501,
+      "registeredMedianPx": 1.0234383344650269,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.1534423828125
+        ],
+        [
+          0.0,
+          1.0,
+          -0.1422901153564453
+        ]
+      ],
+      "translationReview": null
+    }
+  ],
+  "limitation": "Sparse feature registration and visual review, not full per-pixel structural equivalence."
+}

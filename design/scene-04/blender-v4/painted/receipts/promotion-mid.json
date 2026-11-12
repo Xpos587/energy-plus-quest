@@ -1,0 +1,102 @@
+[
+  {
+    "format": "mid",
+    "name": "plate",
+    "source": ".tmp-work/scene4-final-render/gpt/v4-plate-mid.png",
+    "width": 2804,
+    "height": 2244,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 1076072
+  },
+  {
+    "format": "mid",
+    "name": "barge",
+    "source": ".tmp-work/scene4-final-render/painted-assets/mid/barge.png",
+    "width": 1493,
+    "height": 834,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 134842
+  },
+  {
+    "format": "mid",
+    "name": "far",
+    "source": ".tmp-work/scene4-final-render/painted-assets/mid/far.png",
+    "width": 647,
+    "height": 521,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 60830
+  },
+  {
+    "format": "mid",
+    "name": "ladder",
+    "source": ".tmp-work/scene4-final-render/painted-assets/mid/ladder.png",
+    "width": 149,
+    "height": 393,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 19974
+  },
+  {
+    "format": "mid",
+    "name": "gift",
+    "source": ".tmp-work/scene4-final-render/painted-assets/mid/gift.png",
+    "width": 153,
+    "height": 164,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 7456
+  },
+  {
+    "format": "mid",
+    "name": "box",
+    "source": ".tmp-work/scene4-final-render/painted-assets/mid/box.png",
+    "width": 153,
+    "height": 288,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 12876
+  },
+  {
+    "format": "mid",
+    "name": "hook",
+    "source": ".tmp-work/scene4-final-render/painted-assets/mid/hook.png",
+    "width": 61,
+    "height": 95,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 2858
+  },
+  {
+    "format": "mid",
+    "name": "smoke",
+    "source": ".tmp-work/scene4-final-render/painted-assets/mid/smoke.png",
+    "width": 220,
+    "height": 363,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 10286
+  },
+  {
+    "format": "mid",
+    "name": "top",
+    "source": ".tmp-work/scene4-final-render/painted-assets/mid/top.png",
+    "width": 3332,
+    "height": 3876,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 938962
+  },
+  {
+    "format": "mid",
+    "name": "ivan",
+    "source": "public/scene-art/barge-v4/mid/ivan.webp",
+    "width": 222,
+    "height": 145,
+    "alphaReference": "original v4 portrait resized to current box",
+    "alphaChangedPixels": 0,
+    "bytes": 9556
+  }
+]

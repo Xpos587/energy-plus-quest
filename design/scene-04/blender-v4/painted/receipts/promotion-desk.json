@@ -1,0 +1,102 @@
+[
+  {
+    "format": "desk",
+    "name": "plate",
+    "source": ".tmp-work/scene4-final-render/gpt/v4-plate-desk.png",
+    "width": 3072,
+    "height": 2048,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 1046436
+  },
+  {
+    "format": "desk",
+    "name": "barge",
+    "source": ".tmp-work/scene4-final-render/painted-assets/desk/barge.png",
+    "width": 1609,
+    "height": 848,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 134288
+  },
+  {
+    "format": "desk",
+    "name": "far",
+    "source": ".tmp-work/scene4-final-render/painted-assets/desk/far.png",
+    "width": 668,
+    "height": 555,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 60046
+  },
+  {
+    "format": "desk",
+    "name": "ladder",
+    "source": ".tmp-work/scene4-final-render/painted-assets/desk/ladder.png",
+    "width": 159,
+    "height": 419,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 21114
+  },
+  {
+    "format": "desk",
+    "name": "gift",
+    "source": ".tmp-work/scene4-final-render/painted-assets/desk/gift.png",
+    "width": 161,
+    "height": 171,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 7510
+  },
+  {
+    "format": "desk",
+    "name": "box",
+    "source": ".tmp-work/scene4-final-render/painted-assets/desk/box.png",
+    "width": 161,
+    "height": 306,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 13612
+  },
+  {
+    "format": "desk",
+    "name": "hook",
+    "source": ".tmp-work/scene4-final-render/painted-assets/desk/hook.png",
+    "width": 64,
+    "height": 101,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 3004
+  },
+  {
+    "format": "desk",
+    "name": "smoke",
+    "source": ".tmp-work/scene4-final-render/painted-assets/desk/smoke.png",
+    "width": 238,
+    "height": 381,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 10552
+  },
+  {
+    "format": "desk",
+    "name": "top",
+    "source": ".tmp-work/scene4-final-render/painted-assets/desk/top.png",
+    "width": 3460,
+    "height": 3996,
+    "alphaReference": "Blender baseline",
+    "alphaChangedPixels": 0,
+    "bytes": 995600
+  },
+  {
+    "format": "desk",
+    "name": "ivan",
+    "source": "public/scene-art/barge-v4/desk/ivan.webp",
+    "width": 236,
+    "height": 153,
+    "alphaReference": "original v4 portrait resized to current box",
+    "alphaChangedPixels": 0,
+    "bytes": 10290
+  }
+]

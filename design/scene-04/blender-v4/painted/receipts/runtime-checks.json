@@ -1,0 +1,68 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "way": "choice",
+    "overflow": false,
+    "broken": [],
+    "art": "mid",
+    "result": false
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "way": "remote",
+    "overflow": false,
+    "broken": [],
+    "result": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "way": "rush",
+    "overflow": false,
+    "broken": [],
+    "result": true
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "way": "petr",
+    "overflow": false,
+    "broken": [],
+    "result": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "way": "choice",
+    "overflow": false,
+    "broken": [],
+    "art": "tall",
+    "result": false
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "way": "remote",
+    "overflow": false,
+    "broken": [],
+    "result": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "way": "rush",
+    "overflow": false,
+    "broken": [],
+    "result": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "way": "petr",
+    "overflow": false,
+    "broken": [],
+    "result": true
+  }
+]

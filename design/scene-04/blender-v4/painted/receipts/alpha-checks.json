@@ -1,0 +1,999 @@
+{
+  "baseline": ".tmp-work/scene4-final-render/blender-assets",
+  "target": "public/scene-art/barge-v5",
+  "files": 121,
+  "originalCastFiles": 72,
+  "baselineAlphaExceptions": {
+    "restoredPortraits": 4,
+    "liveCrops": 3
+  },
+  "unchangedFiles": 72,
+  "rows": [
+    {
+      "name": "desk/barge.webp",
+      "width": 1609,
+      "height": 848,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/box.webp",
+      "width": 161,
+      "height": 306,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/far-empty.webp",
+      "width": 560,
+      "height": 474,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/far-idle.webp",
+      "width": 560,
+      "height": 474,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/far-sad.webp",
+      "width": 560,
+      "height": 474,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/far.webp",
+      "width": 668,
+      "height": 555,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/gift.webp",
+      "width": 161,
+      "height": 171,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/hook.webp",
+      "width": 64,
+      "height": 101,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/ivan-cheer.webp",
+      "width": 274,
+      "height": 211,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/ivan-climb1.webp",
+      "width": 58,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/ivan-climb2.webp",
+      "width": 58,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/ivan-empty.webp",
+      "width": 274,
+      "height": 211,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/ivan-joy.webp",
+      "width": 274,
+      "height": 211,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/ivan-run1.webp",
+      "width": 68,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/ivan-run2.webp",
+      "width": 70,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/ivan-wave.webp",
+      "width": 274,
+      "height": 211,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/ivan.webp",
+      "width": 236,
+      "height": 153,
+      "alphaChangedPixels": 0,
+      "alphaReference": "public/scene-art/barge-v4/desk/ivan.webp",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/ladder.webp",
+      "width": 159,
+      "height": 419,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/office.webp",
+      "width": 421,
+      "height": 384,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/petr-climb.webp",
+      "width": 55,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/petr-sad.webp",
+      "width": 45,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/petr-walk1.webp",
+      "width": 63,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/petr-walk2.webp",
+      "width": 68,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/plate.webp",
+      "width": 3072,
+      "height": 2048,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/smoke.webp",
+      "width": 238,
+      "height": 381,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "desk/top-ivan.webp",
+      "width": 2600,
+      "height": 3124,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/top-petr.webp",
+      "width": 2600,
+      "height": 3124,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "desk/top.webp",
+      "width": 3460,
+      "height": 3996,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/barge.webp",
+      "width": 1493,
+      "height": 834,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/box.webp",
+      "width": 153,
+      "height": 288,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/far-empty.webp",
+      "width": 540,
+      "height": 447,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/far-idle.webp",
+      "width": 540,
+      "height": 447,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/far-sad.webp",
+      "width": 540,
+      "height": 447,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/far.webp",
+      "width": 647,
+      "height": 521,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/gift.webp",
+      "width": 153,
+      "height": 164,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/hook.webp",
+      "width": 61,
+      "height": 95,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/ivan-cheer.webp",
+      "width": 259,
+      "height": 201,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/ivan-climb1.webp",
+      "width": 58,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/ivan-climb2.webp",
+      "width": 58,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/ivan-empty.webp",
+      "width": 259,
+      "height": 201,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/ivan-joy.webp",
+      "width": 259,
+      "height": 201,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/ivan-run1.webp",
+      "width": 68,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/ivan-run2.webp",
+      "width": 70,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/ivan-wave.webp",
+      "width": 259,
+      "height": 201,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/ivan.webp",
+      "width": 222,
+      "height": 145,
+      "alphaChangedPixels": 0,
+      "alphaReference": "public/scene-art/barge-v4/mid/ivan.webp",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/ladder.webp",
+      "width": 149,
+      "height": 393,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/office.webp",
+      "width": 391,
+      "height": 365,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/petr-climb.webp",
+      "width": 55,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/petr-sad.webp",
+      "width": 45,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/petr-walk1.webp",
+      "width": 63,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/petr-walk2.webp",
+      "width": 68,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/plate.webp",
+      "width": 2804,
+      "height": 2244,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/smoke.webp",
+      "width": 220,
+      "height": 363,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "mid/top-ivan.webp",
+      "width": 2500,
+      "height": 2904,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/top-petr.webp",
+      "width": 2500,
+      "height": 2904,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "mid/top.webp",
+      "width": 3332,
+      "height": 3876,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-petr-portrait.webp",
+      "width": 2048,
+      "height": 3072,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-petr-rail.webp",
+      "width": 2406,
+      "height": 2168,
+      "alphaChangedPixels": 0,
+      "clip": {
+        "x": 10.459891346837708,
+        "y": 0,
+        "width": 1203.468980734059,
+        "height": 1084.2062889496026
+      },
+      "alphaReference": "Live 1.11:1 cover-safe crop; opaque alpha (dynamic bounds, not baseline dimensions)",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-petr.webp",
+      "width": 3884,
+      "height": 1618,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-remote-portrait.webp",
+      "width": 2048,
+      "height": 3072,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-remote-rail.webp",
+      "width": 2406,
+      "height": 2166,
+      "alphaChangedPixels": 0,
+      "clip": {
+        "x": 11.00559362510728,
+        "y": 0,
+        "width": 1203.1754277400198,
+        "height": 1083.9418267928106
+      },
+      "alphaReference": "Live 1.11:1 cover-safe crop; opaque alpha (dynamic bounds, not baseline dimensions)",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-remote.webp",
+      "width": 3884,
+      "height": 1618,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-rush-portrait.webp",
+      "width": 2048,
+      "height": 3072,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-rush-rail.webp",
+      "width": 2408,
+      "height": 2168,
+      "alphaChangedPixels": 0,
+      "clip": {
+        "x": 10.044179927406958,
+        "y": 0,
+        "width": 1204.120624520186,
+        "height": 1084.793355423591
+      },
+      "alphaReference": "Live 1.11:1 cover-safe crop; opaque alpha (dynamic bounds, not baseline dimensions)",
+      "unchangedBytes": false
+    },
+    {
+      "name": "outcome-rush.webp",
+      "width": 3884,
+      "height": 1618,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/barge.webp",
+      "width": 929,
+      "height": 1077,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/box.webp",
+      "width": 135,
+      "height": 233,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/far-empty.webp",
+      "width": 578,
+      "height": 400,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/far-idle.webp",
+      "width": 578,
+      "height": 400,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/far-sad.webp",
+      "width": 578,
+      "height": 400,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/far.webp",
+      "width": 689,
+      "height": 468,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/gift.webp",
+      "width": 135,
+      "height": 151,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/hook.webp",
+      "width": 51,
+      "height": 79,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/ivan-cheer.webp",
+      "width": 197,
+      "height": 192,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/ivan-climb1.webp",
+      "width": 58,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/ivan-climb2.webp",
+      "width": 58,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/ivan-empty.webp",
+      "width": 197,
+      "height": 192,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/ivan-joy.webp",
+      "width": 197,
+      "height": 192,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/ivan-run1.webp",
+      "width": 68,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/ivan-run2.webp",
+      "width": 70,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/ivan-wave.webp",
+      "width": 197,
+      "height": 192,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/ivan.webp",
+      "width": 167,
+      "height": 139,
+      "alphaChangedPixels": 0,
+      "alphaReference": "public/scene-art/barge-v4/tall/ivan.webp",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/ladder.webp",
+      "width": 104,
+      "height": 323,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/office.webp",
+      "width": 256,
+      "height": 317,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/petr-climb.webp",
+      "width": 55,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/petr-sad.webp",
+      "width": 45,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/petr-walk1.webp",
+      "width": 63,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/petr-walk2.webp",
+      "width": 68,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/plate.webp",
+      "width": 2048,
+      "height": 3072,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/smoke.webp",
+      "width": 141,
+      "height": 332,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "tall/top-ivan.webp",
+      "width": 2680,
+      "height": 1932,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/top-petr.webp",
+      "width": 2680,
+      "height": 1932,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "tall/top.webp",
+      "width": 3580,
+      "height": 2580,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/barge.webp",
+      "width": 1527,
+      "height": 719,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/box.webp",
+      "width": 146,
+      "height": 286,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/far-empty.webp",
+      "width": 542,
+      "height": 460,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/far-idle.webp",
+      "width": 542,
+      "height": 460,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/far-sad.webp",
+      "width": 542,
+      "height": 460,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/far.webp",
+      "width": 582,
+      "height": 519,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/gift.webp",
+      "width": 146,
+      "height": 155,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/hook.webp",
+      "width": 60,
+      "height": 95,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/ivan-cheer.webp",
+      "width": 280,
+      "height": 211,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/ivan-climb1.webp",
+      "width": 58,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/ivan-climb2.webp",
+      "width": 58,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/ivan-empty.webp",
+      "width": 280,
+      "height": 211,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/ivan-joy.webp",
+      "width": 280,
+      "height": 211,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/ivan-run1.webp",
+      "width": 68,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/ivan-run2.webp",
+      "width": 70,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/ivan-wave.webp",
+      "width": 280,
+      "height": 211,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/ivan.webp",
+      "width": 220,
+      "height": 139,
+      "alphaChangedPixels": 0,
+      "alphaReference": "public/scene-art/barge-v4/wide/ivan.webp",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/ladder.webp",
+      "width": 152,
+      "height": 390,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/office.webp",
+      "width": 340,
+      "height": 388,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/petr-climb.webp",
+      "width": 55,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/petr-sad.webp",
+      "width": 45,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/petr-walk1.webp",
+      "width": 63,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/petr-walk2.webp",
+      "width": 68,
+      "height": 120,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/plate.webp",
+      "width": 3884,
+      "height": 1618,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/smoke.webp",
+      "width": 231,
+      "height": 349,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    },
+    {
+      "name": "wide/top-ivan.webp",
+      "width": 2612,
+      "height": 2552,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/top-petr.webp",
+      "width": 2612,
+      "height": 2552,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": true
+    },
+    {
+      "name": "wide/top.webp",
+      "width": 3152,
+      "height": 3104,
+      "alphaChangedPixels": 0,
+      "alphaReference": "Blender baseline",
+      "unchangedBytes": false
+    }
+  ]
+}

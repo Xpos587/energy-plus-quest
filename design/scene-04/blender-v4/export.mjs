@@ -1,5 +1,5 @@
 // Blender layers -> runtime sprites for scene 4 (barge v4).
-//   bun design/scene-04/blender-v4/export.mjs [OUT] [OUTCOMES]
+//   bun design/scene-04/blender-v4/export.mjs [OUT] [OUTCOMES] [FORMAT...]
 // Reads OUT/{format}/*.png (rendered at SS x format px) and OUT/manifest.json,
 // writes public/scene-art/barge-v5/{format}/*.webp, outcome-*.webp, and the
 // generated geometry table src/scenes/crane/layers.ts (format px units).
@@ -14,8 +14,12 @@ const OUTCOMES = process.argv[3] ? path.resolve(process.argv[3]) : undefined;
 const base = "scene-art/barge-v5";
 const pub = path.join(root, "public", base);
 const manifest = JSON.parse(await readFile(path.join(OUT, "manifest.json"), "utf8"));
-const S = 1.5; // render supersampling: png px per format px
-const FORMATS = ["wide", "desk", "mid", "tall"];
+const S = manifest.render?.scale ?? 1.5; // Legacy manifests rendered at 1.5x.
+if (!Number.isFinite(S) || S <= 0) throw new Error("Invalid render scale");
+const ALL_FORMATS = ["wide", "desk", "mid", "tall"];
+const FORMATS = process.argv.length > 4 ? process.argv.slice(4) : ALL_FORMATS;
+if (new Set(FORMATS).size !== FORMATS.length || FORMATS.some((f) => !ALL_FORMATS.includes(f)))
+  throw new Error("Expected unique formats: wide desk mid tall");
 const SPRITES = ["ivan", "ladder", "far", "gift", "barge", "smoke", "hook", "box"];
 const FRAMES = manifest.scene.slews.length;
 const COLS = 4;
@@ -32,7 +36,7 @@ async function alphaBox(file) {
         if (y < y0) y0 = y;
         if (y > y1) y1 = y;
       }
-  const pad = 3;
+  const pad = Math.ceil(2 * S); // Two format pixels at either render resolution.
   return {
     left: Math.max(0, x0 - pad), top: Math.max(0, y0 - pad),
     right: Math.min(info.width, x1 + 1 + pad), bottom: Math.min(info.height, y1 + 1 + pad),
@@ -52,13 +56,18 @@ function tipWorld(deg) {
   return [sc.pivot[0] + lx * Math.cos(a) - ly * Math.sin(a), sc.pivot[1] + lx * Math.sin(a) + ly * Math.cos(a), sc.pivot[2] + lz];
 }
 
-const table = {};
+// Partial exports retain the other approved formats, so raw PNGs can be retired per format.
+const table = FORMATS.length === ALL_FORMATS.length ? {} : { ...(await import(path.join(root, "src/scenes/crane/layers.ts"))).craneLayers };
 for (const name of FORMATS) {
   const src = path.join(OUT, name);
   const dst = path.join(pub, name);
   await mkdir(dst, { recursive: true });
   const m = manifest[name];
-  await webp(sharp(path.join(src, "plate.png"))).toFile(path.join(dst, "plate.webp"));
+  const plate = sharp(path.join(src, "plate.png"));
+  const size = await plate.metadata();
+  if (size.width !== Math.round(m.width * S) || size.height !== Math.round(m.height * S))
+    throw new Error(`${name}: plate dimensions do not match manifest render scale ${S}`);
+  await webp(plate).toFile(path.join(dst, "plate.webp"));
   const sprites = {};
   for (const sprite of SPRITES) {
     const file = path.join(src, `${sprite}.png`);
@@ -115,4 +124,4 @@ export const craneWorld = ${JSON.stringify(world)} as const;
 export const craneLayers = ${JSON.stringify(table, null, 1)} as const;
 `;
 await writeFile(path.join(root, "src/scenes/crane/layers.ts"), text);
-console.log("exported", Object.keys(table).join(", "), OUTCOMES ? "+ outcomes" : "");
+console.log("exported", FORMATS.join(", "), OUTCOMES ? "+ outcomes" : "");

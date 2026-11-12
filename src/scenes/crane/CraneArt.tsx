@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { ImageSources } from "../../components/ImageSources";
-import { useArtworkLoading } from "../../components/useArtworkLoading";
+import type { ArtworkStatus } from "../../components/useArtworkLoading";
 import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
@@ -108,7 +108,27 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const interactive = !showResult && !!onSelect && !playing;
   const view = camera(size, playing ? "play" : interactive ? selectedId : undefined);
   const art = craneArtwork[view.format];
-  const plate = useArtworkLoading(imageAsset(art.plate));
+  const [attempt, setAttempt] = useState(0);
+  const source = (path: string) => {
+    const src = imageAsset(path);
+    return attempt ? `${src}${src.includes("?") ? "&" : "?"}artwork-retry=${attempt}` : src;
+  };
+  const artworkKey = `${view.format}:${attempt}`;
+  const [readiness, setReadiness] = useState<{ key: string; status: ArtworkStatus }>({ key: artworkKey, status: "loading" });
+  const status = readiness.key === artworkKey ? readiness.status : "loading";
+  useLayoutEffect(() => {
+    if (status !== "loading") return;
+    let cancelled = false;
+    // The plate and transparent sprites must enter the first painted frame together.
+    const images = [...stage.current!.querySelectorAll("img")];
+    Promise.all(images.map((image) => image.decode())).then(
+      () => { if (!cancelled) setReadiness({ key: artworkKey, status: "ready" }); },
+      () => { if (!cancelled) setReadiness({ key: artworkKey, status: "error" }); },
+    );
+    return () => { cancelled = true; };
+  // While initially loading, a rail choice can replace cast images. Track source changes,
+  // not every position/frame; once revealed, normal animation never blanks the scene.
+  }, [artworkKey, status, beat.office, beat.cab, beat.operator, beat.walker?.pose, beat.lifted, beat.onDeck]);
   const options = craneScene.options(context);
   const litId = playing ?? (interactive ? (hovered ?? selectedId) : undefined);
   // Pointing at an actor lights its outline (scene 5 pattern, nothing is dimmed); untried actors breathe.
@@ -176,10 +196,10 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const sprite = (name: keyof typeof s, extra?: { style?: CSSProperties; lit?: boolean; className?: string; data?: string }) => (
     <img
       className={[styles.layer, extra?.className].filter(Boolean).join(" ")}
-      src={imageAsset(s[name].src)}
+      src={source(s[name].src)}
       alt=""
       draggable={false}
-      decoding="async"
+      decoding="sync"
       data-layer={name}
       data-lit={extra?.lit || undefined}
       data-busy={(playing && beat.busy === name) || undefined}
@@ -200,33 +220,30 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       data-ready={ready || undefined}
       aria-label={craneScene.title}
     >
-      <div className={styles.plane} style={{ width: view.width, height: view.height, left: view.left, top: view.top }}>
+      <div className={styles.plane} style={{ width: view.width, height: view.height, left: view.left, top: view.top, visibility: status === "ready" ? "visible" : "hidden" }}>
         <picture>
-          <ImageSources src={plate.src} />
+          <ImageSources src={source(art.plate)} />
           <img
-            ref={plate.ref}
             className={styles.image}
-            src={plate.src}
-            onLoad={plate.onLoad}
-            onError={plate.onError}
+            src={source(art.plate)}
             width={art.width}
             height={art.height}
-            decoding="async"
+            decoding="sync"
             draggable={false}
             alt="Причал на Оби: Иван за пультом в офисе ПРУ, подарок на поддоне, высокий портальный кран с пустой кабиной и лестницей до неё, баржа с трубами у причала и дальний кран, где сидит Пётр рядом со своими ящиками."
           />
         </picture>
         {/* Remote way: the whole ПРУ building glows, not Ivan inside its glass. */}
-        {cast && <img className={styles.layer} src={imageAsset(castSrc(view.format, "office"))} alt="" draggable={false} decoding="async" data-layer="pru" data-lit={lit.has("ivan") || undefined} style={box(cast.office)} />}
+        {cast && <img className={styles.layer} src={source(castSrc(view.format, "office"))} alt="" draggable={false} decoding="sync" data-layer="pru" data-lit={lit.has("ivan") || undefined} style={box(cast.office)} />}
         {!beat.lifted && !beat.onDeck && sprite("gift")}
         {!(cast && beat.office) && sprite("ivan", { lit: !cast && lit.has("ivan") })}
         {cast && beat.office && (
-          <img className={styles.layer} src={imageAsset(castSrc(view.format, `ivan-${beat.office}`))} alt="" draggable={false} data-layer="office" style={box(cast.window)} />
+          <img className={styles.layer} src={source(castSrc(view.format, `ivan-${beat.office}`))} alt="" draggable={false} decoding="sync" data-layer="office" style={box(cast.window)} />
         )}
         {sprite("ladder", { lit: lit.has("ladder") })}
         {sprite("far", { lit: lit.has("far") })}
         {cast && beat.cab && (
-          <img className={styles.layer} src={imageAsset(castSrc(view.format, `far-${beat.cab}`))} alt="" draggable={false} data-layer="cab" style={box(cast.cab)} />
+          <img className={styles.layer} src={source(castSrc(view.format, `far-${beat.cab}`))} alt="" draggable={false} decoding="sync" data-layer="cab" style={box(cast.cab)} />
         )}
         <div className={styles.sail} style={move({ w: art.width, h: art.height }, sail)} data-sailing={beat.sail > 0 || undefined}>
           <div className={styles.bob}>
@@ -238,9 +255,10 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {walker && beat.walker && (
           <img
             className={styles.layer}
-            src={imageAsset(castSrc(view.format, beat.walker.pose))}
+            src={source(castSrc(view.format, beat.walker.pose))}
             alt=""
             draggable={false}
+            decoding="sync"
             data-layer="walker"
             style={{ ...box(walker), transform: beat.walker.flip ? "scaleX(-1)" : undefined }}
           />
@@ -248,10 +266,10 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         <div className={styles.layer} style={box(art.top)} data-layer="top" data-lit={lit.has("near") || undefined}>
           <img
             className={styles.sheet}
-            src={imageAsset(cast && beat.operator ? art.top.src.replace(/top\.webp$/, `top-${beat.operator}.webp`) : art.top.src)}
+            src={source(cast && beat.operator ? art.top.src.replace(/top\.webp$/, `top-${beat.operator}.webp`) : art.top.src)}
             alt=""
             draggable={false}
-            decoding="async"
+            decoding="sync"
             style={{
               width: `${art.top.cols * 100}%`,
               height: `${art.top.rows * 100}%`,
@@ -339,7 +357,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
           />
         ))}
       </div>
-      <ArtworkLoading viewport status={plate.status} onRetry={plate.retry} />
+      <ArtworkLoading viewport status={status} onRetry={() => setAttempt((count) => count + 1)} />
     </figure>
   );
 }

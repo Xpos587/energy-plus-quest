@@ -1,0 +1,55 @@
+{
+  "width": 1568,
+  "height": 1296,
+  "sprites": [
+    {
+      "name": "barge",
+      "left": 16,
+      "top": 16,
+      "width": 1527,
+      "height": 719
+    },
+    {
+      "name": "far",
+      "left": 16,
+      "top": 751,
+      "width": 582,
+      "height": 519
+    },
+    {
+      "name": "ladder",
+      "left": 614,
+      "top": 751,
+      "width": 152,
+      "height": 390
+    },
+    {
+      "name": "gift",
+      "left": 782,
+      "top": 751,
+      "width": 146,
+      "height": 155
+    },
+    {
+      "name": "box",
+      "left": 944,
+      "top": 751,
+      "width": 146,
+      "height": 286
+    },
+    {
+      "name": "hook",
+      "left": 1106,
+      "top": 751,
+      "width": 60,
+      "height": 95
+    },
+    {
+      "name": "smoke",
+      "left": 1182,
+      "top": 751,
+      "width": 231,
+      "height": 349
+    }
+  ]
+}

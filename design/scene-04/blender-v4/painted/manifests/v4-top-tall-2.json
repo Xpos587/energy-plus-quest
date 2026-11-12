@@ -1,0 +1,34 @@
+{
+  "width": 1840,
+  "height": 1344,
+  "frames": [
+    {
+      "frame": 8,
+      "left": 16,
+      "top": 16,
+      "width": 895,
+      "height": 645
+    },
+    {
+      "frame": 9,
+      "left": 927,
+      "top": 16,
+      "width": 895,
+      "height": 645
+    },
+    {
+      "frame": 10,
+      "left": 16,
+      "top": 677,
+      "width": 895,
+      "height": 645
+    },
+    {
+      "frame": 11,
+      "left": 927,
+      "top": 677,
+      "width": 895,
+      "height": 645
+    }
+  ]
+}

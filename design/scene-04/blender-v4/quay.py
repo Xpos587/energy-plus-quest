@@ -1,7 +1,7 @@
 # Scene 4 (barge) v4: the Ob quay built as geometry, so cranes stand on their
 # rails, nothing floats and every format is a camera, not a repaint.
 # blender --background --factory-startup --python quay.py -- OUTDIR MODE [FORMAT...]
-#   MODE: test | plate | ids
+#   MODE: test | layers | outcomes | model (build/save without rendering)
 # References: docs/scenario-assets image8 (warehouse), image9 (round ПРУ tower),
 # image10 (portal cranes: dark-blue portal, orange boom and cabin), image11 (Ob port).
 import json
@@ -641,6 +641,7 @@ sun = bpy.data.objects.new("sun", bpy.data.lights.new("sun", "SUN"))
 scene.collection.objects.link(sun)
 sun.data.energy = 2.6
 sun.data.angle = math.radians(6)
+sun.data.use_shadow_jitter = True
 d = Vector((-0.45, -0.7, 1.15)).normalized()
 sun.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
 world = bpy.data.worlds.new("w")
@@ -751,9 +752,20 @@ ANCHORS = {
     "quayFootNear": Vector((NEAR_X, PORTAL_Y, 0)),
 }
 
-SS = float(os.environ.get("SS", 1.5))
+SS = float(os.environ.get("SS", 2))
 scene.render.resolution_percentage = 100
-scene.eevee.taa_render_samples = int(os.environ.get("SAMPLES", 16))
+scene.render.image_settings.compression = 90  # Lossless PNG; keep intermediate disk use bounded.
+scene.eevee.taa_render_samples = int(os.environ.get("SAMPLES", 128))
+# Preserve the toon ramp and light direction; resolve fine ink and soften contacts.
+scene.eevee.use_raytracing = True
+scene.eevee.use_fast_gi = True
+scene.eevee.fast_gi_method = "AMBIENT_OCCLUSION_ONLY"
+scene.eevee.fast_gi_quality = 1.0
+scene.eevee.fast_gi_ray_count = 4
+scene.eevee.fast_gi_step_count = 16
+scene.eevee.fast_gi_distance = 3.0
+scene.eevee.shadow_ray_count = 4
+scene.eevee.shadow_step_count = 16
 
 # Layers. Static story actors are separate so the game can outline them; moving
 # parts (barge, near crane top, hook, gift) are separate so they can move.
@@ -814,6 +826,10 @@ OUTCOME_ONLY = {g for g in GROUPS if g.startswith("o_")}
 ALL = set(GROUPS) - OUTCOME_ONLY
 STATIC = ALL - MOVING
 manifest = {
+    "render": {"scale": SS, "samples": scene.eevee.taa_render_samples,
+               "engine": scene.render.engine, "blender": bpy.app.version_string,
+               "aoDistance": scene.eevee.fast_gi_distance, "shadowRays": scene.eevee.shadow_ray_count,
+               "shadowSteps": scene.eevee.shadow_step_count, "sunJitter": sun.data.use_shadow_jitter},
     "scene": {
         "pivot": list(PIVOT), "boomReach": R_HOOK, "tip": [round(v, 3) for v in near["tipLocal"]],
         "slews": [round(v, 2) for v in SLEWS], "restSlew": round(SLEW_DECK, 2),
@@ -892,6 +908,22 @@ if MODE == "outcomes":
                     o.matrix_world = Matrix.Translation(moves.get(g, Vector()))
         scene.render.filepath = str(OUT / f"outcome-{name}.png")
         bpy.ops.render.render(write_still=True)
+if MODE == "model":
+    # A reusable rest-pose master, not all mutually exclusive outcome actors at once.
+    set_slew(SLEW_DECK)
+    barge_collection = bpy.data.collections.new("Barge - approved geometry")
+    scene.collection.children.link(barge_collection)
+    for group, objects in GROUPS.items():
+        for obj in objects:
+            obj["quay_group"] = group
+            obj.hide_render = group in OUTCOME_ONLY or group in {"box", "slings", "hook"}
+            obj.hide_set(obj.hide_render)
+            if group == "barge":
+                barge_collection.objects.link(obj)
+    scene.camera = bpy.data.objects[FORMATS[0]]
+    W, H = FORMATS_SPEC[FORMATS[0]][0]
+    scene.render.resolution_x, scene.render.resolution_y = round(W * SS), round(H * SS)
+    bpy.context.preferences.filepaths.save_version = 0
 (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1))
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT / "quay.blend"))
 print("QUAY OK", MODE, FORMATS)

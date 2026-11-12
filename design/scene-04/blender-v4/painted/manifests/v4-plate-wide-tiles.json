@@ -1,0 +1,51 @@
+{
+  "width": 3884,
+  "height": 1618,
+  "tiles": [
+    {
+      "name": "v4-plate-wide-left-top",
+      "resultPrefix": "v4-plate-wide-left-top-aligned",
+      "left": 0,
+      "top": 0,
+      "width": 1584,
+      "height": 1024,
+      "reviewedTranslationLimitPx": 5,
+      "translationReview": "Replacement only: 4.456 native px pre-correction translation; source-edge overlay wide-left-top-aligned-edge-check.jpg reviewed (roof, lamp, road, trolley). Translation corrects offset; no scale/rotation. Sparse registration is not per-pixel geometry proof."
+    },
+    {
+      "name": "v4-plate-wide-middle-top",
+      "left": 1150,
+      "top": 0,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-wide-right-top",
+      "left": 2300,
+      "top": 0,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-wide-left-bottom",
+      "left": 0,
+      "top": 594,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-wide-middle-bottom",
+      "left": 1150,
+      "top": 594,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-wide-right-bottom",
+      "left": 2300,
+      "top": 594,
+      "width": 1584,
+      "height": 1024
+    }
+  ]
+}

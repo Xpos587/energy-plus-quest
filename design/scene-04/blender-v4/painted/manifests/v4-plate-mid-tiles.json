@@ -1,0 +1,50 @@
+{
+  "width": 2804,
+  "height": 2244,
+  "tiles": [
+    {
+      "name": "v4-plate-mid-left-top",
+      "identityReview": "Mostly foliage/road; 7 translation-consensus points below the 8-point automatic threshold. Keep unchanged canvas, no fitted transform. v4-plate-mid-left-top-edge-check.jpg reviewed (native y500:1024): road curbs/dashes, both lamp heads/poles, partial office roof and crane platform edges visually align. Foliage surface is deliberately repainted. Visual registration evidence, not quantitative full-pixel geometry proof.",
+      "left": 0,
+      "top": 0,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-mid-right-top",
+      "left": 1220,
+      "top": 0,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-mid-left-middle",
+      "left": 0,
+      "top": 610,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-mid-right-middle",
+      "left": 1220,
+      "top": 610,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-mid-left-bottom",
+      "left": 0,
+      "top": 1220,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-mid-right-bottom",
+      "identityReview": "Mostly water; 7 translation-consensus points below the 8-point automatic threshold. Keep unchanged canvas, no fitted transform. v4-plate-mid-right-bottom-edge-check.jpg reviewed (native y0:550): quay edge, bollards, rail and crane feet visually align. Water highlights are intentionally repainted. Visual registration evidence only, not full-pixel geometry proof.",
+      "left": 1220,
+      "top": 1220,
+      "width": 1584,
+      "height": 1024
+    }
+  ]
+}

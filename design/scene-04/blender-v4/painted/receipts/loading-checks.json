@@ -1,0 +1,43 @@
+{
+  "scope": "local Chromium, 1440x900, real-time cold contexts; no screenshot warmup",
+  "modes": {
+    "no-preference": {
+      "samples": 206,
+      "visibleFrames": 172,
+      "loadingMs": 601,
+      "incompleteVisibleFrames": 0
+    },
+    "reduce": {
+      "samples": 237,
+      "visibleFrames": 213,
+      "loadingMs": 429,
+      "incompleteVisibleFrames": 0
+    }
+  },
+  "regression": "delayed last image, changed animation source while pending, rejection, cache-busted retry",
+  "review": "independent read-only review OK after source-race fix",
+  "unitTests": {
+    "passed": 77,
+    "files": 10,
+    "testTimeoutMs": 20000,
+    "limitation": "default 5000ms timeout failed in unrelated compact result-loop test twice; isolated test passed in 7720ms, final combined suite passed"
+  },
+  "typecheck": "passed",
+  "currentHeadValidation": {
+    "sourceHead": "c50936d1d55aaf0d6b8bc785e3a30fc46b5d06e4",
+    "scope": "Actual Vite test-mode bundle plus all 121 real barge-v5 images and staging-required city/endings families; not a full release package or deployment",
+    "build": "passed",
+    "stagedBargeFiles": 121,
+    "sha256Matches": 121,
+    "stageTests": {
+      "passed": 11,
+      "redBeforeFix": "missing mid/ivan-joy.webp"
+    },
+    "craneTests": {
+      "passed": 25,
+      "files": 5,
+      "testTimeoutMs": 20000
+    },
+    "typecheck": "passed"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "canvas": [
+    3072,
+    2048
+  ],
+  "tiles": [
+    {
+      "name": "v4-plate-desk-left-top",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 374,
+      "inliers": 16,
+      "rawMedianPx": 1.4421541690826416,
+      "rawMaxPx": 3.421149492263794,
+      "registeredMedianPx": 1.4013800621032715,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.090118408203125
+        ],
+        [
+          0.0,
+          1.0,
+          0.210784912109375
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-desk-right-top",
+      "rawSize": [
+        1560,
+        1008
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 280,
+      "inliers": 58,
+      "rawMedianPx": 1.5797574520111084,
+      "rawMaxPx": 3.484454870223999,
+      "registeredMedianPx": 1.536906361579895,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.56634521484375
+        ],
+        [
+          0.0,
+          1.0,
+          -0.1136474609375
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-desk-left-middle",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 194,
+      "inliers": 28,
+      "rawMedianPx": 1.5502291917800903,
+      "rawMaxPx": 2.709780216217041,
+      "registeredMedianPx": 1.26123046875,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.69677734375
+        ],
+        [
+          0.0,
+          1.0,
+          -0.67437744140625
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-desk-right-middle",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 195,
+      "inliers": 43,
+      "rawMedianPx": 1.5144673585891724,
+      "rawMaxPx": 2.8841357231140137,
+      "registeredMedianPx": 1.6215466260910034,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.3653564453125
+        ],
+        [
+          0.0,
+          1.0,
+          0.09552001953125
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-desk-left-bottom",
+      "rawSize": [
+        1559,
+        1009
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 121,
+      "inliers": 20,
+      "rawMedianPx": 1.423827052116394,
+      "rawMaxPx": 3.6579270362854004,
+      "registeredMedianPx": 1.215667963027954,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.453857421875
+        ],
+        [
+          0.0,
+          1.0,
+          0.6542282104492188
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    },
+    {
+      "name": "v4-plate-desk-right-bottom",
+      "rawSize": [
+        1560,
+        1008
+      ],
+      "nativeSize": [
+        1584,
+        1024
+      ],
+      "matches": 88,
+      "inliers": 39,
+      "rawMedianPx": 1.2113678455352783,
+      "rawMaxPx": 2.8829917907714844,
+      "registeredMedianPx": 1.2284668684005737,
+      "candidateToSourceAffine": [
+        [
+          1.0,
+          0.0,
+          -0.09467315673828125
+        ],
+        [
+          0.0,
+          1.0,
+          0.20568275451660156
+        ]
+      ],
+      "translationReview": null,
+      "identityReview": null
+    }
+  ],
+  "limitation": "Sparse feature registration and visual review, not full per-pixel structural equivalence."
+}

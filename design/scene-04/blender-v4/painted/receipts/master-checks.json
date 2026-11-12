@@ -1,0 +1,10 @@
+{
+  "identical_geometry_and_cameras": true,
+  "objects": 148,
+  "cameras": 4,
+  "barge_objects": 12,
+  "samples": 128,
+  "scale": 2,
+  "source": "design/scene-04/blender-v4/quay.py",
+  "blend": "design/scene-04/blender-v4/quay.blend"
+}

@@ -1,0 +1,862 @@
+{
+  "published": false,
+  "files": 171,
+  "bytes": 110193828,
+  "rows": [
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-desk-left-bottom-recovered-a1.png",
+      "bytes": 2181992,
+      "sha256": "4982acf40563f78aecbfa3c6df70d9f0858def160635644a0273279661386aac"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-desk-left-middle-a1.png",
+      "bytes": 2327107,
+      "sha256": "87e6bb3239764b23d218498247f69eef97022de60187dc11b9576bab20479aa5"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-desk-left-top-a1.png",
+      "bytes": 2593028,
+      "sha256": "ae660f77462d7d9b63981f510a29f82a7d942b790f53fb163c33d0d2e6c2c0b5"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-desk-proof-a1.png",
+      "bytes": 2621032,
+      "sha256": "59549db9279183dcdbedb57ace879095609867a1e63a37d15aed994c2abd3ea7"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-desk-right-bottom-recovered-a1.png",
+      "bytes": 1827631,
+      "sha256": "cf6976ce6ab9df886c2ac6859083815dfe1b7f9270f68dd763974821851506bb"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-desk-right-middle-a1.png",
+      "bytes": 2101908,
+      "sha256": "154ce6bb682e1fb57e0c1b8ac0cfcadbcfcac0f97375e02f4affdcd8949c1c43"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-desk-right-top-a1.png",
+      "bytes": 2375720,
+      "sha256": "178ad63396282ddafd2d003d4114a0636e9031227efbfd86213687115d8bf1cc"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-mid-left-bottom-a1.png",
+      "bytes": 2013523,
+      "sha256": "03b3e5e39b7d79e8e36dd403a216008b6d0d483a266d9db33f47984b035fec78"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-mid-left-middle-a1.png",
+      "bytes": 2415112,
+      "sha256": "020bc99e59047ac56608c7231b247e727ed675edaf0bf033bd2f59c59f10979c"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-mid-left-top-a1.png",
+      "bytes": 2768465,
+      "sha256": "4f93ef0f3f1b9366878bdb394dd57bb683199fcc59286c079e0ae401b5c488c8"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-mid-proof-a1.png",
+      "bytes": 2556158,
+      "sha256": "b6a4e8401555f58f906fda70eeddad01837dc5c3e73cc0a4e862bfa06e7ac853"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-mid-right-bottom-a1.png",
+      "bytes": 1822347,
+      "sha256": "d087d32b1d6686755147dd1e5118ccf4f1570187ed58efaf58d2fcc63cd7fda4"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-mid-right-middle-a1.png",
+      "bytes": 2168928,
+      "sha256": "f7682eae418d4fa925269f937a21233014ede5a673e7b973d3b14c9a15baa109"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-mid-right-top-a1.png",
+      "bytes": 2581847,
+      "sha256": "5e3b8900627a277560dd577c8510852d986aa554c6f83d929210de05219e864f"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-tall-left-bottom-a1.png",
+      "bytes": 2208727,
+      "sha256": "806428e23aeaad3d15c78eacbdbe4d6ebb786ebcca4d4c42a2754cf050ecee3f"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-tall-left-middle-a1.png",
+      "bytes": 2292166,
+      "sha256": "ae79b8fca3290f04552f247838fad46915c62621c29c791bb87f3bb8bece4103"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-tall-left-top-a1.png",
+      "bytes": 2556672,
+      "sha256": "a26b2902e660b5a61f8e8d6300e09ed98d95a7e25b388bd22a484753963aefb6"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-tall-proof-a1.png",
+      "bytes": 2591506,
+      "sha256": "56eef7af8e8ac09eab6c66585d27a3b3127a0641d3a8960b2d654abaeafcd689"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-tall-right-bottom-a1.png",
+      "bytes": 1720684,
+      "sha256": "d5d01b5c0e388c66b57335ff3560548739aa0ff5abb6de473e9427844935b6f7"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-tall-right-middle-a1.png",
+      "bytes": 2114143,
+      "sha256": "d840454814bb5efb7684689d49e4c33217ae44891a104b5f7035805284a2a6de"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-tall-right-top-a1.png",
+      "bytes": 2361947,
+      "sha256": "35c2c40ffc6f6ab2c3c1a2fb9472e25584bb91a99cca10ff5dbeb875d8043349"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-wide-left-bottom-a1.png",
+      "bytes": 2360435,
+      "sha256": "9ddd722d0c6004eb360df03e1332c41b2da8a0f32c0262cba1e676484f63ecb5"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-wide-left-top-aligned-a1.png",
+      "bytes": 2443564,
+      "sha256": "06814dbd194d4b09811b0cc6d99482ddd72d3bc5dad5c23a5b84767d876a7c72"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-wide-middle-bottom-a1.png",
+      "bytes": 2139119,
+      "sha256": "71f40ee91330917176a35d414426ee524c20744a9bd7af438170e20bd5182010"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-wide-middle-top-a1.png",
+      "bytes": 2410479,
+      "sha256": "8329ca2a00547e83aed8e59f0ec6377baef026705fcaa7eff2c90e4060f08c14"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-wide-right-bottom-a1.png",
+      "bytes": 1913718,
+      "sha256": "8e53aeae07681e58753fe548135da3a8a47a754ce31acf423be19bcc123e12eb"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-wide-right-top-a1.png",
+      "bytes": 2519488,
+      "sha256": "27195b713f4bc51ac0271783556d5721c4d93b8f6a03380a8e02c17ea4251239"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-sprites-desk-a1.png",
+      "bytes": 1225904,
+      "sha256": "875bed17beeb5b3c981fe04b2735ee7c43bffaef10e1caee0f39c59fb62665c6"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-sprites-mid-a1.png",
+      "bytes": 1242992,
+      "sha256": "bedb348ba5930c19f54cfbd5de64efabc83bef0baf79da79e5455ceeacce1a99"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-sprites-tall-a1.png",
+      "bytes": 1004954,
+      "sha256": "99b1f0232118308722d9c7e5cf552a64dca4d92281fe27c6bd81192d401c79b6"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-sprites-wide-a1.png",
+      "bytes": 1207725,
+      "sha256": "9aeaa3dc6588ad2fd302e5f00980b42bbf45a72fa36e6b8208b392935df31250"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-style-wide-a1.png",
+      "bytes": 2658787,
+      "sha256": "4d5a3d7fc6c1eed2f6617283cfddb7c7585e46390c30746b684312f3b6887ae6"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-desk-0-a1.png",
+      "bytes": 995423,
+      "sha256": "e9bcd9f9a123ace7fe5ecfeb55d21ab03364b6ee491d64c030f5989f0c584c78"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-desk-1-a1.png",
+      "bytes": 924770,
+      "sha256": "dfead7e525c294e2345789ee8a89306a1e6256471c6bf625d98702979a2c8711"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-desk-2-a1.png",
+      "bytes": 622279,
+      "sha256": "1db87d97540cf0e538f9f073c75e777353e577ceec79b2d10000408a248007ba"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-desk-3-a1.png",
+      "bytes": 465486,
+      "sha256": "b3c5c08e93cb28311064bb57b29e5998c435e79d810173bea0b4060602883a1d"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-mid-0-recovered-a1.png",
+      "bytes": 900162,
+      "sha256": "6dcf771043071819e4359d8edc4f9e945bd6619149e27e424a50c29e8bb07a70"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-mid-1-recovered-a1.png",
+      "bytes": 772146,
+      "sha256": "fa067523afb0b95e45beead0dc461e113340a4fe91e4cbd357f2ce56d4e03ecb"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-mid-2-a1.png",
+      "bytes": 588945,
+      "sha256": "baf367ef107280d6d41138e1606005ab917f772f273359d9f01949683fee712b"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-mid-3-a1.png",
+      "bytes": 452607,
+      "sha256": "5848e36382ae33a2c0d10e442fcab6d9713646f49b0d1589e664b7a0d9eaa3aa"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-tall-0-a1.png",
+      "bytes": 880499,
+      "sha256": "30b6a8ab1986370441d57e34c49d7cf40a17750e4a0fc01d8ec55c41699bca90"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-tall-1-a1.png",
+      "bytes": 586227,
+      "sha256": "9041b389f94b09beae7d5bfea57851d705360c7fa83ab636b6327df9a8b63e68"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-tall-2-a1.png",
+      "bytes": 422594,
+      "sha256": "749fdf6f415ceeea77f1365111dd742089d28fa850ea14300c251a464dae7131"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-tall-3-a1.png",
+      "bytes": 587737,
+      "sha256": "59664682cd3664ea7856fbeb95c8188f9e312cfcdbd48e395956e84fb4bda6c2"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-wide-0-a1.png",
+      "bytes": 1035288,
+      "sha256": "332d7d046c677ab81d09178c6b69da38c6dce7419d93c473f81a83b5427c9bfb"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-wide-1-a1.png",
+      "bytes": 981350,
+      "sha256": "61900f901d098aed7dce764e8a4b95c9e9f7740e3fe8dfefbb6a71ace6acab4d"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-wide-2-a1.png",
+      "bytes": 894104,
+      "sha256": "eb73dc1294c6b56880cea5f1eb37f2cf4ad60d61f4a76da416c94f1862a75de0"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/v4-top-wide-3-a1.png",
+      "bytes": 531233,
+      "sha256": "c1d27252a0ddf5af4bf715b5fc03b78daf4fbaa2fc9098ebbb0de97db41f3e8b"
+    },
+    {
+      "path": "design/scene-04/blender-v4/quay.blend",
+      "bytes": 4468190,
+      "sha256": "e3d809953600c6daae7f0c61bd28616a5ff690c2b0ed417380b25fcf88b9a827"
+    },
+    {
+      "path": "design/scene-04/blender-v4/reference/previous-painted-scene4.png",
+      "bytes": 3568444,
+      "sha256": "a231aa9b0cd783dcf1054ec5c64390d9d1506c7bf16e562f918e58a0d73dbad0"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/barge.webp",
+      "bytes": 134288,
+      "sha256": "af348385780d2c416bea14a25caa7b906197f48bd663f2d73ce73f8cb33625d0"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/box.webp",
+      "bytes": 13612,
+      "sha256": "0d2bde1cc83043944afa78dc32ecc55216d48f99263cfcef49075778f6e129ee"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/far-empty.webp",
+      "bytes": 10314,
+      "sha256": "05aaedd8a0961d00af1e01ee761a714febdfe6b6e5b44703e7137fe8856093f9"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/far-idle.webp",
+      "bytes": 10928,
+      "sha256": "8ad6deaefd443f8dc06405cb71b6bb39d612772025cf4efc0d9eef18efa5545c"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/far-sad.webp",
+      "bytes": 10816,
+      "sha256": "68091c04ed65396b95e2df2a9c746e5c8ab46969873c5889f17df6dd86016e7f"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/far.webp",
+      "bytes": 60046,
+      "sha256": "5900de0a9f669f40472ef2aaa56ae216ff9ddaef8cbac448d22e588200762f58"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/gift.webp",
+      "bytes": 7510,
+      "sha256": "796dff30eca4e095946191807923832599b06e4a7b67d8d80f1634b86ef0ff43"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/hook.webp",
+      "bytes": 3004,
+      "sha256": "def380c1455ab5d456a6d7ca88e6f9d81cae36b71f9714a721f13ed77ea7e499"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-cheer.webp",
+      "bytes": 9456,
+      "sha256": "9bb3172cf534b21d95f0be66e0d3a710632485d47e4c9109b428f5a568db3fa7"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-climb1.webp",
+      "bytes": 3840,
+      "sha256": "9dc4c7546b17ab81b8051c0be70a7603ba6e9d4f3518fd33c825407057f9c140"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-climb2.webp",
+      "bytes": 3780,
+      "sha256": "0b60ebc8c5abe90c2fc676a0305a2e6bb9fcd468ee3f94883beaa8e578152afc"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-empty.webp",
+      "bytes": 7352,
+      "sha256": "bf853ff624aa06a1272c8c84c46956cb8b58840bdd746bcdfaa3a174bd878095"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-joy.webp",
+      "bytes": 9694,
+      "sha256": "18732fac787c90c5be49fae9e64e9b825fb45378287f04e66f9a4db6dc23bcde"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-run1.webp",
+      "bytes": 4224,
+      "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-run2.webp",
+      "bytes": 4480,
+      "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-wave.webp",
+      "bytes": 9156,
+      "sha256": "001fcb8ea346531749deb28b53be244aaad0148c205dbf70b60b49a96ab568c7"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan.webp",
+      "bytes": 10290,
+      "sha256": "4c47c13a8ea7f2b427539a2fcb9efdf207af656d1f5a90281582e15f3a2e5e82"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ladder.webp",
+      "bytes": 21114,
+      "sha256": "bdd60f63ba77f216da3691255f23a03091c4cae39755b95b7924d6757435a2f1"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/office.webp",
+      "bytes": 20930,
+      "sha256": "9eb8140281028b6234f1fec6cefe34378b43295338527afff946029eea343f0f"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/petr-climb.webp",
+      "bytes": 3662,
+      "sha256": "0b803f23143ff14abb1dea0d2aeceaf4fc98332cfbb9f08af82a6650ae71eb57"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/petr-sad.webp",
+      "bytes": 3376,
+      "sha256": "59108ba6e1beab81bcfbb501e73e6951122143ca792d51c1dbe64750408c282b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/petr-walk1.webp",
+      "bytes": 4262,
+      "sha256": "592ebff0fe3d911e0c171014b0cf52f7bdf05cdb718be0327f640db6c9b1c2eb"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/petr-walk2.webp",
+      "bytes": 3732,
+      "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/plate.webp",
+      "bytes": 1046436,
+      "sha256": "09ebfe54c7c36b5860bed83731b3ab69d2bf22ac4dc5ad6a5ec1d4e3a727f084"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/smoke.webp",
+      "bytes": 10552,
+      "sha256": "d70d427f59e0cc20940a46fed25b65ea17452afa1963d6655648f0da6e049575"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/top-ivan.webp",
+      "bytes": 452420,
+      "sha256": "7b43c23fdb031b03c2fc60d5560419fdb702b690a6531a6d3f183f52b106f5e9"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/top-petr.webp",
+      "bytes": 459978,
+      "sha256": "b8017603504a79dd97277e96ae7e5166962e9f2063a4cfd4bffeb8fa46d5336a"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/top.webp",
+      "bytes": 995600,
+      "sha256": "1e63136b459b6c45b1601141bb10bb995647b05455afe67e7335a799f1a392f2"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/barge.webp",
+      "bytes": 134842,
+      "sha256": "ce6d5ff4e2a547029fbbbd3715aeaafb0b3df672f8e450b6d962f56693992f2e"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/box.webp",
+      "bytes": 12876,
+      "sha256": "8b3238eba3fca86c206fce898d6729daf894484932f697af1433557e4e201d27"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/far-empty.webp",
+      "bytes": 9628,
+      "sha256": "50ce4b6c96758e158b18c2a41956238897fc960318d33c60dd5ed10b707960ee"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/far-idle.webp",
+      "bytes": 10600,
+      "sha256": "21782c9dfa2efb84f6bac6035fa702f0830fd2f4c8d5543f6d0699dc7cc5056e"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/far-sad.webp",
+      "bytes": 10364,
+      "sha256": "dfb5183ee0591973a7247100e85efe377bf08602c30b3b771ef866e0ed9dce5c"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/far.webp",
+      "bytes": 60830,
+      "sha256": "2e7957507d4c219e9c00bf7bb3915abae3bf5de83f3e43e5dc90d88bd961d0f3"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/gift.webp",
+      "bytes": 7456,
+      "sha256": "6f0321c15d019b0b8acaac14fa5483f65a01faae37e6f67111b656caa1151953"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/hook.webp",
+      "bytes": 2858,
+      "sha256": "69c106e5af9da4428522c9adbd306e54a623d2ef66cf050d54ba8233ede34fff"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-cheer.webp",
+      "bytes": 7986,
+      "sha256": "239e70997fa308000158bdcccfde20a61ea934b54dbc1dcf4020022bb7c746ac"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-climb1.webp",
+      "bytes": 3840,
+      "sha256": "9dc4c7546b17ab81b8051c0be70a7603ba6e9d4f3518fd33c825407057f9c140"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-climb2.webp",
+      "bytes": 3780,
+      "sha256": "0b60ebc8c5abe90c2fc676a0305a2e6bb9fcd468ee3f94883beaa8e578152afc"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-empty.webp",
+      "bytes": 5988,
+      "sha256": "47ba82b5a64edf220eb36c988d8e2c1c9dfad2bbb48bb3d1912fa5ddaba2ccb2"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-joy.webp",
+      "bytes": 7680,
+      "sha256": "a893029bb0f33823873ef71e4a5da0456e2bf27c517288ba897bdfce6d1d8d36"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-run1.webp",
+      "bytes": 4224,
+      "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-run2.webp",
+      "bytes": 4480,
+      "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-wave.webp",
+      "bytes": 8310,
+      "sha256": "61300b50dc39b786ca32779605e41d433cec50c7aecec8d80db1eadd3133e8a7"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan.webp",
+      "bytes": 9556,
+      "sha256": "bb697edc15437d6a342962ceeacdeb56795c9c3cf142a2c75b669b5cec7255b8"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ladder.webp",
+      "bytes": 19974,
+      "sha256": "13a128905c71cc338cca63b065ac9f8faa3e3abbcef90d2840f715e4df306c8b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/office.webp",
+      "bytes": 18082,
+      "sha256": "97d8c9b2883b8d2400567da2ea8b15513173d1a75cf10205c1ac9ea448084f4a"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/petr-climb.webp",
+      "bytes": 3662,
+      "sha256": "0b803f23143ff14abb1dea0d2aeceaf4fc98332cfbb9f08af82a6650ae71eb57"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/petr-sad.webp",
+      "bytes": 3376,
+      "sha256": "59108ba6e1beab81bcfbb501e73e6951122143ca792d51c1dbe64750408c282b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/petr-walk1.webp",
+      "bytes": 4262,
+      "sha256": "592ebff0fe3d911e0c171014b0cf52f7bdf05cdb718be0327f640db6c9b1c2eb"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/petr-walk2.webp",
+      "bytes": 3732,
+      "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/plate.webp",
+      "bytes": 1076072,
+      "sha256": "0e63364d72810cfd9d825da22ef4e49a385070d557ab4d23c4de3fe61e999db4"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/smoke.webp",
+      "bytes": 10286,
+      "sha256": "0f6035def345bb2d096c110dd13979a41637f13474b95c7b948fc2dcb4404de9"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/top-ivan.webp",
+      "bytes": 402382,
+      "sha256": "f62185cf54baca819bf66fbaad81c286cdf116bfd4d0aa7d2d80447afe025320"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/top-petr.webp",
+      "bytes": 404854,
+      "sha256": "88caaab2c8c45a3cb919309be03cfaa38f5f14aa8eaf73393cf8c9db335c7448"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/top.webp",
+      "bytes": 938962,
+      "sha256": "4371d5adede6556c05d7b477d8c7ad71d1dda1b439d1309f2af9d1e6a9eeaa25"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-petr-portrait.webp",
+      "bytes": 972788,
+      "sha256": "ac663d19452496202dd65f3253633b796f174ad5eb36a7e90f74fdb11fde7ff5"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-petr-rail.webp",
+      "bytes": 921232,
+      "sha256": "75b1f1855387d709d485dbb5dd0678480894897178d1dd4192c7ce6b6420b700"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-petr.webp",
+      "bytes": 1065756,
+      "sha256": "d5daed192d245df86fda1abfe23cb58caa617c473c15e4aadc4df231f4a3f89c"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-remote-portrait.webp",
+      "bytes": 979152,
+      "sha256": "13f79832a09c05baea213414c160a2a98a2b9340686d120981c18ffd585ed4b8"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-remote-rail.webp",
+      "bytes": 963236,
+      "sha256": "1854fe479a9f32e8429c501eb453f450cf4bedef84a9acb0b98c1b8c3f70dc70"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-remote.webp",
+      "bytes": 1070008,
+      "sha256": "268124bfa802a9ece6f2c01e594ae165251572e25ae370b639a293f622290231"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-rush-portrait.webp",
+      "bytes": 971926,
+      "sha256": "fd7d94aa2744306fb6ff0cc3917f37408701bec51ae0b6f3e19c1dcee112713e"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-rush-rail.webp",
+      "bytes": 929266,
+      "sha256": "bdcb94db2e1dfc952cf80c1148c5cb7df2dd30fb63805ff5ca44a6f59303784b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/outcome-rush.webp",
+      "bytes": 1065232,
+      "sha256": "4d66b2cb053ed71cf4c10f4288dcfdeb815bfa3c915dc9ea5cd4f2740f8c5353"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/barge.webp",
+      "bytes": 109194,
+      "sha256": "86ddb3f5b7e7827c898a5ed64ae866a1067660e43f09b79d786b7e37bdf8952e"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/box.webp",
+      "bytes": 10100,
+      "sha256": "8de733572e693140be31dc9eb62585c1911b891486f27ff1ce657fb63247ca2c"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/far-empty.webp",
+      "bytes": 6914,
+      "sha256": "e89f687b4f7fc246a956935ef39f887c6e3465e159e634810eac38a9fbe25c8f"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/far-idle.webp",
+      "bytes": 7202,
+      "sha256": "bba5110fa48b3953abaed143bfea9b4bceca15d112917d619270fa6a7fc47090"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/far-sad.webp",
+      "bytes": 7142,
+      "sha256": "4d038f5e2ae667b2f61820a122afc557b9337e311c68233b8dc82b12fd399c0c"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/far.webp",
+      "bytes": 58392,
+      "sha256": "be24ca6b43cb21265fab02c21a4d6fa6ad0f57beefd9ab4d7ce6f5c4a485801e"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/gift.webp",
+      "bytes": 6456,
+      "sha256": "93a9c2514ca1c7c0994dccaaf206f16cb7b858a60319380e9660a815e30280ba"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/hook.webp",
+      "bytes": 2290,
+      "sha256": "c0cbd76fc6c9b59187235f7a16585e05b355f10333ac0bb32715f5f52c96a347"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-cheer.webp",
+      "bytes": 5910,
+      "sha256": "4a1d5dd39cd7c5c5bc7dfc4497599ca7197e8081fe794fe3323ce7b6aeec713f"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-climb1.webp",
+      "bytes": 3840,
+      "sha256": "9dc4c7546b17ab81b8051c0be70a7603ba6e9d4f3518fd33c825407057f9c140"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-climb2.webp",
+      "bytes": 3780,
+      "sha256": "0b60ebc8c5abe90c2fc676a0305a2e6bb9fcd468ee3f94883beaa8e578152afc"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-empty.webp",
+      "bytes": 4860,
+      "sha256": "646185b6894cace968773b9e6c68434c50a33c2ed26ac3e813436407782e01e4"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-joy.webp",
+      "bytes": 6158,
+      "sha256": "80606f19e086fcfce7f4335153c038358f0a8668d878c627ecc4225b3f22b6e2"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-run1.webp",
+      "bytes": 4224,
+      "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-run2.webp",
+      "bytes": 4480,
+      "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-wave.webp",
+      "bytes": 6138,
+      "sha256": "6752c4fbf0298eee237557fc6de580b1291f5756c6e85ebf76dcc8cf482ca3fe"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan.webp",
+      "bytes": 7736,
+      "sha256": "5777c229680bb7bff5d00d0da5889042c35d51dc4607c075e42ace2abd54b8be"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ladder.webp",
+      "bytes": 16682,
+      "sha256": "afc84c6e918e99cc590403125925fecc6f695209dfc8ff0d54ea97d0660858e2"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/office.webp",
+      "bytes": 11946,
+      "sha256": "d523282948824b656c6dd601291097fb6c69ea4f32b0e926565c565cce25e73b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/petr-climb.webp",
+      "bytes": 3662,
+      "sha256": "0b803f23143ff14abb1dea0d2aeceaf4fc98332cfbb9f08af82a6650ae71eb57"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/petr-sad.webp",
+      "bytes": 3376,
+      "sha256": "59108ba6e1beab81bcfbb501e73e6951122143ca792d51c1dbe64750408c282b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/petr-walk1.webp",
+      "bytes": 4262,
+      "sha256": "592ebff0fe3d911e0c171014b0cf52f7bdf05cdb718be0327f640db6c9b1c2eb"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/petr-walk2.webp",
+      "bytes": 3732,
+      "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/plate.webp",
+      "bytes": 922634,
+      "sha256": "c466c1e93b974b9216a57080c8ef82b93763f23678887a88314723eac9f35845"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/smoke.webp",
+      "bytes": 8192,
+      "sha256": "46c68e272b94151bbb92eb0c84aec7dad92a1dd9ff7ba282f5dcf3b077ad1184"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/top-ivan.webp",
+      "bytes": 281660,
+      "sha256": "e772acfe793dc20cd3d3ccc35121ce8621919fc3b6e71aeb0f22fd4886cc894f"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/top-petr.webp",
+      "bytes": 278526,
+      "sha256": "d8257b5f9dcd1e7b7c0982cb34b8515970edb3adc8ab24473d9f1dd697042e9a"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/top.webp",
+      "bytes": 656666,
+      "sha256": "559c053d524c7269d7c8d80a43e279181133fa6305e2cab32bef74fe1d81d41f"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/barge.webp",
+      "bytes": 128194,
+      "sha256": "8ce0c92fd772e616988b4334ed6c9a24af36c1d378c228761ad753f6455dab0c"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/box.webp",
+      "bytes": 13472,
+      "sha256": "80713a92e582f0c9f8716047aaf1c4d6029d47864d5f1cfe82c448b43a8654f5"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/far-empty.webp",
+      "bytes": 11276,
+      "sha256": "5ea6be8458de6eb9d2b64d2fcba72975c762953583f8a3c319448122a255a57e"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/far-idle.webp",
+      "bytes": 12000,
+      "sha256": "6b1b073b725fe4d2847c696c7c3429330f8a5ded84d38df45cf0cf4ad3f951aa"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/far-sad.webp",
+      "bytes": 11796,
+      "sha256": "49ea3ae7463702504776a260ead180ad28fec90cb7add6c5f2a13f39aa2edaee"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/far.webp",
+      "bytes": 53912,
+      "sha256": "7bd12ea96f100f8340386d21aac604527c2a345efd9a071ef6b1c97b20115832"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/gift.webp",
+      "bytes": 7414,
+      "sha256": "c766efdf8cbb8ce4218d8b2c7a14056fe7a31a6c48c7dbd3803cd3c9669839b5"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/hook.webp",
+      "bytes": 2906,
+      "sha256": "dfec084b769eed0e6690b425dd51e54e79d88df87c3ca4b0d8643a0e30dd8a54"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-cheer.webp",
+      "bytes": 9072,
+      "sha256": "c9fcba3cfa29115aab3eda1d9ff24c795f63af8ed69d4e4b7a2d0975e6e80f13"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-climb1.webp",
+      "bytes": 3840,
+      "sha256": "9dc4c7546b17ab81b8051c0be70a7603ba6e9d4f3518fd33c825407057f9c140"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-climb2.webp",
+      "bytes": 3780,
+      "sha256": "0b60ebc8c5abe90c2fc676a0305a2e6bb9fcd468ee3f94883beaa8e578152afc"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-empty.webp",
+      "bytes": 7302,
+      "sha256": "7e0132cb3701b96d525185c08734f0a91a335f1f1576ac80ab617b0d539ece45"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-joy.webp",
+      "bytes": 9400,
+      "sha256": "a4c49bb14860291c9e781fb7799de03eaac9b0bb46a96b386af6a7fe8c896616"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-run1.webp",
+      "bytes": 4224,
+      "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-run2.webp",
+      "bytes": 4480,
+      "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-wave.webp",
+      "bytes": 9048,
+      "sha256": "dfc55992c6fefef1abd243f036e2030116c207b153d678f6e59c3a1a722b24d4"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan.webp",
+      "bytes": 9252,
+      "sha256": "89b3d267b0c866c6f1d9c8c81263f29e4ffeaa7cb91a82b184fbb3022d3482ac"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ladder.webp",
+      "bytes": 20012,
+      "sha256": "fc98e5ed20a0d21698d4d9f038e549f8656532b4e51f44e5c27baab969cafbd1"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/office.webp",
+      "bytes": 17364,
+      "sha256": "4652b800c742c5d510aca0dfbf70f9bec49413c9d8c9f76dc1c32b8dbdb6e8b4"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/petr-climb.webp",
+      "bytes": 3662,
+      "sha256": "0b803f23143ff14abb1dea0d2aeceaf4fc98332cfbb9f08af82a6650ae71eb57"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/petr-sad.webp",
+      "bytes": 3376,
+      "sha256": "59108ba6e1beab81bcfbb501e73e6951122143ca792d51c1dbe64750408c282b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/petr-walk1.webp",
+      "bytes": 4262,
+      "sha256": "592ebff0fe3d911e0c171014b0cf52f7bdf05cdb718be0327f640db6c9b1c2eb"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/petr-walk2.webp",
+      "bytes": 3732,
+      "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/plate.webp",
+      "bytes": 1073466,
+      "sha256": "da21e15ac7285fc37f85c4a5954b15e9595e6170891bc29b52cccdc7cab48050"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/smoke.webp",
+      "bytes": 10494,
+      "sha256": "7521cddf45644c3fb82d21122a51d6c7b85066eebfe9c396cb7009af9fb32717"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/top-ivan.webp",
+      "bytes": 449128,
+      "sha256": "dbe33ea32e9a7db0cc7acfbf488e9f08560d429bfd6647e21fd0179e16c3da65"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/top-petr.webp",
+      "bytes": 447242,
+      "sha256": "d0ff22836e5c4895619324c58f11c44081db28f0a95da3d19f07284d82c96dc3"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/top.webp",
+      "bytes": 943886,
+      "sha256": "a652714f7fb6afc93ebbcdcc8c21a238c5484ec39d177864b2fb7b46aabb3011"
+    }
+  ]
+}

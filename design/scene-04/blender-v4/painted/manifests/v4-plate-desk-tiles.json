@@ -1,0 +1,48 @@
+{
+  "width": 3072,
+  "height": 2048,
+  "tiles": [
+    {
+      "name": "v4-plate-desk-left-top",
+      "left": 0,
+      "top": 0,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-desk-right-top",
+      "left": 1488,
+      "top": 0,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-desk-left-middle",
+      "left": 0,
+      "top": 512,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-desk-right-middle",
+      "left": 1488,
+      "top": 512,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-desk-left-bottom",
+      "left": 0,
+      "top": 1024,
+      "width": 1584,
+      "height": 1024
+    },
+    {
+      "name": "v4-plate-desk-right-bottom",
+      "left": 1488,
+      "top": 1024,
+      "width": 1584,
+      "height": 1024
+    }
+  ]
+}
