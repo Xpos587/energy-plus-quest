@@ -23,6 +23,8 @@ test("ships dynamic runtime media and licenses without publishing reference page
     "assets/unused-image.webp": "unused derivative",
     "scene-world/unused.webp": "unused original",
     "scene-art/lastmile-family-v1/revision-5/flight-boat-arseniy-wide.webp": "dynamic flight fallback",
+    "scene-art/barge-v4/mid/ivan-joy.webp": "dynamic barge sprite",
+    "scene-art/barge-v4/outcome-petr-rail.webp": "dynamic barge outcome",
     "assets/index-abcdefgh.js.map": '{"sourcesContent":["private source"]}',
     "fonts/LICENSE.txt": "font license",
     "fonts/example.woff2": "font",
@@ -50,7 +52,7 @@ test("ships dynamic runtime media and licenses without publishing reference page
     const config = join(root, "nginx.conf");
     await writeFile(config, "location /game/ { }");
     await stageStatic(source, stage, config);
-    for (const file of ["index.html", "README-DEPLOY.txt", "quest-cache.js", "r/student-energy/index.html", "r/student-energy/card.jpg", "fonts/LICENSE.txt", "fonts/example.woff2", "scene-world/warehouse.webp", "scene-art/lastmile-family-v1/revision-5/flight-boat-arseniy-wide.webp", ...cityFiles]) {
+    for (const file of ["index.html", "README-DEPLOY.txt", "quest-cache.js", "r/student-energy/index.html", "r/student-energy/card.jpg", "fonts/LICENSE.txt", "fonts/example.woff2", "scene-world/warehouse.webp", "scene-art/lastmile-family-v1/revision-5/flight-boat-arseniy-wide.webp", "scene-art/barge-v4/mid/ivan-joy.webp", "scene-art/barge-v4/outcome-petr-rail.webp", ...cityFiles]) {
       expect(await readFile(join(stage, file), "utf8")).toBe(fixture[file]);
     }
     for (const file of ["assets/unused-image.webp", "scene-world/unused.webp", "review/carriers/closer-blue.png", "scene-art/original.png", "static-image-replacements.json", "assets/index-abcdefgh.js.map", "review/carriers/index.html", "review/unrelated/photo.png"]) {
