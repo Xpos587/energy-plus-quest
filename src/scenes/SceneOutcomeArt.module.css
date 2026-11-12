@@ -128,7 +128,3 @@
 @media (prefers-reduced-motion: reduce) {
   .figure[data-outcome-scene="crane"] .image { animation: none; }
 }
-/* Narrow phones can't show the whole entrance scene; keep the «Приёмка» sign that names the place. */
-@media (max-width: 600px) and (orientation: portrait) {
-  .figure[data-scene-consequence="inventory-entrance"] .image { object-position: 35% center; }
-}

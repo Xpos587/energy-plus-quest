@@ -1,123 +1,103 @@
 {
-  "registration": "homography only; no dense optical flow",
-  "alphabetVariantAudit": [
-    {
-      "variant": "boat",
-      "plaqueBounds": [
-        1025,
-        205,
-        1138,
-        285
-      ],
-      "outsidePlaqueMeanMaxChannelDelta": 0.7718248437195697,
-      "outsidePlaquePixelsAbove30": 19,
-      "largestOutsidePlaqueComponentAbove30": 3
-    },
-    {
-      "variant": "socks",
-      "plaqueBounds": [
-        1025,
-        205,
-        1138,
-        285
-      ],
-      "outsidePlaqueMeanMaxChannelDelta": 0.5813880222554025,
-      "outsidePlaquePixelsAbove30": 2,
-      "largestOutsidePlaqueComponentAbove30": 1
-    }
-  ],
-  "keeperFootprintInsideDeck": true,
-  "wmsNeighbourChangedPixels": 0,
+  "pipeline": "native pixels; no artwork resampling or warping",
+  "plaqueFont": "public/fonts/normalidad-proxy-bold.woff2",
+  "plaqueFontSha256": "2877d6c573d6ad32dac33b3ef76da9f2207d57551004f64f162b3266acef9865",
   "results": [
     {
       "result": "alphabet-boat",
-      "source": "design/scene-03/results-v4/hf-alphabet-camera.png",
-      "sourceSha256": "70a6cbbf14375b46593de8a19a45297604aad592c806e007baac491c9e795e7b",
-      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-alphabet-boat.webp",
-      "acceptedPeopleSourceSha256": "ba68532e32b7495079f2f67729ab862b27e7f8f0592d835e7c81500bf220e526",
-      "sha256": "6207520c746634d5fbdcaea85a7feac47e0ae3159d301ed9d1c72342e4e32453",
+      "source": "design/scene-03/results-v4/native-alphabet-camera.png",
+      "sourceSha256": "57f2790ea36bfc96c5ddeffc9fbaca021502031eb93fbe650a1e74c72d50f9ab",
+      "sha256": "002bff28fab096d9a69cde4429f5f40b24e6316e19fa299450877025e1bb0156",
       "size": [
         1999,
         786
       ],
-      "protectedPersonPixels": 74778,
-      "protectedPersonChangedPixels": 0,
-      "lossless": true
+      "lossless": true,
+      "decodedMatchesExpectedPixels": true,
+      "edit": {
+        "text": "Л-М",
+        "bounds": [
+          1054,
+          232,
+          1115,
+          262
+        ],
+        "outsideChangedPixels": 0
+      }
     },
     {
       "result": "alphabet-camera",
-      "source": "design/scene-03/results-v4/hf-alphabet-camera.png",
-      "sourceSha256": "70a6cbbf14375b46593de8a19a45297604aad592c806e007baac491c9e795e7b",
-      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-alphabet-camera.webp",
-      "acceptedPeopleSourceSha256": "316744aa138b2418af102ab5a509b9d8640a67b4d5a11f1b8744439abb8658c3",
-      "sha256": "25e17ce100c924bc9d7b788ab18d00fb35cb109359bc44ee623c8b3718f0bd8b",
+      "source": "design/scene-03/results-v4/native-alphabet-camera.png",
+      "sourceSha256": "57f2790ea36bfc96c5ddeffc9fbaca021502031eb93fbe650a1e74c72d50f9ab",
+      "sha256": "cfb4c2a280851066c8f88c249a3cbf7a71f822a206204e9cd4fa16f30da3491a",
       "size": [
         1999,
         786
       ],
-      "protectedPersonPixels": 74778,
-      "protectedPersonChangedPixels": 0,
-      "lossless": true
+      "lossless": true,
+      "decodedMatchesExpectedPixels": true,
+      "edit": null
     },
     {
       "result": "alphabet-socks",
-      "source": "design/scene-03/results-v4/hf-alphabet-camera.png",
-      "sourceSha256": "70a6cbbf14375b46593de8a19a45297604aad592c806e007baac491c9e795e7b",
-      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-alphabet-socks.webp",
-      "acceptedPeopleSourceSha256": "bbdef6b7f38c988eda9de8edefe76f7f6ac0e4e5c695937c5a8dddca94ef0b6a",
-      "sha256": "4658aeddd804bcafd9ea3e97bc87315856b3e6e44509ccb19843132f43c8353e",
+      "source": "design/scene-03/results-v4/native-alphabet-camera.png",
+      "sourceSha256": "57f2790ea36bfc96c5ddeffc9fbaca021502031eb93fbe650a1e74c72d50f9ab",
+      "sha256": "e43d644740db5b438ef28ab587b94a4818f95ba13c16c810d456f381cbe966e5",
       "size": [
         1999,
         786
       ],
-      "protectedPersonPixels": 74778,
-      "protectedPersonChangedPixels": 0,
-      "lossless": true
+      "lossless": true,
+      "decodedMatchesExpectedPixels": true,
+      "edit": {
+        "text": "Н-У",
+        "bounds": [
+          1054,
+          232,
+          1115,
+          262
+        ],
+        "outsideChangedPixels": 0
+      }
     },
     {
       "result": "entrance",
-      "source": "design/scene-03/results-v4/hf-entrance.png",
-      "sourceSha256": "a7b0e026ad6809d86c8a97be7a2d284ada9d88e3ff2ebdecc0dbfd640c98c5e7",
-      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-entrance.webp",
-      "acceptedPeopleSourceSha256": "0420419dd128334048364db28e5a6242cfc0284933697f0e099363708d6c56a9",
-      "sha256": "227ab3b00a43f19a852ccf5abd7f13790a766d55aaa2c8c4f2fa5e43e02e82bc",
+      "source": "design/scene-03/results-v4/native-entrance.png",
+      "sourceSha256": "d6817caee92502edf21e11aeb82e613deeec0973766c50f2eeda582d32767cd9",
+      "sha256": "36e3dae8dc049aed1c96faf7122bf7b99aee6ae031ea7089515572a31895b4dd",
       "size": [
         2004,
         785
       ],
-      "protectedPersonPixels": 76801,
-      "protectedPersonChangedPixels": 0,
-      "lossless": true
+      "lossless": true,
+      "decodedMatchesExpectedPixels": true,
+      "edit": null
     },
     {
       "result": "keeper",
-      "source": "design/scene-03/results-v4/hf-keeper.png",
-      "sourceSha256": "fc692acea670dd452c38c59330a413d91fc20c25921fdf4558330524126b1fda",
-      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-keeper.webp",
-      "acceptedPeopleSourceSha256": "701aa36056a39464a7553868a376ba4749bbe5319f1a59ad01746505e243307f",
-      "sha256": "a18b398b8b304d6e82f59eefc8505e335f0eb8da859f58aff67ec9d600442207",
+      "source": "design/scene-03/results-v4/native-keeper.png",
+      "sourceSha256": "90433cc609d5dcd689418f3641c330c3254ae71cc2b6c0a11d8471af6c355210",
+      "sha256": "8bb46bb79059e06034f84a6b0bb79216fd2a8c0b7b124802c2c2bc0de56cb474",
       "size": [
         1672,
         941
       ],
-      "protectedPersonPixels": 176958,
-      "protectedPersonChangedPixels": 0,
-      "lossless": true
+      "lossless": true,
+      "decodedMatchesExpectedPixels": true,
+      "edit": null
     },
     {
       "result": "wms",
-      "source": "design/scene-03/results-v4/hf-wms.png",
-      "sourceSha256": "ec454264f7e80e8ed69feab6987600dd4644a7b27e3d3305628fa476d924f5dc",
-      "acceptedPeopleSource": "public/scene-art/warehouse-results-v3/outcome-wms.webp",
-      "acceptedPeopleSourceSha256": "466faa14d3eb9ccc7fafcaa5d66529b113e5a0f7d1b5b8ef4ba5ce78aad36b89",
-      "sha256": "a2fd99fb4acfe0fd425d9ab580abf56f02929aea33740503d28900e9f1eb8b0d",
+      "source": "design/scene-03/results-v4/native-wms.png",
+      "sourceSha256": "90fbc8178541de79ff70f969ae52b29fa010c84962d0a62eeecbab7330ad3790",
+      "sha256": "173c3357897b438111ad50ee143651848e14217908b055dc86a8c2cd66e4c824",
       "size": [
         1671,
         941
       ],
-      "protectedPersonPixels": 127604,
-      "protectedPersonChangedPixels": 0,
-      "lossless": true
+      "lossless": true,
+      "decodedMatchesExpectedPixels": true,
+      "edit": null
     }
   ]
 }

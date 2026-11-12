@@ -4136,6 +4136,19 @@
   }
 }
 
+/* Warehouse result subjects span more width than a tall leftover-space crop.
+   Bound the portrait zoom by the action, while retaining space for paged copy/actions. */
+@media (max-width: 1000px) and (orientation: portrait) {
+  .app[data-scene="inventory"] { --inventory-art-height: 70vw; }
+  .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) {
+    grid-template-rows: minmax(0, min(var(--inventory-art-height), calc(100dvh - var(--scene-header-height) - 320px))) minmax(0, 1fr) !important;
+  }
+  /* Pagination must measure this bounded row, not the older estimated sheet maximum. */
+  .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) .result { max-height: none; }
+  .app[data-scene="inventory"] .frame[data-layout="result"]:has([data-scene-consequence^="inventory-alphabet-"]) { --inventory-art-height: 94vw; }
+  .app[data-scene="inventory"] .frame[data-layout="result"]:has([data-scene-consequence="inventory-entrance"]) { --inventory-art-height: 74vw; }
+}
+
 /* Scene 2 choice lives on the truck: the art keeps its row while a place card opens below
    (phones) or in the rail (desktop), with the barge card's stacked actions. */
 @media (max-width: 900px) and (orientation: portrait) {

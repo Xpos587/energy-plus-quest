@@ -1,0 +1,120 @@
+{
+  "note": "Provider returned the target reference dimensions rather than the requested size. Four outputs retained byte-for-byte; no local resampling/warp. Rebuild uses only these native masters, not the previous results used during generation.",
+  "results": {
+    "alphabet-camera": {
+      "model": "cx/gpt-image-2.5",
+      "operation": "edit",
+      "submittedAt": "2026-11-12T08:45:38.669521+00:00",
+      "prompt": "design/scene-03/results-v4/alphabet-camera.prompt.txt",
+      "requestedParameters": {
+        "size": "2000x784",
+        "quality": "high",
+        "output_format": "png"
+      },
+      "actualDimensions": [
+        1999,
+        786
+      ],
+      "actualFormat": "PNG",
+      "source": "design/scene-03/results-v4/native-alphabet-camera.png",
+      "sourceSha256": "57f2790ea36bfc96c5ddeffc9fbaca021502031eb93fbe650a1e74c72d50f9ab",
+      "references": [
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-alphabet-camera.webp",
+          "sha256": "25e17ce100c924bc9d7b788ab18d00fb35cb109359bc44ee623c8b3718f0bd8b",
+          "role": "prior result composition; reference only, not an export dependency"
+        }
+      ]
+    },
+    "entrance": {
+      "model": "cx/gpt-image-2.5",
+      "operation": "edit",
+      "submittedAt": "2026-11-12T08:54:20.357985+00:00",
+      "prompt": "design/scene-03/results-v4/entrance.prompt.txt",
+      "requestedParameters": {
+        "size": "2000x784",
+        "quality": "high",
+        "output_format": "png"
+      },
+      "actualDimensions": [
+        2004,
+        785
+      ],
+      "actualFormat": "PNG",
+      "source": "design/scene-03/results-v4/native-entrance.png",
+      "sourceSha256": "d6817caee92502edf21e11aeb82e613deeec0973766c50f2eeda582d32767cd9",
+      "references": [
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-entrance.webp",
+          "sha256": "227ab3b00a43f19a852ccf5abd7f13790a766d55aaa2c8c4f2fa5e43e02e82bc",
+          "role": "prior result composition; reference only, not an export dependency"
+        },
+        {
+          "path": "design/scene-03/results-v4/native-alphabet-camera.png",
+          "sha256": "57f2790ea36bfc96c5ddeffc9fbaca021502031eb93fbe650a1e74c72d50f9ab",
+          "role": "clean style reference"
+        }
+      ]
+    },
+    "keeper": {
+      "model": "cx/gpt-image-2.5",
+      "operation": "edit",
+      "submittedAt": "2026-11-12T08:53:59.238406+00:00",
+      "prompt": "design/scene-03/results-v4/keeper.prompt.txt",
+      "requestedParameters": {
+        "size": "1664x944",
+        "quality": "high",
+        "output_format": "png"
+      },
+      "actualDimensions": [
+        1672,
+        941
+      ],
+      "actualFormat": "PNG",
+      "source": "design/scene-03/results-v4/native-keeper.png",
+      "sourceSha256": "90433cc609d5dcd689418f3641c330c3254ae71cc2b6c0a11d8471af6c355210",
+      "references": [
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-keeper.webp",
+          "sha256": "a18b398b8b304d6e82f59eefc8505e335f0eb8da859f58aff67ec9d600442207",
+          "role": "prior result composition; reference only, not an export dependency"
+        },
+        {
+          "path": "design/scene-03/results-v4/native-alphabet-camera.png",
+          "sha256": "57f2790ea36bfc96c5ddeffc9fbaca021502031eb93fbe650a1e74c72d50f9ab",
+          "role": "clean style reference"
+        }
+      ]
+    },
+    "wms": {
+      "model": "cx/gpt-image-2.5",
+      "operation": "edit",
+      "submittedAt": "2026-11-12T08:53:59.248929+00:00",
+      "prompt": "design/scene-03/results-v4/wms.prompt.txt",
+      "requestedParameters": {
+        "size": "1664x944",
+        "quality": "high",
+        "output_format": "png"
+      },
+      "actualDimensions": [
+        1671,
+        941
+      ],
+      "actualFormat": "PNG",
+      "source": "design/scene-03/results-v4/native-wms.png",
+      "sourceSha256": "90fbc8178541de79ff70f969ae52b29fa010c84962d0a62eeecbab7330ad3790",
+      "references": [
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-wms.webp",
+          "sha256": "a2fd99fb4acfe0fd425d9ab580abf56f02929aea33740503d28900e9f1eb8b0d",
+          "role": "prior result composition; reference only, not an export dependency"
+        },
+        {
+          "path": "design/scene-03/results-v4/native-alphabet-camera.png",
+          "sha256": "57f2790ea36bfc96c5ddeffc9fbaca021502031eb93fbe650a1e74c72d50f9ab",
+          "role": "clean style reference"
+        }
+      ]
+    }
+  }
+}
