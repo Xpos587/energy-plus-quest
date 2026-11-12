@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-09-call-fixes",
+  "release": "media-2026-11-12-scene-fixes",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -3329,39 +3329,6 @@
       ]
     },
     {
-      "name": "media-28-1add8bc130c1.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-26-intro-route/media-28-1add8bc130c1.tar.gz",
-      "sha256": "1add8bc130c1c0b1b2a8bfe05db0043df1d44163fc290388483f8efb89fc9e66",
-      "bytes": 99442,
-      "files": [
-        {
-          "path": "public/opening/route-v1/barge.webp",
-          "sha256": "80924be8b5306c3fe4b2e1480c172efbc49b9ccf1e8f15012e530e6796c66c35",
-          "bytes": 24228
-        },
-        {
-          "path": "public/opening/route-v1/carrier.webp",
-          "sha256": "fd1bb561c01b5819386566c5b7fa79da4ce136073384135f5a39938fb7960b5a",
-          "bytes": 20528
-        },
-        {
-          "path": "public/opening/route-v1/lastmile.webp",
-          "sha256": "ba2cd6d53b7307312fe029bb075f481e444e06097ba064ef54533e9505fe2982",
-          "bytes": 19890
-        },
-        {
-          "path": "public/opening/route-v1/loading.webp",
-          "sha256": "e16d46c9e01d466601c7461e36e95e8046b7da825ea1ae58eccd38817d107ca8",
-          "bytes": 12146
-        },
-        {
-          "path": "public/opening/route-v1/warehouse.webp",
-          "sha256": "9af4257d82fc19ba106ed1f26d08d24782dd775b217a64d840e28bc103023410",
-          "bytes": 22174
-        }
-      ]
-    },
-    {
       "name": "media-29-cc033d2b4297.tar.gz",
       "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-10-27-barge-v3/media-29-cc033d2b4297.tar.gz",
       "sha256": "cc033d2b4297a3190f65273c0fc83c1ca1d664f298301725d25b24dce76f7416",
@@ -4550,6 +4517,189 @@
           "path": "public/scene-art/warehouse-results-v2/outcome-wms.webp",
           "sha256": "97bf3695ce5f6620f7dcafad43b515cf6a2247484914984797e9960f0db721dc",
           "bytes": 182194
+        }
+      ]
+    },
+    {
+      "name": "release-2026-11-12-v1.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-12-scene-fixes/release-2026-11-12-v1.tar.gz",
+      "sha256": "08795b2c00f187a91489e047b4fca916277f3d6bfec70855b9494be4a9b1fc24",
+      "bytes": 130579559,
+      "files": [
+        {
+          "path": "public/compact-art/camera-zone2-v54.png",
+          "sha256": "2ef8cfce7e1054dd91b226e9d86a0af5d7a347a2f78c86cdc2376df5faf40343",
+          "bytes": 1461632
+        },
+        {
+          "path": "public/compact-art/camera-zone3-packed-v54.png",
+          "sha256": "cdaccf85cde3ee2234814b44d40ef5d1617bd027b7092477722c0974d1547d29",
+          "bytes": 1461688
+        },
+        {
+          "path": "public/compact-art/camera-zone4-v54.png",
+          "sha256": "5ba52b56d08d149bb1cde0ef88ba39a1b92668f869fb88a25acf1e08b3c3f2c2",
+          "bytes": 1461413
+        },
+        {
+          "path": "public/compact-art/socks-zone1-unsecured-v57.png",
+          "sha256": "75893ba4947e190ab27e06c48a2150d832096eb4ef4e399ea9f48b25ef35fe09",
+          "bytes": 1483856
+        },
+        {
+          "path": "public/compact-art/socks-zone2-v57.png",
+          "sha256": "83e47a63c5b57a07f7a4a30ec6f341a5e5443dfaf4893262756f2e14ed09a6b7",
+          "bytes": 1462779
+        },
+        {
+          "path": "public/compact-art/socks-zone3-secured-v57.png",
+          "sha256": "f3d4e8a4d1f58eea16bd63b378323770faf97b371102bb5e397b8e2148333b58",
+          "bytes": 1461333
+        },
+        {
+          "path": "public/compact-art/socks-zone4-v57.png",
+          "sha256": "1759e75c0f1d564be40334836db3a32e766b78f4c0043636860a62dd29f770b7",
+          "bytes": 1461300
+        },
+        {
+          "path": "public/opening/route-v1/barge.webp",
+          "sha256": "80924be8b5306c3fe4b2e1480c172efbc49b9ccf1e8f15012e530e6796c66c35",
+          "bytes": 24228
+        },
+        {
+          "path": "public/opening/route-v1/carrier.webp",
+          "sha256": "fd1bb561c01b5819386566c5b7fa79da4ce136073384135f5a39938fb7960b5a",
+          "bytes": 20528
+        },
+        {
+          "path": "public/opening/route-v1/lastmile.webp",
+          "sha256": "e9c3873aa602d91b6ae919c1cbe1004c9ae9553b8ea598e529964dda09dc576e",
+          "bytes": 93786
+        },
+        {
+          "path": "public/opening/route-v1/loading.webp",
+          "sha256": "e16d46c9e01d466601c7461e36e95e8046b7da825ea1ae58eccd38817d107ca8",
+          "bytes": 12146
+        },
+        {
+          "path": "public/opening/route-v1/warehouse.webp",
+          "sha256": "9af4257d82fc19ba106ed1f26d08d24782dd775b217a64d840e28bc103023410",
+          "bytes": 22174
+        },
+        {
+          "path": "public/scene-art/inventory-master-v16-tall.webp",
+          "sha256": "f40710e67d5072cea91d28d529c93cd65d387305c57402d9561e4dad549f1714",
+          "bytes": 1510362
+        },
+        {
+          "path": "public/scene-art/inventory-master-v16.webp",
+          "sha256": "4995a23b6c3071b3869614c73f2672df2d10bf888e92e87db22ae7209c633f5a",
+          "bytes": 1679928
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-15/intro-wide.webp",
+          "sha256": "8ed4214e5d1efb664de37729f392ed47f1597b05f59d0db5378e2078281b12b1",
+          "bytes": 2362548
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-alva.webp",
+          "sha256": "582cf840408e3230d919adc94757a191985417f1f99584aedc49dc84d5184fca",
+          "bytes": 14524366
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-arseniy.webp",
+          "sha256": "dcb033bda59ac55467c84f4231351fad6ad0c8a6734c3323f13434d2da67fcea",
+          "bytes": 14502106
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-khor.webp",
+          "sha256": "e8ebde979a04ea10c28327279aea6d345a95617c31aefa9fad91d8564e0508ce",
+          "bytes": 14559536
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-alva.webp",
+          "sha256": "614b9dc9ac5a7536b658c17ede6462fa8dec3e8f51034bf57a9eb0225d981c7a",
+          "bytes": 15942858
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-arseniy.webp",
+          "sha256": "caf88bfd13e408e646ca5d2ba117432dda8b6bddc88719496ee13db851622ec4",
+          "bytes": 15917130
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-khor.webp",
+          "sha256": "67894c1379eaa2d6395e32e84188edb1b4f0079247c924d3aa03956438742877",
+          "bytes": 15941776
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/flight-boat-arseniy-tall.webp",
+          "sha256": "fede79a580863431112061eb7a7e87ab16b9066b108f96fef69258713fb4bbcf",
+          "bytes": 2505006
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/flight-boat-tall.webp",
+          "sha256": "d551e5a3603f277036df0903a8964b1cb84e4312bf59342b617980dd05ef9037",
+          "bytes": 2481140
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/flight-parcel-arseniy-tall.webp",
+          "sha256": "dc8742f0170b2b4732e8a06170c8176ea9f6d24d34617befe2db37bd88ddca49",
+          "bytes": 2503104
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-18/flight-parcel-tall.webp",
+          "sha256": "c344656970ba0e9bbb261ef7b6aea8cc57da5497577f93d3a48a17e9677282a7",
+          "bytes": 2458288
+        },
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-alphabet-boat.webp",
+          "sha256": "002bff28fab096d9a69cde4429f5f40b24e6316e19fa299450877025e1bb0156",
+          "bytes": 1571978
+        },
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-alphabet-camera.webp",
+          "sha256": "cfb4c2a280851066c8f88c249a3cbf7a71f822a206204e9cd4fa16f30da3491a",
+          "bytes": 1573042
+        },
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-alphabet-socks.webp",
+          "sha256": "e43d644740db5b438ef28ab587b94a4818f95ba13c16c810d456f381cbe966e5",
+          "bytes": 1571722
+        },
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-entrance.webp",
+          "sha256": "36e3dae8dc049aed1c96faf7122bf7b99aee6ae031ea7089515572a31895b4dd",
+          "bytes": 1584256
+        },
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-keeper.webp",
+          "sha256": "8bb46bb79059e06034f84a6b0bb79216fd2a8c0b7b124802c2c2bc0de56cb474",
+          "bytes": 1601262
+        },
+        {
+          "path": "public/scene-art/warehouse-results-v4/outcome-wms.webp",
+          "sha256": "173c3357897b438111ad50ee143651848e14217908b055dc86a8c2cd66e4c824",
+          "bytes": 1514064
+        },
+        {
+          "path": "public/scene1-v4/plate-tall-v18.webp",
+          "sha256": "be97d9f3b42930771c1682685d15b3f0d79ade6051d57e4a4d28d99a4cdb0d54",
+          "bytes": 592440
+        },
+        {
+          "path": "public/scene1-v4/plate-tall-v18@2x.webp",
+          "sha256": "eabba1eabdf93115482bd46d5657788d4c96d9910ba13ab7ada2c71976669765",
+          "bytes": 1381530
+        },
+        {
+          "path": "public/scene1-v4/plate-wide-v18.webp",
+          "sha256": "fdb0bcb5c12def54391d93aea073df03d9a8befc898edd1afc7f6ab25a75bc70",
+          "bytes": 779826
+        },
+        {
+          "path": "public/scene1-v4/plate-wide-v18@2x.webp",
+          "sha256": "19ab8e479e58da5ef5369d5dacd923c546a9e106637bda586eeb296af4629439",
+          "bytes": 1286098
         }
       ]
     }
