@@ -1,30 +1,40 @@
-# Scene 2 camera v54 and boat badge — accepted
+# Scene 2 camera v54 restraints and accepted boat badge
 
-This is the follow-up to the accepted [socks revision](../compact-socks-v57/README.md).
-Michael delegated the pending visual decisions to the coordinator with
-«действуй на свою усмотрение в этот раз». The coordinator selected boat B and
-requested the camera visibility revision below, then accepted both after
-viewing the desktop, phone and native-size phone-crop sheets. Commit permission
-covers the six scoped text files only. Push, media publication and deployment
-remain outside this authorization. Copy, scoring, choice hit areas and
-layout-editor coordinates remain unchanged.
+The original camera/badge revision was accepted in `aa68c14`, following the
+accepted [socks revision](../compact-socks-v57/README.md). Michael subsequently
+reported that the camera fastenings had changed too much, while socks were OK.
+The follow-up restores camera restraints and raises the camera above them.
+The coordinator approved upward box extensions and a small same-sprite
+reduction at place 3 to stay below the roof. Cargo support positions, copy,
+scoring, hit areas and badges are unchanged.
+The coordinator accepted the current comparison: camera body/lens readable,
+native restraints retained. Source-commit permission covers the compositor and
+this README only; push, upload and deployment are not authorized. The earlier
+boat acceptance is unchanged.
 
 ## Camera
 
 The existing v53 secured results used different camera bodies and packages;
 the place-4 package was above the floor. The candidate reuses the camera from
-`public/compact-art/camera-zone1-fallen-v53.png` in one 124×44-pixel cardboard
-insert for places 2–4. Auto uses place 3. No image-generation request was made.
+`public/compact-art/camera-zone1-fallen-v53.png` in cardboard inserts of the
+same 124-pixel width for places 2–4. Auto uses place 3. No image-generation
+request was made.
 
 `scripts/compose-camera-v54.py` masks the existing camera, removes surrounding
 cardboard/cloth pixels and isolated specks, and levels its fallen pose by 25°.
-The common insert rests on the cloth (bottom y=621), the top carton (y=478),
-and the cargo-bay floor (y=718). A pale cream packing liner separates the dark
-camera from the cardboard rim. The camera is 35 source pixels high, raised to
-the top of the insert. The original restraint is removed with a neighboring
-wall patch, resized to 22 pixels high and placed at `bottom - 18`, across the
-lower rim rather than the body/lens. Straps and complete metal buckles remain
-in front of the package. No additional shadow is drawn.
+The inserts still rest on the cloth (bottom y=621), top carton (y=478), and
+cargo-bay floor (y=718). They extend upward to heights 68, 48 and 59 pixels.
+The camera rises by 24 / 5 / 15 pixels versus the original v54 placement;
+places 2/4 retain its 35-pixel height. Place 3 uses a uniform 31-pixel version
+of the same sprite, with its top at y=431, safely below the roof. This narrow
+exception was explicitly approved after the unchanged 35-pixel camera could
+not clear the band within the niche's headroom. The cream liner stays behind
+the camera. Restraints retain their original dimensions,
+curvature, metal buckles and wall mounts, matching socks pixel-for-pixel.
+Places 2–3 retain the original anchor positions; place 4 uses the same 66-pixel
+floor-level translation as socks. Straps remain in front of the package.
+The previous 22-pixel vertical scaling and `bottom - 18` relocation from
+`aa68c14` are removed. No additional shadow is drawn.
 
 Place 1 is **unchanged**, including the fallen box, camera and broken plates.
 This preserves the failure described in [the scenario](../../docs/scenario.md).
@@ -53,56 +63,65 @@ Do not publish or force-add binaries to make this review candidate portable.
 
 ```sh
 uv run --with pillow --with numpy --with scipy python scripts/compose-camera-v54.py
-# With the local source preview already running on 127.0.0.1:4181:
-bun scripts/capture-compact-gifts.mjs .tmp-work/compact-gifts-1011/after camera,boat
-bunx vitest run src/scenes
-bunx tsc --noEmit -p .
+# With the local source preview already running on 127.0.0.1:4175:
+bun scripts/capture-compact-gifts.mjs .tmp-work/barge-camera-fastenings/after camera,socks http://127.0.0.1:4175
+bunx vitest run src/scenes/compact
+bun run typecheck
 ```
 
-The generator asserts the common box size, cargo bounds, foreground restraint
-pixels and unchanged pixels outside the affected package/restraint regions.
-It also requires at least 85% of the dark camera silhouette pixels to remain
-unchanged after adding the restraint: observed values are 95.2%, 97.5% and
-90.9% for places 2, 3 and 4. This is an occlusion guard, not a legibility score.
-Recompositing the old strap positions over the current insert fails that guard
-in all three places. Boat places 1–3 and desktop camera place 1 remain
-pixel-identical to baseline screenshots. The phone camera place-1 screenshot
-has a small rasterization difference confined to badge 1's edge/shadow;
-its artwork and badge DOM bounds are unchanged.
-Four new badge cases failed before the UI change; the focused suite then passed
-14/14 tests. The latest scene suite passed 278 tests across 38 files; TypeScript passed.
-The final capture passed 20 result cases: camera and boat, places 1–4 plus auto,
-at 1440×900 and 390×844. It checks decoded artwork, absence of orange region
-overlays, disabled result choices, stable choice-target styles, and page errors.
-The boat's special place-3 picture correctly has no choice controls.
+The generator asserts box width, cargo/roof bounds, at least 70% unobscured
+camera silhouette, original hardware pixels at the socks anchor coordinates,
+and unchanged pixels outside the affected package/restraint regions.
+The hardware regression failed on the previous scaled/moved restraint; the
+70% visibility regression then failed on the first full-size-restraint draft.
+Both pass for all three current outputs. Generation was first run into a
+candidate directory via `main(output)` before integration. Pixel comparison
+with the saved pre-fix v54 images found **zero changed pixels outside the
+approved box/restraint regions**. All 3,410 / 2,085 / 1,968 opaque hardware
+pixels match socks at places 2 / 3 / 4, respectively.
 
-Local before/after sheets (temporary, subject to repository retention):
+The first correction's 47.7% / 44.2% / 35.9% visibility was rejected as
+unreadable. The current measured fractions are **72.7%, 72.1% and 72.2%**;
+the body and lens now sit above the band, which crosses the lower camera.
+The earlier 85% guard is superseded by the coordinator's 70% target, not
+silently relaxed. Fractions measure occlusion, not recognition; full-size
+phone screenshots remain necessary because the whole-truck view is small.
 
-- [Camera, desktop](../../.tmp-work/compact-gifts-1011/camera-comparison-1440x900.png)
-- [Camera, phone](../../.tmp-work/compact-gifts-1011/camera-comparison-390x844.png)
-- [Camera, native phone-size crops](../../.tmp-work/compact-gifts-1011/camera-phone-1x.png)
-- [Boat A/B, desktop](../../.tmp-work/compact-gifts-1011/boat-comparison-1440x900.png)
-- [Boat A/B, phone](../../.tmp-work/compact-gifts-1011/boat-comparison-390x844.png)
+Fresh checks: 52 compact tests across 5 files and TypeScript passed. Both before
+and after capture passed 20 result cases: camera and socks, places 1–4 plus
+auto, at 1440×900 and 390×844. They check decoded artwork, no orange region
+overlays, disabled result choices, stable choice-target styles and page errors.
+Before/after `checks.json` files are identical. All ten socks result screenshots
+and desktop camera place 1 are pixel-identical. Phone camera place 1 differs
+only within badge 1's unchanged bounds plus shadow; its artwork hash is
+unchanged. Choice screenshots have animated hint differences and are not
+claimed pixel-identical.
 
-Raw captures and `checks.json` live in the adjacent `before/` and `after/`
-folders; `phone-before/` holds the previous dark v54 candidate used as the
-camera comparison baseline. Test output is `vitest.log` and `tsc.log`.
-Sheets show all four manual outcomes, enlarged source details and labelled
-native-size phone crops. Captures use recipient Alva and the default carrier;
-they do not establish an exhaustive carrier/recipient/device audit. The camera
-remains small in the whole-truck phone view, but its silhouette is separated
-from the liner and restraint. Visual acceptance is not inferred from tests.
+Current local evidence (temporary, subject to repository retention):
+
+- [Original camera / before / socks / after detail sheet](../../.tmp-work/barge-camera-fastenings/restraints-comparison.png)
+- [Full 1440×900 frames, places 2–4 before/after](../../.tmp-work/barge-camera-fastenings/full-frames-1440-comparison.png)
+- [Full 390×844 frames, places 2–4 before/after](../../.tmp-work/barge-camera-fastenings/full-frames-390-comparison.png)
+
+Raw captures and `checks.json` are in that folder's `before/` and `after/`;
+`place-{2,3,4}-{before,after}-detail.png` are enlarged individual crops.
+`pixel-checks.json`, `ui-checks.json`, `regression-{red,green}.log`,
+`visibility-{red,green}.log`, `vitest.log` and `typecheck.log` contain validation
+evidence. The v53 comparison files are
+local media named by `aa68c14^:src/scenes/compact/resultArtwork.ts`, not binaries
+recovered from Git. Captures use Alva/default carrier only; no exhaustive
+carrier/recipient/device or human-recognition test is claimed.
 
 ## Local media inventory
 
-Only these three runtime media files are new; boat assets and camera place 1
-are unchanged. SHA-256 values identify the visibility revision reviewed here.
+Only these three runtime media files changed; socks, boat assets and camera
+place 1 are unchanged. SHA-256 values identify the current local correction.
 
 | Path under `public/compact-art/` | SHA-256 |
 | --- | --- |
-| `camera-zone2-v54.png` | `67287e6064e3757bd91787b9068e2a834778d7bc3472e27137f68dafc7c3627c` |
-| `camera-zone3-packed-v54.png` | `2bc62fca68bc849d3ddc11cebf07ab527b21cbf8e66c8842bf5d53eebb7d1eb0` |
-| `camera-zone4-v54.png` | `30968253b1afd29c50467a53d1a22933eea2e829238798f225023928769bd32e` |
+| `camera-zone2-v54.png` | `2ef8cfce7e1054dd91b226e9d86a0af5d7a347a2f78c86cdc2376df5faf40343` |
+| `camera-zone3-packed-v54.png` | `cdaccf85cde3ee2234814b44d40ef5d1617bd027b7092477722c0974d1547d29` |
+| `camera-zone4-v54.png` | `5ba52b56d08d149bb1cde0ef88ba39a1b92668f869fb88a25acf1e08b3c3f2c2` |
 
 Binary media stay local/ignored; `media-artifacts.json` is unchanged. Approved
 media must later be published through the repository artifact workflow, under

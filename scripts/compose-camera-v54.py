@@ -1,4 +1,4 @@
-"""Camera review candidate: same cardboard insert/camera in all secured places.
+"""Same camera in secured places, with native restraints and roof-safe headroom.
 
 Reuse the actual camera from the existing fallen outcome (which stays unchanged)
 and the approved socks restraint extraction. No image-generation request.
@@ -19,7 +19,7 @@ ENV = socks.ENV
 BOX_W, BOX_H = 124, 44
 
 
-def build_box():
+def build_box(height=BOX_H, camera_height=35, camera_top=2):
     source = Image.open(ART / "camera-zone1-fallen-v53.png").convert("RGBA")
     mask = Image.new("L", source.size)
     ImageDraw.Draw(mask).polygon([
@@ -42,7 +42,7 @@ def build_box():
     camera = source.crop(source.getbbox()).rotate(25, Image.Resampling.BICUBIC, expand=True)
     camera = camera.crop(camera.getbbox())
     k = 6
-    w, h = BOX_W * k, BOX_H * k
+    w, h = BOX_W * k, height * k
     image = Image.new("RGBA", (w, h))
     d = ImageDraw.Draw(image)
     # Same compact cardboard construction as the approved socks package.
@@ -54,41 +54,49 @@ def build_box():
     d.rectangle((5 * k, 3 * k, w - 5 * k, h - 4 * k), fill=(96, 58, 28))
     # Pale packing liner separates the dark camera from the cardboard rim.
     d.rectangle((6 * k, 4 * k, w - 6 * k, h - 5 * k), fill=(255, 239, 210))
-    camera = socks.fit_height(camera, 35 * k)
-    image.alpha_composite(camera, ((w - camera.width) // 2, 2 * k))
-    return image.resize((BOX_W, BOX_H), Image.Resampling.LANCZOS)
+    camera = socks.fit_height(camera, camera_height * k)
+    image.alpha_composite(camera, ((w - camera.width) // 2, camera_top * k))
+    return image.resize((BOX_W, height), Image.Resampling.LANCZOS)
 
 
-def main():
-    box = build_box()
+def main(output=ART):
+    # Keep the insert on its support; extend upward to clear the native band.
+    # The niche has only 48px below the roof, so its same camera is 31px high.
     jobs = [
-        ("camera-zone2-v54.png", (466, 621), (355, 565, 575, 602), (90, 12, 118, 33), (355, 509, 575, 546)),
-        ("camera-zone3-packed-v54.png", (657, 478), (590, 436, 724, 475), (56, 15, 82, 35), (430, 436, 564, 475)),
-        ("camera-zone4-v54.png", (972, 718), (902, 606, 1044, 650), (76, 11, 101, 30), (902, 550, 1044, 594)),
+        ("camera-zone2-v54.png", (466, 621), (355, 565, 575, 602), (90, 12, 118, 33), 0, (68, 35, 2)),
+        ("camera-zone3-packed-v54.png", (657, 478), (590, 436, 724, 475), (56, 15, 82, 35), 0, (48, 31, 1)),
+        ("camera-zone4-v54.png", (972, 718), (902, 606, 1044, 650), (76, 11, 101, 30), 66, (59, 35, 2)),
     ]
-    assert box.size == (124, 44)
-    box_pixels = np.asarray(box)
-    camera_pixels = box_pixels[..., :3].max(-1) < 125
-    camera_pixels[:4] = camera_pixels[-5:] = False
-    camera_pixels[:, :8] = camera_pixels[:, -8:] = False
-    assert camera_pixels.sum() > 400, "Camera silhouette is missing"
-    for name, (cx, bottom), strap, buckle, clean_wall in jobs:
+    for name, (cx, bottom), strap, buckle, dy, dimensions in jobs:
+        box = build_box(*dimensions)
+        assert box.width == BOX_W
+        box_pixels = np.asarray(box)
+        camera_pixels = box_pixels[..., :3].max(-1) < 125
+        camera_pixels[:4] = camera_pixels[-5:] = False
+        camera_pixels[:, :8] = camera_pixels[:, -8:] = False
+        assert camera_pixels.sum() > 400, "Camera silhouette is missing"
         result = ENV.copy()
         x0, y0, x1, y1 = strap
-        result.paste(ENV.crop(clean_wall), (x0, y0))
-        x, y = cx - BOX_W // 2, bottom - BOX_H
+        if dy:
+            # Same floor-level translation as socks; retain full-size mounts.
+            result.paste(ENV.crop((x0, y0 - 56, x1, y1 - 56)), (x0, y0))
+            result.paste(ENV.crop(strap), (x0, y0 + dy))
+        x, y = cx - BOX_W // 2, bottom - box.height
         assert y >= 430 and bottom <= 718 and x + BOX_W < 1046
         result.alpha_composite(box, (x, y))
-        # A narrower restraint crosses the package's lower rim, not the lens.
-        layer = socks.strap_layer(strap, buckle).resize((x1 - x0, 22), Image.Resampling.LANCZOS)
-        strap_y = bottom - 18
+        layer = socks.strap_layer(strap, buckle)
+        strap_y = y0 + dy
         result.alpha_composite(layer, (x0, strap_y))
-        opaque = np.asarray(layer.getchannel("A")) == 255
-        actual = np.asarray(result.crop((x0, strap_y, x1, strap_y + layer.height)))
-        assert np.array_equal(actual[opaque], np.asarray(layer)[opaque])
         visible = np.all(np.asarray(result.crop((x, y, x + BOX_W, bottom))) == box_pixels, axis=-1)
         visible_fraction = visible[camera_pixels].mean()
-        assert visible_fraction >= 0.85, f"Strap hides the camera in {name}: {visible_fraction:.1%} visible"
+        assert visible_fraction >= 0.70, f"Strap hides the camera in {name}: {visible_fraction:.1%} visible"
+        # Match the accepted socks hardware pixel-for-pixel, without squashing
+        # the band, buckle or mounts. Place 4 follows its floor-level translation.
+        original = socks.strap_layer(strap, buckle)
+        expected_y = y0 + (66 if "zone4" in name else 0)
+        hardware = np.asarray(original.getchannel("A")) == 255
+        actual = np.asarray(result.crop((x0, expected_y, x1, expected_y + original.height)))
+        assert np.array_equal(actual[hardware], np.asarray(original)[hardware]), f"Distorted or displaced restraint in {name}"
         # No accidental changes to the truck/other cargo outside this placement.
         changed = np.any(np.asarray(result) != np.asarray(ENV), axis=-1)
         allowed = np.zeros_like(changed)
@@ -96,7 +104,7 @@ def main():
         allowed[y0:y1, x0:x1] = True
         allowed[strap_y:strap_y + layer.height, x0:x1] = True
         assert not changed[~allowed].any(), f"Unrelated pixels changed in {name}"
-        result.convert("RGB").save(ART / name, optimize=True)
+        result.convert("RGB").save(output / name, optimize=True)
         print(name, box.size, f"camera pixels visible: {visible_fraction:.1%}; foreground strap; exterior unchanged")
 
 
