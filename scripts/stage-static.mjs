@@ -68,7 +68,7 @@ export async function stageStatic(source, destination, nginxConfig) {
   // The scene 1 city builds its plate/atlas URLs at runtime (wide/tall,
   // @2x). Fail even in --stage-only packaging if a variant would be omitted.
   for (const file of [
-    ...["wide", "tall"].flatMap(plate => [`scene1-v4/plate-${plate}.webp`, `scene1-v4/plate-${plate}@2x.webp`, `scene1-v4/trucks-${plate}.webp`]),
+    ...["wide", "tall"].flatMap(plate => [`scene1-v4/plate-${plate}-v18.webp`, `scene1-v4/plate-${plate}-v18@2x.webp`, `scene1-v4/trucks-${plate}.webp`]),
     "scene1-v4/smoke.webp",
   ]) {
     assert(selected.includes(file), `Missing required city image in staging selection: ${file}`);

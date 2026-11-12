@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { stageStatic } from "./stage-static.mjs";
 
 const cityFiles = [
-  ...["wide", "tall"].flatMap(plate => [`scene1-v4/plate-${plate}.webp`, `scene1-v4/plate-${plate}@2x.webp`, `scene1-v4/trucks-${plate}.webp`]),
+  ...["wide", "tall"].flatMap(plate => [`scene1-v4/plate-${plate}-v18.webp`, `scene1-v4/plate-${plate}-v18@2x.webp`, `scene1-v4/trucks-${plate}.webp`]),
   "scene1-v4/smoke.webp",
 ];
 
@@ -19,7 +19,7 @@ test("ships dynamic runtime media and licenses without publishing reference page
     "quest-cache.js": "/* cache worker */",
     "r/student-energy/index.html": "share page",
     "r/student-energy/card.jpg": "share card",
-    "assets/index-abcdefgh.js": 'const image = "assets/optimized-original-abcdefgh.webp"; const warehouse="scene-world/warehouse.webp"; const font="fonts/example.woff2"; const city=["scene1-v4/plate-wide.webp?v=2","scene1-v4/plate-wide@2x.webp?v=2","scene1-v4/trucks-wide.webp?v=5","scene1-v4/plate-tall.webp?v=2","scene1-v4/plate-tall@2x.webp?v=2","scene1-v4/trucks-tall.webp?v=5","scene1-v4/smoke.webp?v=1"];',
+    "assets/index-abcdefgh.js": 'const image = "assets/optimized-original-abcdefgh.webp"; const warehouse="scene-world/warehouse.webp"; const font="fonts/example.woff2"; const city=["scene1-v4/plate-wide-v18.webp?v=1","scene1-v4/plate-wide-v18@2x.webp?v=1","scene1-v4/trucks-wide.webp?v=5","scene1-v4/plate-tall-v18.webp?v=1","scene1-v4/plate-tall-v18@2x.webp?v=1","scene1-v4/trucks-tall.webp?v=5","scene1-v4/smoke.webp?v=1"];',
     "assets/unused-image.webp": "unused derivative",
     "scene-world/unused.webp": "unused original",
     "scene-art/lastmile-family-v1/revision-5/flight-boat-arseniy-wide.webp": "dynamic flight fallback",
@@ -30,11 +30,11 @@ test("ships dynamic runtime media and licenses without publishing reference page
     "static-image-replacements.json": JSON.stringify({"scene-art/original.png":"assets/optimized-original-abcdefgh.webp"}),
     "scene-art/original.png": "editable original",
     "assets/optimized-original-abcdefgh.webp": "runtime image",
-    "scene1-v4/plate-wide.webp": "wide plate",
-    "scene1-v4/plate-wide@2x.webp": "wide retina plate",
+    "scene1-v4/plate-wide-v18.webp": "wide plate",
+    "scene1-v4/plate-wide-v18@2x.webp": "wide retina plate",
     "scene1-v4/trucks-wide.webp": "wide atlas",
-    "scene1-v4/plate-tall.webp": "tall plate",
-    "scene1-v4/plate-tall@2x.webp": "tall retina plate",
+    "scene1-v4/plate-tall-v18.webp": "tall plate",
+    "scene1-v4/plate-tall-v18@2x.webp": "tall retina plate",
     "scene1-v4/trucks-tall.webp": "tall atlas",
     "scene1-v4/smoke.webp": "smoke",
     "review/carriers/closer-blue.png": "inspection",
