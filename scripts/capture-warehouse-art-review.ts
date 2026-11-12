@@ -26,8 +26,8 @@ try {
   const targetTips=['keeper','wms'].map(id=>{
    const marker=markers.find(m=>m.id===id)!, region=drawing.regions[id as 'keeper'|'wms'];
    const target={x:plane.x+plane.width*region.anchorPixel[0]/drawing.width,y:plane.y+plane.height*region.anchorPixel[1]/drawing.height};
-   const tip={x:marker.rect.x+marker.rect.width/2,y:marker.rect.bottom};
-   assert.ok(Math.abs(tip.x-target.x)<1 && Math.abs(tip.y-target.y-1)<1,`${id} tip must touch its native-image target`);
+   const tip=id==='wms'?{x:marker.rect.right,y:marker.rect.y+marker.rect.height/2}:{x:marker.rect.x+marker.rect.width/2,y:marker.rect.bottom};
+   assert.ok(Math.abs(tip.x-target.x-(id==='wms'?1:0))<1 && Math.abs(tip.y-target.y-(id==='wms'?0:1))<1,`${id} tip must touch its native-image target`);
    return {id,target,tip};
   });
   await page.screenshot({path:`${out}/choice-${width}x${height}.png`,scale:'css'});

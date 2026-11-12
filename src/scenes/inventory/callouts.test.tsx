@@ -6,10 +6,10 @@ import { inventoryScene } from "./index";
 import { warehouseCallouts, warehouseContour, warehouseDrawing } from "./callouts";
 
 const context = { parcel: "boat", recipient: "alva", profile: "student" } as const;
-it("points 3 at the keeper's cap and 4 at the monitor, excluding the operator", () => {
+it("points 3 at the keeper's cap and 4 at the computer’s left edge, excluding the operator", () => {
   for (const [composition, cap, monitor, operatorLeft] of [
-    ["wide", { left: 1332, right: 1358, top: 580, bottom: 588 }, { left: 1286, right: 1300, top: 687, bottom: 700 }, 1400],
-    ["tall", { left: 918, right: 940, top: 905, bottom: 914 }, { left: 863, right: 880, top: 1050, bottom: 1062 }, 965],
+    ["wide", { left: 1332, right: 1358, top: 580, bottom: 588 }, { left: 1262, right: 1275, top: 735, bottom: 750 }, 1400],
+    ["tall", { left: 918, right: 940, top: 905, bottom: 914 }, { left: 863, right: 875, top: 1066, bottom: 1080 }, 965],
   ] as const) {
     const drawing = warehouseDrawing(composition);
     const { keeper, wms } = drawing.regions;
