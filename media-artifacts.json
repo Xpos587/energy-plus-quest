@@ -4521,10 +4521,10 @@
       ]
     },
     {
-      "name": "release-2026-11-12-v1.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-12-scene-fixes/release-2026-11-12-v1.tar.gz",
-      "sha256": "08795b2c00f187a91489e047b4fca916277f3d6bfec70855b9494be4a9b1fc24",
-      "bytes": 130579559,
+      "name": "release-2026-11-12-v2.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-12-scene-fixes/release-2026-11-12-v2.tar.gz",
+      "sha256": "c165f93f12689f58cb373689da14bb6b1be57811d47e1d96cfdec4bb75dd435f",
+      "bytes": 43087530,
       "files": [
         {
           "path": "public/compact-art/camera-zone2-v54.png",
@@ -4573,8 +4573,8 @@
         },
         {
           "path": "public/opening/route-v1/lastmile.webp",
-          "sha256": "e9c3873aa602d91b6ae919c1cbe1004c9ae9553b8ea598e529964dda09dc576e",
-          "bytes": 93786
+          "sha256": "ba2cd6d53b7307312fe029bb075f481e444e06097ba064ef54533e9505fe2982",
+          "bytes": 19890
         },
         {
           "path": "public/opening/route-v1/loading.webp",
@@ -4598,58 +4598,58 @@
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-15/intro-wide.webp",
-          "sha256": "8ed4214e5d1efb664de37729f392ed47f1597b05f59d0db5378e2078281b12b1",
-          "bytes": 2362548
+          "sha256": "5015c856d34b3115325651a8c954d0556ca19ff8f71ae042105e79373e300ade",
+          "bytes": 496610
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-alva.webp",
-          "sha256": "582cf840408e3230d919adc94757a191985417f1f99584aedc49dc84d5184fca",
-          "bytes": 14524366
+          "sha256": "9e0f6ead7699b7e98d54666ef39f5855bb83abcf63fff814d407980b7584ccc8",
+          "bytes": 2322294
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-arseniy.webp",
-          "sha256": "dcb033bda59ac55467c84f4231351fad6ad0c8a6734c3323f13434d2da67fcea",
-          "bytes": 14502106
+          "sha256": "840ad149b1e55e1aad67466e9d2a92fea7a8697e97106d3759813c36368037a9",
+          "bytes": 2316318
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/choice-tall-khor.webp",
-          "sha256": "e8ebde979a04ea10c28327279aea6d345a95617c31aefa9fad91d8564e0508ce",
-          "bytes": 14559536
+          "sha256": "891ee08e478792e454c20eafa6b03ee97419c204ab8a3cfc397ff9d07eaa75be",
+          "bytes": 2330094
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-alva.webp",
-          "sha256": "614b9dc9ac5a7536b658c17ede6462fa8dec3e8f51034bf57a9eb0225d981c7a",
-          "bytes": 15942858
+          "sha256": "bb1fde37927c4f5da4ca0609c3bd325236c8d07521da4c47c7d3dc82e63354eb",
+          "bytes": 2365484
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-arseniy.webp",
-          "sha256": "caf88bfd13e408e646ca5d2ba117432dda8b6bddc88719496ee13db851622ec4",
-          "bytes": 15917130
+          "sha256": "aff591d09ace6dfe2c02eff4f8d8493716ad5c650ff6ed9698888b3e0b0d31e2",
+          "bytes": 2356762
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/choice-wide-khor.webp",
-          "sha256": "67894c1379eaa2d6395e32e84188edb1b4f0079247c924d3aa03956438742877",
-          "bytes": 15941776
+          "sha256": "26f838d80b56da643e7dae72f221b1e422d8b9ecd3ecafa45d8e4534147e18a3",
+          "bytes": 2364688
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/flight-boat-arseniy-tall.webp",
-          "sha256": "fede79a580863431112061eb7a7e87ab16b9066b108f96fef69258713fb4bbcf",
-          "bytes": 2505006
+          "sha256": "d3cddba4191be791cccd65e4fa52b57fae6749990822ab252dc3b454950c4eec",
+          "bytes": 385450
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/flight-boat-tall.webp",
-          "sha256": "d551e5a3603f277036df0903a8964b1cb84e4312bf59342b617980dd05ef9037",
-          "bytes": 2481140
+          "sha256": "4593c890e341dd405ec272f5ff57d7a7b34c9da348fec52160815608961d88f2",
+          "bytes": 381870
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/flight-parcel-arseniy-tall.webp",
-          "sha256": "dc8742f0170b2b4732e8a06170c8176ea9f6d24d34617befe2db37bd88ddca49",
-          "bytes": 2503104
+          "sha256": "4393ab42f605d8b0334cd60b0d2b3f18edc470df3fc524a7e5e9dc98dde21735",
+          "bytes": 385282
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-18/flight-parcel-tall.webp",
-          "sha256": "c344656970ba0e9bbb261ef7b6aea8cc57da5497577f93d3a48a17e9677282a7",
-          "bytes": 2458288
+          "sha256": "e35396e21b0e4e43895f4ee1fe2adf104495315ef51e5d738b91d729208439f4",
+          "bytes": 380092
         },
         {
           "path": "public/scene-art/warehouse-results-v4/outcome-alphabet-boat.webp",
