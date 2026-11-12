@@ -45,7 +45,7 @@ for (const viewport of [
     );
     await expect(resultImage).toHaveAttribute(
       "src",
-      /\/scene-art\/barge-v5\/outcome-remote\.webp/,
+      /\/scene-art\/barge-v4\/outcome-remote\.webp/,
     );
     await resultImage.evaluate(async (image: HTMLImageElement) =>
       image.decode(),
@@ -60,10 +60,8 @@ for (const viewport of [
     ).toBe(
       // The desktop rail (≥1001×701) takes the near-square cut of the same still.
       viewport.width > 1000 && viewport.height > 700
-        ? "/scene-art/barge-v5/outcome-remote-rail.webp"
-        : viewport.width <= 1000 && viewport.height >= 701 && viewport.height > viewport.width
-          ? "/scene-art/barge-v5/outcome-remote-portrait.webp"
-          : "/scene-art/barge-v5/outcome-remote.webp",
+        ? "/scene-art/barge-v4/outcome-remote-rail.webp"
+        : "/scene-art/barge-v4/outcome-remote.webp",
     );
     expect(
       await page.evaluate(

@@ -1,7 +1,7 @@
 /** Barge scene v4: one Blender quay rendered as layers per screen format (see design/scene-04/blender-v4). */
 import { craneLayers, craneWorld } from "./layers";
 
-const base = "scene-art/barge-v5";
+const base = "scene-art/barge-v4";
 
 export type Rect = { x: number; y: number; width: number; height: number };
 export type CraneFormat = keyof typeof craneLayers;

@@ -103,12 +103,6 @@ export function SceneOutcomeArt({
             media="(min-width: 1001px) and (min-height: 701px)"
           />
         )}
-        {scene === "crane" && (
-          <ImageSources
-            src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-portrait.webp"))}
-            media="(max-width: 1000px) and (min-height: 701px) and (orientation: portrait)"
-          />
-        )}
         <ImageSources src={artwork.src} />
         <img
           ref={artwork.ref}

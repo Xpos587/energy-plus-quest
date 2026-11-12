@@ -91,13 +91,13 @@ describe("craneScene source contract", () => {
     expect(html.match(/data-hotspot=/g)).toHaveLength(3);
     for (const id of ["remote", "rush", "petr"])
       expect(html).toContain(`data-hotspot="${id}"`);
-    expect(html).toMatch(/scene-art\/barge-v5\/(mid|desk|wide|tall)\/plate\.webp/);
+    expect(html).toMatch(/scene-art\/barge-v4\/(mid|desk|wide|tall)\/plate\.webp/);
     for (const caption of Object.values(craneCaptions)) expect(html).toContain(`aria-label="${caption}:`);
     expect(html).not.toContain("Баржа готова к отходу");
     expect(html).not.toContain(">Подарок<");
     expect(html.match(/data-barge-ripple=/g)).toHaveLength(3);
     // Grisha 09.11: the pulse is one ring size, drawn on the actor the finger actually hits.
-    const format = html.match(/barge-v5\/(mid|desk|wide|tall)\/plate/)![1] as keyof typeof craneArtwork;
+    const format = html.match(/barge-v4\/(mid|desk|wide|tall)\/plate/)![1] as keyof typeof craneArtwork;
     const art = craneArtwork[format];
     const radii = new Set<number>();
     for (const id of ["remote", "rush", "petr"]) {
