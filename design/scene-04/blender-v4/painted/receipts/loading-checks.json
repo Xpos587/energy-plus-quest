@@ -1,5 +1,5 @@
 {
-  "scope": "local Chromium, 1440x900, real-time cold contexts; no screenshot warmup",
+  "scope": "Earlier plate-gate regression evidence retained below; current face-pass checks are under currentFaceValidation.",
   "modes": {
     "no-preference": {
       "samples": 206,
@@ -23,7 +23,7 @@
     "limitation": "default 5000ms timeout failed in unrelated compact result-loop test twice; isolated test passed in 7720ms, final combined suite passed"
   },
   "typecheck": "passed",
-  "currentHeadValidation": {
+  "priorPaintingPackaging": {
     "sourceHead": "c50936d1d55aaf0d6b8bc785e3a30fc46b5d06e4",
     "scope": "Actual Vite test-mode bundle plus all 121 real barge-v5 images and staging-required city/endings families; not a full release package or deployment",
     "build": "passed",
@@ -38,6 +38,31 @@
       "files": 5,
       "testTimeoutMs": 20000
     },
-    "typecheck": "passed"
+    "typecheck": "passed",
+    "limitation": "Pre-face-pass packaging evidence only; current face hashes were not release-packaged or deployed."
+  },
+  "currentFaceValidation": {
+    "scope": "Local Chromium 1440x900, two real-time cold contexts; current source and accepted face media. No screenshot warmup.",
+    "modes": {
+      "no-preference": {
+        "samples": 132,
+        "visibleFrames": 98,
+        "loadingMs": 653,
+        "incompleteVisibleFrames": 0
+      },
+      "reduce": {
+        "samples": 238,
+        "visibleFrames": 197,
+        "loadingMs": 807,
+        "incompleteVisibleFrames": 0
+      }
+    },
+    "artifactRoot": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/cold-load",
+    "craneTests": {
+      "passed": 26,
+      "files": 6
+    },
+    "typecheck": "passed",
+    "releaseBuildOrDeployment": false
   }
 }

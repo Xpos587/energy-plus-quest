@@ -1,83 +1,8 @@
 {
-  "files": 72,
-  "byteIdenticalToBaselineAndOriginalV4": true,
+  "files": 44,
+  "byteIdenticalToOriginalV4": true,
+  "scope": "Current remaining unchanged cast after face/operator/empty-cab replacements; supersedes the prior 72-file claim.",
   "rows": [
-    {
-      "name": "wide/far-empty.webp",
-      "sha256": "5ea6be8458de6eb9d2b64d2fcba72975c762953583f8a3c319448122a255a57e"
-    },
-    {
-      "name": "wide/far-idle.webp",
-      "sha256": "6b1b073b725fe4d2847c696c7c3429330f8a5ded84d38df45cf0cf4ad3f951aa"
-    },
-    {
-      "name": "wide/far-sad.webp",
-      "sha256": "49ea3ae7463702504776a260ead180ad28fec90cb7add6c5f2a13f39aa2edaee"
-    },
-    {
-      "name": "wide/ivan-cheer.webp",
-      "sha256": "c9fcba3cfa29115aab3eda1d9ff24c795f63af8ed69d4e4b7a2d0975e6e80f13"
-    },
-    {
-      "name": "wide/ivan-climb1.webp",
-      "sha256": "9dc4c7546b17ab81b8051c0be70a7603ba6e9d4f3518fd33c825407057f9c140"
-    },
-    {
-      "name": "wide/ivan-climb2.webp",
-      "sha256": "0b60ebc8c5abe90c2fc676a0305a2e6bb9fcd468ee3f94883beaa8e578152afc"
-    },
-    {
-      "name": "wide/ivan-empty.webp",
-      "sha256": "7e0132cb3701b96d525185c08734f0a91a335f1f1576ac80ab617b0d539ece45"
-    },
-    {
-      "name": "wide/ivan-joy.webp",
-      "sha256": "a4c49bb14860291c9e781fb7799de03eaac9b0bb46a96b386af6a7fe8c896616"
-    },
-    {
-      "name": "wide/ivan-run1.webp",
-      "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
-    },
-    {
-      "name": "wide/ivan-run2.webp",
-      "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
-    },
-    {
-      "name": "wide/ivan-wave.webp",
-      "sha256": "dfc55992c6fefef1abd243f036e2030116c207b153d678f6e59c3a1a722b24d4"
-    },
-    {
-      "name": "wide/office.webp",
-      "sha256": "4652b800c742c5d510aca0dfbf70f9bec49413c9d8c9f76dc1c32b8dbdb6e8b4"
-    },
-    {
-      "name": "wide/petr-climb.webp",
-      "sha256": "0b803f23143ff14abb1dea0d2aeceaf4fc98332cfbb9f08af82a6650ae71eb57"
-    },
-    {
-      "name": "wide/petr-sad.webp",
-      "sha256": "59108ba6e1beab81bcfbb501e73e6951122143ca792d51c1dbe64750408c282b"
-    },
-    {
-      "name": "wide/petr-walk1.webp",
-      "sha256": "592ebff0fe3d911e0c171014b0cf52f7bdf05cdb718be0327f640db6c9b1c2eb"
-    },
-    {
-      "name": "wide/petr-walk2.webp",
-      "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
-    },
-    {
-      "name": "wide/top-ivan.webp",
-      "sha256": "dbe33ea32e9a7db0cc7acfbf488e9f08560d429bfd6647e21fd0179e16c3da65"
-    },
-    {
-      "name": "wide/top-petr.webp",
-      "sha256": "d0ff22836e5c4895619324c58f11c44081db28f0a95da3d19f07284d82c96dc3"
-    },
-    {
-      "name": "desk/far-empty.webp",
-      "sha256": "05aaedd8a0961d00af1e01ee761a714febdfe6b6e5b44703e7137fe8856093f9"
-    },
     {
       "name": "desk/far-idle.webp",
       "sha256": "8ad6deaefd443f8dc06405cb71b6bb39d612772025cf4efc0d9eef18efa5545c"
@@ -85,10 +10,6 @@
     {
       "name": "desk/far-sad.webp",
       "sha256": "68091c04ed65396b95e2df2a9c746e5c8ab46969873c5889f17df6dd86016e7f"
-    },
-    {
-      "name": "desk/ivan-cheer.webp",
-      "sha256": "9bb3172cf534b21d95f0be66e0d3a710632485d47e4c9109b428f5a568db3fa7"
     },
     {
       "name": "desk/ivan-climb1.webp",
@@ -103,24 +24,12 @@
       "sha256": "bf853ff624aa06a1272c8c84c46956cb8b58840bdd746bcdfaa3a174bd878095"
     },
     {
-      "name": "desk/ivan-joy.webp",
-      "sha256": "18732fac787c90c5be49fae9e64e9b825fb45378287f04e66f9a4db6dc23bcde"
-    },
-    {
       "name": "desk/ivan-run1.webp",
       "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
     },
     {
       "name": "desk/ivan-run2.webp",
       "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
-    },
-    {
-      "name": "desk/ivan-wave.webp",
-      "sha256": "001fcb8ea346531749deb28b53be244aaad0148c205dbf70b60b49a96ab568c7"
-    },
-    {
-      "name": "desk/office.webp",
-      "sha256": "9eb8140281028b6234f1fec6cefe34378b43295338527afff946029eea343f0f"
     },
     {
       "name": "desk/petr-climb.webp",
@@ -139,28 +48,12 @@
       "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
     },
     {
-      "name": "desk/top-ivan.webp",
-      "sha256": "7b43c23fdb031b03c2fc60d5560419fdb702b690a6531a6d3f183f52b106f5e9"
-    },
-    {
-      "name": "desk/top-petr.webp",
-      "sha256": "b8017603504a79dd97277e96ae7e5166962e9f2063a4cfd4bffeb8fa46d5336a"
-    },
-    {
-      "name": "mid/far-empty.webp",
-      "sha256": "50ce4b6c96758e158b18c2a41956238897fc960318d33c60dd5ed10b707960ee"
-    },
-    {
       "name": "mid/far-idle.webp",
       "sha256": "21782c9dfa2efb84f6bac6035fa702f0830fd2f4c8d5543f6d0699dc7cc5056e"
     },
     {
       "name": "mid/far-sad.webp",
       "sha256": "dfb5183ee0591973a7247100e85efe377bf08602c30b3b771ef866e0ed9dce5c"
-    },
-    {
-      "name": "mid/ivan-cheer.webp",
-      "sha256": "239e70997fa308000158bdcccfde20a61ea934b54dbc1dcf4020022bb7c746ac"
     },
     {
       "name": "mid/ivan-climb1.webp",
@@ -175,24 +68,12 @@
       "sha256": "47ba82b5a64edf220eb36c988d8e2c1c9dfad2bbb48bb3d1912fa5ddaba2ccb2"
     },
     {
-      "name": "mid/ivan-joy.webp",
-      "sha256": "a893029bb0f33823873ef71e4a5da0456e2bf27c517288ba897bdfce6d1d8d36"
-    },
-    {
       "name": "mid/ivan-run1.webp",
       "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
     },
     {
       "name": "mid/ivan-run2.webp",
       "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
-    },
-    {
-      "name": "mid/ivan-wave.webp",
-      "sha256": "61300b50dc39b786ca32779605e41d433cec50c7aecec8d80db1eadd3133e8a7"
-    },
-    {
-      "name": "mid/office.webp",
-      "sha256": "97d8c9b2883b8d2400567da2ea8b15513173d1a75cf10205c1ac9ea448084f4a"
     },
     {
       "name": "mid/petr-climb.webp",
@@ -211,28 +92,12 @@
       "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
     },
     {
-      "name": "mid/top-ivan.webp",
-      "sha256": "f62185cf54baca819bf66fbaad81c286cdf116bfd4d0aa7d2d80447afe025320"
-    },
-    {
-      "name": "mid/top-petr.webp",
-      "sha256": "88caaab2c8c45a3cb919309be03cfaa38f5f14aa8eaf73393cf8c9db335c7448"
-    },
-    {
-      "name": "tall/far-empty.webp",
-      "sha256": "e89f687b4f7fc246a956935ef39f887c6e3465e159e634810eac38a9fbe25c8f"
-    },
-    {
       "name": "tall/far-idle.webp",
       "sha256": "bba5110fa48b3953abaed143bfea9b4bceca15d112917d619270fa6a7fc47090"
     },
     {
       "name": "tall/far-sad.webp",
       "sha256": "4d038f5e2ae667b2f61820a122afc557b9337e311c68233b8dc82b12fd399c0c"
-    },
-    {
-      "name": "tall/ivan-cheer.webp",
-      "sha256": "4a1d5dd39cd7c5c5bc7dfc4497599ca7197e8081fe794fe3323ce7b6aeec713f"
     },
     {
       "name": "tall/ivan-climb1.webp",
@@ -247,24 +112,12 @@
       "sha256": "646185b6894cace968773b9e6c68434c50a33c2ed26ac3e813436407782e01e4"
     },
     {
-      "name": "tall/ivan-joy.webp",
-      "sha256": "80606f19e086fcfce7f4335153c038358f0a8668d878c627ecc4225b3f22b6e2"
-    },
-    {
       "name": "tall/ivan-run1.webp",
       "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
     },
     {
       "name": "tall/ivan-run2.webp",
       "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
-    },
-    {
-      "name": "tall/ivan-wave.webp",
-      "sha256": "6752c4fbf0298eee237557fc6de580b1291f5756c6e85ebf76dcc8cf482ca3fe"
-    },
-    {
-      "name": "tall/office.webp",
-      "sha256": "d523282948824b656c6dd601291097fb6c69ea4f32b0e926565c565cce25e73b"
     },
     {
       "name": "tall/petr-climb.webp",
@@ -283,12 +136,48 @@
       "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
     },
     {
-      "name": "tall/top-ivan.webp",
-      "sha256": "e772acfe793dc20cd3d3ccc35121ce8621919fc3b6e71aeb0f22fd4886cc894f"
+      "name": "wide/far-idle.webp",
+      "sha256": "6b1b073b725fe4d2847c696c7c3429330f8a5ded84d38df45cf0cf4ad3f951aa"
     },
     {
-      "name": "tall/top-petr.webp",
-      "sha256": "d8257b5f9dcd1e7b7c0982cb34b8515970edb3adc8ab24473d9f1dd697042e9a"
+      "name": "wide/far-sad.webp",
+      "sha256": "49ea3ae7463702504776a260ead180ad28fec90cb7add6c5f2a13f39aa2edaee"
+    },
+    {
+      "name": "wide/ivan-climb1.webp",
+      "sha256": "9dc4c7546b17ab81b8051c0be70a7603ba6e9d4f3518fd33c825407057f9c140"
+    },
+    {
+      "name": "wide/ivan-climb2.webp",
+      "sha256": "0b60ebc8c5abe90c2fc676a0305a2e6bb9fcd468ee3f94883beaa8e578152afc"
+    },
+    {
+      "name": "wide/ivan-empty.webp",
+      "sha256": "7e0132cb3701b96d525185c08734f0a91a335f1f1576ac80ab617b0d539ece45"
+    },
+    {
+      "name": "wide/ivan-run1.webp",
+      "sha256": "ca4b15ca5ac87cbb4ba9d28be6c61a742cbf7c59d0651cb7983e135625bade8b"
+    },
+    {
+      "name": "wide/ivan-run2.webp",
+      "sha256": "a905591c70aad8472d640aeab98fad1e0393634e1a872e0b3c9cc40c5f2475dc"
+    },
+    {
+      "name": "wide/petr-climb.webp",
+      "sha256": "0b803f23143ff14abb1dea0d2aeceaf4fc98332cfbb9f08af82a6650ae71eb57"
+    },
+    {
+      "name": "wide/petr-sad.webp",
+      "sha256": "59108ba6e1beab81bcfbb501e73e6951122143ca792d51c1dbe64750408c282b"
+    },
+    {
+      "name": "wide/petr-walk1.webp",
+      "sha256": "592ebff0fe3d911e0c171014b0cf52f7bdf05cdb718be0327f640db6c9b1c2eb"
+    },
+    {
+      "name": "wide/petr-walk2.webp",
+      "sha256": "8356f02e29cb62eb1151b96a5c6c3adc09da4b470508c18b641812a1ab7d7329"
     }
   ]
 }

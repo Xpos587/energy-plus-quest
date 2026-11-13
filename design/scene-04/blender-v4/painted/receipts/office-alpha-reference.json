@@ -1,0 +1,101 @@
+{
+  "source": "Retained original office images, Pillow LANCZOS 2x; alpha computed from inputs not edited output",
+  "rows": {
+    "wide/office.webp": {
+      "sourceSha256": "4652b800c742c5d510aca0dfbf70f9bec49413c9d8c9f76dc1c32b8dbdb6e8b4",
+      "width": 680,
+      "height": 776,
+      "alphaSha256": "f4927a5df4ed74d5c0b3f0c7d600920aeed2411c0a922d99412e4ff04d4f8ba2"
+    },
+    "wide/ivan-joy.webp": {
+      "sourceSha256": "a4c49bb14860291c9e781fb7799de03eaac9b0bb46a96b386af6a7fe8c896616",
+      "width": 560,
+      "height": 422,
+      "alphaSha256": "12951f5f4e5e9c8bba60121a397181249f9cc9a63da98f18166cc8187eaf72dd"
+    },
+    "wide/ivan-wave.webp": {
+      "sourceSha256": "dfc55992c6fefef1abd243f036e2030116c207b153d678f6e59c3a1a722b24d4",
+      "width": 560,
+      "height": 422,
+      "alphaSha256": "12951f5f4e5e9c8bba60121a397181249f9cc9a63da98f18166cc8187eaf72dd"
+    },
+    "wide/ivan-cheer.webp": {
+      "sourceSha256": "c9fcba3cfa29115aab3eda1d9ff24c795f63af8ed69d4e4b7a2d0975e6e80f13",
+      "width": 560,
+      "height": 422,
+      "alphaSha256": "12951f5f4e5e9c8bba60121a397181249f9cc9a63da98f18166cc8187eaf72dd"
+    },
+    "desk/office.webp": {
+      "sourceSha256": "9eb8140281028b6234f1fec6cefe34378b43295338527afff946029eea343f0f",
+      "width": 842,
+      "height": 768,
+      "alphaSha256": "dea3544b3f249027d3d0e39db3460ac43ce29db2d2fce9ae842ef184c699f96b"
+    },
+    "desk/ivan-joy.webp": {
+      "sourceSha256": "18732fac787c90c5be49fae9e64e9b825fb45378287f04e66f9a4db6dc23bcde",
+      "width": 548,
+      "height": 422,
+      "alphaSha256": "7d8c12ce6409ec1714d4fa8defd6b6f928f455cc9d0d251cbf76ccabbdaf50f7"
+    },
+    "desk/ivan-wave.webp": {
+      "sourceSha256": "001fcb8ea346531749deb28b53be244aaad0148c205dbf70b60b49a96ab568c7",
+      "width": 548,
+      "height": 422,
+      "alphaSha256": "7d8c12ce6409ec1714d4fa8defd6b6f928f455cc9d0d251cbf76ccabbdaf50f7"
+    },
+    "desk/ivan-cheer.webp": {
+      "sourceSha256": "9bb3172cf534b21d95f0be66e0d3a710632485d47e4c9109b428f5a568db3fa7",
+      "width": 548,
+      "height": 422,
+      "alphaSha256": "7d8c12ce6409ec1714d4fa8defd6b6f928f455cc9d0d251cbf76ccabbdaf50f7"
+    },
+    "mid/office.webp": {
+      "sourceSha256": "97d8c9b2883b8d2400567da2ea8b15513173d1a75cf10205c1ac9ea448084f4a",
+      "width": 782,
+      "height": 730,
+      "alphaSha256": "61b54765b0d963265fbce2a5c47c174b4a173000c387686b47fa3cc8eabc6c72"
+    },
+    "mid/ivan-joy.webp": {
+      "sourceSha256": "a893029bb0f33823873ef71e4a5da0456e2bf27c517288ba897bdfce6d1d8d36",
+      "width": 518,
+      "height": 402,
+      "alphaSha256": "efe69e3ccfc608df7bc4453d3ef221178168fdb35ed095baccb2b99059ae1f20"
+    },
+    "mid/ivan-wave.webp": {
+      "sourceSha256": "61300b50dc39b786ca32779605e41d433cec50c7aecec8d80db1eadd3133e8a7",
+      "width": 518,
+      "height": 402,
+      "alphaSha256": "efe69e3ccfc608df7bc4453d3ef221178168fdb35ed095baccb2b99059ae1f20"
+    },
+    "mid/ivan-cheer.webp": {
+      "sourceSha256": "239e70997fa308000158bdcccfde20a61ea934b54dbc1dcf4020022bb7c746ac",
+      "width": 518,
+      "height": 402,
+      "alphaSha256": "efe69e3ccfc608df7bc4453d3ef221178168fdb35ed095baccb2b99059ae1f20"
+    },
+    "tall/office.webp": {
+      "sourceSha256": "d523282948824b656c6dd601291097fb6c69ea4f32b0e926565c565cce25e73b",
+      "width": 512,
+      "height": 634,
+      "alphaSha256": "1cd58723d4e04930b220bfa116245a0281cdb38a4ac1f8763bebbbd58b9c7518"
+    },
+    "tall/ivan-joy.webp": {
+      "sourceSha256": "80606f19e086fcfce7f4335153c038358f0a8668d878c627ecc4225b3f22b6e2",
+      "width": 394,
+      "height": 384,
+      "alphaSha256": "792d90b7fafcb2b7f4fea8755adf30c52850c264b7ee7137cab26cb0157b5b8b"
+    },
+    "tall/ivan-wave.webp": {
+      "sourceSha256": "6752c4fbf0298eee237557fc6de580b1291f5756c6e85ebf76dcc8cf482ca3fe",
+      "width": 394,
+      "height": 384,
+      "alphaSha256": "792d90b7fafcb2b7f4fea8755adf30c52850c264b7ee7137cab26cb0157b5b8b"
+    },
+    "tall/ivan-cheer.webp": {
+      "sourceSha256": "4a1d5dd39cd7c5c5bc7dfc4497599ca7197e8081fe794fe3323ce7b6aeec713f",
+      "width": 394,
+      "height": 384,
+      "alphaSha256": "792d90b7fafcb2b7f4fea8755adf30c52850c264b7ee7137cab26cb0157b5b8b"
+    }
+  }
+}

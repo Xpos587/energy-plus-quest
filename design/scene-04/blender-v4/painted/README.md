@@ -1,134 +1,168 @@
 # Scene 4 painted finish — current inputs and verification
 
-The approved geometry is the **barge below the loading crane**, not the older
-barge position in the style reference. Cameras, world geometry, anchors and
-slew poses remain those in [../quay.py](../quay.py) and the current local
-`../quay.blend`. The coordinator visually accepted the painted choice views,
-three desktop results and rush motion on 12 November 2026.
+The approved geometry is the **barge below the loading crane**. Cameras, world
+geometry, anchors and slew poses remain those in [../quay.py](../quay.py) and the
+current local `../quay.blend`. Exactly three choices remain: remote, rush, Petr.
 
-## What is retained
+## Current media and runtime contract
 
-- `prompts/`: the five actual painting/alignment briefs.
-- `manifests/`: four reviewed tile layouts, four prop layouts, sixteen four-pose
-  top layouts, and result pointers to the **48 accepted model images** in
-  `model-images/`. No transport dumps, credentials or rejected generations.
-- `receipts/`: structural, export, registration, exact-alpha, original-cast,
-  live-crop and runtime checks. Some original receipt source paths describe the
-  working directory at generation time; current model inputs are resolved by
-  `manifests/*.result.json`.
-- [../../../../scripts/scene4-painted/](../../../../scripts/scene4-painted/):
-  the input preparation, extraction, stitching, promotion and review scripts.
-- Runtime media: `public/scene-art/barge-v5/`, 121 WebPs: forty base assets,
-  nine result stills, and seventy-two preserved v4 cast files.
+Runtime media is `public/scene-art/barge-v5/`: **121 WebPs**. The final face and
+machinery pass replaces 36 assets (nine per format), then captures nine outcomes.
+[receipts/alpha-checks.json](receipts/alpha-checks.json) checks these disjoint groups:
 
-Binary files stay outside Git. `receipts/media-files.json` identifies the exact
-current media for a later approved release. **This finish is not yet a published
-media release. Do not hydrate over unpublished artwork.**
+| Files | Contract |
+| ---: | --- |
+| 36 | Original Blender dimensions and pixel-exact mechanical alpha |
+| 44 | Byte-identical original v4 cast |
+| 4 | Deterministically reconstructed legacy `ivan.webp`, unchanged and unused |
+| 16 | Office composites: original alpha resampled 2× with Pillow LANCZOS |
+| 8 | Compact 4×4 operator atlases; 4× logical density, synchronized placement |
+| 4 | `far-empty.webp`: exact alpha/dimensions of the base far crane |
+| 9 | SHA-bound, opaque, live 2× result captures with hull-safe bounds |
 
-`stage-static.mjs` retains the complete `barge-v5` dynamic family together with
-this source switch. Its regression failed before the family change and passes
-after it. A current Vite test-mode bundle was staged with all 121 real barge
-images; every staged file matched the inventory SHA-256. That scoped packaging
-check is not a full release build or deployment; the receipt is in
-`receipts/loading-checks.json` under `currentHeadValidation`.
+All 121 files also match the accepted hashes in
+[receipts/media-files.json](receipts/media-files.json). Binary files stay outside
+Git. That 198-file receipt includes necessary sources as well as runtime media;
+**this is not a published media release. Do not hydrate over unpublished art.**
 
-## Native output is not native model detail
+- The near crane always draws the painted `top.webp`, plus at most one compact
+  operator overlay using the same atlas frame. No whole-crane identity swaps.
+- Ivan has the backward cap used in the office; Petr has a forward cap and beard.
+  Operators are fully hidden when the strut would split their heads. The retained
+  head-alpha threshold is 90%, connected head area 88%. The checker binds the
+  accepted atlases to hashes and verifies frame presence against the generator's
+  visibility receipt; it does not independently infer faces from pixels.
+- Petr moves to the near crane in his branch. The empty far variant uses the
+  **same base far box**, not the old larger cab overlay.
+- `office.webp` already contains Ivan. The legacy Ivan overlay is not drawn over
+  it. Its four unused source files still have their original cap-alpha holes;
+  those files were not repaired. The root fix removes the duplicate runtime head.
+- Sixteen office heads use focused, smiling/waving and cheering expressions.
+  Original body pixels outside the local head mask and resampled alpha are exact.
+  The visible neutral-head collar seam was explicitly accepted by the user.
+- Near/far machinery housings and counterweights are navy. Near RGB edits are
+  bounded by the projected housing/counterweight masks across all 64 frames;
+  far RGB edits are bounded by explicit casing/glazing masks. Fine painted edge
+  highlights are not a claim of pixel-perfect uniform color.
 
-The four logical canvases are 1942×809, 1536×1024, 1402×1122 and 1024×1536.
-Their runtime plates are exactly 2×: 3884×1618, 3072×2048, 2804×2244 and
-2048×3072. The model's tile/sheet RGB output is approximately 1.57 MP; it is
-resampled into the locked native canvases. These are **not** claims of native
-4K model texture detail. The accepted wide style proof itself is 1935×813.
+## Retained sources and density limits
 
-Mechanical sprite alpha comes from the Blender baseline, unchanged pixel for
-pixel. Four Ivan portraits are intentional identity exceptions: original v4
-portraits resized to their current native boxes and encoded deterministically.
-All other 72 cast files, including both operator atlases in all formats, remain
-byte-identical to v4. Four sixteen-frame base atlases plus eight preserved
-sixteen-frame operator atlases give 192 crane-top animation frames.
+- `manifests/` and the original five painting/alignment briefs preserve the
+  reviewed layouts and 48 accepted painting masters in `model-images/`.
+- Three additional used masters (`operators-a1.png`, `far-empty-a1.png`,
+  `expressions-a1.png`) and their briefs support this pass. No rejected identity
+  master or raw request/response transport is part of the retained source set.
+- `face-inputs/` retains 24 necessary pre-edit WebPs (six per format), projected
+  geometry and two reviewed placement layouts. These are generator inputs, not
+  an archive of alternate finished artwork.
+- `receipts/geometry-baseline.json` records the **49 structural core exports**;
+  original cast evidence comes separately from `public/scene-art/barge-v4/`.
+  The current checker does not depend on an expiring scratch Blender directory.
+- Reusable scripts live in [../../../../scripts/scene4-painted/](../../../../scripts/scene4-painted/).
 
-Plate registration uses sparse SIFT correspondences, bounded translations and
-explicit visual review. Desk has six automatic tiles. Mid has four automatic
-tiles and two explicitly reviewed identity tiles; tall has two identity-review
-exceptions. Wide left-top has a reviewed translation of approximately 4.456 px.
-The exact measurements and rationales are in the four plate check receipts.
-**This is not full per-pixel proof of unchanged background geometry.**
+Logical canvases are 1942×809, 1536×1024, 1402×1122 and 1024×1536. Their plates
+are exactly 2× those dimensions. Original painting RGB was approximately 1.57 MP
+per model tile/sheet and was resampled into these locked canvases: **not native
+4K model detail**. Office bodies are resampled from 1.5× to 3× logical pixels;
+only the new head patches add source detail. Operator overlays are 4× logical
+pixels, not new 4× texture detail on the underlying crane.
 
-## Reproduce the finish from retained inputs
+Plate registration uses sparse SIFT matches, bounded translations and visual
+review. Desk has six automatic tiles; mid has four automatic and two reviewed
+identity tiles; tall has two identity-review exceptions. Wide left-top has a
+reviewed translation of about 4.456 px. The four plate receipts retain the exact
+measurements. This is not full per-pixel proof of background geometry.
 
-Run commands from the repository root. First obtain the native structural
-exports using [../README.md](../README.md), and place that unpainted 121-file set
-in `.tmp-work/scene4-final-render/blender-assets/`. Structural export replaces
-runtime files: do not run it merely to check the currently accepted painting.
-The native alpha baseline can also be retained during a deliberate rebuild.
+## Reproduce the face/machinery pass without paid calls
+
+The following commands write candidates and proofs, **not runtime files**.
+The recorded rebuild reproduced all 36 accepted edited WebPs byte-for-byte:
+[receipts/rebuild-checks.json](receipts/rebuild-checks.json).
 
 ```sh
-mkdir -p .tmp-work/scene4-final-render/gpt
-cp design/scene-04/blender-v4/painted/manifests/*.json .tmp-work/scene4-final-render/gpt/
-bun scripts/scene4-painted/prepare-plates.mjs wide desk mid tall
-for format in wide desk mid tall; do
-  bun scripts/scene4-painted/prepare-sheets.mjs "$format"
-  uv run --with numpy --with opencv-python-headless python scripts/scene4-painted/stitch-plate.py "$format"
-  uv run --with numpy --with opencv-python-headless python scripts/scene4-painted/extract-sheets.py sprites "$format"
-  uv run --with numpy --with opencv-python-headless python scripts/scene4-painted/extract-sheets.py top "$format"
+R=/home/michael/Github/energy-plus-quest
+W="$R/.tmp-work/scene4-faces-rebuild"
+for script in generate-operators generate-office-heads generate-far-cab check-machinery; do
+  uv run --with pillow --with numpy --with opencv-python-headless \
+    python "$R/scripts/scene4-painted/$script.py" "$W"
 done
-bun scripts/scene4-painted/promote-painted.mjs wide desk mid tall
+bun "$R/scripts/scene4-painted/check-painted-assets.mjs" --self-test
+bun "$R/scripts/scene4-painted/check-painted-assets.mjs"
 ```
 
-These scripts reuse accepted image outputs; they do not submit paid image jobs.
-Preparation now recreates inputs from the four retained reviewed manifests;
-it does not invent new tile layouts or erase their review exceptions.
+Review candidates before promotion. Their names are
+`$W/candidates/<format>-<asset>.webp`; the nine assets per format are `top`,
+`top-ivan`, `top-petr`, `far`, `far-empty`, `office`, `ivan-joy`, `ivan-wave`,
+`ivan-cheer`. Copy only approved outputs into their corresponding runtime format
+directory, then recapture outcomes. Do not regenerate the accepted receipt's
+hashes merely to make a failed check green.
 
-For live result stills, use a source Vite server **without media hydration**:
+For a deliberate rebuild of the earlier painting layer, first obtain the 49
+native structural core exports using [../README.md](../README.md), placing them
+in `$R/.tmp-work/scene4-final-render/blender-assets/`. Structural export replaces
+runtime media; do not run it merely to check the accepted finish. Retain original
+v4 cast separately. From the repository root, the existing `prepare-plates.mjs`,
+`prepare-sheets.mjs`, `stitch-plate.py`, `extract-sheets.py` and
+`promote-painted.mjs` pipeline reuses the reviewed manifests and 48 masters.
+Copy `painted/manifests/*.json` into its scratch `gpt/` directory first. This older
+promotion creates the pre-face finish; it does **not** replace the face pass.
+
+## Capture and verify the current runtime
+
+Use an existing source Vite server **without media hydration**. These examples
+use a local loopback server, not a phone-reachable preview URL.
 
 ```sh
-BARGE_CAPTURE_RECEIPT=.tmp-work/scene4-final-render/outcome-crops.json \
-  bun scripts/capture-barge-outcomes.mjs http://127.0.0.1:4175
-bun scripts/scene4-painted/check-painted-assets.mjs --self-test
-bun scripts/scene4-painted/check-painted-assets.mjs
-bun scripts/scene4-painted/capture.mjs final
-bun scripts/scene4-painted/compare.mjs
-bun scripts/scene4-painted/cold-load.mjs
+R=/home/michael/Github/energy-plus-quest
+W="$R/.tmp-work/scene4-faces/reviews"
+BARGE_CAPTURE_RECEIPT="$W/outcome-capture.json" \
+  bun "$R/scripts/capture-barge-outcomes.mjs" http://127.0.0.1:4175
+bun "$R/scripts/scene4-painted/capture-face-results.mjs" http://127.0.0.1:4175 "$W"
+bun "$R/scripts/record-barge-outcomes.mjs" http://127.0.0.1:4175 "$W/motion"
 ```
 
-The three rail outcomes use the existing **live 1.11:1 hull-safe crop**, not a
-fixed mechanical matte. Their dimensions vary by a few pixels with sampled
-animation/bobbing bounds and raster rounding. The original blanket comparison
-against baseline dimensions failed on this distinction. The replacement check
-requires a SHA-256-bound capture receipt, native 2× dimensions within raster
-rounding, mid-camera bounds, the existing 6.75% hull inset and opaque alpha.
-It does not resize a result to conceal a difference. Alpha/crop checks do not
-prove image content: the final visual montage caught an error-screen rush-rail
-still from the earlier concurrent gate-change run. All three rail stills were
-regenerated after adding visible-plane/no-loading-status assertions to capture.
-The remaining 114 assets pass baseline alpha/dimensions; the four Ivan files pass exact reconstruction.
+The outcome capture writes all nine runtime stills. Rail uses the existing live
+**1.11:1 crop and 6.75% hull inset**; dimensions vary slightly with sampled
+animation bounds and rounding. Wide/portrait capture their full cameras.
+Capture validation requires a visible, decoded plane, native 2× density, opaque
+alpha and safe hull bounds. It does not resize images to hide a mismatch.
+A previously captured error-screen rail still was superseded by valid captures.
+All nine final stills now match the accepted SHA-bound capture receipt.
 
-## Initial loading regression
+Real-time result verification waits for both decoded artwork and visible copy;
+clock-fast-forward captures that missed copy are not the final evidence. It
+checks three choices, no duplicate Ivan layer, correct desktop rail/phone
+portrait source, no broken images, no loading state and no horizontal overflow.
+Current evidence: [receipts/runtime-checks.json](receipts/runtime-checks.json)
+and [receipts/final-verification.json](receipts/final-verification.json).
 
-Before the fix, plate readiness alone allowed independently decoded transparent
-layers to pop into the first scene frames. Both normal and reduced-motion
-cold-load videos reproduced it. The earlier “capture-only” attribution is
-**retracted**. Two animation frames or a warm-up screenshot were not a fix.
+Latest temporary proof root is `$R/.tmp-work/scene4-faces/reviews/`:
+`{remote,rush,petr}-{1440,390}-RESULT.png`, `choice-{1440,390}.png`, nine
+`native-outcome-*.png` equal-density comparisons, and six recordings plus contact
+sheets in `motion/`. Black rail padding in comparison sheets is outside the
+capture, not missing media. Independent visual review inspected all nine native
+sheets and six motion sheets without finding a concrete defect. **Contact-sheet
+sampling is not a frame-by-frame review of the recordings.**
 
-`CraneArt.tsx` now decodes the complete current image set before revealing the
-plane, retaining the existing loading/error/retry treatment. It invalidates an
-in-flight decode when a rail action changes the initial cast source set, but
-never blanks an already revealed scene for ordinary animation frames. Retry
-cache-busts every layer. The regression covers the last delayed image, a source
-change while pending, failure, and retry. The first version and the source-race
-version both failed the corresponding new assertion before their fixes.
-A fresh read-only reviewer accepted the final gate after that race was fixed.
+## Initial loading regression: retained evidence, bounded claims
 
-`origin/main` at `2ad1702e0f133f2cffc63489cb244d1dd371bf72` had the same
-plate-only gate (`CraneArt.tsx:111,182,214,220,254,342`). That is source evidence,
-not a video reproduction of the older deployment.
+Before the fix, plate readiness alone allowed transparent layers to pop into the
+first scene frames, in normal and reduced-motion cold-load recordings. The old
+“capture-only” attribution is retracted; two warm-up frames were not a fix.
 
-Review artifacts are the latest temporary deliverables under
-`.tmp-work/scene4-final-render/`: `blender-vs-final/` contains all four native
-comparisons, all nine outcomes and true 100% pixel crops; `final/` contains eight
-runtime views; `motion/` contains all six desktop/phone recordings;
-`cold-load/` and `cold-load-after/` retain before/after real-time videos. Extracted
-PNG sequences and raw API transports were removed, not the videos or receipts.
-A brief white frame was observed at the phone Petr result transition in the
-motion recording, followed by a correct result. The initial-scene gate does not
-claim to remove that separate result-image transition gap.
+`CraneArt.tsx` decodes the complete current image set before revealing the plane,
+keeps loading/error/retry treatment, invalidates an in-flight decode when cast
+sources change and never blanks an already revealed scene for ordinary frames.
+Retry cache-busts every layer. Tests cover delayed last image, pending source
+change, failure and retry; failures were observed before the corresponding fixes.
+The face pass preserves this gate and adds the single-operator/office regression.
+
+[receipts/loading-checks.json](receipts/loading-checks.json) explicitly separates
+the earlier cold-load/packaging evidence from current validation. The earlier
+scoped Vite test-mode bundle staged 121 matching barge assets; this was not a full
+release build/deployment and its hashes do not describe the later face pass.
+Unique before/after cold-load evidence remains in
+`$R/.tmp-work/scene4-final-render/{cold-load,cold-load-after}/`.
+A brief phone Petr result-transition white frame was observed in an earlier
+recording. The initial-scene gate does not claim to fix that separate transition,
+and sampled final sheets alone cannot prove it absent from every frame.

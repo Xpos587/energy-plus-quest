@@ -10,16 +10,16 @@
       "height": 809
     },
     "hull": {
-      "x": 663.6820068359375,
-      "y": 447.44024658203125,
+      "x": 663.2919921875,
+      "y": 447.79840087890625,
       "width": 763.5,
       "height": 359.5
     },
     "inset": 0,
     "width": 3884,
     "height": 1618,
-    "sha256": "268124bfa802a9ece6f2c01e594ae165251572e25ae370b639a293f622290231",
-    "sailingTransform": "transform: translate(-0.969001%, 1.31787%);"
+    "sha256": "8dd800de1b4b04689fd5c326bdae57e42be9c9b1cae9c6338df096cf87296b3c",
+    "sailingTransform": "transform: translate(-0.989083%, 1.34518%);"
   },
   {
     "output": "public/scene-art/barge-v5/outcome-rush.webp",
@@ -32,16 +32,16 @@
       "height": 809
     },
     "hull": {
-      "x": 663.9718627929688,
-      "y": 447.2962951660156,
-      "width": 763.5000610351562,
-      "height": 359.4999694824219
+      "x": 662.8980102539062,
+      "y": 448.04534912109375,
+      "width": 763.4999389648438,
+      "height": 359.50006103515625
     },
     "inset": 0,
     "width": 3884,
     "height": 1618,
-    "sha256": "4d66b2cb053ed71cf4c10f4288dcfdeb815bfa3c915dc9ea5cd4f2740f8c5353",
-    "sailingTransform": "transform: translate(-0.954074%, 1.29757%);"
+    "sha256": "b64f9422ad187caa3cf1ae0be2456798d0cd741da90aadd2ba37960e96e364c6",
+    "sailingTransform": "transform: translate(-1.00937%, 1.37278%);"
   },
   {
     "output": "public/scene-art/barge-v5/outcome-petr.webp",
@@ -54,16 +54,82 @@
       "height": 809
     },
     "hull": {
-      "x": 663.389892578125,
-      "y": 446.8009033203125,
-      "width": 763.5,
-      "height": 359.5
+      "x": 663.0955200195312,
+      "y": 447.7511901855469,
+      "width": 763.4999389648438,
+      "height": 359.4999694824219
     },
     "inset": 0,
     "width": 3884,
     "height": 1618,
-    "sha256": "d5daed192d245df86fda1abfe23cb58caa617c473c15e4aadc4df231f4a3f89c",
-    "sailingTransform": "transform: translate(-0.984044%, 1.33833%);"
+    "sha256": "fe64943c0bbe12d8ea32e1464a7bcf3d8a7e7434449cb439e60aaf8e0955f39a",
+    "sailingTransform": "transform: translate(-0.999202%, 1.35894%);"
+  },
+  {
+    "output": "public/scene-art/barge-v5/outcome-remote-rail.webp",
+    "format": "mid",
+    "id": "remote",
+    "clip": {
+      "x": 11.143969497239596,
+      "y": 0,
+      "width": 1202.9862004098177,
+      "height": 1083.7713517205564
+    },
+    "hull": {
+      "x": 380.0866394042969,
+      "y": 589.462158203125,
+      "width": 746.5000305175781,
+      "height": 417
+    },
+    "inset": 0.0675,
+    "width": 2404,
+    "height": 2166,
+    "sha256": "33fb5eae65be808ac77506f11114769a049f2a59779e30cd33322bbb13ec77e0",
+    "sailingTransform": "transform: translate(-1.20637%, 1.11741%);"
+  },
+  {
+    "output": "public/scene-art/barge-v5/outcome-rush-rail.webp",
+    "format": "mid",
+    "id": "rush",
+    "clip": {
+      "x": 11.298050103159994,
+      "y": 0,
+      "width": 1202.5905147839144,
+      "height": 1083.4148781837066
+    },
+    "hull": {
+      "x": 379.9991149902344,
+      "y": 589.1538696289062,
+      "width": 746.5000305175781,
+      "height": 417
+    },
+    "inset": 0.0675,
+    "width": 2404,
+    "height": 2166,
+    "sha256": "d643b45ae44f58d1963a35d455e9aa8d0f78a08828fbf140a9a239d6cad74d35",
+    "sailingTransform": "transform: translate(-1.21262%, 1.12319%);"
+  },
+  {
+    "output": "public/scene-art/barge-v5/outcome-petr-rail.webp",
+    "format": "mid",
+    "id": "petr",
+    "clip": {
+      "x": 11.34830267580935,
+      "y": 0,
+      "width": 1202.1376536815844,
+      "height": 1083.0068952086344
+    },
+    "hull": {
+      "x": 379.6467590332031,
+      "y": 588.77685546875,
+      "width": 746.4999694824219,
+      "height": 417
+    },
+    "inset": 0.0675,
+    "width": 2404,
+    "height": 2166,
+    "sha256": "f1d28d8babed5d1b12802768c56f6dde5e13d702b222c0ce6ca4431c04d206fc",
+    "sailingTransform": "transform: translate(-1.23775%, 1.14647%);"
   },
   {
     "output": "public/scene-art/barge-v5/outcome-remote-portrait.webp",
@@ -76,16 +142,16 @@
       "height": 1536
     },
     "hull": {
-      "x": 420.1277770996094,
-      "y": 745.52001953125,
-      "width": 464.4999694824219,
+      "x": 419.90625,
+      "y": 746.01318359375,
+      "width": 464.5,
       "height": 538.5
     },
     "inset": 0,
     "width": 2048,
     "height": 3072,
-    "sha256": "13f79832a09c05baea213414c160a2a98a2b9340686d120981c18ffd585ed4b8",
-    "sailingTransform": "transform: translate(-0.524633%, 1.12508%);"
+    "sha256": "3a39edbc8846f4f7c70b32f288802c5b22dcaf2a7cd13222043029d75d7ac956",
+    "sailingTransform": "transform: translate(-0.546265%, 1.17147%);"
   },
   {
     "output": "public/scene-art/barge-v5/outcome-rush-portrait.webp",
@@ -98,16 +164,16 @@
       "height": 1536
     },
     "hull": {
-      "x": 420.017578125,
-      "y": 743.6491088867188,
+      "x": 420.29095458984375,
+      "y": 744.7224731445312,
       "width": 464.5,
-      "height": 538.4999389648438
+      "height": 538.5000610351562
     },
     "inset": 0,
     "width": 2048,
     "height": 3072,
-    "sha256": "fd7d94aa2744306fb6ff0cc3917f37408701bec51ae0b6f3e19c1dcee112713e",
-    "sailingTransform": "transform: translate(-0.535394%, 1.14816%);"
+    "sha256": "bf09c403d0a54b2937a026a0ac3a847dd38a8157ddb3bcee676cdca211f71045",
+    "sailingTransform": "transform: translate(-0.508695%, 1.0909%);"
   },
   {
     "output": "public/scene-art/barge-v5/outcome-petr-portrait.webp",
@@ -120,81 +186,15 @@
       "height": 1536
     },
     "hull": {
-      "x": 420.2368469238281,
-      "y": 742.6931762695312,
-      "width": 464.4999694824219,
-      "height": 538.5000610351562
+      "x": 420.017578125,
+      "y": 744.2556762695312,
+      "width": 464.5,
+      "height": 538.4999389648438
     },
     "inset": 0,
     "width": 2048,
     "height": 3072,
-    "sha256": "ac663d19452496202dd65f3253633b796f174ad5eb36a7e90f74fdb11fde7ff5",
-    "sailingTransform": "transform: translate(-0.51398%, 1.10223%);"
-  },
-  {
-    "output": "public/scene-art/barge-v5/outcome-remote-rail.webp",
-    "format": "mid",
-    "id": "remote",
-    "clip": {
-      "x": 11.00559362510728,
-      "y": 0,
-      "width": 1203.1754277400198,
-      "height": 1083.9418267928106
-    },
-    "hull": {
-      "x": 379.9991149902344,
-      "y": 589.6096801757812,
-      "width": 746.5000305175781,
-      "height": 417
-    },
-    "inset": 0.0675,
-    "width": 2406,
-    "height": 2166,
-    "sha256": "1854fe479a9f32e8429c501eb453f450cf4bedef84a9acb0b98c1b8c3f70dc70",
-    "sailingTransform": "transform: translate(-1.21262%, 1.12319%);"
-  },
-  {
-    "output": "public/scene-art/barge-v5/outcome-rush-rail.webp",
-    "format": "mid",
-    "id": "rush",
-    "clip": {
-      "x": 10.044179927406958,
-      "y": 0,
-      "width": 1204.120624520186,
-      "height": 1084.793355423591
-    },
-    "hull": {
-      "x": 379.021484375,
-      "y": 590.345703125,
-      "width": 746.5,
-      "height": 417
-    },
-    "inset": 0.0675,
-    "width": 2408,
-    "height": 2168,
-    "sha256": "bdcb94db2e1dfc952cf80c1148c5cb7df2dd30fb63805ff5ca44a6f59303784b",
-    "sailingTransform": "transform: translate(-1.28235%, 1.18778%);"
-  },
-  {
-    "output": "public/scene-art/barge-v5/outcome-petr-rail.webp",
-    "format": "mid",
-    "id": "petr",
-    "clip": {
-      "x": 10.459891346837708,
-      "y": 0,
-      "width": 1203.468980734059,
-      "height": 1084.2062889496026
-    },
-    "hull": {
-      "x": 379.2012634277344,
-      "y": 589.820556640625,
-      "width": 746.5000305175781,
-      "height": 417
-    },
-    "inset": 0.0675,
-    "width": 2406,
-    "height": 2168,
-    "sha256": "75b1f1855387d709d485dbb5dd0678480894897178d1dd4192c7ce6b6420b700",
-    "sailingTransform": "transform: translate(-1.26952%, 1.1759%);"
+    "sha256": "9c38e323cf0b15d5346d5f6aa788a32c2ef52406c9713ed4a04264a6b4c3262d",
+    "sailingTransform": "transform: translate(-0.535394%, 1.14816%);"
   }
 ]

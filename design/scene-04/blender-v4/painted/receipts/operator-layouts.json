@@ -1,0 +1,30 @@
+{
+  "scale": 4,
+  "boxes": {
+    "wide": {
+      "x": 932.0,
+      "y": 282.75,
+      "w": 106.25,
+      "h": 76.25
+    },
+    "desk": {
+      "x": 683.5,
+      "y": 381.0,
+      "w": 122.75,
+      "h": 89.5
+    },
+    "mid": {
+      "x": 604.25,
+      "y": 443.75,
+      "w": 117.0,
+      "h": 83.0
+    },
+    "tall": {
+      "x": 409.5,
+      "y": 719.0,
+      "w": 108.0,
+      "h": 78.0
+    }
+  },
+  "note": "Native before/after crops have no rescaling. Before is 1.5x authored source; after operator is 4x logical source; approved 2x crane background is resampled only for context."
+}

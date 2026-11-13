@@ -1,0 +1,149 @@
+{
+  "sameBytes": 36,
+  "rows": [
+    {
+      "path": "public/scene-art/barge-v5/wide/top.webp",
+      "sha256": "88167ae5dd49d0f4ec0efba9c440edce6ea699c5f8dbe1edead7db53d66a4f35"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/top-ivan.webp",
+      "sha256": "e316d0af45106024210346294ab572bb6d52799774fca2d58d328173b47d26fe"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/top-petr.webp",
+      "sha256": "8440b0b3bd836b67e2a12334637f94b07a6f51a59b6a6039edb21b3bfec9c661"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/far.webp",
+      "sha256": "62511f7bb83edc4de327724b7327f199cd1ba993042bfdeb2d17cb8a0209f86b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/far-empty.webp",
+      "sha256": "c12e09f068d10aa4ea421ea21c6345b082a7b19e7d1ec35646f99fb6c4ee288f"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/office.webp",
+      "sha256": "0d1ad406aa9d1a8c5b13b39f2b71473a11019c1c19ba95e6e6bce962d86b4915"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-joy.webp",
+      "sha256": "e2efa20d031359551029202e812924fc32fe4ed86c3b1166f7af030576bb3239"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-wave.webp",
+      "sha256": "641a7523cb2770cc571508c4c9963882e01b1deb9ba84d7e6a9ea3658bd2a7ff"
+    },
+    {
+      "path": "public/scene-art/barge-v5/wide/ivan-cheer.webp",
+      "sha256": "73d6201aab90bcee596d764935ad712e5e1545adc7fcbdb2728aa7e16db97d75"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/top.webp",
+      "sha256": "6e5167b866277b6a14be820e50e823ec829f2f144c90d3aaae2bb893ca1faf9b"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/top-ivan.webp",
+      "sha256": "5539b398eba0eef82f711d58a4f10933e107b7ab86f11421de5faeb45bd39ec2"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/top-petr.webp",
+      "sha256": "fe32793d34066db8150daddcacf7bc161bb0410bac0924f54fae411b5ee46e40"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/far.webp",
+      "sha256": "5414d0f8e3bbc21e220ed722ce3a4d63ff80e481d76949988d7f3bde42cb44ef"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/far-empty.webp",
+      "sha256": "2d929c55b8135325e555cd79ee4d8b1c1e07059e5985911f95c38f34553c36f6"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/office.webp",
+      "sha256": "8e9b31e9b027f91fc6eeaf087409e24b0f7b8ba6f3464d316e139826239cac7a"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-joy.webp",
+      "sha256": "749c6cff114cff457abbfda7be4883fa9cba1986e9dc32160c6091035ab5b7ff"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-wave.webp",
+      "sha256": "094b2be09e43cdb2eb45c45728b74ed1d1cf0068e0e34997408fb06e16af8d70"
+    },
+    {
+      "path": "public/scene-art/barge-v5/desk/ivan-cheer.webp",
+      "sha256": "821c520b10d8d483b8406124d07a1dfd2eb4c8d35c2e638d035fbb339deac838"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/top.webp",
+      "sha256": "322faeaec59082d36e65e39d3f0199231f70169d835a28577cec819990cafee4"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/top-ivan.webp",
+      "sha256": "73c624ae1317a55ea734e0fcac3ab445b7f5ea66a1af55de7d1918afd7e259e7"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/top-petr.webp",
+      "sha256": "7be5899fd0e83de5ab1d76daae2150fbb627d83f3850dee9fbb65321851ba359"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/far.webp",
+      "sha256": "89576d4418f4cc3c68382a5bc343669ad0571fa02c4746c7db668d17d4b08836"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/far-empty.webp",
+      "sha256": "9342691e7a93b6bec33da837397cdfaddadb776361f08ebb5c24a90bbc1fb35c"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/office.webp",
+      "sha256": "beb34f08e218d9f12b7f3241db982010bd408cc509ccc35f3a22dd8b594f5868"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-joy.webp",
+      "sha256": "97f27d04f8a73ef4aec93b232a1d0bcb91a497c18ba40a6966a3378ffd394a19"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-wave.webp",
+      "sha256": "c95d1507be67f58efd32de68176c234ee945da0fdfdcfd8091b375327d4163da"
+    },
+    {
+      "path": "public/scene-art/barge-v5/mid/ivan-cheer.webp",
+      "sha256": "e2cd07022ad6ec303172b838398e2968f9aa304e9ddfb91e16e52e7f6b4ca9f2"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/top.webp",
+      "sha256": "7ade065a639af3be5515f5c1efb598515366a7a79f30415ceb9add3b58e891af"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/top-ivan.webp",
+      "sha256": "1b2c142c28a7ec7cd76ff7b99a6e2dd325a9e4ea2cea194dc78a2e36f3bccab7"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/top-petr.webp",
+      "sha256": "a166f44f8261c279678edce8640019e28c9df888fec8d25ae78e196b6f4fb4d5"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/far.webp",
+      "sha256": "f5f2b753492ed31eade9d11c2969c37913955e4185f5d33aa85f050c3704f635"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/far-empty.webp",
+      "sha256": "e3ab5a2250a539888e378b90559cc15d8ae7ed10b8cb01874d02f1a0e4b7aafd"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/office.webp",
+      "sha256": "32d614c01fb504c4ba8e4db7ee4525cb1aa79460f1d9aca6731a900c09c3d162"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-joy.webp",
+      "sha256": "23eab8db94d6d4caed3d433e2319a065997d837d46ec06b08cabef4980ff86e4"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-wave.webp",
+      "sha256": "462adc6470b8406ca6df0e8d670f2f326e20c56636bfc67923d606ef88c0134a"
+    },
+    {
+      "path": "public/scene-art/barge-v5/tall/ivan-cheer.webp",
+      "sha256": "e581ac9585b76bd86a924c810454245444484160d4043116424fefaee9b14b5e"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
 import { craneArtwork, craneCaptions, craneWorld, type CraneFormat, type Rect } from "./artwork";
-import { castSrc, craneCast } from "./cast";
+import { castSrc, craneCast, craneOperatorBoxes } from "./cast";
 import { craneBeat, craneDeckDelta, craneDuration, craneRest, craneSail } from "./consequence";
 import { craneScene } from "./index";
 import { fitTapTargets } from "./tapTargets";
@@ -182,6 +182,10 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const [hookX, hookY] = beat.hook ? art.project(beat.hook) : [0, 0];
   const s = art.sprites;
   const cast = craneCast[view.format];
+  const sheetStyle = {
+    width: `${art.top.cols * 100}%`, height: `${art.top.rows * 100}%`,
+    transform: `translate(${(-(beat.frame % art.top.cols) / art.top.cols) * 100}%, ${(-Math.floor(beat.frame / art.top.cols) / art.top.rows) * 100}%)`,
+  };
   const anchor = art.anchors;
   // Overlay marks are drawn in drawing px; keep them readable when a big drawing is shrunk to a phone.
   const k = view.width ? Math.max(1, (0.8 * art.width) / view.width) : 1;
@@ -196,7 +200,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const sprite = (name: keyof typeof s, extra?: { style?: CSSProperties; lit?: boolean; className?: string; data?: string }) => (
     <img
       className={[styles.layer, extra?.className].filter(Boolean).join(" ")}
-      src={source(s[name].src)}
+      src={source(name === "far" && beat.cab === "empty" ? castSrc(view.format, "far-empty") : s[name].src)}
       alt=""
       draggable={false}
       decoding="sync"
@@ -212,6 +216,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       ref={stage}
       className={styles.stage}
       data-world-scene="crane"
+      data-artwork-ready={status === "ready"}
       data-barge-art={view.format}
       data-selected={playing ?? selectedId}
       data-playing={playing}
@@ -236,15 +241,13 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {/* Remote way: the whole ПРУ building glows, not Ivan inside its glass. */}
         {cast && <img className={styles.layer} src={source(castSrc(view.format, "office"))} alt="" draggable={false} decoding="sync" data-layer="pru" data-lit={lit.has("ivan") || undefined} style={box(cast.office)} />}
         {!beat.lifted && !beat.onDeck && sprite("gift")}
-        {!(cast && beat.office) && sprite("ivan", { lit: !cast && lit.has("ivan") })}
+        {/* The office composite already contains Ivan; never add the legacy cutout over his head. */}
+        {!cast && sprite("ivan", { lit: lit.has("ivan") })}
         {cast && beat.office && (
           <img className={styles.layer} src={source(castSrc(view.format, `ivan-${beat.office}`))} alt="" draggable={false} decoding="sync" data-layer="office" style={box(cast.window)} />
         )}
         {sprite("ladder", { lit: lit.has("ladder") })}
         {sprite("far", { lit: lit.has("far") })}
-        {cast && beat.cab && (
-          <img className={styles.layer} src={source(castSrc(view.format, `far-${beat.cab}`))} alt="" draggable={false} decoding="sync" data-layer="cab" style={box(cast.cab)} />
-        )}
         <div className={styles.sail} style={move({ w: art.width, h: art.height }, sail)} data-sailing={beat.sail > 0 || undefined}>
           <div className={styles.bob}>
             {sprite("barge")}
@@ -266,17 +269,19 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         <div className={styles.layer} style={box(art.top)} data-layer="top" data-lit={lit.has("near") || undefined}>
           <img
             className={styles.sheet}
-            src={source(cast && beat.operator ? art.top.src.replace(/top\.webp$/, `top-${beat.operator}.webp`) : art.top.src)}
+            src={source(art.top.src)}
             alt=""
             draggable={false}
             decoding="sync"
-            style={{
-              width: `${art.top.cols * 100}%`,
-              height: `${art.top.rows * 100}%`,
-              transform: `translate(${(-(beat.frame % art.top.cols) / art.top.cols) * 100}%, ${(-Math.floor(beat.frame / art.top.cols) / art.top.rows) * 100}%)`,
-            }}
+            style={sheetStyle}
           />
         </div>
+        {cast && beat.operator && (
+          <div className={styles.layer} style={box(craneOperatorBoxes[view.format])} data-layer="operator">
+            <img className={styles.sheet} src={source(castSrc(view.format, `top-${beat.operator}`))}
+              alt="" draggable={false} decoding="sync" style={sheetStyle} />
+          </div>
+        )}
         {beat.hook && (
           <svg className={styles.cable} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             <line x1={tipX} y1={tipY} x2={hookX} y2={hookY} />

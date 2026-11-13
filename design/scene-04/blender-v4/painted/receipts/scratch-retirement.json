@@ -1,0 +1,118 @@
+{
+  "scope": "Owned reproducible/superseded scratch only; all198 retained media hashes and36 rebuild/runtime byte comparisons verified first. Latest results, nine native outcome comparisons,128operator-frame proofs and cold-load regression evidence retained.",
+  "physicallyFreedBytes": 0,
+  "rows": [
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/rebuild",
+      "bytesMovedToTrash": 30752576
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/before",
+      "bytesMovedToTrash": 29024881
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/candidates",
+      "bytesMovedToTrash": 42989766
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/inputs",
+      "bytesMovedToTrash": 2946388
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-final-render/gpt",
+      "bytesMovedToTrash": 186179691
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-final-render/painted-assets",
+      "bytesMovedToTrash": 23764467
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-final-render/gate",
+      "bytesMovedToTrash": 18146709
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-final-render/final",
+      "bytesMovedToTrash": 47768375
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-final-render/motion",
+      "bytesMovedToTrash": 9806473
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/preview-diagnostic.png",
+      "bytesMovedToTrash": 5851
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/live-proof.json",
+      "bytesMovedToTrash": 1027
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/desk-far-original-flat.png",
+      "bytesMovedToTrash": 214516
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/desk-far-candidate-flat.png",
+      "bytesMovedToTrash": 212654
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/expressions-a1.png",
+      "bytesMovedToTrash": 825123
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/near-far-scale.png",
+      "bytesMovedToTrash": 769138
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/far-machinery-region.png",
+      "bytesMovedToTrash": 361916
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/wide-office-coordinate-audit.png",
+      "bytesMovedToTrash": 872821
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/desk-office-coordinate-audit.png",
+      "bytesMovedToTrash": 856751
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/mid-office-coordinate-audit.png",
+      "bytesMovedToTrash": 756624
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/tall-office-coordinate-audit.png",
+      "bytesMovedToTrash": 558600
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/rush-1440-motion-proof.png",
+      "bytesMovedToTrash": 5042752
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/rush-1440-operator-native-2dpr.png",
+      "bytesMovedToTrash": 58594
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/rush-390-motion-proof.png",
+      "bytesMovedToTrash": 1457767
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/rush-390-operator-native-2dpr.png",
+      "bytesMovedToTrash": 16148
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/petr-1440-motion-proof.png",
+      "bytesMovedToTrash": 5054887
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/petr-1440-operator-native-2dpr.png",
+      "bytesMovedToTrash": 58438
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/petr-390-motion-proof.png",
+      "bytesMovedToTrash": 1445788
+    },
+    {
+      "path": "/home/michael/Github/energy-plus-quest/.tmp-work/scene4-faces/reviews/petr-390-operator-native-2dpr.png",
+      "bytesMovedToTrash": 16074
+    }
+  ]
+}

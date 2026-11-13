@@ -1,0 +1,42 @@
+[
+  {
+    "format": "wide",
+    "size": [
+      582,
+      519
+    ],
+    "changedPixels": 12791,
+    "alphaExact": true,
+    "outsideMasksExact": true
+  },
+  {
+    "format": "desk",
+    "size": [
+      668,
+      555
+    ],
+    "changedPixels": 30005,
+    "alphaExact": true,
+    "outsideMasksExact": true
+  },
+  {
+    "format": "mid",
+    "size": [
+      647,
+      521
+    ],
+    "changedPixels": 27098,
+    "alphaExact": true,
+    "outsideMasksExact": true
+  },
+  {
+    "format": "tall",
+    "size": [
+      689,
+      468
+    ],
+    "changedPixels": 21117,
+    "alphaExact": true,
+    "outsideMasksExact": true
+  }
+]

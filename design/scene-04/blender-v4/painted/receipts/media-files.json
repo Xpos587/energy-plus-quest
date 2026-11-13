@@ -1,8 +1,143 @@
 {
   "published": false,
-  "files": 171,
-  "bytes": 110193828,
+  "files": 198,
+  "bytes": 129272931,
   "rows": [
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/desk/far.webp",
+      "bytes": 60046,
+      "sha256": "5900de0a9f669f40472ef2aaa56ae216ff9ddaef8cbac448d22e588200762f58"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/desk/ivan-cheer.webp",
+      "bytes": 9456,
+      "sha256": "9bb3172cf534b21d95f0be66e0d3a710632485d47e4c9109b428f5a568db3fa7"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/desk/ivan-joy.webp",
+      "bytes": 9694,
+      "sha256": "18732fac787c90c5be49fae9e64e9b825fb45378287f04e66f9a4db6dc23bcde"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/desk/ivan-wave.webp",
+      "bytes": 9156,
+      "sha256": "001fcb8ea346531749deb28b53be244aaad0148c205dbf70b60b49a96ab568c7"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/desk/office.webp",
+      "bytes": 20930,
+      "sha256": "9eb8140281028b6234f1fec6cefe34378b43295338527afff946029eea343f0f"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/desk/top.webp",
+      "bytes": 995600,
+      "sha256": "1e63136b459b6c45b1601141bb10bb995647b05455afe67e7335a799f1a392f2"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/mid/far.webp",
+      "bytes": 60830,
+      "sha256": "2e7957507d4c219e9c00bf7bb3915abae3bf5de83f3e43e5dc90d88bd961d0f3"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/mid/ivan-cheer.webp",
+      "bytes": 7986,
+      "sha256": "239e70997fa308000158bdcccfde20a61ea934b54dbc1dcf4020022bb7c746ac"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/mid/ivan-joy.webp",
+      "bytes": 7680,
+      "sha256": "a893029bb0f33823873ef71e4a5da0456e2bf27c517288ba897bdfce6d1d8d36"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/mid/ivan-wave.webp",
+      "bytes": 8310,
+      "sha256": "61300b50dc39b786ca32779605e41d433cec50c7aecec8d80db1eadd3133e8a7"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/mid/office.webp",
+      "bytes": 18082,
+      "sha256": "97d8c9b2883b8d2400567da2ea8b15513173d1a75cf10205c1ac9ea448084f4a"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/mid/top.webp",
+      "bytes": 938962,
+      "sha256": "4371d5adede6556c05d7b477d8c7ad71d1dda1b439d1309f2af9d1e6a9eeaa25"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/tall/far.webp",
+      "bytes": 58392,
+      "sha256": "be24ca6b43cb21265fab02c21a4d6fa6ad0f57beefd9ab4d7ce6f5c4a485801e"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/tall/ivan-cheer.webp",
+      "bytes": 5910,
+      "sha256": "4a1d5dd39cd7c5c5bc7dfc4497599ca7197e8081fe794fe3323ce7b6aeec713f"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/tall/ivan-joy.webp",
+      "bytes": 6158,
+      "sha256": "80606f19e086fcfce7f4335153c038358f0a8668d878c627ecc4225b3f22b6e2"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/tall/ivan-wave.webp",
+      "bytes": 6138,
+      "sha256": "6752c4fbf0298eee237557fc6de580b1291f5756c6e85ebf76dcc8cf482ca3fe"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/tall/office.webp",
+      "bytes": 11946,
+      "sha256": "d523282948824b656c6dd601291097fb6c69ea4f32b0e926565c565cce25e73b"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/tall/top.webp",
+      "bytes": 656666,
+      "sha256": "559c053d524c7269d7c8d80a43e279181133fa6305e2cab32bef74fe1d81d41f"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/wide/far.webp",
+      "bytes": 53912,
+      "sha256": "7bd12ea96f100f8340386d21aac604527c2a345efd9a071ef6b1c97b20115832"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/wide/ivan-cheer.webp",
+      "bytes": 9072,
+      "sha256": "c9fcba3cfa29115aab3eda1d9ff24c795f63af8ed69d4e4b7a2d0975e6e80f13"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/wide/ivan-joy.webp",
+      "bytes": 9400,
+      "sha256": "a4c49bb14860291c9e781fb7799de03eaac9b0bb46a96b386af6a7fe8c896616"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/wide/ivan-wave.webp",
+      "bytes": 9048,
+      "sha256": "dfc55992c6fefef1abd243f036e2030116c207b153d678f6e59c3a1a722b24d4"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/wide/office.webp",
+      "bytes": 17364,
+      "sha256": "4652b800c742c5d510aca0dfbf70f9bec49413c9d8c9f76dc1c32b8dbdb6e8b4"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/face-inputs/wide/top.webp",
+      "bytes": 943886,
+      "sha256": "a652714f7fb6afc93ebbcdcc8c21a238c5484ec39d177864b2fb7b46aabb3011"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/expressions-a1.png",
+      "bytes": 1738263,
+      "sha256": "ec3a7b51f29af9550409eb4a7b2dfda4f6d636fed88b85751b62fa2ff6764460"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/far-empty-a1.png",
+      "bytes": 1500726,
+      "sha256": "d928858e84cb67a054eab56d59e02841d04cbdf666f50807f64634aca2d4e774"
+    },
+    {
+      "path": "design/scene-04/blender-v4/painted/model-images/operators-a1.png",
+      "bytes": 1575968,
+      "sha256": "0099cfc6dd1bad36ecb86217b823ae6c27c68dba15d1d5a4a8e8d3d6fae113d2"
+    },
     {
       "path": "design/scene-04/blender-v4/painted/model-images/v4-plate-desk-left-bottom-recovered-a1.png",
       "bytes": 2181992,
@@ -265,8 +400,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/desk/far-empty.webp",
-      "bytes": 10314,
-      "sha256": "05aaedd8a0961d00af1e01ee761a714febdfe6b6e5b44703e7137fe8856093f9"
+      "bytes": 197280,
+      "sha256": "2d929c55b8135325e555cd79ee4d8b1c1e07059e5985911f95c38f34553c36f6"
     },
     {
       "path": "public/scene-art/barge-v5/desk/far-idle.webp",
@@ -280,8 +415,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/desk/far.webp",
-      "bytes": 60046,
-      "sha256": "5900de0a9f669f40472ef2aaa56ae216ff9ddaef8cbac448d22e588200762f58"
+      "bytes": 202236,
+      "sha256": "5414d0f8e3bbc21e220ed722ce3a4d63ff80e481d76949988d7f3bde42cb44ef"
     },
     {
       "path": "public/scene-art/barge-v5/desk/gift.webp",
@@ -295,8 +430,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/desk/ivan-cheer.webp",
-      "bytes": 9456,
-      "sha256": "9bb3172cf534b21d95f0be66e0d3a710632485d47e4c9109b428f5a568db3fa7"
+      "bytes": 122690,
+      "sha256": "821c520b10d8d483b8406124d07a1dfd2eb4c8d35c2e638d035fbb339deac838"
     },
     {
       "path": "public/scene-art/barge-v5/desk/ivan-climb1.webp",
@@ -315,8 +450,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/desk/ivan-joy.webp",
-      "bytes": 9694,
-      "sha256": "18732fac787c90c5be49fae9e64e9b825fb45378287f04e66f9a4db6dc23bcde"
+      "bytes": 120682,
+      "sha256": "749c6cff114cff457abbfda7be4883fa9cba1986e9dc32160c6091035ab5b7ff"
     },
     {
       "path": "public/scene-art/barge-v5/desk/ivan-run1.webp",
@@ -330,8 +465,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/desk/ivan-wave.webp",
-      "bytes": 9156,
-      "sha256": "001fcb8ea346531749deb28b53be244aaad0148c205dbf70b60b49a96ab568c7"
+      "bytes": 121470,
+      "sha256": "094b2be09e43cdb2eb45c45728b74ed1d1cf0068e0e34997408fb06e16af8d70"
     },
     {
       "path": "public/scene-art/barge-v5/desk/ivan.webp",
@@ -345,8 +480,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/desk/office.webp",
-      "bytes": 20930,
-      "sha256": "9eb8140281028b6234f1fec6cefe34378b43295338527afff946029eea343f0f"
+      "bytes": 334448,
+      "sha256": "8e9b31e9b027f91fc6eeaf087409e24b0f7b8ba6f3464d316e139826239cac7a"
     },
     {
       "path": "public/scene-art/barge-v5/desk/petr-climb.webp",
@@ -380,18 +515,18 @@
     },
     {
       "path": "public/scene-art/barge-v5/desk/top-ivan.webp",
-      "bytes": 452420,
-      "sha256": "7b43c23fdb031b03c2fc60d5560419fdb702b690a6531a6d3f183f52b106f5e9"
+      "bytes": 218510,
+      "sha256": "5539b398eba0eef82f711d58a4f10933e107b7ab86f11421de5faeb45bd39ec2"
     },
     {
       "path": "public/scene-art/barge-v5/desk/top-petr.webp",
-      "bytes": 459978,
-      "sha256": "b8017603504a79dd97277e96ae7e5166962e9f2063a4cfd4bffeb8fa46d5336a"
+      "bytes": 215202,
+      "sha256": "fe32793d34066db8150daddcacf7bc161bb0410bac0924f54fae411b5ee46e40"
     },
     {
       "path": "public/scene-art/barge-v5/desk/top.webp",
-      "bytes": 995600,
-      "sha256": "1e63136b459b6c45b1601141bb10bb995647b05455afe67e7335a799f1a392f2"
+      "bytes": 3467098,
+      "sha256": "6e5167b866277b6a14be820e50e823ec829f2f144c90d3aaae2bb893ca1faf9b"
     },
     {
       "path": "public/scene-art/barge-v5/mid/barge.webp",
@@ -405,8 +540,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/mid/far-empty.webp",
-      "bytes": 9628,
-      "sha256": "50ce4b6c96758e158b18c2a41956238897fc960318d33c60dd5ed10b707960ee"
+      "bytes": 193042,
+      "sha256": "9342691e7a93b6bec33da837397cdfaddadb776361f08ebb5c24a90bbc1fb35c"
     },
     {
       "path": "public/scene-art/barge-v5/mid/far-idle.webp",
@@ -420,8 +555,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/mid/far.webp",
-      "bytes": 60830,
-      "sha256": "2e7957507d4c219e9c00bf7bb3915abae3bf5de83f3e43e5dc90d88bd961d0f3"
+      "bytes": 197990,
+      "sha256": "89576d4418f4cc3c68382a5bc343669ad0571fa02c4746c7db668d17d4b08836"
     },
     {
       "path": "public/scene-art/barge-v5/mid/gift.webp",
@@ -435,8 +570,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/mid/ivan-cheer.webp",
-      "bytes": 7986,
-      "sha256": "239e70997fa308000158bdcccfde20a61ea934b54dbc1dcf4020022bb7c746ac"
+      "bytes": 102970,
+      "sha256": "e2cd07022ad6ec303172b838398e2968f9aa304e9ddfb91e16e52e7f6b4ca9f2"
     },
     {
       "path": "public/scene-art/barge-v5/mid/ivan-climb1.webp",
@@ -455,8 +590,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/mid/ivan-joy.webp",
-      "bytes": 7680,
-      "sha256": "a893029bb0f33823873ef71e4a5da0456e2bf27c517288ba897bdfce6d1d8d36"
+      "bytes": 97904,
+      "sha256": "97f27d04f8a73ef4aec93b232a1d0bcb91a497c18ba40a6966a3378ffd394a19"
     },
     {
       "path": "public/scene-art/barge-v5/mid/ivan-run1.webp",
@@ -470,8 +605,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/mid/ivan-wave.webp",
-      "bytes": 8310,
-      "sha256": "61300b50dc39b786ca32779605e41d433cec50c7aecec8d80db1eadd3133e8a7"
+      "bytes": 105562,
+      "sha256": "c95d1507be67f58efd32de68176c234ee945da0fdfdcfd8091b375327d4163da"
     },
     {
       "path": "public/scene-art/barge-v5/mid/ivan.webp",
@@ -485,8 +620,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/mid/office.webp",
-      "bytes": 18082,
-      "sha256": "97d8c9b2883b8d2400567da2ea8b15513173d1a75cf10205c1ac9ea448084f4a"
+      "bytes": 301076,
+      "sha256": "beb34f08e218d9f12b7f3241db982010bd408cc509ccc35f3a22dd8b594f5868"
     },
     {
       "path": "public/scene-art/barge-v5/mid/petr-climb.webp",
@@ -520,63 +655,63 @@
     },
     {
       "path": "public/scene-art/barge-v5/mid/top-ivan.webp",
-      "bytes": 402382,
-      "sha256": "f62185cf54baca819bf66fbaad81c286cdf116bfd4d0aa7d2d80447afe025320"
+      "bytes": 194428,
+      "sha256": "73c624ae1317a55ea734e0fcac3ab445b7f5ea66a1af55de7d1918afd7e259e7"
     },
     {
       "path": "public/scene-art/barge-v5/mid/top-petr.webp",
-      "bytes": 404854,
-      "sha256": "88caaab2c8c45a3cb919309be03cfaa38f5f14aa8eaf73393cf8c9db335c7448"
+      "bytes": 189896,
+      "sha256": "7be5899fd0e83de5ab1d76daae2150fbb627d83f3850dee9fbb65321851ba359"
     },
     {
       "path": "public/scene-art/barge-v5/mid/top.webp",
-      "bytes": 938962,
-      "sha256": "4371d5adede6556c05d7b477d8c7ad71d1dda1b439d1309f2af9d1e6a9eeaa25"
+      "bytes": 3171718,
+      "sha256": "322faeaec59082d36e65e39d3f0199231f70169d835a28577cec819990cafee4"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-petr-portrait.webp",
-      "bytes": 972788,
-      "sha256": "ac663d19452496202dd65f3253633b796f174ad5eb36a7e90f74fdb11fde7ff5"
+      "bytes": 982244,
+      "sha256": "9c38e323cf0b15d5346d5f6aa788a32c2ef52406c9713ed4a04264a6b4c3262d"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-petr-rail.webp",
-      "bytes": 921232,
-      "sha256": "75b1f1855387d709d485dbb5dd0678480894897178d1dd4192c7ce6b6420b700"
+      "bytes": 971536,
+      "sha256": "f1d28d8babed5d1b12802768c56f6dde5e13d702b222c0ce6ca4431c04d206fc"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-petr.webp",
-      "bytes": 1065756,
-      "sha256": "d5daed192d245df86fda1abfe23cb58caa617c473c15e4aadc4df231f4a3f89c"
+      "bytes": 1074080,
+      "sha256": "fe64943c0bbe12d8ea32e1464a7bcf3d8a7e7434449cb439e60aaf8e0955f39a"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-remote-portrait.webp",
-      "bytes": 979152,
-      "sha256": "13f79832a09c05baea213414c160a2a98a2b9340686d120981c18ffd585ed4b8"
+      "bytes": 980134,
+      "sha256": "3a39edbc8846f4f7c70b32f288802c5b22dcaf2a7cd13222043029d75d7ac956"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-remote-rail.webp",
-      "bytes": 963236,
-      "sha256": "1854fe479a9f32e8429c501eb453f450cf4bedef84a9acb0b98c1b8c3f70dc70"
+      "bytes": 960730,
+      "sha256": "33fb5eae65be808ac77506f11114769a049f2a59779e30cd33322bbb13ec77e0"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-remote.webp",
-      "bytes": 1070008,
-      "sha256": "268124bfa802a9ece6f2c01e594ae165251572e25ae370b639a293f622290231"
+      "bytes": 1074982,
+      "sha256": "8dd800de1b4b04689fd5c326bdae57e42be9c9b1cae9c6338df096cf87296b3c"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-rush-portrait.webp",
-      "bytes": 971926,
-      "sha256": "fd7d94aa2744306fb6ff0cc3917f37408701bec51ae0b6f3e19c1dcee112713e"
+      "bytes": 976222,
+      "sha256": "bf09c403d0a54b2937a026a0ac3a847dd38a8157ddb3bcee676cdca211f71045"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-rush-rail.webp",
-      "bytes": 929266,
-      "sha256": "bdcb94db2e1dfc952cf80c1148c5cb7df2dd30fb63805ff5ca44a6f59303784b"
+      "bytes": 950028,
+      "sha256": "d643b45ae44f58d1963a35d455e9aa8d0f78a08828fbf140a9a239d6cad74d35"
     },
     {
       "path": "public/scene-art/barge-v5/outcome-rush.webp",
-      "bytes": 1065232,
-      "sha256": "4d66b2cb053ed71cf4c10f4288dcfdeb815bfa3c915dc9ea5cd4f2740f8c5353"
+      "bytes": 1072510,
+      "sha256": "b64f9422ad187caa3cf1ae0be2456798d0cd741da90aadd2ba37960e96e364c6"
     },
     {
       "path": "public/scene-art/barge-v5/tall/barge.webp",
@@ -590,8 +725,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/tall/far-empty.webp",
-      "bytes": 6914,
-      "sha256": "e89f687b4f7fc246a956935ef39f887c6e3465e159e634810eac38a9fbe25c8f"
+      "bytes": 181600,
+      "sha256": "e3ab5a2250a539888e378b90559cc15d8ae7ed10b8cb01874d02f1a0e4b7aafd"
     },
     {
       "path": "public/scene-art/barge-v5/tall/far-idle.webp",
@@ -605,8 +740,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/tall/far.webp",
-      "bytes": 58392,
-      "sha256": "be24ca6b43cb21265fab02c21a4d6fa6ad0f57beefd9ab4d7ce6f5c4a485801e"
+      "bytes": 183450,
+      "sha256": "f5f2b753492ed31eade9d11c2969c37913955e4185f5d33aa85f050c3704f635"
     },
     {
       "path": "public/scene-art/barge-v5/tall/gift.webp",
@@ -620,8 +755,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/tall/ivan-cheer.webp",
-      "bytes": 5910,
-      "sha256": "4a1d5dd39cd7c5c5bc7dfc4497599ca7197e8081fe794fe3323ce7b6aeec713f"
+      "bytes": 77030,
+      "sha256": "e581ac9585b76bd86a924c810454245444484160d4043116424fefaee9b14b5e"
     },
     {
       "path": "public/scene-art/barge-v5/tall/ivan-climb1.webp",
@@ -640,8 +775,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/tall/ivan-joy.webp",
-      "bytes": 6158,
-      "sha256": "80606f19e086fcfce7f4335153c038358f0a8668d878c627ecc4225b3f22b6e2"
+      "bytes": 80064,
+      "sha256": "23eab8db94d6d4caed3d433e2319a065997d837d46ec06b08cabef4980ff86e4"
     },
     {
       "path": "public/scene-art/barge-v5/tall/ivan-run1.webp",
@@ -655,8 +790,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/tall/ivan-wave.webp",
-      "bytes": 6138,
-      "sha256": "6752c4fbf0298eee237557fc6de580b1291f5756c6e85ebf76dcc8cf482ca3fe"
+      "bytes": 80986,
+      "sha256": "462adc6470b8406ca6df0e8d670f2f326e20c56636bfc67923d606ef88c0134a"
     },
     {
       "path": "public/scene-art/barge-v5/tall/ivan.webp",
@@ -670,8 +805,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/tall/office.webp",
-      "bytes": 11946,
-      "sha256": "d523282948824b656c6dd601291097fb6c69ea4f32b0e926565c565cce25e73b"
+      "bytes": 198546,
+      "sha256": "32d614c01fb504c4ba8e4db7ee4525cb1aa79460f1d9aca6731a900c09c3d162"
     },
     {
       "path": "public/scene-art/barge-v5/tall/petr-climb.webp",
@@ -705,18 +840,18 @@
     },
     {
       "path": "public/scene-art/barge-v5/tall/top-ivan.webp",
-      "bytes": 281660,
-      "sha256": "e772acfe793dc20cd3d3ccc35121ce8621919fc3b6e71aeb0f22fd4886cc894f"
+      "bytes": 154932,
+      "sha256": "1b2c142c28a7ec7cd76ff7b99a6e2dd325a9e4ea2cea194dc78a2e36f3bccab7"
     },
     {
       "path": "public/scene-art/barge-v5/tall/top-petr.webp",
-      "bytes": 278526,
-      "sha256": "d8257b5f9dcd1e7b7c0982cb34b8515970edb3adc8ab24473d9f1dd697042e9a"
+      "bytes": 150790,
+      "sha256": "a166f44f8261c279678edce8640019e28c9df888fec8d25ae78e196b6f4fb4d5"
     },
     {
       "path": "public/scene-art/barge-v5/tall/top.webp",
-      "bytes": 656666,
-      "sha256": "559c053d524c7269d7c8d80a43e279181133fa6305e2cab32bef74fe1d81d41f"
+      "bytes": 2212390,
+      "sha256": "7ade065a639af3be5515f5c1efb598515366a7a79f30415ceb9add3b58e891af"
     },
     {
       "path": "public/scene-art/barge-v5/wide/barge.webp",
@@ -730,8 +865,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/wide/far-empty.webp",
-      "bytes": 11276,
-      "sha256": "5ea6be8458de6eb9d2b64d2fcba72975c762953583f8a3c319448122a255a57e"
+      "bytes": 177666,
+      "sha256": "c12e09f068d10aa4ea421ea21c6345b082a7b19e7d1ec35646f99fb6c4ee288f"
     },
     {
       "path": "public/scene-art/barge-v5/wide/far-idle.webp",
@@ -745,8 +880,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/wide/far.webp",
-      "bytes": 53912,
-      "sha256": "7bd12ea96f100f8340386d21aac604527c2a345efd9a071ef6b1c97b20115832"
+      "bytes": 179756,
+      "sha256": "62511f7bb83edc4de327724b7327f199cd1ba993042bfdeb2d17cb8a0209f86b"
     },
     {
       "path": "public/scene-art/barge-v5/wide/gift.webp",
@@ -760,8 +895,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/wide/ivan-cheer.webp",
-      "bytes": 9072,
-      "sha256": "c9fcba3cfa29115aab3eda1d9ff24c795f63af8ed69d4e4b7a2d0975e6e80f13"
+      "bytes": 123888,
+      "sha256": "73d6201aab90bcee596d764935ad712e5e1545adc7fcbdb2728aa7e16db97d75"
     },
     {
       "path": "public/scene-art/barge-v5/wide/ivan-climb1.webp",
@@ -780,8 +915,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/wide/ivan-joy.webp",
-      "bytes": 9400,
-      "sha256": "a4c49bb14860291c9e781fb7799de03eaac9b0bb46a96b386af6a7fe8c896616"
+      "bytes": 122616,
+      "sha256": "e2efa20d031359551029202e812924fc32fe4ed86c3b1166f7af030576bb3239"
     },
     {
       "path": "public/scene-art/barge-v5/wide/ivan-run1.webp",
@@ -795,8 +930,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/wide/ivan-wave.webp",
-      "bytes": 9048,
-      "sha256": "dfc55992c6fefef1abd243f036e2030116c207b153d678f6e59c3a1a722b24d4"
+      "bytes": 121680,
+      "sha256": "641a7523cb2770cc571508c4c9963882e01b1deb9ba84d7e6a9ea3658bd2a7ff"
     },
     {
       "path": "public/scene-art/barge-v5/wide/ivan.webp",
@@ -810,8 +945,8 @@
     },
     {
       "path": "public/scene-art/barge-v5/wide/office.webp",
-      "bytes": 17364,
-      "sha256": "4652b800c742c5d510aca0dfbf70f9bec49413c9d8c9f76dc1c32b8dbdb6e8b4"
+      "bytes": 289924,
+      "sha256": "0d1ad406aa9d1a8c5b13b39f2b71473a11019c1c19ba95e6e6bce962d86b4915"
     },
     {
       "path": "public/scene-art/barge-v5/wide/petr-climb.webp",
@@ -845,18 +980,18 @@
     },
     {
       "path": "public/scene-art/barge-v5/wide/top-ivan.webp",
-      "bytes": 449128,
-      "sha256": "dbe33ea32e9a7db0cc7acfbf488e9f08560d429bfd6647e21fd0179e16c3da65"
+      "bytes": 173036,
+      "sha256": "e316d0af45106024210346294ab572bb6d52799774fca2d58d328173b47d26fe"
     },
     {
       "path": "public/scene-art/barge-v5/wide/top-petr.webp",
-      "bytes": 447242,
-      "sha256": "d0ff22836e5c4895619324c58f11c44081db28f0a95da3d19f07284d82c96dc3"
+      "bytes": 171536,
+      "sha256": "8440b0b3bd836b67e2a12334637f94b07a6f51a59b6a6039edb21b3bfec9c661"
     },
     {
       "path": "public/scene-art/barge-v5/wide/top.webp",
-      "bytes": 943886,
-      "sha256": "a652714f7fb6afc93ebbcdcc8c21a238c5484ec39d177864b2fb7b46aabb3011"
+      "bytes": 3140506,
+      "sha256": "88167ae5dd49d0f4ec0efba9c440edce6ea699c5f8dbe1edead7db53d66a4f35"
     }
   ]
 }

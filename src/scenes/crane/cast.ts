@@ -49,4 +49,13 @@ export const craneCast = Object.fromEntries(Object.entries(authoredCast).map(([n
   return [format, { ...cast, window: place(cast.window), cab: place(cast.cab), office: place(cast.office) }];
 })) as Record<CraneFormat, Cast>;
 
+// Compact 4×4 operator overlays, rendered at 4× logical pixels from one identity per actor.
+// Generated from the unchanged cab projection; the painted crane shell stays separate.
+export const craneOperatorBoxes: Record<CraneFormat, Box> = {
+  wide: { x: 932, y: 282.75, w: 106.25, h: 76.25 },
+  desk: { x: 683.5, y: 381, w: 122.75, h: 89.5 },
+  mid: { x: 604.25, y: 443.75, w: 117, h: 83 },
+  tall: { x: 409.5, y: 719, w: 108, h: 78 },
+};
+
 export const castSrc = (format: CraneFormat, name: string) => `scene-art/barge-v5/${format}/${name}.webp`;

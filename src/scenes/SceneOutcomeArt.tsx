@@ -18,11 +18,11 @@ const outcomes: Record<string, string> = {
   "inventory-wms":
     "Система управления складом помогает сотруднику быстро забрать подарок возле отгрузки.",
   "crane-rush":
-    "Уставший, но довольный Иван отдыхает у лестницы крана; баржа с подарком отходит от причала.",
+    "Уставший, но довольный Иван сидит в кабине ближнего крана; баржа с подарком отходит от причала.",
   "crane-petr":
-    "Пётр из кабины ближнего крана опускает подарок на баржу, Иван радуется внизу; ящики Петра ждут у дальнего крана.",
+    "Пётр сидит в кабине ближнего крана, Иван радуется в офисе; баржа с подарком отходит, а ящики Петра ждут у его пустого дальнего крана.",
   "crane-remote":
-    "Иван в удобном кресле управляет краном джойстиками из офиса и смотрит, как подарок опускается на баржу.",
+    "Иван машет из офиса вслед барже с погруженным подарком; ближний кран пуст, Пётр остаётся в кабине дальнего крана.",
   "lastmile-helicopter":
     "Вертолёт доставляет подарок и трубы на посадочную площадку месторождения.",
   "lastmile-helicopter-remote":
@@ -101,6 +101,12 @@ export function SceneOutcomeArt({
           <ImageSources
             src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-rail.webp"))}
             media="(min-width: 1001px) and (min-height: 701px)"
+          />
+        )}
+        {scene === "crane" && (
+          <ImageSources
+            src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-portrait.webp"))}
+            media="(max-width: 1000px) and (min-height: 701px) and (orientation: portrait)"
           />
         )}
         <ImageSources src={artwork.src} />

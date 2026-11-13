@@ -1,0 +1,474 @@
+{
+  "recordedAt": "2026-11-13T10:18:27.931543+00:00",
+  "scope": "Current shared working tree and locally promoted Scene4 media; not a source-release build, publication, deployment or whole-video review.",
+  "approval": {
+    "officeHeads": "User explicitly accepted all16 office replacements as-is, including collar seam. Do not treat prior style rejection as current.",
+    "nearOperators": "Approved backward-cap Ivan and forward-cap Petr; hide complete operator where required to avoid split faces.",
+    "geometry": "Unchanged cameras/anchors/world geometry; barge below loading crane."
+  },
+  "validation": {
+    "assetChecker": {
+      "files": 121,
+      "selfTest": "passed",
+      "afterScratchRetirement": "passed",
+      "receipt": "design/scene-04/blender-v4/painted/receipts/alpha-checks.json"
+    },
+    "rebuild": {
+      "assets": 36,
+      "byteEqual": true,
+      "retainedMediaHashesVerified": 198,
+      "receipt": "design/scene-04/blender-v4/painted/receipts/rebuild-checks.json"
+    },
+    "fullTests": {
+      "command": "bun run test && bun run typecheck",
+      "task": "bg-178",
+      "exitCode": 0,
+      "app": {
+        "files": 76,
+        "passed": 401
+      },
+      "scripts": {
+        "files": 14,
+        "passed": 80
+      },
+      "typecheck": "passed"
+    },
+    "craneTests": {
+      "files": 6,
+      "passed": 26
+    },
+    "realTimeResults": {
+      "views": 6,
+      "task": "bg-179",
+      "exitCode": 0,
+      "receipt": "design/scene-04/blender-v4/painted/receipts/runtime-checks.json"
+    },
+    "coldLoad": {
+      "modes": [
+        "no-preference",
+        "reduce"
+      ],
+      "task": "bg-180",
+      "exitCode": 0,
+      "receipt": "design/scene-04/blender-v4/painted/receipts/loading-checks.json"
+    }
+  },
+  "review": {
+    "nativeOperatorAndOffice": {
+      "operatorFrames": 128,
+      "officeComposites": 16,
+      "result": "No near-operator blocker; neutral office collar notch accepted by user."
+    },
+    "finalVisual": {
+      "reviewerRun": "db69df27-3748-473d-b4e1-cdb4d91631d7",
+      "nativeOutcomeSheets": 9,
+      "motionContactSheets": 6,
+      "concreteDefectsFound": 0,
+      "limitation": "Sampled contact sheets, not frame-by-frame WebM inspection."
+    },
+    "code": {
+      "reviewerRun": "63686a6c-4d9f-40de-acad-60cdf822248e",
+      "verdict": "OK with notes",
+      "coverage": "Current scoped runtime/checker/recorder files; reviewer could not independently inspect Git diff attribution or recompute checker receipts. Parent inspected the diff and executed validation.",
+      "disposition": "Reviewer suggested removing existing localhost recorder default because of its read-only/no-network review constraint. Not applied: that constraint governed reviewer actions, not intended browser capture behavior. Captures explicitly passed the4175 base URL."
+    }
+  },
+  "limitations": [
+    "Binary media remains local/unpublished; no hydration, upload, push or deployment authorized.",
+    "Earlier phone Petr result-transition white frame is not claimed fixed by the initial-scene decode gate.",
+    "Unused original legacy Ivan files retain their original alpha holes; duplicate runtime overlay was removed."
+  ],
+  "storageSnapshot": {
+    "command": "bun run check:storage",
+    "passed": true,
+    "localGeneratedMiB": 1414.9,
+    "budgetBytes": 2147483648,
+    "headMiB": 28.4,
+    "gitMiB": 53.4,
+    "cleanupReceipt": "design/scene-04/blender-v4/painted/receipts/scratch-retirement.json",
+    "globalCleanup": "Coordinator reported shared storage ready; independently reran check:storage successfully before staging. Earlier over-budget snapshots are superseded."
+  },
+  "sources": [
+    {
+      "path": "src/scenes/crane/CraneArt.tsx",
+      "sha256": "40778da62466519412fbf15e0ec0fe20be692c09da0fec9b81ea2f46b1907b4c"
+    },
+    {
+      "path": "src/scenes/crane/cast.ts",
+      "sha256": "7f53fc67f769a658d77beee91cb6c4e710beaccaa1e21d186eb6baa4551facff"
+    },
+    {
+      "path": "src/scenes/crane/operator.test.tsx",
+      "sha256": "c9caeb6b098227bb1cb3dcfa58f6e449c58bd704acb3722801310d1ce1dd48d3"
+    },
+    {
+      "path": "src/scenes/SceneOutcomeArt.tsx",
+      "sha256": "9250525bfc47f3e7813fd863c23e021d06efa6c1c70d7d7b321222198d0efd79"
+    },
+    {
+      "path": "scripts/record-barge-outcomes.mjs",
+      "sha256": "bd6dacbf1dfde3106f96a81d308fb5f33982d3b7ad2335e7e9273d7a68f392bc"
+    },
+    {
+      "path": "scripts/scene4-painted/check-painted-assets.mjs",
+      "sha256": "88e6ef0d1a9cb9cf024fc1f2e22a0a90df32c996a2181b016c7d33ebf6c8b52b"
+    },
+    {
+      "path": "scripts/scene4-painted/capture-face-results.mjs",
+      "sha256": "f4334ee50404e6007faeb890e5b11c0cbb520c60f280e84f35bcfd45c7a1b12e"
+    },
+    {
+      "path": "scripts/scene4-painted/generate-operators.py",
+      "sha256": "ab69d1557f7ce5d4b5e230c97422aa9a8eeafaf3cba6f2afd127658023e493d1"
+    },
+    {
+      "path": "scripts/scene4-painted/generate-office-heads.py",
+      "sha256": "afc636fbb5ef91bc726f54d4b5a4f4e0d4595d0fc60eb5dee3916d7165e3fec9"
+    },
+    {
+      "path": "scripts/scene4-painted/generate-far-cab.py",
+      "sha256": "d24fbbcca3d471949f809f9a11024ff745a0331e3ae330f297d5f50917a62107"
+    },
+    {
+      "path": "scripts/scene4-painted/check-machinery.py",
+      "sha256": "ef3e6c01c4a54b1379ebc34d6ebf602f2f9aee06f4de5df591eb990b87dc6eeb"
+    }
+  ],
+  "proofs": [
+    {
+      "path": ".tmp-work/scene4-faces/reviews/choice-1440.png",
+      "bytes": 5029846,
+      "sha256": "4ddd0f749de4a2f6f27fbfc81a4c7da0dcbfb3925756520facc952b2bee74c40"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/choice-390.png",
+      "bytes": 1420859,
+      "sha256": "cd492e1dae822198a179a871598d6d20d7cf73b84f2504ed2a233a2838aa149e"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/cold-load/no-preference-settled.png",
+      "bytes": 1533872,
+      "sha256": "5c4456df85a631606f78c308a3a79e357f70ea500e517ab982d917a0f5ae1641"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/cold-load/no-preference-sheet.jpg",
+      "bytes": 458975,
+      "sha256": "b05272a1ed457f807b7b2be780865fe9c80c471d0eaee9b946ebc5bdc0415532"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/cold-load/no-preference.json",
+      "bytes": 142603,
+      "sha256": "c9964d55d431eaa95d14c5af26f4c620c9b0510ad74e2966b63c06a769594134"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/cold-load/no-preference.webm",
+      "bytes": 993392,
+      "sha256": "a176b58d9cee72582ea2fb339259ef92f19ab30d8081895b3fc95c6b685dac2a"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/cold-load/reduce-settled.png",
+      "bytes": 1534170,
+      "sha256": "74d921a4f7cee4e62887a1bc9f5547defd47d2698642ee987a162f76fc32d16c"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/cold-load/reduce-sheet.jpg",
+      "bytes": 451186,
+      "sha256": "aa998c92f4031fff5eb1c68b2683f11245c8aff0b179e2a81e10662d664b43a1"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/cold-load/reduce.json",
+      "bytes": 254184,
+      "sha256": "af3ae2882c0050becb0706a90c5bacd39fdf4b7ff12061dfcb540e2d7650c567"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/cold-load/reduce.webm",
+      "bytes": 911960,
+      "sha256": "517daec64d3f540ed4b2ccda5046ff2ca91f2f92e4835d65c01b92a2ccba6ea9"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/desk-machinery.png",
+      "bytes": 1858377,
+      "sha256": "bd2587fefb6d6681183e273035f8d50ec8571604ad3fc6c2ea54eeac99a4af2e"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/desk-office-full.png",
+      "bytes": 938228,
+      "sha256": "bdc24bb3e9c7395da6c0df9bf8ac63264cc9431cb53668b09cc847556c27759d"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/desk-office-heads.png",
+      "bytes": 414657,
+      "sha256": "aca6a07fff8b2169cf5bf3199c9617521f99517da98db558e672a6dc8e0df687"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/far-empty-native-proof.png",
+      "bytes": 491503,
+      "sha256": "56ff92dd027202d491565d4e46cfa8d8ac91b506725d530bcde4739c30ad8af6"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/far-machinery-final.png",
+      "bytes": 1043046,
+      "sha256": "6402c91d8ea2c0040104574380a30a6e9568b861c093bc07edb0bbb238b67e3c"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/mid-machinery.png",
+      "bytes": 1717523,
+      "sha256": "c9e8c4500386048b684b93f07c5c12ead0d530ebdd796f988a87d67d7d8901ea"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/mid-office-full.png",
+      "bytes": 816849,
+      "sha256": "6b83d610ee6a1b3361f85490c60f94e13d147aa6d39205d18f552328f19b9508"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/mid-office-heads.png",
+      "bytes": 373751,
+      "sha256": "1667a3517dfb78e54ed9ec4f0d90a25afae4d359346660b3b478c6414d853ea4"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/petr-1440x900-sheet.jpg",
+      "bytes": 341780,
+      "sha256": "84367721ecd26edf2f75fa6d5400b3e9af2a3611d8f907515461f6d0c16c8b4c"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/petr-1440x900.webm",
+      "bytes": 1556490,
+      "sha256": "19fbc08eda3fb342e21101917abe6fabbd5fea716af6fd0839b4b9405224fdbc"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/petr-390x844-sheet.jpg",
+      "bytes": 235236,
+      "sha256": "d9fae78d1d0aafe3eb92af47c4f67fc7ff8a330382e0c68c4c96d4b92e186cc4"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/petr-390x844.webm",
+      "bytes": 1377370,
+      "sha256": "0a4559e302b93cb8204cb69f3684fffb561bc37bff5f23377afa2ebb5cf33d67"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/remote-1440x900-sheet.jpg",
+      "bytes": 261045,
+      "sha256": "550cfc671f1b4ccd26b23275b0b139a0cb4c6329f9938c03029fd69453d23c48"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/remote-1440x900.webm",
+      "bytes": 1230191,
+      "sha256": "227735e905e463f6cdaf953d0fb6d67afd3533f189f6c7ca58d4a274da0cdb9f"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/remote-390x844-sheet.jpg",
+      "bytes": 172672,
+      "sha256": "42a1033bc443bdcc5d82ed1924087b29078fcb8d74290aa25a28831146596d4c"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/remote-390x844.webm",
+      "bytes": 1119878,
+      "sha256": "05273f3b9a28ff56832a1b67eed3490bef0291bc69f06ad9dfb69e8381b54f2b"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/rush-1440x900-sheet.jpg",
+      "bytes": 295286,
+      "sha256": "1fd6c727d628d4c9525c53a12a4113a5dc983f9c2fbf2934002e24cc2096cde2"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/rush-1440x900.webm",
+      "bytes": 1524599,
+      "sha256": "48ed6952e4fd92e0596f51d0a61f5bfe54f977cde6499d7535e392f3eb0899de"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/rush-390x844-sheet.jpg",
+      "bytes": 204879,
+      "sha256": "2ea5d65a4523dc04c9530f3f1dc38ed696e4c75cdf14c0aab6cccfb671c4a4d1"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/motion/rush-390x844.webm",
+      "bytes": 1188546,
+      "sha256": "b45504ea71235f7bc39ccfba024fcbd5b96420ce3f84197abff03bcf81eaec73"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-desk-ivan-00-07.png",
+      "bytes": 2020187,
+      "sha256": "e3fc141eab03cd9d658b80bed9e53535a93417e24459b3de872ae5215a50f76a"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-desk-ivan-08-15.png",
+      "bytes": 1810702,
+      "sha256": "03922ea7d39e7bdec8c45def92a30195cd76d45fcfd103fcf6d4cc6f6f7a833b"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-desk-petr-00-07.png",
+      "bytes": 2022231,
+      "sha256": "a0b3de380a33e54ac214eca860c06d63ef7d1a0a8eec9ad48b218d5e23a9f5fa"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-desk-petr-08-15.png",
+      "bytes": 1820866,
+      "sha256": "3112ee4d2c200bfc3b5a0e56a7a5c41d8b9224425ea2cd7b0e08ad0d1880b0fd"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-mid-ivan-00-07.png",
+      "bytes": 1967312,
+      "sha256": "255a1e7b4e9194c356248724c2c402461cb5a11c5fcf68d2c8ca63646cc33cd3"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-mid-ivan-08-15.png",
+      "bytes": 1747416,
+      "sha256": "e5e0bbaa458d2039864a97473d7680c3d5e7b21f775ad54ea5b5cc5f4303748b"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-mid-petr-00-07.png",
+      "bytes": 1966343,
+      "sha256": "53b6c887fe64a77133f785e74119c9d05671fcf12630fc3841022fe4bcebdfd6"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-mid-petr-08-15.png",
+      "bytes": 1764208,
+      "sha256": "2db0b9eb057ffd175c5486145b5f788c0f848e3f08aace2278ab0602165bf803"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-petr-portrait.png",
+      "bytes": 1154317,
+      "sha256": "6dfb5f54eff9beb63ee876c76de7a8b980b1e1e67cb1fdb637ef327309b5ce95"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-petr-rail.png",
+      "bytes": 1041439,
+      "sha256": "bff251e434bb0b2da1d5d14c72d69ac4f0ffe72e64e20904b18752bd2b56164a"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-petr.png",
+      "bytes": 1136212,
+      "sha256": "fa3c52be270a68015e3bafc7449520ebce3d25ff103d5543b6a377535ba647de"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-remote-portrait.png",
+      "bytes": 1099580,
+      "sha256": "976c7f49b6aec4b3e5cd8a0843e10d17993357b6cb9f011f7288a9747714796e"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-remote-rail.png",
+      "bytes": 996810,
+      "sha256": "e549c4c7fee927f302c9bcc1b8e0fd0c79cd4a0df6f2d77050588971a5c4e990"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-remote.png",
+      "bytes": 1160372,
+      "sha256": "700d8010a38c639bf995ffa036db13508619abce547629709eab6e48202e7660"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-rush-portrait.png",
+      "bytes": 1086777,
+      "sha256": "f4c13327c299c4f7d005040c93470d47e9d3d3fd76a3559b72593ac40bbf9e81"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-rush-rail.png",
+      "bytes": 1029461,
+      "sha256": "6c71b1a20dfadaeb58bd1da8fa43cb7dcefcf7e4ef2525c212d8ba8a39861768"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-outcome-rush.png",
+      "bytes": 1111169,
+      "sha256": "87c5b8487615ee95acabd20bd9d8016125a8e86915bab25619a3f8858461c532"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-tall-ivan-00-07.png",
+      "bytes": 1907714,
+      "sha256": "8ded8526dcc6d285cdfabe8ab198e65d522b811cf9c18ac6d35c5623dfa88317"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-tall-ivan-08-15.png",
+      "bytes": 1534238,
+      "sha256": "d20a4d70581163df202221df00a1e39392152197a22046bab6e3e36513191255"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-tall-petr-00-07.png",
+      "bytes": 1905881,
+      "sha256": "b1840f88593b83bd7ed52d354b6a3843beefcf1473225fff2ef6ac6f63d3f8ea"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-tall-petr-08-15.png",
+      "bytes": 1525935,
+      "sha256": "a64c34efc137e1ea68ae9ffdcb0e6d7355676df554eebe5065a829b169daeb33"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-wide-ivan-00-07.png",
+      "bytes": 2041675,
+      "sha256": "80f4f95b380fdcb64c7a8b7558cfbf43d5dbd2e0528ec7e1f9f81e480d895be0"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-wide-ivan-08-15.png",
+      "bytes": 1882904,
+      "sha256": "7e477f6398756337a9f309a56fe68c9d402d4f1545718a6abc77cb0055747366"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-wide-petr-00-07.png",
+      "bytes": 2024767,
+      "sha256": "ec65d6efa082efe49325d3d5015ffda6067a4fba8f4fcfa089f2f984569988d0"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/native-wide-petr-08-15.png",
+      "bytes": 1885898,
+      "sha256": "21f329db0b855ad79b88fb06343b7e4836b8179726ca4f4ffc34769a14c03311"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/petr-1440-RESULT.png",
+      "bytes": 5031185,
+      "sha256": "819a6bdce2ff39ee4178090a3078e9afdd949da384f9f51fb306d0edfc4f4454"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/petr-390-RESULT.png",
+      "bytes": 939150,
+      "sha256": "af5cc195fc562e50126d7910ce776ee0833d969bc1ec574f8a61be88871909e7"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/remote-1440-RESULT.png",
+      "bytes": 5046867,
+      "sha256": "32be609e6415dbbf5bc8c6f52359c5c4bc9ee0916ded39b1fbcb926446c99e26"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/remote-390-RESULT.png",
+      "bytes": 875874,
+      "sha256": "d7f06af5db6d00c9a92e3bdb2c59fbd5d20c2b64686dad7358f5e3021f4481a2"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/rush-1440-RESULT.png",
+      "bytes": 5010309,
+      "sha256": "30f654530ab6bad4eac0a8cd5b2462911e0f6747b4150b80d081c8b6524025d0"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/rush-390-RESULT.png",
+      "bytes": 1227957,
+      "sha256": "41f0f5749e30fb980c7459c5597ff2707d5308098f3b8c7304f1d282e71af8df"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/tall-machinery.png",
+      "bytes": 1500385,
+      "sha256": "19495e7c0cdd28c325e6f18ca74dc2a41f1987dc373db5295c156b68ee1535c6"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/tall-office-full.png",
+      "bytes": 578578,
+      "sha256": "1d3301ed9e238cc7d5c51c6bff01a4b92c32451b37eacc01b126a68e35e65551"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/tall-office-heads.png",
+      "bytes": 304197,
+      "sha256": "0420b2b26868cc8eea1ba26cdc6bd75a10dc677996805bc10bc3615b35093e69"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/wide-machinery.png",
+      "bytes": 1722489,
+      "sha256": "d08407c3793cf3f39569a46fb650936c777c41be2dfcf15a2a549e46d6126433"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/wide-office-full.png",
+      "bytes": 894948,
+      "sha256": "27ca5fbf96aba2da33545c199a206b1182f6c1cd4a45b325b0a6e0d9d72da0d3"
+    },
+    {
+      "path": ".tmp-work/scene4-faces/reviews/wide-office-heads.png",
+      "bytes": 406854,
+      "sha256": "411378ef7fb415ad1a2569fd76c2706ebb6730ee1bdc6bfea54b52efcf79a380"
+    }
+  ]
+}

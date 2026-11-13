@@ -1,0 +1,450 @@
+[
+  {
+    "format": "wide",
+    "name": "office",
+    "sourceSize": [
+      340,
+      388
+    ],
+    "size": [
+      680,
+      776
+    ],
+    "scale": 2,
+    "oldHead": [
+      147,
+      162,
+      201,
+      241
+    ],
+    "newHead": [
+      295,
+      324,
+      118,
+      156
+    ],
+    "changedPixels": 14376,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "wide",
+    "name": "ivan-joy",
+    "sourceSize": [
+      280,
+      211
+    ],
+    "size": [
+      560,
+      422
+    ],
+    "scale": 2,
+    "oldHead": [
+      114,
+      48,
+      170,
+      125
+    ],
+    "newHead": [
+      227,
+      96,
+      116,
+      154
+    ],
+    "changedPixels": 13503,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "wide",
+    "name": "ivan-wave",
+    "sourceSize": [
+      280,
+      211
+    ],
+    "size": [
+      560,
+      422
+    ],
+    "scale": 2,
+    "oldHead": [
+      114,
+      49,
+      170,
+      127
+    ],
+    "newHead": [
+      227,
+      98,
+      118,
+      156
+    ],
+    "changedPixels": 13869,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "wide",
+    "name": "ivan-cheer",
+    "sourceSize": [
+      280,
+      211
+    ],
+    "size": [
+      560,
+      422
+    ],
+    "scale": 2,
+    "oldHead": [
+      114,
+      49,
+      170,
+      128
+    ],
+    "newHead": [
+      227,
+      98,
+      119,
+      158
+    ],
+    "changedPixels": 14051,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "desk",
+    "name": "office",
+    "sourceSize": [
+      421,
+      384
+    ],
+    "size": [
+      842,
+      768
+    ],
+    "scale": 2,
+    "oldHead": [
+      239,
+      166,
+      296,
+      245
+    ],
+    "newHead": [
+      485,
+      334,
+      116,
+      154
+    ],
+    "changedPixels": 14646,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "desk",
+    "name": "ivan-joy",
+    "sourceSize": [
+      274,
+      211
+    ],
+    "size": [
+      548,
+      422
+    ],
+    "scale": 2,
+    "oldHead": [
+      109,
+      53,
+      163,
+      127
+    ],
+    "newHead": [
+      220,
+      108,
+      110,
+      146
+    ],
+    "changedPixels": 12465,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "desk",
+    "name": "ivan-wave",
+    "sourceSize": [
+      274,
+      211
+    ],
+    "size": [
+      548,
+      422
+    ],
+    "scale": 2,
+    "oldHead": [
+      108,
+      52,
+      164,
+      129
+    ],
+    "newHead": [
+      215,
+      104,
+      116,
+      154
+    ],
+    "changedPixels": 13631,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "desk",
+    "name": "ivan-cheer",
+    "sourceSize": [
+      274,
+      211
+    ],
+    "size": [
+      548,
+      422
+    ],
+    "scale": 2,
+    "oldHead": [
+      108,
+      50,
+      166,
+      129
+    ],
+    "newHead": [
+      215,
+      100,
+      119,
+      158
+    ],
+    "changedPixels": 14360,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "mid",
+    "name": "office",
+    "sourceSize": [
+      391,
+      365
+    ],
+    "size": [
+      782,
+      730
+    ],
+    "scale": 2,
+    "oldHead": [
+      219,
+      163,
+      277,
+      240
+    ],
+    "newHead": [
+      442,
+      326,
+      113,
+      150
+    ],
+    "changedPixels": 14156,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "mid",
+    "name": "ivan-joy",
+    "sourceSize": [
+      259,
+      201
+    ],
+    "size": [
+      518,
+      402
+    ],
+    "scale": 2,
+    "oldHead": [
+      103,
+      56,
+      155,
+      122
+    ],
+    "newHead": [
+      207,
+      112,
+      100,
+      132
+    ],
+    "changedPixels": 10676,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "mid",
+    "name": "ivan-wave",
+    "sourceSize": [
+      259,
+      201
+    ],
+    "size": [
+      518,
+      402
+    ],
+    "scale": 2,
+    "oldHead": [
+      100,
+      54,
+      153,
+      128
+    ],
+    "newHead": [
+      194,
+      110,
+      109,
+      144
+    ],
+    "changedPixels": 12687,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "mid",
+    "name": "ivan-cheer",
+    "sourceSize": [
+      259,
+      201
+    ],
+    "size": [
+      518,
+      402
+    ],
+    "scale": 2,
+    "oldHead": [
+      102,
+      56,
+      156,
+      128
+    ],
+    "newHead": [
+      201,
+      112,
+      108,
+      144
+    ],
+    "changedPixels": 12380,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "tall",
+    "name": "office",
+    "sourceSize": [
+      256,
+      317
+    ],
+    "size": [
+      512,
+      634
+    ],
+    "scale": 2,
+    "oldHead": [
+      123,
+      164,
+      172,
+      233
+    ],
+    "newHead": [
+      247,
+      328,
+      103,
+      136
+    ],
+    "changedPixels": 11120,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "tall",
+    "name": "ivan-joy",
+    "sourceSize": [
+      197,
+      192
+    ],
+    "size": [
+      394,
+      384
+    ],
+    "scale": 2,
+    "oldHead": [
+      49,
+      65,
+      90,
+      119
+    ],
+    "newHead": [
+      97,
+      128,
+      82,
+      108
+    ],
+    "changedPixels": 7080,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "tall",
+    "name": "ivan-wave",
+    "sourceSize": [
+      197,
+      192
+    ],
+    "size": [
+      394,
+      384
+    ],
+    "scale": 2,
+    "oldHead": [
+      46,
+      65,
+      89,
+      125
+    ],
+    "newHead": [
+      91,
+      130,
+      89,
+      118
+    ],
+    "changedPixels": 8330,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  },
+  {
+    "format": "tall",
+    "name": "ivan-cheer",
+    "sourceSize": [
+      197,
+      192
+    ],
+    "size": [
+      394,
+      384
+    ],
+    "scale": 2,
+    "oldHead": [
+      48,
+      67,
+      91,
+      126
+    ],
+    "newHead": [
+      93,
+      134,
+      89,
+      118
+    ],
+    "changedPixels": 8312,
+    "outsideHeadChanged": 0,
+    "alphaChanged": 0
+  }
+]

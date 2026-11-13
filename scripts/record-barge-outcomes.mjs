@@ -2,7 +2,7 @@
 // writes a contact sheet of key frames. Usage: bun scripts/record-barge-outcomes.mjs <baseURL> <outDir> [tag]
 import { chromium } from "playwright";
 import { execFileSync } from "node:child_process";
-import { mkdirSync, renameSync, rmSync } from "node:fs";
+import { mkdirSync, renameSync } from "node:fs";
 const [base = "http://127.0.0.1:4174", out = ".tmp-work/barge-anim", tag = ""] = process.argv.slice(2);
 mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
@@ -23,12 +23,14 @@ for (const [w, h] of [[1440, 900], [390, 844]]) for (const id of ["remote", "rus
   await page.locator("[data-choice-confirm]").click();
   await page.locator("[data-scene-consequence] img").waitFor({ timeout: 20000 });
   const result = (Date.now() - t0) / 1000;
+  await page.locator("[data-scene-consequence] img").evaluate(image => image.decode());
+  await page.getByTestId("result-copy").waitFor({ state: "visible" });
   await page.waitForTimeout(2200);
   const video = await page.video().path();
   await ctx.close();
   const name = `${out}/${id}-${w}x${h}${tag}`;
   renameSync(video, `${name}.webm`);
-  rmSync(tmp, { recursive: true, force: true });
+  execFileSync("trash-put", [tmp]);
   // Key frames: every 0.5 s from the tap to 1.5 s after the result appears.
   const from = Math.max(0, tap - 0.2), span = result + 1.5 - from;
   const n = Math.ceil(span / 0.5);

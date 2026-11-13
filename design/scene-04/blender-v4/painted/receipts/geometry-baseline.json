@@ -1,0 +1,299 @@
+{
+  "source": "Unchanged native Blender export from quay.py; not runtime painting",
+  "rows": {
+    "desk/barge.webp": {
+      "width": 1609,
+      "height": 848,
+      "alphaSha256": "ed9d19463c81a49106f1de3056a88ad58d644c2cf8ab940a32b11627d5239540",
+      "sourceSha256": "bb33658ba7761113b4748958631d8d7633f346dc14e54d4d5868ce26e2e09395"
+    },
+    "desk/box.webp": {
+      "width": 161,
+      "height": 306,
+      "alphaSha256": "a21812a34a88433bce4c7e4da3f0f1a715ba7d8d03360f49766fad82e670ddb9",
+      "sourceSha256": "cab70942e4a6eec5431635e00820fcfc59ec70b4697670d600f006277acd3df1"
+    },
+    "desk/far.webp": {
+      "width": 668,
+      "height": 555,
+      "alphaSha256": "19321a300795982704a188051e793d9e01fed93ac0550398e3b8904919b69bf6",
+      "sourceSha256": "a4baf73d581f8b601d73b104f905a26667d66b11382df38841213bd9fea3bf99"
+    },
+    "desk/gift.webp": {
+      "width": 161,
+      "height": 171,
+      "alphaSha256": "a57e5b9754f4924b0940efb03ffcb3e3bb1672017a2680db8f88d01082215dd3",
+      "sourceSha256": "9ef2bc54f9ac7758c39f5d195c24423ce2888a9435187355073b2740c72a470c"
+    },
+    "desk/hook.webp": {
+      "width": 64,
+      "height": 101,
+      "alphaSha256": "20d4c2238241941b30ced6a1e7ad5df4d6d4805f1dce0530efc07d53bf89d2d6",
+      "sourceSha256": "629fcb816417884676cf2c620b694e783626cff1ac383d70a2b97da0ee2354e4"
+    },
+    "desk/ivan.webp": {
+      "width": 236,
+      "height": 153,
+      "alphaSha256": "cec27a8f0b70c7301fba231d6aa701c5203b956d6a8c9f70932107873c127807",
+      "sourceSha256": "e0f74389cde62a2c334c7969799949031634d53ca03875802f511207300eda4c"
+    },
+    "desk/ladder.webp": {
+      "width": 159,
+      "height": 419,
+      "alphaSha256": "d0001598e951dfea1a8fca41b891cb7d45964e8670a2f05e982e40f810684f16",
+      "sourceSha256": "1cb0b2c85103531f0a3a4e83be0c23d0ffcb118307306b9de71464c26863aae3"
+    },
+    "desk/plate.webp": {
+      "width": 3072,
+      "height": 2048,
+      "alphaSha256": "7d333ab0fce26d8901ab4b7d1922f3d989d194833e3f00e7f318950604ceeb09",
+      "sourceSha256": "778ef22e2e97499e4d213b8859a1d29ef78d866b2efd49e6c1a9c239e9388b08"
+    },
+    "desk/smoke.webp": {
+      "width": 238,
+      "height": 381,
+      "alphaSha256": "81b4d3a5802ea8337dcd5c88bf31d7731fecc24e4920958396996feb75d6927b",
+      "sourceSha256": "0bdf8aa5bd3dc630250e46a0c0ce7e74f3a159c9d3cb3ce2c94b00264ccd28dd"
+    },
+    "desk/top.webp": {
+      "width": 3460,
+      "height": 3996,
+      "alphaSha256": "edc0d7810c0b353af6f0c9f7d6cbb55e6dc8eef41c52f75da4b3f4e5a82e8d56",
+      "sourceSha256": "27757d66b4b6a3843a2c16c788c629335997a96ed586b0c6e82071b0af04a6b6"
+    },
+    "mid/barge.webp": {
+      "width": 1493,
+      "height": 834,
+      "alphaSha256": "b01b2a54ed7bb3b3e475f6e509f2632dd1120e8a110d7760a1d0748df1de8a84",
+      "sourceSha256": "008729f53f4d3bc3b21433c6035865436914646b95c22f272bb449af42c89bc9"
+    },
+    "mid/box.webp": {
+      "width": 153,
+      "height": 288,
+      "alphaSha256": "929439b52501c406de4bb04a2cfab922cb6179d7bac26e94198472bb81f2cb1b",
+      "sourceSha256": "e28b1f9deba7cb2297ad072a9e915948ce67774f522b048338179158696ba135"
+    },
+    "mid/far.webp": {
+      "width": 647,
+      "height": 521,
+      "alphaSha256": "12b67242299b66367860c8a21152016a096ef2aadeceb1071e642696993f17be",
+      "sourceSha256": "7de8bb0f419440cbcb6e51e8b4bc052539ff0ab47a4a3ffbc417e9fb98429d82"
+    },
+    "mid/gift.webp": {
+      "width": 153,
+      "height": 164,
+      "alphaSha256": "9471fdfe7dc3cc96f8d04ada9961e4cc9a2990fefeed9fb670cd7ca6e816f470",
+      "sourceSha256": "deb21b5bfc08d5e190ca6ba03b20c99946a819686b2f0ba8b77c8026171a4861"
+    },
+    "mid/hook.webp": {
+      "width": 61,
+      "height": 95,
+      "alphaSha256": "c313c88cda6428fa85e5c97ebeda9ef3645255df9d48cf7a1db14dd50f57fbc1",
+      "sourceSha256": "e68512f0e61899814001bef83a39e8621fb3a0fa37e0e634631a300fbdb6848a"
+    },
+    "mid/ivan.webp": {
+      "width": 222,
+      "height": 145,
+      "alphaSha256": "47b87ebd2d2c95b3a14d0bc0d7881f108dd0c661341b395b806b36ec25652a80",
+      "sourceSha256": "35f3f9d69bea138c591eeadcfd6bf92a4ec00f9785a619d0da12de668f6a5b82"
+    },
+    "mid/ladder.webp": {
+      "width": 149,
+      "height": 393,
+      "alphaSha256": "67b0178b0635f007947f0ae6761cb20810fd6ff1b5474a31ad87fb318184473f",
+      "sourceSha256": "16adca7f304dd079ec875c2878be549594cf44414a23a0416b76f3c952e8d9a4"
+    },
+    "mid/plate.webp": {
+      "width": 2804,
+      "height": 2244,
+      "alphaSha256": "54d69d96cfeb800b5a648cf27df7ab6f1c228a436e86e63d63c0e1f9877e418b",
+      "sourceSha256": "31c5635604b26aeae4d9fc3752667b8eaa5a2d0bb513c00aff4029e332e9cf26"
+    },
+    "mid/smoke.webp": {
+      "width": 220,
+      "height": 363,
+      "alphaSha256": "7b9b3bab3c8f1dfd4ec205956d4271722207648ff7ae4fe0093db3ffea650660",
+      "sourceSha256": "04e994101ec06a1d1fd1e40e1540aaee2e8742bf29a50501f1ca41ef47279eea"
+    },
+    "mid/top.webp": {
+      "width": 3332,
+      "height": 3876,
+      "alphaSha256": "a100ff7e839d5a1f831e1acb26eec59b0960881ea567bb733aea4ad142075bd9",
+      "sourceSha256": "622236356dae0af9d3694dc19491e67cc51e09323326c360460dd6b2dc0868fa"
+    },
+    "outcome-petr-portrait.webp": {
+      "width": 2048,
+      "height": 3072,
+      "alphaSha256": "7d333ab0fce26d8901ab4b7d1922f3d989d194833e3f00e7f318950604ceeb09",
+      "sourceSha256": "9976e5fbeec8cc6cfacacd5fccefae693a71adcaf117fb51c2eac6731d477e14"
+    },
+    "outcome-petr-rail.webp": {
+      "width": 2406,
+      "height": 2168,
+      "alphaSha256": "ab9f43406dcb1b8df2310fca8c7a26cabb6fc3450cef0aecd7ba5c0e6e565619",
+      "sourceSha256": "00fa006e70058b18847bd183f205da6d7c018d92cf4e60e407bbcd4372805773"
+    },
+    "outcome-petr.webp": {
+      "width": 3884,
+      "height": 1618,
+      "alphaSha256": "7b7296d2114e0eb336f0a33730ed51ba9c82a110f872996d6679d23273c1bf5b",
+      "sourceSha256": "cda3f5dc07064ac47fd75a50e9d82e238464fe621c95184a3636790419e9bbfd"
+    },
+    "outcome-remote-portrait.webp": {
+      "width": 2048,
+      "height": 3072,
+      "alphaSha256": "7d333ab0fce26d8901ab4b7d1922f3d989d194833e3f00e7f318950604ceeb09",
+      "sourceSha256": "9d3d25b428932db251da9d372fc6bd5f6bc97e645026ed0d49acb4e92d73459f"
+    },
+    "outcome-remote-rail.webp": {
+      "width": 2406,
+      "height": 2168,
+      "alphaSha256": "ab9f43406dcb1b8df2310fca8c7a26cabb6fc3450cef0aecd7ba5c0e6e565619",
+      "sourceSha256": "1bcbeee81fa7902c85eb0bb2b9cbfa0bcdd32c88a537327671bb1b5fc7c55cf9"
+    },
+    "outcome-remote.webp": {
+      "width": 3884,
+      "height": 1618,
+      "alphaSha256": "7b7296d2114e0eb336f0a33730ed51ba9c82a110f872996d6679d23273c1bf5b",
+      "sourceSha256": "6b2ac42d0e08e36881c3c08d9568c61b091d8bde92d8143790feca6c6d0bfab4"
+    },
+    "outcome-rush-portrait.webp": {
+      "width": 2048,
+      "height": 3072,
+      "alphaSha256": "7d333ab0fce26d8901ab4b7d1922f3d989d194833e3f00e7f318950604ceeb09",
+      "sourceSha256": "a608fbcce910e7b60e4922f8cd24d8bf42272e709d4016896bb0d46899031f43"
+    },
+    "outcome-rush-rail.webp": {
+      "width": 2406,
+      "height": 2168,
+      "alphaSha256": "ab9f43406dcb1b8df2310fca8c7a26cabb6fc3450cef0aecd7ba5c0e6e565619",
+      "sourceSha256": "b037cf20479cf1fae59f0e096169379f170f4bc3c6aedaf59fdacf84f8c0de5a"
+    },
+    "outcome-rush.webp": {
+      "width": 3884,
+      "height": 1618,
+      "alphaSha256": "7b7296d2114e0eb336f0a33730ed51ba9c82a110f872996d6679d23273c1bf5b",
+      "sourceSha256": "282483090d3dddb61c02abbb59472bfcf03d60fb13938d5ed42e8f519a14ee59"
+    },
+    "tall/barge.webp": {
+      "width": 929,
+      "height": 1077,
+      "alphaSha256": "1c24572cfc97fefcfc89c0593976e41155772d5774f3c83d34f57338f1c7586d",
+      "sourceSha256": "a7faf1d75a99a66122b2d608dbc60b63d80473422cccc5a31f5b39f49800c929"
+    },
+    "tall/box.webp": {
+      "width": 135,
+      "height": 233,
+      "alphaSha256": "df0c828a7a6e0114f34c183ef379f9fe7ca0779ebec77efb0bd2f320f3e6068c",
+      "sourceSha256": "301481003bef88578f0c35862300916240b48d3c9bb346d4ddddde3b5ab57ecb"
+    },
+    "tall/far.webp": {
+      "width": 689,
+      "height": 468,
+      "alphaSha256": "9494f8a12a8428389d37b3cb4b1a13fb9689572e411200fbe45dda4d1a29c203",
+      "sourceSha256": "52194fee29d28e119c04db43deb24ab056cfffb8771c3ad59d80dbd418e0964d"
+    },
+    "tall/gift.webp": {
+      "width": 135,
+      "height": 151,
+      "alphaSha256": "7480031ae836c864b8d15324d8019f1c11281877ebd25cf93c85c8761e623f6f",
+      "sourceSha256": "9b43131ba9673969f6d5b693960e3927b962ea7995b0ba91c06ca10aebba9451"
+    },
+    "tall/hook.webp": {
+      "width": 51,
+      "height": 79,
+      "alphaSha256": "731138ec9ec125d53a7c85358e7c465503d3c99ea07de55c4b84260df230b51d",
+      "sourceSha256": "82e7312f530a74e48c5f721a31103370f3439e9268aae8d5dfd39017c02a34a9"
+    },
+    "tall/ivan.webp": {
+      "width": 167,
+      "height": 139,
+      "alphaSha256": "7fe67d0121870c174a7cddd0f9a2993ff8960dc691ba6ae065c2242f665447f0",
+      "sourceSha256": "b249e1c67b488f2d94f48f6b92d93bb74319108d40f56ed0bc682a45a8a01d92"
+    },
+    "tall/ladder.webp": {
+      "width": 104,
+      "height": 323,
+      "alphaSha256": "54fde7a68f55c73d35e586aadb26d6bc6de671e9c15e2003956d3338d0ea7e25",
+      "sourceSha256": "95ec7e868bcd3bd3bfa2e9ed52e6608d28b8f5480e09102c0b4c55a0b074b9c6"
+    },
+    "tall/plate.webp": {
+      "width": 2048,
+      "height": 3072,
+      "alphaSha256": "7d333ab0fce26d8901ab4b7d1922f3d989d194833e3f00e7f318950604ceeb09",
+      "sourceSha256": "d2b7845622fd5375924880d1ec95fd31cd10b80d807845935ea8d3dc31939072"
+    },
+    "tall/smoke.webp": {
+      "width": 141,
+      "height": 332,
+      "alphaSha256": "ab01bd5a8cfb4cf7c3913c19e69150c4ded7e32b76415956d41dd64dd3280e2f",
+      "sourceSha256": "9cb28e388c8075ae0301d19c86667efad3146afea678f15c7b632dd2ce6d5c5b"
+    },
+    "tall/top.webp": {
+      "width": 3580,
+      "height": 2580,
+      "alphaSha256": "df831ccd487e41c58edfbb080913d76861da4ba008e25ac1125148f7b1896602",
+      "sourceSha256": "4c70e9c168de4186f5175a3cbc6eeed38e6a3133355e6631b9d8a7ef790501c8"
+    },
+    "wide/barge.webp": {
+      "width": 1527,
+      "height": 719,
+      "alphaSha256": "27e1a9bfc1a57c6e71c8f5bc86a0538a03ea4d7e9c55d95fd20aade20932a8d0",
+      "sourceSha256": "54230d6296042fdf48e061030e76c600eefa1761ae83387f0c9a4396fada8ef1"
+    },
+    "wide/box.webp": {
+      "width": 146,
+      "height": 286,
+      "alphaSha256": "87ce5152964c71e6b1b6cfb46f459ceb5484adb6706df8dcb1b4f5ab134fd7cd",
+      "sourceSha256": "22ea3bfd3e84cf7527189d4790e4d73c813fab1b3905b7f87a9124f59f58a526"
+    },
+    "wide/far.webp": {
+      "width": 582,
+      "height": 519,
+      "alphaSha256": "3288a98db83aa1ba1acca5507f0f5184e37d102b2064f0e878cfeab8a891833e",
+      "sourceSha256": "5c8f8114322e4853b5e1f98f92b002efa682f3356f00ea99e3d616fb49d56eda"
+    },
+    "wide/gift.webp": {
+      "width": 146,
+      "height": 155,
+      "alphaSha256": "5a7473b89e189c43602ed3e39b9c8dd6f1e3da5b2fd3882cc6c74f02ca937800",
+      "sourceSha256": "2ff6c3bcd84193dd4469c46e6cb05f36be68f4696de6da16e9da24d453202866"
+    },
+    "wide/hook.webp": {
+      "width": 60,
+      "height": 95,
+      "alphaSha256": "70a34121dbc1b7c5b034c7ea18b457c6eb4d3d64169cc4041fcaf83ff63cdd76",
+      "sourceSha256": "84ca6756aa5643b3b605ddf36b80e92c6788f5eb0959c5f2ee6110df079f9c63"
+    },
+    "wide/ivan.webp": {
+      "width": 220,
+      "height": 139,
+      "alphaSha256": "0602fcbb796de08ca2a0feb85f26b6e246c0a65b2b6475769e8d4161c7b936fe",
+      "sourceSha256": "b71463646b62eaee6b28cfe5f1ac0c037a68cfca89a05e88fb15b018b1bbfe87"
+    },
+    "wide/ladder.webp": {
+      "width": 152,
+      "height": 390,
+      "alphaSha256": "2b92238ad0cb9a17bb42513a50b5adba6ae9cf69bfa990354712090a70aa5bdb",
+      "sourceSha256": "69fac3eca42046af6e8bef0f6556ced3f3bc8f53c9063847ecafd8c612cde4d8"
+    },
+    "wide/plate.webp": {
+      "width": 3884,
+      "height": 1618,
+      "alphaSha256": "7b7296d2114e0eb336f0a33730ed51ba9c82a110f872996d6679d23273c1bf5b",
+      "sourceSha256": "65f5cf423b15aee50158b110cb1717b6048932f4dc7daaac3e7973d528886a61"
+    },
+    "wide/smoke.webp": {
+      "width": 231,
+      "height": 349,
+      "alphaSha256": "705e25649eb9ea2dd07fd125666c34f52bad1cb36de58b40bfee1afc6cc209c9",
+      "sourceSha256": "8fafb03c0e5ce679dd2b3df2799955b0c7895d70a14688a88f65f180bbabeb80"
+    },
+    "wide/top.webp": {
+      "width": 3152,
+      "height": 3104,
+      "alphaSha256": "c1152ade8f1924ade7f966f37df8509ccd6f8185b7bdbb6310216e7302e0d0f1",
+      "sourceSha256": "e54c51670a2f72d2c0f64943cae6fb1b330588f414a1c47efbfeb9c61098c47f"
+    }
+  }
+}
