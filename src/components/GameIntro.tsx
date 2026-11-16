@@ -4,6 +4,7 @@ import { imageAsset } from "../game/imageAssets";
 import { scenarioParagraph } from "../game/scenarioDocument";
 import { lastmileChoiceImage } from "../scenes/lastmile/artworkFamily";
 import { sceneChoiceImage } from "../scenes/artwork";
+import { usePageTitle } from "./usePageTitle";
 import { BrandLockup } from "./BrandLockup";
 import styles from "./GameIntro.module.css";
 import { plateSource } from "./cityV4";
@@ -71,6 +72,7 @@ export function GameIntro({
 }) {
   const introWorldUrl = new URL(introWorld, document.baseURI).href;
   const [page, setPage] = useState(initialPage);
+  usePageTitle(page < 0 ? "Доставляем радость — Энергия+" : `${page === 0 ? "Путь одной посылки" : "Маршрутный лист"} — Доставляем радость`);
   const copy = useRef<HTMLDivElement>(null);
   function turnPage(next: number) {
     setPage(next);
@@ -91,7 +93,7 @@ export function GameIntro({
       <main className={styles.main} id="quest-main">
         {page < 0 ? (
           <section className={styles.cover} aria-labelledby="intro-title">
-            <img className={styles.coverArt} src={introWorld} alt="" />
+            <img className={styles.coverArt} src={introWorld} alt="" fetchPriority="high" />
             <div className={styles.copy}>
               <h1 id="intro-title">
                 Доставляем <br />

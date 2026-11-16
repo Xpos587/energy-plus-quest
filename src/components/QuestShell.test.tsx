@@ -27,6 +27,7 @@ it("shows delivery progress without an expandable route menu", async () => {
     );
     expect(container.querySelector('[data-scene-progress]')?.getAttribute("aria-label")).toBe("Этап 3 из 5: Склад");
     expect(container.querySelector("#delivery-route")).toBeNull();
+    expect(container.querySelector('button[aria-label*="анимац"]')).toBeNull();
   } finally {
     await act(async () => root.unmount());
     vi.unstubAllGlobals();

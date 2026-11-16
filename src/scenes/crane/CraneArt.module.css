@@ -16,9 +16,9 @@
 .layer { position: absolute; display: block; max-width: none; pointer-events: none; user-select: none; -webkit-user-drag: none; transition: filter 200ms ease-out; }
 .sail, .bob { position: absolute; inset: 0; pointer-events: none; }
 .sail[data-sailing] { will-change: transform; }
-.bob { animation: bob 4.8s ease-in-out infinite; }
+.bob { animation: bob 4.8s ease-in-out infinite; animation-play-state: var(--ambient-motion, running); }
 @keyframes bob { 50% { transform: translateY(.18%); } }
-.smoke { opacity: .92; animation: puff 3.6s ease-in-out infinite; transform-origin: 30% 100%; }
+.smoke { opacity: .92; animation: puff 3.6s ease-in-out infinite; animation-play-state: var(--ambient-motion, running); transform-origin: 30% 100%; }
 @keyframes puff { 50% { transform: translate(1.5%, -2%) scale(1.04); opacity: .8; } }
 div.layer { overflow: hidden; }
 .sheet { position: absolute; left: 0; top: 0; max-width: none; }
@@ -27,7 +27,7 @@ div.layer { overflow: hidden; }
 /* Who and what the chosen way uses: a soft glow, no outline (client: outlines look childish). */
 /* R19: feathered halo; no tight white rim that reads as a sticker cut-out. */
 .layer[data-lit] { filter: drop-shadow(0 0 8px #ffffffb3) drop-shadow(0 0 20px #ffffff8c); }
-.layer[data-busy] { animation: busy 900ms ease-in-out infinite; }
+.layer[data-busy] { animation: busy 900ms ease-in-out infinite; animation-play-state: var(--ambient-motion, running); }
 @keyframes busy { 50% { filter: drop-shadow(0 0 2px #ff5500) drop-shadow(0 0 12px #ffb37a); } }
 .stage[data-playing] .hotspot:not([aria-pressed="true"]) { opacity: 0; transition: opacity 200ms; }
 .plane > picture, .image { display: block; width: 100%; height: 100%; }
@@ -58,7 +58,7 @@ div.layer { overflow: hidden; }
   vector-effect: non-scaling-stroke;
   transform-box: fill-box;
   transform-origin: center;
-  animation: breathe 2.8s ease-out infinite both;
+  animation: breathe 2.8s ease-out infinite both; animation-play-state: var(--ambient-motion, running);
 }
 @keyframes breathe {
   0% { transform: scale(.55); opacity: 0; }
@@ -73,7 +73,7 @@ div.layer { overflow: hidden; }
 
 /* Story overlay for the hand-drawn cast: remote signal, the 3-hour clock, reactions. */
 .overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
-.signal { fill: none; stroke: #ff5500; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 2 16; animation: signal 600ms linear infinite; filter: drop-shadow(0 0 4px #fff); }
+.signal { fill: none; stroke: #ff5500; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 2 16; animation: signal 600ms linear infinite; animation-play-state: var(--ambient-motion, running); filter: drop-shadow(0 0 4px #fff); }
 @keyframes signal { to { stroke-dashoffset: -18; } }
 .dial { fill: #fff; stroke: #173c55; stroke-width: 4; }
 .hand { stroke: #173c55; stroke-width: 4; stroke-linecap: round; }

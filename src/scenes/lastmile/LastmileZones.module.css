@@ -36,7 +36,7 @@
   pointer-events: none;
   transform-box: fill-box;
   transform-origin: center;
-  animation: breathe 2.8s ease-out infinite both;
+  animation: breathe 2.8s ease-out infinite both; animation-play-state: var(--ambient-motion, running);
 }
 @keyframes breathe {
   0% { transform: scale(.55); opacity: 0; }

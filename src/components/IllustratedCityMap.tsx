@@ -21,6 +21,7 @@ import {
   trafficPoses,
 } from "./cityV4";
 import styles from "./IllustratedCityMap.module.css";
+import { useAmbientMotion } from "./useAmbientMotion";
 import { useCityMapZoom } from "./useCityMapZoom";
 
 export function IllustratedCityMap({
@@ -88,7 +89,7 @@ export function IllustratedCityMap({
   const clock = useRef(0);
   const dynamicCanvas = useRef<HTMLCanvasElement>(null);
   const [playing, setPlaying] = useState(false);
-  const [reduced, setReduced] = useState(false);
+  const { reduced, stopped } = useAmbientMotion();
   // The gesture hint disappears after the first zoom/pan or choice.
   const [hinted, setHinted] = useState(false);
   const [touch, setTouch] = useState(false);
@@ -123,14 +124,6 @@ export function IllustratedCityMap({
   }, [selectedId]);
 
   useEffect(() => {
-    const preference = matchMedia("(prefers-reduced-motion: reduce)");
-    const sync = () => setReduced(preference.matches);
-    sync();
-    preference.addEventListener("change", sync);
-    return () => preference.removeEventListener("change", sync);
-  }, []);
-
-  useEffect(() => {
     let cancelled = false;
     loadTruckAtlas(plate, attempt).then(
       (atlas) => !cancelled && setLoaded({ source, atlas }),
@@ -156,13 +149,13 @@ export function IllustratedCityMap({
     const [plateWidth] = plates[name].res;
     const tick = (now: number) => {
       handle = 0;
-      if (!reduced) handle = requestAnimationFrame(tick);
+      if (!stopped) handle = requestAnimationFrame(tick);
       const canvas = dynamicCanvas.current;
       if (!canvas) return;
       // A hidden tab pauses rAF; never fast-forward the trucks afterwards.
       const dt = Math.min(0.1, Math.max(0, (now - last) / 1000));
       last = now;
-      if (!reduced) stepTraffic(traffic.current, dt);
+      if (!stopped) stepTraffic(traffic.current, dt);
       const time = traffic.current.time;
       clock.current = time;
       const dpr = Math.min(2, window.devicePixelRatio || 1);
@@ -190,14 +183,14 @@ export function IllustratedCityMap({
       if (pick) pick.toggleAttribute("data-flip", autoFlip);
       drawCity(context, traffic.current, atlas, smoke, {
         plate: name,
-        reduced,
+        reduced: stopped,
         k,
         ox: (box.left - view.left) * dpr,
         oy: (box.top - view.top) * dpr,
         dpr,
         selected: selected.current,
         expressAge:
-          start === undefined ? undefined : reduced ? 3 : time - start,
+          start === undefined ? undefined : stopped ? 3 : time - start,
         pins: live.current && !selected.current,
         pinScale,
         autoFlip,
@@ -226,19 +219,19 @@ export function IllustratedCityMap({
     // A still map needs a new frame only when its viewport or camera changes.
     // Observe the imperative camera transform too (dragging bypasses React).
     let transform = surface.style.transform;
-    const cameraObserver = reduced ? new MutationObserver(() => {
+    const cameraObserver = stopped ? new MutationObserver(() => {
       if (surface.style.transform === transform) return;
       transform = surface.style.transform;
       schedule();
     }) : undefined;
     cameraObserver?.observe(surface, { attributes: true, attributeFilter: ["style"] });
-    const resizeObserver = reduced && typeof ResizeObserver === "function"
+    const resizeObserver = stopped && typeof ResizeObserver === "function"
       ? new ResizeObserver(schedule)
       : undefined;
     resizeObserver?.observe(area);
     window.addEventListener("resize", schedule);
     schedule();
-    setPlaying(!reduced);
+    setPlaying(!stopped);
     return () => {
       repaint.current = () => {};
       cancelAnimationFrame(handle);
@@ -246,7 +239,7 @@ export function IllustratedCityMap({
       resizeObserver?.disconnect();
       window.removeEventListener("resize", schedule);
     };
-  }, [reduced, atlas, plate, ready]);
+  }, [stopped, atlas, plate, ready]);
 
   return (
     <div className={styles.root}>
@@ -300,9 +293,9 @@ export function IllustratedCityMap({
               ? "load-error"
               : !ready
                 ? "images-loading"
-                : reduced
-                  ? "reduced-motion"
-                  : "ready"
+            : reduced
+              ? "reduced-motion"
+              : "ready"
           }
           data-motion-state={playing && ready ? "playing" : "paused"}
         >

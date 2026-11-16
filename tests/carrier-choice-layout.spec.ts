@@ -36,12 +36,11 @@ for (const [width, height] of [
       expect(box?.height).toBeGreaterThanOrEqual(44);
     }
     for (const [id, year] of [
-      ["old", "2011"],
       ["near", "2021"],
       ["crew", "2024"],
       ["old4", "2013"],
     ]) {
-      const button = page.locator(`[data-scene-choice="${id}"]`);
+      const button = page.locator(`[data-carrier-choice="${id}"]`);
       await button.click();
       await expect(page.locator("[data-speedometer]")).toBeVisible();
       await expect(page.locator("[data-choice-inspection]")).toContainText(
@@ -59,7 +58,7 @@ for (const [width, height] of [
     }
     await pickCarrier(page, "express");
     await expect(page.locator("[data-choice-inspection]")).toContainText(
-      "Express",
+      "Подобрать фуру автоматически",
     );
     await page.locator("[data-choice-cancel]").click();
     await page.getByRole("button", { name: "Задание", exact: true }).click();

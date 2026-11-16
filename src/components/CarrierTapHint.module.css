@@ -61,10 +61,10 @@
     animation: chipIn 0.35s 0.15s ease-out backwards;
   }
   .tapIcon svg {
-    animation: tapPress 2.4s ease-in-out infinite;
+    animation: tapPress 2.4s ease-in-out infinite; animation-play-state: var(--ambient-motion, running);
   }
   .tapIcon::before {
-    animation: tapRing 2.4s ease-out infinite;
+    animation: tapRing 2.4s ease-out infinite; animation-play-state: var(--ambient-motion, running);
   }
 }
 @keyframes chipIn {

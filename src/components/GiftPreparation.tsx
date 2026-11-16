@@ -4,6 +4,7 @@ import { preparationCardArtwork } from "../game/artwork";
 import { parcels, profiles, recipients } from "../game/content";
 import type { GameAction, GameState } from "../game/types";
 import styles from "./GiftPreparation.module.css";
+import { usePageTitle } from "./usePageTitle";
 
 type Props = {
   state: GameState;
@@ -40,6 +41,7 @@ export function GiftPreparation({ state, onAction, onBackToIntro }: Props) {
       : state.step === "recipient"
         ? "Кому отправим подарок?"
         : `Что отправим ${state.recipient ? recipientDative[state.recipient] : "в подарок"}?`;
+  usePageTitle(`${title} — Доставляем радость`);
   const select = (id: string) => {
     if (state.step === "profile")
       onAction({

@@ -77,7 +77,7 @@ export function ResultCopy({ paragraphs, title, titleTabIndex, children, reminde
     <section className={styles.reader} aria-label="Рассказ о результате" data-result-reader data-result-density={density} data-continuous={continuous || undefined}>
       {reminder}
       <div className={styles.narrativeRow} data-result-narrative>
-        {title != null && <h2 tabIndex={titleTabIndex}>{title}</h2>}
+        {title != null && <h1 tabIndex={titleTabIndex}>{title}</h1>}
         {children && <div className={styles.consequence}>{children}</div>}
         <div ref={body} className={styles.reading} data-result-reading aria-label="Текст результата" tabIndex={navigation && !continuous ? undefined : 0} aria-live="polite">
           <p data-testid="result-copy">

@@ -74,14 +74,8 @@ for (const file of ["assets/missing.js", "assets/missing.css", "scene-art/missin
   const response = await request(file);
   assert.equal(response.status, 404, `Missing ${file} must not fall back to game HTML`);
 }
-const video = paths.find(file => /city-motion-mobile\.mp4$/.test(file));
-assert(video, "Map video must be included");
-const range = await request(video, { headers: { Range: "bytes=0-63" } });
-assert.equal(range.status, 206, "Video byte-range support");
-assert.match(range.headers.get("content-range") ?? "", /^bytes 0-63\//);
-await range.arrayBuffer();
 const compressed = await request(scripts[0], { headers: { "Accept-Encoding": "gzip" } });
 assert.equal(compressed.headers.get("content-encoding"), "gzip", "JavaScript compression");
 await compressed.arrayBuffer();
 assert(!paths.some(path => /^review\/.*\.html$/i.test(path)), "Reference pages leaked into the archive");
-console.log(`Nginx HTTP checks passed: ${paths.length} files, entrypoint bodies/MIME, slash redirect, missing-file 404, gzip, video ranges. Browser gameplay is checked separately.`);
+console.log(`Nginx HTTP checks passed: ${paths.length} files, entrypoint bodies/MIME, slash redirect, missing-file 404, gzip. Browser gameplay is checked separately.`);

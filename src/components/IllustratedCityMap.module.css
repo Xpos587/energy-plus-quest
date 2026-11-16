@@ -66,6 +66,7 @@
 }
 .target {
   position: absolute;
+  z-index: 1;
   width: max(calc(44px / var(--map-zoom, 1)), 12cqw);
   height: max(calc(44px / var(--map-zoom, 1)), 4.8cqw);
   padding: 0;

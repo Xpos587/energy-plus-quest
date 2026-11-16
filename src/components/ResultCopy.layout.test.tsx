@@ -26,12 +26,12 @@ it("keeps the result title outside measured prose and preserves navigation callb
         navigation={{ ...navigation, onBack, onNext }}
       />,
     ));
-    const title = host.querySelector("[data-result-narrative] > h2");
+    const title = host.querySelector("[data-result-narrative] > h1");
     const reading = host.querySelector("[data-result-reading]");
     expect(title?.textContent).toBe("Груз прибыл");
     expect(title?.getAttribute("tabindex")).toBe("-1");
     expect(title?.nextElementSibling).toBe(reading);
-    expect(reading?.querySelector("h2")).toBeNull();
+    expect(reading?.querySelector("h1")).toBeNull();
     expect(reading?.textContent).toBe("Подарок прибыл вовремя.");
     await act(async () => host.querySelector<HTMLButtonElement>('button[aria-label="Изменить выбор"]')?.click());
     await act(async () => host.querySelector<HTMLButtonElement>('button[aria-label="Продолжить"]')?.click());

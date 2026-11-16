@@ -2,7 +2,20 @@ import { expectNoInteractionDecorations } from './helpers/interaction-decoration
 import { expect, test, type Page } from "@playwright/test";
 import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
+async function expectScreenIdentity(page: Page) {
+  const heading = page.locator("h1");
+  await expect(heading).toHaveCount(1);
+  const title = await heading.evaluate(node => {
+    const copy = node.cloneNode(true) as HTMLElement;
+    copy.querySelectorAll("small").forEach(label => label.remove());
+    return copy.textContent!.trim().replace(/\s+/g, " ");
+  });
+  await expect(page).toHaveTitle(`${title} — Доставляем радость`);
+  await expect(page.locator("head > title")).toHaveCount(1);
+}
+
 async function readBriefing(page: Page) {
+  await expectScreenIdentity(page);
   const briefing = page.locator("[data-scene-briefing]");
   for (let n = 0; n < 30 && (await briefing.getAttribute("data-reading")) === "true"; n++) {
     await briefing.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ }).click();
@@ -14,6 +27,7 @@ async function readBriefing(page: Page) {
 async function finishResult(page: Page, nextLabel: string) {
   const reader = page.locator("[data-result-reader]");
   await expect(reader).toBeVisible({ timeout: 15000 });
+  await expectScreenIdentity(page);
   const further = reader.getByRole("button", { name: "Читать дальше", exact: true });
   for (let n = 0; n < 40 && await further.isVisible(); n++) {
     await expect(further).toBeInViewport({ ratio: 0.98 });
@@ -37,6 +51,7 @@ test(`${route.parcel}/${route.lastmile} reaches certificate, restores progress a
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
   await openCarrier(page, route.profile, route.recipient, route.parcel);
+  await expectScreenIdentity(page);
   await pickCarrier(page, route.carrier);
   await page.locator("[data-choice-confirm]").click();
   await finishResult(page, "Дальше: погрузка");
@@ -70,15 +85,18 @@ test(`${route.parcel}/${route.lastmile} reaches certificate, restores progress a
     await finishResult(page, scene === "lastmile" ? "К вручению подарка" : scene === "compact" ? "Дальше: склад" : scene === "inventory" ? "Дальше: баржа" : "Дальше: последняя миля");
   }
   await expect(page.locator("[data-journey-ending]")).toBeVisible();
+  await expectScreenIdentity(page);
   await expectNoInteractionDecorations(page);
   await page.getByRole("button", { name: "Узнать, какой вы логист" }).click();
   await expect(page.locator("[data-logist-certificate]")).toBeVisible();
+  await expectScreenIdentity(page);
   await expect(page.locator("[data-certificate-totals] [data-metric]")).toHaveCount(3);
   await expectNoInteractionDecorations(page);
   await page.locator("[data-certificate-art]").evaluate((image: HTMLImageElement) => image.decode());
   await page.screenshot({ path: info.outputPath("certificate.png") });
   await page.reload();
   await expect(page.locator("[data-logist-certificate]")).toBeVisible();
+  await expectScreenIdentity(page);
   await page.getByRole("button", { name: /заново/i }).click();
   await expect(page.locator("[data-intro-enter]")).toBeVisible();
   await page.locator("[data-intro-enter]").click();

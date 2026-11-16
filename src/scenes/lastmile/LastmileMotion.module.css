@@ -11,23 +11,6 @@
   user-select: none;
 }
 
-.floes {
-  animation: drift 12s ease-in-out infinite alternate;
-}
-
-.barge {
-  transform-origin: 50% 85%;
-  animation: bob 4.6s ease-in-out infinite;
-}
-
-.idle {
-  animation: idle 0.18s steps(2, jump-none) infinite alternate;
-}
-
-.late {
-  animation-delay: -0.07s;
-}
-
 .rotor {
   position: absolute;
   overflow: hidden;
@@ -37,33 +20,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  /* 12 frames cover the 72° symmetry of the five-blade rotor */
   animation: rotor 0.42s steps(12) infinite;
-}
-
-@keyframes drift {
-  from {
-    transform: translateX(calc(var(--drift) * -1));
-  }
-  to {
-    transform: translateX(var(--drift));
-  }
-}
-
-@keyframes bob {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(var(--lift)) rotate(-0.35deg);
-  }
-}
-
-@keyframes idle {
-  to {
-    transform: translateY(var(--shake));
-  }
 }
 
 @keyframes rotor {
@@ -73,9 +30,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .floes,
-  .barge,
-  .idle,
   .rotor img {
     animation: none;
   }

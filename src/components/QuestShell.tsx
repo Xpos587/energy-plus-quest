@@ -34,6 +34,8 @@ export function HeaderBackButton({ onClick }: { onClick: () => void }) {
   );
 }
 
+
+
 export function QuestHeader({
   state,
   currentStep = 0,

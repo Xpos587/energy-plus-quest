@@ -29,6 +29,7 @@ for (const [width, height] of [[1440, 900], [390, 844], [320, 568], [844, 390], 
       await page.goto(`/scenes.html?scene=${scene}&parcel=boat&recipient=khor`);
       await readCondition(page);
       await settleArt(page);
+      await expect(page.getByRole("button", { name: /анимаци/i })).toHaveCount(0);
       const question = page.locator('[data-testid="scene-question"]');
       const reminder = question.locator("[data-delivery-reminder]");
       await expect(reminder).toBeInViewport({ ratio: 1 });
@@ -96,6 +97,15 @@ for (const width of [390, 320]) {
       await readCondition(page);
       await settleArt(page);
       await doubleText('[data-testid="scene-question"]');
+      if (scene === "lastmile") {
+        for (const id of ids) {
+          for (const attribute of ["data-hotspot", "data-lastmile-label"]) {
+            await page.locator(`[${attribute}="${id}"]`).click();
+            await expect(page.locator("[data-choice-inspection]")).toHaveAttribute("data-choice-inspection", id);
+            await page.locator("[data-choice-cancel]").click();
+          }
+        }
+      }
       if (scene === "carrier") await pickCarrier(page, "express");
       else await page.locator(`[data-hotspot="${ids.at(-1)}"]`).click();
       await doubleText('[data-choice-inspection]');
@@ -116,7 +126,7 @@ for (const width of [390, 320]) {
       }
       expect(await reading.evaluate(node => {
         const reader = node.closest('[data-result-reader]')!;
-        return reader.querySelector('h2')!.getBoundingClientRect().bottom <= node.getBoundingClientRect().top + 1 &&
+        return reader.querySelector('h1')!.getBoundingClientRect().bottom <= node.getBoundingClientRect().top + 1 &&
           node.getBoundingClientRect().bottom <= reader.querySelector('footer')!.getBoundingClientRect().top + 1;
       })).toBe(true);
       expect(await page.locator('[data-score-key] em').evaluateAll(labels =>

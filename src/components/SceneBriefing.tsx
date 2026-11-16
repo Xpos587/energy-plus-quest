@@ -12,6 +12,8 @@ import {
   useState,
 } from "react";
 import { QuestBrand } from "./QuestShell";
+import { usePageTitle } from "./usePageTitle";
+import { useAmbientMotion } from "./useAmbientMotion";
 import { progressSteps } from "./stageProgress";
 import { useTextPages } from "./useTextPages";
 import styles from "./SceneInteraction.module.css";
@@ -62,6 +64,8 @@ export function SceneBriefing({
   /** Persistent parcel context, shared with preview and result cards. */
   reminder?: ReactNode;
 }) {
+  usePageTitle(`${title} — Доставляем радость`);
+  const { stopped } = useAmbientMotion();
   // The stage count lives in the progress strip, so the reminder carries only
   // what goes where and the current leg (R19).
   // A separate first-entry condition and optional rereading share the same pages.
@@ -198,7 +202,7 @@ export function SceneBriefing({
     };
   }, [navigation, visible]);
   useEffect(() => {
-    if (!showPanHint || visible || inspecting || panDone) return;
+    if (!showPanHint || visible || inspecting || panDone || stopped) return;
     const viewport = briefing.current
       ?.closest('[data-interaction="inspect-confirm"]')
       ?.querySelector<HTMLElement>("[data-pan-viewport]");
@@ -268,7 +272,7 @@ export function SceneBriefing({
       window.removeEventListener("touchend", touchEnd);
       window.removeEventListener("touchcancel", touchEnd);
     };
-  }, [showPanHint, visible, inspecting, hint, panDone]);
+  }, [showPanHint, visible, inspecting, hint, panDone, stopped]);
   const close = () => {
     focusAfterClose.current = true;
     setOpen(false);
@@ -287,7 +291,7 @@ export function SceneBriefing({
         <QuestBrand />
         <div className={`${styles.briefingHeading} ${chrome.headerRow}`}>
           <div className={styles.sceneIdentity}>
-            <h2 tabIndex={-1}>{title}</h2>
+            <h1 tabIndex={-1}>{title}</h1>
             <StageIndicator
               step={currentStep + 1}
               total={progressSteps.length}

@@ -33,6 +33,7 @@ import type { CarrierId, GameAction } from "./game/types";
 import { sceneChoiceImage } from "./scenes/artwork";
 import { outcomeFocus } from "./scenes/outcomeFraming";
 import { ChoiceVerdict, ScenesGame } from "./scenes/ScenesGame";
+import { usePageTitle } from "./components/usePageTitle";
 import { carrierHeadings } from "./scenes/resultHeadings";
 import { restartSceneCondition } from "./scenes/sceneFlow";
 
@@ -337,6 +338,7 @@ function Outcome({
 }) {
   const { state } = useGame();
   const carrier = findCarrier(state.carrier);
+  usePageTitle(carrier ? `${carrierHeadings[carrier.id]} — Доставляем радость` : undefined);
   const recipient = findRecipient(state.recipient);
   const parcel = findParcel(state.parcel);
   useEffect(

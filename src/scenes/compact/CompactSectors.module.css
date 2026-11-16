@@ -76,7 +76,7 @@
   to { stroke-dashoffset: 0; }
 }
 :global([data-interaction="inspect-confirm"]):has(:global([data-scene-briefing][data-reading="false"])) .stage:not([data-selected]) .space {
-  animation: placementOutline 2.4s linear infinite;
+  animation: placementOutline 2.4s linear infinite; animation-play-state: var(--ambient-motion, running);
 }
 .space[data-active="true"] {
   fill: var(--orange);

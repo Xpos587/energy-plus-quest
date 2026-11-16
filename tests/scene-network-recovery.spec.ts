@@ -127,7 +127,7 @@ for (const [index, scene] of stages.entries()) {
     for (let n = 0; n < 40 && (await more.isVisible()); n++) await more.click();
     await page
       .getByRole("button", {
-        name: index === 0 ? "Дальше: погрузка" : "Продолжить",
+        name: ["Дальше: погрузка", "Дальше: склад", "Дальше: баржа", "Дальше: последняя миля"][index],
         exact: true,
       })
       .click();
@@ -154,8 +154,7 @@ for (const [index, scene] of stages.entries()) {
     await target.focus();
     await expect(target).toBeFocused();
     await page.keyboard.press("Enter");
-    if (scene.id !== "lastmile")
-      await page.locator("[data-choice-confirm]").click();
+    await page.locator("[data-choice-confirm]").click();
     await expect(page.locator("[data-result-reader]")).toBeVisible();
     expect(
       await page.evaluate(
@@ -216,7 +215,7 @@ for (const [index, scene] of stages.entries()) {
         await more.click();
       await page
         .getByRole("button", {
-          name: index === 0 ? "Дальше: погрузка" : "Продолжить",
+          name: ["Дальше: погрузка", "Дальше: склад", "Дальше: баржа", "Дальше: последняя миля"][index],
           exact: true,
         })
         .click();

@@ -68,7 +68,7 @@
 
 @media (max-height: 450px) {
   .frame[data-layout="result"] .result { padding: 8px 12px; gap: 4px; }
-  .frame[data-layout="result"] .result h2 { font-size: 18px; }
+  .frame[data-layout="result"] .result :is(h1, h2) { font-size: 18px; }
 }
 .main {
   position: absolute;
@@ -156,7 +156,7 @@
 .briefingHeading {
   display: flex;
 }
-.briefingHeading h2 {
+.briefingHeading :is(h1, h2) {
   margin: 0;
   font-size: clamp(21px, 2vw, 28px);
   line-height: 1.15;
@@ -582,7 +582,7 @@
   font-size: 16px;
   line-height: 1.25;
 }
-.briefingHeading h2:focus {
+.briefingHeading :is(h1, h2):focus {
   outline: none;
 }
 .frame button:focus-visible,
@@ -618,7 +618,7 @@
   color: var(--navy);
   box-shadow: 0 8px 32px #20365318;
 }
-.result h2 {
+.result :is(h1, h2) {
   margin: 0 0 16px;
   font-size: 30px;
 }
@@ -630,7 +630,7 @@
     gap: 6px;
     flex-wrap: wrap;
   }
-  .briefingHeading h2 {
+  .briefingHeading :is(h1, h2) {
     font-size: 19px;
     padding: 10px;
   }
@@ -689,7 +689,7 @@
   .inspectionHeading h3 {
     font-size: 22px;
   }
-  .result h2 {
+  .result :is(h1, h2) {
     font-size: clamp(22px, 5vw, 26px);
   }
   .inspection {
@@ -763,7 +763,7 @@
 .resultInner {
   display: contents;
 }
-.result h2 {
+.result :is(h1, h2) {
   flex-shrink: 0;
   margin: 0;
 }
@@ -893,7 +893,7 @@
   min-height: 36px;
   padding-top: 0;
 }
-.headerCard .briefingHeading h2 {
+.headerCard .briefingHeading :is(h1, h2) {
   flex: 1;
   min-width: 0;
   padding: 0;
@@ -924,7 +924,7 @@
     min-height: 0;
     flex-wrap: nowrap;
   }
-  .headerCard .briefingHeading h2 {
+  .headerCard .briefingHeading :is(h1, h2) {
     max-width: none;
     font-size: clamp(14px, 4vw, 17px);
   }
@@ -973,7 +973,7 @@
     gap: 10px;
     padding: 14px;
   }
-  .frame[data-score-result] > .result h2 {
+  .frame[data-score-result] > .result :is(h1, h2) {
     font-size: 22px;
   }
 }
@@ -1022,13 +1022,13 @@
   pointer-events: none;
   animation:
     panHintEnter 180ms ease-out both,
-    panHintPulse 3.6s ease-in-out 180ms infinite;
+    panHintPulse 3.6s ease-in-out 180ms infinite; animation-play-state: running, var(--ambient-motion, running);
 }
 .panHint svg {
   width: clamp(38px, 4vw, 48px);
   height: 24px;
   flex-shrink: 0;
-  animation: panHintSwipe 3.6s ease-in-out infinite;
+  animation: panHintSwipe 3.6s ease-in-out infinite; animation-play-state: var(--ambient-motion, running);
   fill: none;
   stroke: currentColor;
   stroke-width: 1.6;
@@ -1067,13 +1067,13 @@
 .tutorialHand {
   fill: #fafdff;
   stroke-width: 2;
-  animation: tutorialGesture 6s ease-in-out infinite;
+  animation: tutorialGesture 6s ease-in-out infinite; animation-play-state: var(--ambient-motion, running);
 }
 .tutorialTap {
   fill: none;
   transform-box: fill-box;
   transform-origin: center;
-  animation: tutorialTap 6s ease-out infinite;
+  animation: tutorialTap 6s ease-out infinite; animation-play-state: var(--ambient-motion, running);
 }
 .tutorialSwipe {
   opacity: 0.65;
@@ -1084,8 +1084,8 @@
 }
 .tutorialPinch circle { fill: none; opacity: 0.35; }
 .pinchArrows { fill: none; opacity: 0.5; }
-.pinchFingerFirst { animation: pinchFingerFirst 6s ease-in-out infinite; }
-.pinchFingerSecond { animation: pinchFingerSecond 6s ease-in-out infinite; }
+.pinchFingerFirst { animation: pinchFingerFirst 6s ease-in-out infinite; animation-play-state: var(--ambient-motion, running); }
+.pinchFingerSecond { animation: pinchFingerSecond 6s ease-in-out infinite; animation-play-state: var(--ambient-motion, running); }
 @keyframes pinchFingerFirst {
   0%, 8%, 36% { transform: translate(24px, 25px); opacity: 1; }
   24%, 48% { transform: translate(14px, 13px); opacity: 1; }
@@ -1218,7 +1218,7 @@
 .frame[data-layout="result"] .resultTrail span:last-child {
   color: #20618c;
 }
-.frame[data-layout="result"] .result h2 {
+.frame[data-layout="result"] .result :is(h1, h2) {
   color: #082946;
   font-size: clamp(22px, 2vw, 26px);
   line-height: 1.12;
@@ -1332,7 +1332,7 @@
   .frame[data-layout="result"] .resultStory {
     display: contents;
   }
-  .frame[data-layout="result"] .resultStory > h2 {
+  .frame[data-layout="result"] .resultStory > :is(h1, h2) {
     grid-column: 1 / -1;
     grid-row: 1;
   }
@@ -1371,7 +1371,7 @@
     gap: 5px;
     padding: 10px;
   }
-  .frame[data-layout="result"] .result h2 {
+  .frame[data-layout="result"] .result :is(h1, h2) {
     font-size: clamp(17px, 5.5vw, 21px);
     line-height: 1.13;
   }
@@ -1993,7 +1993,7 @@
   justify-content: flex-start;
 }
 .sceneIdentity { display: grid; gap: 3px; min-width: 0; }
-.app[data-scene] .headerCard .sceneIdentity h2 {
+.app[data-scene] .headerCard .sceneIdentity :is(h1, h2) {
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -2018,7 +2018,7 @@
   }
   .app[data-scene] .headerCard .briefingHeading { width: 100%; }
   .sceneIdentity { flex: 1; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; }
-  .app[data-scene] .headerCard .sceneIdentity h2 { grid-column: 1; grid-row: 1; font-size: 18px; }
+  .app[data-scene] .headerCard .sceneIdentity :is(h1, h2) { grid-column: 1; grid-row: 1; font-size: 18px; }
   .sceneProgress { grid-column: 2; grid-row: 1; font-size: 14px; }
 }
 .app[data-scene] .frame[data-interaction="inspect-confirm"] .inspection[data-continuous-description] {
@@ -2098,7 +2098,7 @@
   display: flex; flex-direction: column; flex: 1; min-height: 0; height: auto;
   width: 100%; max-width: 1100px; margin-inline: auto;
 }
-.app[data-scene] .frame[data-layout="result"] .result h2 { flex: none; margin: 0 0 8px; }
+.app[data-scene] .frame[data-layout="result"] .result :is(h1, h2) { flex: none; margin: 0 0 8px; }
 .app[data-scene] .frame[data-layout="result"] [data-result-reading] {
   --result-fit-viewport: 0;
   width: 100%; max-width: none; flex: 1; min-height: 0; height: 100%; max-height: none; overflow: hidden;
@@ -2177,7 +2177,7 @@
 }
 .app[data-scene] .headerCard .briefingHeading { width: auto; min-height: 0; }
 .app[data-scene] .headerCard .sceneIdentity { display: block; }
-.app[data-scene] .headerCard .sceneIdentity h2 {
+.app[data-scene] .headerCard .sceneIdentity :is(h1, h2) {
   position: absolute; width: 1px; height: 1px; overflow: hidden;
   clip-path: inset(50%); white-space: nowrap;
 }
@@ -2669,7 +2669,7 @@
     justify-content: center;
     gap: 8px;
   }
-  .app[data-scene] .frame[data-layout="result"] [data-result-narrative] > h2 {
+  .app[data-scene] .frame[data-layout="result"] [data-result-narrative] > :is(h1, h2) {
     margin: 0;
   }
   .app[data-scene] .frame[data-layout="result"] [data-result-reading] {
@@ -2847,7 +2847,7 @@
 .app[data-scene] .frame.frame[data-layout="result"] [data-result-narrative] {
   justify-content: flex-start; gap: 12px;
 }
-.app[data-scene] .frame.frame[data-layout="result"] .result h2 {
+.app[data-scene] .frame.frame[data-layout="result"] .result :is(h1, h2) {
   font-size: var(--scene-title-size);
 }
 .app[data-scene] .frame.frame[data-layout="result"] [data-result-reading] {
@@ -3079,7 +3079,7 @@
 .app[data-scene] .frame.frame.frame[data-layout="result"] [data-result-reading] {
   font-size: var(--type-body); line-height: var(--type-body-leading);
 }
-.app[data-scene] .frame.frame.frame[data-layout="result"] .result h2,
+.app[data-scene] .frame.frame.frame[data-layout="result"] .result :is(h1, h2),
 .app[data-scene] .frame.frame.frame .inspectionHeading h3 {
   font-size: var(--type-title); line-height: var(--type-title-leading);
 }
@@ -4060,7 +4060,7 @@
     gap: 12px 32px; width: 100%; max-width: none; height: auto; flex: none;
   }
   .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] [data-delivery-reminder] { grid-column: 1; grid-row: 1; }
-  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] h2 { grid-column: 1; grid-row: 2; align-self: start; margin: 0; font-size: 24px; line-height: 1.25; }
+  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] :is(h1, h2) { grid-column: 1; grid-row: 2; align-self: start; margin: 0; font-size: 24px; line-height: 1.25; }
   .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] [data-result-reading] { grid-column: 2; grid-row: 1 / 3; height: clamp(5lh, 22dvh, 8lh); max-height: none; max-width: none; }
   .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer { grid-column: 1 / -1; grid-row: 3; }
 }
@@ -4070,7 +4070,7 @@
   .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(100px, 1fr) auto !important; }
   .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] .result { height: auto; max-height: calc(100dvh - var(--scene-header-height) - 100px); }
   .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] [data-result-reading] { --result-fit-viewport: 1; flex: none; height: auto; max-height: var(--result-reading-height, 120px); }
-  .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] h2 { font-size: 20px; line-height: 1.25; }
+  .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] :is(h1, h2) { font-size: 20px; line-height: 1.25; }
   /* WMS has subjects near both vertical edges; fit them when the sheet grows. */
   .app[data-scene="inventory"] .frame.frame.frame.frame.frame[data-layout="result"] [data-scene-consequence="inventory-wms"] img { object-fit: contain; }
 }

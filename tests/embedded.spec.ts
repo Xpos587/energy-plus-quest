@@ -107,7 +107,7 @@ test("mobile card labels do not stick to artwork or screen headings", async ({
     await page.goto("/");
     for (const choice of ["professional", "alva", "camera"]) {
       const spacing = await page.evaluate(() => {
-        const heading = document.querySelector("h2")!.getBoundingClientRect();
+        const heading = document.querySelector("h1")!.getBoundingClientRect();
         const cards = [...document.querySelectorAll("[data-choice]")];
         return {
           heading: cards[0].getBoundingClientRect().top - heading.bottom,

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { ImageSources } from "../components/ImageSources";
+import { usePageTitle } from "../components/usePageTitle";
 import { BrandLockup } from "../components/BrandLockup";
 import { useOptionalSaveScope } from "../game/GameContext";
 import { useStoredState } from "../game/persistence";
@@ -34,6 +35,7 @@ export function JourneyEnding({
   const [mission, greeting] = endingHeading(context.recipient).split(
     /(?<=!)\s+/u,
   );
+  usePageTitle(`${showProfile ? profile.title : mission} — Доставляем радость`);
   return (
     <main className={styles.ending} id="quest-main" data-journey-ending>
       <div className={styles.brand}>

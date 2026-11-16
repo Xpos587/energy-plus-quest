@@ -493,7 +493,7 @@ test("barge and last mile results keep the picture, title and actions separate",
     const header = (await page.locator('header[data-header-result]').boundingBox())!;
     const art = (await page.locator('[data-scene-consequence]').boundingBox())!;
     const panel = (await page.locator('[data-result]').boundingBox())!;
-    const title = (await page.locator('[data-result] h2').boundingBox())!;
+    const title = (await page.locator('[data-result] h1').boundingBox())!;
     expect(title.height).toBeGreaterThan(15);
     expect(art.y).toBeGreaterThanOrEqual(header.y + header.height);
     expect(art.y - header.y - header.height).toBeLessThanOrEqual(12);

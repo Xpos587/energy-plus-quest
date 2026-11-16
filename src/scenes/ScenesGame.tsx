@@ -6,6 +6,7 @@ import { restoreArtworkFocus } from "../components/restoreArtworkFocus";
 import { ResultCopy } from "../components/ResultCopy";
 import { SceneBriefing } from "../components/SceneBriefing";
 import { remainingScenes, briefingParagraphs, restartSceneCondition } from "./sceneFlow";
+import { usePageTitle } from "../components/usePageTitle";
 import { resultHeading } from "./resultHeadings";
 import { CarrierTapHint } from "../components/CarrierTapHint";
 import { ChoiceInspection } from "../components/ChoiceInspection";
@@ -294,7 +295,7 @@ function ScenesSession({
     ) ?? (state.phase === "choice"
       ? stage.current?.querySelector<HTMLButtonElement>(`:is([data-scene-choice], [data-hotspot])[data-${["crane", "compact", "lastmile", "inventory"].includes(remainingScenes[state.sceneIndex].id) ? "hotspot" : "scene-choice"}="${lastChoice.current[remainingScenes[state.sceneIndex].id] ?? ""}"]`)
         ?? stage.current?.querySelector<HTMLButtonElement>("[data-scene-choice], [data-hotspot]")
-      : stage.current?.querySelector<HTMLHeadingElement>("h2"));
+      : stage.current?.querySelector<HTMLHeadingElement>("h1"));
     if (destination) return restoreArtworkFocus(destination);
   }, [state.sceneIndex, state.phase]);
 
@@ -307,6 +308,7 @@ function ScenesSession({
   }, [state.finished, state.answers, context, score, onComplete]);
 
   const title = scene.title.replace(/^Сцена \d+\.\s*/, "");
+  usePageTitle(state.finished ? undefined : `${resultVisible && selected ? resultHeading(scene.id, selected.id, context.parcel) : title} — Доставляем радость`);
   const brief = sceneBriefs[scene.id];
   const places = brief?.places(context);
   const syncFocus = brief ? { focusedId: focusedChoice, onFocusChange: setFocusedChoice } : {};

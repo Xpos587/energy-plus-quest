@@ -9,11 +9,7 @@ type Motion = Record<"floes" | "barge" | "rover" | "pipe-carrier", Sprite> & {
   rotor: Sprite & { frames: number };
 };
 
-/**
- * Ambient life on the R5 map: rotor, barge, floes and vehicles. Every layer is cut from the same
- * painted plate (scripts/lastmile-r5/compose.py), so the moving parts carry no style seam.
- * Static frames are pixel-identical to the plate; reduced motion keeps them still.
- */
+/** Pixel-matched map layers stay still; only the helicopter's rotor animates. */
 export function LastmileMotion({
   composition,
 }: {
@@ -32,21 +28,10 @@ export function LastmileMotion({
     width: `${(w / width) * 100}%`,
     height: `${(h / height) * 100}%`,
   });
-  const sprite = (
-    id: "floes" | "barge" | "rover" | "pipe-carrier",
-    className: string,
-  ) => (
+  const sprite = (id: "floes" | "barge" | "rover" | "pipe-carrier") => (
     <img
-      className={className}
       src={imageAsset(motion[id].image)}
-      style={{
-        ...place(motion[id]),
-        // logical-pixel amplitudes as a share of the sprite, so they scale with the map
-        ["--lift" as string]: `${(-2 / motion[id].h) * 100}%`,
-        ["--shake" as string]: `${(0.6 / motion[id].h) * 100}%`,
-        // floes drift inside the 3 px inpainted margin left around them in the plate
-        ["--drift" as string]: `${(2.5 / motion[id].w) * 100}%`,
-      }}
+      style={place(motion[id])}
       alt=""
       draggable={false}
     />
@@ -57,10 +42,10 @@ export function LastmileMotion({
       aria-hidden="true"
       data-lastmile-motion={composition}
     >
-      {sprite("floes", styles.floes)}
-      {sprite("barge", styles.barge)}
-      {sprite("rover", styles.idle)}
-      {sprite("pipe-carrier", `${styles.idle} ${styles.late}`)}
+      {sprite("floes")}
+      {sprite("barge")}
+      {sprite("rover")}
+      {sprite("pipe-carrier")}
       <div className={styles.rotor} style={place(motion.rotor)}>
         <img
           src={imageAsset(motion.rotor.image)}

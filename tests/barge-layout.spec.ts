@@ -37,7 +37,7 @@ for (const parcel of ['camera', 'socks', 'boat']) {
         await expect(more).toBeInViewport({ ratio: 1 });
         await more.click();
       }
-      const proceed = page.getByRole('button', { name: 'Продолжить', exact: true });
+      const proceed = page.getByRole('button', { name: 'Дальше: последняя миля', exact: true });
       await proceed.scrollIntoViewIfNeeded();
       await expect(proceed).toBeInViewport({ ratio: 1 });
       await proceed.click();
