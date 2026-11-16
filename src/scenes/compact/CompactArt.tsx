@@ -198,7 +198,7 @@ export function CompactArt({
         data-map-surface={!showResult || undefined}
       >
         <CargoBay
-          viewportFeedback
+          feedbackContainer={stage}
           placement={placement}
           focused={focused}
           portrait={portrait}

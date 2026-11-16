@@ -103,6 +103,27 @@ it("focuses the selected button and resets the result when the starting scene ch
   expect(container.querySelector("[data-scene-choice]")).toBeNull();
 });
 
+it("shows the existing place description before confirmation and updates it when switching", async () => {
+  await act(async () =>
+    root.render(<ScenesGame context={context} startAt="compact" />),
+  );
+  await click('[data-hotspot="place-1"]');
+  expect(container.querySelector('[aria-label="Описание варианта"]')?.textContent)
+    .toContain("Над ящиками с гирями у задних дверей. Креплений нет.");
+  await click('[data-hotspot="place-2"]');
+  expect(container.querySelectorAll("[data-choice-inspection]")).toHaveLength(1);
+  expect(container.querySelector('[aria-label="Описание варианта"]')?.textContent)
+    .toContain("Над ящиком с посудой, до самой крыши. На стенке есть стропы.");
+  expect(container.querySelector('[aria-label="Описание варианта"]')?.textContent)
+    .not.toContain("Креплений нет.");
+  expect(container.querySelector("[data-result]")).toBeNull();
+  await click('[data-hotspot="auto"]');
+  expect(container.querySelector('[data-choice-inspection="auto"]')?.textContent)
+    .toContain("Compact");
+  expect(container.querySelector('[data-choice-inspection="auto"]')?.textContent)
+    .not.toContain("Креплений нет.");
+});
+
 it("shows a single-paragraph task alongside the places on the art", async () => {
   await act(async () =>
     root.render(<ScenesGame context={context} startAt="inventory" />),

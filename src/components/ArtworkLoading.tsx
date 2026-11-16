@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { type RefObject, useEffect, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { createPortal } from "react-dom";
 import styles from "./ArtworkLoading.module.css";
@@ -8,19 +8,19 @@ export function ArtworkLoading({
   status,
   onRetry,
   inline = false,
-  viewport = false,
+  container,
 }: {
   status: ArtworkStatus;
   onRetry: () => void;
   inline?: boolean;
-  viewport?: boolean;
+  container?: RefObject<HTMLElement | null>;
 }) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   if (status === "ready") return null;
   const feedback = (
     <div
-      className={`${styles.status} ${inline ? styles.inline : ""} ${viewport ? styles.viewport : ""}`}
+      className={`${styles.status} ${inline ? styles.inline : ""}`}
       role="status"
       aria-live="polite"
       data-artwork-status={status}
@@ -38,5 +38,5 @@ export function ArtworkLoading({
       )}
     </div>
   );
-  return viewport && mounted ? createPortal(feedback, document.body) : feedback;
+  return mounted && container?.current ? createPortal(feedback, container.current) : feedback;
 }

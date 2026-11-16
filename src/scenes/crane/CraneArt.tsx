@@ -364,7 +364,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
           </button>
         ))}
       </div>
-      <ArtworkLoading viewport status={status} onRetry={() => setAttempt((count) => count + 1)} />
+      <ArtworkLoading status={status} onRetry={() => setAttempt((count) => count + 1)} />
     </figure>
   );
 }

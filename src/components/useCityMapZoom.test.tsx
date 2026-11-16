@@ -85,6 +85,49 @@ it("eases inspection, decoded-frame following and return on the display clock", 
     expect(callbacks.size).toBe(0);
     await act(async () => camera.inspect(undefined));
     expect(callbacks.size).toBeGreaterThan(0);
+    const viewport = host.firstElementChild as HTMLElement;
+    viewport.setPointerCapture = vi.fn();
+    viewport.hasPointerCapture = () => false;
+    const pointer = async (type: string, id: number, x: number, y = 250) => act(async () => {
+      const event = new Event(type, { bubbles: true });
+      Object.assign(event, { pointerId: id, pointerType: "touch", button: 0, clientX: x, clientY: y });
+      viewport.dispatchEvent(event);
+    });
+    const position = () => surface.style.transform.match(/-?\d+(?:\.\d+)?/g)!.map(Number);
+    // Catch a returning camera at its visible position, not its old destination.
+    const caught = surface.style.transform;
+    await pointer("pointerdown", 1, 300);
+    await tick();
+    expect(surface.style.transform).toBe(caught);
+    const start = position();
+    const trackingRenders = renders;
+    for (const dx of [20, 40, 60]) {
+      await pointer("pointermove", 1, 300 + dx, 270);
+      expect(position()[0] - start[0]).toBeCloseTo(dx);
+      expect(position()[1] - start[1]).toBeCloseTo(20);
+      expect(renders).toBe(trackingRenders);
+    }
+    await pointer("pointerup", 1, 360, 270);
+    await pointer("pointerdown", 2, 280);
+    await pointer("pointerdown", 3, 440);
+    const pinchRenders = renders;
+    const pinchScale = position()[2];
+    await pointer("pointermove", 3, 460);
+    await pointer("pointermove", 3, 480);
+    expect(position()[2]).toBeCloseTo(pinchScale * 200 / 160);
+    expect(renders).toBe(pinchRenders);
+    await pointer("pointerup", 2, 280);
+    await pointer("pointerup", 3, 480);
+    expect(camera!.scale).toBeCloseTo(position()[2]);
+    // Traffic following must also pause while the player holds the map.
+    await act(async () => camera.inspect("crew", { x: .6, y: .5 }));
+    await tick();
+    await pointer("pointerdown", 4, 300);
+    const held = surface.style.transform;
+    camera!.track({ x: .7, y: .5 });
+    await tick();
+    expect(surface.style.transform).toBe(held);
+    await pointer("pointercancel", 4, 300);
   } finally {
     await act(async () => root.unmount());
     expect(callbacks.size).toBe(0);
@@ -198,7 +241,7 @@ it("pinches and drags from a truck without selecting it, then accepts a delibera
     const ref = useRef<HTMLDivElement>(null);
     const map = useCityMapZoom(ref, select);
     return (
-      <div ref={ref} data-scale={map.scale}>
+      <div ref={ref} data-map-scale={map.scale}>
         <button data-carrier-choice="crew">Фура</button>
         <button onClick={map.reset}>Весь город</button>
       </div>
@@ -236,7 +279,8 @@ it("pinches and drags from a truck without selecting it, then accepts a delibera
     await pointer("pointerdown", 2, 220, 310);
     await pointer("pointermove", 1, 100, 310);
     await pointer("pointermove", 2, 260, 310);
-    expect(Number(viewport.dataset.scale)).toBeCloseTo(2);
+    // Read the same live DOM scale as production; React commits on release.
+    expect(Number(viewport.dataset.mapScale)).toBeCloseTo(2);
     await pointer("pointerup", 2, 260, 310);
     await pointer("pointermove", 1, 70, 350);
     await pointer("pointerup", 1, 70, 350);
@@ -245,7 +289,13 @@ it("pinches and drags from a truck without selecting it, then accepts a delibera
     await act(async () =>
       (viewport.lastElementChild as HTMLButtonElement).click(),
     );
-    expect(viewport.dataset.scale).toBe("1");
+    expect(viewport.dataset.mapScale).toBe("1");
+    for (const cancel of ["pointercancel", "lostpointercapture"]) {
+      await pointer("pointerdown", 4, 140, 310, truck);
+      await pointer(cancel, 4, 140, 310);
+      await pointer("pointerup", 4, 140, 310);
+      expect(select).not.toHaveBeenCalled();
+    }
     await pointer("pointerdown", 3, 140, 310, truck);
     await pointer("pointerup", 3, 140, 310);
     expect(select).toHaveBeenCalledExactlyOnceWith("crew");

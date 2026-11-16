@@ -4,8 +4,10 @@ import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 for (const touch of [false, true]) {
   test(`carrier map zooms and pans with ${touch ? "touch" : "mouse and keyboard"}`, async ({
     browser,
+    baseURL,
   }) => {
     const page = await browser.newPage({
+      baseURL,
       viewport: { width: 375, height: 667 },
       isMobile: touch,
       hasTouch: touch,
@@ -40,7 +42,12 @@ for (const touch of [false, true]) {
         await page.mouse.wheel(0, -250);
       }
       await expect.poll(async () => Number(await map.getAttribute("data-map-scale"))).toBeGreaterThan(1);
+      const position = () => surface.evaluate(el => {
+        const matrix = new DOMMatrixReadOnly(getComputedStyle(el).transform);
+        return { x: matrix.e, y: matrix.f, scale: matrix.a };
+      });
       const beforePan = await surface.evaluate((el) => (el as HTMLElement).style.transform);
+      const origin = await position();
 
       if (touch) {
         const session = await page.context().newCDPSession(page);
@@ -51,8 +58,15 @@ for (const touch of [false, true]) {
         for (let offset = 20; offset <= 100; offset += 20) {
           await session.send("Input.dispatchTouchEvent", {
             type: "touchMove",
-            touchPoints: [{ x: x - offset, y }],
+            touchPoints: [{ x: x - offset, y: y + 20 }],
           });
+          // Check tracking while the finger is down, not only the final position.
+          // Chromium delivers coalesced touch moves at the display frame.
+          await page.evaluate(() => new Promise(requestAnimationFrame));
+          const current = await position();
+          expect(current.x - origin.x).toBeCloseTo(-offset, 0);
+          expect(current.y - origin.y).toBeCloseTo(20, 0);
+          expect(current.scale).toBe(origin.scale);
         }
         await session.send("Input.dispatchTouchEvent", {
           type: "touchEnd",
@@ -65,6 +79,8 @@ for (const touch of [false, true]) {
         await page.mouse.up();
       }
       await expect.poll(() => surface.evaluate((el) => (el as HTMLElement).style.transform)).not.toBe(beforePan);
+
+      await expect(page.locator('[data-choice-inspection]')).toHaveCount(0);
 
       if (!touch) {
         await map.focus();

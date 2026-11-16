@@ -49,7 +49,3 @@
   max-width: none;
   transform: none;
 }
-.viewport {
-  position: fixed;
-  z-index: 100;
-}

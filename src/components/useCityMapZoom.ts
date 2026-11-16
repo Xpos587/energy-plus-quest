@@ -151,9 +151,9 @@ export function useCityMapZoom<Choice extends string = string>(
     inspection.current = null;
     viewport.current?.dispatchEvent(new Event("scene-map-inspection-release", { bubbles: true }));
   };
-  const commitZoom = (next: MapView) => {
+  const commitZoom = (next: MapView, render = true) => {
     const following = inspection.current;
-    commit(following && !following.suspended ? centered(next, following.point) : next);
+    commit(following && !following.suspended ? centered(next, following.point) : next, render);
   };
   const track = (point: Point, snap = false) => {
     const following = inspection.current;
@@ -275,6 +275,9 @@ export function useCityMapZoom<Choice extends string = string>(
       if (event.pointerType === "mouse" && event.button !== 0) return;
       if ((event.target as Element).closest("button:not([data-carrier-choice]):not([data-choice-id])")) return;
       window.clearTimeout(wheelTimer);
+      // Catch the displayed camera immediately; traffic must not pull it away.
+      commit(liveView.current, false);
+      if (inspection.current) inspection.current.suspended = true;
       pointers.set(event.pointerId, point(event));
       if (pointers.size === 1) {
         dragged = false;
@@ -283,6 +286,7 @@ export function useCityMapZoom<Choice extends string = string>(
       } else {
         dragged = true;
         candidate = undefined;
+        releaseInspection();
         start();
       }
       rebase();
@@ -301,6 +305,7 @@ export function useCityMapZoom<Choice extends string = string>(
             anchor,
             current,
           ),
+          false,
         );
       } else if (
         dragged ||
@@ -319,6 +324,7 @@ export function useCityMapZoom<Choice extends string = string>(
             },
             liveBounds.current,
           ),
+          false,
         );
       }
     };
@@ -334,7 +340,12 @@ export function useCityMapZoom<Choice extends string = string>(
       if (pointers.size) rebase();
       else {
         candidate = undefined;
+        commit(liveView.current);
         end();
+        if (inspection.current) {
+          inspection.current.suspended = false;
+          track(inspection.current.point);
+        }
       }
       if (chosen) select.current?.(chosen);
     };
@@ -444,6 +455,7 @@ export function useCityMapZoom<Choice extends string = string>(
     };
     const cancel = () => {
       pointers.clear();
+      if (inspection.current) inspection.current.suspended = false;
       candidate = undefined;
       dragged = true;
       window.clearTimeout(wheelTimer);
@@ -486,9 +498,9 @@ export function useCityMapZoom<Choice extends string = string>(
     );
   };
   return {
-    scale: view.scale,
+    scale: liveView.current.scale,
     isZoomed,
-    isOverview: view.scale === 1 && view.x === 0 && view.y === 0,
+    isOverview: liveView.current.scale === 1 && liveView.current.x === 0 && liveView.current.y === 0,
     bounds,
     inspect,
     track,

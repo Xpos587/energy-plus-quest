@@ -374,7 +374,7 @@ export function WorldArt({
             );
           })}
       </div>
-      {!illustration && <ArtworkLoading viewport status={artwork.status} onRetry={artwork.retry} />}
+      {!illustration && <ArtworkLoading status={artwork.status} onRetry={artwork.retry} />}
     </figure>
   );
 }

@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { type RefObject, useId } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { useArtworkLoading } from "../../components/useArtworkLoading";
 import { detailImageAsset, imageAsset } from "../../game/imageAssets";
@@ -56,7 +56,7 @@ export function CargoBay({
   regions,
   terminal,
   autoActive,
-  viewportFeedback = false,
+  feedbackContainer,
   offsetY = (canvasHeight - (portrait ? 874 : 520)) / 2,
 }: {
   placement?: number;
@@ -70,7 +70,7 @@ export function CargoBay({
   /** Draws the Compact stand and its choice outline when the choice is open. */
   terminal?: (typeof compactTerminal)["wide"];
   autoActive?: boolean;
-  viewportFeedback?: boolean;
+  feedbackContainer?: RefObject<HTMLElement | null>;
   offsetY?: number;
 }) {
   const edgeMask = useId();
@@ -181,8 +181,8 @@ export function CargoBay({
           <ArtworkLoading
             status={artwork.status}
             onRetry={artwork.retry}
-            viewport={viewportFeedback}
-            inline={!viewportFeedback}
+            container={feedbackContainer}
+            inline={!feedbackContainer}
           />
         </foreignObject>
       )}

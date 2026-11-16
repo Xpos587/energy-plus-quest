@@ -48,7 +48,7 @@ const sceneBriefs: Partial<Record<SceneId, SceneBrief>> = {
     eyebrow: "Наряд на погрузку",
     route: () => "Фура до склада в Лабытнанги",
     goals: ["Погрузить быстро", "Довезти целым", "Не занять лишнее"],
-    // The highlighted square names the place; no captions that hint at the outcome.
+    // Titles name the highlighted place; previews reuse its artwork description.
     places: () => ({
       "place-1": ["Место 1", ""],
       "place-2": ["Место 2", ""],
@@ -461,7 +461,10 @@ function ScenesSession({
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
               title={scene.id === "compact" || scene.id === "inventory" ? places![pending.id][0] : optionTitles[pending.id]}
               cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "inventory" ? "К складу" : scene.id === "lastmile" ? "К транспорту" : "К причалу"}
-              paragraphs={scene.id === "inventory" || scene.id === "lastmile" ? [choiceLabel(pending.label)] : undefined}
+              continuous={scene.id === "compact"}
+              paragraphs={scene.id === "compact"
+                ? pending.id !== "auto" && pending.accessibleDescription ? [pending.accessibleDescription] : undefined
+                : scene.id === "inventory" || scene.id === "lastmile" ? [choiceLabel(pending.label)] : undefined}
               onCancel={() => setPendingId(undefined)}
               onConfirm={() => {
                 setPendingId(undefined);

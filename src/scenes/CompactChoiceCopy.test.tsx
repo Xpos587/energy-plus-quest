@@ -21,10 +21,10 @@ it("names each numbered place and lets the player revise a direct choice", async
     expect(host.querySelector("[data-scene-choice]")).toBeNull();
     for (let i = 1; i <= 4; i++) {
       await open(`place-${i}`);
-      // The highlighted square explains the place; the card only confirms it.
+      // The card names the place and shows its existing artwork description.
       expect(card()?.querySelector("[data-choice-eyebrow]")).toBeNull();
       expect(card()?.querySelector("h3")?.textContent).toBe(`Место ${i}`);
-      expect(card()?.querySelector('[aria-label="Описание варианта"]')).toBeNull();
+      expect(card()?.querySelector('[aria-label="Описание варианта"]')).not.toBeNull();
       await act(async () => card()!.querySelector<HTMLButtonElement>("[data-choice-cancel]")!.click());
       expect(card()).toBeNull();
     }

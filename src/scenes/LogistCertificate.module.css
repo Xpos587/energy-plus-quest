@@ -163,8 +163,8 @@
   right: 16px;
   top: 16px;
   border-color: transparent;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
 }
 .shareDialog h2 {
   margin: 12px 32px 12px 0;
@@ -223,6 +223,9 @@
 .profile :is(button, a):focus-visible {
   outline: 3px solid #ff6500;
   outline-offset: 3px;
+}
+.profile button:not(:disabled):active {
+  filter: brightness(.85);
 }
 @media (hover: hover) and (pointer: fine) {
   .shareTrigger:hover,
