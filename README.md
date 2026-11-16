@@ -31,6 +31,17 @@ bun run media:hydrate
 bun run dev
 ```
 
+Быстрый цикл разработки без production-кодирования медиа и упаковки:
+
+```bash
+go-task verify:quick
+bun run test:e2e:quick tests/result-stability.spec.ts
+```
+
+Целевой E2E требует конкретный файл, использует desktop и два воркера;
+полная матрица и выпуск остаются отдельными шагами.
+Подробности — в [рабочем процессе разработки](docs/DEVELOPMENT.md).
+
 Полная локальная проверка:
 
 ```bash

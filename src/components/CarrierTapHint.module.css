@@ -22,6 +22,10 @@
   transform: translateX(-50%);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
+[data-carrier-map]:has([data-artwork-status]) .tapHint,
+[data-scene]:has([data-artwork-ready="false"]) .tapHint {
+  visibility: hidden;
+}
 .tapHint[data-active] {
   opacity: 0;
   transform: translate(-50%, -8px);

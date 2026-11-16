@@ -37,6 +37,23 @@ jobs:
       - name: Check repository storage
         run: bun run check:storage
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
+        with:
+          version: "0.11.9"
+          enable-cache: false
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Hydrate test media
+        run: bun run media:hydrate
+
+      - name: Check types and tests
+        run: |
+          bun run typecheck
+          bun run test
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
 

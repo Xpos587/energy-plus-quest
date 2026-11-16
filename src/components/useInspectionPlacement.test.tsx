@@ -26,9 +26,42 @@ it("focuses the selected artwork before inspection and restores the explicit cho
     expect(document.activeElement?.tagName).toBe("H3");
     expect(trigger.hasAttribute("data-inspection-occluded")).toBe(false);
     await act(async () => root.render(<Screen inspect={false} />));
-    expect(document.activeElement).toBe(trigger);
+    await vi.waitFor(() => expect(document.activeElement).toBe(trigger));
   } finally {
     await act(async () => root.unmount());
     host.remove();
+  }
+});
+
+it.each([
+  { moved: false, late: false }, { moved: true, late: false },
+  { moved: false, late: true }, { moved: true, late: true },
+])("restores hidden artwork without stealing focus (moved=$moved late=$late)", async ({ moved, late }) => {
+  const host = document.createElement("div");
+  const plane = document.createElement("div");
+  const trigger = document.createElement("button");
+  const other = document.createElement("button");
+  plane.style.visibility = late ? "visible" : "hidden";
+  plane.append(trigger);
+  document.body.append(host, plane, other);
+  const root = createRoot(host);
+  const focus = trigger.focus.bind(trigger);
+  // JSDOM does not implement the browser's hidden-element focus restriction.
+  const spy = vi.spyOn(trigger, "focus").mockImplementation(options => {
+    if (getComputedStyle(trigger).visibility !== "hidden") focus(options);
+  });
+  try {
+    await act(async () => root.render(<ChoiceInspection selectionKey="crane:remote" title="Remote" returnFocus={trigger} onCancel={() => {}} onConfirm={() => {}} />));
+    await act(async () => root.render(null));
+    await vi.waitFor(() => expect(spy).toHaveBeenCalled());
+    if (late) await act(async () => { plane.style.visibility = "hidden"; trigger.blur(); });
+    expect(document.activeElement).not.toBe(trigger);
+    if (moved) other.focus();
+    await act(async () => { plane.style.visibility = "visible"; });
+    expect(document.activeElement).toBe(moved ? other : trigger);
+  } finally {
+    await act(async () => root.unmount());
+    host.remove(); plane.remove(); other.remove();
+    spy.mockRestore();
   }
 });

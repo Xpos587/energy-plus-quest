@@ -1,7 +1,8 @@
 import { act, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { expect, it, vi } from "vitest";
-import { remainingScenes, ScenesGame } from "./ScenesGame";
+import { ScenesGame } from "./ScenesGame";
+import { remainingScenes } from "./sceneFlow";
 
 it("shows scene 2 condition with its choice, separates later conditions and remembers reading across result/scene returns", async () => {
   vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
@@ -54,7 +55,7 @@ it("shows scene 2 condition with its choice, separates later conditions and reme
     await click(host.querySelector("[data-choice-confirm]"));
     for (let i = 0; i < 40 && find("Читать дальше"); i++)
       await click(find("Читать дальше"));
-    await click(find("Продолжить"));
+    await click(find("Дальше: склад"));
     expect(host.querySelector("[data-scene]")?.getAttribute("data-scene")).toBe(
       "inventory",
     );
@@ -65,7 +66,7 @@ it("shows scene 2 condition with its choice, separates later conditions and reme
     );
     await click(find("К этапу «Загрузка»"));
     expect(host.querySelector("[data-result]")).not.toBeNull();
-    await click(find("Продолжить"));
+    await click(find("Дальше: склад"));
     expect(condition()).toBeNull();
     expect(find("Задание")).toBeDefined();
     await click(find("Задание"));

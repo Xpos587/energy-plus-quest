@@ -4,7 +4,7 @@ import { compactScene } from "./compact";
 import { craneScene } from "./crane";
 import { inventoryScene } from "./inventory";
 import { lastmileScene } from "./lastmile";
-import { carrierHeadings, resultHeading } from "./ScenesGame";
+import { carrierHeadings, resultHeading } from "./resultHeadings";
 import type { SceneDefinition } from "./types";
 
 /** R19 (call 05.11): a result heading names what happened, never grades or compares the choice. */

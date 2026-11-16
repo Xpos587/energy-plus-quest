@@ -344,16 +344,12 @@ test("wide sources include both smaller variants without enlarging originals", a
 
 test("game manifest excludes historical images from every emitted asset and replacement map", async () => {
   const root = await fixture();
-  await mkdir(path.join(root, "src/scenes/crane"), { recursive: true });
+  await mkdir(path.join(root, "src/scenes"), { recursive: true });
   await writeFile(
     path.join(root, "src/scenes/worldManifest.json"),
     JSON.stringify({
       scenes: { example: { desktop: { image: "scene-art/panorama.png" } } },
     }),
-  );
-  await writeFile(
-    path.join(root, "src/scenes/crane/outcomeFraming.json"),
-    "{}",
   );
   await sharp({
     create: { width: 64, height: 32, channels: 3, background: "#305050" },
@@ -369,17 +365,13 @@ test("game manifest excludes historical images from every emitted asset and repl
 
 test("outcome versions follow the runtime artwork source and exclude replaced historical versions", async () => {
   const root = await fixture();
-  await mkdir(path.join(root, "src/scenes/crane"), { recursive: true });
+  await mkdir(path.join(root, "src/scenes"), { recursive: true });
   await mkdir(path.join(root, "public/scene-art/outcomes"), {
     recursive: true,
   });
   await mkdir(path.join(root, "src/game"), { recursive: true });
   await writeFile(path.join(root, "src/game/types.ts"), 'export type ParcelId="socks"; export type RecipientId="khor"; export type ProfileId="student";');
   await writeFile(path.join(root, "src/scenes/worldManifest.json"), JSON.stringify({scenes:{inventory:{desktop:{hotspots:[{id:"wms"}]}},lastmile:{desktop:{hotspots:[{id:"rover"}]}}}}));
-  await writeFile(
-    path.join(root, "src/scenes/crane/outcomeFraming.json"),
-    "{}",
-  );
   for (const file of [
     "inventory-wms-v8.webp",
     "inventory-wms-v9.webp",
@@ -393,7 +385,7 @@ test("outcome versions follow the runtime artwork source and exclude replaced hi
     }).toFile(path.join(root, "public/scene-art/outcomes", file));
   }
   const artwork = (inventory: number, lastmile: number) =>
-    'export function sceneOutcomeImage(scene, selectedId) { return `scene-art/outcomes/${scene}-${selectedId}${scene === "lastmile" ? "-v' +
+    'export function sceneChoiceImage() { return "scene-art/panorama.png"; } export function sceneOutcomeImage(scene, selectedId) { return `scene-art/outcomes/${scene}-${selectedId}${scene === "lastmile" ? "-v' +
     lastmile +
     '.png" : scene === "inventory" ? "-v' +
     inventory +
@@ -458,15 +450,14 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
   const root = await fixture();
   for (const filename of [
     "src/scenes/worldManifest.json",
-    "src/scenes/crane/outcomeFraming.json",
-    "src/scenes/crane/artworkFamily.ts",
+    "src/scenes/crane/artwork.ts",
+    "src/scenes/crane/layers.ts",
     "src/scenes/lastmile/artworkFamily.ts",
     "src/scenes/resolutionArtwork.ts",
     "src/scenes/LogistCertificate.tsx",
     "src/scenes/compact/resultArtwork.ts",
     "src/scenes/compact/CompactArt.tsx",
     "src/scenes/compact/CargoBay.tsx",
-    "src/scenes/crane/choiceArtwork.ts",
     "src/scenes/lastmile/expandedArtwork.ts",
     "src/scenes/WorldArt.tsx",
     "src/scenes/artwork.ts",
@@ -482,30 +473,35 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
   }
   const included = [
     "compact-art/outcomes/socks-niche.png",
-    "review/carrier-art-2026-09-27/closer-old.png",
+    "review/carrier-art-2026-09-27/closer-old4.png",
     "scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
-    "scene-art/lastmile-family-v1/choice-final-tall-v10.webp",
-    "scene-art/lastmile-family-v1/revision-2/flight-boat.webp",
-    "scene-art/lastmile-family-v1/revision-2/flight-parcel-arseniy.webp",
-    "scene-art/lastmile-family-v1/revision-4/choice-tall-khor.webp",
-    "scene-art/lastmile-family-v1/revision-4/choice-wide-alva.webp",
-    "scene-art/lastmile-family-v1/revision-4/choice-tall-arseniy.webp",
+    "scene-art/lastmile-family-v1/revision-15/intro-wide.webp",
+    "scene-art/lastmile-family-v1/revision-18/flight-boat-tall.webp",
+    "scene-art/lastmile-family-v1/revision-18/flight-parcel-arseniy-tall.webp",
     "scene-art/resolution-v2/khor-boat.webp",
     "scene-art/certificates-v1/student-energy.webp",
-    "compact-art/camera-zone2-v53.png",
+    "compact-art/camera-zone2-v54.png",
     "compact-art/compact-environment-v53-portrait.png",
-    "scene-art/barge-family-v1/choice-neutral-wide-v7.webp",
-    "scene-art/warehouse-corrections-2026-10-20/overview-receiving-parallel-labels-v1.png",
-    "scene-art/warehouse-polish-2026-10-17/alphabet.webp",
-    "scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png",
+    "scene-art/barge-v5/wide/plate.webp",
+    "scene-art/barge-v5/tall/ivan.webp",
+    "scene-art/barge-v5/outcome-remote.webp",
+    "scene-art/inventory-master-v16.webp",
+    "scene-art/warehouse-results-v4/outcome-alphabet-camera.webp",
+    "scene-art/warehouse-results-v4/outcome-wms.webp",
     "scene-art/lastmile-family-v1/helicopter-ground-khor-parcel-v6.webp",
   ];
   const excluded = [
+    "review/carrier-art-2026-09-27/closer-old.png",
+    "scene-art/lastmile-family-v1/revision-4/choice-tall-khor.webp",
     "scene-art/inventory-horizontal-v1.png",
     "compact-art/outcomes/unused.png",
     "review/carrier-art-2026-09-27/closer-unused.png",
     "scene-art/outcomes/inventory-unused-v8.webp",
     "scene-art/outcomes/lastmile-unused-v3.png",
+    "compact-art/camera-zone2-v53.png",
+    "scene-art/barge-family-v1/choice-neutral-wide-v7.webp",
+    "scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png",
+    "scene-art/lastmile-family-v1/revision-2/flight-boat.webp",
   ];
   await sharp({ create: { width: 64, height: 32, channels: 3, background: "#305050" } })
     .webp().toFile(path.join(root, "design/scene-01/assets/current/choices/unused-choice.webp"));

@@ -12,6 +12,8 @@ const context = {
 } as const;
 
 beforeEach(() => {
+  // JSDOM has no image decoder; exercise the scene flow with ready artwork.
+  HTMLImageElement.prototype.decode = vi.fn().mockResolvedValue(undefined);
   vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
   vi.stubGlobal("matchMedia", () => ({
     matches: true,
@@ -26,6 +28,7 @@ afterEach(async () => {
   await act(async () => root.unmount());
   container.remove();
   vi.unstubAllGlobals();
+  delete (HTMLImageElement.prototype as Partial<HTMLImageElement>).decode;
 });
 
 async function click(selector: string) {

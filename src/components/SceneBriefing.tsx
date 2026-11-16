@@ -1,4 +1,5 @@
-import { clearReadingState, useReadingState } from "./useReadingState";
+import { useReadingState } from "./useReadingState";
+import { briefingReadingKeys } from "./briefingReadingState";
 import { PageText } from "./PageText";
 import { StageIndicator } from "./StageIndicator";
 import { ArrowLeft, ArrowRight, Info } from "lucide-react";
@@ -10,28 +11,11 @@ import {
   useRef,
   useState,
 } from "react";
-import { QuestBrand, progressSteps } from "./QuestShell";
+import { QuestBrand } from "./QuestShell";
+import { progressSteps } from "./stageProgress";
 import { useTextPages } from "./useTextPages";
 import styles from "./SceneInteraction.module.css";
-
-function briefingReadingKeys(title: string, paragraphs: string[]) {
-  const text = paragraphs.join("\n\n");
-  return [
-    "briefing:open:" + title + text,
-    "SceneBriefing:page:" + text,
-  ] as const;
-}
-
-export function resetBriefingReadingState(
-  scope: string | undefined,
-  title: string,
-  paragraphs: string[],
-) {
-  clearReadingState(scope, [
-    ...briefingReadingKeys(title, paragraphs),
-    "map-navigation:" + title,
-  ]);
-}
+import chrome from "./QuestChrome.module.css";
 
 export function SceneBriefing({
   title,
@@ -53,7 +37,6 @@ export function SceneBriefing({
   keepPanHint = false,
   showLeadOnChoice = true,
   conditionLabel = "Задание",
-  lead,
   reminder,
 }: {
   title: string;
@@ -74,18 +57,14 @@ export function SceneBriefing({
   initiallyOpen?: boolean;
   keepPanHint?: boolean;
   showLeadOnChoice?: boolean;
-  combineCondition?: boolean;
   /** Names what the hidden condition holds, e.g. «Куда везём?». */
   conditionLabel?: string;
-  /** Optional card heading shown above the condition text. */
-  lead?: ReactNode;
-  /** What, to whom and where this stage goes, e.g. ["Вязаные носки для Маймы", "Фура до склада в Лабытнанги"]. */
-  reminder?: [delivery: string, leg: string];
+  /** Persistent parcel context, shared with preview and result cards. */
+  reminder?: ReactNode;
 }) {
   // The stage count lives in the progress strip, so the reminder carries only
   // what goes where and the current leg (R19).
   // A separate first-entry condition and optional rereading share the same pages.
-  const inlineCondition = false;
   // The whole condition is already on the choice screen: no separate «Задание» to reopen.
   const conditionShown = showLeadOnChoice && paragraphs.length === 1;
   const [openKey, pageKey] = briefingReadingKeys(title, paragraphs);
@@ -114,7 +93,7 @@ export function SceneBriefing({
   const briefing = useRef<HTMLElement>(null);
   const id = useId();
   const visible =
-    open && !inlineCondition && !inspecting && paragraphs.length > 0;
+    open && !inspecting && paragraphs.length > 0;
   useLayoutEffect(() => {
     onReadingChange?.(visible);
   }, [visible, onReadingChange]);
@@ -301,14 +280,12 @@ export function SceneBriefing({
       aria-label="Задание сцены"
       data-scene-briefing
       data-reading={visible}
-      data-combined-condition={inlineCondition || undefined}
-      data-briefing-inline={inlineCondition}
       data-briefing-longform={keepParagraphs || undefined}
       ref={briefing}
     >
-      <div className={styles.headerCard}>
+      <div className={styles.headerCard} data-scene-header>
         <QuestBrand />
-        <div className={styles.briefingHeading}>
+        <div className={`${styles.briefingHeading} ${chrome.headerRow}`}>
           <div className={styles.sceneIdentity}>
             <h2 tabIndex={-1}>{title}</h2>
             <StageIndicator
@@ -324,18 +301,7 @@ export function SceneBriefing({
         data-testid="scene-question"
         inert={visible}
       >
-        {inlineCondition && (
-          <div className={styles.inlineCondition} data-testid="scene-intro">
-            {paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        )}
-        {reminder && (
-          <p className={styles.taskReminder} data-task-reminder>
-            <strong>{reminder[0]}</strong> <span>{reminder[1]}</span>
-          </p>
-        )}
+        {reminder}
         {!visible && showLeadOnChoice && paragraphs[0] && (
           <p className={styles.questionLead}>{paragraphs[0]}</p>
         )}
@@ -361,7 +327,7 @@ export function SceneBriefing({
             {keepPanHint ? "Ещё варианты — листайте сцену" : "Листайте сцену"}
           </span>
         )}
-        {(onBack || (paragraphs.length > 0 && !inlineCondition && !conditionShown)) && (
+        {(onBack || (paragraphs.length > 0 && !conditionShown)) && (
           <div className={styles.questionNavigation} data-choice-navigation>
             {onBack && (
               <button
@@ -373,7 +339,7 @@ export function SceneBriefing({
                 {backLabel}
               </button>
             )}
-            {paragraphs.length > 0 && !inlineCondition && !conditionShown && (
+            {paragraphs.length > 0 && !conditionShown && (
               <button
                 ref={toggle}
                 className={`${styles.condition} ${styles.questionTask}`}
@@ -461,7 +427,7 @@ export function SceneBriefing({
           className={styles.briefingCard}
           aria-label="Условие задания"
         >
-          {lead}
+          {reminder}
           <section
             ref={body}
             aria-label="Текст условия"

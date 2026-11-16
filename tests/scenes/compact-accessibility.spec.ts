@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import { parcelNames } from "../../src/scenes/names";
 import { scenarioParagraph } from "../helpers/scenario-copy";
 
-test("loading conditions and exact question remain available with choices", async ({
+test("loading goals, current question and named targets remain available with choices", async ({
   page,
 }) => {
   test.setTimeout(90_000);
@@ -12,13 +12,16 @@ test("loading conditions and exact question remain available with choices", asyn
     const questionText = scenarioParagraph("4027C712")
       .replace("(название подарка)", gift.accusative)
       .replace("он(а)", gift.pronoun)
-      .replace("доехал(а)", gift.arrived);
+      .replace("доехал(а)", gift.arrived)
+      .replace(" в целости и сохранности, а погрузка прошла быстро и легко", " в целости");
     const intro = page.getByRole("button", { name: /^(Далее|К выбору)$/ });
     for (let n = 0; n < 20 && (await intro.isVisible()); n++) await intro.click();
     const question = page.getByTestId("scene-question");
     await expect(
       question.locator("p").filter({ hasText: questionText }),
     ).toBeVisible();
+    for (const goal of ["Погрузить быстро", "Довезти целым", "Не занять лишнее"])
+      await expect(page.getByRole("list", { name: "Что важно" }).getByText(goal, { exact: true })).toBeVisible();
     for (const [index, condition] of [
       /ящиками с гирями.*Креплений нет/,
       /посудой.*стропы/,

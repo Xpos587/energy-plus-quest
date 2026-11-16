@@ -28,6 +28,10 @@
   top: 8cqh;
   aspect-ratio: var(--canvas-aspect, 2);
 }
+.stage:has([data-artwork-ready="false"]) .plane {
+  visibility: hidden;
+  opacity: 0;
+}
 .art {
   mask-image: linear-gradient(
     to bottom,
@@ -241,11 +245,5 @@
   height: auto;
   /* No inspection zoom: each viewport has its own composed overview; the selected place is highlighted, cab stays in view. */
   transform: translate(-50%, 0);
-}
-.stage[data-fixed-result][data-camera-detail] .plane {
-  transition: width 360ms cubic-bezier(.22,1,.36,1), left 360ms cubic-bezier(.22,1,.36,1), top 360ms cubic-bezier(.22,1,.36,1), transform 360ms cubic-bezier(.22,1,.36,1);
-}
-@media (prefers-reduced-motion: reduce) {
-  .stage[data-fixed-result][data-camera-detail] .plane { transition: none; }
 }
 

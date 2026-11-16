@@ -154,7 +154,6 @@
   color: var(--navy);
 }
 .briefingHeading {
-  composes: headerRow from "./QuestChrome.module.css";
   display: flex;
 }
 .briefingHeading h2 {
@@ -956,9 +955,6 @@
     background: transparent;
     padding-right: 0;
   }
-}
-
-@media (max-width: 600px) {
   .app[data-scene="crane"] .frame[data-layout="result"] .result {
     gap: 4px;
     padding: 8px;
@@ -1570,8 +1566,6 @@
     background: #fff;
   }
   .app[data-scene="compact"] .frame[data-layout="result"] .carrierMap { aspect-ratio: 1040 / 550; }
-}
-@media (max-width: 900px) and (orientation: portrait) {
   .app[data-scene] .frame[data-layout="result"] .result {
     align-self: start;
   }
@@ -2037,27 +2031,6 @@
   height: auto;
   overflow: visible;
 }
-.inlineCondition { margin-bottom: 12px; }
-.inlineCondition p {
-  margin: 0 0 8px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.4;
-}
-.inlineCondition p:last-child { margin-bottom: 0; }
-@media (min-width: 600px) and (min-height: 700px) {
-  .app[data-scene="compact"] .frame:has([data-combined-condition]) {
-    grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
-  }
-  .app[data-scene="compact"] .frame:has([data-combined-condition]) .question {
-    padding: 14px 24px 18px;
-  }
-  .app[data-scene="compact"] .frame:has([data-combined-condition]) .question > * {
-    width: min(100%, 1000px);
-    margin-inline: auto;
-  }
-  .app[data-scene="compact"] .frame:has([data-combined-condition]) .questionAction { margin-top: 12px; }
-}
 
 /* Short loading outcomes give spare portrait height to the scene, not a blank footer. */
 @media (max-width: 900px) and (orientation: portrait) {
@@ -2073,16 +2046,10 @@
     --result-fit-viewport: 0;
     max-height: clamp(80px, calc(100dvh - 420px), 240px);
   }
-}
-
-@media (max-width: 900px) and (orientation: portrait) {
   .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"],
   .app[data-scene="compact"] .frame[data-interaction="inspect-confirm"]:has(.briefingCard) {
     grid-template-rows: var(--scene-header-height) minmax(0, 1fr) auto;
   }
-}
-@media (min-width: 360px) and (max-width: 599px) and (min-height: 740px) {
-  .app[data-scene="compact"] .inlineCondition p { font-size: 22px; line-height: 1.4; }
 }
 
 
@@ -3069,7 +3036,7 @@
   .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspection {
     justify-content: flex-start;
   }
-  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspectionCopy { flex: none; }
+  .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspectionCopy { flex: 0 1 auto; overflow-y: auto; }
   .app[data-scene] .frame.frame[data-interaction="inspect-confirm"][data-inspecting="true"] .inspection .actions { margin-top: 12px; }
 }
 
@@ -3710,10 +3677,6 @@
   .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) [data-outcome-scene] :is(picture, img) {
     height: 100%;
   }
-  .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"]:has([data-result-density="compact"]) [data-outcome-scene] img {
-    object-fit: cover;
-    object-position: var(--outcome-focus, 50%) 50%;
-  }
 }
 
 /* Scenes 2–5 desktop (R18): one rail. The picture stays on the left; condition, choice card and result live in the same right rail. */
@@ -3775,43 +3738,19 @@
   .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer button:last-child { grid-column: 1; grid-row: 3; }
 }
 
-/* Scene 2 briefing card: the cargo you are loading, like a shipping label. */
-.briefingLead { display: none; }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead {
-  display: flex; align-items: center; gap: 12px; flex: none; padding-bottom: 12px; margin-bottom: 4px; border-bottom: 2px dashed #d2e4ef;
-}
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead img { width: 52px; height: 52px; border-radius: 10px; object-fit: cover; flex: none; }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead span { display: grid; gap: 2px; }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead small { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #53697d; }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead strong { font-size: 22px; line-height: 1.1; color: #082946; }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead strong::first-letter { text-transform: uppercase; }
-@media (min-width: 1001px) and (min-height: 701px) {
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead { gap: 14px; padding-bottom: 16px; }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead img { width: 72px; height: 72px; border-radius: 12px; }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead strong { font-size: 28px; }
-}
-@media (max-height: 500px) { .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead { display: none; } }
-
-/* Scene 2 round 3: order card goals, named places, verdict. */
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead { flex-wrap: wrap; }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead em { font-size: 14px; font-style: normal; color: #53697d; }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead > .compactGoals { flex-basis: 100%; }
+/* Decision criteria: text-sized, non-interactive, and grouped with their icons. */
 .compactGoals {
-  display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none;
+  display: grid; flex: none; gap: 10px;
+  margin: 0; padding: 12px; list-style: none;
+  border: 1px solid #dbe7ef; border-radius: 10px; background: #f6f9fc;
 }
 .compactGoals li {
-  display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px 4px 7px;
-  border: 1px solid #c4d7e4; border-radius: 999px; background: #f3f8fb;
-  color: #082946; font-size: 13px; font-weight: 600; line-height: 1.2; white-space: nowrap;
+  display: flex; align-items: center; gap: 6px; min-width: 0; max-width: 100%;
+  color: #34536b; font-size: 15px; font-weight: 400; line-height: 1.35;
 }
-.compactGoals svg { flex: none; color: #075d9b; }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals { margin-block: -2px 2px; }
-@media (max-width: 700px) {
-  .compactGoals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
-  .compactGoals li { justify-content: center; gap: 4px; padding: 5px 4px; font-size: 12px; white-space: normal; text-align: left; }
-  .compactGoals svg { width: 14px; height: 14px; }
-}
-@media (max-height: 500px) { .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals { display: none; } }
+.compactGoals li > span { display: block; min-width: 0; }
+.compactGoals svg { flex: none; width: 16px; height: 16px; color: var(--metric); }
+.compactGoals small { display: none; }
 
 /* Choices: hovering a button lights the matching place in the truck and back. */
 .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question [data-scene-choice][data-focused="true"] { border-color: #075d9b; background: #edf4f9; }
@@ -3844,34 +3783,12 @@
 @media (max-width: 600px) and (orientation: portrait) and (max-height: 700px) {
   .app[data-scene="compact"] .frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(104px, 1fr) minmax(0, 340px); }
 }
-.compactGoals li small { display: none; }
-@media (min-width: 1001px) and (min-height: 701px) {
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals {
-    flex: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 0;
-  }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li {
-    justify-content: center; gap: 5px; padding: 6px 4px; font-size: 13px; white-space: normal; text-align: left;
-  }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals { display: grid; gap: 0; border: 1px solid #c4d7e4; border-radius: 12px; overflow: hidden; }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals li {
-    display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 10px; padding: 10px 14px;
-    border: 0; border-radius: 0; background: #fff; font-size: 16px;
-  }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals li + li { border-top: 1px solid #e1ebf2; }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals li small { display: block; font-size: 13px; font-weight: 500; color: #53697d; }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .compactGoals svg { width: 18px; height: 18px; }
-}
-@media (min-width: 1001px) and (min-height: 701px) and (max-height: 860px) {
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li { padding-block: 4px; }
-}
 
 /* Scenes 3 and 5 reuse the order card; the hint under each option shows where the list has room. */
 @media (min-width: 1001px) and (min-height: 701px) {
   .app:is([data-scene="inventory"], [data-scene="lastmile"]) [data-scene-choice] > span:last-child { display: grid; gap: 2px; text-align: left; }
   .app:is([data-scene="inventory"], [data-scene="lastmile"]) [data-choice-detail] { display: block; font-size: 15px; line-height: 1.3; font-weight: 400; color: #53697d; }
 }
-/* Two-line goals in a narrow rail read as tags, not pills. */
-.app:is([data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li { border-radius: 10px; }
 /* Scene 3 phone results: keep room for the story and its actions. */
 @media (max-width: 600px) and (orientation: portrait) and (min-height: 700px) {
   .app[data-scene="inventory"] .frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(0, 1fr) minmax(0, 530px) !important; }
@@ -3881,21 +3798,11 @@
 
 /* Metrics: the icon carries the metric hue, the sign keeps its colour. */
 .app[data-scene] [data-score-delta] [data-score-key] svg { color: var(--metric); }
-.compactGoals svg { color: var(--metric, #075d9b); }
-.app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .briefingLead .compactGoals li small {
-  color: var(--metric); letter-spacing: 0; text-transform: none; font-weight: 600;
-}
 
 /* Desktop type scale for scenes 2, 3 and 5: the question leads but no longer
    outweighs the cargo card and answers; goals stay single-line tags. */
 @media (min-width: 1001px) and (min-height: 701px) {
   .app:is([data-scene="compact"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 24px; line-height: 1.25; }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals {
-    display: flex; flex-wrap: wrap; gap: 6px;
-  }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="lastmile"]) .question > .compactGoals li {
-    padding: 5px 10px 5px 8px; font-size: 14px; white-space: nowrap; border-radius: 999px;
-  }
   /* Score digits sit just under the verdict heading, not above it. */
   .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] strong { font-size: 26px; line-height: 28px; }
   .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-delta] em { font-size: 14px; line-height: 17px; }
@@ -3971,69 +3878,6 @@
   }
 }
 
-/* Goals are a legend, not controls: icon and words, no pill that invites a tap. */
-.app .frame .compactGoals.compactGoals:not(.briefingLead *) {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 4px 14px;
-  border: 0;
-  border-radius: 0;
-  overflow: visible;
-}
-.app .frame .compactGoals.compactGoals li:not(.briefingLead li) {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-  color: #34536b;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.25;
-  white-space: nowrap;
-  text-align: left;
-}
-.app .frame .compactGoals.compactGoals li:not(.briefingLead li) svg {
-  width: 15px;
-  height: 15px;
-}
-/* The phone order card uses the same legend; the desktop card keeps its rows. */
-@media (max-width: 1000px), (max-height: 700px) {
-  .app .frame .briefingLead .compactGoals.compactGoals {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 4px 14px;
-    border: 0;
-    border-radius: 0;
-    overflow: visible;
-  }
-  .app .frame .briefingLead .compactGoals.compactGoals li {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
-    color: #34536b;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.25;
-    white-space: nowrap;
-    text-align: left;
-  }
-  .app .frame .briefingLead .compactGoals.compactGoals li svg {
-    width: 15px;
-    height: 15px;
-  }
-}
-
 /* A narrow back action keeps one line — "← Перевозчик"; the stretched
    choice-card buttons measure themselves, other places use the viewport. */
 .app[data-scene] .frame.frame.frame[data-interaction="inspect-confirm"][data-inspecting="false"] .questionNavigation > button {
@@ -4083,56 +3927,20 @@
   }
 }
 
-/* Goals legend everywhere: three even columns, icon above its words, centred —
-   the shape of the score cells, so no row ends with a stray goal and a long
-   goal wraps symmetrically. The desktop order card keeps its explained rows. */
-.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals:not(.briefingLead *) {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
-  gap: 6px 8px;
-}
-.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals:not(.briefingLead *) li {
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-  min-width: 0;
-  white-space: normal;
-  text-align: center;
-}
-.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals:not(.briefingLead *) li svg {
-  margin: 0;
-}
-@media (max-width: 1000px), (max-height: 700px) {
-  .briefingLead .compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: start;
-    gap: 6px 8px;
-  }
-  .briefingLead .compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals.compactGoals li {
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    min-width: 0;
-    white-space: normal;
-    text-align: center;
-  }
-}
 
 /* Portrait results (phones and tablets): the sheet hugs its copy and actions; the illustration takes
    whatever height is left instead of an empty band under the text.
    WMS keeps its own aspect-locked framing. */
 @media (max-width: 1000px) and (orientation: portrait) {
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) {
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) {
     grid-template-rows: minmax(min(160px, 22dvh), 1fr) auto !important;
   }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) .result {
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) .result {
     height: auto !important;
     max-height: calc(100dvh - var(--scene-header-height) - min(160px, 22dvh));
     overflow-y: auto;
   }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) [data-result-reading] {
+  .app:is([data-scene="carrier"], [data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame[data-layout="result"]:not(:has([data-scene-consequence="inventory-wms"])) [data-result-reading] {
     --result-fit-viewport: 1;
     flex: none;
     height: auto;
@@ -4199,9 +4007,6 @@
 
 /* Scene 5 rail: goals read as a legend at reading size (R18: top-aligned like scenes 2–4). */
 @media (min-width: 1001px) and (min-height: 701px) {
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals { display: grid; grid-template-columns: 1fr; gap: 12px; padding-top: 16px; border-top: 1px solid #e1ebf2; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals li { flex-direction: row; justify-content: flex-start; gap: 12px; font-size: 18px; color: #082946; }
-  .app[data-scene="lastmile"] .frame.frame.frame.frame.frame.frame.frame.frame.frame .question > .compactGoals.compactGoals li svg { width: 22px; height: 22px; }
   .app[data-scene="lastmile"] [data-lastmile-facts] { gap: 20px; }
   .app[data-scene="lastmile"] [data-lastmile-facts] dt { font-size: 16px; }
   .app[data-scene="lastmile"] [data-lastmile-facts] dd { font-size: 20px; }
@@ -4222,81 +4027,6 @@
   .taskReminder strong::after { content: " ·"; font-weight: 500; }
 }
 
-/* R17 unified desktop rail, scenes 2–5 (feedback 02.11): one standard read top-down —
-   reminder, question, context, goals as labelled rows (icon + goal + metric name,
-   so the icons explain themselves), actions pinned to the bottom edge.
-   ponytail: !important wins over the layered rail rules above; fold them into this block when the rail is next rewritten. */
-@media (min-width: 1001px) and (min-height: 701px) {
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame .question:has(> [data-compact-goals]) {
-    justify-content: flex-start !important;
-    gap: 16px !important;
-    padding-block: 28px 24px !important;
-  }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame .question:has(> [data-compact-goals]) .questionPrompt {
-    font-size: 24px !important;
-    line-height: 1.25 !important;
-  }
-  .app:is([data-scene="crane"], [data-scene="lastmile"]) .frame .question:has(> [data-compact-goals]) > p:is([data-crane-decision-context], [data-lastmile-decision-context]) {
-    margin: 0 !important;
-    font-size: 17px !important;
-    line-height: 1.4 !important;
-    color: #34536b !important;
-  }
-  .app[data-scene] .frame .question > ul[data-compact-goals] {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 1px solid #dbe7ef !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-  }
-  .app[data-scene] .frame .question > ul[data-compact-goals] li {
-    display: grid !important;
-    grid-template-columns: 34px minmax(0, 1fr) !important;
-    column-gap: 12px !important;
-    row-gap: 1px !important;
-    align-items: center !important;
-    padding: 9px 14px !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    background: #fff !important;
-    color: #082946 !important;
-    font-size: 17px !important;
-    font-weight: 600 !important;
-    line-height: 1.2 !important;
-    white-space: normal !important;
-    text-align: left !important;
-  }
-  .app[data-scene] .frame .question > ul[data-compact-goals] li + li { border-top: 1px solid #e8f0f5 !important; }
-  .app[data-scene] .frame .question > ul[data-compact-goals] li svg {
-    grid-row: 1 / 3;
-    box-sizing: border-box;
-    width: 34px !important;
-    height: 34px !important;
-    padding: 8px;
-    border-radius: 50%;
-    background: var(--metric-tint);
-  }
-  .app[data-scene] .frame .question > ul[data-compact-goals] li small {
-    display: block !important;
-    grid-column: 2;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--metric);
-  }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame .question:has(> [data-compact-goals]) > .questionNavigation {
-    grid-template-columns: 1fr 1fr !important;
-    margin-top: auto !important;
-  }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame .question:has(> [data-compact-goals]) > .questionNavigation > .questionTask { grid-column: auto !important; }
-}
-@media (min-width: 1001px) and (min-height: 701px) and (max-height: 800px) {
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame .question:has(> [data-compact-goals]) { gap: 12px !important; padding-block: 18px 16px !important; }
-  .app[data-scene] .frame .question > ul[data-compact-goals] li { padding-block: 6px !important; font-size: 16px !important; }
-  .app[data-scene] .frame .question > ul[data-compact-goals] li svg { width: 30px !important; height: 30px !important; padding: 7px; }
-}
 /* Same standard for the chosen-option panel: details from the top, actions on the bottom edge. */
 @media (min-width: 1001px) and (min-height: 701px) {
   .app:is([data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame .inspection[data-choice-inspection] {
@@ -4311,8 +4041,6 @@
 @media (max-width: 600px) and (orientation: portrait) {
   .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 21px; line-height: 1.25; color: #082946; }
   .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is([data-crane-decision-context], [data-lastmile-decision-context]) { font-size: 16px; line-height: 1.35; }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals li { padding-block: 2px; color: #53697d; font-size: 12px; font-weight: 500; }
-  .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .question > .compactGoals svg { width: 12px; height: 12px; color: #7d93a6; }
 }
 @media (max-width: 360px) and (orientation: portrait) {
   .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] .questionPrompt { font-size: 18px; }
@@ -4322,11 +4050,43 @@
   .app:is([data-scene="compact"], [data-scene="inventory"], [data-scene="crane"], [data-scene="lastmile"]) .frame.frame.frame.frame.frame.frame.frame.frame.frame.frame[data-interaction="inspect-confirm"] :is([data-crane-decision-context], [data-lastmile-decision-context]) { font-size: 14px; line-height: 1.3; }
 }
 
-/* Petr's result is one continuous outcome (no pages). On small screens it is taller than the
-   reading box, so the box scrolls, with a visible thumb and a fade over the cut line. The fade-sized
-   bottom padding lets the last line clear the fade at the scroll end. */
+/* Carrier results use the width for metadata beside the story, not a two-line
+   reader below it. The sheet reserves its own real height before the art. */
+@media (min-width: 901px) and (min-height: 501px) {
+  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(0, 1fr) auto; }
+  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] :is(.result, .resultInner, .resultStory) { height: auto; max-width: none; width: 100%; flex: none; }
+  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] {
+    display: grid; grid-template-columns: minmax(240px, 28%) minmax(0, 1fr); grid-template-rows: auto 1fr auto;
+    gap: 12px 32px; width: 100%; max-width: none; height: auto; flex: none;
+  }
+  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] [data-delivery-reminder] { grid-column: 1; grid-row: 1; }
+  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] h2 { grid-column: 1; grid-row: 2; align-self: start; margin: 0; font-size: 24px; line-height: 1.25; }
+  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] [data-result-reading] { grid-column: 2; grid-row: 1 / 3; height: clamp(5lh, 22dvh, 8lh); max-height: none; max-width: none; }
+  .app[data-scene="carrier"] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer { grid-column: 1 / -1; grid-row: 3; }
+}
+
+/* Short phones reserve paragraph space before enlarging the picture. */
+@media (max-width: 360px) and (max-height: 650px) and (orientation: portrait) {
+  .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] { grid-template-rows: minmax(100px, 1fr) auto !important; }
+  .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] .result { height: auto; max-height: calc(100dvh - var(--scene-header-height) - 100px); }
+  .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] [data-result-reading] { --result-fit-viewport: 1; flex: none; height: auto; max-height: var(--result-reading-height, 120px); }
+  .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] h2 { font-size: 20px; line-height: 1.25; }
+  /* WMS has subjects near both vertical edges; fit them when the sheet grows. */
+  .app[data-scene="inventory"] .frame.frame.frame.frame.frame[data-layout="result"] [data-scene-consequence="inventory-wms"] img { object-fit: contain; }
+}
+
+/* Text enlargement may exceed any authored result crop; keep every action reachable. */
+.app [data-layout="result"] [data-sheet-panel] { overflow-y: auto !important; }
+@media (max-height: 400px) and (orientation: landscape) {
+  .app .frame[data-layout="result"] { --type-body: 16px; --type-title: 18px; --type-action: 14px; --scene-action-height: 44px; }
+  .app .frame[data-layout="result"] [data-sheet-panel] { padding: 8px !important; }
+  .app .frame[data-layout="result"] [data-result-reader] { gap: 4px; }
+}
+
+/* Continuous outcomes (Petr and the pipe carrier) scroll on small screens.
+   The fade-sized padding lets the final line clear the fade at the scroll end. */
 @media (max-height: 600px), (max-width: 360px) {
-  .app[data-scene="crane"] .frame.frame.frame.frame[data-layout="result"] [data-continuous="true"] [data-result-reading] {
+  .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-continuous="true"] [data-result-reading] {
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-width: thin;

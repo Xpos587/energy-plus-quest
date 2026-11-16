@@ -10,6 +10,7 @@ import { warehouseCallouts, warehouseDrawing } from "./inventory/callouts";
 import { parcelNames } from "./names";
 import { lastmileChoiceArtwork } from "./lastmile/expandedArtwork";
 import { lastmileChoiceImage } from "./lastmile/artworkFamily";
+import { LastmileMotion } from "./lastmile/LastmileMotion";
 import type { SceneArtProps, SceneId, SceneOption } from "./types";
 import styles from "./WorldArt.module.css";
 import manifest from "./worldManifest.json";
@@ -237,6 +238,7 @@ export function WorldArt({
       className={styles.stage}
       aria-label={title}
       data-world-scene={scene}
+      data-artwork-ready={!!illustration || artwork.status === "ready"}
       data-navigation="fixed"
       data-camera-moving={cameraMoving ? "true" : undefined}
       data-format={format}
@@ -254,7 +256,10 @@ export function WorldArt({
       <div
         className={styles.plane}
         data-world-plane
+        inert={!illustration && artwork.status !== "ready"}
         style={{
+          visibility: !illustration && artwork.status !== "ready" ? "hidden" : undefined,
+          opacity: !illustration && artwork.status !== "ready" ? 0 : undefined,
           width: planeWidth,
           height: planeHeight,
           ...(inventoryCamera ? {
@@ -302,6 +307,7 @@ export function WorldArt({
             />
           </picture>
         )}
+        {scene === "lastmile" && <LastmileMotion composition={lastmileFormat} />}
         {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones labels={shortMarkerLabels} composition={lastmileFormat} selectedId={selectedId} onSelect={onSelect} focusedId={focusedId} onFocusChange={onFocusChange} />}
         {expandedArt ? (
           <div style={{
@@ -360,7 +366,7 @@ export function WorldArt({
                 data-focused={onFocusChange ? focusedId === point.id : undefined}
                 onPointerEnter={onFocusChange && (() => onFocusChange(point.id))}
                 onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
-                disabled={showResult || !onSelect || (!!selectedId && selectedId !== point.id)}
+                disabled={showResult || !onSelect}
                 onClick={() => onSelect?.(point.id)}
               >
                 <span aria-hidden="true">{index + 1}</span>

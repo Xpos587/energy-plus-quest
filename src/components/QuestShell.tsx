@@ -5,19 +5,13 @@ import { choiceArtwork } from "../game/artwork";
 import { thumbnailAsset } from "../game/imageAssets";
 import { findParcel, findProfile, findRecipient } from "../game/content";
 import type { GameState } from "../game/types";
+import { deliveryLine } from "../scenes/names";
 import chrome from "./QuestChrome.module.css";
 import { StageIndicator } from "./StageIndicator";
 import { BrandLockup } from "./BrandLockup";
+import { progressSteps } from "./stageProgress";
 
 type DeliverySelection = Pick<GameState, "profile" | "recipient" | "parcel">;
-
-export const progressSteps = [
-  { id: "carrier", label: "Перевозчик" },
-  { id: "loading", label: "Загрузка" },
-  { id: "warehouse", label: "Склад" },
-  { id: "barge", label: "Баржа" },
-  { id: "last-mile", label: "Последняя миля" },
-] as const;
 
 export function QuestBrand() {
   return (
@@ -50,11 +44,9 @@ export function QuestHeader({
   state: DeliverySelection;
   currentStep?: number;
   selectionTitle?: string;
-  selectionStep?: number;
   onSelectionBack?: () => void;
   result?: boolean;
 }) {
-  const activeStep = selectionTitle ? -1 : currentStep;
   const progressLabel = selectionTitle
     ? "Подготовка"
     : progressSteps[currentStep].label;
@@ -122,6 +114,16 @@ function SelectionSummary({ state }: { state: DeliverySelection }) {
         ) : null,
       )}
     </fieldset>
+  );
+}
+
+export function DeliveryReminder({ state, route }: { state: DeliverySelection; route?: string }) {
+  if (!state.parcel || !state.recipient) return null;
+  return (
+    <div className={chrome.deliveryReminder} data-delivery-reminder data-parcel={state.parcel}>
+      <img src={thumbnailAsset(choiceArtwork[state.parcel])} alt="" />
+      <span><strong>{deliveryLine(state.parcel, state.recipient)}</strong>{route && <small>{route}</small>}</span>
+    </div>
   );
 }
 

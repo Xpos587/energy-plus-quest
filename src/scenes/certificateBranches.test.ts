@@ -3,7 +3,7 @@ import { expect, it } from "vitest";
 import { findCarrier } from "../game/content";
 import { logistType } from "./endingCopy";
 import { totalScores } from "./progress";
-import { remainingScenes } from "./ScenesGame";
+import { remainingScenes } from "./sceneFlow";
 
 it("reaches all seven certificate variants using actual authored routes", () => {
   const fixtures = [];

@@ -120,17 +120,17 @@ it("reminds what goes to whom and the current leg", async () => {
           currentStep={currentStep}
           paragraphs={["Груз прибыл."]}
           question="Что дальше?"
-          reminder={["Лодка для Хабта", "Плыть"]}
+          reminder={<span data-delivery-reminder>Лодка для Хабта · Плыть</span>}
         />,
       ),
     );
-    return element.querySelector("[data-task-reminder]")?.textContent;
+    return element.querySelector("[data-delivery-reminder]")?.textContent;
   };
   try {
-    // R19: the stage count moved to the progress strip; the reminder is one line.
-    expect(await text(0)).toBe("Лодка для Хабта Плыть");
-    expect(await text(3)).toBe("Лодка для Хабта Плыть");
-    expect(await text(4)).toBe("Лодка для Хабта Плыть");
+    // The shared reminder is rendered unchanged, independently of the progress strip.
+    expect(await text(0)).toBe("Лодка для Хабта · Плыть");
+    expect(await text(3)).toBe("Лодка для Хабта · Плыть");
+    expect(await text(4)).toBe("Лодка для Хабта · Плыть");
   } finally {
     await act(async () => root.unmount());
     vi.unstubAllGlobals();

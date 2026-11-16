@@ -1,5 +1,5 @@
 import { expect, it } from "vitest";
-import { remainingScenes } from "./ScenesGame";
+import { remainingScenes } from "./sceneFlow";
 import { initialProgress, progressReducer, totalScores } from "./progress";
 import type { SceneContext } from "./types";
 

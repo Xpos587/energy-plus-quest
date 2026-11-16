@@ -17,6 +17,16 @@ tasks:
   check:
     cmds:
       - bun run check
+  verify:quick:
+    desc: Типы, unit-тесты и компиляция без production-медиа и упаковки
+    cmds:
+      - bun run typecheck
+      - bun run test
+      - bun run build:check
+  e2e:quick:
+    desc: Один E2E-файл; передайте путь после --
+    cmds:
+      - bun run test:e2e:quick {{.CLI_ARGS}}
   verify:
     cmds:
       - task: check

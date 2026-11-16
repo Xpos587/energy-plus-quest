@@ -1,4 +1,4 @@
-import type { logistProfileCopy } from "./endingCopy";
+import type { logistProfileCopy } from "./endingCopy.ts";
 
 export type LogistCopy = ReturnType<typeof logistProfileCopy>;
 /* The player shares the certificate as their own, so it speaks as «я».

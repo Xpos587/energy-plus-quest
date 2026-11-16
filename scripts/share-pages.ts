@@ -5,7 +5,7 @@ import path from "node:path";
 import { promisify } from "node:util";
 import sharp from "sharp";
 import type { Plugin, ResolvedConfig } from "vite";
-import { certificateCopy } from "../src/scenes/certificateExport";
+import { certificateCopy } from "../src/scenes/certificateExport.ts";
 
 const run = promisify(execFile);
 /* Same scenario blocks as endingCopy.ts titles; types valid per profile as in logistType. */
@@ -44,6 +44,7 @@ export function sharePage(title: string, pageUrl: string) {
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../brand/favicon-32.png" sizes="32x32">
 <style>
+*,*::before,*::after{outline:none!important;text-decoration:none!important}
 body{margin:0;min-height:100vh;display:grid;place-items:center;background:#003ca6;font-family:"Roboto Condensed",Verdana,sans-serif;color:#fff;text-align:center}
 main{max-width:720px;padding:24px}
 img{width:100%;height:auto;border-radius:16px}
@@ -74,7 +75,7 @@ export function sharePages(): Plugin {
       config = resolved;
     },
     async closeBundle() {
-      if (config.build.ssr || config.build.write === false) return;
+      if (config.mode === "test" || config.build.ssr || config.build.write === false) return;
       const base = new URL(process.env.PUBLIC_URL || "https://e-plus.media/specprojects/joydelivery/");
       if (!base.pathname.endsWith("/")) base.pathname += "/";
       const scenario = await readFile(path.join(config.root, "docs/scenario.md"), "utf8");

@@ -1,10 +1,12 @@
 import { resolve } from "node:path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import { optimizedImages } from "./scripts/optimized-images";
+import { optimizedImages } from "./scripts/optimized-images.ts";
+import { devWatchOptions } from "./scripts/dev-watch.ts";
 
 export default defineConfig({
   base: "./",
+  server: { watch: devWatchOptions(import.meta.dirname) },
   cacheDir: ".tmp-work/scenes-02-05-vite",
   plugins: [optimizedImages(), react()],
   build: {

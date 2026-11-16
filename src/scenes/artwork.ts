@@ -4,10 +4,7 @@ import { lastmileOutcomeImage } from "./lastmile/artworkFamily";
 import type { SceneContext, SceneId } from "./types";
 import manifest from "./worldManifest.json";
 
-export function sceneChoiceImage(
-  scene: SceneId,
-  context?: SceneContext,
-): string {
+export function sceneChoiceImage(scene: SceneId): string {
   if (scene === "lastmile") {
     return imageAsset(
       "scene-art/lastmile-family-v1/revision-15/intro-wide.webp",

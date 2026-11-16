@@ -4,7 +4,6 @@ import { parcelNames } from "../names";
 import { scenarioParagraph } from "../../game/scenarioDocument";
 import { sceneChoiceImage } from "../artwork";
 import type { SceneContext } from "../types";
-import { inventoryAlphabet } from "./alphabet";
 import { warehouseCallouts } from "./callouts";
 import { inventoryScene } from "./index";
 

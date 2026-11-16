@@ -1,51 +1,9 @@
-.context {
-  margin: 0 0 4px;
-  font-size: var(--type-support, 16px);
-  line-height: 1.35;
-  color: #082946;
-}
-
-.card { display: grid; gap: 12px; min-width: 0; color: #082946; }
-/* Readouts: label, then value with icon; a hairline between. */
-.facts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0;
-  font-family: var(--font-brand);
-}
-/* Label over value: labels share one row, a wrapped value only grows downward. */
-.facts > div {
-  display: grid;
-  grid-row: span 2;
-  grid-template-rows: subgrid;
-  row-gap: 4px;
-  min-width: 0;
-  padding: 0 14px;
-  border-left: 1px solid #dbe5ec;
-}
-.facts > div:first-child { padding-left: 0; border-left: 0; }
-.facts dt { grid-row: 1; margin: 0; color: #52677e; font-size: var(--type-support, 14px); line-height: 1.3; }
-.facts dd {
-  grid-row: 2;
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  margin: 0;
-  font-size: var(--type-choice, 18px);
-  font-weight: 700;
-  line-height: 1.15;
-}
-.facts dd svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: calc(0.575em - 9px); color: #52677e; stroke-width: 1.8; } /* centred on the first line, not on a wrapped value */
-.note {
-  margin: 0;
-  padding-left: 10px;
-  border-left: 3px solid #ff5500;
-  font-size: 15px;
-  line-height: 1.3;
-}
-
-@media (max-width: 400px), (max-height: 500px) {
-  .facts > div { padding-inline: 9px; }
-  .facts dd svg { flex-basis: 16px; width: 16px; height: 16px; margin-top: calc(0.575em - 8px); }
-  .note { font-size: 14px; }
-}
+.context { margin: 0 0 4px; font-size: var(--type-support, 16px); line-height: 1.35; color: #082946; }
+.card { display: grid; gap: 16px; min-width: 0; color: #082946; }
+.facts { margin: 0; padding: 0 12px; border: 1px solid #dbe7ef; border-radius: 10px; background: #f6f9fc; font-family: var(--font-brand); }
+.facts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 12px; padding: 12px 0; }
+.facts > div + div { border-top: 1px solid #dbe7ef; }
+.facts dt { display: flex; align-items: flex-start; gap: 6px; margin: 0; color: #52677e; font-size: 14px; line-height: 1.4; }
+.facts dt svg { flex: 0 0 16px; width: 16px; height: 16px; margin-top: 2px; stroke-width: 1.8; }
+.facts dd { margin: 0; font-size: 16px; font-weight: 500; line-height: 1.4; }
+.note { margin: 0; font-size: 16px; line-height: 1.4; }

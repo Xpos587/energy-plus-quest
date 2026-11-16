@@ -20,9 +20,12 @@ function bounds(path: string) {
   const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
   return { cx: (x0 + x1) / 2, cy: (y0 + y1) / 2, r: Math.max(x1 - x0, y1 - y0) / 2, top: y0, bottom: y1 };
 }
-// The pipe carrier stands right under the helicopter and the robot next to the rover:
-// their names go below the vehicle so no label covers a neighbour.
-const below = new Set(["pipe-carrier", "robot"]);
+// The robot stands next to the rover: its name goes below it so no label covers a neighbour.
+// The pipe carrier keeps its name above: the gift sits on the quay right below it.
+const below = new Set(["robot"]);
+// Ring floor in plate px: the tall map shows at ~0.37x on a 390 px phone, so every ring stays ≥60 px
+// there (small robot included) while neighbours' rings still clear each other.
+const ringMin = 82;
 
 /**
  * The vehicles are the tap targets, each with its name right at it (call 05.11). Untried vehicles
@@ -59,12 +62,12 @@ export function LastmileZones({ labels, composition, selectedId, onSelect, focus
           const idle = !lit && !selectedId && !seen.includes(id);
           return (
             <g key={id} data-lastmile-object={id} data-active={selectedId === id} data-focused={focusedId === id || undefined}>
-              {idle && <circle className={styles.ripple} data-lastmile-ripple={id} cx={b.cx} cy={b.cy} r={Math.max(b.r * .8, 60)} style={{ animationDelay: `${i * .7}s` }} />}
+              {idle && <circle className={styles.ripple} data-lastmile-ripple={id} cx={b.cx} cy={b.cy} r={Math.max(b.r * .8, ringMin)} style={{ animationDelay: `${i * .7}s` }} />}
               <path
                 className={styles.zone}
                 data-lastmile-zone={id}
-                data-interactive={!!onSelect && (!selectedId || selectedId === id)}
-                onClick={onSelect && (!selectedId || selectedId === id) ? () => onSelect(id) : undefined}
+                data-interactive={!!onSelect}
+                onClick={onSelect ? () => onSelect(id) : undefined}
                 onPointerEnter={onFocusChange && (() => onFocusChange(id))}
                 onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
                 d={drawing.regions[id].path}
@@ -84,9 +87,9 @@ export function LastmileZones({ labels, composition, selectedId, onSelect, focus
             data-lastmile-label={id}
             data-below={below.has(id) || undefined}
             data-lit={lit === id || undefined}
-            data-interactive={!!onSelect && (!selectedId || selectedId === id)}
+            data-interactive={!!onSelect}
             style={{ left: `${b.cx / drawing.width * 100}%`, top: `${(below.has(id) ? b.bottom : b.top) / drawing.height * 100}%` }}
-            onClick={onSelect && (!selectedId || selectedId === id) ? () => onSelect(id) : undefined}
+            onClick={onSelect ? () => onSelect(id) : undefined}
             onPointerEnter={onFocusChange && (() => onFocusChange(id))}
             onPointerLeave={onFocusChange && (() => onFocusChange(undefined))}
           >

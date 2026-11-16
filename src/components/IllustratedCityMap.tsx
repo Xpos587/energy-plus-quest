@@ -2,6 +2,8 @@ import { Hand, RotateCcw, ZoomIn } from "lucide-react";
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import { carrierFacts, mapCarrierIds } from "../game/carrierFacts";
 import type { CarrierId } from "../game/types";
+import { ArtworkLoading } from "./ArtworkLoading";
+import { useArtworkLoading } from "./useArtworkLoading";
 import {
   createSmoke,
   createTraffic,
@@ -57,8 +59,19 @@ export function IllustratedCityMap({
     observer?.observe(element);
     return () => observer?.disconnect();
   }, []);
+  const [attempt, setAttempt] = useState(0);
+  const source = plateSource(plate, attempt);
+  const artwork = useArtworkLoading(source);
+  const [loaded, setLoaded] = useState<{
+    source: string;
+    atlas?: HTMLImageElement;
+  }>();
+  const atlas = loaded?.source === source ? loaded.atlas : undefined;
+  const failed =
+    artwork.status === "error" || (loaded?.source === source && !atlas);
+  const ready = !failed && !!atlas && artwork.status === "ready";
   const navigation = useCityMapZoom(viewport, onSelect, {
-    enabled: interactive,
+    enabled: interactive && ready,
     aspectRatio: plateAspect(plate),
   });
   const camera = useRef(navigation);
@@ -75,7 +88,6 @@ export function IllustratedCityMap({
   const clock = useRef(0);
   const dynamicCanvas = useRef<HTMLCanvasElement>(null);
   const [playing, setPlaying] = useState(false);
-  const [failed, setFailed] = useState(false);
   const [reduced, setReduced] = useState(false);
   // The gesture hint disappears after the first zoom/pan or choice.
   const [hinted, setHinted] = useState(false);
@@ -118,34 +130,35 @@ export function IllustratedCityMap({
     return () => preference.removeEventListener("change", sync);
   }, []);
 
-  const [assets, setAssets] = useState<{
-    plate: PlateName;
-    atlas: HTMLImageElement;
-  }>();
   useEffect(() => {
     let cancelled = false;
-    loadTruckAtlas(plate).then(
-      (atlas) => !cancelled && setAssets({ plate, atlas }),
-      () => !cancelled && setFailed(true),
+    loadTruckAtlas(plate, attempt).then(
+      (atlas) => !cancelled && setLoaded({ source, atlas }),
+      () => !cancelled && setLoaded({ source }),
     );
     return () => {
       cancelled = true;
     };
-  }, [plate]);
+  }, [plate, attempt, source]);
+
+  const repaint = useRef<() => void>(() => {});
+  useEffect(() => repaint.current(), [selectedId, interactive]);
 
   useEffect(() => {
-    if (!assets) return;
+    if (!ready || !atlas) return;
+    const area = viewport.current;
+    const surface = area?.querySelector<HTMLElement>("[data-map-surface]");
+    if (!area || !surface) return;
     let handle = 0;
     let last = performance.now();
     const smoke = createSmoke();
-    const name = assets.plate;
+    const name = plate;
     const [plateWidth] = plates[name].res;
     const tick = (now: number) => {
-      handle = requestAnimationFrame(tick);
+      handle = 0;
+      if (!reduced) handle = requestAnimationFrame(tick);
       const canvas = dynamicCanvas.current;
-      const area = viewport.current;
-      const surface = area?.querySelector<HTMLElement>("[data-map-surface]");
-      if (!canvas || !area || !surface) return;
+      if (!canvas) return;
       // A hidden tab pauses rAF; never fast-forward the trucks afterwards.
       const dt = Math.min(0.1, Math.max(0, (now - last) / 1000));
       last = now;
@@ -175,7 +188,7 @@ export function IllustratedCityMap({
       const autoFlip = tail + 232 * pinScale > view.right - 4;
       const pick = surface.querySelector<HTMLElement>("[data-map-autopick]");
       if (pick) pick.toggleAttribute("data-flip", autoFlip);
-      drawCity(context, traffic.current, assets.atlas, smoke, {
+      drawCity(context, traffic.current, atlas, smoke, {
         plate: name,
         reduced,
         k,
@@ -206,14 +219,38 @@ export function IllustratedCityMap({
           camera.current.track({ x, y }, false);
       });
     };
-    handle = requestAnimationFrame(tick);
+    const schedule = () => {
+      if (!handle) handle = requestAnimationFrame(tick);
+    };
+    repaint.current = schedule;
+    // A still map needs a new frame only when its viewport or camera changes.
+    // Observe the imperative camera transform too (dragging bypasses React).
+    let transform = surface.style.transform;
+    const cameraObserver = reduced ? new MutationObserver(() => {
+      if (surface.style.transform === transform) return;
+      transform = surface.style.transform;
+      schedule();
+    }) : undefined;
+    cameraObserver?.observe(surface, { attributes: true, attributeFilter: ["style"] });
+    const resizeObserver = reduced && typeof ResizeObserver === "function"
+      ? new ResizeObserver(schedule)
+      : undefined;
+    resizeObserver?.observe(area);
+    window.addEventListener("resize", schedule);
+    schedule();
     setPlaying(!reduced);
-    return () => cancelAnimationFrame(handle);
-  }, [reduced, assets]);
+    return () => {
+      repaint.current = () => {};
+      cancelAnimationFrame(handle);
+      cameraObserver?.disconnect();
+      resizeObserver?.disconnect();
+      window.removeEventListener("resize", schedule);
+    };
+  }, [reduced, atlas, plate, ready]);
 
   return (
     <div className={styles.root}>
-      {interactive && !hinted && !selectedId && (
+      {ready && interactive && !hinted && !selectedId && (
         <p className={styles.coach} data-map-zoom-hint>
           <span className={styles.coachItem}>
             <span className={styles.coachIcon} aria-hidden="true">
@@ -229,7 +266,7 @@ export function IllustratedCityMap({
           </span>
         </p>
       )}
-      {interactive && navigation.isZoomed && (
+      {ready && interactive && navigation.isZoomed && (
         <button
           type="button"
           className={styles.reset}
@@ -243,7 +280,7 @@ export function IllustratedCityMap({
         </button>
       )}
       <section
-        inert={!interactive}
+        inert={!interactive || !ready}
         ref={viewport}
         className={styles.map}
         aria-label="Карта доступных перевозчиков"
@@ -261,18 +298,22 @@ export function IllustratedCityMap({
           data-motion-reason={
             failed
               ? "load-error"
-              : reduced
-                ? "reduced-motion"
-                : !assets
-                  ? "images-loading"
+              : !ready
+                ? "images-loading"
+                : reduced
+                  ? "reduced-motion"
                   : "ready"
           }
-          data-motion-state={playing && assets ? "playing" : "paused"}
+          data-motion-state={playing && ready ? "playing" : "paused"}
         >
           <img
             className={styles.plate}
-            src={plateSource(plate)}
-            srcSet={plateSrcSet(plate)}
+            style={{ visibility: artwork.status === "ready" ? undefined : "hidden" }}
+            ref={artwork.ref}
+            src={artwork.src}
+            srcSet={plateSrcSet(plate, attempt)}
+            onLoad={artwork.onLoad}
+            onError={artwork.onError}
             sizes="100vw"
             alt="Город со складом в центре и три грузовика"
             data-city-poster
@@ -323,6 +364,7 @@ export function IllustratedCityMap({
         </div>
         <canvas
           ref={dynamicCanvas}
+          hidden={!ready}
           className={styles.overlay}
           aria-hidden="true"
           data-carrier-effects
@@ -336,6 +378,10 @@ export function IllustratedCityMap({
           начальный вид.
         </p>
       </section>
+      <ArtworkLoading
+        status={failed ? "error" : ready ? "ready" : "loading"}
+        onRetry={() => setAttempt((count) => count + 1)}
+      />
     </div>
   );
 }

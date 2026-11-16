@@ -20,8 +20,8 @@ export function CraneFacts({ id }: { id: keyof typeof craneFacts }) {
           [Timer, "Когда начнёт", fact.when],
         ] as const).map(([Icon, label, value]) => (
           <div key={label}>
-            <dt>{label}</dt>
-            <dd><Icon aria-hidden="true" />{value}</dd>
+            <dt><Icon aria-hidden="true" />{label}</dt>
+            <dd>{value}</dd>
           </div>
         ))}
       </dl>

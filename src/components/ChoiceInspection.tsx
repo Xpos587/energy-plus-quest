@@ -1,5 +1,6 @@
 import { ArrowLeft, Check } from "lucide-react";
 import { type ReactNode, useId, useLayoutEffect, useRef } from "react";
+import { restoreArtworkFocus } from "./restoreArtworkFocus";
 import { PagedDescription } from "./PagedDescription";
 import styles from "./SceneInteraction.module.css";
 import { useInspectionPlacement } from "./useInspectionPlacement";
@@ -9,6 +10,7 @@ export function ChoiceInspection({
   selectionKey,
   title,
   eyebrow,
+  reminder,
   children,
   paragraphs,
   media = false,
@@ -23,6 +25,7 @@ export function ChoiceInspection({
   title: string;
   /** What the option is, above its name (e.g. «У ворот склада» over «Синяя фура»). */
   eyebrow?: string;
+  reminder?: ReactNode;
   children?: ReactNode;
   paragraphs?: string[];
   media?: boolean;
@@ -46,15 +49,16 @@ export function ChoiceInspection({
       const restore =
         dialog?.contains(document.activeElement) ||
         document.activeElement === document.body;
-      // Wait until the parent restores the mobile choice row before focusing it.
+      // Keep focus through responsive artwork reloads until the player moves elsewhere.
       queueMicrotask(() => {
         if (
           restore &&
           !heading.current?.isConnected &&
           trigger instanceof HTMLElement &&
-          trigger.isConnected
+          trigger.isConnected &&
+          document.activeElement === document.body
         ) {
-          trigger.focus({ preventScroll: true });
+          restoreArtworkFocus(trigger);
         }
       });
     };
@@ -76,6 +80,7 @@ export function ChoiceInspection({
         }
       }}
     >
+      {reminder}
       <div className={styles.inspectionHeading}>
         <h3 id={id} ref={heading} tabIndex={-1}>
           {eyebrow && (
@@ -90,6 +95,7 @@ export function ChoiceInspection({
         <section
           className={styles.inspectionCopy}
           aria-label="Описание варианта"
+          tabIndex={0}
         >
           {paragraphs && continuous ? (
             paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)

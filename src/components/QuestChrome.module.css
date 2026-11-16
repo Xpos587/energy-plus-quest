@@ -66,11 +66,6 @@
   background: transparent;
   box-shadow: none;
 }
-.header[data-header-result] .progressToggle {
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-}
 .headerRow {
   grid-template-rows: minmax(0, 1fr);
   min-height: 0;
@@ -80,22 +75,12 @@
 }
 
 .headerRow > h1,
-.headerRow > h2,
-.resultHeading > span {
+.headerRow > h2 {
   grid-row: 1;
   align-self: center;
   transform: translateY(1px);
 }
 
-.resultHeading {
-  composes: headerRow;
-  display: grid;
-  grid-template-columns: 32px minmax(0, 1fr);
-  color: #082946;
-  font-size: clamp(18px, 1.4vw, 20px);
-  font-weight: 700;
-  line-height: 1.15;
-}
 
 .selectionHeading {
   composes: headerRow;
@@ -145,27 +130,10 @@
   inset: -6px;
 }
 
-.selectionStep {
-  grid-column: 3;
-  grid-row: 1;
-  justify-self: end;
-  padding: 6px 4px;
-  color: #d95812;
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
 
-.selectionStep span {
-  color: #8da0af;
-  font-size: 14px;
-}
 
 .selectionBack svg,
-.selectionIcon svg,
-.progressChevron svg {
+.selectionIcon svg {
   display: block;
   width: 18px;
   height: 18px;
@@ -240,168 +208,26 @@
   pointer-events: auto;
 }
 
-.progressToggle {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto auto;
-  align-items: start;
-  align-content: center;
-  gap: 9px 10px;
-  width: 180px;
-  height: 98px;
-  padding: 10px 12px;
-  border: 1px solid #e5ebef;
-  border-radius: 14px;
-  background: #fff;
-  color: inherit;
-  font: inherit;
-  box-shadow: 0 12px 30px #173a5b12;
-  cursor: default;
-}
 
-.progressText {
-  grid-column: 1;
-  grid-row: 1;
-  display: grid;
-  gap: 3px;
-  min-width: 122px;
-  text-align: left;
-}
 
-.progressToggle:focus-visible {
-  outline: 3px solid var(--blue, #0079c2);
-  outline-offset: 3px;
-}
 
-.progressChevron {
-  grid-column: 2;
-  grid-row: 1;
-  display: grid;
-  width: 40px;
-  height: 40px;
-  flex: none;
-  place-items: center;
-  border-radius: 8px;
-  background: #edf4f9;
-  transition: transform 160ms ease-out;
-}
 
-.progressToggle[aria-expanded="true"] .progressChevron {
-  transform: rotate(180deg);
-}
 
-.routePopover {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  width: min(320px, calc(100vw - 24px));
-  max-height: none;
-  overflow: hidden;
-  padding: 18px;
-  border: 1px solid #dce5eb;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 14px 40px #173a5b30;
-}
 
-.routePopover > strong {
-  display: block;
-  font-size: 17px;
-}
 
-.routeMission {
-  margin: 8px 0 14px;
-  color: #53697d;
-  font-size: 14px;
-}
 
-.routeList {
-  display: grid;
-  gap: 4px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
-.routeList li {
-  display: grid;
-  grid-template-columns: 30px 1fr auto;
-  align-items: center;
-  gap: 10px;
-  min-height: 42px;
-  padding: 5px 8px;
-  border-radius: 9px;
-  font-size: 14px;
-}
 
-.routeList li[data-route-state="current"] {
-  background: #eaf3fa;
-  font-weight: 700;
-}
 
-.routeList li[data-route-state="upcoming"] {
-  color: #6a7b89;
-}
 
-.routeList small {
-  font-size: 11px;
-  font-weight: 500;
-}
 
-.routeNumber {
-  display: grid;
-  flex: none;
-  place-items: center;
-  width: 26px;
-  height: 26px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background: #e5edf3;
-  color: #315a78;
-  font-size: 12px;
-  font-weight: 700;
-}
 
-.routeList li[data-route-state="done"] .routeNumber,
-.routeList li[data-route-state="current"] .routeNumber {
-  background: var(--blue, #0079c2);
-  color: white;
-}
 
-.progressCaption {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-}
 
-@media (min-width: 601px) {
-  .progressChevron { display: none; }
-}
 
-.progressTrack {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
 
-.progressItem {
-  position: relative;
-  flex: 1;
-  height: 5px;
-  border-radius: 999px;
-  background: #cad5df;
-}
 
-.progressItem[data-current="true"] {
-  background: var(--blue, #0079c2);
-}
 
-.progressItem > span,
-.progressItem i,
 .selectionSummary {
   position: absolute;
   width: 1px;
@@ -414,19 +240,7 @@
   border: 0;
 }
 
-.progressCount {
-  color: #546d83;
-  font-size: 16px;
-  font-variant-numeric: tabular-nums;
-  line-height: 1.2;
-}
 
-.progressCountCompact {
-  display: none;
-}
-.progressRouteIcon {
-  display: none;
-}
 
 @media (min-width: 601px) and (max-width: 760px) {
   .header {
@@ -435,9 +249,6 @@
     gap: 8px;
   }
 
-  .progressToggle {
-    width: min(300px, calc(100vw - 392px));
-  }
 }
 
 @media (max-width: 600px) {
@@ -482,14 +293,7 @@
     flex-basis: 32px;
   }
 
-  .selectionStep {
-    font-size: 15px;
-    padding-inline: 0;
-  }
 
-  .selectionStep span {
-    font-size: 12px;
-  }
 
   .brandCluster {
     gap: 10px;
@@ -519,16 +323,6 @@
     min-width: 0;
   }
 
-  .progressToggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    width: 60px;
-    height: 48px;
-    padding: 6px;
-    border-radius: 10px;
-  }
 
   .header[data-header-result] .resultHeaderCard {
     width: 100%;
@@ -542,70 +336,20 @@
     min-height: 0;
     padding-right: 70px;
   }
-  .header[data-header-result] .resultHeading {
-    min-height: 0;
-    font-size: clamp(14px, 4vw, 17px);
-  }
-  .header[data-header-result] .progressToggle {
-    border-radius: 7px;
-  }
   .header[data-header-result] .routeProgress {
     top: 8px;
   }
 
-  .progressText {
-    min-width: 0;
-  }
 
-  .progressCaption {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-  }
 
-  .progressCount {
-    display: none;
-  }
 
-  .progressCountCompact {
-    display: block;
-    color: #315a78;
-    font-size: 11px;
-    font-weight: 700;
-    white-space: nowrap;
-  }
 
-  .progressChevron {
-    width: 24px;
-    height: 26px;
-  }
 
-  .progressChevron svg {
-    width: 15px;
-    height: 15px;
-  }
 
-  .progressTrack {
-    display: none;
-  }
 
-  .progressItem {
-    width: 5px;
-    height: 5px;
-  }
 
-  .progressItem[data-current="true"] {
-    width: 12px;
-  }
 }
 
-@media (max-width: 359px) {
-  .progressCountCompact {
-    font-size: 10px;
-  }
-}
 
 @media (max-width: 900px) {
   .header {
@@ -617,12 +361,8 @@
   .selectionHeaderCard {
     width: 100%;
   }
-  .routeProgress,
-  .progressToggle {
+  .routeProgress {
     width: min(260px, 34vw);
-  }
-  .progressToggle {
-    border-radius: 0 14px 14px 0;
   }
 }
 
@@ -647,69 +387,8 @@
     right: 12px;
     width: auto;
   }
-  .progressToggle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    width: auto;
-    min-width: 58px;
-    height: 27px;
-    padding: 2px 7px;
-    border: 1px solid #c4dbe9;
-    border-radius: 7px;
-    background: #edf4f9;
-    box-shadow: none;
-  }
-  .progressChevron { display: none; }
-  .progressRouteIcon {
-    display: block;
-    width: 15px;
-    height: 15px;
-    fill: none;
-    stroke: #20618c;
-    stroke-width: 1.7;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .progressCountCompact { font-size: 11px; }
-  .routePopover {
-    top: 82px;
-    right: 0;
-    width: min(280px, calc(100vw - 24px));
-    max-height: calc(100dvh - 110px);
-    padding: 12px;
-    border-radius: 12px;
-  }
-  .routePopover > strong { font-size: 14px; }
-  .routeMission { margin: 4px 0 8px; font-size: 11px; }
-  .routeList {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 3px;
-  }
-  .routeList li {
-    grid-template-columns: 22px 1fr;
-    min-height: 33px;
-    gap: 4px;
-    padding: 3px 4px;
-    font-size: 11px;
-  }
-  .routeNumber { width: 21px; height: 21px; font-size: 10px; }
-  .routeList small { display: none; }
-}
-@media (max-width: 359px) {
-  .progressToggle {
-    min-width: 53px;
-    padding-inline: 5px;
-  }
 }
 
-@media (max-height: 500px) and (min-width: 600px) {
-  .routePopover { position: fixed; top: 12px; right: 12px; width: min(540px, calc(100vw - 24px)); padding: 12px; }
-  .routeList { grid-template-columns: 1fr 1fr; }
-  .routeMission { margin: 6px 0; }
-}
 
 /* Results use one compact brand/progress row; navigation lives with the story. */
 .header[data-header-result] {
@@ -738,10 +417,6 @@
   display: flex;
   align-items: center;
 }
-.header[data-header-result] .progressToggle {
-  height: 100%;
-  padding-block: 6px;
-}
 @media (max-width: 600px) {
   .header[data-header-result] { height: 48px; }
   .header[data-header-result] .resultHeaderCard {
@@ -752,20 +427,6 @@
   .header[data-header-result] .energyMark { flex-basis: 90px; }
   .header[data-header-result] .projectMark { flex-basis: 126px; }
   .header[data-header-result] .routeProgress { width: auto; flex: none; padding-right: 10px; }
-  .header[data-header-result] .progressToggle {
-    width: 100%;
-    min-width: 0;
-    justify-content: center;
-    gap: 5px;
-    padding: 0 8px 0 0;
-  }
-  .header[data-header-result] .progressText {
-    display: flex;
-    align-items: center;
-    line-height: 1;
-  }
-  .header[data-header-result] .progressCountCompact { line-height: 1; }
-  .header[data-header-result] .progressRouteIcon { flex: none; }
 }
 @media (max-width: 900px) and (orientation: portrait) {
   .header[data-header-result] {
@@ -785,4 +446,24 @@
    approved internal padding; content cards keep their own spacing. */
 .header[data-header-result] .resultHeaderCard {
   padding-inline-start: 0;
+}
+
+.deliveryReminder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e1ebf2;
+  color: #31556f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.deliveryReminder img { width: 40px; height: 40px; object-fit: cover; border-radius: 8px; flex: none; }
+.deliveryReminder > span { display: grid; gap: 2px; }
+.deliveryReminder strong { color: #082946; font-size: 16px; font-weight: 500; }
+.deliveryReminder small { font: inherit; }
+@media (max-width: 600px), (max-height: 500px) {
+  .deliveryReminder { gap: 8px; }
 }

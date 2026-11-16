@@ -140,10 +140,10 @@ export function useTextPages(
             const following = Array.from(reader.children).slice(Array.from(reader.children).indexOf(narrative) + 1)
               .filter((element) => element.getBoundingClientRect().height > 0);
             const readerStyle = getComputedStyle(reader);
-            reserved = following.reduce((total, element) => {
-              const style = getComputedStyle(element);
-              return total + element.getBoundingClientRect().height + parseFloat(style.marginTop) + parseFloat(style.marginBottom);
-            }, 0) + (parseFloat(readerStyle.rowGap) || 0) * following.length
+            // Result controls use the reader's gap. Their auto margins are spare
+            // reading space, not content to reserve (computed styles resolve them to pixels).
+            reserved = following.reduce((total, element) => total + element.getBoundingClientRect().height, 0)
+              + (parseFloat(readerStyle.rowGap) || 0) * following.length
               + parseFloat(readerStyle.paddingBottom) + parseFloat(getComputedStyle(panel).paddingBottom);
           }
           const panelLimit = parseFloat(getComputedStyle(panel).maxHeight);
@@ -163,7 +163,7 @@ export function useTextPages(
       const fitViewport = computed.getPropertyValue("--result-fit-viewport").trim() === "1";
       const height =
         ((fitMaxHeight || fitViewport) && Number.isFinite(maxHeight)
-          ? maxHeight
+          ? Math.max(parseFloat(computed.minHeight) || 0, maxHeight)
           // clientHeight rounds away fractional line heights. Comparing that
           // integer with the probe's fractional height can reject text that
           // fits exactly and repeatedly toggle the compact result layout.
@@ -215,8 +215,8 @@ export function useTextPages(
           const source = sources.join("\n\n");
           const tall = (value: string) => (fits(value, 1), probe.getBoundingClientRect().height);
           const lineHeight = parseFloat(computed.lineHeight) || 0;
-          // The last line may overflow into its own empty half-leading.
-          const limit = height + Math.max(0.5, (lineHeight - parseFloat(computed.fontSize)) / 2 || 0);
+          // CSS serialization rounds fractional heights; allow subpixels, not half a line.
+          const limit = height + 0.5;
           const panel = container.closest<HTMLElement>("[data-sheet-panel]");
           const grow = (need: number) => {
             if (fitViewport || !resultFrame || !panel || need - height > lineHeight * 2) return false;

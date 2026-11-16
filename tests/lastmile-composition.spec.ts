@@ -1,12 +1,10 @@
 import { expect, test } from '@playwright/test';
 
-// Source-pixel extents checked against revision 11 (1x canvas pixels): vehicles, АБК, chum camp and the whole barge.
-const bounds = {
-  wide: { width: 2056, height: 1841, objects: [[242, 738, 627, 926], [277, 928, 568, 1102], [542, 958, 752, 1118], [754, 1028, 887, 1115], [1307, 606, 1706, 797], [1576, 736, 1808, 940], [201, 1117, 842, 1479]] },
-  tall: { width: 1664, height: 1952, objects: [[382, 923, 812, 1146], [516, 1118, 837, 1334], [810, 1168, 1050, 1350], [1066, 1230, 1220, 1342], [815, 365, 1097, 527], [1011, 493, 1318, 655], [397, 1397, 1156, 1713]] },
-};
+import exported from '../design/scene-05/r4/runtime.json' with { type: 'json' };
+// Independent Blender projections, not the production UI's framing constants.
+const bounds = exported.views;
 
-for (const [width, height] of [[320, 568], [360, 640], [375, 667], [390, 844], [412, 915], [600, 960], [1024, 1366], [667, 375], [844, 390], [1180, 820], [1366, 768], [1440, 900], [1920, 1080], [2560, 1080]]) {
+for (const [width, height] of [[320, 568], [360, 640], [375, 667], [390, 844], [412, 915], [600, 960], [1024, 1366], [667, 375], [844, 390], [1180, 820], [1024, 768], [1366, 768], [1440, 900], [1920, 1080], [2560, 1080]]) {
   test(`lastmile vehicles and destinations fit ${width}x${height}`, async ({ page }) => {
     await page.setViewportSize({ width, height });
     await page.goto('/scenes.html?scene=lastmile&parcel=boat&recipient=khor');
@@ -25,9 +23,26 @@ for (const [width, height] of [[320, 568], [360, 640], [375, 667], [390, 844], [
     expect(view.top).toBeLessThanOrEqual(0.5);
     expect(view.left + view.planeWidth).toBeGreaterThanOrEqual(view.width - 0.5);
     expect(view.top + view.planeHeight).toBeGreaterThanOrEqual(view.height - 0.5);
+    // The existing breathing ring reaches 1.15x. Check its entire animation envelope,
+    // not a lucky screenshot frame, and keep each label off neighbouring vehicles.
+    const annotations = await stage.evaluate(el => [...el.querySelectorAll('[data-lastmile-ripple]')].map(circle => {
+      const id = circle.getAttribute('data-lastmile-ripple')!;
+      const path = el.querySelector<SVGGraphicsElement>(`[data-lastmile-zone="${id}"]`)!;
+      const box = path.getBoundingClientRect();
+      const label = el.querySelector(`[data-lastmile-label="${id}"]`)!.getBoundingClientRect();
+      return { id, cx: Number(circle.getAttribute('cx')), cy: Number(circle.getAttribute('cy')), radius: Number(circle.getAttribute('r')) * 1.15, box: box.toJSON(), label: label.toJSON() };
+    }));
+    expect(annotations).toHaveLength(4);
+    for (let i = 0; i < annotations.length; i++) for (let j = i + 1; j < annotations.length; j++) {
+      const a = annotations[i], b = annotations[j];
+      expect(Math.hypot(a.cx - b.cx, a.cy - b.cy), `${a.id}/${b.id} breathing rings overlap`).toBeGreaterThan(a.radius + b.radius);
+      for (const [label, box] of [[a.label, b.box], [b.label, a.box], [a.label, b.label]]) {
+        expect(label.right <= box.left || label.left >= box.right || label.bottom <= box.top || label.top >= box.bottom, `${a.id}/${b.id} labels overlap`).toBe(true);
+      }
+    }
     const drawing = bounds[view.format];
     const scale = view.planeWidth / drawing.width;
-    for (const [x0, y0, x1, y1] of drawing.objects) {
+    for (const [x0, y0, x1, y1] of Object.values(drawing.objects)) {
       expect(view.left + x0*scale).toBeGreaterThanOrEqual(-1);
       expect(view.top + y0*scale).toBeGreaterThanOrEqual(view.hintBottom); // Clear the instruction overlay.
       expect(view.left + x1*scale).toBeLessThanOrEqual(view.width+1);

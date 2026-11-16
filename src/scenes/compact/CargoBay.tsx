@@ -56,6 +56,7 @@ export function CargoBay({
   regions,
   terminal,
   autoActive,
+  viewportFeedback = false,
   offsetY = (canvasHeight - (portrait ? 874 : 520)) / 2,
 }: {
   placement?: number;
@@ -69,6 +70,7 @@ export function CargoBay({
   /** Draws the Compact stand and its choice outline when the choice is open. */
   terminal?: (typeof compactTerminal)["wide"];
   autoActive?: boolean;
+  viewportFeedback?: boolean;
   offsetY?: number;
 }) {
   const edgeMask = useId();
@@ -92,6 +94,7 @@ export function CargoBay({
       viewBox={`0 0 1040 ${canvasHeight}`}
       aria-hidden={artwork.status === "ready" ? true : undefined}
       data-cargo-view="side-2d"
+      data-artwork-ready={artwork.status === "ready"}
     >
       <title>Грузовой отсек</title>
       <defs>
@@ -178,7 +181,8 @@ export function CargoBay({
           <ArtworkLoading
             status={artwork.status}
             onRetry={artwork.retry}
-            inline
+            viewport={viewportFeedback}
+            inline={!viewportFeedback}
           />
         </foreignObject>
       )}

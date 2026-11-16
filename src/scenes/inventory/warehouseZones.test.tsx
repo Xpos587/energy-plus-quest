@@ -91,7 +91,7 @@ describe("warehouse storage geography", () => {
   });
 });
 
-it("uses the main warehouse canvas without a second inspection or floating labels", () => {
+it("keeps four numbered accessible targets without labels over the warehouse artwork", () => {
   const host = document.createElement("div");
   host.innerHTML = renderToStaticMarkup(
     <inventoryScene.Art
@@ -103,7 +103,10 @@ it("uses the main warehouse canvas without a second inspection or floating label
   expect(host.querySelector("dialog")).toBeNull();
   expect(host.textContent).not.toContain("Рассмотреть склад");
   expect(host.querySelectorAll("[data-warehouse-label]")).toHaveLength(0);
-  expect(host.querySelectorAll("[data-hotspot]")).toHaveLength(4);
+  const targets = [...host.querySelectorAll("[data-hotspot]")];
+  expect(targets).toHaveLength(4);
+  expect(targets.map(target => target.textContent)).toEqual(["1", "2", "3", "4"]);
+  expect(targets.every(target => target.getAttribute("aria-label")!.length > 15)).toBe(true);
   expect(
     host.querySelectorAll("[data-warehouse-annotations] text"),
   ).toHaveLength(0);

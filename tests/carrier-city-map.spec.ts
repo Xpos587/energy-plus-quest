@@ -79,6 +79,54 @@ for (const [width, height] of [
   });
 }
 
+test("reduced-motion map repaints on changes, not while idle", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await openCarrier(page);
+  await expect(page.locator('[data-map-surface]')).toHaveAttribute("data-motion-reason", "reduced-motion");
+  await page.waitForFunction(() => document.querySelector<HTMLCanvasElement>("[data-carrier-effects]")!.width > 300);
+  // Count actual map canvas clears, not unrelated animation callbacks.
+  await page.evaluate(() => {
+    const canvas = document.querySelector<HTMLCanvasElement>("[data-carrier-effects]")!;
+    const context = canvas.getContext("2d")!;
+    const clear = context.clearRect.bind(context);
+    canvas.dataset.paints = "0";
+    context.clearRect = (...args) => {
+      canvas.dataset.paints = String(Number(canvas.dataset.paints) + 1);
+      clear(...args);
+    };
+  });
+  const paints = () => page.locator("[data-carrier-effects]").evaluate(el => Number((el as HTMLElement).dataset.paints));
+  await page.waitForTimeout(200);
+  const before = await paints();
+  await page.waitForTimeout(1000);
+  const idle = (await paints()) - before;
+  console.log(`Reduced-motion map: ${idle} canvas redraws / 1000 ms idle`);
+  expect(idle).toBe(0);
+
+  const map = page.locator("[data-map-viewport]");
+  await map.focus();
+  await page.keyboard.press("+");
+  await expect.poll(paints).toBeGreaterThan(before);
+  const zoomed = await paints();
+  await page.keyboard.press("ArrowLeft");
+  await expect.poll(paints).toBeGreaterThan(zoomed);
+  const panned = await paints();
+  await page.setViewportSize({ width: 844, height: 390 });
+  await expect.poll(paints).toBeGreaterThan(panned);
+  await expect(page.locator("[data-city-plate]")).toHaveAttribute("data-city-plate", "wide");
+  await pickCarrier(page, "express");
+  await expect(page.locator('[data-choice-inspection="express"]')).toBeVisible();
+  const selected = await paints();
+  await page.locator("[data-choice-cancel]").click();
+  await expect.poll(paints).toBeGreaterThan(selected);
+  await page.waitForTimeout(200);
+  const settled = await paints();
+  await page.waitForTimeout(300);
+  expect(await paints()).toBe(settled);
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await expect.poll(paints).toBeGreaterThan(settled + 2);
+});
+
 test("reduced motion keeps the rigs still and choosable", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await openCarrier(page, "professional", "alva", "boat");

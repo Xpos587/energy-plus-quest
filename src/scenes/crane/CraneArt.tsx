@@ -359,7 +359,9 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             // Only keyboard focus lights the actor; the programmatic focus restored after «Изменить выбор» must not (R19).
             onFocus={(event) => { if (event.currentTarget.matches(":focus-visible")) setHovered(option.id); }}
             onBlur={() => setHovered(undefined)}
-          />
+          >
+            <span className={styles.caption} data-barge-label={option.id}>{craneCaptions[option.id as keyof typeof craneCaptions]}</span>
+          </button>
         ))}
       </div>
       <ArtworkLoading viewport status={status} onRetry={() => setAttempt((count) => count + 1)} />

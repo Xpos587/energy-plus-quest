@@ -7,16 +7,16 @@ import { GameIntro } from "./components/GameIntro";
 import { GiftPreparation } from "./components/GiftPreparation";
 import { IllustratedCityMap } from "./components/IllustratedCityMap";
 import { ImageSources } from "./components/ImageSources";
-import { QuestHeader } from "./components/QuestShell";
+import { DeliveryReminder, QuestHeader } from "./components/QuestShell";
+import shell from "./components/SceneShell.module.css";
+import { restoreArtworkFocus } from "./components/restoreArtworkFocus";
 import { ResultCopy } from "./components/ResultCopy";
 import { SceneBriefing } from "./components/SceneBriefing";
-import { SceneChoices } from "./components/SceneChoices";
 import flow from "./components/SceneInteraction.module.css";
 import { outcomeArtwork } from "./game/artwork";
 import { carrierFacts } from "./game/carrierFacts";
 import {
   carrierBriefing,
-  carriers,
   findCarrier,
   findParcel,
   findRecipient,
@@ -31,9 +31,10 @@ import { interpolateOutcome } from "./game/outcomeText";
 import { useStoredState } from "./game/persistence";
 import type { CarrierId, GameAction } from "./game/types";
 import { sceneChoiceImage } from "./scenes/artwork";
-import { deliveryLine } from "./scenes/names";
 import { outcomeFocus } from "./scenes/outcomeFraming";
-import { carrierHeadings, ChoiceVerdict, restartSceneCondition, ScenesGame } from "./scenes/ScenesGame";
+import { ChoiceVerdict, ScenesGame } from "./scenes/ScenesGame";
+import { carrierHeadings } from "./scenes/resultHeadings";
+import { restartSceneCondition } from "./scenes/sceneFlow";
 
 export function App() {
   return (
@@ -51,9 +52,10 @@ function Game() {
     false,
     (v): v is boolean => typeof v === "boolean",
   );
+  // Choosing a role starts a new save scope, not a new introduction.
   const [introSeen, setIntroSeen] = useStoredState(
     scope && `${scope}:intro-seen`,
-    false,
+    Boolean(state.profile),
     (v): v is boolean => typeof v === "boolean",
   );
   // false = closed; otherwise the intro page to open (-1 cover, 1 route sheet).
@@ -109,7 +111,7 @@ function Game() {
     <div
       className={
         state.step === "carrier" || state.step === "outcome"
-          ? flow.app
+          ? state.step === "carrier" ? shell.app : flow.app
           : styles.app
       }
       data-step={state.step}
@@ -118,21 +120,12 @@ function Game() {
       <QuestHeader
         state={state}
         result={state.step === "outcome"}
-        selectionStep={
-          state.step === "profile"
-            ? 1
-            : state.step === "recipient"
-              ? 2
-              : state.step === "parcel"
-                ? 3
-                : undefined
-        }
       />
 
       <main
         className={
           state.step === "carrier" || state.step === "outcome"
-            ? flow.main
+            ? state.step === "carrier" ? shell.main : flow.main
             : styles.main
         }
         id="quest-main"
@@ -140,7 +133,7 @@ function Game() {
         <div
           className={
             state.step === "carrier" || state.step === "outcome"
-              ? flow.screen
+              ? state.step === "carrier" ? shell.screen : flow.screen
               : styles.screen
           }
           key={
@@ -262,12 +255,12 @@ function CarrierScreen({
     const selected = panel.current?.querySelector<HTMLButtonElement>(
       `[data-scene-choice="${focusCarrier}"], [data-carrier-choice="${focusCarrier}"]`,
     );
-    selected?.focus({ preventScroll: true });
     selected?.scrollIntoView({ block: "nearest", inline: "nearest" });
+    if (selected) return restoreArtworkFocus(selected);
   }, [focusCarrier]);
   return (
     <section
-      className={flow.frame}
+      className={shell.frame}
       ref={panel}
       data-interaction="inspect-confirm"
       data-carrier-layout
@@ -281,11 +274,7 @@ function CarrierScreen({
         currentStep={0}
         title="Выбор перевозчика"
         showLeadOnChoice={false}
-        reminder={
-          state.parcel && state.recipient
-            ? [deliveryLine(state.parcel, state.recipient), "Фура до склада в Лабытнанги"]
-            : undefined
-        }
+        reminder={<DeliveryReminder state={state} route="Фура до склада в Лабытнанги" />}
         initiallyOpen={false}
         question={taskQuestion}
         navigation="fixed"
@@ -301,7 +290,7 @@ function CarrierScreen({
         inspecting={!!pendingId}
         onOpen={() => setPendingId(undefined)}
       />
-      <div className={flow.carrierMap} data-carrier-map>
+      <div className={flow.carrierMap} data-carrier-map data-scene-world>
         <IllustratedCityMap
           interactive={!mapReading}
           onSelect={inspect}
@@ -314,6 +303,7 @@ function CarrierScreen({
         <ChoiceInspection
           returnFocus={choiceTrigger.current}
           selectionKey={pendingId}
+          reminder={<DeliveryReminder state={state} route="Фура до склада в Лабытнанги" />}
           media={pendingId !== "express"}
           eyebrow={
             // Crew already lists «Два водителя» in its facts; auto-select has its own title.
@@ -337,7 +327,6 @@ function CarrierScreen({
   );
 }
 
-const carrierGoals: [string, string, string] = ["Без лишних трат", "Порадовать раньше", "Надёжная фура"];
 
 function Outcome({
   onBack,
@@ -429,8 +418,8 @@ function Outcome({
         <div className={flow.resultInner}>
           <div className={flow.resultStory}>
             <ResultCopy
-              fillSpace
               key={carrier.id}
+              reminder={<DeliveryReminder state={state} route="Фура до склада в Лабытнанги" />}
               titleTabIndex={-1}
               title={
                 <ChoiceVerdict
@@ -443,7 +432,7 @@ function Outcome({
                 scores: carrier.score,
                 onBack,
                 onNext,
-                backLabel: "Назад к машинам",
+                backLabel: "Изменить выбор",
                 nextLabel: "Дальше: погрузка",
               }}
             />

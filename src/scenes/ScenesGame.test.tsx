@@ -1,8 +1,16 @@
 import { act, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { expect, it, vi } from "vitest";
+import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { compactScene } from "./compact";
 import { ScenesGame } from "./ScenesGame";
+
+// JSDOM does not load or decode images; readiness itself has a dedicated test.
+beforeEach(() => {
+  HTMLImageElement.prototype.decode = vi.fn().mockResolvedValue(undefined);
+});
+afterEach(() => {
+  delete (HTMLImageElement.prototype as Partial<HTMLImageElement>).decode;
+});
 
 it("preserves the compact plane while switching between choice and result artwork", async () => {
   vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
@@ -139,10 +147,7 @@ it.each([
             ),
           );
         }
-        if (id === "pipe-carrier") {
-          // Last mile (call 05.11): the vehicle itself commits, no card in between.
-          await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
-        } else if (id.startsWith("place-") || ["remote", "auto", "wms"].includes(id)) {
+        if (id.startsWith("place-") || ["remote", "auto", "wms", "pipe-carrier"].includes(id)) {
           // Truck, warehouse and barge: the place opens a card; only the card commits the choice.
           await click(container.querySelector<HTMLButtonElement>(`[data-hotspot="${id}"]`));
           expect(container.querySelector("[data-result]")).toBeNull();

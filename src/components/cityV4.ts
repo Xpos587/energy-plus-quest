@@ -85,14 +85,16 @@ const files = {
     trucks: "scene1-v4/trucks-tall.webp?v=5",
   },
 } as const;
-const url = (path: string) => `${import.meta.env.BASE_URL}${path}`;
-export const plateSource = (name: PlateName) => url(files[name].plate);
+const url = (path: string, attempt = 0) =>
+  `${import.meta.env.BASE_URL}${path}${attempt ? `${path.includes("?") ? "&" : "?"}artwork-retry=${attempt}` : ""}`;
+export const plateSource = (name: PlateName, attempt = 0) =>
+  url(files[name].plate, attempt);
 /** Retina plate: the tile-by-tile AI-restored master (3x3 crops, registered
  * and blended back), 1.5x for the wide plate and 2x for the tall one. */
 const RETINA = { wide: 1.5, tall: 2 } as const;
-export const plateSrcSet = (name: PlateName) => {
+export const plateSrcSet = (name: PlateName, attempt = 0) => {
   const [w] = M.plates[name].res;
-  return `${plateSource(name)} ${w}w, ${url(files[name].retina)} ${Math.round(w * RETINA[name])}w`;
+  return `${plateSource(name, attempt)} ${w}w, ${url(files[name].retina, attempt)} ${Math.round(w * RETINA[name])}w`;
 };
 
 /** World metres -> plate px (orthographic camera, z up). */
@@ -477,13 +479,16 @@ export const landmark = (
 // ---------------------------------------------------------------- assets
 
 export type CityAssets = Record<PlateName, CanvasImageSource | undefined>;
-export function loadTruckAtlas(name: PlateName): Promise<HTMLImageElement> {
+export function loadTruckAtlas(
+  name: PlateName,
+  attempt = 0,
+): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const image = new Image();
     image.decoding = "async";
     image.onload = () => resolve(image);
     image.onerror = reject;
-    image.src = url(files[name].trucks);
+    image.src = url(files[name].trucks, attempt);
   });
 }
 

@@ -9,7 +9,7 @@ it("shows consequence beside the first narrative without an extra illustration p
   const root = createRoot(host);
   try {
     await act(async () => root.render(
-      <ResultCopy paragraphs={["Лодка не помещается."]} artworkMode="alongside">
+      <ResultCopy paragraphs={["Лодка не помещается."]}>
         <img src="/boat.png" alt="Лодка шире ниши" />
       </ResultCopy>,
     ));

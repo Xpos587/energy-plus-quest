@@ -4,11 +4,11 @@ import { runInNewContext } from "node:vm";
 import { transformSync } from "esbuild";
 import { parseSync } from "rolldown/utils";
 import sharp from "sharp";
-import { desktopDetailQuality, preserveDesktopOriginal } from "./image-detail";
-import { loadFlowersMasters, type FlowersAliases } from "./flowers-masters";
-import { loadConventionalImages, interpolateConventional } from "./conventional-images";
+import { desktopDetailQuality, preserveDesktopOriginal } from "./image-detail.ts";
+import { loadFlowersMasters, type FlowersAliases } from "./flowers-masters.ts";
+import { loadConventionalImages, interpolateConventional } from "./conventional-images.ts";
 import type { Plugin, ResolvedConfig } from "vite";
-import { cachedImageEncode } from "./image-codec-cache";
+import { cachedImageEncode } from "./image-codec-cache.ts";
 
 const virtualId = "virtual:optimized-images";
 const resolvedId = `\0${virtualId}`;
@@ -89,17 +89,13 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
   // Small external fixtures have no game manifest and exercise every source.
   if (!manifestText) return undefined;
   const manifest = JSON.parse(manifestText);
-  const framing = JSON.parse(await source("src/scenes/crane/outcomeFraming.json") ?? "{}");
   const images = new Set<string>();
   visitNodes(manifest, (node) => {
     if (typeof node.image === "string") images.add(node.image);
   });
-  for (const frame of Object.values(framing) as { file: string }[])
-    images.add("scene-art/outcomes/" + frame.file);
 
   // Execute only the pure artwork resolvers with imageAsset replaced by identity.
   // Their real conditionals remain the source of truth for every context variant.
-  const craneFamily = await source("src/scenes/crane/artworkFamily.ts");
   const craneArtwork = await source("src/scenes/crane/artwork.ts");
   const craneLayers = await source("src/scenes/crane/layers.ts");
   const lastmileFamily = await source("src/scenes/lastmile/artworkFamily.ts");
@@ -111,8 +107,6 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
       require(id: string) {
         if (id.endsWith("/imageAssets")) return { imageAsset: (file: string) => file };
         if (id === "./worldManifest.json") return manifest;
-        if (id === "./crane/outcomeFraming.json") return framing;
-        if (id === "./crane/artworkFamily" && craneFamily) return resolver(craneFamily);
         if (id === "./crane/artwork" && craneArtwork) return resolver(craneArtwork);
         if (id === "./layers" && craneLayers) return resolver(craneLayers);
         if (id === "./lastmile/artworkFamily" && lastmileFamily) return resolver(lastmileFamily);
@@ -155,6 +149,7 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
       });
     if (!scene.sceneOutcomeImage) throw new Error("Missing sceneOutcomeImage resolver");
     for (const [sceneId, views] of Object.entries(manifest.scenes ?? {}) as [string, any][]) {
+      images.add(scene.sceneChoiceImage(sceneId));
       if (sceneId === "compact") continue;
       const selected = new Set<string>();
       visitNodes(views, (node) => {
@@ -200,11 +195,11 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
   }
   // Current choice compositions live outside the historical world manifest.
   // Read the pure object exports, rather than admitting whole art directories.
-  for (const filename of ["src/scenes/lastmile/expandedArtwork.ts", "src/scenes/crane/choiceArtwork.ts"]) {
+  for (const filename of ["src/scenes/lastmile/expandedArtwork.ts"]) {
     const text = await source(filename);
     if (!text) continue;
     visitNodes(syntax(filename, text), (node) => {
-      if (node.type === "Property" && node.key.name === "image" && typeof node.value.value === "string")
+      if (node.type === "Property" && (node.key.name ?? node.key.value) === "image" && typeof node.value.value === "string")
         images.add(node.value.value);
     });
   }

@@ -13,8 +13,10 @@ const lastmileFlightRevision = 'scene-art/lastmile-family-v1/revision-18';
 // revision-17: revision-12 map with a smaller river, big swamp, brighter АБК and the Mi-8 livery copied from the client reference (black upper half, orange lower) (design/scene-05/swamp-2026-11-10).
 // revision-12: revision-11 map (v9 opening route style, reference vehicles, 2x) colour-graded per call 05.11:
 // red/yellow foliage muted outside the vehicles, АБК roof and trim back to blue. Geometry is pixel-identical.
-export function lastmileChoiceImage(format: 'wide' | 'tall', recipient: SceneContext['recipient']) {
-  return `scene-art/lastmile-family-v1/revision-18/choice-${format}-${recipient}.webp`;
+// lastmile-r5: R5-05e (v16) Blender layout painted in the scene-4 soft painterly style (gpt16): vehicles grouped round the
+// helideck, peat bog from the pad to the river with a churned rut, camp across the river (scripts/lastmile-r5); one plate for both recipients.
+export function lastmileChoiceImage(format: 'wide' | 'tall', _recipient?: SceneContext['recipient']) {
+  return `scene-art/lastmile-r5/choice-${format}.webp`;
 }
 
 export function lastmileFlightImage(context: SceneContext) {

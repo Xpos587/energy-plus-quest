@@ -27,7 +27,7 @@ for (const [width, height] of [
         const briefing = page.getByRole("button", {
           name: /^(Далее|К выбору|К сцене)$/,
         });
-        await expect(briefing.or(page.locator('[data-briefing-inline="true"]'))).toBeVisible();
+        await expect(briefing.or(page.locator('[data-hotspot]').first()).first()).toBeVisible();
         for (let index = 0; index < 30 && (await briefing.isVisible()); index++)
           await briefing.click();
         await page.locator(`[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();

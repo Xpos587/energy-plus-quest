@@ -6,13 +6,13 @@ import { warehouseCallouts } from "./callouts";
 import { inventoryScene } from "./index";
 
 const expectations = [
-  ["camera", "Ф", "в конце"],
-  ["socks", "Н", "в середине"],
-  ["boat", "Л", "в середине"],
+  ["camera", "Ф"],
+  ["socks", "Н"],
+  ["boat", "Л"],
 ] as const;
 
 describe("warehouse alphabet follows gift names and starts at receiving", () => {
-  for (const [parcel, letter, position] of expectations) {
+  for (const [parcel, letter] of expectations) {
     it(`${parcel}: matching location, result text and consequence illustration`, () => {
       const context = {
         parcel,
@@ -34,7 +34,6 @@ describe("warehouse alphabet follows gift names and starts at receiving", () => 
       expect(parseFloat(marker.style.top)).toBeCloseTo(warehouseCallouts(parcel).alphabet.y * 100);
       expect(marker.querySelector("span")?.textContent).toBe("2");
       expect(marker.title).toBe(`Стеллаж «${letter}»`);
-      expect(marker.getAttribute("aria-label")).toContain("по алфавиту");
       expect(marker.getAttribute("aria-label")).toContain("по алфавиту");
       for (const [id, point] of Object.entries(warehouseCallouts(parcel)).filter(([id]) => id !== "alphabet")) {
         const unchanged = host.querySelector<HTMLElement>(

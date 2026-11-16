@@ -34,14 +34,21 @@ for (const [scene, ids] of Object.entries(choices)) {
       const bounds = await answer.boundingBox();
       expect(bounds!.height).toBeGreaterThanOrEqual(44);
       await answer.click();
-      await expect(page.locator('[data-choice-confirm]')).toBeVisible();
-      await expect(page.locator('[data-result-reader]')).toHaveCount(0);
-      await page.locator('[data-choice-cancel]').click();
-      await expect(answer).toBeFocused();
+      if (scene === 'lastmile') {
+        await expect(page.locator('[data-choice-confirm]')).toHaveCount(0);
+        await expect(page.locator('[data-result-reader]')).toBeVisible();
+        await expect(page.locator('[data-result-heading]')).toHaveAttribute('data-result-heading', id);
+        await page.getByRole('button', { name: 'Изменить выбор', exact: true }).click();
+      } else {
+        await expect(page.locator('[data-choice-confirm]')).toBeVisible();
+        await expect(page.locator('[data-result-reader]')).toHaveCount(0);
+        await page.locator('[data-choice-cancel]').click();
+        await expect(answer).toBeFocused();
+      }
     }
     await page.screenshot({ path: `.tmp-work/choice-buttons/${scene}-${info.project.name}.png` });
     await page.locator(`[${attr}="${ids.at(-1)}"]`).click();
-    await page.locator('[data-choice-confirm]').click();
+    if (scene !== 'lastmile') await page.locator('[data-choice-confirm]').click();
     await expect(page.locator('[data-result-reader]')).toBeVisible({ timeout: 20_000 });
     await page.getByRole('button', { name: /Изменить выбор|К машинам|Назад к машинам/ }).click();
     await expect(condition).not.toBeVisible();

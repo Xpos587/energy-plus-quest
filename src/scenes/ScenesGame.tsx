@@ -1,65 +1,35 @@
 import { ChartLine, Heart, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { QuestHeader } from "../components/QuestShell";
+import { DeliveryReminder, QuestHeader } from "../components/QuestShell";
+import shell from "../components/SceneShell.module.css";
+import { restoreArtworkFocus } from "../components/restoreArtworkFocus";
 import { ResultCopy } from "../components/ResultCopy";
-import {
-  resetBriefingReadingState,
-  SceneBriefing,
-} from "../components/SceneBriefing";
+import { SceneBriefing } from "../components/SceneBriefing";
+import { remainingScenes, briefingParagraphs, restartSceneCondition } from "./sceneFlow";
+import { resultHeading } from "./resultHeadings";
 import { CarrierTapHint } from "../components/CarrierTapHint";
 import { ChoiceInspection } from "../components/ChoiceInspection";
 import { SceneChoices } from "../components/SceneChoices";
 import flow from "../components/SceneInteraction.module.css";
 import { clearReadingState } from "../components/useReadingState";
 import { useOptionalSaveScope } from "../game/GameContext";
-import { choiceArtwork } from "../game/artwork";
-import { prefetchImage, thumbnailAsset } from "../game/imageAssets";
+import { prefetchImage } from "../game/imageAssets";
 import { useStoredState } from "../game/persistence";
-import type { ParcelId, Scores } from "../game/types";
+import type { Scores } from "../game/types";
 import { sceneChoiceImage } from "./artwork";
-import { deliveryLine, parcelNames, recipientNames } from "./names";
+import { recipientNames } from "./names";
+import { progressSteps } from "../components/stageProgress";
 import { choiceLabel } from "./choiceLabel";
-import { compactScene } from "./compact";
 import { CompactCard } from "./compact/CompactCard";
-import { craneScene } from "./crane";
 import { craneCaptions, craneFacts } from "./crane/artwork";
 import { CraneDecisionContext, CraneFacts } from "./crane/CraneDecisionContext";
-import { inventoryScene } from "./inventory";
 import { inventoryAlphabet } from "./inventory/alphabet";
 import { JourneyEnding } from "./JourneyEnding";
-import { lastmileScene } from "./lastmile";
-import { LastmileDecisionContext, lastmileHeadings } from "./lastmile/LastmileFacts";
+import { LastmileDecisionContext } from "./lastmile/LastmileFacts";
 import { initialProgress, progressReducer, totalScores } from "./progress";
 import { SceneOutcomeArt } from "./SceneOutcomeArt";
 import type { SceneContext, SceneId } from "./types";
 
-export const remainingScenes = [
-  compactScene,
-  inventoryScene,
-  craneScene,
-  lastmileScene,
-];
-function briefingParagraphs(scene: SceneId, intro: string[]) {
-  // Scene 2 (R19, phone): the cargo line already says where the truck goes, so
-  // the choice screen keeps only the question, the goals and the picture.
-  if (scene === "compact") return [];
-  return scene === "lastmile" ? intro.slice(0, -1) : intro;
-}
-
-/** Explicit forward navigation starts the target condition; reloads retain their reading state. */
-export function restartSceneCondition(
-  id: SceneId,
-  context: SceneContext,
-  scope: string | undefined,
-) {
-  const scene = remainingScenes.find((scene) => scene.id === id);
-  if (!scene) return;
-  resetBriefingReadingState(
-    scope,
-    scene.title.replace(/^Сцена \d+\.\s*/, ""),
-    briefingParagraphs(id, scene.intro(context)),
-  );
-}
 // Names and hints repeat what the artwork shows; the result stays unspoiled.
 const scorePoints = [
   { key: "energy", icon: Zap, score: "Энергия" },
@@ -125,57 +95,7 @@ const tapHintIdle: Partial<Record<SceneId, string>> = {
   lastmile: "Нажмите на транспорт",
 };
 const tapHintText = (id: SceneId, focused?: string) =>
-  focused ? `${focused} · нажмите, чтобы ${id === "lastmile" ? "выбрать" : "узнать подробнее"}` : tapHintIdle[id];
-/** Result headings (R18 draft for Teo): what happened, taken from the result text; no score verdict. */
-const resultHeadings: Partial<Record<SceneId, Record<string, string>>> = {
-  inventory: {
-    entrance: "Лишний крюк до отгрузки",
-    alphabet: "Подарок в середине алфавита, груз — в начале",
-    keeper: "Место знал один кладовщик",
-    wms: "Система выбрала место у отгрузки",
-  },
-  crane: {
-    remote: "Кран из офиса, без подъёма",
-    rush: "Подъём в кабину — много сил",
-    wait: "Баржа ушла без подарка",
-    petr: "Пётр выручил, свой груз отложил",
-  },
-  lastmile: lastmileHeadings,
-};
-/** Scene 1 result headings (R19, call 05.11): what happened to the parcel, no verdict. */
-export const carrierHeadings: Record<string, string> = {
-  old: "Сервис — подарок на неделю позже",
-  old4: "Сервис — подарок на неделю позже",
-  near: "Рядом, но на три дня позже",
-  crew: "За рулём двое — на три дня раньше",
-  express: "Платформа выбрала — на неделю раньше",
-};
-// The truck outcome depends on the parcel.
-const compactHeadings: Record<ParcelId, Record<string, string>> = {
-  socks: {
-    "place-1": "Коробка развалилась, носки разлетелись",
-    "place-2": "Носки под крышей — больше ничего не влезет",
-    "place-3": "Носки в нише, место осталось",
-    "place-4": "Носки заняли место трёх ящиков",
-    auto: "Система Compact выбрала место 3",
-  },
-  camera: {
-    "place-1": "Фотоаппарат разбил посуду",
-    "place-2": "Место над фотоаппаратом пустует",
-    "place-3": "Фотоаппарат в нише — до него тянуться",
-    "place-4": "К фотоаппарату долго пробирались",
-    auto: "Система Compact выбрала место 3",
-  },
-  boat: {
-    "place-1": "Перегруз сломал фуру",
-    "place-2": "Лодка разбила посуду",
-    "place-3": "Лодка не поместилась в нишу",
-    "place-4": "Лодку закрепили стоя",
-    auto: "Система Compact выбрала место 4",
-  },
-};
-export const resultHeading = (scene: SceneId, id: string, parcel: ParcelId = "socks") =>
-  (scene === "compact" ? compactHeadings[parcel] : resultHeadings[scene])?.[id];
+  focused ? `${focused} · нажмите, чтобы узнать подробнее` : tapHintIdle[id];
 export function SceneGoals({ goals }: { goals: SceneBrief["goals"] }) {
   return (
     <ul className={flow.compactGoals} aria-label="Что важно" data-compact-goals>
@@ -347,7 +267,7 @@ function ScenesSession({
       // These maps choose their format from the mounted stage geometry.
       // A guessed wide image wastes a request before the actual tall/context map.
       if (next && next.id !== "crane" && next.id !== "lastmile")
-        return prefetchImage(sceneChoiceImage(next.id, context));
+        return prefetchImage(sceneChoiceImage(next.id));
     }
   }, [resultVisible, state.sceneIndex, context]);
   const choose = (id: string) => {
@@ -375,7 +295,7 @@ function ScenesSession({
       ? stage.current?.querySelector<HTMLButtonElement>(`:is([data-scene-choice], [data-hotspot])[data-${["crane", "compact", "lastmile", "inventory"].includes(remainingScenes[state.sceneIndex].id) ? "hotspot" : "scene-choice"}="${lastChoice.current[remainingScenes[state.sceneIndex].id] ?? ""}"]`)
         ?? stage.current?.querySelector<HTMLButtonElement>("[data-scene-choice], [data-hotspot]")
       : stage.current?.querySelector<HTMLHeadingElement>("h2"));
-    destination?.focus({ preventScroll: true });
+    if (destination) return restoreArtworkFocus(destination);
   }, [state.sceneIndex, state.phase]);
 
   useEffect(() => {
@@ -429,15 +349,15 @@ function ScenesSession({
   }
 
   return (
-    <div className={flow.app} data-scene={scene.id}>
+    <div className={resultVisible ? flow.app : shell.app} data-scene={scene.id}>
       <QuestHeader
         state={context}
         currentStep={scene.number - 1}
         result={resultVisible}
       />
-      <main className={flow.main} id="quest-main">
+      <main className={resultVisible ? flow.main : shell.main} id="quest-main">
         <div
-          className={flow.frame}
+          className={resultVisible ? flow.frame : shell.frame}
           ref={stage}
           data-interaction={!resultVisible ? "inspect-confirm" : undefined}
           data-inspecting={!!pending}
@@ -477,20 +397,7 @@ function ScenesSession({
                 ) : undefined
               }
               onBack={back}
-              reminder={brief ? [deliveryLine(context.parcel, context.recipient), brief.route(context)] : undefined}
-              lead={
-                brief ? (
-                  <div className={flow.briefingLead} data-briefing-lead>
-                    <img src={thumbnailAsset(choiceArtwork[context.parcel])} alt="" />
-                    <span>
-                      <small>{brief.eyebrow}</small>
-                      <strong>{parcelNames[context.parcel].nominative}</strong>
-                      <em>{brief.route(context)}</em>
-                    </span>
-                    {scene.id !== "lastmile" && <SceneGoals goals={brief.goals} />}
-                  </div>
-                ) : undefined
-              }
+              reminder={<DeliveryReminder state={context} route={brief?.route(context)} />}
               inspecting={!!pending}
               onOpen={() => setPendingId(undefined)}
               action={inspectsOnArt ? undefined : (
@@ -509,6 +416,7 @@ function ScenesSession({
           )}
           <section
             className={flow.carrierMap}
+            data-scene-world
             aria-label={`Иллюстрация: ${title}`}
           >
             {resultVisible && scene.id !== "compact" ? (
@@ -529,7 +437,7 @@ function ScenesSession({
                 }}
                 selectedId={resultVisible ? selected?.id : pending?.id}
                 showResult={resultVisible}
-                onSelect={state.phase === "choice" && !playing ? (inspectsOnArt && scene.id !== "lastmile" ? setPendingId : choose) : undefined}
+                onSelect={state.phase === "choice" && !playing ? (inspectsOnArt ? setPendingId : choose) : undefined}
                 playing={playing}
                 onPlayed={playing ? () => choose(playing) : undefined}
                 {...syncFocus}
@@ -547,10 +455,11 @@ function ScenesSession({
           {pending && (
             <ChoiceInspection
               selectionKey={pending.id}
+              reminder={<DeliveryReminder state={context} route={brief?.route(context)} />}
               returnFocus={document.querySelector<HTMLElement>(`[data-hotspot="${pending.id}"]`)}
               title={scene.id === "compact" || scene.id === "inventory" ? places![pending.id][0] : optionTitles[pending.id]}
-              cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "inventory" ? "К складу" : "К причалу"}
-              paragraphs={scene.id === "inventory" ? [choiceLabel(pending.label)] : undefined}
+              cancelLabel={scene.id === "compact" ? "К кузову" : scene.id === "inventory" ? "К складу" : scene.id === "lastmile" ? "К транспорту" : "К причалу"}
+              paragraphs={scene.id === "inventory" || scene.id === "lastmile" ? [choiceLabel(pending.label)] : undefined}
               onCancel={() => setPendingId(undefined)}
               onConfirm={() => {
                 setPendingId(undefined);
@@ -560,7 +469,7 @@ function ScenesSession({
             >
               {scene.id === "compact"
                 ? pending.id === "auto" ? <CompactCard /> : undefined
-                : scene.id === "inventory" ? undefined
+                : scene.id !== "crane" ? undefined
                 : <CraneFacts id={pending.id as keyof typeof craneFacts} />}
             </ChoiceInspection>
           )}
@@ -574,6 +483,7 @@ function ScenesSession({
               <div className={flow.resultStory}>
                 <ResultCopy
                   key={`${scene.id}:${selected.id}`}
+                  reminder={<DeliveryReminder state={context} route={brief?.route(context)} />}
                   title={brief && places ? (
                     // Teo 05.11: a plain line about what happened, no score verdict.
                     <span className={flow.compactVerdict} data-verdict="none" data-result-heading={selected.id}>
@@ -582,7 +492,6 @@ function ScenesSession({
                   ) : title}
                   titleTabIndex={-1}
                   paragraphs={resultParagraphs}
-                  fillSpace
                   continuous={
                     (scene.id === "lastmile" && selected.id === "pipe-carrier") ||
                     (scene.id === "crane" && selected.id === "petr")
@@ -608,7 +517,7 @@ function ScenesSession({
                       ? "Завершено"
                       : scene.number === 5
                         ? "К вручению подарка"
-                        : "Продолжить",
+                        : `Дальше: ${progressSteps[scene.number].label.toLocaleLowerCase("ru-RU")}`,
                   }}
                 />
               </div>

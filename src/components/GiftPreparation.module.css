@@ -167,7 +167,6 @@
   }
   .back:hover {
     color: #075a90;
-    text-decoration: underline;
   }
 }
 @media (max-width: 640px) {

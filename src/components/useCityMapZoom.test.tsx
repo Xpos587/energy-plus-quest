@@ -31,9 +31,9 @@ it("eases inspection, decoded-frame following and return on the display clock", 
   vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockReturnValue({ width: 720, height: 500, left: 0, top: 0 } as DOMRect);
   let camera: ReturnType<typeof useCityMapZoom>;
   let renders = 0;
-  function Harness() {
+  function Harness({ enabled = true }: { enabled?: boolean }) {
     const ref = useRef<HTMLDivElement>(null);
-    camera = useCityMapZoom(ref);
+    camera = useCityMapZoom(ref, undefined, { enabled });
     renders++;
     return <div ref={ref}><div data-map-surface style={camera.style} /></div>;
   }
@@ -69,6 +69,10 @@ it("eases inspection, decoded-frame following and return on the display clock", 
     expect(surface.style.transform).not.toBe(following);
     await act(async () => camera.inspect(undefined));
     expect(surface.style.transform).not.toBe(original);
+    await tick();
+    // A responsive plate reload temporarily disables input during the return.
+    await act(async () => root.render(<Harness enabled={false} />));
+    await act(async () => root.render(<Harness />));
     for (let i = 0; i < 70; i++) await tick();
     expect(surface.style.transform).toBe(original);
     expect(callbacks.size).toBe(0);
@@ -106,7 +110,6 @@ it("follows a truck without rendering every frame and restores the original manu
     await act(async () => root.render(<Harness />));
     await act(async () => { camera.zoomIn(); camera.zoomIn(); camera.zoomIn(); });
     const surface = host.querySelector("[data-map-surface]") as HTMLElement;
-    const original = surface.style.transform;
     const scale = camera!.scale;
     await act(async () => camera.inspect("crew", { x: .6, y: .5 }));
     expect(camera!.scale).toBeCloseTo(scale);

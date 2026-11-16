@@ -7,8 +7,7 @@ import { sceneChoiceImage } from "../scenes/artwork";
 import { BrandLockup } from "./BrandLockup";
 import styles from "./GameIntro.module.css";
 import { plateSource } from "./cityV4";
-import { progressSteps } from "./QuestShell";
-import { routeArt, stageIcons } from "./StageIndicator";
+import { progressSteps, routeArt, stageIcons } from "./stageProgress";
 
 /* One line instead of the two canonical paragraphs (R19, 09.11): the five
    stages below are the screen's subject, the story only sets them up. */
@@ -135,6 +134,7 @@ export function GameIntro({
                             className={styles.stopScene}
                             data-stage={step.id}
                             src={journeyArt[step.id]}
+                            loading="lazy"
                             alt=""
                           />
                           <span className={styles.stopLabel}>{step.label}</span>

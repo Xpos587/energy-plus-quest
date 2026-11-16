@@ -31,7 +31,7 @@ export async function openCarrier(
 
 /** Open a carrier from the city map. Rigs keep driving, so activate the hit
  * target the way a keyboard user does instead of waiting for it to settle;
- * Express is the call pill under the warehouse doors. */
+ * Express is stationary: click waits for its responsive map to finish changing. */
 export async function pickCarrier(
   page: Page,
   id: "old" | "near" | "crew" | "old4" | "express",
@@ -39,7 +39,11 @@ export async function pickCarrier(
   const target = page.locator(
     id === "express" ? "[data-map-autopick]" : `[data-carrier-choice="${id}"]`,
   );
-  await target.focus();
-  await page.keyboard.press("Enter");
+  if (id === "express") {
+    await target.click();
+  } else {
+    await target.focus();
+    await page.keyboard.press("Enter");
+  }
   await expect(page.locator("[data-choice-inspection]")).toBeVisible();
 }

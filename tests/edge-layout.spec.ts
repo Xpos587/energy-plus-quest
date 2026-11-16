@@ -31,8 +31,7 @@ test('all five stages stay contiguous through the complete delivery path',async(
   for(const [scene,choice] of [['carrier','express'],['compact','auto'],['inventory','wms'],['crane','remote'],['lastmile','rover']]) {
     await expect(page.locator(`[data-scene="${scene}"]`)).toBeVisible();
     const condition=page.getByRole('region',{name:'Условие задания',exact:true});
-    const combined=page.locator('[data-briefing-inline="true"]');
-    await expect(condition.or(combined)).toBeVisible();
+    await expect(condition.or(page.getByTestId('scene-question')).first()).toBeVisible();
     if(await condition.isVisible()) await checkLayout(page,'condition',`${scene}-${info.project.name}`);
     if(scene==='compact') {
       const field=page.locator('[data-world-scene="compact"]');

@@ -1,0 +1,93 @@
+/* Choice/preview shell. Results retain their authored scene-specific framing. */
+.app { --scene-header-height: 64px; position: relative; height: 100dvh; min-height: 320px; overflow: hidden; color: var(--navy); background: var(--mist); }
+.app > header { display: none; }
+.main, .screen { position: absolute; inset: 0; }
+.frame { position: relative; isolation: isolate; width: 100%; height: 100%; overflow: hidden; }
+.frame [data-scene-briefing] { display: contents; }
+.frame [data-scene-header] {
+  position: absolute; inset: 0 0 auto; z-index: 8;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  width: 100%; height: var(--scene-header-height); min-height: 0;
+  padding: 8px 20px; border: 0; border-radius: 0; background: #fff; box-shadow: 0 1px 0 #173a5b15;
+}
+.frame [data-scene-header] > div:first-child { min-width: 0; }
+.frame [data-scene-header] h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.frame [data-scene-world] { position: absolute; inset: var(--scene-header-height) 0 0; width: auto; height: auto; min-width: 0; min-height: 0; }
+.app .frame :is([data-testid="scene-question"], [aria-label="Условие задания"], [data-choice-inspection]) {
+  position: absolute; inset: auto 20px 20px auto; z-index: 7;
+  transform: none; width: min(380px, calc(100% - 40px)); height: auto;
+  max-height: calc(100% - var(--scene-header-height) - 40px);
+  display: flex; flex-direction: column; justify-content: flex-start; gap: 12px;
+  margin: 0; padding: 16px; border: 1px solid #dbe7ef; border-radius: 16px;
+  background: #fff; box-shadow: 0 8px 32px #173a5b20;
+  overflow-y: auto; overscroll-behavior: contain; pointer-events: auto;
+}
+.frame [data-choice-prompt] p { margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700; }
+.frame :is([data-lastmile-decision-context], [data-crane-decision-context]) { margin: 0; font-size: 16px; line-height: 1.4; color: #34536b; }
+.frame [data-choice-navigation] { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.frame [data-choice-navigation] button { flex: 1; min-height: 44px; padding: 8px 12px; border: 1px solid #b9cfde; border-radius: 10px; background: #f2f7fb; box-shadow: none; color: #214c6c; font-size: 15px; font-weight: 500; }
+.frame button:focus-visible { filter: brightness(.85); }
+.frame [data-choice-navigation] button:last-child { margin: 0; }
+.frame [data-choice-inspection] h3 { margin: 0; font-size: 22px; line-height: 1.25; }
+.frame [data-choice-inspection] [aria-label="Описание варианта"] { overflow-y: auto; flex: 0 1 auto; min-height: 2lh; font-size: 17px; }
+.frame [data-choice-inspection] > div:last-child { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.frame [data-choice-inspection] button { min-height: 44px; font-size: 15px; }
+.frame [data-choice-confirm] { flex: 1 1 180px; }
+.app .frame [aria-label="Условие задания"] { width: min(480px, calc(100% - 40px)); }
+/* Override the legacy reader padding once, without changing result typography. */
+.frame [aria-label="Условие задания"] [aria-label="Текст условия"] {
+  flex: 0 0 auto; padding: 0; max-height: min(40dvh, 320px);
+  font-size: 18px; font-weight: 400; line-height: 1.45;
+}
+.frame [aria-label="Условие задания"] > div:last-child { min-height: 44px; padding: 0; gap: 8px; }
+.frame [aria-label="Условие задания"] button { min-height: 44px; padding: 8px 12px; font-size: 16px; font-weight: 500; }
+.frame :is(button, [tabindex="0"]):focus-visible { outline: 3px solid #0079c2; outline-offset: 3px; }
+.frame[data-inspecting="true"] [data-testid="scene-question"],
+.frame [data-reading="true"] [data-testid="scene-question"] { display: none; }
+.frame [data-inspection-occluded] { visibility: hidden; pointer-events: none; }
+.frame:has([data-reading="true"]) :is([data-choice-id], [data-carrier-tap-hint], [data-carrier-choice], [data-scene-choice], [data-callout], [data-loading-zone], [data-warehouse-annotations], [data-lastmile-annotations], [data-hotspot], [data-barge-chip], [data-barge-mark]) { visibility: hidden; pointer-events: none; }
+
+/* A separate rail, not a card laid over the warehouse, quay or final route. */
+@media (min-width: 901px) and (min-height: 501px) {
+  .app:not([data-scene="carrier"]) .frame { display: grid; grid-template-columns: minmax(0, 1fr) clamp(320px, 30vw, 400px); grid-template-rows: var(--scene-header-height) minmax(0, 1fr); }
+  .app:not([data-scene="carrier"]) [data-scene-header] { position: relative; inset: auto; grid-column: 1 / -1; grid-row: 1; }
+  .app:not([data-scene="carrier"]) [data-scene-world] { position: relative; inset: auto; grid-column: 1; grid-row: 2; width: 100%; height: 100%; }
+  .app:not([data-scene="carrier"]) .frame :is([data-testid="scene-question"], [aria-label="Условие задания"], [data-choice-inspection]) {
+    position: relative; inset: auto; grid-column: 2; grid-row: 2;
+    width: 100%; height: 100%; max-height: none; min-height: 0; padding: 24px; gap: 16px;
+    border: 0; border-left: 1px solid #c4d7e4; border-radius: 0; box-shadow: none;
+  }
+  .app:not([data-scene="carrier"]) .frame [aria-label="Текст условия"] { flex: 1; min-height: 2lh; height: 100%; max-height: none; }
+  .app:not([data-scene="carrier"]) .frame :is([data-choice-navigation], [data-choice-inspection] > div:last-child, [aria-label="Условие задания"] > div:last-child) { margin-top: auto; flex-shrink: 0; }
+}
+
+/* On phones, the art owns a real row: cards cannot cover the tap targets. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .app { --scene-header-height: calc(48px + env(safe-area-inset-top, 0px)); }
+  .frame { display: grid; grid-template-rows: var(--scene-header-height) minmax(160px, 1fr) auto; overflow-y: auto; }
+  .frame [data-scene-header] { position: relative; inset: auto; grid-row: 1; padding: env(safe-area-inset-top, 0px) 10px 0; gap: 8px; }
+  .frame [data-scene-header] > div:first-child { flex: 1; max-width: 310px; }
+  .frame [data-scene-world] { position: relative; inset: auto; grid-row: 2; width: 100%; height: 100%; }
+  .app .frame :is([data-testid="scene-question"], [aria-label="Условие задания"], [data-choice-inspection]) {
+    position: relative; inset: auto; grid-row: 3; align-self: end;
+    width: 100%; max-height: min(56dvh, 480px); padding: 14px 16px max(14px, env(safe-area-inset-bottom, 0px));
+    border: 0; border-top: 1px solid #dbe7ef; border-radius: 16px 16px 0 0; gap: 10px;
+  }
+  .frame [data-choice-prompt] p, .frame [data-choice-inspection] h3 { font-size: 20px; }
+  .frame [aria-label="Условие задания"] [aria-label="Текст условия"] { max-height: 24dvh; }
+  .frame [data-carrier-tap-hint] { top: 8px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .app { --scene-header-height: 48px; }
+  .frame { display: grid; grid-template-columns: minmax(0, 1fr) min(360px, 43%); grid-template-rows: var(--scene-header-height) minmax(0, 1fr); }
+  .frame [data-scene-header] { position: relative; inset: auto; grid-row: 1; grid-column: 1 / -1; padding: 4px 12px; }
+  .frame [data-scene-progress] { --stop: 28px; --now: 36px; }
+  .frame [data-scene-world] { position: relative; inset: auto; grid-row: 2; grid-column: 1; width: 100%; height: 100%; }
+  .app .frame :is([data-testid="scene-question"], [aria-label="Условие задания"], [data-choice-inspection]) { position: relative; inset: auto; grid-row: 2; grid-column: 2; align-self: end; width: 100%; padding: 10px; gap: 6px; max-height: 100%; }
+  .frame [data-choice-prompt] p, .frame [data-choice-inspection] h3 { font-size: 18px; }
+  .frame [aria-label="Условие задания"] [aria-label="Текст условия"] { max-height: 24dvh; font-size: 17px; }
+}
+@media (max-height: 360px) and (orientation: landscape) {
+  .frame [data-choice-inspection] > div:last-child { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+  .frame [data-choice-inspection] button { height: auto; padding: 6px 8px; font-size: 13px; }
+}

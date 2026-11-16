@@ -182,6 +182,14 @@ export function useCityMapZoom<Choice extends string = string>(
     }
   };
 
+  // Responsive plates can reload while the camera returns. Only unmounting
+  // cancels that motion; input/geometry changes below keep its destination.
+  useLayoutEffect(() => () => {
+    cancelAnimationFrame(focusFrame.current);
+    if (motion.current) cancelAnimationFrame(motion.current.frame);
+    motion.current = null;
+  }, []);
+
   useLayoutEffect(() => {
     const element = viewport.current;
     if (!element) return;
@@ -453,9 +461,6 @@ export function useCityMapZoom<Choice extends string = string>(
     window.addEventListener("blur", cancel);
     return () => {
       cancel();
-      cancelAnimationFrame(focusFrame.current);
-      if (motion.current) cancelAnimationFrame(motion.current.frame);
-      motion.current = null;
       observer?.disconnect();
       window.removeEventListener("resize", measure);
       element.removeEventListener("pointerdown", down);

@@ -55,7 +55,8 @@ export function CompactArt({
   const frame = showResult && resultReady ? compactResultFrames[key] : undefined;
   const cameraDetail = !!frame;
   const outcomeImage = showResult && resultReady ? wantedOutcome : undefined;
-  const [measuredHeight, setCanvasHeight] = useState(520);
+  const [size, setSize] = useState({ width: 1040, height: 520 });
+  const measuredHeight = 1040 * size.height / size.width;
   // A result never zooms: a taller stage extends the background around the whole truck.
   const canvasHeight = frame
     ? Math.max(frame.height ?? 874, measuredHeight)
@@ -69,7 +70,7 @@ export function CompactArt({
     if (!element) return;
     const measure = () => {
       const { width, height } = element.getBoundingClientRect();
-      if (width > 0 && height > 0) setCanvasHeight((1040 * height) / width);
+      if (width > 0 && height > 0) setSize(previous => previous.width === width && previous.height === height ? previous : { width, height });
     };
     measure();
     const observer =
@@ -104,6 +105,23 @@ export function CompactArt({
   const inspectedSpace = !showResult
     ? choiceRegions.find((space) => space.id === selectedId)
     : undefined;
+  // Phones frame the working bay, not the sky. Inspecting zooms the same plane;
+  // cancelling restores all five places, so no undisclosed pan gesture is required.
+  let choiceCamera: CSSProperties | undefined;
+  if (!showResult && size.width <= 600) {
+    const overview = { x: 40, y: (portrait ? 300 : 66) + offsetY, width: 830, height: 450 };
+    const focus = inspectedSpace ? { ...inspectedSpace, y: inspectedSpace.y + offsetY } : overview;
+    const overviewScale = Math.min((size.width - 24) / overview.width, (size.height - 90) / overview.height);
+    const scale = inspectedSpace
+      ? Math.min(overviewScale * 2, (size.width - 48) / focus.width, (size.height - 100) / focus.height)
+      : overviewScale;
+    choiceCamera = {
+      width: 1040 * scale, height: canvasHeight * scale,
+      left: size.width / 2 - (focus.x + focus.width / 2) * scale,
+      top: 54 + (size.height - 74) / 2 - (focus.y + focus.height / 2) * scale,
+      transform: "none",
+    };
+  }
   const manual = /^place-([1-4])$/.exec(selectedId ?? "");
   // Compact's pick stays hidden until the choice is confirmed.
   const placement =
@@ -176,9 +194,11 @@ export function CompactArt({
       <div
         className={styles.plane}
         data-world-plane
+        style={choiceCamera}
         data-map-surface={!showResult || undefined}
       >
         <CargoBay
+          viewportFeedback
           placement={placement}
           focused={focused}
           portrait={portrait}
@@ -204,8 +224,8 @@ export function CompactArt({
             data-choice-id={space.id}
             aria-label={`${options[index].label}. ${options[index].accessibleDescription}`}
             aria-pressed={space.id === "auto" ? selectedId === "auto" : placement === space.number}
-            aria-disabled={locked}
-            disabled={locked}
+            aria-disabled={locked || (!!choiceCamera && !!selectedId && selectedId !== space.id)}
+            disabled={locked || (!!choiceCamera && !!selectedId && selectedId !== space.id)}
             style={
               {
                 "--marker-x": space.x,
@@ -221,9 +241,9 @@ export function CompactArt({
             onClick={() => onSelect?.(space.id)}
           >
             <span className={styles.number} data-layout-badge={space.id} style={{
-              left: `calc(${badge.x - space.x} / 1040 * 100cqw)`,
+              left: `${(badge.x - space.x) / space.width * 100}%`,
               // The stand's badge sits by its base so phones still show the screen.
-              top: space.id === "auto" ? `calc(100% - ${badge.size}px)` : `calc(${badge.y - (space.y - offsetY)} / 1040 * 100cqw)`,
+              top: space.id === "auto" ? `calc(100% - ${badge.size}px)` : `${(badge.y - (space.y - offsetY)) / space.height * 100}%`,
               // Keep the result number off the gift; choice hit targets stay fixed.
               transform: showResult && space.id === (context.parcel === "boat" ? "place-4" : "place-3")
                 ? "translateX(calc(-100% - 8px))" : undefined,

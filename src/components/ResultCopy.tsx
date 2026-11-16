@@ -16,14 +16,13 @@ type ResultNavigation = {
   nextLabel: string;
 };
 
-export function ResultCopy({ paragraphs, title, titleTabIndex, children, navigation, fillSpace = false, continuous = false, onDisplayedBeatChange }: {
+export function ResultCopy({ paragraphs, title, titleTabIndex, children, reminder, navigation, continuous = false, onDisplayedBeatChange }: {
   paragraphs: string[];
   title?: ReactNode;
   titleTabIndex?: number;
   children?: ReactNode;
-  artworkMode?: "page" | "alongside";
+  reminder?: ReactNode;
   navigation?: ResultNavigation;
-  fillSpace?: boolean;
   continuous?: boolean;
   onDisplayedBeatChange?: (beat: number) => void;
 }) {
@@ -48,12 +47,14 @@ export function ResultCopy({ paragraphs, title, titleTabIndex, children, navigat
     0,
     true,
   );
-  const [page, setPage] = useState(0);
-  const activePage = Math.min(page, Math.max(0, pages.length - 1));
+  // Keep a text anchor when resizing changes the page boundaries.
+  const [position, setPosition] = useState(0);
+  let activePage = 0;
   let pageOffset = 0;
   let beatIndex = 0;
   let beatEnd = authoredBeats[0]?.length ?? 0;
-  const pageBeats = pages.map((part) => {
+  const pageBeats = pages.map((part, index) => {
+    if (pageOffset <= position) activePage = index;
     while (pageOffset >= beatEnd && beatIndex < authoredBeats.length - 1) {
       beatIndex += 1;
       beatEnd += authoredBeats[beatIndex].length;
@@ -69,11 +70,12 @@ export function ResultCopy({ paragraphs, title, titleTabIndex, children, navigat
   }, [displayedBeat, onDisplayedBeatChange]);
   const atEnd = continuous || activePage >= pages.length - 1;
   const advance = () => {
-    if (!atEnd) setPage(activePage + 1);
+    if (!atEnd) setPosition(pages.slice(0, activePage + 1).reduce((length, part) => length + part.length, 0));
     else navigation?.onNext?.();
   };
   return (
     <section className={styles.reader} aria-label="Рассказ о результате" data-result-reader data-result-density={density} data-continuous={continuous || undefined}>
+      {reminder}
       <div className={styles.narrativeRow} data-result-narrative>
         {title != null && <h2 tabIndex={titleTabIndex}>{title}</h2>}
         {children && <div className={styles.consequence}>{children}</div>}
@@ -103,7 +105,10 @@ export function ResultCopy({ paragraphs, title, titleTabIndex, children, navigat
             </div>
             {!atEnd || navigation.onNext ? (
               <button className={styles.next} type="button" aria-label={atEnd ? navigation.nextLabel : "Читать дальше"} title={atEnd ? navigation.nextLabel : "Читать дальше"} onClick={advance}>
-                <span>{atEnd ? navigation.nextLabel : "Читать дальше"}</span>
+                {/* Reserve both labels so pagination cannot change its own available height. */}
+                <span className={styles.actionLabel} data-next-label={navigation.nextLabel} data-reading-label="Читать дальше">
+                  <span>{atEnd ? navigation.nextLabel : "Читать дальше"}</span>
+                </span>
                 <ArrowRight aria-hidden="true" size={24} />
               </button>
             ) : <span className={styles.done} aria-hidden="true"><Check size={24} /></span>}

@@ -46,6 +46,10 @@ div.layer { overflow: hidden; }
 }
 .hotspot:disabled { cursor: default; }
 .hotspot:focus-visible { outline: none; }
+.caption { position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 100%); width: max-content; max-width: 150px; padding: 4px 8px; border-radius: 8px; background: #fff; color: #082946; font: 700 13px/1.2 var(--font-brand); box-shadow: 0 1px 5px #04132740; }
+.hotspot:is(:hover, :focus-visible, [aria-pressed="true"]) .caption { background: var(--orange); color: #fff; }
+.stage[data-playing] .caption { display: none; }
+@media (max-width: 600px) { .caption { max-width: 106px; font-size: 12px; } }
 /* Untried actors breathe: a soft white ring that widens and fades, staggered. */
 .ripple {
   fill: #ffffff26;

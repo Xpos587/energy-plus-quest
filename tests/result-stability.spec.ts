@@ -12,7 +12,7 @@ for (const [width, height] of [[624, 794], [390, 844], [320, 568]]) {
       await page.setViewportSize({ width, height });
       await page.goto(`/scenes.html?scene=${scene}&parcel=boat&recipient=alva`);
       const briefing = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
-      await expect(briefing.or(page.locator('[data-briefing-inline="true"]'))).toBeVisible();
+      await expect(briefing.or(page.locator('[data-hotspot]').first()).first()).toBeVisible();
       for (let index = 0; index < 30 && await briefing.isVisible(); index++) await briefing.click();
       await page.locator(`[${["crane", "compact", "lastmile", "inventory"].includes(scene) ? "data-hotspot" : "data-scene-choice"}="${choice}"]`).click();
       await page.locator("[data-choice-confirm]").click();

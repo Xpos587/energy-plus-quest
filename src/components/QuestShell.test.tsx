@@ -13,7 +13,6 @@ it("shows delivery progress without an expandable route menu", async () => {
         <QuestHeader
           state={{}}
           selectionTitle="Кто отправится в путь?"
-          selectionStep={1}
         />,
       ),
     );
