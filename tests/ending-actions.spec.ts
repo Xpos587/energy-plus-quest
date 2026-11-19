@@ -43,6 +43,9 @@ test("file-share cancellation, failure and retry preserve the JPEG and original 
   page,
 }) => {
   await page.addInitScript(() => {
+    const media = window.matchMedia.bind(window);
+    window.matchMedia = (query: string) =>
+      query === "(pointer: coarse)" ? ({ ...media(query), matches: true }) : media(query);
     let calls = 0;
     Object.defineProperty(navigator, "canShare", {
       configurable: true,
@@ -64,12 +67,13 @@ test("file-share cancellation, failure and retry preserve the JPEG and original 
   });
   await page.reload();
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
-  const share = page.getByRole("button", { name: "Отправить картинку" });
+  /* On a touch device the messenger button opens the system sheet with the file. */
+  const share = page.getByRole("link", { name: "Telegram", exact: true });
   await share.click();
   await expect(page.getByRole("alert")).toHaveCount(0);
   await share.click();
   await expect(page.getByRole("alert")).toContainText(
-    "Не удалось отправить картинку",
+    "Не удалось отправить сертификат",
   );
   await share.click();
   await expect(page.getByRole("alert")).toHaveCount(0);
@@ -90,9 +94,7 @@ test("unsupported sharing keeps download, the VK link and the company link usabl
   });
   await page.reload();
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
-  await expect(
-    page.getByRole("button", { name: "Отправить картинку" }),
-  ).toHaveCount(0);
+  await expect(page.getByRole("dialog")).toContainText("ссылка раскроется в карточку");
   for (let i = 0; i < 2; i++) {
     const pending = page.waitForEvent("download");
     await page.getByRole("button", { name: "Скачать картинку" }).click();

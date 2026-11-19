@@ -14,7 +14,8 @@ export const remainingScenes = [
 export function briefingParagraphs(scene: SceneId, intro: string[]) {
   // Scene 2 (R19, phone): the cargo line already says where the truck goes, so
   // the choice screen keeps only the question, the goals and the picture.
-  if (scene === "compact") return [];
+  // Scene 4 (call 17.11): the story sits on the choice screen itself (CraneDecisionContext).
+  if (scene === "compact" || scene === "crane") return [];
   return scene === "lastmile" ? intro.slice(0, -1) : intro;
 }
 

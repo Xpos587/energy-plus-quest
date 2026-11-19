@@ -2,9 +2,10 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { parcelNames, recipientNames } from "../names";
 import { scenarioParagraph as source } from "../../game/scenarioDocument";
-import type { SceneContext } from "../types";
+import type { SceneArtProps, SceneContext } from "../types";
 import { craneScene } from "./index";
 import { craneArtwork, craneCaptions } from "./artwork";
+import { craneBeat, craneDuration } from "./consequence";
 
 const context: SceneContext = {
   parcel: "camera",
@@ -89,15 +90,16 @@ describe("craneScene source contract", () => {
       <craneScene.Art context={context} showResult={false} onSelect={() => {}} />,
     );
     expect(html.match(/data-hotspot=/g)).toHaveLength(3);
+    expect(html).not.toContain("data-barge-label");
     for (const id of ["remote", "rush", "petr"])
       expect(html).toContain(`data-hotspot="${id}"`);
-    expect(html).toMatch(/scene-art\/barge-v5\/(mid|desk|wide|tall)\/plate\.webp/);
+    expect(html).toMatch(/scene-art\/barge-v7\/(mid|desk|wide|tall)\/plate\.webp/);
     for (const caption of Object.values(craneCaptions)) expect(html).toContain(`aria-label="${caption}:`);
     expect(html).not.toContain("Баржа готова к отходу");
     expect(html).not.toContain(">Подарок<");
     expect(html.match(/data-barge-ripple=/g)).toHaveLength(3);
     // Grisha 09.11: the pulse is one ring size, drawn on the actor the finger actually hits.
-    const format = html.match(/barge-v5\/(mid|desk|wide|tall)\/plate/)![1] as keyof typeof craneArtwork;
+    const format = html.match(/barge-v7\/(mid|desk|wide|tall)\/plate/)![1] as keyof typeof craneArtwork;
     const art = craneArtwork[format];
     const radii = new Set<number>();
     for (const id of ["remote", "rush", "petr"]) {
@@ -117,6 +119,28 @@ describe("craneScene source contract", () => {
     );
     expect(html).toContain('data-selected="petr"');
     expect(html.match(/disabled=""/g)).toHaveLength(3);
+  });
+  it("draws the selection rings only while a choice is clickable", () => {
+    const rings = (props: Partial<SceneArtProps>) =>
+      renderToStaticMarkup(<craneScene.Art context={context} showResult={false} {...props} />).match(/data-barge-ripple=/g)?.length ?? 0;
+    expect(rings({ onSelect: () => {} })).toBe(3);
+    expect(rings({})).toBe(0);
+    expect(rings({ onSelect: () => {}, showResult: true, selectedId: "rush" })).toBe(0);
+    expect(rings({ onSelect: () => {}, playing: "rush" })).toBe(0);
+    expect(rings({ onSelect: () => {}, selectedId: "rush" })).toBe(0);
+  });
+  it("anchors reaction bubbles over the standing Ivan and Petr in every format, not over a crane", () => {
+    expect(craneBeat("rush", craneDuration("rush")).emote).toEqual({ kind: "tired", at: "office" });
+    expect(craneBeat("petr", craneDuration("petr")).emote).toEqual({ kind: "sad", at: "far" });
+    for (const [name, art] of Object.entries(craneArtwork))
+      for (const [at, who] of [["office", art.sprites.ivan], ["far", art.sprites.far]] as const) {
+        const [x, y] = art.emote[at];
+        expect(x, `${name} ${at}`).toBeGreaterThanOrEqual(who.x);
+        expect(x, `${name} ${at}`).toBeLessThanOrEqual(who.x + who.w);
+        expect(Math.abs(y - who.y), `${name} ${at}`).toBeLessThanOrEqual(4);
+        const toCab = Math.hypot(x - art.anchors.nearCabin[0], y - art.anchors.nearCabin[1]);
+        expect(toCab, `${name} ${at} vs crane cab`).toBeGreaterThan(who.h / 2);
+      }
   });
   it("keeps every tap target inside its drawing", () => {
     for (const art of Object.values(craneArtwork))

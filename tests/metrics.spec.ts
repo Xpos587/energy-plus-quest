@@ -83,7 +83,7 @@ test("all outcomes use exactly one canonical metrics panel, not cumulative total
     await page.screenshot({ path: info.outputPath(`${scene}-result.png`) });
     await page
       .getByRole("button", {
-        name: scene === "lastmile" ? "Завершить" : "Продолжить",
+        name: scene === "compact" ? "Дальше: склад" : scene === "inventory" ? "Дальше: баржа" : scene === "crane" ? "Дальше: последняя миля" : "К вручению подарка",
         exact: true,
       })
       .click();

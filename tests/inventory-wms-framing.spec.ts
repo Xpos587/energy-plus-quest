@@ -12,7 +12,10 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       await img.evaluate((image: HTMLImageElement) => image.decode());
       await expect(img).toHaveAttribute('src', /warehouse-results-v4\/outcome-wms\.webp$/);
       const action = await img.evaluate((image: HTMLImageElement) => {
-        const scale = Math.max(image.clientWidth / image.naturalWidth, image.clientHeight / image.naturalHeight);
+        const fit = getComputedStyle(image).objectFit;
+        const scaleX = image.clientWidth / image.naturalWidth;
+        const scaleY = image.clientHeight / image.naturalHeight;
+        const scale = fit === 'contain' ? Math.min(scaleX, scaleY) : Math.max(scaleX, scaleY);
         const focus = getComputedStyle(image).objectPosition.split(' ').map(parseFloat);
         const left = (image.clientWidth - image.naturalWidth * scale) * focus[0] / 100;
         const top = (image.clientHeight - image.naturalHeight * scale) * focus[1] / 100;
@@ -24,7 +27,13 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
       expect(action.top).toBeGreaterThanOrEqual(0);
       expect(action.bottom).toBeLessThanOrEqual(action.height);
       if (height > width) {
-        const overflow = await img.evaluate((image: HTMLImageElement) => image.naturalHeight * Math.max(image.clientWidth / image.naturalWidth, image.clientHeight / image.naturalHeight) - image.clientHeight);
+        const overflow = await img.evaluate((image: HTMLImageElement) => {
+          const fit = getComputedStyle(image).objectFit;
+          const scaleX = image.clientWidth / image.naturalWidth;
+          const scaleY = image.clientHeight / image.naturalHeight;
+          const scale = fit === 'contain' ? Math.min(scaleX, scaleY) : Math.max(scaleX, scaleY);
+          return image.naturalHeight * scale - image.clientHeight;
+        });
         // No top/bottom crop of heads or wheels; the wide source may lose its sides.
         expect(overflow).toBeLessThan(2);
       }
@@ -36,7 +45,7 @@ for (const [width, height] of [[320, 568], [390, 844], [844, 390], [1440, 900]])
         await more.click();
         await expect(page.getByTestId('result-copy')).not.toHaveText(text);
       }
-      await expect(page.getByRole('button', { name: 'Продолжить', exact: true })).toBeInViewport({ ratio: 1 });
+      await expect(page.getByRole('button', { name: 'Дальше: баржа', exact: true })).toBeInViewport({ ratio: 1 });
       expect(await page.evaluate(() => document.documentElement.scrollHeight <= innerHeight && document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     }
   });

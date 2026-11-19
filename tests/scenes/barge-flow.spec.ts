@@ -22,8 +22,12 @@ for (const viewport of [
     await expect(page.getByTestId("scene-question")).toContainText(
       "Как погрузить подарок на баржу?",
     );
-    const intro = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
-    for (let n = 0; n < 20 && (await intro.isVisible()); n++) await intro.click();
+    // One screen (call 17.11): the story and the quay choice together, no «К выбору» step.
+    await expect(page.getByRole("button", { name: /^(Далее|К выбору)$/ })).toHaveCount(0);
+    await expect(page.locator('[data-scene-briefing][data-reading="true"]')).toHaveCount(0);
+    // The first paragraph names the parcel in place of «(название сюрприза)».
+    await expect(page.getByTestId("scene-question")).toContainText("Ваш фотоаппарат уже на причале");
+    for (const text of source.slice(1)) await expect(page.getByTestId("scene-question")).toContainText(text);
     await expect(page.locator('[data-scene-choice]')).toHaveCount(0);
 
     for (const id of ["remote", "rush", "petr"]) {
@@ -45,7 +49,7 @@ for (const viewport of [
     );
     await expect(resultImage).toHaveAttribute(
       "src",
-      /\/scene-art\/barge-v5\/outcome-remote\.webp/,
+      /\/scene-art\/barge-v7\/outcome-remote\.webp/,
     );
     await resultImage.evaluate(async (image: HTMLImageElement) =>
       image.decode(),
@@ -58,12 +62,12 @@ for (const viewport of [
         (image: HTMLImageElement) => new URL(image.currentSrc).pathname,
       ),
     ).toBe(
-      // The desktop rail (≥1001×701) takes the near-square cut of the same still.
-      viewport.width > 1000 && viewport.height > 700
-        ? "/scene-art/barge-v5/outcome-remote-rail.webp"
-        : viewport.width <= 1000 && viewport.height >= 701 && viewport.height > viewport.width
-          ? "/scene-art/barge-v5/outcome-remote-portrait.webp"
-          : "/scene-art/barge-v5/outcome-remote.webp",
+      // The desktop rail (≥1001×701) and the tall phone result row both take the near-square cut
+      // (SceneOutcomeArt: the tall still lost the crane above the copy).
+      (viewport.width > 1000 && viewport.height > 700) ||
+        (viewport.width <= 1000 && viewport.height >= 701 && viewport.height > viewport.width)
+        ? "/scene-art/barge-v7/outcome-remote-rail.webp"
+        : "/scene-art/barge-v7/outcome-remote.webp",
     );
     expect(
       await page.evaluate(

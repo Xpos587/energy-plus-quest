@@ -6,7 +6,7 @@ import { optimizedImages } from "./scripts/optimized-images.ts";
 import { optimizedFonts } from "./scripts/optimized-fonts.ts";
 import { gameCache } from "./scripts/game-cache.ts";
 import { frozenUiSources } from "./scripts/frozen-ui.ts";
-import { sharePages } from "./scripts/share-pages.ts";
+import { publicUrl, sharePages } from "./scripts/share-pages.ts";
 import { devWatchOptions } from "./scripts/dev-watch.ts";
 
 // BUILD_SINGLEFILE=true — вся игра в одном index.html (js/css встроены инлайн).
@@ -16,6 +16,7 @@ const singleFile = process.env.BUILD_SINGLEFILE === "true";
 
 export default defineConfig(({ mode }) => ({
   base: "./",
+  define: { __PUBLIC_URL__: JSON.stringify(publicUrl()) },
   server: { watch: devWatchOptions(import.meta.dirname) },
   plugins: singleFile
     ? [

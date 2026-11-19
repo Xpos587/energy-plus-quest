@@ -8,8 +8,6 @@ for(const viewport of sizes) for(const parcel of ['boat','camera','socks']) test
  const receipt:unknown[]=[];
  for(const id of ['remote','rush','petr']){
  await page.goto(`/scenes.html?scene=crane&parcel=${parcel}&recipient=alva`);
- const intro=page.getByRole('button',{name:/^(Далее|К выбору|К сцене)$/});
- for(let n=0;n<15 && await intro.isVisible();n++) await intro.click();
  await expect(page.locator(`[data-hotspot="${id}"]`)).toBeInViewport({ratio:1});
  await page.locator(`[data-hotspot="${id}"]`).click();
  await page.locator('[data-choice-confirm]').click();
@@ -20,7 +18,7 @@ for(const viewport of sizes) for(const parcel of ['boat','camera','socks']) test
  await expect(page.getByRole('button',{name:'Изменить выбор',exact:true})).toBeInViewport({ratio:1});
  const more=page.getByRole('button',{name:'Читать дальше',exact:true});
  for(let n=0;n<15 && await more.isVisible();n++){await expect(more).toBeInViewport({ratio:1});await more.click();}
- const proceed=page.getByRole('button',{name:'Продолжить',exact:true});
+ const proceed=page.getByRole('button',{name:'Дальше: последняя миля',exact:true});
  await expect(proceed).toBeInViewport({ratio:1});
  expect(await page.evaluate(()=>({x:document.documentElement.scrollWidth<=innerWidth,y:document.documentElement.scrollHeight<=innerHeight}))).toEqual({x:true,y:true});
  await proceed.click();

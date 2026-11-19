@@ -120,7 +120,7 @@
 @media (min-width: 1001px) and (min-height: 701px) {
   .figure[data-outcome-scene="crane"] .image { object-position: 50% 50%; transform-origin: 50% 50%; }
 }
-/* The portrait quay camera keeps the loaded barge below the near crane, not outside a wide crop. */
+/* In a short phone row, keep the loaded barge and the near crane together. */
 @media (max-width: 1000px) and (min-height: 701px) and (orientation: portrait) {
   .figure[data-outcome-scene="crane"] .image { object-position: 50% 80%; transform-origin: 50% 80%; }
 }

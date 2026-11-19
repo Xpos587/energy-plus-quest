@@ -15,6 +15,12 @@ for (const [width, height] of [[1440, 900], [1280, 720], [390, 844], [320, 568]]
       const continuous = await page.locator('[data-continuous=true]').count();
       for (let i = 0; i < 20; i++) {
         if (!continuous) await expect.poll(() => reading.evaluate(n => n.scrollHeight - n.clientHeight), { message: key }).toBeLessThanOrEqual(1);
+        // Short screens keep a useful reading chunk; the native sheet scroll exposes its actions.
+        const panel = page.locator('[data-sheet-panel]');
+        if (await panel.evaluate(n => n.scrollHeight > n.clientHeight + 1)) {
+          await panel.hover({ position: { x: 4, y: 4 } });
+          await page.mouse.wheel(0, 2000);
+        }
         await expect(page.locator('[data-result-reader] footer'), key).toBeInViewport({ ratio: .99 });
         parts.push((await page.getByTestId('result-copy').textContent())!.trim());
         const next = page.getByRole('button', { name: 'Читать дальше', exact: true });

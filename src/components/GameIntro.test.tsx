@@ -24,10 +24,12 @@ it("keeps canonical exposition in two mobile states before starting", async () =
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   expect(start).not.toHaveBeenCalled();
   expect(host.textContent).toContain(scenarioParagraph("38763B42"));
+  expect(host.textContent).toContain("Ваши решения в пути приносят баллы за:");
+  expect(host.textContent).toContain("Перед началом пути выберите роль, подарок и получателя.");
   expect(host.querySelectorAll("li")).toHaveLength(3);
   expect(host.textContent).toContain("Экономия времени, сил, топлива и денег");
-  expect(host.textContent).toContain("Забота о подарке, получателе и людях рядом");
-  expect(host.textContent).toContain("Решения вовремя и самым подходящим способом");
+  expect(host.textContent).toContain("Забота о получателе и людях рядом");
+  expect(host.textContent).toContain("Решение, которое сокращает путь или ускоряет доставку");
   expect(host.textContent).not.toContain(scenarioParagraph("24D093EF"));
   if (host.querySelector('[data-intro-next]')) await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-start]')!.click());
@@ -39,6 +41,7 @@ it("reveals the same metric explanation progressively on desktop", async () => {
   expect(host.textContent).toContain(scenarioParagraph("24D093EF"));
   expect(host.querySelector("[aria-label=\"Показатели\"]")).toBeNull();
   expect(host.querySelectorAll("[aria-label=\"Этапы доставки в игре\"] li")).toHaveLength(5);
+  expect(host.querySelector<HTMLImageElement>('img[src*="route-v2/warehouse.webp"]')).not.toBeNull();
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   expect(host.querySelectorAll("li")).toHaveLength(3);
   expect(host.querySelector("h1")?.textContent).toBe("Маршрутный лист");
@@ -70,8 +73,8 @@ it("returns from sender selection to the introduction and resumes preparation", 
   expect(host.querySelector("[data-intro-start]")).not.toBeNull();
   expect(host.querySelectorAll("li")).toHaveLength(3);
   expect(host.textContent).toContain("Экономия времени, сил, топлива и денег");
-  expect(host.textContent).toContain("Забота о подарке, получателе и людях рядом");
-  expect(host.textContent).toContain("Решения вовремя и самым подходящим способом");
+  expect(host.textContent).toContain("Забота о получателе и людях рядом");
+  expect(host.textContent).toContain("Решение, которое сокращает путь или ускоряет доставку");
   if (host.querySelector('[data-intro-next]')) await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-start]')!.click());
   expect(host.querySelector("h1")?.textContent).toBe("Выберите свою роль");
@@ -90,7 +93,7 @@ it("shows all metric meanings without extra controls before starting", async () 
   await act(async () => host.querySelector<HTMLButtonElement>('[data-intro-next]')!.click());
   const meanings = Array.from(host.querySelectorAll<HTMLElement>('li span'));
   expect(meanings.map(node => node.textContent)).toEqual([
-    "Экономия времени, сил, топлива и денег.", "Забота о подарке, получателе и людях рядом.", "Решения вовремя и самым подходящим способом.",
+    "Экономия времени, сил, топлива и денег.", "Забота о получателе и людях рядом.", "Решение, которое сокращает путь или ускоряет доставку.",
   ]);
   for (const meaning of meanings) expect(meaning.closest('[hidden]')).toBeNull();
   expect(host.querySelector('button[aria-controls^="intro-metric-"]')).toBeNull();

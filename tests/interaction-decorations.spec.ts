@@ -4,8 +4,8 @@ import { expectNoInteractionDecorations } from './helpers/interaction-decoration
 
 test('all seven standalone share pages keep links free of decorations', async ({ page, isMobile }) => {
   for (const card of shareCards) {
-    await page.setContent(sharePage(card.id, `https://example.test/r/${card.id}/`).replace('src="card.jpg"', 'src="data:,"'));
-    const link = page.getByRole('link', { name: 'Пройти игру' });
+    await page.setContent(sharePage(card.id, `https://example.test/r/${card.id}/`, { art: 'data:,', brand: 'data:,', regular: 'data:,', bold: 'data:,' }));
+    const link = page.getByRole('link', { name: 'Пройти игру самому' });
     await expectNoInteractionDecorations(page);
     await page.keyboard.press('Tab');
     await expect(link).toBeFocused();

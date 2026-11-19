@@ -46,7 +46,7 @@ test("complete all remaining scenes without clipping copy or losing scores", asy
     });
     await page
       .getByRole("button", {
-        name: scene === "lastmile" ? "Завершить" : "Продолжить",
+        name: scene === "lastmile" ? "К вручению подарка" : scene === "compact" ? "Дальше: склад" : scene === "inventory" ? "Дальше: баржа" : "Дальше: последняя миля",
         exact: true,
       })
       .click();

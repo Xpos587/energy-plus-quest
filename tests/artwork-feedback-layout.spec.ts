@@ -15,8 +15,8 @@ async function centeredIn(feedback: Locator, media: Locator) {
 for (const scene of [
   { id: "compact", pattern: /compact-environment-v(53|54)/ },
   { id: "inventory", pattern: /inventory-master-v16/ },
-  { id: "crane", pattern: /barge-v5\/(wide|desk|mid|tall)\/plate/ },
-  { id: "lastmile", pattern: /lastmile-r5\/choice/ },
+  { id: "crane", pattern: /barge-v7\/(wide|desk|mid|tall)\/plate/ },
+  { id: "lastmile", pattern: /lastmile-family-v1\/revision-25\/choice/ },
 ]) {
   test(`${scene.id}: loading and retry stay centered in media, including after resize`, async ({ page }, info) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
@@ -51,7 +51,7 @@ for (const scene of [
 test("lastmile preview keeps responsive-image retry centered in its media", async ({ page }, info) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 390, height: 1000 });
-  const pattern = /lastmile-r5\/choice-wide/;
+  const pattern = /lastmile-family-v1\/revision-25\/choice-wide/;
   await page.route(pattern, route => route.abort());
   await page.goto("/scenes.html?scene=lastmile&parcel=socks&recipient=khor");
   const condition = page.getByRole("region", { name: "Условие задания", exact: true });

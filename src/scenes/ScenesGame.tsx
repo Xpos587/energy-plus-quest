@@ -386,11 +386,10 @@ function ScenesSession({
               }))}
               navigation="fixed"
               question={question}
-              keepParagraphs={scene.id === "crane"}
               decisionContext={
                 scene.id === "crane" || scene.id === "lastmile" ? (
                   <>
-                    {scene.id === "crane" ? <CraneDecisionContext /> : <LastmileDecisionContext />}
+                    {scene.id === "crane" ? <CraneDecisionContext paragraphs={intro} /> : <LastmileDecisionContext />}
                     {/* Last scene, tired players (05.11): the task is plain text, no goal icons. */}
                     {scene.id === "crane" && <SceneGoals goals={brief!.goals} />}
                   </>
@@ -465,11 +464,12 @@ function ScenesSession({
               paragraphs={scene.id === "compact"
                 ? pending.id !== "auto" && pending.accessibleDescription ? [pending.accessibleDescription] : undefined
                 : scene.id === "inventory" || scene.id === "lastmile" ? [choiceLabel(pending.label)] : undefined}
-              onCancel={() => setPendingId(undefined)}
+              // The quay plays for seconds: keep the chosen option on screen, locked, instead of snapping back to the question.
+              confirming={!!playing}
+              onCancel={() => { if (!playing) setPendingId(undefined); }}
               onConfirm={() => {
-                setPendingId(undefined);
                 if (scene.id === "crane") setPlayingCrane(pending.id);
-                else choose(pending.id);
+                else { setPendingId(undefined); choose(pending.id); }
               }}
             >
               {scene.id === "compact"

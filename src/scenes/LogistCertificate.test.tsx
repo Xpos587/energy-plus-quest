@@ -1,7 +1,7 @@
 import { act } from "react";
 import { createRoot } from "react-dom/client";
 import { expect, it, vi } from "vitest";
-import { certificateCopy } from "./certificateExport";
+import { certificateCopy, rankName } from "./certificateExport";
 import { logistProfileCopy } from "./endingCopy";
 import { LogistCertificate } from "./LogistCertificate";
 
@@ -52,6 +52,10 @@ it.each([
         host.querySelectorAll("button[data-certificate-actions]"),
       ).toHaveLength(1);
       expect(certificateCopy(copy).join(" ")).not.toContain(copy.callToAction);
+      /* Share links go to the published landing page with the landing's rank, from any host. */
+      const vk = new URL(host.querySelector<HTMLAnchorElement>('a[href^="https://vk.com/"]')!.href);
+      expect(vk.searchParams.get("url")).toBe(`https://e-plus.media/specprojects/joydelivery/r/${profile}-${type}/`);
+      expect(vk.searchParams.get("title")).toBe(`Моё звание в игре «Доставляем радость» — «${rankName(copy.title)}»`);
     } finally {
       await act(async () => root.unmount());
       vi.unstubAllGlobals();

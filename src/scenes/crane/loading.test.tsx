@@ -41,7 +41,7 @@ it("keeps the whole quay hidden until the last sprite decodes, and retries faile
         !this.src.includes("artwork-retry")
       )
         return fail ? Promise.reject(new Error("network")) : delayed;
-      if (this.src.includes("/mid/ivan-joy.webp")) return office;
+      if (this.src.includes("/mid/occluder.webp")) return office;
       return Promise.resolve();
     }),
   });

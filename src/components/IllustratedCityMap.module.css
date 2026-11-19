@@ -67,14 +67,27 @@
 .target {
   position: absolute;
   z-index: 1;
-  width: max(calc(44px / var(--map-zoom, 1)), 12cqw);
-  height: max(calc(44px / var(--map-zoom, 1)), 4.8cqw);
+  width: max(calc(44px / var(--map-zoom, 1)), var(--truck-width, 0px));
+  height: max(calc(36px / var(--map-zoom, 1)), var(--truck-height, 0px));
+  transform: translate(-50%, -50%);
   padding: 0;
   border: 0;
   border-radius: 10px;
   background: transparent;
   cursor: pointer;
   touch-action: none;
+}
+
+/* Separate the dial from the body so blank map above the trailer stays draggable. */
+.dialTarget {
+  position: absolute;
+  width: calc(44px / var(--map-zoom, 1));
+  height: calc(44px / var(--map-zoom, 1));
+  transform: translate(-50%, -50%);
+}
+.target[data-carrier-choice="crew"] .dialTarget {
+  width: calc(90px / var(--map-zoom, 1));
+  transform: translate(calc(-22px / var(--map-zoom, 1)), -50%);
 }
 
 /* No ring around a rig or the Express pill, ever: focus returns to the rig
@@ -107,6 +120,7 @@
    Screen-constant at any zoom. */
 .autopick {
   position: absolute;
+  z-index: 2;
   width: 232px;
   height: 42px;
   margin: 0;

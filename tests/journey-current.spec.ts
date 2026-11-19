@@ -170,7 +170,7 @@ for (const journey of journeys) {
       "data-selected",
       journey.compact[1],
     );
-    await continueResult(page, "Продолжить");
+    await continueResult(page, "Дальше: склад");
 
     await expect(page.locator('[data-scene="inventory"]')).toBeVisible();
     await readBriefing(page);
@@ -182,17 +182,17 @@ for (const journey of journeys) {
     await page.reload();
     await expect(page.locator('[data-scene="inventory"] [data-result]')).toBeVisible();
     await expect(page.locator(`[data-scene-consequence="${inventoryResult}"]`)).toBeVisible();
-    await continueResult(page, "Продолжить");
+    await continueResult(page, "Дальше: баржа");
 
     await expect(page.locator('[data-scene="crane"]')).toBeVisible();
     await readBriefing(page);
     await inspectSceneChoice(page, journey.crane);
-    await continueResult(page, "Продолжить");
+    await continueResult(page, "Дальше: последняя миля");
 
     await expect(page.locator('[data-scene="lastmile"]')).toBeVisible();
     await readBriefing(page);
     await inspectSceneChoice(page, journey.lastmile);
-    await continueResult(page, "Завершить");
+    await continueResult(page, "К вручению подарка");
     await expect(page.getByText("Завершено", { exact: true })).toBeVisible();
 
     const restart = page.getByRole("button", {

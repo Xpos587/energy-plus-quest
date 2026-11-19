@@ -61,17 +61,17 @@
 
 /* Page 0 — story + the journey the player is about to make. */
 .lead{max-width:58ch;margin:0;font-size:var(--type-body);line-height:var(--type-body-leading);font-weight:600;color:var(--ink)}
-.route{position:relative;margin:0;padding-inline:0;display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-top:auto;padding-top:var(--route-pad);list-style:none;--route-pad:clamp(20px,4vh,48px)}
-/* The dashed line runs through the centres of the stops and the pin. */
-.route::before{content:"";position:absolute;left:5%;right:5%;top:calc(var(--route-pad) + var(--stop) / 2 - 1.5px);border-top:3px dashed #8fbad6;z-index:0}
-.route{--stop:clamp(96px,10vw,148px)}
-.stop{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
-.stopArt{position:relative;display:block;flex:none;width:var(--stop);height:var(--stop);min-width:var(--stop);min-height:var(--stop);aspect-ratio:1/1;border-radius:50%;padding:5px;background:#fff;box-shadow:0 1px 0 var(--line),0 10px 24px #075d9b1f}
+.route{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:start;margin:auto 0;padding:0;list-style:none;--route-pad:clamp(20px,4vh,48px);--stop:clamp(96px,10vw,148px);--link-gap:14px}
+/* Variant B1 «тихая линия» (18.11): one axis per stage — photo circle, name, scene title; a thin line with a chevron between circles. */
+.stop{position:relative;display:flex;flex-direction:column;align-items:center;min-width:0;text-align:center}
+.stopArt{position:relative;z-index:1;display:block;flex:none;width:var(--stop);height:var(--stop);padding:clamp(4px,.4vw,6px);border-radius:50%;background:#fff;box-shadow:0 12px 28px -10px #075d9b66}
 .stopArt img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover}
-.stopArt b{position:absolute;left:2px;top:2px;display:grid;flex:none;place-items:center;width:32px;height:32px;aspect-ratio:1/1;border-radius:50%;background:var(--blue);color:#fff;font-size:16px;line-height:1;box-shadow:0 0 0 3px #fff}
-.stopLabel{font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:700;color:var(--ink);text-align:center}
-.goal{position:relative;z-index:1;flex:none;align-self:flex-start;display:flex;align-items:center;gap:6px;height:var(--stop);padding:0 4px 0 2px;color:var(--blue);font-size:var(--type-choice);font-weight:700;white-space:nowrap;background:linear-gradient(90deg,transparent,#e3f0f8 18%)}
-.goal svg{flex:none;color:#ff5500}
+.stopArt b{position:absolute;left:4%;top:4%;display:grid;place-items:center;width:clamp(28px,2.6vw,40px);height:clamp(28px,2.6vw,40px);border-radius:50%;background:var(--blue);color:#fff;font-size:clamp(14px,1.3vw,20px);line-height:1;box-shadow:0 0 0 clamp(3px,.3vw,4px) #fff}
+.stopLink{position:absolute;top:calc(var(--stop) / 2 - 1.5px);left:calc(50% + var(--stop) / 2 + var(--link-gap));width:calc(100% - var(--stop) - 2 * var(--link-gap));border-top:3px solid #9cc3dd}
+.stopLink::after{content:"";position:absolute;left:50%;top:-15.5px;width:28px;height:28px;margin-left:-14px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23003ca6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 6 6 6-6 6'/%3E%3C/svg%3E") center/18px no-repeat;box-shadow:0 2px 6px #075d9b33}
+.stop:last-child .stopLink{display:none}
+.stopLabel{margin-top:clamp(8px,1.6vh,16px);font-size:clamp(17px,1.7vw,26px);line-height:1.1;font-weight:700;color:var(--blue)}
+.stopCaption{margin-top:4px;max-width:13em;font-size:clamp(14px,1.15vw,18px);line-height:1.25;color:var(--muted)}
 
 
 /* Navigation */
@@ -84,7 +84,6 @@
   .page{animation:arrive .35s ease-out both}
   .stop{animation:arrive .4s ease-out both}
   .stop:nth-child(2){animation-delay:.06s}.stop:nth-child(3){animation-delay:.12s}.stop:nth-child(4){animation-delay:.18s}.stop:nth-child(5){animation-delay:.24s}
-  .goal{animation:arrive .4s .3s ease-out both}
 }
 
 /* Phones: the route becomes a vertical timeline. */
@@ -93,14 +92,15 @@
   .lead{font-size:17px;line-height:1.35}
   /* The five stages are the screen: a vertical line of big stage objects. */
   /* The timeline owns the height left under the lead: stops spread evenly, no dead band. */
-  .route{--stop:clamp(52px,20.5vw,84px);flex:1;min-height:0;flex-direction:column;align-items:stretch;justify-content:space-between;gap:2px;padding-top:0;margin-top:12px;padding-block:6px 0}
-  .route::before{left:calc(var(--stop) / 2 - 1px);right:auto;top:calc(var(--stop) / 2 + 6px);bottom:24px;border-top:0;border-left:2px dashed #8fbad6}
-  .stop{flex-direction:row;align-items:center;gap:16px;padding-block:5px}
-  .stopArt{flex:none;padding:2px;box-shadow:0 1px 0 var(--line),0 6px 14px #075d9b1f}
-  .stopArt b{left:auto;right:-5px;top:auto;bottom:-4px;width:23px;height:23px;font-size:13px;box-shadow:0 0 0 2.5px #fff}
-  .stopLabel{text-align:left;font-size:20px;line-height:1.15}
-  .goal{height:auto;align-items:center;padding:4px 0 0 10px;background:none;gap:10px;font-size:20px}
-  .goal svg{width:26px;height:26px}
+  /* Phones: the same line turns vertical; name and scene title centre on each circle. */
+  .route{--stop:clamp(52px,20.5vw,84px);--link-gap:clamp(18px,3.6vh,32px);flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:var(--link-gap);margin-top:12px;padding:0}
+  .stop{display:grid;grid-template-columns:var(--stop) minmax(0,1fr);grid-template-rows:auto auto;column-gap:16px;align-content:center;text-align:left}
+  .stopArt{grid-row:1/3;padding:4px;box-shadow:0 6px 14px #075d9b33}
+  .stopArt b{left:-4px;top:-4px;width:26px;height:26px;font-size:13px;box-shadow:0 0 0 3px #fff}
+  .stopLink{left:calc(var(--stop) / 2 - 1.5px);top:var(--stop);width:0;height:var(--link-gap);border-top:0;border-left:3px solid #9cc3dd}
+  .stopLink::after{left:-11.5px;top:50%;width:20px;height:20px;margin:-10px 0 0;background-size:14px;transform:rotate(90deg)}
+  .stopLabel{align-self:end;margin:0;font-size:20px;line-height:1.15}
+  .stopCaption{align-self:start;max-width:none;margin-top:2px;font-size:15px}
   .lessonActions{margin-top:12px;gap:12px}
   .lessonActions>button{flex:1;min-width:0;min-height:54px;padding:12px 16px}
   .steps{display:none}
@@ -116,9 +116,9 @@
   .lesson{padding:8px 12px}
   .lesson h1{font-size:26px;margin-bottom:8px}
   .lead{font-size:15px;line-height:1.3}
-  .route{--stop:50px;padding-top:6px;gap:2px;margin-top:8px}
-  .route::before{top:31px;bottom:20px}
-  .stopLabel,.goal{font-size:15px}
+  .route{--stop:50px;--link-gap:10px;margin-top:8px}
+  .stopLink::after{display:none}
+  .stopLabel{font-size:15px}.stopCaption{font-size:13px}
   .lessonActions{margin-top:8px}
   .lessonActions>button{min-height:44px;padding:6px 8px;font-size:15px}
   .lessonActions svg{width:18px;height:18px}
@@ -133,27 +133,24 @@
   .lead{font-size:14px;line-height:1.25}
   .route{--stop:64px;--route-pad:8px}
   .stopArt b{width:22px;height:22px;font-size:12px}
-  .stopLabel,.goal{font-size:14px}
+  .stopLabel{font-size:14px}.stopCaption{font-size:12px}
   .lessonActions{margin-top:6px}
   .lessonActions>button{min-height:44px;padding:6px 14px;font-size:15px}
 }
 
-/* Round 2: no empty bands — the route takes the room it needs, centred in the space. */
-.goal{background:none}
 @media (min-width:701px) and (min-height:501px){
   .route{--stop:clamp(120px,min(14vw,24vh),230px);margin-block:auto;--route-pad:clamp(16px,3vh,32px)}
 }
-/* The dashed path stops at the destination pin instead of crossing its label. */
-@media (min-width:701px){.route::before{right:calc(9em + 24px)}.goal{padding-left:8px}}
 /* Phones: content starts at the top; the route centres in what is left. */
 @media (max-width:700px){
   .page{justify-content:flex-start}
 }
 /* 320×568: the timeline stays vertical, only the icon and the label shrink. */
 @media (max-width:700px) and (max-height:700px){
-  .route{--stop:50px;padding-block:6px 0}
-  .stop{gap:14px;padding-block:2px}
-  .stopLabel,.goal{font-size:18px}
+  .route{--stop:50px;--link-gap:12px}
+  .stopLink::after{display:none}
+  .stop{column-gap:14px}
+  .stopLabel{font-size:18px}.stopCaption{font-size:14px}
   .lead{font-size:16px;line-height:1.3}
 }
 
@@ -184,8 +181,10 @@
    phrase, then a one-line plain gloss. */
 .metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 16px;margin:0;padding:0;list-style:none}
 .metrics li{display:flex;flex-direction:column;gap:6px;min-width:0;padding:14px 16px 16px;border-radius:12px;background:var(--metric-tint);box-shadow:inset 0 3px 0 var(--metric)}
-.metrics strong{display:flex;align-items:center;gap:10px;font-size:var(--type-title);line-height:1.1;font-weight:700;color:var(--metric)}
-.metricIcon{flex:none;box-sizing:content-box;width:22px;height:22px;padding:7px;border-radius:50%;color:#fff;background:var(--metric)}
+.metrics strong{display:flex;align-items:center;gap:10px;font-size:var(--type-title);line-height:1.35;font-weight:700;color:var(--metric)}
+/* The proxy font's р/ф descend below the baseline; «Эмпатия» has no descender. */
+.metrics [data-metric="empathy"]{--icon-optical-y:-1.5px}
+.metricIcon{translate:0 var(--icon-optical-y,.4px);flex:none;box-sizing:content-box;width:22px;height:22px;padding:7px;border-radius:50%;color:var(--metric);background:var(--metric-tint)}
 .metrics span{font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:500;color:var(--ink)}
 .metrics small{font-size:var(--type-support);line-height:1.35;color:var(--muted)}
 .preparation{padding-top:clamp(12px,2.2vh,20px);border-top:1px dashed #c9dce8;font-size:var(--type-choice);line-height:var(--type-control-leading);font-weight:500;color:var(--blue)}
@@ -275,7 +274,6 @@
 }
 
 /* ===== Screens 2–3: picture cards and a two-column waybill (desktop first) ===== */
-.stopScene{display:none}
 @media (prefers-reduced-motion:no-preference){
   .stamp{animation:stampDown .28s .45s cubic-bezier(.23,1,.32,1) both}
   .metrics li{animation:arrive .42s cubic-bezier(.23,1,.32,1) both}
@@ -287,39 +285,27 @@
   .lesson h1{font-size:clamp(40px,4.4vw,72px);line-height:1;letter-spacing:-.03em}
   .lead{max-width:46ch;font-size:clamp(20px,1.7vw,28px);line-height:1.3}
 }
-@media (min-width:701px){
-  .route{--img-h:clamp(170px,36vh,400px);--gap:clamp(14px,1.5vw,26px);min-height:0;gap:var(--gap);align-items:stretch;margin-block:auto 0;padding-top:0;justify-content:center}
-  .route::before{display:none}
-  .stop{flex:1 1 0;max-width:340px;gap:0;align-items:stretch;border-radius:16px;background:#fff;box-shadow:0 14px 30px -18px #075d9b80}
-  .stopScene{display:block;width:100%;height:var(--img-h);min-height:0;object-fit:cover;border-radius:16px 16px 0 0}
-  .stopArt{position:absolute;z-index:2;left:12px;top:12px;width:auto;height:auto;min-width:0;min-height:0;aspect-ratio:auto;padding:0;background:none;box-shadow:none;border-radius:0}
-  .stopArt img{display:none}
-  .stopArt b{position:static;width:40px;height:40px;font-size:20px;box-shadow:0 0 0 4px #fff}
-  .stopLabel{padding:14px 10px 16px;font-size:clamp(20px,1.6vw,26px);color:var(--blue)}
-}
-.stopScene[data-stage="carrier"]{object-position:27% 50%}
-.stopScene[data-stage="loading"]{object-position:92% 50%}
-.stopScene[data-stage="warehouse"]{object-position:38% 50%}
-.stopScene[data-stage="barge"]{object-position:62% 50%}
-.stopScene[data-stage="last-mile"]{object-position:22% 50%}
-/* Waybill: invitation on the left, scoring on the right, one quiet divider */
-@media (min-width:1001px){
-  .letter{max-width:1180px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"head scoring" "inv scoring" "prep prep";grid-template-rows:auto 1fr auto;column-gap:0;row-gap:clamp(10px,2vh,22px);padding:clamp(28px,4.4vh,48px) 0 0;overflow:hidden;border-radius:10px;box-shadow:0 30px 60px -30px #05345c99}
-  .letterHead{grid-area:head;border:0;padding:0 clamp(24px,3vw,48px)}
-  .invitation{grid-area:inv;align-self:center;max-width:none;padding:0 clamp(24px,3vw,48px);font-size:clamp(20px,1.7vw,28px);line-height:1.35}
-  .scoring{grid-area:scoring;justify-content:center;gap:clamp(8px,1.6vh,16px);padding:clamp(28px,4.4vh,48px) clamp(22px,2.6vw,40px) clamp(18px,2.6vh,30px);margin-top:calc(-1 * clamp(28px,4.4vh,48px));border-left:1px solid #d9e8f1;background:#f6fafd}
-  .preparation{grid-area:prep;margin:0;padding:clamp(14px,2.2vh,22px) clamp(24px,3vw,48px);border-top:1px solid #d9e8f1;background:#f6fafd}
-  .metrics{grid-template-columns:1fr}
-  .lesson .letter h1{font-size:clamp(36px,3.8vw,62px);white-space:nowrap}
-  .stamp{width:clamp(84px,7vw,120px)}
+/* Waybill: one column, read top to bottom: where → what to do → what scores → next step */
+@media (min-width:701px) and (min-height:501px){
+  .letter{max-width:920px;gap:clamp(10px,2vh,20px);padding:clamp(24px,3.6vh,38px) clamp(28px,4vw,52px) clamp(20px,3vh,30px);border-radius:10px;box-shadow:0 30px 60px -30px #05345c99}
+  .letterHead{padding-bottom:clamp(10px,1.8vh,18px)}
+  .lesson .letter h1{font-size:clamp(30px,5vh,46px);white-space:nowrap;margin-bottom:6px}
+  .destination{font-size:clamp(18px,2.6vh,24px)}
+  .stamp{width:clamp(64px,10vh,92px)}
+  .invitation{max-width:none;font-size:clamp(19px,3.1vh,27px);line-height:1.3;font-weight:500;color:var(--ink)}
+  .scoring{gap:4px}
+  .metricLead{font-size:var(--type-support);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  /* One shared grid: icon | name (sized to «Эффективность») | description; all three
+     centre on the row's middle line. */
+  .metrics{grid-template-columns:auto max-content minmax(0,1fr);gap:0}
+  .metrics li{display:grid;grid-column:1/-1;grid-template-columns:subgrid;align-items:center;column-gap:0;padding:clamp(8px,1.5vh,14px) 0;border-radius:0;background:none;box-shadow:none;border-top:1px solid #e1ecf3}
+  .metrics li:first-child{border-top:0}
+  .metrics strong{display:contents;font-size:clamp(20px,3vh,26px)}
+  .metrics .metricIcon{grid-column:1;width:20px;height:20px;padding:8px;margin-right:14px}
+  .metrics li>span{grid-column:3;padding-left:clamp(16px,2.4vw,32px);font-size:clamp(16px,2.5vh,20px);line-height:1.3}
+  .preparation{padding:clamp(10px,1.7vh,16px) 18px;border:0;border-left:4px solid var(--blue);border-radius:0 8px 8px 0;background:#eaf4fb;font-size:clamp(17px,2.7vh,22px);font-weight:700}
 }
 .stamp::before,.stamp::after{display:none}
-@media (min-width:1001px){
-  .metrics li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:clamp(12px,1.2vw,18px);row-gap:2px;align-items:center;padding:clamp(10px,1.5vh,16px) clamp(14px,1.4vw,22px);border-radius:12px;background:#fff;box-shadow:inset 5px 0 0 var(--metric);border:1px solid #d9e8f1;border-left:0}
-  .metrics strong{display:contents;font-size:clamp(24px,2.1vw,34px)}
-  .metrics .metricIcon{grid-row:1/4;grid-column:1;width:clamp(26px,2.4vw,34px);height:clamp(26px,2.4vw,34px);padding:clamp(11px,1vw,15px)}
-  .metrics li>span,.metrics li>small{grid-column:2}
-}
 /* Phones: three plain rows, no tinted cards */
 @media (max-width:700px){
   .metrics{gap:0}
@@ -327,4 +313,22 @@
   .metrics li:first-child{border-top:0}
   .metrics strong{color:var(--metric);font-size:17px}
   .metrics span{font-size:15px;line-height:1.3;color:var(--text)}
+}
+/* Phones with room: bigger icon chips and plain-size gloss, like the route list on page 0 */
+@media (max-width:700px) and (min-height:701px){
+  .metrics li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;align-items:center;padding:10px 0}
+  .metrics strong{display:contents;font-size:19px}
+  .metrics .metricIcon{grid-row:1;width:20px;height:20px;padding:7px}
+  .metrics li>span{grid-column:2;font-size:16px}
+}
+/* Phones: same reading order as desktop — rule in ink, flat divided rows, next step as a callout */
+@media (max-width:700px){
+  .invitation{font-weight:500;color:var(--ink)}
+  .metricLead{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .metrics li{border-radius:0}
+  .preparation{padding:10px 14px;border:0;border-left:4px solid var(--blue);border-radius:0 8px 8px 0;background:#eaf4fb;font-weight:700}
+}
+@media (max-width:700px) and (min-height:701px){
+  .invitation{font-size:19px;line-height:1.3}
+  .preparation{font-size:18px}
 }

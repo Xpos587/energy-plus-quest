@@ -93,7 +93,7 @@ for (const width of [320, 390]) {
           ).toHaveText(score > 0 ? `+${score}` : String(score));
         }
         await expect(
-          page.getByRole("button", { name: "Продолжить", exact: true }),
+          page.getByRole("button", { name: "Дальше: баржа", exact: true }),
         ).toBeInViewport({ ratio: 1 });
         expect(
           await page.evaluate(

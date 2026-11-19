@@ -30,12 +30,19 @@ export function splitTextPages(
       page = "";
     }
     if (fits && !accepts(segment)) {
-      for (const word of segment.match(/\S+\s*|\s+/gu) ?? []) {
-        if (page && !accepts(page + word)) {
-          pages.push(page);
-          page = "";
+      const words = segment.match(/\S+\s*|\s+/gu) ?? [];
+      // Find the longest fitting prefix instead of laying out every word.
+      for (let start = 0; start < words.length;) {
+        let lo = start + 1;
+        let hi = words.length;
+        while (lo < hi) {
+          const mid = Math.ceil((lo + hi) / 2);
+          if (accepts(page + words.slice(start, mid).join(""))) lo = mid;
+          else hi = mid - 1;
         }
-        page += word;
+        page += words.slice(start, lo).join("");
+        start = lo;
+        if (start < words.length) { pages.push(page); page = ""; }
       }
     } else {
       page += segment;
@@ -62,26 +69,14 @@ export function splitTextPages(
         offset += segment.length;
         sentenceEnds.add(offset);
       }
-      let best = left.length;
-      let bestScore = Infinity;
-      for (const match of combined.matchAll(/\s+(?=\S)/gu)) {
-        const split = match.index + match[0].length;
-        const first = combined.slice(0, split);
-        const second = combined.slice(split);
-        if (
-          Math.min(first.trim().length, second.trim().length) <
-          combined.trim().length * 0.28
-        )
-          continue;
-        if (!accepts(first, index - 1) || !accepts(second, index)) continue;
-        const score =
-          Math.abs(first.length - second.length) +
-          (sentenceEnds.has(split) ? 0 : combined.length);
-        if (score < bestScore) {
-          best = split;
-          bestScore = score;
-        }
-      }
+      const splits = Array.from(combined.matchAll(/\s+(?=\S)/gu), m => m.index + m[0].length);
+      const score = (at: number) => Math.abs(2 * at - combined.length) + (sentenceEnds.has(at) ? 0 : combined.length);
+      // Same stable preference as a full scan; stop measuring at its first fit.
+      const best = splits.sort((a, b) => score(a) - score(b)).find(at => {
+        const first = combined.slice(0, at), second = combined.slice(at);
+        return Math.min(first.trim().length, second.trim().length) >= combined.trim().length * 0.28 &&
+          accepts(first, index - 1) && accepts(second, index);
+      }) ?? left.length;
       pages.splice(index - 1, 2, combined.slice(0, best), combined.slice(best));
     }
   }
@@ -178,7 +173,10 @@ export function useTextPages(
       probe.style.cssText = `position:absolute;visibility:hidden;pointer-events:none;width:${width}px;inset:0 auto auto 0;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;`;
       container.append(probe);
       const paragraphGap = parseFloat(computed.getPropertyValue("--reading-paragraph-gap"));
-      const fits = (value: string, pageIndex: number) => {
+      // Reuse heights only within this pass; resize/font changes measure afresh.
+      const measured = new Map<string, number>();
+      const keyFor = (value: string, pageIndex: number) => `${pageIndex === 0 && leadLength > 0}:${value}`;
+      const prepare = (probe: HTMLParagraphElement, value: string, pageIndex: number) => {
         const candidate = preserveWhitespace ? value : value.trim();
         if (pageIndex === 0 && leadLength > 0) {
           const leadingLength = value.length - value.trimStart().length;
@@ -205,15 +203,39 @@ export function useTextPages(
             return span;
           }));
         } else probe.textContent = candidate;
-        return probe.getBoundingClientRect().height <= height;
       };
+      const measure = (value: string, pageIndex: number) => {
+        const key = keyFor(value, pageIndex);
+        const cached = measured.get(key);
+        if (cached !== undefined) return cached;
+        prepare(probe, value, pageIndex);
+        const measuredHeight = probe.getBoundingClientRect().height;
+        measured.set(key, measuredHeight);
+        return measuredHeight;
+      };
+      const measureTogether = (values: string[]) => {
+        const pending = new Map<string, HTMLParagraphElement>();
+        for (const value of values) {
+          const key = keyFor(value, 1);
+          if (measured.has(key) || pending.has(key)) continue;
+          const candidate = probe.cloneNode(false) as HTMLParagraphElement;
+          prepare(candidate, value, 1);
+          pending.set(key, candidate);
+        }
+        // Insert every candidate before reading heights; one layout for this batch.
+        container.append(...pending.values());
+        for (const [key, candidate] of pending) measured.set(key, candidate.getBoundingClientRect().height);
+        for (const candidate of pending.values()) candidate.remove();
+      };
+      // Serialized lh limits can differ from laid-out lines by a fraction of a pixel.
+      const fits = (value: string, pageIndex: number) => measure(value, pageIndex) <= height + 0.5;
       const fitted = capPages
         ? (() => {
           // Results read as at most two sentence-bounded pages (three for long
           // copy). Authored beats keep their own page. Before splitting a
           // sentence, the sheet grows by up to two lines.
           const source = sources.join("\n\n");
-          const tall = (value: string) => (fits(value, 1), probe.getBoundingClientRect().height);
+          const tall = (value: string) => measure(value, 1);
           const lineHeight = parseFloat(computed.lineHeight) || 0;
           // CSS serialization rounds fractional heights; allow subpixels, not half a line.
           const limit = height + 0.5;
@@ -226,6 +248,7 @@ export function useTextPages(
             return false;
           };
           if (keepBlocks) {
+            measureTogether(sources);
             const worst = Math.max(...sources.map(tall));
             return worst <= limit || grow(worst) ? sources : paginateTextBlocks(sources, fits, mergeBlocks);
           }
@@ -234,14 +257,17 @@ export function useTextPages(
           let best = [source];
           let worst = tall(source);
           for (let count = 2; count <= Math.min(3, sentences.length) && worst > limit; count++) {
-            let score = Infinity;
+            const candidates: string[][] = [];
             for (let i = 1; i < sentences.length; i++)
-              for (let j = count > 2 ? i + 1 : sentences.length; j <= sentences.length - (count > 2 ? 1 : 0); j++) {
-                const parts = count > 2 ? [join(0, i), join(i, j), join(j, sentences.length)] : [join(0, i), join(i, sentences.length)];
-                const heights = parts.map(tall);
-                const candidate = Math.max(...heights) * 1000 + Math.max(...heights) - Math.min(...heights);
-                if (candidate < score) [score, best, worst] = [candidate, parts, Math.max(...heights)];
-              }
+              for (let j = count > 2 ? i + 1 : sentences.length; j <= sentences.length - (count > 2 ? 1 : 0); j++)
+                candidates.push(count > 2 ? [join(0, i), join(i, j), join(j, sentences.length)] : [join(0, i), join(i, sentences.length)]);
+            measureTogether(candidates.flat());
+            let score = Infinity;
+            for (const parts of candidates) {
+              const heights = parts.map(tall);
+              const candidate = Math.max(...heights) * 1000 + Math.max(...heights) - Math.min(...heights);
+              if (candidate < score) [score, best, worst] = [candidate, parts, Math.max(...heights)];
+            }
             if (worst > limit && (count === 3 || source.length <= 600) && grow(worst)) return best;
           }
           return worst > limit ? splitTextPages(source, 260, fits) : best;
@@ -257,24 +283,20 @@ export function useTextPages(
           : fitted,
       );
     };
-    paginate();
-    const observer =
-      typeof ResizeObserver === "undefined"
-        ? null
-        : new ResizeObserver(paginate);
-    observer?.observe(container);
+    // The first ResizeObserver notification already measures the mounted layout.
+    // Doing it synchronously as well repeats the work inside the click handler.
+    const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(paginate);
+    if (observer) observer.observe(container);
+    else paginate();
     const resultFrame = container.closest('[data-layout="result"]');
     if (resultFrame) observer?.observe(resultFrame);
     const resultPanel = container.closest("[data-sheet-panel]");
     if (resultPanel) observer?.observe(resultPanel);
     window.addEventListener("resize", paginate);
-    let active = true;
-    document.fonts?.ready.then(() => {
-      if (active) paginate();
-    });
+    document.fonts?.addEventListener("loadingdone", paginate);
     return () => {
-      active = false;
       observer?.disconnect();
+      document.fonts?.removeEventListener("loadingdone", paginate);
       window.removeEventListener("resize", paginate);
     };
   }, [text, enabled, fitMaxHeight, keepBlocks, preserveWhitespace, fillSpace, mergeBlocks, leadLength, capPages]);

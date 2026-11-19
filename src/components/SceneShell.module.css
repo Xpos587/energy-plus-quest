@@ -73,10 +73,18 @@
     position: relative; inset: auto; grid-row: 3; align-self: end;
     width: 100%; max-height: min(56dvh, 480px); padding: 14px 16px max(14px, env(safe-area-inset-bottom, 0px));
     border: 0; border-top: 1px solid #dbe7ef; border-radius: 16px 16px 0 0; gap: 10px;
+    /* The card sits inside the scrolling frame: when it has no range of its own, a swipe/wheel on it must scroll the frame. */
+    overscroll-behavior: auto;
   }
   .frame [data-choice-prompt] p, .frame [data-choice-inspection] h3 { font-size: 20px; }
   .frame [aria-label="Условие задания"] [aria-label="Текст условия"] { max-height: 24dvh; }
   .frame [data-carrier-tap-hint] { top: 8px; }
+}
+@media (max-width: 360px) and (orientation: portrait) {
+  /* The stacked actions and truck instruments need more than 56dvh here. */
+  .app[data-scene="carrier"] .frame[data-camera-inspection="true"] [data-choice-inspection] {
+    max-height: calc(100dvh - var(--scene-header-height) - 160px);
+  }
 }
 @media (max-height: 500px) and (orientation: landscape) {
   .app { --scene-header-height: 48px; }

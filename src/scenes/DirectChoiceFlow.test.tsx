@@ -81,7 +81,7 @@ it.each(["helicopter", "rover", "robot", "pipe-carrier"])("last mile previews %s
   expect(host.querySelectorAll('fieldset[aria-label="Изменение показателей"]')).toHaveLength(1);
 });
 
-it("switches last-mile previews through markers, labels and vehicle shapes without cancelling", async () => {
+it("switches last-mile previews through markers and vehicle shapes without cancelling", async () => {
   await act(async () => root.render(<ScenesGame
     context={{ profile: "professional", recipient: "khor", parcel: "boat" }}
     startAt="lastmile"
@@ -91,7 +91,7 @@ it("switches last-mile previews through markers, labels and vehicle shapes witho
       .find(button => /^(Далее|К выбору)$/.test(button.textContent ?? ""));
     await act(async () => next!.click());
   }
-  for (const [kind, id] of [["hotspot", "helicopter"], ["hotspot", "rover"], ["lastmile-label", "robot"], ["lastmile-zone", "pipe-carrier"]]) {
+  for (const [kind, id] of [["hotspot", "helicopter"], ["hotspot", "rover"], ["lastmile-zone", "robot"], ["lastmile-zone", "pipe-carrier"]]) {
     const target = host.querySelector<HTMLElement>(`[data-${kind}="${id}"]`)!;
     if (kind === "hotspot") expect((target as HTMLButtonElement).disabled).toBe(false);
     else expect(target.getAttribute("data-interactive")).toBe("true");

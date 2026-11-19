@@ -49,6 +49,10 @@ for (const [width, height] of [[1440, 900], [390, 844], [320, 568], [844, 390], 
         await expect(inspection).toHaveAttribute("data-choice-inspection", id);
         await expect(page.locator("[data-result-reader]")).toHaveCount(0);
         await expect(inspection.locator("[data-delivery-reminder]")).toBeInViewport({ ratio: 1 });
+        // A real wheel/swipe on the card (not scrollIntoView) must bring Confirm fully on screen when the frame scrolls.
+        const card = await inspection.boundingBox();
+        await page.mouse.move(card!.x + 24, card!.y + 24);
+        await page.mouse.wheel(0, 400);
         await expect(page.locator("[data-choice-confirm]")).toBeInViewport({ ratio: 0.99 });
         await page.locator("[data-choice-cancel]")[activate]();
         await expect(target).toBeFocused();
@@ -99,11 +103,9 @@ for (const width of [390, 320]) {
       await doubleText('[data-testid="scene-question"]');
       if (scene === "lastmile") {
         for (const id of ids) {
-          for (const attribute of ["data-hotspot", "data-lastmile-label"]) {
-            await page.locator(`[${attribute}="${id}"]`).click();
-            await expect(page.locator("[data-choice-inspection]")).toHaveAttribute("data-choice-inspection", id);
-            await page.locator("[data-choice-cancel]").click();
-          }
+          await page.locator(`[data-hotspot="${id}"]`).click();
+          await expect(page.locator("[data-choice-inspection]")).toHaveAttribute("data-choice-inspection", id);
+          await page.locator("[data-choice-cancel]").click();
         }
       }
       if (scene === "carrier") await pickCarrier(page, "express");

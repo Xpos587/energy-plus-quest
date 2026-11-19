@@ -30,7 +30,7 @@ for (const scene of ['compact','inventory','crane','lastmile']) {
     await expect(page.getByRole('button',{name:'Изменить выбор',exact:true})).toBeInViewport({ratio:.99});
     const reading=page.locator('[data-result-reading]');
     await expect.poll(()=>reading.evaluate(e=>e.scrollWidth<=e.clientWidth+1&&e.scrollHeight<=e.clientHeight+1)).toBe(true);
-    const forward=page.getByRole('button',{name:/^(Читать дальше|Продолжить|Завершить)$/});
+    const forward=page.getByRole('button',{name:/^(Читать дальше|Дальше: склад|Дальше: баржа|Дальше: последняя миля|К вручению подарка)$/});
     await expect(forward).toBeInViewport({ratio:0.99});
     await expect.poll(()=>frame.evaluate(e=>e.scrollHeight<=e.clientHeight+1)).toBe(true);
     if(n===0) await page.locator('img').evaluateAll(async imgs=>Promise.all(imgs.map(img=>(img as HTMLImageElement).decode())));
@@ -50,7 +50,7 @@ test('carrier map keeps selection and readable result', async ({page}, info) => 
   await expect(page.locator('[data-choice-confirm]')).toBeInViewport({ratio:.99});
   await page.locator('[data-choice-confirm]').click();
   for(let i=0;i<30;i++) {
-    const next=page.getByRole('button',{name:/^(Читать дальше|Дальше: погрузка|Продолжить)$/});
+    const next=page.getByRole('button',{name:/^(Читать дальше|Дальше: погрузка)$/});
     await expect(next).toBeInViewport({ratio:.99});
     const reading=page.locator('[data-result-reading]');
     await expect.poll(()=>reading.evaluate(e=>e.scrollHeight<=e.clientHeight+1)).toBe(true);

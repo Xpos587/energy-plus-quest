@@ -34,12 +34,12 @@ test('barge story pages fit and continue to lastmile only after the final page',
     await expect.poll(() => reading.evaluate(e => e.scrollHeight <= e.clientHeight + 1 && e.scrollWidth <= e.clientWidth + 1)).toBe(true);
     const forward = page.getByRole('button', { name: 'Читать дальше', exact: true });
     if (!await forward.count()) break;
-    await expect(page.getByRole('button', { name: 'Продолжить', exact: true })).toHaveCount(0);
+    await expect(page.getByRole('button', { name: /^Дальше:/ })).toHaveCount(0);
     await expect(forward).toBeInViewport({ ratio: 1 });
     await forward.click();
   }
   expect(pages).toBeLessThan(30);
-  const next = page.getByRole('button', { name: 'Продолжить', exact: true });
+  const next = page.getByRole('button', { name: 'Дальше: последняя миля', exact: true });
   await expect(next).toBeInViewport({ ratio: 1 });
   await next.click();
   await expect(page.locator('[data-scene="lastmile"]')).toBeVisible();

@@ -32,7 +32,7 @@ for (const parcel of ['socks', 'camera', 'boat'] as const) {
    }
    const normalize=(text:string)=>text.replace(/\s+/g,' ').trim();
    expect(normalize(pages.join(' ')).length).toBeGreaterThan(40);
-   const proceed=page.getByRole('button',{name:'Продолжить',exact:true});
+    const proceed=page.getByRole('button',{name:'Дальше: склад',exact:true});
    await expect(proceed).toBeInViewport({ratio:1});
    await proceed.click();
    await expect(page.locator('[data-scene="inventory"]')).toBeVisible();

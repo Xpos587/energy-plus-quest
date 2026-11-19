@@ -8,8 +8,6 @@ for (const parcel of ['camera', 'socks', 'boat']) {
   for (const id of ['rush', 'petr', 'remote']) {
     test(`${parcel} ${id}: choice, consequence, revise, continue`, async ({ page }, info) => {
       await page.goto(`/scenes.html?scene=crane&parcel=${parcel}&recipient=alva`);
-      const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });
-      for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
       await page.locator('img').evaluateAll(async images => {
         await Promise.all(images.map(image => (image as HTMLImageElement).decode().catch(() => {})));
       });
@@ -21,7 +19,7 @@ for (const parcel of ['camera', 'socks', 'boat']) {
       await expect(page.locator('[data-result-reader]')).toBeVisible();
       await page.locator('[data-outcome-scene="crane"] img').evaluate(async (image: HTMLImageElement) => image.decode());
       const art = page.locator('[data-outcome-scene="crane"] img');
-      await expect(art).toHaveAttribute('src', new RegExp(`barge-v5/outcome-${id}`));
+      await expect(art).toHaveAttribute('src', new RegExp(`barge-v7/outcome-${id}`));
       await page.screenshot({ path: `${captures}/${info.project.name}-${parcel}-${id}.png` });
       await page.getByRole('button', { name: 'Изменить выбор', exact: true }).scrollIntoViewIfNeeded();
       await expect(page.getByRole('button', { name: 'Изменить выбор', exact: true })).toBeInViewport({ ratio: 1 });

@@ -14,12 +14,6 @@
 
 /* Live quay: Blender layers stacked on the plate, in the same px space. */
 .layer { position: absolute; display: block; max-width: none; pointer-events: none; user-select: none; -webkit-user-drag: none; transition: filter 200ms ease-out; }
-.sail, .bob { position: absolute; inset: 0; pointer-events: none; }
-.sail[data-sailing] { will-change: transform; }
-.bob { animation: bob 4.8s ease-in-out infinite; animation-play-state: var(--ambient-motion, running); }
-@keyframes bob { 50% { transform: translateY(.18%); } }
-.smoke { opacity: .92; animation: puff 3.6s ease-in-out infinite; animation-play-state: var(--ambient-motion, running); transform-origin: 30% 100%; }
-@keyframes puff { 50% { transform: translate(1.5%, -2%) scale(1.04); opacity: .8; } }
 div.layer { overflow: hidden; }
 .sheet { position: absolute; left: 0; top: 0; max-width: none; }
 .cable { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
@@ -46,10 +40,6 @@ div.layer { overflow: hidden; }
 }
 .hotspot:disabled { cursor: default; }
 .hotspot:focus-visible { outline: none; }
-.caption { position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 100%); width: max-content; max-width: 150px; padding: 4px 8px; border-radius: 8px; background: #fff; color: #082946; font: 700 13px/1.2 var(--font-brand); box-shadow: 0 1px 5px #04132740; }
-.hotspot:is(:hover, :focus-visible, [aria-pressed="true"]) .caption { background: var(--orange); color: #fff; }
-.stage[data-playing] .caption { display: none; }
-@media (max-width: 600px) { .caption { max-width: 106px; font-size: 12px; } }
 /* Untried actors breathe: a soft white ring that widens and fades, staggered. */
 .ripple {
   fill: #ffffff26;
@@ -67,14 +57,20 @@ div.layer { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   .plane { transition: none !important; }
-  .bob, .smoke, .layer { animation: none !important; }
+  .layer { animation: none !important; }
   .ripple { animation: none; transform: none; opacity: .55; fill: none; }
 }
 
 /* Story overlay for the hand-drawn cast: remote signal, the 3-hour clock, reactions. */
 .overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
-.signal { fill: none; stroke: #ff5500; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 2 16; animation: signal 600ms linear infinite; animation-play-state: var(--ambient-motion, running); filter: drop-shadow(0 0 4px #fff); }
-@keyframes signal { to { stroke-dashoffset: -18; } }
+/* Remote: a blue radio signal in the air, dotted, with rings rising from the ПРУ roof. */
+.signal { fill: none; stroke: #2a9df4; stroke-linecap: round; animation: march 600ms linear infinite; animation-play-state: var(--ambient-motion, running); filter: drop-shadow(0 0 4px #fff); }
+.wave { fill: none; stroke: #2a9df4; stroke-linecap: round; opacity: 0; transform-box: fill-box; transform-origin: 50% 100%; animation: wave 1.5s ease-out infinite; animation-play-state: var(--ambient-motion, running); }
+@keyframes wave { 0% { opacity: .95; transform: scale(.35); } 100% { opacity: 0; transform: scale(1.25); } }
+/* Ground walks: a dotted footpath marching along, one step per 600 ms; the occluder layer sits above. */
+.route { fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: .9; animation: march 600ms linear infinite; animation-play-state: var(--ambient-motion, running); }
+@keyframes march { to { stroke-dashoffset: var(--dash); } }
+@media (prefers-reduced-motion: reduce) { .signal, .route { animation: none; } .wave { animation: none; opacity: .8; } }
 .dial { fill: #fff; stroke: #173c55; stroke-width: 4; }
 .hand { stroke: #173c55; stroke-width: 4; stroke-linecap: round; }
 .badgeText, .tagText { font: 700 20px system-ui, sans-serif; text-anchor: middle; fill: #173c55; paint-order: stroke; stroke: #fff; stroke-width: 5px; }

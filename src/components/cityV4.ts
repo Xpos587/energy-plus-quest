@@ -9,6 +9,7 @@ import {
   depotPill,
   paceFraction,
   rigPin,
+  rigDialOffset,
   sparkle,
 } from "./cityPins";
 import manifest from "./cityV4Manifest.json";
@@ -662,6 +663,7 @@ function drawPart(
   heading: number,
   o: DrawOptions,
   roll = 0,
+  bounds?: number[],
 ) {
   const frames = spec.sprites.trucks[key];
   const unit = o.k / spec.sprites.scale;
@@ -693,7 +695,20 @@ function drawPart(
   ) => {
     const f = frames[k];
     const r = turn(k);
-    cx.setTransform(Math.cos(r), Math.sin(r), -Math.sin(r), Math.cos(r), x, y);
+    const cs = Math.cos(r), sn = Math.sin(r);
+    if (bounds) {
+      // Use the same sprite frame, pivot and rotation as the canvas.
+      const hw = f[2] * unit / 2, hh = f[3] * unit / 2;
+      const u = f[4] * o.k + hw, v = f[5] * o.k + hh;
+      const mx = px + cs * u - sn * v, my = py + sn * u + cs * v;
+      const rx = Math.abs(cs) * hw + Math.abs(sn) * hh;
+      const ry = Math.abs(sn) * hw + Math.abs(cs) * hh;
+      bounds[0] = Math.min(bounds[0], mx - rx);
+      bounds[1] = Math.min(bounds[1], my - ry);
+      bounds[2] = Math.max(bounds[2], mx + rx);
+      bounds[3] = Math.max(bounds[3], my + ry);
+    }
+    cx.setTransform(cs, sn, -sn, cs, x, y);
     cx.drawImage(
       atlas,
       f[0],
@@ -809,8 +824,9 @@ function drawArticulated(
   id: MapCarrierId,
   g: Rig,
   o: DrawOptions,
-  shake: Shake = NO_SHAKE,
-  motion?: Motion,
+  shake: Shake,
+  motion: Motion | undefined,
+  bounds: number[],
 ) {
   const at = project(o.plate, g.kingpin[0], g.kingpin[1]);
   // Plate px per shake metre, never under 4 CSS px so the rattle still reads
@@ -844,7 +860,7 @@ function drawArticulated(
   ]);
   contactShadow(c, trlAt, g.trailer, lh, o, spec.mpp);
   contactShadow(c, cabAt, g.tractor, th, o, spec.mpp);
-  drawPart(c, atlas, spec, `${id}-chassis`, kp, g.tractor, o);
+  drawPart(c, atlas, spec, `${id}-chassis`, kp, g.tractor, o, 0, bounds);
   let exhaust: Pt = kp;
   const cab = () => {
     exhaust = drawPart(
@@ -856,6 +872,7 @@ function drawArticulated(
       g.tractor,
       o,
       shake.cab[2],
+      bounds,
     );
   };
   const trailer = () =>
@@ -868,6 +885,7 @@ function drawArticulated(
       g.trailer,
       o,
       shake.trailer[2],
+      bounds,
     );
   // Cab and trailer meet at the kingpin, so the one whose far end is lower
   // on screen (nearer the viewer) covers the hitch. Switching only on the
@@ -1197,7 +1215,9 @@ export function drawCity(
     }))
     .sort((a, b) => a.at[1] - b.at[1]);
   const exhausts: Partial<Record<MapCarrierId, Pt>> = {};
-  for (const { id } of order) {
+  const bodies = rigs.map(() => [Infinity, Infinity, -Infinity, -Infinity]);
+  const dials: (Pt | undefined)[] = [];
+  for (const { id, i } of order) {
     const dim = !!focus && focus !== id;
     c.globalAlpha = dim ? 0.5 : 1;
     const shake = id === "old4" && !o.reduced ? rattle(time) : NO_SHAKE;
@@ -1206,10 +1226,11 @@ export function drawCity(
       atlas,
       spec,
       id,
-      rigs[mapCarrierIds.indexOf(id)],
+      rigs[i],
       o,
       shake,
-      motions[mapCarrierIds.indexOf(id)],
+      motions[i],
+      bodies[i],
     );
   }
   c.globalAlpha = 1;
@@ -1312,12 +1333,16 @@ export function drawCity(
           paceFraction(id) *
           4.2;
       // Rig gauges run a little larger than the other pins (Grisha, 09.11).
+      const x = Math.round(sx + (r ? r[0] * 4 : 0));
+      const y = Math.round(sy - 2 * o.pinScale + (r ? r[1] * 4 : 0));
+      const scale = o.pinScale * 1.18;
+      dials[index] = [x, y - rigDialOffset * scale];
       rigPin(
         c,
         id,
-        sx + (r ? r[0] * 4 : 0),
-        sy - 2 * o.pinScale + (r ? r[1] * 4 : 0),
-        o.pinScale * 1.18,
+        x,
+        y,
+        scale,
         live + (r ? r[2] * 4 + Math.sin(time * 23) * 0.06 : 0),
         glowAt,
       );
@@ -1350,4 +1375,5 @@ export function drawCity(
     );
   }
   c.restore();
+  return { bodies, dials };
 }

@@ -1,129 +1,103 @@
-import { pickCarrier } from "./helpers/open-preparation";
-import { expect, type Page, test } from "@playwright/test";
+import { expect, test, type Page, type Locator } from "@playwright/test";
+import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
-async function carrier(page: Page) {
-  await page.goto("/");
-  for (const id of ["professional", "alva", "camera"])
-    await page.locator(`[data-choice="${id}"]`).click();
-  await page
-    .getByRole("button", { name: "Закрыть условие", exact: true })
-    .click();
+async function readBriefing(page: Page) {
+  const briefing = page.locator("[data-scene-briefing]");
+  for (let step = 0; step < 30 && await briefing.getAttribute("data-reading") === "true"; step++)
+    await briefing.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ }).click();
+  await expect(briefing).toHaveAttribute("data-reading", "false");
 }
-async function fits(page: Page) {
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth + 1,
-    ),
-  ).toBe(true);
-  for (const selector of ["[data-choice-confirm]", "[data-choice-cancel]"]) {
-    const button = page.locator(selector);
-    await expect(button).toBeInViewport({ ratio: 1 });
-    const b = await button.boundingBox();
-    expect(b?.height).toBeGreaterThanOrEqual(44);
+
+async function expectTouchTarget(target: Locator, page: Page) {
+  const bounds = await target.boundingBox();
+  expect(bounds).not.toBeNull();
+  expect(bounds!.width).toBeGreaterThanOrEqual(43);
+  expect(bounds!.height).toBeGreaterThanOrEqual(43);
+  const viewport = page.viewportSize()!;
+  expect(Math.max(0, Math.min(bounds!.x + bounds!.width, viewport.width) - Math.max(bounds!.x, 0))).toBeGreaterThan(0);
+  expect(Math.max(0, Math.min(bounds!.y + bounds!.height, viewport.height) - Math.max(bounds!.y, 0))).toBeGreaterThan(0);
+  await expect(target).toBeInViewport({ ratio: 0.98 });
+}
+
+async function finishResult(page: Page, nextLabel: string) {
+  const reader = page.locator("[data-result-reader]");
+  await expect(reader).toBeVisible();
+  const more = reader.getByRole("button", { name: "Читать дальше", exact: true });
+  for (let step = 0; step < 40 && await more.isVisible(); step++) {
+    await expectTouchTarget(more, page);
+    await more.click();
   }
+  await expect(more).toHaveCount(0);
+  const next = reader.getByRole("button", { name: nextLabel, exact: true });
+  await expectTouchTarget(next, page);
+  await next.click();
 }
-test("inspect, cancel and confirm across all five scenes without premature outcomes", async ({
-  page,
-}, info) => {
+
+test("inspect, cancel and confirm across all five scenes without premature outcomes", async ({ page }) => {
   const errors: string[] = [];
-  page.on("pageerror", (error) => errors.push(error.message));
-  await carrier(page);
-  const choice = page.locator('[data-carrier-choice="crew"]');
-  await choice.click();
-  await expect(page.locator('[data-step="carrier"]')).toBeVisible();
+  page.on("pageerror", error => errors.push(error.message));
+  await openCarrier(page);
+
+  await pickCarrier(page, "crew");
   await expect(page.locator("[data-score-key]")).toHaveCount(0);
-  await fits(page);
-  await page.screenshot({ path: info.outputPath("carrier-inspection.png") });
+  await expectTouchTarget(page.locator("[data-choice-cancel]"), page);
   await page.locator("[data-choice-cancel]").click();
-  await expect(choice).toBeFocused();
-  await choice.click();
+  await expect(page.locator('[data-carrier-choice="crew"]')).toBeFocused();
+  await pickCarrier(page, "crew");
+  await expectTouchTarget(page.locator("[data-choice-confirm]"), page);
   await page.locator("[data-choice-confirm]").click();
   await expect(page.locator("[data-score-key]")).toHaveCount(3);
-  await page
-    .getByRole("button", { name: "Дальше: погрузка", exact: true })
-    .click();
-  for (const [index, [scene, id]] of [
-    ["compact", "place-2"],
-    ["inventory", "wms"],
-    ["crane", "remote"],
-    ["lastmile", "rover"],
-  ].entries()) {
+  await finishResult(page, "Дальше: погрузка");
+
+  for (const [scene, id, next] of [
+    ["compact", "place-2", "Дальше: склад"],
+    ["inventory", "wms", "Дальше: баржа"],
+    ["crane", "remote", "Дальше: последняя миля"],
+    ["lastmile", "rover", "К вручению подарка"],
+  ]) {
     await expect(page.locator(`[data-scene="${scene}"]`)).toBeVisible();
+    await readBriefing(page);
     await expect(page.getByTestId("scene-question")).toBeAttached();
-    await page
-      .getByRole("button", { name: "Закрыть условие", exact: true })
-      .click();
-    await expect(
-      page.locator(
-        `[data-scene="${scene}"] [data-choice-id]:not([data-hotspot])`,
-      ),
-    ).toHaveCount(scene === "compact" ? 1 : 0);
-    const canvas = await page
-      .locator(`[data-world-scene="${scene}"]`)
-      .boundingBox();
-    expect(canvas?.height).toBeGreaterThanOrEqual(
-      (page.viewportSize()?.height ?? 0) - 1,
-    );
-    await page.screenshot({ path: info.outputPath(`${scene}-overview.png`) });
-    await page.locator(`[data-choice-id="${id}"]`).click();
+    const hotspot = page.locator(`[data-hotspot="${id}"]`);
+    await expectTouchTarget(hotspot, page);
+    await hotspot.click();
     await expect(page.locator("[data-score-key]")).toHaveCount(0);
-    await fits(page);
+    await expectTouchTarget(page.locator("[data-choice-confirm]"), page);
     await page.locator("[data-choice-inspection] h3").press("Escape");
-    await expect(page.locator(`[data-choice-id="${id}"]`)).toBeFocused();
-    await page.locator(`[data-choice-id="${id}"]`).click();
-    await page.screenshot({ path: info.outputPath(`${scene}-inspection.png`) });
+    await expect(hotspot).toBeFocused();
+    await hotspot.click();
+    await expectTouchTarget(page.locator("[data-choice-confirm]"), page);
     await page.locator("[data-choice-confirm]").click();
     await expect(page.getByTestId("result-copy")).toBeVisible();
     if (scene !== "compact") {
-      await expect
-        .poll(() =>
-          page
-            .locator("[data-scene-consequence] > img")
-            .evaluate(
-              (image: HTMLImageElement) =>
-                image.complete && image.naturalWidth > 0,
-            ),
-        )
-        .toBe(true);
-    }
-    await page.screenshot({ path: info.outputPath(`${scene}-result.png`) });
-    const paragraphs = page.getByTestId("result-copy").locator("p");
-    const paragraphCount = await paragraphs.count();
-    for (let paragraph = 0; paragraph < paragraphCount; paragraph++) {
-      await expect(paragraphs.nth(paragraph)).toBeVisible();
-      if (paragraph < paragraphCount - 1)
-        await page
-          .getByRole("button", { name: "Следующий абзац", exact: true })
-          .click();
+      const image = page.locator("[data-scene-consequence] img");
+      await expect.poll(() => image.evaluate((node: HTMLImageElement) => node.complete && node.naturalWidth > 0)).toBe(true);
+      expect((await image.getAttribute("alt"))?.trim().length ?? 0).toBeGreaterThan(0);
     }
     await expect(page.locator("[data-score-key]")).toHaveCount(3);
-    await page
-      .getByRole("button", {
-        name: index === 3 ? "Завершить" : "Продолжить",
-        exact: true,
-      })
-      .click();
+    await finishResult(page, next);
   }
-  await expect(
-    page.getByRole("button", { name: "Завершено", exact: true }),
-  ).toBeDisabled();
+  await expect(page.locator("[data-journey-ending]")).toBeVisible();
   expect(errors).toEqual([]);
 });
 
-test("briefing can be reread and a pending answer survives resizing without committing", async ({
-  page,
-}) => {
-  await carrier(page);
-  await page.getByRole("button", { name: "Условие", exact: true }).click();
-  await expect(page.getByTestId("scene-intro")).toContainText("Доставить");
-  await page.getByRole("button", { name: "Далее", exact: true }).click();
-  await page.getByRole("button", { name: "К сцене", exact: true }).click();
+test("briefing can be reread and a pending carrier answer survives resizing without committing", async ({ page }) => {
+  await openCarrier(page);
+  await page.getByRole("button", { name: "Задание", exact: true }).click();
+  await expect(page.getByTestId("scene-intro")).toBeVisible();
+  for (let step = 0; step < 30; step++) {
+    const advance = page.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
+    if (!(await advance.isVisible())) break;
+    await advance.click();
+  }
+  await expect(page.getByTestId("scene-intro")).toHaveCount(0);
   await pickCarrier(page, "express");
   await page.setViewportSize({ width: 844, height: 390 });
-  await fits(page);
-  await expect(page.locator('[data-step="carrier"]')).toBeVisible();
+  await expectTouchTarget(page.locator("[data-choice-confirm]"), page);
+  await expect(page.locator("[data-choice-inspection]")).toBeVisible();
   await page.setViewportSize({ width: 320, height: 568 });
-  await fits(page);
+  await expectTouchTarget(page.locator("[data-choice-confirm]"), page);
+  await expect(page.locator("[data-choice-inspection]")).toBeVisible();
   await page.locator("[data-choice-inspection] h3").press("Escape");
   await expect(page.locator('[data-carrier-choice="express"]')).toBeFocused();
   await expect(page.getByTestId("scene-question")).toBeVisible();

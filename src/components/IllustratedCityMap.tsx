@@ -18,7 +18,6 @@ import {
   plates,
   stepTraffic,
   trafficFrame,
-  trafficPoses,
 } from "./cityV4";
 import styles from "./IllustratedCityMap.module.css";
 import { useAmbientMotion } from "./useAmbientMotion";
@@ -181,7 +180,7 @@ export function IllustratedCityMap({
       const autoFlip = tail + 232 * pinScale > view.right - 4;
       const pick = surface.querySelector<HTMLElement>("[data-map-autopick]");
       if (pick) pick.toggleAttribute("data-flip", autoFlip);
-      drawCity(context, traffic.current, atlas, smoke, {
+      const { bodies, dials } = drawCity(context, traffic.current, atlas, smoke, {
         plate: name,
         reduced: stopped,
         k,
@@ -195,21 +194,29 @@ export function IllustratedCityMap({
         pinScale,
         autoFlip,
       });
-      const poses = trafficPoses(traffic.current);
-      trafficFrame(traffic.current, name).forEach(([x, y], index) => {
-        const target = targets.current[index];
-        if (target) {
-          // Screen heading of the rig: project its world direction.
-          const p = poses[index];
-          const [a, b] = plates[name].proj;
-          const dx = a[0] * Math.cos(p.heading) + a[1] * Math.sin(p.heading);
-          const dy = b[0] * Math.cos(p.heading) + b[1] * Math.sin(p.heading);
-          target.style.left = `${x * 100}%`;
-          target.style.top = `${y * 100}%`;
-          target.style.transform = `translate(-50%, -50%) rotate(${Math.atan2(dy, dx)}rad)`;
+      const unit = 100 / box.width;
+      const [plateW, plateH] = plates[name].res;
+      const pickIndex = mapCarrierIds.findIndex(id => id === selected.current);
+      if (pickIndex >= 0) {
+        const [x, y] = frameAt()[pickIndex];
+        camera.current.track({ x, y }, false);
+      }
+      targets.current.forEach((target, index) => {
+        const body = bodies[index];
+        if (!target || !body || !Number.isFinite(body[0])) return;
+        const [left, top, right, bottom] = body.map(p => p / dpr);
+        const x = (left + right) / 2, y = (top + bottom) / 2;
+        target.style.left = `${(x - (box.left - view.left)) * unit}%`;
+        target.style.top = `${(y - (box.top - view.top)) * unit * plateW / plateH}%`;
+        target.style.setProperty("--truck-width", `${(right - left) * unit}cqw`);
+        target.style.setProperty("--truck-height", `${(bottom - top) * unit}cqw`);
+        const dial = target.firstElementChild as HTMLElement;
+        const point = dials[index];
+        dial.hidden = !point;
+        if (point) {
+          dial.style.left = `calc(50% + ${(point[0] - x) * unit}cqw)`;
+          dial.style.top = `calc(50% + ${(point[1] - y) * unit}cqw)`;
         }
-        if (mapCarrierIds[index] === selected.current)
-          camera.current.track({ x, y }, false);
       });
     };
     const schedule = () => {
@@ -326,17 +333,16 @@ export function IllustratedCityMap({
                 style={{
                   left: `${frameAt()[index][0] * 100}%`,
                   top: `${frameAt()[index][1] * 100}%`,
-                  transform: "translate(-50%, -50%)",
-                  // A rig is ~21 m long and ~4.5 m wide in plate metres.
-                  width: `max(calc(44px / var(--map-zoom, 1)), ${(22 / plates[plate].mpp / plates[plate].res[0]) * 100}cqw)`,
-                  height: `max(calc(36px / var(--map-zoom, 1)), ${(9 / plates[plate].mpp / plates[plate].res[0]) * 100}cqw)`,
+
                 }}
                 aria-label={`Рассмотреть: ${carrierFacts[id].label}`}
                 aria-pressed={selectedId === id}
                 onClick={() => {
                   onSelect(id);
                 }}
-              />
+              >
+                <span className={styles.dialTarget} aria-hidden="true" hidden />
+              </button>
             ))}
           <button
             type="button"

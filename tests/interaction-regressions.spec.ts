@@ -124,9 +124,13 @@ for (const [width, height] of [
         name:
           scene === "carrier"
             ? "Дальше: погрузка"
-            : scene === "lastmile"
-              ? "Завершить"
-              : "Продолжить",
+            : scene === "compact"
+              ? "Дальше: склад"
+              : scene === "inventory"
+                ? "Дальше: баржа"
+                : scene === "crane"
+                  ? "Дальше: последняя миля"
+                  : "К вручению подарка",
         exact: true,
       });
       await expect(next).toBeInViewport({ ratio: 1 });

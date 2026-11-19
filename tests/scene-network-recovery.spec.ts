@@ -6,9 +6,9 @@ const stages = [
   {
     id: "crane",
     choice: "remote",
-    pattern: /barge-v5\/(wide|desk|mid|tall)\/plate/,
+    pattern: /barge-v7\/(wide|desk|mid|tall)\/plate/,
   },
-  { id: "lastmile", choice: "rover", pattern: /lastmile-r5\/choice/ },
+  { id: "lastmile", choice: "rover", pattern: /lastmile-family-v1\/revision-25\/choice/ },
 ] as const;
 
 async function briefing(page: Page) {
@@ -231,11 +231,7 @@ for (const [index, scene] of stages.entries()) {
       await expect(target).toBeFocused();
       await page.keyboard.press("Enter");
       await expect(
-        page.locator(
-          scene.id === "lastmile"
-            ? "[data-result-reader]"
-            : "[data-choice-inspection]",
-        ),
+        page.locator("[data-choice-inspection]"),
       ).toBeVisible();
       expect(errors).toEqual([]);
     } finally {

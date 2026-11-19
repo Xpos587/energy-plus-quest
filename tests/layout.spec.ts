@@ -20,7 +20,7 @@ for (const viewport of [
         ),
       ).toBe(true);
     await noHorizontalOverflow();
-    for (const choice of await page.locator("[data-scene-choice]").all()) {
+    for (const choice of await page.locator("[data-carrier-choice]").all()) {
       await choice.scrollIntoViewIfNeeded();
       await expect(choice).toBeInViewport({ ratio: 0.98 });
       expect((await choice.boundingBox())?.height).toBeGreaterThanOrEqual(44);
@@ -36,9 +36,7 @@ for (const viewport of [
     await expect(page.locator('[data-outcome-art="crew"]')).toBeVisible();
     await expect(page.locator("[data-score-key]")).toHaveCount(3);
 
-    await page
-      .getByRole("button", { name: "Загрузить подарок в фуру" })
-      .click();
+    await page.getByRole("button", { name: "Дальше: погрузка" }).click();
     await expect(page.locator('[data-scene="compact"]')).toBeVisible();
     await expect(page.getByTestId("scene-question")).toContainText("лодку");
     await noHorizontalOverflow();
@@ -56,9 +54,7 @@ test("parcel and recipient names stay grammatical in the next decision", async (
     await openCarrier(page, "professional", recipient, parcel);
     await pickCarrier(page, "crew");
     await page.locator("[data-choice-confirm]").click();
-    await page
-      .getByRole("button", { name: "Загрузить подарок в фуру" })
-      .click();
+    await page.getByRole("button", { name: "Дальше: погрузка" }).click();
     const question = page.getByTestId("scene-question");
     await expect(question).toContainText(expected);
     await expect(question).not.toContainText(

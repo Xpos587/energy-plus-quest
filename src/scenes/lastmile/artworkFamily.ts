@@ -1,44 +1,40 @@
 import type { SceneContext } from '../types';
 
-export const lastmileRevision = 'scene-art/lastmile-family-v1/revision-2';
-// revision-5: Mi-8 livery (orange body, black engine housing, five-blade rotor) per the technical reference.
-// revision-13: revision-5 flight and revision-2 pipe-carrier outpainted to 1672x2200 (design/scene-05/fill)
-// so near-square desktop rails and portrait/landscape phones are covered without bands or cut subjects.
-const lastmileTallRevision = 'scene-art/lastmile-family-v1/revision-13';
 // revision-18: flight screens with the Mi-8 repainted to the client reference livery (black upper half, orange lower,
 // small white nose patch); cargo door, sling and load unchanged (design/scene-05/swamp-2026-11-10/finish_flight.py).
 const lastmileFlightRevision = 'scene-art/lastmile-family-v1/revision-18';
+// revision-21: tundra flight (parcel/boat), one pipe-carrier plate and a calmer rover-boat, approved 18.11.
+// ponytail: Arseniy keeps revision-18 flights (worker on the ground) until tundra variants exist.
+const lastmileTundraRevision = 'scene-art/lastmile-family-v1/revision-21';
+// revision-22: revision-21 flights with the white «3» on the Mi-8 nose and a regenerated rover-boat (.tmp-work/s5-r22).
+const lastmileRevision22 = 'scene-art/lastmile-family-v1/revision-22';
 
-// revision-18: revision-17 map plus a bog that interrupts the muddy trail (finish_trail.py).
-// revision-17: revision-12 map with a smaller river, big swamp, brighter АБК and the Mi-8 livery copied from the client reference (black upper half, orange lower) (design/scene-05/swamp-2026-11-10).
-// revision-12: revision-11 map (v9 opening route style, reference vehicles, 2x) colour-graded per call 05.11:
-// red/yellow foliage muted outside the vehicles, АБК roof and trim back to blue. Geometry is pixel-identical.
-// lastmile-r5: R5-05e (v16) Blender layout painted in the scene-4 soft painterly style (gpt16): vehicles grouped round the
-// helideck, peat bog from the pad to the river with a churned rut, camp across the river (scripts/lastmile-r5); one plate for both recipients.
+// Revision 25 repaints the same v29 layout, with revised vehicles and flooded ruts.
 export function lastmileChoiceImage(format: 'wide' | 'tall', _recipient?: SceneContext['recipient']) {
-  return `scene-art/lastmile-r5/choice-${format}.webp`;
+  return `scene-art/lastmile-family-v1/revision-25/choice-${format}.webp`;
 }
 
 export function lastmileFlightImage(context: SceneContext) {
   const gift = context.parcel === 'boat' ? 'boat' : 'parcel';
-  const destination = context.recipient === 'arseniy' ? '-arseniy' : '';
-  return `${lastmileFlightRevision}/flight-${gift}${destination}-tall.webp`;
+  if (context.recipient === 'arseniy') return `${lastmileFlightRevision}/flight-${gift}-arseniy-tall.webp`;
+  return `${lastmileRevision22}/flight-${gift}-tall.webp`;
 }
+
+// revision-19: sunny closeups approved 16.11 (rover, ground helicopter, robot) on the R5 bog/tundra; one rover plate for all recipients.
+const lastmileOutcomeRevision = 'scene-art/lastmile-family-v1/revision-19';
 
 export function lastmileOutcomeImage(option: string, context: SceneContext) {
   const boat = context.parcel === 'boat';
   switch (option) {
     case 'rover':
-      return `${lastmileRevision}/rover-${boat ? 'boat' : 'parcel'}-${context.recipient}.webp`;
+      return boat ? `${lastmileRevision22}/rover-boat.webp` : `${lastmileOutcomeRevision}/rover-parcel.webp`;
     case 'pipe-carrier':
-      return `${lastmileTallRevision}/pipe-carrier-${context.recipient}-tall.webp`;
+      return `${lastmileTundraRevision}/pipe-carrier-tall.webp`;
     case 'helicopter':
       if (context.recipient === 'arseniy') return lastmileFlightImage(context);
-      return `scene-art/lastmile-family-v1/${context.recipient === 'khor'
-        ? boat ? 'helicopter-ground-khor-boat-v6.webp' : 'helicopter-ground-khor-parcel-v6.webp'
-        : boat ? 'helicopter-ground-boat-final-v5.webp' : 'helicopter-ground-alva-parcel-v6.webp'}`;
+      return `${lastmileOutcomeRevision}/ground-${context.recipient === 'khor' ? 'khor-' : boat ? '' : 'alva-'}${boat ? 'boat' : 'parcel'}.webp`;
     case 'robot':
-      return `scene-art/lastmile-family-v1/${boat ? 'robot-boat-result-v3.webp' : 'robot-parcel-result-v1.webp'}`;
+      return `${lastmileOutcomeRevision}/robot-${boat ? 'boat' : 'parcel'}.webp`;
     default:
       return undefined;
   }

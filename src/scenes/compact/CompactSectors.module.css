@@ -227,7 +227,7 @@
   }
 }
 .failurePicture, .failureImage { display: block; width: 100%; height: 100%; }
-.failureImage { object-fit: cover; }
+.failureImage { object-fit: contain; background: #e4eef2; }
 @media (max-width: 900px) and (orientation: portrait) {
   :global([data-scene="compact"] [data-layout="result"]:has([data-failure-art="boat-place-3"])) {
     grid-template-rows: calc(100vw * 1024 / 1536) minmax(0, 1fr) !important;

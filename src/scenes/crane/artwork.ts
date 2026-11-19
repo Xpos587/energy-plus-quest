@@ -1,7 +1,9 @@
-/** Barge scene v4: one Blender quay rendered as layers per screen format (see design/scene-04/blender-v4). */
+/** Barge scene v7: the Blender quay (design/scene-04/blender-v6) painted per format (design/scene-04/stylized-v7), as layers.
+ * Crane swap (call 17.11): the empty loading crane stands far right by the barge, Petr waits by his crates next to it. */
 import { craneLayers, craneWorld } from "./layers";
 
-const base = "scene-art/barge-v5";
+// Result stills: live v7 painted quay captured by scripts/capture-barge-outcomes.mjs.
+const outcomeBase = "scene-art/barge-v7";
 
 export type Rect = { x: number; y: number; width: number; height: number };
 export type CraneFormat = keyof typeof craneLayers;
@@ -40,9 +42,6 @@ function format(name: CraneFormat) {
     ...corners(sp.far), ...corners(sp.barge)];
   const tall = name === "tall";
   const pad = (r: { x: number; y: number; w: number; h: number }, d: number) => ({ x: r.x - d, y: r.y - d, w: r.w + 2 * d, h: r.h + 2 * d });
-  // A crane cab is about 7 m across; z px per metre is the vertical affine term.
-  const m = Math.abs(layer.affine[1][2]);
-  const cab = ([x, y]: Point) => ({ x: x - 3.5 * m, y: y - 3.5 * m, w: 7 * m, h: 7 * m });
   return {
     ...layer,
     project,
@@ -50,11 +49,11 @@ function format(name: CraneFormat) {
     focus: around(story, tall ? 40 : 24, width, height),
     // Air around the story inside focus; the camera may crop into it to fill the screen.
     focusPad: tall ? 40 : 24,
-    // Tap targets are the actors themselves: Ivan's window, the ladder, the empty near cab, Petr's cab.
+    // Tap targets are the actors themselves: Ivan on the ПРУ porch, the barge crane's ladder, Petr by his crates.
     targets: {
       remote: pad(sp.ivan, 14),
       rush: pad(sp.ladder, 10),
-      petr: cab(a.farCabin),
+      petr: pad(sp.far, 10),
     } as Record<string, { x: number; y: number; w: number; h: number }>,
     // What each way uses: these layers light up when the way is picked.
     actors: {
@@ -62,12 +61,17 @@ function format(name: CraneFormat) {
       rush: ["ladder", "near"],
       petr: ["far", "near"],
     } as Record<string, readonly CraneActor[]>,
+    // Reaction bubbles: the tail tip just over the head of whoever reacts (people stand still).
+    emote: {
+      office: [sp.ivan.x + sp.ivan.w * 0.75, sp.ivan.y - 2],
+      far: [sp.far.x + sp.far.w * 0.75, sp.far.y - 2],
+    } as const,
     // Card open on a phone: the camera closes in on the chosen way.
     zoom: tall
       ? ({
           remote: around([a.ivan, a.gift, a.nearCabin, a.deckSpot], 120, width, height),
           rush: around([a.ladderFoot, a.ladderTop, a.nearCabin, a.gift], 140, width, height),
-          petr: around([a.petr, a.farCabin, a.nearCabin, a.deckSpot], 110, width, height),
+          petr: around([a.petr, a.ladderFoot, a.nearCabin, a.deckSpot], 110, width, height),
         } as Partial<Record<string, Rect>>)
       : ({} as Partial<Record<string, Rect>>),
   };
@@ -83,17 +87,17 @@ export { craneWorld };
 
 /** What each way is about: the card eyebrow. */
 export const craneCaptions = {
-  remote: "Иван в офисе ПРУ, за пультом",
-  rush: "Иван поднимается на кран",
-  petr: "Пётр на дальнем кране",
+  remote: "Иван управляет краном из офиса ПРУ",
+  rush: "Иван идёт на дальний кран",
+  petr: "Пётр рядом — поднимается на кран у баржи",
 } as const;
 
 /** Card facts, as the truck card lists speed and year: who, from where, when. */
 export const craneFacts = {
   remote: { who: "Иван", where: "Из офиса ПРУ, с пульта", when: "Сразу", note: "Краном управляют на расстоянии, на кран подниматься не нужно" },
-  rush: { who: "Иван", where: "Из кабины крана", when: "После подъёма", note: "Иван дойдёт до крана и поднимется по лестнице в кабину" },
-  petr: { who: "Пётр", where: "Из кабины ближнего крана", when: "Сразу", note: "У Петра скоро своя погрузка" },
+  rush: { who: "Иван", where: "Из кабины крана", when: "После подъёма", note: "Иван пройдёт весь причал до крана у баржи и поднимется по лестнице в кабину" },
+  petr: { who: "Пётр", where: "Из кабины крана у баржи", when: "Сразу", note: "У Петра скоро своя погрузка" },
 } as const;
 
-export const craneOutcomeImage = (id: string) => `${base}/outcome-${id}.webp`;
+export const craneOutcomeImage = (id: string) => `${outcomeBase}/outcome-${id}.webp`;
 export const craneChoiceImage = craneArtwork.wide.plate;

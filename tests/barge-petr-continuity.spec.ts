@@ -16,11 +16,6 @@ for (const [width, height] of [
       await page.goto(
         `/scenes.html?scene=crane&parcel=${parcel}&recipient=khor`,
       );
-      for (let n = 0; n < 40; n++) {
-        const f = page.getByRole("button", { name: /^(Далее|К выбору)$/ });
-        if (!(await f.isVisible())) break;
-        await f.click();
-      }
       await page.locator('[data-hotspot="petr"]').click();
       await page.locator("[data-choice-confirm]").click();
       await expect(page.locator("[data-result]")).toBeVisible();
@@ -45,7 +40,7 @@ for (const [width, height] of [
         expect(
           await r.evaluate((e) => e.scrollHeight <= e.clientHeight + 1),
         ).toBe(true);
-      for (const label of ["Изменить выбор", "Продолжить"])
+      for (const label of ["Изменить выбор", "Дальше: последняя миля"])
         await expect(
           page.getByRole("button", { name: label, exact: true }),
         ).toBeInViewport({ ratio: 1 });

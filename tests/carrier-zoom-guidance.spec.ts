@@ -17,16 +17,10 @@ test("map teaches zoom once, previews a truck, and returns to the overview", asy
 
   const map = page.locator("[data-map-viewport]");
   const hint = page.locator("[data-map-zoom-hint]");
-  if (info.project.use.hasTouch) {
-    await expect(hint).toBeHidden();
-  } else {
-    await expect(hint).toBeVisible();
-    await expect(hint).toBeInViewport({ ratio: 1 });
-  }
+  await expect(hint).toHaveCSS("display", info.project.use.hasTouch ? "none" : "flex");
+  if (!info.project.use.hasTouch) await expect(hint).toBeInViewport({ ratio: 1 });
   await expect(hint).toContainText(
-    info.project.use.hasTouch
-      ? "Раздвиньте пальцы, чтобы приблизить"
-      : "Прокрутите колёсико, чтобы приблизить",
+    info.project.use.hasTouch ? "Два пальца — масштаб" : "Колёсико — масштаб",
   );
   await page.screenshot({ path: info.outputPath("zoom-hint.png") });
 
@@ -38,7 +32,7 @@ test("map teaches zoom once, previews a truck, and returns to the overview", asy
   await expect(hint).toHaveCount(0);
   const card = page.locator('[data-carrier-inspection="near"]');
   await expect(card).toBeVisible();
-  await expect(card).toContainText("17 км/ч");
+  await expect(card).toContainText("Очень медленно");
   await expect(card).toContainText("2021");
   await expect(page.locator('[data-layout="result"]')).toHaveCount(0);
   const reset = page.getByRole("button", {

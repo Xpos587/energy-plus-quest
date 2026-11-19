@@ -11,11 +11,13 @@ for (const [width, height] of [[320,568],[390,844],[844,390],[1440,900]]) {
       for (const option of ['helicopter','rover','robot','pipe-carrier']) {
         await expect(page.locator('[data-hotspot]')).toHaveCount(4);
         await page.locator(`[data-choice-id="${option}"]:not([data-callout-target])`).click();
+        await page.locator('[data-choice-confirm]').click();   // inspect -> confirm -> result (ScenesGame.tsx)
         for(let n=0;n<12;n++) {
           const image=page.locator('[data-scene-consequence] img');
           await image.evaluate(async(i:HTMLImageElement)=>{await i.decode();await document.fonts.ready;});
           await page.waitForTimeout(200);
           for(const button of await page.locator('[data-result] button').all()) {
+            await button.scrollIntoViewIfNeeded();   // short phones scroll the result sheet to its footer
             const box=await button.boundingBox();
             expect(box,`${option} ${await button.innerText()}`).not.toBeNull();
             expect(box!.y+box!.height,`${option}: ${await button.innerText()} below viewport`).toBeLessThanOrEqual(height+1);

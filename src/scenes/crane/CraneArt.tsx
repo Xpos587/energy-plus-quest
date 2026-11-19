@@ -6,8 +6,7 @@ import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
 import { craneArtwork, craneCaptions, craneWorld, type CraneFormat, type Rect } from "./artwork";
-import { castSrc, craneCast, craneOperatorBoxes } from "./cast";
-import { craneBeat, craneDeckDelta, craneDuration, craneRest, craneSail } from "./consequence";
+import { craneBeat, craneDeckDelta, craneDuration, craneRest } from "./consequence";
 import { craneScene } from "./index";
 import { fitTapTargets } from "./tapTargets";
 import styles from "./CraneArt.module.css";
@@ -76,7 +75,18 @@ function useConsequence(playing: string | undefined, onPlayed: (() => void) | un
 }
 
 const sub = (a: readonly number[], b: readonly number[]) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]] as const;
-const scaleBy = (a: readonly number[], k: number) => [a[0] * k, a[1] * k, a[2] * k] as const;
+
+/** A quay walk with its kinks rounded off (r metres on the ground); a projected quadratic stays a quadratic. */
+function roundedRoute(route: readonly (readonly number[])[], project: (p: readonly number[]) => readonly number[], r = 1.5) {
+  const at = (p: readonly number[]) => project(p).map((v) => v.toFixed(1)).join(" ");
+  const toward = (c: readonly number[], e: readonly number[]) => {
+    const leg = Math.hypot(e[0] - c[0], e[1] - c[1]);
+    const t = Math.min(r, leg / 2) / leg;
+    return [c[0] + (e[0] - c[0]) * t, c[1] + (e[1] - c[1]) * t, c[2]];
+  };
+  const corners = route.slice(1, -1).map((c, i) => ` L${at(toward(c, route[i]))} Q${at(c)} ${at(toward(c, route[i + 2]))}`);
+  return `M${at(route[0])}${corners.join("")} L${at(route[route.length - 1])}`;
+}
 
 export function CraneArt({ context, selectedId, onSelect, showResult, playing, onPlayed, focusedId, onFocusChange }: SceneArtProps) {
   // The rail cards and the quay pins light the same actors.
@@ -128,7 +138,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
     return () => { cancelled = true; };
   // While initially loading, a rail choice can replace cast images. Track source changes,
   // not every position/frame; once revealed, normal animation never blanks the scene.
-  }, [artworkKey, status, beat.office, beat.cab, beat.operator, beat.walker?.pose, beat.lifted, beat.onDeck]);
+  }, [artworkKey, status, beat.lifted, beat.onDeck]);
   const options = craneScene.options(context);
   const litId = playing ?? (interactive ? (hovered ?? selectedId) : undefined);
   // Pointing at an actor lights its outline (scene 5 pattern, nothing is dimmed); untried actors breathe.
@@ -176,12 +186,10 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
     const dy = bx * delta[0] + by * delta[1] + bz * delta[2];
     return { transform: `translate(${(dx / r.w) * 100}%, ${(dy / r.h) * 100}%)` };
   };
-  const sail = scaleBy(craneSail, beat.sail);
   const hookAt = beat.hook ? sub(beat.hook, [craneWorld.gift[0], craneWorld.gift[1], craneWorld.hookAttach]) : undefined;
   const [tipX, tipY] = art.project(craneWorld.tips[beat.frame]);
   const [hookX, hookY] = beat.hook ? art.project(beat.hook) : [0, 0];
   const s = art.sprites;
-  const cast = craneCast[view.format];
   const sheetStyle = {
     width: `${art.top.cols * 100}%`, height: `${art.top.rows * 100}%`,
     transform: `translate(${(-(beat.frame % art.top.cols) / art.top.cols) * 100}%, ${(-Math.floor(beat.frame / art.top.cols) / art.top.rows) * 100}%)`,
@@ -189,18 +197,23 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const anchor = art.anchors;
   // Overlay marks are drawn in drawing px; keep them readable when a big drawing is shrunk to a phone.
   const k = view.width ? Math.max(1, (0.8 * art.width) / view.width) : 1;
-  const emoteAt = { office: [anchor.ivan[0] + 46, anchor.ivan[1] - 52], near: [anchor.nearCabin[0] + 38, anchor.nearCabin[1] - 46], far: [anchor.farCabin[0] - 40, anchor.farCabin[1] - 30] } as const;
-  const walker = cast && beat.walker && (() => {
-    const [x, y] = art.project(beat.walker.at);
-    // ponytail: cartoon figures drawn ~1.8x true scale so they read at quay zoom.
-    const h = 2.4 * 2.3 * Math.abs(art.affine[1][2]);
-    const w = h * (cast.figs[beat.walker.pose] ?? 0.5);
-    return { x: x - w / 2, y: y - h, w, h };
-  })();
+  // Choice marks sized to the people (Grisha: body-wide dashes looked sloppy): a footpath of 0.35 m round dots
+  // every 0.8 m. Zero-length dashes with round caps are always whole dots, even on the rounded corners.
+  const metre = Math.hypot(art.affine[0][0], art.affine[1][0]);
+  const dot = { width: 0.35 * metre * k, step: 0.8 * metre * k };
+  const dotted = { strokeWidth: dot.width, strokeDasharray: `0 ${dot.step}`, ["--dash" as string]: `${-dot.step}` };
+  // Only while choosing: a marching dotted way; after confirming, the crane loading tells the story.
+  const routeId = !playing && (litId === "rush" || litId === "petr") ? litId : undefined;
+  const routePath = routeId && roundedRoute(craneWorld.routes[routeId], art.project);
+  // Remote: a radio signal arcs from the ПРУ roof over both cranes to the barge crane's cab.
+  const showSignal = litId === "remote" && (!playing || beat.signal);
+  const [sx, sy] = [anchor.pru[0], anchor.pru[1] - 2 * metre];
+  const [ex, ey] = [anchor.nearCabin[0], anchor.nearCabin[1] - 2.4 * metre];
+  const lift = 34 * Math.abs(art.affine[1][2]);
   const sprite = (name: keyof typeof s, extra?: { style?: CSSProperties; lit?: boolean; className?: string; data?: string }) => (
     <img
       className={[styles.layer, extra?.className].filter(Boolean).join(" ")}
-      src={source(name === "far" && beat.cab === "empty" ? castSrc(view.format, "far-empty") : s[name].src)}
+      src={source(s[name].src)}
       alt=""
       draggable={false}
       decoding="sync"
@@ -220,7 +233,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       data-barge-art={view.format}
       data-selected={playing ?? selectedId}
       data-playing={playing}
-      data-cast={(cast && playing) ? "" : undefined}
+      data-cast={playing ? "" : undefined}
       data-zoomed={(interactive && !!selectedId) || undefined}
       data-ready={ready || undefined}
       aria-label={craneScene.title}
@@ -235,37 +248,23 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             height={art.height}
             decoding="sync"
             draggable={false}
-            alt="Причал на Оби: Иван за пультом в офисе ПРУ, подарок на поддоне, высокий портальный кран с пустой кабиной и лестницей до неё, баржа с трубами у причала и дальний кран, где сидит Пётр рядом со своими ящиками."
+            alt="Причал на Оби: Иван у офиса ПРУ слева, ближний кран, подарок на тележке, а далеко справа у баржи с трубами — портальный кран с пустой кабиной и лестницей; рядом с ним Пётр у своих ящиков."
           />
         </picture>
-        {/* Remote way: the whole ПРУ building glows, not Ivan inside its glass. */}
-        {cast && <img className={styles.layer} src={source(castSrc(view.format, "office"))} alt="" draggable={false} decoding="sync" data-layer="pru" data-lit={lit.has("ivan") || undefined} style={box(cast.office)} />}
+        {routePath && (
+          <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
+            <path className={styles.route} data-barge-route={routeId} d={routePath}
+              style={{ stroke: routeId === "rush" ? "#FF8A00" : "#2FA84F", ...dotted }} />
+          </svg>
+        )}
+        {/* Everything standing on the quay, over the routes: the walks pass behind cranes, crates and trees. */}
+        <img className={styles.layer} src={source(art.occluder)} alt="" draggable={false} decoding="sync" data-layer="occluder" style={box({ x: 0, y: 0, w: art.width, h: art.height })} />
         {!beat.lifted && !beat.onDeck && sprite("gift")}
-        {/* The office composite already contains Ivan; never add the legacy cutout over his head. */}
-        {!cast && sprite("ivan", { lit: lit.has("ivan") })}
-        {cast && beat.office && (
-          <img className={styles.layer} src={source(castSrc(view.format, `ivan-${beat.office}`))} alt="" draggable={false} decoding="sync" data-layer="office" style={box(cast.window)} />
-        )}
+        {beat.office !== "empty" && sprite("ivan", { lit: lit.has("ivan") })}
         {sprite("ladder", { lit: lit.has("ladder") })}
-        {sprite("far", { lit: lit.has("far") })}
-        <div className={styles.sail} style={move({ w: art.width, h: art.height }, sail)} data-sailing={beat.sail > 0 || undefined}>
-          <div className={styles.bob}>
-            {sprite("barge")}
-            {beat.onDeck && sprite("gift", { style: move(s.gift, craneDeckDelta) })}
-          </div>
-          {sprite("smoke", { className: styles.smoke })}
-        </div>
-        {walker && beat.walker && (
-          <img
-            className={styles.layer}
-            src={source(castSrc(view.format, beat.walker.pose))}
-            alt=""
-            draggable={false}
-            decoding="sync"
-            data-layer="walker"
-            style={{ ...box(walker), transform: beat.walker.flip ? "scaleX(-1)" : undefined }}
-          />
-        )}
+        {beat.cab !== "empty" && sprite("far", { lit: lit.has("far") })}
+        {sprite("barge")}
+        {beat.onDeck && sprite("gift", { style: move(s.gift, craneDeckDelta) })}
         <div className={styles.layer} style={box(art.top)} data-layer="top" data-lit={lit.has("near") || undefined}>
           <img
             className={styles.sheet}
@@ -276,21 +275,21 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             style={sheetStyle}
           />
         </div>
-        {cast && beat.operator && (
-          <div className={styles.layer} style={box(craneOperatorBoxes[view.format])} data-layer="operator">
-            <img className={styles.sheet} src={source(castSrc(view.format, `top-${beat.operator}`))}
-              alt="" draggable={false} decoding="sync" style={sheetStyle} />
-          </div>
-        )}
         {beat.hook && (
           <svg className={styles.cable} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             <line x1={tipX} y1={tipY} x2={hookX} y2={hookY} />
           </svg>
         )}
-        {cast && (beat.signal || beat.emote || beat.later) && (
+        {(showSignal || beat.emote || beat.later) && (
           <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
-            {beat.signal && (
-              <path className={styles.signal} d={`M${anchor.pru[0]} ${anchor.pru[1] - 20} Q${(anchor.pru[0] + anchor.nearCabin[0]) / 2} ${Math.min(anchor.pru[1], anchor.nearCabin[1]) - 170} ${anchor.nearCabin[0]} ${anchor.nearCabin[1] - 24}`} />
+            {showSignal && (
+              <g data-barge-signal>
+                <path className={styles.signal} style={dotted} d={`M${sx} ${sy} Q${(sx + ex) / 2} ${Math.min(sy, ey) - lift} ${ex} ${ey}`} />
+                {[0, 1, 2].map((i) => (
+                  <path key={i} className={styles.wave} style={{ animationDelay: `${i * 0.5}s`, strokeWidth: dot.width }}
+                    d={`M${sx - 3.6 * metre} ${sy - metre} Q${sx} ${sy - 4.8 * metre} ${sx + 3.6 * metre} ${sy - metre}`} />
+                ))}
+              </g>
             )}
             {beat.later && (
               // Petr left his own crates: they wait for the next run, as the result says.
@@ -302,8 +301,9 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
               </g>
             )}
             {beat.emote && (
-              <g transform={`translate(${emoteAt[beat.emote.at][0]} ${emoteAt[beat.emote.at][1]}) scale(${k})`}>
-                <g className={styles.emote} data-barge-emote={beat.emote.kind}>
+              // The bubble tail tip (-4, 16) lands on the anchor over the head.
+              <g transform={`translate(${art.emote[beat.emote.at][0] + 4 * k} ${art.emote[beat.emote.at][1] - 16 * k}) scale(${k})`}>
+                <g className={styles.emote} data-barge-emote={beat.emote.kind} data-barge-emote-at={beat.emote.at}>
                   <path className={styles.bubble} d="M-22 -40 h44 a10 10 0 0 1 10 10 v24 a10 10 0 0 1 -10 10 h-16 l-10 12 l-2 -12 h-16 a10 10 0 0 1 -10 -10 v-24 a10 10 0 0 1 10 -10z" />
                   {beat.emote.kind === "question" ? (
                     <text className={styles.mark} y="-10">?</text>
@@ -359,9 +359,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             // Only keyboard focus lights the actor; the programmatic focus restored after «Изменить выбор» must not (R19).
             onFocus={(event) => { if (event.currentTarget.matches(":focus-visible")) setHovered(option.id); }}
             onBlur={() => setHovered(undefined)}
-          >
-            <span className={styles.caption} data-barge-label={option.id}>{craneCaptions[option.id as keyof typeof craneCaptions]}</span>
-          </button>
+          />
         ))}
       </div>
       <ArtworkLoading status={status} onRetry={() => setAttempt((count) => count + 1)} />

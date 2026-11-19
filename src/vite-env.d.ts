@@ -1,5 +1,8 @@
 /// <reference types="vite/client" />
 
+/** PUBLIC_URL of the published game (scripts/share-pages.ts publicUrl), ends in "/". */
+declare const __PUBLIC_URL__: string;
+
 declare module "virtual:thumbnail-images" {
   const images: Record<string, string>;
   export default images;

@@ -60,22 +60,27 @@ test("downloads the story JPEG and shares the public result page", async ({
   const vk = new URL(
     (await page.getByRole("link", { name: "ВКонтакте", exact: true }).getAttribute("href"))!,
   );
-  expect(vk.searchParams.get("title")).toBe("Я — логистический гик!");
-  expect(vk.searchParams.get("url")).toMatch(/\/r\/(?:student|professional)-efficiency\/$/u);
+  expect(vk.searchParams.get("title")).toBe("Моё звание в игре «Доставляем радость» — «Логистический гик»");
+  expect(vk.searchParams.get("url")).toBe("https://e-plus.media/specprojects/joydelivery/r/student-efficiency/");
+  expect(vk.searchParams.get("image")).toBe("https://e-plus.media/specprojects/joydelivery/r/student-efficiency/card.jpg");
   const telegram = new URL(
     (await page.getByRole("link", { name: "Telegram", exact: true }).getAttribute("href"))!,
   );
   expect(telegram.searchParams.get("url")).toBe(vk.searchParams.get("url"));
+  expect(telegram.searchParams.get("text")).toBe("Моё звание в игре «Доставляем радость» — «Логистический гик». Пройдите игру и узнайте, какой вы логист.");
   const max = new URL(
     (await page.getByRole("link", { name: "MAX", exact: true }).getAttribute("href"))!,
   );
-  expect(max.searchParams.get("text")).toBe(`Я — логистический гик! ${vk.searchParams.get("url")}`);
+  expect(max.searchParams.get("text")).toBe(`${telegram.searchParams.get("text")} ${vk.searchParams.get("url")}`);
 });
 
-test("native sharing sends the JPEG with short first-person copy", async ({
+test("on touch devices each messenger button sends the JPEG with copy and link", async ({
   page,
 }) => {
   await page.addInitScript(() => {
+    const media = window.matchMedia.bind(window);
+    window.matchMedia = (query: string) =>
+      query === "(pointer: coarse)" ? ({ ...media(query), matches: true }) : media(query);
     Object.defineProperty(navigator, "canShare", {
       configurable: true,
       value: () => true,
@@ -87,19 +92,25 @@ test("native sharing sends the JPEG with short first-person copy", async ({
           type: data.files?.[0].type,
           text: data.text,
         };
+        (window as unknown as { calls: number }).calls =
+          ((window as unknown as { calls?: number }).calls ?? 0) + 1;
         throw new DOMException("Cancelled", "AbortError");
       },
     });
   });
   await page.reload();
   await page.getByRole("button", { name: "Поделиться", exact: true }).click();
-  await page.getByRole("button", { name: "Отправить картинку" }).click();
+  for (const name of ["Telegram", "ВКонтакте", "MAX"])
+    await page.getByRole("link", { name, exact: true }).click();
+  expect(await page.evaluate(() => (window as unknown as { calls: number }).calls)).toBe(3);
+  expect(page.context().pages()).toHaveLength(1);
   const shared = await page.evaluate(
     () =>
       (window as unknown as { shared: { type: string; text: string } }).shared,
   );
   expect(shared.type).toBe("image/jpeg");
-  expect(shared.text).toContain("Я — логистический гик!");
+  expect(shared.text).toContain("Моё звание в игре «Доставляем радость» — «Логистический гик».");
+  expect(shared.text).toMatch(/ https:\/\/e-plus\.media\/specprojects\/joydelivery\/r\/student-[a-z]+\/$/u);
   expect(shared.text).not.toContain("Узнайте больше");
   await expect(page.getByRole("alert")).toHaveCount(0);
 });

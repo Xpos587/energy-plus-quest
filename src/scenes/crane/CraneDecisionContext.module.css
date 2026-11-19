@@ -1,4 +1,5 @@
-.context { margin: 0 0 4px; font-size: var(--type-support, 16px); line-height: 1.35; color: #082946; }
+.story { display: grid; gap: 6px; margin: 0 0 4px; }
+.context { margin: 0; font-size: var(--type-support, 16px); line-height: 1.35; color: #082946; }
 .card { display: grid; gap: 16px; min-width: 0; color: #082946; }
 .facts { margin: 0; padding: 0 12px; border: 1px solid #dbe7ef; border-radius: 10px; background: #f6f9fc; font-family: var(--font-brand); }
 .facts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 12px; padding: 12px 0; }

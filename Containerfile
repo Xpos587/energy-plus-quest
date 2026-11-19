@@ -14,7 +14,7 @@ COPY media-artifacts.json ./
 COPY scripts/media-artifacts.ts ./scripts/media-artifacts.ts
 RUN bun scripts/media-artifacts.ts
 
-COPY index.html tsconfig.json vite.config.ts repository-budget.json ./
+COPY index.html tsconfig.json vite.config.ts ./
 COPY public/ ./public/
 COPY src/ ./src/
 COPY scripts/ ./scripts/

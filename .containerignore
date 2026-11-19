@@ -5,7 +5,6 @@
 !index.html
 !tsconfig.json
 !vite.config.ts
-!repository-budget.json
 !media-artifacts.json
 !public/
 !public/**/
@@ -21,6 +20,7 @@
 !docs/
 !docs/**/
 !docs/**/*.json
+!docs/scenario.md
 # Never send credentials, caches or binary masters nested in source directories.
 **/.env
 **/.env.*

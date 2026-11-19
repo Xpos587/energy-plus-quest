@@ -1,87 +1,78 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
+import { openCarrier, pickCarrier } from "../helpers/open-preparation";
 
-test("Back retraces condition then previous result; Continue restarts the condition", async ({
-  page,
-}) => {
+async function finishBriefing(page: Page) {
+  const briefing = page.locator("[data-scene-briefing]");
+  for (let step = 0; step < 30 && await briefing.getAttribute("data-reading") === "true"; step++) {
+    const advance = briefing.getByRole("button", { name: /^(Далее|К выбору|К сцене)$/ });
+    await expect(advance).toBeVisible();
+    await advance.click();
+  }
+  await expect(briefing).toHaveAttribute("data-reading", "false");
+}
+
+async function finishResult(page: Page, label: string) {
+  const more = page.getByRole("button", { name: "Читать дальше", exact: true });
+  for (let step = 0; step < 40 && await more.isVisible(); step++) await more.click();
+  await expect(more).toHaveCount(0);
+  const next = page.getByRole("button", { name: label, exact: true });
+  await expect(next).toBeVisible();
+  await next.click();
+}
+
+async function confirmChoice(page: Page, id: string, label: string) {
+  const hotspot = page.locator(`[data-hotspot="${id}"]`);
+  await expect(hotspot).toBeVisible();
+  await hotspot.click();
+  await expect(page.locator("[data-choice-inspection]")).toBeVisible();
+  await expect(page.locator("[data-result-reader]")).toHaveCount(0);
+  await page.locator("[data-choice-confirm]").click();
+  await expect(page.locator("[data-result-reader]")).toBeVisible();
+  const resultText = await page.locator("[data-result-reading]").innerText();
+  const scores = await page.locator("[data-score-key]").allTextContents();
+  expect(scores).toHaveLength(3);
+  await finishResult(page, label);
+  return { resultText, scores };
+}
+
+test("current briefing, persistence and back navigation preserve previous results", async ({ page }) => {
   test.setTimeout(60_000);
   const errors: string[] = [];
-  page.on("pageerror", (error) => errors.push(error.message));
-  await page.goto("/");
-  for (const id of ["professional", "alva", "camera"])
-    await page.locator(`[data-choice="${id}"]`).click();
-  const read = async () => {
-    for (let step = 0; step < 30; step++) {
-      if (!(await page.getByTestId("scene-intro").isVisible())) break;
-      await page.getByRole("button", { name: /^(Далее|К выбору)$/ }).click();
-    }
-    await expect(page.getByTestId("scene-intro")).toHaveCount(0);
-    await page.locator("[data-pan-viewport]").dispatchEvent("scene-pan-start");
-  };
-  const confirm = async (id: string) => {
-    await page.locator(`[data-hotspot="${id}"]`).scrollIntoViewIfNeeded();
-    await page.locator(`[data-hotspot="${id}"]`).click();
-    await page.locator("[data-choice-confirm]").click();
-    await expect(page.locator("[data-result]")).toBeVisible();
-    await page.getByRole("button", { name: "Продолжить", exact: true }).click();
-  };
-  await read();
-  await page.locator('[data-carrier-choice="near"]').click();
+  page.on("pageerror", error => errors.push(error.message));
+  await openCarrier(page, "professional", "alva", "camera");
+  await finishBriefing(page);
+  await pickCarrier(page, "near");
   await page.locator("[data-choice-confirm]").click();
-  const carrierScores = await page
-    .locator("[data-score-key]")
-    .allTextContents();
-  await page
-    .getByRole("button", { name: "Дальше: погрузка", exact: true })
-    .click();
-  const compactFirst = await page.getByTestId("scene-intro").textContent();
-  await read();
-  await page.getByRole("button", { name: "Назад", exact: true }).click();
-  await expect(page.getByTestId("scene-intro")).toHaveText(compactFirst!);
-  await page.getByRole("button", { name: "Назад", exact: true }).click();
-  await expect(
-    page.locator('[data-layout="result"][data-carrier="near"]'),
-  ).toBeVisible();
-  expect(await page.locator("[data-score-key]").allTextContents()).toEqual(
-    carrierScores,
-  );
-  await page
-    .getByRole("button", { name: "Дальше: погрузка", exact: true })
-    .click();
-  await expect(page.getByTestId("scene-intro")).toHaveText(compactFirst!);
-  await read();
-  await confirm("place-3");
-  for (const [scene, previous, option] of [
-    ["inventory", "compact", "wms"],
-    ["crane", "inventory", "remote"],
-    ["lastmile", "crane", "robot"],
-  ]) {
-    await expect(page.locator(`[data-scene="${scene}"]`)).toBeVisible();
-    const firstPart = await page.getByTestId("scene-intro").textContent();
-    if (scene === "crane") {
-      await page.getByRole("button", { name: "Далее", exact: true }).click();
-      const secondPart = await page.getByTestId("scene-intro").textContent();
-      await page.reload();
-      await expect(page.getByTestId("scene-intro")).toHaveText(secondPart!);
-      await page.getByRole("button", { name: "Назад", exact: true }).click();
-      await expect(page.getByTestId("scene-intro")).toHaveText(firstPart!);
-    }
-    await read();
-    await page.reload();
-    await expect(page.getByTestId("scene-intro")).toHaveCount(0);
-    await page.getByRole("button", { name: "Назад", exact: true }).click();
-    await expect(page.getByTestId("scene-intro")).toBeVisible();
-    await expect(page.getByTestId("scene-intro")).toHaveText(firstPart!);
-    await expect(page.locator(`[data-scene="${scene}"]`)).toBeVisible();
-    await page.getByRole("button", { name: "Назад", exact: true }).click();
-    await expect(
-      page.locator(`[data-scene="${previous}"] [data-result]`),
-    ).toBeVisible();
-    await page.getByRole("button", { name: "Продолжить", exact: true }).click();
-    await expect(page.getByTestId("scene-intro")).toBeVisible();
-    await expect(page.getByTestId("scene-intro")).toHaveText(firstPart!);
-    await expect(page.locator("[data-hotspot]").first()).toBeHidden();
-    await read();
-    if (scene !== "lastmile") await confirm(option);
-  }
+  const carrierScores = await page.locator("[data-score-key]").allTextContents();
+  await finishResult(page, "Дальше: погрузка");
+
+  const compactQuestion = page.locator('[data-scene="compact"] [data-testid="scene-question"]');
+  await expect(compactQuestion).toBeVisible();
+  await expect(page.locator('[data-scene="compact"] [data-testid="scene-intro"]')).toHaveCount(0);
+  const compactPrompt = await compactQuestion.innerText();
+  expect(compactPrompt.length).toBeGreaterThan(30);
+  const { resultText: compactResultText, scores: compactScores } = await confirmChoice(page, "place-3", "Дальше: склад");
+
+  const inventoryBriefing = page.locator('[data-scene="inventory"] [data-scene-briefing]');
+  await expect(inventoryBriefing).toHaveAttribute("data-reading", "true");
+  const inventoryCopy = await page.getByTestId("scene-intro").textContent();
+  await finishBriefing(page);
+  await page.reload();
+  await expect(page.locator('[data-scene="inventory"] [data-scene-briefing]')).toHaveAttribute("data-reading", "false");
+  await expect(page.locator('[data-scene="inventory"] [data-testid="scene-intro"]')).toHaveCount(0);
+  await page.getByRole("button", { name: "Задание", exact: true }).click();
+  await expect(page.locator('[data-scene="inventory"] [data-scene-briefing]')).toHaveAttribute("data-reading", "true");
+  await expect(page.getByTestId("scene-intro")).toHaveText(inventoryCopy!);
+  await finishBriefing(page);
+
+  await page.getByRole("button", { name: /^К этапу «/ }).click();
+  await expect(page.locator('[data-scene="compact"] [data-result-reader]')).toBeVisible();
+  expect(compactScores).toHaveLength(3);
+  expect(await page.locator("[data-score-key]").allTextContents()).toEqual(compactScores);
+  await expect(page.locator("[data-result-reading]")).toContainText(compactResultText.slice(0, 30));
+  await page.getByRole("button", { name: "Изменить выбор", exact: true }).click();
+  await page.getByRole("button", { name: /^К этапу «/ }).click();
+  await expect(page.locator('[data-layout="result"][data-carrier="near"]')).toBeVisible();
+  expect(await page.locator("[data-score-key]").allTextContents()).toEqual(carrierScores);
   expect(errors).toEqual([]);
 });

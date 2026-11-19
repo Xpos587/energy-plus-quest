@@ -5,15 +5,15 @@ import {
   Share2,
   X,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { type MouseEvent, useEffect, useRef, useState } from "react";
 import { ImageSources } from "../components/ImageSources";
 import { scoreItems } from "../components/ScoreBoard";
 import { imageAsset } from "../game/imageAssets";
 import type { ProfileId, Scores } from "../game/types";
 import {
-  certificateCopy,
   exportCertificate,
   type LogistCopy,
+  rankName,
 } from "./certificateExport";
 import { endingRestartLabel, finalScore } from "./endingCopy";
 import styles from "./LogistCertificate.module.css";
@@ -120,23 +120,32 @@ export function LogistCertificate({
     } catch (e) {
       if (!(e instanceof DOMException && e.name === "AbortError"))
         setError(
-          "Не удалось отправить картинку. Скачайте её и прикрепите к сообщению.",
+          "Не удалось отправить сертификат. Скачайте картинку и прикрепите её к сообщению.",
         );
     }
   };
+  /* Approved option B: the system sheet carries the file on touch devices; desktop sheets
+     (Windows/macOS) list OS targets, not the chosen messenger, so desktop opens its share URL. */
   const canShareFile = Boolean(
     prepared &&
+      typeof matchMedia === "function" &&
+      matchMedia("(pointer: coarse)").matches &&
       typeof navigator.share === "function" &&
       typeof navigator.canShare === "function" &&
       navigator.canShare({ files: [prepared] }),
   );
-  /* Public per-result page (scripts/share-pages.ts): its preview card carries the picture. */
-  const shareUrl = new URL(
-    `r/${profile}-${copy.type}/`,
-    new URL(import.meta.env.BASE_URL, location.href),
-  ).href;
-  const title = certificateCopy(copy)[0];
-  const message = `${title} ${shareUrl}`;
+  /* Public per-result page (scripts/share-pages.ts) on the published address, also from dev
+     and preview hosts that serve no r/<id>/ pages: its preview card carries the picture. */
+  const shareUrl = `${__PUBLIC_URL__}r/${profile}-${copy.type}/`;
+  /* Gender-neutral first person, same rank as the landing page heading. */
+  const title = `Моё звание в игре «Доставляем радость» — «${rankName(copy.title)}»`;
+  const text = `${title}. Пройдите игру и узнайте, какой вы логист.`;
+  const message = `${text} ${shareUrl}`;
+  const shareFileInstead = (event: MouseEvent) => {
+    if (!canShareFile) return;
+    event.preventDefault();
+    void share();
+  };
   const cta = copy.callToAction.match(companyLink);
 
   return (
@@ -282,14 +291,16 @@ export function LogistCertificate({
         </button>
         <h2 id="ending-share-title">Поделиться званием</h2>
         <p id="ending-share-description">
-          В чате ссылка раскроется в яркую карточку с вашим званием. Для сторис
-          скачайте картинку.
+          {canShareFile
+            ? "Откроется меню телефона: выберите чат — сертификат уйдёт картинкой вместе со ссылкой на игру."
+            : "В чате ссылка раскроется в карточку с вашим сертификатом. Картинку можно скачать и прикрепить к сообщению."}
         </p>
         <nav className={styles.social} aria-label="Поделиться ссылкой">
           <a
-            href={`https://t.me/share/url?${new URLSearchParams({ url: shareUrl, text: title })}`}
+            href={`https://t.me/share/url?${new URLSearchParams({ url: shareUrl, text })}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={shareFileInstead}
           >
             <SocialIcon channel="telegram" />
             Telegram
@@ -298,6 +309,7 @@ export function LogistCertificate({
             href={`https://vk.com/share.php?${new URLSearchParams({ url: shareUrl, title, image: `${shareUrl}card.jpg` })}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={shareFileInstead}
           >
             <SocialIcon channel="vk" />
             ВКонтакте
@@ -306,18 +318,13 @@ export function LogistCertificate({
             href={`https://max.ru/:share?${new URLSearchParams({ text: message })}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={shareFileInstead}
           >
             <SocialIcon channel="max" />
             MAX
           </a>
         </nav>
         <div className={styles.fileActions}>
-          {canShareFile && (
-            <button type="button" onClick={share}>
-              <Share2 size={21} aria-hidden="true" />
-              Отправить картинку
-            </button>
-          )}
           <button type="button" onClick={download} disabled={busy}>
             <Download size={21} aria-hidden="true" />
             {busy ? "Сохраняем картинку…" : "Скачать картинку для сторис"}

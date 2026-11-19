@@ -102,6 +102,8 @@ function crewBadge(c: CanvasRenderingContext2D, left: number, cy: number, color:
   c.fillText("×2", left + pad + iw + gap, cy + 0.5);
 }
 
+export const rigDialOffset = 21;
+
 /** Rig marker: the same small speedometer over every cab. The needle shows
  * how fast the rig moves through the city; no numbers. The green rig adds a
  * two-driver badge. Tail touches (x, y). */
@@ -122,7 +124,7 @@ export function rigPin(
   c.scale(s, s);
   const color = carrierColors[id];
   const r = 15;
-  const cy = -r - 6;
+  const cy = -rigDialOffset;
   const twinkle =
     t === undefined ? 0 : glow(c, cy, r, color, t, (r + id.length) * 1.9);
   // shadow, tail, white disc with a coloured rim

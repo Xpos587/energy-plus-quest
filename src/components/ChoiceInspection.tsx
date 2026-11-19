@@ -111,6 +111,7 @@ export function ChoiceInspection({
           type="button"
           className={styles.secondary}
           data-choice-cancel
+          disabled={confirming}
           onClick={onCancel}
         >
           <ArrowLeft size={18} aria-hidden="true" />

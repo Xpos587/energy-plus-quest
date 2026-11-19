@@ -104,7 +104,7 @@ test("reload checkpoints and an upstream gift change never retain discarded deci
       page.locator(`[data-scene="${scene}"] [data-result-reader]`),
     ).toBeVisible();
     await expect.poll(async () => (await saved(page)).answers).toEqual(answers);
-    if (scene !== "lastmile") await proceed(page, "Продолжить");
+    if (scene !== "lastmile") await proceed(page, scene === "compact" ? "Дальше: склад" : scene === "inventory" ? "Дальше: баржа" : "Дальше: последняя миля");
   }
 
   const oldScope = (await saved(page)).scope;
@@ -175,7 +175,7 @@ test("reload checkpoints and an upstream gift change never retain discarded deci
     await expect(page.locator("[data-result-reader]")).toBeVisible();
     await proceed(
       page,
-      scene === "lastmile" ? "К вручению подарка" : "Продолжить",
+      scene === "compact" ? "Дальше: склад" : scene === "inventory" ? "Дальше: баржа" : scene === "crane" ? "Дальше: последняя миля" : "К вручению подарка",
     );
   }
   await page.getByRole("button", { name: "Узнать, какой вы логист" }).click();

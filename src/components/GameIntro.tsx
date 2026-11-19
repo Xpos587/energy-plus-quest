@@ -1,14 +1,16 @@
 import { ArrowLeft, ArrowRight, ChartLine, Heart, Zap } from "lucide-react";
 import { type CSSProperties, useRef, useState } from "react";
-import { imageAsset } from "../game/imageAssets";
 import { scenarioParagraph } from "../game/scenarioDocument";
-import { lastmileChoiceImage } from "../scenes/lastmile/artworkFamily";
 import { sceneChoiceImage } from "../scenes/artwork";
 import { usePageTitle } from "./usePageTitle";
 import { BrandLockup } from "./BrandLockup";
 import styles from "./GameIntro.module.css";
-import { plateSource } from "./cityV4";
-import { progressSteps, routeArt, stageIcons } from "./stageProgress";
+import { progressSteps, routeArt, routeStamp } from "./stageProgress";
+
+/* Under each stage name: the scenario's own scene title ("Сцена N. …" minus the number). */
+const stageCaptions = ["207E7D8D", "1599ECBA", "4A260F2F", "726CB289", "0ACB585F"].map(
+  (id) => scenarioParagraph(id, "structure").replace(/^Сцена \d\. /, ""),
+);
 
 /* One line instead of the two canonical paragraphs (R19, 09.11): the five
    stages below are the screen's subject, the story only sets them up. */
@@ -25,8 +27,12 @@ const metricParts = explanation.match(
 );
 if (!metricParts)
   throw new Error("Canonical introduction metrics structure changed");
-const [, mission, , , , , preparation] = metricParts;
-const metricLead = "Что приносит баллы в пути:";
+const [, mission, , , , , canonicalPreparation] = metricParts;
+const metricLead = "Ваши решения в пути приносят баллы за:";
+const preparation = canonicalPreparation.replace(
+  "Но сначала выберите роль, подарок и получателя.",
+  "Перед началом пути выберите роль, подарок и получателя.",
+);
 
 /* Same icons as the in-game score delta, so the player recognises them later.
    One noun phrase per metric reads straight after the lead above it. */
@@ -40,28 +46,19 @@ const metrics = [
   {
     key: "empathy",
     title: "Эмпатия",
-    text: "Забота о подарке, получателе и людях рядом.",
+    text: "Забота о получателе и людях рядом.",
     Icon: Heart,
   },
   {
     key: "efficiency",
     title: "Эффективность",
-    text: "Решения вовремя и самым подходящим способом.",
+    text: "Решение, которое сокращает путь или ускоряет доставку.",
     Icon: ChartLine,
   },
 ];
 
 const introWorld = sceneChoiceImage("lastmile");
 
-/* One big picture per stage: the live scene art itself (never baked copies),
-   so a redrawn scene reaches the intro without touching it. */
-const journeyArt = {
-  carrier: plateSource("wide"),
-  loading: sceneChoiceImage("compact"),
-  warehouse: sceneChoiceImage("inventory"),
-  barge: sceneChoiceImage("crane"),
-  "last-mile": imageAsset(lastmileChoiceImage("wide", "alva")),
-} as const;
 
 export function GameIntro({
   onStart,
@@ -129,17 +126,12 @@ export function GameIntro({
                       {progressSteps.map((step, index) => (
                         <li className={styles.stop} key={step.id}>
                           <span className={styles.stopArt}>
-                            <img src={stageIcons[step.id]} alt="" />
+                            <img data-stage={step.id} src={routeArt[step.id]} alt="" />
                             <b aria-hidden="true">{index + 1}</b>
                           </span>
-                          <img
-                            className={styles.stopScene}
-                            data-stage={step.id}
-                            src={journeyArt[step.id]}
-                            loading="lazy"
-                            alt=""
-                          />
+                          <span className={styles.stopLink} aria-hidden="true" />
                           <span className={styles.stopLabel}>{step.label}</span>
+                          <span className={styles.stopCaption}>{stageCaptions[index]}</span>
                         </li>
                       ))}
                     </ol>
@@ -163,7 +155,7 @@ export function GameIntro({
                           </p>
                         </div>
                         <span className={styles.stamp} aria-hidden="true">
-                          <img src={routeArt["last-mile"]} alt="" />
+                          <img src={routeStamp} alt="" />
                         </span>
                       </header>
                       <p className={styles.invitation}>{invitation}</p>

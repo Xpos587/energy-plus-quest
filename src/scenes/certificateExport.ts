@@ -1,6 +1,11 @@
 import type { logistProfileCopy } from "./endingCopy.ts";
 
 export type LogistCopy = ReturnType<typeof logistProfileCopy>;
+/** Scenario title «Вы — логистический гик!» → rank «Логистический гик» for share texts and landing pages. */
+export const rankName = (scenarioTitle: string) => {
+  const rank = scenarioTitle.replace(/^Вы — /u, "").replace(/[.!]$/u, "");
+  return rank[0].toUpperCase() + rank.slice(1);
+};
 /* The player shares the certificate as their own, so it speaks as «я».
    «Мне удалось …» avoids guessing the player's gender in past-tense verbs. */
 const firstPerson: [RegExp, string][] = [
@@ -108,7 +113,8 @@ export async function exportCertificate(copy: LogistCopy, artwork: string) {
   for (const paragraph of paragraphs) wrap(paragraph, 38, 400);
   ctx.font = `400 30px ${family}`;
   ctx.fillStyle = "#44667d";
-  const footer = location.host + location.pathname.replace(/\/$/u, "");
+  /* The public address, not the dev/preview host the picture was rendered on. */
+  const footer = __PUBLIC_URL__.replace(/^https?:\/\//u, "").replace(/\/$/u, "");
   ctx.fillText(footer, W / 2, H - 120);
   if (y > H - 150)
     throw new Error("Текст не помещается в картинку.");

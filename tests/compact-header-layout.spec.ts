@@ -11,9 +11,9 @@ test('placement cue runs while choosing and respects reduced motion',async({page
  expect(motion.duration).toBe('2.4s');
  const offset=await zone.evaluate(el=>getComputedStyle(el).strokeDashoffset);
  await expect.poll(()=>zone.evaluate(el=>getComputedStyle(el).strokeDashoffset)).not.toBe(offset);
- await page.locator('[data-hotspot="place-1"]').click();await page.locator('[data-choice-confirm]').click();
+ await page.locator('[data-hotspot="place-1"]').click();
  await expect(zone).toHaveCSS('animation-name','none');
- await page.getByRole('button',{name:'Изменить выбор',exact:true}).click();
+ await page.locator('[data-choice-cancel]').click();
  await expect(zone).not.toHaveCSS('animation-name','none');
  await page.emulateMedia({reducedMotion:'reduce'});
  await expect(zone).toHaveCSS('animation-name','none');
@@ -44,7 +44,7 @@ test('compact header and introduction form a useful choice screen',async({page},
  await page.getByRole('button',{name:'Изменить выбор',exact:true}).click();
  await page.locator('[data-hotspot="place-4"]').click();await page.locator('[data-choice-confirm]').click();
  await expect(page.locator('[data-result-reader]')).toBeVisible();
- await expect(page.getByRole('button',{name:/^(Продолжить|Читать дальше)$/})).toBeInViewport({ratio:1});
+ await expect(page.getByRole('button',{name:/^(Дальше: склад|Читать дальше)$/})).toBeInViewport({ratio:1});
  await page.screenshot({path:`.tmp-work/compact-header/${info.project.name}-result.png`});
  await page.getByRole('button',{name:'Изменить выбор',exact:true}).click();
  for(const choice of await choices.all()) await expect(choice).toBeInViewport({ratio:1});
@@ -54,10 +54,12 @@ for (const parcel of ['camera', 'socks']) test(`${parcel} place two uses boxed g
  await page.goto(`/scenes.html?scene=compact&parcel=${parcel}&recipient=alva`);
  const next=page.getByRole('button',{name:/^(Далее|К выбору)$/});
  for(let n=0;n<20&&await next.isVisible();n++) await next.click();
- await page.locator('[data-hotspot="place-2"]').click();await page.locator('[data-choice-confirm]').click();
- await expect(page.locator(`[data-cargo-view] > image:not([filter])[href*="${parcel}-zone2-v"]`)).toHaveCount(1);
+ const target=page.locator('[data-hotspot="place-2"]');
+ await target.click();
  await expect(page.locator('[data-loading-zone="place-2"]')).toHaveAttribute('data-active','true');
- await expect(page.getByRole('button',{name:/^(Продолжить|Читать дальше)$/})).toBeInViewport({ratio:1});
+ await page.locator('[data-choice-confirm]').click();
+ await expect(page.locator(`[data-cargo-view] > image:not([filter])[href*="${parcel}-zone2-v"]`)).toHaveCount(1);
+ await expect(page.getByRole('button',{name:/^(Дальше: склад|Читать дальше)$/})).toBeInViewport({ratio:1});
  const framing = await page.locator('[data-world-plane]').evaluate(el => {
    const r=el.getBoundingClientRect();
    return {boxedCameraWidth:r.width*132/1368,boxedCameraHeight:r.height*75/1149};

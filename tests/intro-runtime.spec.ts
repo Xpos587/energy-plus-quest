@@ -20,16 +20,14 @@ for (const reducedMotion of ["reduce", "no-preference"] as const) {
   });
 }
 
-test("portrait introduction does not download hidden scene illustrations", async ({ page }) => {
+test("portrait introduction shows the five route photos it downloads", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   await page.locator("[data-intro-enter]").click();
   const scenes = page.locator("img[data-stage]");
   await expect(scenes).toHaveCount(5);
-  await page.waitForTimeout(500);
-  // Hidden illustrations should not compete with the visible timeline and cover.
-  expect(await scenes.evaluateAll(images => images.filter(image => (image as HTMLImageElement).currentSrc))).toHaveLength(0);
-  await page.setViewportSize({ width: 844, height: 390 });
+  // Every downloaded stage photo is the visible route circle (B1, 18.11) — nothing hidden.
+  for (const image of await scenes.all()) await expect(image).toBeVisible();
   await expect.poll(() => scenes.evaluateAll(images => images.filter(image => {
     const img = image as HTMLImageElement;
     return img.complete && img.naturalWidth > 0;

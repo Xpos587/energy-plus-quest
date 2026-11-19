@@ -80,9 +80,8 @@ Never stop another session's server or clean its outputs to speed up your job.
   Start independent tasks in new sessions; do not delete active history or expect
   context rollover to shrink the original session file.
 
-Follow [repository retention and storage limits](REPOSITORY-HYGIENE.md). Do not
-increase the budget or delete current media/active worktrees to hide a failed
-check. Cleanup runs only when jobs using those files have finished.
+Follow the [repository retention policy](REPOSITORY-HYGIENE.md). Preserve current
+media and active worktrees. Clean up only after jobs using those files have finished.
 
 ## Documentation evidence
 

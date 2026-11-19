@@ -30,7 +30,7 @@ for (const parcel of ['boat', 'camera', 'socks']) {
         // The frozen scenario currently contains no WMS link label or URL.
         await expect(page.locator('[data-result-link] a[href^="http"]')).toHaveCount(0);
       }
-      const next = page.getByRole('button', { name: 'Продолжить', exact: true });
+      const next = page.getByRole('button', { name: 'Дальше: баржа', exact: true });
       await expect(next).toBeInViewport({ ratio: 1 });
       await next.click();
       await expect(page.locator('[data-scene="crane"]')).toBeVisible();

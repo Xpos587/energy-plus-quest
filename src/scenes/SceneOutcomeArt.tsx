@@ -105,7 +105,8 @@ export function SceneOutcomeArt({
         )}
         {scene === "crane" && (
           <ImageSources
-            src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-portrait.webp"))}
+            // The phone result row is wide too; the tall still loses the crane above the copy.
+            src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-rail.webp"))}
             media="(max-width: 1000px) and (min-height: 701px) and (orientation: portrait)"
           />
         )}

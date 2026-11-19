@@ -245,9 +245,13 @@ test("five-scene journey supports rereading, cancellation, revising and reloadin
         name:
           scene === "carrier"
             ? "Дальше: погрузка"
-            : scene === "lastmile"
-              ? "Завершить"
-              : "Продолжить",
+            : scene === "compact"
+              ? "Дальше: склад"
+              : scene === "inventory"
+                ? "Дальше: баржа"
+                : scene === "crane"
+                  ? "Дальше: последняя миля"
+                  : "К вручению подарка",
         exact: true,
       })
       .click();
@@ -340,7 +344,7 @@ test("touch: reading a long consequence keeps the scene still and actions reacha
       .evaluate((el: HTMLImageElement) => el.decode());
     await checkResult(phone);
     await expect(phone.locator('[data-scene-panning="true"]')).toHaveCount(0);
-    await expect(phone.getByRole("button", { name: "Продолжить", exact: true })).toBeInViewport({ ratio: 1 });
+    await expect(phone.getByRole("button", { name: "Дальше: баржа", exact: true })).toBeInViewport({ ratio: 1 });
     await phone.screenshot({ path: info.outputPath("touch-reader.png") });
   } finally {
     await phone.close();
@@ -370,7 +374,7 @@ test("back arrow returns to the previous scene from both reading and choosing", 
     .locator("[data-score-key] strong")
     .allTextContents();
   for (const phase of ["reading", "choosing"]) {
-    await page.getByRole("button", { name: "Продолжить", exact: true }).click();
+    await page.getByRole("button", { name: "Дальше: склад", exact: true }).click();
     await expect(
       page.getByRole("region", { name: "Условие задания", exact: true }),
     ).toBeVisible();

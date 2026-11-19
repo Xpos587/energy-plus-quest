@@ -8,7 +8,9 @@ test('a changed carrier map has a visible reset back to its initial view', async
   const surface = page.locator('[data-map-surface]');
   const reset = page.getByRole('button', { name: 'Вернуть карту', exact: true });
   await expect(reset).toHaveCount(0);
-  const initial = await surface.getAttribute('style');
+  await expect(surface).toHaveAttribute('data-motion-reason', 'reduced-motion');
+  const transform = () => surface.evaluate(el => getComputedStyle(el).transform);
+  const initial = await transform();
   await map.focus();
   await page.keyboard.press('+');
   await page.keyboard.press('ArrowRight');
@@ -19,7 +21,7 @@ test('a changed carrier map has a visible reset back to its initial view', async
   if (info.project.use.hasTouch) await reset.tap();
   else await reset.click();
   await expect(map).toHaveAttribute('data-map-scale', '1');
-  await expect(surface).toHaveAttribute('style', initial!);
+  await expect.poll(transform).toBe(initial);
   await expect(reset).toHaveCount(0);
   await expect(page.locator('[data-choice-inspection], [data-layout="result"]')).toHaveCount(0);
 });

@@ -70,6 +70,10 @@
 .actionLabel::after { content: attr(data-reading-label); visibility: hidden; }
 .reader .reading { min-height: 2lh !important; }
 .reader .footer button, .reader [data-score-delta], .reader [data-score-key] { height: auto !important; }
+/* Leave a pixel of scroll extent after the last action: scrollHeight rounds
+   fractional text heights, otherwise a short landscape sheet clips its border. */
+.reader .footer { padding-bottom: 1px; }
+.reader .footer button { align-self: stretch; }
 .reader [data-score-key] { min-height: var(--result-control-height, 44px); grid-template-rows: auto auto !important; }
 .reader [data-score-key] em { width: 100%; }
 .reader .footer button > span,
@@ -78,6 +82,8 @@
   line-height: 1.2 !important;
 }
 @media (max-width: 600px) {
-  .reader .footer { grid-template-columns: repeat(auto-fit, minmax(min(100%, 8em), 1fr)) !important; }
-  .reader .footer button { grid-row: auto !important; grid-column: auto !important; }
+  /* Two actions share the available row; large text can wrap either to a full row. */
+  .reader .footer { display: flex; flex-wrap: wrap; }
+  .reader .resultFeedback { order: -1; flex-basis: 100%; }
+  .reader .footer button { flex: 1 1 14em; }
 }

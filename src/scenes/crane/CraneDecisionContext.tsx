@@ -2,11 +2,13 @@ import { MapPin, Timer } from "lucide-react";
 import { craneFacts } from "./artwork";
 import styles from "./CraneDecisionContext.module.css";
 
-/** The situation in one line; the quay picture shows who is where. */
-export const craneSituation = "Баржа вот-вот уйдёт, а кран без машиниста: Иван в офисе ПРУ.";
-
-export function CraneDecisionContext() {
-  return <p className={styles.context} data-crane-decision-context>{craneSituation}</p>;
+/** The scene story on the choice screen itself: no separate briefing step before the quay. */
+export function CraneDecisionContext({ paragraphs }: { paragraphs: readonly string[] }) {
+  return (
+    <div className={styles.story} data-crane-decision-context>
+      {paragraphs.map((text) => <p key={text} className={styles.context}>{text}</p>)}
+    </div>
+  );
 }
 
 /** Card body, like the truck card's readouts: from where and when the crane starts. */

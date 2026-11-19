@@ -19,7 +19,6 @@ import { warehouseCamera } from "./inventory/warehouseCamera";
 
 const shortMarkerLabels: Record<string, string> = {
   entrance: "У приёмки", alphabet: "По алфавиту", keeper: "Кладовщик", wms: "Автоподбор",
-  helicopter: "Вертолёт", rover: "Снегоболотоход", robot: "Тележка", "pipe-carrier": "Трубовоз",
 };
 
 const markerInset = 24;
@@ -308,7 +307,7 @@ export function WorldArt({
           </picture>
         )}
         {scene === "lastmile" && <LastmileMotion composition={lastmileFormat} />}
-        {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones labels={shortMarkerLabels} composition={lastmileFormat} selectedId={selectedId} onSelect={onSelect} focusedId={focusedId} onFocusChange={onFocusChange} />}
+        {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones composition={lastmileFormat} selectedId={selectedId} onSelect={onSelect} focusedId={focusedId} onFocusChange={onFocusChange} />}
         {expandedArt ? (
           <div style={{
             position: "absolute",
@@ -353,7 +352,7 @@ export function WorldArt({
                 data-hotspot={point.id}
                 data-choice-id={point.id}
                 className={`${mapStyles.mapNumber} ${styles.marker}`}
-                title={caption ?? choiceLabel(option.label)}
+                title={scene === "lastmile" ? undefined : caption ?? choiceLabel(option.label)}
                 style={{ left: `${point.x * 100}%`, top: `${point.y * 100}%` }}
                 aria-label={[
                   `Вариант ${index + 1}`,

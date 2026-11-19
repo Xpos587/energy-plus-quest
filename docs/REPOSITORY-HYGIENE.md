@@ -69,18 +69,7 @@ Recent local preview/deployment checks are kept under `.tmp-work`, not separate
 container-managed cache, not project source; clean it using Podman rather than
 manually deleting overlay internals.
 
-## Enforced Git limits
-
-`repository-budget.json` is authoritative:
-
-- Tracked content: at most **40 MiB**.
-- Git directory: at most **64 MiB**.
-- Individual tracked file: at most **1 MiB**.
-- Binary image/video/PDF/font/native masters and `dist` are forbidden in the index.
-- Generated local output across `.tmp-work`, `dist`, `build`, `release`: at most **2 GiB**.
-- Image codec cache: at most **256 MiB**, encoded results only; no duplicated source buffers.
-
-The pre-commit hook checks staged objects, not unstaged files. Enable it after cloning with `bun run setup:hooks`. CI checks the committed tree. New exceptions require a concrete reason and must still satisfy the total repository limit.
+The image codec cache retains up to 256 MiB of encoded results, not source buffers.
 
 ## Build and deployment
 

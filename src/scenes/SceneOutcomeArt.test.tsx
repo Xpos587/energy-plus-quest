@@ -20,7 +20,7 @@ it("uses the flight image for the flight beat without separate episode controls"
   );
 
   expect(host.querySelector("img")?.getAttribute("src")).toContain(
-    "revision-18/flight-boat-tall.webp",
+    "revision-22/flight-boat-tall.webp",
   );
   expect(host.querySelector("nav")).toBeNull();
 });
@@ -37,7 +37,7 @@ it("uses the ground image only after the narrative reaches the ground beat", () 
   );
 
   expect(host.querySelector("img")?.getAttribute("src")).toContain(
-    "helicopter-ground-boat-final-v5",
+    "revision-19/ground-boat.webp",
   );
   expect(host.querySelector("nav")).toBeNull();
 });

@@ -9,8 +9,10 @@ for (const profile of ["student", "professional"] as const) {
       // Isolate the seven reachable results without replaying the same five stages.
       await page.evaluate(async ({ profile, type }) => {
         const load = (url: string) => import(/* @vite-ignore */ url);
-        const React = (await load("/node_modules/.vite/deps/react.js")).default;
-        const { createRoot } = (await load("/node_modules/.vite/deps/react-dom_client.js")).default;
+        // Reuse the loaded Vite dependency URL, including its current optimizer hash.
+        const dependency = (name: string) => performance.getEntriesByType("resource").map(e => e.name).find(url => new URL(url).pathname.endsWith(`/${name}`))!;
+        const React = (await load(dependency("react.js"))).default;
+        const { createRoot } = (await load(dependency("react-dom_client.js"))).default;
         const { LogistCertificate } = await load("/src/scenes/LogistCertificate.tsx");
         const { logistProfileCopy } = await load("/src/scenes/endingCopy.ts");
         const scores = type === "future"

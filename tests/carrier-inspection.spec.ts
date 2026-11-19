@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { carrierFacts, mapCarrierIds } from "../src/game/carrierFacts";
 import { openCarrier, pickCarrier } from "./helpers/open-preparation";
 
 for (const [width, height] of [
@@ -18,13 +19,12 @@ for (const [width, height] of [
     await expect(page.locator("[data-map-controls]")).toHaveCount(0);
     await expect(page.getByRole("button", { name: "К выбору подарка", exact: true })).toBeInViewport({ ratio: 1 });
     await expect(page.getByRole("button", { name: "Подробнее о задаче", exact: true })).toHaveCount(0);
-    for (const id of ["old", "near", "crew", "old4"]) {
-      const button = page.locator(`[data-scene-choice="${id}"]`);
-      await expect(button).toBeInViewport({ ratio: 1 });
-      const rect = await button.boundingBox();
-      expect(rect?.width).toBeGreaterThanOrEqual(44);
-      expect(rect?.height).toBeGreaterThanOrEqual(44);
-      await button.click();
+    const surface = page.locator("[data-map-surface]");
+    const poster = surface.locator("[data-city-plate]");
+    await expect(surface).toHaveAttribute("data-motion-reason", "ready");
+    const overviewPlate = (await poster.getAttribute("data-city-plate"))!;
+    for (const id of [...mapCarrierIds, "express"] as const) {
+      await pickCarrier(page, id);
       await expect(
         page.locator(`[data-carrier-inspection="${id}"]`),
       ).toBeVisible();
@@ -37,9 +37,11 @@ for (const [width, height] of [
       await expect(page.locator('[data-layout="result"]')).toHaveCount(0);
       await page.screenshot({ path: info.outputPath(`${id}-inspection.png`) });
       await page.locator("[data-choice-cancel]").click();
-      await expect(
-        page.locator(`[data-carrier-inspection="${id}"]`),
-      ).toHaveCount(0);
+      await expect(page.locator(`[data-carrier-inspection="${id}"]`)).toHaveCount(0);
+      // Wait for the overview artwork, not the departing inspection's still-ready atlas.
+      await expect(poster).toHaveAttribute("data-city-plate", overviewPlate);
+      await expect(surface).toHaveAttribute("data-motion-reason", "ready");
+      if (id !== "express") await expect(page.locator(`[data-carrier-choice="${id}"]`)).toBeFocused();
     }
     await pickCarrier(page, "crew");
     await expect(page.locator('[data-carrier-inspection="crew"] img')).toHaveCount(0);
@@ -67,17 +69,13 @@ test("short carrier outcome fills the available reading area at 620x768", async 
   expect(await reading.evaluate(el => el.firstElementChild!.getBoundingClientRect().height - el.clientHeight)).toBeLessThanOrEqual(1);
 });
 
-test("all truck inspections survive unavailable motion video", async ({
-  page,
-}) => {
-  await page.route("**/scene1-live/**/*.mp4", (route) => route.abort());
+test("city truck inspection shows qualitative pace and the model year", async ({ page }) => {
   await openCarrier(page, "professional", "alva", "boat");
-  await expect(page.locator("[data-map-viewport]")).toBeVisible();
+  await expect(page.locator("[data-map-surface]")).toHaveAttribute("data-motion-reason", "ready");
   await pickCarrier(page, "near");
-  await expect(page.locator('[data-carrier-inspection="near"]')).toContainText("17 км/ч");
-  await expect(page.locator('[data-carrier-inspection="near"]')).toContainText(
-    "2021",
-  );
+  const inspection = page.locator('[data-carrier-inspection="near"]');
+  await expect(inspection).toContainText("Очень медленно");
+  await expect(inspection).toContainText(String(carrierFacts.near.buildYear));
 });
 
 test("paused poster targets remain reachable below the mobile header by keyboard", async ({
@@ -86,18 +84,19 @@ test("paused poster targets remain reachable below the mobile header by keyboard
   await page.setViewportSize({ width: 320, height: 568 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await openCarrier(page, "professional", "alva", "boat");
-  for (const id of ["near", "old", "crew", "old4"]) {
+  await expect(page.locator("[data-map-surface]")).toHaveAttribute("data-motion-reason", "reduced-motion");
+  for (const id of mapCarrierIds) {
     const target = page.locator(`[data-carrier-choice="${id}"]`);
     await target.focus();
+    await expect(target).toBeFocused();
+    // The Express badge can sit above the truck body. Its painted dial must
+    // still be reachable, without clicking through the Express badge.
     await expect
       .poll(() =>
-        target.evaluate((element) => {
-          const box = element.getBoundingClientRect();
-          const hit = document.elementFromPoint(
-            box.x + box.width / 2,
-            box.y + box.height / 2,
-          );
-          return hit === element || element.contains(hit);
+        target.locator("span").evaluate((dial) => {
+          const box = dial.getBoundingClientRect();
+          const hit = document.elementFromPoint(box.left + Math.min(22, box.width / 2), box.y + box.height / 2);
+          return hit?.closest("[data-carrier-choice]") === dial.parentElement;
         }),
       )
       .toBe(true);

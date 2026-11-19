@@ -2,8 +2,8 @@ import { test, expect, type Page } from '@playwright/test';
 // R19: after «Изменить выбор» the previous way stayed lit next to the new one.
 test.use({ contextOptions: { reducedMotion: 'reduce' } });
 
-// Lit layers per way (artwork.ts actors; "near" renders as top, "ivan" as pru).
-const lit: Record<string, string> = { remote: 'pru+top', rush: 'ladder+top', petr: 'far+top' };
+// Lit layers per way (artwork.ts actors; "near" renders as top).
+const lit: Record<string, string> = { remote: 'ivan+top', rush: 'ladder+top', petr: 'far+top' };
 // Every ordered pair of the three ways exactly once.
 const order = ['rush', 'petr', 'remote', 'rush', 'remote', 'petr', 'rush'];
 
@@ -15,8 +15,6 @@ test('only the current way is lit across every change of choice', async ({ page 
   const touch = !!info.project.use.hasTouch;
   const press = (selector: string) => touch ? page.locator(selector).tap() : page.locator(selector).click();
   await page.goto('/scenes.html?scene=crane&parcel=camera&recipient=alva');
-  const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });
-  for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
   const revise = page.getByRole('button', { name: 'Изменить выбор', exact: true });
   for (const [step, id] of order.entries()) {
     if (step > 0) {
@@ -37,8 +35,6 @@ for (const [width, height] of [[320, 568], [390, 844], [1440, 900]]) {
   test(`quay tap targets stay 44px with an 8px gap at ${width}x${height}`, async ({ page }) => {
     await page.setViewportSize({ width, height });
     await page.goto('/scenes.html?scene=crane&parcel=camera&recipient=alva&carrier=near');
-    const intro = page.getByRole('button', { name: /^(Далее|К выбору|К сцене)$/ });
-    for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
     const rects = await page.locator('[data-world-scene=crane] [data-hotspot]').evaluateAll(
       nodes => nodes.map(node => {
         const rect = node.getBoundingClientRect();

@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-// R18 uses a static flight plate, not the retired animated SVG rotor.
+// R21 uses a static flight plate, not the retired animated SVG rotor.
 for (const reducedMotion of ['no-preference', 'reduce'] as const) {
   test(`helicopter flight plate loads with ${reducedMotion} and returns to the choices`, async ({ page }) => {
     await page.emulateMedia({ reducedMotion });
@@ -11,7 +11,7 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     await page.locator("[data-choice-confirm]").click();
     const flight = page.locator('[data-delivery-leg="flight"] img');
     await expect(flight).toBeVisible();
-    await expect(flight).toHaveAttribute('src', /revision-18\/flight-boat-tall\.webp$/);
+    await expect(flight).toHaveAttribute('src', /revision-22\/flight-boat-tall\.webp$/);
     await flight.evaluate((image: HTMLImageElement) => image.decode());
     await expect(flight).not.toHaveJSProperty('naturalWidth', 0);
     expect(await flight.evaluate(image => getComputedStyle(image).animationName)).toBe('none');
