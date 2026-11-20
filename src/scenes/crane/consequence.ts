@@ -18,8 +18,10 @@ export type CraneBeat = {
   cab?: "empty";
   /** Who sits in the barge crane cab. */
   operator?: "ivan" | "petr";
-  /** A small reaction over a character: Ivan by the ПРУ office or Petr by his crates (both stand still). */
-  emote?: { kind: "tired" | "question" | "sad"; at: "office" | "far" };
+  /** Ivan's walk to the barge crane ladder, 0 = porch, 1 = ladder (rush); he stays there for the loading. */
+  walk?: number;
+  /** A small reaction over a character: Ivan by the ПРУ office or at the ladder after his walk, or Petr by his crates. */
+  emote?: { kind: "tired" | "question" | "sad"; at: "office" | "ladder" | "far" };
   /** Remote-control signal from the office to the near crane. */
   signal?: boolean;
   /** Petr's own crates wait for later. */
@@ -68,8 +70,9 @@ const timelines: Record<string, Step[]> = {
     [{ ms: 600, at: () => ({ ...rest(), office: "joy", signal: true }) }],
     "ivan", { office: "joy", signal: true }, { office: "wave", signal: false },
   ),
-  // People stay where they stand; the crane does the work.
-  rush: load([{ ms: 400, at: () => ({ ...rest(), busy: "ladder" }) }], "ladder", {}, { emote: { kind: "tired", at: "office" } }),
+  // Ivan walks the quay to the barge crane ladder, then the crane does the work.
+  rush: load([{ ms: 2600, at: (t) => ({ ...rest(), office: "empty", walk: t }) }], "ladder", { office: "empty", walk: 1 },
+    { emote: { kind: "tired", at: "ladder" } }),
   petr: load([{ ms: 400, at: () => ({ ...rest(), busy: "far" }) }], "far", { later: true }, { emote: { kind: "sad", at: "far" } }),
 };
 

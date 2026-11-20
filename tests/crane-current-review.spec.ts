@@ -4,7 +4,7 @@ for (const viewport of [{width:320,height:568},{width:390,height:844},{width:844
  for (const parcel of ['boat','camera','socks']) {
  test(`${viewport.width} ${parcel} all branches`, async ({page}) => {
  await page.setViewportSize(viewport);
- await page.goto(`http://127.0.0.1:4320/scenes.html?scene=crane&parcel=${parcel}&recipient=alva`);
+ await page.goto(`/scenes.html?scene=crane&parcel=${parcel}&recipient=alva`);
  const settle = async () => {await page.locator('img').evaluateAll(async images=>Promise.all(images.map(i=>(i as HTMLImageElement).decode().catch(()=>{})))); await page.waitForTimeout(800);};
  await settle();
  await page.screenshot({path:`${root}/${viewport.width}-${parcel}-intro.png`});
@@ -14,8 +14,10 @@ for (const viewport of [{width:320,height:568},{width:390,height:844},{width:844
  await page.screenshot({path:`${root}/${viewport.width}-${parcel}-choice.png`});
  for(const id of ['remote','rush','petr']) {
  await page.locator(`[data-scene-choice="${id}"]`).click();
+ // The option opens its card; the result follows confirm and the quay loading run.
+ await page.locator('[data-choice-confirm]').click();
+ await expect(page.locator('[data-scene-consequence]')).toBeVisible({timeout:15000});
  await settle();
- await expect(page.locator('[data-scene-consequence]')).toBeVisible();
  await page.screenshot({path:`${root}/${viewport.width}-${parcel}-${id}.png`});
  const more=page.getByRole('button',{name:'Читать дальше',exact:true});
  for(let n=0;n<10 && await more.isVisible();n++){await more.click();await settle();await page.screenshot({path:`${root}/${viewport.width}-${parcel}-${id}-part${n+2}.png`});}

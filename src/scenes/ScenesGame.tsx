@@ -22,7 +22,7 @@ import { recipientNames } from "./names";
 import { progressSteps } from "../components/stageProgress";
 import { choiceLabel } from "./choiceLabel";
 import { CompactCard } from "./compact/CompactCard";
-import { craneCaptions, craneFacts } from "./crane/artwork";
+import { craneCaptions, craneChoiceNames, craneFacts } from "./crane/artwork";
 import { CraneDecisionContext, CraneFacts } from "./crane/CraneDecisionContext";
 import { inventoryAlphabet } from "./inventory/alphabet";
 import { JourneyEnding } from "./JourneyEnding";
@@ -401,7 +401,20 @@ function ScenesSession({
               reminder={<DeliveryReminder state={context} route={brief?.route(context)} />}
               inspecting={!!pending}
               onOpen={() => setPendingId(undefined)}
-              action={inspectsOnArt ? undefined : (
+              action={scene.id === "crane" && state.phase === "choice" ? (
+                // Owner 19.11: the three ways also stay listed beside the quay; the list and the pins pick the same card.
+                <SceneChoices
+                  variant="scene"
+                  options={options.map((option) => ({
+                    id: option.id,
+                    label: craneChoiceNames[option.id as keyof typeof craneChoiceNames],
+                    accessibleLabel: optionTitles[option.id],
+                  }))}
+                  selectedId={pending?.id}
+                  {...syncFocus}
+                  onInspect={setPendingId}
+                />
+              ) : inspectsOnArt ? undefined : (
                 <SceneChoices
                   variant="scene"
                   options={options.map((option) => ({

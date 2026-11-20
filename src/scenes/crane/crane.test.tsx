@@ -85,12 +85,16 @@ describe("craneScene source contract", () => {
       });
     }
   }
-  it("makes the three actors the tap targets, with no numbers, captions or chips", () => {
+  it("makes the three actors the tap targets, each with a numbered pin naming Ivan and Petr", () => {
     const html = renderToStaticMarkup(
       <craneScene.Art context={context} showResult={false} onSelect={() => {}} />,
     );
     expect(html.match(/data-hotspot=/g)).toHaveLength(3);
     expect(html).not.toContain("data-barge-label");
+    // Owner 19.11: who is Ivan, who is Petr, where to tap — a pin inside each tap target.
+    expect(html.match(/data-quay-pin=/g)).toHaveLength(3);
+    expect(html).toMatch(/data-hotspot="remote"[^>]*>.*?data-quay-pin="remote".*?>Иван</);
+    expect(html).toMatch(/data-hotspot="petr"[^>]*>.*?data-quay-pin="petr".*?>Пётр</);
     for (const id of ["remote", "rush", "petr"])
       expect(html).toContain(`data-hotspot="${id}"`);
     expect(html).toMatch(/scene-art\/barge-v7\/(mid|desk|wide|tall)\/plate\.webp/);
@@ -130,8 +134,13 @@ describe("craneScene source contract", () => {
     expect(rings({ onSelect: () => {}, selectedId: "rush" })).toBe(0);
   });
   it("anchors reaction bubbles over the standing Ivan and Petr in every format, not over a crane", () => {
-    expect(craneBeat("rush", craneDuration("rush")).emote).toEqual({ kind: "tired", at: "office" });
+    expect(craneBeat("rush", craneDuration("rush")).emote).toEqual({ kind: "tired", at: "ladder" });
     expect(craneBeat("petr", craneDuration("petr")).emote).toEqual({ kind: "sad", at: "far" });
+    for (const [name, art] of Object.entries(craneArtwork)) {
+      // After the rush walk Ivan stands at the barge crane ladder; his bubble follows him there.
+      const [lx, ly] = art.emote.ladder;
+      expect(Math.hypot(lx - art.anchors.ladderFoot[0], ly - art.anchors.ladderFoot[1]), `${name} ladder`).toBeLessThan(art.sprites.ivan.h * 1.6);
+    }
     for (const [name, art] of Object.entries(craneArtwork))
       for (const [at, who] of [["office", art.sprites.ivan], ["far", art.sprites.far]] as const) {
         const [x, y] = art.emote[at];
@@ -141,6 +150,13 @@ describe("craneScene source contract", () => {
         const toCab = Math.hypot(x - art.anchors.nearCabin[0], y - art.anchors.nearCabin[1]);
         expect(toCab, `${name} ${at} vs crane cab`).toBeGreaterThan(who.h / 2);
       }
+  });
+  it("walks Ivan to the barge crane ladder before the crane loads (rush)", () => {
+    expect(craneBeat("rush", 0)).toMatchObject({ office: "empty", walk: 0 });
+    expect(craneBeat("rush", 1300).walk).toBeCloseTo(0.5, 1);
+    expect(craneBeat("rush", 2600)).toMatchObject({ walk: 1, lifted: false });
+    expect(craneBeat("rush", craneDuration("rush")).walk).toBe(1);
+    expect(craneBeat("petr", 0).walk).toBeUndefined();
   });
   it("keeps every tap target inside its drawing", () => {
     for (const art of Object.values(craneArtwork))

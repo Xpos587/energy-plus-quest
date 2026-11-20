@@ -85,7 +85,7 @@ describe("current artwork for every delivery context", () => {
     it(`${recipient}/${parcel}: matching lastmile choice and all consequences`, () => {
       for (const format of ["wide", "tall"] as const) {
         const choice = lastmileChoiceImage(format, recipient);
-        expect(choice).toBe(`scene-art/lastmile-family-v1/revision-25/choice-${format}.webp`);
+        expect(choice).toBe(`scene-art/lastmile-family-v1/revision-27/choice-${format}.webp`);
         expect(existsSync(`public/${choice}`)).toBe(true);
       }
       const choice = "revision-15/intro-wide.webp";

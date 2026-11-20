@@ -1,3 +1,4 @@
+import { Footprints, Monitor, UsersRound } from "lucide-react";
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { ImageSources } from "../../components/ImageSources";
@@ -5,11 +6,14 @@ import type { ArtworkStatus } from "../../components/useArtworkLoading";
 import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
-import { craneArtwork, craneCaptions, craneWorld, type CraneFormat, type Rect } from "./artwork";
+import { craneArtwork, craneCaptions, cranePins, craneWorld, type CraneFormat, type Rect } from "./artwork";
 import { craneBeat, craneDeckDelta, craneDuration, craneRest } from "./consequence";
 import { craneScene } from "./index";
 import { fitTapTargets } from "./tapTargets";
 import styles from "./CraneArt.module.css";
+
+// Same icons as the option list (SceneChoices), so a pin and its row read as one choice.
+const pinIcons = { remote: Monitor, rush: Footprints, petr: UsersRound } as const;
 
 /** Pick the drawing that fills the stage and crops least of the quay story, then keep that strip in frame. */
 function camera(stage: { width: number; height: number }, zoomId?: string) {
@@ -159,14 +163,46 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
     const y = (rect.y / art.height) * view.height;
     return [option.id, { x, y, w: (rect.w / art.width) * view.width, h: (rect.h / art.height) * view.height }];
   }));
-  const ids = options.map((option) => option.id);
   // Only the part of the plane the stage shows is usable for a finger.
   const frame = { x: -view.left, y: -view.top, w: size.width, h: size.height };
+  // A zoomed card can crop an actor out of frame; its pin would be clamped onto empty quay, so it hides instead.
+  const ids = options.map((option) => option.id).filter((id) => {
+    const r = hotspot.get(id)!;
+    return !size.width || (r.x + r.w > frame.x && r.x < frame.x + frame.w && r.y + r.h > frame.y && r.y < frame.y + frame.h);
+  });
   const fitted = new Map(fitTapTargets(ids.map((id) => hotspot.get(id)!), size, { frame }).map((rect, i) => [ids[i], rect]));
   const hotspotStyle = (id: string): CSSProperties => {
     const rect = fitted.get(id);
-    return rect ? { left: rect.x, top: rect.y, width: rect.w, height: rect.h } : {};
+    if (!rect) return {};
+    // The pin stands over its box; tell it how much stage it has on each side so it never leaves the screen.
+    const centre = rect.x + view.left + rect.w / 2;
+    return {
+      left: rect.x, top: rect.y, width: rect.w, height: rect.h,
+      ["--room-left" as string]: `${centre}px`, ["--room-right" as string]: `${size.width - centre}px`,
+    };
   };
+  // A pin that would stick out of the top of the stage hangs under its box instead (chip 34 px + pointer 7 px).
+  // Where two chips above their actors would collide (Petr stands by the ladder), the smaller actor's chip hangs below.
+  const below = new Set(ids.filter((id) => (fitted.get(id)?.y ?? 0) + view.top < 52));
+  const narrow = size.width <= 560;
+  // ponytail: chip width estimated from its text (Roboto Condensed ≈ 0.55 em per letter); measure the chips if names grow.
+  const chipBox = (id: string) => {
+    const rect = fitted.get(id)!;
+    const { name, detail } = cranePins[id as keyof typeof cranePins];
+    const text = narrow ? (name ?? "") : name ? `${name} · ${detail}` : detail;
+    const w = (narrow ? 32 : 40) + text.length * (narrow ? 7.2 : 8.3);
+    const h = narrow ? 30 : 34;
+    const y = below.has(id) ? rect.y + rect.h + 7 : rect.y - 7 - h;
+    return { x: rect.x + rect.w / 2 - w / 2, y, w, h };
+  };
+  for (const [i, a] of ids.entries())
+    for (const b of ids.slice(i + 1)) {
+      if (!fitted.has(a) || !fitted.has(b)) continue;
+      const [p, q] = [chipBox(a), chipBox(b)];
+      if (p.x < q.x + q.w + 4 && q.x < p.x + p.w + 4 && p.y < q.y + q.h + 4 && q.y < p.y + p.h + 4)
+        below.add(fitted.get(a)!.h < fitted.get(b)!.h ? a : b);
+    }
+  const pinBelow = (id: string) => below.has(id);
   // Pulsing hint rings (Grisha 09.11): one ring size for every actor, and the ring sits on the box the
   // finger actually hits — the fitted tap target, not a separate guess at where the actor is.
   const toArt = view.width ? art.width / view.width : 0;
@@ -202,6 +238,21 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const metre = Math.hypot(art.affine[0][0], art.affine[1][0]);
   const dot = { width: 0.35 * metre * k, step: 0.8 * metre * k };
   const dotted = { strokeWidth: dot.width, strokeDasharray: `0 ${dot.step}`, ["--dash" as string]: `${-dot.step}` };
+  // Rush: Ivan's own sprite slides along the rush route (by length), with a small step bob.
+  const walkShift = (() => {
+    if (beat.walk === undefined) return undefined;
+    const route = craneWorld.routes.rush;
+    const legs = route.slice(1).map((p, i) => Math.hypot(p[0] - route[i][0], p[1] - route[i][1]));
+    let d = beat.walk * legs.reduce((a, b) => a + b, 0);
+    let i = 0;
+    while (i < legs.length - 1 && d > legs[i]) d -= legs[i++];
+    const t = legs[i] ? Math.min(1, d / legs[i]) : 1;
+    const at = route[i].map((v, j) => v + (route[i + 1][j] - v) * t);
+    const [x0, y0] = art.project(route[0]);
+    const [x, y] = art.project(at);
+    const bob = beat.walk < 1 ? -Math.abs(Math.sin(d * Math.PI / 0.8)) * 0.25 * metre : 0;
+    return { transform: `translate(${((x - x0) / s.ivan.w) * 100}%, ${((y - y0 + bob) / s.ivan.h) * 100}%)` };
+  })();
   // Only while choosing: a marching dotted way; after confirming, the crane loading tells the story.
   const routeId = !playing && (litId === "rush" || litId === "petr") ? litId : undefined;
   const routePath = routeId && roundedRoute(craneWorld.routes[routeId], art.project);
@@ -210,6 +261,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const [sx, sy] = [anchor.pru[0], anchor.pru[1] - 2 * metre];
   const [ex, ey] = [anchor.nearCabin[0], anchor.nearCabin[1] - 2.4 * metre];
   const lift = 34 * Math.abs(art.affine[1][2]);
+  const signalPath = `M${sx} ${sy} Q${(sx + ex) / 2} ${Math.min(sy, ey) - lift} ${ex} ${ey}`;
   const sprite = (name: keyof typeof s, extra?: { style?: CSSProperties; lit?: boolean; className?: string; data?: string }) => (
     <img
       className={[styles.layer, extra?.className].filter(Boolean).join(" ")}
@@ -220,6 +272,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       data-layer={name}
       data-lit={extra?.lit || undefined}
       data-busy={(playing && beat.busy === name) || undefined}
+      data-walking={extra?.data}
       style={{ ...box(s[name]), ...extra?.style }}
     />
   );
@@ -248,7 +301,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             height={art.height}
             decoding="sync"
             draggable={false}
-            alt="Причал на Оби: Иван у офиса ПРУ слева, ближний кран, подарок на тележке, а далеко справа у баржи с трубами — портальный кран с пустой кабиной и лестницей; рядом с ним Пётр у своих ящиков."
+            alt="Причал на Оби: Иван у офиса ПРУ слева, ближний кран, подарок на тележке, а далеко справа у баржи с трубами — портальный кран с пустой кабиной и лестницей. Пётр стоит у своего крана, под стрелой — его ящики и маленькая баржа."
           />
         </picture>
         {routePath && (
@@ -260,7 +313,8 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {/* Everything standing on the quay, over the routes: the walks pass behind cranes, crates and trees. */}
         <img className={styles.layer} src={source(art.occluder)} alt="" draggable={false} decoding="sync" data-layer="occluder" style={box({ x: 0, y: 0, w: art.width, h: art.height })} />
         {!beat.lifted && !beat.onDeck && sprite("gift")}
-        {beat.office !== "empty" && sprite("ivan", { lit: lit.has("ivan") })}
+        {beat.walk !== undefined && sprite("porch")}
+        {(beat.office !== "empty" || walkShift) && sprite("ivan", { lit: lit.has("ivan"), style: walkShift, data: walkShift && "walking" })}
         {sprite("ladder", { lit: lit.has("ladder") })}
         {beat.cab !== "empty" && sprite("far", { lit: lit.has("far") })}
         {sprite("barge")}
@@ -283,8 +337,11 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {(showSignal || beat.emote || beat.later) && (
           <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             {showSignal && (
+              // Moonlight-yellow on a dark casing reads over trees, road and sky; bright packets run along the arc.
               <g data-barge-signal>
-                <path className={styles.signal} style={dotted} d={`M${sx} ${sy} Q${(sx + ex) / 2} ${Math.min(sy, ey) - lift} ${ex} ${ey}`} />
+                <path className={styles.signalCasing} style={{ strokeWidth: dot.width * 2.2 }} d={signalPath} />
+                <path className={styles.signal} style={{ strokeWidth: dot.width }} d={signalPath} />
+                <path className={styles.packets} pathLength={100} style={{ strokeWidth: dot.width * 1.8 }} d={signalPath} data-barge-packets />
                 {[0, 1, 2].map((i) => (
                   <path key={i} className={styles.wave} style={{ animationDelay: `${i * 0.5}s`, strokeWidth: dot.width }}
                     d={`M${sx - 3.6 * metre} ${sy - metre} Q${sx} ${sy - 4.8 * metre} ${sx + 3.6 * metre} ${sy - metre}`} />
@@ -292,12 +349,15 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
               </g>
             )}
             {beat.later && (
-              // Petr left his own crates: they wait for the next run, as the result says.
-              <g className={styles.emote} data-barge-later transform={`translate(${anchor.crates[0]} ${anchor.crates[1] - 30 - 18 * k}) scale(${k})`}>
-                <rect className={styles.tag} x="-96" y="-16" width="192" height="32" rx="16" />
-                <circle className={styles.dial} cx="-76" r="10" style={{ strokeWidth: 2.5 }} />
-                <path className={styles.hand} d="M-76 -6 V0 H-71" style={{ strokeWidth: 2.5, fill: "none" }} />
-                <text className={styles.tagText} x="10" y="6">Груз Петра ждёт</text>
+              // Petr left his own cargo (crates on his small barge): it waits for the next run, as the result says.
+              // Hangs under the crates (pointer tip on petrCargo), so the chip sits over the pontoon and water, off the quay edge.
+              <g className={styles.emote} data-barge-later transform={`translate(${anchor.petrCargo[0]} ${anchor.petrCargo[1]}) scale(${k})`}>
+                <path className={styles.tag} d="M-8 9 L0 0 L8 9" />
+                <rect className={styles.tag} x="-96" y="8" width="192" height="32" rx="16" />
+                <path d="M-7 10 H7" stroke="#fff" strokeWidth="3" />
+                <circle className={styles.dial} cx="-76" cy="24" r="10" style={{ strokeWidth: 2.5 }} />
+                <path className={styles.hand} d="M-76 18 V24 H-71" style={{ strokeWidth: 2.5, fill: "none" }} />
+                <text className={styles.tagText} x="10" y="30">Груз Петра ждёт</text>
               </g>
             )}
             {beat.emote && (
@@ -346,9 +406,11 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {options.map((option) => (
           <button
             key={option.id}
+            data-hotspot-lit={(hovered === option.id) || undefined}
             type="button"
             className={styles.hotspot}
             data-hotspot={option.id}
+            data-offstage={!ids.includes(option.id) || undefined}
             style={hotspotStyle(option.id)}
             aria-label={`${craneCaptions[option.id as keyof typeof craneCaptions]}: ${choiceLabel(option.label)}`}
             aria-pressed={(playing ?? selectedId) === option.id}
@@ -359,10 +421,27 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             // Only keyboard focus lights the actor; the programmatic focus restored after «Изменить выбор» must not (R19).
             onFocus={(event) => { if (event.currentTarget.matches(":focus-visible")) setHovered(option.id); }}
             onBlur={() => setHovered(undefined)}
-          />
+          >
+            <QuayPin id={option.id as keyof typeof cranePins} number={options.indexOf(option) + 1} below={pinBelow(option.id)} />
+          </button>
         ))}
       </div>
       <ArtworkLoading status={status} onRetry={() => setAttempt((count) => count + 1)} />
     </figure>
+  );
+}
+
+/** A tappable marker over an actor: the option icon with its number, and the person's name where there is one. */
+function QuayPin({ id, number, below }: { id: keyof typeof cranePins; number: number; below: boolean }) {
+  const Icon = pinIcons[id];
+  const { name, detail } = cranePins[id];
+  return (
+    <span className={styles.pin} data-quay-pin={id} data-below={below || undefined} aria-hidden="true">
+      <span className={styles.pinChip}>
+        <span className={styles.pinIcon} data-choice-number={number}><Icon /></span>
+        {name && <b className={styles.pinName}>{name}</b>}
+        <span className={styles.pinDetail} data-named={!!name || undefined}>{detail}</span>
+      </span>
+    </span>
   );
 }

@@ -20,7 +20,6 @@
 !docs/
 !docs/**/
 !docs/**/*.json
-!docs/scenario.md
 # Never send credentials, caches or binary masters nested in source directories.
 **/.env
 **/.env.*

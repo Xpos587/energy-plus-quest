@@ -28,7 +28,8 @@ for (const viewport of [
     // The first paragraph names the parcel in place of «(название сюрприза)».
     await expect(page.getByTestId("scene-question")).toContainText("Ваш фотоаппарат уже на причале");
     for (const text of source.slice(1)) await expect(page.getByTestId("scene-question")).toContainText(text);
-    await expect(page.locator('[data-scene-choice]')).toHaveCount(0);
+    // Owner 19.11: the three ways are also listed beside the quay, the same pick as the pins.
+    await expect(page.locator('[data-scene-choice]')).toHaveCount(3);
 
     for (const id of ["remote", "rush", "petr"]) {
       const marker = page.locator(`[data-hotspot="${id}"]`);

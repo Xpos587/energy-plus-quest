@@ -41,6 +41,9 @@ function format(name: CraneFormat) {
   const story: readonly Point[] = [a.pru, [pu, pv], office, ...corners(sp.ivan), ...corners(sp.gift), ...near, ...corners(sp.ladder),
     ...corners(sp.far), ...corners(sp.barge)];
   const tall = name === "tall";
+  // Screen shift of Ivan's sprite from the start to the end of his rush walk.
+  const rush = craneWorld.routes.rush;
+  const walkEnd = project(rush[rush.length - 1]).map((v, i) => v - project(rush[0])[i]);
   const pad = (r: { x: number; y: number; w: number; h: number }, d: number) => ({ x: r.x - d, y: r.y - d, w: r.w + 2 * d, h: r.h + 2 * d });
   return {
     ...layer,
@@ -61,16 +64,18 @@ function format(name: CraneFormat) {
       rush: ["ladder", "near"],
       petr: ["far", "near"],
     } as Record<string, readonly CraneActor[]>,
-    // Reaction bubbles: the tail tip just over the head of whoever reacts (people stand still).
+    // Reaction bubbles: the tail tip just over the head of whoever reacts; `ladder` = Ivan after his walk.
     emote: {
       office: [sp.ivan.x + sp.ivan.w * 0.75, sp.ivan.y - 2],
+      ladder: [sp.ivan.x + sp.ivan.w * 0.75 + walkEnd[0], sp.ivan.y - 2 + walkEnd[1]],
       far: [sp.far.x + sp.far.w * 0.75, sp.far.y - 2],
     } as const,
     // Card open on a phone: the camera closes in on the chosen way.
     zoom: tall
       ? ({
           remote: around([a.ivan, a.gift, a.nearCabin, a.deckSpot], 120, width, height),
-          rush: around([a.ladderFoot, a.ladderTop, a.nearCabin, a.gift], 140, width, height),
+          // Wide enough to read Ivan's walk: the quay leg from mid-quay, the gift and the whole loading crane.
+          rush: around([a.ladderFoot, a.ladderTop, a.nearCabin, a.nearTip, a.gift, project([30, 17, 0])], 100, width, height),
           petr: around([a.petr, a.ladderFoot, a.nearCabin, a.deckSpot], 110, width, height),
         } as Partial<Record<string, Rect>>)
       : ({} as Partial<Record<string, Rect>>),
@@ -90,6 +95,21 @@ export const craneCaptions = {
   remote: "Иван управляет краном из офиса ПРУ",
   rush: "Иван идёт на дальний кран",
   petr: "Пётр рядом — поднимается на кран у баржи",
+} as const;
+
+/** Short choice names for the option chips and the pins on the quay (phones fit three in one row). */
+export const craneChoiceNames = {
+  remote: "Иван — с пульта",
+  rush: "Иван — пешком на кран",
+  petr: "Попросить Петра",
+} as const;
+
+/** Pins on the quay: the two people wear their name (roles as the scenario says: «Крановщик Иван», «оператора Петра»);
+ * the ladder pin has no person, only a place. On a narrow stage only the name stays. */
+export const cranePins = {
+  remote: { name: "Иван", detail: "крановщик" },
+  rush: { name: undefined, detail: "Пешком на кран" },
+  petr: { name: "Пётр", detail: "оператор" },
 } as const;
 
 /** Card facts, as the truck card lists speed and year: who, from where, when. */

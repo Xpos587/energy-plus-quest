@@ -19,7 +19,7 @@ for (const [width, height] of [[320, 568], [360, 640], [375, 667], [390, 844], [
       const hint = document.querySelector('[data-carrier-tap-hint]')!.getBoundingClientRect();
       return { width: s.width, height: s.height, left: p.left-s.left, top: p.top-s.top, planeWidth: p.width, planeHeight: p.height, hintBottom: hint.bottom-s.top, format: el.querySelector('img')!.src.includes('choice-wide') ? 'wide' as const : 'tall' as const };
     });
-    await expect(stage.locator('img').first()).toHaveAttribute('src', new RegExp(`revision-25/choice-${view.format}\\.webp$`));
+    await expect(stage.locator('img').first()).toHaveAttribute('src', new RegExp(`revision-27/choice-${view.format}\\.webp$`));
     // The art always covers the whole stage: no bands at any layout.
     expect(view.left).toBeLessThanOrEqual(0.5);
     expect(view.top).toBeLessThanOrEqual(0.5);

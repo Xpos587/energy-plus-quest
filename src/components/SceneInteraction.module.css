@@ -4132,3 +4132,42 @@
 /* A zero keeps its metric hue but recedes: the chip turns neutral grey. */
 .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key]:has(strong[data-neutral="true"]) svg { background: #eef2f5; color: #7b91a3; }
 .app[data-scene] .frame.frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key]:has(strong[data-neutral="true"]) strong { color: #7b91a3; }
+
+/* Scene 4 choice list (owner 19.11): the quay pins also stay listed in the panel; the list opens the same card.
+   The choice screen is styled by SceneShell, so these rules hang on the scene attribute, not on .app. */
+[data-scene="crane"] [data-interaction="inspect-confirm"] .questionAction > [data-choice-variant="scene"] { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 8px; }
+[data-scene="crane"] [data-interaction="inspect-confirm"] .questionAction [data-scene-choice] { min-height: 56px; padding: 8px 12px; font-size: 17px; line-height: 1.2; }
+[data-scene="crane"] [data-interaction="inspect-confirm"] .questionAction [data-scene-choice]:is([data-focused="true"], [aria-pressed="true"]) { border-color: #075d9b; background: #edf4f9; }
+@media (max-width: 900px) and (orientation: portrait) {
+  /* Phones: the picture stays big; the question and three chips lead, the story scrolls under them. */
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .question[data-testid="scene-question"] { max-height: min(44dvh, 400px); gap: 8px; padding-top: 10px; }
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .question[data-testid="scene-question"] > :first-child { order: -3; }
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .question[data-testid="scene-question"] > .questionTop { order: -2; }
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .question[data-testid="scene-question"] > .questionAction { order: -1; }
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .questionAction > [data-choice-variant="scene"] { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 6px; }
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .questionAction [data-scene-choice]:last-child:nth-child(odd) { grid-column: auto; }
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .questionAction [data-scene-choice] {
+    flex-direction: column; justify-content: center; gap: 4px;
+    min-height: 64px; padding: 6px 4px; font-size: 14px; line-height: 1.15; text-align: center;
+  }
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .questionAction [data-scene-choice] > span:first-child { flex: none; width: 28px; height: 24px; }
+  [data-scene="crane"] [data-interaction="inspect-confirm"] .questionAction [data-scene-choice] svg { width: 18px; height: 18px; }
+}
+/* Crane card on short phones: «К причалу» and «Подтвердить выбор» share one row so the facts stay in view.
+   The scene shell owns .app/.frame here, so only this module's .inspection/.actions are named. */
+@media (orientation: portrait) and (max-height: 700px) {
+  [data-scene="crane"] .inspection[data-choice-inspection] { gap: 8px; }
+  [data-scene="crane"] .inspection[data-choice-inspection] .actions { flex-wrap: nowrap; }
+  [data-scene="crane"] .inspection[data-choice-inspection] .actions > button { flex: 1 1 auto; padding-inline: 10px; }
+}
+/* Owner (Teo, scale): on a portrait phone the choice screen first shows the whole quay — both cranes, ПРУ,
+   Petr's berth, the big barge, river and shore — in the mid drawing's own aspect (1402×1122); picking a
+   way grows the picture row again and the camera closes in on it. */
+@media (max-width: 600px) and (orientation: portrait) and (min-height: 701px) {
+  /* The frame carries SceneShell's hashed class, so it is named by its data attributes. */
+  [data-scene="crane"] [data-interaction="inspect-confirm"][data-inspecting="false"][data-inspecting] {
+    grid-template-rows: var(--scene-header-height) minmax(0, 80.03vw) minmax(0, 1fr);
+  }
+  /* The card fills the rest of the screen under the shorter picture, no empty band between them. */
+  [data-scene="crane"] [data-interaction="inspect-confirm"][data-inspecting="false"] [data-testid="scene-question"][data-testid] { align-self: stretch; margin-top: 0; max-height: none; }
+}

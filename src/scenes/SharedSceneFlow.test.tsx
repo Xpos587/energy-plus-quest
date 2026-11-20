@@ -100,7 +100,12 @@ it("focuses the selected button and resets the result when the starting scene ch
   expect(
     container.querySelector('[data-hotspot="remote"]'),
   ).not.toBeNull();
-  expect(container.querySelector("[data-scene-choice]")).toBeNull();
+  // Owner 19.11: the quay pins are also listed in the panel, and the list opens the same card.
+  expect([...container.querySelectorAll("[data-scene-choice]")].map((node) => node.getAttribute("data-scene-choice")))
+    .toEqual(["remote", "rush", "petr"]);
+  await act(async () => container.querySelector<HTMLButtonElement>('[data-scene-choice="petr"]')!.click());
+  expect(container.querySelector('[data-choice-inspection="petr"]')).not.toBeNull();
+  expect(container.querySelector('[data-hotspot="petr"]')?.getAttribute("aria-pressed")).toBe("true");
 });
 
 it("shows the existing place description before confirmation and updates it when switching", async () => {

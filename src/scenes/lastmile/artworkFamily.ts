@@ -9,9 +9,9 @@ const lastmileTundraRevision = 'scene-art/lastmile-family-v1/revision-21';
 // revision-22: revision-21 flights with the white «3» on the Mi-8 nose and a regenerated rover-boat (.tmp-work/s5-r22).
 const lastmileRevision22 = 'scene-art/lastmile-family-v1/revision-22';
 
-// Revision 25 repaints the same v29 layout, with revised vehicles and flooded ruts.
+// Revision 27: r26 plate with gpt-image-2 harmonised bog + quay (native row vehicles, level Mi-8), one horizon river (.tmp-work/scene5-r9).
 export function lastmileChoiceImage(format: 'wide' | 'tall', _recipient?: SceneContext['recipient']) {
-  return `scene-art/lastmile-family-v1/revision-25/choice-${format}.webp`;
+  return `scene-art/lastmile-family-v1/revision-27/choice-${format}.webp`;
 }
 
 export function lastmileFlightImage(context: SceneContext) {
