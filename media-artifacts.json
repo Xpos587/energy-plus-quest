@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-20-current-r27",
+  "release": "media-2026-11-20-current-r28",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -4521,10 +4521,10 @@
       ]
     },
     {
-      "name": "runtime-76682913a118.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-20-current-r27/runtime-76682913a118.tar.gz",
-      "sha256": "76682913a11835849d0f0e4a56a3a5f772c5a613eb61a862f239d92d40edacc2",
-      "bytes": 203191322,
+      "name": "runtime-e48386aeaa26.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-20-current-r28/runtime-e48386aeaa26.tar.gz",
+      "sha256": "e48386aeaa26e398e3c7e0f41d5b4812e28968e8cf61a45531f0130011e3c76b",
+      "bytes": 208626907,
       "files": [
         {
           "path": "design/scene-04/blender-v4/painted/face-inputs/desk/far.webp",
@@ -5617,6 +5617,31 @@
           "sha256": "01ca9b6bafc46a94b30d4e28b56bed9c26a5478146a70f14ae4e7d01256c8b4a"
         },
         {
+          "path": "public/scene-art/barge-v7/desk/cabIvan.webp",
+          "bytes": 33608,
+          "sha256": "e2a84924a292e37572323aca9836fe426e7cf68ffec0d5cfed371206ac317f08"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/cabPetr.webp",
+          "bytes": 33142,
+          "sha256": "309d19df38bc62acb1c32512e64c339faab18e6a2b6d1bef03428fa412468f8e"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/climbIvan.webp",
+          "bytes": 16526,
+          "sha256": "d4ba459b84fe0ecac6944b9d3c5e39a0ee05e909f7583cb3574831bfd8da9d86"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/climbOccluder.webp",
+          "bytes": 8938,
+          "sha256": "d11b2e534f6c87db91df2c8f62d3913724c2aa37d6e76e4a52fedfb4257bd814"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/climbPetr.webp",
+          "bytes": 16542,
+          "sha256": "88772d05641cc7e40828d1c33ec2ecfcf04f9490bdce6e006c491f64d2acbc42"
+        },
+        {
           "path": "public/scene-art/barge-v7/desk/far.webp",
           "bytes": 5986,
           "sha256": "73c548d5a8d1133d98da5e929cf37409b740d05d8cf7f21c295cd5b64754c024"
@@ -5653,8 +5678,13 @@
         },
         {
           "path": "public/scene-art/barge-v7/desk/porch.webp",
-          "bytes": 3858,
-          "sha256": "30b91014322324abc2ad0ac1d086643d7a413eb41f03b398f584e8f44e6a7886"
+          "bytes": 13148,
+          "sha256": "3eeb6289b201b941fcc731157d082787fe4c06409352ca0f67b295d29b26b327"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/post.webp",
+          "bytes": 11952,
+          "sha256": "15bc3bf5ada5ef9c5efa7b57621bf247699f45cc699dda8fde4ebff78e8932ac"
         },
         {
           "path": "public/scene-art/barge-v7/desk/smoke.webp",
@@ -5667,6 +5697,56 @@
           "sha256": "e11df5de7a821c44e8d8b07ce2027b2f492872313bb5f5ed00ee0ef491d98551"
         },
         {
+          "path": "public/scene-art/barge-v7/desk/turnOccluderIvan.webp",
+          "bytes": 230,
+          "sha256": "751af16414d813a7b12f2e4b21b096e8e96480bba7816515dec006af2ef080fe"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/turnOccluderPetr.webp",
+          "bytes": 6232,
+          "sha256": "774bd8a3d8dd4991ae6ee1ae88194d3bc25d1365a67b63bacfd619f94ac37ec3"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/walkIvanEast.webp",
+          "bytes": 67376,
+          "sha256": "24e69fc20a85a3a8b3cb59036b8ede9147d819950e77b378d9d8c374af4c565a"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/walkIvanInland.webp",
+          "bytes": 66448,
+          "sha256": "1f0085283ed68ff9fbc926666dd29abd243754d52ed4b349d6f2d9b6785cf56c"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/walkIvanSeaward.webp",
+          "bytes": 67464,
+          "sha256": "e52d0cbc7e1cda9e29e8cf3441fa58d3f45d0affac2f3c4afe5652c05058fd7a"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/walkOccluder.webp",
+          "bytes": 77224,
+          "sha256": "da21f2590b3d1459e8031772650fb51a2dfca4185569a16ed2dd6580b78118d5"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/walkOccluderPetr.webp",
+          "bytes": 34398,
+          "sha256": "23878fba6858b6c7a2019572d5c7517fa724babeb997b0404e0345c6f64ff968"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/walkPetrEast.webp",
+          "bytes": 67326,
+          "sha256": "a32a36f7eeb5caea4edcee5129fd68815f25ae6b5b2cdd5fa2c8d8dea2e663fa"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/walkPetrInland.webp",
+          "bytes": 66058,
+          "sha256": "0f14c713e0f33f74e0b1c264b7c69f60b628fdf97398a2e39483c97b30333f3e"
+        },
+        {
+          "path": "public/scene-art/barge-v7/desk/walkPetrSeaward.webp",
+          "bytes": 67092,
+          "sha256": "fdaabefed6c0b9abc2f25fc539eb7dae49bac0d40bc03b52c59d98c2c79c3789"
+        },
+        {
           "path": "public/scene-art/barge-v7/mid/barge.webp",
           "bytes": 86062,
           "sha256": "29037c1aa4edba1f0b6d1615d44451739581bf60faeaaa67e3f231e5ade7ee07"
@@ -5675,6 +5755,31 @@
           "path": "public/scene-art/barge-v7/mid/box.webp",
           "bytes": 4784,
           "sha256": "1f4a74c8d0913bf19de51969503300cab200a398b819dc7501978d5b65fb0549"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/cabIvan.webp",
+          "bytes": 29256,
+          "sha256": "dc2701f04fd451ddeb46e78b43a9bed15a2fc8ccec199cb5f204512f14b01109"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/cabPetr.webp",
+          "bytes": 28888,
+          "sha256": "0d62b07eb48995ba436c9cc9be9ba339a4e8495b47947be97553fbcd7770f688"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/climbIvan.webp",
+          "bytes": 14604,
+          "sha256": "7a80776dc83dafd29c68b59d67a8cedd6c73516cd986bb13e55b5b1bbbbcbde8"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/climbOccluder.webp",
+          "bytes": 8162,
+          "sha256": "c95914ad8c10ac98acdf984d6b0d36b977e357678b26c135b58e44275198b3d5"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/climbPetr.webp",
+          "bytes": 14394,
+          "sha256": "81376b9ebbfbf9912beae37d0d56464dbc13d2cacc1f0cb1c2f1190636c81e7d"
         },
         {
           "path": "public/scene-art/barge-v7/mid/far.webp",
@@ -5713,8 +5818,13 @@
         },
         {
           "path": "public/scene-art/barge-v7/mid/porch.webp",
-          "bytes": 3694,
-          "sha256": "e84f6c3d8460be1591eba0960d423fc990ca5d4efead93c225d80ce4d18c153a"
+          "bytes": 12414,
+          "sha256": "a67033e0900c16aaf19f21e143e95c94469f3b19781c05b0a32b310a07c7532a"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/post.webp",
+          "bytes": 10766,
+          "sha256": "5f5630e76c28a4e1acc919ffc95fbf75fdd1b0be215d672e35aee4fec72ba5ca"
         },
         {
           "path": "public/scene-art/barge-v7/mid/smoke.webp",
@@ -5727,49 +5837,99 @@
           "sha256": "6e854781aa32afadb3b23b519f8d86b73e4372af1ee02b30b4061de64a97c928"
         },
         {
+          "path": "public/scene-art/barge-v7/mid/turnOccluderIvan.webp",
+          "bytes": 272,
+          "sha256": "4386d02a2e0257f7b9c332efec8b35ca09da3428247c13eb1b56a3fb408046b6"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/turnOccluderPetr.webp",
+          "bytes": 6130,
+          "sha256": "46e89ca94cd35d89a0dce66dfcff1f8b733e54d03ce22586d966215400f4b7d9"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/walkIvanEast.webp",
+          "bytes": 58922,
+          "sha256": "37f8d50c14403247924a632ce442ac7b3a490a336180b8761fb93f9a74ae410a"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/walkIvanInland.webp",
+          "bytes": 57722,
+          "sha256": "8dd3941a2056f537cfb3c565a772afc953007f830ea402749f4d816274ff1ff9"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/walkIvanSeaward.webp",
+          "bytes": 58190,
+          "sha256": "0896d974ccefbf7d1a88155fed63685a5330a78ff68e3dc271aedb15b04c3a59"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/walkOccluder.webp",
+          "bytes": 68966,
+          "sha256": "90d7442f6aac6412edb542060b693718ba034cc14fb739f98e5792c39d95e57d"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/walkOccluderPetr.webp",
+          "bytes": 31474,
+          "sha256": "19af3701bbe42dd50d2af528c22a539b5f7d5919cd37ad800ba88d6513f0fb79"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/walkPetrEast.webp",
+          "bytes": 58778,
+          "sha256": "f0cb69be5de81be79cadc1c363323ba90879d20819df3326ab1c841847502aff"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/walkPetrInland.webp",
+          "bytes": 57668,
+          "sha256": "744e450d0d9c09b48ab3898ca100cec72cf9aecdcd2b769d0c878decff19f7e9"
+        },
+        {
+          "path": "public/scene-art/barge-v7/mid/walkPetrSeaward.webp",
+          "bytes": 57734,
+          "sha256": "df51792f9f4b74e171fa556f99b94a818f9d3077b0d0abab591109e3cb10bfff"
+        },
+        {
           "path": "public/scene-art/barge-v7/outcome-petr-portrait.webp",
-          "bytes": 890498,
-          "sha256": "69b7f44f43176eba096a1095cf0573477898c56ab2302cdebeb170c06bbb21fa"
+          "bytes": 960038,
+          "sha256": "501cc2dcb4d339833eec36d976d8b44c149ce5f2699f522c240b83fe8c1d4c6c"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-petr-rail.webp",
-          "bytes": 670870,
-          "sha256": "f2211b62133672525bc314b880e59a56ca8bc8fad2dd664b2122a10b2064545d"
+          "bytes": 705550,
+          "sha256": "32f0507f05d4bd1324ac1d40313a20d0106d5fc868320375a626e8647e121eb3"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-petr.webp",
-          "bytes": 1084454,
-          "sha256": "88006eec5770e9d511a9a7af249e2481aec5b85445d9f2f3887167c26804a781"
+          "bytes": 1131174,
+          "sha256": "746ee5527332c80bd097752bd7a814fde987b8566f514d242568f983145851f9"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-remote-portrait.webp",
-          "bytes": 888746,
-          "sha256": "5718855aa3fe9a27775a1136698f3d3457cbaa7d7081051911949b6d9b8e6f83"
+          "bytes": 964544,
+          "sha256": "f890ee9ed4bb407e7a70af5cdd939e6a1005b120517226535908850810cdbda2"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-remote-rail.webp",
-          "bytes": 672886,
-          "sha256": "ab881e7f5c00d2b4f9a71d8914db29486014ec024ce32513840a001d2d79140e"
+          "bytes": 702282,
+          "sha256": "db50a7a5ecea523a9607c12a2274181e770c53a6a92927d8c8e367dabb7c21ed"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-remote.webp",
-          "bytes": 1084036,
-          "sha256": "7d68dbfb9c738c1f0c4dfd6428b6d8d8ce20052bb8fd058d5057100cda478477"
+          "bytes": 1130290,
+          "sha256": "afaa0dba8600d076f67592a53714ce39c2fdcc6be0b9d276f276107cc9efa5c6"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-rush-portrait.webp",
-          "bytes": 884224,
-          "sha256": "4b8e6c0179c6efe2d73be482ead978b70ee4d3fa02a8fd635734dc473ce0ae10"
+          "bytes": 966146,
+          "sha256": "f77ad19dd12611786a2eb6ef3a47d0aa19920fbd39c580ad2d29741c66e2f5b1"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-rush-rail.webp",
-          "bytes": 672490,
-          "sha256": "2d8d7719817e9ad51be3c564d19efd18224d3279c9ebf506ac5caf55c175ff90"
+          "bytes": 703458,
+          "sha256": "36e4e22fd3a7cac153dbfd41c656f2e0b048565b63d706619ee48bdf548ba483"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-rush.webp",
-          "bytes": 1082770,
-          "sha256": "bf1ba59208709daa863342aa544f3caa58c9c616c7ace0c24470e24839152f02"
+          "bytes": 1130596,
+          "sha256": "3b8091dd5619fb12ba95f69d15f267570a32d83a10f23e74c90e2df2fd1233fa"
         },
         {
           "path": "public/scene-art/barge-v7/tall/barge.webp",
@@ -5780,6 +5940,26 @@
           "path": "public/scene-art/barge-v7/tall/box.webp",
           "bytes": 4978,
           "sha256": "de3d187dd25adfb9bcf9cb002ba65010b8f3b88262fa8f70c5db53638d777036"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/cabIvan.webp",
+          "bytes": 47148,
+          "sha256": "9d6cd2a0cec604a394c7c6ded82c936d326ede7f5bea2cdd38b4b72e317f34de"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/cabPetr.webp",
+          "bytes": 46604,
+          "sha256": "c7f5b20b2504d03f362546f61c0f53505d0d567cf497ce8e432c9c5ffb2d331e"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/climbIvan.webp",
+          "bytes": 20376,
+          "sha256": "2a07bb934f1b2c0404b9041f995b63706cfb72c79a970bc28a01786c2efb55f5"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/climbPetr.webp",
+          "bytes": 20280,
+          "sha256": "c54de1b8fa302b8b7e027f41a6be169e059bd5f6e19f9b2cfd8d3399cbc73015"
         },
         {
           "path": "public/scene-art/barge-v7/tall/far.webp",
@@ -5818,8 +5998,13 @@
         },
         {
           "path": "public/scene-art/barge-v7/tall/porch.webp",
-          "bytes": 2622,
-          "sha256": "f622694b2b11b62c8bfb88d5ae884d2ad71612cf0822f8ca517da3f4aabc0519"
+          "bytes": 32598,
+          "sha256": "ccade5247c680aada7edd508e16258b841748c277abe723129f236bfd20254f1"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/post.webp",
+          "bytes": 12480,
+          "sha256": "bd84140eb80024a357b77e6c5d04216a439edf375c4112169c332460d91a890f"
         },
         {
           "path": "public/scene-art/barge-v7/tall/smoke.webp",
@@ -5832,6 +6017,56 @@
           "sha256": "0534756c6c7ab85443ad8d5afed321a02917bd69adff9d6d27f2131fa04fb403"
         },
         {
+          "path": "public/scene-art/barge-v7/tall/turnOccluderIvan.webp",
+          "bytes": 728,
+          "sha256": "5b35fe4f8f751c359c84db18432bd24dd82bbbbb0fe954a7a5dfa22304e6df34"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/turnOccluderPetr.webp",
+          "bytes": 5486,
+          "sha256": "f07e47af6b01307a341d01541ad96f7d320d47ae675bfe103427b893c65eee0f"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/walkIvanEast.webp",
+          "bytes": 80776,
+          "sha256": "c376773e4b926b2e239f75cdec467224cb4df76858dee98485e171fb4b970395"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/walkIvanInland.webp",
+          "bytes": 80216,
+          "sha256": "ab42b29e300651f1abaf638dae4d7ca7838ecd6e9f47c147ec1885b477a11eb1"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/walkIvanSeaward.webp",
+          "bytes": 79518,
+          "sha256": "402643971ff66f68eca67c6d62ecef60ba130682bffe48bf8cfc835a213f90d3"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/walkOccluder.webp",
+          "bytes": 8432,
+          "sha256": "1eab87e256b243267d54a2a9d7e664da4568f8237f210c3fe644b5e1beb11ad8"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/walkOccluderPetr.webp",
+          "bytes": 13390,
+          "sha256": "24291d6a694c6d20720304d2a046b73d60256528934c464a4b65214c501ade99"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/walkPetrEast.webp",
+          "bytes": 80178,
+          "sha256": "3b1e41fafc411a9682cc63fdf0414b87c0858a88312dc33ace2290b78997917e"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/walkPetrInland.webp",
+          "bytes": 79418,
+          "sha256": "c3a5f0e9decced8dec8b0c68c8207b2ca9c475e6047db0fb0792332fddfb6dee"
+        },
+        {
+          "path": "public/scene-art/barge-v7/tall/walkPetrSeaward.webp",
+          "bytes": 78832,
+          "sha256": "0e6c042ac2c845640c0664e9c4f07eb35a0aed75d40f2971891696ae6bf2d435"
+        },
+        {
           "path": "public/scene-art/barge-v7/wide/barge.webp",
           "bytes": 103346,
           "sha256": "5982a104b2898be0024f3546318e9aebfd4237b2dda08af3da59f38ff5ae020a"
@@ -5840,6 +6075,31 @@
           "path": "public/scene-art/barge-v7/wide/box.webp",
           "bytes": 5100,
           "sha256": "cb5cc738f8c2ef35e259da4c6b29cdc1952a8e48dd4d86e82906b7f22ff5ce5a"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/cabIvan.webp",
+          "bytes": 33440,
+          "sha256": "6a622fd23986a61cbb733da6dc9e96801b7493b12bfdd32f5f5ea1adcd28cb9a"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/cabPetr.webp",
+          "bytes": 32790,
+          "sha256": "d5458f8cf3e2653ea1d0811261df466d8d04ee48cd6956424d4b818891391ad1"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/climbIvan.webp",
+          "bytes": 16346,
+          "sha256": "395e7d20b3850987675bdefb9a3ea1f820814cb26a78d6f6557a4ec57d601f39"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/climbOccluder.webp",
+          "bytes": 8766,
+          "sha256": "1d290eb7c34de50b2aa6222d82f40b252d3ff046f64964498281897bf1129317"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/climbPetr.webp",
+          "bytes": 16174,
+          "sha256": "ec8e0c2d5dfd80e9c125fcc33d09441f333bb6ac01f285240068e5e8f5d4f0ec"
         },
         {
           "path": "public/scene-art/barge-v7/wide/far.webp",
@@ -5878,8 +6138,13 @@
         },
         {
           "path": "public/scene-art/barge-v7/wide/porch.webp",
-          "bytes": 3806,
-          "sha256": "7c0f7789c9b8a05cd8a14ccf98fe9d65d8a8f4077554c0e76eecebeb3eda9fb9"
+          "bytes": 13574,
+          "sha256": "6da021cf19201d72368cbfe2b2234390e6c7c621588dd24bec05a4614525e027"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/post.webp",
+          "bytes": 12016,
+          "sha256": "8f05044fb8d762c7e45955456c8a23620963af653c79aa3e931f13cc912157d6"
         },
         {
           "path": "public/scene-art/barge-v7/wide/smoke.webp",
@@ -5890,6 +6155,56 @@
           "path": "public/scene-art/barge-v7/wide/top.webp",
           "bytes": 480460,
           "sha256": "1c9c6715c6564a6aecb0434525e61718841f3ef955c79a6ffc499b2334da28be"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/turnOccluderIvan.webp",
+          "bytes": 324,
+          "sha256": "096909ce71f21dfed903983a532d3d7be0c84e273131c711c43f876c40f4864d"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/turnOccluderPetr.webp",
+          "bytes": 6414,
+          "sha256": "3e786c5cabccbac975eb288fd8c427aeaef97d75ca556b4a9f4d611431ed1f6c"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/walkIvanEast.webp",
+          "bytes": 65328,
+          "sha256": "3bcc0532be28c564087e590179acad34b557164f691c039cb1304510f271d69a"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/walkIvanInland.webp",
+          "bytes": 64464,
+          "sha256": "fd37a7bfda2c02cc7e663c34ce0fa3d33cec9739fd3f921e9b76701f29c6ff0c"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/walkIvanSeaward.webp",
+          "bytes": 65710,
+          "sha256": "9f685773db64373e8a3e956c0ef52797b0615e9580e8828523d9476be8b6c576"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/walkOccluder.webp",
+          "bytes": 76558,
+          "sha256": "47e5273559d67b43130beaf74030b639c3d44cec97d17b0b197af09a20f4e3ec"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/walkOccluderPetr.webp",
+          "bytes": 33470,
+          "sha256": "4ced8260873d982a6239f3b4d6b6499eb756d771cb2de2804d2baca8ed175065"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/walkPetrEast.webp",
+          "bytes": 65214,
+          "sha256": "f3e2f09207ae64273923649d2b4bdfc641e12303b7916229593b14c530d31aad"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/walkPetrInland.webp",
+          "bytes": 64188,
+          "sha256": "e09a1eb9247184a3622bbc6603fcf839f01142d9e804225d35fdf460512be957"
+        },
+        {
+          "path": "public/scene-art/barge-v7/wide/walkPetrSeaward.webp",
+          "bytes": 65716,
+          "sha256": "29194461a09a55186853cd7f451297c4e87ced9dab3d734089227e3af3529105"
         },
         {
           "path": "public/scene-art/inventory-master-v16-tall.webp",
@@ -6150,6 +6465,66 @@
           "path": "public/scene-art/lastmile-family-v1/revision-27/wide-rover.webp",
           "bytes": 22124,
           "sha256": "a255a8219a1014c33b175d72e1c8ed3cd708d8fcd947175ae25eb088aaa37442"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/choice-tall.webp",
+          "bytes": 709998,
+          "sha256": "3f829dc05901d21581a78a902078b63d3c12af39c9e7418a98ac04f684d5c3ff"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/choice-wide.webp",
+          "bytes": 814422,
+          "sha256": "331623a81fb81b09118fff97b1b3ead5aed9479dcfa9bf23e1f5784d07bbb0b7"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/tall-barge.webp",
+          "bytes": 14462,
+          "sha256": "264fce0cea4bf708fc4a336f7b78c1b2ec4608b8b53bfecbaddaa71119dd7aee"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/tall-floes.webp",
+          "bytes": 81640,
+          "sha256": "09a2fb7b0519b116485c02c5ed08870a94667737e6e7d7af147e0a5803e35124"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/tall-pipe-carrier.webp",
+          "bytes": 31390,
+          "sha256": "d4ef6f0f0ac96ed18445061b41904ee74e62c1ff20cd517c5a50d60b31dac53a"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/tall-rotor.webp",
+          "bytes": 249298,
+          "sha256": "0bb7f684e69d3ea1e23a233fd073e8b5f8e9cf84447b16e13b9d3526b27debbf"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/tall-rover.webp",
+          "bytes": 14360,
+          "sha256": "1b32d8782b16d5d0b2e5ca46265ad933142e1df5442472fe9b9e5e0f5460d6d4"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/wide-barge.webp",
+          "bytes": 27796,
+          "sha256": "3a6a5367f4a247571834a796f6321fb2a7f3a4cf3ab1914b54bf5480d85dfccf"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/wide-floes.webp",
+          "bytes": 70424,
+          "sha256": "d8b4587fd6b0622d895286476889a1d112a15c45f116a3778b8db422ace9961a"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/wide-pipe-carrier.webp",
+          "bytes": 29906,
+          "sha256": "6027cb2bf3d145da5df9bee4115e14fdd7f2e829cf3b6ae33b6518c0f657299c"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/wide-rotor.webp",
+          "bytes": 359870,
+          "sha256": "f497293b912767d343c0c73a527689864e0ffbccea525324321fbbb318e0c038"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-28/wide-rover.webp",
+          "bytes": 23598,
+          "sha256": "7b4d6e3920dbd9452c56380be329518a4c797a96c090ae7447e429c3d9721597"
         },
         {
           "path": "public/scene-art/lastmile-r5/choice-tall.webp",

@@ -98,6 +98,7 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
   // Their real conditionals remain the source of truth for every context variant.
   const craneArtwork = await source("src/scenes/crane/artwork.ts");
   const craneLayers = await source("src/scenes/crane/layers.ts");
+  const craneWalkArt = await source("src/scenes/crane/walkArt.json");
   const lastmileFamily = await source("src/scenes/lastmile/artworkFamily.ts");
   function resolver(text: string) {
     const exports = {};
@@ -109,6 +110,7 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
         if (id === "./worldManifest.json") return manifest;
         if (id === "./crane/artwork" && craneArtwork) return resolver(craneArtwork);
         if (id === "./layers" && craneLayers) return resolver(craneLayers);
+        if (id === "./walkArt.json" && craneWalkArt) return JSON.parse(craneWalkArt);
         if (id === "./lastmile/artworkFamily" && lastmileFamily) return resolver(lastmileFamily);
         throw new Error("Unexpected dependency in pure artwork resolver: " + id);
       },

@@ -1,6 +1,8 @@
 /** Barge scene v7: the Blender quay (design/scene-04/blender-v6) painted per format (design/scene-04/stylized-v7), as layers.
  * Crane swap (call 17.11): the empty loading crane stands far right by the barge, Petr waits by his crates next to it. */
 import { craneLayers, craneWorld } from "./layers";
+// Step cycles, cab occupants, painted-out patches and depth masks: design/scene-04/walk-v1 (boxes in format px).
+import walkArt from "./walkArt.json";
 
 // Result stills: live v7 painted quay captured by scripts/capture-barge-outcomes.mjs.
 const outcomeBase = "scene-art/barge-v7";
@@ -8,7 +10,20 @@ const outcomeBase = "scene-art/barge-v7";
 export type Rect = { x: number; y: number; width: number; height: number };
 export type CraneFormat = keyof typeof craneLayers;
 type Point = readonly [number, number];
-export type CraneActor = "ivan" | "ladder" | "far" | "near";
+export type CraneActor = "ivan" | "far" | "near";
+type Sprite = { src: string; x: number; y: number; w: number; h: number };
+/** A frame grid (cols × rows) in one image, frames left to right, top to bottom. */
+export type CraneSheet = Sprite & { cols: number; rows: number };
+type Walker = "Ivan" | "Petr";
+/** Walk art not every format has yet (being made in .tmp-work/crane-anim); each piece is drawn only when present.
+ * post: the quay with Petr painted out while he walks (as porch for Ivan).
+ * cab<Walker>: the person seen in the loading crane cab, one sheet frame per `top` slew frame.
+ * walk<Walker><Dir> / climb<Walker>: step cycles, boxed at the route start / ladder foot like the walker sprite.
+ * walkOccluder… / turnOccluder… / climbOccluder: scenery nearer the camera than the walk, drawn over the walker. */
+export type CraneOptionalSprites = Partial<
+  Record<"post" | "walkOccluder" | "walkOccluderPetr" | "turnOccluderIvan" | "turnOccluderPetr" | "climbOccluder", Sprite>
+  & Record<`walk${Walker}${"East" | "Inland" | "Seaward"}` | `climb${Walker}` | `cab${Walker}`, CraneSheet>
+>;
 
 /** Bounding box around points, padded and kept inside the drawing. */
 function around(points: readonly Point[], pad: number, width: number, height: number): Rect {
@@ -33,7 +48,7 @@ function format(name: CraneFormat) {
   };
   const near: readonly Point[] = [a.nearCabin, a.nearTip, a.quayFootNear, a.ladderTop];
   const corners = (r: { x: number; y: number; w: number; h: number }): Point[] => [[r.x, r.y], [r.x + r.w, r.y + r.h]];
-  const sp = layer.sprites;
+  const sp = { ...layer.sprites, ...walkArt.formats[name] } as typeof layer.sprites & CraneOptionalSprites;
   // Whole figures, not just their centres: office, both cranes, the barge from bow to stern.
   // The round ПРУ office is about 11 m across; the drawn one bulges half a window left of Ivan.
   const [pu, pv] = project([-10 - 6, 20 - 6, 0]);
@@ -41,12 +56,11 @@ function format(name: CraneFormat) {
   const story: readonly Point[] = [a.pru, [pu, pv], office, ...corners(sp.ivan), ...corners(sp.gift), ...near, ...corners(sp.ladder),
     ...corners(sp.far), ...corners(sp.barge)];
   const tall = name === "tall";
-  // Screen shift of Ivan's sprite from the start to the end of his rush walk.
-  const rush = craneWorld.routes.rush;
-  const walkEnd = project(rush[rush.length - 1]).map((v, i) => v - project(rush[0])[i]);
+  const metre = Math.hypot(layer.affine[0][0], layer.affine[1][0]);
   const pad = (r: { x: number; y: number; w: number; h: number }, d: number) => ({ x: r.x - d, y: r.y - d, w: r.w + 2 * d, h: r.h + 2 * d });
   return {
     ...layer,
+    sprites: sp,
     project,
     // The strip that must stay in frame: office, gift, near crane, barge, far crane.
     focus: around(story, tall ? 40 : 24, width, height),
@@ -61,14 +75,14 @@ function format(name: CraneFormat) {
     // What each way uses: these layers light up when the way is picked.
     actors: {
       remote: ["ivan", "near"],
-      rush: ["ladder", "near"],
+      // No glow on the ladder (owner 20.11: the lit ladder looked awful); Ivan is the one who walks.
+      rush: ["ivan", "near"],
       petr: ["far", "near"],
     } as Record<string, readonly CraneActor[]>,
-    // Reaction bubbles: the tail tip just over the head of whoever reacts; `ladder` = Ivan after his walk.
+    // Reaction bubbles: the tail tip over Ivan's head at the office, or over the loading crane cab once someone climbed in.
     emote: {
       office: [sp.ivan.x + sp.ivan.w * 0.75, sp.ivan.y - 2],
-      ladder: [sp.ivan.x + sp.ivan.w * 0.75 + walkEnd[0], sp.ivan.y - 2 + walkEnd[1]],
-      far: [sp.far.x + sp.far.w * 0.75, sp.far.y - 2],
+      cab: [a.nearCabin[0], a.nearCabin[1] - 2.4 * metre],
     } as const,
     // Card open on a phone: the camera closes in on the chosen way.
     zoom: tall
@@ -89,6 +103,8 @@ export const craneArtwork = {
   tall: format("tall"),
 };
 export { craneWorld };
+/** World metres per 8-phase step cycle of the walk sheets. */
+export const craneWalkCycle = walkArt.walkCycleMetres;
 
 /** What each way is about: the card eyebrow. */
 export const craneCaptions = {
@@ -104,12 +120,11 @@ export const craneChoiceNames = {
   petr: "Попросить Петра",
 } as const;
 
-/** Pins on the quay: the two people wear their name (roles as the scenario says: «Крановщик Иван», «оператора Петра»);
- * the ladder pin has no person, only a place. On a narrow stage only the name stays. */
+/** Pins on the quay (owner 20.11): one short word per way, no second line of roles; the button's aria-label says the whole way. */
 export const cranePins = {
-  remote: { name: "Иван", detail: "крановщик" },
-  rush: { name: undefined, detail: "Пешком на кран" },
-  petr: { name: "Пётр", detail: "оператор" },
+  remote: "С пульта",
+  rush: "Пешком",
+  petr: "Пётр",
 } as const;
 
 /** Card facts, as the truck card lists speed and year: who, from where, when. */

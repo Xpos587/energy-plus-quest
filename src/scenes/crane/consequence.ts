@@ -11,17 +11,17 @@ export type CraneBeat = {
   /** The gift sits on the barge deck. */
   onDeck: boolean;
   /** A story actor working right now (pulses). */
-  busy?: "ladder" | "ivan" | "far";
+  busy?: "ivan" | "far";
   /** Ivan by the ПРУ office; "empty" = he has walked off to the crane. */
   office?: "joy" | "wave" | "cheer" | "empty";
-  /** Petr by his crates; "empty" = he has walked off to the crane. */
-  cab?: "empty";
-  /** Who sits in the barge crane cab. */
-  operator?: "ivan" | "petr";
-  /** Ivan's walk to the barge crane ladder, 0 = porch, 1 = ladder (rush); he stays there for the loading. */
+  /** Who walks the quay to the loading crane: Ivan (rush) or Petr ("far" sprite). */
+  walker?: "ivan" | "far";
+  /** The walk along the walker's route, 0 = start, 1 = ladder foot. */
   walk?: number;
-  /** A small reaction over a character: Ivan by the ПРУ office or at the ladder after his walk, or Petr by his crates. */
-  emote?: { kind: "tired" | "question" | "sad"; at: "office" | "ladder" | "far" };
+  /** Then up the ladder, 0 = foot, 1 = top; at 1 the walker sits in the cab, out of sight. */
+  climb?: number;
+  /** A small reaction: over Ivan by the ПРУ office, or over the loading crane cab once someone climbed in. */
+  emote?: { kind: "tired" | "question" | "sad"; at: "office" | "cab" };
   /** Remote-control signal from the office to the near crane. */
   signal?: boolean;
   /** Petr's own crates wait for later. */
@@ -63,6 +63,11 @@ function load(prelude: Step[], busy: CraneBeat["busy"], keep: Partial<CraneBeat>
 }
 
 const rest = () => ({ frame: last, hook: hookUnder(last, high) });
+/** Walk the route, then climb the ladder into the cab. */
+const climbIn = (walker: "ivan" | "far", walkMs: number, keep: Partial<CraneBeat>): Step[] => [
+  { ms: walkMs, at: (t) => ({ ...rest(), ...keep, walker, walk: t }) },
+  { ms: 1100, at: (t) => ({ ...rest(), ...keep, walker, walk: 1, climb: t }) },
+];
 
 const timelines: Record<string, Step[]> = {
   // Ivan takes the joystick; the signal runs to the empty cab; he waves the barge off.
@@ -70,10 +75,12 @@ const timelines: Record<string, Step[]> = {
     [{ ms: 600, at: () => ({ ...rest(), office: "joy", signal: true }) }],
     "ivan", { office: "joy", signal: true }, { office: "wave", signal: false },
   ),
-  // Ivan walks the quay to the barge crane ladder, then the crane does the work.
-  rush: load([{ ms: 2600, at: (t) => ({ ...rest(), office: "empty", walk: t }) }], "ladder", { office: "empty", walk: 1 },
-    { emote: { kind: "tired", at: "ladder" } }),
-  petr: load([{ ms: 400, at: () => ({ ...rest(), busy: "far" }) }], "far", { later: true }, { emote: { kind: "sad", at: "far" } }),
+  // Ivan walks the whole quay to the barge crane ladder and climbs into the cab; then the crane does the work.
+  rush: load(climbIn("ivan", 2600, { office: "empty" }), undefined, { office: "empty", walker: "ivan", walk: 1, climb: 1 },
+    { emote: { kind: "tired", at: "cab" } }),
+  // Petr walks from his crates to the same ladder (a shorter way) and climbs in; his own cargo waits.
+  petr: load(climbIn("far", 1500, { later: true }), undefined, { walker: "far", walk: 1, climb: 1, later: true },
+    { emote: { kind: "sad", at: "cab" } }),
 };
 
 export const craneRest: CraneBeat = { frame: last, hook: hookUnder(last, high), lifted: false, onDeck: false };

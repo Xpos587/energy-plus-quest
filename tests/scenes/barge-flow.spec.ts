@@ -28,8 +28,8 @@ for (const viewport of [
     // The first paragraph names the parcel in place of «(название сюрприза)».
     await expect(page.getByTestId("scene-question")).toContainText("Ваш фотоаппарат уже на причале");
     for (const text of source.slice(1)) await expect(page.getByTestId("scene-question")).toContainText(text);
-    // Owner 19.11: the three ways are also listed beside the quay, the same pick as the pins.
-    await expect(page.locator('[data-scene-choice]')).toHaveCount(3);
+    // Owner 20.11: one choice UI — the pins on the quay, no option buttons under the picture.
+    await expect(page.locator('[data-scene-choice]')).toHaveCount(0);
 
     for (const id of ["remote", "rush", "petr"]) {
       const marker = page.locator(`[data-hotspot="${id}"]`);

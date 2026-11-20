@@ -6,7 +6,7 @@
   "scripts": {
     "media:hydrate": "bun scripts/media-artifacts.ts",
     "media:verify": "bun scripts/media-artifacts.ts --verify",
-    "clean:stale": "if [ -d .tmp-work ] && [ ! -L .tmp-work ]; then find .tmp-work -type f -mmin +4320 -delete && find .tmp-work -depth -mindepth 1 -type d -empty -delete; fi",
+    "clean:stale": "if [ -d .tmp-work ] && [ ! -L .tmp-work ]; then find .tmp-work -type f -mmin +4320 -not -path '*/node_modules/*' -delete && find .tmp-work -depth -mindepth 1 -type d -empty -delete; fi",
     "clean:generated": "rm -rf dist .tmp-work/image-build-cache && { [ ! -d .tmp-work ] || find .tmp-work -type f -name trace.zip -delete; }",
     "preview:current": "bun scripts/preview-current.ts",
     "dev": "bun run media:hydrate && vite",

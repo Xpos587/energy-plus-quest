@@ -100,10 +100,9 @@ it("focuses the selected button and resets the result when the starting scene ch
   expect(
     container.querySelector('[data-hotspot="remote"]'),
   ).not.toBeNull();
-  // Owner 19.11: the quay pins are also listed in the panel, and the list opens the same card.
-  expect([...container.querySelectorAll("[data-scene-choice]")].map((node) => node.getAttribute("data-scene-choice")))
-    .toEqual(["remote", "rush", "petr"]);
-  await act(async () => container.querySelector<HTMLButtonElement>('[data-scene-choice="petr"]')!.click());
+  // Owner 20.11: one choice UI — only the quay pins, no option buttons in the panel.
+  expect(container.querySelector("[data-scene-choice]")).toBeNull();
+  await act(async () => container.querySelector<HTMLButtonElement>('[data-hotspot="petr"]')!.click());
   expect(container.querySelector('[data-choice-inspection="petr"]')).not.toBeNull();
   expect(container.querySelector('[data-hotspot="petr"]')?.getAttribute("aria-pressed")).toBe("true");
 });

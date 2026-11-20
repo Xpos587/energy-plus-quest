@@ -38,9 +38,14 @@ it("keeps the whole quay hidden until the last sprite decodes, and retries faile
     value: vi.fn(function (this: HTMLImageElement) {
       if (
         this.src.includes("/mid/barge.webp") &&
-        !this.src.includes("artwork-retry")
+        !this.src.includes("artwork-retry=2")
       )
-        return fail ? Promise.reject(new Error("network")) : delayed;
+      {
+        if (!fail) return delayed;
+        // A really broken image: done loading, no pixels (a swapped request would still be loading).
+        Object.defineProperty(this, "complete", { configurable: true, value: true });
+        return Promise.reject(new Error("network"));
+      }
       if (this.src.includes("/mid/occluder.webp")) return office;
       return Promise.resolve();
     }),
@@ -69,6 +74,7 @@ it("keeps the whole quay hidden until the last sprite decodes, and retries faile
     await act(async () => root.render(null));
     fail = true;
     await act(async () => root.render(render()));
+    // The first failure retries silently (artwork-retry=1); only a second one shows the plate.
     expect(plane().style.visibility).toBe("hidden");
     expect(
       document.querySelector('[data-artwork-status="error"]'),
@@ -81,7 +87,7 @@ it("keeps the whole quay hidden until the last sprite decodes, and retries faile
     expect(plane().style.visibility).toBe("visible");
     expect(
       host.querySelector('[data-layer="barge"]')!.getAttribute("src"),
-    ).toContain("artwork-retry=1");
+    ).toContain("artwork-retry=2");
   } finally {
     await act(async () => root.unmount());
     host.remove();

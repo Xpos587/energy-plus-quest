@@ -105,6 +105,8 @@ div.layer { overflow: hidden; }
   bottom: 0;
   left: 0;
   translate: clamp(calc(6px - var(--room-left, 999px)), -50%, calc(var(--room-right, 999px) - 100% - 6px)) 0;
+  /* The pin is 0 px wide: without this the chip shrinks to it and the name spills out (owner 20.11). */
+  width: max-content;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -160,23 +162,17 @@ div.layer { overflow: hidden; }
   font: 700 9px/1 system-ui, sans-serif;
 }
 .pinName { font-weight: 700; }
-.pinDetail { color: #42566b; font-weight: 500; }
-.pinDetail[data-named]::before { content: "· "; }
 /* Pointed at or picked, here or in the option list: the chip turns the brand colour. */
 .hotspot:is(:hover, [data-hotspot-lit], [aria-pressed="true"]) .pinChip { border-color: #075d9b; background: #075d9b; color: #fff; }
-.hotspot:is(:hover, [data-hotspot-lit], [aria-pressed="true"]) .pinDetail { color: #d9ecf8; }
 .hotspot:is(:hover, [data-hotspot-lit], [aria-pressed="true"]) .pinIcon { background: #ff5500; }
 .hotspot:is(:hover, [data-hotspot-lit], [aria-pressed="true"]) .pin::after { border-top-color: #075d9b; }
 .hotspot:is(:hover, [data-hotspot-lit], [aria-pressed="true"]) .pin[data-below]::after { border-bottom-color: #075d9b; }
 .hotspot:focus-visible .pinChip { outline: 3px solid #ff5500; outline-offset: 2px; }
 .hotspot:disabled .pin { display: none; }
-/* Narrow stage: name only (or the short place), smaller chip; the tap box under it stays 44 px. */
+/* Narrow stage: a smaller chip with the same one word; the tap box under it stays 44 px. */
 @container (max-width: 560px) {
   .pinChip { min-height: 30px; gap: 4px; padding: 2px 8px 2px 2px; font-size: 13px; }
   .pinIcon { flex-basis: 24px; height: 24px; }
   .pinIcon svg { width: 14px; height: 14px; }
-  /* Only names stay; the ladder pin is its number, as in the option chips under the picture. */
-  .pinDetail { display: none; }
-  .pinChip:not(:has(.pinName)) { padding-right: 2px; }
 }
 @media (prefers-reduced-motion: reduce) { .pinChip { transition: none; } }

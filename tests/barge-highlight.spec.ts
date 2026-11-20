@@ -3,7 +3,7 @@ import { test, expect, type Page } from '@playwright/test';
 test.use({ contextOptions: { reducedMotion: 'reduce' } });
 
 // Lit layers per way (artwork.ts actors; "near" renders as top).
-const lit: Record<string, string> = { remote: 'ivan+top', rush: 'ladder+top', petr: 'far+top' };
+const lit: Record<string, string> = { remote: 'ivan+top', rush: 'ivan+top', petr: 'far+top' };
 // Every ordered pair of the three ways exactly once.
 const order = ['rush', 'petr', 'remote', 'rush', 'remote', 'petr', 'rush'];
 

@@ -16,3 +16,7 @@
   .facts dd { font-size: 15px; line-height: 1.3; }
   .note { font-size: 14px; line-height: 1.35; }
 }
+/* Owner 20.11 («плывёт»): switching pins must not move the card or resize the quay above it.
+   Title, «Откуда управляет» and the note each hold two lines, the longest any way needs. */
+:global([data-choice-inspection]):has(.card) h3 { min-height: 2lh; }
+.facts > div:first-child dd, .note { min-height: 2lh; }

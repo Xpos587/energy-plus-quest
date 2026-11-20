@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+// Review stills of each branch's result; the quay animation is covered by barge-flow.
+test.use({ contextOptions: { reducedMotion: 'reduce' } });
 const root = 'docs/reviews/barge-2026-10-17/before';
 for (const viewport of [{width:320,height:568},{width:390,height:844},{width:844,height:390},{width:1440,height:900}]) {
  for (const parcel of ['boat','camera','socks']) {
@@ -13,7 +15,7 @@ for (const viewport of [{width:320,height:568},{width:390,height:844},{width:844
  await settle();
  await page.screenshot({path:`${root}/${viewport.width}-${parcel}-choice.png`});
  for(const id of ['remote','rush','petr']) {
- await page.locator(`[data-scene-choice="${id}"]`).click();
+ await page.locator(`[data-hotspot="${id}"]`).click();
  // The option opens its card; the result follows confirm and the quay loading run.
  await page.locator('[data-choice-confirm]').click();
  await expect(page.locator('[data-scene-consequence]')).toBeVisible({timeout:15000});

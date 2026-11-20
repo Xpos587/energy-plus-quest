@@ -1,0 +1,562 @@
+{
+ "walkCycleMetres": 3.648,
+ "formats": {
+  "wide": {
+   "walkIvanEast": {
+    "src": "scene-art/barge-v7/wide/walkIvanEast.webp",
+    "x": 466.5,
+    "y": 593.0,
+    "w": 46.0,
+    "h": 83.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkIvanInland": {
+    "src": "scene-art/barge-v7/wide/walkIvanInland.webp",
+    "x": 466.5,
+    "y": 592.0,
+    "w": 42.5,
+    "h": 84.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkIvanSeaward": {
+    "src": "scene-art/barge-v7/wide/walkIvanSeaward.webp",
+    "x": 466.5,
+    "y": 593.0,
+    "w": 43.0,
+    "h": 84.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "climbIvan": {
+    "src": "scene-art/barge-v7/wide/climbIvan.webp",
+    "x": 1355.0,
+    "y": 363.0,
+    "w": 31.0,
+    "h": 77.5,
+    "cols": 2,
+    "rows": 1
+   },
+   "walkPetrEast": {
+    "src": "scene-art/barge-v7/wide/walkPetrEast.webp",
+    "x": 838.5,
+    "y": 565.0,
+    "w": 46.0,
+    "h": 83.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkPetrInland": {
+    "src": "scene-art/barge-v7/wide/walkPetrInland.webp",
+    "x": 838.5,
+    "y": 564.0,
+    "w": 42.5,
+    "h": 84.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkPetrSeaward": {
+    "src": "scene-art/barge-v7/wide/walkPetrSeaward.webp",
+    "x": 838.5,
+    "y": 565.0,
+    "w": 43.0,
+    "h": 84.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "climbPetr": {
+    "src": "scene-art/barge-v7/wide/climbPetr.webp",
+    "x": 1355.0,
+    "y": 363.0,
+    "w": 31.0,
+    "h": 77.5,
+    "cols": 2,
+    "rows": 1
+   },
+   "cabIvan": {
+    "src": "scene-art/barge-v7/wide/cabIvan.webp",
+    "x": 1348.5,
+    "y": 184.0,
+    "w": 81.0,
+    "h": 104.5,
+    "cols": 4,
+    "rows": 4
+   },
+   "cabPetr": {
+    "src": "scene-art/barge-v7/wide/cabPetr.webp",
+    "x": 1348.5,
+    "y": 184.0,
+    "w": 81.0,
+    "h": 104.5,
+    "cols": 4,
+    "rows": 4
+   },
+   "porch": {
+    "src": "scene-art/barge-v7/wide/porch.webp",
+    "x": 452.0,
+    "y": 589.5,
+    "w": 72.0,
+    "h": 90.0
+   },
+   "post": {
+    "src": "scene-art/barge-v7/wide/post.webp",
+    "x": 829.0,
+    "y": 575.0,
+    "w": 65.5,
+    "h": 81.5
+   },
+   "walkOccluder": {
+    "src": "scene-art/barge-v7/wide/walkOccluder.webp",
+    "x": 600.0,
+    "y": 380.5,
+    "w": 502.0,
+    "h": 206.0
+   },
+   "turnOccluderIvan": {
+    "src": "scene-art/barge-v7/wide/turnOccluderIvan.webp",
+    "x": 1379.5,
+    "y": 462.0,
+    "w": 6.5,
+    "h": 6.5
+   },
+   "walkOccluderPetr": {
+    "src": "scene-art/barge-v7/wide/walkOccluderPetr.webp",
+    "x": 826.0,
+    "y": 462.5,
+    "w": 558.0,
+    "h": 199.5
+   },
+   "turnOccluderPetr": {
+    "src": "scene-art/barge-v7/wide/turnOccluderPetr.webp",
+    "x": 1339.0,
+    "y": 351.5,
+    "w": 38.0,
+    "h": 155.0
+   },
+   "climbOccluder": {
+    "src": "scene-art/barge-v7/wide/climbOccluder.webp",
+    "x": 1369.0,
+    "y": 302.0,
+    "w": 21.0,
+    "h": 139.0
+   }
+  },
+  "desk": {
+   "walkIvanEast": {
+    "src": "scene-art/barge-v7/desk/walkIvanEast.webp",
+    "x": 259.5,
+    "y": 704.5,
+    "w": 46.5,
+    "h": 84.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkIvanInland": {
+    "src": "scene-art/barge-v7/desk/walkIvanInland.webp",
+    "x": 259.5,
+    "y": 704.0,
+    "w": 42.5,
+    "h": 85.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkIvanSeaward": {
+    "src": "scene-art/barge-v7/desk/walkIvanSeaward.webp",
+    "x": 259.5,
+    "y": 704.5,
+    "w": 43.5,
+    "h": 85.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "climbIvan": {
+    "src": "scene-art/barge-v7/desk/climbIvan.webp",
+    "x": 1157.5,
+    "y": 472.0,
+    "w": 31.5,
+    "h": 79.0,
+    "cols": 2,
+    "rows": 1
+   },
+   "walkPetrEast": {
+    "src": "scene-art/barge-v7/desk/walkPetrEast.webp",
+    "x": 635.5,
+    "y": 676.0,
+    "w": 46.5,
+    "h": 84.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkPetrInland": {
+    "src": "scene-art/barge-v7/desk/walkPetrInland.webp",
+    "x": 635.5,
+    "y": 675.5,
+    "w": 42.5,
+    "h": 85.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkPetrSeaward": {
+    "src": "scene-art/barge-v7/desk/walkPetrSeaward.webp",
+    "x": 635.5,
+    "y": 676.0,
+    "w": 43.5,
+    "h": 85.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "climbPetr": {
+    "src": "scene-art/barge-v7/desk/climbPetr.webp",
+    "x": 1157.5,
+    "y": 472.0,
+    "w": 31.5,
+    "h": 79.0,
+    "cols": 2,
+    "rows": 1
+   },
+   "cabIvan": {
+    "src": "scene-art/barge-v7/desk/cabIvan.webp",
+    "x": 1151.0,
+    "y": 291.0,
+    "w": 81.5,
+    "h": 106.0,
+    "cols": 4,
+    "rows": 4
+   },
+   "cabPetr": {
+    "src": "scene-art/barge-v7/desk/cabPetr.webp",
+    "x": 1151.0,
+    "y": 291.0,
+    "w": 81.5,
+    "h": 106.0,
+    "cols": 4,
+    "rows": 4
+   },
+   "porch": {
+    "src": "scene-art/barge-v7/desk/porch.webp",
+    "x": 244.0,
+    "y": 701.0,
+    "w": 73.0,
+    "h": 91.0
+   },
+   "post": {
+    "src": "scene-art/barge-v7/desk/post.webp",
+    "x": 625.5,
+    "y": 686.5,
+    "w": 66.0,
+    "h": 82.0
+   },
+   "walkOccluder": {
+    "src": "scene-art/barge-v7/desk/walkOccluder.webp",
+    "x": 394.5,
+    "y": 490.0,
+    "w": 507.0,
+    "h": 208.0
+   },
+   "turnOccluderIvan": {
+    "src": "scene-art/barge-v7/desk/turnOccluderIvan.webp",
+    "x": 1182.5,
+    "y": 572.0,
+    "w": 6.0,
+    "h": 6.5
+   },
+   "walkOccluderPetr": {
+    "src": "scene-art/barge-v7/desk/walkOccluderPetr.webp",
+    "x": 622.5,
+    "y": 572.5,
+    "w": 564.0,
+    "h": 202.0
+   },
+   "turnOccluderPetr": {
+    "src": "scene-art/barge-v7/desk/turnOccluderPetr.webp",
+    "x": 1142.5,
+    "y": 460.5,
+    "w": 37.0,
+    "h": 152.5
+   },
+   "climbOccluder": {
+    "src": "scene-art/barge-v7/desk/climbOccluder.webp",
+    "x": 1171.5,
+    "y": 410.5,
+    "w": 21.0,
+    "h": 140.5
+   }
+  },
+  "mid": {
+   "walkIvanEast": {
+    "src": "scene-art/barge-v7/mid/walkIvanEast.webp",
+    "x": 234.5,
+    "y": 738.5,
+    "w": 42.5,
+    "h": 77.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkIvanInland": {
+    "src": "scene-art/barge-v7/mid/walkIvanInland.webp",
+    "x": 234.5,
+    "y": 738.0,
+    "w": 39.5,
+    "h": 78.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkIvanSeaward": {
+    "src": "scene-art/barge-v7/mid/walkIvanSeaward.webp",
+    "x": 234.5,
+    "y": 738.5,
+    "w": 40.0,
+    "h": 78.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "climbIvan": {
+    "src": "scene-art/barge-v7/mid/climbIvan.webp",
+    "x": 1055.5,
+    "y": 526.5,
+    "w": 29.0,
+    "h": 72.5,
+    "cols": 2,
+    "rows": 1
+   },
+   "walkPetrEast": {
+    "src": "scene-art/barge-v7/mid/walkPetrEast.webp",
+    "x": 578.5,
+    "y": 713.0,
+    "w": 42.5,
+    "h": 77.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkPetrInland": {
+    "src": "scene-art/barge-v7/mid/walkPetrInland.webp",
+    "x": 578.5,
+    "y": 712.5,
+    "w": 39.5,
+    "h": 78.0,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkPetrSeaward": {
+    "src": "scene-art/barge-v7/mid/walkPetrSeaward.webp",
+    "x": 578.5,
+    "y": 713.0,
+    "w": 40.0,
+    "h": 78.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "climbPetr": {
+    "src": "scene-art/barge-v7/mid/climbPetr.webp",
+    "x": 1055.5,
+    "y": 526.5,
+    "w": 29.0,
+    "h": 72.5,
+    "cols": 2,
+    "rows": 1
+   },
+   "cabIvan": {
+    "src": "scene-art/barge-v7/mid/cabIvan.webp",
+    "x": 1050.0,
+    "y": 361.0,
+    "w": 74.5,
+    "h": 96.5,
+    "cols": 4,
+    "rows": 4
+   },
+   "cabPetr": {
+    "src": "scene-art/barge-v7/mid/cabPetr.webp",
+    "x": 1050.0,
+    "y": 361.0,
+    "w": 74.5,
+    "h": 96.5,
+    "cols": 4,
+    "rows": 4
+   },
+   "porch": {
+    "src": "scene-art/barge-v7/mid/porch.webp",
+    "x": 221.0,
+    "y": 735.5,
+    "w": 67.0,
+    "h": 83.0
+   },
+   "post": {
+    "src": "scene-art/barge-v7/mid/post.webp",
+    "x": 569.5,
+    "y": 722.0,
+    "w": 60.5,
+    "h": 75.0
+   },
+   "walkOccluder": {
+    "src": "scene-art/barge-v7/mid/walkOccluder.webp",
+    "x": 358.0,
+    "y": 542.5,
+    "w": 464.0,
+    "h": 190.5
+   },
+   "turnOccluderIvan": {
+    "src": "scene-art/barge-v7/mid/turnOccluderIvan.webp",
+    "x": 1078.5,
+    "y": 617.5,
+    "w": 6.0,
+    "h": 6.0
+   },
+   "walkOccluderPetr": {
+    "src": "scene-art/barge-v7/mid/walkOccluderPetr.webp",
+    "x": 566.5,
+    "y": 618.0,
+    "w": 516.5,
+    "h": 185.0
+   },
+   "turnOccluderPetr": {
+    "src": "scene-art/barge-v7/mid/turnOccluderPetr.webp",
+    "x": 1041.0,
+    "y": 515.5,
+    "w": 35.5,
+    "h": 143.5
+   },
+   "climbOccluder": {
+    "src": "scene-art/barge-v7/mid/climbOccluder.webp",
+    "x": 1068.5,
+    "y": 470.0,
+    "w": 20.0,
+    "h": 129.0
+   }
+  },
+  "tall": {
+   "walkIvanEast": {
+    "src": "scene-art/barge-v7/tall/walkIvanEast.webp",
+    "x": 299.0,
+    "y": 1341.0,
+    "w": 47.5,
+    "h": 92.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkIvanInland": {
+    "src": "scene-art/barge-v7/tall/walkIvanInland.webp",
+    "x": 296.5,
+    "y": 1339.5,
+    "w": 50.0,
+    "h": 93.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkIvanSeaward": {
+    "src": "scene-art/barge-v7/tall/walkIvanSeaward.webp",
+    "x": 299.0,
+    "y": 1343.0,
+    "w": 51.0,
+    "h": 87.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "climbIvan": {
+    "src": "scene-art/barge-v7/tall/climbIvan.webp",
+    "x": 607.0,
+    "y": 556.0,
+    "w": 37.5,
+    "h": 80.5,
+    "cols": 2,
+    "rows": 1
+   },
+   "walkPetrEast": {
+    "src": "scene-art/barge-v7/tall/walkPetrEast.webp",
+    "x": 530.5,
+    "y": 1073.0,
+    "w": 47.5,
+    "h": 92.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkPetrInland": {
+    "src": "scene-art/barge-v7/tall/walkPetrInland.webp",
+    "x": 528.0,
+    "y": 1071.5,
+    "w": 50.0,
+    "h": 93.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "walkPetrSeaward": {
+    "src": "scene-art/barge-v7/tall/walkPetrSeaward.webp",
+    "x": 530.5,
+    "y": 1075.0,
+    "w": 51.0,
+    "h": 87.5,
+    "cols": 8,
+    "rows": 1
+   },
+   "climbPetr": {
+    "src": "scene-art/barge-v7/tall/climbPetr.webp",
+    "x": 607.0,
+    "y": 556.0,
+    "w": 37.5,
+    "h": 80.5,
+    "cols": 2,
+    "rows": 1
+   },
+   "cabIvan": {
+    "src": "scene-art/barge-v7/tall/cabIvan.webp",
+    "x": 495.0,
+    "y": 371.5,
+    "w": 166.0,
+    "h": 106.0,
+    "cols": 4,
+    "rows": 4
+   },
+   "cabPetr": {
+    "src": "scene-art/barge-v7/tall/cabPetr.webp",
+    "x": 495.0,
+    "y": 371.5,
+    "w": 166.0,
+    "h": 106.0,
+    "cols": 4,
+    "rows": 4
+   },
+   "porch": {
+    "src": "scene-art/barge-v7/tall/porch.webp",
+    "x": 273.0,
+    "y": 1333.5,
+    "w": 74.5,
+    "h": 134.5
+   },
+   "post": {
+    "src": "scene-art/barge-v7/tall/post.webp",
+    "x": 524.0,
+    "y": 1092.5,
+    "w": 47.5,
+    "h": 95.0
+   },
+   "walkOccluder": {
+    "src": "scene-art/barge-v7/tall/walkOccluder.webp",
+    "x": 234.0,
+    "y": 1253.0,
+    "w": 43.5,
+    "h": 91.5
+   },
+   "turnOccluderIvan": {
+    "src": "scene-art/barge-v7/tall/turnOccluderIvan.webp",
+    "x": 380.0,
+    "y": 595.0,
+    "w": 6.0,
+    "h": 15.5
+   },
+   "walkOccluderPetr": {
+    "src": "scene-art/barge-v7/tall/walkOccluderPetr.webp",
+    "x": 590.5,
+    "y": 814.0,
+    "w": 49.5,
+    "h": 114.0
+   },
+   "turnOccluderPetr": {
+    "src": "scene-art/barge-v7/tall/turnOccluderPetr.webp",
+    "x": 612.0,
+    "y": 558.0,
+    "w": 80.5,
+    "h": 154.5
+   }
+  }
+ }
+}

@@ -6,7 +6,7 @@ import type { ArtworkStatus } from "../../components/useArtworkLoading";
 import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
-import { craneArtwork, craneCaptions, cranePins, craneWorld, type CraneFormat, type Rect } from "./artwork";
+import { craneArtwork, craneCaptions, cranePins, craneWalkCycle, craneWorld, type CraneFormat, type CraneSheet, type Rect } from "./artwork";
 import { craneBeat, craneDeckDelta, craneDuration, craneRest } from "./consequence";
 import { craneScene } from "./index";
 import { fitTapTargets } from "./tapTargets";
@@ -134,10 +134,20 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
     if (status !== "loading") return;
     let cancelled = false;
     // The plate and transparent sprites must enter the first painted frame together.
+    // decode() also rejects when the browser swaps the request (a new srcset candidate as the phone's
+    // toolbar resizes the viewport, a re-rendered src); only a real load error counts as a failure.
+    const settled = (image: HTMLImageElement): Promise<unknown> => image.decode().catch(() =>
+      image.complete
+        ? (image.naturalWidth ? undefined : Promise.reject(new Error(image.currentSrc)))
+        : new Promise((resolve, reject) => {
+          image.addEventListener("load", () => resolve(settled(image)), { once: true });
+          image.addEventListener("error", reject, { once: true });
+        }));
     const images = [...stage.current!.querySelectorAll("img")];
-    Promise.all(images.map((image) => image.decode())).then(
+    Promise.all(images.map(settled)).then(
       () => { if (!cancelled) setReadiness({ key: artworkKey, status: "ready" }); },
-      () => { if (!cancelled) setReadiness({ key: artworkKey, status: "error" }); },
+      // One silent retry first: a dropped request on a phone network is not worth a «Повторить» plate.
+      () => { if (!cancelled) { if (attempt) setReadiness({ key: artworkKey, status: "error" }); else setAttempt(1); } },
     );
     return () => { cancelled = true; };
   // While initially loading, a rail choice can replace cast images. Track source changes,
@@ -185,15 +195,15 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   // Where two chips above their actors would collide (Petr stands by the ladder), the smaller actor's chip hangs below.
   const below = new Set(ids.filter((id) => (fitted.get(id)?.y ?? 0) + view.top < 52));
   const narrow = size.width <= 560;
-  // ponytail: chip width estimated from its text (Roboto Condensed ≈ 0.55 em per letter); measure the chips if names grow.
+  // ponytail: chip width estimated from its one word (Roboto Condensed ≈ 0.55 em per letter); measure the chips if labels grow.
   const chipBox = (id: string) => {
     const rect = fitted.get(id)!;
-    const { name, detail } = cranePins[id as keyof typeof cranePins];
-    const text = narrow ? (name ?? "") : name ? `${name} · ${detail}` : detail;
-    const w = (narrow ? 32 : 40) + text.length * (narrow ? 7.2 : 8.3);
+    const w = (narrow ? 38 : 46) + cranePins[id as keyof typeof cranePins].length * (narrow ? 7.2 : 8.3);
     const h = narrow ? 30 : 34;
     const y = below.has(id) ? rect.y + rect.h + 7 : rect.y - 7 - h;
-    return { x: rect.x + rect.w / 2 - w / 2, y, w, h };
+    // The same edge clamp as .pinChip's translate (6 px from the stage sides), so a chip pushed in from the edge still counts its neighbours.
+    const x = Math.max(6, Math.min(size.width - 6 - w, rect.x + view.left + rect.w / 2 - w / 2)) - view.left;
+    return { x, y, w, h };
   };
   for (const [i, a] of ids.entries())
     for (const b of ids.slice(i + 1)) {
@@ -226,10 +236,12 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const [tipX, tipY] = art.project(craneWorld.tips[beat.frame]);
   const [hookX, hookY] = beat.hook ? art.project(beat.hook) : [0, 0];
   const s = art.sprites;
-  const sheetStyle = {
-    width: `${art.top.cols * 100}%`, height: `${art.top.rows * 100}%`,
-    transform: `translate(${(-(beat.frame % art.top.cols) / art.top.cols) * 100}%, ${(-Math.floor(beat.frame / art.top.cols) / art.top.rows) * 100}%)`,
-  };
+  /** One frame of a grid image, shown through its clipping box. */
+  const frameStyle = (grid: { cols: number; rows: number }, frame: number): CSSProperties => ({
+    width: `${grid.cols * 100}%`, height: `${grid.rows * 100}%`,
+    transform: `translate(${(-(frame % grid.cols) / grid.cols) * 100}%, ${(-Math.floor(frame / grid.cols) / grid.rows) * 100}%)`,
+  });
+  const sheetStyle = frameStyle(art.top, beat.frame);
   const anchor = art.anchors;
   // Overlay marks are drawn in drawing px; keep them readable when a big drawing is shrunk to a phone.
   const k = view.width ? Math.max(1, (0.8 * art.width) / view.width) : 1;
@@ -238,21 +250,56 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const metre = Math.hypot(art.affine[0][0], art.affine[1][0]);
   const dot = { width: 0.35 * metre * k, step: 0.8 * metre * k };
   const dotted = { strokeWidth: dot.width, strokeDasharray: `0 ${dot.step}`, ["--dash" as string]: `${-dot.step}` };
-  // Rush: Ivan's own sprite slides along the rush route (by length), with a small step bob.
-  const walkShift = (() => {
-    if (beat.walk === undefined) return undefined;
-    const route = craneWorld.routes.rush;
+  // Rush / Petr: the walker slides along his route (by length), then climbs the barge crane ladder.
+  // With step-cycle sheets he walks frame by frame; without, his standing sprite bobs a little.
+  const walker = beat.walker && s[beat.walker];
+  const who = beat.walker === "ivan" ? "Ivan" : "Petr";
+  // Seated in the cab only when there is a drawing of him there; otherwise he waits at the cab door, never an empty cab.
+  const cabSheet = beat.walker && s[`cab${who}`];
+  const inCab = (beat.climb ?? 0) >= 1 && !!cabSheet;
+  const walk = (() => {
+    if (beat.walk === undefined || !walker) return undefined;
+    const route = craneWorld.routes[beat.walker === "ivan" ? "rush" : "petr"];
     const legs = route.slice(1).map((p, i) => Math.hypot(p[0] - route[i][0], p[1] - route[i][1]));
-    let d = beat.walk * legs.reduce((a, b) => a + b, 0);
+    const walked = beat.walk * legs.reduce((a, b) => a + b, 0);
+    let d = walked;
     let i = 0;
     while (i < legs.length - 1 && d > legs[i]) d -= legs[i++];
     const t = legs[i] ? Math.min(1, d / legs[i]) : 1;
     const at = route[i].map((v, j) => v + (route[i + 1][j] - v) * t);
     const [x0, y0] = art.project(route[0]);
     const [x, y] = art.project(at);
-    const bob = beat.walk < 1 ? -Math.abs(Math.sin(d * Math.PI / 0.8)) * 0.25 * metre : 0;
-    return { transform: `translate(${((x - x0) / s.ivan.w) * 100}%, ${((y - y0 + bob) / s.ivan.h) * 100}%)` };
+    const [dx, dy] = [route[i + 1][0] - route[i][0], route[i + 1][1] - route[i][1]];
+    const climbing = (beat.climb ?? 0) > 0;
+    const sheet: CraneSheet | undefined = climbing
+      ? s[`climb${who}`]
+      // Along the quay East; off-axis legs (Ivan's porch exit, both final turns) Inland or Seaward.
+      : s[`walk${who}${Math.abs(dy) <= 0.25 * Math.abs(dx) ? "East" : dy > 0 ? "Inland" : "Seaward"}`];
+    const bob = beat.walk < 1 && !sheet ? -Math.abs(Math.sin(d * Math.PI / 0.8)) * 0.25 * metre : 0;
+    // Up the rungs: from the ladder foot to its top, with a small rung-by-rung sway.
+    const up = (beat.climb ?? 0) * (anchor.ladderFoot[1] - anchor.ladderTop[1]);
+    const sway = climbing && !sheet ? Math.sin(beat.climb! * Math.PI * 8) * 0.15 * metre : 0;
+    // A walk sheet is boxed at the route start, a climb sheet at the ladder foot.
+    const [sx, sy] = climbing && sheet ? [0, -up] : [x - x0 + sway, y - y0 + bob - up];
+    const r = sheet ?? walker;
+    // Step phase tied to distance (one cycle per walkCycleMetres); a climb sheet swaps hands every rung (8 per ladder).
+    const frame = sheet ? (climbing ? Math.floor(beat.climb! * 8) : Math.floor((walked / craneWalkCycle) * sheet.cols)) % (sheet.cols * sheet.rows) : 0;
+    // One depth mask per segment: the lane, the final turn, the ladder (an object can be in front of one and behind another).
+    const occluder: "climbOccluder" | "turnOccluderIvan" | "turnOccluderPetr" | "walkOccluder" | "walkOccluderPetr" =
+      climbing ? "climbOccluder" : i === legs.length - 1 ? `turnOccluder${who}` : beat.walker === "ivan" ? "walkOccluder" : "walkOccluderPetr";
+    return {
+      sheet,
+      frame,
+      occluder,
+      style: {
+        transform: `translate(${(sx / r.w) * 100}%, ${(sy / r.h) * 100}%)`,
+        visibility: inCab ? "hidden" : undefined,
+      } satisfies CSSProperties,
+      // Over his head, as the office bubble sits over Ivan at the ПРУ.
+      head: [r.x + r.w * 0.75 + sx, r.y - 2 + sy] as const,
+    };
   })();
+  const emoteAt = beat.emote && (beat.emote.at === "cab" && !inCab && walk ? walk.head : art.emote[beat.emote.at]);
   // Only while choosing: a marching dotted way; after confirming, the crane loading tells the story.
   const routeId = !playing && (litId === "rush" || litId === "petr") ? litId : undefined;
   const routePath = routeId && roundedRoute(craneWorld.routes[routeId], art.project);
@@ -262,10 +309,11 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const [ex, ey] = [anchor.nearCabin[0], anchor.nearCabin[1] - 2.4 * metre];
   const lift = 34 * Math.abs(art.affine[1][2]);
   const signalPath = `M${sx} ${sy} Q${(sx + ex) / 2} ${Math.min(sy, ey) - lift} ${ex} ${ey}`;
-  const sprite = (name: keyof typeof s, extra?: { style?: CSSProperties; lit?: boolean; className?: string; data?: string }) => (
+  const sprite = (name: keyof typeof s, extra?: { style?: CSSProperties; lit?: boolean; className?: string; data?: string; key?: string }) => (
     <img
+      key={extra?.key}
       className={[styles.layer, extra?.className].filter(Boolean).join(" ")}
-      src={source(s[name].src)}
+      src={source(s[name]!.src)}
       alt=""
       draggable={false}
       decoding="sync"
@@ -273,7 +321,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       data-lit={extra?.lit || undefined}
       data-busy={(playing && beat.busy === name) || undefined}
       data-walking={extra?.data}
-      style={{ ...box(s[name]), ...extra?.style }}
+      style={{ ...box(s[name]!), ...extra?.style }}
     />
   );
 
@@ -306,17 +354,28 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         </picture>
         {routePath && (
           <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
+            {/* Dark-cased dots, like the ПРУ signal: plain coloured dots sank into the warm quay tiles. */}
+            <path className={styles.route} d={routePath}
+              style={{ ...dotted, stroke: "#0b2340", strokeWidth: dot.width * 1.7 }} />
             <path className={styles.route} data-barge-route={routeId} d={routePath}
-              style={{ stroke: routeId === "rush" ? "#FF8A00" : "#2FA84F", ...dotted }} />
+              style={{ stroke: routeId === "rush" ? "#FFB020" : "#4BE36E", ...dotted }} />
           </svg>
         )}
         {/* Everything standing on the quay, over the routes: the walks pass behind cranes, crates and trees. */}
         <img className={styles.layer} src={source(art.occluder)} alt="" draggable={false} decoding="sync" data-layer="occluder" style={box({ x: 0, y: 0, w: art.width, h: art.height })} />
         {!beat.lifted && !beat.onDeck && sprite("gift")}
-        {beat.walk !== undefined && sprite("porch")}
-        {(beat.office !== "empty" || walkShift) && sprite("ivan", { lit: lit.has("ivan"), style: walkShift, data: walkShift && "walking" })}
-        {sprite("ladder", { lit: lit.has("ladder") })}
-        {beat.cab !== "empty" && sprite("far", { lit: lit.has("far") })}
+        {beat.walker === "ivan" && sprite("porch")}
+        {beat.walker === "far" && s.post && sprite("post")}
+        {beat.walker !== "ivan" && beat.office !== "empty" && sprite("ivan", { lit: lit.has("ivan") })}
+        {/* No separate ladder layer (owner 20.11: the cut-out ladder read as macaroni); the plate has its painted ladder. */}
+        {beat.walker !== "far" && sprite("far", { lit: lit.has("far") })}
+        {beat.walker && (walk?.sheet ? (
+          <div className={styles.layer} style={{ ...box(walk.sheet), ...walk.style }} data-layer={beat.walker} data-walking="walking">
+            <img className={styles.sheet} src={source(walk.sheet.src)} alt="" draggable={false} decoding="sync" style={frameStyle(walk.sheet, walk.frame)} />
+          </div>
+        ) : sprite(beat.walker, { style: walk?.style, data: "walking" }))}
+        {/* Scenery nearer the camera than the walk (Petr's crane over Ivan's lane, the barge crane leg over the ladder), when drawn. */}
+        {walk && !inCab && s[walk.occluder] && sprite(walk.occluder)}
         {sprite("barge")}
         {beat.onDeck && sprite("gift", { style: move(s.gift, craneDeckDelta) })}
         <div className={styles.layer} style={box(art.top)} data-layer="top" data-lit={lit.has("near") || undefined}>
@@ -329,6 +388,11 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             style={sheetStyle}
           />
         </div>
+        {inCab && (
+          <div className={styles.layer} style={box(cabSheet)} data-layer={`cab${who}`}>
+            <img className={styles.sheet} src={source(cabSheet.src)} alt="" draggable={false} decoding="sync" style={frameStyle(cabSheet, beat.frame)} />
+          </div>
+        )}
         {beat.hook && (
           <svg className={styles.cable} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             <line x1={tipX} y1={tipY} x2={hookX} y2={hookY} />
@@ -360,9 +424,9 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
                 <text className={styles.tagText} x="10" y="30">Груз Петра ждёт</text>
               </g>
             )}
-            {beat.emote && (
+            {beat.emote && emoteAt && (
               // The bubble tail tip (-4, 16) lands on the anchor over the head.
-              <g transform={`translate(${art.emote[beat.emote.at][0] + 4 * k} ${art.emote[beat.emote.at][1] - 16 * k}) scale(${k})`}>
+              <g transform={`translate(${emoteAt[0] + 4 * k} ${emoteAt[1] - 16 * k}) scale(${k})`}>
                 <g className={styles.emote} data-barge-emote={beat.emote.kind} data-barge-emote-at={beat.emote.at}>
                   <path className={styles.bubble} d="M-22 -40 h44 a10 10 0 0 1 10 10 v24 a10 10 0 0 1 -10 10 h-16 l-10 12 l-2 -12 h-16 a10 10 0 0 1 -10 -10 v-24 a10 10 0 0 1 10 -10z" />
                   {beat.emote.kind === "question" ? (
@@ -431,16 +495,14 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   );
 }
 
-/** A tappable marker over an actor: the option icon with its number, and the person's name where there is one. */
+/** A tappable marker over an actor: the option icon with its number and one short word (owner 20.11). */
 function QuayPin({ id, number, below }: { id: keyof typeof cranePins; number: number; below: boolean }) {
   const Icon = pinIcons[id];
-  const { name, detail } = cranePins[id];
   return (
     <span className={styles.pin} data-quay-pin={id} data-below={below || undefined} aria-hidden="true">
       <span className={styles.pinChip}>
         <span className={styles.pinIcon} data-choice-number={number}><Icon /></span>
-        {name && <b className={styles.pinName}>{name}</b>}
-        <span className={styles.pinDetail} data-named={!!name || undefined}>{detail}</span>
+        <b className={styles.pinName}>{cranePins[id]}</b>
       </span>
     </span>
   );
