@@ -8,7 +8,7 @@ const stages = [
     choice: "remote",
     pattern: /barge-v7\/(wide|desk|mid|tall)\/plate/,
   },
-  { id: "lastmile", choice: "rover", pattern: /lastmile-family-v1\/revision-28\/choice/ },
+  { id: "lastmile", choice: "rover", pattern: /lastmile-family-v1\/revision-29\/choice/ },
 ] as const;
 
 async function briefing(page: Page) {

@@ -1,4 +1,3 @@
-import { Footprints, Monitor, UsersRound } from "lucide-react";
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { ArtworkLoading } from "../../components/ArtworkLoading";
 import { ImageSources } from "../../components/ImageSources";
@@ -6,14 +5,11 @@ import type { ArtworkStatus } from "../../components/useArtworkLoading";
 import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
-import { craneArtwork, craneCaptions, cranePins, craneWalkCycle, craneWorld, type CraneFormat, type CraneSheet, type Rect } from "./artwork";
+import { craneArtwork, craneCaptions, craneWalkCycle, craneWorld, type CraneFormat, type CraneSheet, type Rect } from "./artwork";
 import { craneBeat, craneDeckDelta, craneDuration, craneRest } from "./consequence";
 import { craneScene } from "./index";
 import { fitTapTargets } from "./tapTargets";
 import styles from "./CraneArt.module.css";
-
-// Same icons as the option list (SceneChoices), so a pin and its row read as one choice.
-const pinIcons = { remote: Monitor, rush: Footprints, petr: UsersRound } as const;
 
 /** Pick the drawing that fills the stage and crops least of the quay story, then keep that strip in frame. */
 function camera(stage: { width: number; height: number }, zoomId?: string) {
@@ -195,11 +191,11 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   // Where two chips above their actors would collide (Petr stands by the ladder), the smaller actor's chip hangs below.
   const below = new Set(ids.filter((id) => (fitted.get(id)?.y ?? 0) + view.top < 52));
   const narrow = size.width <= 560;
-  // ponytail: chip width estimated from its one word (Roboto Condensed ≈ 0.55 em per letter); measure the chips if labels grow.
+  // The number badge is square (call 21.11: numbers only, as on the warehouse map).
   const chipBox = (id: string) => {
     const rect = fitted.get(id)!;
-    const w = (narrow ? 38 : 46) + cranePins[id as keyof typeof cranePins].length * (narrow ? 7.2 : 8.3);
     const h = narrow ? 30 : 34;
+    const w = h;
     const y = below.has(id) ? rect.y + rect.h + 7 : rect.y - 7 - h;
     // The same edge clamp as .pinChip's translate (6 px from the stage sides), so a chip pushed in from the edge still counts its neighbours.
     const x = Math.max(6, Math.min(size.width - 6 - w, rect.x + view.left + rect.w / 2 - w / 2)) - view.left;
@@ -365,7 +361,8 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         <img className={styles.layer} src={source(art.occluder)} alt="" draggable={false} decoding="sync" data-layer="occluder" style={box({ x: 0, y: 0, w: art.width, h: art.height })} />
         {!beat.lifted && !beat.onDeck && sprite("gift")}
         {beat.walker === "ivan" && sprite("porch")}
-        {beat.walker === "far" && s.post && sprite("post")}
+        {/* Petr is painted at his old quay-edge spot: the patch is always up (call 21.11 moved him). */}
+        {s.post && sprite("post")}
         {beat.walker !== "ivan" && beat.office !== "empty" && sprite("ivan", { lit: lit.has("ivan") })}
         {/* No separate ladder layer (owner 20.11: the cut-out ladder read as macaroni); the plate has its painted ladder. */}
         {beat.walker !== "far" && sprite("far", { lit: lit.has("far") })}
@@ -401,15 +398,14 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {(showSignal || beat.emote || beat.later) && (
           <svg className={styles.overlay} viewBox={`0 0 ${art.width} ${art.height}`} aria-hidden="true">
             {showSignal && (
-              // Moonlight-yellow on a dark casing reads over trees, road and sky; bright packets run along the arc.
+              // Call 21.11: a radio link, not a rope — broken dashes running from the ПРУ roof, Wi-Fi arcs at both ends.
               <g data-barge-signal>
-                <path className={styles.signalCasing} style={{ strokeWidth: dot.width * 2.2 }} d={signalPath} />
-                <path className={styles.signal} style={{ strokeWidth: dot.width }} d={signalPath} />
-                <path className={styles.packets} pathLength={100} style={{ strokeWidth: dot.width * 1.8 }} d={signalPath} data-barge-packets />
-                {[0, 1, 2].map((i) => (
-                  <path key={i} className={styles.wave} style={{ animationDelay: `${i * 0.5}s`, strokeWidth: dot.width }}
-                    d={`M${sx - 3.6 * metre} ${sy - metre} Q${sx} ${sy - 4.8 * metre} ${sx + 3.6 * metre} ${sy - metre}`} />
-                ))}
+                <path className={styles.signalCasing} pathLength={100} style={{ strokeWidth: dot.width * 2.2 }} d={signalPath} />
+                <path className={styles.packets} pathLength={100} style={{ strokeWidth: dot.width }} d={signalPath} data-barge-packets />
+                {[[sx, sy], [ex, ey]].flatMap(([x, y], end) => [0, 1, 2].map((i) => (
+                  <path key={`${end}-${i}`} className={styles.wave} style={{ animationDelay: `${i * 0.5}s`, strokeWidth: dot.width }}
+                    d={`M${x - 3.6 * metre} ${y - metre} Q${x} ${y - 4.8 * metre} ${x + 3.6 * metre} ${y - metre}`} />
+                )))}
               </g>
             )}
             {beat.later && (
@@ -486,7 +482,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
             onFocus={(event) => { if (event.currentTarget.matches(":focus-visible")) setHovered(option.id); }}
             onBlur={() => setHovered(undefined)}
           >
-            <QuayPin id={option.id as keyof typeof cranePins} number={options.indexOf(option) + 1} below={pinBelow(option.id)} />
+            <QuayPin id={option.id} number={options.indexOf(option) + 1} below={pinBelow(option.id)} />
           </button>
         ))}
       </div>
@@ -495,15 +491,12 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   );
 }
 
-/** A tappable marker over an actor: the option icon with its number and one short word (owner 20.11). */
-function QuayPin({ id, number, below }: { id: keyof typeof cranePins; number: number; below: boolean }) {
-  const Icon = pinIcons[id];
+/** A tappable marker over an actor: only the option number, as the warehouse map (call 21.11: a name on the map
+ * means nothing before the story is told; the card on the right explains the way). */
+function QuayPin({ id, number, below }: { id: string; number: number; below: boolean }) {
   return (
     <span className={styles.pin} data-quay-pin={id} data-below={below || undefined} aria-hidden="true">
-      <span className={styles.pinChip}>
-        <span className={styles.pinIcon} data-choice-number={number}><Icon /></span>
-        <b className={styles.pinName}>{cranePins[id]}</b>
-      </span>
+      <span className={styles.pinChip}>{number}</span>
     </span>
   );
 }

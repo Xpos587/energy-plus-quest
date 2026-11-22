@@ -478,7 +478,7 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
     "scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
     ...["wide", "tall"].flatMap(format => [
       `choice-${format}`, ...["barge", "floes", "pipe-carrier", "rotor", "rover"].map(layer => `${format}-${layer}`),
-    ].map(file => `scene-art/lastmile-family-v1/revision-28/${file}.webp`)),
+    ].map(file => `scene-art/lastmile-family-v1/revision-29/${file}.webp`)),
     "scene-art/lastmile-family-v1/revision-15/intro-wide.webp",
     "scene-art/lastmile-family-v1/revision-22/flight-boat-tall.webp",
     "scene-art/lastmile-family-v1/revision-18/flight-parcel-arseniy-tall.webp",

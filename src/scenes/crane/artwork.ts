@@ -1,6 +1,6 @@
 /** Barge scene v7: the Blender quay (design/scene-04/blender-v6) painted per format (design/scene-04/stylized-v7), as layers.
  * Crane swap (call 17.11): the empty loading crane stands far right by the barge, Petr waits by his crates next to it. */
-import { craneLayers, craneWorld } from "./layers";
+import { craneLayers, craneWorld as quayWorld } from "./layers";
 // Step cycles, cab occupants, painted-out patches and depth masks: design/scene-04/walk-v1 (boxes in format px).
 import walkArt from "./walkArt.json";
 
@@ -15,6 +15,15 @@ type Sprite = { src: string; x: number; y: number; w: number; h: number };
 /** A frame grid (cols × rows) in one image, frames left to right, top to bottom. */
 export type CraneSheet = Sprite & { cols: number; rows: number };
 type Walker = "Ivan" | "Petr";
+
+/** Call 21.11: Petr waits just right of his crane's right legs, between the rails (not on the quay edge under his boom),
+ * and walks straight along the rails to the barge crane ladder. The plate still has him at the old spot: the `post`
+ * patch covers it and his cut-out and step sheets are shifted by the world move (a pure screen shift for this camera).
+ * ponytail: depth masks for this lane are the old ones; re-render walk-v1 if something must pass in front of him. */
+const petrFrom = quayWorld.routes.petr[0];
+const petrRoute = [[21.6, 4.6, 0], [57, 4.6, 0], quayWorld.routes.petr[2]] as const;
+const petrMove = petrRoute[0].map((v, i) => v - petrFrom[i]);
+const craneWorld = { ...quayWorld, routes: { ...quayWorld.routes, petr: petrRoute } };
 /** Walk art not every format has yet (being made in .tmp-work/crane-anim); each piece is drawn only when present.
  * post: the quay with Petr painted out while he walks (as porch for Ivan).
  * cab<Walker>: the person seen in the loading crane cab, one sheet frame per `top` slew frame.
@@ -48,7 +57,17 @@ function format(name: CraneFormat) {
   };
   const near: readonly Point[] = [a.nearCabin, a.nearTip, a.quayFootNear, a.ladderTop];
   const corners = (r: { x: number; y: number; w: number; h: number }): Point[] => [[r.x, r.y], [r.x + r.w, r.y + r.h]];
-  const sp = { ...layer.sprites, ...walkArt.formats[name] } as typeof layer.sprites & CraneOptionalSprites;
+  const [[ax, ay, az], [bx, by, bz]] = layer.affine;
+  const [mx, my, mz] = petrMove;
+  const shift = <T extends { x: number; y: number }>(r: T): T => ({ ...r, x: r.x + ax * mx + ay * my + az * mz, y: r.y + bx * mx + by * my + bz * mz });
+  const art = walkArt.formats[name] as CraneOptionalSprites;
+  const sp = {
+    ...layer.sprites, ...art,
+    far: shift(layer.sprites.far),
+    ...Object.fromEntries((["walkPetrEast", "walkPetrInland", "walkPetrSeaward"] as const).filter((k) => art[k]).map((k) => [k, shift(art[k]!)])),
+  } as typeof layer.sprites & CraneOptionalSprites;
+  const petr = shift({ x: a.petr[0], y: a.petr[1] });
+  const anchors = { ...a, petr: [petr.x, petr.y] as const };
   // Whole figures, not just their centres: office, both cranes, the barge from bow to stern.
   // The round ПРУ office is about 11 m across; the drawn one bulges half a window left of Ivan.
   const [pu, pv] = project([-10 - 6, 20 - 6, 0]);
@@ -60,6 +79,7 @@ function format(name: CraneFormat) {
   const pad = (r: { x: number; y: number; w: number; h: number }, d: number) => ({ x: r.x - d, y: r.y - d, w: r.w + 2 * d, h: r.h + 2 * d });
   return {
     ...layer,
+    anchors,
     sprites: sp,
     project,
     // The strip that must stay in frame: office, gift, near crane, barge, far crane.
@@ -90,7 +110,7 @@ function format(name: CraneFormat) {
           remote: around([a.ivan, a.gift, a.nearCabin, a.deckSpot], 120, width, height),
           // Wide enough to read Ivan's walk: the quay leg from mid-quay, the gift and the whole loading crane.
           rush: around([a.ladderFoot, a.ladderTop, a.nearCabin, a.nearTip, a.gift, project([30, 17, 0])], 100, width, height),
-          petr: around([a.petr, a.ladderFoot, a.nearCabin, a.deckSpot], 110, width, height),
+          petr: around([anchors.petr, a.ladderFoot, a.nearCabin, a.deckSpot], 110, width, height),
         } as Partial<Record<string, Rect>>)
       : ({} as Partial<Record<string, Rect>>),
   };
@@ -118,13 +138,6 @@ export const craneChoiceNames = {
   remote: "Иван — с пульта",
   rush: "Иван — пешком на кран",
   petr: "Попросить Петра",
-} as const;
-
-/** Pins on the quay (owner 20.11): one short word per way, no second line of roles; the button's aria-label says the whole way. */
-export const cranePins = {
-  remote: "С пульта",
-  rush: "Пешком",
-  petr: "Пётр",
 } as const;
 
 /** Card facts, as the truck card lists speed and year: who, from where, when. */

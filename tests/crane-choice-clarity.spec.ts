@@ -6,14 +6,14 @@ const overlap = (a: { x: number; y: number; width: number; height: number }, b: 
   a.x < b.x + b.width && b.x < a.x + a.width && a.y < b.y + b.height && b.y < a.y + a.height;
 
 for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 }, { width: 320, height: 640 }]) {
-  test(`${viewport.width}x${viewport.height}: one-word pins are the only choice UI`, async ({ page }) => {
+  test(`${viewport.width}x${viewport.height}: numbered pins are the only choice UI`, async ({ page }) => {
     await page.setViewportSize(viewport);
     await page.goto('/scenes.html?scene=crane&parcel=socks&recipient=alva');
     await expect(page.locator('[data-artwork-ready="true"]')).toBeVisible();
     await page.waitForTimeout(600);
 
-    // Owner 20.11: one word per pin, no role after a dot; the pins are the only choice UI.
-    for (const [id, word] of [['remote', 'С пульта'], ['rush', 'Пешком'], ['petr', 'Пётр']])
+    // Call 21.11: only numbers on the map (as the warehouse); the pins are the only choice UI.
+    for (const [id, word] of [['remote', '1'], ['rush', '2'], ['petr', '3']])
       await expect(page.locator(`[data-quay-pin="${id}"]`)).toHaveText(word);
     await expect(page.locator('[data-scene-choice]')).toHaveCount(0);
     await expect(page.locator('[data-layer="ladder"]')).toHaveCount(0);
@@ -26,12 +26,6 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
       expect(chip.y).toBeGreaterThanOrEqual(stage.y - 1);
       expect(chip.y + chip.height).toBeLessThanOrEqual(stage.y + stage.height + 1);
     }
-    // The word never spills out of its chip.
-    for (const id of ['remote', 'rush', 'petr'])
-      expect(await page.locator(`[data-quay-pin="${id}"] b`).evaluate((b) => {
-        const word = b.getBoundingClientRect(), chip = b.parentElement!.getBoundingClientRect();
-        return word.left >= chip.left && word.right <= chip.right && b.scrollWidth <= b.clientWidth + 1;
-      }), id).toBe(true);
     for (let i = 0; i < chips.length; i++)
       for (let j = i + 1; j < chips.length; j++) expect(overlap(chips[i], chips[j]), `chips ${i} ${j}`).toBe(false);
 

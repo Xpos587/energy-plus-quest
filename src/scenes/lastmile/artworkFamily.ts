@@ -11,7 +11,7 @@ const lastmileRevision22 = 'scene-art/lastmile-family-v1/revision-22';
 
 // Revision 28: r27 with the pipe carrier and rover mirrored onto the Mi-8 -> robot row, all facing right (.tmp-work/s5-transport/realign.py).
 export function lastmileChoiceImage(format: 'wide' | 'tall', _recipient?: SceneContext['recipient']) {
-  return `scene-art/lastmile-family-v1/revision-28/choice-${format}.webp`;
+  return `scene-art/lastmile-family-v1/revision-29/choice-${format}.webp`;
 }
 
 export function lastmileFlightImage(context: SceneContext) {

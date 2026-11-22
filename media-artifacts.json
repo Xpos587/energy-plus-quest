@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-20-current-r28",
+  "release": "media-2026-11-22-current-r29",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -4521,10 +4521,10 @@
       ]
     },
     {
-      "name": "runtime-e48386aeaa26.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-20-current-r28/runtime-e48386aeaa26.tar.gz",
-      "sha256": "e48386aeaa26e398e3c7e0f41d5b4812e28968e8cf61a45531f0130011e3c76b",
-      "bytes": 208626907,
+      "name": "runtime-9d2ce6fb5b3b.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-22-current-r29/runtime-9d2ce6fb5b3b.tar.gz",
+      "sha256": "9d2ce6fb5b3b71a2ca9c46211ac143c76fd0f458e5f663ad54cebd9092d92662",
+      "bytes": 210470445,
       "files": [
         {
           "path": "design/scene-04/blender-v4/painted/face-inputs/desk/far.webp",
@@ -5728,8 +5728,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/desk/walkOccluderPetr.webp",
-          "bytes": 34398,
-          "sha256": "23878fba6858b6c7a2019572d5c7517fa724babeb997b0404e0345c6f64ff968"
+          "bytes": 30444,
+          "sha256": "5b4880b5ffa0c55ce7b66830f2ba2fa0dc6d5726439bc756dd9f702c0074be3a"
         },
         {
           "path": "public/scene-art/barge-v7/desk/walkPetrEast.webp",
@@ -5868,8 +5868,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/mid/walkOccluderPetr.webp",
-          "bytes": 31474,
-          "sha256": "19af3701bbe42dd50d2af528c22a539b5f7d5919cd37ad800ba88d6513f0fb79"
+          "bytes": 28360,
+          "sha256": "34b53c422c6ae7dd944841c063a9a0334882dd2a8b522d8fa7726d2b2fffe186"
         },
         {
           "path": "public/scene-art/barge-v7/mid/walkPetrEast.webp",
@@ -5888,48 +5888,48 @@
         },
         {
           "path": "public/scene-art/barge-v7/outcome-petr-portrait.webp",
-          "bytes": 960038,
-          "sha256": "501cc2dcb4d339833eec36d976d8b44c149ce5f2699f522c240b83fe8c1d4c6c"
+          "bytes": 888646,
+          "sha256": "c708bdec79bdd231f43741a57076af4972e9d6db9427a3eb1977649733043f37"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-petr-rail.webp",
-          "bytes": 705550,
-          "sha256": "32f0507f05d4bd1324ac1d40313a20d0106d5fc868320375a626e8647e121eb3"
+          "bytes": 600336,
+          "sha256": "8729c6140ed052a5a069275b48fe46c2d54c7840ddc2c44ba4d6aaacb19286c9"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-petr.webp",
-          "bytes": 1131174,
-          "sha256": "746ee5527332c80bd097752bd7a814fde987b8566f514d242568f983145851f9"
+          "bytes": 1084246,
+          "sha256": "d02be52f6721d6f2640e2ea364011479d60ff06ca620d6279237e1dfddaaf67d"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-remote-portrait.webp",
-          "bytes": 964544,
-          "sha256": "f890ee9ed4bb407e7a70af5cdd939e6a1005b120517226535908850810cdbda2"
+          "bytes": 889688,
+          "sha256": "af20b6b5ec6113e54076cbee1eb5a0b095dcd904224ccef06bc9c371c636e62b"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-remote-rail.webp",
-          "bytes": 702282,
-          "sha256": "db50a7a5ecea523a9607c12a2274181e770c53a6a92927d8c8e367dabb7c21ed"
+          "bytes": 626612,
+          "sha256": "819354585fb470b92ef8535c60c62a10391e6357941e0f206de71deedba0760f"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-remote.webp",
-          "bytes": 1130290,
-          "sha256": "afaa0dba8600d076f67592a53714ce39c2fdcc6be0b9d276f276107cc9efa5c6"
+          "bytes": 1083922,
+          "sha256": "25cb06512282f9274150cad7fa1e4849339d81fe376d3bc467e1c92004723de8"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-rush-portrait.webp",
-          "bytes": 966146,
-          "sha256": "f77ad19dd12611786a2eb6ef3a47d0aa19920fbd39c580ad2d29741c66e2f5b1"
+          "bytes": 885956,
+          "sha256": "eaf3de30a5964eec8f3b8fadcc38fa3655b9c56fefd35874490b35443d0dd023"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-rush-rail.webp",
-          "bytes": 703458,
-          "sha256": "36e4e22fd3a7cac153dbfd41c656f2e0b048565b63d706619ee48bdf548ba483"
+          "bytes": 625680,
+          "sha256": "6301cfb8594438b9576cb4b7b558d969f6e63a1aadbff022e0ba6ab5da2630f1"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-rush.webp",
-          "bytes": 1130596,
-          "sha256": "3b8091dd5619fb12ba95f69d15f267570a32d83a10f23e74c90e2df2fd1233fa"
+          "bytes": 1082994,
+          "sha256": "0511c7d6422202de6bc8df5cc9db62202b8f720aa15fe8158d4890d6b9606217"
         },
         {
           "path": "public/scene-art/barge-v7/tall/barge.webp",
@@ -6048,8 +6048,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/tall/walkOccluderPetr.webp",
-          "bytes": 13390,
-          "sha256": "24291d6a694c6d20720304d2a046b73d60256528934c464a4b65214c501ade99"
+          "bytes": 30262,
+          "sha256": "505e9db3b8e41e50a3b042ae124710f763c849a70e441b06476b5f598bebec98"
         },
         {
           "path": "public/scene-art/barge-v7/tall/walkPetrEast.webp",
@@ -6188,8 +6188,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/wide/walkOccluderPetr.webp",
-          "bytes": 33470,
-          "sha256": "4ced8260873d982a6239f3b4d6b6499eb756d771cb2de2804d2baca8ed175065"
+          "bytes": 29556,
+          "sha256": "3362433a97d8f785b5b5997abf48f675654ec6a49ec73350403ca8c9a0f7ca7a"
         },
         {
           "path": "public/scene-art/barge-v7/wide/walkPetrEast.webp",
@@ -6523,6 +6523,66 @@
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-28/wide-rover.webp",
+          "bytes": 23598,
+          "sha256": "7b4d6e3920dbd9452c56380be329518a4c797a96c090ae7447e429c3d9721597"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/choice-tall.webp",
+          "bytes": 725868,
+          "sha256": "a06fbd1ffc155c935283558d26036a95663f9002eb2b385c816333c96091496b"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/choice-wide.webp",
+          "bytes": 836768,
+          "sha256": "5741005795bc9cd608d049b4c2de90a0e34a98b5c8a5bd8bac8c215e5a78434f"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/tall-barge.webp",
+          "bytes": 14462,
+          "sha256": "264fce0cea4bf708fc4a336f7b78c1b2ec4608b8b53bfecbaddaa71119dd7aee"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/tall-floes.webp",
+          "bytes": 81640,
+          "sha256": "09a2fb7b0519b116485c02c5ed08870a94667737e6e7d7af147e0a5803e35124"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/tall-pipe-carrier.webp",
+          "bytes": 31390,
+          "sha256": "d4ef6f0f0ac96ed18445061b41904ee74e62c1ff20cd517c5a50d60b31dac53a"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/tall-rotor.webp",
+          "bytes": 249298,
+          "sha256": "0bb7f684e69d3ea1e23a233fd073e8b5f8e9cf84447b16e13b9d3526b27debbf"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/tall-rover.webp",
+          "bytes": 14360,
+          "sha256": "1b32d8782b16d5d0b2e5ca46265ad933142e1df5442472fe9b9e5e0f5460d6d4"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/wide-barge.webp",
+          "bytes": 27796,
+          "sha256": "3a6a5367f4a247571834a796f6321fb2a7f3a4cf3ab1914b54bf5480d85dfccf"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/wide-floes.webp",
+          "bytes": 70424,
+          "sha256": "d8b4587fd6b0622d895286476889a1d112a15c45f116a3778b8db422ace9961a"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/wide-pipe-carrier.webp",
+          "bytes": 29906,
+          "sha256": "6027cb2bf3d145da5df9bee4115e14fdd7f2e829cf3b6ae33b6518c0f657299c"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/wide-rotor.webp",
+          "bytes": 359870,
+          "sha256": "f497293b912767d343c0c73a527689864e0ffbccea525324321fbbb318e0c038"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-29/wide-rover.webp",
           "bytes": 23598,
           "sha256": "7b4d6e3920dbd9452c56380be329518a4c797a96c090ae7447e429c3d9721597"
         },

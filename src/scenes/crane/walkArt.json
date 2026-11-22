@@ -122,10 +122,10 @@
    },
    "walkOccluderPetr": {
     "src": "scene-art/barge-v7/wide/walkOccluderPetr.webp",
-    "x": 826.0,
-    "y": 462.5,
-    "w": 558.0,
-    "h": 199.5
+    "x": 1100.5,
+    "y": 478.5,
+    "w": 96.5,
+    "h": 69.0
    },
    "turnOccluderPetr": {
     "src": "scene-art/barge-v7/wide/turnOccluderPetr.webp",
@@ -263,10 +263,10 @@
    },
    "walkOccluderPetr": {
     "src": "scene-art/barge-v7/desk/walkOccluderPetr.webp",
-    "x": 622.5,
-    "y": 572.5,
-    "w": 564.0,
-    "h": 202.0
+    "x": 899.0,
+    "y": 589.5,
+    "w": 97.0,
+    "h": 70.5
    },
    "turnOccluderPetr": {
     "src": "scene-art/barge-v7/desk/turnOccluderPetr.webp",
@@ -404,10 +404,10 @@
    },
    "walkOccluderPetr": {
     "src": "scene-art/barge-v7/mid/walkOccluderPetr.webp",
-    "x": 566.5,
-    "y": 618.0,
-    "w": 516.5,
-    "h": 185.0
+    "x": 824.5,
+    "y": 632.5,
+    "w": 90.0,
+    "h": 68.0
    },
    "turnOccluderPetr": {
     "src": "scene-art/barge-v7/mid/turnOccluderPetr.webp",
@@ -545,10 +545,10 @@
    },
    "walkOccluderPetr": {
     "src": "scene-art/barge-v7/tall/walkOccluderPetr.webp",
-    "x": 590.5,
-    "y": 814.0,
-    "w": 49.5,
-    "h": 114.0
+    "x": 580.0,
+    "y": 797.0,
+    "w": 50.0,
+    "h": 112.5
    },
    "turnOccluderPetr": {
     "src": "scene-art/barge-v7/tall/turnOccluderPetr.webp",

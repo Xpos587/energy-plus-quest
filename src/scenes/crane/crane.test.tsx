@@ -93,10 +93,11 @@ describe("craneScene source contract", () => {
     expect(html).not.toContain("data-barge-label");
     // Owner 19.11: who is Ivan, who is Petr, where to tap — a pin inside each tap target.
     expect(html.match(/data-quay-pin=/g)).toHaveLength(3);
-    // Owner 20.11: one short word per pin, no role line after a dot.
-    expect(html).toMatch(/data-hotspot="remote"[^>]*>.*?data-quay-pin="remote".*?>С пульта</);
-    expect(html).toMatch(/data-hotspot="rush"[^>]*>.*?data-quay-pin="rush".*?>Пешком</);
-    expect(html).toMatch(/data-hotspot="petr"[^>]*>.*?data-quay-pin="petr".*?>Пётр</);
+    // Call 21.11: numbers only on the map, as the warehouse; names wait for the card.
+    expect(html).toMatch(/data-hotspot="remote"[^>]*>.*?data-quay-pin="remote".*?>1</);
+    expect(html).toMatch(/data-hotspot="rush"[^>]*>.*?data-quay-pin="rush".*?>2</);
+    expect(html).toMatch(/data-hotspot="petr"[^>]*>.*?data-quay-pin="petr".*?>3</);
+    for (const word of ["С пульта<", "Пешком<", "Пётр<"]) expect(html).not.toContain(word);
     expect(html).not.toContain("·");
     // Owner 20.11: the cut-out ladder read as macaroni; the plate's painted ladder stays alone.
     expect(html).not.toContain('data-layer="ladder"');

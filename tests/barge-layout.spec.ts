@@ -32,6 +32,7 @@ for (const parcel of ['camera', 'socks', 'boat']) {
         const more = page.getByRole('button', { name: 'Читать дальше', exact: true });
         if (!await more.isVisible()) break;
         await more.scrollIntoViewIfNeeded();
+        if (!await more.isVisible()) break; // scrolling can finish the text and turn it into the proceed button
         await expect(more).toBeInViewport({ ratio: 1 });
         await more.click();
       }
