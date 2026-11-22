@@ -4,8 +4,8 @@ test.use({ contextOptions: { reducedMotion: 'reduce' } });
 
 const litLayers = (page: Page) => page.locator('[data-world-scene=crane] [data-lit]').evaluateAll(
   layers => layers.map(layer => (layer as HTMLElement).dataset.layer).sort().join('+'));
-// Lit layers per crane way (artwork.ts actors; "near" renders as top, "ivan" as pru).
-const crane: Record<string, string> = { remote: 'pru+top', rush: 'ladder+top', wait: 'top', petr: 'far+top' };
+// Lit layers per crane way (artwork.ts actors; "near" renders as top). Owner 20.11: no glow on the ladder.
+const crane: Record<string, string> = { remote: 'ivan+top', rush: 'ivan+top', petr: 'far+top' };
 // What a card highlights, per scene: any visible focus/selected mark.
 const marks = '[data-focused="true"], [aria-pressed="true"], [data-active="true"]:not(svg), [data-lit]';
 
@@ -68,8 +68,8 @@ for (const { name, pairs } of scenes) {
         nodes => [...new Set(nodes.filter(node => node.getClientRects().length)
           .map(node => node.dataset.hotspot ?? node.dataset.sceneChoice ?? node.dataset.carrierChoice ?? ''))]
           .filter(Boolean).sort().join('+')),
-      // lastmile commits straight from the zone and hides the drawing on the result screen.
-      `${first} -> ${second}`).toBe(name === 'crane' ? crane[second] : name === 'lastmile' ? '' : second);
+      // lastmile also opens a card from the vehicle now (ScenesGame inspectsOnArt), so it lights the new pick like the rest.
+      `${first} -> ${second}`).toBe(name === 'crane' ? crane[second] : second);
     }
   });
 }

@@ -3,20 +3,18 @@ import { expect, it } from "vitest";
 import { scenarioParagraph } from "../../game/scenarioDocument";
 import { lastmileScene, pipeCarrierResult } from "./index";
 import { LastmileZones } from "./LastmileZones";
-it("breathing rings remain separate at their maximum animated scale in both compositions", () => {
-  for (const composition of ["wide", "tall"] as const) {
-    const host = document.createElement("div");
-    host.innerHTML = renderToStaticMarkup(<LastmileZones composition={composition} />);
-    const rings = [...host.querySelectorAll("[data-lastmile-ripple]")].map(circle => ({
-      cx: Number(circle.getAttribute("cx")), cy: Number(circle.getAttribute("cy")),
-      radius: Number(circle.getAttribute("r")) * 1.15,
-    }));
-    expect(rings).toHaveLength(4);
-    for (let i = 0; i < rings.length; i++) for (let j = i + 1; j < rings.length; j++) {
-      const a = rings[i], b = rings[j];
-      expect(a.radius).toBeGreaterThan(0);
-      expect(Math.hypot(a.cx - b.cx, a.cy - b.cy)).toBeGreaterThan(a.radius + b.radius);
-    }
+it("breathing rings remain separate at their maximum animated scale", () => {
+  const host = document.createElement("div");
+  host.innerHTML = renderToStaticMarkup(<LastmileZones />);
+  const rings = [...host.querySelectorAll("[data-lastmile-ripple]")].map(circle => ({
+    cx: Number(circle.getAttribute("cx")), cy: Number(circle.getAttribute("cy")),
+    radius: Number(circle.getAttribute("r")) * 1.15,
+  }));
+  expect(rings).toHaveLength(4);
+  for (let i = 0; i < rings.length; i++) for (let j = i + 1; j < rings.length; j++) {
+    const a = rings[i], b = rings[j];
+    expect(a.radius).toBeGreaterThan(0);
+    expect(Math.hypot(a.cx - b.cx, a.cy - b.cy)).toBeGreaterThan(a.radius + b.radius);
   }
 });
 for (const recipient of ["alva","khor","arseniy"] as const) for (const parcel of ["boat","camera","socks"] as const) {

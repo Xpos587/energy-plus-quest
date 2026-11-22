@@ -37,7 +37,7 @@ it("keeps the whole quay hidden until the last sprite decodes, and retries faile
     configurable: true,
     value: vi.fn(function (this: HTMLImageElement) {
       if (
-        this.src.includes("/mid/barge.webp") &&
+        this.src.includes("/desk/barge.webp") &&
         !this.src.includes("artwork-retry=2")
       )
       {
@@ -46,7 +46,7 @@ it("keeps the whole quay hidden until the last sprite decodes, and retries faile
         Object.defineProperty(this, "complete", { configurable: true, value: true });
         return Promise.reject(new Error("network"));
       }
-      if (this.src.includes("/mid/occluder.webp")) return office;
+      if (this.src.includes("/desk/occluder.webp")) return office;
       return Promise.resolve();
     }),
   });

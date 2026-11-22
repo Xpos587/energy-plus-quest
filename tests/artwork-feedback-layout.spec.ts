@@ -16,7 +16,7 @@ for (const scene of [
   { id: "compact", pattern: /compact-environment-v(53|54)/ },
   { id: "inventory", pattern: /inventory-master-v16/ },
   { id: "crane", pattern: /barge-v7\/(wide|desk|mid|tall)\/plate/ },
-  { id: "lastmile", pattern: /lastmile-family-v1\/revision-29\/choice/ },
+  { id: "lastmile", pattern: /lastmile-family-v1\/revision-30\/choice/ },
 ]) {
   test(`${scene.id}: loading and retry stay centered in media, including after resize`, async ({ page }, info) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
@@ -47,29 +47,3 @@ for (const scene of [
     } finally { release(); }
   });
 }
-
-test("lastmile preview keeps responsive-image retry centered in its media", async ({ page }, info) => {
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.setViewportSize({ width: 390, height: 1000 });
-  const pattern = /lastmile-family-v1\/revision-29\/choice-wide/;
-  await page.route(pattern, route => route.abort());
-  await page.goto("/scenes.html?scene=lastmile&parcel=socks&recipient=khor");
-  const condition = page.getByRole("region", { name: "Условие задания", exact: true });
-  for (let n = 0; n < 40 && await condition.isVisible(); n++)
-    await condition.getByRole("button", { name: /^(Далее|К выбору)$/ }).click();
-  const media = page.locator('[data-world-scene="lastmile"]');
-  await expect(media).toHaveAttribute("data-artwork-ready", "true");
-  await page.locator('[data-hotspot="rover"]').click();
-  await expect(page.locator("[data-choice-inspection]")).toBeVisible();
-  await expect(media.locator("img").first()).toHaveAttribute("src", /choice-tall/);
-  await page.setViewportSize({ width: 1440, height: 900 });
-  const feedback = page.locator('[data-artwork-status="error"]');
-  await centeredIn(feedback, media);
-  await expect(page.locator("[data-choice-inspection]")).toBeVisible();
-  await page.screenshot({ path: info.outputPath("lastmile-preview-centered.png") });
-  await page.unroute(pattern);
-  await feedback.getByRole("button", { name: "Повторить", exact: true }).click();
-  await expect(media).toHaveAttribute("data-artwork-ready", "true");
-  await expect(page.locator("[data-choice-inspection]")).toBeVisible();
-  await expect(page.locator("[data-result-reader]")).toHaveCount(0);
-});

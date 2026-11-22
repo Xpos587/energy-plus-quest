@@ -4,9 +4,6 @@ import { craneLayers, craneWorld as quayWorld } from "./layers";
 // Step cycles, cab occupants, painted-out patches and depth masks: design/scene-04/walk-v1 (boxes in format px).
 import walkArt from "./walkArt.json";
 
-// Result stills: live v7 painted quay captured by scripts/capture-barge-outcomes.mjs.
-const outcomeBase = "scene-art/barge-v7";
-
 export type Rect = { x: number; y: number; width: number; height: number };
 export type CraneFormat = keyof typeof craneLayers;
 type Point = readonly [number, number];
@@ -21,9 +18,14 @@ type Walker = "Ivan" | "Petr";
  * patch covers it and his cut-out and step sheets are shifted by the world move (a pure screen shift for this camera).
  * ponytail: depth masks for this lane are the old ones; re-render walk-v1 if something must pass in front of him. */
 const petrFrom = quayWorld.routes.petr[0];
-const petrRoute = [[21.6, 4.6, 0], [57, 4.6, 0], quayWorld.routes.petr[2]] as const;
+// Owner 22.11: he stood on the right leg's bogie by the quay edge; now clear of it, inland of the sea rail and
+// seaward of his crates (x ≥ 29.5, y 6.8…11.8), so the straight lane passes in front of them.
+const petrRoute = [[23.5, 5.9, 0], [57, 5.9, 0], quayWorld.routes.petr[2]] as const;
 const petrMove = petrRoute[0].map((v, i) => v - petrFrom[i]);
-const craneWorld = { ...quayWorld, routes: { ...quayWorld.routes, petr: petrRoute } };
+/** Remote (call 21.11, owner 22.11): Ivan steps from the porch straight inland up the steps into the ПРУ door, then
+ * radios the crane. 5 m inland is the dark doorway on the desk plate (3.4 m stopped him on the bottom step). */
+const officeRoute = [quayWorld.routes.rush[0], [quayWorld.routes.rush[0][0], quayWorld.routes.rush[0][1] + 5, 0]] as const;
+const craneWorld = { ...quayWorld, routes: { ...quayWorld.routes, petr: petrRoute, office: officeRoute } };
 /** Walk art not every format has yet (being made in .tmp-work/crane-anim); each piece is drawn only when present.
  * post: the quay with Petr painted out while he walks (as porch for Ivan).
  * cab<Walker>: the person seen in the loading crane cab, one sheet frame per `top` slew frame.
@@ -86,10 +88,11 @@ function format(name: CraneFormat) {
     focus: around(story, tall ? 40 : 24, width, height),
     // Air around the story inside focus; the camera may crop into it to fill the screen.
     focusPad: tall ? 40 : 24,
-    // Tap targets are the actors themselves: Ivan on the ПРУ porch, the barge crane's ladder, Petr by his crates.
+    // Tap targets are the actors themselves: Ivan on the ПРУ porch, the barge crane's cab, Petr by his crates.
+    // Owner 22.11: pin 2 on the ladder read as nothing; it marks the cab (about 5 × 7 m on screen around nearCabin).
     targets: {
       remote: pad(sp.ivan, 14),
-      rush: pad(sp.ladder, 10),
+      rush: pad({ x: a.nearCabin[0] - 2.5 * metre, y: a.nearCabin[1] - 3.5 * metre, w: 5 * metre, h: 7 * metre }, 12),
       petr: pad(sp.far, 10),
     } as Record<string, { x: number; y: number; w: number; h: number }>,
     // What each way uses: these layers light up when the way is picked.
@@ -104,15 +107,6 @@ function format(name: CraneFormat) {
       office: [sp.ivan.x + sp.ivan.w * 0.75, sp.ivan.y - 2],
       cab: [a.nearCabin[0], a.nearCabin[1] - 2.4 * metre],
     } as const,
-    // Card open on a phone: the camera closes in on the chosen way.
-    zoom: tall
-      ? ({
-          remote: around([a.ivan, a.gift, a.nearCabin, a.deckSpot], 120, width, height),
-          // Wide enough to read Ivan's walk: the quay leg from mid-quay, the gift and the whole loading crane.
-          rush: around([a.ladderFoot, a.ladderTop, a.nearCabin, a.nearTip, a.gift, project([30, 17, 0])], 100, width, height),
-          petr: around([anchors.petr, a.ladderFoot, a.nearCabin, a.deckSpot], 110, width, height),
-        } as Partial<Record<string, Rect>>)
-      : ({} as Partial<Record<string, Rect>>),
   };
 }
 
@@ -147,5 +141,4 @@ export const craneFacts = {
   petr: { who: "Пётр", where: "Из кабины крана у баржи", when: "Сразу", note: "У Петра скоро своя погрузка" },
 } as const;
 
-export const craneOutcomeImage = (id: string) => `${outcomeBase}/outcome-${id}.webp`;
 export const craneChoiceImage = craneArtwork.wide.plate;

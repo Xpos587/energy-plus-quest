@@ -4,8 +4,9 @@ import { parcelNames, recipientNames } from "../names";
 import { scenarioParagraph as source } from "../../game/scenarioDocument";
 import type { SceneArtProps, SceneContext } from "../types";
 import { craneScene } from "./index";
-import { craneArtwork, craneCaptions } from "./artwork";
+import { craneArtwork, craneCaptions, craneWorld } from "./artwork";
 import { craneBeat, craneDuration } from "./consequence";
+import { camera } from "./CraneArt";
 
 const context: SceneContext = {
   parcel: "camera",
@@ -103,13 +104,13 @@ describe("craneScene source contract", () => {
     expect(html).not.toContain('data-layer="ladder"');
     for (const id of ["remote", "rush", "petr"])
       expect(html).toContain(`data-hotspot="${id}"`);
-    expect(html).toMatch(/scene-art\/barge-v7\/(mid|desk|wide|tall)\/plate\.webp/);
+    expect(html).toMatch(/scene-art\/barge-v7\/desk\/plate\.webp/);
     for (const caption of Object.values(craneCaptions)) expect(html).toContain(`aria-label="${caption}:`);
     expect(html).not.toContain("Баржа готова к отходу");
     expect(html).not.toContain(">Подарок<");
     expect(html.match(/data-barge-ripple=/g)).toHaveLength(3);
     // Grisha 09.11: the pulse is one ring size, drawn on the actor the finger actually hits.
-    const format = html.match(/barge-v7\/(mid|desk|wide|tall)\/plate/)![1] as keyof typeof craneArtwork;
+    const format = html.match(/barge-v7\/(desk)\/plate/)![1] as keyof typeof craneArtwork;
     const art = craneArtwork[format];
     const radii = new Set<number>();
     for (const id of ["remote", "rush", "petr"]) {
@@ -160,12 +161,46 @@ describe("craneScene source contract", () => {
     expect(craneBeat(id, walkMs + 550)).toMatchObject({ walker, walk: 1, lifted: false });
     expect(craneBeat(id, walkMs + 550).climb).toBeCloseTo(0.5, 1);
     expect(craneBeat(id, craneDuration(id))).toMatchObject({ walker, walk: 1, climb: 1 });
-    expect(craneBeat("remote", 0).walker).toBeUndefined();
+  });
+  it("remote: Ivan walks into the ПРУ door, then the radio link comes up; no bubble over the empty office", () => {
+    expect(craneBeat("remote", 0)).toMatchObject({ walker: "ivan", route: "office", walk: 0, office: "empty" });
+    expect(craneBeat("remote", 999).signal).toBeUndefined();
+    expect(craneBeat("remote", 1200)).toMatchObject({ signal: true, office: "empty" });
+    expect(craneBeat("remote", 1200).walker).toBeUndefined();
+    for (let ms = 0; ms <= craneDuration("remote"); ms += 50) expect(craneBeat("remote", ms).emote).toBeUndefined();
+  });
+  it.each(["remote", "rush", "petr"])("%s: the cable hangs plumb under the boom tip of the drawn slew frame", (id) => {
+    for (let ms = 0; ms <= craneDuration(id); ms += 20) {
+      const { hook, frame } = craneBeat(id, ms);
+      if (!hook) continue;
+      const tip = craneWorld.tips[frame];
+      expect(Math.hypot(hook[0] - tip[0], hook[1] - tip[1]), `${id} @${ms}ms`).toBeLessThan(1e-9);
+    }
   });
   it("paints Petr out of the plate and draws his step cycle with one lane mask while he walks", () => {
     const html = renderToStaticMarkup(<craneScene.Art context={context} showResult={false} playing="petr" />);
     expect(html).toMatch(/data-layer="post".*data-layer="far"[^>]*data-walking.*walkPetrEast\.webp.*data-layer="walkOccluderPetr"/);
     expect(html.match(/data-layer="(walkOccluder\w*|turnOccluder\w+|climbOccluder)"/g)).toHaveLength(1);
+  });
+  it("camera always covers the stage, never exposing the background", () => {
+    for (let width = 320; width <= 2560; width += 10)
+      for (let height = 400; height <= 1600; height += 10) {
+        const view = camera({ width, height });
+        expect(view.left, `${width}x${height}`).toBeLessThanOrEqual(1e-6);
+        expect(view.top, `${width}x${height}`).toBeLessThanOrEqual(1e-6);
+        expect(view.left + view.width, `${width}x${height}`).toBeGreaterThanOrEqual(width - 1e-6);
+        expect(view.top + view.height, `${width}x${height}`).toBeGreaterThanOrEqual(height - 1e-6);
+      }
+  });
+  it("pin 2 (rush) marks the barge crane cab, not its ladder", () => {
+    for (const [name, art] of Object.entries(craneArtwork)) {
+      const t = art.targets.rush;
+      const [cx, cy] = art.anchors.nearCabin;
+      expect(Math.abs(t.x + t.w / 2 - cx), name).toBeLessThan(1);
+      expect(Math.abs(t.y + t.h / 2 - cy), name).toBeLessThan(1);
+      // The ladder foot stays outside the box: the pin no longer points into the ladder and legs.
+      expect(t.y + t.h, name).toBeLessThan(art.anchors.ladderFoot[1]);
+    }
   });
   it("keeps every tap target inside its drawing", () => {
     for (const art of Object.values(craneArtwork))

@@ -17,9 +17,10 @@ for (const [width, height] of [[320, 568], [360, 640], [375, 667], [390, 844], [
       const s = el.getBoundingClientRect();
       const p = el.querySelector('[data-world-plane]')!.getBoundingClientRect();
       const hint = document.querySelector('[data-carrier-tap-hint]')!.getBoundingClientRect();
-      return { width: s.width, height: s.height, left: p.left-s.left, top: p.top-s.top, planeWidth: p.width, planeHeight: p.height, hintBottom: hint.bottom-s.top, format: el.querySelector('img')!.src.includes('choice-wide') ? 'wide' as const : 'tall' as const };
+      return { width: s.width, height: s.height, left: p.left-s.left, top: p.top-s.top, planeWidth: p.width, planeHeight: p.height, hintBottom: hint.bottom-s.top };
     });
-    await expect(stage.locator('img').first()).toHaveAttribute('src', new RegExp(`revision-29/choice-${view.format}\\.webp$`));
+    // One wide drawing on every screen (owner 22.11).
+    await expect(stage.locator('img').first()).toHaveAttribute('src', /revision-30\/choice-wide\.webp$/);
     // The art always covers the whole stage: no bands at any layout.
     expect(view.left).toBeLessThanOrEqual(0.5);
     expect(view.top).toBeLessThanOrEqual(0.5);
@@ -37,7 +38,7 @@ for (const [width, height] of [[320, 568], [360, 640], [375, 667], [390, 844], [
       const a = annotations[i], b = annotations[j];
       expect(Math.hypot(a.cx - b.cx, a.cy - b.cy), `${a.id}/${b.id} breathing rings overlap`).toBeGreaterThan(a.radius + b.radius);
     }
-    const drawing = bounds[view.format];
+    const drawing = bounds;
     const zones = await stage.evaluate(el => {
       const stage = el.getBoundingClientRect();
       return [...el.querySelectorAll('[data-lastmile-zone]')].map(path => {
@@ -46,10 +47,18 @@ for (const [width, height] of [[320, 568], [360, 640], [375, 667], [390, 844], [
       });
     });
     expect(zones).toHaveLength(4);
+    // One wide drawing that always covers: a stage narrower than the quay row itself (1024x1366 beside the side panel)
+    // trims both row ends evenly; every vehicle then still keeps its centre, and its hotspot, on screen.
+    const row = Math.max(...zones.map(b => b.right)) - Math.min(...zones.map(b => b.left));
     for (const box of zones) {
-      expect(box.left).toBeGreaterThanOrEqual(-1);
+      if (row <= view.width) {
+        expect(box.left).toBeGreaterThanOrEqual(-1);
+        expect(box.right).toBeLessThanOrEqual(view.width + 1);
+      } else {
+        expect((box.left + box.right) / 2).toBeGreaterThan(0);
+        expect((box.left + box.right) / 2).toBeLessThan(view.width);
+      }
       expect(box.top).toBeGreaterThanOrEqual(view.hintBottom);
-      expect(box.right).toBeLessThanOrEqual(view.width + 1);
       expect(box.bottom).toBeLessThanOrEqual(view.height + 1);
     }
     for (const id of ['helicopter', 'pipe-carrier', 'rover', 'robot']) {

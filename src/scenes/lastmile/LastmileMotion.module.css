@@ -29,6 +29,32 @@
   }
 }
 
+/* Its pointer tip sits on the painted parcel. */
+.giftPin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #ff5500;
+  color: #fff;
+  box-shadow: 0 1px 5px rgb(4 19 39 / 35%);
+  transform: translate(-50%, calc(-100% - 9px));
+}
+.giftPin svg { width: 16px; height: 16px; }
+.giftPin::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: 1px 0 0 -6px;
+  border: 6px solid transparent;
+  border-top: 8px solid #fff;
+  border-bottom: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rotor img {
     animation: none;

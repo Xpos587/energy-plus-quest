@@ -5,14 +5,17 @@ import type { ArtworkStatus } from "../../components/useArtworkLoading";
 import { imageAsset } from "../../game/imageAssets";
 import { choiceLabel } from "../choiceLabel";
 import type { SceneArtProps } from "../types";
-import { craneArtwork, craneCaptions, craneWalkCycle, craneWorld, type CraneFormat, type CraneSheet, type Rect } from "./artwork";
+import { craneArtwork, craneCaptions, craneWalkCycle, craneWorld, type CraneFormat, type CraneSheet } from "./artwork";
 import { craneBeat, craneDeckDelta, craneDuration, craneRest } from "./consequence";
 import { craneScene } from "./index";
 import { fitTapTargets } from "./tapTargets";
 import styles from "./CraneArt.module.css";
 
-/** Pick the drawing that fills the stage and crops least of the quay story, then keep that strip in frame. */
-function camera(stage: { width: number; height: number }, zoomId?: string) {
+/** Owner 22.11: one composition (the desktop drawing) on every screen, no per-shape redraws and no zoom-in;
+ * the camera only scales it to cover the stage and keeps the quay story strip in frame. */
+const craneFormats: readonly CraneFormat[] = ["desk"];
+
+export function camera(stage: { width: number; height: number }) {
   const fit = (format: CraneFormat) => {
     const { width, height, focus, focusPad } = craneArtwork[format];
     // Always cover: an empty band of sky colour reads as a broken picture.
@@ -24,25 +27,35 @@ function camera(stage: { width: number; height: number }, zoomId?: string) {
     const mismatch = Math.abs(Math.log(width / height / (stage.width / Math.max(1, stage.height))));
     return { format, scale, lost, mismatch };
   };
-  const { format, scale: overview } = (Object.keys(craneArtwork) as CraneFormat[])
+  const { format, scale } = craneFormats
     .map(fit)
     .reduce((best, next) => (next.lost < best.lost - 1e-3 || (Math.abs(next.lost - best.lost) <= 1e-3 && next.mismatch < best.mismatch) ? next : best));
-  const { width, height, zoom } = craneArtwork[format];
-  // An open card frames the chosen way, as the city map follows a truck.
-  const focus: Rect = (zoomId && zoom[zoomId]) || craneArtwork[format].focus;
-  const scale = Math.max(overview, Math.min(stage.width / focus.width, stage.height / focus.height));
-  const place = (stageSize: number, size: number, start: number, span: number) => {
-    const offset = stageSize / 2 - (start + span / 2) * scale;
-    return size * scale <= stageSize
-      ? (stageSize - size * scale) / 2
-      : Math.max(stageSize - size * scale, Math.min(0, offset));
+  const { width, height, focus, targets, sprites, affine } = craneArtwork[format];
+  // The three actors are the choice: when the story strip is wider than the screen (near-square stages), the pan still
+  // keeps every actor in, else centring the strip cut Ivan off at its far left. The gift's landing spot on the deck is
+  // the result: kept in both phases so choice and result share one camera.
+  const [[ax, ay, az], [bx, by, bz]] = affine;
+  const [dx, dy, dz] = craneDeckDelta;
+  const deckGift = { x: sprites.gift.x + ax * dx + ay * dy + az * dz, y: sprites.gift.y + bx * dx + by * dy + bz * dz, w: sprites.gift.w, h: sprites.gift.h };
+  const actors = [...Object.values(targets), deckGift];
+  const span = (from: (r: (typeof actors)[number]) => number, size: (r: (typeof actors)[number]) => number) =>
+    [Math.min(...actors.map(from)), Math.max(...actors.map((r) => from(r) + size(r)))] as const;
+  const place = (stageSize: number, size: number, start: number, length: number, [keepFrom, keepTo]: readonly [number, number]) => {
+    if (size * scale <= stageSize) return (stageSize - size * scale) / 2;
+    const cover = (offset: number) => Math.max(stageSize - size * scale, Math.min(0, offset));
+    const offset = cover(stageSize / 2 - (start + length / 2) * scale);
+    // Keeping the actors never uncovers the stage (owner 22.11: a 180 px sky band at the left on 1950×1220).
+    // The actors stay in while offset ∈ [−keepFrom·scale, stage − keepTo·scale]; the old max/min order pinned them to the right edge.
+    // Wider than the screen: centre the actors themselves, so both ends lose the same sliver.
+    if ((keepTo - keepFrom) * scale > stageSize) return cover(stageSize / 2 - ((keepFrom + keepTo) / 2) * scale);
+    return cover(Math.max(-keepFrom * scale, Math.min(stageSize - keepTo * scale, offset)));
   };
   return {
     format,
     width: width * scale,
     height: height * scale,
-    left: place(stage.width, width, focus.x, focus.width),
-    top: place(stage.height, height, focus.y, focus.height),
+    left: place(stage.width, width, focus.x, focus.width, span((r) => r.x, (r) => r.w)),
+    top: place(stage.height, height, focus.y, focus.height, span((r) => r.y, (r) => r.h)),
   };
 }
 
@@ -93,8 +106,6 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const [ownHover, setOwnHover] = useState<string>();
   const hovered = ownHover ?? focusedId;
   const setHovered = (id: string | undefined) => { setOwnHover(id); onFocusChange?.(id); };
-  // Animate camera moves only after the first measured frame, not from size 0.
-  const [ready, setReady] = useState(false);
   const stage = useRef<HTMLElement>(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
   useLayoutEffect(() => {
@@ -105,18 +116,16 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       setSize((old) => (old.width === width && old.height === height ? old : { width, height }));
     };
     measure();
-    const frame = requestAnimationFrame(() => setReady(true));
     if (typeof ResizeObserver === "undefined") return;
     const observer = new ResizeObserver(measure);
     observer.observe(element);
-    return () => {
-      cancelAnimationFrame(frame);
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
-  const beat = useConsequence(playing, onPlayed);
+  const played = useConsequence(playing, onPlayed);
+  // The result screen keeps the quay where the animation ended: same drawing, same camera.
+  const beat = !playing && showResult && selectedId ? craneBeat(selectedId, Infinity) : played;
   const interactive = !showResult && !!onSelect && !playing;
-  const view = camera(size, playing ? "play" : interactive ? selectedId : undefined);
+  const view = camera(size);
   const art = craneArtwork[view.format];
   const [attempt, setAttempt] = useState(0);
   const source = (path: string) => {
@@ -171,7 +180,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   }));
   // Only the part of the plane the stage shows is usable for a finger.
   const frame = { x: -view.left, y: -view.top, w: size.width, h: size.height };
-  // A zoomed card can crop an actor out of frame; its pin would be clamped onto empty quay, so it hides instead.
+  // A cropped phone frame can cut an actor out; its pin would be clamped onto empty quay, so it hides instead.
   const ids = options.map((option) => option.id).filter((id) => {
     const r = hotspot.get(id)!;
     return !size.width || (r.x + r.w > frame.x && r.x < frame.x + frame.w && r.y + r.h > frame.y && r.y < frame.y + frame.h);
@@ -216,7 +225,8 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
     const rect = fitted.get(id);
     return (rect && toArt ? { x: rect.x * toArt, y: rect.y * toArt, w: rect.w * toArt, h: rect.h * toArt } : art.targets[id]);
   };
-  const ringSize = Math.max(0, ...ids.map((id) => Math.max(artBox(id).w, artBox(id).h))) * 0.36;
+  // Half the largest side: the ring encloses the whole cab box, not just its middle (owner 22.11).
+  const ringSize = Math.max(0, ...ids.map((id) => Math.max(artBox(id).w, artBox(id).h))) * 0.5;
   const ringAt = (id: string) => {
     const rect = artBox(id);
     return ringSize ? { x: rect.x + rect.w / 2, y: rect.y + rect.h / 2, r: ringSize } : undefined;
@@ -255,7 +265,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
   const inCab = (beat.climb ?? 0) >= 1 && !!cabSheet;
   const walk = (() => {
     if (beat.walk === undefined || !walker) return undefined;
-    const route = craneWorld.routes[beat.walker === "ivan" ? "rush" : "petr"];
+    const route = craneWorld.routes[beat.route ?? (beat.walker === "ivan" ? "rush" : "petr")];
     const legs = route.slice(1).map((p, i) => Math.hypot(p[0] - route[i][0], p[1] - route[i][1]));
     const walked = beat.walk * legs.reduce((a, b) => a + b, 0);
     let d = walked;
@@ -290,6 +300,8 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       style: {
         transform: `translate(${(sx / r.w) * 100}%, ${(sy / r.h) * 100}%)`,
         visibility: inCab ? "hidden" : undefined,
+        // Through the ПРУ door: he fades into the dark doorway over the last steps.
+        opacity: beat.route === "office" ? Math.min(1, (1 - beat.walk) / 0.3) : undefined,
       } satisfies CSSProperties,
       // Over his head, as the office bubble sits over Ivan at the ПРУ.
       head: [r.x + r.w * 0.75 + sx, r.y - 2 + sy] as const,
@@ -330,9 +342,9 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
       data-barge-art={view.format}
       data-selected={playing ?? selectedId}
       data-playing={playing}
+      data-crane-result={(showResult && !playing && selectedId) || undefined}
       data-cast={playing ? "" : undefined}
       data-zoomed={(interactive && !!selectedId) || undefined}
-      data-ready={ready || undefined}
       aria-label={craneScene.title}
     >
       <div className={styles.plane} style={{ width: view.width, height: view.height, left: view.left, top: view.top, visibility: status === "ready" ? "visible" : "hidden" }}>
@@ -360,7 +372,7 @@ export function CraneArt({ context, selectedId, onSelect, showResult, playing, o
         {/* Everything standing on the quay, over the routes: the walks pass behind cranes, crates and trees. */}
         <img className={styles.layer} src={source(art.occluder)} alt="" draggable={false} decoding="sync" data-layer="occluder" style={box({ x: 0, y: 0, w: art.width, h: art.height })} />
         {!beat.lifted && !beat.onDeck && sprite("gift")}
-        {beat.walker === "ivan" && sprite("porch")}
+        {(beat.walker === "ivan" || beat.office === "empty") && sprite("porch")}
         {/* Petr is painted at his old quay-edge spot: the patch is always up (call 21.11 moved him). */}
         {s.post && sprite("post")}
         {beat.walker !== "ivan" && beat.office !== "empty" && sprite("ivan", { lit: lit.has("ivan") })}

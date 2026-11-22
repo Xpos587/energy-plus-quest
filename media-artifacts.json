@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-22-current-r29",
+  "release": "media-2026-11-22-current-r30",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -4521,10 +4521,10 @@
       ]
     },
     {
-      "name": "runtime-9d2ce6fb5b3b.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-22-current-r29/runtime-9d2ce6fb5b3b.tar.gz",
-      "sha256": "9d2ce6fb5b3b71a2ca9c46211ac143c76fd0f458e5f663ad54cebd9092d92662",
-      "bytes": 210470445,
+      "name": "runtime-053778980319.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-22-current-r30/runtime-053778980319.tar.gz",
+      "sha256": "053778980319dc1765f0e20c927be423b776617217745d0033e69d206cedf64d",
+      "bytes": 214382563,
       "files": [
         {
           "path": "design/scene-04/blender-v4/painted/face-inputs/desk/far.webp",
@@ -5613,8 +5613,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/desk/box.webp",
-          "bytes": 5120,
-          "sha256": "01ca9b6bafc46a94b30d4e28b56bed9c26a5478146a70f14ae4e7d01256c8b4a"
+          "bytes": 13654,
+          "sha256": "ab84d2fa4d6c086685efc4f49e9da2647a898b8df749d09f001562550e98def2"
         },
         {
           "path": "public/scene-art/barge-v7/desk/cabIvan.webp",
@@ -5633,8 +5633,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/desk/climbOccluder.webp",
-          "bytes": 8938,
-          "sha256": "d11b2e534f6c87db91df2c8f62d3913724c2aa37d6e76e4a52fedfb4257bd814"
+          "bytes": 8932,
+          "sha256": "7e233c36cf72fcc598114df0d69159eaeac77cb06d94078a43c4030169f2dd71"
         },
         {
           "path": "public/scene-art/barge-v7/desk/climbPetr.webp",
@@ -5648,8 +5648,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/desk/gift.webp",
-          "bytes": 2832,
-          "sha256": "88ede06bcfc3d4431b6b8e8b420fe5ffae95121cdcbb9fdf83741c4d359d43d2"
+          "bytes": 6996,
+          "sha256": "cde1d2d6a577f25fc09930c7c00032c0b4a267dba88738a3b964d2ab491c9952"
         },
         {
           "path": "public/scene-art/barge-v7/desk/hook.webp",
@@ -5668,13 +5668,13 @@
         },
         {
           "path": "public/scene-art/barge-v7/desk/occluder.webp",
-          "bytes": 374428,
-          "sha256": "111a6bb8a43ed1831dc787a6c19953e34c9d19559cdacec8e5b1dd56748e5e79"
+          "bytes": 2238216,
+          "sha256": "7e2d8dda8e173f1e5c162d9b2eb814d950045aea7e27ee22ab7d932f9152ba0e"
         },
         {
           "path": "public/scene-art/barge-v7/desk/plate.webp",
-          "bytes": 1105784,
-          "sha256": "4f3902cd1fb6144bd926524aadbff63189111556fe1f4d5dfe1800b6b1ab5703"
+          "bytes": 5558176,
+          "sha256": "b6c9e3b98ff5ede4e3e21b70de9b2549b854b17fa6333297ba55defdd7d32754"
         },
         {
           "path": "public/scene-art/barge-v7/desk/porch.webp",
@@ -5703,8 +5703,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/desk/turnOccluderPetr.webp",
-          "bytes": 6232,
-          "sha256": "774bd8a3d8dd4991ae6ee1ae88194d3bc25d1365a67b63bacfd619f94ac37ec3"
+          "bytes": 5384,
+          "sha256": "14ae7147ed103e73a9b8e366aa497c4808022425854359e7df23ca899d71a5f1"
         },
         {
           "path": "public/scene-art/barge-v7/desk/walkIvanEast.webp",
@@ -5723,8 +5723,8 @@
         },
         {
           "path": "public/scene-art/barge-v7/desk/walkOccluder.webp",
-          "bytes": 77224,
-          "sha256": "da21f2590b3d1459e8031772650fb51a2dfca4185569a16ed2dd6580b78118d5"
+          "bytes": 80964,
+          "sha256": "0acb2e970853a5c0ad3edefefddc90cd99d0da2be948aaa524093310e26e5a21"
         },
         {
           "path": "public/scene-art/barge-v7/desk/walkOccluderPetr.webp",
@@ -5887,11 +5887,6 @@
           "sha256": "df51792f9f4b74e171fa556f99b94a818f9d3077b0d0abab591109e3cb10bfff"
         },
         {
-          "path": "public/scene-art/barge-v7/outcome-petr-portrait.webp",
-          "bytes": 888646,
-          "sha256": "c708bdec79bdd231f43741a57076af4972e9d6db9427a3eb1977649733043f37"
-        },
-        {
           "path": "public/scene-art/barge-v7/outcome-petr-rail.webp",
           "bytes": 600336,
           "sha256": "8729c6140ed052a5a069275b48fe46c2d54c7840ddc2c44ba4d6aaacb19286c9"
@@ -5902,11 +5897,6 @@
           "sha256": "d02be52f6721d6f2640e2ea364011479d60ff06ca620d6279237e1dfddaaf67d"
         },
         {
-          "path": "public/scene-art/barge-v7/outcome-remote-portrait.webp",
-          "bytes": 889688,
-          "sha256": "af20b6b5ec6113e54076cbee1eb5a0b095dcd904224ccef06bc9c371c636e62b"
-        },
-        {
           "path": "public/scene-art/barge-v7/outcome-remote-rail.webp",
           "bytes": 626612,
           "sha256": "819354585fb470b92ef8535c60c62a10391e6357941e0f206de71deedba0760f"
@@ -5915,11 +5905,6 @@
           "path": "public/scene-art/barge-v7/outcome-remote.webp",
           "bytes": 1083922,
           "sha256": "25cb06512282f9274150cad7fa1e4849339d81fe376d3bc467e1c92004723de8"
-        },
-        {
-          "path": "public/scene-art/barge-v7/outcome-rush-portrait.webp",
-          "bytes": 885956,
-          "sha256": "eaf3de30a5964eec8f3b8fadcc38fa3655b9c56fefd35874490b35443d0dd023"
         },
         {
           "path": "public/scene-art/barge-v7/outcome-rush-rail.webp",
@@ -6273,8 +6258,8 @@
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-19/ground-alva-parcel.webp",
-          "bytes": 366700,
-          "sha256": "5c0e90988e9944a9a34bce203946f30095a5592cba39bfd99eeeea7c4324b3fb"
+          "bytes": 426338,
+          "sha256": "7913ee0fdcd5fcb1b7cba6ea979ec8b996bbce3f4b69d4f2d2bab7bdc39739f3"
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-19/ground-boat.webp",
@@ -6288,8 +6273,8 @@
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-19/ground-khor-parcel.webp",
-          "bytes": 441580,
-          "sha256": "5dce94a5af749aa05662ba3087f25c46aa98031a38e4fe882dfdf2453bb5f59a"
+          "bytes": 512560,
+          "sha256": "aab2e7ffa520ebab5648ebe0b93baa1fbba3013e004ac20573e909ed57d4f579"
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-19/robot-boat.webp",
@@ -6298,8 +6283,8 @@
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-19/robot-parcel.webp",
-          "bytes": 411086,
-          "sha256": "aba6e31a32712254e9a6e3c9ab42eb28e1b9b18427487f96683e90960136166a"
+          "bytes": 476482,
+          "sha256": "96aec94313448dc6464f6736e88613f2191c11f6733e6afe3030bf0424bbe89d"
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-19/rover-boat.webp",
@@ -6308,8 +6293,8 @@
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-19/rover-parcel.webp",
-          "bytes": 355010,
-          "sha256": "a712af312b88112e22c07037e42a295d688af17c3cd5d3b1a4d1310bd1bc7f69"
+          "bytes": 412662,
+          "sha256": "11709d18124e9476d1125726ee03086d9da620a6eb21a894630b51baf4c75d75"
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-21/flight-boat-tall.webp",
@@ -6338,8 +6323,8 @@
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-22/flight-parcel-tall.webp",
-          "bytes": 2979858,
-          "sha256": "3a13ecf050862f4340eaeb66ae608c2c801f72c0105c51df2e0d4ad7a3508d84"
+          "bytes": 2955468,
+          "sha256": "8fa797a0b3eb0b5c5c09d2686f9e92997ad04a7503d986bf3f069342241c51fb"
         },
         {
           "path": "public/scene-art/lastmile-family-v1/revision-22/rover-boat.webp",

@@ -24,13 +24,8 @@ for (const [width, height] of [[1440, 900], [1280, 800], [1024, 768], [844, 390]
     await page.waitForTimeout(600); // camera move to the open card
     fills(await stage.evaluate(covered, ":scope > div"));
     await page.locator("[data-choice-confirm]").click();
-    const figure = page.locator("[data-scene-consequence]");
-    await expect(figure.locator("img")).toHaveCSS("object-fit", "cover");
-    fills(await figure.evaluate(covered, "img"));
-    // Phone result rows are also landscape: the tall still cuts off the crane above the reader.
-    const rail = width > 1000 && height > 700;
-    const portrait = width <= 1000 && height >= 701 && height > width;
-    if (portrait) await expect(figure.locator("img")).toHaveCSS("object-position", "50% 80%");
-    await expect.poll(() => figure.locator("img").evaluate((i: HTMLImageElement) => i.currentSrc)).toMatch(rail || portrait ? /outcome-remote-rail\.webp/ : /outcome-remote\.webp/);
+    // The result keeps the same live quay and camera (client Fedya 22.11): it still covers the stage.
+    await expect(page.locator('[data-crane-result="remote"]')).toBeVisible();
+    fills(await stage.evaluate(covered, ":scope > div"));
   });
 }

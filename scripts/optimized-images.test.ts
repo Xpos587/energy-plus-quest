@@ -476,9 +476,8 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
     "compact-art/outcomes/socks-niche.png",
     "review/carrier-art-2026-09-27/closer-old4.png",
     "scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
-    ...["wide", "tall"].flatMap(format => [
-      `choice-${format}`, ...["barge", "floes", "pipe-carrier", "rotor", "rover"].map(layer => `${format}-${layer}`),
-    ].map(file => `scene-art/lastmile-family-v1/revision-29/${file}.webp`)),
+    ...["choice-wide", ...["barge", "floes", "pipe-carrier", "rotor", "rover"].map(layer => `wide-${layer}`)]
+      .map(file => `scene-art/lastmile-family-v1/revision-30/${file}.webp`),
     "scene-art/lastmile-family-v1/revision-15/intro-wide.webp",
     "scene-art/lastmile-family-v1/revision-22/flight-boat-tall.webp",
     "scene-art/lastmile-family-v1/revision-18/flight-parcel-arseniy-tall.webp",
@@ -488,7 +487,6 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
     "compact-art/compact-environment-v53-portrait.png",
     "scene-art/barge-v7/wide/plate.webp",
     "scene-art/barge-v7/tall/ivan.webp",
-    "scene-art/barge-v7/outcome-remote.webp",
     "scene-art/inventory-master-v16.webp",
     "scene-art/warehouse-results-v4/outcome-alphabet-camera.webp",
     "scene-art/warehouse-results-v4/outcome-wms.webp",
@@ -496,6 +494,7 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
   ];
   const excluded = [
     "scene-art/lastmile-r5/choice-wide.webp",
+    "scene-art/lastmile-family-v1/revision-30/choice-tall.webp",
     "scene-art/lastmile-family-v1/helicopter-ground-khor-parcel-v6.webp",
     "review/carrier-art-2026-09-27/closer-old.png",
     "scene-art/lastmile-family-v1/revision-4/choice-tall-khor.webp",
@@ -506,6 +505,7 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
     "scene-art/outcomes/lastmile-unused-v3.png",
     "compact-art/camera-zone2-v53.png",
     "scene-art/barge-family-v1/choice-neutral-wide-v7.webp",
+    "scene-art/barge-v7/outcome-remote.webp",
     "scene-art/warehouse-revision-3-2026-10-18/wms-stylized-v3.png",
     "scene-art/lastmile-family-v1/revision-2/flight-boat.webp",
   ];

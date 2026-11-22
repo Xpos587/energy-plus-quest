@@ -103,7 +103,7 @@
    the artwork row to whatever space the reader leaves. The flight keeps its
    separately reviewed rotor/tail framing. */
 @media (max-width: 900px) and (orientation: portrait) {
-  :global([data-scene]:is([data-scene="crane"], [data-scene="lastmile"], [data-scene="inventory"]) [data-layout="result"]:has([data-scene-consequence]):not(:has([data-delivery-leg="flight"]))) {
+  :global([data-scene]:is([data-scene="lastmile"], [data-scene="inventory"]) [data-layout="result"]:has([data-scene-consequence]):not(:has([data-delivery-leg="flight"]))) {
     grid-template-rows: calc(100vw * 941 / 1672) minmax(0, 1fr) !important;
   }
   :global([data-scene="inventory"] [data-layout="result"]:has([data-scene-consequence="inventory-entrance"])) {
@@ -114,17 +114,3 @@
   }
 }
 
-/* Barge: the live quay hands over to the still with a short settle, no fade through a blank frame. */
-.figure[data-outcome-scene="crane"] .image { animation: outcomeSettle 900ms cubic-bezier(.2,.8,.2,1) both; transform-origin: var(--outcome-focus, 50%) 60%; }
-/* The rail stills are framed around the story already. */
-@media (min-width: 1001px) and (min-height: 701px) {
-  .figure[data-outcome-scene="crane"] .image { object-position: 50% 50%; transform-origin: 50% 50%; }
-}
-/* In a short phone row, keep the loaded barge and the near crane together. */
-@media (max-width: 1000px) and (min-height: 701px) and (orientation: portrait) {
-  .figure[data-outcome-scene="crane"] .image { object-position: 50% 80%; transform-origin: 50% 80%; }
-}
-@keyframes outcomeSettle { from { transform: scale(1.04); } }
-@media (prefers-reduced-motion: reduce) {
-  .figure[data-outcome-scene="crane"] .image { animation: none; }
-}

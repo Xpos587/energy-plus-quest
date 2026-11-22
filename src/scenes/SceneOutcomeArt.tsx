@@ -6,7 +6,6 @@ import { imageAsset } from "../game/imageAssets";
 import { sceneOutcomeImage } from "./artwork";
 import { outcomeCloseup, outcomeFocus } from "./outcomeFraming";
 import { lastmileFlightImage } from "./lastmile/artworkFamily";
-import { craneOutcomeImage } from "./crane/artwork";
 import styles from "./SceneOutcomeArt.module.css";
 import type { SceneContext, SceneId } from "./types";
 
@@ -17,12 +16,6 @@ const outcomes: Record<string, string> = {
     "Подарок рядом с отгрузкой, но сотрудники новой смены ищут его среди коробок.",
   "inventory-wms":
     "Система управления складом помогает сотруднику быстро забрать подарок возле отгрузки.",
-  "crane-rush":
-    "Уставший, но довольный Иван сидит в кабине ближнего крана; баржа с подарком отходит от причала.",
-  "crane-petr":
-    "Пётр сидит в кабине ближнего крана, Иван радуется в офисе; баржа с подарком отходит, а ящики Петра ждут у его пустого дальнего крана.",
-  "crane-remote":
-    "Иван машет из офиса вслед барже с погруженным подарком; ближний кран пуст, Пётр остаётся в кабине дальнего крана.",
   "lastmile-helicopter":
     "Вертолёт доставляет подарок и трубы на посадочную площадку месторождения.",
   "lastmile-helicopter-remote":
@@ -96,20 +89,6 @@ export function SceneOutcomeArt({
       }
     >
       <picture className={styles.picture}>
-        {scene === "crane" && (
-          // The right-rail result is 0.96–1.28:1; a near-square cut keeps barge, crane and office whole.
-          <ImageSources
-            src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-rail.webp"))}
-            media="(min-width: 1001px) and (min-height: 701px)"
-          />
-        )}
-        {scene === "crane" && (
-          <ImageSources
-            // The phone result row is wide too; the tall still loses the crane above the copy.
-            src={imageAsset(craneOutcomeImage(selectedId).replace(/\.webp$/, "-rail.webp"))}
-            media="(max-width: 1000px) and (min-height: 701px) and (orientation: portrait)"
-          />
-        )}
         <ImageSources src={artwork.src} />
         <img
           ref={artwork.ref}

@@ -138,9 +138,7 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
       for (const parcel of ids.get("ParcelId")!)
         for (const recipient of ids.get("RecipientId")!)
           images.add(family.lastmileFlightImage({ parcel, recipient }));
-      for (const recipient of ids.get("RecipientId")!)
-        for (const format of ["wide", "tall"])
-          images.add(family.lastmileChoiceImage(format, recipient));
+      images.add(family.lastmileChoiceImage());
     }
     // Scene 4 picks one of several layered quay drawings at runtime by screen ratio:
     // admit its plate and every sprite the generated layer table names.
@@ -152,7 +150,8 @@ async function runtimeImages(root: string): Promise<RuntimeImages | undefined> {
     if (!scene.sceneOutcomeImage) throw new Error("Missing sceneOutcomeImage resolver");
     for (const [sceneId, views] of Object.entries(manifest.scenes ?? {}) as [string, any][]) {
       images.add(scene.sceneChoiceImage(sceneId));
-      if (sceneId === "compact") continue;
+      // Compact and crane results are drawn live on their own stage, not as outcome stills.
+      if (sceneId === "compact" || sceneId === "crane") continue;
       const selected = new Set<string>();
       visitNodes(views, (node) => {
         if (Array.isArray(node.hotspots)) for (const hotspot of node.hotspots) selected.add(hotspot.id);

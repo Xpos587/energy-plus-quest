@@ -11,7 +11,7 @@ for(const viewport of sizes) for(const parcel of ['boat','camera','socks']) test
  await expect(page.locator(`[data-hotspot="${id}"]`)).toBeInViewport({ratio:1});
  await page.locator(`[data-hotspot="${id}"]`).click();
  await page.locator('[data-choice-confirm]').click();
- await expect(page.locator('[data-scene-consequence]')).toBeVisible();
+ await expect(page.locator('[data-crane-result]')).toBeVisible();
  await page.waitForTimeout(700);
  const images=await page.locator('img:visible').evaluateAll(async imgs=>Promise.all(imgs.map(async i=>{const x=i as HTMLImageElement;await x.decode();return {src:x.currentSrc,source:[x.naturalWidth,x.naturalHeight],display:[x.clientWidth,x.clientHeight]};})));
  receipt.push({id,images});

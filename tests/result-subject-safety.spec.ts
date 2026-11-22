@@ -18,29 +18,14 @@ for (const [width, height] of [[1440, 900], [1920, 1080], [390, 844], [320, 568]
       } }));
     });
     await page.goto('/', { waitUntil: 'domcontentloaded' });
-    const image = page.locator('[data-scene-consequence="crane-petr"] img');
-    await expect(image).toBeVisible();
-    const visible = await image.evaluate((img: HTMLImageElement) => {
-      const box = img.getBoundingClientRect();
-      const style = getComputedStyle(img);
-      const scale = style.objectFit === 'contain'
-        ? Math.min(box.width / img.naturalWidth, box.height / img.naturalHeight)
-        : Math.max(box.width / img.naturalWidth, box.height / img.naturalHeight);
-      const positions = style.objectPosition.split(' ').map(p => parseFloat(p) / 100);
-      const x = (box.width - img.naturalWidth * scale) * positions[0];
-      const y = (box.height - img.naturalHeight * scale) * positions[1];
-      const landmarks = img.naturalWidth / img.naturalHeight > 2.5
-        ? [[0.27, 0.09], [0.4, 0.13], [0.79, 0.98]]
-        : [[420 / 1672, 75 / 941], [750 / 1672, 100 / 941], [1600 / 1672, 900 / 941]];
-      return landmarks.map(([sx, sy]) => ({
-        x: x + sx * img.naturalWidth * scale, y: y + sy * img.naturalHeight * scale, width: box.width, height: box.height,
-      }));
-    });
-    for (const point of visible) {
-      expect(point.x).toBeGreaterThanOrEqual(0);
-      expect(point.y).toBeGreaterThanOrEqual(0);
-      expect(point.x).toBeLessThanOrEqual(point.width);
-      expect(point.y).toBeLessThanOrEqual(point.height);
-    }
+    // The result is the live quay in its end state (client Fedya 22.11); the drawing covers the stage at the choice's camera.
+    const stage = page.locator('[data-barge-art][data-crane-result="petr"][data-artwork-ready="true"]');
+    await expect(stage).toBeVisible();
+    const box = await stage.evaluate((s) => { const a = s.getBoundingClientRect(), p = s.firstElementChild!.getBoundingClientRect(); return [p.left - a.left, p.top - a.top, p.right - a.right, p.bottom - a.bottom]; });
+    expect(box[0]).toBeLessThanOrEqual(0.5); expect(box[1]).toBeLessThanOrEqual(0.5);
+    expect(box[2]).toBeGreaterThanOrEqual(-0.5); expect(box[3]).toBeGreaterThanOrEqual(-0.5);
+    // Petr in the cab (his sheet) and the gift on the deck are drawn.
+    await expect(stage.locator('[data-layer="cabPetr"]')).toHaveCount(1);
+    await expect(stage.locator('[data-layer="gift"]')).toHaveCount(1);
   });
 }

@@ -52,7 +52,7 @@ test('desktop result stays fixed when the wheel is over the illustration', async
   for (let n = 0; n < 20 && await intro.isVisible(); n++) await intro.click();
   await page.locator('[data-hotspot="petr"]').click();
   await page.locator('[data-choice-confirm]').click();
-  await page.locator('[data-outcome-scene="crane"] img').evaluate((image: HTMLImageElement) => image.decode());
+  await expect(page.locator('[data-crane-result="petr"][data-artwork-ready="true"]')).toBeVisible();
   await page.mouse.move(600, 350);
   await page.mouse.wheel(0, 650);
   await expect.poll(() => page.locator('[data-layout="result"]').evaluate(element => element.scrollTop)).toBe(0);

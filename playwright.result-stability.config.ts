@@ -1,3 +1,2 @@
 import { defineConfig } from "@playwright/test";
-import base from "./playwright.scene-zoom.config";
-export default defineConfig({ ...base, testMatch: "result-stability.spec.ts", projects: [{ name: "result-stability" }], outputDir: ".tmp-work/result-stability" });
+export default defineConfig({ testDir: "./tests", workers: 2, reporter: "line", timeout: 45000, use: { baseURL: "http://127.0.0.1:4231", reducedMotion: "reduce" }, webServer: { command: "bun run dev -- --host 127.0.0.1 --port 4231 --strictPort", url: "http://127.0.0.1:4231", reuseExistingServer: true }, testMatch: "result-stability.spec.ts", projects: [{ name: "result-stability" }], outputDir: ".tmp-work/result-stability" });

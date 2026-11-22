@@ -45,31 +45,12 @@ for (const viewport of [
     // The quay plays the consequence first, then the result reads.
     await expect(page.locator("[data-playing]")).toHaveCount(1);
     await expect(page.locator("[data-score-key]")).toHaveCount(3, { timeout: 15_000 });
-    const resultImage = page.locator(
-      '[data-scene-consequence="crane-remote"] img',
-    );
-    await expect(resultImage).toHaveAttribute(
-      "src",
-      /\/scene-art\/barge-v7\/outcome-remote\.webp/,
-    );
-    await resultImage.evaluate(async (image: HTMLImageElement) =>
-      image.decode(),
-    );
+    // Client Fedya 22.11: the result keeps the live quay in its end state, no switch to a cut still.
+    await expect(page.locator('[data-barge-art][data-crane-result="remote"]')).toBeVisible();
+    await expect(page.locator("[data-scene-consequence]")).toHaveCount(0);
     if (viewport.width !== 320) {
       await page.screenshot({ path: info.outputPath("crane-remote-result.png") });
     }
-    expect(
-      await resultImage.evaluate(
-        (image: HTMLImageElement) => new URL(image.currentSrc).pathname,
-      ),
-    ).toBe(
-      // The desktop rail (≥1001×701) and the tall phone result row both take the near-square cut
-      // (SceneOutcomeArt: the tall still lost the crane above the copy).
-      (viewport.width > 1000 && viewport.height > 700) ||
-        (viewport.width <= 1000 && viewport.height >= 701 && viewport.height > viewport.width)
-        ? "/scene-art/barge-v7/outcome-remote-rail.webp"
-        : "/scene-art/barge-v7/outcome-remote.webp",
-    );
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,

@@ -23,18 +23,19 @@ for (const scene of ["inventory", "crane"] as const) {
   test(`${scene} artwork retries after a failed responsive image`, async ({ page }, info) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
     await resume(page, scene);
-    const pattern = scene === "crane" ? /outcome-remote/ : /outcome-wms/;
+    // Scene 4 keeps the live quay on the result (client Fedya 22.11): its plate is the image to fail.
+    const pattern = scene === "crane" ? /barge-v7\/desk\/plate/ : /outcome-wms/;
     let failures = 0;
     await page.route(pattern, route => { failures++; return route.abort(); });
     await page.reload();
-    const art = page.locator(`[data-outcome-scene="${scene}"]`);
+    const art = page.locator(scene === "crane" ? "[data-barge-art]" : `[data-outcome-scene="${scene}"]`);
     await expect(art.locator('[data-artwork-status="error"]')).toBeVisible();
     expect(failures).toBeGreaterThan(0);
     await page.unroute(pattern);
     await art.getByRole("button", { name: "Повторить", exact: true }).click();
     await expect(art.locator("[data-artwork-status]")).toHaveCount(0);
-    await art.locator("img").evaluate((image: HTMLImageElement) => image.decode());
-    expect(await art.locator("img").evaluate((image: HTMLImageElement) => image.naturalWidth)).toBeGreaterThan(0);
+    await art.locator("img").first().evaluate((image: HTMLImageElement) => image.decode());
+    expect(await art.locator("img").first().evaluate((image: HTMLImageElement) => image.naturalWidth)).toBeGreaterThan(0);
     await expect(page.getByRole("button", { name: "Изменить выбор", exact: true })).toBeEnabled();
     await page.screenshot({ path: info.outputPath(`${scene}-recovered.png`) });
     await page.getByRole("button", { name: "Изменить выбор", exact: true }).click();

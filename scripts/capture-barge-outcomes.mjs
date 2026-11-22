@@ -1,9 +1,9 @@
 // Scene 4 result stills capture the gift loaded aboard the moored barge. Live house-style layers keep the still consistent with the animation.
-// outcome-<id>.webp: wide drawing for phones/banners; outcome-<id>-rail.webp: the mid
-// camera cut at 1.11:1 for the desktop rail (0.96…1.28:1); -portrait uses the tall camera.
+// Owner 22.11: one composition everywhere. outcome-<id>.webp: the whole desktop drawing; outcome-<id>-rail.webp:
+// the same drawing cut at 1.11:1 for the desktop rail (0.96…1.28:1).
 // Check the hull's cover-safe bounds before overwriting any still.
 // Needs a dev server WITHOUT hydrate: bunx vite --host 127.0.0.1 --port 4173 --strictPort
-// Usage: bun scripts/capture-barge-outcomes.mjs [baseUrl] [wide|mid|tall]
+// Usage: bun scripts/capture-barge-outcomes.mjs [baseUrl] [full|rail]
 import { chromium } from "playwright";
 import sharp from "sharp";
 import { writeFile } from "node:fs/promises";
@@ -14,9 +14,8 @@ import { craneDuration } from "../src/scenes/crane/consequence";
 const base = process.argv[2] ?? "http://127.0.0.1:4173";
 const only = process.argv[3];
 const shots = {
-  wide: { ...craneArtwork.wide, suffix: "" },
-  mid: { ...craneArtwork.mid, suffix: "-rail" },
-  tall: { ...craneArtwork.tall, suffix: "-portrait" },
+  full: { ...craneArtwork.desk, suffix: "" },
+  rail: { ...craneArtwork.desk, suffix: "-rail" },
 };
 
 /** Pad the story for the rail's cover crops, bounded by the original camera. */
@@ -36,7 +35,7 @@ async function railCrop(page, frameW, frameH) {
 
 const receipts = [];
 const browser = await chromium.launch();
-for (const [format, { width, height, suffix }] of Object.entries(shots).filter(([name]) => !only || name === only)) {
+for (const [shot, { width, height, suffix }] of Object.entries(shots).filter(([name]) => !only || name === only)) {
   for (const id of ["remote", "rush", "petr"]) {
     const context = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 2, serviceWorkers: "block" });
     const page = await context.newPage();
@@ -51,8 +50,8 @@ for (const [format, { width, height, suffix }] of Object.entries(shots).filter((
         [data-barge-art] [class*=skip],[data-barge-art] button{display:none!important}`;
     await page.addStyleTag({ content: frame });
     // This animation badge belongs to the far crane, outside the rail still; avoid a cut-off word.
-    if (format === "mid") await page.addStyleTag({ content: "[data-barge-later]{display:none!important}" });
-    await page.locator(`[data-barge-art="${format}"] > div`).waitFor({ state: "visible" });
+    if (shot === "rail") await page.addStyleTag({ content: "[data-barge-later]{display:none!important}" });
+    await page.locator(`[data-barge-art="desk"] > div`).waitFor({ state: "visible" });
     await page.clock.pauseAt(Date.now() + 1000);
     await page.locator("[data-choice-confirm]").evaluate((el) => el.click());
     // Just before the end: gift released on the moored barge, reaction visible.
@@ -63,24 +62,24 @@ for (const [format, { width, height, suffix }] of Object.entries(shots).filter((
     const visibility = await page.locator("[data-barge-art] > div").evaluate((plane) => getComputedStyle(plane).visibility);
     // Only the quay itself: the result card below may still miss the very stills being captured.
     if (visibility !== "visible" || await page.locator("[data-barge-art] [data-artwork-status]").count())
-      throw new Error(`${id}/${format}: scene is not ready; refuse an empty/error still`);
+      throw new Error(`${id}/${shot}: scene is not ready; refuse an empty/error still`);
     const drawn = await page.locator("[data-barge-art]").getAttribute("data-barge-art");
-    if (drawn !== format) throw new Error(`${id}: drew ${drawn}, not ${format}`);
-    const clip = format === "mid" ? await railCrop(page, width, height) : { x: 0, y: 0, width, height };
+    if (drawn !== "desk") throw new Error(`${id}: drew ${drawn}, not desk`);
+    const clip = shot === "rail" ? await railCrop(page, width, height) : { x: 0, y: 0, width, height };
     const hull = await page.locator('[data-barge-art] img[data-layer=barge]').boundingBox();
-    const inset = format === "mid" ? 0.0675 : 0;
+    const inset = shot === "rail" ? 0.0675 : 0;
     // v7: the stern runs off the drawing's own edge (mid/wide); only the in-picture sides need the cover-safe air.
     const cut = (edge, frameEdge) => Math.abs(edge - frameEdge) < 1;
     if (!hull || (hull.x < clip.x + clip.width * inset && !cut(hull.x, 0)) || (hull.y < clip.y + clip.height * inset && !cut(hull.y, 0)) ||
         (hull.x + hull.width > clip.x + clip.width * (1 - inset) && !cut(hull.x + hull.width, width)) ||
         (hull.y + hull.height > clip.y + clip.height * (1 - inset) && !cut(hull.y + hull.height, height)))
-      throw new Error(`${id}/${format}: hull leaves the cover-safe crop ${JSON.stringify({ clip, hull })}`);
+      throw new Error(`${id}/${shot}: hull leaves the cover-safe crop ${JSON.stringify({ clip, hull })}`);
     const png = await page.screenshot({ clip });
     const output = `public/scene-art/barge-v7/outcome-${id}${suffix}.webp`;
     const encoded = await sharp(png).webp({ quality: 92, effort: 6 }).toBuffer();
     const metadata = await sharp(encoded).metadata();
     await writeFile(output, encoded);
-    receipts.push({ output, format, id, clip, hull, inset, width: metadata.width, height: metadata.height,
+    receipts.push({ output, shot, id, clip, hull, inset, width: metadata.width, height: metadata.height,
       sha256: createHash("sha256").update(encoded).digest("hex") });
     console.log(id + suffix, "ok", JSON.stringify(clip, (_, v) => (typeof v === "number" ? Math.round(v) : v)));
     await context.close();

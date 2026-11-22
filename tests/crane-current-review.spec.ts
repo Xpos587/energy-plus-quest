@@ -18,7 +18,7 @@ for (const viewport of [{width:320,height:568},{width:390,height:844},{width:844
  await page.locator(`[data-hotspot="${id}"]`).click();
  // The option opens its card; the result follows confirm and the quay loading run.
  await page.locator('[data-choice-confirm]').click();
- await expect(page.locator('[data-scene-consequence]')).toBeVisible({timeout:15000});
+ await expect(page.locator('[data-crane-result]')).toBeVisible({timeout:15000});
  await settle();
  await page.screenshot({path:`${root}/${viewport.width}-${parcel}-${id}.png`});
  const more=page.getByRole('button',{name:'Читать дальше',exact:true});

@@ -16,7 +16,9 @@ export type CraneBeat = {
   office?: "joy" | "wave" | "cheer" | "empty";
   /** Who walks the quay to the loading crane: Ivan (rush) or Petr ("far" sprite). */
   walker?: "ivan" | "far";
-  /** The walk along the walker's route, 0 = start, 1 = ladder foot. */
+  /** Ivan's short walk into the ПРУ door (remote) instead of the quay route to the ladder. */
+  route?: "office";
+  /** The walk along the walker's route, 0 = start, 1 = ladder foot (or the office door). */
   walk?: number;
   /** Then up the ladder, 0 = foot, 1 = top; at 1 the walker sits in the cab, out of sight. */
   climb?: number;
@@ -31,9 +33,10 @@ export type CraneBeat = {
 const last = craneWorld.slews.length - 1;
 const [gx, gy] = craneWorld.gift;
 const high = craneWorld.hookAttach + 7; // hook carried well above the quay
-// Call 21.11: the gift got lost beside the pipes; it lands in the middle of the free red deck before the wheelhouse
-// (pipes end at x≈62.5, wheelhouse front ≈75, hull y −13.5…−2.6). The hook leans a little off the boom tip to get there.
-const deck = [68.6, -8.1, craneWorld.deck[2]] as const;
+// Owner 22.11: the cable hangs plumb from the boom tip (leaning it toward the 21.11 mid-deck spot [68.6, −8.1] kinked
+// the line sideways), so the gift lands right under the resting tip: on the free red deck between the pipes
+// (end x≈62.5) and the wheelhouse (front ≈75), hull y −13.5…−2.6.
+const deck = craneWorld.deck;
 const deckDelta = [deck[0] - gx, deck[1] - gy, deck[2] - craneWorld.gift[2]] as const;
 const deckAttach = craneWorld.hookAttach + deckDelta[2];
 export { deckDelta as craneDeckDelta };
@@ -44,8 +47,6 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 type Step = { ms: number; at: (t: number) => Partial<CraneBeat> };
 const tipAt = (frame: number) => craneWorld.tips[frame];
 const hookUnder = (frame: number, z: number) => [tipAt(frame)[0], tipAt(frame)[1], z] as const;
-/** Lowering onto the deck: from under the boom tip (k = 0) over to the gift's deck spot (k = 1). */
-const overDeck = (k: number, z: number) => [lerp(tipAt(last)[0], deck[0], ease(k)), lerp(tipAt(last)[1], deck[1], ease(k)), z] as const;
 
 /** The common loading run; `keep` holds for the whole run, `end` joins it once the gift is released. */
 function load(prelude: Step[], busy: CraneBeat["busy"], keep: Partial<CraneBeat> = {}, end: Partial<CraneBeat> = {}): Step[] {
@@ -57,9 +58,9 @@ function load(prelude: Step[], busy: CraneBeat["busy"], keep: Partial<CraneBeat>
     { ms: 380, at: (t) => ({ frame: 0, hook: [gx, gy, lerp(craneWorld.hookAttach, high, ease(t))], lifted: true, busy }) },
     // swing back over the free spot on the deck
     { ms: 760, at: (t) => { const f = Math.round(lerp(0, last, ease(t))); return { frame: f, hook: hookUnder(f, high), lifted: true, busy }; } },
-    { ms: 360, at: (t) => ({ frame: last, hook: overDeck(t, lerp(high, deckAttach, ease(t))), lifted: true, busy }) },
+    { ms: 360, at: (t) => ({ frame: last, hook: hookUnder(last, lerp(high, deckAttach, ease(t))), lifted: true, busy }) },
     // release: the hook rises, the gift stays aboard
-    { ms: 260, at: (t) => ({ frame: last, hook: overDeck(1 - t, lerp(deckAttach, high, ease(t))), onDeck: true }) },
+    { ms: 260, at: (t) => ({ frame: last, hook: hookUnder(last, lerp(deckAttach, high, ease(t))), onDeck: true }) },
     // hold on the loaded barge (it stays moored), then the result reads
     { ms: 900, at: () => ({ frame: last, hook: hookUnder(last, high), onDeck: true }) },
   ];
@@ -75,10 +76,13 @@ const climbIn = (walker: "ivan" | "far", walkMs: number, keep: Partial<CraneBeat
 ];
 
 const timelines: Record<string, Step[]> = {
-  // Ivan takes the joystick; the signal runs to the empty cab; he waves the barge off.
+  // Ivan walks into the ПРУ office, the radio link comes up, the crane loads on its own; general plan, no zoom.
   remote: load(
-    [{ ms: 600, at: () => ({ ...rest(), office: "joy", signal: true }) }],
-    "ivan", { office: "joy", signal: true }, { office: "wave", signal: false },
+    [
+      { ms: 1000, at: (t) => ({ ...rest(), office: "empty", walker: "ivan", route: "office", walk: t }) },
+      { ms: 500, at: () => ({ ...rest(), office: "empty", signal: true }) },
+    ],
+    undefined, { office: "empty", signal: true }, { signal: false },
   ),
   // Ivan walks the whole quay to the barge crane ladder and climbs into the cab; then the crane does the work.
   rush: load(climbIn("ivan", 2600, { office: "empty" }), undefined, { office: "empty", walker: "ivan", walk: 1, climb: 1 },

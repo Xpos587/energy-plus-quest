@@ -1,5 +1,5 @@
 import { imageAsset } from "../game/imageAssets";
-import { craneChoiceImage, craneOutcomeImage } from "./crane/artwork";
+import { craneChoiceImage } from "./crane/artwork";
 import { lastmileOutcomeImage } from "./lastmile/artworkFamily";
 import type { SceneContext, SceneId } from "./types";
 import manifest from "./worldManifest.json";
@@ -25,7 +25,6 @@ export function sceneOutcomeImage(
     const variant = selectedId === "alphabet" ? `alphabet-${context.parcel}` : selectedId;
     return imageAsset(`scene-art/warehouse-results-v4/outcome-${variant}.webp`);
   }
-  if (scene === "crane") return imageAsset(craneOutcomeImage(selectedId));
   if (scene === "lastmile") {
     const file = lastmileOutcomeImage(selectedId, context);
     if (file) return imageAsset(file);

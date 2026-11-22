@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { SoftGlow } from "../SoftGlow";
-import contours from "./segmentedContours.json";
+import { contourBox } from "./camera";
+import drawing from "./segmentedContours.json";
 import styles from "./LastmileZones.module.css";
 
 type Props = {
-  composition: "wide" | "tall";
   selectedId?: string;
   onSelect?: (id: string) => void;
   focusedId?: string;
@@ -12,12 +12,10 @@ type Props = {
 };
 const ids = ["helicopter", "rover", "robot", "pipe-carrier"] as const;
 
-/** Centre and radius of a contour (paths are absolute M/L/Z polygons). */
+/** Centre and radius of a contour. */
 function bounds(path: string) {
-  const n = path.match(/-?\d+(\.\d+)?/g)!.map(Number);
-  const xs = n.filter((_, i) => i % 2 === 0), ys = n.filter((_, i) => i % 2 === 1);
-  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
-  return { cx: (x0 + x1) / 2, cy: (y0 + y1) / 2, r: Math.max(x1 - x0, y1 - y0) / 2 };
+  const { x, y, w, h } = contourBox(path);
+  return { cx: x + w / 2, cy: y + h / 2, r: Math.max(w, h) / 2 };
 }
 // Preferred ring floor in plate px; nearby vehicles can cap it without shrinking tap targets.
 const ringMin = 82;
@@ -26,10 +24,9 @@ const ringMin = 82;
  * The vehicles themselves are the tap targets, without name tags. Untried vehicles
  * breathe with a soft ring; pointing at one (mouse or keyboard) lights it with a glow around its
  * shape — the rest of the map is never darkened (03.11: highlight the choice, don't hide the others).
- * Full-art coordinates keep masks aligned across the two map compositions.
+ * Contours are in plate px of the one wide drawing.
  */
-export function LastmileZones({ composition, selectedId, onSelect, focusedId, onFocusChange }: Props) {
-  const drawing = contours[composition];
+export function LastmileZones({ selectedId, onSelect, focusedId, onFocusChange }: Props) {
   const centres = ids.map(id => bounds(drawing.regions[id].path));
   const root = useRef<HTMLDivElement>(null);
   const [seen, setSeen] = useState<string[]>([]);
@@ -57,7 +54,7 @@ export function LastmileZones({ composition, selectedId, onSelect, focusedId, on
           const b = centres[i];
           const nearest = Math.min(...centres.filter(other => other !== b)
             .map(other => Math.hypot(b.cx - other.cx, b.cy - other.cy)));
-          // Reserve a gap at breathe's 1.15x peak, for either artwork composition.
+          // Reserve a gap at breathe's 1.15x peak.
           const radius = Math.min(Math.max(b.r * .8, ringMin), nearest * .48 / 1.15);
           const idle = !lit && !selectedId && !seen.includes(id);
           return (

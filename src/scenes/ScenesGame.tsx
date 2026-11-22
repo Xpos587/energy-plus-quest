@@ -421,7 +421,8 @@ function ScenesSession({
             data-scene-world
             aria-label={`Иллюстрация: ${title}`}
           >
-            {resultVisible && scene.id !== "compact" ? (
+            {/* Scene 4 (client Fedya 22.11): the result stays on the live quay, same drawing and camera, no switch to a still. */}
+            {resultVisible && scene.id !== "compact" && scene.id !== "crane" ? (
               <SceneOutcomeArt
                 scene={scene.id}
                 selectedId={selected.id}
@@ -445,8 +446,6 @@ function ScenesSession({
                 {...syncFocus}
               />
             )}
-            {/* Fetch the result picture while the quay plays, so the hand-off is not a loading flash. */}
-            {playing && <div hidden><SceneOutcomeArt scene={scene.id} selectedId={playing} context={context} /></div>}
             {inspectsOnArt && !resultVisible && !playing && (
               <CarrierTapHint
                 selectedId={pending?.id}

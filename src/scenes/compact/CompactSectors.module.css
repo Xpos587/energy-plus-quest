@@ -181,9 +181,6 @@
   );
 }
 
-.stage[data-map-viewport] { overflow: clip; touch-action: none; }
-.stage[data-map-viewport] .plane { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
-.stage[data-map-viewport] .number { scale: calc(1 / var(--map-zoom, 1)); transform-origin: top left; }
 @media (max-width: 900px) and (orientation: portrait) {
   .stage[data-fixed-result] .art { mask-image: none; }
   .stage[data-fixed-result] .plane {

@@ -10,6 +10,7 @@ import { warehouseCallouts, warehouseDrawing } from "./inventory/callouts";
 import { parcelNames } from "./names";
 import { lastmileChoiceArtwork } from "./lastmile/expandedArtwork";
 import { lastmileChoiceImage } from "./lastmile/artworkFamily";
+import { lastmileCamera } from "./lastmile/camera";
 import { LastmileMotion } from "./lastmile/LastmileMotion";
 import type { SceneArtProps, SceneId, SceneOption } from "./types";
 import styles from "./WorldArt.module.css";
@@ -22,9 +23,6 @@ const shortMarkerLabels: Record<string, string> = {
 };
 
 const markerInset = 24;
-// Keep destinations clear of the “choose transport” chip (smaller below 420px).
-const lastmileTopInset = (width: number) => (width <= 420 ? 56 : 64);
-const framingInset = 8; // Lastmile framing bounds objects, not markers; the outpainted canvas fills the rest.
 
 function framingScale(
   stage: { width: number; height: number },
@@ -47,21 +45,6 @@ function framingScale(
       limit(stage.height, view.height, hotspots.map(({ y }) => y)),
     ),
   );
-}
-
-// Lastmile always covers the stage; the outpainted canvas leaves room to fit the framed objects below the hint.
-function coverScale(
-  stage: { width: number; height: number },
-  top: number,
-  view: { width: number; height: number },
-  framing: readonly { x: number; y: number }[],
-) {
-  if (!stage.width || !stage.height) return 0;
-  const span = (values: number[]) => Math.max(...values) - Math.min(...values);
-  return Math.max(stage.width / view.width, stage.height / view.height, Math.min(
-    (stage.width - framingInset * 2) / (view.width * span(framing.map(({ x }) => x))),
-    (stage.height - top - framingInset * 2) / (view.height * span(framing.map(({ y }) => y))),
-  ));
 }
 
 function framingOffset(
@@ -93,7 +76,7 @@ type WorldArtProps = SceneArtProps & {
   outcome?: string;
   giftLocation?: string;
   rescue?: string;
-  children?: ReactNode | ((composition: "wide" | "tall") => ReactNode);
+  children?: ReactNode | ((composition: "wide" | "tall") => ReactNode); // inventory: its two drawings
   illustration?: (format: "desktop" | "mobile") => ReactNode;
 };
 
@@ -150,16 +133,11 @@ export function WorldArt({
         : containedArea(views.mobile) > containedArea(views.desktop)
         ? "mobile"
         : "desktop";
-  const lastmileFormat = size.width / Math.max(1, size.height - lastmileTopInset(size.width)) >= 1.1 ? "wide" : "tall";
-  const lastmileComposition = scene === "lastmile"
-    ? { ...lastmileChoiceArtwork[lastmileFormat], image: lastmileChoiceImage(lastmileFormat, context.recipient) }
-    : undefined;
-  const expandedArt = lastmileComposition;
-  const composition = expandedArt;
+  // Scene 5: one wide drawing on every screen (owner 22.11), framed by its own camera.
+  const composition = scene === "lastmile" ? { ...lastmileChoiceArtwork, image: lastmileChoiceImage() } : undefined;
+  const lastmileView = composition ? lastmileCamera(size) : undefined;
   const inventoryComposition = format === "mobile" ? "tall" : "wide";
-  const layers = typeof children === "function"
-    ? children(scene === "inventory" ? inventoryComposition : lastmileFormat)
-    : children;
+  const layers = typeof children === "function" ? children(inventoryComposition) : children;
   const view = composition ?? manifest.scenes[scene][format];
   const alphabet = inventoryAlphabet[context.parcel];
   const callouts = warehouseCallouts(context.parcel, inventoryComposition);
@@ -193,16 +171,13 @@ export function WorldArt({
   });
   const scale = inventoryCamera
     ? inventoryCamera.scale
-    : composition
-      ? coverScale(size, lastmileTopInset(size.width), view, composition.framing)
+    : lastmileView
+      ? lastmileView.width / view.width
       : framingScale(size, view, hotspots);
   const interactiveMarkers = markers &&
     (scene !== "inventory" || (!showResult && !!onSelect));
   const planeWidth = view.width * scale;
   const planeHeight = planeWidth * view.height / view.width;
-  const planeScale = planeWidth / view.width;
-  const clampOffset = (offset: number, stageSize: number, planeSize: number) =>
-    planeSize <= stageSize ? (stageSize - planeSize) / 2 : Math.max(stageSize - planeSize, Math.min(0, offset));
   const active = options.find((option) => option.id === selectedId);
   const markerId =
     scene === "compact"
@@ -228,9 +203,6 @@ export function WorldArt({
     !illustration && !markers && active
       ? hotspots.find((point) => point.id === selectedId)
       : undefined;
-  const selectedTransport = scene === "lastmile"
-    ? hotspots.find((point) => point.id === selectedId)
-    : undefined;
   return (
     <figure
       ref={stage}
@@ -265,14 +237,9 @@ export function WorldArt({
             left: inventoryCamera.left,
             top: inventoryCamera.top,
             transform: "none",
-          } : composition ? {
-            left: selectedTransport
-              ? clampOffset(size.width / 2 - selectedTransport.x * composition.width * planeScale, size.width, planeWidth)
-              : framingOffset(size.width, planeWidth, composition.framing.map(({ x }) => x), framingInset),
-            top: selectedTransport
-              ? clampOffset(size.height / 2 - selectedTransport.y * composition.height * planeScale, size.height, planeHeight)
-              : Math.max(size.height - planeHeight, Math.min(0,
-                lastmileTopInset(size.width) + framingOffset(size.height - lastmileTopInset(size.width), planeHeight, composition.framing.map(({ y }) => y), framingInset))),
+          } : lastmileView ? {
+            left: lastmileView.left,
+            top: lastmileView.top,
             transform: "none",
           } : {
             left: framingOffset(size.width, planeWidth, hotspots.map(({ x }) => x)),
@@ -306,20 +273,9 @@ export function WorldArt({
             />
           </picture>
         )}
-        {scene === "lastmile" && <LastmileMotion composition={lastmileFormat} />}
-        {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones composition={lastmileFormat} selectedId={selectedId} onSelect={onSelect} focusedId={focusedId} onFocusChange={onFocusChange} />}
-        {expandedArt ? (
-          <div style={{
-            position: "absolute",
-            left: expandedArt.original.x * planeScale,
-            top: expandedArt.original.y * planeScale,
-            width: expandedArt.original.width * planeScale,
-            height: expandedArt.original.height * planeScale,
-            pointerEvents: "none",
-          }}>
-            {layers}
-          </div>
-        ) : layers}
+        {scene === "lastmile" && <LastmileMotion />}
+        {scene === "lastmile" && interactiveMarkers && onSelect && <LastmileZones selectedId={selectedId} onSelect={onSelect} focusedId={focusedId} onFocusChange={onFocusChange} />}
+        {layers}
         {selectedPoint && active && (
           <span
             role="img"
