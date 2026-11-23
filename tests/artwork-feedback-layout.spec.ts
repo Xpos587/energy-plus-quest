@@ -16,7 +16,7 @@ for (const scene of [
   { id: "compact", pattern: /compact-environment-v(53|54)/ },
   { id: "inventory", pattern: /inventory-master-v16/ },
   { id: "crane", pattern: /barge-v7\/(wide|desk|mid|tall)\/plate/ },
-  { id: "lastmile", pattern: /lastmile-family-v1\/revision-30\/choice/ },
+  { id: "lastmile", pattern: /lastmile-family-v1\/revision-31\/choice/ },
 ]) {
   test(`${scene.id}: loading and retry stay centered in media, including after resize`, async ({ page }, info) => {
     await page.emulateMedia({ reducedMotion: "reduce" });

@@ -66,6 +66,10 @@
   .app { --scene-header-height: calc(48px + env(safe-area-inset-top, 0px)); }
   .frame { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: var(--scene-header-height) minmax(160px, 1fr) auto; overflow-y: auto; }
   .app[data-scene="lastmile"] .frame { grid-template-rows: var(--scene-header-height) minmax(260px, 1fr) max-content; }
+  /* Owner 23.11: the quay never zooms. Briefing, choice and inspection all show the whole 3:2 drawing at one height. */
+  .app[data-scene="crane"] .frame:not([data-layout="result"]) { grid-template-rows: var(--scene-header-height) 66.667vw minmax(0, 1fr); background: #fff; }
+  .app[data-scene="crane"] .frame:not([data-layout="result"]) :is([data-testid="scene-question"], [aria-label="Условие задания"], [data-choice-inspection]) { align-self: stretch; max-height: none; }
+  .app[data-scene="crane"] .frame:not([data-layout="result"]) :is([data-choice-navigation], [data-choice-inspection] > div:last-child) { margin-top: auto; }
   .frame [data-scene-header] { position: relative; inset: auto; grid-row: 1; padding: env(safe-area-inset-top, 0px) 10px 0; gap: 8px; }
   .frame [data-scene-header] > div:first-child { flex: 1; max-width: 310px; }
   .frame [data-scene-world] { position: relative; inset: auto; grid-row: 2; width: 100%; height: 100%; }

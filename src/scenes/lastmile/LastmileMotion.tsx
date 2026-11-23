@@ -1,4 +1,3 @@
-import { Gift } from "lucide-react";
 import type { CSSProperties } from "react";
 import { imageAsset } from "../../game/imageAssets";
 import { lastmileChoiceArtwork } from "./expandedArtwork";
@@ -10,7 +9,7 @@ type Motion = Record<"floes" | "barge" | "rover" | "pipe-carrier", Sprite> & {
   rotor: Sprite & { frames: number };
 };
 
-/** Pixel-matched map layers stay still; only the helicopter's rotor animates. A pin marks the gift on the quay. */
+/** Pixel-matched map layers stay still; only the helicopter's rotor animates. */
 export function LastmileMotion() {
   const {
     width,
@@ -19,7 +18,6 @@ export function LastmileMotion() {
   }: { width: number; height: number; motion?: Motion } =
     lastmileChoiceArtwork;
   if (!motion) return null;
-  const [tipX, tipY] = lastmileChoiceArtwork.landmarks.gift.tip;
   const place = ({ x, y, w, h }: Box): CSSProperties => ({
     left: `${(x / width) * 100}%`,
     top: `${(y / height) * 100}%`,
@@ -44,10 +42,6 @@ export function LastmileMotion() {
       {sprite("barge")}
       {sprite("rover")}
       {sprite("pipe-carrier")}
-      {/* The painted parcel is ~9 plate px: the pin, not a bigger box, says where the gift waits (r30 README). */}
-      <span className={styles.giftPin} data-lastmile-gift-pin style={{ left: `${(tipX / width) * 100}%`, top: `${(tipY / height) * 100}%` }}>
-        <Gift />
-      </span>
       <div className={styles.rotor} style={place(motion.rotor)}>
         <img
           src={imageAsset(motion.rotor.image)}

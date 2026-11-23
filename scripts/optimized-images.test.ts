@@ -477,7 +477,7 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
     "review/carrier-art-2026-09-27/closer-old4.png",
     "scene-art/carrier-results-2026-10-02/old-wide-v8.webp",
     ...["choice-wide", ...["barge", "floes", "pipe-carrier", "rotor", "rover"].map(layer => `wide-${layer}`)]
-      .map(file => `scene-art/lastmile-family-v1/revision-30/${file}.webp`),
+      .map(file => `scene-art/lastmile-family-v1/revision-31/${file}.webp`),
     "scene-art/lastmile-family-v1/revision-15/intro-wide.webp",
     "scene-art/lastmile-family-v1/revision-22/flight-boat-tall.webp",
     "scene-art/lastmile-family-v1/revision-18/flight-parcel-arseniy-tall.webp",
@@ -494,7 +494,7 @@ test("only artwork reachable from runtime tuples, carrier IDs and context varian
   ];
   const excluded = [
     "scene-art/lastmile-r5/choice-wide.webp",
-    "scene-art/lastmile-family-v1/revision-30/choice-tall.webp",
+    "scene-art/lastmile-family-v1/revision-31/choice-tall.webp",
     "scene-art/lastmile-family-v1/helicopter-ground-khor-parcel-v6.webp",
     "review/carrier-art-2026-09-27/closer-old.png",
     "scene-art/lastmile-family-v1/revision-4/choice-tall-khor.webp",

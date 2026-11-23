@@ -3833,7 +3833,6 @@
 .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key] + [data-score-key] { border-left: 0; }
 .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key] :is(strong, em) { color: var(--metric); }
 .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key] em { font-weight: 600; }
-.app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key]:has(strong[data-neutral="true"]) { background: #f3f6f8; }
 .app[data-scene] .frame.frame.frame.frame[data-layout="result"] [data-result-reader] footer [data-score-key]:has(strong[data-neutral="true"]) :is(strong, em, svg) { color: #5a7285; }
 
 /* Rail answers: number badges and the Compact icon share one marker column,
@@ -4159,15 +4158,4 @@
   [data-scene="crane"] .inspection[data-choice-inspection] { gap: 8px; }
   [data-scene="crane"] .inspection[data-choice-inspection] .actions { flex-wrap: nowrap; }
   [data-scene="crane"] .inspection[data-choice-inspection] .actions > button { flex: 1 1 auto; padding-inline: 10px; }
-}
-/* Owner (Teo, scale): on a portrait phone the choice screen first shows the whole quay — both cranes, ПРУ,
-   Petr's berth, the big barge, river and shore — in the mid drawing's own aspect (1402×1122); picking a
-   way grows the picture row again and the camera closes in on it. */
-@media (max-width: 600px) and (orientation: portrait) and (min-height: 701px) {
-  /* The frame carries SceneShell's hashed class, so it is named by its data attributes. */
-  [data-scene="crane"] [data-interaction="inspect-confirm"][data-inspecting="false"][data-inspecting] {
-    grid-template-rows: var(--scene-header-height) minmax(0, 80.03vw) minmax(0, 1fr);
-  }
-  /* The card fills the rest of the screen under the shorter picture, no empty band between them. */
-  [data-scene="crane"] [data-interaction="inspect-confirm"][data-inspecting="false"] [data-testid="scene-question"][data-testid] { align-self: stretch; margin-top: 0; max-height: none; }
 }

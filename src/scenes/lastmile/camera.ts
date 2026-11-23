@@ -11,17 +11,15 @@ export function contourBox(path: string): Box {
   return { x: x0, y: y0, w: Math.max(...xs) - x0, h: Math.max(...ys) - y0 };
 }
 
-// Story tiers, widest first. Every recipient's destination is in `places`: Майма's chum, Хабт's reindeer by the
-// chums, Арсений's АБК (scenario: «Конечные точки — АБК, чум Маймы»). The rig only receives the helicopter's pipes,
-// so a phone loses it first; the transport row and the gift on the quay are never cut.
+// Keep the rig with the playable foreground even when the camp cannot fit on a narrow tablet stage.
 const pad = 12;
 const { landmarks: l } = art;
 const choice = [...Object.values(contours.regions).map(({ path }) => contourBox(path)), art.motion.rotor, l.gift];
-const places = [...choice, l.chums, l.reindeer, l.abk, l.helipad];
-const story = [...places, l.industry];
-const span = (boxes: Box[], axis: "x" | "y") => {
+const industry = [...choice, l.industry];
+const story = [...industry, l.chums, l.reindeer, l.abk, l.helipad];
+const span = (boxes: Box[], axis: "x" | "y", padding = pad) => {
   const size = axis === "x" ? "w" : "h";
-  return [Math.min(...boxes.map((b) => b[axis])) - pad, Math.max(...boxes.map((b) => b[axis] + b[size])) + pad] as const;
+  return [Math.min(...boxes.map((b) => b[axis])) - padding, Math.max(...boxes.map((b) => b[axis] + b[size])) + padding] as const;
 };
 /** The «Нажмите на транспорт» chip covers the top of the stage (smaller below 420 px). */
 export const lastmileTopInset = (width: number) => (width <= 420 ? 56 : 64);
@@ -36,13 +34,13 @@ export function lastmileCamera(stage: { width: number; height: number }) {
     const [from, to] = span(story, axis);
     const offset = cover((stageSize + inset) / 2 - ((from + to) / 2) * scale);
     // The hint is a short centred chip and the destinations sit at the sides: a tier may run under it before it is dropped.
-    for (const [keepFrom, keepTo] of [story, places, choice].map((tier) => span(tier, axis)))
+    for (const [keepFrom, keepTo] of [span(story, axis), span(industry, axis), span(choice, axis, 0)])
       for (const top of [inset, 0])
         if ((keepTo - keepFrom) * scale <= stageSize - top)
           return cover(Math.max(top - keepFrom * scale, Math.min(stageSize - keepTo * scale, offset)));
-    // Narrower than the quay row itself (a 704×1302 tablet stage beside the side panel): centre the four tap points,
-    // so each vehicle's hotspot stays on screen while the row's outer ends are trimmed.
-    const taps = art.hotspots.map((point) => point[axis] * size);
+    // Narrower than the quay row itself (a 704×1302 tablet stage beside the side panel): centre the tap points and the rig,
+    // so the rig and tap points remain visible even if a silhouette is trimmed.
+    const taps = [...art.hotspots.map((point) => point[axis] * size), l.industry[axis], l.industry[axis] + l.industry[axis === "x" ? "w" : "h"]];
     return cover((stageSize + inset) / 2 - ((Math.min(...taps) + Math.max(...taps)) / 2) * scale);
   };
   return {

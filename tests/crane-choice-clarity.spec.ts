@@ -33,11 +33,13 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
       const hotspot = await box(page, `[data-hotspot="${id}"]`);
       expect(Math.min(hotspot.width, hotspot.height)).toBeGreaterThanOrEqual(44);
     }
-    if (viewport.width < 900) expect(stage.height).toBeGreaterThan(viewport.height * 0.35);
+    // Owner 23.11: no zoom on a phone either — the whole 3:2 quay, the same picture with or without an open card.
+    if (viewport.width < 900) expect(Math.abs(stage.height - viewport.width / 1.5)).toBeLessThan(2);
 
     // Pin → card: picking a pin opens its card and presses the pin.
     await page.locator('[data-hotspot="petr"]').click();
     await expect(page.locator('[data-choice-inspection="petr"]')).toBeVisible();
+    expect(await box(page, '[data-world-scene="crane"]')).toEqual(stage);
     await expect(page.locator('[data-hotspot="petr"]')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('[data-choice-confirm]')).toBeInViewport({ ratio: 1 });
     await page.getByRole('button', { name: 'К причалу' }).click();

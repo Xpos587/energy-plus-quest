@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "Xpos587/energy-plus-quest",
-  "release": "media-2026-11-22-current-r30",
+  "release": "media-2026-11-23-current-r31",
   "archives": [
     {
       "name": "media-01-32eb00d20ba4.tar.gz",
@@ -4521,10 +4521,10 @@
       ]
     },
     {
-      "name": "runtime-3547bfe5eb0c.tar.gz",
-      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-22-current-r30/runtime-3547bfe5eb0c.tar.gz",
-      "sha256": "3547bfe5eb0c2d453f6ad6b2afa3e1dac8aa5416fefdba8ba5124ad998a8c3cd",
-      "bytes": 218239136,
+      "name": "runtime-95f3da06bf39.tar.gz",
+      "url": "https://github.com/Xpos587/energy-plus-quest/releases/download/media-2026-11-23-current-r31/runtime-95f3da06bf39.tar.gz",
+      "sha256": "95f3da06bf391c662d37270e1f304398fd8d89b39bbd99de169e55780b63658b",
+      "bytes": 222004108,
       "files": [
         {
           "path": "design/scene-04/blender-v4/painted/face-inputs/desk/far.webp",
@@ -6630,6 +6630,66 @@
           "path": "public/scene-art/lastmile-family-v1/revision-30/wide-rover.webp",
           "bytes": 20212,
           "sha256": "2e7efaf09345da13d9af2b679dcc66fd35cdeb74c9893c202bb245aca56895df"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/choice-tall.webp",
+          "bytes": 1359224,
+          "sha256": "36c3b1a33be0b1384c73b0e3a822ab232c6184aad4c2837dc3a2e6db65690718"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/choice-wide.webp",
+          "bytes": 1555796,
+          "sha256": "ff0afbc6f74c36c9e53bcd128faccf26edb7e8b2902323c7837fd9278b2675cf"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/tall-barge.webp",
+          "bytes": 67132,
+          "sha256": "4ff59c07a132a56198e0fb5401b080713ecd1fbfd5fb37318b614b5905c3685d"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/tall-floes.webp",
+          "bytes": 145702,
+          "sha256": "b44b33f1df8d2aed943a2078c5067ceefa2f6cf1af16618b2311efcc6790083d"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/tall-pipe-carrier.webp",
+          "bytes": 26756,
+          "sha256": "31aa800d2f1a6bd2f4b2d44c2423fea669e8a90f2d1d96495584998ccadf9950"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/tall-rotor.webp",
+          "bytes": 118264,
+          "sha256": "68e6e8861a6d0530d2f36bae2df2ec706110c9c419c83237a09f8e5815fca1b5"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/tall-rover.webp",
+          "bytes": 14884,
+          "sha256": "c6cf1cd0bccdaf17c2e6f814154dc73f7fe510828487bd7593e2a685caafe0ff"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/wide-barge.webp",
+          "bytes": 114570,
+          "sha256": "1d3cc7ff7cbf15d104e5298a6b9561ed4a33e50529edb40919ab4923fefcbb46"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/wide-floes.webp",
+          "bytes": 108310,
+          "sha256": "bb763691ac8c2d7354dbe493c44bfef0aaa35d7fb5de36d2a6c8f27a40e38b5f"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/wide-pipe-carrier.webp",
+          "bytes": 27848,
+          "sha256": "e087a335e4d5e9d63fc93aa03258b8ad70f21a9b7ccbbb18d9aea95fec05d5e3"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/wide-rotor.webp",
+          "bytes": 202020,
+          "sha256": "562d527f0532988860fb1d385ae023465b9975ea1818126e4ac8db8deffa19a1"
+        },
+        {
+          "path": "public/scene-art/lastmile-family-v1/revision-31/wide-rover.webp",
+          "bytes": 22154,
+          "sha256": "3b139e474a1baa7ee5b7035e288eddea9ee62a0159cbe345fcbdd75f286c889c"
         },
         {
           "path": "public/scene-art/lastmile-r5/choice-tall.webp",
